@@ -14,7 +14,7 @@ export interface EnhancedLocationData {
   travelTime: string
   description: string
   population?: string
-  category: 'major_town' | 'town' | 'village' | 'industrial' | 'historic'
+  category: 'city' | 'district_hq' | 'major_town' | 'town' | 'village' | 'industrial' | 'historic'
   amenities: {
     banks: Array<{ name: string; distance: string; address: string }>
     atms: Array<{ name: string; distance: string; address: string }>
@@ -379,7 +379,7 @@ export function getEnhancedLocationBySlug(slug: string): EnhancedLocationData | 
 }
 
 export function getLocationsByTaluk(taluk: string): EnhancedLocationData[] {
-  return enhancedVelloreLocations.filter(loc => 
+  return enhancedVelloreLocations.filter(loc =>
     loc.taluk.toLowerCase() === taluk.toLowerCase()
   );
 }
@@ -389,7 +389,7 @@ export function getLocationsByCategory(category: string): EnhancedLocationData[]
 }
 
 export function getMajorTowns(): EnhancedLocationData[] {
-  return enhancedVelloreLocations.filter(loc => 
+  return enhancedVelloreLocations.filter(loc =>
     loc.category === 'major_town' || loc.category === 'industrial'
   );
 }

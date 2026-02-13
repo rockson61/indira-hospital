@@ -5,16 +5,77 @@ import {
     enhancedVelloreLocations,
     type EnhancedLocationData,
 } from "@/lib/data/enhanced-location-data";
+import { tamilNaduLocations, type TamilNaduLocation } from "@/lib/data/tamilnadu-locations";
 import { MapPin, Clock, ArrowRight, Train, Bus, Car } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Our Locations | Indira Super Speciality Hospital Vellore",
+    title: "Locations We Serve | Indira Super Speciality Hospital Vellore",
     description:
-        "Find Indira Super Speciality Hospital's reach across Vellore district. We serve patients from Arakkonam, Arcot, Ranipet, Tirupattur, Vaniyambadi and more.",
+        "Indira Super Speciality Hospital serves patients across Tamil Nadu. Find directions, travel info, and transport options from your town or city.",
 };
 
-function getCategoryBadge(category: EnhancedLocationData["category"]) {
+type AnyLocation = {
+    name: string;
+    slug: string;
+    description: string;
+    distance: string;
+    travelTime: string;
+    category: string;
+    district: string;
+    transportOptions: {
+        bus: boolean;
+        train: boolean;
+        auto?: boolean;
+        taxi: boolean;
+    };
+};
+
+function mergeLocations(): AnyLocation[] {
+    const velloreLocations: AnyLocation[] = enhancedVelloreLocations.map((loc) => ({
+        name: loc.name,
+        slug: loc.slug,
+        description: loc.description,
+        distance: loc.distance,
+        travelTime: loc.travelTime,
+        category: loc.category,
+        district: loc.district,
+        transportOptions: loc.transportOptions,
+    }));
+
+    const tnLocations: AnyLocation[] = tamilNaduLocations.map((loc) => ({
+        name: loc.name,
+        slug: loc.slug,
+        description: loc.description,
+        distance: loc.distance,
+        travelTime: loc.travelTime,
+        category: loc.category,
+        district: loc.district,
+        transportOptions: loc.transportOptions,
+    }));
+
+    // Merge and deduplicate by slug
+    const slugSet = new Set<string>();
+    const merged: AnyLocation[] = [];
+
+    for (const loc of [...velloreLocations, ...tnLocations]) {
+        if (!slugSet.has(loc.slug)) {
+            slugSet.add(loc.slug);
+            merged.push(loc);
+        }
+    }
+
+    // Sort by distance (numeric value)
+    return merged.sort((a, b) => {
+        const distA = parseInt(a.distance.replace(/[^\d]/g, "")) || 0;
+        const distB = parseInt(b.distance.replace(/[^\d]/g, "")) || 0;
+        return distA - distB;
+    });
+}
+
+function getCategoryBadge(category: string) {
     const styles: Record<string, string> = {
+        city: "bg-red-100 text-red-700",
+        district_hq: "bg-indigo-100 text-indigo-700",
         major_town: "bg-blue-100 text-blue-700",
         town: "bg-green-100 text-green-700",
         village: "bg-gray-100 text-gray-600",
@@ -22,6 +83,8 @@ function getCategoryBadge(category: EnhancedLocationData["category"]) {
         historic: "bg-purple-100 text-purple-700",
     };
     const labels: Record<string, string> = {
+        city: "City",
+        district_hq: "District HQ",
         major_town: "Major Town",
         town: "Town",
         village: "Village",
@@ -39,7 +102,13 @@ function getCategoryBadge(category: EnhancedLocationData["category"]) {
 }
 
 export default function LocationsPage() {
-    const locations = enhancedVelloreLocations;
+    const locations = mergeLocations();
+
+    // Group by region for stats
+    const nearbyCount = locations.filter(
+        (l) => parseInt(l.distance) <= 50
+    ).length;
+    const districtsServed = new Set(locations.map((l) => l.district)).size;
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -47,14 +116,15 @@ export default function LocationsPage() {
             <section className="bg-gradient-to-br from-teal-800 via-teal-700 to-emerald-700 text-white py-20 lg:py-28">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <p className="text-teal-200 font-medium mb-3 uppercase tracking-wider text-sm">
-                        Serving Vellore District
+                        Serving All of Tamil Nadu
                     </p>
                     <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
                         Locations We Serve
                     </h1>
                     <p className="mt-4 text-lg text-teal-100 max-w-2xl leading-relaxed">
-                        Indira Super Speciality Hospital is accessible from major towns
-                        across Vellore district. World-class healthcare, close to home.
+                        From nearby Vellore towns to major cities across Tamil Nadu,
+                        Indira Super Speciality Hospital provides world-class healthcare
+                        accessible to patients across the state.
                     </p>
                 </div>
             </section>
@@ -63,9 +133,9 @@ export default function LocationsPage() {
             <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-10 relative z-10">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     {[
-                        { label: "Locations Served", value: `${locations.length}+` },
-                        { label: "Vellore District", value: "100%" },
-                        { label: "Nearest Town", value: "20 km" },
+                        { label: "Locations Listed", value: `${locations.length}+` },
+                        { label: "Districts Covered", value: `${districtsServed}` },
+                        { label: "Nearby (< 50 km)", value: `${nearbyCount}` },
                         { label: "24/7 Emergency", value: "Always" },
                     ].map((stat) => (
                         <div
@@ -84,7 +154,7 @@ export default function LocationsPage() {
             {/* Location Cards */}
             <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
                 <SectionHeader
-                    title="Towns & Cities Near Us"
+                    title="Towns & Cities Across Tamil Nadu"
                     subtitle="All Locations"
                     description="Click on any location to learn more about how to reach Indira Hospital from there."
                 />
@@ -154,8 +224,8 @@ export default function LocationsPage() {
                 <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold">Can&#39;t Find Your Location?</h2>
                     <p className="mt-4 text-purple-100 text-lg">
-                        We serve patients from across Tamil Nadu. Contact us for directions
-                        and transport assistance.
+                        We serve patients from across Tamil Nadu and neighboring states.
+                        Contact us for directions and transport assistance.
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Link
