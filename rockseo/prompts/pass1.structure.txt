@@ -1,0 +1,26 @@
+PASS 1 — Structural Optimization
+
+Normalize structure for extraction readiness.
+
+Rules:
+- Remove generic introductions ("In this article...", "Let's explore...")
+- Every heading implies a question (H2 = "What is X?" → H2: "X")
+- First sentence answers immediately (no preamble)
+- Reorder sections for logical dependency:
+  1. Definition/What
+  2. When/Who needs it
+  3. How it works/Procedure
+  4. Benefits/Outcomes
+  5. Cost/Timeline
+  6. Why choose us
+  7. FAQs
+- No mixed intent sections (don't combine "benefits" with "procedure")
+- Front-load key information (inverted pyramid)
+
+Heading Hierarchy:
+- H1: One per page (page title)
+- H2: Major sections (should be extractable as featured snippets)
+- H3: Subsections within H2
+- Never skip levels
+
+Rewrite content accordingly. Preserve all JSX syntax.

@@ -1,0 +1,64 @@
+CONTENT CONSOLIDATION PLAN
+Generated: 2026-01-02T02:31:32.638Z
+============================================================
+
+SUMMARY
+----------------------------------------
+Total overlaps analyzed: 380025
+Groups identified: 9
+Merge recommendations: 4
+Redirect recommendations: 0
+Differentiate recommendations: 5
+
+
+🔀 MERGE THESE PAGES
+(Combine into single comprehensive guide)
+----------------------------------------
+
+Topic: gum-disease
+Canonical: /blog/gum-abscess
+Merge from: /blog/6mm-gum-pocket, /blog/beginning-stages-of-gingivitis, /blog/bleeding-gums-after-quitting-smoking, /blog/braces-for-overcrowding, /blog/can-gingivitis-be-reversed
+           ... and 372 more
+Reason: 378 blog posts cover same topic. Merge into comprehensive guide.
+
+Topic: emergency-dentistry
+Canonical: /blog/tooth-abscess-treatment
+Merge from: /blog/abscess-emergency-immediate-treatment, /blog/after-hours-dental-emergency-finding-help, /blog/alveoloplasty-jawbone-smoothing, /blog/biopsy-oral-lesions-diagnostic, /blog/bone-removal-surgery-torus
+           ... and 33 more
+Reason: 39 blog posts cover same topic. Merge into comprehensive guide.
+
+Topic: tooth-extraction
+Canonical: /blog/surgical-tooth-extraction-complex
+Merge from: /blog/bleeding-after-extraction-when-worry, /blog/emergency-tooth-extraction-when-necessary, /blog/simple-tooth-extraction-what-to-expect
+Reason: 4 blog posts cover same topic. Merge into comprehensive guide.
+
+Topic: dental-crowns
+Canonical: /blog/lost-crown-filling-temporary-fixes
+Merge from: /blog/crown-lengthening-aesthetic-restorative
+Reason: 2 blog posts cover same topic. Merge into comprehensive guide.
+
+
+✏️ DIFFERENTIATE THESE PAGES
+(Add unique value to each)
+----------------------------------------
+
+Topic: dental-implants (73% similar)
+Pages:
+Action: Moderate overlap (73%). Add unique angles to each page.
+
+Topic: cosmetic-dentistry (81% similar)
+Pages:
+Action: Moderate overlap (81%). Add unique angles to each page.
+
+Topic: teeth-whitening (76% similar)
+Pages:
+Action: Moderate overlap (76%). Add unique angles to each page.
+
+Topic: dental-fillings (78% similar)
+Pages:
+Action: Moderate overlap (78%). Add unique angles to each page.
+
+Topic: root-canal (76% similar)
+Pages:
+Action: Moderate overlap (76%). Add unique angles to each page.
+

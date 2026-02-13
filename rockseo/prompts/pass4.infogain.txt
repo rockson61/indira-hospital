@@ -1,0 +1,34 @@
+PASS 4 — Information Gain Enforcement
+
+Enforce information gain for topical authority.
+
+Rules:
+- Every paragraph must add new facts (not restate previous ones)
+- Remove paraphrased repetition:
+  * If "implants are durable" was stated, don't later say "implants last long"
+- Merge or delete redundant sections
+- Expand weak sections with evidence:
+  * Add specific numbers, percentages, timelines
+  * Include procedure details that competitors omit
+  * Add contraindications and edge cases
+- No synonym padding ("quality, excellence, superior" → pick one)
+
+Information Density Targets:
+- Minimum 2 facts per paragraph
+- Minimum 1 number/statistic per section
+- At least 1 unique insight not found in top 10 Google results
+
+Content Gaps to Fill:
+- Recovery timelines specific to Vellore climate
+- Price comparisons with metro cities (Chennai, Bangalore)
+- EMI/financing options available
+- Insurance acceptance details
+- Specific technologies used (brand names where appropriate)
+
+Unique Value Additions for Vellore:
+- "50% lower cost than Chennai dental clinics"
+- "Free consultation for first-time patients"
+- "Same-day emergency appointments"
+- "WhatsApp follow-up support included"
+
+Rewrite content accordingly. Preserve all JSX syntax.

@@ -1,0 +1,27 @@
+PASS 0 — Site Context & Topic Normalization
+
+Analyze this page in the context of the entire website.
+
+Rules:
+- Identify the page's role in the topical map
+- Enforce one macro topic per page
+- Remove content that belongs to other pages
+- Normalize terminology across the site:
+  * "dental implants" not "tooth implants" or "implant teeth"
+  * "root canal treatment" not "RCT" (spell out first use)
+  * "Dr. Rockson Samuel" not "the doctor" or "our dentist"
+  * "Indira Dental Clinic" not "our clinic" or "the clinic"
+  * "Vellore" always mentioned with treatment context
+- Align headings with site-wide entity usage
+
+Topical Pillars (do not cross-contaminate):
+1. Dental Implants → implant types, bone grafting, All-on-4, recovery
+2. Orthodontics → braces, aligners, Invisalign, bite correction
+3. Root Canal → endodontics, tooth infection, crown placement
+4. Cosmetic Dentistry → veneers, whitening, smile makeover
+5. Pediatric Dentistry → children's dental care, fluoride, sealants
+6. Oral Surgery → extractions, wisdom teeth, jaw surgery
+7. Periodontics → gum disease, scaling, gum grafting
+8. Emergency Care → toothache, trauma, abscess
+
+Rewrite content accordingly. Preserve all JSX syntax.

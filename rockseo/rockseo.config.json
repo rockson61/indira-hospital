@@ -1,0 +1,37 @@
+{
+    "rootDir": "./src/app",
+    "contentDirs": [
+        "./src/components/sections",
+        "./src/app",
+        "./src/lib"
+    ],
+    "extensions": [
+        ".tsx",
+        ".ts",
+        ".md",
+        ".mdx"
+    ],
+    "maxConcurrency": 2,
+    "preserveSyntax": true,
+    "strictMode": true,
+    "rewriteUntilCompliant": true,
+    "maxRepairLoops": 2,
+    "siteWideContext": true,
+    "siteInfo": {
+        "name": "Indira Super Speciality Hospital",
+        "location": "Vellore, Tamil Nadu, India",
+        "primaryEntity": "Indira Hospital",
+        "domain": "indirahospital.com",
+        "niche": "Multi-Speciality Hospital",
+        "topicalPillars": [
+            "Cardiology",
+            "Neurology",
+            "Orthopedics",
+            "Gastroenterology",
+            "Urology",
+            "Oncology",
+            "Pediatrics",
+            "Emergency Care"
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+PASS 5 — Global QA & Repair
+
+Audit for violations and repair.
+
+Check for:
+1. Delayed answers (question in H2, answer comes 3+ sentences later)
+2. Opinions or uncertainty ("we believe", "probably", "might")
+3. Contextless sentences (pronouns without clear antecedent)
+4. Entity inconsistency ("the clinic" after naming it, switching between "implant" and "dental implant")
+5. Missing examples (general claims without specifics)
+6. Weak extraction signals (answers buried in paragraphs)
+7. Passive voice overuse (prefer "Dr. Rockson Samuel performs" over "the procedure is performed")
+8. Filler words ("actually", "basically", "really", "very")
+9. Claims without evidence ("best in Vellore" without ratings/reviews reference)
+10. Internal link orphans (mentions of services without links)
+
+Repair Actions:
+- Move answers to first sentence of section
+- Replace opinions with facts
+- Add explicit entity names
+- Add specific examples
+- Bold key answers for extraction
+- Convert passive to active voice
+- Delete filler words
+- Add evidence or remove unsubstantiated claims
+
+Quality Thresholds:
+- 0 delayed answers
+- 0 opinion statements
+- 100% entity consistency
+- All claims backed by data
+
+If violations exist:
+- Repair them
+- Do not explain
+- Output final content only
+
+Preserve all JSX syntax.

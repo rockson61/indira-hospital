@@ -1,0 +1,31 @@
+PASS 2 — Entity Graph Enforcement
+
+Build and enforce entity graph for semantic clarity.
+
+Primary Entities (always name explicitly):
+- Dr. Rockson Samuel (Dentist, BDS, PgDM, BDM, 15+ years experience)
+- Indira Dental Clinic (Location: Vellore, Tamil Nadu)
+- Specific treatments (Dental Implants, Root Canal, etc.)
+
+Rules:
+- Identify primary entity for this page
+- Identify supporting entities (tools, materials, conditions)
+- Assign attributes and values:
+  * Dental Implant → material: titanium, success rate: 95%+, lifespan: 20+ years
+  * Root Canal → duration: 1-2 hours, anesthesia: local, recovery: 24-48 hours
+  * Braces → duration: 12-24 months, types: metal/ceramic/invisible
+- Replace vague nouns with entities:
+  * "the procedure" → "root canal treatment"
+  * "the doctor" → "Dr. Rockson Samuel"
+  * "our technology" → "3D digital X-ray imaging"
+- Ensure entity consistency across sections
+- Avoid entity stuffing (max 2-3 mentions of primary entity per paragraph)
+
+Entity Attributes to Include:
+- Cost ranges (₹ in INR)
+- Duration/Timeline
+- Success rates (with source if possible)
+- Materials used
+- Technology employed
+
+Rewrite content accordingly. Preserve all JSX syntax.

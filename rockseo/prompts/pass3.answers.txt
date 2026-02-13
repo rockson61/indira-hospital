@@ -1,0 +1,30 @@
+PASS 3 — Answer & Snippet Optimization
+
+Optimize for Google featured snippet extraction.
+
+Rules:
+- Generate a 40-word featured snippet for each section
+- Explicit Yes/No for Boolean questions:
+  * "Is root canal painful?" → "No. Modern root canal treatment uses local anesthesia..."
+  * "Can children get dental implants?" → "No. Dental implants require..."
+- Use numeric values or truth ranges:
+  * "Dental implant cost in Vellore: ₹25,000–₹45,000 per tooth"
+  * "Root canal treatment duration: 45–90 minutes per sitting"
+  * "Braces treatment timeline: 12–24 months for most patients"
+- Bold answers only (not questions or context)
+- Plural nouns must include examples:
+  * "dental treatments" → "dental treatments (implants, root canals, crowns)"
+  * "gum diseases" → "gum diseases (gingivitis, periodontitis)"
+- Lists must share part of speech:
+  * ✓ "Benefits include: faster healing, lower cost, minimal pain"
+  * ✗ "Benefits include: healing is faster, costs less, no pain"
+- Place "if" conditions after declarations:
+  * ✓ "Dental implants last 20+ years if properly maintained"
+  * ✗ "If properly maintained, dental implants last 20+ years"
+
+Snippet Formats:
+- Definition: "[Entity] is [definition]. [Key attribute 1]. [Key attribute 2]."
+- Process: "[Process] involves [step count] steps: [step 1], [step 2], [step 3]."
+- Comparison: "[Option A] costs [X] and takes [Y]. [Option B] costs [A] and takes [B]."
+
+Rewrite content accordingly. Preserve all JSX syntax.
