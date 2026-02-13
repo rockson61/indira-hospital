@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { getDirectusClient } from '@/lib/directus'
 import { readItems } from '@directus/sdk'
 import { Doctor, Service, Location, Diagnostic, Post } from '@/lib/schema'
+import { enhancedVelloreLocations } from '@/lib/data/enhanced-location-data'
+import { tamilNaduLocations } from '@/lib/data/tamilnadu-locations'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://indirahospital.com'
@@ -50,8 +52,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.9,
         }))
 
-        const locationUrls = locations.map((location) => ({
-            url: `${baseUrl}/locations/${location.slug}`,
+        // Merge CMS location slugs with static local data slugs
+        const cmsLocationSlugs = new Set(locations.map((l: any) => l.slug));
+        const allLocationSlugs = new Set<string>(cmsLocationSlugs);
+        for (const loc of enhancedVelloreLocations) allLocationSlugs.add(loc.slug);
+        for (const loc of tamilNaduLocations) allLocationSlugs.add(loc.slug);
+
+        const locationUrls = Array.from(allLocationSlugs).map((slug) => ({
+            url: `${baseUrl}/locations/${slug}`,
             lastModified: new Date(),
             changeFrequency: 'monthly' as const,
             priority: 0.8,
