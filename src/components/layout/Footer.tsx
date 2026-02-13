@@ -45,11 +45,12 @@ export function Footer() {
                         <ul className="space-y-2" role="list">
                             <li role="listitem"><Link href="/departments/cardiology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Cardiology</Link></li>
                             <li role="listitem"><Link href="/departments/neurology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Neurology</Link></li>
-                            <li role="listitem"><Link href="/departments/orthopedics" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Orthopedics</Link></li>
+                            <li role="listitem"><Link href="/departments/orthopaedics" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Orthopaedics</Link></li>
                             <li role="listitem"><Link href="/departments/gastroenterology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Gastroenterology</Link></li>
                             <li role="listitem"><Link href="/departments/oncology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Oncology</Link></li>
                             <li role="listitem"><Link href="/departments/urology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Urology</Link></li>
                             <li role="listitem"><Link href="/departments/nephrology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Nephrology</Link></li>
+                            <li role="listitem"><Link href="/departments/dental" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Dental</Link></li>
                         </ul>
                     </nav>
 

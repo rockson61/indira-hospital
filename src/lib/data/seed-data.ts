@@ -155,6 +155,34 @@ export const SEED_DATA = {
             short_description: "24/7 Critical care and trauma response.",
             icon: "Siren",
             full_description: "State-of-the-art Intensive Care Units and 24/7 Emergency Department staffed by critical care specialists to handle all medical emergencies."
+        },
+        {
+            title: "Dental",
+            slug: "dental",
+            short_description: "Complete dental care from routine check-ups to advanced implants.",
+            icon: "Smile",
+            full_description: "Comprehensive dental services including root canal treatment, dental implants, orthodontics, cosmetic dentistry, oral surgery, teeth whitening, and preventive care using modern equipment and techniques."
+        },
+        {
+            title: "Neurology",
+            slug: "neurology",
+            short_description: "Expert care for brain, spine, and nervous system disorders.",
+            icon: "Brain",
+            full_description: "Advanced neurological care including diagnosis and treatment of stroke, epilepsy, headaches, Parkinson's disease, multiple sclerosis, peripheral neuropathy, and neuromuscular disorders using the latest diagnostic tools like EEG and EMG."
+        },
+        {
+            title: "Oncology",
+            slug: "oncology",
+            short_description: "Comprehensive cancer diagnosis and treatment.",
+            icon: "Ribbon",
+            full_description: "Multidisciplinary cancer care offering early detection, chemotherapy, targeted therapy, immunotherapy, surgical oncology, and palliative care with a compassionate, patient-centered approach."
+        },
+        {
+            title: "Nephrology",
+            slug: "nephrology",
+            short_description: "Kidney care, dialysis, and renal disease management.",
+            icon: "Droplets",
+            full_description: "Complete kidney care including management of chronic kidney disease, dialysis services, kidney stone prevention, hypertension management, electrolyte disorders, and pre-transplant evaluation."
         }
     ]
 };
