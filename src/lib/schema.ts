@@ -239,12 +239,26 @@ export interface Diagnostic {
     name: string;
     slug: string;
     category: 'radiology' | 'pathology' | 'cardiology' | 'other';
+    description?: string;
+    short_description?: string;
     price?: number;
     preparation_instructions?: string;
     report_time?: string;
     home_collection?: boolean;
-    description?: string;
+    sample_type?: string;
+    fasting_required?: boolean;
+    parameters_count?: number;
+    thumbnail?: string; // UUID
+    // SEO fields
+    seo_title?: string;
+    seo_description?: string;
+    sort_order?: number;
+    // Schema.org MedicalTest
+    body_system?: string;
+    used_to_diagnose?: string[] | string;
+    normal_range?: string;
 }
+
 
 // ─────────────────────────────────────────
 // Pages — Schema.org: WebPage

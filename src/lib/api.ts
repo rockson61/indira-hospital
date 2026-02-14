@@ -85,3 +85,33 @@ export async function getLocations() {
         fields: ['name', 'slug', 'district', 'distance_from_hospital', 'address', 'phone'],
     }));
 }
+
+export async function getDiagnostics(category?: string) {
+    const client = await getDirectusClient();
+    const filter: any = { status: { _eq: 'published' } };
+    if (category) filter.category = { _eq: category };
+
+    return await client.request(readItems('diagnostics', {
+        filter,
+        fields: ['name', 'slug', 'category', 'short_description', 'price', 'report_time', 'home_collection', 'sample_type', 'fasting_required', 'parameters_count'],
+        // @ts-ignore
+        sort: ['sort_order', 'name'],
+    }));
+}
+
+export async function getDiagnosticBySlug(slug: string) {
+    const client = await getDirectusClient();
+    const tests = await client.request(readItems('diagnostics', {
+        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
+        fields: ['*'],
+        limit: 1,
+    }));
+    return (tests as any[]).length > 0 ? (tests as any[])[0] : null;
+}
+
+export async function getHospitalSettings() {
+    const { readSingleton } = await import('@directus/sdk');
+    const client = await getDirectusClient();
+    return await client.request(readSingleton('hospital_settings' as any));
+}
+
