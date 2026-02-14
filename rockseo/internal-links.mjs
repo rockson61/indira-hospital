@@ -21,7 +21,7 @@ const ROOT = path.join(__dirname, "..");
 
 // Configuration
 const CONFIG = {
-    appDir: path.join(ROOT, "app"),
+    appDir: path.join(ROOT, "src/app"),
     contentDirs: [
         "components/healthcare/services",
         "components/condition",

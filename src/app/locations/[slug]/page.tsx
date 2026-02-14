@@ -12,6 +12,7 @@ import { enhancedVelloreLocations } from "@/lib/data/enhanced-location-data";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { SEED_DATA } from "@/lib/data/seed-data";
 import { clinicConfig } from "@/lib/data/clinic-config";
+import { getLocationBySlug } from "@/lib/api"; // Added import
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -160,9 +161,21 @@ export default async function LocationPage({
 
     if (!location) notFound();
 
+    // Fetch M2M data from API
+    const apiLocation = await getLocationBySlug(slug).catch(() => null);
+
     const isNearby = parseInt(location.distance) <= 50;
-    const doctors = SEED_DATA.doctors;
-    const departments = SEED_DATA.services;
+
+    // Use M2M doctors if available, else fallback to SEED_DATA
+    const doctors = (apiLocation?.related_doctors as any[])?.length > 0
+        ? apiLocation!.related_doctors
+        : SEED_DATA.doctors.slice(0, 3); // Fallback to first 3 if no specific link
+
+    // Use M2M services if available, else fallback to SEED_DATA
+    const departments = (apiLocation?.related_services as any[])?.length > 0
+        ? apiLocation!.related_services
+        : SEED_DATA.services;
+
     const waUrl = getWhatsAppUrl(location.name);
 
     // Google Maps embed URL for directions
@@ -350,12 +363,14 @@ export default async function LocationPage({
                         </h2>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {departments.map((dept) => {
+                        {(departments as any[]).map((dept) => {
                             const IconComp = deptIcons[dept.title] || Stethoscope;
+                            // Check if API data has icon, else usage static map
+                            // API services might have 'icon' string field
                             return (
                                 <Link
                                     key={dept.slug}
-                                    href={`/departments/${dept.slug}`}
+                                    href={`/departments/${dept.slug}`} // Note: using departments route for services
                                     className="group flex items-start gap-4 p-5 rounded-xl bg-gray-50 hover:bg-teal-50 transition-colors border border-transparent hover:border-teal-200"
                                 >
                                     <div className="w-10 h-10 rounded-lg bg-teal-100 group-hover:bg-teal-200 flex items-center justify-center flex-shrink-0 transition-colors">
@@ -387,15 +402,19 @@ export default async function LocationPage({
                         </p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {doctors.map((doc) => (
+                        {(doctors as any[]).map((doc) => (
                             <Link
                                 key={doc.slug}
                                 href={`/doctors/${doc.slug}`}
                                 className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition-all hover:-translate-y-1"
                             >
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center text-white font-bold text-lg">
-                                        {doc.name.split(" ").map(n => n[0]).slice(0, 2).join("")}
+                                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center text-white font-bold text-lg overflow-hidden">
+                                        {doc.image ? (
+                                            <img src={`https://admin.indirasuperspecialityhospital.com/assets/${doc.image}`} alt={doc.name} className="w-full h-full object-cover" />
+                                        ) : (
+                                            doc.name.split(" ").map((n: string) => n[0]).slice(0, 2).join("")
+                                        )}
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 group-hover:text-purple-700 transition-colors">
@@ -404,7 +423,7 @@ export default async function LocationPage({
                                         <p className="text-sm text-gray-500">{doc.designation}</p>
                                     </div>
                                 </div>
-                                <p className="text-sm text-gray-600 mb-3">{doc.department} • {doc.experience_years}+ Years</p>
+                                <p className="text-sm text-gray-600 mb-3">{typeof doc.department === 'string' ? doc.department : doc.department?.name} • {doc.experience_years}+ Years</p>
                                 <div className="flex items-center justify-between">
                                     <span className="text-xs text-teal-600 font-medium">View Profile →</span>
                                 </div>

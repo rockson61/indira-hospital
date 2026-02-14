@@ -61,7 +61,7 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
     const departments = SEED_DATA.services;
 
     // JSON-LD structured data — enhanced with CMS SEO fields
-    const sameAs = [doctor.social_linkedin, doctor.social_website].filter(Boolean);
+    const sameAs = [doctor?.social_linkedin, doctor?.social_website].filter(Boolean);
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Physician",
@@ -158,6 +158,13 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                                     <MapPin className="w-5 h-5 text-amber-400" />
                                     <span className="text-sm font-medium">Indira Hospital, Vellore</span>
                                 </div>
+                                {/* M2M: Locations Count */}
+                                {(doctor.available_locations as any[])?.length > 0 && (
+                                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                                        <MapPin className="w-5 h-5 text-amber-400" />
+                                        <span className="text-sm font-medium">Visits {(doctor.available_locations as any[]).length} Other Locations</span>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Specialties */}
@@ -292,79 +299,106 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                             </Card>
                         )}
 
-                        {/* ========== SIGNATURE TREATMENTS (Marketing) ========== */}
-                        <div className="mt-4">
-                            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                                <span className="bg-red-100 p-2 rounded-lg mr-3 text-red-600">
-                                    <Star className="w-5 h-5" />
-                                </span>
-                                Treatments at Indira Hospital
-                            </h2>
-                            <div className="grid sm:grid-cols-3 gap-5">
-                                <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow">
-                                    <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mb-3">
-                                        <Zap className="w-5 h-5 text-purple-600" />
-                                    </div>
-                                    <h3 className="font-bold text-gray-900 mb-1">Laparoscopic Surgery</h3>
-                                    <p className="text-gray-500 text-xs mb-3">3mm keyhole surgery. Same-day discharge.</p>
-                                    <ul className="space-y-1 text-xs text-gray-600">
-                                        {["Hernia", "Gallbladder", "Appendix"].map(f => (
-                                            <li key={f} className="flex items-center gap-1.5">
-                                                <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Laparoscopic Surgery.")}`}
-                                        target="_blank" rel="noopener noreferrer"
-                                        className="mt-3 inline-flex items-center text-purple-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
-                                        Enquire <ArrowRight className="w-3 h-3" />
-                                    </a>
-                                </Card>
-
-                                <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow relative overflow-hidden">
-                                    <div className="absolute top-3 right-3 px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-bold rounded-full">
-                                        Popular
-                                    </div>
-                                    <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mb-3">
-                                        <Heart className="w-5 h-5 text-red-500" />
-                                    </div>
-                                    <h3 className="font-bold text-gray-900 mb-1">Laser Piles Treatment</h3>
-                                    <p className="text-gray-500 text-xs mb-3">30-min painless procedure. 24hr recovery.</p>
-                                    <ul className="space-y-1 text-xs text-gray-600">
-                                        {["No Cuts", "No Stitches", "USFDA Laser"].map(f => (
-                                            <li key={f} className="flex items-center gap-1.5">
-                                                <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Laser Piles Treatment.")}`}
-                                        target="_blank" rel="noopener noreferrer"
-                                        className="mt-3 inline-flex items-center text-red-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
-                                        Enquire <ArrowRight className="w-3 h-3" />
-                                    </a>
-                                </Card>
-
-                                <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow">
-                                    <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
-                                        <Shield className="w-5 h-5 text-teal-600" />
-                                    </div>
-                                    <h3 className="font-bold text-gray-900 mb-1">Fistula Removal</h3>
-                                    <p className="text-gray-500 text-xs mb-3">VAAFT / Laser / LIFT. No recurrence.</p>
-                                    <ul className="space-y-1 text-xs text-gray-600">
-                                        {["Permanent Cure", "Minimal Pain", "Quick Recovery"].map(f => (
-                                            <li key={f} className="flex items-center gap-1.5">
-                                                <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Fistula Treatment.")}`}
-                                        target="_blank" rel="noopener noreferrer"
-                                        className="mt-3 inline-flex items-center text-teal-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
-                                        Enquire <ArrowRight className="w-3 h-3" />
-                                    </a>
-                                </Card>
+                        {/* ========== M2M: SPECIALIZED PROCEDURES (Replaces generic if available) ========== */}
+                        {(doctor.related_services as any[])?.length > 0 ? (
+                            <div className="mt-4">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-red-100 p-2 rounded-lg mr-3 text-red-600">
+                                        <Zap className="w-5 h-5" />
+                                    </span>
+                                    Procedures Performed by {doctor.name}
+                                </h2>
+                                <div className="grid sm:grid-cols-2 gap-5">
+                                    {(doctor.related_services as any[]).map((svc: any) => (
+                                        <Link key={svc?.slug || Math.random()} href={`/services/${svc?.slug}`} className="block">
+                                            <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow h-full hover:bg-slate-50">
+                                                <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mb-3">
+                                                    {svc?.icon ? <img src={getImageUrl(svc.icon)!} className="w-6 h-6" alt="" /> : <Heart className="w-5 h-5 text-red-500" />}
+                                                </div>
+                                                <h3 className="font-bold text-gray-900 mb-1">{svc?.title}</h3>
+                                                <p className="text-gray-500 text-xs mb-3 line-clamp-2">{svc?.short_description}</p>
+                                                <span className="mt-auto inline-flex items-center text-red-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
+                                                    View Procedure <ArrowRight className="w-3 h-3" />
+                                                </span>
+                                            </Card>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        ) : (
+                            <div className="mt-4">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-red-100 p-2 rounded-lg mr-3 text-red-600">
+                                        <Star className="w-5 h-5" />
+                                    </span>
+                                    Treatments at Indira Hospital
+                                </h2>
+                                <div className="grid sm:grid-cols-3 gap-5">
+                                    <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow">
+                                        <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mb-3">
+                                            <Zap className="w-5 h-5 text-purple-600" />
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 mb-1">Laparoscopic Surgery</h3>
+                                        <p className="text-gray-500 text-xs mb-3">3mm keyhole surgery. Same-day discharge.</p>
+                                        <ul className="space-y-1 text-xs text-gray-600">
+                                            {["Hernia", "Gallbladder", "Appendix"].map(f => (
+                                                <li key={f} className="flex items-center gap-1.5">
+                                                    <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Laparoscopic Surgery.")}`}
+                                            target="_blank" rel="noopener noreferrer"
+                                            className="mt-3 inline-flex items-center text-purple-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
+                                            Enquire <ArrowRight className="w-3 h-3" />
+                                        </a>
+                                    </Card>
+
+                                    <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow relative overflow-hidden">
+                                        <div className="absolute top-3 right-3 px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-bold rounded-full">
+                                            Popular
+                                        </div>
+                                        <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mb-3">
+                                            <Heart className="w-5 h-5 text-red-500" />
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 mb-1">Laser Piles Treatment</h3>
+                                        <p className="text-gray-500 text-xs mb-3">30-min painless procedure. 24hr recovery.</p>
+                                        <ul className="space-y-1 text-xs text-gray-600">
+                                            {["No Cuts", "No Stitches", "USFDA Laser"].map(f => (
+                                                <li key={f} className="flex items-center gap-1.5">
+                                                    <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Laser Piles Treatment.")}`}
+                                            target="_blank" rel="noopener noreferrer"
+                                            className="mt-3 inline-flex items-center text-red-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
+                                            Enquire <ArrowRight className="w-3 h-3" />
+                                        </a>
+                                    </Card>
+
+                                    <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow">
+                                        <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
+                                            <Shield className="w-5 h-5 text-teal-600" />
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 mb-1">Fistula Removal</h3>
+                                        <p className="text-gray-500 text-xs mb-3">VAAFT / Laser / LIFT. No recurrence.</p>
+                                        <ul className="space-y-1 text-xs text-gray-600">
+                                            {["Permanent Cure", "Minimal Pain", "Quick Recovery"].map(f => (
+                                                <li key={f} className="flex items-center gap-1.5">
+                                                    <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Fistula Treatment.")}`}
+                                            target="_blank" rel="noopener noreferrer"
+                                            className="mt-3 inline-flex items-center text-teal-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
+                                            Enquire <ArrowRight className="w-3 h-3" />
+                                        </a>
+                                    </Card>
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* RIGHT COLUMN - Sidebar */}
@@ -419,6 +453,31 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                                     ))}
                                 </div>
                             </Card>
+
+                            {/* M2M: VISITING LOCATIONS */}
+                            {(doctor.available_locations as any[])?.length > 0 && (
+                                <Card className="p-6 border-none shadow-sm rounded-2xl">
+                                    <h3 className="font-bold text-gray-900 mb-4">Available at Locations</h3>
+                                    <div className="flex flex-col gap-3">
+                                        {(doctor.available_locations as any[]).map((loc: any) => (
+                                            <Link
+                                                key={loc.slug}
+                                                href={`/locations/${loc.slug}`}
+                                                className="flex items-center group p-3 rounded-xl bg-gray-50 hover:bg-teal-50 transition-colors"
+                                            >
+                                                <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0 mr-3 text-teal-600">
+                                                    <MapPin className="w-5 h-5" />
+                                                </div>
+                                                <div>
+                                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-teal-700">{loc.name}</p>
+                                                    <p className="text-xs text-gray-500">{loc.district}</p>
+                                                </div>
+                                                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-teal-600 ml-auto" />
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </Card>
+                            )}
 
                             {/* Departments Quick Links */}
                             <Card className="p-6 border-none shadow-sm rounded-2xl">

@@ -21,8 +21,8 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.join(__dirname, "..");
 
 const CONFIG = {
-    appDir: path.join(ROOT, "app/[locale]"),
-    blogDir: path.join(ROOT, "app/[locale]/blog"),
+    appDir: path.join(ROOT, "src/app"),
+    blogDir: path.join(ROOT, "src/app/blog"),
     extensions: [".tsx", ".ts", ".mdx", ".md"],
     outputReport: path.join(__dirname, "reports/serp-overlap-report.json"),
     outputText: path.join(__dirname, "reports/serp-overlap.txt"),

@@ -81,6 +81,9 @@ export interface Doctor {
     social_website?: string;
     accepting_new_patients?: boolean;
     sort_order?: number;
+    // M2M - API injected
+    related_services?: Service[];
+    available_locations?: Location[];
 }
 
 // ─────────────────────────────────────────
@@ -133,6 +136,14 @@ export interface Service {
     risks_list?: string[];
     duration_minutes?: number;
     sort_order?: number;
+    // M2M - API injected
+    related_doctors?: Doctor[];
+    available_locations?: Location[];
+    // Enhanced Content Fields
+    pricing?: { package_name: string; cost: string; features: string[] }[];
+    faqs?: { question: string; answer: string }[];
+    reviews?: { patient_name: string; review: string; rating: number }[];
+    technology?: { name: string; description: string; icon?: string }[];
 }
 
 // ─────────────────────────────────────────
@@ -158,6 +169,9 @@ export interface Location {
     transport_guide?: string;
     nearby_landmarks?: string[];
     sort_order?: number;
+    // M2M - API injected
+    related_doctors?: Doctor[];
+    related_services?: Service[];
 }
 
 // ─────────────────────────────────────────
@@ -302,6 +316,49 @@ export interface Post {
     tags: string[];
     seo_title?: string;
     seo_description?: string;
+
+    // M2M - API injected
+    related_doctors?: Doctor[];
+    related_services?: Service[];
+}
+
+// ─────────────────────────────────────────
+// M2M Junction Tables
+// ─────────────────────────────────────────
+export interface DoctorService {
+    id: number;
+    doctors_id: string | Doctor;
+    services_id: string | Service;
+}
+
+export interface DoctorLocation {
+    id: number;
+    doctors_id: string | Doctor;
+    locations_id: string | Location;
+}
+
+export interface ServiceLocation {
+    id: number;
+    services_id: string | Service;
+    locations_id: string | Location;
+}
+
+export interface HealthPackageService {
+    id: number;
+    health_packages_id: string | HealthPackage;
+    services_id: string | Service;
+}
+
+export interface PostDoctor {
+    id: number;
+    posts_id: string | Post;
+    doctors_id: string | Doctor;
+}
+
+export interface PostService {
+    id: number;
+    posts_id: string | Post;
+    services_id: string | Service;
 }
 
 // ─────────────────────────────────────────
@@ -321,4 +378,11 @@ export interface Schema {
     diagnostics: Diagnostic[];
     posts: Post[];
     authors: Author[];
+    // M2M Collections
+    doctors_services: DoctorService[];
+    doctors_locations: DoctorLocation[];
+    services_locations: ServiceLocation[];
+    health_packages_services: HealthPackageService[];
+    posts_doctors: PostDoctor[];
+    posts_services: PostService[];
 }

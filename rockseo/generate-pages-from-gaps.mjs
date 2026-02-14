@@ -22,82 +22,82 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.join(__dirname, "..");
 
 const CONFIG = {
-    appDir: path.join(ROOT, "app/[locale]"),
+    appDir: path.join(ROOT, "src/app"),
     outputDir: path.join(__dirname, "generated-pages"),
     outputReport: path.join(__dirname, "reports/topical-gaps-report.json"),
 
     // Complete topic taxonomy for dental clinic
     topicTaxonomy: {
-        "dental-implants": {
-            hub: "/services/dental-implants",
-            requiredSubtopics: [
-                "single tooth implant cost",
-                "all-on-4 implants guide",
-                "all-on-6 implants guide",
-                "dental implant procedure steps",
-                "dental implant recovery time",
-                "dental implant failure signs",
-                "bone grafting for implants",
-                "sinus lift before implants",
-                "immediate load implants",
-                "implant vs bridge comparison",
-                "implant aftercare instructions",
-                "dental implant pain management",
-                "zirconia vs titanium implants",
-                "implant cost in vellore",
-                "implant warranty policy"
-            ]
-        },
-        "root-canal": {
-            hub: "/services/root-canal-treatment",
-            requiredSubtopics: [
-                "single sitting root canal",
-                "root canal pain during treatment",
-                "root canal vs extraction",
-                "root canal aftercare",
-                "root canal crown needed",
-                "root canal cost breakdown",
-                "root canal failure symptoms",
-                "re-root canal treatment",
-                "apicoectomy procedure",
-                "root canal during pregnancy",
-                "root canal for children",
-                "laser root canal benefits"
-            ]
-        },
-        "orthodontics": {
-            hub: "/services/orthodontics",
-            requiredSubtopics: [
-                "metal braces guide",
-                "ceramic braces vs metal",
-                "invisalign treatment guide",
-                "braces for adults",
-                "braces age limit",
-                "braces cost in vellore",
-                "braces treatment duration",
-                "braces pain management",
-                "retainer after braces",
-                "overbite correction",
-                "underbite treatment",
-                "crossbite correction",
-                "teeth gaps treatment"
-            ]
-        },
-        "gum-treatment": {
-            hub: "/services/gum-treatment",
-            requiredSubtopics: [
-                "gingivitis treatment guide",
-                "periodontitis stages",
-                "deep cleaning scaling",
-                "laser gum treatment",
-                "gum grafting procedure",
-                "gum recession treatment",
-                "gum pocket treatment",
-                "bleeding gums causes",
-                "gum disease prevention",
-                "gum surgery recovery"
-            ]
-        },
+        // "dental-implants": {
+        //     hub: "/services/dental-implants",
+        //     requiredSubtopics: [
+        //         "single tooth implant cost",
+        //         "all-on-4 implants guide",
+        //         "all-on-6 implants guide",
+        //         "dental implant procedure steps",
+        //         "dental implant recovery time",
+        //         "dental implant failure signs",
+        //         "bone grafting for implants",
+        //         "sinus lift before implants",
+        //         "immediate load implants",
+        //         "implant vs bridge comparison",
+        //         "implant aftercare instructions",
+        //         "dental implant pain management",
+        //         "zirconia vs titanium implants",
+        //         "implant cost in vellore",
+        //         "implant warranty policy"
+        //     ]
+        // },
+        // "root-canal": {
+        //     hub: "/services/root-canal-treatment",
+        //     requiredSubtopics: [
+        //         "single sitting root canal",
+        //         "root canal pain during treatment",
+        //         "root canal vs extraction",
+        //         "root canal aftercare",
+        //         "root canal crown needed",
+        //         "root canal cost breakdown",
+        //         "root canal failure symptoms",
+        //         "re-root canal treatment",
+        //         "apicoectomy procedure",
+        //         "root canal during pregnancy",
+        //         "root canal for children",
+        //         "laser root canal benefits"
+        //     ]
+        // },
+        // "orthodontics": {
+        //     hub: "/services/orthodontics",
+        //     requiredSubtopics: [
+        //         "metal braces guide",
+        //         "ceramic braces vs metal",
+        //         "invisalign treatment guide",
+        //         "braces for adults",
+        //         "braces age limit",
+        //         "braces cost in vellore",
+        //         "braces treatment duration",
+        //         "braces pain management",
+        //         "retainer after braces",
+        //         "overbite correction",
+        //         "underbite treatment",
+        //         "crossbite correction",
+        //         "teeth gaps treatment"
+        //     ]
+        // },
+        // "gum-treatment": {
+        //     hub: "/services/gum-treatment",
+        //     requiredSubtopics: [
+        //         "gingivitis treatment guide",
+        //         "periodontitis stages",
+        //         "deep cleaning scaling",
+        //         "laser gum treatment",
+        //         "gum grafting procedure",
+        //         "gum recession treatment",
+        //         "gum pocket treatment",
+        //         "bleeding gums causes",
+        //         "gum disease prevention",
+        //         "gum surgery recovery"
+        //     ]
+        // },
         "cosmetic-dentistry": {
             hub: "/services/cosmetic-dentistry",
             requiredSubtopics: [
@@ -110,41 +110,41 @@ const CONFIG = {
                 "dental bonding vs veneers"
             ]
         },
-        "dental-crowns": {
-            hub: "/services/restorative-dentistry/dental-crowns",
-            requiredSubtopics: [
-                "zirconia crown guide",
-                "ceramic crown benefits",
-                "metal crown uses",
-                "crown vs filling",
-                "temporary crown care",
-                "crown after root canal",
-                "crown pain solutions",
-                "crown lifespan care"
-            ]
-        },
-        "tooth-extraction": {
-            hub: "/services/oral-surgery/tooth-extraction",
-            requiredSubtopics: [
-                "wisdom tooth removal guide",
-                "tooth extraction recovery",
-                "dry socket prevention",
-                "extraction aftercare",
-                "extraction vs root canal",
-                "impacted wisdom tooth"
-            ]
-        },
-        "emergency-dentistry": {
-            hub: "/services/emergency-dentistry",
-            requiredSubtopics: [
-                "dental emergency types",
-                "toothache emergency relief",
-                "broken tooth emergency",
-                "knocked out tooth guide",
-                "dental abscess emergency",
-                "swelling emergency care"
-            ]
-        }
+        // "dental-crowns": {
+        //     hub: "/services/restorative-dentistry/dental-crowns",
+        //     requiredSubtopics: [
+        //         "zirconia crown guide",
+        //         "ceramic crown benefits",
+        //         "metal crown uses",
+        //         "crown vs filling",
+        //         "temporary crown care",
+        //         "crown after root canal",
+        //         "crown pain solutions",
+        //         "crown lifespan care"
+        //     ]
+        // },
+        // "tooth-extraction": {
+        //     hub: "/services/oral-surgery/tooth-extraction",
+        //     requiredSubtopics: [
+        //         "wisdom tooth removal guide",
+        //         "tooth extraction recovery",
+        //         "dry socket prevention",
+        //         "extraction aftercare",
+        //         "extraction vs root canal",
+        //         "impacted wisdom tooth"
+        //     ]
+        // },
+        // "emergency-dentistry": {
+        //     hub: "/services/emergency-dentistry",
+        //     requiredSubtopics: [
+        //         "dental emergency types",
+        //         "toothache emergency relief",
+        //         "broken tooth emergency",
+        //         "knocked out tooth guide",
+        //         "dental abscess emergency",
+        //         "swelling emergency care"
+        //     ]
+        // }
     }
 };
 
@@ -424,7 +424,7 @@ async function main() {
         fs.mkdirSync(CONFIG.outputDir, { recursive: true });
     }
 
-    for (const missing of allMissing.slice(0, 10)) { // Limit to 10 for safety
+    for (const missing of allMissing.slice(0, 10)) { // Limit for Cosmetic
         const page = generatePageTemplate(missing.topic, missing.cluster);
 
         const outputPath = path.join(CONFIG.outputDir, `${page.slug}.tsx`);

@@ -156,6 +156,26 @@ const departmentProcedures: Record<string, string[]> = {
     ],
 };
 
+// RockSEO: Internal Links Mapping
+const relatedServicesMap: Record<string, { title: string; url: string }[]> = {
+    dental: [
+        { title: "Dental Implants", url: "/services/dental-implants" },
+        { title: "Cosmetic Dentistry", url: "/services/cosmetic-dentistry" },
+        { title: "Orthodontics", url: "/services/orthodontics" },
+        { title: "Root Canal Treatment", url: "/services/root-canal-treatment" },
+    ],
+    orthopaedics: [
+        { title: "Joint Replacement", url: "/services/joint-replacement" },
+        { title: "Spine Surgery", url: "/services/spine-surgery" },
+    ],
+    cardiology: [
+        { title: "Interventional Cardiology", url: "/services/interventional-cardiology" },
+    ],
+    "general-surgery": [
+        { title: "Laparoscopic Surgery", url: "/departments/laparoscopic-surgeries" },
+    ]
+};
+
 export function generateStaticParams() {
     return SEED_DATA.services.map((service) => ({
         slug: service.slug,
@@ -264,9 +284,10 @@ export default async function DepartmentDetailPage({
                         <h2 className="text-3xl font-bold text-gray-900 mb-6">
                             About {department.title}
                         </h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                            {department.full_description}
-                        </p>
+                        <div
+                            className="text-gray-600 text-lg leading-relaxed space-y-4"
+                            dangerouslySetInnerHTML={{ __html: department.full_description }}
+                        />
                         <p className="text-gray-600 mt-4 leading-relaxed">
                             At Indira Super Speciality Hospital, our {department.title}{" "}
                             department is equipped with state-of-the-art technology and staffed
@@ -341,6 +362,40 @@ export default async function DepartmentDetailPage({
                                         {procedure}
                                     </span>
                                 </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Related Specialized Centers (RockSEO Internal Linking) */}
+            {relatedServicesMap[slug] && (
+                <section className="bg-purple-50 py-16">
+                    <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                        <SectionHeader
+                            title="Specialized Centers"
+                            subtitle="Advanced Care"
+                            description={`Explore our specialized centers of excellence within ${department.title}.`}
+                        />
+                        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {relatedServicesMap[slug].map((service) => (
+                                <Link
+                                    key={service.url}
+                                    href={service.url}
+                                    className="flex items-center p-6 bg-white rounded-xl shadow-sm border border-purple-100 hover:shadow-md hover:border-purple-300 transition-all group"
+                                >
+                                    <div className="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                                        <Activity className="h-6 w-6 text-purple-600 group-hover:text-white" />
+                                    </div>
+                                    <div className="ml-4">
+                                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-700">
+                                            {service.title}
+                                        </h3>
+                                        <span className="text-sm text-purple-600 group-hover:underline">
+                                            Learn more &rarr;
+                                        </span>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

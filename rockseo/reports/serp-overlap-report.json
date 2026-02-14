@@ -1,0 +1,361 @@
+{
+  "timestamp": "2026-02-14T15:16:20.337Z",
+  "pagesAnalyzed": 24,
+  "highOverlaps": [
+    {
+      "page1": "/services/dental-implants/all-on-4-implants-guide",
+      "page2": "/services/dental-implants/all-on-6-implants-guide",
+      "title1": "All-on-4 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "All-on-6 Implants Guide | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 101,
+      "action": "MERGE",
+      "reason": "Near-identical titles - combine into single comprehensive page",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-4-implants-guide",
+      "page2": "/services/dental-implants/bone-grafting-for-implants",
+      "title1": "All-on-4 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Bone Grafting For Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 92,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-4-implants-guide",
+      "page2": "/services/dental-implants/dental-implant-failure-signs",
+      "title1": "All-on-4 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 80,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-4-implants-guide",
+      "page2": "/services/dental-implants/immediate-load-implants",
+      "title1": "All-on-4 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Immediate Load Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 92,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-4-implants-guide",
+      "page2": "/services/dental-implants/implant-vs-bridge-comparison",
+      "title1": "All-on-4 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Implant Vs Bridge Comparison | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 84,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-4-implants-guide",
+      "page2": "/services/dental-implants/sinus-lift-before-implants",
+      "title1": "All-on-4 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Sinus Lift Before Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 87,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-6-implants-guide",
+      "page2": "/services/dental-implants/bone-grafting-for-implants",
+      "title1": "All-on-6 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Bone Grafting For Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 92,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-6-implants-guide",
+      "page2": "/services/dental-implants/dental-implant-failure-signs",
+      "title1": "All-on-6 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 80,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-6-implants-guide",
+      "page2": "/services/dental-implants/immediate-load-implants",
+      "title1": "All-on-6 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Immediate Load Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 92,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-6-implants-guide",
+      "page2": "/services/dental-implants/implant-vs-bridge-comparison",
+      "title1": "All-on-6 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Implant Vs Bridge Comparison | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 84,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/all-on-6-implants-guide",
+      "page2": "/services/dental-implants/sinus-lift-before-implants",
+      "title1": "All-on-6 Implants Guide | Indira Dental Clinic Vellore",
+      "title2": "Sinus Lift Before Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 87,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/bone-grafting-for-implants",
+      "page2": "/services/dental-implants/dental-implant-failure-signs",
+      "title1": "Bone Grafting For Implants | Indira Dental Clinic Vellore",
+      "title2": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 80,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/bone-grafting-for-implants",
+      "page2": "/services/dental-implants/immediate-load-implants",
+      "title1": "Bone Grafting For Implants | Indira Dental Clinic Vellore",
+      "title2": "Immediate Load Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 93,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/bone-grafting-for-implants",
+      "page2": "/services/dental-implants/implant-vs-bridge-comparison",
+      "title1": "Bone Grafting For Implants | Indira Dental Clinic Vellore",
+      "title2": "Implant Vs Bridge Comparison | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 84,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/bone-grafting-for-implants",
+      "page2": "/services/dental-implants/sinus-lift-before-implants",
+      "title1": "Bone Grafting For Implants | Indira Dental Clinic Vellore",
+      "title2": "Sinus Lift Before Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 88,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-failure-signs",
+      "page2": "/services/dental-implants/immediate-load-implants",
+      "title1": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "title2": "Immediate Load Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 87,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-failure-signs",
+      "page2": "/services/dental-implants/implant-vs-bridge-comparison",
+      "title1": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "title2": "Implant Vs Bridge Comparison | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 95,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-failure-signs",
+      "page2": "/services/dental-implants/sinus-lift-before-implants",
+      "title1": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "title2": "Sinus Lift Before Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 87,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/immediate-load-implants",
+      "page2": "/services/dental-implants/implant-vs-bridge-comparison",
+      "title1": "Immediate Load Implants | Indira Dental Clinic Vellore",
+      "title2": "Implant Vs Bridge Comparison | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 84,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/immediate-load-implants",
+      "page2": "/services/dental-implants/sinus-lift-before-implants",
+      "title1": "Immediate Load Implants | Indira Dental Clinic Vellore",
+      "title2": "Sinus Lift Before Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 87,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    },
+    {
+      "page1": "/services/dental-implants/implant-vs-bridge-comparison",
+      "page2": "/services/dental-implants/sinus-lift-before-implants",
+      "title1": "Implant Vs Bridge Comparison | Indira Dental Clinic Vellore",
+      "title2": "Sinus Lift Before Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 80,
+      "action": "DIFFERENTIATE",
+      "reason": "Same topic, high content overlap - add unique angles",
+      "priority": "high"
+    }
+  ],
+  "mediumOverlaps": [
+    {
+      "page1": "/services/dental-implants/dental-implant-failure-signs",
+      "page2": "/services/dental-implants/dental-implant-procedure-steps",
+      "title1": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "title2": "Dental Implant Procedure Steps | Painless 3-Step Process | Indira Dental",
+      "topic": "dental-implants",
+      "similarity": 58,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-failure-signs",
+      "page2": "/services/dental-implants/dental-implant-recovery-time",
+      "title1": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "title2": "Dental Implant Recovery Time | What to Expect | Indira Dental",
+      "topic": "dental-implants",
+      "similarity": 52,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-failure-signs",
+      "page2": "/services/dental-implants/single-tooth-implant-cost",
+      "title1": "Dental Implant Failure Signs | Indira Dental Clinic Vellore",
+      "title2": "Single Tooth Implant Cost in Vellore | INR 20,000 - INR 35,000 | Indira Dental",
+      "topic": "dental-implants",
+      "similarity": 55,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-procedure-steps",
+      "page2": "/services/dental-implants/dental-implant-recovery-time",
+      "title1": "Dental Implant Procedure Steps | Painless 3-Step Process | Indira Dental",
+      "title2": "Dental Implant Recovery Time | What to Expect | Indira Dental",
+      "topic": "dental-implants",
+      "similarity": 57,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-procedure-steps",
+      "page2": "/services/dental-implants/immediate-load-implants",
+      "title1": "Dental Implant Procedure Steps | Painless 3-Step Process | Indira Dental",
+      "title2": "Immediate Load Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 51,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-procedure-steps",
+      "page2": "/services/dental-implants/implant-vs-bridge-comparison",
+      "title1": "Dental Implant Procedure Steps | Painless 3-Step Process | Indira Dental",
+      "title2": "Implant Vs Bridge Comparison | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 58,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-procedure-steps",
+      "page2": "/services/dental-implants/single-tooth-implant-cost",
+      "title1": "Dental Implant Procedure Steps | Painless 3-Step Process | Indira Dental",
+      "title2": "Single Tooth Implant Cost in Vellore | INR 20,000 - INR 35,000 | Indira Dental",
+      "topic": "dental-implants",
+      "similarity": 58,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-procedure-steps",
+      "page2": "/services/dental-implants/sinus-lift-before-implants",
+      "title1": "Dental Implant Procedure Steps | Painless 3-Step Process | Indira Dental",
+      "title2": "Sinus Lift Before Implants | Indira Dental Clinic Vellore",
+      "topic": "dental-implants",
+      "similarity": 51,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    },
+    {
+      "page1": "/services/dental-implants/dental-implant-recovery-time",
+      "page2": "/services/dental-implants/single-tooth-implant-cost",
+      "title1": "Dental Implant Recovery Time | What to Expect | Indira Dental",
+      "title2": "Single Tooth Implant Cost in Vellore | INR 20,000 - INR 35,000 | Indira Dental",
+      "topic": "dental-implants",
+      "similarity": 51,
+      "action": "MONITOR",
+      "reason": "Moderate overlap - ensure distinct value propositions",
+      "priority": "low"
+    }
+  ],
+  "topicClusters": {
+    "emergency-dentistry": [
+      "/contact",
+      "/locations",
+      "",
+      "/services",
+      "/terms",
+      "/treatments/piles-treatment-vellore"
+    ],
+    "dental-implants": [
+      "/services/dental-implants/all-on-4-implants-guide",
+      "/services/dental-implants/all-on-6-implants-guide",
+      "/services/dental-implants/bone-grafting-for-implants",
+      "/services/dental-implants/dental-implant-failure-signs",
+      "/services/dental-implants/dental-implant-procedure-steps",
+      "/services/dental-implants/dental-implant-recovery-time",
+      "/services/dental-implants/immediate-load-implants",
+      "/services/dental-implants/implant-vs-bridge-comparison",
+      "/services/dental-implants/single-tooth-implant-cost",
+      "/services/dental-implants/sinus-lift-before-implants"
+    ]
+  },
+  "recommendations": []
+}

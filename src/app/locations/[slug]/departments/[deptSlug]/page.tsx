@@ -126,7 +126,10 @@ export default async function LocationDepartmentPage({ params }: { params: Promi
                             <h2 className="text-xl font-bold text-gray-900 mb-4">
                                 {dept.title} Treatment for {location.name} Patients
                             </h2>
-                            <p className="text-gray-600 leading-relaxed">{dept.full_description}</p>
+                            <div
+                                className="text-gray-600 leading-relaxed space-y-4"
+                                dangerouslySetInnerHTML={{ __html: dept.full_description }}
+                            />
                             <p className="text-gray-600 leading-relaxed mt-4">
                                 Patients from {location.name} and surrounding areas can reach Indira Hospital in approximately {location.travelTime}.
                                 We offer comprehensive {dept.title} care with state-of-the-art technology and experienced specialists.

@@ -1,12 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { getServiceBySlug } from "@/lib/api";
 import { SEED_DATA } from "@/lib/data/seed-data";
 import { getImageUrl } from "@/lib/utils";
 import {
     ChevronRight, CheckCircle2, Stethoscope, Heart, Activity, Baby,
     Siren, Smile, Brain, Ribbon, Droplets, MessageCircle, Phone, Award,
-    Users, Clock, Shield, Star, MapPin, Zap, ArrowRight, GraduationCap
+    Users, Clock, Shield, Star, MapPin, Zap, ArrowRight, GraduationCap,
+    Banknote, HelpCircle, Quote, Info
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -43,6 +45,26 @@ const serviceProcedures: Record<string, string[]> = {
     nephrology: ["Dialysis Services", "Chronic Kidney Disease", "Kidney Stone Management", "Hypertension Treatment", "Electrolyte Disorders", "Pre-Transplant Evaluation", "Glomerulonephritis Care", "Diabetic Nephropathy"],
 };
 
+// RockSEO Guides Map
+const rockseoGuides: Record<string, { title: string; url: string; description?: string }[]> = {
+    "dental-implants": [
+        { title: "Single Tooth Implant Cost", url: "/services/dental-implants/single-tooth-implant-cost", description: "Detailed cost breakdown in Vellore" },
+        { title: "All-on-4 Implants Guide", url: "/services/dental-implants/all-on-4-implants-guide", description: "Full mouth fixed teeth in 3 days" },
+        { title: "Procedure Steps", url: "/services/dental-implants/dental-implant-procedure-steps", description: "Step-by-step guide to surgery" },
+        { title: "Recovery Time", url: "/services/dental-implants/dental-implant-recovery-time", description: "Healing timeline and tips" },
+    ],
+    "root-canal-treatment": [
+        { title: "Single Sitting Root Canal", url: "/services/root-canal-treatment/single-sitting-root-canal", description: "Painless treatment in 60 mins" },
+    ],
+    "orthodontics": [
+        { title: "Invisalign Treatment Guide", url: "/services/orthodontics/invisalign-treatment-guide", description: "Clear aligners cost and process" },
+    ],
+    "cosmetic-dentistry": [
+        { title: "Teeth Whitening Guide", url: "/services/cosmetic-dentistry/teeth-whitening-guide", description: "Laser whitening cost & details" },
+        { title: "Dental Veneers Types", url: "/services/cosmetic-dentistry/dental-veneers-types", description: "Ceramic vs Composite Veneers" },
+    ]
+};
+
 export function generateStaticParams() {
     return SEED_DATA.services.map((service) => ({ slug: service.slug }));
 }
@@ -54,27 +76,40 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     return {
         title: `${service.title} - Best ${service.title} Treatment in Vellore | Indira Hospital`,
-        description: `${service.full_description} Book appointment on WhatsApp for ${service.title} at Indira Super Speciality Hospital, Vellore. Best hospital for Laparoscopic Surgery, Laser Piles, Fistula.`,
+        description: `${service.full_description?.substring(0, 160) || service.short_description} Book appointment on WhatsApp at Indira Super Speciality Hospital, Vellore.`,
         keywords: [service.title, "Vellore", "Indira Hospital", "best hospital", "treatment", "surgery"],
     };
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const service = SEED_DATA.services.find((s) => s.slug === slug);
+
+    // Use API with fallback
+    let service = await getServiceBySlug(slug).catch(() => null);
+    if (!service) {
+        service = SEED_DATA.services.find((s) => s.slug === slug) as any;
+    }
+
     if (!service) notFound();
 
     const procedures = serviceProcedures[slug] || [];
-    const relatedDoctors = SEED_DATA.doctors.filter(
-        (d) => {
-            const dept = typeof d.department === 'string' ? d.department : (d.department as any)?.name || '';
-            return dept.toLowerCase() === service.title.toLowerCase() ||
-                d.specialties.some(s =>
-                    service.title.toLowerCase().includes(s.toLowerCase()) ||
-                    s.toLowerCase().includes(service.title.toLowerCase())
-                );
-        }
-    );
+    const guides = rockseoGuides[slug] || [];
+
+    // Use M2M related doctors if available, else fallback to seed logic
+    let relatedDoctors = (service.related_doctors as any[]) || [];
+
+    if (relatedDoctors.length === 0) {
+        relatedDoctors = SEED_DATA.doctors.filter(
+            (d) => {
+                const dept = typeof d.department === 'string' ? d.department : (d.department as any)?.name || '';
+                return dept.toLowerCase() === service!.title.toLowerCase() ||
+                    d.specialties.some(s =>
+                        service!.title.toLowerCase().includes(s.toLowerCase()) ||
+                        s.toLowerCase().includes(service!.title.toLowerCase())
+                    );
+            }
+        ) as any;
+    }
     const otherServices = SEED_DATA.services.filter((s) => s.slug !== slug);
 
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
@@ -153,6 +188,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <MapPin className="w-5 h-5 text-amber-400" />
                                     <span className="text-sm font-medium">Indira Hospital, Vellore</span>
                                 </div>
+                                {/* M2M: Locations Count */}
+                                {(service.available_locations as any[])?.length > 0 && (
+                                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                                        <MapPin className="w-5 h-5 text-amber-400" />
+                                        <span className="text-sm font-medium">Available at {(service.available_locations as any[]).length} Locations</span>
+                                    </div>
+                                )}
                             </div>
 
                             {/* CTA Buttons */}
@@ -186,12 +228,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 </span>
                                 About {service.title}
                             </h2>
-                            <p className="text-gray-600 leading-relaxed text-base">{service.full_description}</p>
-                            <p className="text-gray-600 leading-relaxed mt-4">
-                                At Indira Super Speciality Hospital, our {service.title} department is equipped with state-of-the-art
-                                technology and staffed by experienced specialists dedicated to providing the highest quality care.
-                                We follow evidence-based treatment protocols to ensure optimal patient outcomes.
-                            </p>
+                            {/* Rich Text Rendering */}
+                            <div className="text-gray-600 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: service.full_description }} />
+
                             <div className="mt-6 p-4 bg-purple-50 rounded-xl">
                                 <p className="text-sm text-gray-700">
                                     Also visit our{" "}
@@ -202,6 +241,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 </p>
                             </div>
                         </Card>
+
 
                         {/* Procedures Grid */}
                         {procedures.length > 0 && (
@@ -218,6 +258,139 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                             <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                                             <span className="text-gray-700 group-hover:text-purple-800 font-medium text-sm">{proc}</span>
                                         </div>
+                                    ))}
+                                </div>
+                            </Card>
+                        )}
+
+                        {/* Technology Section */}
+                        {service.technology && service.technology.length > 0 && (
+                            <Card className="p-8 border-none shadow-sm rounded-2xl">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-indigo-100 p-2 rounded-lg mr-3 text-indigo-600">
+                                        <Zap className="w-5 h-5" />
+                                    </span>
+                                    Advanced Technology
+                                </h2>
+                                <div className="grid gap-4">
+                                    {service.technology.map((tech: any, index: number) => (
+                                        <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-indigo-50/50 border border-indigo-100">
+                                            <div className="bg-white p-2 rounded-lg shadow-sm text-indigo-600">
+                                                {iconMap[tech.icon] || <Zap className="w-5 h-5" />}
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold text-gray-900">{tech.name}</h3>
+                                                <p className="text-sm text-gray-600 mt-1">{tech.description}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Card>
+                        )}
+
+                        {/* Pricing Section */}
+                        {service.pricing && service.pricing.length > 0 && (
+                            <Card className="p-8 border-none shadow-sm rounded-2xl bg-gradient-to-br from-gray-50 to-white">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-green-100 p-2 rounded-lg mr-3 text-green-600">
+                                        <Banknote className="w-5 h-5" />
+                                    </span>
+                                    Treatment Packages & Cost
+                                </h2>
+                                <div className="grid sm:grid-cols-2 gap-4">
+                                    {service.pricing.map((pkg: any, index: number) => (
+                                        <div key={index} className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                            <h3 className="font-bold text-gray-900 mb-2">{pkg.package_name}</h3>
+                                            <div className="text-2xl font-bold text-green-600 mb-3">{pkg.cost}</div>
+                                            <ul className="space-y-2 mb-4">
+                                                {pkg.features.map((feat: string, i: number) => (
+                                                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
+                                                        <CheckCircle2 className="w-3.5 h-3.5 text-green-500 mt-0.5 flex-shrink-0" />
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                            <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I am interested in the ${pkg.package_name} for ${service.title}.`)}`}
+                                                target="_blank" rel="noopener noreferrer"
+                                                className="block w-full text-center py-2 rounded-lg bg-green-50 text-green-700 text-sm font-semibold hover:bg-green-100 transition-colors">
+                                                Get Quote
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p className="text-xs text-gray-400 mt-4 text-center">* Prices are indicative and may vary based on patient condition and room choice.</p>
+                            </Card>
+                        )}
+
+                        {/* Reviews Section */}
+                        {service.reviews && service.reviews.length > 0 && (
+                            <Card className="p-8 border-none shadow-sm rounded-2xl">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-yellow-100 p-2 rounded-lg mr-3 text-yellow-600">
+                                        <Star className="w-5 h-5" />
+                                    </span>
+                                    Patient Stories
+                                </h2>
+                                <div className="grid gap-4">
+                                    {service.reviews.map((review: any, index: number) => (
+                                        <div key={index} className="p-5 bg-gray-50 rounded-2xl relative">
+                                            <Quote className="absolute top-4 right-4 w-8 h-8 text-gray-200" />
+                                            <div className="flex items-center gap-1 mb-2">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
+                                                ))}
+                                            </div>
+                                            <p className="text-gray-700 italic mb-3 relative z-10">"{review.review}"</p>
+                                            <div className="font-semibold text-gray-900 text-sm">- {review.patient_name}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Card>
+                        )}
+
+                        {/* FAQs Section */}
+                        {service.faqs && service.faqs.length > 0 && (
+                            <Card className="p-8 border-none shadow-sm rounded-2xl">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-blue-100 p-2 rounded-lg mr-3 text-blue-600">
+                                        <HelpCircle className="w-5 h-5" />
+                                    </span>
+                                    Frequently Asked Questions
+                                </h2>
+                                <div className="space-y-4">
+                                    {service.faqs.map((faq: any, index: number) => (
+                                        <details key={index} className="group bg-gray-50 rounded-xl overflow-hidden">
+                                            <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-gray-900 group-hover:text-purple-700 transition-colors">
+                                                {faq.question}
+                                                <ChevronRight className="w-4 h-4 text-gray-400 transition-transform group-open:rotate-90" />
+                                            </summary>
+                                            <div className="px-4 pb-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                                                {faq.answer}
+                                            </div>
+                                        </details>
+                                    ))}
+                                </div>
+                            </Card>
+                        )}
+
+                        {/* RockSEO Guides Section */}
+                        {guides.length > 0 && (
+                            <Card className="p-8 border-none shadow-sm rounded-2xl bg-amber-50/50">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-amber-100 p-2 rounded-lg mr-3 text-amber-600">
+                                        <GraduationCap className="w-5 h-5" />
+                                    </span>
+                                    Patient Guides & Cost Info
+                                </h2>
+                                <div className="grid sm:grid-cols-2 gap-4">
+                                    {guides.map((guide) => (
+                                        <Link key={guide.url} href={guide.url} className="group p-4 bg-white rounded-xl border border-amber-100 hover:border-amber-300 hover:shadow-md transition-all">
+                                            <h3 className="font-bold text-gray-900 group-hover:text-amber-700 mb-1 flex items-center justify-between">
+                                                {guide.title}
+                                                <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-amber-600 opacity-0 group-hover:opacity-100 transition-all" />
+                                            </h3>
+                                            {guide.description && <p className="text-xs text-gray-500">{guide.description}</p>}
+                                        </Link>
                                     ))}
                                 </div>
                             </Card>
@@ -240,7 +413,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                                 {doc.image && getImageUrl(doc.image) ? (
                                                     <img src={getImageUrl(doc.image)!} alt={doc.name} className="w-full h-full object-cover" />
                                                 ) : (
-                                                    <span className="text-purple-700 font-bold text-lg">{doc.name.split(' ').map(n => n[0]).join('').slice(0, 2)}</span>
+                                                    <span className="text-purple-700 font-bold text-lg">{doc.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}</span>
                                                 )}
                                             </div>
                                             <div className="min-w-0">
@@ -322,6 +495,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
                     {/* RIGHT SIDEBAR */}
                     <div className="lg:col-span-1 space-y-6">
+
                         <div className="lg:sticky lg:top-24 space-y-6">
                             {/* Book Appointment */}
                             <Card className="p-6 border-none shadow-lg rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50">
@@ -343,6 +517,31 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     </a>
                                 </div>
                             </Card>
+
+                            {/* M2M: AVAILABLE LOCATIONS */}
+                            {(service.available_locations as any[])?.length > 0 && (
+                                <Card className="p-6 border-none shadow-sm rounded-2xl">
+                                    <h3 className="font-bold text-gray-900 mb-4">Available at Locations</h3>
+                                    <div className="flex flex-col gap-3">
+                                        {(service.available_locations as any[]).map((loc: any) => (
+                                            <Link
+                                                key={loc.slug}
+                                                href={`/locations/${loc.slug}`}
+                                                className="flex items-center group p-3 rounded-xl bg-gray-50 hover:bg-purple-50 transition-colors"
+                                            >
+                                                <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mr-3 text-purple-600">
+                                                    <MapPin className="w-5 h-5" />
+                                                </div>
+                                                <div>
+                                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-purple-700">{loc.name}</p>
+                                                    <p className="text-xs text-gray-500">{loc.district}</p>
+                                                </div>
+                                                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 ml-auto" />
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </Card>
+                            )}
 
                             {/* Hospital Highlights */}
                             <Card className="p-6 border-none shadow-sm rounded-2xl">

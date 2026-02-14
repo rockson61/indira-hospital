@@ -113,7 +113,10 @@ export default async function DeptLocationPage({ params }: { params: Promise<{ s
                     <div className="lg:col-span-2 space-y-8">
                         <Card className="p-8 border-none shadow-sm rounded-2xl">
                             <h2 className="text-xl font-bold text-gray-900 mb-4">{dept.title} for {location.name} Patients</h2>
-                            <p className="text-gray-600 leading-relaxed">{dept.full_description}</p>
+                            <div
+                                className="text-gray-600 leading-relaxed space-y-4"
+                                dangerouslySetInnerHTML={{ __html: dept.full_description }}
+                            />
                             <p className="text-gray-600 leading-relaxed mt-4">
                                 Patients from {location.name} can reach Indira Hospital in approximately {location.travelTime}.
                             </p>
