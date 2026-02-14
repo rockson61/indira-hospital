@@ -60,6 +60,7 @@ export function Header() {
             name: "Patients", submenu: [
                 { name: "Book Appointment", url: "/book-appointment", description: "Schedule your visit." },
                 { name: "Insurance", url: "/patients/insurance", description: "Tax & Insurance info." },
+                { name: "Medical Glossary", url: "/glossary", description: "A-Z Guide to Medical Terms." },
             ]
         },
         { name: "Contact", url: "/contact" }

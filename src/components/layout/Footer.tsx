@@ -2,74 +2,140 @@
 
 import React from "react";
 import Link from "next/link";
-import { Phone, MessageCircle, MapPin } from "lucide-react";
-
+import { Phone, MessageCircle, MapPin, Facebook, Instagram, Twitter, Linkedin, Youtube, ChevronDown } from "lucide-react";
 import { clinicConfig } from "@/lib/data/clinic-config";
+import { FOOTER_LINKS } from "@/lib/data/footer-links";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export function Footer() {
     const whatsappUrl = `https://wa.me/${clinicConfig.phone ? clinicConfig.phone.replace(/\D/g, '') : ''}`;
     const address = clinicConfig.address;
     const phone = clinicConfig.phone;
 
-    return (
-        <footer className="clay-card mx-4 mb-4 mt-12" role="contentinfo">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Company Info */}
-                    <div className="lg:col-span-1 space-y-4">
-                        <Link href="/" className="flex items-center space-x-3 group" aria-label="Indira Hospital Home">
-                            <span className="text-xl font-bold gradient-text text-purple-800">Indira Hospital</span>
+    const currentYear = new Date().getFullYear();
+
+    const FooterColumn = ({ title, links }: { title: string, links: { name: string, url: string }[] }) => (
+        <div className="space-y-4">
+            <h5 className="font-bold text-gray-900 text-sm uppercase tracking-wider">{title}</h5>
+            <ul className="space-y-2">
+                {links.map((link) => (
+                    <li key={link.name}>
+                        <Link href={link.url} className="text-xs text-gray-600 hover:text-purple-700 transition-colors block leading-relaxed hover:underline decoration-purple-200 underline-offset-2">
+                            {link.name}
                         </Link>
-                        <p className="text-sm text-gray-600 leading-relaxed">
-                            {clinicConfig.name} is your premier healthcare destination in Vellore. We offer world-class medical services with a focus on patient care and advanced technology.
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+
+    return (
+        <footer className="bg-gray-50 pt-16 pb-8 border-t border-gray-200 mt-12" role="contentinfo">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                {/* Mobile Accordion View */}
+                <div className="lg:hidden mb-12">
+                    <div className="mb-8">
+                        <Link href="/" className="flex items-center space-x-2 mb-4">
+                            <img src="/logo.png" alt="Indira Hospital Logo" className="h-10 w-auto" />
+                        </Link>
+                        <p className="text-sm text-gray-600 mb-6">
+                            Indira Super Speciality Hospital is a leading healthcare provider in Vellore, dedicated to clinical excellence and patient care.
                         </p>
-                        <address className="flex items-start space-x-3 not-italic">
-                            <MapPin className="w-4 h-4 text-purple-700 mt-1 flex-shrink-0" aria-hidden="true" />
-                            <p className="text-sm text-gray-600 leading-relaxed">{address}</p>
-                        </address>
-                        <div className="flex items-center space-x-3 text-sm text-gray-600">
-                            <Phone className="w-4 h-4 text-purple-700" aria-hidden="true" />
-                            <a href={`tel:${phone}`} className="hover:text-purple-700 transition-colors" aria-label="Call Indira Hospital">{phone}</a>
+                        <div className="flex space-x-4 mb-6">
+                            <SocialLink icon={Facebook} href="#" />
+                            <SocialLink icon={Instagram} href="#" />
+                            <SocialLink icon={Twitter} href="#" />
+                            <SocialLink icon={Linkedin} href="#" />
+                            <SocialLink icon={Youtube} href="#" />
                         </div>
-                        <div className="flex items-center space-x-4 pt-2">
-                            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-sm text-gray-600 hover:text-purple-700 transition-colors" aria-label="WhatsApp Indira Hospital">
-                                <MessageCircle className="w-4 h-4" />
-                                <span>WhatsApp</span>
+                    </div>
+
+                    <Accordion type="single" collapsible className="w-full space-y-2">
+                        <FooterAccordionItem title="Medical Specialties" links={FOOTER_LINKS.medicalServices} />
+                        <FooterAccordionItem title="Treatments & Procedures" links={FOOTER_LINKS.procedures} />
+                        <FooterAccordionItem title="Health Library (Symptoms)" links={FOOTER_LINKS.healthLibrary} />
+                        <FooterAccordionItem title="Advanced Technology" links={FOOTER_LINKS.technology} />
+                        <FooterAccordionItem title="Our Locations" links={FOOTER_LINKS.locations} />
+                    </Accordion>
+                </div>
+
+                {/* Desktop Grid View */}
+                <div className="hidden lg:grid grid-cols-5 gap-8 mb-16">
+                    <div className="col-span-1 space-y-6">
+                        <Link href="/" className="block">
+                            <span className="text-2xl font-bold gradient-text text-purple-800">Indira Hospital</span>
+                        </Link>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                            Trusted by 1 Lakh+ patients for over 25 years. We combine medical expertise with compassionate care.
+                        </p>
+                        <div className="flex space-x-3">
+                            <SocialLink icon={Facebook} href="#" />
+                            <SocialLink icon={Instagram} href="#" />
+                            <SocialLink icon={Youtube} href="#" />
+                        </div>
+                        <div className="pt-4 space-y-3">
+                            <a href={`tel:${phone}`} className="flex items-center space-x-2 text-sm font-semibold text-gray-800 hover:text-purple-700">
+                                <Phone className="w-4 h-4" /> <span>{phone}</span>
+                            </a>
+                            <a href={whatsappUrl} className="flex items-center space-x-2 text-sm font-semibold text-green-600 hover:text-green-700">
+                                <MessageCircle className="w-4 h-4" /> <span>WhatsApp Us</span>
                             </a>
                         </div>
                     </div>
 
-                    {/* Departments */}
-                    <nav aria-label="Departments">
-                        <h5 className="font-semibold text-gray-800 mb-4">Departments</h5>
-                        <ul className="space-y-2" role="list">
-                            <li role="listitem"><Link href="/departments/cardiology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Cardiology</Link></li>
-                            <li role="listitem"><Link href="/departments/neurology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Neurology</Link></li>
-                            <li role="listitem"><Link href="/departments/orthopaedics" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Orthopaedics</Link></li>
-                            <li role="listitem"><Link href="/departments/gastroenterology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Gastroenterology</Link></li>
-                            <li role="listitem"><Link href="/departments/oncology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Oncology</Link></li>
-                            <li role="listitem"><Link href="/departments/urology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Urology</Link></li>
-                            <li role="listitem"><Link href="/departments/nephrology" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Nephrology</Link></li>
-                            <li role="listitem"><Link href="/departments/dental" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Dental</Link></li>
-                        </ul>
-                    </nav>
-
-                    {/* Quick Links */}
-                    <nav aria-label="Quick Links">
-                        <h5 className="font-semibold text-gray-800 mb-4">Quick Links</h5>
-                        <ul className="space-y-2" role="list">
-                            <li role="listitem"><Link href="/about" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">About Us</Link></li>
-                            <li role="listitem"><Link href="/doctors" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Our Doctors</Link></li>
-                            <li role="listitem"><Link href="/contact" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Contact Us</Link></li>
-                            <li role="listitem"><Link href="/patients/insurance" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Insurance</Link></li>
-                            <li role="listitem"><Link href="/blog" className="text-sm text-gray-600 hover:text-purple-700 transition-colors">Health Blog</Link></li>
-                        </ul>
-                    </nav>
+                    <FooterColumn title="Medical Specialties" links={FOOTER_LINKS.medicalServices} />
+                    <FooterColumn title="Treatments" links={FOOTER_LINKS.procedures} />
+                    <FooterColumn title="Health Library" links={FOOTER_LINKS.healthLibrary} />
+                    <div className="space-y-8">
+                        <FooterColumn title="Technology" links={FOOTER_LINKS.technology} />
+                        <FooterColumn title="Locations" links={FOOTER_LINKS.locations} />
+                    </div>
                 </div>
-                <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">
-                    &copy; {new Date().getFullYear()} Indira Super Speciality Hospital. All rights reserved.
+
+                {/* Bottom Bar */}
+                <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                    <div>
+                        &copy; {currentYear} Indira Super Speciality Hospital. All rights reserved.
+                    </div>
+                    <div className="flex space-x-6">
+                        <Link href="/privacy-policy" className="hover:text-purple-700">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:text-purple-700">Terms of Service</Link>
+                        <Link href="/sitemap.xml" className="hover:text-purple-700">Sitemap</Link>
+                        <Link href="/glossary" className="hover:text-purple-700 font-medium text-purple-600">Medical Glossary</Link>
+                    </div>
                 </div>
             </div>
         </footer>
     );
 }
+
+const SocialLink = ({ icon: Icon, href }: { icon: React.ElementType, href: string }) => (
+    <a href={href} className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-purple-100 hover:text-purple-700 transition-colors">
+        <Icon className="w-4 h-4" />
+    </a>
+);
+
+const FooterAccordionItem = ({ title, links }: { title: string, links: { name: string, url: string }[] }) => (
+    <AccordionItem value={title} className="border-b border-gray-200 last:border-0">
+        <AccordionTrigger className="text-sm font-semibold text-gray-800 hover:text-purple-700 py-3">
+            {title}
+        </AccordionTrigger>
+        <AccordionContent>
+            <ul className="space-y-2 pb-4 pl-1">
+                {links.map((link) => (
+                    <li key={link.name}>
+                        <Link href={link.url} className="text-sm text-gray-600 hover:text-purple-700 block">
+                            {link.name}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+);
