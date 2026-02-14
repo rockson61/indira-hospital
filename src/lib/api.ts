@@ -77,3 +77,11 @@ export async function getInsurances() {
         sort: ['tier'] // Gold first usually if alphabetical, but better to sort by a rank or just use tier
     }));
 }
+
+export async function getLocations() {
+    const client = await getDirectusClient();
+    return await client.request(readItems('locations', {
+        filter: { status: { _eq: 'published' } },
+        fields: ['name', 'slug', 'district', 'distance_from_hospital', 'address', 'phone'],
+    }));
+}

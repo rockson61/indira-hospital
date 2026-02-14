@@ -1,22 +1,48 @@
 import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
+import { getLocations } from "@/lib/api";
+import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 
-const topLocations = [
-    { name: "Chennai", slug: "chennai", distance: "135 km" },
-    { name: "Ambur", slug: "ambur", distance: "25 km" },
-    { name: "Ranipet", slug: "ranipet", distance: "30 km" },
-    { name: "Vaniyambadi", slug: "vaniyambadi", distance: "35 km" },
-    { name: "Tiruvannamalai", slug: "tiruvannamalai", distance: "60 km" },
-    { name: "Villupuram", slug: "villupuram", distance: "120 km" },
-    { name: "Kanchipuram", slug: "kanchipuram", distance: "90 km" },
-    { name: "Tindivanam", slug: "tindivanam", distance: "135 km" },
-    { name: "Krishnagiri", slug: "krishnagiri", distance: "80 km" },
-    { name: "Dharmapuri", slug: "dharmapuri", distance: "120 km" },
-    { name: "Salem", slug: "salem", distance: "145 km" },
-    { name: "Bengaluru", slug: "bengaluru", distance: "200 km" },
-];
+export async function LocationStrip() {
+    let locations: { name: string; slug: string; distance?: string }[] = [];
 
-export function LocationStrip() {
+    try {
+        const cmsLocations = await getLocations().catch(() => []);
+        if (cmsLocations.length > 0) {
+            locations = cmsLocations.map((loc: any) => ({
+                name: loc.name,
+                slug: loc.slug,
+                distance: loc.distance_from_hospital || "",
+            }));
+        }
+    } catch {
+        // CMS unavailable
+    }
+
+    // Fallback to local Tamil Nadu location data
+    if (!locations.length && tamilNaduLocations?.length) {
+        locations = tamilNaduLocations.slice(0, 12).map((loc: any) => ({
+            name: loc.name || loc.city,
+            slug: loc.slug,
+            distance: loc.distance || loc.distance_from_hospital || "",
+        }));
+    }
+
+    // Ultimate fallback
+    if (!locations.length) {
+        locations = [
+            { name: "Chennai", slug: "chennai", distance: "135 km" },
+            { name: "Ambur", slug: "ambur", distance: "25 km" },
+            { name: "Ranipet", slug: "ranipet", distance: "30 km" },
+            { name: "Vaniyambadi", slug: "vaniyambadi", distance: "35 km" },
+            { name: "Tiruvannamalai", slug: "tiruvannamalai", distance: "60 km" },
+            { name: "Krishnagiri", slug: "krishnagiri", distance: "80 km" },
+        ];
+    }
+
+    // Limit to 12 for the strip
+    const displayLocations = locations.slice(0, 12);
+
     return (
         <section className="py-16 bg-gradient-to-b from-white to-gray-50">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -30,7 +56,7 @@ export function LocationStrip() {
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                    {topLocations.map((loc) => (
+                    {displayLocations.map((loc) => (
                         <Link
                             key={loc.slug}
                             href={`/locations/${loc.slug}`}
@@ -40,7 +66,7 @@ export function LocationStrip() {
                                 <MapPin className="w-5 h-5 text-brand-600" />
                             </div>
                             <span className="font-semibold text-gray-900 text-sm">{loc.name}</span>
-                            <span className="text-xs text-gray-500">{loc.distance}</span>
+                            {loc.distance && <span className="text-xs text-gray-500">{loc.distance}</span>}
                         </Link>
                     ))}
                 </div>

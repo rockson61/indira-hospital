@@ -1,7 +1,7 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight, MessageCircle, Phone, ShieldCheck, Clock, Zap, CreditCard } from "lucide-react";
+import { getDoctors } from "@/lib/api";
+import { SEED_DATA } from "@/lib/data/seed-data";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -12,22 +12,27 @@ const trustBadges = [
     { label: "Expert Surgeons", icon: ShieldCheck },
 ];
 
-export function Hero() {
+export async function Hero() {
+    // Fetch doctor count for dynamic stat
+    let doctorCount = 25;
+    try {
+        const doctors = await getDoctors().catch(() => []);
+        if (doctors.length > 0) doctorCount = doctors.length;
+        else doctorCount = SEED_DATA.doctors.length;
+    } catch {
+        doctorCount = SEED_DATA.doctors.length;
+    }
+
     return (
         <div className="relative isolate overflow-hidden min-h-[90vh] flex items-center">
             {/* Multi-layer gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900 to-purple-900" />
-            {/* Animated gradient overlay */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-500/20 via-transparent to-purple-500/10" />
-            {/* Decorative grid */}
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)", backgroundSize: "64px 64px" }} />
-            {/* Top-right glow */}
             <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-brand-400/20 rounded-full blur-3xl animate-pulse" />
-            {/* Bottom-left glow */}
             <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-purple-500/15 rounded-full blur-3xl" />
 
             <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-16 lg:px-8 lg:py-40 w-full">
-                {/* Left content */}
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:shrink-0">
                     {/* Announcement badge */}
                     <div className="mb-8">
@@ -48,7 +53,7 @@ export function Hero() {
                     </h1>
 
                     <p className="mt-6 text-lg leading-8 text-white/70">
-                        Indira Super Speciality Hospital — 25+ expert doctors, 10+ departments,
+                        Indira Super Speciality Hospital — {doctorCount}+ expert doctors, 10+ departments,
                         advanced Cath Lab, and 24/7 emergency care. Your trusted healthcare destination in Vellore.
                     </p>
 
@@ -95,7 +100,6 @@ export function Hero() {
                 {/* Right — Hospital showcase card */}
                 <div className="mt-16 lg:mt-0 lg:flex-1 flex justify-center">
                     <div className="relative max-w-lg w-full">
-                        {/* Glow behind card */}
                         <div className="absolute -inset-4 bg-gradient-to-r from-brand-500/30 to-purple-500/30 rounded-3xl blur-2xl" />
                         <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
                             <img
@@ -105,7 +109,6 @@ export function Hero() {
                                 width={800}
                                 height={500}
                             />
-                            {/* Overlay info card at bottom */}
                             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
                                 <div className="flex items-center justify-between">
                                     <div>
