@@ -1,132 +1,441 @@
-import { notFound } from "next/navigation"
-import { getDirectusClient } from "@/lib/directus"
-import { readItems } from "@directus/sdk"
-import { Service } from "@/lib/schema"
-import { Button } from "@/components/ui/button"
-import { SectionContainer } from "@/components/ui/section-container"
-import { CheckCircle, ShieldCheck, Clock, UserCheck } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-
-// Funnel Components (Placeholder for now, can be extracted)
-const HeroSection = ({ title, short_description, image }: { title: string, short_description: string, image: string }) => (
-    <div className="relative bg-purple-950 text-white py-24">
-        <div className="absolute inset-0 opacity-20">
-            {/* Use image if available, else fallback pattern */}
-            {image && <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${image}`} alt={title} fill className="object-cover" />}
-        </div>
-        <SectionContainer className="relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-            <p className="text-xl md:text-2xl text-purple-100 max-w-2xl mb-8">{short_description}</p>
-            <div className="flex gap-4">
-                <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-black font-semibold">Book Appointment</Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">Cost Estimate</Button>
-            </div>
-        </SectionContainer>
-    </div>
-)
-
-const ProblemSolutionSection = ({ full_description }: { full_description: string }) => (
-    <SectionContainer className="py-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="prose prose-lg dark:prose-invert">
-                <h2 className="text-3xl font-bold text-purple-900 dark:text-purple-100 mb-6">Understanding the Condition</h2>
-                {/* Dangerously set inner HTML for WYSIWYG content */}
-                <div dangerouslySetInnerHTML={{ __html: full_description }} />
-            </div>
-            <div className="bg-purple-50 dark:bg-purple-900/20 p-8 rounded-2xl border border-purple-100 dark:border-purple-800">
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <ShieldCheck className="w-6 h-6 text-purple-600" />
-                    Why Choose Advanced Treatment?
-                </h3>
-                <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-purple-500 mt-1" />
-                        <span>Minimally Invasive Procedures</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                        <Clock className="w-5 h-5 text-purple-500 mt-1" />
-                        <span>Faster Recovery Time</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                        <UserCheck className="w-5 h-5 text-purple-500 mt-1" />
-                        <span>Expert Specialists</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </SectionContainer>
-)
-
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
 import { SEED_DATA } from "@/lib/data/seed-data";
+import { getImageUrl } from "@/lib/utils";
+import {
+    ChevronRight, CheckCircle2, Stethoscope, Heart, Activity, Baby,
+    Siren, Smile, Brain, Ribbon, Droplets, MessageCircle, Phone, Award,
+    Users, Clock, Shield, Star, MapPin, Zap, ArrowRight, GraduationCap
+} from "lucide-react";
+import { Card } from "@/components/ui/card";
 
-export async function generateStaticParams() {
-    // Generate params for all services
-    const services = SEED_DATA.services;
-    return services.map((s) => ({
-        slug: s.slug,
-    }));
+const WHATSAPP_NUMBER = "917010650063";
+
+// Icon map for services
+const iconMap: Record<string, React.ReactNode> = {
+    Scalpel: <Stethoscope className="h-8 w-8" />,
+    Activity: <Activity className="h-8 w-8" />,
+    Stethoscope: <Stethoscope className="h-8 w-8" />,
+    Baby: <Baby className="h-8 w-8" />,
+    Bone: <Activity className="h-8 w-8" />,
+    Heart: <Heart className="h-8 w-8" />,
+    Siren: <Siren className="h-8 w-8" />,
+    Smile: <Smile className="h-8 w-8" />,
+    Brain: <Brain className="h-8 w-8" />,
+    Ribbon: <Ribbon className="h-8 w-8" />,
+    Droplets: <Droplets className="h-8 w-8" />,
+};
+
+// Key procedures per service/department
+const serviceProcedures: Record<string, string[]> = {
+    "general-surgery": ["Laser Surgery for Piles", "Hernia Repair", "Thyroid Surgery", "Laparoscopic Cholecystectomy", "Breast Surgery", "Varicose Vein Treatment", "Lipoma Removal", "Appendectomy"],
+    "laparoscopic-surgeries": ["Laparoscopic Cholecystectomy", "Laparoscopic Appendectomy", "Laparoscopic Hernia Repair", "Diagnostic Laparoscopy", "Laparoscopic Hysterectomy", "Bariatric Surgery"],
+    gastroenterology: ["Upper GI Endoscopy", "Colonoscopy", "ERCP", "Liver Biopsy", "Acid Reflux Treatment", "Peptic Ulcer Management", "IBS Treatment", "Hepatitis Management"],
+    urology: ["Kidney Stone Removal (PCNL)", "Ureteroscopy", "Prostate Surgery (TURP)", "Cystoscopy", "Circumcision", "Hydrocele Surgery", "Varicocele Treatment"],
+    "obstetrics-gynaecology": ["Normal & Caesarean Delivery", "High-Risk Pregnancy Care", "Painless Delivery", "Infertility Treatment", "Hysterectomy", "Ovarian Cyst Removal", "Fibroid Treatment", "Prenatal Screening"],
+    orthopaedics: ["Total Knee Replacement", "Total Hip Replacement", "Arthroscopy", "Fracture Management", "Spine Surgery", "Sports Medicine", "Ligament Reconstruction", "Joint Injections"],
+    cardiology: ["Angiography", "Angioplasty & Stenting", "Pacemaker Implantation", "Echocardiography", "TMT / Stress Test", "Heart Failure Management", "Cardiac Rehabilitation", "Holter Monitoring"],
+    "icu-emergency": ["24/7 Emergency Care", "Ventilator Support", "Trauma Management", "Post-Surgical ICU Care", "Cardiac Monitoring", "Sepsis Management", "Stroke Care", "Poison Management"],
+    dental: ["Root Canal Treatment", "Dental Implants", "Orthodontics (Braces)", "Cosmetic Dentistry", "Teeth Whitening", "Oral & Maxillofacial Surgery", "Wisdom Tooth Extraction", "Dental Crowns & Bridges"],
+    neurology: ["Stroke Management", "Epilepsy Treatment", "Migraine & Headache Clinic", "Parkinson's Disease Care", "EEG & EMG Studies", "Peripheral Neuropathy", "Multiple Sclerosis Treatment", "Nerve Conduction Studies"],
+    oncology: ["Cancer Screening", "Chemotherapy", "Targeted Therapy", "Immunotherapy", "Surgical Oncology", "Palliative Care", "Biopsy & Diagnosis", "Cancer Rehabilitation"],
+    nephrology: ["Dialysis Services", "Chronic Kidney Disease", "Kidney Stone Management", "Hypertension Treatment", "Electrolyte Disorders", "Pre-Transplant Evaluation", "Glomerulonephritis Care", "Diabetic Nephropathy"],
+};
+
+export function generateStaticParams() {
+    return SEED_DATA.services.map((service) => ({ slug: service.slug }));
 }
 
-export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
-    const client = await getDirectusClient();
-    let service: Service | undefined;
+    const service = SEED_DATA.services.find((s) => s.slug === slug);
+    if (!service) return { title: "Service Not Found" };
 
-    try {
-        // Fetch service data with deep fields (video, features, etc.)
-        const services = await client.request(readItems('services', {
-            filter: {
-                slug: { _eq: slug },
-                status: { _eq: 'published' }
-            },
-            limit: 1,
-            fields: ['*'] as any
-        })) as unknown as Service[];
-        service = services[0];
-    } catch (error) {
-        // Fallback
-    }
+    return {
+        title: `${service.title} - Best ${service.title} Treatment in Vellore | Indira Hospital`,
+        description: `${service.full_description} Book appointment on WhatsApp for ${service.title} at Indira Super Speciality Hospital, Vellore. Best hospital for Laparoscopic Surgery, Laser Piles, Fistula.`,
+        keywords: [service.title, "Vellore", "Indira Hospital", "best hospital", "treatment", "surgery"],
+    };
+}
 
-    if (!service) {
-        // Map seed data to Service interface
-        const seedService = SEED_DATA.services.find(s => s.slug === slug);
-        if (seedService) {
-            service = {
-                ...seedService,
-                id: seedService.slug,
-                status: 'published',
-            } as any;
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const service = SEED_DATA.services.find((s) => s.slug === slug);
+    if (!service) notFound();
+
+    const procedures = serviceProcedures[slug] || [];
+    const relatedDoctors = SEED_DATA.doctors.filter(
+        (d) => {
+            const dept = typeof d.department === 'string' ? d.department : (d.department as any)?.name || '';
+            return dept.toLowerCase() === service.title.toLowerCase() ||
+                d.specialties.some(s =>
+                    service.title.toLowerCase().includes(s.toLowerCase()) ||
+                    s.toLowerCase().includes(service.title.toLowerCase())
+                );
         }
-    }
+    );
+    const otherServices = SEED_DATA.services.filter((s) => s.slug !== slug);
 
-    if (!service) {
-        notFound();
-    }
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
+
+    // JSON-LD
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "MedicalSpecialty",
+        name: service.title,
+        description: service.full_description,
+        provider: {
+            "@type": "Hospital",
+            name: "Indira Super Speciality Hospital",
+            address: { "@type": "PostalAddress", addressLocality: "Vellore", addressRegion: "Tamil Nadu", addressCountry: "IN" },
+        },
+    };
 
     return (
-        <main className="min-h-screen">
-            {/* 1. Awareness & Interest (Hero) */}
-            <HeroSection
-                title={service.title}
-                short_description={service.short_description}
-                image={service.icon} // Using icon as main image placeholder for now
-            />
+        <div className="bg-gray-50 min-h-screen">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-            {/* 2. Consideration (Problem/Solution) */}
-            <ProblemSolutionSection full_description={service.full_description} />
-
-            {/* 3. Proof (Success/Testimonials - Placeholder) */}
-            {/* <SuccessStories serviceId={service.id} /> */}
-
-            {/* 4. Action (CTA/Booking) */}
-            <SectionContainer className="py-16 bg-slate-50 dark:bg-slate-900">
-                <div className="text-center max-w-2xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-4">Ready to take the next step?</h2>
-                    <p className="text-muted-foreground mb-8">Schedule a consultation with our expert specialists today.</p>
-                    <Button size="lg" className="w-full md:w-auto">Book Consultation Now</Button>
+            {/* ========== HERO ========== */}
+            <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-800 text-white overflow-hidden">
+                <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                 </div>
-            </SectionContainer>
-        </main>
-    )
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
+                    {/* Breadcrumbs */}
+                    <nav className="flex items-center text-sm text-purple-200 mb-8">
+                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <span className="text-white font-medium">{service.title}</span>
+                    </nav>
+
+                    <div className="flex items-start gap-6">
+                        <div className="hidden sm:flex h-16 w-16 rounded-2xl bg-white/10 backdrop-blur items-center justify-center text-white">
+                            {iconMap[service.icon] || <Stethoscope className="h-8 w-8" />}
+                        </div>
+                        <div>
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{service.title}</h1>
+                            <p className="mt-4 text-lg text-purple-100 max-w-3xl leading-relaxed">{service.short_description}</p>
+
+                            {/* Quick Stats */}
+                            <div className="flex flex-wrap gap-4 mt-6">
+                                {procedures.length > 0 && (
+                                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                                        <CheckCircle2 className="w-5 h-5 text-amber-400" />
+                                        <span className="text-sm font-medium">{procedures.length}+ Procedures</span>
+                                    </div>
+                                )}
+                                {relatedDoctors.length > 0 && (
+                                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                                        <Users className="w-5 h-5 text-amber-400" />
+                                        <span className="text-sm font-medium">{relatedDoctors.length} Specialist{relatedDoctors.length > 1 ? 's' : ''}</span>
+                                    </div>
+                                )}
+                                <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                                    <MapPin className="w-5 h-5 text-amber-400" />
+                                    <span className="text-sm font-medium">Indira Hospital, Vellore</span>
+                                </div>
+                            </div>
+
+                            {/* CTA Buttons */}
+                            <div className="flex flex-wrap gap-4 mt-8">
+                                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+                                    className="inline-flex items-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-green-500/30 text-lg">
+                                    <MessageCircle className="w-5 h-5 mr-2" />
+                                    Book on WhatsApp
+                                </a>
+                                <a href="tel:+919842342525"
+                                    className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
+                                    <Phone className="w-5 h-5 mr-2" />
+                                    +91 98423 42525
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ========== MAIN CONTENT ========== */}
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+                <div className="grid lg:grid-cols-3 gap-8">
+                    {/* LEFT COLUMN */}
+                    <div className="lg:col-span-2 space-y-8">
+                        {/* About */}
+                        <Card className="p-8 border-none shadow-sm rounded-2xl">
+                            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                <span className="bg-purple-100 p-2 rounded-lg mr-3 text-purple-600">
+                                    <Stethoscope className="w-5 h-5" />
+                                </span>
+                                About {service.title}
+                            </h2>
+                            <p className="text-gray-600 leading-relaxed text-base">{service.full_description}</p>
+                            <p className="text-gray-600 leading-relaxed mt-4">
+                                At Indira Super Speciality Hospital, our {service.title} department is equipped with state-of-the-art
+                                technology and staffed by experienced specialists dedicated to providing the highest quality care.
+                                We follow evidence-based treatment protocols to ensure optimal patient outcomes.
+                            </p>
+                            <div className="mt-6 p-4 bg-purple-50 rounded-xl">
+                                <p className="text-sm text-gray-700">
+                                    Also visit our{" "}
+                                    <Link href={`/departments/${service.slug}`} className="text-purple-700 font-semibold hover:underline">
+                                        {service.title} Department
+                                    </Link>{" "}
+                                    for detailed clinical information.
+                                </p>
+                            </div>
+                        </Card>
+
+                        {/* Procedures Grid */}
+                        {procedures.length > 0 && (
+                            <Card className="p-8 border-none shadow-sm rounded-2xl">
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-blue-100 p-2 rounded-lg mr-3 text-blue-600">
+                                        <CheckCircle2 className="w-5 h-5" />
+                                    </span>
+                                    Treatments & Procedures
+                                </h2>
+                                <div className="grid sm:grid-cols-2 gap-3">
+                                    {procedures.map((proc) => (
+                                        <div key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-purple-50 transition-colors group">
+                                            <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                                            <span className="text-gray-700 group-hover:text-purple-800 font-medium text-sm">{proc}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Card>
+                        )}
+
+                        {/* Doctors in this Service */}
+                        {relatedDoctors.length > 0 && (
+                            <div>
+                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <span className="bg-teal-100 p-2 rounded-lg mr-3 text-teal-600">
+                                        <GraduationCap className="w-5 h-5" />
+                                    </span>
+                                    Our {service.title} Specialists
+                                </h2>
+                                <div className="grid sm:grid-cols-2 gap-5">
+                                    {relatedDoctors.map((doc) => (
+                                        <Link key={doc.slug} href={`/doctors/${doc.slug}`}
+                                            className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex items-center gap-4 hover:shadow-md transition-all">
+                                            <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                                                {doc.image && getImageUrl(doc.image) ? (
+                                                    <img src={getImageUrl(doc.image)!} alt={doc.name} className="w-full h-full object-cover" />
+                                                ) : (
+                                                    <span className="text-purple-700 font-bold text-lg">{doc.name.split(' ').map(n => n[0]).join('').slice(0, 2)}</span>
+                                                )}
+                                            </div>
+                                            <div className="min-w-0">
+                                                <h3 className="font-bold text-gray-900 truncate group-hover:text-purple-700 transition-colors">{doc.name}</h3>
+                                                <p className="text-gray-500 text-sm truncate">{doc.designation}</p>
+                                                <p className="text-xs text-gray-400 mt-0.5">{doc.experience_years}+ Years Experience</p>
+                                            </div>
+                                            <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-purple-600 ml-auto flex-shrink-0 transition-colors" />
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Signature Treatments (Marketing) */}
+                        <div className="mt-4">
+                            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                <span className="bg-red-100 p-2 rounded-lg mr-3 text-red-600">
+                                    <Star className="w-5 h-5" />
+                                </span>
+                                Signature Treatments
+                            </h2>
+                            <div className="grid sm:grid-cols-3 gap-5">
+                                <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow">
+                                    <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mb-3">
+                                        <Zap className="w-5 h-5 text-purple-600" />
+                                    </div>
+                                    <h3 className="font-bold text-gray-900 mb-1">Laparoscopic Surgery</h3>
+                                    <p className="text-gray-500 text-xs mb-3">3mm keyhole surgery. Same-day discharge.</p>
+                                    <ul className="space-y-1 text-xs text-gray-600">
+                                        {["Hernia", "Gallbladder", "Appendix"].map(f => (
+                                            <li key={f} className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
+                                        ))}
+                                    </ul>
+                                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Laparoscopic Surgery.")}`}
+                                        target="_blank" rel="noopener noreferrer"
+                                        className="mt-3 inline-flex items-center text-purple-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
+                                        Enquire <ArrowRight className="w-3 h-3" />
+                                    </a>
+                                </Card>
+                                <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow relative overflow-hidden">
+                                    <div className="absolute top-3 right-3 px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-bold rounded-full">Popular</div>
+                                    <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mb-3">
+                                        <Heart className="w-5 h-5 text-red-500" />
+                                    </div>
+                                    <h3 className="font-bold text-gray-900 mb-1">Laser Piles Treatment</h3>
+                                    <p className="text-gray-500 text-xs mb-3">30-min painless procedure. 24hr recovery.</p>
+                                    <ul className="space-y-1 text-xs text-gray-600">
+                                        {["No Cuts", "No Stitches", "USFDA Laser"].map(f => (
+                                            <li key={f} className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
+                                        ))}
+                                    </ul>
+                                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Laser Piles Treatment.")}`}
+                                        target="_blank" rel="noopener noreferrer"
+                                        className="mt-3 inline-flex items-center text-red-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
+                                        Enquire <ArrowRight className="w-3 h-3" />
+                                    </a>
+                                </Card>
+                                <Card className="p-5 border-none shadow-sm rounded-2xl hover:shadow-md transition-shadow">
+                                    <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center mb-3">
+                                        <Shield className="w-5 h-5 text-teal-600" />
+                                    </div>
+                                    <h3 className="font-bold text-gray-900 mb-1">Fistula Removal</h3>
+                                    <p className="text-gray-500 text-xs mb-3">VAAFT / Laser / LIFT. No recurrence.</p>
+                                    <ul className="space-y-1 text-xs text-gray-600">
+                                        {["Permanent Cure", "Minimal Pain", "Quick Recovery"].map(f => (
+                                            <li key={f} className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
+                                        ))}
+                                    </ul>
+                                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need info about Fistula Treatment.")}`}
+                                        target="_blank" rel="noopener noreferrer"
+                                        className="mt-3 inline-flex items-center text-teal-600 font-medium text-xs hover:gap-2 gap-1 transition-all">
+                                        Enquire <ArrowRight className="w-3 h-3" />
+                                    </a>
+                                </Card>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* RIGHT SIDEBAR */}
+                    <div className="lg:col-span-1 space-y-6">
+                        <div className="lg:sticky lg:top-24 space-y-6">
+                            {/* Book Appointment */}
+                            <Card className="p-6 border-none shadow-lg rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50">
+                                <div className="text-center">
+                                    <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <MessageCircle className="w-7 h-7 text-green-600" />
+                                    </div>
+                                    <h3 className="font-bold text-gray-900 text-lg">Book Appointment</h3>
+                                    <p className="text-gray-500 text-sm mt-1 mb-5">Chat with us for instant booking, cost estimates, and availability.</p>
+                                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+                                        className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-md text-base">
+                                        <MessageCircle className="w-5 h-5 mr-2" />
+                                        WhatsApp Now
+                                    </a>
+                                    <a href="tel:+919842342525"
+                                        className="w-full inline-flex items-center justify-center px-6 py-3 mt-3 bg-white text-gray-700 font-medium rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors text-sm">
+                                        <Phone className="w-4 h-4 mr-2" />
+                                        Call +91 98423 42525
+                                    </a>
+                                </div>
+                            </Card>
+
+                            {/* Hospital Highlights */}
+                            <Card className="p-6 border-none shadow-sm rounded-2xl">
+                                <h3 className="font-bold text-gray-900 mb-4">Why Indira Hospital</h3>
+                                <div className="space-y-3">
+                                    {[
+                                        { icon: Award, text: "25+ Years Legacy" },
+                                        { icon: Users, text: "1 Lakh+ Patients Treated" },
+                                        { icon: Stethoscope, text: "15+ Super Specialities" },
+                                        { icon: Clock, text: "24/7 Emergency" },
+                                        { icon: Shield, text: "Insurance & Cashless" },
+                                        { icon: Star, text: "#1 for Minimal Invasive Surgery" },
+                                    ].map(({ icon: Icon, text }) => (
+                                        <div key={text} className="flex items-center gap-3 text-sm text-gray-600">
+                                            <div className="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center flex-shrink-0">
+                                                <Icon className="w-4 h-4 text-purple-600" />
+                                            </div>
+                                            {text}
+                                        </div>
+                                    ))}
+                                </div>
+                            </Card>
+
+                            {/* Other Services Quick Links */}
+                            <Card className="p-6 border-none shadow-sm rounded-2xl">
+                                <h3 className="font-bold text-gray-900 mb-4">Other Services</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {otherServices.map((svc) => (
+                                        <Link key={svc.slug} href={`/services/${svc.slug}`}
+                                            className="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-medium hover:bg-purple-50 hover:text-purple-700 transition-colors">
+                                            {svc.title}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </Card>
+
+                            {/* Location */}
+                            <Card className="p-6 border-none shadow-sm rounded-2xl">
+                                <h3 className="font-bold text-gray-900 mb-3">Location & Directions</h3>
+                                <div className="rounded-xl overflow-hidden mb-3">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6!2d79.15!3d12.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sIndira+Super+Speciality+Hospital!5e0!3m2!1sen!2sin!4v1"
+                                        width="100%" height="180" style={{ border: 0 }}
+                                        allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                                        title="Indira Hospital Location"
+                                    />
+                                </div>
+                                <p className="text-xs text-gray-500">Indira Super Speciality Hospital, Vellore, Tamil Nadu</p>
+                                <Link href="/locations" className="mt-3 inline-flex items-center text-purple-600 font-medium text-sm hover:text-purple-800 gap-1">
+                                    View All 79+ Locations <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* ========== OTHER SERVICES ========== */}
+            <section className="bg-white py-12">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="text-center mb-8">
+                        <span className="text-purple-600 font-semibold text-sm uppercase tracking-wider">Explore More</span>
+                        <h2 className="text-2xl font-bold mt-2 text-gray-900">Other Services at Indira Hospital</h2>
+                    </div>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {otherServices.slice(0, 6).map((svc) => (
+                            <Link key={svc.slug} href={`/services/${svc.slug}`}
+                                className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-5 hover:shadow-md transition-all flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center flex-shrink-0 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                    {iconMap[svc.icon] ? <div className="scale-75">{iconMap[svc.icon]}</div> : <Stethoscope className="w-6 h-6" />}
+                                </div>
+                                <div className="min-w-0">
+                                    <h3 className="font-bold text-gray-900 group-hover:text-purple-700 transition-colors">{svc.title}</h3>
+                                    <p className="text-gray-500 text-xs mt-1 line-clamp-2">{svc.short_description}</p>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="text-center mt-8">
+                        <Link href="/services" className="inline-flex items-center px-6 py-3 bg-purple-50 text-purple-700 font-semibold rounded-xl hover:bg-purple-100 transition-colors">
+                            View All Services <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* ========== WHATSAPP CTA BOTTOM ========== */}
+            <section className="bg-gradient-to-r from-green-600 to-green-500 text-white py-10">
+                <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                    <h2 className="text-2xl md:text-3xl font-bold">
+                        Need {service.title} Consultation?
+                    </h2>
+                    <p className="mt-2 text-green-100 text-base max-w-lg mx-auto">
+                        Skip the phone queue. Chat on WhatsApp for instant appointment booking and cost estimate.
+                    </p>
+                    <div className="mt-6 flex flex-wrap justify-center gap-4">
+                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center px-8 py-4 bg-white text-green-700 font-bold rounded-xl text-lg hover:bg-green-50 transition-colors shadow-lg">
+                            <MessageCircle className="w-5 h-5 mr-2" />
+                            Chat on WhatsApp
+                        </a>
+                        <a href="tel:+919842342525"
+                            className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-lg transition-colors border border-white/20">
+                            <Phone className="w-5 h-5 mr-2" />
+                            Call Us
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
 }
