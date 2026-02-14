@@ -5,7 +5,7 @@ export async function getDoctors() {
     const client = await getDirectusClient();
     return await client.request(readItems('doctors', {
         filter: { status: { _eq: 'published' } },
-        // @ts-ignore
+        // @ts-expect-error - Directus SDK types for nested fields
         fields: ['name', 'slug', 'designation', 'image', 'department.name', 'department.slug', 'specialties', 'consultation_fee'],
     }));
 }
@@ -14,7 +14,7 @@ export async function getDoctorBySlug(slug: string) {
     const client = await getDirectusClient();
     const doctors = await client.request(readItems('doctors', {
         filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
-        // @ts-ignore
+        // @ts-expect-error - Directus SDK types for nested fields
         fields: ['*', 'department.*', 'education', 'experience_timeline', 'awards', 'opd_schedule'],
         limit: 1,
     }));
@@ -33,7 +33,7 @@ export async function getDepartmentBySlug(slug: string) {
     const client = await getDirectusClient();
     const departments = await client.request(readItems('departments', {
         filter: { slug: { _eq: slug } },
-        // @ts-ignore
+        // @ts-expect-error - Directus SDK types for nested fields
         fields: ['*', 'services.*'],
         limit: 1
     }));
@@ -44,7 +44,7 @@ export async function getServices() {
     const client = await getDirectusClient();
     return await client.request(readItems('services', {
         filter: { status: { _eq: 'published' } },
-        // @ts-ignore
+        // @ts-expect-error - Directus SDK types for nested fields
         fields: ['title', 'slug', 'icon', 'short_description', 'department.slug', 'cost_range_min', 'cost_range_max', 'video_explainer']
     }));
 }
@@ -60,7 +60,7 @@ export async function getTestimonials() {
 
 export async function getFAQs(category?: string) {
     const client = await getDirectusClient();
-    const filter = { status: { _eq: 'published' } } as any;
+    const filter: Record<string, unknown> = { status: { _eq: 'published' } };
     if (category) filter.category = { _eq: category };
 
     return await client.request(readItems('faqs', {
@@ -88,13 +88,13 @@ export async function getLocations() {
 
 export async function getDiagnostics(category?: string) {
     const client = await getDirectusClient();
-    const filter: any = { status: { _eq: 'published' } };
+    const filter: Record<string, unknown> = { status: { _eq: 'published' } };
     if (category) filter.category = { _eq: category };
 
     return await client.request(readItems('diagnostics', {
         filter,
         fields: ['name', 'slug', 'category', 'short_description', 'price', 'report_time', 'home_collection', 'sample_type', 'fasting_required', 'parameters_count'],
-        // @ts-ignore
+        // @ts-expect-error - Directus SDK types for sort
         sort: ['sort_order', 'name'],
     }));
 }
@@ -106,12 +106,15 @@ export async function getDiagnosticBySlug(slug: string) {
         fields: ['*'],
         limit: 1,
     }));
-    return (tests as any[]).length > 0 ? (tests as any[])[0] : null;
+    // @ts-expect-error - Directus SDK returns generic item array
+    return (tests as unknown[]).length > 0 ? (tests as unknown[])[0] : null;
 }
+
 
 export async function getHospitalSettings() {
     const { readSingleton } = await import('@directus/sdk');
     const client = await getDirectusClient();
-    return await client.request(readSingleton('hospital_settings' as any));
+    // @ts-expect-error - Singleton type inference issue
+    return await client.request(readSingleton('hospital_settings'));
 }
 

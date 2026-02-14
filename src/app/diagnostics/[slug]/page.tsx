@@ -3,7 +3,7 @@ import { getDiagnosticBySlug } from "@/lib/api"
 import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Clock, Banknote, AlertCircle, Phone, Home, Droplets, Beaker } from "lucide-react"
+import { CheckCircle2, Clock, AlertCircle, Phone, Home, Droplets, Beaker } from "lucide-react"
 import type { Metadata } from "next"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

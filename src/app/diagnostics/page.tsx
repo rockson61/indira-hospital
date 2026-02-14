@@ -2,7 +2,7 @@ import { getDiagnostics } from "@/lib/api"
 import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
-import { Search, FlaskConical, ScanLine, Activity, Clock, Home, Droplets, Zap } from "lucide-react"
+import { FlaskConical, ScanLine, Activity, Clock, Home, Droplets, Zap } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 
 // Category icons and colors
-const categoryConfig: Record<string, { icon: any; color: string; bgColor: string; label: string }> = {
+const categoryConfig: Record<string, { icon: React.ElementType; color: string; bgColor: string; label: string }> = {
     radiology: { icon: ScanLine, color: 'text-blue-600', bgColor: 'bg-blue-50', label: 'Radiology & Imaging' },
     pathology: { icon: FlaskConical, color: 'text-purple-600', bgColor: 'bg-purple-50', label: 'Pathology & Lab' },
     cardiology: { icon: Activity, color: 'text-red-600', bgColor: 'bg-red-50', label: 'Cardiology' },
@@ -20,21 +20,21 @@ const categoryConfig: Record<string, { icon: any; color: string; bgColor: string
 }
 
 export default async function DiagnosticsPage() {
-    let diagnostics: any[] = [];
+    let diagnostics: Diagnostic[] = [];
 
     try {
-        diagnostics = (await getDiagnostics()) as any[];
+        diagnostics = (await getDiagnostics()) as Diagnostic[];
     } catch {
         diagnostics = [];
     }
 
     // Group by category
-    const grouped = diagnostics.reduce((acc: Record<string, any[]>, test: any) => {
+    const grouped = diagnostics.reduce((acc: Record<string, Diagnostic[]>, test: Diagnostic) => {
         const cat = test.category || 'other';
         if (!acc[cat]) acc[cat] = [];
         acc[cat].push(test);
         return acc;
-    }, {} as Record<string, any[]>);
+    }, {} as Record<string, Diagnostic[]>);
 
     const categoryOrder = ['radiology', 'pathology', 'cardiology', 'other'];
 
@@ -73,7 +73,7 @@ export default async function DiagnosticsPage() {
                         </div>
 
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {tests.map((test: any) => (
+                            {tests.map((test: Diagnostic) => (
                                 <Link
                                     key={test.slug}
                                     href={`/diagnostics/${test.slug}`}
@@ -105,7 +105,7 @@ export default async function DiagnosticsPage() {
                                                 {test.sample_type}
                                             </span>
                                         )}
-                                        {test.parameters_count > 0 && (
+                                        {test.parameters_count !== undefined && test.parameters_count > 0 && (
                                             <span>{test.parameters_count} parameters</span>
                                         )}
                                     </div>
@@ -151,7 +151,7 @@ export default async function DiagnosticsPage() {
                         "name": "Indira Super Speciality Hospital — Diagnostics",
                         "url": "https://www.indirasuperspecialityhospital.com/diagnostics",
                         "medicalSpecialty": "Diagnostic",
-                        "availableService": diagnostics.map((t: any) => ({
+                        "availableService": diagnostics.map((t: Diagnostic) => ({
                             "@type": "MedicalTest",
                             "name": t.name,
                             "url": `https://www.indirasuperspecialityhospital.com/diagnostics/${t.slug}`,
