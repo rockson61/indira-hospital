@@ -91,7 +91,10 @@ export function Footer() {
 
                     <FooterColumn title="Medical Specialties" links={FOOTER_LINKS.medicalServices} />
                     <FooterColumn title="Treatments" links={FOOTER_LINKS.procedures} />
-                    <FooterColumn title="Health Library" links={FOOTER_LINKS.healthLibrary} />
+                    <div className="space-y-8">
+                        <FooterColumn title="Specialists" links={FOOTER_LINKS.specialists} />
+                        <FooterColumn title="Health Library" links={FOOTER_LINKS.healthLibrary} />
+                    </div>
                     <div className="space-y-8">
                         <FooterColumn title="Technology" links={FOOTER_LINKS.technology} />
                         <FooterColumn title="Locations" links={FOOTER_LINKS.locations} />

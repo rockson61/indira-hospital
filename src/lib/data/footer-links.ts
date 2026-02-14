@@ -73,5 +73,17 @@ export const FOOTER_LINKS = {
         { name: "Arakkonam", url: "/locations/arakkonam" },
         { name: "Kanchipuram", url: "/locations/kanchipuram" },
         { name: "Chittoor", url: "/locations/chittoor" }
+    ],
+    specialists: [
+        { name: "Cardiologists", url: "/doctors?dept=cardiology" },
+        { name: "Neurologists", url: "/doctors?dept=neurology" },
+        { name: "Orthopedicians", url: "/doctors?dept=orthopaedics" },
+        { name: "Gastroenterologists", url: "/doctors?dept=gastroenterology" },
+        { name: "Oncologists", url: "/doctors?dept=oncology" },
+        { name: "Urologists", url: "/doctors?dept=urology" },
+        { name: "Nephrologists", url: "/doctors?dept=nephrology" },
+        { name: "Gynaecologists", url: "/doctors?dept=obstetrics-gynaecology" },
+        { name: "General Surgeons", url: "/doctors?dept=general-surgery" },
+        { name: "Dentists", url: "/doctors?dept=dental" }
     ]
 };

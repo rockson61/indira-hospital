@@ -11,6 +11,7 @@ import {
     Banknote, HelpCircle, Quote, Info
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { injectInternalLinks } from "@/lib/html-linkify"; // Import utility
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -229,7 +230,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 About {service.title}
                             </h2>
                             {/* Rich Text Rendering */}
-                            <div className="text-gray-600 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: service.full_description }} />
+                            <div className="text-gray-600 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
 
                             <div className="mt-6 p-4 bg-purple-50 rounded-xl">
                                 <p className="text-sm text-gray-700">
