@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { FAQSection } from "@/components/sections/faq-section";
 import { LocationStrip } from "@/components/sections/location-strip";
 import { CTASection } from "@/components/sections/cta";
+import { getHospitalSettings } from "@/lib/api";
 
 export const revalidate = 3600;
 
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: "Indira Super Speciality Hospital | Best Hospital in Vellore",
     description:
       "25+ expert doctors, 10+ departments, advanced Cath Lab, 24/7 Emergency. Trusted healthcare in Vellore, Tamil Nadu.",
-    url: "https://indirahospital.com",
+    url: "https://www.indirasuperspecialityhospital.com",
     siteName: "Indira Hospital",
     images: [
       {
@@ -54,113 +55,123 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://indirahospital.com",
+    canonical: "https://www.indirasuperspecialityhospital.com",
   },
 };
 
-// Hospital JSON-LD structured data
-const hospitalJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Hospital",
-  name: "Indira Super Speciality Hospital",
-  alternateName: "Indira Hospital Vellore",
-  url: "https://indirahospital.com",
-  logo: "https://indirahospital.com/logo.png",
-  image: "https://indirahospital.com/hero-hospital.png",
-  description:
-    "Indira Super Speciality Hospital is a leading multi-speciality hospital in Vellore, Tamil Nadu offering advanced Cath Lab, Laser Piles Treatment, Laparoscopic Surgery, and 24/7 Emergency services.",
-  telephone: ["+919842342525", "+917010650063"],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Katpadi Road",
-    addressLocality: "Vellore",
-    addressRegion: "Tamil Nadu",
-    postalCode: "632004",
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 12.9165,
-    longitude: 79.1325,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "23:59",
-    },
-  ],
-  medicalSpecialty: [
-    "GeneralSurgery",
-    "Cardiology",
-    "Orthopedics",
-    "Gastroenterology",
-    "Urology",
-    "Gynecology",
-    "SpineSurgery",
-    "Oncology",
-    "Nephrology",
-    "EmergencyMedicine",
-  ],
-  availableService: [
-    { "@type": "MedicalProcedure", name: "Laser Piles Treatment" },
-    { "@type": "MedicalProcedure", name: "Laparoscopic Surgery" },
-    { "@type": "MedicalProcedure", name: "Coronary Angiography" },
-    { "@type": "MedicalProcedure", name: "Angioplasty" },
-    { "@type": "MedicalProcedure", name: "Joint Replacement" },
-    { "@type": "MedicalProcedure", name: "Spine Surgery" },
-    { "@type": "MedicalProcedure", name: "Endoscopy" },
-    { "@type": "MedicalProcedure", name: "Kidney Stone Treatment" },
-  ],
-  sameAs: [],
-  priceRange: "₹₹",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.7",
-    bestRating: "5",
-    ratingCount: "1250",
-  },
-};
+function buildJsonLd(h: any) {
+  // Parse JSON fields safely
+  const openingHours = typeof h.opening_hours === 'string' ? JSON.parse(h.opening_hours) : (h.opening_hours || []);
+  const areasServed = typeof h.areas_served === 'string' ? JSON.parse(h.areas_served) : (h.areas_served || []);
+  const sameAs = [h.social_facebook, h.social_instagram, h.social_youtube, h.social_linkedin, h.social_twitter]
+    .filter(Boolean);
 
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MedicalOrganization",
-  name: "Indira Super Speciality Hospital",
-  url: "https://indirahospital.com",
-  telephone: "+919842342525",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Katpadi Road",
-    addressLocality: "Vellore",
-    addressRegion: "Tamil Nadu",
-    postalCode: "632004",
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 12.9165,
-    longitude: 79.1325,
-  },
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: "+919842342525",
-      contactType: "Appointments",
-      areaServed: "IN",
-      availableLanguage: ["English", "Tamil"],
+  const hospitalJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    name: h.hospital_name || "Indira Super Speciality Hospital",
+    alternateName: "Indira Hospital Vellore",
+    url: h.website || "https://www.indirasuperspecialityhospital.com",
+    logo: "https://www.indirasuperspecialityhospital.com/logo.png",
+    image: "https://www.indirasuperspecialityhospital.com/hero-hospital.png",
+    description: h.description || "Indira Super Speciality Hospital is a leading multi-speciality hospital in Vellore, Tamil Nadu.",
+    ...(h.legal_name && { legalName: h.legal_name }),
+    ...(h.tagline && { slogan: h.tagline }),
+    ...(h.founded_year && { foundingDate: String(h.founded_year) }),
+    ...(h.bed_count && { numberOfBeds: h.bed_count }),
+    telephone: [h.phone || "+919842342525", h.emergency_phone || "+917010650063"].filter(Boolean),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: h.address_street || "Katpadi Road",
+      addressLocality: h.address_city || "Vellore",
+      addressRegion: h.address_state || "Tamil Nadu",
+      postalCode: h.address_pincode || "632004",
+      addressCountry: h.address_country || "IN",
     },
-    {
-      "@type": "ContactPoint",
-      telephone: "+917010650063",
-      contactType: "WhatsApp Booking",
-      areaServed: "IN",
-      availableLanguage: ["English", "Tamil"],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: h.geo_lat || 12.9344,
+      longitude: h.geo_lng || 79.1422,
     },
-  ],
-};
+    ...(openingHours.length > 0 && { openingHoursSpecification: openingHours }),
+    medicalSpecialty: [
+      "GeneralSurgery", "Cardiology", "Orthopedics", "Gastroenterology",
+      "Urology", "Gynecology", "SpineSurgery", "Oncology", "Nephrology", "EmergencyMedicine",
+    ],
+    availableService: [
+      { "@type": "MedicalProcedure", name: "Laser Piles Treatment" },
+      { "@type": "MedicalProcedure", name: "Laparoscopic Surgery" },
+      { "@type": "MedicalProcedure", name: "Coronary Angiography" },
+      { "@type": "MedicalProcedure", name: "Angioplasty" },
+      { "@type": "MedicalProcedure", name: "Joint Replacement" },
+      { "@type": "MedicalProcedure", name: "Spine Surgery" },
+      { "@type": "MedicalProcedure", name: "Endoscopy" },
+      { "@type": "MedicalProcedure", name: "Kidney Stone Treatment" },
+    ],
+    ...(sameAs.length > 0 && { sameAs }),
+    ...(h.google_maps_url && { hasMap: h.google_maps_url }),
+    priceRange: h.price_range || "₹₹",
+    ...(h.aggregate_rating && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: String(h.aggregate_rating),
+        bestRating: "5",
+        ratingCount: String(h.review_count || 850),
+      },
+    }),
+    ...(areasServed.length > 0 && {
+      areaServed: areasServed.map((a: string) => ({ "@type": "Place", name: a })),
+    }),
+  };
 
-export default function Home() {
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    name: h.hospital_name || "Indira Super Speciality Hospital",
+    url: h.website || "https://www.indirasuperspecialityhospital.com",
+    telephone: h.phone || "+919842342525",
+    ...(h.email && { email: h.email }),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: h.address_street || "Katpadi Road",
+      addressLocality: h.address_city || "Vellore",
+      addressRegion: h.address_state || "Tamil Nadu",
+      postalCode: h.address_pincode || "632004",
+      addressCountry: h.address_country || "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: h.geo_lat || 12.9344,
+      longitude: h.geo_lng || 79.1422,
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: h.phone || "+919842342525",
+        contactType: "Appointments",
+        areaServed: "IN",
+        availableLanguage: ["English", "Tamil"],
+      },
+      ...(h.whatsapp ? [{
+        "@type": "ContactPoint",
+        telephone: h.whatsapp,
+        contactType: "WhatsApp Booking",
+        areaServed: "IN",
+        availableLanguage: ["English", "Tamil"],
+      }] : []),
+    ],
+  };
+
+  return { hospitalJsonLd, localBusinessJsonLd };
+}
+
+export default async function Home() {
+  // Fetch hospital settings from CMS
+  let hospitalSettings: any = {};
+  try { hospitalSettings = await getHospitalSettings(); } catch { /* fallback to defaults */ }
+
+  const { hospitalJsonLd, localBusinessJsonLd } = buildJsonLd(hospitalSettings);
+
   return (
     <main className="flex flex-col min-h-screen">
       {/* JSON-LD Structured Data */}

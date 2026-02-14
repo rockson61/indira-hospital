@@ -60,21 +60,36 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
 
     const departments = SEED_DATA.services;
 
-    // JSON-LD structured data
+    // JSON-LD structured data — enhanced with CMS SEO fields
+    const sameAs = [doctor.social_linkedin, doctor.social_website].filter(Boolean);
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Physician",
         name: doctor.name,
-        description: doctor.bio?.replace(/<[^>]*>?/gm, ''),
+        url: `https://www.indirasuperspecialityhospital.com/doctors/${slug}`,
+        description: doctor.bio?.replace(/<[^>]*>?/gm, '').slice(0, 300),
         medicalSpecialty: deptName,
         image: getImageUrl(doctor.image) || undefined,
+        ...(doctor.qualifications && { hasCredential: doctor.qualifications }),
+        ...(doctor.medical_registration_number && { identifier: doctor.medical_registration_number }),
+        ...(doctor.gender && { gender: doctor.gender }),
+        ...(doctor.experience_years && { yearsInPractice: doctor.experience_years }),
+        ...(doctor.consultation_fee && { priceRange: `₹${doctor.consultation_fee}` }),
+        ...(doctor.accepting_new_patients !== undefined && { isAcceptingNewPatients: doctor.accepting_new_patients }),
+        ...(doctor.available_days?.length && { availableService: { "@type": "MedicalProcedure", serviceType: "Consultation", hoursAvailable: doctor.available_days } }),
+        ...(doctor.phone && { telephone: doctor.phone }),
+        ...(doctor.email && { email: doctor.email }),
+        ...(sameAs.length > 0 && { sameAs }),
         worksFor: {
             "@type": "Hospital",
             name: "Indira Super Speciality Hospital",
+            url: "https://www.indirasuperspecialityhospital.com",
             address: {
                 "@type": "PostalAddress",
+                streetAddress: "Katpadi Road",
                 addressLocality: "Vellore",
                 addressRegion: "Tamil Nadu",
+                postalCode: "632004",
                 addressCountry: "IN",
             },
         },

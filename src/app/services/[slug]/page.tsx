@@ -79,16 +79,32 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
 
-    // JSON-LD
+    // JSON-LD — enhanced with MedicalProcedure schema
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "MedicalSpecialty",
+        "@type": service.procedure_type || "MedicalProcedure",
         name: service.title,
-        description: service.full_description,
+        url: `https://www.indirasuperspecialityhospital.com/services/${slug}`,
+        description: service.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || service.short_description,
+        ...(service.body_location && { bodyLocation: service.body_location }),
+        ...(service.preparation && { preparation: service.preparation.replace(/<[^>]*>?/gm, '') }),
+        ...(service.followup && { followup: service.followup.replace(/<[^>]*>?/gm, '') }),
+        ...(service.how_performed && { howPerformed: service.how_performed.replace(/<[^>]*>?/gm, '') }),
+        ...(service.risks_description && { risks: service.risks_description.replace(/<[^>]*>?/gm, '') }),
+        ...(service.duration_minutes && { procedureType: `Duration: ${service.duration_minutes} minutes` }),
+        ...((service.cost_range_min || service.cost_range_max) && {
+            offers: {
+                "@type": "Offer",
+                priceCurrency: "INR",
+                ...(service.cost_range_min && { lowPrice: service.cost_range_min }),
+                ...(service.cost_range_max && { highPrice: service.cost_range_max }),
+            }
+        }),
         provider: {
             "@type": "Hospital",
             name: "Indira Super Speciality Hospital",
-            address: { "@type": "PostalAddress", addressLocality: "Vellore", addressRegion: "Tamil Nadu", addressCountry: "IN" },
+            url: "https://www.indirasuperspecialityhospital.com",
+            address: { "@type": "PostalAddress", streetAddress: "Katpadi Road", addressLocality: "Vellore", addressRegion: "Tamil Nadu", postalCode: "632004", addressCountry: "IN" },
         },
     };
 
