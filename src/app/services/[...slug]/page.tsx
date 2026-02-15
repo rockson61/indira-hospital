@@ -96,7 +96,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     return {
         title: service.seo_title || `${service.title} - Best ${service.title} Treatment in Vellore | Indira Hospital`,
-        description: service.seo_description || `${service.full_description?.substring(0, 160) || service.short_description} Book appointment on WhatsApp at Indira Super Speciality Hospital, Vellore.`,
+        description: service.seo_description || `${service.full_description?.replace(/<[^>]*>?/gm, '').substring(0, 160) || service.short_description} Book appointment on WhatsApp at Indira Super Speciality Hospital, Vellore.`,
         keywords: [service.title, "Vellore", "Indira Hospital", "best hospital", "treatment", "surgery"],
     };
 }
