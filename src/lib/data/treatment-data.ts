@@ -141,6 +141,266 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         faq: [
             { question: "When can I walk after surgery?", answer: "Most patients walk with support on the same day or next day after surgery." }
         ]
+    },
+    {
+        id: "t-7",
+        slug: "hip-replacement",
+        parentServiceSlug: "orthopaedics",
+        title: "Total Hip Replacement",
+        shortDescription: "Restore mobility with advanced hip replacement surgery.",
+        fullDescription: "Our orthopaedic team performs total hip replacement surgery for patients with severe arthritis or hip fractures, using durable implants and minimally invasive techniques for faster recovery.",
+        features: [
+            "Ceramic-on-Ceramic implants",
+            "Minimally Invasive approach",
+            "Computer Navigation",
+            "Rapid Rehab Protocol"
+        ],
+        benefits: [
+            "Pain-free walking",
+            "Improved joint mobility",
+            "Long-lasting results",
+            "Enhanced quality of life"
+        ]
+    },
+    {
+        id: "t-8",
+        slug: "arthroscopy",
+        parentServiceSlug: "orthopaedics",
+        title: "Arthroscopy (Sports Medicine)",
+        shortDescription: "Minimally invasive keyhole surgery for joint problems.",
+        fullDescription: "Arthroscopy is a procedure for diagnosing and treating joint problems. A surgeon inserts a narrow tube attached to a fiber-optic video camera through a small incision.",
+        features: [
+            "Keyhole surgery",
+            "ligament reconstruction (ACL/PCL)",
+            "Meniscus Repair",
+            "Rotator Cuff Repair"
+        ],
+        benefits: [
+            "Minimal scarring",
+            "Day-care procedure",
+            "Faster return to sports",
+            "Less post-op pain"
+        ]
+    },
+    {
+        id: "t-9",
+        slug: "kidney-transplant",
+        parentServiceSlug: "urology",
+        title: "Kidney Transplantation",
+        shortDescription: "Life-saving transplant surgery for renal failure.",
+        fullDescription: "We offer a comprehensive renal transplant program involving live related donors and deceased donors, supported by advanced immunology and post-transplant care.",
+        features: [
+            "Laparoscopic Donor Nephrectomy",
+            "Advanced Immunosuppression",
+            "Dedicated Transplant ICU",
+            "Cross-match compatibility testing"
+        ],
+        benefits: [
+            "Freedom from Dialysis",
+            "Normal lifestyle",
+            "High success rates",
+            "Comprehensive follow-up"
+        ]
+    },
+    {
+        id: "t-10",
+        slug: "prostate-surgery",
+        parentServiceSlug: "urology",
+        title: "Laser Prostate Surgery (TURP/HoLEP)",
+        shortDescription: "Advanced laser treatment for enlarged prostate (BPH).",
+        fullDescription: "We use Holmium Laser Enucleation of the Prostate (HoLEP) and TURP to treat benign prostatic hyperplasia (BPH), ensuring rapid relief from urinary symptoms.",
+        features: [
+            "Holmium Laser technology",
+            "Bloodless procedure",
+            "Suitable for cardiac patients",
+            "Short hospital stay"
+        ],
+        benefits: [
+            "Immediate symptom relief",
+            "Quick catheter removal",
+            "Low recurrence risk",
+            "Safe for elderly"
+        ]
+    },
+    {
+        id: "t-11",
+        slug: "liver-transplant",
+        parentServiceSlug: "gastroenterology",
+        title: "Liver Transplantation",
+        shortDescription: "Expert care for end-stage liver disease.",
+        fullDescription: "Our liver transplant unit provides state-of-the-art care for patients with liver failure and liver cancer, offering both living donor and cadaveric transplant options.",
+        features: [
+            "Living Donor Liver Transplant",
+            "Dedicated Liver ICU",
+            "Experienced Transplant Team",
+            "Post-transplant rehabilitation"
+        ],
+        benefits: [
+            "Survival benefit",
+            "Improved quality of life",
+            "Expert multidisciplinary care",
+            "Long-term management"
+        ]
+    },
+    {
+        id: "t-12",
+        slug: "gallbladder-removal",
+        parentServiceSlug: "gastroenterology",
+        title: "Laparoscopic Gallbladder Removal",
+        shortDescription: "Minimally invasive surgery for gallstones.",
+        fullDescription: "Cholecystectomy is the surgical removal of the gallbladder. Laparoscopic removal is the gold standard, offering minimal pain and quick recovery.",
+        features: [
+            "Keyhole incisions",
+            "HD Laparoscopy",
+            "Day-care option",
+            "Low complication rate"
+        ],
+        benefits: [
+            "No dietary restrictions post-recovery",
+            "Prevention of complications",
+            "Cosmetic advantage",
+            "Return to work in days"
+        ]
+    },
+    {
+        id: "t-13",
+        slug: "root-canal-treatment",
+        parentServiceSlug: "dental",
+        title: "Root Canal Treatment",
+        shortDescription: "Save your natural tooth with painless root canal therapy.",
+        fullDescription: "Root canal treatment is designed to eliminate bacteria from the infected root canal, prevent reinfection of the tooth and save the natural tooth.",
+        features: [
+            "Single-sitting option",
+            "Rotary Endodontics",
+            "Digital X-rays",
+            "Painless anesthesia"
+        ],
+        benefits: [
+            "Saves natural tooth",
+            "Relieves severe pain",
+            "Prevents spread of infection",
+            "Durable functionality"
+        ]
+    },
+    {
+        id: "t-14",
+        slug: "dental-implants",
+        parentServiceSlug: "dental",
+        title: "Dental Implants",
+        shortDescription: "Permanent solution for missing teeth.",
+        fullDescription: "Dental implants are replacement tooth roots. Implants provide a strong foundation for fixed (permanent) or removable replacement teeth that are made to match your natural teeth.",
+        features: [
+            "Titanium implants",
+            "Immediate Loading option",
+            "Bone grafting if needed",
+            "3D Guide planning"
+        ],
+        benefits: [
+            "Looks and feels like natural teeth",
+            "Improved speech",
+            "Easier eating",
+            "Durability (Life-long)"
+        ]
+    },
+    {
+        id: "t-15",
+        slug: "lasik",
+        parentServiceSlug: "ophthalmology",
+        title: "LASIK Eye Surgery",
+        shortDescription: "Freedom from glasses with advanced laser vision correction.",
+        fullDescription: "LASIK is a refractive surgery for the correction of myopia, hyperopia, and astigmatism. The surgery is performed by an ophthalmologist who uses a laser or microkeratome to reshape the eye's cornea.",
+        features: [
+            "Blade-free option",
+            "Custom Wavefront technology",
+            "Quick procedure (10 mins)",
+            "Fast visual recovery"
+        ],
+        benefits: [
+            "20/20 vision potential",
+            "Freedom from contact lenses",
+            "Painless procedure",
+            "Permanent results"
+        ]
+    },
+    {
+        id: "t-16",
+        slug: "hernia-repair",
+        parentServiceSlug: "general-surgery",
+        title: "Laparoscopic Hernia Repair",
+        shortDescription: "Advanced mesh repair for all types of hernias.",
+        fullDescription: "We perform laparoscopic repair for Inguinal, Umbilical, and Incisional hernias using 3D mesh, ensuring strong reinforcement and minimal recurrence.",
+        features: [
+            "3D Mesh technolgy",
+            "TAPP / TEP techniques",
+            "Minimal incisions",
+            "Fast recovery"
+        ],
+        benefits: [
+            "Reduced post-op pain",
+            "Low recurrence rate",
+            "Early return to activity",
+            "Better cosmetics"
+        ]
+    },
+    {
+        id: "t-17",
+        slug: "dialysis",
+        parentServiceSlug: "nephrology",
+        title: "Dialysis Services",
+        shortDescription: "24/7 Hemodialysis for acute and chronic kidney failure.",
+        fullDescription: "Our Dialysis unit is equipped with advanced Fresenius machines to provide safe and effective hemodialysis for patients with renal failure.",
+        features: [
+            "24/7 Emergency Dialysis",
+            "Bedside dialysis in ICU",
+            "RO Water plant",
+            "Strict infection control"
+        ],
+        benefits: [
+            "Life-sustaining treatment",
+            "Experienced technicians",
+            "Comfortable environment",
+            "Dietary counseling"
+        ]
+    },
+    {
+        id: "t-18",
+        slug: "chemotherapy",
+        parentServiceSlug: "oncology",
+        title: "Chemotherapy Day Care",
+        shortDescription: "Comprehensive medical oncology services.",
+        fullDescription: "We provide chemotherapy administration in a comfortable day-care setting, managed by experienced oncologists and specially trained nursing staff.",
+        features: [
+            "Chemo-port handling",
+            "Targeted Therapy",
+            "Immunotherapy",
+            "Palliative care integration"
+        ],
+        benefits: [
+            "Personalized protocols",
+            "Side-effect management",
+            "Psychological support",
+            "Nutrition guidance"
+        ]
+    },
+    {
+        id: "t-19",
+        slug: "c-section",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Caesarean Section (C-Section)",
+        shortDescription: "Safe surgical delivery for mother and baby.",
+        fullDescription: "While we encourage normal delivery, our team is ready 24/7 for emergency or elective C-sections to ensure the safety of both mother and child in high-risk situations.",
+        features: [
+            "Epidural / Spinal Anesthesia",
+            "Pediatrician at birth",
+            "Cosmetic skin closure",
+            "Partner allowed (in some cases)"
+        ],
+        benefits: [
+            "Life-saving intervention",
+            "Controlled environment",
+            "Pain management",
+            "Planned timing (for elective)"
+        ]
     }
 ];
 
