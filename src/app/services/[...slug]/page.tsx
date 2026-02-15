@@ -91,12 +91,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
 
     // Check for Service
-    const service = SEED_DATA.services.find((s) => s.slug === lastSlug);
+    const service = SEED_DATA.services.find((s) => s.slug === lastSlug) as any;
     if (!service) return { title: "Page Not Found" };
 
     return {
-        title: `${service.title} - Best ${service.title} Treatment in Vellore | Indira Hospital`,
-        description: `${service.full_description?.substring(0, 160) || service.short_description} Book appointment on WhatsApp at Indira Super Speciality Hospital, Vellore.`,
+        title: service.seo_title || `${service.title} - Best ${service.title} Treatment in Vellore | Indira Hospital`,
+        description: service.seo_description || `${service.full_description?.substring(0, 160) || service.short_description} Book appointment on WhatsApp at Indira Super Speciality Hospital, Vellore.`,
         keywords: [service.title, "Vellore", "Indira Hospital", "best hospital", "treatment", "surgery"],
     };
 }
@@ -139,7 +139,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         procedures = treatment.features; // Use features as procedures
 
         // Find parent service to link stuff
-        const parentService = SEED_DATA.services.find(s => s.slug === treatment.parentServiceSlug);
+        const parentService = SEED_DATA.services.find(s => s.slug === treatment.parentServiceSlug) as any;
         if (parentService) {
             (service as any).related_doctors = (parentService.related_doctors as any[]) || [];
             (service as any).available_locations = (parentService.available_locations as any[]) || [];
@@ -188,7 +188,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         "@type": isTreatmentPage ? "MedicalProcedure" : (service.procedure_type || "MedicalProcedure"),
         name: service.title,
         url: `https://www.indirasuperspecialityhospital.com/services/${slug.join('/')}`,
-        description: service.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || service.short_description,
+        description: service.seo_description || service.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || service.short_description,
         provider: {
             "@type": "Hospital",
             name: "Indira Super Speciality Hospital",

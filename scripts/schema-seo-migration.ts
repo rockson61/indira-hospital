@@ -1,11 +1,7 @@
 /**
- * Schema SEO Migration — Adds all missing fields for semantic SEO (Schema.org JSON-LD)
+ * Schema & SEO Migration Script
  * 
- * Creates: hospital_settings singleton
- * Enhances: doctors, departments, services, locations, health_packages,
- *           insurances, testimonials, faqs, pages
- * 
- * Idempotent — skips existing fields/collections.
+ * Adds missing SEO fields and creates the hospital_settings singleton.
  */
 import { createDirectus, rest, authentication, createCollection, createField } from '@directus/sdk';
 import dotenv from 'dotenv';
@@ -30,9 +26,9 @@ const client = createDirectus(CMS_URL)
 // HELPERS
 // =============================================
 
-async function createCollectionSafe(collection: string, meta: any) {
+async function createCollectionSafe(collection: string, meta: any, schema: any = {}) {
     try {
-        await client.request(createCollection({ collection, schema: {}, meta }));
+        await client.request(createCollection({ collection, schema, meta }));
         console.log(`  ✅ Created collection: ${collection}`);
     } catch (e: any) {
         if (e?.errors?.[0]?.code === 'RECORD_NOT_UNIQUE' || e?.message?.includes('already exists')) {
@@ -49,15 +45,17 @@ async function addField(collection: string, field: string, config: any) {
             field,
             type: config.type,
             meta: {
-                interface: config.interface,
-                display: config.display,
-                options: config.options,
-                special: config.special,
-                required: config.required,
-                note: config.note,
+                interface: config.interface || 'input',
+                display: config.display || null,
+                options: config.options || null,
+                special: config.special || null,
+                required: config.required || false,
+                note: config.note || null,
+                hidden: config.hidden || false,
+                width: config.width || 'full',
             },
             schema: {
-                is_unique: config.unique,
+                is_unique: config.unique || false,
                 default_value: config.default_value,
             }
         }));
@@ -71,208 +69,115 @@ async function addField(collection: string, field: string, config: any) {
     }
 }
 
-// Convenience shortcuts
-const seoTitle = { type: 'string', interface: 'input', display: 'raw', note: 'SEO: page title tag' };
-const seoDesc = { type: 'text', interface: 'textarea', display: 'raw', note: 'SEO: meta description' };
-const sortOrder = { type: 'integer', interface: 'input', display: 'raw', note: 'Display sort order', default_value: 0 };
-const richText = { type: 'text', interface: 'input-rich-text-html', display: 'formatted-value' };
-const plainText = { type: 'text', interface: 'textarea', display: 'raw' };
-const str = { type: 'string', interface: 'input', display: 'raw' };
-const floatField = { type: 'float', interface: 'input', display: 'raw' };
-const intField = { type: 'integer', interface: 'input', display: 'raw' };
-const boolField = { type: 'boolean', interface: 'boolean', display: 'boolean', special: ['boolean'] };
-const jsonTags = { type: 'json', interface: 'tags', display: 'labels' };
-const jsonCode = { type: 'json', interface: 'input-code', display: 'raw' };
-const imageField = { type: 'uuid', interface: 'image', display: 'image', special: ['file'] };
-
 // =============================================
-// MIGRATION
+// MAIN SETUP
 // =============================================
 
-async function migrate() {
+async function setup() {
     console.log('🔐 Authenticating...');
     await client.login({ email: ADMIN_EMAIL!, password: ADMIN_PASSWORD! });
     console.log('✅ Authenticated\n');
 
-    // ─────────────────────────────────────────
-    // 1. HOSPITAL SETTINGS (Singleton)
-    // Schema.org: Hospital, MedicalOrganization, LocalBusiness
-    // ─────────────────────────────────────────
-    console.log('═══ 1. hospital_settings (NEW Singleton) ═══');
-    await createCollectionSafe('hospital_settings', {
-        note: 'Global hospital info for LocalBusiness JSON-LD',
-        singleton: true
-    });
-    await addField('hospital_settings', 'hospital_name', { ...str, required: true, note: 'Schema: name' });
-    await addField('hospital_settings', 'legal_name', { ...str, note: 'Schema: legalName' });
-    await addField('hospital_settings', 'tagline', { ...str, note: 'Schema: slogan' });
-    await addField('hospital_settings', 'description', { ...plainText, note: 'Schema: description' });
-    await addField('hospital_settings', 'logo', { ...imageField, note: 'Schema: logo' });
-    await addField('hospital_settings', 'founded_year', { ...intField, note: 'Schema: foundingDate' });
-    await addField('hospital_settings', 'phone', { ...str, note: 'Schema: telephone' });
-    await addField('hospital_settings', 'emergency_phone', { ...str, note: 'Emergency contact' });
-    await addField('hospital_settings', 'whatsapp', { ...str, note: 'WhatsApp number' });
-    await addField('hospital_settings', 'email', { ...str, note: 'Schema: email' });
-    await addField('hospital_settings', 'website', { ...str, note: 'Schema: url' });
-    await addField('hospital_settings', 'address_street', { ...str, note: 'Schema: streetAddress' });
-    await addField('hospital_settings', 'address_city', { ...str, note: 'Schema: addressLocality' });
-    await addField('hospital_settings', 'address_state', { ...str, note: 'Schema: addressRegion' });
-    await addField('hospital_settings', 'address_pincode', { ...str, note: 'Schema: postalCode' });
-    await addField('hospital_settings', 'address_country', { ...str, note: 'Schema: addressCountry' });
-    await addField('hospital_settings', 'geo_lat', { ...floatField, note: 'Schema: latitude' });
-    await addField('hospital_settings', 'geo_lng', { ...floatField, note: 'Schema: longitude' });
-    await addField('hospital_settings', 'opening_hours', { ...jsonCode, note: 'Schema: openingHoursSpecification (JSON array)' });
-    await addField('hospital_settings', 'price_range', { ...str, note: 'Schema: priceRange e.g. "₹₹"' });
-    await addField('hospital_settings', 'bed_count', { ...intField, note: 'Schema: numberOfBeds' });
-    await addField('hospital_settings', 'social_facebook', { ...str, note: 'Schema: sameAs' });
-    await addField('hospital_settings', 'social_instagram', { ...str, note: 'Schema: sameAs' });
-    await addField('hospital_settings', 'social_youtube', { ...str, note: 'Schema: sameAs' });
-    await addField('hospital_settings', 'social_linkedin', { ...str, note: 'Schema: sameAs' });
-    await addField('hospital_settings', 'social_twitter', { ...str, note: 'Schema: sameAs' });
-    await addField('hospital_settings', 'google_maps_url', { ...str, note: 'Schema: hasMap' });
-    await addField('hospital_settings', 'aggregate_rating', { ...floatField, note: 'Schema: aggregateRating.ratingValue' });
-    await addField('hospital_settings', 'review_count', { ...intField, note: 'Schema: aggregateRating.reviewCount' });
-    await addField('hospital_settings', 'areas_served', { ...jsonTags, note: 'Schema: areaServed' });
+    // 1. Hospital Settings (Singleton)
+    console.log('═══ 1. Hospital Settings ═══');
+    await createCollectionSafe('hospital_settings', { singleton: true, note: 'Global Hospital Metadata' });
 
-    // ─────────────────────────────────────────
-    // 2. DOCTORS — Physician schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 2. doctors (SEO enhancements) ═══');
-    await addField('doctors', 'seo_title', seoTitle);
-    await addField('doctors', 'seo_description', seoDesc);
-    await addField('doctors', 'medical_registration_number', { ...str, note: 'Physician.identifier — MCI/State reg number' });
+    // Basic Info
+    await addField('hospital_settings', 'hospital_name', { type: 'string', width: 'half', required: true });
+    await addField('hospital_settings', 'legal_name', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'tagline', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'description', { type: 'text', interface: 'textarea', width: 'full' });
+    await addField('hospital_settings', 'logo', { type: 'uuid', interface: 'file-image', related_collection: 'directus_files' }); // specialized handling might be needed for file relation, but let's try basic
+    await addField('hospital_settings', 'founded_year', { type: 'integer', width: 'half' });
+
+    // Contact
+    await addField('hospital_settings', 'phone', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'emergency_phone', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'whatsapp', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'email', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'website', { type: 'string', width: 'half' });
+
+    // Address
+    await addField('hospital_settings', 'address_street', { type: 'string', width: 'full' });
+    await addField('hospital_settings', 'address_city', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'address_state', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'address_pincode', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'address_country', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'geo_lat', { type: 'float', width: 'half' });
+    await addField('hospital_settings', 'geo_lng', { type: 'float', width: 'half' });
+
+    // Social
+    await addField('hospital_settings', 'social_facebook', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'social_instagram', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'social_youtube', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'social_linkedin', { type: 'string', width: 'half' });
+    await addField('hospital_settings', 'social_twitter', { type: 'string', width: 'half' });
+
+    // SEO / Other
+    await addField('hospital_settings', 'google_maps_url', { type: 'string', width: 'full' });
+    await addField('hospital_settings', 'areas_served', { type: 'json', interface: 'tags', width: 'full' });
+    await addField('hospital_settings', 'opening_hours', { type: 'json', interface: 'code', width: 'full', note: 'Schema.org OpeningHoursSpecification format' });
+
+
+    // 2. Doctors SEO
+    console.log('\n═══ 2. Doctors SEO ═══');
+    const seoValues = {
+        seo_title: { type: 'string', width: 'half', note: 'Meta Title' },
+        seo_description: { type: 'text', interface: 'textarea', width: 'full', note: 'Meta Description' },
+        sort_order: { type: 'integer', width: 'half', note: 'Sort Order' },
+    };
+
+    for (const [key, config] of Object.entries(seoValues)) {
+        await addField('doctors', key, config);
+    }
+
+    await addField('doctors', 'medical_registration_number', { type: 'string', width: 'half' });
     await addField('doctors', 'gender', {
-        type: 'string', interface: 'select-dropdown', display: 'labels',
-        options: { choices: [{ text: 'Male', value: 'male' }, { text: 'Female', value: 'female' }, { text: 'Other', value: 'other' }] },
-        note: 'Physician.gender'
+        type: 'string',
+        interface: 'select-dropdown',
+        options: { choices: [{ text: 'Male', value: 'Male' }, { text: 'Female', value: 'Female' }, { text: 'Other', value: 'Other' }] },
+        width: 'half'
     });
-    await addField('doctors', 'qualifications', { ...str, note: 'Physician.hasCredential — e.g. MBBS, MS, MCh' });
-    await addField('doctors', 'available_days', { ...jsonTags, note: 'Physician.availableService — days available' });
-    await addField('doctors', 'phone', { ...str, note: 'Physician.telephone' });
-    await addField('doctors', 'email', { ...str, note: 'Physician.email' });
-    await addField('doctors', 'social_linkedin', { ...str, note: 'Physician.sameAs' });
-    await addField('doctors', 'social_website', { ...str, note: 'Physician.sameAs' });
-    await addField('doctors', 'accepting_new_patients', { ...boolField, note: 'Physician.isAcceptingNewPatients', default_value: true });
-    await addField('doctors', 'sort_order', sortOrder);
+    await addField('doctors', 'qualifications', { type: 'string', width: 'full' });
+    await addField('doctors', 'available_days', { type: 'json', interface: 'tags', width: 'full' });
+    await addField('doctors', 'email', { type: 'string', width: 'half' });
+    await addField('doctors', 'phone', { type: 'string', width: 'half' });
+    await addField('doctors', 'social_linkedin', { type: 'string', width: 'half' });
 
-    // ─────────────────────────────────────────
-    // 3. DEPARTMENTS — MedicalSpecialty schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 3. departments (SEO enhancements) ═══');
-    await addField('departments', 'seo_title', seoTitle);
-    await addField('departments', 'seo_description', seoDesc);
-    await addField('departments', 'short_description', { ...str, note: 'Short text for cards/listings' });
-    await addField('departments', 'head_of_department', { ...str, note: 'Link to lead doctor name' });
-    await addField('departments', 'facilities', { ...jsonTags, note: 'List of key facilities' });
-    await addField('departments', 'sort_order', sortOrder);
-
-    // ─────────────────────────────────────────
-    // 4. SERVICES — MedicalProcedure schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 4. services (SEO enhancements) ═══');
-    await addField('services', 'seo_title', seoTitle);
-    await addField('services', 'seo_description', seoDesc);
+    // 3. Services SEO
+    console.log('\n═══ 3. Services SEO ═══');
+    for (const [key, config] of Object.entries(seoValues)) {
+        await addField('services', key, config);
+    }
     await addField('services', 'procedure_type', {
-        type: 'string', interface: 'select-dropdown', display: 'labels',
-        options: {
-            choices: [
-                { text: 'Surgical', value: 'SurgicalProcedure' },
-                { text: 'Non-Invasive', value: 'NonInvasiveProcedure' },
-                { text: 'Diagnostic', value: 'DiagnosticProcedure' },
-                { text: 'Therapeutic', value: 'TherapeuticProcedure' },
-                { text: 'Palliative', value: 'PalliativeProcedure' },
-            ]
-        },
-        note: 'MedicalProcedure.procedureType'
+        type: 'string',
+        interface: 'select-dropdown',
+        options: { choices: [{ text: 'Surgical', value: 'Surgical' }, { text: 'Non-Surgical', value: 'Non-Surgical' }, { text: 'Diagnostic', value: 'Diagnostic' }] },
+        width: 'half'
     });
-    await addField('services', 'body_location', { ...str, note: 'MedicalProcedure.bodyLocation' });
-    await addField('services', 'preparation', { ...richText, note: 'MedicalProcedure.preparation' });
-    await addField('services', 'followup', { ...richText, note: 'MedicalProcedure.followup' });
-    await addField('services', 'how_performed', { ...richText, note: 'MedicalProcedure.howPerformed' });
-    await addField('services', 'risks_description', { ...richText, note: 'MedicalProcedure.risks' });
-    await addField('services', 'benefits_list', { ...jsonTags, note: 'List of procedure benefits' });
-    await addField('services', 'risks_list', { ...jsonTags, note: 'List of procedure risks' });
-    await addField('services', 'duration_minutes', { ...intField, note: 'Typical procedure duration' });
-    await addField('services', 'sort_order', sortOrder);
+    await addField('services', 'duration_minutes', { type: 'integer', width: 'half' });
+    await addField('services', 'benefits_list', { type: 'json', interface: 'tags', width: 'full' });
 
-    // ─────────────────────────────────────────
-    // 5. LOCATIONS — MedicalClinic / Place schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 5. locations (SEO enhancements) ═══');
-    await addField('locations', 'seo_title', seoTitle);
-    await addField('locations', 'seo_description', seoDesc);
-    await addField('locations', 'geo_lat', { ...floatField, note: 'Place.geo.latitude' });
-    await addField('locations', 'geo_lng', { ...floatField, note: 'Place.geo.longitude' });
-    await addField('locations', 'google_maps_url', { ...str, note: 'Place.hasMap — Google Maps link' });
-    await addField('locations', 'transport_guide', { ...richText, note: 'How to reach from this location' });
-    await addField('locations', 'nearby_landmarks', { ...jsonTags, note: 'Reference landmarks' });
-    await addField('locations', 'sort_order', sortOrder);
+    // 4. Locations SEO
+    console.log('\n═══ 4. Locations SEO ═══');
+    for (const [key, config] of Object.entries(seoValues)) {
+        await addField('locations', key, config);
+    }
+    await addField('locations', 'geo_lat', { type: 'float', width: 'half' });
+    await addField('locations', 'geo_lng', { type: 'float', width: 'half' });
+    await addField('locations', 'google_maps_url', { type: 'string', width: 'full' });
+    await addField('locations', 'nearby_landmarks', { type: 'json', interface: 'tags', width: 'full' });
 
-    // ─────────────────────────────────────────
-    // 6. FAQs — FAQPage schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 6. faqs (enhancements) ═══');
-    await addField('faqs', 'related_service', { ...str, note: 'Related service name/slug' });
-    await addField('faqs', 'related_department', { ...str, note: 'Related department name/slug' });
-    await addField('faqs', 'sort_order', sortOrder);
-
-    // ─────────────────────────────────────────
-    // 7. HEALTH PACKAGES — Product / Offer schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 7. health_packages (SEO enhancements) ═══');
-    await addField('health_packages', 'slug', { ...str, required: true, unique: true, note: 'URL slug' });
-    await addField('health_packages', 'seo_title', seoTitle);
-    await addField('health_packages', 'seo_description', seoDesc);
-    await addField('health_packages', 'short_description', { ...str, note: 'Card/listing description' });
-    await addField('health_packages', 'original_price', { ...intField, note: 'Product.offers.highPrice (MRP / strikethrough)' });
-    await addField('health_packages', 'validity_days', { ...intField, note: 'Offer validity in days' });
-    await addField('health_packages', 'is_featured', { ...boolField, note: 'Show on homepage', default_value: false });
-    await addField('health_packages', 'sort_order', sortOrder);
-
-    // ─────────────────────────────────────────
-    // 8. INSURANCES — enhancements
-    // ─────────────────────────────────────────
-    console.log('\n═══ 8. insurances (enhancements) ═══');
-    await addField('insurances', 'slug', { ...str, unique: true, note: 'URL slug' });
-    await addField('insurances', 'description', { ...plainText, note: 'About this insurer' });
-    await addField('insurances', 'website_url', { ...str, note: 'External website link' });
-    await addField('insurances', 'cashless_available', { ...boolField, note: 'Cashless treatment flag', default_value: true });
-    await addField('insurances', 'sort_order', sortOrder);
-
-    // ─────────────────────────────────────────
-    // 9. TESTIMONIALS — Review schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 9. testimonials (SEO enhancements) ═══');
-    await addField('testimonials', 'treatment_received', { ...str, note: 'What treatment was received' });
-    await addField('testimonials', 'department', { ...str, note: 'Related department' });
-    await addField('testimonials', 'doctor', { ...str, note: 'Treating doctor name' });
-    await addField('testimonials', 'date_of_visit', { type: 'date', interface: 'datetime', display: 'datetime', note: 'Review.datePublished' });
-    await addField('testimonials', 'is_featured', { ...boolField, note: 'Show on homepage', default_value: false });
-    await addField('testimonials', 'sort_order', sortOrder);
-
-    // ─────────────────────────────────────────
-    // 10. PAGES — WebPage schema
-    // ─────────────────────────────────────────
-    console.log('\n═══ 10. pages (SEO enhancements) ═══');
-    await addField('pages', 'og_image', { ...imageField, note: 'Open Graph image' });
-    await addField('pages', 'canonical_url', { ...str, note: 'SEO canonical URL' });
-    await addField('pages', 'robots_meta', {
-        type: 'string', interface: 'select-dropdown', display: 'labels',
-        options: {
-            choices: [
-                { text: 'Index, Follow', value: 'index,follow' },
-                { text: 'No Index, Follow', value: 'noindex,follow' },
-                { text: 'Index, No Follow', value: 'index,nofollow' },
-                { text: 'No Index, No Follow', value: 'noindex,nofollow' },
-            ]
-        },
-        note: 'Robots meta directive',
-        default_value: 'index,follow'
-    });
-    await addField('pages', 'sort_order', sortOrder);
+    // 5. Departments SEO
+    console.log('\n═══ 5. Departments SEO ═══');
+    for (const [key, config] of Object.entries(seoValues)) {
+        await addField('departments', key, config);
+    }
+    await addField('departments', 'short_description', { type: 'text', interface: 'textarea', width: 'full' });
+    await addField('departments', 'facilities', { type: 'json', interface: 'tags', width: 'full' });
 
     console.log('\n' + '═'.repeat(60));
-    console.log('✨ Schema SEO Migration Complete!');
+    console.log('✨ Schema & SEO Migration Complete!');
 }
 
-migrate().catch(err => { console.error('Migration failed:', err); process.exit(1); });
+setup().catch(err => { console.error('Setup failed:', err); process.exit(1); });

@@ -92,35 +92,39 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { slug } = await params;
     const location = allLocations.find((l) => l.slug === slug);
+    const apiLocation = await getLocationBySlug(slug).catch(() => null);
 
-    if (!location) return { title: "Location Not Found" };
+    if (!location && !apiLocation) return { title: "Location Not Found" };
+
+    // Prefer API SEO title/description
+    const title = apiLocation?.seo_title || (location ? `Best Hospital Near ${location.name} | Laparoscopic Surgery, Laser Piles | Indira Hospital Vellore` : 'Indira Hospital Location');
+    const description = apiLocation?.seo_description || (location ? `Indira Super Speciality Hospital is ${location.travelTime} from ${location.name}. Best laparoscopic surgery, laser piles treatment, fistula removal in ${location.district}. 24/7 emergency, 15+ departments. WhatsApp us now!` : '');
 
     return {
-        title: `Best Hospital Near ${location.name} | Laparoscopic Surgery, Laser Piles | Indira Hospital Vellore`,
-        description: `Indira Super Speciality Hospital is ${location.travelTime} from ${location.name}. Best laparoscopic surgery, laser piles treatment, fistula removal in ${location.district}. 24/7 emergency, 15+ departments. WhatsApp us now!`,
+        title,
+        description,
         keywords: [
-            `hospital near ${location.name}`,
-            `best hospital ${location.district}`,
-            `laparoscopic surgery ${location.name}`,
-            `laser piles treatment ${location.name}`,
-            `fistula removal ${location.name}`,
-            `super speciality hospital ${location.district}`,
+            `hospital near ${location?.name || apiLocation?.name}`,
+            `best hospital ${location?.district || apiLocation?.district}`,
+            `laparoscopic surgery ${location?.name || apiLocation?.name}`,
+            `laser piles treatment ${location?.name || apiLocation?.name}`,
             "Indira Hospital Vellore",
         ],
         openGraph: {
-            title: `Best Hospital Near ${location.name} | Indira Hospital Vellore`,
-            description: `Just ${location.distance} from ${location.name}. #1 for Laparoscopic Surgery, Laser Piles & Fistula. 24/7 Emergency.`,
+            title,
+            description,
         },
     };
 }
 
 // Structured Data (JSON-LD) for SEO
-function LocationJsonLd({ location }: { location: (typeof allLocations)[0] }) {
+// Structured Data (JSON-LD) for SEO
+function LocationJsonLd({ location, apiLocation }: { location: (typeof allLocations)[0], apiLocation: any }) {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Hospital",
         name: clinicConfig.name,
-        description: `Best super speciality hospital accessible from ${location.name}. Advanced laparoscopic surgery, laser piles treatment, and fistula removal.`,
+        description: apiLocation?.seo_description || `Best super speciality hospital accessible from ${location.name}. Advanced laparoscopic surgery, laser piles treatment, and fistula removal.`,
         address: {
             "@type": "PostalAddress",
             streetAddress: clinicConfig.address,
@@ -141,6 +145,13 @@ function LocationJsonLd({ location }: { location: (typeof allLocations)[0] }) {
         areaServed: {
             "@type": "Place",
             name: `${location.name}, ${location.district}`,
+            ...(apiLocation?.geo_lat && apiLocation?.geo_lng && {
+                geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: apiLocation.geo_lat,
+                    longitude: apiLocation.geo_lng
+                }
+            })
         },
     };
     return (
@@ -183,7 +194,7 @@ export default async function LocationPage({
 
     return (
         <main className="min-h-screen">
-            <LocationJsonLd location={location} />
+            <LocationJsonLd location={location} apiLocation={apiLocation} />
 
             {/* ========== HERO ========== */}
             <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-800 text-white py-20 lg:py-28 overflow-hidden">

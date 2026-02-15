@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const deptName = typeof doctor.department === 'string' ? doctor.department : (doctor.department as any)?.name || '';
 
     return {
-        title: `${doctor.name} - ${doctor.designation} | Indira Super Speciality Hospital`,
-        description: `${doctor.name}, ${doctor.designation} at Indira Hospital. ${doctor.experience_years}+ years experience in ${deptName}. Book appointment on WhatsApp. Best hospital in Vellore for Laparoscopic Surgery, Laser Piles, Fistula.`,
+        title: doctor.seo_title || `${doctor.name} - ${doctor.designation} | Indira Super Speciality Hospital`,
+        description: doctor.seo_description || `${doctor.name}, ${doctor.designation} at Indira Hospital. ${doctor.experience_years}+ years experience in ${deptName}. Book appointment on WhatsApp. Best hospital in Vellore for Laparoscopic Surgery, Laser Piles, Fistula.`,
         keywords: [doctor.name, doctor.designation, deptName, "Indira Hospital", "Vellore", "best doctor"],
     };
 }
@@ -67,7 +67,7 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
         "@type": "Physician",
         name: doctor.name,
         url: `https://www.indirasuperspecialityhospital.com/doctors/${slug}`,
-        description: doctor.bio?.replace(/<[^>]*>?/gm, '').slice(0, 300),
+        description: (doctor.seo_description || doctor.bio || '').replace(/<[^>]*>?/gm, '').slice(0, 300),
         medicalSpecialty: deptName,
         image: getImageUrl(doctor.image) || undefined,
         ...(doctor.qualifications && { hasCredential: doctor.qualifications }),

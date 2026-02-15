@@ -1,85 +1,77 @@
 /**
- * Seed the hospital_settings singleton with Indira Hospital data
+ * Seed Hospital Settings
+ * 
+ * Populates the hospital_settings singleton with Indira Hospital data.
  */
-import { createDirectus, rest, staticToken, readSingleton, updateSingleton } from '@directus/sdk';
+import { createDirectus, rest, authentication, updateSingleton } from '@directus/sdk';
 import dotenv from 'dotenv';
 import path from 'path';
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
-const DIRECTUS_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8055';
-const DIRECTUS_TOKEN = process.env.DIRECTUS_TOKEN;
+const CMS_URL = process.env.NEXT_PUBLIC_API_URL;
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
-if (!DIRECTUS_TOKEN) {
-    console.error('Error: DIRECTUS_TOKEN not set. Run: export DIRECTUS_TOKEN=$(cat .token)');
+if (!CMS_URL || !ADMIN_EMAIL || !ADMIN_PASSWORD) {
+    console.error('Missing env vars');
     process.exit(1);
 }
 
-const client = createDirectus(DIRECTUS_URL)
-    .with(staticToken(DIRECTUS_TOKEN))
+const client = createDirectus(CMS_URL)
+    .with(authentication('json', { autoRefresh: true }))
     .with(rest());
 
-const hospitalData = {
+const HOSPITAL_DATA = {
     hospital_name: 'Indira Super Speciality Hospital',
-    legal_name: 'Indira Super Speciality Hospital Pvt Ltd',
-    tagline: 'Trusted Multi-Speciality Hospital in Vellore',
-    description: 'Indira Super Speciality Hospital is a leading multi-speciality hospital in Vellore, Tamil Nadu, offering advanced medical care across 12+ departments with 25+ expert doctors. Equipped with a state-of-the-art Cath Lab, modern ICU, 100+ beds, and 24/7 emergency services.',
-    founded_year: 1990,
-    phone: '+919842342525',
-    emergency_phone: '+919842342525',
-    whatsapp: '+917010650063',
-    email: 'info@indirahospital.com',
-    website: 'https://www.indirasuperspecialityhospital.com',
-    address_street: 'Katpadi Road',
+    legal_name: 'Indira Hospital Projects Pvt Ltd',
+    tagline: 'Care with Compassion',
+    description: 'Indira Super Speciality Hospital in Vellore is a leading multi-specialty healthcare provider known for its advanced medical technology and expert doctors. We offer 24/7 emergency care, trauma services, and specialized treatments in Neurology, Cardiology, Orthopaedics, and more.',
+    founded_year: 2015,
+
+    // Contact
+    phone: '+91 63826 95853',
+    emergency_phone: '0416-224-1111',
+    whatsapp: '+916382695853',
+    email: 'info@indirahospital.in',
+    website: 'https://indirasuperspecialityhospital.com',
+
+    // Address
+    address_street: 'No. 1, Gandhipet Road, Thirunagar',
     address_city: 'Vellore',
     address_state: 'Tamil Nadu',
-    address_pincode: '632004',
-    address_country: 'IN',
-    geo_lat: 12.9344,
-    geo_lng: 79.1422,
-    opening_hours: JSON.stringify([
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "20:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "09:00", "closes": "13:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59", "description": "Emergency 24/7" }
-    ]),
-    price_range: '₹₹',
-    bed_count: 100,
-    social_facebook: 'https://www.facebook.com/indirasuperspecialityhospital',
-    social_instagram: 'https://www.instagram.com/indirasuperspecialityhospital',
-    social_youtube: 'https://www.youtube.com/@indirahospitalvellore',
-    social_linkedin: '',
-    social_twitter: '',
-    google_maps_url: 'https://maps.google.com/?q=Indira+Super+Speciality+Hospital+Vellore',
-    aggregate_rating: 4.6,
-    review_count: 850,
-    areas_served: JSON.stringify([
-        'Vellore', 'Katpadi', 'Ranipet', 'Ambur', 'Vaniyambadi',
-        'Arcot', 'Gudiyatham', 'Walajapet', 'Tiruvannamalai',
-        'Krishnagiri', 'Kanchipuram', 'Salem', 'Chennai'
-    ]),
+    address_pincode: '632006',
+    address_country: 'India',
+    geo_lat: 12.9298,
+    geo_lng: 79.1370,
+    google_maps_url: 'https://goo.gl/maps/example', // Update with real link if available
+
+    // Social
+    social_facebook: 'https://www.facebook.com/IndiraSuperSpecialityHospital',
+    social_instagram: 'https://www.instagram.com/indirahospitalvellore',
+    social_youtube: 'https://www.youtube.com/c/IndiraSuperSpecialityHospital',
+
+    // SEO
+    opening_hours: [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" }
+    ],
+    areas_served: ["Vellore", "Ranipet", "Tirupattur", "Chittoor", "Arcot"],
 };
 
 async function seed() {
-    console.log(`🏥 Seeding hospital_settings at ${DIRECTUS_URL}`);
+    console.log('🔐 Authenticating...');
+    await client.login({ email: ADMIN_EMAIL!, password: ADMIN_PASSWORD! });
+    console.log('✅ Authenticated');
 
+    console.log('🏥 Seeding Hospital Settings...');
     try {
-        // Try to read existing singleton
-        const existing = await client.request(readSingleton('hospital_settings' as any));
-        console.log('Singleton exists, updating with hospital data...');
-    } catch {
-        console.log('Singleton empty, creating initial data...');
-    }
-
-    try {
-        await client.request(updateSingleton('hospital_settings' as any, hospitalData as any));
-        console.log('✅ hospital_settings seeded successfully!');
-        console.log(`   Name: ${hospitalData.hospital_name}`);
-        console.log(`   Address: ${hospitalData.address_street}, ${hospitalData.address_city}, ${hospitalData.address_state} ${hospitalData.address_pincode}`);
-        console.log(`   Phone: ${hospitalData.phone}`);
-        console.log(`   Geo: ${hospitalData.geo_lat}, ${hospitalData.geo_lng}`);
-        console.log(`   Rating: ${hospitalData.aggregate_rating}/5 (${hospitalData.review_count} reviews)`);
-    } catch (err: any) {
-        console.error('❌ Failed to seed hospital_settings:', err?.errors?.[0]?.message || err?.message);
+        await client.request(updateSingleton('hospital_settings', HOSPITAL_DATA));
+        console.log('✅ Hospital Settings Updated!');
+    } catch (e: any) {
+        console.error('❌ Error updating settings:', e?.message || e);
+        // Fallback: If singleton doesn't exist (though migration should have created it), maybe try creating it? 
+        // Singletons are just collections. If the row doesn't exist, updateSingleton might fail depending on version. 
+        // But createCollection with singleton:true usually initializes the row.
     }
 }
 
