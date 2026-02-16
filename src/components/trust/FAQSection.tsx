@@ -14,11 +14,14 @@ interface FAQSectionProps {
   location?: string
 }
 
+/**
+ * FAQSection - Standardized UI component for displaying FAQs with SEO Schema.
+ */
 export function FAQSection({
   title,
   description,
   faqs,
-  category = "dental",
+  category = "general",
   location = "Vellore",
 }: FAQSectionProps) {
   // Generate unique IDs for schema markup
@@ -67,49 +70,5 @@ export function FAQSection({
         }}
       />
     </div>
-  )
-}
-
-// Use centralized data
-import { generalFaqs, invisalignFaqs } from "@/lib/data/faq-data"
-
-// Example usage for dental FAQs
-export function DentalFAQs({ location = "Vellore" }) {
-  // We can enrich the data with location here if needed, or use as is
-  // For now, mapping simple substitution if necessary or just using the static text
-  // The original code injected location into string templates.
-  // We'll simplisticly replace "our clinic" with `our ${location} clinic` if we really want to match 1:1,
-  // OR just assume the data is generic enough or contains "Indira Dental Clinic"
-  // The new data has "At our clinic".
-  // Let's use it as is for simplicity, or modify the data file to be functions?
-  // Functions is better for dynamic location.
-  // BUT for now, let's just use the array.
-
-  const dentalFaqs = generalFaqs;
-
-
-  return (
-    <FAQSection
-      title={`Frequently Asked Dental Questions in ${location}`}
-      description={`Find answers to common dental questions from our experienced dentists in ${location}`}
-      faqs={dentalFaqs}
-      category="General Dentistry"
-      location={location}
-    />
-  )
-}
-
-// Example usage for Invisalign FAQs
-export function InvisalignFAQs({ location = "Vellore" }) {
-  const alignerFaqs = invisalignFaqs;
-
-  return (
-    <FAQSection
-      title={`Invisalign FAQs in ${location}`}
-      description={`Common questions about Invisalign clear aligner treatment at our ${location} dental clinic`}
-      faqs={alignerFaqs}
-      category="Invisalign"
-      location={location}
-    />
   )
 }

@@ -8,6 +8,7 @@ import { FeaturedDoctors } from "@/components/sections/featured-doctors";
 import { Testimonials } from "@/components/sections/testimonials";
 import { FAQSection } from "@/components/sections/faq-section";
 import { LocationStrip } from "@/components/sections/location-strip";
+import { AZIndex } from "@/components/sections/a-z-index";
 import { CTASection } from "@/components/sections/cta";
 import { getHospitalSettings } from "@/lib/api";
 
@@ -165,6 +166,8 @@ function buildJsonLd(h: any) {
   return { hospitalJsonLd, localBusinessJsonLd };
 }
 
+import { QuickLinks } from "@/components/sections/quick-links";
+
 export default async function Home() {
   // Fetch hospital settings from CMS
   let hospitalSettings: any = {};
@@ -187,9 +190,11 @@ export default async function Home() {
       {/* Sections */}
       <Hero />
       <StatsBanner />
+      <QuickLinks />
       <WhyChooseUs />
       <FeaturedDepartments />
       <SignatureTreatments />
+      <AZIndex />
       <FeaturedDoctors />
       <Testimonials />
       <FAQSection />

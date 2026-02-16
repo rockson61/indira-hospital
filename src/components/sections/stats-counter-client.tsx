@@ -77,9 +77,9 @@ export function StatsCounterClient({ doctorCount, departmentCount, patientCount 
 
     return (
         <section ref={ref} className="relative py-16 sm:py-20 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-900 to-brand-800" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-900 to-primary-800" />
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-            <div className="absolute top-0 left-1/4 w-72 h-72 bg-brand-500/20 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl" />
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">

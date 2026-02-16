@@ -38,9 +38,9 @@ export function ClinicsOverview() {
   return (
     <SectionContainer>
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold gradient-text mb-6">Our Modern Dental Clinic</h2>
+        <h2 className="text-3xl md:text-5xl font-bold gradient-text mb-6">Our Modern Medical Facility</h2>
         <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-          Experience dental care in a state-of-the-art facility designed for your comfort and safety, conveniently
+          Experience healthcare in a state-of-the-art facility designed for your comfort and safety, conveniently
           located in the heart of Vellore.
         </p>
       </div>
@@ -93,10 +93,10 @@ export function ClinicsOverview() {
                     📞 7010650063
                   </a>
                   <a
-                    href="mailto:rockson68@hotmail.com"
+                    href="mailto:info@indirasuperspecialityhospital.com"
                     className="text-foreground/80 hover:text-primary transition-colors block"
                   >
-                    ✉️ rockson68@hotmail.com
+                    ✉️ info@indirasuperspecialityhospital.com
                   </a>
                   <a
                     href="https://wa.me/917010650063"
@@ -138,7 +138,7 @@ export function ClinicsOverview() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Indira Dental Clinic Location"
+            title="Indira Hospital Location"
           />
         </div>
       </div>
@@ -175,7 +175,7 @@ export function ClinicsOverview() {
         </div>
 
         <p className="text-default-700 dark:text-default-300 mb-6">
-          Rated as one of the top dental clinics in Vellore based on patient satisfaction and treatment quality.
+          Rated as one of the top hospitals in Vellore based on patient satisfaction and treatment quality.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

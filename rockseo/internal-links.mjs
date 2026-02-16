@@ -75,6 +75,60 @@ const CONFIG = {
             topics: ["emergency", "urgent", "same-day", "pain", "swelling", "knocked out", "broken tooth"],
             relatedConditions: ["toothache", "abscessed-tooth", "cracked-teeth", "broken-jaw"],
             relatedServices: ["root-canal-treatment", "tooth-extraction"]
+        },
+        "general-surgery": {
+            hub: "/services/general-surgery",
+            topics: ["surgery", "piles", "hernia", "thyroid", "varicose veins", "appendix", "gallbladder", "laparoscopic"],
+            relatedConditions: ["appendicitis", "gallstones", "piles"],
+            relatedServices: ["urology", "gastroenterology"]
+        },
+        "gastroenterology": {
+            hub: "/services/gastroenterology",
+            topics: ["endoscopy", "colonoscopy", "gastritis", "ulcer", "liver", "pancreas", "digestive"],
+            relatedConditions: ["fatty-liver", "acidity", "pancreatitis"],
+            relatedServices: ["general-surgery", "nephrology"]
+        },
+        "urology": {
+            hub: "/services/urology",
+            topics: ["kidney stone", "prostate", "urinary", "uti", "urologist", "laser lithotripsy"],
+            relatedConditions: ["kidney-stones", "bph", "uti"],
+            relatedServices: ["nephrology", "diagnostics"]
+        },
+        "obstetrics-gynaecology": {
+            hub: "/services/obstetrics-gynaecology",
+            topics: ["pregnancy", "maternity", "delivery", "normal delivery", "c-section", "gynecology", "pcos", "pcod"],
+            relatedConditions: ["high-risk-pregnancy", "infertility", "pcos"],
+            relatedServices: ["diagnostics", "health-packages"]
+        },
+        "orthopaedics": {
+            hub: "/services/orthopaedics",
+            topics: ["joint replacement", "knee replacement", "hip replacement", "fracture", "spine", "ortho", "bone"],
+            relatedConditions: ["arthritis", "sciatica", "spondylosis"],
+            relatedServices: ["physiotherapy", "diagnostics"]
+        },
+        "cardiology": {
+            hub: "/services/cardiology",
+            topics: ["heart", "cardio", "angioplasty", "angiogram", "pacemaker", "heart attack", "chest pain"],
+            relatedConditions: ["hypertension", "heart-failure", "arrhythmia"],
+            relatedServices: ["diagnostics", "icu-emergency"]
+        },
+        "neurology": {
+            hub: "/services/neurology",
+            topics: ["brain", "stroke", "epilepsy", "neurology", "nerves", "migraine", "headache"],
+            relatedConditions: ["paralysis", "seizures", "parkinsons"],
+            relatedServices: ["diagnostics", "cardiology"]
+        },
+        "oncology": {
+            hub: "/services/oncology",
+            topics: ["cancer", "oncology", "chemotherapy", "chemo", "tumor", "malignant"],
+            relatedConditions: ["breast-cancer", "colon-cancer"],
+            relatedServices: ["general-surgery", "diagnostics"]
+        },
+        "nephrology": {
+            hub: "/services/nephrology",
+            topics: ["kidney", "nephrology", "dialysis", "creatinine", "renal"],
+            relatedConditions: ["kidney-failure", "nephrotic-syndrome"],
+            relatedServices: ["urology", "diagnostics"]
         }
     },
 
@@ -140,7 +194,7 @@ function extractPageData(filePath, content) {
     };
 
     // Extract slug from file path
-    const pathMatch = filePath.match(/app\/\[locale\]\/(.+?)\/page\.tsx$/);
+    const pathMatch = filePath.match(/app\/(.+?)\/page\.tsx$/);
     if (pathMatch) {
         data.slug = "/" + pathMatch[1];
     }

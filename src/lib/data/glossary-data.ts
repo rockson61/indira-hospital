@@ -475,9 +475,9 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Implant",
         definition: "A thing implanted in something else, especially a piece of tissue, prosthetic device, or other object implanted in the body.",
-        category: "Dental",
-        relatedService: "dental",
-        relatedServiceTitle: "Dental Care"
+        category: "Dentistry",
+        relatedService: "dentistry",
+        relatedServiceTitle: "Maxillofacial & Dentistry"
     },
     {
         term: "Insulin",
@@ -585,9 +585,9 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Orthodontics",
         definition: "The treatment of irregularities in the teeth (especially of alignment and occlusion) and jaws, including the use of braces.",
-        category: "Dental",
-        relatedService: "dental",
-        relatedServiceTitle: "Dental Care"
+        category: "Dentistry",
+        relatedService: "dentistry",
+        relatedServiceTitle: "Maxillofacial & Dentistry"
     },
 
     // P

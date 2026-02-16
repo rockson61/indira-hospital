@@ -12,7 +12,10 @@ import { enhancedVelloreLocations } from "@/lib/data/enhanced-location-data";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { SEED_DATA } from "@/lib/data/seed-data";
 import { clinicConfig } from "@/lib/data/clinic-config";
-import { getLocationBySlug } from "@/lib/api"; // Added import
+import { getLocationBySlug } from "@/lib/api";
+import EntityReviews from "@/components/trust/EntityReviews";
+import { DoctorCard } from "@/components/entities/DoctorCard";
+import { ServiceCard } from "@/components/entities/ServiceCard";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -373,29 +376,14 @@ export default async function LocationPage({
                             Healthcare Departments for {location.name} Patients
                         </h2>
                     </div>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {(departments as any[]).map((dept) => {
-                            const IconComp = deptIcons[dept.title] || Stethoscope;
-                            // Check if API data has icon, else usage static map
-                            // API services might have 'icon' string field
-                            return (
-                                <Link
-                                    key={dept.slug}
-                                    href={`/departments/${dept.slug}`} // Note: using departments route for services
-                                    className="group flex items-start gap-4 p-5 rounded-xl bg-gray-50 hover:bg-teal-50 transition-colors border border-transparent hover:border-teal-200"
-                                >
-                                    <div className="w-10 h-10 rounded-lg bg-teal-100 group-hover:bg-teal-200 flex items-center justify-center flex-shrink-0 transition-colors">
-                                        <IconComp className="w-5 h-5 text-teal-600" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-semibold text-gray-900 group-hover:text-teal-700 transition-colors text-sm">
-                                            {dept.title}
-                                        </h3>
-                                        <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">{dept.short_description}</p>
-                                    </div>
-                                </Link>
-                            );
-                        })}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {(departments as any[]).map((dept) => (
+                            <ServiceCard
+                                key={dept.slug}
+                                service={dept}
+                                variant="compact"
+                            />
+                        ))}
                     </div>
                 </SectionContainer>
             </section>
@@ -414,31 +402,7 @@ export default async function LocationPage({
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {(doctors as any[]).map((doc) => (
-                            <Link
-                                key={doc.slug}
-                                href={`/doctors/${doc.slug}`}
-                                className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition-all hover:-translate-y-1"
-                            >
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center text-white font-bold text-lg overflow-hidden">
-                                        {doc.image ? (
-                                            <img src={`https://admin.indirasuperspecialityhospital.com/assets/${doc.image}`} alt={doc.name} className="w-full h-full object-cover" />
-                                        ) : (
-                                            doc.name.split(" ").map((n: string) => n[0]).slice(0, 2).join("")
-                                        )}
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 group-hover:text-purple-700 transition-colors">
-                                            {doc.name}
-                                        </h3>
-                                        <p className="text-sm text-gray-500">{doc.designation}</p>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-gray-600 mb-3">{typeof doc.department === 'string' ? doc.department : doc.department?.name} • {doc.experience_years}+ Years</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-xs text-teal-600 font-medium">View Profile →</span>
-                                </div>
-                            </Link>
+                            <DoctorCard key={doc.slug} doctor={doc} variant="grid" />
                         ))}
                     </div>
                 </SectionContainer>
@@ -530,6 +494,15 @@ export default async function LocationPage({
                 </SectionContainer>
             </section>
 
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="location"
+                entityName={location.name}
+                entitySlug={slug}
+                title={`What Patients from ${location.name} Say`}
+                description={`Verified reviews and testimonials from patients who visited Indira Hospital from ${location.name}.`}
+            />
+
             {/* ========== WHY CHOOSE US ========== */}
             <section className="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white">
                 <SectionContainer>
@@ -569,25 +542,14 @@ export default async function LocationPage({
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
-                            { title: "Piles Treatment", slug: "/treatments/piles-treatment-vellore", desc: "Laser piles treatment — no cuts, no pain, 30-min cure.", tag: "#1 in TN" },
-                            { title: "Hernia Surgery", slug: "/departments/general-surgery", desc: "Laparoscopic mesh hernia repair with same-day discharge.", tag: "Laparoscopic" },
-                            { title: "Gallbladder Surgery", slug: "/departments/general-surgery", desc: "Single-incision laparoscopic cholecystectomy.", tag: "Keyhole" },
-                            { title: "Joint Replacement", slug: "/departments/orthopaedics", desc: "Total knee & hip replacement with navigation technology.", tag: "Advanced" },
-                            { title: "Heart Care", slug: "/departments/cardiology", desc: "Angiography, angioplasty & pacemaker implantation.", tag: "24/7 Cath Lab" },
-                            { title: "Spine Surgery", slug: "/departments/spine-surgery", desc: "Minimally invasive spine surgery and disc treatment.", tag: "Expert" },
+                            { title: "Piles Treatment", slug: "piles-treatment-vellore", short_description: "Laser piles treatment — no cuts, no pain, 30-min cure.", procedure_type: "#1 in TN" },
+                            { title: "Hernia Surgery", slug: "../../departments/general-surgery", short_description: "Laparoscopic mesh hernia repair with same-day discharge.", procedure_type: "Laparoscopic" },
+                            { title: "Gallbladder Surgery", slug: "../../departments/general-surgery", short_description: "Single-incision laparoscopic cholecystectomy.", procedure_type: "Keyhole" },
+                            { title: "Joint Replacement", slug: "../../departments/orthopaedics", short_description: "Total knee & hip replacement with navigation technology.", procedure_type: "Advanced" },
+                            { title: "Heart Care", slug: "../../departments/cardiology", short_description: "Angiography, angioplasty & pacemaker implantation.", procedure_type: "24/7 Cath Lab" },
+                            { title: "Spine Surgery", slug: "../../departments/spine-surgery", short_description: "Minimally invasive spine surgery and disc treatment.", procedure_type: "Expert" },
                         ].map((t) => (
-                            <Link
-                                key={t.title}
-                                href={t.slug}
-                                className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition-all hover:-translate-y-1"
-                            >
-                                <div className="flex items-start justify-between mb-3">
-                                    <h3 className="font-bold text-gray-900 group-hover:text-teal-700 transition-colors">{t.title}</h3>
-                                    <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-medium rounded-full flex-shrink-0">{t.tag}</span>
-                                </div>
-                                <p className="text-sm text-gray-500 mb-4">{t.desc}</p>
-                                <span className="text-teal-600 text-sm font-medium">Learn More →</span>
-                            </Link>
+                            <ServiceCard key={t.title} service={t} variant="detail" />
                         ))}
                     </div>
                 </SectionContainer>

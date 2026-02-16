@@ -20,8 +20,8 @@
     "siteInfo": {
         "name": "Indira Super Speciality Hospital",
         "location": "Vellore, Tamil Nadu, India",
-        "primaryEntity": "Indira Hospital",
-        "domain": "indirahospital.com",
+        "primaryEntity": "Indira Super Speciality Hospital",
+        "domain": "indirasuperspecialityhospital.com",
         "niche": "Multi-Speciality Hospital",
         "topicalPillars": [
             "Cardiology",
@@ -31,7 +31,8 @@
             "Urology",
             "Oncology",
             "Pediatrics",
-            "Emergency Care"
+            "Emergency Care",
+            "Dental Surgery"
         ]
     }
 }

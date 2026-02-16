@@ -1,0 +1,160 @@
+- [x] Implement and Integrate SEO Reviews (Core Entities) <!-- id: 1 -->
+    - [x] Plan and research existing schema <!-- id: 2 -->
+    - [x] Create `EntityReviews` component with JSON-LD <!-- id: 3 -->
+    - [x] Update API to fetch reviews for specific entities <!-- id: 4 -->
+    - [x] Integrate reviews into Doctors, Services, Departments, Diagnostics, and Locations <!-- id: 5 -->
+- [x] Integrate SEO Reviews into Supporting Entities <!-- id: 6 -->
+    - [x] Integrate reviews into Health Packages detail page <!-- id: 7 -->
+    - [x] Integrate reviews into Location-specific Department pages <!-- id: 8 -->
+    - [x] Verify SEO schema and layout for new pages <!-- id: 9 -->
+- [x] Expand Sitemap & Further Reviews Integration <!-- id: 12 -->
+    - [x] Update `sitemap.ts` to include Health Packages and fix baseUrl <!-- id: 13 -->
+    - [x] Integrate reviews into Blog detail pages <!-- id: 14 -->
+    - [x] Integrate reviews into Technology detail pages <!-- id: 15 -->
+- [x] Integrate Reviews into Semantic Mesh Pages <!-- id: 16 -->
+    - [x] Update plan with deep-link page list (4 specific templates) <!-- id: 17 -->
+    - [x] Integrate reviews into Location → Doctor pages <!-- id: 18 -->
+    - [x] Integrate reviews into Location → Department → Doctor pages <!-- id: 19 -->
+    - [x] Integrate reviews into Department → Doctor pages <!-- id: 20 -->
+    - [x] Integrate reviews into Department → Location pages <!-- id: 21 -->
+- [x] Integrate Reviews into Service Guides <!-- id: 22 -->
+    - [x] Update `generate-pages-from-gaps.mjs` template <!-- id: 23 -->
+    - [x] Batch update existing 27+ service guide pages <!-- id: 24 -->
+- [x] Expand Service Guides to all Medical Treatments <!-- id: 25 -->
+    - [x] Identify treatments/subtopics for all 11 medical departments <!-- id: 26 -->
+    - [x] Update `generate-pages-from-gaps.mjs` with full medical taxonomy <!-- id: 27 -->
+    - [x] Generate and move new medical guide pages <!-- id: 28 -->
+    - [x] Update Sitemap and internal linking hubs <!-- id: 29 -->
+- [x] Debug and Fix Runtime Errors <!-- id: 10 -->
+    - [x] Resolved JSX tag mismatches and layout issues <!-- id: 11 -->
+- [x] Debug and Fix Runtime Errors <!-- id: 10 -->
+    - [x] Resolved JSX tag mismatches and layout issues <!-- id: 11 -->
+- [x] Implement International Patients Section <!-- id: 30 -->
+    - [x] Research and define 50-country dataset <!-- id: 31 -->
+    - [x] Create International Patients Hub page <!-- id: 32 -->
+    - [x] Create Dynamic Country Guide system <!-- id: 33 -->
+    - [x] Integrate into main navigation and sitemap <!-- id: 34 -->
+    - [x] Generate premium visual assets for international care <!-- id: 35 -->
+- [x] Update Global Navigation <!-- id: 36 -->
+    - [x] Sync Header links with new modules (Packages, Blog, International) <!-- id: 37 -->
+    - [x] Reorganize Footer columns for better discoverability <!-- id: 38 -->
+    - [x] Map procedure links to SEO-optimized guides <!-- id: 39 -->
+- [x] Expand Medical Technology Section <!-- id: 40 -->
+    - [x] Update `technology-data.ts` with Physiotherapy <!-- id: 41 -->
+    - [x] Create Technology Hub page (`src/app/technology/page.tsx`) <!-- id: 42 -->
+    - [x] Enhance Technology Detail pages and inter-linking <!-- id: 43 -->
+- [x] Comprehensive Site Validation & Expansion <!-- id: 44 -->
+    - [x] Enhance Doctors listing with advanced filtering <!-- id: 45 -->
+    - [x] Create Quality & Safety standards page <!-- id: 46 -->
+    - [x] Integrate full department list from user provided text
+    - [x] Populate `seed-data.ts` with 41+ specialized departments
+    - [x] Update `a-z-index.tsx` to reflect expanded list dynamically
+    - [x] Verify production build and page generation
+- [x] Optimizing UI/UX & Creative Elements <!-- id: 50 -->
+    - [x] Research Apollo UX Patterns <!-- id: 51 -->
+    - [x] Implement Mobile Sticky Quick-Actions <!-- id: 52 -->
+    - [x] Overhaul Hero Section with Video/A-Z Search <!-- id: 53 -->
+    - [x] Apply Glassmorphism & Micro-animations across UI <!-- id: 54 -->
+    - [x] Integrate A-Z Condition Index on Homepage <!-- id: 55 -->
+    - [x] Enhance Social Proof with Video Testimonial UI <!-- id: 56 -->
+    - [x] Update Project Proposal (Implementation Plan) with all current progress <!-- id: 57 -->
+    - [x] Implementation of Premium Emergency Pulse & Enhanced Testimonials <!-- id: 58 -->
+- [x] Branding & Stability <!-- id: 59 -->
+    - [x] Align Tailwind Config & Globals with Brand Colors (#841F74, #2C4167) <!-- id: 60 -->
+    - [x] Audit and fix inconsistent font sizes and colors in components <!-- id: 61 -->
+    - [x] Replace legacy `brand-` utilities with semantic `primary-` classes <!-- id: 62 -->
+    - [x] Fix `EntityReviews` fetch errors with department name normalization <!-- id: 63 -->
+    - [x] Verify production build and no console errors <!-- id: 64 -->
+    - [x] Fix homepage font sizes (Hero & Section Headers) to be more proportional <!-- id: 65 -->
+- [x] **Comprehensive UI/UX & SEO Polish** <!-- id: 66 -->
+    - [x] **Category Pages**: Enhance `/departments` and `/doctors` with better hero sections and grids. <!-- id: 67 -->
+    - [x] **Single Pages**: Audit and improve layout for Department and Doctor profiles. <!-- id: 68 -->
+    - [x] **Meta Tags**: Systematically verify `generateMetadata` for all dynamic routes. <!-- id: 69 -->
+    - [x] **Mobile Responsiveness**: Check padding and font sizes on mobile views. <!-- id: 70 -->
+- [x] **Investigate Directus API Permissions**: Address the `403 Forbidden` error for fetching blog posts. <!-- id: 71 -->
+    - [x] Verified static token has full access to `posts` and `author` fields.
+    - [x] Identified missing public read access for `directus_files` (images) and `posts` as the likely cause.
+    - [x] Created and ran `scripts/fix-public-permissions.ts` to grant public read access.
+- [x] **Blog Content Migration** <!-- id: 72 -->
+    - [x] **Schema Definition**: Define `posts` schema in Directus (title, slug, content, author, etc.). <!-- id: 73 -->
+    - [x] **Seed Script**: Seeded 5 high-quality, SEO-optimized blog posts for Indira Hospital. <!-- id: 74 -->
+    - [x] **API Integration**: Update `src/lib/api.ts` to fetch full blog content from Directus. <!-- id: 75 -->
+    - [x] **Frontend Update**: Ensure Blog Detail pages render structured content dynamically. <!-- id: 76 -->
+- [x] **Heading Hierarchy Audit & Standardization** <!-- id: 77 -->
+    - [x] Audit and fix H1-H6 hierarchy on all major pages (Home, Departments, Doctors, Services, Blog, Technology, International). <!-- id: 78 -->
+    - [x] Standardize `FAQAccordionClient` to use semantic `<h3>` for questions. <!-- id: 79 -->
+    - [x] Standardize `WhyChooseUs` to use semantic `<h3>` for feature titles. <!-- id: 80 -->
+    - [x] Update `Testimonials` to use semantic `<h3>` for patient names. <!-- id: 81 -->
+    - [x] Switch list items in `Services` detail page from `div` to `ul`/`li` for better semantics. <!-- id: 82 -->
+- [x] **Deployment Readiness** <!-- id: 83 -->
+    - [x] Run full production build (`npm run build`) and fix any errors. <!-- id: 84 -->
+    - [x] Verify `next.config.ts` image domains and security headers. <!-- id: 85 -->
+    - [x] Check `sitemap.xml` generation. <!-- id: 86 -->
+    - [x] Create `DEPLOYMENT.md` guide for the user. <!-- id: 87 -->
+- [x] **Bug Fix: Treatment Page Data** <!-- id: 88 -->
+    - [x] Investigate why `src/app/services/[...slug]/page.tsx` shows "Indira Dental" fallback. <!-- id: 89 -->
+    - [x] Ensure correct `service` and `doctor` data is fetched for the specific slug. <!-- id: 90 -->
+    - [x] Remove or update hardcoded fallbacks to reflect "Indira Super Speciality Hospital". <!-- id: 91 -->
+- [x] **UI/UX Standardization** <!-- id: 92 -->
+    - [x] Audit and upgrade `Contact` page. <!-- id: 93 -->
+    - [x] Audit and upgrade `Technology` page. <!-- id: 94 -->
+    - [x] Audit and upgrade `International Patients` pages. <!-- id: 95 -->
+    - [x] Audit and upgrade `About` page. <!-- id: 96 -->
+    - [x] Audit and upgrade `Doctors` and `Departments` list/detail pages. <!-- id: 97 -->
+- [x] Codebase Optimization & Cleanup
+    - [x] Update contact details in `clinic-config.ts` and global search
+    - [x] Consolidate `blog-posts.ts` and `blog-posts-migrated.ts`
+    - [x] Audit and clean up unused scripts in `scripts/`
+    - [x] Remove any other unused components or data files
+    - [x] Standardize phone numbers across the codebase
+- [x] **Remove Legacy Project Data**
+    - [x] Clean up `rockseo` directory (remove old reports/config, update with hospital data).
+    - [x] Remove old dental blogs from `blog-posts.ts`.
+    - [x] Scan and remove "Dr. Rockson Samuel" branding (except legitimate doctor profile).
+    - [x] Update `rockseo.config.json` with Indira Hospital details.
+    - [x] Ensure "Dental Services" are retained but styled as a department.
+- [x] **Update Domain Name**
+    - [x] Replace `https://indirahospital.com` with `https://www.indirasuperspecialityhospital.com`.
+- [x] **Merge Treatments into Services**
+    - [x] Move `src/app/treatments/piles-treatment-vellore` to `src/app/services/`.
+    - [x] Delete `src/app/treatments` directory.
+- [x] **Cleanup Scripts**
+    - [x] Remove executed seed and setup scripts from `scripts/`.
+- [x] **Move Documentation**
+    - [x] Create `documents` folder in project root.
+    - [x] Move `task.md`, `walkthrough.md`, `implementation_plan.md`, `DEPLOYMENT.md` to `documents/`.
+- [x] **Enhance Documentation for International Standards**
+    - [x] Merge `THEME_ANALYSIS` and `COMPETITOR_ANALYSIS` into `MASTER_BLUEPRINT.md`.
+    - [x] Add "International Standards Compliance" section (JCI, WCAG, Privacy) to Blueprint.
+    - [x] Rewrite `PROJECT_PROPOSAL.md` to be stakeholder-facing and standards-compliant.
+- [x] **Final UI/UX Optimizaton (Component-First)**
+    - [x] Create `src/components/entities/` directory.
+    - [x] Build Standardized Entity Cards:
+        - [x] `DoctorCard.tsx` (Grid, List, Compact variants).
+        - [x] `ServiceCard.tsx` (Poster, Detail, Compact variants).
+        - [x] `DepartmentCard.tsx`.
+        - [x] `LocationCard.tsx`.
+    - [x] **Refactor Doctor Page**: Replace ad-hoc HTML with Entity Cards.
+    - [x] **Refactor Service Page**: Replace ad-hoc HTML with Entity Cards.
+    - [x] **Refactor Listing Pages**: Update `/doctors`, `/services`, `/locations`, and `/diagnostics` hubs.
+    - [x] **Refactor Location Detail**: Enhance with Doctor/Service mesh.
+    - [x] Verify Cross-Embedding (Semantic Mesh) across all hubs.
+- [x] **Final UX Refinement & Polish**
+    - [x] **About Page Overhaul**: Fix leadership avatars and add conversion CTAs.
+    - [x] **Contact Page Enhancement**: Align form and contact blocks with brand theme.
+    - [x] **Micro-animations**: Add `framer-motion` entry effects to all Entity Cards.
+    - [x] Final Consistency Audit: Verify `PageHero` usage across all secondary pages. <!-- id: 89 -->
+- [x] **Freshness & Universal SEO (Final Phase)** <!-- id: 90 -->
+    - [x] Delete `src/app/services/` legacy dental service directories <!-- id: 91 -->
+    - [x] Purge `faq-data.ts` and `seed-data.ts` of dental-specific content <!-- id: 92 -->
+    - [x] Update `clinic-config.ts` with general hospital equipment <!-- id: 93 -->
+    - [x] Implement and Integrate `EntityFAQs.tsx` on all detail pages <!-- id: 94 -->
+    - [x] Remove hardcoded dental guides from service template <!-- id: 95 -->
+    - [x] Cleanse `services-data.tsx` and delete legacy `content/` components <!-- id: 96 -->
+    - [x] Final QA & Branding Audit <!-- id: 97 -->
+- [x] **Handover & Walkthrough** <!-- id: 98 -->
+    - [x] Generate final `walkthrough.md` with proof of work <!-- id: 99 -->
+    - [x] Final build verification <!-- id: 100 -->
+
+> [!NOTE]
+> **Directus Permissions**: Ensure junction tables (`doctors_locations`, `doctors_services`, `departments_doctors`) have Public Read access to prevent 403 errors during static site generation. The current API gracefully handles these failures but data might be missing if permissions are locked.

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { CalendarCheck, MessageCircle, Phone, MapPin, ArrowRight } from "lucide-react";
+import { CalendarCheck, MessageCircle, Phone, MapPin, ArrowRight, Calendar } from "lucide-react";
+import { clinicConfig } from "@/lib/data/clinic-config";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -14,15 +15,15 @@ export function CTASection() {
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
                     </span>
                     24/7 Emergency Available — Call{" "}
-                    <a href="tel:+919842342525" className="underline underline-offset-2 hover:no-underline">+91 98423 42525</a>{" "}
+                    <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="underline underline-offset-2 hover:no-underline">{clinicConfig.phone}</a>{" "}
                     for immediate assistance
                 </div>
             </div>
 
             {/* Main CTA area */}
-            <div className="bg-gradient-to-br from-brand-900 via-brand-800 to-purple-900 py-16 sm:py-24 relative">
+            <div className="bg-gradient-to-br from-primary-900 via-primary-800 to-purple-900 py-16 sm:py-24 relative">
                 {/* Decorative */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl" />
+                <div className="absolute top-0 right-0 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
 
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -65,7 +66,7 @@ export function CTASection() {
                             <h3 className="text-xl font-bold text-white mb-2">Call to Book</h3>
                             <p className="text-white/70 text-sm mb-4">Speak directly with our reception team for appointment booking.</p>
                             <span className="inline-flex items-center gap-2 text-white font-semibold">
-                                +91 98423 42525 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                {clinicConfig.phone} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </a>
                     </div>
@@ -77,11 +78,11 @@ export function CTASection() {
                             Katpadi Road, Vellore, Tamil Nadu 632004
                         </div>
                         <div className="hidden sm:block w-1 h-1 rounded-full bg-white/30" />
-                        <Link href="/departments" className="text-brand-300 hover:text-brand-200 font-medium transition-colors">
+                        <Link href="/departments" className="text-primary-300 hover:text-primary-200 font-medium transition-colors">
                             View Departments
                         </Link>
                         <div className="hidden sm:block w-1 h-1 rounded-full bg-white/30" />
-                        <Link href="/doctors" className="text-brand-300 hover:text-brand-200 font-medium transition-colors">
+                        <Link href="/doctors" className="text-primary-300 hover:text-primary-200 font-medium transition-colors">
                             Find a Doctor
                         </Link>
                     </div>

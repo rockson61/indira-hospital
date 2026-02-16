@@ -12,41 +12,37 @@ export const FOOTER_LINKS = {
         { name: "ENT", url: "/departments/ent" },
         { name: "Dermatology", url: "/departments/dermatology" },
         { name: "General Surgery", url: "/departments/general-surgery" },
-        { name: "Dental", url: "/departments/dental" },
+        { name: "Dentistry", url: "/departments/dentistry" },
         { name: "Plastic Surgery", url: "/departments/plastic-surgery" },
         { name: "Rheumatology", url: "/departments/rheumatology" }
     ],
     procedures: [
-        { name: "Angioplasty", url: "/services/cardiology/angioplasty" },
-        { name: "Knee Replacement", url: "/services/orthopaedics/knee-replacement" },
-        { name: "Hip Replacement", url: "/services/orthopaedics/hip-replacement" },
-        { name: "Kidney Transplant", url: "/services/urology/kidney-transplant" },
-        { name: "Liver Transplant", url: "/services/gastroenterology/liver-transplant" },
-        { name: "Caesarean Section", url: "/services/obstetrics-gynaecology/c-section" },
-        { name: "Root Canal", url: "/services/dental/root-canal-treatment" },
-        { name: "Dental Implants", url: "/services/dental/dental-implants" },
-        { name: "Lasik Surgery", url: "/services/ophthalmology/lasik" },
-        { name: "Hernia Repair", url: "/services/general-surgery/hernia-repair" },
-        { name: "Gallbladder Removal", url: "/services/gastroenterology/gallbladder-removal" },
-        { name: "Dialysis", url: "/services/nephrology/dialysis" },
-        { name: "Chemotherapy", url: "/services/oncology/chemotherapy" },
-        { name: "Arthroscopy", url: "/services/orthopaedics/arthroscopy" },
-        { name: "Prostate Surgery", url: "/services/urology/prostate-surgery" }
+        { name: "Angioplasty", url: "/services/cardiology/heart-angioplasty-procedure" },
+        { name: "Knee Replacement", url: "/services/orthopaedics/total-knee-replacement-cost" },
+        { name: "Hip Replacement", url: "/services/orthopaedics/hip-replacement-surgery-guide" },
+        { name: "Kidney Stone Laser Surgery", url: "/services/urology/kidney-stone-laser-surgery" },
+        { name: "Gallbladder Removal", url: "/services/general-surgery/gallbladder-removal-recovery" },
+        { name: "Caesarean Section", url: "/services/obstetrics-gynaecology/normal-delivery-vs-c-section" },
+        { name: "Hernia Repair", url: "/services/general-surgery/laparoscopic-hernia-repair" },
+        { name: "Dialysis", url: "/services/nephrology/dialysis-procedure-guide" },
+        { name: "Chemotherapy", url: "/services/oncology/chemotherapy-side-effects" },
+        { name: "Piles/Fistula Laser", url: "/services/general-surgery/laser-piles-treatment-cost" },
+        { name: "Maxillofacial Surgery", url: "/services/maxillofacial-surgery" },
+        { name: "Dental Implants", url: "/services/dental-implants" },
+        { name: "Smile Makeover", url: "/services/smile-makeover" },
+        { name: "Stroke Management", url: "/services/neurology/stroke-recovery-exercises" }
     ],
     healthLibrary: [
-        { name: "Chest Pain", url: "/glossary?q=Chest Pain" },
-        { name: "Back Pain", url: "/glossary?q=Back Pain" },
-        { name: "Headache & Migraine", url: "/glossary?q=Migraine" },
-        { name: "Stomach Pain", url: "/glossary?q=Gastritis" },
-        { name: "Joint Pain", url: "/glossary?q=Arthritis" },
-        { name: "Diabetes", url: "/glossary?q=Diabetes" },
-        { name: "Hypertension", url: "/glossary?q=Hypertension" },
-        { name: "Asthma", url: "/glossary?q=Asthma" },
-        { name: "Kidney Stones", url: "/glossary?q=Kidney Stones" },
-        { name: "Piles/Fistula", url: "/services/general-surgery/piles-treatment" },
-        { name: "Pregnancy Care", url: "/services/obstetrics-gynaecology/maternity" },
-        { name: "Stroke Symptoms", url: "/services/neurology/stroke-management" },
-        { name: "Fractures", url: "/services/orthopaedics/fracture-care" }
+        { name: "Heart Attack Signs", url: "/services/cardiology/heart-attack-warning-signs" },
+        { name: "Migraine Relief", url: "/services/neurology/migraine-relief-management" },
+        { name: "PCOS/PCOD Guide", url: "/services/obstetrics-gynaecology/pcod-pcos-treatment-guide" },
+        { name: "ACL Recovery", url: "/services/orthopaedics/acl-reconstruction-recovery" },
+        { name: "Kidney Stones", url: "/services/urology/urinary-tract-infection-treatment" },
+        { name: "Diabetes Prevention", url: "/services/nephrology/diabetic-nephropathy-prevention" },
+        { name: "Breast Cancer Screening", url: "/services/oncology/breast-cancer-screening-guide" },
+        { name: "Thyroid Surgery Info", url: "/services/general-surgery/thyroid-surgery-guide" },
+        { name: "Gingivitis Help", url: "/services/gum-treatment/gingivitis-treatment-guide" },
+        { name: "Colonoscopy Guide", url: "/services/gastroenterology/colonoscopy-screening-cost" }
     ],
     technology: [
         { name: "Robotic Surgery", url: "/technology/robotic-surgery" },
@@ -84,6 +80,21 @@ export const FOOTER_LINKS = {
         { name: "Nephrologists", url: "/doctors?dept=nephrology" },
         { name: "Gynaecologists", url: "/doctors?dept=obstetrics-gynaecology" },
         { name: "General Surgeons", url: "/doctors?dept=general-surgery" },
-        { name: "Dentists", url: "/doctors?dept=dental" }
+        { name: "Dentists", url: "/doctors?dept=dentistry" }
+    ],
+    patientCare: [
+        { name: "International Patients", url: "/patients/international" },
+        { name: "Health Packages", url: "/health-packages" },
+        { name: "Insurance Partners", url: "/patients/insurance" },
+        { name: "Patient FAQs", url: "/faq" },
+        { name: "Diagnostics", url: "/diagnostics" },
+        { name: "Medical Glossary", url: "/glossary" }
+    ],
+    quickLinks: [
+        { name: "Our Story", url: "/about" },
+        { name: "Quality & Safety", url: "/about/quality-safety" },
+        { name: "Latest News (Blog)", url: "/blog" },
+        { name: "Join Our Team", url: "/careers" },
+        { name: "Contact Us", url: "/contact" }
     ]
 };

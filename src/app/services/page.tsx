@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { SectionHeader } from "@/components/ui/section-header";
-import { ServiceCard } from "@/components/ui/service-card";
-import { SEED_DATA } from "@/lib/data/seed-data";
+import { ServiceCard } from "@/components/entities/ServiceCard";
+import { getEffectiveDepartments } from "@/lib/utils/department-utils";
 import {
     Stethoscope,
     Activity,
@@ -36,7 +36,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-    const services = SEED_DATA.services;
+    const services = getEffectiveDepartments().map(d => ({
+        ...d,
+        title: d.name,
+        short_description: d.description
+    }));
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -90,14 +94,8 @@ export default function ServicesPage() {
                     {services.map((service) => (
                         <ServiceCard
                             key={service.slug}
-                            title={service.title}
-                            description={service.short_description}
-                            slug={service.slug}
-                            icon={
-                                iconMap[service.icon] || (
-                                    <Stethoscope className="h-6 w-6" />
-                                )
-                            }
+                            service={service}
+                            variant="poster"
                         />
                     ))}
                 </div>

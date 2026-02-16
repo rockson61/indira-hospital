@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/section-header";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowRight, Clock } from "lucide-react";
+import { ServiceCard } from "@/components/entities/ServiceCard";
 import { getServices } from "@/lib/api";
 import { SEED_DATA } from "@/lib/data/seed-data";
 
@@ -40,55 +41,42 @@ export async function SignatureTreatments() {
     const featured = services.slice(0, 8);
 
     return (
-        <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-100/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+        <section className="py-32 bg-slate-900 relative overflow-hidden">
+            {/* Background Glows */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-                <SectionHeader
-                    title="Signature Treatments"
-                    subtitle="What We're Known For"
-                    description="Advanced medical procedures with proven outcomes and compassionate care."
-                />
+                <div className="flex justify-between items-end mb-12">
+                    <SectionHeader
+                        title="Signature Treatments"
+                        subtitle="Advanced Clinical Excellence"
+                        description="We define the standards of healthcare in the region through specialized procedures and surgical precision."
+                        className="text-white mb-0 text-left items-start"
+                        align="left"
+                    />
+                    <Link
+                        href="/services"
+                        className="hidden sm:inline-flex items-center font-bold text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                        View All Treatments <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                </div>
 
-                <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {featured.map((service: any, index: number) => {
                         const style = cardStyles[index % cardStyles.length];
-                        const desc = (service.short_description || "").replace(/<[^>]*>?/gm, "").substring(0, 120);
+                        const desc = (service.short_description || "").replace(/<[^>]*>?/gm, "").substring(0, 100);
                         const whatsappMsg = `Hi, I need information about ${service.title} at Indira Hospital.`;
 
                         return (
-                            <div
+                            <ServiceCard
                                 key={service.slug}
-                                className={`group relative rounded-2xl bg-white border border-gray-100 p-6 hover:shadow-2xl ${style.shadow} transition-all duration-500 hover:-translate-y-2 overflow-hidden`}
-                            >
-                                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${style.color}`} />
-
-                                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${style.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                                    <span className="text-white font-bold text-lg">{service.title?.charAt(0) || "S"}</span>
-                                </div>
-
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
-                                <p className="text-sm text-gray-600 mb-5 leading-relaxed">{desc}{desc.length >= 120 ? "..." : ""}</p>
-
-                                <div className="flex flex-col gap-2">
-                                    <a
-                                        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMsg)}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-500 hover:bg-green-600 text-white text-sm font-semibold py-2.5 px-4 transition-colors"
-                                    >
-                                        <MessageCircle className="w-4 h-4" />
-                                        Book on WhatsApp
-                                    </a>
-                                    <Link
-                                        href={`/services/${service.slug}`}
-                                        className="inline-flex items-center justify-center text-sm font-medium text-brand-700 hover:text-brand-900 py-1 transition-colors"
-                                    >
-                                        Learn More →
-                                    </Link>
-                                </div>
-                            </div>
+                                service={service}
+                                variant="poster"
+                                className="group"
+                                cardClassName="bg-white/5 backdrop-blur-md border-white/10 text-white hover:bg-white/10"
+                            />
                         );
                     })}
                 </div>

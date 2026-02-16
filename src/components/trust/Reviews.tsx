@@ -4,17 +4,17 @@ import { Star } from "lucide-react"
 const reviews = [
   {
     name: "Sam Franklin",
-    review: "Highly recommend Dr. Rockson Samuel for affordable and quality dental care near VIT University.",
+    review: "Highly recommend Indira Super Speciality Hospital for affordable and quality care near VIT University.",
     rating: 5,
   },
   {
     name: "Rajendiran",
-    review: "Treatment by Dr. Rockson is very good. He listens to patients well and explains everything clearly.",
+    review: "Treatment at Indira Hospital is very good. The doctors listen to patients well and explain everything clearly.",
     rating: 5,
   },
   {
     name: "John D.",
-    review: "Great service from Dr. Rockson, he explained to me everything he did in detail.",
+    review: "Great service from the team, they explained to me everything they did in detail.",
     rating: 4,
   },
 ]

@@ -31,13 +31,13 @@ export function StickyFooter() {
             )}
         >
             <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="w-full gap-2 border-brand-600 text-brand-600 hover:bg-brand-50" asChild>
+                <Button variant="outline" className="w-full gap-2 border-primary-600 text-primary-600 hover:bg-primary-50" asChild>
                     <a href="tel:+919876543210">
                         <Phone className="h-4 w-4" />
                         call Now
                     </a>
                 </Button>
-                <Button className="w-full gap-2 bg-brand-600 hover:bg-brand-700 text-white" asChild>
+                <Button className="w-full gap-2 bg-primary-600 hover:bg-primary-700 text-white" asChild>
                     <Link href="/contact">
                         <CalendarCheck className="h-4 w-4" />
                         Book Now

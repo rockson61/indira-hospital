@@ -226,6 +226,8 @@ export interface HealthPackage {
     validity_days?: number;
     is_featured?: boolean;
     sort_order?: number;
+    // M2M - API injected
+    related_services?: Service[];
 }
 
 // ─────────────────────────────────────────

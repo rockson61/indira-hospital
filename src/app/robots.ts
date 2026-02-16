@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/admin/', '/private/'],
         },
-        sitemap: 'https://indirahospital.com/sitemap.xml',
+        sitemap: 'https://www.indirasuperspecialityhospital.com/sitemap.xml',
     }
 }

@@ -29,11 +29,11 @@ export function SectionHeader({
             {...props}
         >
             {subtitle && (
-                <span className="text-secondary-600 font-semibold tracking-wide uppercase text-sm">
+                <span className="text-secondary font-semibold tracking-wide uppercase text-sm">
                     {subtitle}
                 </span>
             )}
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
                 {title}
             </h2>
             {description && (
@@ -41,7 +41,7 @@ export function SectionHeader({
                     {description}
                 </p>
             )}
-            <div className={cn("h-1 w-20 bg-brand-500 rounded-full mt-4", {
+            <div className={cn("h-1 w-20 bg-primary rounded-full mt-4", {
                 "mx-auto": align === "center",
             })} />
         </div>

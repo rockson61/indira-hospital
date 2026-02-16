@@ -1,6 +1,6 @@
 import { getDirectusClient } from './directus';
 import { readItems, readSingleton } from '@directus/sdk';
-import { Doctor, Service, Location, Post, HospitalSettings, Diagnostic, Testimonial, FAQ, Insurance, Department } from './schema';
+import { Doctor, Service, Location, Post, HospitalSettings, Diagnostic, Testimonial, FAQ, Insurance, Department, HealthPackage } from './schema';
 
 export async function getDoctors() {
     const client = await getDirectusClient();
@@ -161,20 +161,135 @@ export async function getTestimonials() {
     const client = await getDirectusClient();
     return await client.request(readItems('testimonials', {
         filter: { status: { _eq: 'published' } },
-        fields: ['id', 'patient_name', 'content', 'rating', 'image'],
+        fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit'],
         limit: 10
     }));
 }
 
-export async function getFAQs(category?: string) {
+export async function getReviewsByEntity(type: 'doctor' | 'department' | 'service' | 'diagnostic' | 'location' | 'blog' | 'technology', name: string) {
     const client = await getDirectusClient();
-    const filter: Record<string, unknown> = { status: { _eq: 'published' } };
-    if (category) filter.category = { _eq: category };
 
-    return await client.request(readItems('faqs', {
-        filter,
-        fields: ['question', 'answer', 'category']
-    }));
+    // Normalize entity name for better matching
+    const normalizeName = (input: string): string => {
+        const map: Record<string, string> = {
+            'pediatrics': 'Paediatrics',
+            'paediatrics': 'Paediatrics',
+            'orthopedics': 'Orthopaedics',
+            'orthopaedics': 'Orthopaedics',
+            'gynaecology': 'Obstetrics & Gynaecology',
+            'gynecology': 'Obstetrics & Gynaecology',
+            'ent': 'ENT (Ear, Nose, Throat)',
+            'ear nose throat': 'ENT (Ear, Nose, Throat)',
+            'dermatology': 'Dermatology & Cosmetology',
+            'skin': 'Dermatology & Cosmetology',
+            'vascular': 'Vascular Surgery', // Ensure this matches CMS exactly, assuming CMS has 'Vascular Surgery' or similar. If it fails, we catch it.
+            'cardio': 'Cardiac Sciences', // Map cardio to broader category if needed
+        };
+        const lower = input.toLowerCase();
+        for (const key in map) {
+            if (lower.includes(key)) return map[key];
+        }
+        return input;
+    };
+
+    const searchName = type === 'department' ? normalizeName(name) : name;
+
+    // 1. Try strict filtering by metadata fields
+    const metadataFilter: any = { status: { _eq: 'published' } };
+    if (type === 'doctor') metadataFilter.doctor = { _contains: name };
+    else if (type === 'department') metadataFilter.department = { _contains: searchName };
+    else if (type === 'service' || type === 'diagnostic' || type === 'technology') metadataFilter.treatment_received = { _contains: name };
+    else if (type === 'blog') {
+        metadataFilter._or = [
+            { treatment_received: { _contains: name } },
+            { content: { _contains: name } }
+        ];
+    }
+
+    let reviews = await client.request(readItems('testimonials', {
+        filter: metadataFilter,
+        fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit', 'doctor', 'department'],
+        limit: 10
+    })) as unknown as Testimonial[];
+
+    // 2. If no reviews found via metadata, fallback to keyword search in content
+    if (reviews.length === 0) {
+        // Clean up the name for searching (e.g. "Dr. Raman Kumar" -> "Raman Kumar")
+        const searchName = name.replace(/^Dr\.\s+/i, '').replace(/\s+Guide$/i, '');
+
+        const contentFilter: any = {
+            status: { _eq: 'published' },
+            content: { _contains: searchName }
+        };
+
+        reviews = await client.request(readItems('testimonials', {
+            filter: contentFilter,
+            fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit', 'doctor', 'department'],
+            limit: 10
+        })) as unknown as Testimonial[];
+    }
+
+    // 3. If still no reviews, and it's a department/service, try mapping common terms
+    if (reviews.length === 0) {
+        let genericTerm = '';
+        if (name.toLowerCase().includes('cardio')) genericTerm = 'cardio';
+        else if (name.toLowerCase().includes('ortho')) genericTerm = 'ortho';
+        else if (name.toLowerCase().includes('gast')) genericTerm = 'gastro';
+        else if (name.toLowerCase().includes('surger')) genericTerm = 'surgery';
+        else if (name.toLowerCase().includes('piles')) genericTerm = 'piles';
+        else if (name.toLowerCase().includes('dent')) genericTerm = 'dentistry';
+
+        if (genericTerm) {
+            reviews = await client.request(readItems('testimonials', {
+                filter: {
+                    status: { _eq: 'published' },
+                    content: { _contains: genericTerm }
+                },
+                fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit', 'doctor', 'department'],
+                limit: 10
+            })) as unknown as Testimonial[];
+        }
+    }
+
+    return reviews;
+}
+
+export async function getFaqsByEntity(type: string, name: string) {
+    const client = await getDirectusClient();
+    let faqs: FAQ[] = [];
+
+    try {
+        // 1. Try Directus
+        faqs = await client.request(readItems('faqs', {
+            filter: {
+                _or: [
+                    { related_service: { title: { _icontains: name } } },
+                    { related_department: { name: { _icontains: name } } },
+                    { category: { _eq: 'general' } }
+                ]
+            } as any,
+            fields: ['question', 'answer', 'category'],
+            limit: 8
+        })) as unknown as FAQ[];
+    } catch (e) {
+        // Silently fail for CMS, fallback to static
+    }
+
+    // 2. Fallback to static data if Directus empty
+    if (faqs.length === 0) {
+        const { comprehensiveFaqs } = await import('./data/faq-data');
+        // Match specific category first, then general
+        const specific = comprehensiveFaqs.filter(faq =>
+            faq.category?.toLowerCase() === type.toLowerCase() ||
+            faq.category?.toLowerCase() === name.toLowerCase() ||
+            faq.question.toLowerCase().includes(name.toLowerCase())
+        );
+        const general = comprehensiveFaqs.filter(faq => faq.category?.toLowerCase() === 'general');
+
+        faqs = [...specific, ...general].slice(0, 6) as any[];
+    }
+
+    return faqs;
 }
 
 export async function getInsurances() {
@@ -216,6 +331,38 @@ export async function getDiagnosticBySlug(slug: string) {
     return (tests as unknown[]).length > 0 ? (tests as unknown[])[0] : null;
 }
 
+
+export async function getHealthPackages() {
+    const client = await getDirectusClient();
+    return await client.request(readItems('health_packages', {
+        filter: { status: { _eq: 'published' } },
+        fields: ['title', 'slug', 'price', 'original_price', 'tests_included', 'thumbnail', 'short_description', 'is_featured'],
+        sort: ['sort_order', '-is_featured', 'price'] as any,
+    }));
+}
+
+export async function getHealthPackageBySlug(slug: string) {
+    const client = await getDirectusClient();
+    const packages = await client.request(readItems('health_packages', {
+        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
+        fields: ['*'],
+        limit: 1,
+    }));
+
+    if ((packages as unknown[]).length === 0) return null;
+    const pkg = (packages as unknown[])[0] as HealthPackage;
+
+    // M2M: Fetch related Services (optional but good for semantic mesh)
+    try {
+        const servicesRel = await client.request(readItems('health_packages_services', {
+            filter: { health_packages_id: { _eq: pkg.id } },
+            fields: ['services_id.title', 'services_id.slug', 'services_id.icon'] as any
+        }));
+        pkg.related_services = servicesRel.map((r: any) => r.services_id).filter(Boolean);
+    } catch (e) { }
+
+    return pkg;
+}
 
 export async function getHospitalSettings() {
     const client = await getDirectusClient();

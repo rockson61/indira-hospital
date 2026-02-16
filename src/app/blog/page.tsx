@@ -1,4 +1,5 @@
 import { getDirectusClient } from "@/lib/directus"
+import { getImageUrl } from "@/lib/utils"
 import { readItems } from "@directus/sdk"
 import { Post } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
@@ -48,7 +49,7 @@ export default async function BlogListingPage() {
                                 <div className="relative h-48 bg-slate-200">
                                     {post.image ? (
                                         <Image
-                                            src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${post.image}`}
+                                            src={getImageUrl(post.image as string) || '/images/hospital-placeholder.jpg'}
                                             alt={post.title}
                                             fill
                                             className="object-cover"

@@ -80,10 +80,10 @@ export function SeverityQuiz() {
     const resultData = getResult();
 
     return (
-        <Card className="max-w-md mx-auto overflow-hidden bg-white shadow-lg border-2 border-brand-100">
-            <div className="bg-brand-600 p-4 text-white text-center">
+        <Card className="max-w-md mx-auto overflow-hidden bg-white shadow-lg border-2 border-primary-100">
+            <div className="bg-primary-600 p-4 text-white text-center">
                 <h3 className="font-bold text-lg">Piles Severity Check</h3>
-                <p className="text-brand-100 text-xs">Answer 3 simple questions to know your stage.</p>
+                <p className="text-primary-100 text-xs">Answer 3 simple questions to know your stage.</p>
             </div>
 
             <div className="p-6">
@@ -94,7 +94,7 @@ export function SeverityQuiz() {
                             <span>{Math.round(((step) / QUESTIONS.length) * 100)}%</span>
                         </div>
                         <div className="w-full bg-gray-100 h-1.5 rounded-full mb-6 overflow-hidden">
-                            <div className="bg-brand-500 h-full transition-all duration-300" style={{ width: `${((step + 1) / QUESTIONS.length) * 100}%` }}></div>
+                            <div className="bg-primary-500 h-full transition-all duration-300" style={{ width: `${((step + 1) / QUESTIONS.length) * 100}%` }}></div>
                         </div>
 
                         <h4 className="text-lg font-medium text-gray-900 mb-6">{QUESTIONS[step].text}</h4>
@@ -104,10 +104,10 @@ export function SeverityQuiz() {
                                 <button
                                     key={i}
                                     onClick={() => handleAnswer(opt.score)}
-                                    className="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-500 hover:bg-brand-50 transition-all flex justify-between group"
+                                    className="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-primary-500 hover:bg-primary-50 transition-all flex justify-between group"
                                 >
-                                    <span className="text-gray-700 font-medium group-hover:text-brand-700">{opt.label}</span>
-                                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-brand-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <span className="text-gray-700 font-medium group-hover:text-primary-700">{opt.label}</span>
+                                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </button>
                             ))}
                         </div>

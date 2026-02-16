@@ -9,16 +9,16 @@ interface FAQAccordionClientProps {
 
 function FAQItem({ faq, isOpen, onToggle }: { faq: { question: string; answer: string }; isOpen: boolean; onToggle: () => void }) {
     return (
-        <div className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? "shadow-lg shadow-brand-100/50 border-brand-200" : "hover:border-gray-300"}`}>
+        <div className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? "shadow-lg shadow-primary-100/50 border-primary-200" : "hover:border-gray-300"}`}>
             <button
                 onClick={onToggle}
                 className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"
                 aria-expanded={isOpen}
             >
-                <span className={`text-base sm:text-lg font-semibold transition-colors ${isOpen ? "text-brand-700" : "text-gray-900"}`}>
+                <h3 className={`text-base sm:text-lg font-semibold transition-colors ${isOpen ? "text-primary-700" : "text-gray-900"}`}>
                     {faq.question}
-                </span>
-                <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-brand-600" : "text-gray-400"}`} />
+                </h3>
+                <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-primary-600" : "text-gray-400"}`} />
             </button>
             <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                 <div className="overflow-hidden">
@@ -38,7 +38,7 @@ export function FAQAccordionClient({ faqs }: FAQAccordionClientProps) {
         <section className="py-24 bg-white relative">
             <div className="mx-auto max-w-4xl px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-semibold mb-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-semibold mb-4">
                         <HelpCircle className="w-4 h-4" />
                         Frequently Asked Questions
                     </div>

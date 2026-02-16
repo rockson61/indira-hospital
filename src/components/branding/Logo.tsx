@@ -20,7 +20,7 @@ export function Logo({ className, variant = 'auto' }: LogoProps) {
                         variant === 'dark' ? "text-foreground" :
                             "text-foreground dark:text-white"
                 )}>
-                    Indira Dental Clinic
+                    Indira Super Speciality Hospital
                 </div>
                 <div className={cn(
                     "text-[10px] md:text-xs",
@@ -28,7 +28,7 @@ export function Logo({ className, variant = 'auto' }: LogoProps) {
                         variant === 'dark' ? "text-muted-foreground" :
                             "text-muted-foreground dark:text-muted-foreground/70"
                 )}>
-                    Dr. Rockson Samuel | Vellore
+                    Advanced Care | Vellore
                 </div>
             </div>
         </Link>

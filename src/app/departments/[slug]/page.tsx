@@ -19,6 +19,11 @@ import {
     Droplets,
 } from "lucide-react";
 import { clinicConfig } from "@/lib/data/clinic-config";
+import { DoctorCard } from "@/components/entities/DoctorCard";
+import { ServiceCard } from "@/components/entities/ServiceCard";
+import { DepartmentCard } from "@/components/entities/DepartmentCard";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 // Icon map for departments
 const iconMap: Record<string, React.ReactNode> = {
@@ -114,15 +119,15 @@ const departmentProcedures: Record<string, string[]> = {
         "Stroke Care",
         "Poison Management",
     ],
-    dental: [
-        "Root Canal Treatment",
-        "Dental Implants",
-        "Orthodontics (Braces)",
-        "Cosmetic Dentistry",
-        "Teeth Whitening",
+    dentistry: [
         "Oral & Maxillofacial Surgery",
-        "Wisdom Tooth Extraction",
-        "Dental Crowns & Bridges",
+        "Orthognathic Procedures",
+        "Dental Implants",
+        "Orthodontics",
+        "Root Canal Treatment",
+        "Smile Makeover",
+        "Full Mouth Rehabilitation",
+        "Pediatric Dentistry",
     ],
     neurology: [
         "Stroke Management",
@@ -158,11 +163,11 @@ const departmentProcedures: Record<string, string[]> = {
 
 // RockSEO: Internal Links Mapping
 const relatedServicesMap: Record<string, { title: string; url: string }[]> = {
-    dental: [
+    dentistry: [
+        { title: "Maxillofacial Surgery", url: "/services/maxillofacial-surgery" },
         { title: "Dental Implants", url: "/services/dental-implants" },
-        { title: "Cosmetic Dentistry", url: "/services/cosmetic-dentistry" },
         { title: "Orthodontics", url: "/services/orthodontics" },
-        { title: "Root Canal Treatment", url: "/services/root-canal-treatment" },
+        { title: "Smile Makeover", url: "/services/smile-makeover" },
     ],
     orthopaedics: [
         { title: "Joint Replacement", url: "/services/joint-replacement" },
@@ -259,7 +264,7 @@ export default async function DepartmentDetailPage({
                             <div className="mt-8 flex flex-wrap gap-4">
                                 <Link
                                     href="/book-appointment"
-                                    className="inline-flex items-center px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg transition-colors"
+                                    className="inline-flex items-center px-6 py-3 bg-white hover:bg-purple-50 text-purple-900 font-bold rounded-lg transition-colors shadow-lg"
                                 >
                                     <Calendar className="h-5 w-5 mr-2" />
                                     Book Appointment
@@ -379,23 +384,15 @@ export default async function DepartmentDetailPage({
                         />
                         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {relatedServicesMap[slug].map((service) => (
-                                <Link
+                                <ServiceCard
                                     key={service.url}
-                                    href={service.url}
-                                    className="flex items-center p-6 bg-white rounded-xl shadow-sm border border-purple-100 hover:shadow-md hover:border-purple-300 transition-all group"
-                                >
-                                    <div className="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center group-hover:bg-purple-600 transition-colors">
-                                        <Activity className="h-6 w-6 text-purple-600 group-hover:text-white" />
-                                    </div>
-                                    <div className="ml-4">
-                                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-700">
-                                            {service.title}
-                                        </h3>
-                                        <span className="text-sm text-purple-600 group-hover:underline">
-                                            Learn more &rarr;
-                                        </span>
-                                    </div>
-                                </Link>
+                                    service={{
+                                        title: service.title,
+                                        slug: service.url.split('/').pop(),
+                                        short_description: `Advanced ${service.title} center at Indira Hospital.`
+                                    }}
+                                    variant="poster"
+                                />
                             ))}
                         </div>
                     </div>
@@ -412,40 +409,29 @@ export default async function DepartmentDetailPage({
                     />
                     <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {relatedDoctors.map((doctor) => (
-                            <Link
-                                key={doctor.id}
-                                href={`/doctors/${doctor.slug}`}
-                                className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group"
-                            >
-                                <div className="h-48 bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-                                    {doctor.image ? (
-                                        <img
-                                            src={doctor.image}
-                                            alt={doctor.name}
-                                            className="h-full w-full object-cover"
-                                        />
-                                    ) : (
-                                        <div className="h-20 w-20 rounded-full bg-purple-100 flex items-center justify-center">
-                                            <Stethoscope className="h-10 w-10 text-purple-400" />
-                                        </div>
-                                    )}
-                                </div>
-                                <div className="p-5">
-                                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-700 transition-colors">
-                                        {doctor.name}
-                                    </h3>
-                                    <p className="text-sm text-purple-600 font-medium mt-1">
-                                        {doctor.designation}
-                                    </p>
-                                    <p className="text-sm text-gray-500 mt-2">
-                                        {doctor.experience_years} Years Experience
-                                    </p>
-                                </div>
-                            </Link>
+                            <DoctorCard key={doctor.id} doctor={doctor} variant="grid" />
                         ))}
                     </div>
                 </section>
             )}
+
+            {/* ========== FAQ SECTION ========== */}
+            <EntityFAQs
+                entityType="department"
+                entityName={department.title}
+                entitySlug={slug}
+                title={`Common Questions about our ${department.title} Department`}
+                description={`Find answers to frequently asked questions about the care and services provided in our ${department.title} department.`}
+            />
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="department"
+                entityName={department.title}
+                entitySlug={slug}
+                title={`Patient Feedback for ${department.title}`}
+                description={`Verified experiences from patients who received care in our ${department.title} department.`}
+            />
 
             {/* CTA */}
             <section className="bg-gradient-to-r from-purple-900 to-purple-700 text-white py-16">
@@ -460,7 +446,7 @@ export default async function DepartmentDetailPage({
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Link
                             href="/book-appointment"
-                            className="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg transition-colors"
+                            className="px-8 py-3 bg-white hover:bg-purple-50 text-purple-900 font-bold rounded-lg transition-colors shadow-lg"
                         >
                             Book Appointment
                         </Link>

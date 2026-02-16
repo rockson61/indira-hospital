@@ -5,9 +5,10 @@ import { Doctor, Service, Location, Diagnostic, Post } from '@/lib/schema'
 import { enhancedVelloreLocations } from '@/lib/data/enhanced-location-data'
 import { tamilNaduLocations } from '@/lib/data/tamilnadu-locations'
 import { SEED_DATA } from '@/lib/data/seed-data'
+import { INTERNATIONAL_COUNTRIES } from '@/lib/data/international-data'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'https://indirahospital.com'
+    const baseUrl = 'https://www.indirasuperspecialityhospital.com'
     const client = await getDirectusClient()
 
     // Static Routes
@@ -21,8 +22,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/book-appointment',
         '/diagnostics',
         '/blog',
+        '/health-packages',
+        '/patients/international',
+        '/technology',
+        '/faq',
+        '/careers',
+        '/about/quality-safety',
         '/privacy-policy',
         '/terms',
+        '/services/piles-treatment-vellore',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
@@ -52,13 +60,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     try {
         // Dynamic Routes Fetching from CMS
-        const [doctors, services, locations, diagnostics, posts] = await Promise.all([
-            client.request(readItems('doctors', { filter: { status: { _eq: 'published' } }, fields: ['slug', 'updated_at'] as any })),
-            client.request(readItems('services', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any })),
-            client.request(readItems('locations', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any })),
-            client.request(readItems('diagnostics', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any })),
-            client.request(readItems('posts', { filter: { status: { _eq: 'published' } }, fields: ['slug', 'date_created'] as any })),
-        ]) as [any[], any[], any[], any[], any[]]
+        const fetchCMS = async (collection: string, options: any) => {
+            try {
+                return await client.request(readItems(collection as any, options));
+            } catch (e) {
+                console.warn(`Sitemap: Failed to fetch ${collection}`, (e as any).message);
+                return [];
+            }
+        };
+
+        const [doctors, services, locations, diagnostics, healthPackages, posts, technologies] = await Promise.all([
+            fetchCMS('doctors', { filter: { status: { _eq: 'published' } }, fields: ['slug', 'updated_at'] as any }),
+            fetchCMS('services', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
+            fetchCMS('locations', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
+            fetchCMS('diagnostics', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
+            fetchCMS('health_packages', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
+            fetchCMS('posts', { filter: { status: { _eq: 'published' } }, fields: ['slug', 'date_created'] as any }),
+            fetchCMS('technologies', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
+        ]) as [any[], any[], any[], any[], any[], any[], any[]]
 
         // Add CMS location slugs
         for (const l of locations) allLocationSlugs.add(l.slug);
@@ -98,17 +117,48 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         }))
 
+        const healthPackageUrls = healthPackages.map((pkg) => ({
+            url: `${baseUrl}/health-packages/${pkg.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        }))
+
+        const technologyUrls = technologies.map((tech) => ({
+            url: `${baseUrl}/technology/${tech.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        }))
+
         // ===== DEEP LINK URLS =====
         const deepLinkUrls: MetadataRoute.Sitemap = [];
 
-        // Seed-data-based service detail pages
-        for (const s of SEED_DATA.services) {
-            deepLinkUrls.push({
-                url: `${baseUrl}/services/${s.slug}`,
-                lastModified: new Date(),
-                changeFrequency: 'monthly' as const,
-                priority: 0.8,
-            });
+        // Dynamic Service Guide Pages (FileSystem scan)
+        const fs = require('fs');
+        const path = require('path');
+        const servicesRoot = path.join(process.cwd(), 'src/app/services');
+
+        if (fs.existsSync(servicesRoot)) {
+            const clusters = fs.readdirSync(servicesRoot).filter((f: string) =>
+                fs.statSync(path.join(servicesRoot, f)).isDirectory() && !f.startsWith('[')
+            );
+
+            for (const cluster of clusters) {
+                const clusterPath = path.join(servicesRoot, cluster);
+                const topics = fs.readdirSync(clusterPath).filter((f: string) =>
+                    fs.statSync(path.join(clusterPath, f)).isDirectory() && !f.startsWith('[')
+                );
+
+                for (const topic of topics) {
+                    deepLinkUrls.push({
+                        url: `${baseUrl}/services/${cluster}/${topic}`,
+                        lastModified: new Date(),
+                        changeFrequency: 'weekly' as const,
+                        priority: 0.7,
+                    });
+                }
+            }
         }
 
         // Department → Doctor
@@ -180,13 +230,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             }
         }
 
+        const internationalUrls = INTERNATIONAL_COUNTRIES.map((c) => ({
+            url: `${baseUrl}/patients/international/${c.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        }))
+
         return [
             ...staticRoutes,
             ...doctorUrls,
             ...serviceUrls,
             ...locationUrls,
             ...diagnosticUrls,
+            ...healthPackageUrls,
             ...blogUrls,
+            ...internationalUrls,
+            ...technologyUrls,
             ...deepLinkUrls,
         ]
 

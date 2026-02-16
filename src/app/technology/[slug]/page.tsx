@@ -5,6 +5,7 @@ import { ChevronRight, CheckCircle2, ArrowLeft } from "lucide-react";
 import { getTechnologyBySlug, getAllTechnologies } from "@/lib/data/technology-data";
 import { Footer } from "@/components/layout/Footer";
 import { Metadata } from "next";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -48,8 +49,8 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
                 <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="max-w-3xl">
-                        <Link href="/" className="inline-flex items-center text-purple-200 hover:text-white mb-6 transition-colors text-sm">
-                            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+                        <Link href="/technology" className="inline-flex items-center text-purple-200 hover:text-white mb-6 transition-colors text-sm">
+                            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Technology
                         </Link>
                         <h1 className="text-3xl md:text-5xl font-bold mb-4">{tech.title}</h1>
                         <p className="text-xl text-purple-100">{tech.shortDescription}</p>
@@ -135,6 +136,15 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
                     ))}
                 </div>
             </section>
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="technology"
+                entityName={tech.title}
+                entitySlug={slug}
+                title={`Patient Experiences with ${tech.title}`}
+                description={`See how our advanced medical technology has improved outcomes and comfort for our patients.`}
+            />
         </main>
     );
 }

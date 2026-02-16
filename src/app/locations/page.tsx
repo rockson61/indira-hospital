@@ -11,6 +11,8 @@ import {
     MessageCircle, Phone, Zap, Star, Shield,
     CheckCircle2, Award, Users, Stethoscope, Heart
 } from "lucide-react";
+import { clinicConfig } from "@/lib/data/clinic-config";
+import { LocationCard } from "@/components/entities/LocationCard";
 
 const WHATSAPP_NUMBER = "917010650063";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
@@ -146,11 +148,11 @@ export default function LocationsPage() {
                                     WhatsApp Us Now
                                 </a>
                                 <a
-                                    href="tel:+919842342525"
+                                    href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
                                     className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20"
                                 >
                                     <Phone className="w-5 h-5 mr-2" />
-                                    +91 98423 42525
+                                    {clinicConfig.phone}
                                 </a>
                             </div>
                         </div>
@@ -290,54 +292,7 @@ export default function LocationsPage() {
                 />
                 <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {locations.map((loc) => (
-                        <Link
-                            key={loc.slug}
-                            href={`/locations/${loc.slug}`}
-                            className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300"
-                        >
-                            <div className="h-2 bg-gradient-to-r from-teal-500 to-emerald-500 group-hover:from-purple-600 group-hover:to-purple-500 transition-all" />
-                            <div className="p-6">
-                                <div className="flex items-start justify-between mb-3">
-                                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors">
-                                        {loc.name}
-                                    </h3>
-                                    {getCategoryBadge(loc.category)}
-                                </div>
-                                <p className="text-gray-500 text-sm line-clamp-2 mb-4">
-                                    {loc.description}
-                                </p>
-                                <div className="flex items-center gap-4 text-sm text-gray-600">
-                                    <span className="flex items-center gap-1.5">
-                                        <MapPin className="h-4 w-4 text-teal-600" />
-                                        {loc.distance}
-                                    </span>
-                                    <span className="flex items-center gap-1.5">
-                                        <Clock className="h-4 w-4 text-teal-600" />
-                                        {loc.travelTime}
-                                    </span>
-                                </div>
-                                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                                    {loc.transportOptions.train && (
-                                        <span className="flex items-center gap-1 text-xs text-gray-500">
-                                            <Train className="h-3.5 w-3.5" /> Train
-                                        </span>
-                                    )}
-                                    {loc.transportOptions.bus && (
-                                        <span className="flex items-center gap-1 text-xs text-gray-500">
-                                            <Bus className="h-3.5 w-3.5" /> Bus
-                                        </span>
-                                    )}
-                                    {loc.transportOptions.taxi && (
-                                        <span className="flex items-center gap-1 text-xs text-gray-500">
-                                            <Car className="h-3.5 w-3.5" /> Taxi
-                                        </span>
-                                    )}
-                                    <span className="ml-auto text-purple-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                        Details <ArrowRight className="h-3.5 w-3.5" />
-                                    </span>
-                                </div>
-                            </div>
-                        </Link>
+                        <LocationCard key={loc.slug} location={loc} variant="card" />
                     ))}
                 </div>
             </section>
@@ -363,7 +318,7 @@ export default function LocationsPage() {
                             Chat on WhatsApp
                         </a>
                         <a
-                            href="tel:+919842342525"
+                            href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
                             className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-lg transition-colors border border-white/20"
                         >
                             <Phone className="w-5 h-5 mr-2" />

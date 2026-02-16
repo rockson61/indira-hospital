@@ -47,8 +47,8 @@ export function CostCalculator() {
     const cost = calculateCost();
 
     return (
-        <Card className="p-6 bg-white shadow-xl border-t-4 border-brand-600 rounded-xl">
-            <div className="flex items-center gap-2 mb-6 text-brand-700">
+        <Card className="p-6 bg-white shadow-xl border-t-4 border-primary-600 rounded-xl">
+            <div className="flex items-center gap-2 mb-6 text-primary-700">
                 <Calculator className="w-6 h-6" />
                 <h3 className="text-xl font-bold">Surgery Cost Estimator</h3>
             </div>
@@ -58,7 +58,7 @@ export function CostCalculator() {
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Select Treatment</label>
                         <select
-                            className="w-full p-2 border border-gray-300 rounded-md focus:ring-brand-500 focus:border-brand-500"
+                            className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
                             value={selectedTreatment}
                             onChange={(e) => setSelectedTreatment(e.target.value)}
                         >
@@ -71,13 +71,13 @@ export function CostCalculator() {
                         <div className="grid grid-cols-2 gap-3">
                             <button
                                 onClick={() => setMethod('laser')}
-                                className={`p-2 text-sm font-medium rounded-md border ${method === 'laser' ? 'bg-brand-50 border-brand-500 text-brand-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'}`}
+                                className={`p-2 text-sm font-medium rounded-md border ${method === 'laser' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'}`}
                             >
                                 Laser (Painless)
                             </button>
                             <button
                                 onClick={() => setMethod('open')}
-                                className={`p-2 text-sm font-medium rounded-md border ${method === 'open' ? 'bg-brand-50 border-brand-500 text-brand-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'}`}
+                                className={`p-2 text-sm font-medium rounded-md border ${method === 'open' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'}`}
                             >
                                 Open Surgery
                             </button>
@@ -87,7 +87,7 @@ export function CostCalculator() {
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Room Preference</label>
                         <select
-                            className="w-full p-2 border border-gray-300 rounded-md focus:ring-brand-500 focus:border-brand-500"
+                            className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
                             value={roomType}
                             onChange={(e) => setRoomType(e.target.value)}
                         >
@@ -101,7 +101,7 @@ export function CostCalculator() {
                             id="insurance"
                             checked={insurance}
                             onChange={(e) => setInsurance(e.target.checked)}
-                            className="w-4 h-4 text-brand-600 border-gray-300 rounded focus:ring-brand-500"
+                            className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
                         />
                         <label htmlFor="insurance" className="text-sm text-gray-700">I have Health Insurance</label>
                     </div>
@@ -131,7 +131,7 @@ export function CostCalculator() {
 
                     <button
                         onClick={() => setShowResult(false)}
-                        className="flex items-center justify-center w-full text-brand-600 text-sm hover:underline"
+                        className="flex items-center justify-center w-full text-primary-600 text-sm hover:underline"
                     >
                         <RefreshCw className="w-3 h-3 mr-1" /> Recalculate
                     </button>

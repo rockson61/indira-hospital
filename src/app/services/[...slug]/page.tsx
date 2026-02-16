@@ -9,10 +9,17 @@ import {
     ChevronRight, CheckCircle2, Stethoscope, Heart, Activity, Baby,
     Siren, Smile, Brain, Ribbon, Droplets, MessageCircle, Phone, Award,
     Users, Clock, Shield, Star, MapPin, Zap, ArrowRight, GraduationCap,
-    Banknote, HelpCircle, Quote, Info
+    Banknote, HelpCircle, Quote, Info, Sparkles
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
+import EntityReviews from "@/components/trust/EntityReviews";
+import { clinicConfig } from "@/lib/data/clinic-config";
+import { DoctorCard } from "@/components/entities/DoctorCard";
+import { ServiceCard } from "@/components/entities/ServiceCard";
+import { LocationCard } from "@/components/entities/LocationCard";
+import { DepartmentCard } from "@/components/entities/DepartmentCard";
+import EntityFAQs from "@/components/trust/EntityFAQs";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -42,7 +49,7 @@ const serviceProcedures: Record<string, string[]> = {
     orthopaedics: ["Total Knee Replacement", "Total Hip Replacement", "Arthroscopy", "Fracture Management", "Spine Surgery", "Sports Medicine", "Ligament Reconstruction", "Joint Injections"],
     cardiology: ["Angiography", "Angioplasty & Stenting", "Pacemaker Implantation", "Echocardiography", "TMT / Stress Test", "Heart Failure Management", "Cardiac Rehabilitation", "Holter Monitoring"],
     "icu-emergency": ["24/7 Emergency Care", "Ventilator Support", "Trauma Management", "Post-Surgical ICU Care", "Cardiac Monitoring", "Sepsis Management", "Stroke Care", "Poison Management"],
-    dental: ["Root Canal Treatment", "Dental Implants", "Orthodontics (Braces)", "Cosmetic Dentistry", "Teeth Whitening", "Oral & Maxillofacial Surgery", "Wisdom Tooth Extraction", "Dental Crowns & Bridges"],
+    dentistry: ["Maxillofacial Surgery", "Orthognathic Procedures", "Dental Implants", "Orthodontics", "Root Canal Treatment", "Smile Makeover", "Full Mouth Rehabilitation", "Pediatric Dentistry"],
     neurology: ["Stroke Management", "Epilepsy Treatment", "Migraine & Headache Clinic", "Parkinson's Disease Care", "EEG & EMG Studies", "Peripheral Neuropathy", "Multiple Sclerosis Treatment", "Nerve Conduction Studies"],
     oncology: ["Cancer Screening", "Chemotherapy", "Targeted Therapy", "Immunotherapy", "Surgical Oncology", "Palliative Care", "Biopsy & Diagnosis", "Cancer Rehabilitation"],
     nephrology: ["Dialysis Services", "Chronic Kidney Disease", "Kidney Stone Management", "Hypertension Treatment", "Electrolyte Disorders", "Pre-Transplant Evaluation", "Glomerulonephritis Care", "Diabetic Nephropathy"],
@@ -50,21 +57,51 @@ const serviceProcedures: Record<string, string[]> = {
 
 // RockSEO Guides Map
 const rockseoGuides: Record<string, { title: string; url: string; description?: string }[]> = {
-    "dental-implants": [
-        { title: "Single Tooth Implant Cost", url: "/services/dental-implants/single-tooth-implant-cost", description: "Detailed cost breakdown in Vellore" },
-        { title: "All-on-4 Implants Guide", url: "/services/dental-implants/all-on-4-implants-guide", description: "Full mouth fixed teeth in 3 days" },
-        { title: "Procedure Steps", url: "/services/dental-implants/dental-implant-procedure-steps", description: "Step-by-step guide to surgery" },
-        { title: "Recovery Time", url: "/services/dental-implants/dental-implant-recovery-time", description: "Healing timeline and tips" },
+    "general-surgery": [
+        { title: "Laser Piles Treatment", url: "/services/general-surgery/laser-piles-treatment-cost" },
+        { title: "Laparoscopic Hernia Repair", url: "/services/general-surgery/laparoscopic-hernia-repair" },
+        { title: "Thyroid Surgery Guide", url: "/services/general-surgery/thyroid-surgery-guide" },
+        { title: "Gallbladder Removal", url: "/services/general-surgery/gallbladder-removal-recovery" },
     ],
-    "root-canal-treatment": [
-        { title: "Single Sitting Root Canal", url: "/services/root-canal-treatment/single-sitting-root-canal", description: "Painless treatment in 60 mins" },
+    "gastroenterology": [
+        { title: "Endoscopy Procedure Guide", url: "/services/gastroenterology/endoscopy-procedure-guide" },
+        { title: "Colonoscopy Cost", url: "/services/gastroenterology/colonoscopy-screening-cost" },
+        { title: "Fatty Liver Treatment", url: "/services/gastroenterology/fatty-liver-treatment-diet" },
     ],
-    "orthodontics": [
-        { title: "Invisalign Treatment Guide", url: "/services/orthodontics/invisalign-treatment-guide", description: "Clear aligners cost and process" },
+    "urology": [
+        { title: "Kidney Stone Laser Surgery", url: "/services/urology/kidney-stone-laser-surgery" },
+        { title: "Prostate TURP Surgery", url: "/services/urology/prostate-turp-surgery" },
+        { title: "UTI Treatment Guide", url: "/services/urology/urinary-tract-infection-treatment" },
     ],
-    "cosmetic-dentistry": [
-        { title: "Teeth Whitening Guide", url: "/services/cosmetic-dentistry/teeth-whitening-guide", description: "Laser whitening cost & details" },
-        { title: "Dental Veneers Types", url: "/services/cosmetic-dentistry/dental-veneers-types", description: "Ceramic vs Composite Veneers" },
+    "obstetrics-gynaecology": [
+        { title: "Normal Delivery vs C-Section", url: "/services/obstetrics-gynaecology/normal-delivery-vs-c-section" },
+        { title: "High Risk Pregnancy Care", url: "/services/obstetrics-gynaecology/high-risk-pregnancy-care" },
+        { title: "PCOS/PCOD Treatment", url: "/services/obstetrics-gynaecology/pcod-pcos-treatment-guide" },
+    ],
+    "orthopaedics": [
+        { title: "Knee Replacement Cost", url: "/services/orthopaedics/total-knee-replacement-cost" },
+        { title: "ACL Recovery Guide", url: "/services/orthopaedics/acl-reconstruction-recovery" },
+        { title: "Hip Replacement Surgery", url: "/services/orthopaedics/hip-replacement-surgery-guide" },
+    ],
+    "cardiology": [
+        { title: "Heart Angioplasty Guide", url: "/services/cardiology/heart-angioplasty-procedure" },
+        { title: "Coronary Angiography", url: "/services/cardiology/coronary-angiography-guide" },
+        { title: "Pacemaker Implantation", url: "/services/cardiology/pacemaker-implantation-steps" },
+    ],
+    "neurology": [
+        { title: "Stroke Recovery Exercises", url: "/services/neurology/stroke-recovery-exercises" },
+        { title: "Epilepsy Treatment Options", url: "/services/neurology/epilepsy-treatment-options" },
+        { title: "Migraine Management", url: "/services/neurology/migraine-relief-management" },
+    ],
+    "oncology": [
+        { title: "Chemotherapy Side Effects", url: "/services/oncology/chemotherapy-side-effects" },
+        { title: "Breast Cancer Screening", url: "/services/oncology/breast-cancer-screening-guide" },
+        { title: "Surgical Oncology", url: "/services/oncology/surgical-oncology-overview" },
+    ],
+    "nephrology": [
+        { title: "Dialysis Procedure Guide", url: "/services/nephrology/dialysis-procedure-guide" },
+        { title: "Chronic Kidney Disease", url: "/services/nephrology/chronic-kidney-disease-stages" },
+        { title: "Diabetic Nephropathy", url: "/services/nephrology/diabetic-nephropathy-prevention" },
     ]
 };
 
@@ -251,10 +288,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <MessageCircle className="w-5 h-5 mr-2" />
                                     Book on WhatsApp
                                 </a>
-                                <a href="tel:+919842342525"
+                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
                                     className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
                                     <Phone className="w-5 h-5 mr-2" />
-                                    +91 98423 42525
+                                    {clinicConfig.phone}
                                 </a>
                             </div>
                         </div>
@@ -286,41 +323,23 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     </span>
                                     {isTreatmentPage ? 'Treatment Benefits & Features' : 'Treatments & Procedures'}
                                 </h2>
-                                <div className="grid sm:grid-cols-2 gap-3">
+                                <ul className="grid sm:grid-cols-2 gap-3">
                                     {procedures.map((proc) => (
-                                        <div key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-purple-50 transition-colors group">
+                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-purple-50 transition-colors group">
                                             <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                                             <span className="text-gray-700 group-hover:text-purple-800 font-medium text-sm">{proc}</span>
-                                        </div>
+                                        </li>
                                     ))}
-                                </div>
+                                </ul>
                             </Card>
                         )}
 
                         {/* FAQs Section */}
-                        {service.faqs && service.faqs.length > 0 && (
-                            <Card className="p-8 border-none shadow-sm rounded-2xl">
-                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                                    <span className="bg-blue-100 p-2 rounded-lg mr-3 text-blue-600">
-                                        <HelpCircle className="w-5 h-5" />
-                                    </span>
-                                    Frequently Asked Questions
-                                </h2>
-                                <div className="space-y-4">
-                                    {service.faqs.map((faq: any, index: number) => (
-                                        <details key={index} className="group bg-gray-50 rounded-xl overflow-hidden">
-                                            <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-gray-900 group-hover:text-purple-700 transition-colors">
-                                                {faq.question}
-                                                <ChevronRight className="w-4 h-4 text-gray-400 transition-transform group-open:rotate-90" />
-                                            </summary>
-                                            <div className="px-4 pb-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
-                                                {faq.answer}
-                                            </div>
-                                        </details>
-                                    ))}
-                                </div>
-                            </Card>
-                        )}
+                        <EntityFAQs
+                            entityType={isTreatmentPage ? "treatment" : "service"}
+                            entityName={service.title}
+                            entitySlug={lastSlug}
+                        />
 
                         {/* Doctors in this Service */}
                         {relatedDoctors.length > 0 && (
@@ -333,22 +352,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 </h2>
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     {relatedDoctors.map((doc) => (
-                                        <Link key={doc.slug} href={`/doctors/${doc.slug}`}
-                                            className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex items-center gap-4 hover:shadow-md transition-all">
-                                            <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                                                {doc.image && getImageUrl(doc.image) ? (
-                                                    <img src={getImageUrl(doc.image)!} alt={doc.name} className="w-full h-full object-cover" />
-                                                ) : (
-                                                    <span className="text-purple-700 font-bold text-lg">{doc.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}</span>
-                                                )}
-                                            </div>
-                                            <div className="min-w-0">
-                                                <h3 className="font-bold text-gray-900 truncate group-hover:text-purple-700 transition-colors">{doc.name}</h3>
-                                                <p className="text-gray-500 text-sm truncate">{doc.designation}</p>
-                                                <p className="text-xs text-gray-400 mt-0.5">{doc.experience_years}+ Years Experience</p>
-                                            </div>
-                                            <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-purple-600 ml-auto flex-shrink-0 transition-colors" />
-                                        </Link>
+                                        <DoctorCard key={doc.slug} doctor={doc} variant="compact" />
                                     ))}
                                 </div>
                             </div>
@@ -368,7 +372,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 </div>
                             </Card>
                         )}
-
                     </div>
 
                     {/* RIGHT SIDEBAR */}
@@ -396,22 +399,37 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <h3 className="font-bold text-gray-900 mb-4">Available at Locations</h3>
                                     <div className="flex flex-col gap-3">
                                         {(service.available_locations as any[]).map((loc: any) => (
-                                            <Link
-                                                key={loc.slug}
-                                                href={`/locations/${loc.slug}`}
-                                                className="flex items-center group p-3 rounded-xl bg-gray-50 hover:bg-purple-50 transition-colors"
-                                            >
-                                                <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mr-3 text-purple-600">
-                                                    <MapPin className="w-5 h-5" />
-                                                </div>
-                                                <div>
-                                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-purple-700">{loc.name}</p>
-                                                    <p className="text-xs text-gray-500">{loc.district}</p>
-                                                </div>
-                                                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 ml-auto" />
-                                            </Link>
+                                            <LocationCard key={loc.slug} location={loc} variant="compact" />
                                         ))}
                                     </div>
+                                </Card>
+                            )}
+
+                            {/* RockSEO: TREATMENT GUIDES (SPOKES) */}
+                            {guides.length > 0 && (
+                                <Card className="p-6 border-none shadow-sm rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100">
+                                    <h3 className="font-bold text-gray-900 mb-4 flex items-center">
+                                        <Sparkles className="w-5 h-5 text-purple-600 mr-2" />
+                                        Advanced Guides
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {guides.map((guide, idx) => (
+                                            <li key={idx}>
+                                                <Link
+                                                    href={guide.url}
+                                                    className="block p-3 rounded-xl bg-white/60 hover:bg-white transition-all border border-transparent hover:border-purple-200 group shadow-sm hover:shadow"
+                                                >
+                                                    <div className="flex items-center justify-between">
+                                                        <span className="text-sm font-semibold text-gray-800 group-hover:text-purple-700">{guide.title}</span>
+                                                        <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" />
+                                                    </div>
+                                                    {guide.description && (
+                                                        <p className="text-xs text-gray-500 mt-1 line-clamp-1">{guide.description}</p>
+                                                    )}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </Card>
                             )}
 
@@ -419,19 +437,24 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             <Card className="p-6 border-none shadow-sm rounded-2xl">
                                 <h3 className="font-bold text-gray-900 mb-4">Related Services</h3>
                                 <div className="flex flex-wrap gap-2">
-                                    {otherServices.slice(0, 8).map((svc) => (
-                                        <Link key={svc.slug} href={`/services/${svc.slug}`}
-                                            className="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-medium hover:bg-purple-50 hover:text-purple-700 transition-colors">
-                                            {svc.title}
-                                        </Link>
+                                    {otherServices.slice(0, 10).map((svc) => (
+                                        <ServiceCard key={svc.slug} service={svc} variant="compact" />
                                     ))}
                                 </div>
                             </Card>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType={isTreatmentPage ? "service" : "service"}
+                entityName={service.title}
+                entitySlug={lastSlug}
+                title={`Verified Reviews for ${service.title}`}
+                description={`What our patients are saying about their ${service.title} experience at Indira Hospital.`}
+            />
+        </div >
     );
 }

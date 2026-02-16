@@ -38,7 +38,7 @@ export function WhyChooseUs() {
     return (
         <section className="py-24 bg-white relative overflow-hidden">
             {/* Subtle background pattern */}
-            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #0284c7 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #841F74 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                 <SectionHeader
@@ -51,7 +51,7 @@ export function WhyChooseUs() {
                         {features.map((feature) => (
                             <div
                                 key={feature.name}
-                                className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-100 bg-white p-8 hover:shadow-2xl hover:shadow-brand-100/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-100 bg-white p-8 hover:shadow-2xl hover:shadow-primary-100/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
                             >
                                 {/* Top gradient accent */}
                                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
@@ -66,9 +66,9 @@ export function WhyChooseUs() {
                                     <feature.icon className="h-8 w-8" aria-hidden="true" />
                                 </div>
 
-                                <dt className="text-xl font-bold leading-7 text-gray-900">
+                                <h3 className="text-xl font-bold leading-7 text-gray-900">
                                     {feature.name}
-                                </dt>
+                                </h3>
                                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                                     <p className="flex-auto">{feature.description}</p>
                                 </dd>

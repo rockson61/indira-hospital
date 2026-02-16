@@ -54,13 +54,13 @@
 
 :root {
 
-  --primary: oklch(0.482 0.184 328.36);
-  /* #841F74 Brand Purple */
-  --primary-foreground: oklch(0.985 0 0);
+  /* Brand Purple #841F74 */
+  --primary: hsl(310 62% 32%);
+  --primary-foreground: hsl(0 0% 100%);
 
-  --secondary: oklch(0.347 0.078 259.97);
-  /* #2C4167 Brand Dark Blue */
-  --secondary-foreground: oklch(0.985 0 0);
+  /* Brand Dark Blue #2C4167 */
+  --secondary: hsl(219 40% 29%);
+  --secondary-foreground: hsl(0 0% 100%);
 
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);

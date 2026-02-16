@@ -12,6 +12,7 @@ import { getPostBySlug } from "@/lib/api"
 import { Card } from "@/components/ui/card" // Added Card
 import { getImageUrl } from "@/lib/utils" // Added getImageUrl
 import { Stethoscope, User, ArrowRight } from "lucide-react" // Added icons
+import EntityReviews from "@/components/trust/EntityReviews"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
@@ -67,7 +68,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             {typeof post.author === 'object' && post.author?.avatar ? (
                                 <div className="relative w-12 h-12 rounded-full overflow-hidden bg-slate-200">
                                     <Image
-                                        src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${post.author.avatar}`}
+                                        src={getImageUrl(post.author.avatar) || '/images/hospital-placeholder.jpg'}
                                         alt={post.author.name}
                                         fill
                                         className="object-cover"
@@ -99,7 +100,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
                     {post.image ? (
                         <Image
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${post.image}`}
+                            src={getImageUrl(post.image) || '/images/hospital-placeholder.jpg'}
                             alt={post.title}
                             fill
                             className="object-cover"
@@ -198,6 +199,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </div>
                 )}
             </SectionContainer>
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="blog"
+                entityName={post.title}
+                entitySlug={slug}
+                title={`What Patients Say About Our Insights`}
+                description={`Read real patient experiences related to our healthcare updates and expert insights.`}
+            />
         </main>
     )
 }

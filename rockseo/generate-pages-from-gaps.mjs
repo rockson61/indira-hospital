@@ -22,201 +22,258 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.join(__dirname, "..");
 
 const CONFIG = {
-    appDir: path.join(ROOT, "src/app"),
-    outputDir: path.join(__dirname, "generated-pages"),
-    outputReport: path.join(__dirname, "reports/topical-gaps-report.json"),
+  appDir: path.join(ROOT, "src/app"),
+  outputDir: path.join(__dirname, "generated-pages"),
+  outputReport: path.join(__dirname, "reports/topical-gaps-report.json"),
 
-    // Complete topic taxonomy for dental clinic
-    topicTaxonomy: {
-        // "dental-implants": {
-        //     hub: "/services/dental-implants",
-        //     requiredSubtopics: [
-        //         "single tooth implant cost",
-        //         "all-on-4 implants guide",
-        //         "all-on-6 implants guide",
-        //         "dental implant procedure steps",
-        //         "dental implant recovery time",
-        //         "dental implant failure signs",
-        //         "bone grafting for implants",
-        //         "sinus lift before implants",
-        //         "immediate load implants",
-        //         "implant vs bridge comparison",
-        //         "implant aftercare instructions",
-        //         "dental implant pain management",
-        //         "zirconia vs titanium implants",
-        //         "implant cost in vellore",
-        //         "implant warranty policy"
-        //     ]
-        // },
-        // "root-canal": {
-        //     hub: "/services/root-canal-treatment",
-        //     requiredSubtopics: [
-        //         "single sitting root canal",
-        //         "root canal pain during treatment",
-        //         "root canal vs extraction",
-        //         "root canal aftercare",
-        //         "root canal crown needed",
-        //         "root canal cost breakdown",
-        //         "root canal failure symptoms",
-        //         "re-root canal treatment",
-        //         "apicoectomy procedure",
-        //         "root canal during pregnancy",
-        //         "root canal for children",
-        //         "laser root canal benefits"
-        //     ]
-        // },
-        // "orthodontics": {
-        //     hub: "/services/orthodontics",
-        //     requiredSubtopics: [
-        //         "metal braces guide",
-        //         "ceramic braces vs metal",
-        //         "invisalign treatment guide",
-        //         "braces for adults",
-        //         "braces age limit",
-        //         "braces cost in vellore",
-        //         "braces treatment duration",
-        //         "braces pain management",
-        //         "retainer after braces",
-        //         "overbite correction",
-        //         "underbite treatment",
-        //         "crossbite correction",
-        //         "teeth gaps treatment"
-        //     ]
-        // },
-        // "gum-treatment": {
-        //     hub: "/services/gum-treatment",
-        //     requiredSubtopics: [
-        //         "gingivitis treatment guide",
-        //         "periodontitis stages",
-        //         "deep cleaning scaling",
-        //         "laser gum treatment",
-        //         "gum grafting procedure",
-        //         "gum recession treatment",
-        //         "gum pocket treatment",
-        //         "bleeding gums causes",
-        //         "gum disease prevention",
-        //         "gum surgery recovery"
-        //     ]
-        // },
-        "cosmetic-dentistry": {
-            hub: "/services/cosmetic-dentistry",
-            requiredSubtopics: [
-                "teeth whitening guide",
-                "dental veneers types",
-                "smile makeover process",
-                "composite bonding guide",
-                "gummy smile correction",
-                "teeth contouring reshaping",
-                "dental bonding vs veneers"
-            ]
-        },
-        // "dental-crowns": {
-        //     hub: "/services/restorative-dentistry/dental-crowns",
-        //     requiredSubtopics: [
-        //         "zirconia crown guide",
-        //         "ceramic crown benefits",
-        //         "metal crown uses",
-        //         "crown vs filling",
-        //         "temporary crown care",
-        //         "crown after root canal",
-        //         "crown pain solutions",
-        //         "crown lifespan care"
-        //     ]
-        // },
-        // "tooth-extraction": {
-        //     hub: "/services/oral-surgery/tooth-extraction",
-        //     requiredSubtopics: [
-        //         "wisdom tooth removal guide",
-        //         "tooth extraction recovery",
-        //         "dry socket prevention",
-        //         "extraction aftercare",
-        //         "extraction vs root canal",
-        //         "impacted wisdom tooth"
-        //     ]
-        // },
-        // "emergency-dentistry": {
-        //     hub: "/services/emergency-dentistry",
-        //     requiredSubtopics: [
-        //         "dental emergency types",
-        //         "toothache emergency relief",
-        //         "broken tooth emergency",
-        //         "knocked out tooth guide",
-        //         "dental abscess emergency",
-        //         "swelling emergency care"
-        //     ]
-        // }
+  // Complete topic taxonomy for dental clinic
+  topicTaxonomy: {
+    "dental-implants": {
+      hub: "/services/dental-implants",
+      requiredSubtopics: [
+        "single tooth implant cost",
+        "all-on-4 implants guide",
+        "all-on-6 implants guide",
+        "dental implant procedure steps",
+        "dental implant recovery time",
+        "dental implant failure signs",
+        "bone grafting for implants",
+        "sinus lift before implants",
+        "immediate load implants",
+        "implant vs bridge comparison",
+        "implant aftercare instructions",
+        "dental implant pain management",
+        "zirconia vs titanium implants",
+        "implant cost in vellore",
+        "implant warranty policy"
+      ]
+    },
+    "root-canal": {
+      hub: "/services/root-canal-treatment",
+      requiredSubtopics: [
+        "single sitting root canal",
+        "root canal pain during treatment",
+        "root canal vs extraction",
+        "root canal aftercare",
+        "root canal crown needed",
+        "root canal cost breakdown",
+        "root canal failure symptoms",
+        "re-root canal treatment",
+        "apicoectomy procedure",
+        "root canal during pregnancy",
+        "root canal for children",
+        "laser root canal benefits"
+      ]
+    },
+    "orthodontics": {
+      hub: "/services/orthodontics",
+      requiredSubtopics: [
+        "metal braces guide",
+        "ceramic braces vs metal",
+        "invisalign treatment guide",
+        "braces for adults",
+        "braces age limit",
+        "braces cost in vellore",
+        "braces treatment duration",
+        "braces pain management",
+        "retainer after braces",
+        "overbite correction",
+        "underbite treatment",
+        "crossbite correction",
+        "teeth gaps treatment"
+      ]
+    },
+    "gum-treatment": {
+      hub: "/services/gum-treatment",
+      requiredSubtopics: [
+        "gingivitis treatment guide",
+        "periodontitis stages",
+        "deep cleaning scaling",
+        "laser gum treatment",
+        "gum grafting procedure",
+        "gum recession treatment",
+        "gum pocket treatment",
+        "bleeding gums causes",
+        "gum disease prevention",
+        "gum surgery recovery"
+      ]
+    },
+    "cosmetic-dentistry": {
+      hub: "/services/cosmetic-dentistry",
+      requiredSubtopics: [
+        "teeth whitening guide",
+        "dental veneers types",
+        "smile makeover process",
+        "composite bonding guide",
+        "gummy smile correction",
+        "teeth contouring reshaping",
+        "dental bonding vs veneers"
+      ]
+    },
+    "general-surgery": {
+      hub: "/services/general-surgery",
+      requiredSubtopics: [
+        "laser piles treatment cost",
+        "laparoscopic hernia repair",
+        "thyroid surgery guide",
+        "varicose veins laser treatment",
+        "gallbladder removal recovery",
+        "appendix surgery steps",
+        "breast lump removal"
+      ]
+    },
+    "gastroenterology": {
+      hub: "/services/gastroenterology",
+      requiredSubtopics: [
+        "endoscopy procedure guide",
+        "colonoscopy screening cost",
+        "fatty liver treatment diet",
+        "acid reflux Gerd management",
+        "pancreatitis treatment steps",
+        "h-pylori infection cure"
+      ]
+    },
+    "urology": {
+      hub: "/services/urology",
+      requiredSubtopics: [
+        "kidney stone laser surgery",
+        "prostate TURP surgery",
+        "urinary tract infection treatment",
+        "male infertility causes",
+        "kidney stone prevention tips"
+      ]
+    },
+    "obstetrics-gynaecology": {
+      hub: "/services/obstetrics-gynaecology",
+      requiredSubtopics: [
+        "normal delivery vs c-section",
+        "high risk pregnancy care",
+        "pcod pcos treatment guide",
+        "painless delivery epidural",
+        "laparoscopic hysterectomy guide",
+        "infertility evaluation steps"
+      ]
+    },
+    "orthopaedics": {
+      hub: "/services/orthopaedics",
+      requiredSubtopics: [
+        "total knee replacement cost",
+        "acl reconstruction recovery",
+        "hip replacement surgery guide",
+        "spine surgery disc prolapse",
+        "fracture care rehabilitation"
+      ]
+    },
+    "cardiology": {
+      hub: "/services/cardiology",
+      requiredSubtopics: [
+        "heart angioplasty procedure",
+        "coronary angiography guide",
+        "pacemaker implantation steps",
+        "heart attack warning signs",
+        "preventive heart checkup"
+      ]
+    },
+    "neurology": {
+      hub: "/services/neurology",
+      requiredSubtopics: [
+        "stroke recovery exercises",
+        "epilepsy treatment options",
+        "migraine relief management",
+        "parkinsons disease care",
+        "eeg test procedure"
+      ]
+    },
+    "oncology": {
+      hub: "/services/oncology",
+      requiredSubtopics: [
+        "chemotherapy side effects",
+        "breast cancer screening guide",
+        "surgical oncology overview",
+        "palliative care services"
+      ]
+    },
+    "nephrology": {
+      hub: "/services/nephrology",
+      requiredSubtopics: [
+        "dialysis procedure guide",
+        "chronic kidney disease stages",
+        "diabetic nephropathy prevention",
+        "av fistula surgery"
+      ]
     }
+  }
 };
 
 const results = {
-    timestamp: new Date().toISOString(),
-    existingPages: [],
-    missingTopics: [],
-    generatedPages: [],
-    recommendations: []
+  timestamp: new Date().toISOString(),
+  existingPages: [],
+  missingTopics: [],
+  generatedPages: [],
+  recommendations: []
 };
 
 /**
  * Slugify a topic title
  */
 function slugify(text) {
-    return text
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .trim();
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .trim();
 }
 
 /**
  * Check if a topic is already covered
  */
 function isTopicCovered(topic, existingPages, existingContent) {
-    const topicLower = topic.toLowerCase();
-    const topicWords = topicLower.split(/\s+/).filter(w => w.length > 2);
+  const topicLower = topic.toLowerCase();
+  const topicWords = topicLower.split(/\s+/).filter(w => w.length > 2);
 
-    // Check if any existing page covers this topic
-    for (const page of existingPages) {
-        const pageLower = page.toLowerCase();
+  // Check if any existing page covers this topic
+  for (const page of existingPages) {
+    const pageLower = page.toLowerCase();
 
-        // Direct match
-        if (pageLower.includes(slugify(topic))) {
-            return { covered: true, by: page, type: "direct" };
-        }
-
-        // Word overlap check
-        const matchingWords = topicWords.filter(w => pageLower.includes(w));
-        if (matchingWords.length >= Math.ceil(topicWords.length * 0.7)) {
-            return { covered: true, by: page, type: "overlap" };
-        }
+    // Direct match
+    if (pageLower.includes(slugify(topic))) {
+      return { covered: true, by: page, type: "direct" };
     }
 
-    // Check content for topic coverage
-    const searchTerms = topicWords.join("|");
-    const contentMatches = existingContent.filter(c => {
-        const regex = new RegExp(searchTerms, "gi");
-        return (c.match(regex) || []).length >= 3;
-    });
-
-    if (contentMatches.length > 0) {
-        return { covered: true, by: "content", type: "content" };
+    // Word overlap check
+    const matchingWords = topicWords.filter(w => pageLower.includes(w));
+    if (matchingWords.length >= Math.ceil(topicWords.length * 0.7)) {
+      return { covered: true, by: page, type: "overlap" };
     }
+  }
 
-    return { covered: false };
+  // Check content for topic coverage
+  const searchTerms = topicWords.join("|");
+  const contentMatches = existingContent.filter(c => {
+    const regex = new RegExp(searchTerms, "gi");
+    return (c.match(regex) || []).length >= 3;
+  });
+
+  if (contentMatches.length > 0) {
+    return { covered: true, by: "content", type: "content" };
+  }
+
+  return { covered: false };
 }
 
 /**
  * Generate RockSEO-ready page template
  */
 function generatePageTemplate(topic, cluster) {
-    const title = topic.split(" ").map(w =>
-        w.charAt(0).toUpperCase() + w.slice(1)
-    ).join(" ");
+  const title = topic.split(" ").map(w =>
+    w.charAt(0).toUpperCase() + w.slice(1)
+  ).join(" ");
 
-    const slug = slugify(topic);
-    const hubPath = CONFIG.topicTaxonomy[cluster].hub;
+  const slug = slugify(topic);
+  const hubPath = CONFIG.topicTaxonomy[cluster].hub;
 
-    const template = `// RockSEO Auto-Generated Page Template
+  const template = `// RockSEO Auto-Generated Page Template
 // Topic: ${title}
 // Cluster: ${cluster}
 // Hub: ${hubPath}
@@ -224,7 +281,8 @@ function generatePageTemplate(topic, cluster) {
 
 import { Metadata } from "next";
 import { SectionContainer } from "@/components/ui/section-container";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
   title: "${title} | Indira Dental Clinic Vellore",
@@ -310,164 +368,173 @@ export default function ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w
             WhatsApp: +91-7010650063
           </p>
         </section>
+
+        {/* 6. Reviews Section */}
+        <EntityReviews 
+          entityType="service" 
+          entityName="${title}" 
+          entitySlug="${cluster}/${slug}"
+          title="Patient Experiences with ${title}"
+          description="Read verified experiences from patients who underwent ${title} at Indira Dental Clinic."
+        />
       </SectionContainer>
     </main>
   );
 }
 `;
 
-    return {
-        slug,
-        title,
-        cluster,
-        hubPath,
-        template
-    };
+  return {
+    slug,
+    title,
+    cluster,
+    hubPath,
+    template
+  };
 }
 
 /**
  * Get all existing page slugs
  */
 function getExistingPages(dir, list = []) {
-    if (!fs.existsSync(dir)) return list;
+  if (!fs.existsSync(dir)) return list;
 
-    for (const f of fs.readdirSync(dir)) {
-        const full = path.join(dir, f);
-        const stat = fs.statSync(full);
+  for (const f of fs.readdirSync(dir)) {
+    const full = path.join(dir, f);
+    const stat = fs.statSync(full);
 
-        if (stat.isDirectory() && !f.startsWith(".") && !f.startsWith("[")) {
-            list.push(f);
-            getExistingPages(full, list);
-        }
+    if (stat.isDirectory() && !f.startsWith(".") && !f.startsWith("[")) {
+      list.push(f);
+      getExistingPages(full, list);
     }
-    return list;
+  }
+  return list;
 }
 
 /**
  * Get content samples from blog posts
  */
 function getBlogContentSamples(dir) {
-    const samples = [];
-    if (!fs.existsSync(dir)) return samples;
+  const samples = [];
+  if (!fs.existsSync(dir)) return samples;
 
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    for (const entry of entries.filter(e => e.isDirectory()).slice(0, 100)) {
-        const pagePath = path.join(dir, entry.name, "page.tsx");
-        if (fs.existsSync(pagePath)) {
-            try {
-                const content = fs.readFileSync(pagePath, "utf8").slice(0, 1000);
-                samples.push(content);
-            } catch (e) { }
-        }
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries.filter(e => e.isDirectory()).slice(0, 100)) {
+    const pagePath = path.join(dir, entry.name, "page.tsx");
+    if (fs.existsSync(pagePath)) {
+      try {
+        const content = fs.readFileSync(pagePath, "utf8").slice(0, 1000);
+        samples.push(content);
+      } catch (e) { }
     }
-    return samples;
+  }
+  return samples;
 }
 
 /**
  * Main execution
  */
 async function main() {
-    console.log("🆕 RockSEO Topical Gap Detector & Page Generator");
-    console.log("=".repeat(55));
-    console.log("\nAnalyzing topic coverage and identifying gaps\n");
+  console.log("🆕 RockSEO Topical Gap Detector & Page Generator");
+  console.log("=".repeat(55));
+  console.log("\nAnalyzing topic coverage and identifying gaps\n");
 
-    // Get existing pages
-    const existingPages = getExistingPages(CONFIG.appDir);
-    const blogContent = getBlogContentSamples(path.join(CONFIG.appDir, "blog"));
+  // Get existing pages
+  const existingPages = getExistingPages(CONFIG.appDir);
+  const blogContent = getBlogContentSamples(path.join(CONFIG.appDir, "blog"));
 
-    console.log(`📁 Existing pages: ${existingPages.length}`);
-    console.log(`📝 Blog samples analyzed: ${blogContent.length}\n`);
+  console.log(`📁 Existing pages: ${existingPages.length}`);
+  console.log(`📝 Blog samples analyzed: ${blogContent.length}\n`);
 
-    results.existingPages = existingPages;
+  results.existingPages = existingPages;
 
-    // Analyze each topic cluster
-    const allMissing = [];
+  // Analyze each topic cluster
+  const allMissing = [];
 
-    for (const [cluster, data] of Object.entries(CONFIG.topicTaxonomy)) {
-        console.log(`\n📊 Cluster: ${cluster.toUpperCase()}`);
-        console.log(`   Hub: ${data.hub}`);
+  for (const [cluster, data] of Object.entries(CONFIG.topicTaxonomy)) {
+    console.log(`\n📊 Cluster: ${cluster.toUpperCase()}`);
+    console.log(`   Hub: ${data.hub}`);
 
-        const clusterMissing = [];
-        const clusterCovered = [];
+    const clusterMissing = [];
+    const clusterCovered = [];
 
-        for (const topic of data.requiredSubtopics) {
-            const coverage = isTopicCovered(topic, existingPages, blogContent);
+    for (const topic of data.requiredSubtopics) {
+      const coverage = isTopicCovered(topic, existingPages, blogContent);
 
-            if (coverage.covered) {
-                clusterCovered.push({ topic, ...coverage });
-            } else {
-                clusterMissing.push({ topic, cluster });
-                allMissing.push({ topic, cluster });
-            }
-        }
-
-        console.log(`   ✅ Covered: ${clusterCovered.length}/${data.requiredSubtopics.length}`);
-        console.log(`   ❌ Missing: ${clusterMissing.length}`);
-
-        if (clusterMissing.length > 0) {
-            for (const m of clusterMissing.slice(0, 3)) {
-                console.log(`      - ${m.topic}`);
-            }
-            if (clusterMissing.length > 3) {
-                console.log(`      ... and ${clusterMissing.length - 3} more`);
-            }
-        }
+      if (coverage.covered) {
+        clusterCovered.push({ topic, ...coverage });
+      } else {
+        clusterMissing.push({ topic, cluster });
+        allMissing.push({ topic, cluster });
+      }
     }
 
-    results.missingTopics = allMissing;
+    console.log(`   ✅ Covered: ${clusterCovered.length}/${data.requiredSubtopics.length}`);
+    console.log(`   ❌ Missing: ${clusterMissing.length}`);
 
-    // Generate page templates for missing topics
-    console.log("\n" + "=".repeat(55));
-    console.log("📝 GENERATING PAGE TEMPLATES\n");
-
-    if (!fs.existsSync(CONFIG.outputDir)) {
-        fs.mkdirSync(CONFIG.outputDir, { recursive: true });
+    if (clusterMissing.length > 0) {
+      for (const m of clusterMissing.slice(0, 3)) {
+        console.log(`      - ${m.topic}`);
+      }
+      if (clusterMissing.length > 3) {
+        console.log(`      ... and ${clusterMissing.length - 3} more`);
+      }
     }
+  }
 
-    for (const missing of allMissing.slice(0, 10)) { // Limit for Cosmetic
-        const page = generatePageTemplate(missing.topic, missing.cluster);
+  results.missingTopics = allMissing;
 
-        const outputPath = path.join(CONFIG.outputDir, `${page.slug}.tsx`);
-        fs.writeFileSync(outputPath, page.template);
+  // Generate page templates for missing topics
+  console.log("\n" + "=".repeat(55));
+  console.log("📝 GENERATING PAGE TEMPLATES\n");
 
-        results.generatedPages.push({
-            topic: page.title,
-            slug: page.slug,
-            cluster: page.cluster,
-            path: outputPath
-        });
+  if (!fs.existsSync(CONFIG.outputDir)) {
+    fs.mkdirSync(CONFIG.outputDir, { recursive: true });
+  }
 
-        console.log(`   🆕 Generated: ${page.slug}.tsx`);
-    }
+  for (const missing of allMissing.slice(0, 100)) { // Increased for medical coverage
+    const page = generatePageTemplate(missing.topic, missing.cluster);
 
-    if (allMissing.length > 10) {
-        console.log(`\n   ⚠️ ${allMissing.length - 10} more topics identified but not generated.`);
-        console.log("   Run again to generate more, or edit the script limit.");
-    }
+    const outputPath = path.join(CONFIG.outputDir, `${page.slug}.tsx`);
+    fs.writeFileSync(outputPath, page.template);
 
-    // Save report
-    const reportDir = path.dirname(CONFIG.outputReport);
-    if (!fs.existsSync(reportDir)) {
-        fs.mkdirSync(reportDir, { recursive: true });
-    }
+    results.generatedPages.push({
+      topic: page.title,
+      slug: page.slug,
+      cluster: page.cluster,
+      path: outputPath
+    });
 
-    fs.writeFileSync(CONFIG.outputReport, JSON.stringify(results, null, 2));
+    console.log(`   🆕 Generated: ${page.slug}.tsx`);
+  }
 
-    // Summary
-    console.log("\n" + "=".repeat(55));
-    console.log("📈 TOPICAL GAP SUMMARY\n");
-    console.log(`   Total required subtopics: ${Object.values(CONFIG.topicTaxonomy).reduce((s, c) => s + c.requiredSubtopics.length, 0)}`);
-    console.log(`   Topics missing: ${allMissing.length}`);
-    console.log(`   Templates generated: ${results.generatedPages.length}`);
+  if (allMissing.length > 10) {
+    console.log(`\n   ⚠️ ${allMissing.length - 10} more topics identified but not generated.`);
+    console.log("   Run again to generate more, or edit the script limit.");
+  }
 
-    console.log(`\n💾 Generated pages saved to: ${CONFIG.outputDir}`);
-    console.log(`💾 Report saved: ${CONFIG.outputReport}`);
+  // Save report
+  const reportDir = path.dirname(CONFIG.outputReport);
+  if (!fs.existsSync(reportDir)) {
+    fs.mkdirSync(reportDir, { recursive: true });
+  }
 
-    console.log("\n⚠️ IMPORTANT:");
-    console.log("   1. Review generated templates before publishing");
-    console.log("   2. Fill in TODO sections with actual content");
-    console.log("   3. Run SERP overlap detector after adding pages");
-    console.log("   4. Move approved pages to app/[locale]/ directory");
+  fs.writeFileSync(CONFIG.outputReport, JSON.stringify(results, null, 2));
+
+  // Summary
+  console.log("\n" + "=".repeat(55));
+  console.log("📈 TOPICAL GAP SUMMARY\n");
+  console.log(`   Total required subtopics: ${Object.values(CONFIG.topicTaxonomy).reduce((s, c) => s + c.requiredSubtopics.length, 0)}`);
+  console.log(`   Topics missing: ${allMissing.length}`);
+  console.log(`   Templates generated: ${results.generatedPages.length}`);
+
+  console.log(`\n💾 Generated pages saved to: ${CONFIG.outputDir}`);
+  console.log(`💾 Report saved: ${CONFIG.outputReport}`);
+
+  console.log("\n⚠️ IMPORTANT:");
+  console.log("   1. Review generated templates before publishing");
+  console.log("   2. Fill in TODO sections with actual content");
+  console.log("   3. Run SERP overlap detector after adding pages");
+  console.log("   4. Move approved pages to app/[locale]/ directory");
 }
 
 main().catch(console.error);

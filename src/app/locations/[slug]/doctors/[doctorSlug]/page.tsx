@@ -10,6 +10,7 @@ import {
     ArrowRight, CheckCircle2, GraduationCap
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -199,6 +200,15 @@ export default async function LocationDoctorPage({ params }: { params: Promise<{
                     </div>
                 </div>
             </div>
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="doctor"
+                entityName={doctor.name}
+                entitySlug={`${slug}/doctors/${doctorSlug}`}
+                title={`Patient Reviews for ${doctor.name} - ${location.name}`}
+                description={`Read verified patient experiences for ${doctor.name} from the ${location.name} area.`}
+            />
 
             <section className="bg-gradient-to-r from-green-600 to-green-500 text-white py-10">
                 <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">

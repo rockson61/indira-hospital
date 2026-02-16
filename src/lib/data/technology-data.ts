@@ -181,6 +181,25 @@ export const TECHNOLOGY_DATA: TechnologyItem[] = [
             "Platelet support for dengue/oncology",
             "Lifesaving support available 24/7"
         ]
+    },
+    {
+        id: "tech-10",
+        slug: "physiotherapy",
+        title: "Modern Physiotherapy & Rehab",
+        shortDescription: "Advanced physical therapy for rapid recovery and pain management.",
+        fullDescription: "Our Physiotherapy department is equipped with state-of-the-art machines for pain management and rehabilitation. From sports injury recovery to post-surgical rehabilitation, our expert therapists use evidence-based techniques to restore mobility and function.",
+        features: [
+            "Short Wave Diathermy (SWD)",
+            "Interferential Therapy (IFT)",
+            "Electronic Cervical & Lumbar Traction",
+            "Muscle Stimulators & Ultrasound Therapy"
+        ],
+        benefits: [
+            "Faster post-surgical recovery",
+            "Effective non-invasive pain management",
+            "Improved range of motion",
+            "Personalized exercise programs"
+        ]
     }
 ];
 

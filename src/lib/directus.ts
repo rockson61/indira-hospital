@@ -8,7 +8,11 @@ const globalForDirectus = globalThis as unknown as {
 };
 
 const createDirectusConfig = () => {
-    const directus = createDirectus<Schema>(process.env.NEXT_PUBLIC_API_URL as string)
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl || apiUrl === 'undefined') {
+        throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
+    }
+    const directus = createDirectus<Schema>(apiUrl)
         .with(authentication('json', { autoRefresh: true }))
         .with(rest());
 
@@ -16,7 +20,11 @@ const createDirectusConfig = () => {
 }
 
 const createStaticClient = (token: string) => {
-    return createDirectus<Schema>(process.env.NEXT_PUBLIC_API_URL as string)
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl || apiUrl === 'undefined') {
+        throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
+    }
+    return createDirectus<Schema>(apiUrl)
         .with(staticToken(token))
         .with(rest()) as ClientType;
 }

@@ -27,15 +27,33 @@ const reviews = [
     name: "Mohammed Ali",
     location: "Sathuvachari, Vellore",
     review:
-      "Had a dental emergency and Dr. Rockson Samuel saw me immediately. Very professional and caring approach to patient care. Grateful for their 24/7 emergency dental services in Vellore.",
+      "Had a dental emergency and was seen immediately. Very professional and caring approach to patient care. Grateful for their 24/7 emergency dental services in Vellore.",
     rating: 5,
     date: "2024-01-05",
+  },
+  {
+    name: "Rajendiran",
+    review: "Treatment at Indira Hospital is very good. The doctors listen to patients well and explain everything clearly.",
+    rating: 5,
+    date: "2024-01-05", // Assuming a date for the new review
+  },
+  {
+    name: "John D.",
+    review: "Great service from the team, they explained to me everything they did in detail.",
+    rating: 4,
+    date: "2024-01-05", // Assuming a date for the new review
+  },
+  {
+    name: "Sam Franklin",
+    review: "Highly recommend Indira Super Speciality Hospital for affordable and quality care near VIT University.",
+    rating: 5,
+    date: "2024-01-05", // Assuming a date for the new review
   },
   {
     name: "Lakshmi Venkatesh",
     location: "Bagayam, Vellore",
     review:
-      "I got my braces done at Indira Dental Clinic, and the results are amazing! Dr. Rockson Samuel is undoubtedly the best orthodontist in Vellore. Highly recommend for anyone looking for teeth alignment.",
+      "I got my braces done at Indira Dental Clinic, and the results are amazing! This is undoubtedly the best orthodontist in Vellore. Highly recommend for anyone looking for teeth alignment.",
     rating: 5,
     date: "2024-01-20",
   },

@@ -3,6 +3,7 @@ import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
 import { FlaskConical, ScanLine, Activity, Clock, Home, Droplets, Zap } from "lucide-react"
+import { DiagnosticCard } from "@/components/entities/DiagnosticCard"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -72,44 +73,9 @@ export default async function DiagnosticsPage() {
                             </div>
                         </div>
 
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {tests.map((test: Diagnostic) => (
-                                <Link
-                                    key={test.slug}
-                                    href={`/diagnostics/${test.slug}`}
-                                    className="bg-white border rounded-xl p-5 hover:shadow-md hover:border-blue-200 transition-all group"
-                                >
-                                    <div className="flex justify-between items-start mb-3">
-                                        <h3 className="font-bold text-slate-900 group-hover:text-blue-700 transition-colors">{test.name}</h3>
-                                        <span className="text-lg font-bold text-blue-600 whitespace-nowrap ml-2">
-                                            {test.price ? `₹${test.price}` : 'Call'}
-                                        </span>
-                                    </div>
-                                    <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                                        {test.short_description || `Comprehensive ${test.name} with fast reporting.`}
-                                    </p>
-                                    <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
-                                        <span className="flex items-center gap-1">
-                                            <Clock className="w-3.5 h-3.5" />
-                                            {test.report_time || '24h'}
-                                        </span>
-                                        {test.home_collection && (
-                                            <span className="flex items-center gap-1 text-teal-600">
-                                                <Home className="w-3.5 h-3.5" />
-                                                Home Collection
-                                            </span>
-                                        )}
-                                        {test.sample_type && test.sample_type !== 'N/A - Imaging' && (
-                                            <span className="flex items-center gap-1">
-                                                <Droplets className="w-3.5 h-3.5" />
-                                                {test.sample_type}
-                                            </span>
-                                        )}
-                                        {test.parameters_count !== undefined && test.parameters_count > 0 && (
-                                            <span>{test.parameters_count} parameters</span>
-                                        )}
-                                    </div>
-                                </Link>
+                                <DiagnosticCard key={test.slug} test={test} />
                             ))}
                         </div>
                     </SectionContainer>
@@ -155,6 +121,7 @@ export default async function DiagnosticsPage() {
                             "@type": "MedicalTest",
                             "name": t.name,
                             "url": `https://www.indirasuperspecialityhospital.com/diagnostics/${t.slug}`,
+                            "description": (t as any).seo_description || t.short_description,
                             ...(t.price && { "offers": { "@type": "Offer", "price": t.price, "priceCurrency": "INR" } }),
                         })),
                     })

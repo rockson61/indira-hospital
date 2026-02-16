@@ -1,5 +1,5 @@
 import { SectionHeader } from "@/components/ui/section-header";
-import { DoctorCard } from "@/components/ui/doctor-card";
+import { DoctorCard } from "@/components/entities/DoctorCard";
 import { getDoctors } from "@/lib/api";
 import { getImageUrl } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -35,12 +35,8 @@ export async function FeaturedDoctors() {
                     {featuredOnly.map((doc: any) => (
                         <DoctorCard
                             key={doc.slug}
-                            name={doc.name}
-                            designation={doc.designation}
-                            department={doc.department?.name}
-                            slug={doc.slug}
-                            image={getImageUrl(doc.image) || undefined}
-                            className="bg-white"
+                            doctor={doc}
+                            variant="grid"
                         />
                     ))}
                 </div>

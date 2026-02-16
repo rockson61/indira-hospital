@@ -10,6 +10,7 @@ import {
     Award, Users, Clock, Shield, Star, MapPin, ArrowRight, Heart, Zap
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -234,6 +235,15 @@ export default async function LocationDepartmentPage({ params }: { params: Promi
                     </div>
                 </div>
             </div>
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="department"
+                entityName={dept.title}
+                entitySlug={`${slug}/departments/${deptSlug}`}
+                title={`What Patients from ${location.name} Say About ${dept.title}`}
+                description={`Reviews from patients in the ${location.name} area who received ${dept.title} care at Indira Hospital.`}
+            />
 
             {/* Bottom CTA */}
             <section className="bg-gradient-to-r from-green-600 to-green-500 text-white py-10">

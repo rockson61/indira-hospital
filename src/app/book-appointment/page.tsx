@@ -131,7 +131,7 @@ export default function BookAppointmentPage() {
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <Mail className="w-5 h-5" />
-                                        <span>care@indirahospital.com</span>
+                                        <span>care@indirasuperspecialityhospital.com</span>
                                     </div>
                                 </CardContent>
                             </Card>

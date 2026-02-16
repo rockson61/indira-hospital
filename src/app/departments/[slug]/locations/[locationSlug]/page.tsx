@@ -9,6 +9,7 @@ import {
     CheckCircle2, Award, Users, Stethoscope, Shield, Star
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -204,6 +205,15 @@ export default async function DeptLocationPage({ params }: { params: Promise<{ s
                     </div>
                 </div>
             </div>
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="department"
+                entityName={dept.title}
+                entitySlug={`departments/${slug}/locations/${locationSlug}`}
+                title={`Patient Reviews for ${dept.title} near ${location.name}`}
+                description={`Read real experiences from patients who visited our ${dept.title} department from ${location.name}.`}
+            />
 
             <section className="bg-gradient-to-r from-green-600 to-green-500 text-white py-10">
                 <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">

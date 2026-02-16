@@ -60,10 +60,10 @@ export async function LocationStrip() {
                         <Link
                             key={loc.slug}
                             href={`/locations/${loc.slug}`}
-                            className="group flex flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-4 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-100/50 transition-all duration-300 hover:-translate-y-1"
+                            className="group flex flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-4 hover:border-primary-300 hover:shadow-lg hover:shadow-primary-100/50 transition-all duration-300 hover:-translate-y-1"
                         >
-                            <div className="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center group-hover:bg-brand-100 transition-colors">
-                                <MapPin className="w-5 h-5 text-brand-600" />
+                            <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center group-hover:bg-primary-100 transition-colors">
+                                <MapPin className="w-5 h-5 text-primary-600" />
                             </div>
                             <span className="font-semibold text-gray-900 text-sm">{loc.name}</span>
                             {loc.distance && <span className="text-xs text-gray-500">{loc.distance}</span>}
@@ -74,7 +74,7 @@ export async function LocationStrip() {
                 <div className="mt-8 text-center">
                     <Link
                         href="/locations"
-                        className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:text-brand-900 transition-colors"
+                        className="inline-flex items-center gap-2 text-primary-700 font-semibold hover:text-primary-900 transition-colors"
                     >
                         View All Locations <ArrowRight className="w-4 h-4" />
                     </Link>

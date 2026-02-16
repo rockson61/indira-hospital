@@ -1,23 +1,25 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter, Outfit } from "next/font/google"; // Brand fonts
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { StickyFooter } from "@/components/layout/StickyFooter";
+import { MobileQuickActions } from "@/components/layout/MobileQuickActions";
 import FloatingActionBar from "@/components/widgets/FloatingActionBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://indirahospital.com'),
+  metadataBase: new URL('https://www.indirasuperspecialityhospital.com'),
   title: {
     default: "Indira Super Speciality Hospital | Best Hospital in Vellore",
     template: "%s | Indira Hospital"
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Indira Super Speciality Hospital | Vellore",
     description: "Advanced medical care and super speciality services in Vellore.",
-    url: "https://indirahospital.com",
+    url: "https://www.indirasuperspecialityhospital.com",
     siteName: "Indira Hospital",
     images: [
       {
@@ -67,6 +69,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#841F74",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -75,14 +84,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col font-sans`}
+        className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
         <Header />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
-        <StickyFooter />
+        <MobileQuickActions />
         <div className="hidden md:block">
           <FloatingActionBar />
         </div>

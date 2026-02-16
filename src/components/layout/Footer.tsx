@@ -62,8 +62,9 @@ export function Footer() {
                         <Accordion type="single" collapsible className="w-full space-y-2">
                             <FooterAccordionItem title="Medical Specialties" links={FOOTER_LINKS.medicalServices} />
                             <FooterAccordionItem title="Treatments & Procedures" links={FOOTER_LINKS.procedures} />
-                            <FooterAccordionItem title="Health Library (Symptoms)" links={FOOTER_LINKS.healthLibrary} />
+                            <FooterAccordionItem title="Patient Care" links={FOOTER_LINKS.patientCare} />
                             <FooterAccordionItem title="Advanced Technology" links={FOOTER_LINKS.technology} />
+                            <FooterAccordionItem title="Quick Links" links={FOOTER_LINKS.quickLinks} />
                             <FooterAccordionItem title="Our Locations" links={FOOTER_LINKS.locations} />
                         </Accordion>
                     </div>
@@ -95,12 +96,12 @@ export function Footer() {
                         <FooterColumn title="Medical Specialties" links={FOOTER_LINKS.medicalServices} />
                         <FooterColumn title="Treatments" links={FOOTER_LINKS.procedures} />
                         <div className="space-y-8">
-                            <FooterColumn title="Specialists" links={FOOTER_LINKS.specialists} />
-                            <FooterColumn title="Health Library" links={FOOTER_LINKS.healthLibrary} />
+                            <FooterColumn title="Patient Care" links={FOOTER_LINKS.patientCare} />
+                            <FooterColumn title="Technology" links={FOOTER_LINKS.technology} />
                         </div>
                         <div className="space-y-8">
-                            <FooterColumn title="Technology" links={FOOTER_LINKS.technology} />
-                            <FooterColumn title="Locations" links={FOOTER_LINKS.locations} />
+                            <FooterColumn title="Quick Links" links={FOOTER_LINKS.quickLinks} />
+                            <FooterColumn title="Our Locations" links={FOOTER_LINKS.locations} />
                         </div>
                     </div>
 

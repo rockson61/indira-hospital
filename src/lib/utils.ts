@@ -6,7 +6,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getImageUrl(id?: string) {
-  if (!id) return null;
+  if (!id || !process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_API_URL === 'undefined') {
+    return '/images/hospital-placeholder.jpg';
+  }
   return `${process.env.NEXT_PUBLIC_API_URL}/assets/${id}`;
 }
 

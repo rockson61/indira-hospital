@@ -9,55 +9,55 @@ import { motion } from "framer-motion"
 const FEATURES = [
   {
     icon: Shield,
-    title: "3D CBCT & Digital Imaging",
+    title: "Advanced Diagnostic Suite",
     description:
-      "In-house CBCT scanner, digital X-rays (90% less radiation), and intraoral cameras. Diagnosis results in 10 minutes, not days.",
+      "Fully equipped with 3T MRI, 128-Slice CT, and Digital X-rays. Precision reports within hours for rapid diagnosis.",
     color: "text-[#54CAD3]",
   },
   {
     icon: Clock,
-    title: "Same-Day Emergency Care",
+    title: "24/7 Emergency & Trauma",
     description:
-      "WhatsApp +91-7010650063 for emergencies. Most cases treated within 2 hours. Open Monday–Saturday 10AM–8PM, Sunday 10AM–1:30PM.",
+      "24/7 Emergency care with trauma specialists and ICU support. Rapid response teams for cardiac and neuro emergencies.",
     color: "text-red-500",
   },
   {
     icon: Award,
-    title: "Dr. Rockson Samuel: 15+ Years",
+    title: "Super Speciality Experts",
     description:
-      "BDS, PgDM, BDM with 1,000+ successful implants, 5,000+ root canals. Former consultant at CMC Vellore. 95%+ success rate.",
+      "Multidisciplinary team of specialists across Cardiology, Neurology, Orthopaedics, and General Surgery.",
     color: "text-[#005f73]",
   },
   {
     icon: Heart,
-    title: "Painless Treatment (2/10 Rating)",
+    title: "Patient-Centric Care",
     description:
-      "Patients rate pain as 2/10 on average. Local anaesthesia for all procedures. IV sedation available for anxious patients (₹3,000 extra).",
+      "Compassionate care with a 98% satisfaction rate. Dedicated patient care coordinators for a seamless hospital experience.",
     color: "text-pink-500",
   },
   {
     icon: Zap,
-    title: "Single-Visit Root Canal",
+    title: "Minimally Invasive Surgery",
     description:
-      "45–60 minute RCT. Same-day crowns available. 50% faster than multi-visit protocols with equal success rates.",
+      "Advanced laparoscopic and laser surgeries with faster recovery and minimal scarring. Most procedures are day-care.",
     color: "text-yellow-500",
   },
   {
     icon: Users,
-    title: "All Ages: 2 Years to 80+",
+    title: "Comprehensive Family Care",
     description:
-      "Pediatric sealants (₹500), geriatric dentures (₹10,000+), orthodontics for teens and adults. Family discount: 10% for 3+ members.",
+      "Specialized care for all ages from Pediatric to Geriatric departments. Empaneled with major health insurance providers.",
     color: "text-green-500",
   },
 ] as const
 
 const GUARANTEES = [
-  "Hospital-Grade Sterilization (Class B Autoclave)",
-  "All-Inclusive Pricing – No Hidden Costs",
-  "Lifetime Warranty on Dental Implants",
-  "0% EMI via Bajaj Finserv, HDFC, ICICI",
-  "Insurance Claims Assistance (All Major Insurers)",
-  "Free WhatsApp Follow-up for 30 Days",
+  "NABH Standards of Patient Safety",
+  "Transperant Pricing & Billing",
+  "24/7 Advanced ICU & Life Support",
+  "Cashless Treatment with 50+ TPAs",
+  "Precision Diagnostics & Pharmacy",
+  "Comprehensive Post-Op Care",
 ] as const
 
 export function WhyChooseUs() {
@@ -73,7 +73,7 @@ export function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Why Choose Indira Dental Clinic?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Why Choose Indira Super Speciality Hospital?</h2>
           <p className="text-xl text-teal-100/80 max-w-3xl mx-auto">
             <strong>4.9/5 Google Rating</strong> • 500+ Reviews • 50% Lower Than Chennai/Bangalore Prices
           </p>
@@ -176,8 +176,8 @@ export function WhyChooseUs() {
                 ))}
               </div>
               <blockquote className="text-2xl font-medium text-white/90 italic">
-                "Dr. Rockson and his team at Indira Dental Clinic provided exceptional care. The clinic is modern,
-                clean, and the staff is incredibly professional. I highly recommend them for any dental needs."
+                "The team at Indira Super Speciality Hospital provided exceptional care. The facility is modern,
+                clean, and the staff is incredibly professional. I highly recommend them for any medical needs."
               </blockquote>
               <div className="text-[#54CAD3] font-semibold">- Priya Sharma, Gandhi Nagar, Vellore</div>
             </div>

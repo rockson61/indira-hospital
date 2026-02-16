@@ -5,10 +5,13 @@ import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Clock, AlertCircle, Phone, Home, Droplets, Beaker } from "lucide-react"
 import type { Metadata } from "next"
+import EntityReviews from "@/components/trust/EntityReviews"
+import EntityFAQs from "@/components/trust/EntityFAQs"
+import { clinicConfig } from "@/lib/data/clinic-config"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
-    const test = await getDiagnosticBySlug(slug) as Diagnostic | null;
+    const test = await getDiagnosticBySlug(slug) as any;
     if (!test) return {};
     return {
         title: test.seo_title || `${test.name} — Indira Hospital Vellore`,
@@ -189,15 +192,33 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                                 Not sure which test to book? Our support team is here to guide you.
                             </p>
                             <Button variant="ghost" className="w-full flex items-center justify-start gap-3 hover:bg-slate-200" asChild>
-                                <a href="tel:+919842342525">
+                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}>
                                     <Phone className="w-4 h-4" />
-                                    +91 98423 42525
+                                    {clinicConfig.phone}
                                 </a>
                             </Button>
                         </div>
                     </div>
                 </div>
             </SectionContainer>
+
+            {/* ========== FAQ SECTION ========== */}
+            <EntityFAQs
+                entityType="diagnostic"
+                entityName={test.name}
+                entitySlug={slug}
+                title={`Common Questions about ${test.name}`}
+                description={`Get answers to common queries about ${test.name}, preparation, and reporting at Indira Diagnostics.`}
+            />
+
+            {/* ========== REVIEWS SECTION ========== */}
+            <EntityReviews
+                entityType="diagnostic"
+                entityName={test.name}
+                entitySlug={slug}
+                title={`Verified Reviews for ${test.name}`}
+                description={`What our patients are saying about their diagnostic experience at Indira Hospital.`}
+            />
 
             {/* JSON-LD: MedicalTest */}
             <script

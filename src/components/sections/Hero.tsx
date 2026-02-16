@@ -1,133 +1,107 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, MessageCircle, Phone, ShieldCheck, Clock, Zap, CreditCard } from "lucide-react";
-import { getDoctors } from "@/lib/api";
-import { SEED_DATA } from "@/lib/data/seed-data";
+import { ArrowRight, MessageCircle, Phone, Clock, Zap, Target, Search } from "lucide-react";
 
-const WHATSAPP_NUMBER = "917010650063";
-
-const trustBadges = [
-    { label: "24/7 ICU", icon: Clock },
-    { label: "Advanced Cath Lab", icon: Zap },
-    { label: "Cashless Insurance", icon: CreditCard },
-    { label: "Expert Surgeons", icon: ShieldCheck },
-];
-
-export async function Hero() {
-    // Fetch doctor count for dynamic stat
-    let doctorCount = 25;
-    try {
-        const doctors = await getDoctors().catch(() => []);
-        if (doctors.length > 0) doctorCount = doctors.length;
-        else doctorCount = SEED_DATA.doctors.length;
-    } catch {
-        doctorCount = SEED_DATA.doctors.length;
-    }
+export function Hero() {
+    const [searchTerm, setSearchTerm] = useState("");
 
     return (
-        <div className="relative isolate overflow-hidden min-h-[90vh] flex items-center">
-            {/* Multi-layer gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900 to-purple-900" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-500/20 via-transparent to-purple-500/10" />
-            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)", backgroundSize: "64px 64px" }} />
-            <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-brand-400/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-purple-500/15 rounded-full blur-3xl" />
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900">
+            {/* VIDEO BACKGROUND OVERLAY */}
+            <div className="absolute inset-0 z-0">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover opacity-40 scale-105"
+                    poster="/hero-hospital.png"
+                >
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-surgeons-performing-a-surgery-in-an-operating-room-41315-large.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+            </div>
 
-            <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-16 lg:px-8 lg:py-40 w-full">
-                <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:shrink-0">
-                    {/* Announcement badge */}
-                    <div className="mb-8">
-                        <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/20">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                            </span>
-                            New: Advanced Cath Lab Available
-                        </span>
+            <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:py-32 lg:px-8 w-full">
+                <div className="max-w-3xl">
+                    {/* Trust Batch */}
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 backdrop-blur-md mb-8">
+                        <span className="flex h-2 w-2 rounded-full bg-purple-500 animate-pulse" />
+                        <span className="text-purple-400 text-xs font-bold tracking-widest uppercase">Indira Super Speciality Hospital</span>
                     </div>
 
-                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-[1.1]">
-                        World-Class Care,{" "}
-                        <span className="bg-gradient-to-r from-brand-300 via-brand-200 to-purple-300 bg-clip-text text-transparent">
-                            Right Here in Vellore
-                        </span>
+                    <h1 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter mb-6">
+                        Precision <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Healthcare.</span>
                     </h1>
 
-                    <p className="mt-6 text-lg leading-8 text-white/70">
-                        Indira Super Speciality Hospital — {doctorCount}+ expert doctors, 10+ departments,
-                        advanced Cath Lab, and 24/7 emergency care. Your trusted healthcare destination in Vellore.
+                    <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl font-medium">
+                        Vellore's premier destination for advanced surgery, interventional cardiology,
+                        and 24/7 trauma excellence. Proven expertise with human compassion.
                     </p>
 
-                    {/* CTA Buttons */}
-                    <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                        <a
-                            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-bold text-base px-6 py-3.5 shadow-lg shadow-green-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/40 hover:-translate-y-0.5"
-                        >
-                            <MessageCircle className="w-5 h-5" />
-                            Book on WhatsApp
-                        </a>
+                    {/* HERO ACTION BAR - NEW UI */}
+                    <div className="flex flex-col md:flex-row gap-4 mb-16">
                         <Link
-                            href="/contact"
-                            className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold text-base px-6 py-3.5 ring-1 ring-white/20 transition-all duration-300"
+                            href="/book-appointment"
+                            className="px-10 py-5 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl font-black text-lg transition-all shadow-2xl shadow-purple-500/20 flex items-center justify-center gap-3 active:scale-95"
                         >
-                            Book Appointment <ArrowRight className="w-4 h-4" />
+                            <Target className="w-6 h-6" /> Book Appointment
                         </Link>
                         <a
-                            href="tel:+919842342525"
-                            className="inline-flex items-center gap-2 text-white/80 hover:text-white font-medium transition-colors"
+                            href="https://wa.me/917010650063"
+                            className="px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-xl text-white rounded-2xl font-black text-lg border border-white/20 transition-all flex items-center justify-center gap-3 active:scale-95"
                         >
-                            <Phone className="w-4 h-4" />
-                            +91 98423 42525
+                            <MessageCircle className="w-6 h-6 text-green-400" /> WhatsApp Direct
                         </a>
                     </div>
 
-                    {/* Trust badges */}
-                    <div className="mt-10 flex flex-wrap items-center gap-4">
-                        {trustBadges.map((badge) => (
-                            <div
-                                key={badge.label}
-                                className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 text-sm text-white/80 ring-1 ring-white/10"
-                            >
-                                <badge.icon className="w-4 h-4 text-brand-300" />
-                                {badge.label}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Right — Hospital showcase card */}
-                <div className="mt-16 lg:mt-0 lg:flex-1 flex justify-center">
-                    <div className="relative max-w-lg w-full">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-brand-500/30 to-purple-500/30 rounded-3xl blur-2xl" />
-                        <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
-                            <img
-                                src="/hero-hospital.png"
-                                alt="Indira Super Speciality Hospital modern interior"
-                                className="w-full h-auto object-cover"
-                                width={800}
-                                height={500}
+                    {/* HERO QUICK FIND */}
+                    <div className="relative max-w-xl group">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl blur opacity-25 group-focus-within:opacity-100 transition duration-1000 group-focus-within:duration-200" />
+                        <div className="relative flex items-center bg-white dark:bg-slate-900 rounded-2xl p-2">
+                            <Search className="w-6 h-6 text-slate-400 ml-4" />
+                            <input
+                                type="text"
+                                placeholder="Search Doctors, Diseases or Departments..."
+                                className="w-full bg-transparent border-none outline-none px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 font-medium"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
                             />
-                            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <p className="text-white font-bold text-lg">Indira Super Speciality Hospital</p>
-                                        <p className="text-white/70 text-sm">Katpadi Road, Vellore, TN</p>
-                                    </div>
-                                    <div className="flex items-center gap-1 bg-green-500/20 backdrop-blur-sm rounded-full px-3 py-1.5 ring-1 ring-green-500/30">
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                                        </span>
-                                        <span className="text-green-300 text-xs font-semibold">Open 24/7</span>
-                                    </div>
-                                </div>
-                            </div>
+                            {searchTerm && (
+                                <Link
+                                    href={`/doctors?q=${searchTerm}`}
+                                    className="bg-purple-600 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg active:scale-95 transition-all"
+                                >
+                                    Find
+                                </Link>
+                            )}
                         </div>
                     </div>
                 </div>
+
+                {/* STATS STRIP */}
+                <div className="absolute bottom-12 right-12 hidden lg:flex flex-col gap-6">
+                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 min-w-[200px]">
+                        <p className="text-3xl font-black text-white">25+</p>
+                        <p className="text-slate-400 font-bold text-sm uppercase">Expert Specialists</p>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 min-w-[200px]">
+                        <p className="text-3xl font-black text-white">24/7</p>
+                        <p className="text-slate-400 font-bold text-sm uppercase">Emergency Care</p>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            {/* DECORATIVE MESH */}
+            <div className="absolute top-0 right-0 w-1/3 h-full pointer-events-none opacity-20">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-purple-500">
+                    <path fill="currentColor" d="M45.7,-77.6C58.3,-69.1,67.1,-54.2,74.1,-39.1C81.1,-24.1,86.2,-8.8,84.7,6.1C83.2,21,75.1,35.5,65,48.2C54.8,60.9,42.7,71.8,28.7,77.1C14.7,82.4,-1.2,82.2,-16.7,78.5C-32.2,74.9,-47.4,67.7,-60.1,57C-72.8,46.3,-83,32,-87.3,16.2C-91.5,0.4,-89.9,-16.8,-82.7,-31.4C-75.5,-46.1,-62.7,-58.2,-48.3,-66C-33.8,-73.8,-17.7,-77.4,-0.4,-76.8C16.9,-76.1,33.1,-86.1,45.7,-77.6Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+        </section>
     );
 }

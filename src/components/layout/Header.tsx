@@ -57,10 +57,17 @@ export function Header() {
             name: "Diagnostics", url: "/diagnostics"
         },
         {
+            name: "Technology", url: "/technology"
+        },
+        {
             name: "Patients", submenu: [
                 { name: "Book Appointment", url: "/book-appointment", description: "Schedule your visit." },
+                { name: "International Care", url: "/patients/international", description: "Global medical tourism support." },
+                { name: "Health Packages", url: "/health-packages", description: "Preventive health checkup plans." },
+                { name: "Patient FAQs", url: "/faq", description: "Common questions and help." },
+                { name: "Join Our Team (Careers)", url: "/careers", description: "Careers at Indira Hospital." },
                 { name: "Insurance", url: "/patients/insurance", description: "Tax & Insurance info." },
-                { name: "Medical Glossary", url: "/glossary", description: "A-Z Guide to Medical Terms." },
+                { name: "Latest News (Blog)", url: "/blog", description: "Health tips and hospital updates." },
             ]
         },
         { name: "Contact", url: "/contact" }
@@ -107,6 +114,14 @@ export function Header() {
         .cta-primary:hover {
           transform: translateY(-2px);
           box-shadow: 0 8px 25px rgba(132, 31, 116, 0.4);
+        }
+        @keyframes custom-pulse {
+          0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+          70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        .emergency-pulse {
+          animation: custom-pulse 2s infinite;
         }
       `}} />
 
@@ -178,9 +193,13 @@ export function Header() {
                         </nav>
 
                         <div className="hidden md:flex items-center space-x-3">
+                            <a href="tel:+917010650063" className="hidden lg:flex items-center space-x-2 px-3 py-2 bg-red-600 text-white rounded-lg text-sm font-bold emergency-pulse hover:bg-red-700 transition-all">
+                                <div className="w-2 h-2 bg-white rounded-full animate-ping" />
+                                <span>Emergency 24/7</span>
+                            </a>
                             <a href={`tel:${phone}`} className="flex items-center space-x-2 px-3 py-2 clay-button text-sm font-medium text-gray-700 hover:text-purple-700 transition-colors">
                                 <Phone className="h-4 w-4" />
-                                <span className="hidden lg:inline">{phone}</span>
+                                <span className="hidden xl:inline">{phone}</span>
                             </a>
                             <a
                                 href={whatsappUrl}

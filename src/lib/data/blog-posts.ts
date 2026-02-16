@@ -1,8 +1,6 @@
 // Auto-generated blog posts metadata
 // Run: node scripts/generate-blog-data.js to regenerate
 
-import { allMigratedPosts } from './blog-posts-migrated';
-
 export interface BlogPost {
   slug: string
   title: string
@@ -15,8 +13,7 @@ export interface BlogPost {
   tags?: string[]
 }
 
-// Export the generated posts
-export const allBlogPosts: BlogPost[] = allMigratedPosts;
+export const allBlogPosts: BlogPost[] = [];
 
 // Export default for convenience
 export default allBlogPosts;
