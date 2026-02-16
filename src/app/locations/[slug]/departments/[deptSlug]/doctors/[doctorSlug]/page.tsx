@@ -18,30 +18,7 @@ function getLocationBySlug(slug: string) {
     return enhancedVelloreLocations.find(l => l.slug === slug) || tamilNaduLocations.find(l => l.slug === slug);
 }
 
-function getAllLocationSlugs(): string[] {
-    const slugSet = new Set<string>();
-    enhancedVelloreLocations.forEach(l => slugSet.add(l.slug));
-    tamilNaduLocations.forEach(l => slugSet.add(l.slug));
-    return Array.from(slugSet);
-}
-
-export function generateStaticParams() {
-    const params: { slug: string; deptSlug: string; doctorSlug: string }[] = [];
-    const locationSlugs = getAllLocationSlugs();
-    for (const slug of locationSlugs) {
-        for (const dept of SEED_DATA.services) {
-            const relatedDoctors = SEED_DATA.doctors.filter(d => {
-                const dName = typeof d.department === 'string' ? d.department : (d.department as any)?.name || '';
-                return dName.toLowerCase() === dept.title.toLowerCase() ||
-                    d.specialties.some(s => dept.title.toLowerCase().includes(s.toLowerCase()) || s.toLowerCase().includes(dept.title.toLowerCase()));
-            });
-            for (const doc of relatedDoctors) {
-                params.push({ slug, deptSlug: dept.slug, doctorSlug: doc.slug });
-            }
-        }
-    }
-    return params;
-}
+// This page is rendered on-demand to stay within Vercel build limits (10,000+ combinations)
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; deptSlug: string; doctorSlug: string }> }): Promise<Metadata> {
     const { slug, deptSlug, doctorSlug } = await params;

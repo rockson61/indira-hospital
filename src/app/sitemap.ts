@@ -70,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         };
 
         const [doctors, services, locations, diagnostics, healthPackages, posts, technologies] = await Promise.all([
-            fetchCMS('doctors', { filter: { status: { _eq: 'published' } }, fields: ['slug', 'updated_at'] as any }),
+            fetchCMS('doctors', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
             fetchCMS('services', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
             fetchCMS('locations', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),
             fetchCMS('diagnostics', { filter: { status: { _eq: 'published' } }, fields: ['slug'] as any }),

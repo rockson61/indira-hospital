@@ -30,7 +30,9 @@ export async function getDoctorBySlug(slug: string) {
             fields: ['services_id.title', 'services_id.slug', 'services_id.icon'] as any
         }));
         doctor.related_services = servicesRel.map((r: any) => r.services_id).filter(Boolean);
-    } catch (e) { console.error('Error fetching doctor services', e); }
+    } catch (e) {
+        console.warn(`API: Could not fetch services for doctor ${slug}. This might be a permission issue for doctors_services junction table.`);
+    }
 
     // M2M: Fetch related Locations
     try {
@@ -39,7 +41,9 @@ export async function getDoctorBySlug(slug: string) {
             fields: ['locations_id.name', 'locations_id.slug', 'locations_id.district'] as any
         }));
         doctor.available_locations = locationsRel.map((r: any) => r.locations_id).filter(Boolean);
-    } catch (e) { console.error('Error fetching doctor locations', e); }
+    } catch (e) {
+        console.warn(`API: Could not fetch locations for doctor ${slug}. This might be a permission issue for doctors_locations junction table.`);
+    }
 
     return doctor;
 }
@@ -70,7 +74,9 @@ export async function getServiceBySlug(slug: string) {
             fields: ['doctors_id.name', 'doctors_id.slug', 'doctors_id.image', 'doctors_id.designation', 'doctors_id.department.name'] as any
         }));
         service.related_doctors = doctorsRel.map((r: any) => r.doctors_id).filter(Boolean);
-    } catch (e) { }
+    } catch (e) {
+        console.warn(`API: Could not fetch doctors for service ${slug}. Junction table permission issue suspected.`);
+    }
 
     // M2M: Fetch Available Locations
     try {
@@ -79,7 +85,9 @@ export async function getServiceBySlug(slug: string) {
             fields: ['locations_id.name', 'locations_id.slug', 'locations_id.district'] as any
         }));
         service.available_locations = locationsRel.map((r: any) => r.locations_id).filter(Boolean);
-    } catch (e) { }
+    } catch (e) {
+        console.warn(`API: Could not fetch locations for service ${slug}. Junction table permission issue suspected.`);
+    }
 
     return service;
 }

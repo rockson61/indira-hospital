@@ -12,15 +12,7 @@ import EntityReviews from "@/components/trust/EntityReviews";
 
 const WHATSAPP_NUMBER = "917010650063";
 
-export function generateStaticParams() {
-    const params: { slug: string; doctorSlug: string }[] = [];
-    for (const dept of SEED_DATA.services) {
-        for (const doc of SEED_DATA.doctors) {
-            params.push({ slug: dept.slug, doctorSlug: doc.slug });
-        }
-    }
-    return params;
-}
+// This page is rendered on-demand to stay within Vercel build limits (10,000+ combinations)
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; doctorSlug: string }> }): Promise<Metadata> {
     const { slug, doctorSlug } = await params;

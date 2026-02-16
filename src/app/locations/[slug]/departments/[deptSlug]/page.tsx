@@ -26,17 +26,7 @@ function getLocationBySlug(slug: string) {
         || tamilNaduLocations.find(l => l.slug === slug);
 }
 
-export function generateStaticParams() {
-    const locationSlugs = getAllLocationSlugs();
-    const deptSlugs = SEED_DATA.services.map(s => s.slug);
-    const params: { slug: string; deptSlug: string }[] = [];
-    for (const slug of locationSlugs) {
-        for (const deptSlug of deptSlugs) {
-            params.push({ slug, deptSlug });
-        }
-    }
-    return params;
-}
+// This page is rendered on-demand to stay within Vercel build limits (10,000+ combinations)
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; deptSlug: string }> }): Promise<Metadata> {
     const { slug, deptSlug } = await params;
