@@ -98,7 +98,7 @@ export interface SubServiceTemplateProps {
     }
     relatedServices?: RelatedServicesProps
     reviews?: {
-        entityType?: string
+        entityType?: 'doctor' | 'department' | 'service' | 'diagnostic' | 'location' | 'blog' | 'technology'
         entityName: string
         entitySlug: string
     }
@@ -258,7 +258,7 @@ export function SubServiceTemplate({
             {reviews && (
                 <SectionContainer className="mt-16">
                     <EntityReviews
-                        entityType={reviews.entityType || "service"}
+                        entityType={(reviews.entityType || "service") as any}
                         entityName={reviews.entityName}
                         entitySlug={reviews.entitySlug}
                         title={`Patient Experiences with ${reviews.entityName}`}

@@ -1,4 +1,5 @@
 import { ModernCard, ModernCardHeader, ModernCardContent } from "@/components/ui/modern-card";
+import { cn } from "@/lib/utils";
 import { Star, UserCircle, MapPin, Quote } from "lucide-react";
 import { formatDate } from '@/lib/date';
 import { getReviewsByEntity } from "@/lib/api";
@@ -10,6 +11,7 @@ interface EntityReviewsProps {
     entitySlug: string;
     title?: string;
     description?: string;
+    className?: string;
 }
 
 export default async function EntityReviews({
@@ -17,7 +19,8 @@ export default async function EntityReviews({
     entityName,
     entitySlug,
     title = "Patient Reviews & Experiences",
-    description = "Read what our patients have to say about their experience."
+    description = "Read what our patients have to say about their experience.",
+    className
 }: EntityReviewsProps) {
     let reviews = [];
     try {
@@ -68,7 +71,7 @@ export default async function EntityReviews({
     };
 
     return (
-        <section className="py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+        <section className={cn("py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800", className)}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -13,7 +13,7 @@ import {
     Award,
     Users
 } from 'lucide-react';
-import { sectionHeader as SectionHeader } from "@/components/ui/section-header"; // Using lowercase since that's what was in the import
+import { SectionHeader } from "@/components/ui/section-header";
 import { SectionContainer } from "@/components/ui/section-container";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { ServiceCard } from "@/components/entities/ServiceCard";

@@ -1,5 +1,6 @@
 import { getFaqsByEntity } from "@/lib/api";
 import { FAQSection } from "./FAQSection";
+import { cn } from "@/lib/utils";
 
 interface EntityFAQsProps {
     entityType: string;
@@ -7,6 +8,7 @@ interface EntityFAQsProps {
     entitySlug?: string;
     title?: string;
     description?: string;
+    className?: string;
 }
 
 /**
@@ -18,7 +20,8 @@ export default async function EntityFAQs({
     entityName,
     entitySlug,
     title,
-    description
+    description,
+    className
 }: EntityFAQsProps) {
     const faqs = await getFaqsByEntity(entityType, entityName);
 
@@ -27,7 +30,7 @@ export default async function EntityFAQs({
     }
 
     return (
-        <section className="bg-slate-50/50 dark:bg-slate-900/50 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800">
+        <section className={cn("bg-slate-50/50 dark:bg-slate-900/50 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800", className)}>
             <div className="max-w-7xl mx-auto">
                 <FAQSection
                     title={title || `Frequently Asked Questions about ${entityName}`}
