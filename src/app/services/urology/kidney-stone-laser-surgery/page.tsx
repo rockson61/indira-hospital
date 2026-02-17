@@ -1,108 +1,123 @@
-// RockSEO Auto-Generated Page Template
-// Topic: Kidney Stone Laser Surgery
-// Cluster: urology
-// Hub: /services/urology
-// Generated: 2026-02-16T11:40:07.705Z
-
 import { Metadata } from "next";
-import { SectionContainer } from "@/components/ui/section-container";
-import Link from "next/link";
-import EntityReviews from "@/components/trust/EntityReviews";
+import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
+import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Kidney Stone Laser Surgery | Indira Super Speciality Hospital Vellore",
-  description: "TODO: Add 150-160 character description with primary keyword in first 60 characters."
+  description: "Advanced Kidney Stone Laser Surgery at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
 };
 
 export default function KidneyStoneLaserSurgeryPage() {
   return (
-    <main className="min-h-screen">
-      <SectionContainer>
-        {/* ROCKSEO STRUCTURE - DO NOT CHANGE ORDER */}
-        
-        {/* 1. Definition/Answer First (Featured Snippet Target) */}
-        <section className="py-12">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Kidney Stone Laser Surgery at Indira Super Speciality Hospital
-          </h1>
-          
-          {/* 40-word featured snippet answer */}
-          <p className="text-xl text-foreground/80 mb-8">
-            <strong>TODO: Answer the query directly in 40 words.</strong>{" "}
-            Include primary entity (Dr. P. Shankar), cost range (₹X,XXX–₹X,XXX), 
-            and key differentiator (e.g., "50% lower cost than Chennai").
-          </p>
-        </section>
-        
-        {/* 2. Key Facts Table (Entity Graph) */}
-        <section className="py-8 bg-muted rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4">Quick Facts</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div><strong>Cost:</strong> ₹X,XXX – ₹X,XXX</div>
-            <div><strong>Duration:</strong> X minutes/hours</div>
-            <div><strong>Recovery:</strong> X days</div>
-            <div><strong>Success Rate:</strong> X%</div>
-          </div>
-        </section>
-        
-        {/* 3. Main Content (Information Gain) */}
-        <section className="py-8 prose prose-lg max-w-none">
-          <h2>What is Kidney Stone Laser Surgery?</h2>
-          <p>TODO: Comprehensive explanation with entity references.</p>
-          
-          <h2>Who Needs This Treatment?</h2>
-          <p>TODO: Patient criteria with specific symptoms.</p>
-          
-          <h2>The Procedure at Indira Super Speciality Hospital</h2>
-          <p>TODO: Step-by-step with durations and what to expect.</p>
-          
-          <h2>Cost & Payment Options</h2>
-          <p>
-            <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-            This is 50% lower than Chennai/Bangalore.
-            0% EMI available via Bajaj Finserv, HDFC, ICICI.
-          </p>
-        </section>
-        
-        {/* 4. Related Services (Hub Link) */}
-        <section className="py-8 bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6">
-          <h2 className="text-2xl font-bold mb-4">Related Services</h2>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/services/urology" className="text-teal-600 hover:underline">
-                ← Back to urology main page
-              </Link>
-            </li>
-            {/* TODO: Add 2-3 sibling service links */}
-          </ul>
-        </section>
-        
-        {/* 5. CTA Section */}
-        <section className="py-12 text-center">
-          <h2 className="text-2xl font-bold mb-4">Book Your Consultation</h2>
-          <p className="mb-6">
-            Dr. P. Shankar • 30+ years experience • 20,000+ patients
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700"
-          >
-            Schedule Appointment
-          </Link>
-          <p className="mt-4 text-muted-foreground">
-            WhatsApp: +91-7010650063
-          </p>
-        </section>
+    <SubServiceTemplate
+      title="Kidney Stone Laser Surgery"
+      eyebrow="Urology Treatment"
+      description={
+        <p>
+          Advanced kidney stone treatment using state-of-the-art <strong>Holmium Laser 100W</strong> technology. Our urology experts perform RIRS and URSL procedures to ensure complete stone clearance without external cuts, offering 50% lower costs than Chennai.
+        </p>
+      }
+      quickFacts={[
+        { label: "Cost", value: "₹50,000 – ₹70,000", icon: "IndianRupee" },
+        { label: "Duration", value: "30–60 Minutes", icon: "Clock" },
+        { label: "Recovery", value: "1 Day", icon: "Activity" },
+        { label: "Success Rate", value: "99%", icon: "Star" }
+      ]}
+      marketingContent={{
+        sections: [
+          {
+            id: "stone-techniques",
+            heading: "Kidney Stone Removal Techniques",
+            description: "We offer multiple advanced options depending on the size and location of your stones:",
+            table: {
+              headers: ["Technique", "Stone Size", "Incision", "Recovery"],
+              rows: [
+                ["Laser Lithotripsy", "< 1.5 cm", "Internal (No Cuts)", "Same Day"],
+                ["RIRS", "< 2.0 cm", "Internal (No Cuts)", "1-2 Days"],
+                ["PCNL", "> 2.0 cm", "Miniature (5mm)", "2-3 Days"],
+                ["ESWL", "< 1.0 cm", "None (Sound Waves)", "Day Care"]
+              ],
+              caption: "Comparison of surgical and non-surgical stone removal options at Indira Hospital."
+            }
+          },
+          {
+            id: "why-laser",
+            heading: "Benefits of Laser Surgery (Lithotripsy)",
+            bullets: [
+              "Precision: Target and blast even the hardest stones into dust",
+              "Minimal Pain: Performed through natural urinary passages",
+              "Zero Scarring: No external cuts or stitches involved",
+              "Faster Discharge: Most patients return home within 24 hours",
+              "High Success Rate: Over 98% clearance in a single sitting"
+            ]
+          }
+        ],
+        faqs: [
+          {
+            question: "Is laser stone removal safe for elderly patients?",
+            answer: "Yes, because it is minimally invasive and performed under mild anesthesia, it is generally safe for patients with hypertension or diabetes."
+          },
+          {
+            question: "Will the stones come back?",
+            answer: "While the procedure clears existing stones, lifestyle and diet play a huge role in prevention. We provide a personalized diet chart to minimize recurrence."
+          }
+        ]
+      }}
+      timeline={{
+        title: "Your Treatment Journey",
+        steps: [
+          { title: "Diagnostic Mapping", description: "CT scan or Ultrasound to locate stone precisely." },
+          { title: "Admission", description: "Quick paper-less admission on procedure morning." },
+          { title: "Laser Procedure", description: "Laser fragmentation of stones (30-45 mins)." },
+          { title: "Home Recovery", description: "Discharge within 24 hours with follow-up guide." }
+        ]
+      }}
+      relatedServices={{
+        serviceSlug: "urology/kidney-stone-laser-surgery",
+        related: [
+          { title: "RIRS Procedure", href: "/services/urology/rirs-treatment" },
+          { title: "Prostate Treatment", href: "/services/urology/prostate-turp-surgery" }
+        ]
+      }}
+      reviews={{
+        entityName: "Kidney Stone Laser Surgery",
+        entitySlug: "urology/kidney-stone-laser-surgery"
+      }}
+    >
+      <section>
+        <h2>Advanced Laser Kidney Stone Treatment in Vellore</h2>
+        <p>
+          At Indira Super Speciality Hospital, we utilize the latest <strong>Holmium Laser</strong> technology for highly effective kidney stone removal. Unlike traditional surgery, laser lithotripsy is a walk-in, walk-out procedure that eliminates stones without any external cuts.
+        </p>
 
-        {/* 6. Reviews Section */}
-        <EntityReviews 
-          entityType="service" 
-          entityName="Kidney Stone Laser Surgery" 
-          entitySlug="urology/kidney-stone-laser-surgery"
-          title="Patient Experiences with Kidney Stone Laser Surgery"
-          description="Read verified experiences from patients who underwent Kidney Stone Laser Surgery at Indira Super Speciality Hospital."
-        />
-      </SectionContainer>
-    </main>
+        <h3>Why Choose Laser Lithotripsy?</h3>
+        <p>
+          Laser treatment is the gold standard for kidney stones that are too large to pass naturally but small enough for endoscopic removal. The laser fiber is passed through a ureteroscope to reach the stone, where it delivers precise energy to fragment the stone into tiny sand-like particles.
+        </p>
+
+        <div className="my-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-3xl border border-purple-100 dark:border-purple-800">
+          <h4 className="text-xl font-bold text-purple-900 dark:text-purple-300 mb-4 tracking-tight">Vellore's Most Affordable Laser Package</h4>
+          <p className="text-slate-700 dark:text-slate-300">
+            Our laser packages are designed to be inclusive of medication, hospital stay, and specialist fees. We provide clear pricing with <strong>no hidden costs</strong>.
+          </p>
+          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
+            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> 0% EMI Available</li>
+            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> All Insurances Accepted</li>
+            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> TPA Assistance</li>
+            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> CM Insurance Schemes</li>
+          </ul>
+        </div>
+
+        <h2>Who Needs This Procedure?</h2>
+        <p>
+          You may require laser surgery if you experience symptoms like sharp pain in the side (renal colic), blood in urine, or dynamic stones detected during routine screenings. Our specialists will perform a comprehensive evaluation to determine the best approach for your specific case.
+        </p>
+
+        <h2>Cost & Booking</h2>
+        <p>
+          The cost for Kidney Stone Laser Surgery at Indira Hospital starts from <strong>₹50,000</strong>. This depends on the size and number of stones. For an accurate quote and consultation, please book an appointment through our website or call our 24/7 hotline.
+        </p>
+      </section>
+    </SubServiceTemplate>
   );
 }

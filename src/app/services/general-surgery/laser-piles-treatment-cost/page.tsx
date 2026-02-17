@@ -1,108 +1,127 @@
-// RockSEO Auto-Generated Page Template
-// Topic: Laser Piles Treatment Cost
-// Cluster: general-surgery
-// Hub: /services/general-surgery
-// Generated: 2026-02-16T11:40:07.703Z
-
 import { Metadata } from "next";
-import { SectionContainer } from "@/components/ui/section-container";
-import Link from "next/link";
-import EntityReviews from "@/components/trust/EntityReviews";
+import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
+import { CheckCircle, ShieldCheck, Activity, IndianRupee } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Laser Piles Treatment Cost | Indira Super Speciality Hospital Vellore",
-  description: "TODO: Add 150-160 character description with primary keyword in first 60 characters."
+  description: "Advanced Laser Piles Treatment Cost at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
 };
 
 export default function LaserPilesTreatmentCostPage() {
   return (
-    <main className="min-h-screen">
-      <SectionContainer>
-        {/* ROCKSEO STRUCTURE - DO NOT CHANGE ORDER */}
-        
-        {/* 1. Definition/Answer First (Featured Snippet Target) */}
-        <section className="py-12">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Laser Piles Treatment Cost at Indira Super Speciality Hospital
-          </h1>
-          
-          {/* 40-word featured snippet answer */}
-          <p className="text-xl text-foreground/80 mb-8">
-            <strong>TODO: Answer the query directly in 40 words.</strong>{" "}
-            Include primary entity (Dr. P. Shankar), cost range (₹X,XXX–₹X,XXX), 
-            and key differentiator (e.g., "50% lower cost than Chennai").
-          </p>
-        </section>
-        
-        {/* 2. Key Facts Table (Entity Graph) */}
-        <section className="py-8 bg-muted rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4">Quick Facts</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div><strong>Cost:</strong> ₹X,XXX – ₹X,XXX</div>
-            <div><strong>Duration:</strong> X minutes/hours</div>
-            <div><strong>Recovery:</strong> X days</div>
-            <div><strong>Success Rate:</strong> X%</div>
-          </div>
-        </section>
-        
-        {/* 3. Main Content (Information Gain) */}
-        <section className="py-8 prose prose-lg max-w-none">
-          <h2>What is Laser Piles Treatment Cost?</h2>
-          <p>TODO: Comprehensive explanation with entity references.</p>
-          
-          <h2>Who Needs This Treatment?</h2>
-          <p>TODO: Patient criteria with specific symptoms.</p>
-          
-          <h2>The Procedure at Indira Super Speciality Hospital</h2>
-          <p>TODO: Step-by-step with durations and what to expect.</p>
-          
-          <h2>Cost & Payment Options</h2>
-          <p>
-            <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-            This is 50% lower than Chennai/Bangalore.
-            0% EMI available via Bajaj Finserv, HDFC, ICICI.
-          </p>
-        </section>
-        
-        {/* 4. Related Services (Hub Link) */}
-        <section className="py-8 bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6">
-          <h2 className="text-2xl font-bold mb-4">Related Services</h2>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/services/general-surgery" className="text-teal-600 hover:underline">
-                ← Back to general surgery main page
-              </Link>
-            </li>
-            {/* TODO: Add 2-3 sibling service links */}
-          </ul>
-        </section>
-        
-        {/* 5. CTA Section */}
-        <section className="py-12 text-center">
-          <h2 className="text-2xl font-bold mb-4">Book Your Consultation</h2>
-          <p className="mb-6">
-            Dr. P. Shankar • 30+ years experience • 20,000+ patients
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700"
-          >
-            Schedule Appointment
-          </Link>
-          <p className="mt-4 text-muted-foreground">
-            WhatsApp: +91-7010650063
-          </p>
-        </section>
+    <SubServiceTemplate
+      title="Laser Piles Treatment Cost"
+      eyebrow="General-surgery Treatment"
+      description={
+        <p>
+          Indira Hospital is a center of excellence for <strong>Laser Proctology</strong>. We offer painless, scar-less laser treatment for Piles (Hemorrhoids), Fissures, and Fistulas, ensuring same-day discharge and rapid recovery.
+        </p>
+      }
+      quickFacts={[
+        { label: "Cost", value: "₹35,000 – ₹50,000", icon: "IndianRupee" },
+        { label: "Duration", value: "20–30 Minutes", icon: "Clock" },
+        { label: "Recovery", value: "Same Day", icon: "Activity" },
+        { label: "Success Rate", value: "98%+", icon: "ShieldCheck" }
+      ]}
+      marketingContent={{
+        sections: [
+          {
+            id: "laser-vs-traditional",
+            heading: "Laser vs. Traditional Surgery",
+            description: "Why laser treatment is the preferred choice for modern proctology:",
+            table: {
+              headers: ["Feature", "Laser Treatment", "Traditional Surgery"],
+              rows: [
+                ["Pain Level", "Minimal / None", "Moderate to Severe"],
+                ["Hospital Stay", "Same Day Discharge", "2-3 Days"],
+                ["Blood Loss", "Negligible", "Significant"],
+                ["Recovery Time", "2-3 Days", "2-4 Weeks"],
+                ["External Cuts", "No Cuts / Stitches", "Surgical Incisions"]
+              ],
+              caption: "Comparative analysis of Laser Proctology vs Conventional Open Surgery."
+            }
+          },
+          {
+            id: "benefits",
+            heading: "Key Benefits of Laser Treatment",
+            bullets: [
+              "Painless: Virtually no post-operative pain",
+              "No Marks: Zero scarring as no incisions are made",
+              "Fast Return: Most patients resume office work in 48 hours",
+              "Low Recurrence: Laser precisely targets the affected tissue",
+              "Safe for All: Ideal even for elderly or diabetic patients"
+            ]
+          }
+        ],
+        faqs: [
+          {
+            question: "Is laser piles surgery really painless?",
+            answer: "Yes, because there are no surgical cuts or open wounds, the post-operative discomfort is minimal and easily managed with simple oral medications."
+          },
+          {
+            question: "When can I go home after the procedure?",
+            answer: "It is typically a 'Day Care' procedure. Patients are admitted in the morning, undergo the 20-minute procedure, and are discharged by the evening."
+          }
+        ]
+      }}
+      timeline={{
+        title: "Your Recovery Path",
+        steps: [
+          { title: "Examination", description: "Proctological evaluation and staging." },
+          { title: "Laser Ablation", description: "Precision laser treatment (20 mins)." },
+          { title: "Post-op Care", description: "Short rest and same-day discharge." },
+          { title: "Back to Life", description: "Resume light activities within 2 days." }
+        ]
+      }}
+      relatedServices={{
+        serviceSlug: "general-surgery/laser-piles-treatment-cost",
+        related: [
+          { title: "Hernia Repair", href: "/services/general-surgery/laparoscopic-hernia-repair" },
+          { title: "Appendix Surgery", href: "/services/general-surgery/appendix-surgery-steps" }
+        ]
+      }}
+      reviews={{
+        entityName: "Laser Piles Treatment",
+        entitySlug: "general-surgery/laser-piles-treatment-cost"
+      }}
+    >
+      <section>
+        <h2>Advanced Laser Proctology Center in Vellore</h2>
+        <p>
+          Indira Super Speciality Hospital is a pioneer in <strong>Laser Proctology</strong> in the Vellore region. We use advanced Diode Laser units to treat Piles (Hemorrhoids), Fissures, and Fistulas with high precision and patient comfort.
+        </p>
 
-        {/* 6. Reviews Section */}
-        <EntityReviews 
-          entityType="service" 
-          entityName="Laser Piles Treatment Cost" 
-          entitySlug="general-surgery/laser-piles-treatment-cost"
-          title="Patient Experiences with Laser Piles Treatment Cost"
-          description="Read verified experiences from patients who underwent Laser Piles Treatment Cost at Indira Super Speciality Hospital."
-        />
-      </SectionContainer>
-    </main>
+        <h3>Why Choose Laser Over Open Surgery?</h3>
+        <p>
+          Traditional surgery for piles often involves painful cuts and a long recovery period. Our laser technology allows us to shrink the hemorrhoidal mass from within using a fine laser fiber. This process, called <strong>Laser Hemorrhoidoplasty</strong>, ensures that the blood supply is cut off without damaging the surrounding sensitive tissues.
+        </p>
+
+        <div className="my-8 p-6 bg-slate-50 dark:bg-slate-900/40 rounded-3xl border border-slate-200 dark:border-slate-800">
+          <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Painless Procedure • Same Day Home</h4>
+          <p className="text-slate-600 dark:text-slate-400">
+            Our specialized proctology unit is designed for maximum patient privacy and rapid turnaround.
+          </p>
+          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
+              <ShieldCheck className="w-5 h-5 text-green-500" /> No Stitches Required
+            </li>
+            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
+              <Activity className="w-5 h-5 text-blue-500" /> Walk within 2 Hours
+            </li>
+            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
+              <IndianRupee className="w-5 h-5 text-purple-500" /> Affordable Packages
+            </li>
+            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
+              <CheckCircle className="w-5 h-5 text-teal-500" /> 98% Success Rate
+            </li>
+          </ul>
+        </div>
+
+        <h2>Cost & Insurance Support</h2>
+        <p>
+          The cost for Laser Piles treatment typically ranges between <strong>₹35,000 and ₹50,000</strong>. We accept all major health insurance providers and government schemes like TN CM Health Insurance. We also provide 0% EMI options for self-paying patients to ensure financial ease.
+        </p>
+      </section>
+    </SubServiceTemplate>
   );
 }

@@ -1,108 +1,129 @@
-// RockSEO Auto-Generated Page Template
-// Topic: Endoscopy Procedure Guide
-// Cluster: gastroenterology
-// Hub: /services/gastroenterology
-// Generated: 2026-02-16T11:40:07.704Z
-
 import { Metadata } from "next";
-import { SectionContainer } from "@/components/ui/section-container";
-import Link from "next/link";
-import EntityReviews from "@/components/trust/EntityReviews";
+import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
+import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Endoscopy Procedure Guide | Indira Super Speciality Hospital Vellore",
-  description: "TODO: Add 150-160 character description with primary keyword in first 60 characters."
+  description: "Advanced Endoscopy Procedure Guide at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
 };
 
 export default function EndoscopyProcedureGuidePage() {
   return (
-    <main className="min-h-screen">
-      <SectionContainer>
-        {/* ROCKSEO STRUCTURE - DO NOT CHANGE ORDER */}
-        
-        {/* 1. Definition/Answer First (Featured Snippet Target) */}
-        <section className="py-12">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Endoscopy Procedure Guide at Indira Super Speciality Hospital
-          </h1>
-          
-          {/* 40-word featured snippet answer */}
-          <p className="text-xl text-foreground/80 mb-8">
-            <strong>TODO: Answer the query directly in 40 words.</strong>{" "}
-            Include primary entity (Dr. P. Shankar), cost range (₹X,XXX–₹X,XXX), 
-            and key differentiator (e.g., "50% lower cost than Chennai").
-          </p>
-        </section>
-        
-        {/* 2. Key Facts Table (Entity Graph) */}
-        <section className="py-8 bg-muted rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4">Quick Facts</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div><strong>Cost:</strong> ₹X,XXX – ₹X,XXX</div>
-            <div><strong>Duration:</strong> X minutes/hours</div>
-            <div><strong>Recovery:</strong> X days</div>
-            <div><strong>Success Rate:</strong> X%</div>
-          </div>
-        </section>
-        
-        {/* 3. Main Content (Information Gain) */}
-        <section className="py-8 prose prose-lg max-w-none">
-          <h2>What is Endoscopy Procedure Guide?</h2>
-          <p>TODO: Comprehensive explanation with entity references.</p>
-          
-          <h2>Who Needs This Treatment?</h2>
-          <p>TODO: Patient criteria with specific symptoms.</p>
-          
-          <h2>The Procedure at Indira Super Speciality Hospital</h2>
-          <p>TODO: Step-by-step with durations and what to expect.</p>
-          
-          <h2>Cost & Payment Options</h2>
-          <p>
-            <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-            This is 50% lower than Chennai/Bangalore.
-            0% EMI available via Bajaj Finserv, HDFC, ICICI.
-          </p>
-        </section>
-        
-        {/* 4. Related Services (Hub Link) */}
-        <section className="py-8 bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6">
-          <h2 className="text-2xl font-bold mb-4">Related Services</h2>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/services/gastroenterology" className="text-teal-600 hover:underline">
-                ← Back to gastroenterology main page
-              </Link>
-            </li>
-            {/* TODO: Add 2-3 sibling service links */}
-          </ul>
-        </section>
-        
-        {/* 5. CTA Section */}
-        <section className="py-12 text-center">
-          <h2 className="text-2xl font-bold mb-4">Book Your Consultation</h2>
-          <p className="mb-6">
-            Dr. P. Shankar • 30+ years experience • 20,000+ patients
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700"
-          >
-            Schedule Appointment
-          </Link>
-          <p className="mt-4 text-muted-foreground">
-            WhatsApp: +91-7010650063
-          </p>
-        </section>
+    <SubServiceTemplate
+      title="Endoscopy Procedure Guide"
+      eyebrow="Gastroenterology Treatment"
+      description={
+        <p>
+          High-definition diagnostic <strong>Upper GI Endoscopy (OGD)</strong> and <strong>Colonoscopy</strong> services using advanced video endoscopes. Led by senior gastroenterologists for accurate diagnosis of digestive, liver, and pancreatic disorders.
+        </p>
+      }
+      quickFacts={[
+        { label: "Cost", value: "₹3,000 – ₹8,000", icon: "IndianRupee" },
+        { label: "Duration", value: "15–30 Minutes", icon: "Clock" },
+        { label: "Recovery", value: "2–4 Hours", icon: "Activity" },
+        { label: "Accuracy", value: "High-Def", icon: "Eye" }
+      ]}
+      marketingContent={{
+        sections: [
+          {
+            id: "endoscopy-types",
+            heading: "Diagnostic & Therapeutic Endoscopy",
+            description: "We provide specialized endoscopic services for various digestive conditions:",
+            table: {
+              headers: ["Service", "Purpose", "Duration", "Preparation"],
+              rows: [
+                ["Upper GI (OGD)", "Stomach/Esophagus", "15 Mins", "6h Fasting"],
+                ["Colonoscopy", "Large Intestine", "30 Mins", "Full Bowel Prep"],
+                ["Sigmoidoscopy", "Lower Colon", "20 Mins", "Enema Prep"],
+                ["Endoscopic Biopsy", "Tissue Sampling", "Extra 5 Mins", "Same as OGD"]
+              ],
+              caption: "Endoscopic diagnostic services available at Indira Hospital's Gastroenterology unit."
+            }
+          },
+          {
+            id: "indications",
+            heading: "When do you need an Endoscopy?",
+            bullets: [
+              "Chronic acid reflux or GERD that doesn't resolve with medicine",
+              "Persistent abdominal pain, bloating, or nausea",
+              "Difficulty in swallowing (Dysphagia) or feeling of food 'stuck'",
+              "Unexplained weight loss or loss of appetite",
+              "Screening for Stomach or Colorectal cancers"
+            ]
+          },
+          {
+            id: "procedure",
+            heading: "Life-Saving Therapeutic Procedures",
+            description: "Beyond diagnosis, our senior specialists perform therapeutic interventions during endoscopy:",
+            bullets: [
+              "Variceal Banding (EVL) for preventing liver-related bleeding",
+              "Endoscopic Polypectomy: Removing pre-cancerous growths",
+              "Stricture Dilatation: Widening a narrowed food pipe",
+              "Foreign Body Removal from the food pipe or stomach"
+            ]
+          }
+        ],
+        faqs: [
+          {
+            question: "Is endoscopy painful?",
+            answer: "The procedure can be slightly uncomfortable, but it is not painful. At Indira Hospital, we offer 'Conscious Sedation' so you are relaxed and won't feel any pain."
+          },
+          {
+            question: "How long does it take to get the report?",
+            answer: "For diagnostic endoscopy, high-definition images and preliminary reports are provided immediately after the procedure."
+          }
+        ]
+      }}
+      timeline={{
+        title: "Your Procedure Steps",
+        steps: [
+          { title: "Preparation", description: "6-8 hours of strict fasting for clear view." },
+          { title: "Sedation", description: "Optional mild sedation for complete comfort." },
+          { title: "The Procedure", description: "Safe insertion of the flexible scope (10-15 mins)." },
+          { title: "Post-op Rest", description: "Recovery in a specialized room (30-60 mins)." }
+        ]
+      }}
+      relatedServices={{
+        serviceSlug: "gastroenterology/endoscopy-procedure-guide",
+        related: [
+          { title: "Colonoscopy Guide", href: "/services/gastroenterology/colonoscopy" },
+          { title: "Liver Care", href: "/services/gastroenterology/liver-diseases" }
+        ]
+      }}
+      reviews={{
+        entityName: "Endoscopy Procedure Guide",
+        entitySlug: "gastroenterology/endoscopy-procedure-guide"
+      }}
+    >
+      <section>
+        <h2>Advanced High-Definition Endoscopy in Vellore</h2>
+        <p>
+          An Upper GI Endoscopy (also known as OGD) is a vital diagnostic tool that allows our specialists to look directly at the lining of your upper digestive tract. We use the latest <strong>HD Video Endoscopes</strong> to detect ulcers, inflammation, and early-stage tumors with pinpoint accuracy.
+        </p>
 
-        {/* 6. Reviews Section */}
-        <EntityReviews 
-          entityType="service" 
-          entityName="Endoscopy Procedure Guide" 
-          entitySlug="gastroenterology/endoscopy-procedure-guide"
-          title="Patient Experiences with Endoscopy Procedure Guide"
-          description="Read verified experiences from patients who underwent Endoscopy Procedure Guide at Indira Super Speciality Hospital."
-        />
-      </SectionContainer>
-    </main>
+        <h3>Why Choose Indira Hospital for Endoscopy?</h3>
+        <p>
+          We maintain the highest standards of hygiene and sterilization. Each endoscope undergoes a 7-step mechanized disinfection process. Our dedicated recovery suites and senior nursing staff ensure you are comfortable before, during, and after the procedure.
+        </p>
+
+        <div className="my-8 p-6 bg-teal-50 dark:bg-teal-900/20 rounded-3xl border border-teal-100 dark:border-teal-800">
+          <h4 className="text-xl font-bold text-teal-900 dark:text-teal-300 mb-4 tracking-tight">Same-Day Diagnostic Results</h4>
+          <p className="text-slate-700 dark:text-slate-300">
+            We understand the anxiety of waiting for results. Our gastroenterology lab provides <strong>instant high-quality printouts</strong> of your endoscopy images and a detailed report right after your procedure.
+          </p>
+          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
+            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> NABL Accredited Lab</li>
+            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> HD Digital Imaging</li>
+            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> Certified Sterilization</li>
+            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> Senior Gastroenterologists</li>
+          </ul>
+        </div>
+
+        <h2>Cost & Appointment Booking</h2>
+        <p>
+          Diagnostic Endoscopy (OGD) packages start at <strong>₹3,000</strong>. We also offer emergency endoscopy services for foreign body removals or GI bleeding cases. You can book an appointment online or visit our 24/7 emergency department for urgent cases.
+        </p>
+      </section>
+    </SubServiceTemplate>
   );
 }

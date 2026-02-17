@@ -15,60 +15,64 @@ export interface RelatedServicesProps {
   alternatives?: SimpleServiceItem[]
 }
 
-// Comprehensive fallback services that apply to most dental services
+// Comprehensive fallback services that apply to medical services
 const DEFAULT_RELATED: SimpleServiceItem[] = [
-  { title: 'Dental Implants', href: '/services/dental-implants' },
-  { title: 'Root Canal Treatment', href: '/services/root-canal-treatment' },
-  { title: 'Dental Crowns', href: '/services/restorative-dentistry/dental-crowns' },
-  { title: 'Teeth Whitening', href: '/services/cosmetic-dentistry/teeth-whitening' },
-  { title: 'Orthodontics & Braces', href: '/services/orthodontics' },
-  { title: 'Dental Veneers', href: '/services/cosmetic-dentistry/dental-veneers' },
+  { title: 'Emergency Care 24/7', href: '/contact' },
+  { title: 'Health Checkup Packages', href: '/diagnostics' },
+  { title: 'Specialist Consultation', href: '/doctors' },
+  { title: 'Diagnostic Lab Services', href: '/diagnostics' },
 ]
 
 const DEFAULT_ALTERNATIVES: SimpleServiceItem[] = [
-  { title: 'Smile Makeover', href: '/services/cosmetic-dentistry/smile-makeover' },
-  { title: 'Full Mouth Rehabilitation', href: '/services/full-mouth-rehabilitation' },
-  { title: 'Preventive Dentistry', href: '/services/preventive-dentistry' },
-  { title: 'Emergency Dentistry', href: '/services/emergency-dentistry' },
+  { title: 'Critical Care Unit', href: '/' },
+  { title: 'Pharmacy Services', href: '/' },
+  { title: 'Home Care Nursing', href: '/' },
+  { title: 'Physiotherapy Center', href: '/' },
 ]
 
 const FALLBACK_MAP: Record<string, { related: SimpleServiceItem[]; alternatives: SimpleServiceItem[] }> = {
-  'dental-implants': {
+  'kidney-stone': {
     related: [
-      { title: 'All-on-4 Dental Implants', href: '/services/dental-implants/all-on-4' },
-      { title: 'Bone Grafting', href: '/services/bone-grafting' },
-      { title: 'Sinus Lift', href: '/services/dental-implants/sinus-lift' },
+      { title: 'RIRS Surgery', href: '/services/urology/kidney-stone-laser-surgery' },
+      { title: 'PCNL Surgery', href: '/services/urology' },
+      { title: 'Dialysis Center', href: '/services/nephrology/dialysis' },
     ],
     alternatives: [
-      { title: 'Dental Bridges', href: '/services/restorative-dentistry/dental-bridges' },
-      { title: 'Dentures', href: '/services/prosthodontics/dentures' },
+      { title: 'ESWL Treatment', href: '/services/urology' },
+      { title: 'Medical Management', href: '/services/urology' },
     ],
   },
-  'dental-crowns': {
+  'heart-care': {
     related: [
-      { title: 'Zirconia Crown', href: '/services/restorative-dentistry/dental-crowns/zirconia-crown' },
-      { title: 'PFM Crown', href: '/services/restorative-dentistry/dental-crowns/pfm-crown' },
+      { title: 'Angioplasty', href: '/services/cardiology/heart-angioplasty-procedure' },
+      { title: 'Heart Valve Surgery', href: '/services/cardiology/heart-valve-replacement-surgery' },
+      { title: 'ECG & Echo Test', href: '/services/cardiology' },
     ],
     alternatives: [
-      { title: 'Porcelain Veneers', href: '/services/cosmetic-dentistry/dental-veneers' },
-      { title: 'Composite Bonding', href: '/services/restorative-dentistry/composite-bonding' },
+      { title: 'Pacemaker Surgery', href: '/services/cardiology/pacemaker-implantation-steps' },
+      { title: 'Cardiac Rehab', href: '/services/cardiology' },
     ],
   },
-  'cosmetic-dentistry': {
+  'general-surgery': {
     related: [
-      { title: 'Teeth Whitening', href: '/services/cosmetic-dentistry/teeth-whitening' },
-      { title: 'Dental Veneers', href: '/services/cosmetic-dentistry/dental-veneers' },
-      { title: 'Smile Makeover', href: '/services/cosmetic-dentistry/smile-makeover' },
+      { title: 'Laser Piles Treatment', href: '/services/general-surgery/laser-piles-treatment-cost' },
+      { title: 'Laparoscopic Hernia', href: '/services/general-surgery/laparoscopic-hernia-repair' },
+      { title: 'Gallbladder Surgery', href: '/services/general-surgery/gallbladder-stone-surgery' },
     ],
     alternatives: [
-      { title: 'Orthodontics', href: '/services/orthodontics' },
-      { title: 'Dental Crowns', href: '/services/restorative-dentistry/dental-crowns' },
+      { title: 'Appendix Surgery', href: '/services/general-surgery/appendix-surgery-steps' },
+      { title: 'Fissure Laser Care', href: '/services/general-surgery' },
     ],
-  },
+  }
 }
 
 export function RelatedServices({ serviceSlug, heading = 'Related & Alternative Services', related, alternatives }: RelatedServicesProps) {
-  const data = FALLBACK_MAP[serviceSlug] || { related: [], alternatives: [] }
+  // Find a matching fallback key based on partial slug match
+  const fallbackKey = Object.keys(FALLBACK_MAP).find(key =>
+    serviceSlug.toLowerCase().includes(key.toLowerCase())
+  )
+
+  const data = (fallbackKey ? FALLBACK_MAP[fallbackKey] : null) || { related: [], alternatives: [] }
   const relatedList = related && related.length > 0 ? related : (data.related.length > 0 ? data.related : DEFAULT_RELATED)
   const altList = alternatives && alternatives.length > 0 ? alternatives : (data.alternatives.length > 0 ? data.alternatives : DEFAULT_ALTERNATIVES)
 

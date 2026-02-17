@@ -243,9 +243,10 @@ export async function getReviewsByEntity(type: 'doctor' | 'department' | 'servic
         if (name.toLowerCase().includes('cardio')) genericTerm = 'cardio';
         else if (name.toLowerCase().includes('ortho')) genericTerm = 'ortho';
         else if (name.toLowerCase().includes('gast')) genericTerm = 'gastro';
-        else if (name.toLowerCase().includes('surger')) genericTerm = 'surgery';
+        else if (name.toLowerCase().includes('urology')) genericTerm = 'urology';
         else if (name.toLowerCase().includes('piles')) genericTerm = 'piles';
         else if (name.toLowerCase().includes('dent')) genericTerm = 'dentistry';
+        else if (name.toLowerCase().includes('surgery')) genericTerm = 'surgery';
 
         if (genericTerm) {
             reviews = await client.request(readItems('testimonials', {
