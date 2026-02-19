@@ -3,123 +3,133 @@ import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 import { CheckCircle, ShieldCheck, Activity, IndianRupee } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Laser Piles Treatment Cost | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Laser Piles Treatment Cost at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Laser Piles (Hemorrhoids) Treatment Cost & Guide | Indira Hospital Vellore",
+  description: "Advanced Laser Piles (Hemorrhoids) treatment at Indira Super Speciality Hospital, Vellore. Painless, same-day discharge, and affordable laser proctology.",
+  keywords: ["Laser piles treatment Vellore", "Piles surgery cost", "Painless hemorrhoid treatment", "Laser proctology Vellore", "Hemorrhoids specialist"]
 };
 
 export default function LaserPilesTreatmentCostPage() {
   return (
     <SubServiceTemplate
-      title="Laser Piles Treatment Cost"
-      eyebrow="General-surgery Treatment"
+      departmentName="General Surgery"
+      departmentSlug="general-surgery"
+      title="Laser Piles Treatment"
+      eyebrow="Laser Proctology Excellence"
       description={
         <p>
-          Indira Hospital is a center of excellence for <strong>Laser Proctology</strong>. We offer painless, scar-less laser treatment for Piles (Hemorrhoids), Fissures, and Fistulas, ensuring same-day discharge and rapid recovery.
+          Indira Hospital is a regional center of excellence for <strong>Laser Proctology</strong>. We offer advanced, painless treatment for Piles (Hemorrhoids), ensuring same-day discharge and rapid return to normal activities.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹35,000 – ₹50,000", icon: "IndianRupee" },
-        { label: "Duration", value: "20–30 Minutes", icon: "Clock" },
-        { label: "Recovery", value: "Same Day", icon: "Activity" },
-        { label: "Success Rate", value: "98%+", icon: "ShieldCheck" }
+        { label: "Cost Package", value: "₹35k – ₹55k", icon: "IndianRupee" },
+        { label: "Duration", value: "20-30 Mins", icon: "Clock" },
+        { label: "Discharge", value: "Same Day", icon: "Activity" },
+        { label: "Success Rate", value: "99%+", icon: "Star" }
       ]}
       marketingContent={{
         sections: [
           {
             id: "laser-vs-traditional",
-            heading: "Laser vs. Traditional Surgery",
-            description: "Why laser treatment is the preferred choice for modern proctology:",
+            heading: "Laser Treatment vs. Traditional Surgery",
+            description: "Laser technology has revolutionised the treatment of piles, making traditional open surgery largely obsolete for most cases:",
             table: {
-              headers: ["Feature", "Laser Treatment", "Traditional Surgery"],
+              headers: ["Feature", "Laser Therapy (Indira)", "Conventional Surgery"],
               rows: [
-                ["Pain Level", "Minimal / None", "Moderate to Severe"],
-                ["Hospital Stay", "Same Day Discharge", "2-3 Days"],
-                ["Blood Loss", "Negligible", "Significant"],
-                ["Recovery Time", "2-3 Days", "2-4 Weeks"],
-                ["External Cuts", "No Cuts / Stitches", "Surgical Incisions"]
+                ["Pain Intensity", "Virtually Painless", "Moderate to High"],
+                ["Hospital Stay", "6-8 Hours (Day Care)", "3-5 Days"],
+                ["Blood Loss", "Minimal (Bloodless)", "Moderate"],
+                ["Recovery", "Back to work in 48 hours", "2-3 Weeks"],
+                ["External Wounds", "None / Pin-hole", "Surgical Cuts & Stitches"]
               ],
-              caption: "Comparative analysis of Laser Proctology vs Conventional Open Surgery."
+              caption: "Modern Laser Proctology vs. Conventional Surgical Methods."
             }
           },
           {
             id: "benefits",
-            heading: "Key Benefits of Laser Treatment",
+            heading: "Benefits of Laser Hemorrhoidoplasty (LHP)",
             bullets: [
-              "Painless: Virtually no post-operative pain",
-              "No Marks: Zero scarring as no incisions are made",
-              "Fast Return: Most patients resume office work in 48 hours",
-              "Low Recurrence: Laser precisely targets the affected tissue",
-              "Safe for All: Ideal even for elderly or diabetic patients"
+              "Precision Healing: Laser fiber shrinks the hemorrhoidal mass without damaging the sphincter muscle.",
+              "No Marks: No external incisions mean no visible scars or annoying stitches.",
+              "Rapid Recovery: Most patients resume their professional lives within 2-3 days.",
+              "Minimal Recurrence: Precisely targets the vascular supply to prevent future issues.",
+              "Safe for Comorbidities: An ideal choice for elderly, heart, and diabetic patients."
             ]
           }
         ],
         faqs: [
           {
-            question: "Is laser piles surgery really painless?",
-            answer: "Yes, because there are no surgical cuts or open wounds, the post-operative discomfort is minimal and easily managed with simple oral medications."
+            question: "Is the procedure truly 'walk-in, walk-out'?",
+            answer: "For most patients, yes. Laser piles surgery is a daycare procedure. You are admitted in the morning, treated in 20 minutes, and typically ready to go home by the evening."
           },
           {
-            question: "When can I go home after the procedure?",
-            answer: "It is typically a 'Day Care' procedure. Patients are admitted in the morning, undergo the 20-minute procedure, and are discharged by the evening."
+            question: "Will I need to follow a special diet after surgery?",
+            answer: "We recommend a high-fiber diet and plenty of fluids for the first few weeks to ensure smooth bowel movements. Our nutritionists provide a detailed chart at the time of discharge."
           }
         ]
       }}
       timeline={{
-        title: "Your Recovery Path",
+        title: "Your Treatment Journey",
         steps: [
-          { title: "Examination", description: "Proctological evaluation and staging." },
-          { title: "Laser Ablation", description: "Precision laser treatment (20 mins)." },
-          { title: "Post-op Care", description: "Short rest and same-day discharge." },
-          { title: "Back to Life", description: "Resume light activities within 2 days." }
+          { title: "Clinical Staging", description: "Proctological examination to determine the grade of piles (Grade 1 to 4)." },
+          { title: "Laser Procedure", description: "Precision laser shrinkage of hemorrhoidal tissue under mild anesthesia." },
+          { title: "Stabilization", description: "Short recovery period in our dedicated daycare unit (4-6 hours)." },
+          { title: "Home Care", description: "Discharge with a personalized recovery kit and nutrition guide." }
         ]
       }}
       relatedServices={{
-        serviceSlug: "general-surgery/laser-piles-treatment-cost",
+        serviceSlug: "general-surgery",
         related: [
-          { title: "Hernia Repair", href: "/services/general-surgery/laparoscopic-hernia-repair" },
-          { title: "Appendix Surgery", href: "/services/general-surgery/appendix-surgery-steps" }
+          { title: "Fissure & Fistula Laser", href: "/services/general-surgery/piles-treatment-vellore" },
+          { title: "Laparoscopic Hernia Repair", href: "/services/general-surgery/laparoscopic-hernia-repair" },
+          { title: "Appendix Surgery Steps", href: "/services/general-surgery/appendix-surgery-steps" }
         ]
       }}
       reviews={{
-        entityName: "Laser Piles Treatment",
-        entitySlug: "general-surgery/laser-piles-treatment-cost"
+        entityName: "Proctology Care",
+        entitySlug: "general-surgery",
+        entityType: "department"
       }}
     >
       <section>
-        <h2>Advanced Laser Proctology Center in Vellore</h2>
+        <h2>Advanced Proctology Center in Vellore</h2>
         <p>
-          Indira Super Speciality Hospital is a pioneer in <strong>Laser Proctology</strong> in the Vellore region. We use advanced Diode Laser units to treat Piles (Hemorrhoids), Fissures, and Fistulas with high precision and patient comfort.
+          At Indira Super Speciality Hospital, we leverage the power of <strong>Diode Laser technology</strong> to provide patients with a superior alternative to traditional surgery. Laser Hemorrhoidoplasty (LHP) is specifically designed to treat various grades of hemorrhoids with maximum precision and minimum downtime.
         </p>
 
-        <h3>Why Choose Laser Over Open Surgery?</h3>
+        <h3>Painless & Bloodless Intervention</h3>
         <p>
-          Traditional surgery for piles often involves painful cuts and a long recovery period. Our laser technology allows us to shrink the hemorrhoidal mass from within using a fine laser fiber. This process, called <strong>Laser Hemorrhoidoplasty</strong>, ensures that the blood supply is cut off without damaging the surrounding sensitive tissues.
+          Unlike conventional methods that involve cutting and suturing sensitive anal tissue, laser therapy uses focused thermal energy to ablate the blood vessels feeding the hemorrhoids. This causes the piles to shrink and fibrose within a few weeks, providing permanent relief without the trauma of a major operation.
         </p>
 
-        <div className="my-8 p-6 bg-slate-50 dark:bg-slate-900/40 rounded-3xl border border-slate-200 dark:border-slate-800">
-          <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Painless Procedure • Same Day Home</h4>
-          <p className="text-slate-600 dark:text-slate-400">
-            Our specialized proctology unit is designed for maximum patient privacy and rapid turnaround.
+        <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 rounded-[2.5rem] border border-emerald-100 dark:border-emerald-800 shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+          <h4 className="text-2xl font-black text-slate-900 dark:text-emerald-300 mb-6 tracking-tight">Vellore's Most Trusted Laser Unit</h4>
+          <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+            Our specialized piles treatment packages are inclusive, transparent, and designed to make high-end laser surgery accessible to all.
           </p>
-          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
-              <ShieldCheck className="w-5 h-5 text-green-500" /> No Stitches Required
-            </li>
-            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
-              <Activity className="w-5 h-5 text-blue-500" /> Walk within 2 Hours
-            </li>
-            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
-              <IndianRupee className="w-5 h-5 text-purple-500" /> Affordable Packages
-            </li>
-            <li className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
-              <CheckCircle className="w-5 h-5 text-teal-500" /> 98% Success Rate
-            </li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              "100% Cashless for Private Insurance",
+              "TN Govt. CM Health Insurance Scheme",
+              "Bajaj Finserv & Credit Card 0% EMIs",
+              "Advanced High-Power Diode Laser"
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <h2>Cost & Insurance Support</h2>
+        <h2>When is Laser Treatment Recommended?</h2>
         <p>
-          The cost for Laser Piles treatment typically ranges between <strong>₹35,000 and ₹50,000</strong>. We accept all major health insurance providers and government schemes like TN CM Health Insurance. We also provide 0% EMI options for self-paying patients to ensure financial ease.
+          Laser treatment is highly effective for Grade 2 and Grade 3 piles. For Grade 4 cases, it can often be used in combination with other minimally invasive techniques to reduce pain and improve recovery. If you experience painless bleeding during bowel movements, itching, or swelling in the anal region, it's time to consult our specialists.
+        </p>
+
+        <h3>Expert Proctology Team</h3>
+        <p>
+          Our team of senior general surgeons is specially trained in <strong>Laser Proctology</strong>. We combine years of clinical experience with the latest technology to deliver outcomes that prioritize both cure and patient convenience.
         </p>
       </section>
     </SubServiceTemplate>

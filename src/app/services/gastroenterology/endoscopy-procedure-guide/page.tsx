@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 export default function EndoscopyProcedureGuidePage() {
   return (
     <SubServiceTemplate
+      departmentName="Gastroenterology"
+      departmentSlug="gastroenterology"
       title="Endoscopy Procedure Guide"
       eyebrow="Gastroenterology Treatment"
       description={

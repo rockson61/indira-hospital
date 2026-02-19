@@ -2,52 +2,64 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "H-pylori Infection Cure | Indira Super Speciality Hospital Vellore",
-  description: "Advanced H-pylori Infection Cure at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "H. Pylori Infection: Diagnosis & Complete Cure | Indira Hospital Vellore",
+  description: "Complete eradication treatment for H. Pylori infection at Indira Super Speciality Hospital, Vellore. Expert gastroenterologist diagnosis and evidence-based triple/quadruple therapy.",
+  keywords: ["H pylori treatment Vellore", "Helicobacter pylori eradication", "Stomach ulcer specialist", "Gastritis hospital Vellore", "Triple therapy H pylori"]
 };
 
 export default function HPyloriInfectionCurePage() {
   return (
     <SubServiceTemplate
-      title="H-pylori Infection Cure"
-      eyebrow="Gastroenterology Treatment"
+      departmentName="Gastroenterology"
+      departmentSlug="gastroenterology"
+      title="H. Pylori Infection Cure"
+      eyebrow="Gastroenterology Specialists"
       description={
         <p>
-          H-pylori Infection Cure at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          <strong>Helicobacter pylori (H. Pylori)</strong> is a common bacterial infection of the stomach affecting nearly 60% of Indians. It is the most common cause of peptic ulcers and a major risk factor for stomach cancer. Complete eradication is achievable with the right antibiotic regimen.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Prevalence", value: "~60% in India", icon: "Activity" },
+        { label: "Test", value: "Breath / Biopsy", icon: "ShieldCheck" },
+        { label: "Cure Rate", value: "90%+ (1st Line)", icon: "Star" },
+        { label: "Duration", value: "10-14 Days Rx", icon: "Clock" }
       ]}
       relatedServices={{
-        serviceSlug: "gastroenterology/h-pylori-infection-cure",
+        serviceSlug: "gastroenterology",
         related: [
-          { title: "All Gastroenterology Services", href: "/services/gastroenterology" }
+          { title: "GERD Management", href: "/services/gastroenterology/acid-reflux-gerd-management" },
+          { title: "Endoscopy Procedure", href: "/services/gastroenterology/endoscopy-procedure-guide" },
+          { title: "Colonoscopy Screening", href: "/services/gastroenterology/colonoscopy-screening-cost" }
         ]
       }}
-      reviews={{
-        entityName: "H-pylori Infection Cure",
-        entitySlug: "gastroenterology/h-pylori-infection-cure"
-      }}
+      reviews={{ entityName: "Gastroenterology", entitySlug: "gastroenterology", entityType: "department" }}
     >
       <section>
-        <h2>What is H-pylori Infection Cure?</h2>
+        <h2>What is H. Pylori and Why Does it Matter?</h2>
         <p>
-          TODO: Comprehensive explanation of H-pylori Infection Cure and its benefits for patients. H-pylori Infection Cure is a specialized treatment offered at our Vellore facility.
+          H. Pylori is a spiral-shaped bacterium that colonizes the stomach lining. It produces enzymes that damage the protective mucus layer, allowing stomach acid to erode the lining and create <strong>gastric and duodenal ulcers</strong>. Chronic infection is also classified as a Group 1 carcinogen for stomach cancer.
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <h3>How It's Diagnosed at Indira Hospital</h3>
+        <ul>
+          <li><strong>Urea Breath Test (UBT):</strong> A non-invasive, highly accurate test. You drink a capsule and breathe into a bag — no needles or scopes required.</li>
+          <li><strong>Endoscopic Biopsy (CLO Test / Histology):</strong> During an upper GI endoscopy, a tissue sample is taken from the stomach wall for direct testing.</li>
+          <li><strong>Stool Antigen Test:</strong> A simple, convenient test using a stool sample, also used to confirm eradication.</li>
+        </ul>
+        <h2>Eradication Treatment: "Triple" & "Quadruple" Therapy</h2>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for H-pylori Infection Cure. Consult with our specialists to determine if this is the right treatment for you.
+          Our gastroenterologists prescribe evidence-based regimens tailored to local antibiotic resistance patterns:
         </p>
-        
-        <h2>Cost & Payment Options</h2>
+        <ul>
+          <li><strong>Standard Triple Therapy (10-14 days):</strong> PPI + Clarithromycin + Amoxicillin.</li>
+          <li><strong>Bismuth Quadruple Therapy:</strong> PPI + Bismuth + Tetracycline + Metronidazole. Used for treatment-naive or failed first-line cases.</li>
+        </ul>
         <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          Eradication is confirmed 4 weeks after completing treatment using a repeat Urea Breath Test or stool antigen test.
+        </p>
+        <h2>Don't Ignore Stomach Symptoms</h2>
+        <p>
+          Burning pain in the upper abdomen (especially when fasting), nausea, bloating, and frequent burping are classic symptoms. If any of these persist, schedule a gastroenterology consultation today.
         </p>
       </section>
     </SubServiceTemplate>

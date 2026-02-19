@@ -2,52 +2,60 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "Breast Cancer Screening Guide | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Breast Cancer Screening Guide at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Breast Cancer Screening: Mammography & Guide | Indira Hospital Vellore",
+  description: "Advanced Breast Cancer Screening with Digital Mammography at Indira Super Speciality Hospital, Vellore. Early detection specialist team for comprehensive breast health.",
+  keywords: ["Breast cancer screening Vellore", "Mammography cost Vellore", "Breast lump check", "Oncology hospital Vellore", "Women's cancer screening"]
 };
 
 export default function BreastCancerScreeningGuidePage() {
   return (
     <SubServiceTemplate
+      departmentName="Oncology"
+      departmentSlug="oncology"
       title="Breast Cancer Screening Guide"
-      eyebrow="Oncology Treatment"
+      eyebrow="Oncology & Women's Health"
       description={
         <p>
-          Breast Cancer Screening Guide at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          <strong>Breast cancer</strong> is the most common cancer in Indian women. Early detection through screening dramatically improves survival rates — Stage 1 breast cancer has a 98%+ 5-year survival rate. Indira Hospital's oncology team provides comprehensive breast health screening and evaluation.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Mammogram Cost", value: "₹1,500 – ₹2,500", icon: "IndianRupee" },
+        { label: "Duration", value: "20-30 Mins", icon: "Clock" },
+        { label: "Start At", value: "Age 40 (Annual)", icon: "Activity" },
+        { label: "Survival (Stage 1)", value: "98%+", icon: "Star" }
       ]}
       relatedServices={{
-        serviceSlug: "oncology/breast-cancer-screening-guide",
+        serviceSlug: "oncology",
         related: [
-          { title: "All Oncology Services", href: "/services/oncology" }
+          { title: "Surgical Oncology", href: "/services/oncology/surgical-oncology-overview" },
+          { title: "Chemotherapy Guide", href: "/services/oncology/chemotherapy-side-effects" },
+          { title: "Breast Lump Removal", href: "/services/general-surgery/breast-lump-removal" }
         ]
       }}
-      reviews={{
-        entityName: "Breast Cancer Screening Guide",
-        entitySlug: "oncology/breast-cancer-screening-guide"
-      }}
+      reviews={{ entityName: "Oncology Care", entitySlug: "oncology", entityType: "department" }}
     >
       <section>
-        <h2>What is Breast Cancer Screening Guide?</h2>
+        <h2>Why Breast Cancer Screening is Life-Saving</h2>
         <p>
-          TODO: Comprehensive explanation of Breast Cancer Screening Guide and its benefits for patients. Breast Cancer Screening Guide is a specialized treatment offered at our Vellore facility.
+          Over 70% of breast cancers in India are diagnosed at an advanced stage (Stage 3 or 4). This is largely because of delayed screening and lack of awareness. A simple mammogram can detect cancers <strong>2-3 years before they can be felt</strong> as a lump, at a stage when treatment is most effective and breast-conserving surgery is possible.
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <h3>Screening Methods Available at Indira Hospital</h3>
+        <ul>
+          <li><strong>Digital Mammography:</strong> Gold standard for women 40+. Annual screening recommended. High accuracy with lower radiation than traditional film X-ray.</li>
+          <li><strong>Breast Ultrasound:</strong> Recommended for women under 40, those with dense breasts, or as an adjunct to mammography. No radiation.</li>
+          <li><strong>MRI Breast:</strong> For high-risk women (BRCA gene mutation carriers) or to characterize lesions seen on mammogram.</li>
+          <li><strong>Fine Needle Aspiration Cytology (FNAC) / Core Biopsy:</strong> For suspicious lumps. Performed in-clinic; results in 24-48 hours.</li>
+        </ul>
+        <h2>Who Should be Screened?</h2>
+        <ul>
+          <li><strong>All Women 40+:</strong> Annual mammogram screening.</li>
+          <li><strong>High-Risk Women (30-40):</strong> Close family history of breast or ovarian cancer; annual MRI + mammogram.</li>
+          <li><strong>Any Woman with Symptoms:</strong> A new lump, nipple discharge, skin thickening, or dimpling warrants immediate evaluation regardless of age.</li>
+        </ul>
+        <h2>Comprehensive Breast Clinic</h2>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for Breast Cancer Screening Guide. Consult with our specialists to determine if this is the right treatment for you.
-        </p>
-        
-        <h2>Cost & Payment Options</h2>
-        <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          Our Multidisciplinary Breast Clinic brings together a surgical oncologist, radiologist, pathologist, and medical oncologist. If a suspicious lesion is found, you receive a complete diagnosis and treatment plan in a single visit — eliminating the anxiety of multiple appointments across different specialists.
         </p>
       </section>
     </SubServiceTemplate>

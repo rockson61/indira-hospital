@@ -44,13 +44,20 @@ export function Header() {
             ]
         },
         {
-            name: "Services", submenu: [
-                { name: "All Services", url: "/departments", description: "Complete range of medical specialties." },
-                { name: "Cardiology", url: "/departments/cardiology", description: "Heart care and surgery." },
-                { name: "Neurology", url: "/departments/neurology", description: "Brain and spine care." },
-                { name: "Orthopedics", url: "/departments/orthopedics", description: "Bone and joint treatments." },
-                { name: "Gastroenterology", url: "/departments/gastroenterology", description: "Digestive health." },
-                { name: "Oncology", url: "/departments/oncology", description: "Cancer treatment and care." },
+            name: "Specialties", submenu: [
+                { name: "Proctology", url: "/departments/general-surgery", description: "Advanced laser treatment for piles, fissures, and fistulas." },
+                { name: "Laparoscopy", url: "/departments/laparoscopic-surgeries", description: "Minimally invasive keyhole surgeries for faster recovery." },
+                { name: "Gynaecology", url: "/departments/obstetrics-gynaecology", description: "Comprehensive care for women's health and maternity." },
+                { name: "ENT", url: "/departments/ent", description: "Expert care for ear, nose, and throat disorders." },
+                { name: "Urology", url: "/departments/urology", description: "Advanced treatment for kidney stones and prostate issues." },
+                { name: "Vascular", url: "/departments/vascular-surgery", description: "Comprehensive care for vascular and circulatory health." },
+                { name: "Aesthetics", url: "/departments/cosmetology-plastic-surgery", description: "Advanced cosmetic and plastic surgery solutions." },
+                { name: "Orthopedics", url: "/departments/orthopaedics", description: "Expert bone, joint, and trauma care." },
+                { name: "Ophthalmology", url: "/departments/opthalmology", description: "Advanced vision correction and eye care services." },
+                { name: "Fertility", url: "/departments/obstetrics-gynecology-reproductive-medicine", description: "Comprehensive fertility and reproductive health care." },
+                { name: "Weight Loss", url: "/departments/bariatrics", description: "Advanced surgical and medical weight loss solutions." },
+                { name: "Dermatology", url: "/departments/dermatology", description: "Expert diagnosis and treatment for all skin conditions." },
+                { name: "Our Hospitals", url: "/locations", description: "Find an Indira Hospital location near you." },
             ]
         },
         {

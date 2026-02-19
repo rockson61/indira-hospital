@@ -2,52 +2,56 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "Palliative Care Services | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Palliative Care Services at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Palliative Care Services: Comfort & Dignity | Indira Hospital Vellore",
+  description: "Compassionate Palliative Care services at Indira Super Speciality Hospital, Vellore. Expert pain management and holistic support for patients with serious illness.",
+  keywords: ["Palliative care Vellore", "Pain management cancer", "Hospice care hospital Vellore", "End of life care", "CANSA pain management"]
 };
 
 export default function PalliativeCareServicesPage() {
   return (
     <SubServiceTemplate
+      departmentName="Oncology"
+      departmentSlug="oncology"
       title="Palliative Care Services"
-      eyebrow="Oncology Treatment"
+      eyebrow="Comfort & Supportive Care"
       description={
         <p>
-          Palliative Care Services at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          <strong>Palliative Care</strong> is a specialized medical approach focused on providing relief from the symptoms, pain, and stress of serious illness. At Indira Hospital, our palliative team works alongside your primary specialists to improve quality of life for both the patient and their family — at any stage of illness, not just at end of life.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Focus", value: "Quality of Life", icon: "ShieldCheck" },
+        { label: "Pain Control", value: "Expert Led", icon: "Activity" },
+        { label: "emotional support", value: "Counselling", icon: "Star" },
+        { label: "Home Care", value: "Available", icon: "Clock" }
       ]}
       relatedServices={{
-        serviceSlug: "oncology/palliative-care-services",
+        serviceSlug: "oncology",
         related: [
-          { title: "All Oncology Services", href: "/services/oncology" }
+          { title: "Chemotherapy Side Effects", href: "/services/oncology/chemotherapy-side-effects" },
+          { title: "Surgical Oncology", href: "/services/oncology/surgical-oncology-overview" },
+          { title: "Breast Cancer Screening", href: "/services/oncology/breast-cancer-screening-guide" }
         ]
       }}
-      reviews={{
-        entityName: "Palliative Care Services",
-        entitySlug: "oncology/palliative-care-services"
-      }}
+      reviews={{ entityName: "Oncology Care", entitySlug: "oncology", entityType: "department" }}
     >
       <section>
-        <h2>What is Palliative Care Services?</h2>
+        <h2>What Palliative Care Is (and Isn't)</h2>
         <p>
-          TODO: Comprehensive explanation of Palliative Care Services and its benefits for patients. Palliative Care Services is a specialized treatment offered at our Vellore facility.
+          A common misconception is that palliative care means "giving up." In reality, it is a proactive, evidence-based approach that can be initiated alongside curative treatment from the day of cancer diagnosis. Studies show that patients who receive early palliative care alongside standard oncology care often live <em>longer</em> and report a better quality of life.
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <h3>Core Services We Provide</h3>
+        <ul>
+          <li><strong>Pain Management:</strong> Our specialists use the WHO Pain Ladder — from simple analgesics to opioid prescribing, nerve blocks, and spinal drug delivery for complex cancer pain. Good pain control is achievable for 90%+ of patients.</li>
+          <li><strong>Symptom Control:</strong> Management of breathlessness, nausea, constipation, fatigue, depression, and anxiety.</li>
+          <li><strong>Psychological Support:</strong> Access to counsellors and a psychiatrist for patients and families dealing with the emotional impact of a cancer diagnosis.</li>
+          <li><strong>Advance Care Planning:</strong> Helping patients articulate their values and preferences for future medical care; guiding important conversations with families.</li>
+          <li><strong>Home Palliative Care:</strong> For patients who wish to remain at home, our team conducts regular home visits and is available by phone for medication adjustments.</li>
+          <li><strong>Spiritual Support:</strong> Access to chaplaincy services and spiritual counselors for those who desire it.</li>
+        </ul>
+        <h2>When to Refer to Palliative Care</h2>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for Palliative Care Services. Consult with our specialists to determine if this is the right treatment for you.
-        </p>
-        
-        <h2>Cost & Payment Options</h2>
-        <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          Palliative care should be considered for any patient with a life-limiting illness — cancer, advanced heart failure, COPD, or CKD — who has significant uncontrolled symptoms, existential distress, or complex care needs. <strong>Early referral consistently produces better outcomes.</strong> Ask your specialist today.
         </p>
       </section>
     </SubServiceTemplate>

@@ -2,52 +2,63 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "High Risk Pregnancy Care | Indira Super Speciality Hospital Vellore",
-  description: "Advanced High Risk Pregnancy Care at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "High Risk Pregnancy Care | Maternal-Fetal Medicine Vellore",
+  description: "Specialized High Risk Pregnancy care at Indira Super Speciality Hospital, Vellore. Expert maternal-fetal medicine specialists for gestational diabetes, preeclampsia, and twin pregnancies.",
+  keywords: ["High risk pregnancy Vellore", "Maternal fetal medicine", "Gestational diabetes hospital", "Preeclampsia management Vellore", "Twin pregnancy specialist"]
 };
 
 export default function HighRiskPregnancyCarePage() {
   return (
     <SubServiceTemplate
+      departmentName="Obstetrics & Gynaecology"
+      departmentSlug="obstetrics-gynaecology"
       title="High Risk Pregnancy Care"
-      eyebrow="Obstetrics-gynaecology Treatment"
+      eyebrow="Maternal-Fetal Medicine"
       description={
         <p>
-          High Risk Pregnancy Care at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          A pregnancy is considered "high risk" when there are factors that could affect the health of the mother, the baby, or both. Indira Hospital's dedicated <strong>Maternal-Fetal Medicine</strong> team provides expert, compassionate monitoring and intervention to navigate these challenges and maximize outcomes for mother and child.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "NICU", value: "Level 3 On-Site", icon: "ShieldCheck" },
+        { label: "Monitoring", value: "Advanced Doppler", icon: "Activity" },
+        { label: "Fetal Echo", value: "Available", icon: "Star" },
+        { label: "24/7 Obs", value: "Always Available", icon: "Clock" }
       ]}
       relatedServices={{
-        serviceSlug: "obstetrics-gynaecology/high-risk-pregnancy-care",
+        serviceSlug: "obstetrics-gynaecology",
         related: [
-          { title: "All Obstetrics-gynaecology Services", href: "/services/obstetrics-gynaecology" }
+          { title: "Normal vs. C-Section", href: "/services/obstetrics-gynaecology/normal-delivery-vs-c-section" },
+          { title: "Painless Delivery (Epidural)", href: "/services/obstetrics-gynaecology/painless-delivery-epidural" },
+          { title: "Laparoscopic Hysterectomy", href: "/services/obstetrics-gynaecology/laparoscopic-hysterectomy-guide" }
         ]
       }}
-      reviews={{
-        entityName: "High Risk Pregnancy Care",
-        entitySlug: "obstetrics-gynaecology/high-risk-pregnancy-care"
-      }}
+      reviews={{ entityName: "Obstetrics & Gynaecology", entitySlug: "obstetrics-gynaecology", entityType: "department" }}
     >
       <section>
-        <h2>What is High Risk Pregnancy Care?</h2>
+        <h2>What Constitutes a High Risk Pregnancy?</h2>
         <p>
-          TODO: Comprehensive explanation of High Risk Pregnancy Care and its benefits for patients. High Risk Pregnancy Care is a specialized treatment offered at our Vellore facility.
+          Several maternal or fetal factors can make a pregnancy high risk. Our specialists manage:
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <ul>
+          <li><strong>Gestational Diabetes Mellitus (GDM):</strong> Blood sugar elevation during pregnancy requiring dietary and medication management.</li>
+          <li><strong>Preeclampsia & Hypertension:</strong> Dangerous high BP during pregnancy with close monitoring and timely delivery planning.</li>
+          <li><strong>Twin / Multiple Pregnancies:</strong> Higher risk for preterm labour and growth restriction, requiring frequent monitoring.</li>
+          <li><strong>Advanced Maternal Age (&gt;35 years):</strong> Increased risk of chromosomal abnormalities and complications.</li>
+          <li><strong>Placenta Previa / Accreta:</strong> Abnormal placental placement requiring specialized surgical team on standby for delivery.</li>
+          <li><strong>Previous Caesarean Section:</strong> Management of VBAC (Vaginal Birth After Caesarean) or elective repeat section.</li>
+          <li><strong>Fetal Growth Restriction (FGR):</strong> Close Doppler monitoring and precise timing of delivery.</li>
+        </ul>
+        <h2>Our Comprehensive Monitoring Arsenal</h2>
+        <ul>
+          <li><strong>Level 2 Anomaly Scan (18-22 weeks):</strong> Detailed anatomical survey of the baby.</li>
+          <li><strong>Fetal Echocardiography:</strong> Specialized heart scan for the baby.</li>
+          <li><strong>Doppler Velocimetry:</strong> Blood flow assessment in umbilical and fetal vessels to detect placental insufficiency.</li>
+          <li><strong>Non-Stress Test (NST):</strong> Regular fetal heart rate monitoring in the last trimester.</li>
+        </ul>
+        <h2>Level 3 NICU — Always Ready</h2>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for High Risk Pregnancy Care. Consult with our specialists to determine if this is the right treatment for you.
-        </p>
-        
-        <h2>Cost & Payment Options</h2>
-        <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          For high-risk pregnancies, peace of mind comes from knowing a <strong>Level 3 NICU</strong> is on-site. Our neonatologists are present at deliveries where a sick or premature baby is anticipated, ensuring the best possible start for your newborn.
         </p>
       </section>
     </SubServiceTemplate>

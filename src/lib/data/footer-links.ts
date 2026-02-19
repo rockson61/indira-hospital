@@ -1,20 +1,18 @@
 export const FOOTER_LINKS = {
     medicalServices: [
-        { name: "Cardiology", url: "/departments/cardiology" },
-        { name: "Neurology", url: "/departments/neurology" },
-        { name: "Orthopaedics", url: "/departments/orthopaedics" },
-        { name: "Gastroenterology", url: "/departments/gastroenterology" },
-        { name: "Oncology", url: "/departments/oncology" },
-        { name: "Urology", url: "/departments/urology" },
-        { name: "Nephrology", url: "/departments/nephrology" },
+        { name: "Proctology", url: "/departments/general-surgery" },
+        { name: "Laparoscopy", url: "/departments/laparoscopic-surgeries" },
         { name: "Gynaecology", url: "/departments/obstetrics-gynaecology" },
-        { name: "Pediatrics", url: "/departments/pediatrics" },
         { name: "ENT", url: "/departments/ent" },
+        { name: "Urology", url: "/departments/urology" },
+        { name: "Vascular", url: "/departments/vascular-surgery" },
+        { name: "Aesthetics", url: "/departments/cosmetology-plastic-surgery" },
+        { name: "Orthopedics", url: "/departments/orthopaedics" },
+        { name: "Ophthalmology", url: "/departments/opthalmology" },
+        { name: "Fertility", url: "/departments/obstetrics-gynecology-reproductive-medicine" },
+        { name: "Weight Loss", url: "/departments/bariatrics" },
         { name: "Dermatology", url: "/departments/dermatology" },
-        { name: "General Surgery", url: "/departments/general-surgery" },
-        { name: "Dentistry", url: "/departments/dentistry" },
-        { name: "Plastic Surgery", url: "/departments/plastic-surgery" },
-        { name: "Rheumatology", url: "/departments/rheumatology" }
+        { name: "Our Hospitals", url: "/locations" }
     ],
     procedures: [
         { name: "Angioplasty", url: "/services/cardiology/heart-angioplasty-procedure" },

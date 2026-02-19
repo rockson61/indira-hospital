@@ -2,52 +2,68 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "Fracture Care Rehabilitation | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Fracture Care Rehabilitation at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Fracture Care & Rehabilitation | Indira Hospital Vellore",
+  description: "Advanced Fracture Management and Rehabilitation at Indira Super Speciality Hospital, Vellore. Expert orthopaedic surgeons providing ORIF and minimally invasive fracture fixation.",
+  keywords: ["Fracture treatment Vellore", "Bone fracture surgery hospital", "ORIF surgery Vellore", "Fracture rehabilitation", "Orthopaedic surgeon Vellore"]
 };
 
 export default function FractureCareRehabilitationPage() {
   return (
     <SubServiceTemplate
-      title="Fracture Care Rehabilitation"
-      eyebrow="Orthopaedics Treatment"
+      departmentName="Orthopaedics"
+      departmentSlug="orthopaedics"
+      title="Fracture Care & Rehabilitation"
+      eyebrow="Orthopaedic Trauma Care"
       description={
         <p>
-          Fracture Care Rehabilitation at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          From minor fractures to complex multi-fragment breaks, Indira Hospital's <strong>Orthopaedic Trauma Unit</strong> provides expert, 24/7 fracture management. Our surgeons use the latest fixation hardware and minimally invasive techniques for maximum stability and fastest recovery.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Emergency", value: "24/7 Coverage", icon: "Activity" },
+        { label: "Approach", value: "MIPO / ORIF", icon: "ShieldCheck" },
+        { label: "Implants", value: "Synthes / DePuy", icon: "Star" },
+        { label: "Rehab", value: "In-Hospital Start", icon: "Clock" }
       ]}
-      relatedServices={{
-        serviceSlug: "orthopaedics/fracture-care-rehabilitation",
-        related: [
-          { title: "All Orthopaedics Services", href: "/services/orthopaedics" }
+      timeline={{
+        title: "Fracture Treatment Pathway",
+        steps: [
+          { title: "Emergency Assessment", description: "X-ray, CT scan, vascular and neurological assessment of the injury." },
+          { title: "Temporary Stabilisation", description: "Splinting, traction, or external fixator for acute swelling reduction." },
+          { title: "Definitive Surgery", description: "ORIF with plate-and-screws or Intramedullary Nailing once swelling resolves." },
+          { title: "Rehabilitation", description: "Active, progressive physiotherapy from Day 1 post-operatively for fastest recovery." }
         ]
       }}
-      reviews={{
-        entityName: "Fracture Care Rehabilitation",
-        entitySlug: "orthopaedics/fracture-care-rehabilitation"
+      relatedServices={{
+        serviceSlug: "orthopaedics",
+        related: [
+          { title: "ACL Reconstruction", href: "/services/orthopaedics/acl-reconstruction-recovery" },
+          { title: "Spine Surgery", href: "/services/orthopaedics/spine-surgery-disc-prolapse" },
+          { title: "Knee Replacement", href: "/services/orthopaedics/total-knee-replacement-cost" }
+        ]
       }}
+      reviews={{ entityName: "Orthopaedic Care", entitySlug: "orthopaedics", entityType: "department" }}
     >
       <section>
-        <h2>What is Fracture Care Rehabilitation?</h2>
+        <h2>Expert Trauma Fracture Management</h2>
         <p>
-          TODO: Comprehensive explanation of Fracture Care Rehabilitation and its benefits for patients. Fracture Care Rehabilitation is a specialized treatment offered at our Vellore facility.
+          When a bone breaks, prompt and correct management determines the long-term functional outcome. At Indira Hospital, our orthopaedic trauma team handles the full spectrum — from closed fractures treated with casting to complex peri-articular fractures requiring sophisticated surgical reconstruction.
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <h3>Commonly Treated Fractures</h3>
+        <ul>
+          <li><strong>Hip Fractures (Neck of Femur/Intertrochanteric):</strong> Surgical fixation or hip replacement within 24-48 hours to prevent complications in elderly patients.</li>
+          <li><strong>Wrist Fractures (Distal Radius):</strong> Minimally invasive volar plate fixation allowing early hand use.</li>
+          <li><strong>Ankle Fractures:</strong> ORIF of lateral and medial malleolus for anatomical joint restoration.</li>
+          <li><strong>Tibial Shaft Fractures:</strong> Intramedullary nailing — minimal incision, excellent alignment, early weight-bearing.</li>
+          <li><strong>Complex Periarticular Fractures:</strong> Knee, elbow, and shoulder joint fractures requiring specialized surgical skills.</li>
+        </ul>
+        <h3>MIPO: Minimally Invasive Plate Osteosynthesis</h3>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for Fracture Care Rehabilitation. Consult with our specialists to determine if this is the right treatment for you.
+          Our surgeons are trained in <strong>MIPO</strong> technique where long plate fixation is achieved through very small incisions, preserving blood supply to the fracture fragments — essential for rapid and reliable bone healing.
         </p>
-        
-        <h2>Cost & Payment Options</h2>
+        <h2>Fracture Rehabilitation</h2>
         <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          Our physiotherapy team begins fracture rehabilitation from the very first post-operative day. Early movement prevents joint stiffness, muscle wasting, and blood clots. You'll have a clear, milestone-based recovery plan for returning to full function.
         </p>
       </section>
     </SubServiceTemplate>

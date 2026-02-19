@@ -2,52 +2,84 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "Laparoscopic Hernia Repair | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Laparoscopic Hernia Repair at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Laparoscopic Hernia Repair Guide & Cost | Indira Hospital Vellore",
+  description: "Advanced Laparoscopic Hernia Repair (TAPP/TEP) at Indira Super Speciality Hospital, Vellore. Less pain, smaller scars, and rapid return to work compared to open surgery.",
+  keywords: ["Laparoscopic hernia repair Vellore", "Hernia surgery cost India", "TAPP TEP hernia", "Inguinal hernia hospital Vellore", "Hernia surgeon Vellore"]
 };
 
 export default function LaparoscopicHerniaRepairPage() {
   return (
     <SubServiceTemplate
+      departmentName="General Surgery"
+      departmentSlug="general-surgery"
       title="Laparoscopic Hernia Repair"
-      eyebrow="General-surgery Treatment"
+      eyebrow="Advanced General Surgery"
       description={
         <p>
-          Laparoscopic Hernia Repair at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          Indira Hospital is a center of expertise for <strong>Laparoscopic Hernia Repair</strong> — treating inguinal, umbilical, incisional, and hiatal hernias with minimal access techniques. Our surgeons achieve durable, tension-free repairs using premium mesh technology through tiny incisions.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Cost (Inguinal)", value: "₹35k – ₹65k", icon: "IndianRupee" },
+        { label: "Duration", value: "45-60 Mins", icon: "Clock" },
+        { label: "Stay", value: "1 Day (Day Care)", icon: "Activity" },
+        { label: "Return to Work", value: "3-5 Days", icon: "Star" }
       ]}
-      relatedServices={{
-        serviceSlug: "general-surgery/laparoscopic-hernia-repair",
-        related: [
-          { title: "All General-surgery Services", href: "/services/general-surgery" }
+      marketingContent={{
+        sections: [
+          {
+            id: "lap-vs-open",
+            heading: "Laparoscopic vs. Open Hernia Repair",
+            description: "Benefits of choosing keyhole hernia surgery at Indira Hospital:",
+            table: {
+              headers: ["Factor", "Laparoscopic (TAPP/TEP)", "Open (Lichtenstein)"],
+              rows: [
+                ["Incision", "3 x 5-10mm ports", "3-4 cm skin incision"],
+                ["Pain", "Minimal", "Moderate"],
+                ["Return to Work", "3-5 Days", "7-10 Days"],
+                ["Bilateral Hernia", "Both sides, same session", "Two separate sessions"],
+                ["Recurrence", "Similar (~1-2%)", "Similar (~1-2%)"]
+              ],
+              caption: "Hernia repair technique comparison."
+            }
+          }
+        ],
+        faqs: [
+          {
+            question: "Is hernia repair done overnight or same day?",
+            answer: "Most laparoscopic hernia repairs at Indira Hospital are performed as day-care procedures. You arrive, have surgery under general anaesthesia, recover for a few hours, and go home the same afternoon."
+          }
         ]
       }}
-      reviews={{
-        entityName: "Laparoscopic Hernia Repair",
-        entitySlug: "general-surgery/laparoscopic-hernia-repair"
+      relatedServices={{
+        serviceSlug: "general-surgery",
+        related: [
+          { title: "Appendix Surgery", href: "/services/general-surgery/appendix-surgery-steps" },
+          { title: "Gallbladder Stone Surgery", href: "/services/general-surgery/gallbladder-stone-surgery" },
+          { title: "Laser Piles Treatment", href: "/services/general-surgery/laser-piles-treatment-cost" }
+        ]
       }}
+      reviews={{ entityName: "General Surgery", entitySlug: "general-surgery", entityType: "department" }}
     >
       <section>
-        <h2>What is Laparoscopic Hernia Repair?</h2>
+        <h2>Understanding Hernia</h2>
         <p>
-          TODO: Comprehensive explanation of Laparoscopic Hernia Repair and its benefits for patients. Laparoscopic Hernia Repair is a specialized treatment offered at our Vellore facility.
+          A hernia occurs when an internal organ (typically small intestine) pushes through a weak spot in the surrounding muscle or connective tissue. They most commonly occur in the groin (inguinal hernia — 75% of all hernias), belly button (umbilical), or at a previous surgical incision site (incisional hernia).
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <h3>Symptoms</h3>
+        <ul>
+          <li>A visible bulge in the affected area, especially when standing or coughing</li>
+          <li>Aching or burning sensation at the bulge site</li>
+          <li>Pain or discomfort when bending over or lifting</li>
+          <li>Groinal weakness or pressure</li>
+        </ul>
+        <h3>When to Seek Emergency Care</h3>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for Laparoscopic Hernia Repair. Consult with our specialists to determine if this is the right treatment for you.
+          If a hernia becomes <strong>irreducible (stuck) or strangulated</strong> (blood supply cut off), this is a surgical emergency. Signs include sudden severe pain, nausea, vomiting, the bulge becoming hard and fixed. Call 108 or proceed to emergency immediately.
         </p>
-        
-        <h2>Cost & Payment Options</h2>
+        <h2>Cost & Recovery</h2>
         <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          Laparoscopic inguinal hernia repair costs <strong>₹35,000 – ₹65,000</strong> (including mesh) at Indira Hospital. Both sides can be repaired in one session at very little additional cost. Most patients return to desk work within 3-5 days and lifting within 3-4 weeks.
         </p>
       </section>
     </SubServiceTemplate>

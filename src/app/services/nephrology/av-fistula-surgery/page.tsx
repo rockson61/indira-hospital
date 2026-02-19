@@ -2,52 +2,75 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "Av Fistula Surgery | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Av Fistula Surgery at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "AV Fistula Creation Surgery for Dialysis | Indira Hospital Vellore",
+  description: "Expert Arteriovenous (AV) Fistula creation surgery at Indira Super Speciality Hospital, Vellore. Ensuring optimal, long-lasting dialysis access for kidney patients.",
+  keywords: ["AV fistula Vellore", "Dialysis access surgery", "Kidney failure fistula", "Nephrology hospital Vellore", "AV fistula creation cost"]
 };
 
-export default function AvFistulaSurgeryPage() {
+export default function AVFistulaSurgeryPage() {
   return (
     <SubServiceTemplate
-      title="Av Fistula Surgery"
-      eyebrow="Nephrology Treatment"
+      departmentName="Nephrology"
+      departmentSlug="nephrology"
+      title="AV Fistula Surgery"
+      eyebrow="Nephrology & Vascular Access"
       description={
         <p>
-          Av Fistula Surgery at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          An <strong>Arteriovenous (AV) Fistula</strong> is the gold standard for hemodialysis access. Created surgically by connecting an artery and vein in the arm, it provides a durable, high-flow access point for dialysis. Our vascular surgeons at Indira Hospital specialize in creating fistulas that mature well and last for years.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Cost", value: "₹25,000 – ₹45,000", icon: "IndianRupee" },
+        { label: "Duration", value: "45-90 Mins", icon: "Clock" },
+        { label: "Maturation", value: "4-6 Weeks", icon: "Activity" },
+        { label: "Longevity", value: "Years of Use", icon: "Star" }
       ]}
-      relatedServices={{
-        serviceSlug: "nephrology/av-fistula-surgery",
-        related: [
-          { title: "All Nephrology Services", href: "/services/nephrology" }
+      timeline={{
+        title: "AV Fistula Creation Process",
+        steps: [
+          { title: "Vein Mapping", description: "Doppler ultrasound mapping of forearm veins to plan the ideal fistula site.", duration: "Pre-op" },
+          { title: "Surgery", description: "Anastomosis of artery and vein under local/regional anaesthesia.", duration: "45-90 Mins" },
+          { title: "Maturation", description: "Fistula 'matures' (arterializes) over 4-6 weeks — no dialysis needles during this time.", duration: "4-6 Weeks" },
+          { title: "First Use", description: "Fistula is evaluated by nephrologist and cleared for dialysis needle access.", duration: "Week 6+" }
         ]
       }}
-      reviews={{
-        entityName: "Av Fistula Surgery",
-        entitySlug: "nephrology/av-fistula-surgery"
+      relatedServices={{
+        serviceSlug: "nephrology",
+        related: [
+          { title: "Dialysis Procedure", href: "/services/nephrology/dialysis-procedure-guide" },
+          { title: "Chronic Kidney Disease", href: "/services/nephrology/chronic-kidney-disease-stages" },
+          { title: "Diabetic Nephropathy", href: "/services/nephrology/diabetic-nephropathy-prevention" }
+        ]
       }}
+      reviews={{ entityName: "Nephrology Care", entitySlug: "nephrology", entityType: "department" }}
     >
       <section>
-        <h2>What is Av Fistula Surgery?</h2>
+        <h2>Why AV Fistula is the Best Dialysis Access</h2>
         <p>
-          TODO: Comprehensive explanation of Av Fistula Surgery and its benefits for patients. Av Fistula Surgery is a specialized treatment offered at our Vellore facility.
+          Dialysis requires access to large volumes of blood rapidly. An AV fistula, once mature, provides this naturally. Compared to central venous catheters (temporary lines), fistulas have:
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <ul>
+          <li>Dramatically lower rates of infection (bloodstream infections)</li>
+          <li>Better blood flow rates enabling more effective dialysis clearance</li>
+          <li>Longer functional lifespan (3-5+ years vs. months for grafts)</li>
+          <li>No external device — lower impact on body image and lifestyle</li>
+        </ul>
+        <h3>Planning is Critical: Start Early</h3>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for Av Fistula Surgery. Consult with our specialists to determine if this is the right treatment for you.
+          It is strongly recommended that patients with <strong>Stage 4-5 Chronic Kidney Disease (CKD)</strong> consult a vascular surgeon for fistula planning at least 6 months before anticipated dialysis initiation. Creating a fistula early enough to allow adequate maturation prevents the need for a temporary catheter.
         </p>
-        
-        <h2>Cost & Payment Options</h2>
+        <h2>Fistula Care at Home</h2>
         <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          After surgery, patients are taught to care for their fistula:
+        </p>
+        <ul>
+          <li>Daily fistula site inspection for signs of infection (redness, swelling, discharge)</li>
+          <li>Feeling for the "thrill" (vibration) and listening for the "bruit" (sound) — confirming it's working</li>
+          <li>Avoiding tight clothing, watches, or blood pressure measurements on the fistula arm</li>
+        </ul>
+        <h2>Cost & Insurance</h2>
+        <p>
+          AV Fistula creation surgery costs between <strong>₹25,000 and ₹45,000</strong>. It is covered under most major health insurance policies and government schemes including Aarogyasri and TN CM Health Insurance.
         </p>
       </section>
     </SubServiceTemplate>

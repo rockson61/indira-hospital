@@ -3,119 +3,132 @@ import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Kidney Stone Laser Surgery | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Kidney Stone Laser Surgery at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Kidney Stone Laser Surgery (Lithotripsy) | Indira Hospital Vellore",
+  description: "Advanced Kidney Stone Laser Surgery (RIRS/URSL) at Indira Super Speciality Hospital, Vellore. Minimally invasive, 100W Holmium Laser, and affordable cost.",
+  keywords: ["Kidney stone laser surgery Vellore", "Laser lithotripsy cost", "RIRS surgery Vellore", "Urologist in Vellore", "Holmium laser kidney stone"]
 };
 
 export default function KidneyStoneLaserSurgeryPage() {
   return (
     <SubServiceTemplate
+      departmentName="Urology"
+      departmentSlug="urology"
       title="Kidney Stone Laser Surgery"
-      eyebrow="Urology Treatment"
+      eyebrow="Urology Excellence"
       description={
         <p>
-          Advanced kidney stone treatment using state-of-the-art <strong>Holmium Laser 100W</strong> technology. Our urology experts perform RIRS and URSL procedures to ensure complete stone clearance without external cuts, offering 50% lower costs than Chennai.
+          State-of-the-art <strong>100W Holmium Laser</strong> technology for precise, painless kidney stone removal. Our urology department specializes in RIRS and URSL, offering zero-incision solutions and faster recovery.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹50,000 – ₹70,000", icon: "IndianRupee" },
-        { label: "Duration", value: "30–60 Minutes", icon: "Clock" },
-        { label: "Recovery", value: "1 Day", icon: "Activity" },
-        { label: "Success Rate", value: "99%", icon: "Star" }
+        { label: "Cost Package", value: "₹50k – ₹75k", icon: "IndianRupee" },
+        { label: "Duration", value: "30-60 Mins", icon: "Clock" },
+        { label: "Hospital Stay", value: "24 Hours", icon: "ShieldCheck" },
+        { label: "Success Rate", value: "99%+", icon: "Star" }
       ]}
       marketingContent={{
         sections: [
           {
             id: "stone-techniques",
-            heading: "Kidney Stone Removal Techniques",
-            description: "We offer multiple advanced options depending on the size and location of your stones:",
+            heading: "Which Technique is Right for You?",
+            description: "We offer several advanced options tailored to stone size and location:",
             table: {
-              headers: ["Technique", "Stone Size", "Incision", "Recovery"],
+              headers: ["Technique", "Stone Size", "Method", "Recovery"],
               rows: [
-                ["Laser Lithotripsy", "< 1.5 cm", "Internal (No Cuts)", "Same Day"],
-                ["RIRS", "< 2.0 cm", "Internal (No Cuts)", "1-2 Days"],
-                ["PCNL", "> 2.0 cm", "Miniature (5mm)", "2-3 Days"],
-                ["ESWL", "< 1.0 cm", "None (Sound Waves)", "Day Care"]
+                ["Laser Lithotripsy", "< 1.5 cm", "Endoscopic (Internal)", "Same Day"],
+                ["RIRS (Advanced)", "< 2.0 cm", "Flexible Endoscopy", "1-2 Days"],
+                ["Mini-PCNL", "> 2.0 cm", "Keyhole (5mm)", "2-3 Days"],
+                ["ESWL", "< 1.0 cm", "Non-Surgical", "Day Care"]
               ],
-              caption: "Comparison of surgical and non-surgical stone removal options at Indira Hospital."
+              caption: "Full range of urological interventions at Indira Hospital."
             }
           },
           {
             id: "why-laser",
-            heading: "Benefits of Laser Surgery (Lithotripsy)",
+            heading: "Benefits of Advanced Laser Therapy",
             bullets: [
-              "Precision: Target and blast even the hardest stones into dust",
-              "Minimal Pain: Performed through natural urinary passages",
-              "Zero Scarring: No external cuts or stitches involved",
-              "Faster Discharge: Most patients return home within 24 hours",
-              "High Success Rate: Over 98% clearance in a single sitting"
+              "Precision Fragmentation: Blasts even the hardest staghorn stones into dust.",
+              "Internal Procedure: Performed via natural urinary passages—no external cuts.",
+              "Minimal Discomfort: Significantly lower post-op pain compared to open surgery.",
+              "Rapid Return: Most patients return to work within 48-72 hours.",
+              "Comprehensive Clear: High success rate in a single-sitting procedure."
             ]
           }
         ],
         faqs: [
           {
-            question: "Is laser stone removal safe for elderly patients?",
-            answer: "Yes, because it is minimally invasive and performed under mild anesthesia, it is generally safe for patients with hypertension or diabetes."
+            question: "Is laser stone removal safe for patients with diabetes?",
+            answer: "Yes, it is highly recommended for diabetic and elderly patients because it is minimally invasive and carries a lower risk of infection than open surgery."
           },
           {
-            question: "Will the stones come back?",
-            answer: "While the procedure clears existing stones, lifestyle and diet play a huge role in prevention. We provide a personalized diet chart to minimize recurrence."
+            question: "What is the follow-up care like?",
+            answer: "We provide a personalized stone-prevention diet plan. Depending on the procedure, a temporary stent may be placed and removed 7-10 days later in a 5-minute OPD procedure."
           }
         ]
       }}
       timeline={{
-        title: "Your Treatment Journey",
+        title: "Kidney Stone Treatment Roadmap",
         steps: [
-          { title: "Diagnostic Mapping", description: "CT scan or Ultrasound to locate stone precisely." },
-          { title: "Admission", description: "Quick paper-less admission on procedure morning." },
-          { title: "Laser Procedure", description: "Laser fragmentation of stones (30-45 mins)." },
-          { title: "Home Recovery", description: "Discharge within 24 hours with follow-up guide." }
+          { title: "Precision Mapping", description: "CT KUB or Ultrasound to determine stone size, density, and location." },
+          { title: "Prep & Admission", description: "Standard pre-op tests and quick paperless admission." },
+          { title: "Laser Fragmentation", description: "Stone retrieval or laser dusting using Holmium Laser technology." },
+          { title: "Quick Recovery", description: "Observation for 24 hours with specialist follow-up guide." }
         ]
       }}
       relatedServices={{
-        serviceSlug: "urology/kidney-stone-laser-surgery",
+        serviceSlug: "urology",
         related: [
-          { title: "RIRS Procedure", href: "/services/urology/rirs-treatment" },
-          { title: "Prostate Treatment", href: "/services/urology/prostate-turp-surgery" }
+          { title: "Prostate (TURP) Surgery", href: "/services/urology/prostate-turp-surgery" },
+          { title: "Urinary Tract Infection", href: "/services/urology/urinary-tract-infection-treatment" },
+          { title: "Male Infertility Causes", href: "/services/urology/male-infertility-causes" }
         ]
       }}
       reviews={{
-        entityName: "Kidney Stone Laser Surgery",
-        entitySlug: "urology/kidney-stone-laser-surgery"
+        entityName: "Urology Care",
+        entitySlug: "urology",
+        entityType: "department"
       }}
     >
       <section>
-        <h2>Advanced Laser Kidney Stone Treatment in Vellore</h2>
+        <h2>Advanced Urology Center in Vellore</h2>
         <p>
-          At Indira Super Speciality Hospital, we utilize the latest <strong>Holmium Laser</strong> technology for highly effective kidney stone removal. Unlike traditional surgery, laser lithotripsy is a walk-in, walk-out procedure that eliminates stones without any external cuts.
+          Indira Super Speciality Hospital is a regional leader in minimally invasive urology. We use the <strong>Holmium Laser</strong>, which is the gold standard for treating stones in the kidney, ureter, and bladder. This technology allows our surgeons to reach stones deep inside the kidney without a single external incision.
         </p>
 
-        <h3>Why Choose Laser Lithotripsy?</h3>
+        <h3>RIRS (Retrograde Intrarenal Surgery)</h3>
         <p>
-          Laser treatment is the gold standard for kidney stones that are too large to pass naturally but small enough for endoscopic removal. The laser fiber is passed through a ureteroscope to reach the stone, where it delivers precise energy to fragment the stone into tiny sand-like particles.
+          For stones up to 2cm, we recommend <strong>RIRS</strong>. Using a flexible fiber-optic endoscope, our urologists navigate the urinary tract to reach the stone directly. The laser then "dusts" the stone into particles small enough to be flushed out naturally with urine.
         </p>
 
-        <div className="my-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-3xl border border-purple-100 dark:border-purple-800">
-          <h4 className="text-xl font-bold text-purple-900 dark:text-purple-300 mb-4 tracking-tight">Vellore's Most Affordable Laser Package</h4>
-          <p className="text-slate-700 dark:text-slate-300">
-            Our laser packages are designed to be inclusive of medication, hospital stay, and specialist fees. We provide clear pricing with <strong>no hidden costs</strong>.
+        <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/10 dark:to-indigo-900/10 rounded-[2.5rem] border border-purple-100 dark:border-purple-800 shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+          <h4 className="text-2xl font-black text-slate-900 dark:text-purple-300 mb-6 tracking-tight">Transparent Pricing & Insurance</h4>
+          <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+            We provide all-inclusive surgical packages that cover hospital stay, OT charges, and initial medication. No hidden shocks.
           </p>
-          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> 0% EMI Available</li>
-            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> All Insurances Accepted</li>
-            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> TPA Assistance</li>
-            <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500" /> CM Insurance Schemes</li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              "0% EMI - Bajai Finserv & Credit Cards",
+              "Cashless TPAs & Private Insurance",
+              "Govt. Employee Healthcare Schemes",
+              "Comprehensive Pre-Op Pack Included"
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <h2>Who Needs This Procedure?</h2>
+        <h2>When Should You Consult a Urologist?</h2>
         <p>
-          You may require laser surgery if you experience symptoms like sharp pain in the side (renal colic), blood in urine, or dynamic stones detected during routine screenings. Our specialists will perform a comprehensive evaluation to determine the best approach for your specific case.
+          Persistent side pain, blood in the urine, or difficulty urinating are clear signs that you should see a specialist. Early intervention with laser therapy can prevent severe kidney damage and avoid the need for more invasive open surgeries.
         </p>
 
-        <h2>Cost & Booking</h2>
+        <h3>Expert Urological Surgeons</h3>
         <p>
-          The cost for Kidney Stone Laser Surgery at Indira Hospital starts from <strong>₹50,000</strong>. This depends on the size and number of stones. For an accurate quote and consultation, please book an appointment through our website or call our 24/7 hotline.
+          Our urology team is led by senior consultants with decades of experience in complex endo-urological procedures. We combine clinical expertise with compassionate care to ensure the best possible experience for our patients.
         </p>
       </section>
     </SubServiceTemplate>

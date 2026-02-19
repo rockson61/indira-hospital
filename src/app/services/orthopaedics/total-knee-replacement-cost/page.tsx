@@ -1,115 +1,133 @@
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle, ShieldCheck, Activity, IndianRupee, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Total Knee Replacement Cost | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Total Knee Replacement Cost at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Total Knee Replacement (TKR) Surgery Cost & Guide | Indira Hospital",
+  description: "Advanced Total Knee Replacement (TKR) surgery at Indira Super Speciality Hospital, Vellore. High-flex implants, computer-assisted surgery, and affordable cost.",
+  keywords: ["Knee replacement Vellore", "TKR surgery cost", "Orthopaedic surgeon Vellore", "Joint replacement hospital", "Knee surgery recovery"]
 };
 
 export default function TotalKneeReplacementCostPage() {
   return (
     <SubServiceTemplate
-      title="Total Knee Replacement Cost"
-      eyebrow="Orthopaedics Treatment"
+      departmentName="Orthopaedics"
+      departmentSlug="orthopaedics"
+      title="Total Knee Replacement (TKR)"
+      eyebrow="Orthopaedic Excellence"
       description={
         <p>
           Indira Hospital is a premier center for <strong>Joint Replacement Surgery</strong> in Vellore. We use high-quality, international-standard implants and computer-assisted techniques to restore mobility and eliminate chronic knee pain.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹1.5L – ₹2.2L", icon: "IndianRupee" },
-        { label: "Duration", value: "90–120 Minutes", icon: "Clock" },
-        { label: "Recovery", value: "3–5 Days", icon: "Activity" },
-        { label: "Success Rate", value: "98%+", icon: "ShieldCheck" }
+        { label: "Cost Package", value: "₹1.5L – ₹2.3L", icon: "IndianRupee" },
+        { label: "Duration", value: "60-90 Mins", icon: "Clock" },
+        { label: "Stay", value: "3-4 Days", icon: "Activity" },
+        { label: "Success Rate", value: "99%+", icon: "Star" }
       ]}
       marketingContent={{
         sections: [
           {
             id: "implant-types",
             heading: "Choosing the Right Implant",
-            description: "We offer high-performance implants from world leaders like Stryker, Zimmer Biomet, and Smith & Nephew:",
+            description: "We utilize gold-standard implants from world leaders such as Stryker, Zimmer Biomet, and Smith & Nephew, ensuring longevity and natural movement:",
             table: {
-              headers: ["Implant Category", "Material", "Durability", "Ideal For"],
+              headers: ["Implant Type", "Durability", "Flexibility", "Ideal Profile"],
               rows: [
-                ["Cobalt-Chrome", "Metal Alloy", "15-20 Years", "Active Seniors"],
-                ["Oxidized Zirconium", "Ceramic-Metal", "25+ Years", "Younger Patients"],
-                ["Titanium", "Biocompatible Metal", "20 Years", "Light Activity"]
+                ["Oxidized Zirconium", "25+ Years", "High Flexion", "Younger/Active"],
+                ["Ceramic-on-Poly", "20-25 Years", "Standard", "Seniors"],
+                ["Cobalt-Chrome", "15-20 Years", "Medium", "Cost-Effective"]
               ],
-              caption: "High-flex knee implant options available at Indira Orthopaedic Hospital."
+              caption: "FDA-approved knee implant options available at Indira Hospital."
             }
           },
           {
-            id: "when-to-surgery",
-            heading: "Signs You Need Knee Replacement",
+            id: "benefits",
+            heading: "Why Choose Computer-Assisted TKR?",
             bullets: [
-              "Severe pain that limits daily activities (walking, climbing stairs)",
-              "Moderate or severe knee pain while resting, day or night",
-              "Chronic knee inflammation and swelling that doesn't improve with rest",
-              "Knee deformity — a bowing in or out of your knee",
-              "Knee stiffness that prevents you from bending or straightening your knee"
+              "Precision Alignment: Digital mapping ensures perfect placement of the new joint.",
+              "Minimal Blood Loss: Advanced surgical techniques minimize tissue trauma.",
+              "Pain Management: Multi-modal analgesia for a comfortable post-op experience.",
+              "Rapid Mobilization: Our 'Fast-Track' protocol gets you standing within 24 hours.",
+              "Long-Term Results: Optimized alignment significantly reduces implant wear."
             ]
           }
         ],
         faqs: [
           {
-            question: "How long does a knee replacement last?",
-            answer: "With modern materials and expert surgical placement, over 90% of knee replacements last 20-25 years."
+            question: "When can I resume driving or stairs after TKR?",
+            answer: "Most patients can navigate stairs with support within 4-5 days and resume driving an automatic vehicle within 4-6 weeks, pending surgeon approval."
           },
           {
-            question: "When can I walk after surgery?",
-            answer: "At Indira Hospital, our 'Fast-Track' protocol allows most patients to stand and take a few steps with help within 24 hours of surgery."
+            question: "Is there an age limit for knee replacement?",
+            answer: "No. Age is not a barrier; surgical fitness is. We have successfully performed joint replacements on patients in their 80s, enabling them to enjoy a pain-free life."
           }
         ]
       }}
       timeline={{
-        title: "Your Mobility Plan",
+        title: "Knee Replacement Recovery Roadmap",
         steps: [
-          { title: "Pre-op Mapping", description: "X-rays and medical fitness clearance." },
-          { title: "The Procedure", description: "Precision joint replacement (60-90 mins)." },
-          { title: "Physiotherapy", description: "In-hospital rehabilitation starts Day 1." },
-          { title: "Home Care", description: "Guided exercises for full mobility (4 weeks)." }
+          { title: "Precision Planning", description: "X-ray mapping and cardiologist clearance for surgical fitness." },
+          { title: "The Procedure", description: "Minimal-access total knee replacement using high-flex implants." },
+          { title: "In-Hospital Rehab", description: "Intensive physiotherapy starting Day 1 to restore range of motion." },
+          { title: "Home Recovery", description: "Guided home exercise program for full independence in 4-6 weeks." }
         ]
       }}
       relatedServices={{
-        serviceSlug: "orthopaedics/total-knee-replacement-cost",
+        serviceSlug: "orthopaedics",
         related: [
-          { title: "Hip Replacement", href: "/services/orthopaedics/hip-replacement-surgery-guide" },
-          { title: "Spine Care", href: "/services/orthopaedics/spine-surgery-disc-prolapse" }
+          { title: "Hip Replacement Guide", href: "/services/orthopaedics/hip-replacement-surgery-guide" },
+          { title: "Spine Surgery Options", href: "/services/orthopaedics/spine-surgery-disc-prolapse" },
+          { title: "Arthroscopy Services", href: "/services/orthopaedics" }
         ]
       }}
       reviews={{
-        entityName: "Total Knee Replacement",
-        entitySlug: "orthopaedics/total-knee-replacement-cost"
+        entityName: "Joint Replacement",
+        entitySlug: "orthopaedics",
+        entityType: "department"
       }}
     >
       <section>
-        <h2>Advanced Joint Replacement Center in Vellore</h2>
+        <h2>Vellore's Destination for Orthopaedic Excellence</h2>
         <p>
-          Indira Super Speciality Hospital is a destination for <strong>High-Flexion Total Knee Replacement (TKR)</strong>. Our orthopaedic unit is led by senior surgeons who specialize in minimally invasive techniques that minimize tissue trauma and maximize post-operative range of motion.
+          At Indira Super Speciality Hospital, we combine clinical expertise with advanced technology to deliver superior outcomes in <strong>Total Knee Replacement (TKR)</strong>. Our multidisciplinary team ensures a seamless journey from preoperative planning to post-surgical rehabilitation.
         </p>
 
-        <h3>Computer-Assisted Alignment</h3>
+        <h3>Minimally Invasive Techniques</h3>
         <p>
-          Precision is the key to a long-lasting knee replacement. We use advanced alignment tools to ensure the implant is perfectly positioned according to your unique anatomy. This reduces wear and tear and provides a natural 'feel' to the new joint.
+          Our surgeons utilize "sub-vastus" or "mid-vastus" approaches that don't cut through the main quad muscle. This results in significantly less pain, better early control of the leg, and a much faster return to independent walking compared to traditional methods.
         </p>
 
-        <div className="my-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-3xl border border-blue-100 dark:border-blue-800">
-          <h4 className="text-xl font-bold text-blue-900 dark:text-blue-300 mb-4 tracking-tight">Rapid Recovery Rehabilitation</h4>
-          <p className="text-slate-700 dark:text-slate-300">
-            Our goal is to get you back on your feet quickly. Our dedicated physiotherapy team works with you from <strong>Day 1</strong> post-surgery.
+        <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-[2.5rem] border border-blue-100 dark:border-blue-800 shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+          <h4 className="text-2xl font-black text-slate-900 dark:text-blue-300 mb-6 tracking-tight">Rapid Recovery & Support</h4>
+          <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+            Our surgical packages are comprehensive, covering the implant, hospital stay, and initial physiotherapy.
           </p>
-          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-            <li className="flex items-center gap-2 font-medium text-blue-800 dark:text-blue-200"><CheckCircle className="w-4 h-4" /> Zero-Infection Modular OT</li>
-            <li className="flex items-center gap-2 font-medium text-blue-800 dark:text-blue-200"><CheckCircle className="w-4 h-4" /> Advanced Pain Management</li>
-            <li className="flex items-center gap-2 font-medium text-blue-800 dark:text-blue-200"><CheckCircle className="w-4 h-4" /> Home Physiotherapy Support</li>
-            <li className="flex items-center gap-2 font-medium text-blue-800 dark:text-blue-200"><CheckCircle className="w-4 h-4" /> FDA Approved Implants</li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              "0% EMI Options - Easy Finance",
+              "Cashless Claims for 50+ Insurers",
+              "Zero-Infection Modular OTs",
+              "Home Physiotherapy Assistance"
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <h2>Cost & Booking</h2>
+        <h2>When Should You Consider Surgery?</h2>
         <p>
-          Total Knee Replacement packages start at <strong>₹1,50,000</strong> per knee (all-inclusive). We offer special packages for bilateral (both knees) replacements. We accept all major insurances and offer 0% interest EMI options. Book your consultation today to walk pain-free again.
+          If chronic knee pain makes it difficult to walk even short distances, interferes with your sleep, or stops you from performing simple daily tasks, it may be time for a joint replacement. Modern TKR is one of the most successful surgeries in all of medicine, with a satisfaction rate exceeding 95%.
+        </p>
+
+        <h3>Expert Physiotherapy & Care</h3>
+        <p>
+          We believe that surgery is only 50% of the success story. The other 50% comes from expert <strong>Post-Operative Rehabilitation</strong>. Our dedicated physio team works one-on-one with you to ensure you regain full range of motion and return to an active lifestyle as quickly as possible.
         </p>
       </section>
     </SubServiceTemplate>

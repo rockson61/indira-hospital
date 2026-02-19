@@ -1,114 +1,91 @@
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
+import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Heart Valve Replacement Surgery | Indira Super Speciality Hospital Vellore",
-    description: "Comprehensive Heart Valve Replacement Surgery at Indira Hospital, Vellore. Expert cardiac surgeons, advanced valve options, and dedicated post-op care."
+    title: "Heart Valve Replacement Surgery Guide | Indira Hospital Vellore",
+    description: "Advanced Heart Valve Replacement Surgery at Indira Super Speciality Hospital, Vellore. Expert cardiac surgeons offering mechanical and biological valve options.",
+    keywords: ["Heart valve replacement Vellore", "Cardiac surgery hospital", "Valve surgery cost", "Open heart surgery Vellore", "Mitral aortic valve"]
 };
 
-export default function HeartValveReplacementPage() {
+export default function HeartValveReplacementSurgeryPage() {
     return (
         <SubServiceTemplate
-            title="Heart Valve Replacement"
-            eyebrow="Cardiology Treatment"
+      departmentName="Cardiology"
+      departmentSlug="cardiology"
+            title="Heart Valve Replacement Surgery"
+            eyebrow="Cardiac Surgery Excellence"
             description={
                 <p>
-                    Advanced surgical solutions for <strong>Aortic and Mitral Valve</strong> diseases. Our cardiac team specializes in mechanical and bioprosthetic valve replacements using state-of-the-art heart-lung technology.
+                    Indira Super Speciality Hospital offers advanced <strong>Heart Valve Replacement</strong> surgery using both mechanical and biological prostheses. Our cardiac surgery team restores normal valve function to prevent heart failure and improve quality of life.
                 </p>
             }
             quickFacts={[
-                { label: "Cost", value: "₹2.5L – ₹4.5L", icon: "IndianRupee" },
-                { label: "Duration", value: "3–4 Hours", icon: "Clock" },
-                { label: "Stay", value: "5–7 Days", icon: "Activity" },
-                { label: "Success Rate", value: "95%+", icon: "ShieldCheck" }
+                { label: "Cost Range", value: "₹2.5L – ₹4.5L", icon: "IndianRupee" },
+                { label: "Duration", value: "3-5 Hours", icon: "Clock" },
+                { label: "ICU Stay", value: "2-3 Days", icon: "Activity" },
+                { label: "Success Rate", value: "97%+", icon: "Star" }
             ]}
             marketingContent={{
                 sections: [
                     {
                         id: "valve-types",
-                        heading: "Choosing the Right Valve",
-                        description: "We offer both mechanical and biological valve options tailored to your age and lifestyle:",
+                        heading: "Mechanical vs. Biological Valves",
+                        description: "Choosing the right valve type is a lifelong decision made with your surgeon:",
                         table: {
-                            headers: ["Valve Type", "Durability", "Medication", "Ideal For"],
+                            headers: ["Feature", "Mechanical Valve", "Biological (Tissue) Valve"],
                             rows: [
-                                ["Mechanical Valve", "Lifetime", "Continious Blood Thinners", "Younger Patients"],
-                                ["Bioprosthetic (Tissue)", "10-15 Years", "Short-term Medication", "Elderly Patients"],
-                                ["Repair (Surgical)", "Variable", "Minimal Medication", "Specific Conditions"]
+                                ["Durability", "25-30+ Years", "10-15 Years"],
+                                ["Blood Thinners", "Required (Lifelong)", "Often not required"],
+                                ["Best For", "Younger Patients (<60)", "Older Patients (>65)"],
+                                ["Lifestyle", "Active / Sports", "Flexible"],
                             ],
-                            caption: "Valve replacement options available at Indira Hospital's Cardiac Center."
+                            caption: "Valve selection guide."
                         }
-                    },
-                    {
-                        id: "indications",
-                        heading: "When is Surgery Necessary?",
-                        bullets: [
-                            "Severe Valve Stenosis (narrowing of the valve opening)",
-                            "Severe Valve Regurgitation (leaking valve)",
-                            "Persistent shortness of breath or chest pain",
-                            "Heart failure symptoms due to underlying valve disease",
-                            "Enlargement of heart chambers detected on Echo"
-                        ]
                     }
                 ],
                 faqs: [
                     {
-                        question: "How long is the recovery from valve surgery?",
-                        answer: "Most patients stay in the hospital for 5-7 days. Full recovery and return to normal activities typically takes 6-8 weeks."
-                    },
-                    {
-                        question: "What is the difference between mechanical and tissue valves?",
-                        answer: "Mechanical valves are highly durable but require lifelong blood-thinning medication. Tissue valves (usually from bovine/porcine sources) don't require lifelong thinners but may need replacement after 10-15 years."
+                        question: "Can heart valves be replaced without open-heart surgery?",
+                        answer: "Yes. For selected patients, Transcatheter Aortic Valve Implantation (TAVI) is available — a minimally invasive option where the new valve is delivered via a catheter through the femoral artery, avoiding a traditional open-chest approach."
                     }
                 ]
             }}
             timeline={{
-                title: "Your Cardiac Recovery Path",
+                title: "Heart Valve Surgery Journey",
                 steps: [
-                    { title: "Cardiac Evaluation", description: "Echo, Angiogram, and fitness clearance." },
-                    { title: "Surgery", description: "Precision valve replacement in our Modular OT." },
-                    { title: "ICU Care", description: "Strict monitoring for 24-48 hours." },
-                    { title: "Rehabilitation", description: "Physiotherapy and gradual mobilization." }
+                    { title: "Cardiac Work-up", description: "Echocardiography, catheterization, and fitness clearance." },
+                    { title: "Surgery", description: "On bypass, the damaged valve is resected and the prosthetic valve is sewn in." },
+                    { title: "ICU Recovery", description: "Intensive monitoring for 48-72 hours post-operatively." },
+                    { title: "Cardiac Rehab", description: "Guided exercise program for recovery over 6-8 weeks." }
                 ]
             }}
             relatedServices={{
-                serviceSlug: "cardiology/heart-valve-replacement-surgery",
+                serviceSlug: "cardiology",
                 related: [
-                    { title: "Coronary Angioplasty", href: "/services/cardiology/heart-angioplasty-procedure" },
-                    { title: "Pacemaker Implantation", href: "/services/cardiology/pacemaker-implantation-steps" }
+                    { title: "Heart Angioplasty", href: "/services/cardiology/heart-angioplasty-procedure" },
+                    { title: "Pacemaker Implantation", href: "/services/cardiology/pacemaker-implantation-steps" },
+                    { title: "Preventive Heart Checkup", href: "/services/cardiology/preventive-heart-checkup" }
                 ]
             }}
-            reviews={{
-                entityName: "Heart Valve Replacement",
-                entitySlug: "cardiology/heart-valve-replacement-surgery"
-            }}
+            reviews={{ entityName: "Cardiac Surgery", entitySlug: "cardiology", entityType: "department" }}
         >
             <section>
-                <h2>Center of Excellence for Cardiac Surgery</h2>
+                <h2>Premier Cardiac Surgery in Vellore</h2>
                 <p>
-                    At Indira Super Speciality Hospital, our Department of Cardiothoracic Surgery is equipped with the latest surgical technology and a dedicated <strong>Cardiac ICU</strong>. Our surgeons have extensive experience in treating complex valvular heart diseases with high success rates.
+                    Heart valve disease can affect any of the four valves (mitral, aortic, tricuspid, pulmonary). The most commonly replaced valves are the <strong>aortic</strong> and <strong>mitral</strong> valves. When valve repair is not feasible, replacement with a prosthetic valve is the definitive solution.
                 </p>
-
-                <h3>Why Choose Indira Hospital?</h3>
+                <h3>Symptoms Indicating Valve Surgery</h3>
+                <ul>
+                    <li>Progressive shortness of breath, especially at night</li>
+                    <li>Fatigue and reduced exercise capacity</li>
+                    <li>Swollen ankles and feet</li>
+                    <li>Heart palpitations and irregular heartbeat</li>
+                    <li>Chest discomfort or pressure</li>
+                </ul>
+                <h2>Cost & Insurance Coverage</h2>
                 <p>
-                    We provide a comprehensive heart care ecosystem. From advanced diagnostics like 4D ECHO to a modular operation theater environment that ensures zero-infection rates, we prioritize patient outcomes above all else.
-                </p>
-
-                <div className="my-8 p-6 bg-red-50 dark:bg-red-900/20 rounded-3xl border border-red-100 dark:border-red-800">
-                    <h4 className="text-xl font-bold text-red-900 dark:text-red-300 mb-4 tracking-tight">Dedicated 24/7 Cardiac Emergency</h4>
-                    <p className="text-slate-700 dark:text-slate-300">
-                        Cardiac emergencies require immediate attention. Our facility features a dedicated chest pain clinic and 24/7 availability of cardiac surgeons and anaesthetists.
-                    </p>
-                    <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-                        <li className="flex items-center gap-2 font-medium text-red-800 dark:text-red-200"><div className="w-2 h-2 rounded-full bg-red-500" /> Advanced Life Support</li>
-                        <li className="flex items-center gap-2 font-medium text-red-800 dark:text-red-200"><div className="w-2 h-2 rounded-full bg-red-500" /> Heart-Lung Machine</li>
-                        <li className="flex items-center gap-2 font-medium text-red-800 dark:text-red-200"><div className="w-2 h-2 rounded-full bg-red-500" /> Blood Bank Assistance</li>
-                        <li className="flex items-center gap-2 font-medium text-red-800 dark:text-red-200"><div className="w-2 h-2 rounded-full bg-red-500" /> Comprehensive Rehab</li>
-                    </ul>
-                </div>
-
-                <h2>Cost & Booking</h2>
-                <p>
-                    Heart Valve Replacement costs range from <strong>₹2,50,000 to ₹4,50,000</strong> depending on the type of valve chosen. We offer transparent pricing and support all major TPA and government insurance schemes. Schedule a consultation with our cardiologist today for a detailed evaluation.
+                    Heart valve replacement surgery costs <strong>₹2.5 – 4.5 Lakhs</strong> depending on the valve chosen and procedure type. All major government and private insurers are accepted, including CGHS and ECHS. Our dedicated insurance desk handles pre-authorization for a cashless experience.
                 </p>
             </section>
         </SubServiceTemplate>

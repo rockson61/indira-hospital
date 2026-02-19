@@ -2,53 +2,63 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "Chemotherapy Side Effects | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Chemotherapy Side Effects at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "Chemotherapy: Managing Side Effects Guide | Indira Hospital Vellore",
+  description: "Expert chemotherapy administration and side effect management at Indira Super Speciality Hospital, Vellore. Comprehensive oncology care to keep patients comfortable during cancer treatment.",
+  keywords: ["Chemotherapy Vellore", "Cancer treatment hospital", "Chemo side effects management", "Medical oncologist Vellore", "Oncology centre Vellore"]
 };
 
 export default function ChemotherapySideEffectsPage() {
   return (
     <SubServiceTemplate
-      title="Chemotherapy Side Effects"
-      eyebrow="Oncology Treatment"
+      departmentName="Oncology"
+      departmentSlug="oncology"
+      title="Chemotherapy & Side Effects"
+      eyebrow="Medical Oncology"
       description={
         <p>
-          Chemotherapy Side Effects at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          Indira Hospital's <strong>Medical Oncology Department</strong> provides evidence-based chemotherapy protocols administered in a dedicated oncology day care unit. Our team of oncologists and oncology nurses are expert in managing side effects to keep you as comfortable and active as possible throughout treatment.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Unit", value: "Oncology Day Care", icon: "Activity" },
+        { label: "Protocols", value: "NCCN-Based", icon: "ShieldCheck" },
+        { label: "Support", value: "Dietitian + Social Work", icon: "Star" },
+        { label: "Anti-nausea", value: "Modern Regimens", icon: "Clock" }
       ]}
       relatedServices={{
-        serviceSlug: "oncology/chemotherapy-side-effects",
+        serviceSlug: "oncology",
         related: [
-          { title: "All Oncology Services", href: "/services/oncology" }
+          { title: "Surgical Oncology", href: "/services/oncology/surgical-oncology-overview" },
+          { title: "Palliative Care", href: "/services/oncology/palliative-care-services" },
+          { title: "Breast Cancer Screening", href: "/services/oncology/breast-cancer-screening-guide" }
         ]
       }}
-      reviews={{
-        entityName: "Chemotherapy Side Effects",
-        entitySlug: "oncology/chemotherapy-side-effects"
-      }}
+      reviews={{ entityName: "Oncology Care", entitySlug: "oncology", entityType: "department" }}
     >
       <section>
-        <h2>What is Chemotherapy Side Effects?</h2>
+        <h2>Understanding Chemotherapy</h2>
         <p>
-          TODO: Comprehensive explanation of Chemotherapy Side Effects and its benefits for patients. Chemotherapy Side Effects is a specialized treatment offered at our Vellore facility.
+          Chemotherapy uses powerful drugs to kill rapidly dividing cancer cells throughout the body. It can be used to <strong>cure cancer</strong>, control its spread, or relieve symptoms (palliative intent). It is often combined with surgery and radiation for maximum effect (multimodal therapy).
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <h3>Common Side Effects & How We Manage Them</h3>
+        <ul>
+          <li><strong>Nausea & Vomiting:</strong> Highly controllable with modern 5-HT3 inhibitors and NK1 antagonists administered before each cycle. Most patients experience minimal or no nausea.</li>
+          <li><strong>Hair Loss (Alopecia):</strong> Occurs with some (not all) chemo drugs. We offer scalp cooling systems (cold cap therapy) that can reduce hair loss for eligible patients.</li>
+          <li><strong>Fatigue:</strong> The most common complaint. We provide energy management strategies, nutritional support, and graded exercise programs.</li>
+          <li><strong>Low Blood Counts (Myelosuppression):</strong> Regular blood tests before each cycle ensure safe treatment. Growth factors (G-CSF) are used to support white cell counts.</li>
+          <li><strong>Peripheral Neuropathy:</strong> Tingling or numbness in hands/feet with certain drugs. Dose modification and supplements like B6 are used to minimize this.</li>
+          <li><strong>Mouth Sores (Mucositis):</strong> Preventable with careful oral hygiene protocol and special mouthwashes.</li>
+        </ul>
+        <h2>Our Supportive Oncology Team</h2>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for Chemotherapy Side Effects. Consult with our specialists to determine if this is the right treatment for you.
+          We believe that <strong>supportive care</strong> — managing the side effects of cancer and its treatment — is as important as the treatment itself. Our comprehensive team includes:
         </p>
-        
-        <h2>Cost & Payment Options</h2>
-        <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
-        </p>
+        <ul>
+          <li>Dedicated Oncology Nurses trained in cannulation and chemo drug administration</li>
+          <li>Oncology Dietitian for nutrition plans during treatment</li>
+          <li>Oncology Social Worker for psychosocial support and navigating financial assistance</li>
+          <li>Pain Management Specialist for complex cancer pain</li>
+        </ul>
       </section>
     </SubServiceTemplate>
   );

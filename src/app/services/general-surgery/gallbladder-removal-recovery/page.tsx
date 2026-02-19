@@ -2,52 +2,75 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
-  title: "Gallbladder Removal Recovery | Indira Super Speciality Hospital Vellore",
-  description: "Advanced Gallbladder Removal Recovery at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  title: "After Gallbladder Removal: Recovery & Diet | Indira Hospital Vellore",
+  description: "Expert post-operative guidance after Laparoscopic Cholecystectomy at Indira Super Speciality Hospital, Vellore. Diet tips, recovery timeline, and when to take activity after gallbladder surgery.",
+  keywords: ["Gallbladder removal recovery Vellore", "Post cholecystectomy diet", "After gallbladder surgery", "Laparoscopic cholecystectomy recovery", "General surgery Vellore"]
 };
 
 export default function GallbladderRemovalRecoveryPage() {
   return (
     <SubServiceTemplate
+      departmentName="General Surgery"
+      departmentSlug="general-surgery"
       title="Gallbladder Removal Recovery"
-      eyebrow="General-surgery Treatment"
+      eyebrow="General Surgery Recovery"
       description={
         <p>
-          Gallbladder Removal Recovery at Indira Super Speciality Hospital is performed by experienced specialists to provide high-quality medical outcomes with a focus on patient safety and affordable care.
+          Recovering well after <strong>Laparoscopic Cholecystectomy (Gallbladder Removal)</strong> is straightforward with the right guidance. Most patients are home within 24 hours of surgery and back to normal life within 1-2 weeks. Our surgical team provides a comprehensive discharge plan for smooth, comfortable recovery.
         </p>
       }
       quickFacts={[
-        { label: "Cost", value: "₹X,XXX – ₹X,XXX" },
-        { label: "Duration", value: "X Minutes" },
-        { label: "Recovery", value: "X Days" },
-        { label: "Success Rate", value: "95%+" }
+        { label: "Hospital Stay", value: "1 Day", icon: "Activity" },
+        { label: "Light Work", value: "3-5 Days", icon: "Clock" },
+        { label: "Full Recovery", value: "1-2 Weeks", icon: "ShieldCheck" },
+        { label: "Diet Normal", value: "4-6 Weeks", icon: "Star" }
       ]}
-      relatedServices={{
-        serviceSlug: "general-surgery/gallbladder-removal-recovery",
-        related: [
-          { title: "All General-surgery Services", href: "/services/general-surgery" }
+      timeline={{
+        title: "Recovery After Gallbladder Surgery",
+        steps: [
+          { title: "Surgery Day", description: "Surgery under GA. Discharge evening/next morning. Light liquid diet.", duration: "Day 0-1" },
+          { title: "Days 2-5", description: "Soft diet (khichdi, dal, curd). Walk around the house. Minimal lifting.", duration: "Days 2-5" },
+          { title: "Week 1-2", description: "Return to desk work. Light exercise (short walks). Avoid heavy meals.", duration: "Weeks 1-2" },
+          { title: "Week 3-6", description: "Gradually resume normal foods. Return to full activity, gym, and driving.", duration: "Weeks 3-6" }
         ]
       }}
-      reviews={{
-        entityName: "Gallbladder Removal Recovery",
-        entitySlug: "general-surgery/gallbladder-removal-recovery"
+      relatedServices={{
+        serviceSlug: "general-surgery",
+        related: [
+          { title: "Gallbladder Stone Surgery", href: "/services/general-surgery/gallbladder-stone-surgery" },
+          { title: "Appendix Surgery", href: "/services/general-surgery/appendix-surgery-steps" },
+          { title: "Laparoscopic Hernia", href: "/services/general-surgery/laparoscopic-hernia-repair" }
+        ]
       }}
+      reviews={{ entityName: "General Surgery", entitySlug: "general-surgery", entityType: "department" }}
     >
       <section>
-        <h2>What is Gallbladder Removal Recovery?</h2>
+        <h2>The First 24 Hours: What to Expect</h2>
         <p>
-          TODO: Comprehensive explanation of Gallbladder Removal Recovery and its benefits for patients. Gallbladder Removal Recovery is a specialized treatment offered at our Vellore facility.
+          After laparoscopic cholecystectomy, most patients experience:
         </p>
-        
-        <h2>Who Needs This Treatment?</h2>
+        <ul>
+          <li><strong>Shoulder Tip Pain:</strong> Caused by residual gas (CO₂) used in the abdomen irritating the diaphragm. Resolves in 24-48 hours. Walking helps.</li>
+          <li><strong>Mild Abdominal Bloating:</strong> Improves with movement and passing gas.</li>
+          <li><strong>Soreness at Port Sites:</strong> Minimal with keyhole surgery. Managed with oral painkillers.</li>
+          <li><strong>Nausea:</strong> Short-lived and controlled with anti-nausea medication given at discharge.</li>
+        </ul>
+        <h2>Eating After Gallbladder Removal</h2>
         <p>
-          TODO: Patient criteria and symptoms that indicate a need for Gallbladder Removal Recovery. Consult with our specialists to determine if this is the right treatment for you.
+          The gallbladder stores bile for fat digestion. Without it, bile drips directly from the liver into the intestine continuously. Most people adapt well, but some dietary adjustments in the first month help:
         </p>
-        
-        <h2>Cost & Payment Options</h2>
+        <ul>
+          <li><strong>Days 1-7:</strong> Light, low-fat foods (dal, curd, rice, idli, boiled vegetables). Small, frequent meals instead of large ones.</li>
+          <li><strong>Weeks 2-4:</strong> Gradually introduce normal home cooking. Avoid deep-fried, very oily, or very spicy foods temporarily.</li>
+          <li><strong>Month 2+:</strong> The large majority of patients can return to a completely normal, unrestricted diet.</li>
+        </ul>
+        <h3>Loose Motions After Surgery: When to Worry?</h3>
         <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Super Speciality Hospital, Vellore.
-          We offer 50% lower costs than Chennai/Bangalore with 0% EMI options available via major banks.
+          Up to 20% of patients experience temporarily looser stools after cholecystectomy as the intestine adjusts to continuous bile exposure. This typically resolves within 4-8 weeks with a low-fat diet and resolves permanently in most patients. If persistent, your surgeon may prescribe cholestyramine or probiotics.
+        </p>
+        <h2>When to Contact Your Surgeon</h2>
+        <p>
+          Contact us immediately if you develop high fever (&gt;38.5°C), severe abdominal pain not relieved by painkillers, yellowing of skin/eyes (jaundice), or persistent vomiting after surgery.
         </p>
       </section>
     </SubServiceTemplate>
