@@ -34,7 +34,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
     return (
         <main className="min-h-screen pb-20 bg-[#FAFAFA]">
             {/* Header */}
-            <section className="relative pt-36 pb-16 overflow-hidden">
+            <section className="relative pt-48 pb-16 overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-teal-50 blur-[120px] opacity-60" />
                     <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-teal-50 blur-[120px] opacity-50" />

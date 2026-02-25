@@ -22,7 +22,7 @@ export function Hero() {
     const [searchTerm, setSearchTerm] = useState("");
 
     return (
-        <section className="relative pt-44 pb-32 lg:pt-56 lg:pb-48 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
+        <section className="relative pt-56 pb-32 lg:pt-64 lg:pb-48 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
             {/* ELITE CINEMATIC BACKGROUND */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
             <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />

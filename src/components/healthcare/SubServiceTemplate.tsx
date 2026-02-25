@@ -145,7 +145,7 @@ export function SubServiceTemplate({
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureJsonLd) }} />
 
             {/* ── Hero ─────────────────────────────────────────────────────── */}
-            <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-[#FAFAFA]">
+            <section className="relative pt-44 pb-20 lg:pt-52 lg:pb-28 overflow-hidden bg-[#FAFAFA]">
                 <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-teal-50 blur-[120px] opacity-60" />
                     <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-teal-50 blur-[120px] opacity-50" />

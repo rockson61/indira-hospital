@@ -17,7 +17,7 @@ export function PageHero({
     className,
 }: PageHeroProps) {
     return (
-        <section className={cn("relative py-20 lg:py-32 overflow-hidden bg-slate-900", className)}>
+        <section className={cn("relative pt-36 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900", className)}>
             {/* Background Image / Overlay */}
             <div className="absolute inset-0 z-0">
                 {backgroundImage ? (

@@ -22,7 +22,7 @@ export default async function LocationDepartmentPage({
     return (
         <div className="min-h-screen bg-slate-50 selection:bg-teal-200 selection:text-teal-900 pb-24">
             {/* Bold Asymmetrical Hero with Subtle Pattern */}
-            <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
+            <div className="relative pt-44 pb-20 lg:pt-56 lg:pb-32 overflow-hidden bg-slate-900">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
                 <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[600px] bg-teal-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none" />
 
