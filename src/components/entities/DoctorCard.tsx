@@ -126,7 +126,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             <a href={whatsappUrl} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-bold rounded-full shadow-sm">
                                 Book
                             </a>
-                            <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/\s+/g, '-')}/${doctor.slug}`} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 text-slate-700 text-sm font-bold rounded-full">
+                            <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/${doctor.slug}`} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 text-slate-700 text-sm font-bold rounded-full">
                                 Profile
                             </Link>
                         </div>
@@ -193,7 +193,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                                 Book
                             </a>
                         ) : null}
-                        <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/\s+/g, '-')}/${doctor.slug}`}
+                        <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/${doctor.slug}`}
                             className="flex-1 flex items-center justify-center gap-2 bg-slate-50 hover:bg-teal-50 hover:text-teal-700 text-slate-700 text-[13px] font-bold py-3 rounded-full transition-all border border-slate-100">
                             Profile
                         </Link>

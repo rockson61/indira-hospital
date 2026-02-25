@@ -1,34 +1,36 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { doctors } from "@/data/doctors";
-import { getDepartments } from "@/lib/api";
+import { getDoctors, getDepartments } from "@/lib/api";
 import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, Stethoscope, GraduationCap } from "lucide-react";
 
 export async function generateStaticParams() {
-    return doctors.map((doc) => ({
-        specialty: doc.specialty.toLowerCase().replace(/\s+/g, '-'),
+    const doctors = await getDoctors().catch(() => []);
+    return doctors.map((doc: any) => ({
+        specialty: (typeof doc.department === 'string' ? doc.department : doc.department?.name || "General").toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
         slug: doc.slug
     }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ specialty: string; slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
-    const doc = doctors.find((d) => d.slug === slug);
+    const doctors = await getDoctors().catch(() => []);
+    const doc = doctors.find((d: any) => d.slug === slug);
     if (!doc) return { title: "Doctor Not Found" };
     return {
-        title: `${doc.name} — ${doc.specialty} | Best Hospital in TN & India | Indira Hospital`,
-        description: doc.bio,
+        title: `${doc.name} — ${typeof doc.department === 'string' ? doc.department : doc.department?.name || "Specialist"} | Best Hospital in TN & India | Indira Hospital`,
+        description: doc.bio || `Book an appointment with ${doc.name}`,
     };
 }
 
-export default async function DoctorDetailPage({
+export default async function DoctorProfileRoute({
     params,
 }: {
     params: Promise<{ specialty: string; slug: string }>;
 }) {
     const { slug, specialty } = await params;
-    const currDoctor = doctors.find((d) => d.slug === slug);
+    const allDoctors = await getDoctors().catch(() => []);
+    const currDoctor = allDoctors.find((d: any) => d.slug === slug);
 
     if (!currDoctor) {
         notFound();
@@ -43,11 +45,11 @@ export default async function DoctorDetailPage({
     const dept = departments.find((d: any) => d.slug === currDoctor.departmentId);
 
     // Get other doctors in the same department
-    const relatedDoctors = doctors.filter(
-        (d) => d.departmentId === currDoctor.departmentId && d.slug !== currDoctor.slug
+    const relatedDoctors = allDoctors.filter(
+        (d: any) => d.department === currDoctor.department && d.slug !== currDoctor.slug
     );
 
-    const initials = currDoctor.name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
+    const initials = currDoctor.name.split(" ").map((n: string) => n[0]).join("").slice(0, 2).toUpperCase();
 
     return (
         <div className="bg-[#FAFAFA] min-h-screen">
@@ -92,7 +94,7 @@ export default async function DoctorDetailPage({
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
                                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center">
                                     <Clock className="w-5 h-5 text-teal-400 mx-auto mb-2" />
-                                    <p className="text-2xl font-black text-white">{currDoctor.experience}+</p>
+                                    <p className="text-2xl font-black text-white">{currDoctor.years_of_experience || currDoctor.experience || 10}+</p>
                                     <p className="text-xs text-slate-400 font-medium">Years Experience</p>
                                 </div>
                                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center">
@@ -102,7 +104,7 @@ export default async function DoctorDetailPage({
                                 </div>
                                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center">
                                     <Award className="w-5 h-5 text-teal-400 mx-auto mb-2" />
-                                    <p className="text-2xl font-black text-white">{currDoctor.education.length}</p>
+                                    <p className="text-2xl font-black text-white">{Array.isArray(currDoctor.qualifications || currDoctor.education) ? (currDoctor.qualifications || currDoctor.education).length : 2}</p>
                                     <p className="text-xs text-slate-400 font-medium">Qualifications</p>
                                 </div>
                             </div>
@@ -137,21 +139,28 @@ export default async function DoctorDetailPage({
                     {/* Main Content */}
                     <div className="lg:col-span-2 space-y-10">
                         {/* Education */}
-                        <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center">
-                                    <GraduationCap className="w-5 h-5 text-teal-600" />
+                        {((currDoctor.qualifications || currDoctor.education) && (
+                            <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100">
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center">
+                                        <GraduationCap className="w-5 h-5 text-teal-600" />
+                                    </div>
+                                    <h2 className="text-xl font-black text-slate-900">Education & Qualifications</h2>
                                 </div>
-                                <h2 className="text-xl font-black text-slate-900">Education & Qualifications</h2>
+                                <div className="flex flex-wrap gap-3">
+                                    {(Array.isArray(currDoctor.qualifications || currDoctor.education)
+                                        ? (currDoctor.qualifications || currDoctor.education)
+                                        : [currDoctor.qualifications || currDoctor.education]
+                                    ).map((edu: any, i: number) => (
+                                        <span key={i} className="px-4 py-2 bg-slate-50 border border-slate-200 text-slate-700 font-semibold rounded-xl text-sm">
+                                            {typeof edu === 'object' && edu !== null
+                                                ? `${edu.degree || edu.name || ''} ${edu.institution ? `(${edu.institution})` : ''}`.trim() || JSON.stringify(edu)
+                                                : edu}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="flex flex-wrap gap-3">
-                                {currDoctor.education.map((edu, i) => (
-                                    <span key={i} className="px-4 py-2 bg-slate-50 border border-slate-200 text-slate-700 font-semibold rounded-xl text-sm">
-                                        {edu}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
+                        ))}
 
                         {/* Availability */}
                         <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100">
@@ -162,7 +171,7 @@ export default async function DoctorDetailPage({
                                 <h2 className="text-xl font-black text-slate-900">Availability Schedule</h2>
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                {currDoctor.availability.map((day, i) => (
+                                {(Array.isArray(currDoctor.availability) ? currDoctor.availability : ['Mon - Sat']).map((day: string, i: number) => (
                                     <div key={i} className="flex items-center gap-2 px-4 py-3 bg-teal-50 border border-teal-100 rounded-xl">
                                         <div className="w-2 h-2 rounded-full bg-teal-500" />
                                         <span className="text-sm font-bold text-teal-700">{day}</span>
@@ -195,15 +204,15 @@ export default async function DoctorDetailPage({
                                     <h3 className="font-bold text-slate-900">More Specialists</h3>
                                 </div>
                                 <div className="space-y-3">
-                                    {relatedDoctors.map((doc) => (
+                                    {relatedDoctors.map((doc: any) => (
                                         <Link
                                             key={doc.slug}
-                                            href={`/doctor/${doc.specialty.toLowerCase().replace(/\s+/g, '-')}/${doc.slug}`}
+                                            href={`/doctor/${(doc.department || 'specialist').toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/${doc.slug}`}
                                             className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group"
                                         >
                                             <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
                                                 <span className="text-teal-700 font-bold text-xs">
-                                                    {doc.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                                                    {doc.name.split(" ").map((n: string) => n[0]).join("").slice(0, 2)}
                                                 </span>
                                             </div>
                                             <div>
