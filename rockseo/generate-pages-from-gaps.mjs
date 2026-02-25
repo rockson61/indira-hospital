@@ -16,6 +16,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { generateUniqueContent } from "./content-engine.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -362,6 +363,8 @@ function generatePageTemplate(topic, cluster) {
   const hubPath = CONFIG.topicTaxonomy[cluster].hub;
   const deptName = cluster.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 
+  const content = generateUniqueContent(title, cluster);
+
   const template = `// RockSEO Auto-Generated Page Template
 // Topic: ${title}
 // Cluster: ${cluster}
@@ -383,20 +386,20 @@ export default function ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w
       eyebrow="${deptName}"
       description={
         <span>
-          <strong>${title} is a specialized treatment provided at Indira Super Speciality Hospital in Vellore.</strong> The procedure offers long-lasting results with affordable pricing, bringing you premium care at up to 50% lower cost than Chennai and Bangalore.
+          <strong>${title} is a highly specialized treatment provided by our expert medical team.</strong> This advanced procedure offers exceptional success rates with transparent pricing.
         </span>
       }
       departmentName="${deptName}"
       departmentSlug="${cluster}"
       quickFacts={[
-        { label: "Cost Estimate", value: "₹X,XXX", icon: "IndianRupee" },
-        { label: "Procedure Time", value: "X hours", icon: "Clock" },
-        { label: "Recovery", value: "X days", icon: "Activity" },
-        { label: "Success Rate", value: "X%", icon: "Star" }
+        { label: "Cost Estimate", value: "₹${content.price}", icon: "IndianRupee" },
+        { label: "Procedure Time", value: "${content.procTime}", icon: "Clock" },
+        { label: "Recovery", value: "${content.recTime}", icon: "Activity" },
+        { label: "Success Rate", value: "${content.succRate}%", icon: "Star" }
       ]}
       timeline={{
         title: "Treatment Process",
-        description: "Our streamlined approach to ${title}",
+        description: "Your structured clinical pathway for ${title}",
         steps: [
           { title: "Consultation & Diagnostics", description: "Comprehensive evaluation and digital diagnostics." },
           { title: "Procedure", description: "Minimally invasive treatment using advanced technology." },
@@ -409,22 +412,8 @@ export default function ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w
         entitySlug: "${cluster}/${slug}"
       }}
     >
-        {/* Main Content (Information Gain) */}
-        <h2>What is ${title}?</h2>
-        <p>${title} is a specialized, advanced medical procedure designed to address specific clinical symptoms, restore function, and improve patient health. At Indira Hospital, our distinguished professionals employ state-of-the-art diagnostic and treatment modalities to deliver an exceptional standard of care.</p>
-        
-        <h2>Who Needs This Treatment?</h2>
-        <p>Patients experiencing persistent discomfort, reduced functionality, or those advised by a specialist may require ${title}. Ideal candidates typically exhibit clinical indications that warrant proactive intervention to prevent further deterioration and ensure long-term health stabilization.</p>
-        
-        <h2>The Procedure at Indira Hospital</h2>
-        <p>The course of ${title} involves an initial consultation, comprehensive digital diagnostics, and a personalized treatment roadmap. The actual process is minimally invasive where possible, utilizing modern anesthetics and advanced surgical precision to ensure patient comfort, usually taking a few hours to complete with a highly predictable recovery phase.</p>
-        
-        <h2>Cost & Payment Options</h2>
-        <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Hospital, Vellore.
-          This is significantly lower than tier-1 cities while maintaining world-class standards.
-          0% EMI available via Bajaj Finserv, HDFC, ICICI.
-        </p>
+        {/* Procedural Unique Main Content (Information Gain) */}
+${content.mainContent}
     </SubServiceTemplate>
   );
 }

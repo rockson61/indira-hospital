@@ -2,7 +2,7 @@
 // Topic: Apicoectomy Procedure
 // Cluster: root-canal
 // Hub: /services/root-canal-treatment
-// Generated: 2026-02-25T03:34:09.101Z
+// Generated: 2026-02-25T05:28:19.369Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -19,20 +19,20 @@ export default function ApicoectomyProcedurePage() {
       eyebrow="Root Canal"
       description={
         <span>
-          <strong>Apicoectomy Procedure is a specialized treatment provided at Indira Super Speciality Hospital in Vellore.</strong> The procedure offers long-lasting results with affordable pricing, bringing you premium care at up to 50% lower cost than Chennai and Bangalore.
+          <strong>Apicoectomy Procedure is a highly specialized treatment provided by our expert medical team.</strong> This advanced procedure offers exceptional success rates with transparent pricing.
         </span>
       }
       departmentName="Root Canal"
       departmentSlug="root-canal"
       quickFacts={[
-        { label: "Cost Estimate", value: "₹X,XXX", icon: "IndianRupee" },
-        { label: "Procedure Time", value: "X hours", icon: "Clock" },
-        { label: "Recovery", value: "X days", icon: "Activity" },
-        { label: "Success Rate", value: "X%", icon: "Star" }
+        { label: "Cost Estimate", value: "₹10000", icon: "IndianRupee" },
+        { label: "Procedure Time", value: "1 hour", icon: "Clock" },
+        { label: "Recovery", value: "1 week", icon: "Activity" },
+        { label: "Success Rate", value: "95%", icon: "Star" }
       ]}
       timeline={{
         title: "Treatment Process",
-        description: "Our streamlined approach to Apicoectomy Procedure",
+        description: "Your structured clinical pathway for Apicoectomy Procedure",
         steps: [
           { title: "Consultation & Diagnostics", description: "Comprehensive evaluation and digital diagnostics." },
           { title: "Procedure", description: "Minimally invasive treatment using advanced technology." },
@@ -45,22 +45,24 @@ export default function ApicoectomyProcedurePage() {
         entitySlug: "root-canal/apicoectomy-procedure"
       }}
     >
-        {/* Main Content (Information Gain) */}
-        <h2>What is Apicoectomy Procedure?</h2>
-        <p>Apicoectomy Procedure is a specialized, advanced medical procedure designed to address specific clinical symptoms, restore function, and improve patient health. At Indira Hospital, our distinguished professionals employ state-of-the-art diagnostic and treatment modalities to deliver an exceptional standard of care.</p>
+        {/* Procedural Unique Main Content (Information Gain) */}
+
+        <h2>Understanding Apicoectomy Procedure</h2>
+        <p>Apicoectomy Procedure is a minimally invasive medical procedure designed to address undiagnosed symptoms and discomfort. At Indira Hospital, our distinguished specialists utilize precision diagnostics to ensure maximum safety and rapid recovery. By choosing our dedicated department, patients benefit from world-class healthcare tailored to their precise clinical needs.</p>
         
         <h2>Who Needs This Treatment?</h2>
-        <p>Patients experiencing persistent discomfort, reduced functionality, or those advised by a specialist may require Apicoectomy Procedure. Ideal candidates typically exhibit clinical indications that warrant proactive intervention to prevent further deterioration and ensure long-term health stabilization.</p>
+        <p>If you are experiencing warning signs such as undiagnosed symptoms, conservative therapies may not be sufficient. Apicoectomy Procedure is recommended when lifestyle modifications fail to provide relief, and diagnostic imaging confirms the necessity of a minimally invasive intervention. Early consultation can prevent complications and lead to rapid recovery.</p>
         
         <h2>The Procedure at Indira Hospital</h2>
-        <p>The course of Apicoectomy Procedure involves an initial consultation, comprehensive digital diagnostics, and a personalized treatment roadmap. The actual process is minimally invasive where possible, utilizing modern anesthetics and advanced surgical precision to ensure patient comfort, usually taking a few hours to complete with a highly predictable recovery phase.</p>
+        <p>The Apicoectomy Procedure pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages precision diagnostics for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 1 hour, drastically reducing trauma.</p>
         
-        <h2>Cost & Payment Options</h2>
-        <p>
-          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Hospital, Vellore.
-          This is significantly lower than tier-1 cities while maintaining world-class standards.
-          0% EMI available via Bajaj Finserv, HDFC, ICICI.
-        </p>
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li><strong>Expert Specialists:</strong> Decades of combined experience in complex surgeries.</li>
+            <li><strong>Advanced Infrastructure:</strong> Fully equipped ICUs and precision diagnostics.</li>
+            <li><strong>Dedicated Care:</strong> 24/7 post-operative support to ensure rapid recovery.</li>
+        </ul>
+    
     </SubServiceTemplate>
   );
 }

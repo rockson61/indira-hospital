@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-25T04:19:28.035Z",
+  "timestamp": "2026-02-25T05:28:19.346Z",
   "existingPages": [
     "(seo-pages)",
     "services",
@@ -21,114 +21,266 @@
     "international",
     "privacy-policy",
     "services",
-    "acid-reflux-gerd-management",
-    "acl-reconstruction-recovery",
-    "all-on-4-implants-guide",
-    "all-on-6-implants-guide",
-    "apicoectomy-procedure",
-    "appendix-surgery-steps",
-    "av-fistula-surgery",
-    "bleeding-gums-causes",
-    "bone-grafting-for-implants",
-    "braces-age-limit",
-    "braces-cost-in-vellore",
-    "braces-for-adults",
-    "braces-pain-management",
-    "braces-treatment-duration",
-    "breast-cancer-screening-guide",
-    "breast-lump-removal",
-    "ceramic-braces-vs-metal",
-    "chemotherapy-side-effects",
-    "chronic-kidney-disease-stages",
-    "colonoscopy-screening-cost",
-    "composite-bonding-guide",
-    "coronary-angiography-guide",
-    "crossbite-correction",
-    "deep-cleaning-scaling",
-    "dental-bonding-vs-veneers",
-    "dental-implant-failure-signs",
-    "dental-implant-pain-management",
-    "dental-implant-procedure-steps",
-    "dental-implant-recovery-time",
-    "dental-veneers-types",
-    "diabetic-nephropathy-prevention",
-    "dialysis-procedure-guide",
-    "eeg-test-procedure",
-    "endoscopy-procedure-guide",
-    "epilepsy-treatment-options",
-    "fatty-liver-treatment-diet",
-    "fracture-care-rehabilitation",
-    "gallbladder-removal-recovery",
-    "gingivitis-treatment-guide",
-    "gum-disease-prevention",
-    "gum-grafting-procedure",
-    "gum-pocket-treatment",
-    "gum-recession-treatment",
-    "gum-surgery-recovery",
-    "gummy-smile-correction",
-    "h-pylori-infection-cure",
-    "heart-angioplasty-procedure",
-    "heart-attack-warning-signs",
-    "high-risk-pregnancy-care",
-    "hip-replacement-surgery-guide",
-    "immediate-load-implants",
-    "implant-aftercare-instructions",
-    "implant-cost-in-vellore",
-    "implant-vs-bridge-comparison",
-    "implant-warranty-policy",
-    "infertility-evaluation-steps",
-    "invisalign-treatment-guide",
-    "kidney-stone-laser-surgery",
-    "kidney-stone-prevention-tips",
-    "laparoscopic-hernia-repair",
-    "laparoscopic-hysterectomy-guide",
-    "laser-gum-treatment",
-    "laser-piles-treatment-cost",
-    "laser-root-canal-benefits",
-    "male-infertility-causes",
-    "metal-braces-guide",
-    "migraine-relief-management",
-    "normal-delivery-vs-c-section",
-    "overbite-correction",
-    "pacemaker-implantation-steps",
-    "painless-delivery-epidural",
-    "palliative-care-services",
-    "pancreatitis-treatment-steps",
-    "parkinsons-disease-care",
-    "pcod-pcos-treatment-guide",
-    "periodontitis-stages",
-    "preventive-heart-checkup",
-    "prostate-turp-surgery",
-    "re-root-canal-treatment",
-    "retainer-after-braces",
-    "root-canal-aftercare",
-    "root-canal-cost-breakdown",
-    "root-canal-crown-needed",
-    "root-canal-during-pregnancy",
-    "root-canal-failure-symptoms",
-    "root-canal-for-children",
-    "root-canal-pain-during-treatment",
-    "root-canal-vs-extraction",
-    "single-sitting-root-canal",
-    "single-tooth-implant-cost",
-    "sinus-lift-before-implants",
-    "smile-makeover-process",
-    "spine-surgery-disc-prolapse",
-    "stroke-recovery-exercises",
-    "surgical-oncology-overview",
-    "teeth-contouring-reshaping",
-    "teeth-gaps-treatment",
-    "teeth-whitening-guide",
-    "thyroid-surgery-guide",
-    "total-knee-replacement-cost",
-    "underbite-treatment",
-    "urinary-tract-infection-treatment",
-    "varicose-veins-laser-treatment",
-    "zirconia-vs-titanium-implants",
     "technology",
     "terms"
   ],
   "missingTopics": [
+    {
+      "topic": "single tooth implant cost",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "all-on-4 implants guide",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "all-on-6 implants guide",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "dental implant procedure steps",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "dental implant recovery time",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "dental implant failure signs",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "bone grafting for implants",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "sinus lift before implants",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "immediate load implants",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "implant vs bridge comparison",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "implant aftercare instructions",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "dental implant pain management",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "zirconia vs titanium implants",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "implant cost in vellore",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "implant warranty policy",
+      "cluster": "dental-implants"
+    },
+    {
+      "topic": "single sitting root canal",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal pain during treatment",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal vs extraction",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal aftercare",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal crown needed",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal cost breakdown",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal failure symptoms",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "re-root canal treatment",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "apicoectomy procedure",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal during pregnancy",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "root canal for children",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "laser root canal benefits",
+      "cluster": "root-canal"
+    },
+    {
+      "topic": "metal braces guide",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "ceramic braces vs metal",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "invisalign treatment guide",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "braces for adults",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "braces age limit",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "braces cost in vellore",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "braces treatment duration",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "braces pain management",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "retainer after braces",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "overbite correction",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "underbite treatment",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "crossbite correction",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "teeth gaps treatment",
+      "cluster": "orthodontics"
+    },
+    {
+      "topic": "gingivitis treatment guide",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "periodontitis stages",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "deep cleaning scaling",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "laser gum treatment",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "gum grafting procedure",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "gum recession treatment",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "gum pocket treatment",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "bleeding gums causes",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "gum disease prevention",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "gum surgery recovery",
+      "cluster": "gum-treatment"
+    },
+    {
+      "topic": "teeth whitening guide",
+      "cluster": "cosmetic-dentistry"
+    },
+    {
+      "topic": "dental veneers types",
+      "cluster": "cosmetic-dentistry"
+    },
+    {
+      "topic": "smile makeover process",
+      "cluster": "cosmetic-dentistry"
+    },
+    {
+      "topic": "composite bonding guide",
+      "cluster": "cosmetic-dentistry"
+    },
+    {
+      "topic": "gummy smile correction",
+      "cluster": "cosmetic-dentistry"
+    },
+    {
+      "topic": "teeth contouring reshaping",
+      "cluster": "cosmetic-dentistry"
+    },
+    {
+      "topic": "dental bonding vs veneers",
+      "cluster": "cosmetic-dentistry"
+    },
+    {
+      "topic": "laser piles treatment cost",
+      "cluster": "general-surgery"
+    },
+    {
+      "topic": "laparoscopic hernia repair",
+      "cluster": "general-surgery"
+    },
+    {
+      "topic": "thyroid surgery guide",
+      "cluster": "general-surgery"
+    },
+    {
+      "topic": "varicose veins laser treatment",
+      "cluster": "general-surgery"
+    },
+    {
+      "topic": "gallbladder removal recovery",
+      "cluster": "general-surgery"
+    },
+    {
+      "topic": "appendix surgery steps",
+      "cluster": "general-surgery"
+    },
+    {
+      "topic": "breast lump removal",
+      "cluster": "general-surgery"
+    },
     {
       "topic": "fistula laser treatment",
       "cluster": "general-surgery"
@@ -160,6 +312,30 @@
     {
       "topic": "hydrocele surgery cost",
       "cluster": "general-surgery"
+    },
+    {
+      "topic": "endoscopy procedure guide",
+      "cluster": "gastroenterology"
+    },
+    {
+      "topic": "colonoscopy screening cost",
+      "cluster": "gastroenterology"
+    },
+    {
+      "topic": "fatty liver treatment diet",
+      "cluster": "gastroenterology"
+    },
+    {
+      "topic": "acid reflux Gerd management",
+      "cluster": "gastroenterology"
+    },
+    {
+      "topic": "pancreatitis treatment steps",
+      "cluster": "gastroenterology"
+    },
+    {
+      "topic": "h-pylori infection cure",
+      "cluster": "gastroenterology"
     },
     {
       "topic": "peptic ulcer disease treatment",
@@ -196,6 +372,26 @@
     {
       "topic": "upper GI endoscopy prep",
       "cluster": "gastroenterology"
+    },
+    {
+      "topic": "kidney stone laser surgery",
+      "cluster": "urology"
+    },
+    {
+      "topic": "prostate TURP surgery",
+      "cluster": "urology"
+    },
+    {
+      "topic": "urinary tract infection treatment",
+      "cluster": "urology"
+    },
+    {
+      "topic": "male infertility causes",
+      "cluster": "urology"
+    },
+    {
+      "topic": "kidney stone prevention tips",
+      "cluster": "urology"
     },
     {
       "topic": "bladder cancer treatment options",
@@ -238,6 +434,30 @@
       "cluster": "urology"
     },
     {
+      "topic": "normal delivery vs c-section",
+      "cluster": "obstetrics-gynaecology"
+    },
+    {
+      "topic": "high risk pregnancy care",
+      "cluster": "obstetrics-gynaecology"
+    },
+    {
+      "topic": "pcod pcos treatment guide",
+      "cluster": "obstetrics-gynaecology"
+    },
+    {
+      "topic": "painless delivery epidural",
+      "cluster": "obstetrics-gynaecology"
+    },
+    {
+      "topic": "laparoscopic hysterectomy guide",
+      "cluster": "obstetrics-gynaecology"
+    },
+    {
+      "topic": "infertility evaluation steps",
+      "cluster": "obstetrics-gynaecology"
+    },
+    {
       "topic": "fibroid removal surgery",
       "cluster": "obstetrics-gynaecology"
     },
@@ -272,6 +492,26 @@
     {
       "topic": "colposcopy procedure details",
       "cluster": "obstetrics-gynaecology"
+    },
+    {
+      "topic": "total knee replacement cost",
+      "cluster": "orthopaedics"
+    },
+    {
+      "topic": "acl reconstruction recovery",
+      "cluster": "orthopaedics"
+    },
+    {
+      "topic": "hip replacement surgery guide",
+      "cluster": "orthopaedics"
+    },
+    {
+      "topic": "spine surgery disc prolapse",
+      "cluster": "orthopaedics"
+    },
+    {
+      "topic": "fracture care rehabilitation",
+      "cluster": "orthopaedics"
     },
     {
       "topic": "shoulder arthroscopy guide",
@@ -314,6 +554,26 @@
       "cluster": "orthopaedics"
     },
     {
+      "topic": "heart angioplasty procedure",
+      "cluster": "cardiology"
+    },
+    {
+      "topic": "coronary angiography guide",
+      "cluster": "cardiology"
+    },
+    {
+      "topic": "pacemaker implantation steps",
+      "cluster": "cardiology"
+    },
+    {
+      "topic": "heart attack warning signs",
+      "cluster": "cardiology"
+    },
+    {
+      "topic": "preventive heart checkup",
+      "cluster": "cardiology"
+    },
+    {
       "topic": "bypass surgery CABG",
       "cluster": "cardiology"
     },
@@ -354,6 +614,26 @@
       "cluster": "cardiology"
     },
     {
+      "topic": "stroke recovery exercises",
+      "cluster": "neurology"
+    },
+    {
+      "topic": "epilepsy treatment options",
+      "cluster": "neurology"
+    },
+    {
+      "topic": "migraine relief management",
+      "cluster": "neurology"
+    },
+    {
+      "topic": "parkinsons disease care",
+      "cluster": "neurology"
+    },
+    {
+      "topic": "eeg test procedure",
+      "cluster": "neurology"
+    },
+    {
       "topic": "alzheimers dementia care",
       "cluster": "neurology"
     },
@@ -392,6 +672,22 @@
     {
       "topic": "ncs emg test guide",
       "cluster": "neurology"
+    },
+    {
+      "topic": "chemotherapy side effects",
+      "cluster": "oncology"
+    },
+    {
+      "topic": "breast cancer screening guide",
+      "cluster": "oncology"
+    },
+    {
+      "topic": "surgical oncology overview",
+      "cluster": "oncology"
+    },
+    {
+      "topic": "palliative care services",
+      "cluster": "oncology"
     },
     {
       "topic": "radiation therapy guide",
@@ -436,6 +732,22 @@
     {
       "topic": "cancer pain management",
       "cluster": "oncology"
+    },
+    {
+      "topic": "dialysis procedure guide",
+      "cluster": "nephrology"
+    },
+    {
+      "topic": "chronic kidney disease stages",
+      "cluster": "nephrology"
+    },
+    {
+      "topic": "diabetic nephropathy prevention",
+      "cluster": "nephrology"
+    },
+    {
+      "topic": "av fistula surgery",
+      "cluster": "nephrology"
     },
     {
       "topic": "kidney biopsy procedure",
@@ -484,6 +796,390 @@
   ],
   "generatedPages": [
     {
+      "topic": "Single Tooth Implant Cost",
+      "slug": "single-tooth-implant-cost",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/single-tooth-implant-cost.tsx"
+    },
+    {
+      "topic": "All-on-4 Implants Guide",
+      "slug": "all-on-4-implants-guide",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/all-on-4-implants-guide.tsx"
+    },
+    {
+      "topic": "All-on-6 Implants Guide",
+      "slug": "all-on-6-implants-guide",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/all-on-6-implants-guide.tsx"
+    },
+    {
+      "topic": "Dental Implant Procedure Steps",
+      "slug": "dental-implant-procedure-steps",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/dental-implant-procedure-steps.tsx"
+    },
+    {
+      "topic": "Dental Implant Recovery Time",
+      "slug": "dental-implant-recovery-time",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/dental-implant-recovery-time.tsx"
+    },
+    {
+      "topic": "Dental Implant Failure Signs",
+      "slug": "dental-implant-failure-signs",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/dental-implant-failure-signs.tsx"
+    },
+    {
+      "topic": "Bone Grafting For Implants",
+      "slug": "bone-grafting-for-implants",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/bone-grafting-for-implants.tsx"
+    },
+    {
+      "topic": "Sinus Lift Before Implants",
+      "slug": "sinus-lift-before-implants",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/sinus-lift-before-implants.tsx"
+    },
+    {
+      "topic": "Immediate Load Implants",
+      "slug": "immediate-load-implants",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/immediate-load-implants.tsx"
+    },
+    {
+      "topic": "Implant Vs Bridge Comparison",
+      "slug": "implant-vs-bridge-comparison",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/implant-vs-bridge-comparison.tsx"
+    },
+    {
+      "topic": "Implant Aftercare Instructions",
+      "slug": "implant-aftercare-instructions",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/implant-aftercare-instructions.tsx"
+    },
+    {
+      "topic": "Dental Implant Pain Management",
+      "slug": "dental-implant-pain-management",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/dental-implant-pain-management.tsx"
+    },
+    {
+      "topic": "Zirconia Vs Titanium Implants",
+      "slug": "zirconia-vs-titanium-implants",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/zirconia-vs-titanium-implants.tsx"
+    },
+    {
+      "topic": "Implant Cost In Vellore",
+      "slug": "implant-cost-in-vellore",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/implant-cost-in-vellore.tsx"
+    },
+    {
+      "topic": "Implant Warranty Policy",
+      "slug": "implant-warranty-policy",
+      "cluster": "dental-implants",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/implant-warranty-policy.tsx"
+    },
+    {
+      "topic": "Single Sitting Root Canal",
+      "slug": "single-sitting-root-canal",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/single-sitting-root-canal.tsx"
+    },
+    {
+      "topic": "Root Canal Pain During Treatment",
+      "slug": "root-canal-pain-during-treatment",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-pain-during-treatment.tsx"
+    },
+    {
+      "topic": "Root Canal Vs Extraction",
+      "slug": "root-canal-vs-extraction",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-vs-extraction.tsx"
+    },
+    {
+      "topic": "Root Canal Aftercare",
+      "slug": "root-canal-aftercare",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-aftercare.tsx"
+    },
+    {
+      "topic": "Root Canal Crown Needed",
+      "slug": "root-canal-crown-needed",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-crown-needed.tsx"
+    },
+    {
+      "topic": "Root Canal Cost Breakdown",
+      "slug": "root-canal-cost-breakdown",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-cost-breakdown.tsx"
+    },
+    {
+      "topic": "Root Canal Failure Symptoms",
+      "slug": "root-canal-failure-symptoms",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-failure-symptoms.tsx"
+    },
+    {
+      "topic": "Re-root Canal Treatment",
+      "slug": "re-root-canal-treatment",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/re-root-canal-treatment.tsx"
+    },
+    {
+      "topic": "Apicoectomy Procedure",
+      "slug": "apicoectomy-procedure",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/apicoectomy-procedure.tsx"
+    },
+    {
+      "topic": "Root Canal During Pregnancy",
+      "slug": "root-canal-during-pregnancy",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-during-pregnancy.tsx"
+    },
+    {
+      "topic": "Root Canal For Children",
+      "slug": "root-canal-for-children",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/root-canal-for-children.tsx"
+    },
+    {
+      "topic": "Laser Root Canal Benefits",
+      "slug": "laser-root-canal-benefits",
+      "cluster": "root-canal",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/laser-root-canal-benefits.tsx"
+    },
+    {
+      "topic": "Metal Braces Guide",
+      "slug": "metal-braces-guide",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/metal-braces-guide.tsx"
+    },
+    {
+      "topic": "Ceramic Braces Vs Metal",
+      "slug": "ceramic-braces-vs-metal",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/ceramic-braces-vs-metal.tsx"
+    },
+    {
+      "topic": "Invisalign Treatment Guide",
+      "slug": "invisalign-treatment-guide",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/invisalign-treatment-guide.tsx"
+    },
+    {
+      "topic": "Braces For Adults",
+      "slug": "braces-for-adults",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/braces-for-adults.tsx"
+    },
+    {
+      "topic": "Braces Age Limit",
+      "slug": "braces-age-limit",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/braces-age-limit.tsx"
+    },
+    {
+      "topic": "Braces Cost In Vellore",
+      "slug": "braces-cost-in-vellore",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/braces-cost-in-vellore.tsx"
+    },
+    {
+      "topic": "Braces Treatment Duration",
+      "slug": "braces-treatment-duration",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/braces-treatment-duration.tsx"
+    },
+    {
+      "topic": "Braces Pain Management",
+      "slug": "braces-pain-management",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/braces-pain-management.tsx"
+    },
+    {
+      "topic": "Retainer After Braces",
+      "slug": "retainer-after-braces",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/retainer-after-braces.tsx"
+    },
+    {
+      "topic": "Overbite Correction",
+      "slug": "overbite-correction",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/overbite-correction.tsx"
+    },
+    {
+      "topic": "Underbite Treatment",
+      "slug": "underbite-treatment",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/underbite-treatment.tsx"
+    },
+    {
+      "topic": "Crossbite Correction",
+      "slug": "crossbite-correction",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/crossbite-correction.tsx"
+    },
+    {
+      "topic": "Teeth Gaps Treatment",
+      "slug": "teeth-gaps-treatment",
+      "cluster": "orthodontics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/teeth-gaps-treatment.tsx"
+    },
+    {
+      "topic": "Gingivitis Treatment Guide",
+      "slug": "gingivitis-treatment-guide",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gingivitis-treatment-guide.tsx"
+    },
+    {
+      "topic": "Periodontitis Stages",
+      "slug": "periodontitis-stages",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/periodontitis-stages.tsx"
+    },
+    {
+      "topic": "Deep Cleaning Scaling",
+      "slug": "deep-cleaning-scaling",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/deep-cleaning-scaling.tsx"
+    },
+    {
+      "topic": "Laser Gum Treatment",
+      "slug": "laser-gum-treatment",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/laser-gum-treatment.tsx"
+    },
+    {
+      "topic": "Gum Grafting Procedure",
+      "slug": "gum-grafting-procedure",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gum-grafting-procedure.tsx"
+    },
+    {
+      "topic": "Gum Recession Treatment",
+      "slug": "gum-recession-treatment",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gum-recession-treatment.tsx"
+    },
+    {
+      "topic": "Gum Pocket Treatment",
+      "slug": "gum-pocket-treatment",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gum-pocket-treatment.tsx"
+    },
+    {
+      "topic": "Bleeding Gums Causes",
+      "slug": "bleeding-gums-causes",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/bleeding-gums-causes.tsx"
+    },
+    {
+      "topic": "Gum Disease Prevention",
+      "slug": "gum-disease-prevention",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gum-disease-prevention.tsx"
+    },
+    {
+      "topic": "Gum Surgery Recovery",
+      "slug": "gum-surgery-recovery",
+      "cluster": "gum-treatment",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gum-surgery-recovery.tsx"
+    },
+    {
+      "topic": "Teeth Whitening Guide",
+      "slug": "teeth-whitening-guide",
+      "cluster": "cosmetic-dentistry",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/teeth-whitening-guide.tsx"
+    },
+    {
+      "topic": "Dental Veneers Types",
+      "slug": "dental-veneers-types",
+      "cluster": "cosmetic-dentistry",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/dental-veneers-types.tsx"
+    },
+    {
+      "topic": "Smile Makeover Process",
+      "slug": "smile-makeover-process",
+      "cluster": "cosmetic-dentistry",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/smile-makeover-process.tsx"
+    },
+    {
+      "topic": "Composite Bonding Guide",
+      "slug": "composite-bonding-guide",
+      "cluster": "cosmetic-dentistry",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/composite-bonding-guide.tsx"
+    },
+    {
+      "topic": "Gummy Smile Correction",
+      "slug": "gummy-smile-correction",
+      "cluster": "cosmetic-dentistry",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gummy-smile-correction.tsx"
+    },
+    {
+      "topic": "Teeth Contouring Reshaping",
+      "slug": "teeth-contouring-reshaping",
+      "cluster": "cosmetic-dentistry",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/teeth-contouring-reshaping.tsx"
+    },
+    {
+      "topic": "Dental Bonding Vs Veneers",
+      "slug": "dental-bonding-vs-veneers",
+      "cluster": "cosmetic-dentistry",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/dental-bonding-vs-veneers.tsx"
+    },
+    {
+      "topic": "Laser Piles Treatment Cost",
+      "slug": "laser-piles-treatment-cost",
+      "cluster": "general-surgery",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/laser-piles-treatment-cost.tsx"
+    },
+    {
+      "topic": "Laparoscopic Hernia Repair",
+      "slug": "laparoscopic-hernia-repair",
+      "cluster": "general-surgery",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/laparoscopic-hernia-repair.tsx"
+    },
+    {
+      "topic": "Thyroid Surgery Guide",
+      "slug": "thyroid-surgery-guide",
+      "cluster": "general-surgery",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/thyroid-surgery-guide.tsx"
+    },
+    {
+      "topic": "Varicose Veins Laser Treatment",
+      "slug": "varicose-veins-laser-treatment",
+      "cluster": "general-surgery",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/varicose-veins-laser-treatment.tsx"
+    },
+    {
+      "topic": "Gallbladder Removal Recovery",
+      "slug": "gallbladder-removal-recovery",
+      "cluster": "general-surgery",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/gallbladder-removal-recovery.tsx"
+    },
+    {
+      "topic": "Appendix Surgery Steps",
+      "slug": "appendix-surgery-steps",
+      "cluster": "general-surgery",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/appendix-surgery-steps.tsx"
+    },
+    {
+      "topic": "Breast Lump Removal",
+      "slug": "breast-lump-removal",
+      "cluster": "general-surgery",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/breast-lump-removal.tsx"
+    },
+    {
       "topic": "Fistula Laser Treatment",
       "slug": "fistula-laser-treatment",
       "cluster": "general-surgery",
@@ -530,6 +1226,42 @@
       "slug": "hydrocele-surgery-cost",
       "cluster": "general-surgery",
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/hydrocele-surgery-cost.tsx"
+    },
+    {
+      "topic": "Endoscopy Procedure Guide",
+      "slug": "endoscopy-procedure-guide",
+      "cluster": "gastroenterology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/endoscopy-procedure-guide.tsx"
+    },
+    {
+      "topic": "Colonoscopy Screening Cost",
+      "slug": "colonoscopy-screening-cost",
+      "cluster": "gastroenterology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/colonoscopy-screening-cost.tsx"
+    },
+    {
+      "topic": "Fatty Liver Treatment Diet",
+      "slug": "fatty-liver-treatment-diet",
+      "cluster": "gastroenterology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/fatty-liver-treatment-diet.tsx"
+    },
+    {
+      "topic": "Acid Reflux Gerd Management",
+      "slug": "acid-reflux-gerd-management",
+      "cluster": "gastroenterology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/acid-reflux-gerd-management.tsx"
+    },
+    {
+      "topic": "Pancreatitis Treatment Steps",
+      "slug": "pancreatitis-treatment-steps",
+      "cluster": "gastroenterology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/pancreatitis-treatment-steps.tsx"
+    },
+    {
+      "topic": "H-pylori Infection Cure",
+      "slug": "h-pylori-infection-cure",
+      "cluster": "gastroenterology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/h-pylori-infection-cure.tsx"
     },
     {
       "topic": "Peptic Ulcer Disease Treatment",
@@ -584,6 +1316,36 @@
       "slug": "upper-gi-endoscopy-prep",
       "cluster": "gastroenterology",
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/upper-gi-endoscopy-prep.tsx"
+    },
+    {
+      "topic": "Kidney Stone Laser Surgery",
+      "slug": "kidney-stone-laser-surgery",
+      "cluster": "urology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/kidney-stone-laser-surgery.tsx"
+    },
+    {
+      "topic": "Prostate TURP Surgery",
+      "slug": "prostate-turp-surgery",
+      "cluster": "urology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/prostate-turp-surgery.tsx"
+    },
+    {
+      "topic": "Urinary Tract Infection Treatment",
+      "slug": "urinary-tract-infection-treatment",
+      "cluster": "urology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/urinary-tract-infection-treatment.tsx"
+    },
+    {
+      "topic": "Male Infertility Causes",
+      "slug": "male-infertility-causes",
+      "cluster": "urology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/male-infertility-causes.tsx"
+    },
+    {
+      "topic": "Kidney Stone Prevention Tips",
+      "slug": "kidney-stone-prevention-tips",
+      "cluster": "urology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/kidney-stone-prevention-tips.tsx"
     },
     {
       "topic": "Bladder Cancer Treatment Options",
@@ -646,6 +1408,42 @@
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/phimosis-treatment-options.tsx"
     },
     {
+      "topic": "Normal Delivery Vs C-section",
+      "slug": "normal-delivery-vs-c-section",
+      "cluster": "obstetrics-gynaecology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/normal-delivery-vs-c-section.tsx"
+    },
+    {
+      "topic": "High Risk Pregnancy Care",
+      "slug": "high-risk-pregnancy-care",
+      "cluster": "obstetrics-gynaecology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/high-risk-pregnancy-care.tsx"
+    },
+    {
+      "topic": "Pcod Pcos Treatment Guide",
+      "slug": "pcod-pcos-treatment-guide",
+      "cluster": "obstetrics-gynaecology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/pcod-pcos-treatment-guide.tsx"
+    },
+    {
+      "topic": "Painless Delivery Epidural",
+      "slug": "painless-delivery-epidural",
+      "cluster": "obstetrics-gynaecology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/painless-delivery-epidural.tsx"
+    },
+    {
+      "topic": "Laparoscopic Hysterectomy Guide",
+      "slug": "laparoscopic-hysterectomy-guide",
+      "cluster": "obstetrics-gynaecology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/laparoscopic-hysterectomy-guide.tsx"
+    },
+    {
+      "topic": "Infertility Evaluation Steps",
+      "slug": "infertility-evaluation-steps",
+      "cluster": "obstetrics-gynaecology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/infertility-evaluation-steps.tsx"
+    },
+    {
       "topic": "Fibroid Removal Surgery",
       "slug": "fibroid-removal-surgery",
       "cluster": "obstetrics-gynaecology",
@@ -698,6 +1496,36 @@
       "slug": "colposcopy-procedure-details",
       "cluster": "obstetrics-gynaecology",
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/colposcopy-procedure-details.tsx"
+    },
+    {
+      "topic": "Total Knee Replacement Cost",
+      "slug": "total-knee-replacement-cost",
+      "cluster": "orthopaedics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/total-knee-replacement-cost.tsx"
+    },
+    {
+      "topic": "Acl Reconstruction Recovery",
+      "slug": "acl-reconstruction-recovery",
+      "cluster": "orthopaedics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/acl-reconstruction-recovery.tsx"
+    },
+    {
+      "topic": "Hip Replacement Surgery Guide",
+      "slug": "hip-replacement-surgery-guide",
+      "cluster": "orthopaedics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/hip-replacement-surgery-guide.tsx"
+    },
+    {
+      "topic": "Spine Surgery Disc Prolapse",
+      "slug": "spine-surgery-disc-prolapse",
+      "cluster": "orthopaedics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/spine-surgery-disc-prolapse.tsx"
+    },
+    {
+      "topic": "Fracture Care Rehabilitation",
+      "slug": "fracture-care-rehabilitation",
+      "cluster": "orthopaedics",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/fracture-care-rehabilitation.tsx"
     },
     {
       "topic": "Shoulder Arthroscopy Guide",
@@ -760,6 +1588,36 @@
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/trigger-finger-release.tsx"
     },
     {
+      "topic": "Heart Angioplasty Procedure",
+      "slug": "heart-angioplasty-procedure",
+      "cluster": "cardiology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/heart-angioplasty-procedure.tsx"
+    },
+    {
+      "topic": "Coronary Angiography Guide",
+      "slug": "coronary-angiography-guide",
+      "cluster": "cardiology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/coronary-angiography-guide.tsx"
+    },
+    {
+      "topic": "Pacemaker Implantation Steps",
+      "slug": "pacemaker-implantation-steps",
+      "cluster": "cardiology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/pacemaker-implantation-steps.tsx"
+    },
+    {
+      "topic": "Heart Attack Warning Signs",
+      "slug": "heart-attack-warning-signs",
+      "cluster": "cardiology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/heart-attack-warning-signs.tsx"
+    },
+    {
+      "topic": "Preventive Heart Checkup",
+      "slug": "preventive-heart-checkup",
+      "cluster": "cardiology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/preventive-heart-checkup.tsx"
+    },
+    {
       "topic": "Bypass Surgery CABG",
       "slug": "bypass-surgery-cabg",
       "cluster": "cardiology",
@@ -820,6 +1678,36 @@
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/holter-monitor-test.tsx"
     },
     {
+      "topic": "Stroke Recovery Exercises",
+      "slug": "stroke-recovery-exercises",
+      "cluster": "neurology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/stroke-recovery-exercises.tsx"
+    },
+    {
+      "topic": "Epilepsy Treatment Options",
+      "slug": "epilepsy-treatment-options",
+      "cluster": "neurology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/epilepsy-treatment-options.tsx"
+    },
+    {
+      "topic": "Migraine Relief Management",
+      "slug": "migraine-relief-management",
+      "cluster": "neurology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/migraine-relief-management.tsx"
+    },
+    {
+      "topic": "Parkinsons Disease Care",
+      "slug": "parkinsons-disease-care",
+      "cluster": "neurology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/parkinsons-disease-care.tsx"
+    },
+    {
+      "topic": "Eeg Test Procedure",
+      "slug": "eeg-test-procedure",
+      "cluster": "neurology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/eeg-test-procedure.tsx"
+    },
+    {
       "topic": "Alzheimers Dementia Care",
       "slug": "alzheimers-dementia-care",
       "cluster": "neurology",
@@ -878,6 +1766,30 @@
       "slug": "ncs-emg-test-guide",
       "cluster": "neurology",
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/ncs-emg-test-guide.tsx"
+    },
+    {
+      "topic": "Chemotherapy Side Effects",
+      "slug": "chemotherapy-side-effects",
+      "cluster": "oncology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/chemotherapy-side-effects.tsx"
+    },
+    {
+      "topic": "Breast Cancer Screening Guide",
+      "slug": "breast-cancer-screening-guide",
+      "cluster": "oncology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/breast-cancer-screening-guide.tsx"
+    },
+    {
+      "topic": "Surgical Oncology Overview",
+      "slug": "surgical-oncology-overview",
+      "cluster": "oncology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/surgical-oncology-overview.tsx"
+    },
+    {
+      "topic": "Palliative Care Services",
+      "slug": "palliative-care-services",
+      "cluster": "oncology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/palliative-care-services.tsx"
     },
     {
       "topic": "Radiation Therapy Guide",
@@ -944,6 +1856,30 @@
       "slug": "cancer-pain-management",
       "cluster": "oncology",
       "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/cancer-pain-management.tsx"
+    },
+    {
+      "topic": "Dialysis Procedure Guide",
+      "slug": "dialysis-procedure-guide",
+      "cluster": "nephrology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/dialysis-procedure-guide.tsx"
+    },
+    {
+      "topic": "Chronic Kidney Disease Stages",
+      "slug": "chronic-kidney-disease-stages",
+      "cluster": "nephrology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/chronic-kidney-disease-stages.tsx"
+    },
+    {
+      "topic": "Diabetic Nephropathy Prevention",
+      "slug": "diabetic-nephropathy-prevention",
+      "cluster": "nephrology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/diabetic-nephropathy-prevention.tsx"
+    },
+    {
+      "topic": "Av Fistula Surgery",
+      "slug": "av-fistula-surgery",
+      "cluster": "nephrology",
+      "path": "/Users/rockson61/Downloads/Indira Hospital/rockseo/generated-pages/av-fistula-surgery.tsx"
     },
     {
       "topic": "Kidney Biopsy Procedure",

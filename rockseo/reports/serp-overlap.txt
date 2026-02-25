@@ -1,0 +1,163 @@
+SERP OVERLAP REPORT - 2026-02-25T05:28:33.693Z
+==================================================
+
+Pages Analyzed: 282
+High Overlaps: 32
+Medium Overlaps: 757
+
+⚠️ HIGH PRIORITY OVERLAPS (Cannibalization Risk)
+--------------------------------------------------
+
+/services/braces-cost-in-vellore ↔ /services/braces-pain-management
+  Similarity: 77% | Topic: orthodontics
+  Action: MERGE - Near-identical titles - combine into single comprehensive page
+
+/services/braces-cost-in-vellore ↔ /services/metal-braces-guide
+  Similarity: 77% | Topic: orthodontics
+  Action: MERGE - Near-identical titles - combine into single comprehensive page
+
+/services/braces-cost-in-vellore ↔ /services/teeth-gaps-treatment
+  Similarity: 71% | Topic: orthodontics
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/braces-for-adults ↔ /services/braces-treatment-duration
+  Similarity: 71% | Topic: orthodontics
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/braces-pain-management ↔ /services/metal-braces-guide
+  Similarity: 71% | Topic: orthodontics
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/carpal-tunnel-release ↔ /services/trigger-finger-release
+  Similarity: 71% | Topic: emergency-dentistry
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/cervical-cancer-vaccines ↔ /services/targeted-therapy-for-cancer
+  Similarity: 70% | Topic: emergency-dentistry
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/colposcopy-procedure-details ↔ /services/tubal-ligation-procedure
+  Similarity: 71% | Topic: emergency-dentistry
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/composite-bonding-guide ↔ /services/dental-bonding-vs-veneers
+  Similarity: 73% | Topic: cosmetic-dentistry
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/dental-bonding-vs-veneers ↔ /services/dental-veneers-types
+  Similarity: 76% | Topic: cosmetic-dentistry
+  Action: MERGE - Near-identical titles - combine into single comprehensive page
+
+/services/dental-implant-failure-signs ↔ /services/dental-implant-recovery-time
+  Similarity: 71% | Topic: dental-implants
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/dental-implant-pain-management ↔ /services/dental-implant-procedure-steps
+  Similarity: 71% | Topic: dental-implants
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/gum-pocket-treatment ↔ /services/laser-gum-treatment
+  Similarity: 74% | Topic: gum-disease
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/laser-root-canal-benefits ↔ /services/root-canal-cost-breakdown
+  Similarity: 72% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/re-root-canal-treatment ↔ /services/root-canal-for-children
+  Similarity: 71% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-aftercare ↔ /services/root-canal-crown-needed
+  Similarity: 73% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-aftercare ↔ /services/root-canal-during-pregnancy
+  Similarity: 72% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-aftercare ↔ /services/root-canal-failure-symptoms
+  Similarity: 70% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-aftercare ↔ /services/root-canal-vs-extraction
+  Similarity: 74% | Topic: root-canal
+  Action: MERGE - Near-identical titles - combine into single comprehensive page
+
+/services/root-canal-aftercare ↔ /services/single-sitting-root-canal
+  Similarity: 70% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-crown-needed ↔ /services/root-canal-during-pregnancy
+  Similarity: 72% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-crown-needed ↔ /services/root-canal-failure-symptoms
+  Similarity: 71% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-crown-needed ↔ /services/root-canal-vs-extraction
+  Similarity: 71% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-crown-needed ↔ /services/single-sitting-root-canal
+  Similarity: 71% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-during-pregnancy ↔ /services/root-canal-failure-symptoms
+  Similarity: 71% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-during-pregnancy ↔ /services/root-canal-vs-extraction
+  Similarity: 71% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-during-pregnancy ↔ /services/single-sitting-root-canal
+  Similarity: 70% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-failure-symptoms ↔ /services/root-canal-vs-extraction
+  Similarity: 74% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-failure-symptoms ↔ /services/single-sitting-root-canal
+  Similarity: 75% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/root-canal-vs-extraction ↔ /services/single-sitting-root-canal
+  Similarity: 74% | Topic: root-canal
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/shoulder-arthroscopy-guide ↔ /services/total-shoulder-replacement
+  Similarity: 71% | Topic: emergency-dentistry
+  Action: DIFFERENTIATE - Same topic, high content overlap - add unique angles
+
+/services/thyroid-surgery-guide ↔ /services/varicocele-surgery-guide
+  Similarity: 74% | Topic: emergency-dentistry
+  Action: MERGE - Near-identical titles - combine into single comprehensive page
+
+
+⚡ MEDIUM PRIORITY OVERLAPS
+--------------------------------------------------
+
+/doctor/near-me/treat/cardiology/heart-angioplasty-procedure ↔ /doctor/near-me/treat/general-surgery/laser-piles-treatment-cost (52%)
+/doctor/near-me/treat/gastroenterology/colonoscopy-screening-cost ↔ /services/colonoscopy-screening-cost (53%)
+/doctor/near-me/treat/general-surgery/fistula-surgery-treatment ↔ /doctor/near-me/treat/orthopaedics/arthroscopy-joint-surgery (51%)
+/doctor/near-me/treat/general-surgery/gallbladder-stone-surgery ↔ /doctor/near-me/treat/urology/kidney-stone-laser-surgery (51%)
+/doctor/near-me/treat/urology/bladder-cancer-diagnosis-treatment ↔ /doctor/near-me/treat/urology/enlarged-prostate-bph-treatment (54%)
+/doctor/near-me/treat/urology/urinary-tract-infection-treatment ↔ /doctor/near-me/treat/urology/uti-treatment-guide (57%)
+/doctor/near-me/treat/urology/urinary-tract-infection-treatment ↔ /services/urinary-tract-infection-treatment (52%)
+/doctor/near-me/treat/urology/uti-treatment-guide ↔ /services/urinary-tract-infection-treatment (58%)
+/services/acl-reconstruction-recovery ↔ /services/breast-cancer-screening-guide (62%)
+/services/acl-reconstruction-recovery ↔ /services/cancer-pain-management (64%)
+/services/acl-reconstruction-recovery ↔ /services/carpal-tunnel-release (51%)
+/services/acl-reconstruction-recovery ↔ /services/cervical-cancer-vaccines (51%)
+/services/acl-reconstruction-recovery ↔ /services/colonoscopy-screening-cost (63%)
+/services/acl-reconstruction-recovery ↔ /services/endometriosis-pain-management (50%)
+/services/acl-reconstruction-recovery ↔ /services/fracture-care-rehabilitation (50%)
+/services/acl-reconstruction-recovery ↔ /services/high-risk-pregnancy-care (61%)
+/services/acl-reconstruction-recovery ↔ /services/hip-replacement-surgery-guide (50%)
+/services/acl-reconstruction-recovery ↔ /services/immunotherapy-treatment-options (62%)
+/services/acl-reconstruction-recovery ↔ /services/joint-pain-relief-injections (52%)
+/services/acl-reconstruction-recovery ↔ /services/myomectomy-surgery-cost (50%)
+... and 737 more
