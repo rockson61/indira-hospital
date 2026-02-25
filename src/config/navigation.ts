@@ -1,7 +1,7 @@
 export const navigation = {
     mainNav: [
         { title: "Treatments", href: "/doctor/near-me/treat" },
-        { title: "Doctors", href: "/doctor/near-me" },
+        { title: "Doctors", href: "/doctors" },
         { title: "Locations", href: "/doctor/near-me" },
     ],
 

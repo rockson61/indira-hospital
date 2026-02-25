@@ -129,7 +129,7 @@ export function Header() {
                     <nav className="flex flex-col space-y-2 flex-1">
                         {navigation.mainNav.map((item) => (
                             <Link
-                                key={item.href}
+                                key={item.title}
                                 href={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={`flex items-center justify-between p-4 rounded-3xl text-lg font-bold transition-all ${pathname === item.href ? "bg-teal-50 text-teal-700" : "text-slate-800 hover:bg-slate-50"
