@@ -26,7 +26,7 @@ export const FOOTER_LINKS = {
         { name: "Chemotherapy", url: "/doctor/near-me/treat/oncology/chemotherapy-side-effects" },
         { name: "Piles/Fistula Laser", url: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
         { name: "Maxillofacial Surgery", url: "/doctor/near-me/treat/maxillofacial-surgery" },
-        { name: "Dental Implants", url: "/doctor/near-me/treat/dental-implants" },
+        { name: "Laparoscopic Surgery", url: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
         { name: "Smile Makeover", url: "/doctor/near-me/treat/smile-makeover" },
         { name: "Stroke Management", url: "/doctor/near-me/treat/neurology/stroke-recovery-exercises" }
     ],
@@ -78,7 +78,7 @@ export const FOOTER_LINKS = {
         { name: "Nephrologists", url: "/doctor/near-me" },
         { name: "Gynaecologists", url: "/doctor/near-me" },
         { name: "General Surgeons", url: "/doctor/near-me" },
-        { name: "Dentists", url: "/doctor/near-me" }
+        { name: "General Physicians", url: "/doctor/near-me" }
     ],
     patientCare: [
         { name: "International Patients", url: "/patients/international" },

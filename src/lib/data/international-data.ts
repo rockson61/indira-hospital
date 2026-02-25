@@ -27,7 +27,7 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         region: "Middle East",
         flight_duration: "4 hours (Dubai/Abu Dhabi to Chennai)",
         visa_info: "E-Medical Visa available. Fast-track processing for UAE residents.",
-        common_treatments: ["Orthopaedics", "Dental Implants", "Health Checkups"],
+        common_treatments: ["Orthopaedics", "Cardiac Diagnostics", "Health Checkups"],
         why_choose_us: "Direct flights, English-speaking staff, and high-tech surgical options."
     },
     {
@@ -63,7 +63,7 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         region: "Europe",
         flight_duration: "10 hours",
         visa_info: "E-Medical Visa. Invitation letter sent within 24 hours.",
-        common_treatments: ["Dental Implants", "Cosmetic Surgery", "Hip Replacement"],
+        common_treatments: ["Knee Replacement", "Laparoscopic Surgery", "Hip Replacement"],
         why_choose_us: "Zero waiting periods and 70% cost savings compared to private UK care."
     },
     {
@@ -105,7 +105,7 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
     // Adding more to reach top 40-50 list (Simplified for demo, will expand)
     { name: "Tanzania", slug: "tanzania", region: "Africa", flight_duration: "6 hours", visa_info: "E-Visa", common_treatments: ["General Surgery"], why_choose_us: "Cost-effective care." },
     { name: "Uganda", slug: "uganda", region: "Africa", flight_duration: "7 hours", visa_info: "Medical Visa", common_treatments: ["Diagnostics"], why_choose_us: "Advanced labs." },
-    { name: "Mauritius", slug: "mauritius", region: "Africa", flight_duration: "6 hours", visa_info: "Visa on Arrival (Confirm)", common_treatments: ["Dental"], why_choose_us: "Holiday + Healthcare." },
+    { name: "Mauritius", slug: "mauritius", region: "Africa", flight_duration: "6 hours", visa_info: "Visa on Arrival (Confirm)", common_treatments: ["General Surgery"], why_choose_us: "Holiday + Healthcare." },
     { name: "Seychelles", slug: "seychelles", region: "Africa", flight_duration: "5 hours", visa_info: "Visa Free", common_treatments: ["Health Packages"], why_choose_us: "Easy access." },
     { name: "Iraq", slug: "iraq", region: "Middle East", flight_duration: "5 hours", visa_info: "Medical Visa Only", common_treatments: ["Cardiac"], why_choose_us: "Life-saving procedures." },
     { name: "Yemen", slug: "yemen", region: "Middle East", flight_duration: "5 hours", visa_info: "Medical Visa", common_treatments: ["Trauma"], why_choose_us: "Critical care expertise." },
@@ -116,13 +116,13 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
     { name: "Vietnam", slug: "vietnam", region: "SEA", flight_duration: "4 hours", visa_info: "E-Visa", common_treatments: ["Oncology"], why_choose_us: "Advanced tech." },
     { name: "Fiji", slug: "fiji", region: "Oceania", flight_duration: "14 hours", visa_info: "Medical Visa", common_treatments: ["Kidney Care"], why_choose_us: "Tertiary expertise." },
     { name: "Canada", slug: "canada", region: "Americas", flight_duration: "15 hours", visa_info: "E-Visa", common_treatments: ["Elective Surgery"], why_choose_us: "Short waiting list." },
-    { name: "Australia", slug: "australia", region: "Oceania", flight_duration: "12 hours", visa_info: "E-Visa", common_treatments: ["Dental Implants"], why_choose_us: "Cost savings." },
+    { name: "Australia", slug: "australia", region: "Oceania", flight_duration: "12 hours", visa_info: "E-Visa", common_treatments: ["Laparoscopy"], why_choose_us: "Cost savings." },
     { name: "Germany", slug: "germany", region: "Europe", flight_duration: "9 hours", visa_info: "E-Visa", common_treatments: ["Alternative Therapy"], why_choose_us: "Holistic care." },
     { name: "France", slug: "france", region: "Europe", flight_duration: "9 hours", visa_info: "E-Visa", common_treatments: ["Cosmetic"], why_choose_us: "Premium service." },
     { name: "Saudi Arabia", slug: "saudi-arabia", region: "Middle East", flight_duration: "5 hours", visa_info: "E-Visa", common_treatments: ["Diabetes Care"], why_choose_us: "Arabic support." },
     { name: "Qatar", slug: "qatar", region: "Middle East", flight_duration: "4 hours", visa_info: "E-Visa", common_treatments: ["Surgical Packages"], why_choose_us: "Direct flights." },
     { name: "Bahrain", slug: "bahrain", region: "Middle East", flight_duration: "4 hours", visa_info: "E-Visa", common_treatments: ["Orthopaedics"], why_choose_us: "Easy logistics." },
-    { name: "Kuwait", slug: "kuwait", region: "Middle East", flight_duration: "5 hours", visa_info: "E-Visa", common_treatments: ["Dental"], why_choose_us: "High quality." },
+    { name: "Kuwait", slug: "kuwait", region: "Middle East", flight_duration: "5 hours", visa_info: "E-Visa", common_treatments: ["Nephrology"], why_choose_us: "High quality." },
     { name: "South Africa", slug: "south-africa", region: "Africa", flight_duration: "10 hours", visa_info: "Medical Visa", common_treatments: ["Complex Surgeries"], why_choose_us: "Expertise." },
     { name: "Sudan", slug: "sudan", region: "Africa", flight_duration: "6 hours", visa_info: "Medical Visa", common_treatments: ["Gastro"], why_choose_us: "Better facilities." },
     { name: "Zambia", slug: "zambia", region: "Africa", flight_duration: "8 hours", visa_info: "E-Visa", common_treatments: ["Cardiology"], why_choose_us: "Trusted doctors." },
@@ -132,15 +132,15 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
     { name: "Malawi", slug: "malawi", region: "Africa", flight_duration: "8 hours", visa_info: "E-Visa", common_treatments: ["Diagnostics"], why_choose_us: "Precision." },
     { name: "Sierra Leone", slug: "sierra-leone", region: "Africa", flight_duration: "12 hours", visa_info: "Medical Visa", common_treatments: ["Surgery"], why_choose_us: "Quality care." },
     { name: "Liberia", slug: "liberia", region: "Africa", flight_duration: "12 hours", visa_info: "Medical Visa", common_treatments: ["Urology"], why_choose_us: "Advanced tech." },
-    { name: "Singapore", slug: "singapore", region: "SEA", flight_duration: "4 hours", visa_info: "E-Visa", common_treatments: ["Dental Implants"], why_choose_us: "Value for money." },
+    { name: "Singapore", slug: "singapore", region: "SEA", flight_duration: "4 hours", visa_info: "E-Visa", common_treatments: ["Orthopaedics"], why_choose_us: "Value for money." },
     { name: "Malaysia", slug: "malaysia", region: "SEA", flight_duration: "4 hours", visa_info: "E-Visa", common_treatments: ["Cosmetic"], why_choose_us: "Cultural match." },
     { name: "Indonesia", slug: "indonesia", region: "SEA", flight_duration: "5 hours", visa_info: "E-Visa", common_treatments: ["Health Checkups"], why_choose_us: "Affordability." },
     { name: "Philippines", slug: "philippines", region: "SEA", flight_duration: "6 hours", visa_info: "E-Visa", common_treatments: ["Cardiac"], why_choose_us: "Expertise." },
     { name: "Thailand", slug: "thailand", region: "SEA", flight_duration: "4 hours", visa_info: "E-Visa", common_treatments: ["Orthopaedics"], why_choose_us: "Cost benefit." },
     { name: "Russia", slug: "russia", region: "Europe", flight_duration: "8 hours", visa_info: "Medical Visa", common_treatments: ["Oncology"], why_choose_us: "Technology." },
-    { name: "Italy", slug: "italy", region: "Europe", flight_duration: "9 hours", visa_info: "E-Visa", common_treatments: ["Dental"], why_choose_us: "Quick service." },
+    { name: "Italy", slug: "italy", region: "Europe", flight_duration: "9 hours", visa_info: "E-Visa", common_treatments: ["Cardiology"], why_choose_us: "Quick service." },
     { name: "Spain", slug: "spain", region: "Europe", flight_duration: "9 hours", visa_info: "E-Visa", common_treatments: ["Surgical"], why_choose_us: "Qualified doctors." },
-    { name: "Japan", slug: "japan", region: "East Asia", flight_duration: "9 hours", visa_info: "E-Visa", common_treatments: ["Dental Implants"], why_choose_us: "Skill level." },
+    { name: "Japan", slug: "japan", region: "East Asia", flight_duration: "9 hours", visa_info: "E-Visa", common_treatments: ["Neurology"], why_choose_us: "Skill level." },
     { name: "South Korea", slug: "south-korea", region: "East Asia", flight_duration: "8 hours", visa_info: "E-Visa", common_treatments: ["Diagnostics"], why_choose_us: "Efficiency." },
     { name: "Israel", slug: "israel", region: "Middle East", flight_duration: "6 hours", visa_info: "Medical Visa", common_treatments: ["Cancer"], why_choose_us: "Specific tech." }
 ];

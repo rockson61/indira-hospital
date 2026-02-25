@@ -83,13 +83,13 @@ export const servicesData: ServiceData[] = [
         features: ["3T MRI", "128-Slice CT", "Ultrasound", "Digital X-Ray"],
     },
     {
-        id: "dentistry",
-        title: "Maxillofacial & Dentistry",
-        description: "Specialized oral and maxillofacial surgery, implants, and orthodontics.",
+        id: "oncology",
+        title: "Medical & Surgical Oncology",
+        description: "Comprehensive cancer care including chemotherapy, targeted therapy, and complex tumor removals.",
         icon: Sparkles,
         image: "/hero-hospital.png",
-        href: "/departments/dentistry",
-        features: ["Maxillofacial Surgery", "Dental Implants", "Orthodontics", "Root Canal"],
+        href: "/departments/oncology",
+        features: ["Chemotherapy", "Surgical Oncology", "Cancer Screening", "Palliative Care"],
     }
 ];
 

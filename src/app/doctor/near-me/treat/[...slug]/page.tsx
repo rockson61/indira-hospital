@@ -55,55 +55,6 @@ const serviceProcedures: Record<string, string[]> = {
     nephrology: ["Dialysis Services", "Chronic Kidney Disease", "Kidney Stone Management", "Hypertension Treatment", "Electrolyte Disorders", "Pre-Transplant Evaluation", "Glomerulonephritis Care", "Diabetic Nephropathy"],
 };
 
-// RockSEO Guides Map (Updated to new URL structure)
-const rockseoGuides: Record<string, { title: string; url: string; description?: string }[]> = {
-    "general-surgery": [
-        { title: "Laser Piles Treatment", url: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
-        { title: "Laparoscopic Hernia Repair", url: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
-        { title: "Thyroid Surgery Guide", url: "/doctor/near-me/treat/general-surgery/thyroid-surgery-guide" },
-        { title: "Gallbladder Removal", url: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
-    ],
-    "gastroenterology": [
-        { title: "Endoscopy Procedure Guide", url: "/doctor/near-me/treat/gastroenterology/endoscopy-procedure-guide" },
-        { title: "Colonoscopy Cost", url: "/doctor/near-me/treat/gastroenterology/colonoscopy-screening-cost" },
-        { title: "Fatty Liver Treatment", url: "/doctor/near-me/treat/gastroenterology/fatty-liver-treatment-diet" },
-    ],
-    "urology": [
-        { title: "Kidney Stone Laser Surgery", url: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
-        { title: "Prostate TURP Surgery", url: "/doctor/near-me/treat/urology/prostate-turp-surgery" },
-        { title: "UTI Treatment Guide", url: "/doctor/near-me/treat/urology/urinary-tract-infection-treatment" },
-    ],
-    "obstetrics-gynaecology": [
-        { title: "Normal Delivery vs C-Section", url: "/doctor/near-me/treat/obstetrics-gynaecology/normal-delivery-vs-c-section" },
-        { title: "High Risk Pregnancy Care", url: "/doctor/near-me/treat/obstetrics-gynaecology/high-risk-pregnancy-care" },
-        { title: "PCOS/PCOD Treatment", url: "/doctor/near-me/treat/obstetrics-gynaecology/pcod-pcos-treatment-guide" },
-    ],
-    "orthopaedics": [
-        { title: "Knee Replacement Cost", url: "/doctor/near-me/treat/orthopaedics/total-knee-replacement-cost" },
-        { title: "ACL Recovery Guide", url: "/doctor/near-me/treat/orthopaedics/acl-reconstruction-recovery" },
-        { title: "Hip Replacement Surgery", url: "/doctor/near-me/treat/orthopaedics/hip-replacement-surgery-guide" },
-    ],
-    "cardiology": [
-        { title: "Heart Angioplasty Guide", url: "/doctor/near-me/treat/cardiology/heart-angioplasty-procedure" },
-        { title: "Coronary Angiography", url: "/doctor/near-me/treat/cardiology/coronary-angiography-guide" },
-        { title: "Pacemaker Implantation", url: "/doctor/near-me/treat/cardiology/pacemaker-implantation-steps" },
-    ],
-    "neurology": [
-        { title: "Stroke Recovery Exercises", url: "/doctor/near-me/treat/neurology/stroke-recovery-exercises" },
-        { title: "Epilepsy Treatment Options", url: "/doctor/near-me/treat/neurology/epilepsy-treatment-options" },
-        { title: "Migraine Management", url: "/doctor/near-me/treat/neurology/migraine-relief-management" },
-    ],
-    "oncology": [
-        { title: "Chemotherapy Side Effects", url: "/doctor/near-me/treat/oncology/chemotherapy-side-effects" },
-        { title: "Breast Cancer Screening", url: "/doctor/near-me/treat/oncology/breast-cancer-screening-guide" },
-        { title: "Surgical Oncology", url: "/doctor/near-me/treat/oncology/surgical-oncology-overview" },
-    ],
-    "nephrology": [
-        { title: "Dialysis Procedure Guide", url: "/doctor/near-me/treat/nephrology/dialysis-procedure-guide" },
-        { title: "Chronic Kidney Disease", url: "/doctor/near-me/treat/nephrology/chronic-kidney-disease-stages" },
-        { title: "Diabetic Nephropathy", url: "/doctor/near-me/treat/nephrology/diabetic-nephropathy-prevention" },
-    ]
-};
 
 export async function generateStaticParams() {
     const services = await getServices().catch(() => []);
@@ -195,8 +146,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     }
 
     if (!service) notFound();
-
-    const guides = rockseoGuides[lastSlug] || [];
 
     // Fallback logic for doctors if M2M missing
     let relatedDoctors = (service.related_doctors as any[]) || [];
@@ -402,34 +351,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                             <LocationCard key={loc.slug} location={loc} variant="compact" />
                                         ))}
                                     </div>
-                                </Card>
-                            )}
-
-                            {/* RockSEO: TREATMENT GUIDES (SPOKES) */}
-                            {guides.length > 0 && (
-                                <Card className="p-6 border-none shadow-sm rounded-2xl bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-100">
-                                    <h3 className="font-bold text-gray-900 mb-4 flex items-center">
-                                        <Sparkles className="w-5 h-5 text-teal-600 mr-2" />
-                                        Advanced Guides
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {guides.map((guide, idx) => (
-                                            <li key={idx}>
-                                                <Link
-                                                    href={guide.url}
-                                                    className="block p-3 rounded-xl bg-white/60 hover:bg-white transition-all border border-transparent hover:border-teal-200 group shadow-sm hover:shadow"
-                                                >
-                                                    <div className="flex items-center justify-between">
-                                                        <span className="text-sm font-semibold text-gray-800 group-hover:text-teal-700">{guide.title}</span>
-                                                        <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />
-                                                    </div>
-                                                    {guide.description && (
-                                                        <p className="text-xs text-gray-500 mt-1 line-clamp-1">{guide.description}</p>
-                                                    )}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </Card>
                             )}
 
