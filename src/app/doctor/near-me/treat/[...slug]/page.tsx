@@ -242,7 +242,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <div className="absolute inset-0 opacity-5">
                     <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                 </div>
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-20 relative z-10">
                     <nav className="flex items-center text-sm text-teal-200 mb-8 overflow-x-auto whitespace-nowrap">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
