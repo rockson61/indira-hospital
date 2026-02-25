@@ -12,23 +12,23 @@ export function SensitiveTeethContent() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-blue-50 dark:bg-slate-800/60 p-6 rounded-xl border border-blue-100 dark:border-blue-700/40">
+                <div className="bg-teal-50 dark:bg-slate-800/60 p-6 rounded-xl border border-blue-100 dark:border-teal-700/40">
                     <h4 className="flex items-center gap-2 font-bold text-foreground mb-4">
-                        <Snowflake className="w-5 h-5 text-blue-500" />
+                        <Snowflake className="w-5 h-5 text-teal-500" />
                         Common Triggers
                     </h4>
                     <ul className="space-y-2">
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> Ice cream & cold drinks
+                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Ice cream & cold drinks
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> Hot coffee or tea
+                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Hot coffee or tea
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> Citrus fruits & acidic foods
+                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Citrus fruits & acidic foods
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> Cold air
+                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Cold air
                         </li>
                     </ul>
                 </div>

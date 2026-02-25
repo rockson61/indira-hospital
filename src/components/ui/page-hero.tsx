@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface PageHeroProps {
     title: string;
@@ -20,13 +21,14 @@ export function PageHero({
             {/* Background Image / Overlay */}
             <div className="absolute inset-0 z-0">
                 {backgroundImage ? (
-                    <img
+                    <Image
                         src={backgroundImage}
                         alt={title}
-                        className="w-full h-full object-cover opacity-30"
+                        fill
+                        className="object-cover opacity-30"
                     />
                 ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
             </div>
@@ -35,7 +37,7 @@ export function PageHero({
             <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
                 {subtitle && (
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                        <span className="text-purple-300 text-xs font-bold tracking-widest uppercase">{subtitle}</span>
+                        <span className="text-teal-300 text-xs font-bold tracking-widest uppercase">{subtitle}</span>
                     </div>
                 )}
 

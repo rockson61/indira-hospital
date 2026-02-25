@@ -1,22 +1,23 @@
 import { SectionHeader } from "@/components/ui/section-header";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { getDoctors } from "@/lib/api";
-import { getImageUrl } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { SEED_DATA } from "@/lib/data/seed-data";
-
 export async function FeaturedDoctors() {
-    let doctors = await getDoctors().catch(() => []);
-    if (!doctors.length) doctors = SEED_DATA.doctors as any;
+    let doctors: any[] = [];
+    try {
+        doctors = await getDoctors().catch(() => []);
+    } catch {
+        doctors = [];
+    }
 
-    // Limit to 4 for homepage
+    if (!doctors || doctors.length === 0) return null;
+
     const featuredOnly = doctors.slice(0, 4);
 
     return (
-        <section className="py-24 bg-gray-50">
+        <section className="py-24 bg-[#FAFAFA]">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="flex justify-between items-end mb-12">
                     <SectionHeader
@@ -26,25 +27,27 @@ export async function FeaturedDoctors() {
                         className="mb-0 text-left items-start"
                         align="left"
                     />
-                    <Button variant="outline" className="hidden sm:inline-flex" asChild>
-                        <Link href="/doctors">View All Doctors <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                    </Button>
+                    <Link
+                        href="/doctors"
+                        className="hidden sm:inline-flex items-center px-6 py-3 bg-slate-900 text-white font-bold rounded-full hover:bg-teal-700 transition-all shadow-sm text-sm"
+                    >
+                        View All <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                 </div>
 
-                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+                <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
                     {featuredOnly.map((doc: any) => (
-                        <DoctorCard
-                            key={doc.slug}
-                            doctor={doc}
-                            variant="grid"
-                        />
+                        <DoctorCard key={doc.slug} doctor={doc} variant="grid" />
                     ))}
                 </div>
 
                 <div className="mt-12 text-center sm:hidden">
-                    <Button variant="outline" asChild>
-                        <Link href="/doctors">View All Doctors <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                    </Button>
+                    <Link
+                        href="/doctors"
+                        className="inline-flex items-center px-6 py-3 bg-slate-900 text-white font-bold rounded-full hover:bg-teal-700 transition-all shadow-sm text-sm"
+                    >
+                        View All Doctors <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                 </div>
             </div>
         </section>

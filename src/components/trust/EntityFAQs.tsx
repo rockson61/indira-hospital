@@ -30,12 +30,12 @@ export default async function EntityFAQs({
     }
 
     return (
-        <section className={cn("bg-slate-50/50 dark:bg-slate-900/50 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800", className)}>
+        <section className={cn("bg-[#FAFAFA] py-16 px-6 lg:px-8 border-t border-slate-100", className)}>
             <div className="max-w-7xl mx-auto">
                 <FAQSection
                     title={title || `Frequently Asked Questions about ${entityName}`}
                     description={description || `Find answers to common questions about ${entityName} at Indira Super Speciality Hospital.`}
-                    faqs={faqs.map(f => ({ question: f.question, answer: f.answer }))}
+                    faqs={faqs.map((f: any) => ({ question: f.question, answer: f.answer }))}
                     category={entityType}
                 />
             </div>

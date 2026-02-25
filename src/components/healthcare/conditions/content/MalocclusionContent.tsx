@@ -36,8 +36,8 @@ export function MalocclusionContent() {
                 </div>
             </div>
 
-            <div className="bg-blue-50 dark:bg-slate-800/60 p-6 rounded-xl text-center">
-                <Smile className="w-10 h-10 text-blue-600 mx-auto mb-3" />
+            <div className="bg-teal-50 dark:bg-slate-800/60 p-6 rounded-xl text-center">
+                <Smile className="w-10 h-10 text-teal-600 mx-auto mb-3" />
                 <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-2">Modern Orthodontics</h3>
                 <p className="text-blue-800 text-sm max-w-lg mx-auto">
                     Gone are the days of only metal braces. With clear aligners like Invisalign, correcting malocclusion is discreet, comfortable, and faster than ever.

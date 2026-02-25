@@ -9,6 +9,7 @@ import { Calendar, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { format } from "date-fns"
+import { BLOG_CONFIGURATION } from "@/config/constants"
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -22,7 +23,7 @@ export default async function BlogListingPage() {
         posts = await client.request(readItems('posts', {
             filter: { status: { _eq: 'published' } },
             sort: ['-date_created'],
-            fields: ['*', 'author.*'] as any
+            fields: ['*', 'author.*'] as never[]
         })) as unknown as Post[];
     } catch (error) {
         console.warn("Failed to fetch blog posts:", error);
@@ -34,9 +35,9 @@ export default async function BlogListingPage() {
             {/* Hero */}
             <div className="bg-slate-50 py-20">
                 <SectionContainer>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Health Insights & News</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">{BLOG_CONFIGURATION.TITLE}</h1>
                     <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto">
-                        Expert advice, wellness tips, and the latest updates from Indira Super Speciality Hospital.
+                        {BLOG_CONFIGURATION.SUBTITLE}
                     </p>
                 </SectionContainer>
             </div>
@@ -49,20 +50,20 @@ export default async function BlogListingPage() {
                                 <div className="relative h-48 bg-slate-200">
                                     {post.image ? (
                                         <Image
-                                            src={getImageUrl(post.image as string) || '/images/hospital-placeholder.jpg'}
+                                            src={getImageUrl(post.image as string) || BLOG_CONFIGURATION.PLACEHOLDER_IMAGE_PATH}
                                             alt={post.title}
                                             fill
                                             className="object-cover"
                                         />
                                     ) : (
-                                        <div className="flex items-center justify-center h-full text-slate-400">No Image</div>
+                                        <div className="flex items-center justify-center h-full text-slate-400">{BLOG_CONFIGURATION.NO_IMAGE_PLACEHOLDER}</div>
                                     )}
                                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-800">
-                                        {post.category || 'Health'}
+                                        {post.category || BLOG_CONFIGURATION.DEFAULT_CATEGORY}
                                     </div>
                                 </div>
                                 <CardContent className="pt-6">
-                                    <h2 className="text-xl font-bold mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
+                                    <h2 className="text-xl font-bold mb-3 line-clamp-2 hover:text-teal-600 transition-colors">
                                         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                                     </h2>
                                     <p className="text-muted-foreground line-clamp-3 text-sm mb-4">
@@ -76,14 +77,14 @@ export default async function BlogListingPage() {
                                         {/* Handle Author object or string */}
                                         <div className="flex items-center gap-1">
                                             <User className="w-3 h-3" />
-                                            {typeof post.author === 'object' ? post.author?.name : 'Indira Hospital'}
+                                            {typeof post.author === 'object' && post.author !== null && 'name' in post.author ? String(post.author.name) : BLOG_CONFIGURATION.DEFAULT_AUTHOR}
                                         </div>
                                     </div>
                                 </CardContent>
                                 <CardFooter>
                                     <Button asChild variant="ghost" className="w-full justify-between group">
                                         <Link href={`/blog/${post.slug}`}>
-                                            Read Article
+                                            {BLOG_CONFIGURATION.READ_ARTICLE_BUTTON}
                                             <span className="group-hover:translate-x-1 transition-transform">→</span>
                                         </Link>
                                     </Button>
@@ -93,7 +94,7 @@ export default async function BlogListingPage() {
                     </div>
                 ) : (
                     <div className="text-center py-20 bg-slate-50 rounded-2xl border border-dashed text-muted-foreground">
-                        <p>No articles found. Check back soon for updates!</p>
+                        <p>{BLOG_CONFIGURATION.NO_ARTICLES_MESSAGE}</p>
                     </div>
                 )}
             </SectionContainer>

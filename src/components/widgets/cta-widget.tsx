@@ -61,15 +61,15 @@ export function CTAWidget({
   const SecondaryIcon = iconMap[secondaryIcon]
 
   return (
-    <ModernCard className={`overflow-hidden relative ${urgency ? 'bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border-red-200 dark:border-red-800' : 'bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 dark:from-teal-950/30 dark:via-cyan-950/30 dark:to-blue-950/30 border-teal-100 dark:border-teal-800'}`}>
+    <ModernCard className={`overflow-hidden relative ${urgency ? 'bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border-red-200 dark:border-red-800' : 'bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 dark:from-teal-950/30 dark:via-cyan-950/30 dark:to-teal-950/30 border-teal-100 dark:border-teal-800'}`}>
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-teal-200/20 dark:bg-teal-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-200/20 dark:bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-200/20 dark:bg-teal-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
       <div className="p-8 md:p-10 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-1 text-center md:text-left space-y-4">
-            <h3 className={`text-3xl md:text-4xl font-bold tracking-tight ${urgency ? 'text-red-600 dark:text-red-400' : 'bg-gradient-to-r from-teal-700 to-blue-700 dark:from-teal-300 dark:to-blue-300 bg-clip-text text-transparent'}`}>
+            <h3 className={`text-3xl md:text-4xl font-bold tracking-tight ${urgency ? 'text-red-600 dark:text-red-400' : 'bg-gradient-to-r from-teal-700 to-teal-700 dark:from-teal-300 dark:to-teal-300 bg-clip-text text-transparent'}`}>
               {title}
             </h3>
             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
@@ -94,7 +94,7 @@ export function CTAWidget({
                 as={Link}
                 href={primaryAction.href}
                 size="lg"
-                className={`${urgency ? 'bg-red-600 hover:bg-red-700 shadow-red-200 dark:shadow-red-900/20' : 'bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 shadow-teal-200 dark:shadow-teal-900/20'} text-white font-bold shadow-lg w-full sm:w-auto px-8 py-6 text-lg transition-transform hover:-translate-y-0.5`}
+                className={`${urgency ? 'bg-red-600 hover:bg-red-700 shadow-red-200 dark:shadow-red-900/20' : 'bg-gradient-to-r from-teal-600 to-teal-600 hover:from-teal-700 hover:to-teal-700 shadow-teal-200 dark:shadow-teal-900/20'} text-white font-bold shadow-lg w-full sm:w-auto px-8 py-6 text-lg transition-transform hover:-translate-y-0.5`}
               >
                 <PrimaryIcon className="w-5 h-5 mr-2" />
                 {primaryAction.text}
@@ -130,7 +130,7 @@ export function CTAWidget({
                 </Badge>
               )}
 
-              <Badge variant="secondary" className="bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800 px-3 py-1">
+              <Badge variant="secondary" className="bg-teal-50 text-teal-700 border-teal-200 dark:bg-teal-900/20 dark:text-teal-300 dark:border-teal-800 px-3 py-1">
                 <Shield className="w-3.5 h-3.5 mr-1.5" />
                 15+ Years Experience
               </Badge>

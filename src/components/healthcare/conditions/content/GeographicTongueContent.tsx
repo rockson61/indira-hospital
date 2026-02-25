@@ -18,8 +18,8 @@ export function GeographicTongueContent() {
                             <p className="text-sm text-red-800">Smooth red islands with slightly raised white borders.</p>
                         </div>
                     </div>
-                    <div className="bg-blue-50 dark:bg-slate-800/60 p-4 rounded-lg flex gap-3">
-                        <RefreshCw className="w-6 h-6 text-blue-500 mt-1 shrink-0" />
+                    <div className="bg-teal-50 dark:bg-slate-800/60 p-4 rounded-lg flex gap-3">
+                        <RefreshCw className="w-6 h-6 text-teal-500 mt-1 shrink-0" />
                         <div>
                             <h4 className="font-bold text-blue-900 dark:text-blue-100">Comes and Goes</h4>
                             <p className="text-sm text-blue-800">You may have symptom-free periods (remission) followed by flare-ups.</p>

@@ -1,205 +1,110 @@
-import { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { StatsBanner } from "@/components/sections/stats-banner";
-import { WhyChooseUs } from "@/components/sections/why-choose-us";
-import { FeaturedDepartments } from "@/components/sections/featured-departments";
+import { TrustStrip } from "@/components/sections/trust-strip";
+import { DepartmentGridSection } from "@/components/sections/DepartmentGridSection";
+import { DoctorHighlightSection } from "@/components/sections/DoctorHighlightSection";
 import { SignatureTreatments } from "@/components/sections/signature-treatments";
-import { FeaturedDoctors } from "@/components/sections/featured-doctors";
 import { Testimonials } from "@/components/sections/testimonials";
-import { FAQSection } from "@/components/sections/faq-section";
-import { LocationStrip } from "@/components/sections/location-strip";
-import { AZIndex } from "@/components/sections/a-z-index";
-import { CTASection } from "@/components/sections/cta";
-import { getHospitalSettings } from "@/lib/api";
-
-export const revalidate = 3600;
-
-export const metadata: Metadata = {
-  title: "Indira Super Speciality Hospital Vellore | Best Multi-Speciality Hospital",
-  description:
-    "Indira Super Speciality Hospital in Vellore offers world-class medical care — 25+ expert doctors, advanced Cath Lab, Laser Piles Treatment, Laparoscopic Surgery, Cardiology, Orthopaedics, 24/7 Emergency. Book on WhatsApp.",
-  keywords: [
-    "best hospital in Vellore",
-    "super speciality hospital Vellore",
-    "Indira Hospital",
-    "laser piles treatment Vellore",
-    "laparoscopic surgery Vellore",
-    "cardiologist Vellore",
-    "orthopaedic surgeon Vellore",
-    "emergency hospital Vellore",
-    "best doctor Vellore",
-    "hospital near me Vellore",
-    "cath lab Vellore",
-    "heart treatment Vellore",
-  ],
-  openGraph: {
-    title: "Indira Super Speciality Hospital | Best Hospital in Vellore",
-    description:
-      "25+ expert doctors, 10+ departments, advanced Cath Lab, 24/7 Emergency. Trusted healthcare in Vellore, Tamil Nadu.",
-    url: "https://www.indirasuperspecialityhospital.com",
-    siteName: "Indira Hospital",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Indira Super Speciality Hospital Vellore",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Indira Super Speciality Hospital Vellore",
-    description: "World-class multi-speciality healthcare. 24/7 Emergency, Advanced Cath Lab, Expert Surgeons.",
-    images: ["/og-image.jpg"],
-  },
-  alternates: {
-    canonical: "https://www.indirasuperspecialityhospital.com",
-  },
-};
-
-function buildJsonLd(h: any) {
-  // Parse JSON fields safely
-  const openingHours = typeof h.opening_hours === 'string' ? JSON.parse(h.opening_hours) : (h.opening_hours || []);
-  const areasServed = typeof h.areas_served === 'string' ? JSON.parse(h.areas_served) : (h.areas_served || []);
-  const sameAs = [h.social_facebook, h.social_instagram, h.social_youtube, h.social_linkedin, h.social_twitter]
-    .filter(Boolean);
-
-  const hospitalJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Hospital",
-    name: h.hospital_name || "Indira Super Speciality Hospital",
-    alternateName: "Indira Hospital Vellore",
-    url: h.website || "https://www.indirasuperspecialityhospital.com",
-    logo: "https://www.indirasuperspecialityhospital.com/logo.png",
-    image: "https://www.indirasuperspecialityhospital.com/hero-hospital.png",
-    description: h.description || "Indira Super Speciality Hospital is a leading multi-speciality hospital in Vellore, Tamil Nadu.",
-    ...(h.legal_name && { legalName: h.legal_name }),
-    ...(h.tagline && { slogan: h.tagline }),
-    ...(h.founded_year && { foundingDate: String(h.founded_year) }),
-    ...(h.bed_count && { numberOfBeds: h.bed_count }),
-    telephone: [h.phone || "+919842342525", h.emergency_phone || "+917010650063"].filter(Boolean),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: h.address_street || "Katpadi Road",
-      addressLocality: h.address_city || "Vellore",
-      addressRegion: h.address_state || "Tamil Nadu",
-      postalCode: h.address_pincode || "632004",
-      addressCountry: h.address_country || "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: h.geo_lat || 12.9344,
-      longitude: h.geo_lng || 79.1422,
-    },
-    ...(openingHours.length > 0 && { openingHoursSpecification: openingHours }),
-    medicalSpecialty: [
-      "GeneralSurgery", "Cardiology", "Orthopedics", "Gastroenterology",
-      "Urology", "Gynecology", "SpineSurgery", "Oncology", "Nephrology", "EmergencyMedicine",
-    ],
-    availableService: [
-      { "@type": "MedicalProcedure", name: "Laser Piles Treatment" },
-      { "@type": "MedicalProcedure", name: "Laparoscopic Surgery" },
-      { "@type": "MedicalProcedure", name: "Coronary Angiography" },
-      { "@type": "MedicalProcedure", name: "Angioplasty" },
-      { "@type": "MedicalProcedure", name: "Joint Replacement" },
-      { "@type": "MedicalProcedure", name: "Spine Surgery" },
-      { "@type": "MedicalProcedure", name: "Endoscopy" },
-      { "@type": "MedicalProcedure", name: "Kidney Stone Treatment" },
-    ],
-    ...(sameAs.length > 0 && { sameAs }),
-    ...(h.google_maps_url && { hasMap: h.google_maps_url }),
-    priceRange: h.price_range || "₹₹",
-    ...(h.aggregate_rating && {
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: String(h.aggregate_rating),
-        bestRating: "5",
-        ratingCount: String(h.review_count || 850),
-      },
-    }),
-    ...(areasServed.length > 0 && {
-      areaServed: areasServed.map((a: string) => ({ "@type": "Place", name: a })),
-    }),
-  };
-
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    name: h.hospital_name || "Indira Super Speciality Hospital",
-    url: h.website || "https://www.indirasuperspecialityhospital.com",
-    telephone: h.phone || "+919842342525",
-    ...(h.email && { email: h.email }),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: h.address_street || "Katpadi Road",
-      addressLocality: h.address_city || "Vellore",
-      addressRegion: h.address_state || "Tamil Nadu",
-      postalCode: h.address_pincode || "632004",
-      addressCountry: h.address_country || "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: h.geo_lat || 12.9344,
-      longitude: h.geo_lng || 79.1422,
-    },
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: h.phone || "+919842342525",
-        contactType: "Appointments",
-        areaServed: "IN",
-        availableLanguage: ["English", "Tamil"],
-      },
-      ...(h.whatsapp ? [{
-        "@type": "ContactPoint",
-        telephone: h.whatsapp,
-        contactType: "WhatsApp Booking",
-        areaServed: "IN",
-        availableLanguage: ["English", "Tamil"],
-      }] : []),
-    ],
-  };
-
-  return { hospitalJsonLd, localBusinessJsonLd };
-}
-
 import { QuickLinks } from "@/components/sections/quick-links";
+import { WhyChooseUs } from "@/components/sections/why-choose-us";
+import { HOME_PAGE_CONTENT } from "@/config/constants";
+import { MessageCircle, Phone, ArrowRight, Zap, Sparkles } from "lucide-react";
+import { SectionContainer } from "@/components/ui/section-container";
 
-export default async function Home() {
-  // Fetch hospital settings from CMS
-  let hospitalSettings: any = {};
-  try { hospitalSettings = await getHospitalSettings(); } catch { /* fallback to defaults */ }
-
-  const { hospitalJsonLd, localBusinessJsonLd } = buildJsonLd(hospitalSettings);
-
+export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(hospitalJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
-
-      {/* Sections */}
+    <main className="min-h-screen bg-slate-50 selection:bg-teal-200 selection:text-teal-900">
       <Hero />
       <StatsBanner />
-      <QuickLinks />
-      <WhyChooseUs />
-      <FeaturedDepartments />
-      <SignatureTreatments />
-      <AZIndex />
-      <FeaturedDoctors />
-      <Testimonials />
-      <FAQSection />
-      <LocationStrip />
-      <CTASection />
+
+      {/* REFINED TRUST BAR */}
+      <section className="bg-white border-y border-slate-100 py-16 relative z-10 -mt-12 mb-12 rounded-[3rem] mx-4 sm:mx-8 shadow-xl shadow-slate-200/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center font-black text-slate-400 tracking-[0.3em] uppercase mb-10 text-xs flex items-center justify-center gap-4">
+            <span className="h-px w-12 bg-slate-200" />
+            {HOME_PAGE_CONTENT.ACCREDITATION_TITLE}
+            <span className="h-px w-12 bg-slate-200" />
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            {HOME_PAGE_CONTENT.ACCREDITATION_BADGES.map((badge, index) => (
+              <div key={index} className="group flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-2xl border border-slate-100 hover:border-teal-200 hover:bg-teal-50 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-2 h-2 rounded-full bg-teal-500 opacity-40 group-hover:opacity-100 transition-opacity" />
+                <span className="text-sm font-black text-slate-500 group-hover:text-teal-700 tracking-wider">
+                  {badge}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="space-y-32 pb-32">
+        <TrustStrip />
+        <DepartmentGridSection />
+        <SignatureTreatments />
+        <WhyChooseUs />
+        <DoctorHighlightSection />
+        <Testimonials />
+        <QuickLinks />
+      </div>
+
+      {/* ELITE SIGNATURE HOME CTA */}
+      <SectionContainer className="pb-32 px-4">
+        <div className="bg-gradient-to-br from-slate-900 via-emerald-950 to-teal-950 rounded-[4rem] border border-white/10 overflow-hidden shadow-2xl relative group/cta flex flex-col items-center text-center p-12 sm:p-24">
+          {/* Ambient Background Lights */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[100px] group-hover/cta:bg-teal-500/20 transition-colors duration-1000 opacity-50" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[80px] opacity-40" />
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+
+          <div className="relative z-10 w-full max-w-4xl">
+            <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 mb-10 shadow-[0_0_40px_rgba(20,184,166,0.3)] group-hover/cta:scale-110 transition-transform duration-500">
+              <Sparkles className="w-10 h-10 text-teal-300" />
+            </div>
+
+            <h2 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-black text-white mb-10 tracking-tight leading-[1.05]">
+              {HOME_PAGE_CONTENT.CTA_HEADING.split(' ').slice(0, -1).join(' ')} <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
+                {HOME_PAGE_CONTENT.CTA_HEADING.split(' ').pop()}
+              </span>
+            </h2>
+
+            <p className="text-xl sm:text-2xl text-slate-300 font-light mb-16 max-w-2xl mx-auto leading-relaxed">
+              {HOME_PAGE_CONTENT.CTA_SUBTEXT}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-3xl mx-auto">
+              <a
+                href="/book-appointment"
+                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-teal-500 text-slate-900 font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-teal-500/25 overflow-hidden text-xl"
+              >
+                <span className="relative z-10">{HOME_PAGE_CONTENT.CTA_BUTTON_BOOK}</span>
+                <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+              </a>
+
+              <a
+                href="/contact"
+                className="flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all text-xl"
+              >
+                <Phone className="w-6 h-6 mr-3 text-teal-400" />
+                {HOME_PAGE_CONTENT.CTA_BUTTON_CONTACT}
+              </a>
+            </div>
+
+            <div className="mt-16 flex items-center justify-center gap-8 opacity-40 grayscale group-hover/cta:grayscale-0 group-hover/cta:opacity-70 transition-all duration-700">
+              <div className="flex items-center gap-2 text-white font-bold tracking-widest text-xs uppercase">
+                <Zap className="w-4 h-4 text-teal-400" /> Professional
+              </div>
+              <div className="flex items-center gap-2 text-white font-bold tracking-widest text-xs uppercase">
+                <Zap className="w-4 h-4 text-teal-400" /> Precise
+              </div>
+              <div className="flex items-center gap-2 text-white font-bold tracking-widest text-xs uppercase">
+                <Zap className="w-4 h-4 text-teal-400" /> Patient-First
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
     </main>
   );
 }

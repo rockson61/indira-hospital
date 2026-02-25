@@ -211,7 +211,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
     <>
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-50 via-cyan-50/50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.toc}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">📋 Table of Contents</h2>
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">📋 Table of Contents</h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {tocItems.map((item) => (
               <li key={item.href}>
@@ -230,7 +230,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-white via-teal-50/30 to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.what}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/30 dark:border-teal-700/30 shadow-lg">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📖 What Is {conditionName}?</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📖 What Is {conditionName}?</h2>
           <p className="text-foreground/80 leading-relaxed mb-4">{content.intro}</p>
           <p className="text-foreground/80 leading-relaxed">
             <strong>Warning:</strong> Ignoring {conditionName.toLowerCase()} leads to abscess formation (within 1–2 weeks), potential tooth loss, and spread of infection to jaw bone. <strong>Treatment cost increases 3–5x</strong> if delayed. Book a free 15-minute assessment at Indira Dental Clinic, {cityName}.
@@ -240,11 +240,11 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-100/70 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.causes}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">⚠️ Common Causes of {conditionName}</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">⚠️ Common Causes of {conditionName}</h2>
           <ul className="grid gap-4 md:grid-cols-2">
             {content.causes.map((cause, index) => (
               <li key={cause} className="glassmorphism-item to-teal-50/50 dark:from-slate-800/80 dark:to-teal-900/30 rounded-2xl border border-teal-200 dark:border-teal-700/40 p-5 text-foreground/80 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-blue-600 text-white text-xs font-bold mr-3 shadow-sm">{index + 1}</span>
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 text-white text-xs font-bold mr-3 shadow-sm">{index + 1}</span>
                 {cause}
               </li>
             ))}
@@ -254,7 +254,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50/50 via-white to-teal-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.symptoms}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/30 dark:border-teal-700/30 shadow-lg">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🔍 Symptoms to Watch For</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🔍 Symptoms to Watch For</h2>
           <ul className="grid gap-3 md:grid-cols-2">
             {content.symptoms.map((symptom) => (
               <li key={symptom} className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-teal-900/30 rounded-xl p-4 border border-teal-200 dark:border-teal-700/40">
@@ -268,7 +268,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-50 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.when}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🚨 When to See a Dentist</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🚨 When to See a Dentist</h2>
           <p className="text-foreground/80 leading-relaxed mb-6">
             <strong>See a dentist immediately</strong> if you experience any of these symptoms. Treatment within 48 hours prevents complications and reduces costs by 50%.
           </p>
@@ -277,12 +277,12 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-teal-900/30 rounded-xl p-4 border border-teal-200 dark:border-teal-700/40"><span className="text-teal-500">❗</span> Swelling in the jaw, cheek, or neck</li>
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-teal-900/30 rounded-xl p-4 border border-teal-200 dark:border-teal-700/40"><span className="text-teal-500">❗</span> Difficulty opening your mouth or swallowing</li>
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-teal-900/30 rounded-xl p-4 border border-teal-200 dark:border-teal-700/40"><span className="text-teal-500">❗</span> Pain radiating to the ear, head, or temples</li>
-            <li className="flex items-start gap-3 backdrop-blur-sm bg-gradient-to-r from-white/80 to-blue-50/50 dark:from-slate-800/80 dark:to-blue-900/30 rounded-xl p-4 border border-blue-200 dark:border-blue-800/50 md:col-span-2"><span className="text-blue-500">❗</span> Visible pus, bleeding, or foul taste in the mouth</li>
+            <li className="flex items-start gap-3 backdrop-blur-sm bg-gradient-to-r from-white/80 to-blue-50/50 dark:from-slate-800/80 dark:to-blue-900/30 rounded-xl p-4 border border-blue-200 dark:border-blue-800/50 md:col-span-2"><span className="text-teal-500">❗</span> Visible pus, bleeding, or foul taste in the mouth</li>
           </ul>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-xl bg-gradient-to-r from-teal-600 to-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center rounded-xl bg-gradient-to-r from-teal-600 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
             >
               🏥 Book Emergency Appointment
             </Link>
@@ -297,7 +297,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-cyan-50/50 via-white to-blue-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.treatments}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-4">💊 Treatment Options</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-4">💊 Treatment Options</h2>
         <p className="text-foreground/80 leading-relaxed mb-6">
           Treatment depends on the root cause. Dr. Rockson Samuel at Indira Dental Clinic, {cityName} combines restorative, periodontal, and surgical expertise. <strong>All costs below are all-inclusive</strong> (consultation + procedure + follow-up).
         </p>
@@ -329,7 +329,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-teal-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.remedies}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🌿 Home Remedies &amp; Myths</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🌿 Home Remedies &amp; Myths</h2>
           <p className="text-foreground/80 leading-relaxed mb-4">
             <strong>Temporary relief options:</strong> Warm salt-water rinses (1 tsp salt in 250ml water), cold compress (15 minutes on/off), ibuprofen 400mg every 6 hours. <strong>Avoid:</strong> Aspirin on gums (causes burns), undiluted clove oil, hot compresses (increases swelling).
           </p>
@@ -340,11 +340,11 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-50 via-cyan-50/50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.prevention}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-6">🛡️ Prevention Tips</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-6">🛡️ Prevention Tips</h2>
         <ul className="grid gap-4 md:grid-cols-2">
           {content.prevention.map((tip, index) => (
             <li key={tip} className="rounded-2xl border border-teal-200/50 dark:border-teal-700/40 bg-gradient-to-br from-white to-teal-50/30 dark:from-slate-800 dark:to-teal-900/20 p-5 shadow-md transition-all hover:shadow-xl hover:scale-[1.02]">
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-blue-600 text-white text-xs font-bold mr-3 shadow-sm">{index + 1}</span>
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 text-white text-xs font-bold mr-3 shadow-sm">{index + 1}</span>
               <span className="text-foreground/80 dark:text-slate-300">{tip}</span>
             </li>
           ))}
@@ -353,7 +353,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-teal-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.why}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {conditionName} Care?</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {conditionName} Care?</h2>
           <ul className="grid gap-3 md:grid-cols-2">
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-teal-900/30 rounded-xl p-4 border border-teal-200 dark:border-teal-700/40">
               <span className="mt-0.5 text-teal-500 text-lg">✓</span>
@@ -372,7 +372,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
               <span className="text-foreground/80 dark:text-slate-300"><strong>50% Lower Cost</strong>: Same quality as Chennai clinics. 0% EMI available through Bajaj Finserv, HDFC, ICICI.</span>
             </li>
             <li className="flex items-start gap-3 backdrop-blur-sm bg-gradient-to-r from-white/80 to-blue-50/50 dark:from-slate-800/80 dark:to-blue-900/30 rounded-xl p-4 border border-blue-200 dark:border-blue-800/50 md:col-span-2">
-              <span className="mt-0.5 text-blue-500 text-lg">⭐</span>
+              <span className="mt-0.5 text-teal-500 text-lg">⭐</span>
               <span className="text-foreground/80 dark:text-slate-300"><strong>4.9/5 Google Rating</strong> (500+ reviews). Patients from {cityName}, Chennai, Bangalore, and abroad.</span>
             </li>
           </ul>
@@ -380,7 +380,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
             <Link href="/about-us" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-teal-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-teal-600 dark:text-teal-400 transition-all hover:bg-teal-50 dark:hover:bg-teal-900/30 hover:shadow-md">
               About Us →
             </Link>
-            <Link href="/about-us/our-team" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-blue-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-blue-600 dark:text-blue-400 transition-all hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:shadow-md">
+            <Link href="/about-us/our-team" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-teal-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-teal-600 dark:text-blue-400 transition-all hover:bg-teal-50 dark:hover:bg-blue-900/30 hover:shadow-md">
               Meet Our Team →
             </Link>
           </div>
@@ -391,14 +391,14 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-100/70 via-blue-50/50 to-cyan-100/70 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.book}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📅 Book Appointment</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📅 Book Appointment</h2>
           <p className="text-foreground/80 leading-relaxed mb-6">
             <strong>Free consultation available.</strong> Stop {conditionName.toLowerCase()} pain today. Call or WhatsApp +91-7010650063 to book with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day emergency appointments available.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-xl bg-gradient-to-r from-teal-600 to-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center rounded-xl bg-gradient-to-r from-teal-600 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
             >
               📝 Book Online
             </Link>
@@ -421,7 +421,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50/50 via-white to-teal-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.related}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-6">🔗 Related Conditions</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-6">🔗 Related Conditions</h2>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
           {content.relatedConditions.map((item) => (
             <Link

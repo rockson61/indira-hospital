@@ -22,13 +22,12 @@ export const MobileQuickActions = () => {
                 >
                     <div className="relative">
                         <Phone className="w-5 h-5" />
-                        <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-600 rounded-full animate-ping" />
                     </div>
                     <span className="text-[10px] font-bold uppercase tracking-tighter">Emergency</span>
                 </Link>
 
                 <Link
-                    href="/locations/vellore"
+                    href="/doctor/near-me/vellore"
                     className="flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 active:scale-95 transition-transform"
                 >
                     <MapPin className="w-5 h-5" />

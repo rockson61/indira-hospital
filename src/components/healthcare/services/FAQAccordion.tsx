@@ -29,19 +29,19 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
       title: "General Surgery",
       description: "Advanced laparoscopic and laser surgeries for piles, hernia, and more.",
       icon: Activity,
-      link: "/departments/general-surgery"
+      link: "/doctor/near-me/treat/general-surgery"
     },
     {
       title: "Cardiac Sciences",
       description: "24/7 cardiac emergency care and interventional cardiology services.",
       icon: Heart,
-      link: "/departments/cardiology"
+      link: "/doctor/near-me/treat/cardiology"
     },
     {
       title: "Obstetrics & Gynaecology",
       description: "Comprehensive women's care including maternity and painless delivery.",
       icon: Baby,
-      link: "/departments/obstetrics-gynaecology"
+      link: "/doctor/near-me/treat/obstetrics-gynaecology"
     },
     {
       title: "Diagnostics & Imaging",
@@ -52,12 +52,12 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
   ]
 
   const locationServices = [
-    { name: "Hospital in Vellore", href: "/locations/vellore" },
-    { name: "Specialists in Katpadi", href: "/doctors" },
-    { name: "Emergency Care Vellore", href: "/departments/icu-emergency" },
+    { name: "Hospital in Vellore", href: "/doctor/near-me/vellore" },
+    { name: "Specialists in Katpadi", href: "/doctor/near-me" },
+    { name: "Emergency Care Vellore", href: "/doctor/near-me/treat/icu-emergency" },
     { name: "Diagnostics in Ranipet", href: "/diagnostics" },
-    { name: "Maternity Care Vellore", href: "/departments/obstetrics-gynaecology" },
-    { name: "Dialysis Center Vellore", href: "/departments/nephrology" }
+    { name: "Maternity Care Vellore", href: "/doctor/near-me/treat/obstetrics-gynaecology" },
+    { name: "Dialysis Center Vellore", href: "/doctor/near-me/treat/nephrology" }
   ]
 
   // Generate FAQ Schema
@@ -88,7 +88,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4 border-purple-600 text-purple-700 text-sm font-semibold">
+            <Badge variant="outline" className="mb-4 border-teal-600 text-teal-700 text-sm font-semibold">
               <HelpCircle className="w-4 h-4 mr-2" />
               Frequently Asked Questions
             </Badge>
@@ -103,7 +103,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
 
           {/* Why Choose Section */}
           <div className="mb-12">
-            <ModernCard className="bg-gradient-to-r from-purple-50 to-blue-50 border-purple-200">
+            <ModernCard className="bg-gradient-to-r from-teal-50 to-teal-50 border-teal-200">
               <ModernCardContent className="py-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Why Choose Indira Hospital in {locationName}?</h3>
                 <p className="text-foreground/80 leading-relaxed mb-6">
@@ -124,8 +124,8 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
               {serviceCategories.map((service, index) => (
                 <ModernCard key={index} hover className="h-full text-center">
                   <ModernCardHeader>
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <service.icon className="w-6 h-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <service.icon className="w-6 h-6 text-teal-600" />
                     </div>
                     <ModernCardTitle className="text-lg">{service.title}</ModernCardTitle>
                   </ModernCardHeader>
@@ -133,7 +133,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
                     <p className="text-muted-foreground mb-4">{service.description}</p>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
+                      className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
                     >
                       Learn More
                     </Link>
@@ -149,7 +149,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-lg">
-                  <AccordionTrigger className="px-6 py-4 text-left font-semibold text-foreground hover:text-purple-600">
+                  <AccordionTrigger className="px-6 py-4 text-left font-semibold text-foreground hover:text-teal-600">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-foreground/80 leading-relaxed">
@@ -168,7 +168,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
             <ModernCard className="mb-6">
               <ModernCardContent className="py-6">
                 <h4 className="text-lg font-semibold text-foreground mb-4">
-                  <Link href="/locations" className="text-foreground hover:text-purple-600 transition-colors">
+                  <Link href="/doctor/near-me" className="text-foreground hover:text-teal-600 transition-colors">
                     Find Help Near You
                   </Link>
                 </h4>
@@ -177,7 +177,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
                     <Link
                       key={index}
                       href={location.href}
-                      className="inline-flex items-center justify-center px-3 py-2 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-100 transition-colors"
+                      className="inline-flex items-center justify-center px-3 py-2 bg-teal-50 text-teal-700 rounded-lg text-sm font-medium hover:bg-teal-100 transition-colors"
                     >
                       {location.name}
                     </Link>
@@ -192,14 +192,14 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
                 <ModernCardContent className="py-6">
                   <h4 className="text-lg font-semibold text-foreground mb-4">Super Speciality Services</h4>
                   <ul className="space-y-2 text-foreground/80">
-                    <li>• <Link href="/departments/cardiology" className="text-purple-600 hover:text-purple-700 hover:underline">Interventional Cardiology</Link></li>
-                    <li>• <Link href="/departments/orthopaedics" className="text-purple-600 hover:text-purple-700 hover:underline">Joint Replacement Surgery</Link></li>
-                    <li>• <Link href="/departments/nephrology" className="text-purple-600 hover:text-purple-700 hover:underline">Dialysis & Nephrology</Link></li>
-                    <li>• <Link href="/departments/general-surgery" className="text-purple-600 hover:text-purple-700 hover:underline">Laparoscopic Surgery</Link></li>
-                    <li>• <Link href="/departments/icu-emergency" className="text-purple-600 hover:text-purple-700 hover:underline">24/7 Emergency Care</Link></li>
-                    <li>• <Link href="/diagnostics" className="text-purple-600 hover:text-purple-700 hover:underline">Advanced 3T MRI & CT</Link></li>
-                    <li>• <Link href="/international-patients" className="text-purple-600 hover:text-purple-700 hover:underline">International Patient Care</Link></li>
-                    <li>• <Link href="/health-packages" className="text-purple-600 hover:text-purple-700 hover:underline">Master Health Checkups</Link></li>
+                    <li>• <Link href="/doctor/near-me/treat/cardiology" className="text-teal-600 hover:text-teal-700 hover:underline">Interventional Cardiology</Link></li>
+                    <li>• <Link href="/doctor/near-me/treat/orthopaedics" className="text-teal-600 hover:text-teal-700 hover:underline">Joint Replacement Surgery</Link></li>
+                    <li>• <Link href="/doctor/near-me/treat/nephrology" className="text-teal-600 hover:text-teal-700 hover:underline">Dialysis & Nephrology</Link></li>
+                    <li>• <Link href="/doctor/near-me/treat/general-surgery" className="text-teal-600 hover:text-teal-700 hover:underline">Laparoscopic Surgery</Link></li>
+                    <li>• <Link href="/doctor/near-me/treat/icu-emergency" className="text-teal-600 hover:text-teal-700 hover:underline">24/7 Emergency Care</Link></li>
+                    <li>• <Link href="/diagnostics" className="text-teal-600 hover:text-teal-700 hover:underline">Advanced 3T MRI & CT</Link></li>
+                    <li>• <Link href="/patients/international" className="text-teal-600 hover:text-teal-700 hover:underline">International Patient Care</Link></li>
+                    <li>• <Link href="/health-packages" className="text-teal-600 hover:text-teal-700 hover:underline">Master Health Checkups</Link></li>
                   </ul>
                 </ModernCardContent>
               </ModernCard>
@@ -208,14 +208,14 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
                 <ModernCardContent className="py-6">
                   <h4 className="text-lg font-semibold text-foreground mb-4">Patient Links</h4>
                   <ul className="space-y-2 text-foreground/80">
-                    <li>• <Link href="/doctors" className="text-purple-600 hover:text-purple-700 hover:underline">Find a Specialist</Link></li>
-                    <li>• <Link href="/book-appointment" className="text-purple-600 hover:text-purple-700 hover:underline">Book an Appointment</Link></li>
-                    <li>• <Link href="/health-packages" className="text-purple-600 hover:text-purple-700 hover:underline">View Health Packages</Link></li>
-                    <li>• <Link href="/diagnostics" className="text-purple-600 hover:text-purple-700 hover:underline">Book Lab Test</Link></li>
-                    <li>• <Link href="/about" className="text-purple-600 hover:text-purple-700 hover:underline">About Indira Hospital</Link></li>
-                    <li>• <Link href="/contact" className="text-purple-600 hover:text-purple-700 hover:underline">Contact Us</Link></li>
-                    <li>• <Link href="/blog" className="text-purple-600 hover:text-purple-700 hover:underline">Health Blog</Link></li>
-                    <li>• <Link href="/services" className="text-purple-600 hover:text-purple-700 hover:underline">All Departments</Link></li>
+                    <li>• <Link href="/doctor/near-me" className="text-teal-600 hover:text-teal-700 hover:underline">Find a Specialist</Link></li>
+                    <li>• <Link href="/book-appointment" className="text-teal-600 hover:text-teal-700 hover:underline">Book an Appointment</Link></li>
+                    <li>• <Link href="/health-packages" className="text-teal-600 hover:text-teal-700 hover:underline">View Health Packages</Link></li>
+                    <li>• <Link href="/diagnostics" className="text-teal-600 hover:text-teal-700 hover:underline">Book Lab Test</Link></li>
+                    <li>• <Link href="/about" className="text-teal-600 hover:text-teal-700 hover:underline">About Indira Hospital</Link></li>
+                    <li>• <Link href="/contact" className="text-teal-600 hover:text-teal-700 hover:underline">Contact Us</Link></li>
+                    <li>• <Link href="/blog" className="text-teal-600 hover:text-teal-700 hover:underline">Health Blog</Link></li>
+                    <li>• <Link href="/doctor/near-me/treat" className="text-teal-600 hover:text-teal-700 hover:underline">All Departments</Link></li>
                   </ul>
                 </ModernCardContent>
               </ModernCard>
@@ -224,21 +224,21 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
 
           {/* CTA Section */}
           <div className="text-center">
-            <ModernCard className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+            <ModernCard className="bg-gradient-to-r from-teal-600 to-teal-600 text-white">
               <ModernCardContent className="py-8">
                 <h3 className="text-2xl font-bold mb-4">Quality Care, Accessible to All</h3>
                 <p className="text-lg mb-6">
                   At Indira Hospital, we prioritize your health. Schedule your consultation today with our renowned experts.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="bg-white hover:bg-purple-50 text-purple-600">
+                  <Button asChild size="lg" className="bg-white hover:bg-teal-50 text-teal-600">
                     <Link href="/contact">
                       <Phone className="w-5 h-5 mr-2" />
                       Contact Us
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600">
-                    <Link href="/doctors">
+                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-teal-600">
+                    <Link href="/doctor/near-me">
                       <Calendar className="w-5 h-5 mr-2" />
                       Find Specialist
                     </Link>

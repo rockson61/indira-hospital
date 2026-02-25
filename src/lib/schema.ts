@@ -1,373 +1,349 @@
-// =============================================
-// Directus CMS TypeScript Schema
-// All interfaces include SEO fields for Schema.org JSON-LD
-// =============================================
+// =========================================================
+// HEADLESS CMS CONTENT ARCHITECTURE & INTEGRATION SCHEMAS
+// =========================================================
 
-// ─────────────────────────────────────────
-// Hospital Settings (Singleton)
-// Schema.org: Hospital, MedicalOrganization, LocalBusiness
-// ─────────────────────────────────────────
-export interface HospitalSettings {
+export interface SEOObject {
+    metaTitle?: string;
+    metaDescription?: string;
+    ogImage?: string;
+    canonicalURL?: string;
+    noIndex?: boolean;
+    structuredDataOverride?: Record<string, any>;
+}
+
+export interface GlobalSiteSettings {
     id: string;
-    hospital_name: string;
-    legal_name?: string;
+    hospitalName: string;
     tagline?: string;
-    description?: string;
-    logo?: string; // UUID
-    founded_year?: number;
-    phone?: string;
-    emergency_phone?: string;
-    whatsapp?: string;
+    logo?: string;
+    favicon?: string;
+    primaryPhone?: string;
+    emergencyPhone?: string;
     email?: string;
-    website?: string;
-    address_street?: string;
-    address_city?: string;
-    address_state?: string;
-    address_pincode?: string;
-    address_country?: string;
-    geo_lat?: number;
-    geo_lng?: number;
-    opening_hours?: OpeningHoursSpec[];
-    price_range?: string;
-    bed_count?: number;
-    social_facebook?: string;
-    social_instagram?: string;
-    social_youtube?: string;
-    social_linkedin?: string;
-    social_twitter?: string;
-    google_maps_url?: string;
-    aggregate_rating?: number;
-    review_count?: number;
-    areas_served?: string[];
+    socialLinks?: Record<string, string>;
+    primaryColor?: string;
+    secondaryColor?: string;
+    trustBadges?: string[];
+    footerText?: string;
+    defaultSEO?: SEOObject;
 }
 
-export interface OpeningHoursSpec {
-    dayOfWeek: string[];
-    opens: string;
-    closes: string;
-    description?: string;
-}
-
-// ─────────────────────────────────────────
-// Doctors — Schema.org: Physician
-// ─────────────────────────────────────────
 export interface Doctor {
     id: string;
-    status: 'published' | 'draft' | 'archived';
     name: string;
     slug: string;
-    designation: string;
-    department: string | Department;
-    image: string; // UUID
-    bio: string;
+    photo?: string;
+    qualifications?: string[];
+    specialization: string;
+    department?: string | Department;
+    yearsOfExperience?: number;
+    languagesSpoken?: string[];
+    bio?: string;
+    availability?: string[];
+    consultationFee?: number;
+    location?: string | Location;
+    featured?: boolean;
+    seo?: SEOObject;
+
+    // Legacy
+    image?: string;
+    status?: string;
+    designation?: string;
     experience_years?: number;
-    consultation_fee?: number;
     specialties?: string[];
-    languages?: string[];
-    education?: { degree: string; institution: string; year: string }[];
-    experience_timeline?: { role: string; hospital: string; start: string; end: string }[];
-    awards?: { title: string; year: string }[];
-    opd_schedule?: Record<string, string>;
-    // SEO fields
-    seo_title?: string;
-    seo_description?: string;
-    medical_registration_number?: string;
-    gender?: 'male' | 'female' | 'other';
-    qualifications?: string;
-    available_days?: string[];
-    phone?: string;
-    email?: string;
-    social_linkedin?: string;
-    social_website?: string;
-    accepting_new_patients?: boolean;
-    sort_order?: number;
-    // M2M - API injected
-    related_services?: Service[];
-    available_locations?: Location[];
+    related_services?: Service[] | any[];
+    available_locations?: Location[] | any[];
 }
 
-// ─────────────────────────────────────────
-// Departments — Schema.org: MedicalSpecialty
-// ─────────────────────────────────────────
 export interface Department {
     id: string;
-    status: 'published' | 'draft' | 'archived';
     name: string;
     slug: string;
-    icon: string; // UUID
-    featured_image: string; // UUID
-    description: string;
-    services?: string[] | Service[];
-    // SEO fields
-    seo_title?: string;
-    seo_description?: string;
-    short_description?: string;
-    head_of_department?: string;
-    facilities?: string[];
-    sort_order?: number;
+    icon?: string;
+    shortDescription?: string;
+    fullDescription?: string;
+    featuredImage?: string;
+    doctors?: string[] | Doctor[];
+    location?: string | Location;
+    seo?: SEOObject;
+
+    // Legacy
+    status?: string;
 }
 
-// ─────────────────────────────────────────
-// Services — Schema.org: MedicalProcedure
-// ─────────────────────────────────────────
-export interface Service {
-    id: string;
-    status: 'published' | 'draft' | 'archived';
-    title: string;
-    slug: string;
-    icon: string; // UUID
-    short_description: string;
-    full_description: string;
-    department?: string | Department;
-    video_explainer?: string; // UUID
-    recovery_timeline?: { day: string; activity: string }[];
-    cost_range_min?: number;
-    cost_range_max?: number;
-    // SEO fields
-    seo_title?: string;
-    seo_description?: string;
-    procedure_type?: 'SurgicalProcedure' | 'NonInvasiveProcedure' | 'DiagnosticProcedure' | 'TherapeuticProcedure' | 'PalliativeProcedure';
-    body_location?: string;
-    preparation?: string;
-    followup?: string;
-    how_performed?: string;
-    risks_description?: string;
-    benefits_list?: string[];
-    risks_list?: string[];
-    duration_minutes?: number;
-    sort_order?: number;
-    // M2M - API injected
-    related_doctors?: Doctor[];
-    available_locations?: Location[];
-    // Enhanced Content Fields
-    pricing?: { package_name: string; cost: string; features: string[] }[];
-    faqs?: { question: string; answer: string }[];
-    reviews?: { patient_name: string; review: string; rating: number }[];
-    technology?: { name: string; description: string; icon?: string }[];
-}
-
-// ─────────────────────────────────────────
-// Locations — Schema.org: MedicalClinic, Place
-// ─────────────────────────────────────────
 export interface Location {
     id: string;
-    status: 'published' | 'draft' | 'archived';
     name: string;
     slug: string;
-    district: string;
-    address: string;
-    phone: string;
-    map_embed: string;
-    visiting_hours: string;
-    distance_from_hospital?: string;
-    // SEO fields
-    seo_title?: string;
-    seo_description?: string;
-    geo_lat?: number;
-    geo_lng?: number;
-    google_maps_url?: string;
-    transport_guide?: string;
-    nearby_landmarks?: string[];
-    sort_order?: number;
-    // M2M - API injected
-    related_doctors?: Doctor[];
-    related_services?: Service[];
-}
+    address?: string;
+    mapEmbed?: string;
+    phone?: string;
+    emergencyPhone?: string;
+    operatingHours?: string;
+    departments?: string[] | Department[];
+    doctors?: string[] | Doctor[];
+    seo?: SEOObject;
 
-// ─────────────────────────────────────────
-// FAQs — Schema.org: FAQPage
-// ─────────────────────────────────────────
-export interface FAQ {
-    id: string;
-    status: 'published' | 'draft' | 'archived';
-    question: string;
-    answer: string;
-    category: 'general' | 'insurance' | 'treatment';
-    related_service?: string;
-    related_department?: string;
-    sort_order?: number;
-}
-
-// ─────────────────────────────────────────
-// Testimonials — Schema.org: Review
-// ─────────────────────────────────────────
-export interface Testimonial {
-    id: string;
-    status: 'published' | 'draft' | 'archived';
-    patient_name: string;
-    content: string;
-    rating: number;
-    image: string; // UUID
-    // SEO fields
-    treatment_received?: string;
-    department?: string;
-    doctor?: string;
-    date_of_visit?: string;
-    is_featured?: boolean;
-    sort_order?: number;
-}
-
-// ─────────────────────────────────────────
-// Health Packages — Schema.org: Product, Offer
-// ─────────────────────────────────────────
-export interface HealthPackage {
-    id: string;
-    status: 'published' | 'draft' | 'archived';
-    title: string;
-    slug: string;
-    price: number;
-    tests_included: string;
-    thumbnail: string; // UUID
-    // SEO fields
-    seo_title?: string;
-    seo_description?: string;
-    short_description?: string;
-    original_price?: number;
-    validity_days?: number;
-    is_featured?: boolean;
-    sort_order?: number;
-    // M2M - API injected
-    related_services?: Service[];
-}
-
-// ─────────────────────────────────────────
-// Insurances
-// ─────────────────────────────────────────
-export interface Insurance {
-    id: string;
-    status: 'published' | 'draft' | 'archived';
-    name: string;
-    slug?: string;
-    logo: string; // UUID
-    tier: 'gold' | 'silver' | 'bronze';
-    description?: string;
-    website_url?: string;
-    cashless_available?: boolean;
-    sort_order?: number;
-}
-
-// ─────────────────────────────────────────
-// Diagnostics
-// ─────────────────────────────────────────
-export interface Diagnostic {
-    id: string;
-    status: 'published' | 'draft' | 'archived';
-    name: string;
-    slug: string;
-    category: 'radiology' | 'pathology' | 'cardiology' | 'other';
-    description?: string;
-    short_description?: string;
-    price?: number;
-    preparation_instructions?: string;
-    report_time?: string;
-    home_collection?: boolean;
-    sample_type?: string;
-    fasting_required?: boolean;
-    parameters_count?: number;
-    thumbnail?: string; // UUID
-    // SEO fields
-    seo_title?: string;
-    seo_description?: string;
-    sort_order?: number;
-    // Schema.org MedicalTest
-    body_system?: string;
-    used_to_diagnose?: string[] | string;
-    normal_range?: string;
-}
-
-
-// ─────────────────────────────────────────
-// Pages — Schema.org: WebPage
-// ─────────────────────────────────────────
-export interface Page {
-    id: string;
-    status: 'published' | 'draft' | 'archived';
-    title: string;
-    slug: string;
-    hero_image: string; // UUID
-    content: string;
-    seo_title: string;
-    seo_description: string;
-    og_image?: string; // UUID
-    canonical_url?: string;
-    robots_meta?: 'index,follow' | 'noindex,follow' | 'index,nofollow' | 'noindex,nofollow';
-    sort_order?: number;
-}
-
-// ─────────────────────────────────────────
-// Blog Posts — Schema.org: Article
-// ─────────────────────────────────────────
-export interface Author {
-    id: string;
-    name: string;
-    avatar: string; // UUID
-    bio: string;
+    // Legacy
+    status?: string;
+    related_doctors?: Doctor[] | any[];
+    related_services?: Service[] | any[];
 }
 
 export interface Post {
     id: string;
-    status: 'published' | 'draft' | 'archived';
     title: string;
     slug: string;
-    image: string; // UUID
-    content: string;
-    excerpt: string;
-    author: Author | string;
+    excerpt?: string;
+    featuredImage?: string;
+    content?: string;
+    author?: { name: string; avatar?: string; bio?: string } | string | any;
+    category?: string;
+    tags?: string[];
+    publishedDate?: string;
+    seo?: SEOObject;
+
+    // Legacy mappings
     date_created: string;
-    category: string;
-    tags: string[];
+    image?: string;
+    status?: string;
+    related_doctors?: Doctor[] | any[];
+    related_services?: Service[] | any[];
+}
+
+export interface Testimonial {
+    id: string;
+    patientName: string;
+    patientPhoto?: string;
+    quote: string;
+    rating?: number;
+    relatedDepartment?: string | Department;
+    location?: string | Location;
+}
+
+export interface InsurancePartner {
+    id: string;
+    name: string;
+    logo?: string;
+    link?: string;
+    description?: string;
+}
+
+// ─────────────────────────────────────────
+// 4️⃣ MODULAR SECTION BLOCKS
+// ─────────────────────────────────────────
+export interface HeroSectionBlock {
+    _type: 'hero';
+    heading: string;
+    subheading?: string;
+    backgroundImage?: string;
+    primaryCTALabel?: string;
+    primaryCTALink?: string;
+    secondaryCTA?: string;
+    showEmergencyBadge?: boolean;
+}
+
+export interface DepartmentGridBlock {
+    _type: 'department_grid';
+    title: string;
+    description?: string;
+    departments?: Department[];
+    layoutVariant?: 'grid' | 'carousel';
+}
+
+export interface DoctorHighlightBlock {
+    _type: 'doctor_highlight';
+    title: string;
+    doctors?: Doctor[];
+    showFilter?: boolean;
+}
+
+export interface AppointmentCTABlock {
+    _type: 'appointment_cta';
+    title: string;
+    description?: string;
+    buttonText?: string;
+    backgroundStyle?: 'primary' | 'secondary' | 'light' | 'image';
+}
+
+export interface TestimonialSectionBlock {
+    _type: 'testimonial_section';
+    title: string;
+    testimonials?: Testimonial[];
+    autoSlide?: boolean;
+}
+
+export interface InsuranceSectionBlock {
+    _type: 'insurance_section';
+    title: string;
+    insurancePartners?: InsurancePartner[];
+}
+
+export interface BlogPreviewBlock {
+    _type: 'blog_preview';
+    title: string;
+    numberOfPosts?: number;
+    categoryFilter?: string;
+}
+
+export type CMSBlock =
+    | HeroSectionBlock
+    | DepartmentGridBlock
+    | DoctorHighlightBlock
+    | AppointmentCTABlock
+    | TestimonialSectionBlock
+    | InsuranceSectionBlock
+    | BlogPreviewBlock;
+
+// ─────────────────────────────────────────
+// 3️⃣ PAGE-LEVEL CONTENT MODEL
+// ─────────────────────────────────────────
+export interface Page {
+    id: string;
+    title: string;
+    slug: string;
+    heroSection?: HeroSectionBlock;
+    sections?: CMSBlock[];
+    seo?: SEOObject;
+}
+
+// ─────────────────────────────────────────
+// 5️⃣ ADVANCED ENTERPRISE MODELS
+// ─────────────────────────────────────────
+export interface Event {
+    id: string;
+    title: string;
+    slug: string;
+    description?: string; // Rich Text
+    startDate: string;
+    endDate?: string;
+    location?: string | Location;
+    isVirtual?: boolean;
+    registrationLink?: string;
+    featuredImage?: string;
+    seo?: SEOObject;
+}
+
+export interface HealthPackage {
+    id: string;
+    title: string;
+    slug: string;
+    price?: number;
+    originalPrice?: number;
+    testsIncluded?: string[]; // Array of test names
+    thumbnail?: string;
+    shortDescription?: string;
+    fullDescription?: string; // Rich Text
+    isFeatured?: boolean;
+    relatedDepartments?: string[] | Department[];
+    seo?: SEOObject;
+
+    // Legacy
+    status?: string;
+    tests_included?: string;
+    related_services?: any[];
+}
+
+export interface DoctorSchedule {
+    id: string;
+    doctor: string | Doctor;
+    location: string | Location;
+    dayOfWeek: string; // e.g. "Monday"
+    startTime: string; // e.g. "09:00"
+    endTime: string;   // e.g. "17:00"
+    exceptions?: { date: string; isAvailable: boolean; reason?: string }[];
+}
+
+export interface FAQ {
+    id: string;
+    question: string;
+    answer: string; // Rich Text or plain text
+    category?: string;
+    relatedEntity?: string; // Polymorphic reference ID
+
+    // Legacy
+    status?: string;
+}
+
+export interface ClinicalProcedure {
+    id: string;
+    title: string;
+    slug: string;
+    overview?: string; // Rich text
+    preparation?: string; // Rich text
+    recovery?: string; // Rich text
+    risks?: string; // Rich text
+    relatedDepartments?: string[] | Department[];
+    relatedDoctors?: string[] | Doctor[];
+    faqs?: FAQ[];
+    seo?: SEOObject;
+}
+
+export interface PatientEducationResource {
+    id: string;
+    title: string;
+    slug: string;
+    resourceType: 'article' | 'video' | 'pdf_guide';
+    fileUrl?: string;
+    videoUrl?: string;
+    content?: string; // Rich Text
+    relatedDepartments?: string[] | Department[];
+    seo?: SEOObject;
+}
+
+export interface TelemedicineProfile {
+    id: string;
+    doctor: string | Doctor;
+    isAvailable: boolean;
+    consultationFee: number;
+    platformLink?: string;
+    languagesSpoken: string[];
+}
+
+export interface Diagnostic {
+    id: string;
+    name: string;
+    slug: string;
+    shortDescription?: string;
+    price?: number;
+    reportTimeHours?: number;
+    thumbnail?: string;
+
+    // Legacy
+    status?: string;
+    short_description?: string;
+    body_system?: string;
+    used_to_diagnose?: string[] | string | any;
+    normal_range?: string;
+}
+
+export interface Service {
+    id: string;
+    title: string;
+    slug: string;
+    icon?: string;
+    shortDescription?: string;
+    procedureType?: string;
+    relatedDoctors?: any[];
+    availableLocations?: any[];
+    seo?: SEOObject;
+
+    // Legacy mappings
+    status?: string;
+    short_description?: string;
+    full_description?: string;
+    procedure_type?: string;
     seo_title?: string;
     seo_description?: string;
-
-    // M2M - API injected
-    related_doctors?: Doctor[];
-    related_services?: Service[];
+    related_doctors?: any[];
+    available_locations?: any[];
 }
 
 // ─────────────────────────────────────────
-// M2M Junction Tables
-// ─────────────────────────────────────────
-export interface DoctorService {
-    id: number;
-    doctors_id: string | Doctor;
-    services_id: string | Service;
-}
-
-export interface DoctorLocation {
-    id: number;
-    doctors_id: string | Doctor;
-    locations_id: string | Location;
-}
-
-export interface ServiceLocation {
-    id: number;
-    services_id: string | Service;
-    locations_id: string | Location;
-}
-
-export interface HealthPackageService {
-    id: number;
-    health_packages_id: string | HealthPackage;
-    services_id: string | Service;
-}
-
-export interface PostDoctor {
-    id: number;
-    posts_id: string | Post;
-    doctors_id: string | Doctor;
-}
-
-export interface PostService {
-    id: number;
-    posts_id: string | Post;
-    services_id: string | Service;
-}
-
-// ─────────────────────────────────────────
-// Aggregate Schema
+// Aggregate Schema for Directus SDK
 // ─────────────────────────────────────────
 export interface Schema {
-    hospital_settings: HospitalSettings;
+    hospital_settings: GlobalSiteSettings;
     doctors: Doctor[];
     departments: Department[];
     services: Service[];
@@ -376,15 +352,12 @@ export interface Schema {
     locations: Location[];
     pages: Page[];
     faqs: FAQ[];
-    insurances: Insurance[];
+    insurances: InsurancePartner[];
     diagnostics: Diagnostic[];
     posts: Post[];
-    authors: Author[];
-    // M2M Collections
-    doctors_services: DoctorService[];
-    doctors_locations: DoctorLocation[];
-    services_locations: ServiceLocation[];
-    health_packages_services: HealthPackageService[];
-    posts_doctors: PostDoctor[];
-    posts_services: PostService[];
+    events: Event[];
+    doctor_schedules: DoctorSchedule[];
+    clinical_procedures: ClinicalProcedure[];
+    patient_education: PatientEducationResource[];
+    telemedicine_profiles: TelemedicineProfile[];
 }

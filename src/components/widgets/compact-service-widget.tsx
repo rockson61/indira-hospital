@@ -35,7 +35,7 @@ export function CompactServiceWidget({
   description,
   services,
   ctaText = "Learn More",
-  ctaLink = "/services",
+  ctaLink = "/doctor/near-me/treat",
   showPricing = true,
   showLocation = true
 }: CompactServiceWidgetProps) {
@@ -58,7 +58,7 @@ export function CompactServiceWidget({
             <div key={index} className="service-item-card flex items-center justify-between p-3 rounded-lg border shadow-sm">
               <div className="flex-1">
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={`/doctor/near-me/treat/${service.slug}`}
                   className="text-sm font-semibold text-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
                 >
                   {service.name}
@@ -95,7 +95,7 @@ export function CompactServiceWidget({
             variant="bordered"
             className="border-teal-600 text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/20 dark:text-teal-400 dark:border-teal-400 font-semibold"
             as={Link}
-            href="/contact"
+            href="/doctor/near-me"
           >
             <Phone className="w-4 h-4 mr-1" />
             Book Now

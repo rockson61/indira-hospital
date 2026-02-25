@@ -5,7 +5,6 @@ import {
     Globe, HeartHandshake, ShieldPlus
 } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
-import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -17,40 +16,40 @@ const BENEFITS = [
     {
         title: "World-Class Tech",
         desc: "Work with the latest robotic surgical systems, 3T MRI, and fully modular OTs.",
-        icon: <ShieldPlus className="w-6 h-6 text-purple-600" />
+        icon: <ShieldPlus className="w-6 h-6 text-teal-600 group-hover:scale-110 transition-transform duration-500" />
     },
     {
         title: "Growth Opportunities",
         desc: "Regular CPD programs, workshops, and support for clinical research papers.",
-        icon: <GraduationCap className="w-6 h-6 text-purple-600" />
+        icon: <GraduationCap className="w-6 h-6 text-teal-600 group-hover:scale-110 transition-transform duration-500" />
     },
     {
         title: "Work-Life Balance",
         desc: "Structured shifts, competitive compensation, and a supportive medical community.",
-        icon: <Sparkles className="w-6 h-6 text-purple-600" />
+        icon: <Sparkles className="w-6 h-6 text-teal-600 group-hover:scale-110 transition-transform duration-500" />
     }
 ];
 
 export default function CareersPage() {
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950">
-            {/* HERO */}
-            <section className="bg-slate-900 pt-24 pb-40 text-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20 pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[150px]" />
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/30 rounded-full blur-[150px]" />
-                </div>
+        <main className="min-h-screen bg-slate-50 selection:bg-teal-200 selection:text-teal-900 pb-24">
+            {/* ELITE RECRUITMENT HERO */}
+            <section className="bg-slate-900 pt-36 pb-48 lg:pt-48 lg:pb-64 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
 
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
-                        <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-5 py-2 mb-8 text-purple-400 font-bold text-sm tracking-widest uppercase">
-                            <Briefcase className="w-4 h-4" /> Join our Clinical Legacy
+                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-teal-500/30">
+                            <div className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></div>
+                            Join our Clinical Legacy
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight">
-                            Build Your Career in <br />
-                            <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">Excellence.</span>
+                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                            Build Your Career in <br className="hidden sm:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-400">Excellence.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
                             We are looking for passionate healthcare professionals who want to
                             shape the future of patient care in Tamil Nadu.
                         </p>
@@ -58,55 +57,62 @@ export default function CareersPage() {
                 </SectionContainer>
             </section>
 
-            {/* WHY JOIN US */}
-            <SectionContainer className="py-24 -mt-20">
-                <div className="grid md:grid-cols-3 gap-8">
+            {/* BENEFITS BENTO GRID */}
+            <SectionContainer className="relative z-20 -mt-24 sm:-mt-32 max-w-6xl mx-auto px-4 mb-24">
+                <div className="grid md:grid-cols-3 gap-6">
                     {BENEFITS.map((item, i) => (
-                        <Card key={i} className="p-10 bg-white dark:bg-slate-900 border-none shadow-2xl rounded-[3rem] hover:-translate-y-2 transition-all">
-                            <div className="mb-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-2xl inline-block">
+                        <div key={i} className="group bg-white/90 backdrop-blur-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(20,184,166,0.1)] p-10 rounded-[2.5rem] transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                            {/* Hover light sheen */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                            <div className="mb-8 w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center group-hover:bg-teal-100 transition-colors duration-500 relative z-10">
                                 {item.icon}
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">{item.title}</h3>
-                            <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
+                            <h3 className="text-2xl font-black mb-4 text-slate-900 relative z-10 tracking-tight">{item.title}</h3>
+                            <p className="text-slate-500 leading-relaxed font-medium relative z-10">
                                 {item.desc}
                             </p>
-                        </Card>
+                        </div>
                     ))}
                 </div>
             </SectionContainer>
 
             {/* OPEN POSITIONS PREVIEW */}
-            <section className="bg-white dark:bg-slate-900 py-32">
+            <section className="bg-slate-50 py-16">
                 <SectionContainer>
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                        <div className="max-w-xl">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Current <span className="text-purple-600 font-black">Opportunities</span></h2>
-                            <p className="text-lg text-slate-500">
+                    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
+                        <div className="max-w-2xl">
+                            <h2 className="text-4xl sm:text-5xl font-black mb-6 text-slate-900 tracking-tight">Active <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Opportunities</span></h2>
+                            <p className="text-xl text-slate-500 font-light leading-relaxed">
                                 We are actively hiring for the following departments. Even if you don't see your
-                                role, we'd love to hear from you.
+                                exact role listed, we would love to hear from talented professionals.
                             </p>
                         </div>
-                        <Link href="mailto:careers@indirahospitals.com" className="inline-flex items-center gap-3 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-bold hover:bg-slate-800 transition-all">
-                            Send General Application <ArrowRight className="w-5 h-5" />
+                        <Link href="mailto:careers@indirahospitals.com" className="group/btn relative flex items-center justify-center px-8 py-4 bg-white border-2 border-slate-200 text-slate-900 rounded-2xl font-black hover:border-slate-300 transition-all shadow-sm overflow-hidden whitespace-nowrap">
+                            <span className="relative z-10">Send General Application</span>
+                            <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                            <div className="absolute inset-0 bg-slate-50 -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 ease-out z-0" />
                         </Link>
                     </div>
 
-                    <div className="grid gap-6">
+                    <div className="grid gap-4">
                         {[
                             { title: "Consultant Cardiologist", dept: "Interventional Cardiology", type: "Full-Time" },
-                            { title: "OT Staff Nurse", dept: "Surgery / Pre-Op", type: "Shift-Based" },
-                            { title: "Radiology Technician", dept: "Diagnostics / MRI", type: "Full-Time" },
+                            { title: "Senior OT Staff Nurse", dept: "Surgery / Pre-Op", type: "Shift-Based" },
+                            { title: "Advanced Radiology Technician", dept: "Diagnostics / 3T MRI", type: "Full-Time" },
                             { title: "Patient Relation Executive", dept: "Administration", type: "Regular" }
                         ].map((job, i) => (
-                            <div key={i} className="group flex flex-col md:flex-row justify-between items-start md:items-center p-8 bg-slate-50 dark:bg-slate-800/50 rounded-3xl hover:bg-white dark:hover:bg-slate-800 border border-transparent hover:border-purple-200 transition-all cursor-pointer">
-                                <div>
-                                    <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-purple-600 transition-colors">{job.title}</h4>
-                                    <div className="flex gap-4 text-sm text-slate-500 font-medium tracking-wide pb-2">
-                                        <span className="flex items-center gap-1.5"><Globe className="w-4 h-4" /> {job.dept}</span>
-                                        <span className="flex items-center gap-1.5"><HeartHandshake className="w-4 h-4" /> {job.type}</span>
+                            <div key={i} className="group flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 sm:p-8 bg-white rounded-3xl border border-slate-200 hover:border-teal-300 hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:ring-2 hover:ring-teal-500/20 transition-all duration-300 cursor-pointer hover:-translate-y-1 relative overflow-hidden">
+                                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-teal-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                                <div className="mb-6 sm:mb-0 sm:pl-4">
+                                    <h4 className="text-2xl font-black text-slate-900 mb-3 group-hover:text-teal-700 transition-colors tracking-tight">{job.title}</h4>
+                                    <div className="flex flex-wrap gap-4 text-sm text-slate-500 font-bold uppercase tracking-widest">
+                                        <span className="flex items-center gap-1.5 bg-slate-100 px-3 py-1 rounded-md"><Globe className="w-4 h-4 text-teal-600" /> {job.dept}</span>
+                                        <span className="flex items-center gap-1.5 bg-slate-100 px-3 py-1 rounded-md"><HeartHandshake className="w-4 h-4 text-emerald-600" /> {job.type}</span>
                                     </div>
                                 </div>
-                                <Link href="mailto:careers@indirahospitals.com" className="mt-4 md:mt-0 px-6 py-2.5 bg-purple-100 text-purple-700 rounded-xl font-bold text-sm hover:bg-purple-600 hover:text-white transition-all">
+                                <Link href="mailto:careers@indirahospitals.com" className="sm:mr-2 w-full sm:w-auto text-center px-8 py-3.5 bg-slate-100 text-slate-700 rounded-xl font-black text-sm uppercase tracking-widest group-hover:bg-gradient-to-r group-hover:from-teal-500 group-hover:to-emerald-500 group-hover:text-white group-hover:shadow-lg group-hover:shadow-teal-500/30 transition-all duration-300 transform group-hover:scale-105">
                                     Apply Now
                                 </Link>
                             </div>
@@ -115,19 +121,28 @@ export default function CareersPage() {
                 </SectionContainer>
             </section>
 
-            {/* CTA */}
+            {/* MASSIVE CTA BENTO */}
             <SectionContainer className="py-24">
-                <div className="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-[4rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl">
-                    <div className="max-w-2xl mx-auto relative z-10">
-                        <Mail className="w-16 h-16 mx-auto mb-8 text-purple-400 opacity-50" />
-                        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight">Ready to join the <br /> best team in Vellore?</h2>
-                        <p className="text-xl text-purple-200 mb-12">
-                            Send your CV and a brief cover letter to our HR department.
-                            We review applications on a rolling basis.
+                <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-teal-950 rounded-[4rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl group/cta">
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[100px] group-hover/cta:bg-teal-500/20 transition-colors duration-700" />
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px]" />
+
+                    <div className="max-w-3xl mx-auto relative z-10">
+                        <div className="w-24 h-24 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-8 backdrop-blur-md shadow-inner border border-white/20 group-hover/cta:scale-110 transition-transform duration-500">
+                            <Mail className="w-10 h-10 text-teal-300" />
+                        </div>
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-8 tracking-tight leading-[1.1]">
+                            Ready to join the <br /> best team in Vellore?
+                        </h2>
+                        <p className="text-xl text-teal-100/80 mb-12 font-light leading-relaxed">
+                            Send your comprehensive CV and a brief cover letter to our Human Resources department.
+                            We review elite applications on a rolling basis.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Link href="mailto:careers@indirahospitals.com" className="px-12 py-5 bg-white text-indigo-900 font-black rounded-2xl hover:bg-slate-100 transition-all shadow-xl text-lg">
-                                careers@indirahospitals.com
+                        <div className="flex justify-center">
+                            <Link href="mailto:careers@indirahospitals.com" className="group/btn relative flex items-center justify-center px-10 py-6 bg-white text-slate-900 font-black rounded-2xl hover:bg-slate-50 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] overflow-hidden text-lg w-full sm:w-auto">
+                                <span className="relative z-10 tracking-wide">careers@indirahospitals.com</span>
+                                <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-200/50 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </Link>
                         </div>
                     </div>

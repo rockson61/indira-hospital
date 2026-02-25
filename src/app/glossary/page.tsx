@@ -42,10 +42,10 @@ export default function GlossaryPage() {
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
             {/* Hero Section */}
-            <div className="bg-gradient-to-r from-purple-900 to-purple-800 text-white py-16">
+            <div className="bg-gradient-to-r from-teal-900 to-teal-700 text-white py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-3xl md:text-5xl font-bold mb-4">Medical Glossary</h1>
-                    <p className="text-purple-100 text-lg max-w-2xl mx-auto">
+                    <p className="text-teal-100 text-lg max-w-2xl mx-auto">
                         Understanding medical terminology made easy. Explore our comprehensive guide to conditions, treatments, and procedures.
                     </p>
                 </div>
@@ -68,7 +68,7 @@ export default function GlossaryPage() {
                             <Button
                                 variant={selectedLetter === null ? "default" : "outline"}
                                 onClick={() => setSelectedLetter(null)}
-                                className={selectedLetter === null ? "bg-purple-600 hover:bg-purple-700" : ""}
+                                className={selectedLetter === null ? "bg-teal-600 hover:bg-teal-700" : ""}
                             >
                                 All
                             </Button>
@@ -77,7 +77,7 @@ export default function GlossaryPage() {
                                     key={letter}
                                     variant={selectedLetter === letter ? "default" : "outline"}
                                     onClick={() => setSelectedLetter(letter === selectedLetter ? null : letter)}
-                                    className={`w-10 h-10 p-0 flex-shrink-0 ${selectedLetter === letter ? "bg-purple-600 hover:bg-purple-700" : ""}`}
+                                    className={`w-10 h-10 p-0 flex-shrink-0 ${selectedLetter === letter ? "bg-teal-600 hover:bg-teal-700" : ""}`}
                                 >
                                     {letter}
                                 </Button>
@@ -99,8 +99,8 @@ export default function GlossaryPage() {
                                 </div>
                                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {groupedTerms[letter].map((term) => (
-                                        <Card key={term.term} className="p-6 hover:shadow-md transition-all border-l-4 border-l-purple-500 rounded-lg group">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors">
+                                        <Card key={term.term} className="p-6 hover:shadow-md transition-all border-l-4 border-l-teal-500 rounded-lg group">
+                                            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-teal-700 transition-colors">
                                                 {term.term}
                                             </h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -113,7 +113,7 @@ export default function GlossaryPage() {
                                                 {term.relatedService && (
                                                     <Link
                                                         href={`/department/${term.relatedService}`.replace('department', 'services')} // Mapping check needed, assuming services
-                                                        className="text-purple-600 text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                                                        className="text-teal-600 text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
                                                     >
                                                         Learn More <ArrowRight className="w-3 h-3" />
                                                     </Link>
@@ -134,7 +134,7 @@ export default function GlossaryPage() {
                         <p className="text-gray-500 mt-2">Try adjusting your search or filter.</p>
                         <Button
                             variant="link"
-                            className="text-purple-600 mt-2"
+                            className="text-teal-600 mt-2"
                             onClick={() => { setSearchQuery(""); setSelectedLetter(null); }}
                         >
                             Clear all filters

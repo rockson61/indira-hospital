@@ -1,380 +1,268 @@
 import { getDirectusClient } from './directus';
 import { readItems, readSingleton } from '@directus/sdk';
-import { Doctor, Service, Location, Post, HospitalSettings, Diagnostic, Testimonial, FAQ, Insurance, Department, HealthPackage } from './schema';
+import { Doctor, Service, Location, Post, GlobalSiteSettings, Diagnostic, Testimonial, FAQ, InsurancePartner, Department, HealthPackage } from './schema';
+import { SEED_DATA } from './data/seed-data';
+import { comprehensiveFaqs } from './data/faq-data';
+import { testimonials as localTestimonials } from './data/testimonials-data';
+import { tamilNaduLocations } from './data/tamilnadu-locations';
 
 export async function getDoctors() {
-    const client = await getDirectusClient();
-    return await client.request(readItems('doctors', {
-        filter: { status: { _eq: 'published' } },
-        // @ts-expect-error - Directus SDK types for nested fields
-        fields: ['name', 'slug', 'designation', 'image', 'department.name', 'department.slug', 'specialties', 'consultation_fee'],
-    }));
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('doctors', { fields: ['*'] }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getDoctors', error);
+    }
+    return SEED_DATA.doctors as any;
 }
 
 export async function getDoctorBySlug(slug: string) {
-    const client = await getDirectusClient();
-    const doctors = await client.request(readItems('doctors', {
-        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
-        // @ts-expect-error - Directus SDK types for nested fields
-        fields: ['*', 'department.*', 'education', 'experience_timeline', 'awards', 'opd_schedule'],
-        limit: 1,
-    })) as unknown as Doctor[];
-
-    if (doctors.length === 0) return null;
-    const doctor = doctors[0];
-
-    // M2M: Fetch related Services
     try {
-        const servicesRel = await client.request(readItems('doctors_services', {
-            filter: { doctors_id: { _eq: doctor.id } },
-            fields: ['services_id.title', 'services_id.slug', 'services_id.icon'] as any
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('doctors', {
+            filter: { slug: { _eq: slug } },
+            fields: ['*', { related_services: ['*'], available_locations: ['*'] }],
+            limit: 1
         }));
-        doctor.related_services = servicesRel.map((r: any) => r.services_id).filter(Boolean);
-    } catch (e) {
-        console.warn(`API: Could not fetch services for doctor ${slug}. This might be a permission issue for doctors_services junction table.`);
+        if (data && data.length > 0) return data[0] as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getDoctorBySlug ${slug}`, error);
     }
 
-    // M2M: Fetch related Locations
-    try {
-        const locationsRel = await client.request(readItems('doctors_locations', {
-            filter: { doctors_id: { _eq: doctor.id } },
-            fields: ['locations_id.name', 'locations_id.slug', 'locations_id.district'] as any
-        }));
-        doctor.available_locations = locationsRel.map((r: any) => r.locations_id).filter(Boolean);
-    } catch (e) {
-        console.warn(`API: Could not fetch locations for doctor ${slug}. This might be a permission issue for doctors_locations junction table.`);
-    }
-
-    return doctor;
+    const doctor = SEED_DATA.doctors.find((d: any) => d.slug === slug);
+    if (!doctor) return null;
+    return {
+        ...doctor,
+        related_services: [],
+        available_locations: []
+    } as any;
 }
 
 export async function getDepartments() {
-    const client = await getDirectusClient();
-    return await client.request(readItems('departments', {
-        filter: { status: { _eq: 'published' } },
-        fields: ['name', 'slug', 'icon', 'description'],
-    }));
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('departments', { fields: ['*'] }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getDepartments', error);
+    }
+    return SEED_DATA.services as any;
 }
 
 export async function getServiceBySlug(slug: string) {
-    const client = await getDirectusClient();
-    const services = await client.request(readItems('services', {
-        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
-        fields: ['*', 'department.*', 'video_explainer'] as any, // Removed services.* which was invalid for department
-        limit: 1
-    })) as unknown as Service[];
-
-    if (services.length === 0) return null;
-    const service = services[0];
-
-    // M2M: Fetch Performing Doctors
     try {
-        const doctorsRel = await client.request(readItems('doctors_services', {
-            filter: { services_id: { _eq: service.id } },
-            fields: ['doctors_id.name', 'doctors_id.slug', 'doctors_id.image', 'doctors_id.designation', 'doctors_id.department.name'] as any
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('services', {
+            filter: { slug: { _eq: slug } },
+            fields: ['*', { related_doctors: ['*'], available_locations: ['*'] }],
+            limit: 1
         }));
-        service.related_doctors = doctorsRel.map((r: any) => r.doctors_id).filter(Boolean);
-    } catch (e) {
-        console.warn(`API: Could not fetch doctors for service ${slug}. Junction table permission issue suspected.`);
+        if (data && data.length > 0) return data[0] as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getServiceBySlug ${slug}`, error);
     }
 
-    // M2M: Fetch Available Locations
-    try {
-        const locationsRel = await client.request(readItems('services_locations', {
-            filter: { services_id: { _eq: service.id } },
-            fields: ['locations_id.name', 'locations_id.slug', 'locations_id.district'] as any
-        }));
-        service.available_locations = locationsRel.map((r: any) => r.locations_id).filter(Boolean);
-    } catch (e) {
-        console.warn(`API: Could not fetch locations for service ${slug}. Junction table permission issue suspected.`);
-    }
-
-    return service;
+    const service = SEED_DATA.services.find((s: any) => s.slug === slug);
+    if (!service) return null;
+    return {
+        ...service,
+        related_doctors: SEED_DATA.doctors.filter((d: any) =>
+            (d.department && service.title && d.department.toLowerCase().includes(service.title.toLowerCase())) ||
+            (d.specialties && service.title && d.specialties.some((sp: string) => sp.toLowerCase().includes(service.title.toLowerCase())))
+        ),
+        available_locations: []
+    } as any;
 }
 
 export async function getLocationBySlug(slug: string) {
-    const client = await getDirectusClient();
-    const locations = await client.request(readItems('locations', {
-        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
-        fields: ['*'],
-        limit: 1
-    })) as unknown as Location[];
-
-    if (locations.length === 0) return null;
-    const location = locations[0];
-
-    // M2M: Fetch Available Doctors
     try {
-        const doctorsRel = await client.request(readItems('doctors_locations', {
-            filter: { locations_id: { _eq: location.id } },
-            fields: ['doctors_id.name', 'doctors_id.slug', 'doctors_id.image', 'doctors_id.designation'] as any
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('locations', {
+            filter: { slug: { _eq: slug } },
+            fields: ['*', { related_doctors: ['*'], related_services: ['*'] }],
+            limit: 1
         }));
-        location.related_doctors = doctorsRel.map((r: any) => r.doctors_id).filter(Boolean);
-    } catch (e) { }
+        if (data && data.length > 0) return data[0] as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getLocationBySlug ${slug}`, error);
+    }
 
-    // M2M: Fetch Available Services
-    try {
-        const servicesRel = await client.request(readItems('services_locations', {
-            filter: { locations_id: { _eq: location.id } },
-            fields: ['services_id.title', 'services_id.slug', 'services_id.icon', 'services_id.short_description'] as any
-        }));
-        location.related_services = servicesRel.map((r: any) => r.services_id).filter(Boolean);
-    } catch (e) { }
-
-    return location;
+    const loc = tamilNaduLocations.find((l: any) => l.slug === slug);
+    if (!loc) return null;
+    return {
+        ...loc,
+        related_doctors: SEED_DATA.doctors,
+        related_services: SEED_DATA.services
+    } as any;
 }
 
 export async function getPostBySlug(slug: string) {
-    const client = await getDirectusClient();
-    const posts = await client.request(readItems('posts', {
-        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
-        fields: ['*', 'author.*'] as any,
-        limit: 1
-    })) as unknown as Post[];
-
-    if (posts.length === 0) return null;
-    const post = posts[0];
-
-    // M2M: Fetch Related Doctors
     try {
-        const doctorsRel = await client.request(readItems('posts_doctors', {
-            filter: { posts_id: { _eq: post.id } },
-            fields: ['doctors_id.name', 'doctors_id.slug', 'doctors_id.image', 'doctors_id.designation', 'doctors_id.department.name'] as any
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('posts', {
+            filter: { slug: { _eq: slug } },
+            fields: ['*'],
+            limit: 1
         }));
-        post.related_doctors = doctorsRel.map((r: any) => r.doctors_id).filter(Boolean);
-    } catch (e) { }
-
-    // M2M: Fetch Related Services
-    try {
-        const servicesRel = await client.request(readItems('posts_services', {
-            filter: { posts_id: { _eq: post.id } },
-            fields: ['services_id.title', 'services_id.slug', 'services_id.icon', 'services_id.short_description'] as any
-        }));
-        post.related_services = servicesRel.map((r: any) => r.services_id).filter(Boolean);
-    } catch (e) { }
-
-    return post;
+        if (data && data.length > 0) return data[0] as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getPostBySlug ${slug}`, error);
+    }
+    return null; // Mock fallback
 }
 
 export async function getServices() {
-    const client = await getDirectusClient();
-    return await client.request(readItems('services', {
-        filter: { status: { _eq: 'published' } },
-        // @ts-expect-error - Directus SDK types for nested fields
-        fields: ['title', 'slug', 'icon', 'short_description', 'department.slug', 'cost_range_min', 'cost_range_max', 'video_explainer']
-    }));
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('services', { fields: ['*'] }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getServices', error);
+    }
+    return SEED_DATA.services as any;
 }
 
 export async function getTestimonials() {
-    const client = await getDirectusClient();
-    return await client.request(readItems('testimonials', {
-        filter: { status: { _eq: 'published' } },
-        fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit'],
-        limit: 10
-    }));
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('testimonials', { fields: ['*'] }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getTestimonials', error);
+    }
+    return localTestimonials as any;
 }
 
-export async function getReviewsByEntity(type: 'doctor' | 'department' | 'service' | 'diagnostic' | 'location' | 'blog' | 'technology', name: string) {
-    const client = await getDirectusClient();
-
-    // Normalize entity name for better matching
-    const normalizeName = (input: string): string => {
-        const map: Record<string, string> = {
-            'pediatrics': 'Paediatrics',
-            'paediatrics': 'Paediatrics',
-            'orthopedics': 'Orthopaedics',
-            'orthopaedics': 'Orthopaedics',
-            'gynaecology': 'Obstetrics & Gynaecology',
-            'gynecology': 'Obstetrics & Gynaecology',
-            'ent': 'ENT (Ear, Nose, Throat)',
-            'ear nose throat': 'ENT (Ear, Nose, Throat)',
-            'dermatology': 'Dermatology & Cosmetology',
-            'skin': 'Dermatology & Cosmetology',
-            'vascular': 'Vascular Surgery', // Ensure this matches CMS exactly, assuming CMS has 'Vascular Surgery' or similar. If it fails, we catch it.
-            'cardio': 'Cardiac Sciences', // Map cardio to broader category if needed
-        };
-        const lower = input.toLowerCase();
-        for (const key in map) {
-            if (lower.includes(key)) return map[key];
-        }
-        return input;
-    };
-
-    const searchName = type === 'department' ? normalizeName(name) : name;
-
-    // 1. Try strict filtering by metadata fields
-    const metadataFilter: any = { status: { _eq: 'published' } };
-    if (type === 'doctor') metadataFilter.doctor = { _contains: name };
-    else if (type === 'department') metadataFilter.department = { _contains: searchName };
-    else if (type === 'service' || type === 'diagnostic' || type === 'technology') metadataFilter.treatment_received = { _contains: name };
-    else if (type === 'blog') {
-        metadataFilter._or = [
-            { treatment_received: { _contains: name } },
-            { content: { _contains: name } }
-        ];
+export async function getReviewsByEntity(type: string, name: string) {
+    try {
+        const client = await getDirectusClient();
+        // Adjust the filter based on how reviews are tied to entities in Directus
+        const data = await client.request(readItems('testimonials', {
+            fields: ['*'],
+            // Example filter, may need adjustment for your specific schema
+            // filter: { relatedDepartment: { _eq: name } }
+        }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getReviewsByEntity ${type} ${name}`, error);
     }
 
-    let reviews = await client.request(readItems('testimonials', {
-        filter: metadataFilter,
-        fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit', 'doctor', 'department'],
-        limit: 10
-    })) as unknown as Testimonial[];
-
-    // 2. If no reviews found via metadata, fallback to keyword search in content
-    if (reviews.length === 0) {
-        // Clean up the name for searching (e.g. "Dr. Raman Kumar" -> "Raman Kumar")
-        const searchName = name.replace(/^Dr\.\s+/i, '').replace(/\s+Guide$/i, '');
-
-        const contentFilter: any = {
-            status: { _eq: 'published' },
-            content: { _contains: searchName }
-        };
-
-        reviews = await client.request(readItems('testimonials', {
-            filter: contentFilter,
-            fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit', 'doctor', 'department'],
-            limit: 10
-        })) as unknown as Testimonial[];
-    }
-
-    // 3. If still no reviews, and it's a department/service, try mapping common terms
-    if (reviews.length === 0) {
-        let genericTerm = '';
-        if (name.toLowerCase().includes('cardio')) genericTerm = 'cardio';
-        else if (name.toLowerCase().includes('ortho')) genericTerm = 'ortho';
-        else if (name.toLowerCase().includes('gast')) genericTerm = 'gastro';
-        else if (name.toLowerCase().includes('urology')) genericTerm = 'urology';
-        else if (name.toLowerCase().includes('piles')) genericTerm = 'piles';
-        else if (name.toLowerCase().includes('dent')) genericTerm = 'dentistry';
-        else if (name.toLowerCase().includes('surgery')) genericTerm = 'surgery';
-
-        if (genericTerm) {
-            reviews = await client.request(readItems('testimonials', {
-                filter: {
-                    status: { _eq: 'published' },
-                    content: { _contains: genericTerm }
-                },
-                fields: ['id', 'patient_name', 'content', 'rating', 'image', 'treatment_received', 'date_of_visit', 'doctor', 'department'],
-                limit: 10
-            })) as unknown as Testimonial[];
-        }
-    }
-
-    return reviews;
+    return localTestimonials.map((t, i) => ({
+        id: `rev-${i}`,
+        patient_name: t.name,
+        treatment_received: t.treatment,
+        rating: t.rating,
+        content: t.text,
+        verified: t.verified
+    })) as any;
 }
 
 export async function getFaqsByEntity(type: string, name: string) {
-    const client = await getDirectusClient();
-    let faqs: FAQ[] = [];
-
     try {
-        // 1. Try Directus
-        faqs = await client.request(readItems('faqs', {
-            filter: {
-                _or: [
-                    { related_service: { title: { _icontains: name } } },
-                    { related_department: { name: { _icontains: name } } },
-                    { category: { _eq: 'general' } }
-                ]
-            } as any,
-            fields: ['question', 'answer', 'category'],
-            limit: 8
-        })) as unknown as FAQ[];
-    } catch (e) {
-        // Silently fail for CMS, fallback to static
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('faqs', {
+            fields: ['*'],
+        }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getFaqsByEntity ${type} ${name}`, error);
     }
-
-    // 2. Fallback to static data if Directus empty
-    if (faqs.length === 0) {
-        const { comprehensiveFaqs } = await import('./data/faq-data');
-        // Match specific category first, then general
-        const specific = comprehensiveFaqs.filter(faq =>
-            faq.category?.toLowerCase() === type.toLowerCase() ||
-            faq.category?.toLowerCase() === name.toLowerCase() ||
-            faq.question.toLowerCase().includes(name.toLowerCase())
-        );
-        const general = comprehensiveFaqs.filter(faq => faq.category?.toLowerCase() === 'general');
-
-        faqs = [...specific, ...general].slice(0, 6) as any[];
-    }
-
-    return faqs;
+    return comprehensiveFaqs as any; // Using comprehensive by default
 }
 
 export async function getInsurances() {
-    const client = await getDirectusClient();
-    return await client.request(readItems('insurances', {
-        filter: { status: { _eq: 'published' } },
-        fields: ['name', 'logo', 'tier'],
-        sort: ['tier'] // Gold first usually if alphabetical, but better to sort by a rank or just use tier
-    }));
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('insurances', { fields: ['*'] }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getInsurances', error);
+    }
+    return []; // Mock fallback
 }
 
 export async function getLocations() {
-    const client = await getDirectusClient();
-    return await client.request(readItems('locations', {
-        filter: { status: { _eq: 'published' } },
-        fields: ['name', 'slug', 'district', 'distance_from_hospital', 'address', 'phone'],
-    }));
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('locations', { fields: ['*'] }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getLocations', error);
+    }
+    return tamilNaduLocations as any;
 }
 
 export async function getDiagnostics(category?: string) {
-    const client = await getDirectusClient();
-    const filter: Record<string, unknown> = { status: { _eq: 'published' } };
-    if (category) filter.category = { _eq: category };
-
-    return await client.request(readItems('diagnostics', {
-        filter,
-        fields: ['name', 'slug', 'category', 'short_description', 'price', 'report_time', 'home_collection', 'sample_type', 'fasting_required', 'parameters_count'],
-        sort: ['sort_order', 'name'] as any,
-    }));
+    try {
+        const client = await getDirectusClient();
+        const filter: any = category ? { category: { _eq: category } } : undefined;
+        const data = await client.request(readItems('diagnostics', {
+            fields: ['*'],
+            filter
+        }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getDiagnostics', error);
+    }
+    return []; // Mock fallback
 }
 
 export async function getDiagnosticBySlug(slug: string) {
-    const client = await getDirectusClient();
-    const tests = await client.request(readItems('diagnostics', {
-        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
-        fields: ['*'],
-        limit: 1,
-    }));
-    return (tests as unknown[]).length > 0 ? (tests as unknown[])[0] : null;
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('diagnostics', {
+            filter: { slug: { _eq: slug } },
+            fields: ['*'],
+            limit: 1
+        }));
+        if (data && data.length > 0) return data[0] as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getDiagnosticBySlug ${slug}`, error);
+    }
+    return null; // Mock fallback
 }
 
-
 export async function getHealthPackages() {
-    const client = await getDirectusClient();
-    return await client.request(readItems('health_packages', {
-        filter: { status: { _eq: 'published' } },
-        fields: ['title', 'slug', 'price', 'original_price', 'tests_included', 'thumbnail', 'short_description', 'is_featured'],
-        sort: ['sort_order', '-is_featured', 'price'] as any,
-    }));
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('health_packages', { fields: ['*'] }));
+        if (data && data.length > 0) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getHealthPackages', error);
+    }
+    return []; // Mock fallback
 }
 
 export async function getHealthPackageBySlug(slug: string) {
-    const client = await getDirectusClient();
-    const packages = await client.request(readItems('health_packages', {
-        filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
-        fields: ['*'],
-        limit: 1,
-    }));
-
-    if ((packages as unknown[]).length === 0) return null;
-    const pkg = (packages as unknown[])[0] as HealthPackage;
-
-    // M2M: Fetch related Services (optional but good for semantic mesh)
     try {
-        const servicesRel = await client.request(readItems('health_packages_services', {
-            filter: { health_packages_id: { _eq: pkg.id } },
-            fields: ['services_id.title', 'services_id.slug', 'services_id.icon'] as any
+        const client = await getDirectusClient();
+        const data = await client.request(readItems('health_packages', {
+            filter: { slug: { _eq: slug } },
+            fields: ['*'],
+            limit: 1
         }));
-        pkg.related_services = servicesRel.map((r: any) => r.services_id).filter(Boolean);
-    } catch (e) { }
-
-    return pkg;
+        if (data && data.length > 0) return data[0] as any;
+    } catch (error) {
+        console.warn(`Directus fallback: getHealthPackageBySlug ${slug}`, error);
+    }
+    return null; // Mock fallback
 }
 
-export async function getHospitalSettings() {
-    const client = await getDirectusClient();
-    return await client.request(readSingleton('hospital_settings')) as unknown as HospitalSettings;
-}
+export async function getGlobalSiteSettings() {
+    try {
+        const client = await getDirectusClient();
+        const data = await client.request(readSingleton('hospital_settings', { fields: ['*'] }));
+        if (data) return data as any;
+    } catch (error) {
+        console.warn('Directus fallback: getGlobalSiteSettings', error);
+    }
 
+    return {
+        hospitalName: "Indira Hospital",
+        emergencyPhone: "0416-2253456",
+        helplinePhone: "+91 80560 99990",
+        address: "71F, Filterbed Road, Vellore, Tamilnadu - 632001",
+        email: "contact@indirahospital.com",
+    } as any;
+}

@@ -1,155 +1,38 @@
-"use client"
+import AppointmentBookingClient from "./AppointmentBookingClient";
+import { Clock } from "lucide-react";
 
-import { SectionContainer } from "@/components/ui/section-container"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Calendar } from "@/components/ui/calendar"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { format } from "date-fns"
-import { CalendarIcon, User, Phone, Mail, Stethoscope } from "lucide-react"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { cn } from "@/lib/utils"
-import { useState } from "react"
+export const metadata = {
+    title: "Book an Appointment",
+    description: "Schedule your consultation with top specialists at Indira Hospital.",
+};
 
-export default function BookAppointmentPage() {
-    const [date, setDate] = useState<Date>()
-
+export default function AppointmentPage() {
     return (
-        <main className="min-h-screen bg-slate-50 py-12">
-            <SectionContainer>
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl font-bold text-slate-900 mb-4">Book Your Appointment</h1>
-                        <p className="text-muted-foreground text-lg">
-                            Schedule a consultation with our expert doctors. Priority slots available for early booking.
-                        </p>
-                    </div>
+        <main className="min-h-screen bg-slate-50 selection:bg-teal-200 selection:text-teal-900 pb-24">
+            {/* Bold Asymmetrical Deep Hero for the booking context */}
+            <section className="relative pt-36 pb-48 lg:pt-48 lg:pb-64 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
+                {/* 3D-like glowing spheres and custom grid pattern */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-teal-500/20 blur-[120px] opacity-70 pointer-events-none" />
+                <div className="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] rounded-full bg-emerald-500/20 blur-[100px] opacity-50 pointer-events-none" />
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {/* Booking Form */}
-                        <Card className="md:col-span-2 shadow-lg">
-                            <CardHeader>
-                                <CardTitle>Patient Details</CardTitle>
-                                <CardDescription>Please fill in your details to secure your slot.</CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-6">
-                                <div className="grid md:grid-cols-2 gap-4">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-medium">Patient Name</label>
-                                        <div className="relative">
-                                            <User className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
-                                            <Input placeholder="Enter full name" className="pl-10" />
-                                        </div>
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-medium">Phone Number</label>
-                                        <div className="relative">
-                                            <Phone className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
-                                            <Input placeholder="+91 98765 43210" className="pl-10" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium">Email Address</label>
-                                    <div className="relative">
-                                        <Mail className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
-                                        <Input type="email" placeholder="john@example.com" className="pl-10" />
-                                    </div>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium">Department / Doctor</label>
-                                    <Select>
-                                        <SelectTrigger className="pl-10 relative">
-                                            <Stethoscope className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
-                                            <SelectValue placeholder="Select Department" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="cardiology">Cardiology</SelectItem>
-                                            <SelectItem value="neurology">Neurology</SelectItem>
-                                            <SelectItem value="orthopedics">Orthopedics</SelectItem>
-                                            <SelectItem value="gastroenterology">Gastroenterology</SelectItem>
-                                            <SelectItem value="oncology">Oncology</SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium">Preferred Date</label>
-                                    <Popover>
-                                        <PopoverTrigger asChild>
-                                            <Button
-                                                variant={"outline"}
-                                                className={cn(
-                                                    "w-full justify-start text-left font-normal pl-10 relative",
-                                                    !date && "text-muted-foreground"
-                                                )}
-                                            >
-                                                <CalendarIcon className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
-                                                {date ? format(date, "PPP") : <span>Pick a date</span>}
-                                            </Button>
-                                        </PopoverTrigger>
-                                        <PopoverContent className="w-auto p-0">
-                                            <Calendar
-                                                mode="single"
-                                                selected={date}
-                                                onSelect={setDate}
-                                                initialFocus
-                                                disabled={(date) => date < new Date()}
-                                            />
-                                        </PopoverContent>
-                                    </Popover>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium">Reason for Visit (Optional)</label>
-                                    <Textarea placeholder="Briefly describe your symptoms..." />
-                                </div>
-
-                                <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
-                                    Confirm Booking
-                                </Button>
-                            </CardContent>
-                        </Card>
-
-                        {/* Info Sidebar */}
-                        <div className="space-y-6">
-                            <Card className="bg-blue-900 text-white border-0">
-                                <CardHeader>
-                                    <CardTitle>Need Assistance?</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-blue-100 mb-6">
-                                        Our support team is available 24/7 to help you with appointment scheduling.
-                                    </p>
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <Phone className="w-5 h-5" />
-                                        <span className="font-bold text-lg">+91 0416 224 2222</span>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <Mail className="w-5 h-5" />
-                                        <span>care@indirasuperspecialityhospital.com</span>
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle className="text-base">Outstation Patients</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground">
-                                        Traveling from outside Vellore? Contact our International Patient Desk for travel & accommodation assistance.
-                                    </p>
-                                </CardContent>
-                            </Card>
-                        </div>
-                    </div>
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-teal-500/30">
+                        <Clock className="w-4 h-4" /> Fast Track Booking
+                    </span>
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05] mb-6 max-w-4xl mx-auto">
+                        Secure Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-200">Consultation.</span>
+                    </h1>
+                    <p className="text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                        Skip the waiting queue. Book an exact time slot with our elite specialists in under 60 seconds.
+                    </p>
                 </div>
-            </SectionContainer>
+            </section>
+
+            {/* Negative margin to pull the form up over the hero */}
+            <section className="relative z-20 -mt-24 sm:-mt-40 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto mb-16">
+                <AppointmentBookingClient />
+            </section>
         </main>
-    )
+    );
 }

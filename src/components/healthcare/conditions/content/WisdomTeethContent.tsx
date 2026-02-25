@@ -45,16 +45,16 @@ export function WisdomTeethContent() {
                 </ul>
             </div>
 
-            <Card className="bg-blue-50 dark:bg-slate-800/60 border-blue-100 dark:border-blue-700/40">
+            <Card className="bg-teal-50 dark:bg-slate-800/60 border-blue-100 dark:border-teal-700/40">
                 <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                        <HelpCircle className="w-8 h-8 text-blue-600 shrink-0 mt-1" />
+                        <HelpCircle className="w-8 h-8 text-teal-600 shrink-0 mt-1" />
                         <div>
                             <h3 className="font-bold text-foreground mb-2">Did You Know?</h3>
                             <p className="text-foreground/80 text-sm mb-4">
                                 Not everyone needs their wisdom teeth removed! If they grow in completely, are positioned correctly, and you can clean them properly, you might be able to keep them.
                             </p>
-                            <a href="/contact" className="text-blue-700 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                            <a href="/contact" className="text-teal-700 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
                                 Book an evaluation <ArrowRight className="w-4 h-4" />
                             </a>
                         </div>

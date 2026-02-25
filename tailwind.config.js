@@ -59,7 +59,7 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+                sans: ["var(--font-outfit)", "system-ui", "sans-serif"],
                 heading: ["var(--font-outfit)", "system-ui", "sans-serif"],
             },
             colors: {
@@ -112,6 +112,17 @@ module.exports = {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
+                '3xl': '1.5rem',
+                '4xl': '2rem',
+                '5xl': '2.5rem',
+                '6xl': '3rem',
+                '7xl': '4rem',
+            },
+            boxShadow: {
+                'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                'glass-sm': '0 4px 16px 0 rgba(31, 38, 135, 0.05)',
+                'float': '0 20px 40px -10px rgba(0,0,0,0.08)',
+                'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
             },
             keyframes: {
                 "accordion-down": {

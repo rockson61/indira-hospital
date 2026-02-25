@@ -10,7 +10,7 @@ export function DryMouthContent() {
                     Saliva is your mouth's primary defense against tooth decay. It washes away food particles, neutralizes acids, and provides disease-fighting substances. Without enough saliva, you are at much higher risk for cavities and gum disease.
                 </p>
 
-                <div className="bg-blue-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-blue-100 dark:border-blue-700/40 relative overflow-hidden">
+                <div className="bg-teal-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-blue-100 dark:border-teal-700/40 relative overflow-hidden">
                     <Droplets className="absolute top-4 right-4 w-12 h-12 text-blue-200 opacity-50" />
                     <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-4">Tips for Relief</h4>
                     <ul className="space-y-3">
@@ -22,7 +22,7 @@ export function DryMouthContent() {
                             "Breathe through your nose, not your mouth"
                         ].map((tip, i) => (
                             <li key={i} className="flex items-center gap-3">
-                                <div className="w-1.5 h-1.5 bg-blue-50 dark:bg-slate-800/600 rounded-full" />
+                                <div className="w-1.5 h-1.5 bg-teal-50 dark:bg-slate-800/600 rounded-full" />
                                 <span className="text-foreground/80 text-sm">{tip}</span>
                             </li>
                         ))}

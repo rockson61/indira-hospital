@@ -13,62 +13,64 @@ interface LocationCardProps {
 }
 
 export function LocationCard({ location, className, cardClassName, variant = "card" }: LocationCardProps) {
-    const href = `/locations/${location.slug}`;
+    const href = `/doctor/near-me/${location.slug}`;
 
     if (variant === "compact") {
         return (
             <Link
                 href={href}
                 className={cn(
-                    "group flex items-center p-3 rounded-xl bg-gray-50 hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-gray-100",
+                    "group flex items-center p-4 rounded-[2rem] bg-white hover:shadow-soft border border-slate-100 hover:border-teal-100 hover:-translate-y-0.5 transition-all",
                     className
                 )}
             >
-                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 mr-3">
+                <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 flex-shrink-0 mr-3 shadow-sm">
                     <MapPin className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                    <p className="text-sm font-semibold text-gray-900 group-hover:text-blue-700 truncate">{location.name}</p>
-                    <p className="text-xs text-gray-500 truncate">{location.city || location.district}</p>
+                    <p className="text-sm font-bold text-slate-900 group-hover:text-teal-700 truncate transition-colors">{location.name}</p>
+                    <p className="text-xs text-slate-500 truncate font-medium">{location.city || location.district}</p>
                 </div>
-                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-2" />
+                <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-teal-50 transition-colors">
+                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-teal-600" />
+                </div>
             </Link>
         );
     }
 
     return (
-        <Card className={cn("overflow-hidden border-none shadow-sm hover:shadow-lg transition-all group bg-white", cardClassName || className)}>
-            {/* Map Thumbnail / Placeholder */}
-            <div className="h-32 bg-gray-100 relative group-hover:h-36 transition-all duration-500">
+        <Card className={cn("overflow-hidden rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-float hover:-translate-y-1 transition-all group bg-white", cardClassName || className)}>
+            {/* Map Thumbnail */}
+            <div className="h-36 bg-slate-50 relative overflow-hidden">
                 <iframe
                     src={location.map_url || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6!2d79.15!3d12.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sIndira+Super+Speciality+Hospital!5e0!3m2!1sen!2sin!4v1"}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity pointer-events-none"
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity pointer-events-none"
                     title={location.name}
                     loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent p-4 flex items-end">
-                    <h3 className="text-white font-bold text-lg drop-shadow-md">{location.name}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-5 flex items-end">
+                    <h3 className="text-white font-heading font-black text-lg tracking-tight drop-shadow-md">{location.name}</h3>
                 </div>
             </div>
 
-            <div className="p-5">
+            <div className="p-6">
                 <div className="space-y-3 mb-5">
-                    <div className="flex items-start gap-3 text-sm text-gray-600">
-                        <MapPin className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
+                    <div className="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                        <MapPin className="w-4 h-4 text-teal-500 mt-1 flex-shrink-0" />
                         <span>{location.address || "Address details currently unavailable."}</span>
                     </div>
                     {location.phone && (
-                        <div className="flex items-center gap-3 text-sm text-gray-600">
-                            <Phone className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <div className="flex items-center gap-3 text-sm text-slate-600 font-medium">
+                            <Phone className="w-4 h-4 text-teal-500 flex-shrink-0" />
                             <span>{location.phone}</span>
                         </div>
                     )}
-                    <div className="flex items-center gap-3 text-sm text-gray-600">
-                        <Clock className="w-4 h-4 text-amber-500 flex-shrink-0" />
+                    <div className="flex items-center gap-3 text-sm text-slate-600 font-medium">
+                        <Clock className="w-4 h-4 text-slate-400 flex-shrink-0" />
                         <span>{location.travelTime || "Mon - Sat: 9:00 AM - 9:00 PM"}</span>
                     </div>
                     {location.distance && (
-                        <div className="flex items-center gap-3 text-sm text-gray-500 italic">
+                        <div className="flex items-center gap-3 text-sm text-slate-400 font-medium">
                             <Navigation className="w-3.5 h-3.5" />
                             <span>{location.distance} from hospital</span>
                         </div>
@@ -78,7 +80,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
                 <div className="flex gap-3">
                     <Link
                         href={href}
-                        className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-50 text-blue-700 font-semibold rounded-lg text-sm hover:bg-blue-100 transition-colors"
+                        className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-slate-50 text-slate-700 font-bold rounded-full text-sm hover:bg-teal-50 hover:text-teal-700 transition-all border border-slate-100"
                     >
                         View Clinic
                     </Link>
@@ -86,7 +88,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
                         href={location.map_url || "#"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 font-semibold rounded-lg text-sm hover:bg-gray-200 transition-colors"
+                        className="inline-flex items-center justify-center w-12 h-12 bg-slate-50 text-slate-600 rounded-full hover:bg-teal-50 hover:text-teal-700 transition-all border border-slate-100"
                     >
                         <Navigation className="w-4 h-4" />
                     </a>

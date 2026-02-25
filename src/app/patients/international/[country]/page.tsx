@@ -10,7 +10,8 @@ import {
 import { SectionContainer } from "@/components/ui/section-container";
 import { Card } from "@/components/ui/card";
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
-import { SEED_DATA } from "@/lib/data/seed-data";
+import { getDoctors } from "@/lib/api";
+import Image from "next/image";
 
 export async function generateStaticParams() {
     return INTERNATIONAL_COUNTRIES.map((country) => ({
@@ -40,9 +41,8 @@ export default async function CountryGuidePage({ params }: PageProps) {
 
     if (!country) notFound();
 
-    // Get some relevant services/doctors for specific treatments
-    const featuredServices = SEED_DATA.services.slice(0, 3);
-    const featuredDoctors = SEED_DATA.doctors.slice(0, 2);
+    const allDoctors = await getDoctors().catch(() => []);
+    const featuredDoctors = allDoctors.slice(0, 2);
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950">
@@ -165,9 +165,9 @@ export default async function CountryGuidePage({ params }: PageProps) {
                         <div>
                             <h3 className="font-bold text-slate-900 dark:text-white mb-4">Recommended Specialists</h3>
                             <div className="space-y-4">
-                                {featuredDoctors.map((doc, idx) => (
+                                {featuredDoctors.map((doc: any, idx: number) => (
                                     <Link key={idx} href={`/doctors/${doc.slug}`} className="flex items-center gap-4 p-3 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-transparent hover:border-teal-200 transition-all">
-                                        <img src={doc.image} alt={doc.name} className="w-12 h-12 rounded-xl object-cover" />
+                                        <Image src={doc.image || doc.photo} alt={doc.name} width={48} height={48} className="rounded-xl object-cover" />
                                         <div>
                                             <p className="font-bold text-sm text-slate-900 dark:text-white">{doc.name}</p>
                                             <p className="text-xs text-slate-500">{doc.designation}</p>

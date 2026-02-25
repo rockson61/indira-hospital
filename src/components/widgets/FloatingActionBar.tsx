@@ -57,9 +57,27 @@ export default function FloatingActionBar() {
     return () => clearInterval(intervalId);
   }, []);
 
-  // Mock weather for now to avoid broken API call
   useEffect(() => {
-    setWeather({ temperature: 30, icon: 'Sun' });
+    const fetchWeather = async () => {
+      try {
+        const res = await fetch("https://api.open-meteo.com/v1/forecast?latitude=12.9165&longitude=79.1325&current=temperature_2m,is_day,weather_code");
+        if (!res.ok) throw new Error("Weather fetch failed");
+        const data = await res.json();
+        const temp = data.current.temperature_2m;
+        const isDay = data.current.is_day;
+        const code = data.current.weather_code;
+
+        let iconType = isDay ? 'Sun' : 'Moon';
+        if (code >= 1 && code <= 3) iconType = isDay ? 'Cloud' : 'Cloudy';
+        if (code >= 45) iconType = 'Cloudy'; // broadly mapping rain/fog/storms to cloudy
+
+        setWeather({ temperature: temp, icon: iconType });
+      } catch (error) {
+        console.warn("Weather fetch failed, using fallback", error);
+        setWeather({ temperature: 30, icon: 'Sun' });
+      }
+    };
+    fetchWeather();
   }, []);
 
   const weatherIcons: Record<string, any> = { Sun, Cloud, Cloudy, Moon, Wind };
@@ -152,7 +170,7 @@ export default function FloatingActionBar() {
           {/* Petal 3: Right Buttons (Directions & Scroll Up) */}
           <div className="petal petal-3 absolute flex gap-2">
             <a href={directionsUrl} target="_blank" rel="noopener noreferrer" title="Get Directions">
-              <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg transition-all hover:scale-110">
+              <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 text-white shadow-lg transition-all hover:scale-110">
                 <MapPin className="w-5 h-5" />
               </Button>
             </a>

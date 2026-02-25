@@ -95,10 +95,10 @@ export function ServicePeopleAlsoSearchFor({
             <Link
               key={`${query.link}-${index}`}
               href={query.link}
-              className="flex items-center gap-2 p-3 bg-muted rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-colors group"
+              className="flex items-center gap-2 p-3 bg-muted rounded-lg hover:bg-teal-50 hover:text-teal-700 transition-colors group"
             >
-              <ArrowRight className="w-4 h-4 text-blue-500 group-hover:text-blue-700 flex-shrink-0" />
-              <span className="text-sm font-medium text-foreground/90 group-hover:text-blue-700 flex-1">
+              <ArrowRight className="w-4 h-4 text-teal-500 group-hover:text-teal-700 flex-shrink-0" />
+              <span className="text-sm font-medium text-foreground/90 group-hover:text-teal-700 flex-1">
                 Best {query.text} in India
               </span>
               {query.category && (

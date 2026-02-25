@@ -1,6 +1,4 @@
 import { getDoctors, getDepartments } from "@/lib/api";
-import { SEED_DATA } from "@/lib/data/seed-data";
-import { getEffectiveDepartments } from "@/lib/utils/department-utils";
 import { StatsCounterClient } from "./stats-counter-client";
 
 export async function StatsBanner() {
@@ -15,13 +13,10 @@ export async function StatsBanner() {
         ]);
 
         if (doctors.length > 0) doctorCount = doctors.length;
-        else doctorCount = SEED_DATA.doctors.length;
-
         if (departments.length > 0) departmentCount = departments.length;
-        else departmentCount = getEffectiveDepartments().length;
     } catch {
-        doctorCount = SEED_DATA.doctors.length;
-        departmentCount = getEffectiveDepartments().length;
+        doctorCount = 20;
+        departmentCount = 10;
     }
 
     return (

@@ -4,157 +4,162 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
     Stethoscope, Activity, Heart, Ambulance, Smile, Brain, Ribbon, Droplets, Zap,
-    Baby, Bone, ArrowRight, CheckCircle2, ChevronRight
+    Baby, Bone, ArrowRight, CheckCircle2, ChevronRight, Sparkles
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
-    service: any; // Flexible for Seed/Directus data
+    service: any;
     variant?: "poster" | "detail" | "compact" | "featured";
     className?: string;
     cardClassName?: string;
     theme?: "purple" | "blue" | "teal" | "rose" | "dark";
 }
 
-// Icon Map (keep consistent with pages)
 const iconMap: Record<string, React.ReactNode> = {
-    Scalpel: <Stethoscope className="h-6 w-6" />,
-    Activity: <Activity className="h-6 w-6" />,
-    Stethoscope: <Stethoscope className="h-6 w-6" />,
-    Baby: <Baby className="h-6 w-6" />,
-    Bone: <Bone className="h-6 w-6" />,
-    Heart: <Heart className="h-6 w-6" />,
-    Siren: <Ambulance className="h-6 w-6" />,
-    Smile: <Smile className="h-6 w-6" />,
-    Brain: <Brain className="h-6 w-6" />,
-    Ribbon: <Ribbon className="h-6 w-6" />,
-    Droplets: <Droplets className="h-6 w-6" />,
-    Zap: <Zap className="h-6 w-6" />,
+    Scalpel: <Stethoscope className="h-full w-full" />,
+    Activity: <Activity className="h-full w-full" />,
+    Stethoscope: <Stethoscope className="h-full w-full" />,
+    Baby: <Baby className="h-full w-full" />,
+    Bone: <Bone className="h-full w-full" />,
+    Heart: <Heart className="h-full w-full" />,
+    Siren: <Ambulance className="h-full w-full" />,
+    Smile: <Smile className="h-full w-full" />,
+    Brain: <Brain className="h-full w-full" />,
+    Ribbon: <Ribbon className="h-full w-full" />,
+    Droplets: <Droplets className="h-full w-full" />,
+    Zap: <Zap className="h-full w-full" />,
 };
 
-export function ServiceCard({ service, variant = "detail", className, cardClassName, theme = "purple" }: ServiceCardProps) {
-    const Icon = iconMap[service.icon] || <Stethoscope className="h-6 w-6" />;
-    const href = `/services/${service.slug}`;
+export function ServiceCard({ service, variant = "detail", className, cardClassName, theme = "teal" }: ServiceCardProps) {
+    const Icon = iconMap[service.icon] || <Stethoscope className="h-full w-full" />;
+    const href = `/doctor/near-me/treat/${service.slug}`;
 
-    // --- VARIANT: COMPACT (Sidebar / Lists) ---
+    // --- VARIANT: COMPACT ---
     if (variant === "compact") {
         return (
-            <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-            >
+            <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                 <Link
                     href={href}
                     className={cn(
-                        "group flex items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-purple-50 border border-transparent hover:border-purple-100 transition-all",
+                        "group flex items-center justify-between p-5 rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-slate-200/50 hover:bg-white hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 transition-all duration-500",
                         className
                     )}
                 >
-                    <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-purple-600 shadow-sm group-hover:scale-110 transition-transform">
-                            {/* Smaller icon for compact */}
-                            <div className="scale-75">{Icon}</div>
+                    <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 shadow-sm group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all duration-500">
+                            <div className="w-6 h-6">{Icon}</div>
                         </div>
-                        <span className="text-sm font-medium text-gray-700 group-hover:text-purple-700 transition-colors">
+                        <span className="text-base font-black text-slate-900 group-hover:text-teal-700 transition-colors tracking-tight">
                             {service.title}
                         </span>
                     </div>
-                    <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-purple-500 transition-colors" />
+                    <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-teal-500 transition-colors" />
                 </Link>
             </motion.div>
         );
     }
 
-    // --- VARIANT: POSTER (Home / Landing Grid) ---
+    // --- VARIANT: POSTER ---
     if (variant === "poster") {
         return (
             <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 className="h-full"
             >
                 <Link href={href} className={cn("group block h-full", className)}>
-                    <Card className={cn(
-                        "h-full border-none shadow-sm hover:shadow-xl transition-all duration-300 bg-white overflow-hidden relative p-6 flex flex-col items-center text-center",
+                    <div className={cn(
+                        "h-full rounded-[3rem] border border-slate-200/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 bg-white/40 overflow-hidden relative p-10 flex flex-col items-center text-center",
                         cardClassName
                     )}>
-                        <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {/* Light Streak Animation */}
+                        <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-teal-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                        <div className="w-14 h-14 rounded-2xl bg-purple-50 group-hover:bg-purple-600 flex items-center justify-center text-purple-600 group-hover:text-white transition-all duration-300 mb-4 shadow-sm group-hover:shadow-lg group-hover:scale-110">
-                            {Icon}
+                        <div className="w-20 h-20 rounded-[2rem] bg-slate-50 border border-slate-100 group-hover:bg-teal-600 flex items-center justify-center text-teal-600 group-hover:text-white transition-all duration-700 mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 relative z-10">
+                            <div className="w-10 h-10">{Icon}</div>
                         </div>
 
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-700 transition-colors mb-2">
-                            {service.title}
-                        </h3>
+                        <div className="relative z-10 flex-grow">
+                            <h3 className="text-2xl font-black text-slate-900 group-hover:text-teal-700 transition-colors mb-4 tracking-tight leading-tight">
+                                {service.title}
+                            </h3>
 
-                        <p className="text-sm text-gray-500 line-clamp-3 mb-4 leading-relaxed">
-                            {service.short_description}
-                        </p>
+                            <p className="text-[15px] text-slate-500 font-medium line-clamp-3 mb-8 leading-relaxed">
+                                {service.short_description}
+                            </p>
+                        </div>
 
-                        <span className="mt-auto inline-flex items-center text-purple-600 text-sm font-bold group-hover:gap-2 transition-all">
-                            Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                        </span>
-                    </Card>
+                        <div className="mt-auto pt-6 border-t border-slate-100 w-full relative z-10">
+                            <span className="inline-flex items-center text-slate-400 text-xs font-black tracking-[0.2em] uppercase group-hover:text-teal-600 transition-all">
+                                Explore Expertise <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                            </span>
+                        </div>
+                    </div>
                 </Link>
             </motion.div>
         );
     }
 
-    // --- VARIANT: DETAIL (Department Page / Listings) ---
+    // --- VARIANT: DETAIL (Default) ---
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-        >
-            <Card className={cn(
-                "group border-none shadow-sm hover:shadow-md transition-all p-6 flex flex-col bg-white",
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div className={cn(
+                "group relative h-full rounded-[3rem] border border-slate-200/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 p-10 flex flex-col bg-white/40 overflow-hidden",
                 className
             )}>
-                <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        {Icon}
+                {/* Light Streak Animation */}
+                <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-teal-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
+
+                <div className="flex items-start justify-between mb-8 relative z-10">
+                    <div className="w-16 h-16 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-lg group-hover:scale-110">
+                        <div className="w-8 h-8">{Icon}</div>
                     </div>
                     {service.procedure_type && (
-                        <span className="px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wide">
+                        <span className="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-black/10">
                             {service.procedure_type}
                         </span>
                     )}
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
-                    <Link href={href} className="hover:underline decoration-blue-200 underline-offset-4">
-                        {service.title}
+                <div className="relative z-10 flex-grow">
+                    <h3 className="text-3xl font-black text-slate-900 mb-4 group-hover:text-teal-700 transition-colors tracking-tight leading-tight">
+                        <Link href={href} className="before:absolute before:inset-0 outline-none">
+                            {service.title}
+                        </Link>
+                    </h3>
+
+                    <p className="text-slate-500 text-lg font-medium mb-8 line-clamp-3 leading-relaxed">
+                        {service.short_description}
+                    </p>
+
+                    {service.features && service.features.length > 0 && (
+                        <div className="mb-10 space-y-3">
+                            {service.features.slice(0, 3).map((feat: string, i: number) => (
+                                <div key={i} className="flex items-center gap-3 text-sm text-slate-600 font-bold">
+                                    <div className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0">
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-teal-500" />
+                                    </div>
+                                    <span className="truncate">{feat}</span>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                <div className="mt-auto relative z-20">
+                    <Link
+                        href={href}
+                        className="group/btn relative inline-flex items-center justify-center w-full py-5 bg-slate-900 text-white font-black rounded-2xl text-sm transition-all duration-500 overflow-hidden shadow-xl hover:bg-teal-500"
+                    >
+                        <span className="relative z-10 uppercase tracking-[0.2em]">View Details</span>
+                        <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                     </Link>
-                </h3>
-
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">
-                    {service.short_description}
-                </p>
-
-                {/* Key Features / Procedures (If available in features array) */}
-                {service.features && service.features.length > 0 && (
-                    <div className="mb-5 space-y-1">
-                        {service.features.slice(0, 3).map((feat: string, i: number) => (
-                            <div key={i} className="flex items-center gap-2 text-xs text-gray-500">
-                                <CheckCircle2 className="w-3 h-3 text-green-500 flex-shrink-0" />
-                                <span className="truncate">{feat}</span>
-                            </div>
-                        ))}
-                    </div>
-                )}
-
-                <Link
-                    href={href}
-                    className="inline-flex items-center justify-center w-full py-2.5 bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-700 font-semibold rounded-lg text-sm transition-colors border border-gray-100 hover:border-blue-100"
-                >
-                    View Details
-                </Link>
-            </Card>
+                </div>
+            </div>
         </motion.div>
     );
 }

@@ -174,7 +174,7 @@ export function ServiceSupportContent({
     <>
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-50 via-cyan-50/50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.contents}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">📋 Table of Contents</h2>
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-6">📋 Table of Contents</h2>
           <nav aria-label={`${serviceName} sections`}>
             <ul className="grid gap-3 sm:grid-cols-2">
               {tocItems.map((item) => (
@@ -195,7 +195,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-white via-teal-50/30 to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.what}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/30 dark:border-teal-600/30 shadow-lg">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📖 What Is {serviceName}?</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-4">📖 What Is {serviceName}?</h2>
           <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-4">
             <strong>{serviceName}</strong> restores tooth function, eliminates pain, and improves smile aesthetics. At Indira Dental Clinic in {cityName}, Dr. Rockson Samuel (BDS, PgDM, BDM, 15+ years experience) performs this procedure using 3D CBCT imaging and digital planning for predictable outcomes.
           </p>
@@ -207,7 +207,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-50 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.when}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🔍 When Do You Need {serviceName}?</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-4">🔍 When Do You Need {serviceName}?</h2>
           <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-6">
             <strong>Book a consultation at Indira Dental Clinic, {cityName}</strong> if you experience any of these symptoms:
           </p>
@@ -226,11 +226,11 @@ export function ServiceSupportContent({
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50/50 via-white to-teal-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.procedure}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">Step-by-Step {serviceName} Procedure</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-6">Step-by-Step {serviceName} Procedure</h2>
         <div className="grid gap-6 md:grid-cols-2">
           {procedureSteps.map((step, index) => (
             <div key={step.title} className="rounded-2xl border border-teal-200/50 dark:border-teal-700/40 bg-gradient-to-br from-white to-teal-50/30 dark:from-slate-900/80 dark:to-teal-950/40 p-6 shadow-md transition-all hover:shadow-xl hover:scale-[1.02]">
-              <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-blue-600 text-white font-semibold shadow-md">
+              <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-teal-600 text-white font-semibold shadow-md">
                 {index + 1}
               </span>
               <h3 className="text-lg font-semibold text-foreground dark:text-slate-100 mb-2">{step.title}</h3>
@@ -242,11 +242,11 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-100/70 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.benefits}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">✨ Benefits of {serviceName} in {cityName}</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-6">✨ Benefits of {serviceName} in {cityName}</h2>
           <ul className="grid gap-4 md:grid-cols-2">
             {benefitHighlights.map((benefit, index) => (
               <li key={benefit} className="glassmorphism-item dark:from-slate-800/60 dark:to-teal-900/40 rounded-2xl border border-teal-200 dark:border-teal-700/40 p-6 text-foreground/80 dark:text-slate-300 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]">
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-blue-600 text-white text-sm font-bold mb-3 shadow-md">{index + 1}</span>
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 text-white text-sm font-bold mb-3 shadow-md">{index + 1}</span>
                 <p>{benefit}</p>
               </li>
             ))}
@@ -255,7 +255,7 @@ export function ServiceSupportContent({
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-cyan-50/50 via-white to-blue-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.cost}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">{serviceName} Cost &amp; Packages</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-4">{serviceName} Cost &amp; Packages</h2>
         <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-6">
           <strong>All-inclusive pricing</strong>—no hidden fees. Each package includes: consultation, CBCT scan, procedure, materials, and follow-up visits. <strong>0% EMI available</strong> for treatments above ₹5,000. Serving patients from {cityName}, {locationName}, and nearby districts.
         </p>
@@ -290,12 +290,12 @@ export function ServiceSupportContent({
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-teal-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.beforeAfter}>
-        <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-blue-200/50 dark:border-blue-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">📸 Before & After Results</h2>
+        <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-blue-200/50 dark:border-teal-600/30 shadow-xl">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-6">📸 Before & After Results</h2>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="glassmorphism-item dark:from-slate-800/60 dark:to-blue-900/40 rounded-2xl border border-blue-200 dark:border-blue-700/40 p-6 shadow-lg transition-all hover:shadow-xl hover:scale-[1.01]">
+            <div className="glassmorphism-item dark:from-slate-800/60 dark:to-blue-900/40 rounded-2xl border border-blue-200 dark:border-teal-700/40 p-6 shadow-lg transition-all hover:shadow-xl hover:scale-[1.01]">
               <div className="flex items-center gap-3 mb-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-md">😔</span>
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 text-white shadow-md">😔</span>
                 <h3 className="text-lg font-semibold text-foreground dark:text-slate-100">Before Treatment</h3>
               </div>
               <p className="text-sm text-foreground/80 dark:text-slate-300 leading-relaxed">
@@ -321,7 +321,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-teal-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.why}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {serviceName}?</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {serviceName}?</h2>
           <ul className="grid gap-3 md:grid-cols-2">
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/60 dark:to-teal-900/40 rounded-xl p-4 border border-teal-200 dark:border-teal-700/40">
               <span className="mt-0.5 text-teal-500 dark:text-teal-400 text-lg">✓</span>
@@ -339,8 +339,8 @@ export function ServiceSupportContent({
               <span className="mt-0.5 text-teal-500 dark:text-teal-400 text-lg">✓</span>
               <span className="text-foreground/80 dark:text-slate-300"><strong>50% Lower Cost</strong>: Same quality as Chennai clinics at half the price. 0% EMI available.</span>
             </li>
-            <li className="flex items-start gap-3 backdrop-blur-sm bg-gradient-to-r from-white/80 to-blue-50/50 dark:from-slate-800/60 dark:to-blue-900/40 rounded-xl p-4 border border-blue-200 dark:border-blue-700/40 md:col-span-2">
-              <span className="mt-0.5 text-blue-500 dark:text-blue-400 text-lg">⭐</span>
+            <li className="flex items-start gap-3 backdrop-blur-sm bg-gradient-to-r from-white/80 to-blue-50/50 dark:from-slate-800/60 dark:to-blue-900/40 rounded-xl p-4 border border-blue-200 dark:border-teal-700/40 md:col-span-2">
+              <span className="mt-0.5 text-teal-500 dark:text-teal-400 text-lg">⭐</span>
               <span className="text-foreground/80 dark:text-slate-300"><strong>4.9/5 Rating</strong> on Google (500+ reviews). Patients from {cityName}, {locationName}, Chennai, and Bangalore.</span>
             </li>
           </ul>
@@ -348,7 +348,7 @@ export function ServiceSupportContent({
             <Link href="/about-us/dr-rockson-samuel" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-teal-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-teal-600 dark:text-teal-400 transition-all hover:bg-teal-50 dark:hover:bg-teal-900/40 hover:shadow-md">
               Meet Our Dentist →
             </Link>
-            <Link href="/gallery" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-blue-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-blue-600 dark:text-blue-400 transition-all hover:bg-blue-50 dark:hover:bg-blue-900/40 hover:shadow-md">
+            <Link href="/gallery" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-teal-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-teal-600 dark:text-teal-400 transition-all hover:bg-teal-50 dark:hover:bg-blue-900/40 hover:shadow-md">
               Explore Our Technology →
             </Link>
           </div>
@@ -359,7 +359,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-teal-100/70 via-blue-50/50 to-cyan-100/70 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.book}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-teal-200/50 dark:border-teal-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📅 Book Your {serviceName} Appointment</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 dark:from-teal-400 dark:to-teal-400 bg-clip-text text-transparent mb-4">📅 Book Your {serviceName} Appointment</h2>
           <p className="text-foreground/80 dark:text-slate-300 leading-relaxed">
             <strong>Free consultation available.</strong> Call or WhatsApp +91-7010650063 to book your appointment with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day appointments available for emergencies. Upload previous X-rays via WhatsApp for faster evaluation.
           </p>

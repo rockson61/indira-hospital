@@ -8,7 +8,7 @@ const links = [
         description: "Explore our cutting-edge medical equipment.",
         icon: Microscope,
         href: "/technology",
-        color: "bg-blue-50 text-blue-600",
+        color: "bg-teal-50 text-teal-600",
         hover: "hover:border-blue-200"
     },
     {
@@ -16,8 +16,8 @@ const links = [
         description: "Dedicated services for overseas visitors.",
         icon: Globe,
         href: "/patients/international",
-        color: "bg-purple-50 text-purple-600",
-        hover: "hover:border-purple-200"
+        color: "bg-teal-50 text-teal-600",
+        hover: "hover:border-teal-200"
     },
     {
         title: "Health Insights",
@@ -44,10 +44,10 @@ export function QuickLinks() {
                                 <link.icon className="w-6 h-6" />
                             </div>
                             <div className="flex-1">
-                                <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{link.title}</h3>
+                                <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors">{link.title}</h3>
                                 <p className="text-sm text-slate-500">{link.description}</p>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-blue-500 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-teal-500 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     ))}
                 </div>

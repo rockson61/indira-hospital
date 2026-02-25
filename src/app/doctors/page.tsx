@@ -1,32 +1,50 @@
 import { Metadata } from "next";
 import { getDoctors } from "@/lib/api";
-import { SEED_DATA } from "@/lib/data/seed-data";
-import DoctorsClient from "@/components/sections/doctors-client";
 import { PageHero } from "@/components/ui/page-hero";
-
-export const revalidate = 3600; // Revalidate every hour
+import { SectionContainer } from "@/components/ui/section-container";
+import { DoctorCard } from "@/components/entities/DoctorCard";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import { Testimonials } from "@/components/sections/testimonials";
 
 export const metadata: Metadata = {
-    title: "Meet Our Specialists | Best Doctors in Vellore | Indira Hospital",
-    description: "Consult with highly experienced multi-speciality doctors at Indira Hospital, Vellore. Find experts in Cardiology, Neurology, Orthopaedics, and more.",
+    title: "Best Doctors & Surgeons in Tamil Nadu | Indira Super Speciality Hospital",
+    description: "Find top laparoscopic surgeons, urologists, proctologists, and multi-speciality doctors at Indira Hospital. Book your priority appointment today.",
 };
 
-export default async function DoctorsPage() {
-    let doctors = await getDoctors().catch(() => []);
-
-    if (!doctors || doctors.length === 0) {
-        doctors = SEED_DATA.doctors as any;
-    }
+export default async function DoctorsDirectoryPage() {
+    const doctors = await getDoctors().catch(() => []);
 
     return (
-        <main>
+        <main className="min-h-screen bg-slate-50">
             <PageHero
-                title="Meet Our Specialists"
-                subtitle="World-Class Care"
-                description="Indira Hospital brings together over 25+ expert surgeons and specialists to provide comprehensive tertiary care with a human touch."
-                backgroundImage="/images/doctors-hero.jpg"
+                title="Our Medical Experts"
+                subtitle="Trusted Specialists"
+                description="Meet our team of highly qualified and experienced doctors dedicated to providing world-class healthcare."
+                backgroundImage="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200"
             />
-            <DoctorsClient initialDoctors={doctors as any} />
+
+            <SectionContainer className="py-24 -mt-16 relative z-10 min-h-[50vh]">
+                {doctors.length > 0 ? (
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {doctors.map((doctor: any) => (
+                            <DoctorCard key={doctor.slug || doctor.name} doctor={doctor} variant="grid" />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="text-center text-slate-500 py-12">
+                        <p className="text-xl">Loading doctor profiles...</p>
+                    </div>
+                )}
+            </SectionContainer>
+
+            <EntityFAQs
+                entityType="hospital"
+                entityName="Indira Hospital"
+                entitySlug="indira-hospital"
+                className="bg-white py-24 border-t border-slate-100"
+            />
+
+            <Testimonials />
         </main>
     );
 }

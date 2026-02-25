@@ -5,19 +5,11 @@ import { getDepartments } from "@/lib/api";
 import { getImageUrl } from "@/lib/utils";
 import { Stethoscope, ArrowRight } from "lucide-react";
 
-import { SEED_DATA } from "@/lib/data/seed-data";
-
 export async function FeaturedDepartments() {
     let departments = await getDepartments().catch(() => []);
 
-    if (!departments.length) {
-        departments = SEED_DATA.services.map(s => ({
-            name: s.title,
-            slug: s.slug,
-            icon: s.icon,
-            description: s.short_description
-        })) as any;
-    }
+    if (!departments || departments.length === 0) return null;
+
     // Limit to 6 for homepage
     const featuredOnly = departments.slice(0, 6);
 
@@ -34,7 +26,7 @@ export async function FeaturedDepartments() {
                     />
                     <Link
                         href="/departments"
-                        className="hidden sm:inline-flex items-center font-bold text-blue-600 hover:text-blue-700 transition-colors"
+                        className="hidden sm:inline-flex items-center font-bold text-teal-600 hover:text-teal-700 transition-colors"
                     >
                         View All Departments <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>

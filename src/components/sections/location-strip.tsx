@@ -59,7 +59,7 @@ export async function LocationStrip() {
                     {displayLocations.map((loc) => (
                         <Link
                             key={loc.slug}
-                            href={`/locations/${loc.slug}`}
+                            href={`/doctor/near-me/${loc.slug}`}
                             className="group flex flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-4 hover:border-primary-300 hover:shadow-lg hover:shadow-primary-100/50 transition-all duration-300 hover:-translate-y-1"
                         >
                             <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center group-hover:bg-primary-100 transition-colors">
@@ -73,7 +73,7 @@ export async function LocationStrip() {
 
                 <div className="mt-8 text-center">
                     <Link
-                        href="/locations"
+                        href="/doctor/near-me"
                         className="inline-flex items-center gap-2 text-primary-700 font-semibold hover:text-primary-900 transition-colors"
                     >
                         View All Locations <ArrowRight className="w-4 h-4" />

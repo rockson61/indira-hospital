@@ -15,14 +15,14 @@ const features = [
         name: "25+ Expert Doctors",
         description: "A team of highly qualified doctors, surgeons, and nursing staff dedicated to patient recovery.",
         icon: Users,
-        color: "from-blue-500 to-indigo-600",
+        color: "from-teal-500 to-teal-600",
         stat: "25+",
     },
     {
         name: "Advanced Technology",
         description: "State-of-the-art Cath Lab, diagnostic imaging, and minimally invasive surgical equipment.",
         icon: Microscope,
-        color: "from-purple-500 to-violet-600",
+        color: "from-teal-400 to-emerald-600",
         stat: "Latest",
     },
     {

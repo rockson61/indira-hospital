@@ -3,6 +3,7 @@ import { getTestimonials } from "@/lib/api";
 import { getImageUrl } from "@/lib/utils";
 import { Star, Play, ArrowRight } from "lucide-react";
 import { testimonials as localTestimonials } from "@/lib/data/testimonials-data";
+import Image from "next/image";
 
 export async function Testimonials() {
     let testimonials: any[] = await getTestimonials().catch(() => []);
@@ -18,12 +19,15 @@ export async function Testimonials() {
         }));
     }
 
+    // Filter out any entries missing required fields
+    testimonials = testimonials.filter(t => t.patient_name && t.content);
+
     if (testimonials.length === 0) return null;
 
     return (
         <section className="py-32 bg-slate-900 text-white relative isolate overflow-hidden">
             {/* Background Glows */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[160px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal-600/10 rounded-full blur-[160px] pointer-events-none" />
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
                 <SectionHeader
@@ -37,18 +41,18 @@ export async function Testimonials() {
                     {testimonials.map((testimonial: any, i: number) => (
                         <div
                             key={testimonial.id}
-                            className="group relative bg-slate-800/40 backdrop-blur-2xl rounded-[2.5rem] p-10 border border-white/5 hover:border-blue-500/30 transition-all duration-700 hover:-translate-y-3 shadow-2xl overflow-hidden"
+                            className="group relative bg-slate-800/40 backdrop-blur-2xl rounded-[2.5rem] p-10 border border-white/5 hover:border-teal-500/30 transition-all duration-700 hover:-translate-y-3 shadow-2xl overflow-hidden"
                         >
                             {/* Decorative Background Pattern */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-blue-500/10 transition-colors" />
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-teal-500/10 transition-colors" />
 
                             {/* VIDEO PLAY OVERLAY (Premium) */}
-                            <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-blue-900/40 border border-white/20 cursor-pointer overflow-hidden">
+                            <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-teal-600 to-teal-600 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-teal-900/40 border border-white/20 cursor-pointer overflow-hidden">
                                 <span className="absolute inset-0 bg-white/20 animate-pulse group-hover:hidden" />
                                 <Play className="w-5 h-5 fill-current relative z-10" />
                             </div>
 
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black uppercase tracking-tighter mb-6 group-hover:bg-blue-500/20 transition-colors">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[10px] font-black uppercase tracking-tighter mb-6 group-hover:bg-teal-500/20 transition-colors">
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                                 Verified Video Story
                             </div>
@@ -59,13 +63,15 @@ export async function Testimonials() {
 
                             <div className="flex items-center gap-x-4 border-t border-white/5 pt-8">
                                 {testimonial.image ? (
-                                    <img
-                                        className="h-14 w-14 rounded-2xl bg-gray-800 object-cover ring-2 ring-white/10"
+                                    <Image
                                         src={getImageUrl(testimonial.image)!}
                                         alt={testimonial.patient_name}
+                                        width={56}
+                                        height={56}
+                                        className="h-14 w-14 rounded-2xl bg-gray-800 object-cover ring-2 ring-white/10"
                                     />
                                 ) : (
-                                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-500/20">
+                                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-teal-500/20">
                                         {testimonial.patient_name.charAt(0)}
                                     </div>
                                 )}

@@ -9,7 +9,7 @@ const glassCardVariants = cva("rounded-2xl backdrop-blur-sm border transition-al
       accent:
         "bg-teal-50/70 dark:bg-teal-900/20 border-teal-200/50 dark:border-teal-700/50 hover:shadow-teal-500/20 hover:shadow-lg",
       secondary:
-        "bg-blue-50/70 dark:bg-blue-900/20 border-blue-200/50 dark:border-blue-700/50 hover:shadow-blue-500/20 hover:shadow-lg",
+        "bg-teal-50/70 dark:bg-blue-900/20 border-blue-200/50 dark:border-teal-700/50 hover:shadow-teal-500/20 hover:shadow-lg",
       ghost: "bg-transparent border-border/50 dark:border-gray-700/50 hover:bg-card/50 dark:hover:bg-gray-800/50",
     },
   },

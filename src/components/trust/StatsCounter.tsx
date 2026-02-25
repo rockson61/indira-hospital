@@ -122,7 +122,7 @@ export function StatsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Trusted by Thousands in <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">Vellore</span>
+            Trusted by Thousands in <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-600">Vellore</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Our commitment to excellence has made us the most trusted dental clinic in Vellore. Here are the numbers

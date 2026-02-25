@@ -11,10 +11,10 @@ import { siteConfig } from "@/config/site";
 
 export function SocialIcons({ className, size = "sm", color = "primary" }: SocialIconsProps) {
     const socialLinks = [
-        { icon: Facebook, href: siteConfig.links.facebook, label: "Facebook" },
-        { icon: Instagram, href: siteConfig.links.instagram, label: "Instagram" },
-        { icon: Youtube, href: siteConfig.links.youtube || "https://youtube.com/@indiradental", label: "YouTube" },
-        { icon: Twitter, href: siteConfig.links.twitter, label: "Twitter" },
+        { icon: Facebook, href: siteConfig.socials?.facebook, label: "Facebook" },
+        { icon: Instagram, href: siteConfig.socials?.instagram, label: "Instagram" },
+        { icon: Youtube, href: siteConfig.socials?.youtube || "https://youtube.com/@indiradental", label: "YouTube" },
+        { icon: Twitter, href: siteConfig.socials?.twitter, label: "Twitter" },
     ];
 
     return (

@@ -119,7 +119,15 @@ const CONFIG = {
         "varicose veins laser treatment",
         "gallbladder removal recovery",
         "appendix surgery steps",
-        "breast lump removal"
+        "breast lump removal",
+        "fistula laser treatment",
+        "fissure surgery recovery",
+        "pilonidal sinus laser surgery",
+        "diabetic foot ulcer care",
+        "lipoma excision surgery",
+        "sebaceous cyst removal",
+        "circumcision surgery guide",
+        "hydrocele surgery cost"
       ]
     },
     "gastroenterology": {
@@ -130,7 +138,16 @@ const CONFIG = {
         "fatty liver treatment diet",
         "acid reflux Gerd management",
         "pancreatitis treatment steps",
-        "h-pylori infection cure"
+        "h-pylori infection cure",
+        "peptic ulcer disease treatment",
+        "irritable bowel syndrome IBS relief",
+        "inflammatory bowel disease IBD care",
+        "crohns disease management",
+        "ulcerative colitis treatment",
+        "liver cirrhosis care plan",
+        "hepatitis B treatment options",
+        "gastric balloon weight loss",
+        "upper GI endoscopy prep"
       ]
     },
     "urology": {
@@ -140,7 +157,17 @@ const CONFIG = {
         "prostate TURP surgery",
         "urinary tract infection treatment",
         "male infertility causes",
-        "kidney stone prevention tips"
+        "kidney stone prevention tips",
+        "bladder cancer treatment options",
+        "prostate cancer screening",
+        "erectile dysfunction treatment",
+        "varicocele surgery guide",
+        "urethral stricture repair",
+        "overactive bladder relief",
+        "urinary incontinence treatment",
+        "laser prostatectomy HOLEP",
+        "testicular torsion emergency",
+        "phimosis treatment options"
       ]
     },
     "obstetrics-gynaecology": {
@@ -151,7 +178,16 @@ const CONFIG = {
         "pcod pcos treatment guide",
         "painless delivery epidural",
         "laparoscopic hysterectomy guide",
-        "infertility evaluation steps"
+        "infertility evaluation steps",
+        "fibroid removal surgery",
+        "endometriosis pain management",
+        "ovarian cyst laparoscopy",
+        "cervical cancer screening PAP",
+        "menopause symptom relief",
+        "tubal ligation procedure",
+        "ectopic pregnancy treatment",
+        "myomectomy surgery cost",
+        "colposcopy procedure details"
       ]
     },
     "orthopaedics": {
@@ -161,7 +197,17 @@ const CONFIG = {
         "acl reconstruction recovery",
         "hip replacement surgery guide",
         "spine surgery disc prolapse",
-        "fracture care rehabilitation"
+        "fracture care rehabilitation",
+        "shoulder arthroscopy guide",
+        "rotator cuff repair surgery",
+        "carpal tunnel release",
+        "knee arthroscopy recovery",
+        "sports injury treatment",
+        "knee cartilage repair",
+        "joint pain relief injections",
+        "osteoporosis management plan",
+        "total shoulder replacement",
+        "trigger finger release"
       ]
     },
     "cardiology": {
@@ -171,7 +217,17 @@ const CONFIG = {
         "coronary angiography guide",
         "pacemaker implantation steps",
         "heart attack warning signs",
-        "preventive heart checkup"
+        "preventive heart checkup",
+        "bypass surgery CABG",
+        "heart valve replacement",
+        "arrhythmia treatment options",
+        "echocardiogram test details",
+        "tmt test for heart",
+        "heart failure management",
+        "pediatric cardiology care",
+        "hypertension control diet",
+        "cholesterol management plan",
+        "holter monitor test"
       ]
     },
     "neurology": {
@@ -181,7 +237,17 @@ const CONFIG = {
         "epilepsy treatment options",
         "migraine relief management",
         "parkinsons disease care",
-        "eeg test procedure"
+        "eeg test procedure",
+        "alzheimers dementia care",
+        "multiple sclerosis treatment",
+        "neuropathy pain relief",
+        "brain tumor surgery guide",
+        "spinal cord injury rehab",
+        "sleep apnea study",
+        "vertigo dizziness treatment",
+        "myasthenia gravis care",
+        "bell palsy recovery",
+        "ncs emg test guide"
       ]
     },
     "oncology": {
@@ -190,7 +256,18 @@ const CONFIG = {
         "chemotherapy side effects",
         "breast cancer screening guide",
         "surgical oncology overview",
-        "palliative care services"
+        "palliative care services",
+        "radiation therapy guide",
+        "targeted therapy for cancer",
+        "immunotherapy treatment options",
+        "pet scan for cancer",
+        "colon cancer treatment",
+        "lung cancer early signs",
+        "prostate cancer treatment options",
+        "cervical cancer vaccines",
+        "head and neck cancer care",
+        "bone marrow transplant prep",
+        "cancer pain management"
       ]
     },
     "nephrology": {
@@ -199,7 +276,18 @@ const CONFIG = {
         "dialysis procedure guide",
         "chronic kidney disease stages",
         "diabetic nephropathy prevention",
-        "av fistula surgery"
+        "av fistula surgery",
+        "kidney biopsy procedure",
+        "acute kidney injury care",
+        "kidney transplant preparation",
+        "glomerulonephritis treatment",
+        "polycystic kidney disease management",
+        "nephrotic syndrome cure",
+        "proteinuria treatment options",
+        "hemodialysis vs peritoneal dialysis",
+        "kidney diet plan",
+        "high creatinine levels causes",
+        "fluid restriction guidelines"
       ]
     }
   }
@@ -272,6 +360,7 @@ function generatePageTemplate(topic, cluster) {
 
   const slug = slugify(topic);
   const hubPath = CONFIG.topicTaxonomy[cluster].hub;
+  const deptName = cluster.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 
   const template = `// RockSEO Auto-Generated Page Template
 // Topic: ${title}
@@ -280,105 +369,63 @@ function generatePageTemplate(topic, cluster) {
 // Generated: ${new Date().toISOString()}
 
 import { Metadata } from "next";
-import { SectionContainer } from "@/components/ui/section-container";
-import Link from "next/link";
-import EntityReviews from "@/components/trust/EntityReviews";
+import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
 
 export const metadata: Metadata = {
-  title: "${title} | Indira Dental Clinic Vellore",
-  description: "TODO: Add 150-160 character description with primary keyword in first 60 characters."
+  title: "${title} | Indira Hospital Vellore",
+  description: "Learn about ${title} at Indira Super Speciality Hospital. Expert care by senior doctors with affordable cost, premium facilities, and 0% EMIs available."
 };
 
 export default function ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join("")}Page() {
   return (
-    <main className="min-h-screen">
-      <SectionContainer>
-        {/* ROCKSEO STRUCTURE - DO NOT CHANGE ORDER */}
+    <SubServiceTemplate
+      title="${title}"
+      eyebrow="${deptName}"
+      description={
+        <span>
+          <strong>${title} is a specialized treatment provided at Indira Super Speciality Hospital in Vellore.</strong> The procedure offers long-lasting results with affordable pricing, bringing you premium care at up to 50% lower cost than Chennai and Bangalore.
+        </span>
+      }
+      departmentName="${deptName}"
+      departmentSlug="${cluster}"
+      quickFacts={[
+        { label: "Cost Estimate", value: "₹X,XXX", icon: "IndianRupee" },
+        { label: "Procedure Time", value: "X hours", icon: "Clock" },
+        { label: "Recovery", value: "X days", icon: "Activity" },
+        { label: "Success Rate", value: "X%", icon: "Star" }
+      ]}
+      timeline={{
+        title: "Treatment Process",
+        description: "Our streamlined approach to ${title}",
+        steps: [
+          { title: "Consultation & Diagnostics", description: "Comprehensive evaluation and digital diagnostics." },
+          { title: "Procedure", description: "Minimally invasive treatment using advanced technology." },
+          { title: "Recovery & Follow-up", description: "Post-operative care and dedicated monitoring." }
+        ]
+      }}
+      reviews={{
+        entityType: "service",
+        entityName: "${title}",
+        entitySlug: "${cluster}/${slug}"
+      }}
+    >
+        {/* Main Content (Information Gain) */}
+        <h2>What is ${title}?</h2>
+        <p>${title} is a specialized, advanced medical procedure designed to address specific clinical symptoms, restore function, and improve patient health. At Indira Hospital, our distinguished professionals employ state-of-the-art diagnostic and treatment modalities to deliver an exceptional standard of care.</p>
         
-        {/* 1. Definition/Answer First (Featured Snippet Target) */}
-        <section className="py-12">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            ${title} at Indira Dental Clinic
-          </h1>
-          
-          {/* 40-word featured snippet answer */}
-          <p className="text-xl text-foreground/80 mb-8">
-            <strong>TODO: Answer the query directly in 40 words.</strong>{" "}
-            Include primary entity (Dr. Rockson Samuel), cost range (₹X,XXX–₹X,XXX), 
-            and key differentiator (e.g., "50% lower cost than Chennai").
-          </p>
-        </section>
+        <h2>Who Needs This Treatment?</h2>
+        <p>Patients experiencing persistent discomfort, reduced functionality, or those advised by a specialist may require ${title}. Ideal candidates typically exhibit clinical indications that warrant proactive intervention to prevent further deterioration and ensure long-term health stabilization.</p>
         
-        {/* 2. Key Facts Table (Entity Graph) */}
-        <section className="py-8 bg-muted rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4">Quick Facts</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div><strong>Cost:</strong> ₹X,XXX – ₹X,XXX</div>
-            <div><strong>Duration:</strong> X minutes/hours</div>
-            <div><strong>Recovery:</strong> X days</div>
-            <div><strong>Success Rate:</strong> X%</div>
-          </div>
-        </section>
+        <h2>The Procedure at Indira Hospital</h2>
+        <p>The course of ${title} involves an initial consultation, comprehensive digital diagnostics, and a personalized treatment roadmap. The actual process is minimally invasive where possible, utilizing modern anesthetics and advanced surgical precision to ensure patient comfort, usually taking a few hours to complete with a highly predictable recovery phase.</p>
         
-        {/* 3. Main Content (Information Gain) */}
-        <section className="py-8 prose prose-lg max-w-none">
-          <h2>What is ${title}?</h2>
-          <p>TODO: Comprehensive explanation with entity references.</p>
-          
-          <h2>Who Needs This Treatment?</h2>
-          <p>TODO: Patient criteria with specific symptoms.</p>
-          
-          <h2>The Procedure at Indira Dental Clinic</h2>
-          <p>TODO: Step-by-step with durations and what to expect.</p>
-          
-          <h2>Cost & Payment Options</h2>
-          <p>
-            <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Dental Clinic, Vellore.
-            This is 50% lower than Chennai/Bangalore.
-            0% EMI available via Bajaj Finserv, HDFC, ICICI.
-          </p>
-        </section>
-        
-        {/* 4. Related Services (Hub Link) */}
-        <section className="py-8 bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6">
-          <h2 className="text-2xl font-bold mb-4">Related Services</h2>
-          <ul className="space-y-2">
-            <li>
-              <Link href="${hubPath}" className="text-teal-600 hover:underline">
-                ← Back to ${cluster.replace("-", " ")} main page
-              </Link>
-            </li>
-            {/* TODO: Add 2-3 sibling service links */}
-          </ul>
-        </section>
-        
-        {/* 5. CTA Section */}
-        <section className="py-12 text-center">
-          <h2 className="text-2xl font-bold mb-4">Book Your Consultation</h2>
-          <p className="mb-6">
-            Dr. Rockson Samuel • 15+ years experience • 5,000+ patients
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700"
-          >
-            Schedule Appointment
-          </Link>
-          <p className="mt-4 text-muted-foreground">
-            WhatsApp: +91-7010650063
-          </p>
-        </section>
-
-        {/* 6. Reviews Section */}
-        <EntityReviews 
-          entityType="service" 
-          entityName="${title}" 
-          entitySlug="${cluster}/${slug}"
-          title="Patient Experiences with ${title}"
-          description="Read verified experiences from patients who underwent ${title} at Indira Dental Clinic."
-        />
-      </SectionContainer>
-    </main>
+        <h2>Cost & Payment Options</h2>
+        <p>
+          <strong>Cost: ₹X,XXX – ₹X,XXX</strong> at Indira Hospital, Vellore.
+          This is significantly lower than tier-1 cities while maintaining world-class standards.
+          0% EMI available via Bajaj Finserv, HDFC, ICICI.
+        </p>
+    </SubServiceTemplate>
   );
 }
 `;
@@ -401,6 +448,9 @@ function getExistingPages(dir, list = []) {
   for (const f of fs.readdirSync(dir)) {
     const full = path.join(dir, f);
     const stat = fs.statSync(full);
+
+    // Ignore doctor/near-me to force generation of medical hub pages
+    if (full.includes("doctor/near-me")) continue;
 
     if (stat.isDirectory() && !f.startsWith(".") && !f.startsWith("[")) {
       list.push(f);
@@ -491,7 +541,7 @@ async function main() {
     fs.mkdirSync(CONFIG.outputDir, { recursive: true });
   }
 
-  for (const missing of allMissing.slice(0, 100)) { // Increased for medical coverage
+  for (const missing of allMissing.slice(0, 500)) { // Increased for medical coverage
     const page = generatePageTemplate(missing.topic, missing.cluster);
 
     const outputPath = path.join(CONFIG.outputDir, `${page.slug}.tsx`);
@@ -532,7 +582,7 @@ async function main() {
 
   console.log("\n⚠️ IMPORTANT:");
   console.log("   1. Review generated templates before publishing");
-  console.log("   2. Fill in TODO sections with actual content");
+  console.log("   2. Update placeholder texts and prices with specialized content");
   console.log("   3. Run SERP overlap detector after adding pages");
   console.log("   4. Move approved pages to app/[locale]/ directory");
 }
