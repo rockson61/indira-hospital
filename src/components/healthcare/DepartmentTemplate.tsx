@@ -83,7 +83,7 @@ export function DepartmentTemplate({
                 <div className="absolute inset-0 bg-[url('/hero-hospital.png')] bg-cover bg-center opacity-10" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#002b36]/50" />
 
-                <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
+                <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-20 lg:pt-56 lg:pb-28">
                     {/* Breadcrumbs */}
                     <nav className="flex items-center text-sm text-teal-200/60 mb-8">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
