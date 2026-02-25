@@ -67,7 +67,7 @@ export function DoctorTemplate({
             {/* Premium Doctor Hero */}
             <section className="relative bg-gradient-to-br from-[#005f73] via-[#0a3d47] to-[#002b36] text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_25%_25%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24 relative z-10">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-16 lg:pt-56 lg:pb-24 relative z-10">
                     {/* Breadcrumbs */}
                     <nav className="flex items-center text-sm text-teal-200/60 mb-12">
                         <Link href="/" className="hover:text-white transition-colors">{DOCTOR_PROFILE.BREADCRUMB_HOME}</Link>
