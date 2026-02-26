@@ -29,7 +29,7 @@ export function Header() {
                     className={`w-full max-w-7xl rounded-full transition-all duration-500 border border-white/40 
                     ${scrolled ? 'bg-white/80 backdrop-blur-xl shadow-glass py-3' : 'bg-white/95 shadow-soft py-4'}`}
                 >
-                    <div className="px-6 md:px-8 grid grid-cols-3 items-center">
+                    <div className="px-6 md:px-8 flex justify-between items-center w-full lg:grid lg:grid-cols-3">
                         {/* Left: Navigation */}
                         <nav className="hidden lg:flex items-center space-x-8 justify-start">
                             {navigation.mainNav.map((item) => (

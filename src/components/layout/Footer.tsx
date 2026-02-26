@@ -11,7 +11,7 @@ export function Footer() {
         <footer className="bg-slate-900 text-white pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Top: Brand + Contact */}
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     <div className="lg:col-span-1 space-y-5">
                         <span className="text-2xl font-heading font-black tracking-tight">{siteConfig.name}</span>
                         <p className="text-slate-400 text-sm leading-relaxed font-medium max-w-xs">{siteConfig.description}</p>
