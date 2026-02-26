@@ -71,9 +71,9 @@ export function Header() {
                                 <Image
                                     src="/logo.png"
                                     alt={siteConfig.name}
-                                    width={200}
-                                    height={50}
-                                    className="h-10 w-auto md:h-12 object-contain"
+                                    width={240}
+                                    height={60}
+                                    className="h-12 w-auto md:h-14 object-contain"
                                 />
                             </Link>
                         </div>
