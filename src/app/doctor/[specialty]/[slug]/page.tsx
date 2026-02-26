@@ -63,7 +63,7 @@ export default async function DoctorProfileRoute({
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.15),transparent_70%)]" />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-24">
                     {/* Breadcrumb */}
                     <nav className="flex items-center text-sm text-slate-300 mb-8">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
