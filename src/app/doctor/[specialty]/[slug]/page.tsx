@@ -4,10 +4,17 @@ import Link from "next/link";
 import { getDoctors, getDepartments } from "@/lib/api";
 import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, Stethoscope, GraduationCap } from "lucide-react";
 
+export const dynamicParams = true;
+
+export function getDoctorSpecialtySlug(doc: any): string {
+    const rawDept = typeof doc.department === 'string' ? doc.department : doc.department?.name || doc.specialty || 'specialist';
+    return rawDept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
 export async function generateStaticParams() {
     const doctors = await getDoctors().catch(() => []);
     return doctors.map((doc: any) => ({
-        specialty: (typeof doc.department === 'string' ? doc.department : doc.department?.name || "General").toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+        specialty: getDoctorSpecialtySlug(doc),
         slug: doc.slug
     }));
 }

@@ -15,6 +15,12 @@ interface DoctorCardProps {
 
 const WHATSAPP_NUMBER = "917010650063";
 
+// Must match the slug derivation logic in doctor/[specialty]/[slug]/page.tsx generateStaticParams
+function getSpecialtySlug(doctor: any): string {
+    const rawDept = typeof doctor.department === 'string' ? doctor.department : doctor.department?.name || doctor.specialty || 'specialist';
+    return rawDept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
 export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: DoctorCardProps) {
     const deptName = typeof doctor.department === 'string' ? doctor.department : (doctor.department?.name || '');
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I would like to book an appointment with ${doctor.name}.`)}`;
@@ -29,7 +35,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                 viewport={{ once: true }}
                 transition={{ duration: 0.3 }}
             >
-                <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/\s+/g, '-')}/${doctor.slug}`} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-soft hover:border-teal-100 hover:-translate-y-0.5 transition-all">
+                <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-soft hover:border-teal-100 hover:-translate-y-0.5 transition-all">
                     <div className="relative w-14 h-14 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm">
                         {doctor.image && getImageUrl(doctor.image) ? (
                             <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover" />
@@ -80,7 +86,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             <div className="flex justify-between items-start">
                                 <div>
                                     <h3 className="text-2xl font-black font-heading text-slate-900 group-hover:text-teal-700 transition-colors tracking-tight">
-                                        <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/\s+/g, '-')}/${doctor.slug}`} className="hover:underline">
+                                        <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="hover:underline">
                                             {doctor.name}
                                         </Link>
                                     </h3>
@@ -126,7 +132,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             <a href={whatsappUrl} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-bold rounded-full shadow-sm">
                                 Book
                             </a>
-                            <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/${doctor.slug}`} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 text-slate-700 text-sm font-bold rounded-full">
+                            <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 text-slate-700 text-sm font-bold rounded-full">
                                 Profile
                             </Link>
                         </div>
@@ -193,7 +199,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                                 Book
                             </a>
                         ) : null}
-                        <Link href={`/doctor/${(doctor.specialty || deptName || 'specialist').toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/${doctor.slug}`}
+                        <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`}
                             className="flex-1 flex items-center justify-center gap-2 bg-slate-50 hover:bg-teal-50 hover:text-teal-700 text-slate-700 text-[13px] font-bold py-3 rounded-full transition-all border border-slate-100">
                             Profile
                         </Link>
