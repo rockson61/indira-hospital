@@ -25,6 +25,32 @@ export const tamilNaduLocations: TamilNaduLocation[] = [
     // VELLORE DISTRICT & NEARBY
     // ========================================
     {
+        name: 'Vellore',
+        slug: 'vellore',
+        district: 'Vellore',
+        distance: '0 km',
+        travelTime: '0 minutes',
+        description: 'Vellore is a major historical and medical hub in Tamil Nadu, home to Indira Super Speciality Hospital. We provide top-tier healthcare services to residents across the city and surrounding areas.',
+        category: 'district_hq',
+        pincode: '632001',
+        population: '5,00,000+',
+        transportOptions: { bus: true, train: true, auto: true, taxi: true },
+        specialFeatures: ['Medical Hub', 'Smart City', 'Historical Fort'],
+    },
+    {
+        name: 'Ranipet',
+        slug: 'ranipet',
+        district: 'Ranipet',
+        distance: '25 km',
+        travelTime: '40 minutes',
+        description: 'Ranipet is a bustling industrial district capital. Indira Hospital provides advanced treatments and emergency care to the entire Ranipet industrial corridor.',
+        category: 'district_hq',
+        pincode: '632401',
+        population: '50,000+',
+        transportOptions: { bus: true, train: true, auto: true, taxi: true },
+        specialFeatures: ['Industrial Hub', 'District Capital', 'NH48 Connectivity'],
+    },
+    {
         name: 'Katpadi',
         slug: 'katpadi',
         district: 'Vellore',
