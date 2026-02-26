@@ -10,10 +10,13 @@ import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { HOME_PAGE_CONTENT } from "@/config/constants";
 import { MessageCircle, Phone, ArrowRight, Zap, Sparkles } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50 selection:bg-teal-200 selection:text-teal-900">
+      <JsonLdSchema type="hospital" />
       <Hero />
       <StatsBanner />
 
@@ -47,6 +50,10 @@ export default function Home() {
         <Testimonials />
         <QuickLinks />
       </div>
+
+      {/* SEO DEEP-LINK GRIDS */}
+      <InternalLinkGrid type="services" title="Popular Treatments" subtitle="Browse Services" limit={16} className="bg-white border-y border-slate-100" />
+      <InternalLinkGrid type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={16} className="bg-slate-50" />
 
       {/* ELITE SIGNATURE HOME CTA */}
       <SectionContainer className="pb-32 px-4">

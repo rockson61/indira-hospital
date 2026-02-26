@@ -17,6 +17,7 @@ import { clinicConfig } from "@/lib/data/clinic-config";
 import { getDepartments, getDoctors } from "@/lib/api";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { cn } from "@/lib/utils";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -429,6 +430,10 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     ) as any)}
                 </div>
             </SectionContainer>
+
+            {/* SEO DEEP-LINK GRIDS */}
+            <InternalLinkGrid type="services" title="Treatments Available" subtitle="Our Services" limit={12} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={8} className="bg-slate-50" />
         </main>
     );
 }

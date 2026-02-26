@@ -4,6 +4,8 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionContainer } from "@/components/ui/section-container";
 import { DepartmentCard } from "@/components/entities/DepartmentCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = {
     title: "Centres of Excellence & Departments | Indira Super Speciality Hospital",
@@ -15,6 +17,11 @@ export default async function DepartmentsDirectoryPage() {
 
     return (
         <main className="min-h-screen bg-slate-50">
+            <JsonLdSchema
+                type="itemList"
+                name="Departments & Centres of Excellence at Indira Hospital"
+                items={departments.map((d: any) => ({ name: d.title || d.name, url: `/departments/${d.slug}` }))}
+            />
             <PageHero
                 title="Centres of Excellence"
                 subtitle="Expert Departments"
@@ -42,6 +49,11 @@ export default async function DepartmentsDirectoryPage() {
                 entitySlug="indira-hospital"
                 className="bg-white py-24 border-t border-slate-100"
             />
+
+            {/* SEO DEEP-LINK GRIDS */}
+            <InternalLinkGrid type="services" title="Treatments We Offer" subtitle="Our Services" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={12} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="locations" title="Find Us Near You" subtitle="Our Locations" limit={12} className="bg-slate-50" />
         </main>
     );
 }

@@ -5,6 +5,8 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { Testimonials } from "@/components/sections/testimonials";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = {
     title: "Best Doctors & Surgeons in Tamil Nadu | Indira Super Speciality Hospital",
@@ -16,6 +18,15 @@ export default async function DoctorsDirectoryPage() {
 
     return (
         <main className="min-h-screen bg-slate-50">
+            <JsonLdSchema
+                type="itemList"
+                name="Expert Doctors at Indira Hospital"
+                items={doctors.map((d: any) => {
+                    const dept = typeof d.department === 'string' ? d.department : d.department?.name || d.specialty || 'specialist';
+                    const specialtySlug = dept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                    return { name: d.name, url: `/doctor/${specialtySlug}/${d.slug}` };
+                })}
+            />
             <PageHero
                 title="Our Medical Experts"
                 subtitle="Trusted Specialists"
@@ -45,6 +56,11 @@ export default async function DoctorsDirectoryPage() {
             />
 
             <Testimonials />
+
+            {/* SEO DEEP-LINK GRIDS */}
+            <InternalLinkGrid type="services" title="Treatments We Offer" subtitle="Our Services" limit={12} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="departments" title="Browse by Department" subtitle="Centres of Excellence" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="locations" title="Find Us Near You" subtitle="Our Locations" limit={12} className="bg-white border-t border-slate-100" />
         </main>
     );
 }

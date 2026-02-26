@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getDoctors, getDepartments } from "@/lib/api";
 import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, Stethoscope, GraduationCap } from "lucide-react";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const dynamicParams = true;
 
@@ -60,6 +62,13 @@ export default async function DoctorProfileRoute({
 
     return (
         <div className="bg-[#FAFAFA] min-h-screen">
+            <JsonLdSchema
+                type="physician"
+                name={currDoctor.name}
+                specialty={currDoctor.specialty || (typeof currDoctor.department === 'string' ? currDoctor.department : currDoctor.department?.name || 'Specialist')}
+                description={currDoctor.bio || `Expert doctor at Indira Hospital`}
+                url={`/doctor/${specialty}/${slug}`}
+            />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.15),transparent_70%)]" />
@@ -234,6 +243,10 @@ export default async function DoctorProfileRoute({
                     </div>
                 </div>
             </section>
+
+            {/* SEO DEEP-LINK GRIDS */}
+            <InternalLinkGrid type="services" title="Treatments Available" subtitle="Our Services" limit={8} className="bg-white" />
+            <InternalLinkGrid type="locations" title="Hospital Near You" subtitle="Our Locations" limit={8} className="bg-[#FAFAFA]" />
         </div>
     );
 }
