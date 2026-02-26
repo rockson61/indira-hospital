@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 }
 
 interface PageProps {
-    params: { city: string };
+    params: Promise<{ city: string }>;
 }
 
 function getLocation(slug: string) {
@@ -46,7 +46,8 @@ function getLocation(slug: string) {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const location = getLocation(params.city);
+    const { city } = await params;
+    const location = getLocation(city);
     if (!location) return { title: "Location Not Found" };
 
     return {
@@ -63,7 +64,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function LocationDetailPage({ params }: PageProps) {
-    const location = getLocation(params.city);
+    const { city } = await params;
+    const location = getLocation(city);
     if (!location) notFound();
 
     const departments = await getDepartments().catch(() => []);
