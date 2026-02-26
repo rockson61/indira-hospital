@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { FOOTER_LINKS } from "@/lib/data/footer-links";
+import { LOCATION_HIERARCHY } from "@/lib/data/location-hierarchy";
 import { Phone, MapPin, Mail, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
@@ -82,14 +83,20 @@ export function Footer() {
                     </div>
                 </div>
 
-                {/* Middle: Locations Strip */}
-                <div className="border-t border-slate-800 py-8">
-                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Our Locations</h4>
-                    <div className="flex flex-wrap gap-x-6 gap-y-2">
-                        {FOOTER_LINKS.locations.map((loc) => (
-                            <Link key={loc.name} href={loc.url} className="text-sm text-slate-400 hover:text-teal-400 transition-colors font-medium whitespace-nowrap">
-                                {loc.name}
-                            </Link>
+                {/* Middle: Locations Hierarchy */}
+                <div className="border-t border-slate-800 py-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                        {LOCATION_HIERARCHY.map((group) => (
+                            <div key={group.region}>
+                                <h4 className="text-[11px] font-bold text-teal-500 uppercase tracking-widest mb-4">{group.region}</h4>
+                                <div className="flex flex-col gap-2.5">
+                                    {group.locations.map((loc) => (
+                                        <Link key={loc.name} href={loc.url} className="text-sm text-slate-400 hover:text-teal-400 transition-colors font-medium">
+                                            {loc.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </div>
