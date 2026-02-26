@@ -20,6 +20,8 @@ import { cn } from "@/lib/utils";
 
 const WHATSAPP_NUMBER = "917010650063";
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
     const allLocations = [
         ...enhancedVelloreLocations.map(l => ({ city: l.slug })),

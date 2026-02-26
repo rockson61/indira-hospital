@@ -56,6 +56,8 @@ const serviceProcedures: Record<string, string[]> = {
 };
 
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
     const services = await getServices().catch(() => []);
     const serviceParams = services.map((service: any) => ({ slug: [service.slug] }));

@@ -13,6 +13,8 @@ import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 import { getDoctors } from "@/lib/api";
 import Image from "next/image";
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
     return INTERNATIONAL_COUNTRIES.map((country) => ({
         country: country.slug,
