@@ -77,9 +77,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const treatment = getTreatmentBySlug(lastSlug);
     if (treatment) {
         return {
-            title: `${treatment.title} Treatment in India & Tamil Nadu | Indira Hospital`,
-            description: treatment.shortDescription,
-            keywords: [treatment.title, "Tamil Nadu", "India", "Treatment", "Hospital", ...treatment.features]
+            title: `${treatment.title} — Cost, Recovery & Same-Day Discharge | Indira Hospital`,
+            description: `${treatment.shortDescription} Get a free cost estimate today.`,
+            keywords: [treatment.title, "Tamil Nadu", "India", "cost", "treatment", "same day discharge", ...treatment.features]
         };
     }
 
@@ -88,9 +88,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!service) return { title: "Page Not Found" };
 
     return {
-        title: service.seo_title || `${service.title} - Best ${service.title} Treatment in Tamil Nadu & India | Indira Hospital`,
-        description: service.seo_description || `${service.full_description?.replace(/<[^>]*>?/gm, '').substring(0, 160) || service.short_description} Book appointment on WhatsApp at Indira Super Speciality Hospital.`,
-        keywords: [service.title, "Tamil Nadu", "India", "Indira Hospital", "best hospital", "treatment", "surgery"],
+        title: service.seo_title || `${service.title} — Cost, Recovery & Same-Day Discharge | Indira Hospital`,
+        description: service.seo_description || `${service.full_description?.replace(/<[^>]*>?/gm, '').substring(0, 140) || service.short_description} Get a free cost estimate at Indira Hospital.`,
+        keywords: [service.title, "cost", "same day", "Tamil Nadu", "India", "Indira Hospital", "treatment", "surgery"],
     };
 }
 
@@ -239,12 +239,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
                                     className="inline-flex items-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-green-500/30 text-lg">
                                     <MessageCircle className="w-5 h-5 mr-2" />
-                                    Book on WhatsApp
+                                    Book on WhatsApp — It's Free
                                 </a>
                                 <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
                                     className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
                                     <Phone className="w-5 h-5 mr-2" />
-                                    {clinicConfig.phone}
+                                    Talk to a Doctor Now
                                 </a>
                             </div>
                         </div>
@@ -262,7 +262,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 <span className="bg-teal-100 p-2 rounded-lg mr-3 text-teal-600">
                                     <Stethoscope className="w-5 h-5" />
                                 </span>
-                                About {service.title}
+                                About {service.title} — What You Need to Know
                             </h2>
                             <div className="text-gray-600 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
                         </Card>
@@ -301,7 +301,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <span className="bg-teal-100 p-2 rounded-lg mr-3 text-teal-600">
                                         <GraduationCap className="w-5 h-5" />
                                     </span>
-                                    Our {service.title} Specialists
+                                    Surgeons Who Specialise in {service.title}
                                 </h2>
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     {relatedDoctors.map((doc) => (
@@ -336,12 +336,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <MessageCircle className="w-7 h-7 text-green-600" />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 text-lg">Book Appointment</h3>
-                                    <p className="text-gray-500 text-sm mt-1 mb-5">Chat with us for instant booking, cost estimates, and availability.</p>
+                                    <h3 className="font-bold text-gray-900 text-lg">Get a Free Cost Estimate</h3>
+                                    <p className="text-gray-500 text-sm mt-1 mb-5">No hidden charges. Get exact pricing, insurance coverage, and available dates in under 2 minutes.</p>
                                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
                                         className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-md text-base">
                                         <MessageCircle className="w-5 h-5 mr-2" />
-                                        WhatsApp Now
+                                        Get Free Estimate on WhatsApp
                                     </a>
                                 </div>
                             </Card>
@@ -349,7 +349,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             {/* M2M: AVAILABLE LOCATIONS */}
                             {(service.available_locations as any[])?.length > 0 && (
                                 <Card className="p-6 border-none shadow-sm rounded-2xl">
-                                    <h3 className="font-bold text-gray-900 mb-4">Available at Locations</h3>
+                                    <h3 className="font-bold text-gray-900 mb-4">Available Near You</h3>
                                     <div className="flex flex-col gap-3">
                                         {(service.available_locations as any[]).map((loc: any) => (
                                             <LocationCard key={loc.slug} location={loc} variant="compact" />
@@ -360,7 +360,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
                             {/* Other Services Quick Links */}
                             <Card className="p-6 border-none shadow-sm rounded-2xl">
-                                <h3 className="font-bold text-gray-900 mb-4">Related Services</h3>
+                                <h3 className="font-bold text-gray-900 mb-4">Other Treatments You May Need</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {otherServices.slice(0, 10).map((svc: any) => (
                                         <ServiceCard key={svc.slug} service={svc} variant="compact" />
@@ -377,8 +377,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 entityType={isTreatmentPage ? "service" : "service"}
                 entityName={service.title}
                 entitySlug={lastSlug}
-                title={`Verified Reviews for ${service.title}`}
-                description={`What our patients are saying about their ${service.title} experience at Indira Hospital.`}
+                title={`${service.title} — Real Patient Results`}
+                description={`Read verified reviews from patients who chose Indira Hospital for their ${service.title} procedure.`}
             />
 
             {/* ENTITY CARD SECTIONS */}

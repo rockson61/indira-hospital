@@ -28,7 +28,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "general-surgery",
         title: "General & Laparoscopic Surgery",
-        description: "Advanced minimally invasive procedures for hernia, gallbladder, and laser treatment for piles/fistula.",
+        description: "Laser piles, laparoscopic hernia, gallbladder removal — same-day discharge, half the metro cost. 15,000+ surgeries done.",
         icon: Zap,
         image: "/hero-hospital.png",
         href: "/departments/general-surgery",
@@ -38,7 +38,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "orthopaedics",
         title: "Orthopaedics & Joint Replacement",
-        description: "Expert care for bone and joint issues, including total knee and hip replacements.",
+        description: "Walking pain-free again starts here. Total knee & hip replacement by surgeons with 1,000+ joint replacements each.",
         icon: Activity,
         image: "/hero-hospital.png",
         href: "/departments/orthopaedics",
@@ -48,7 +48,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "cardiology",
         title: "Interventional Cardiology",
-        description: "24/7 cardiac emergency care with advanced Cath Lab for Angioplasty and Stenting.",
+        description: "Chest pain? Don't wait. 24/7 Cath Lab with < 30 min door-to-balloon time. Angioplasty, stenting & pacemakers by India's best.",
         icon: Heart,
         image: "/hero-hospital.png",
         href: "/departments/cardiology",
@@ -58,7 +58,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "obstetrics-gynaecology",
         title: "Obstetrics & Gynaecology",
-        description: "Comprehensive women's healthcare, from maternity to advanced gynaecological surgeries.",
+        description: "Painless delivery, high-risk pregnancy care, and laparoscopic gynaecology — because every mother deserves the safest hands.",
         icon: Baby,
         image: "/hero-hospital.png",
         href: "/departments/obstetrics-gynaecology",
@@ -67,7 +67,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "nephrology",
         title: "Nephrology & Dialysis",
-        description: "Dedicated dialysis unit and expert management of chronic kidney diseases.",
+        description: "24/7 dialysis. Kidney stones removed in 45 minutes. CKD managed before it's too late. Don't delay — your kidneys can't wait.",
         icon: Shield,
         image: "/hero-hospital.png",
         href: "/departments/nephrology",
@@ -76,7 +76,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "diagnostics",
         title: "Advanced Diagnostics",
-        description: "Fully automated NABL accredited lab and imaging center (MRI, CT, Ultrasound).",
+        description: "NABL accredited. 3T MRI, 128-slice CT, digital X-ray — reports in under 12 hours. Stop guessing, get diagnosed today.",
         icon: ClipboardCheck,
         image: "/hero-hospital.png",
         href: "/diagnostics",
@@ -85,7 +85,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "oncology",
         title: "Medical & Surgical Oncology",
-        description: "Comprehensive cancer care including chemotherapy, targeted therapy, and complex tumor removals.",
+        description: "Cancer doesn't wait, and neither should you. Chemotherapy, targeted therapy & tumour removal under one NABH-accredited roof.",
         icon: Sparkles,
         image: "/hero-hospital.png",
         href: "/departments/oncology",
@@ -95,7 +95,7 @@ export const servicesData: ServiceData[] = [
 
 export const bookingServices = [
     { value: "general-consultation", label: "General Physician Consultation", duration: "15-30 min" },
-    { value: "surgery-consultation", label: "General / Laparoscopic Surgery Consultation", duration: "30 min" },
+    { value: "surgery-consultation", label: "Surgery Consultation (Free Cost Estimate)", duration: "30 min" },
     { value: "ortho-consultation", label: "Orthopaedics Consultation", duration: "30 min" },
     { value: "cardio-consultation", label: "Cardiology Consultation", duration: "30 min" },
     { value: "gynaecology-consultation", label: "Gynaecology Consultation", duration: "30 min" },
