@@ -68,10 +68,10 @@ export const BLOG_CONFIGURATION = {
 } as const;
 
 export const HOME_PAGE_CONTENT = {
-    ACCREDITATION_TITLE: "Recognized & Accreditated By",
+    ACCREDITATION_TITLE: "Recognized & Accredited By",
     ACCREDITATION_BADGES: ["NABH ACCREDITED", "NABL CERTIFIED", "ISO 9001:2015"],
-    CTA_HEADING: "Best Hospital in Tamil Nadu & India",
-    CTA_SUBTEXT: "Renowned globally for clinical mastery in Proctology, Laparoscopy & Super-Speciality Care. Experience the pinnacle of medical precision.",
-    CTA_BUTTON_BOOK: "Book Specialist",
-    CTA_BUTTON_CONTACT: "Emergency 24/7"
+    CTA_HEADING: "Every Day You Wait Costs You More",
+    CTA_SUBTEXT: "Delaying surgery doesn't save money — it doubles it. Get a free cost estimate today and stop the pain tomorrow.",
+    CTA_BUTTON_BOOK: "Get Free Estimate",
+    CTA_BUTTON_CONTACT: "Call Now — It's Free"
 } as const;

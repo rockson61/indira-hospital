@@ -40,7 +40,7 @@ export function Hero() {
                             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-teal-500/30"
                         >
                             <span className="flex h-2.5 w-2.5 rounded-full bg-teal-400 animate-pulse" />
-                            Best Hospital in Tamil Nadu & India
+                            15,000+ Surgeries. Zero Compromises.
                         </motion.div>
 
                         <motion.h1
@@ -49,9 +49,9 @@ export function Hero() {
                             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                             className="text-6xl md:text-8xl lg:text-[7rem] font-black text-white leading-[1.05] tracking-tight mb-8"
                         >
-                            Clinical Mastery. <br />
+                            Stop Suffering. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">
-                                India&apos;s Pride.
+                                Start Healing.
                             </span>
                         </motion.h1>
 
@@ -61,8 +61,8 @@ export function Hero() {
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             className="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-xl font-light"
                         >
-                            Indira Super Speciality Hospital: #1 for Proctology, Laparoscopy & Super-Speciality surgical precision.
-                            Serving patients globally from our Vellore center of excellence.
+                            Advanced laser & laparoscopic surgery at half the metro cost.
+                            Walk in with pain. Walk out same day. That&apos;s the Indira promise.
                         </motion.p>
 
                         <motion.div
@@ -75,7 +75,7 @@ export function Hero() {
                                 href="/book-appointment"
                                 className="group/btn relative px-10 py-5 bg-teal-500 hover:bg-teal-400 text-slate-900 rounded-2xl font-black text-xl transition-all shadow-lg shadow-teal-500/25 flex items-center justify-center gap-2 overflow-hidden hover:scale-[1.02]"
                             >
-                                <span className="relative z-10">Book Visit Now</span>
+                                <span className="relative z-10">Get Free Cost Estimate</span>
                                 <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </Link>
@@ -83,7 +83,7 @@ export function Hero() {
                                 href={`tel:${siteConfig.contact.emergencyPhone}`}
                                 className="px-10 py-5 bg-white/5 backdrop-blur-md text-white rounded-2xl font-black text-xl border border-white/10 transition-all hover:bg-white/10 flex items-center justify-center gap-3"
                             >
-                                <Phone className="w-6 h-6 text-rose-400" /> 24/7 Emergency
+                                <Phone className="w-6 h-6 text-rose-400" /> Talk to a Doctor Now
                             </a>
                         </motion.div>
 

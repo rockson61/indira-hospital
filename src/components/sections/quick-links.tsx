@@ -4,24 +4,24 @@ import { Microscope, Globe, FileText, ArrowRight } from "lucide-react";
 
 const links = [
     {
-        title: "Advanced Technology",
-        description: "Explore our cutting-edge medical equipment.",
+        title: "See Our Equipment",
+        description: "3T MRI, Cath Lab, HD Endoscopy — why diagnosis here is faster.",
         icon: Microscope,
         href: "/technology",
         color: "bg-teal-50 text-teal-600",
         hover: "hover:border-blue-200"
     },
     {
-        title: "International Patients",
-        description: "Dedicated services for overseas visitors.",
+        title: "Flying In for Surgery?",
+        description: "Airport pickup, translator, visa letter — we handle everything.",
         icon: Globe,
         href: "/patients/international",
         color: "bg-teal-50 text-teal-600",
         hover: "hover:border-teal-200"
     },
     {
-        title: "Health Insights",
-        description: "Read the latest news and medical articles.",
+        title: "Don't Google Your Symptoms",
+        description: "Read expert-written guides by our surgeons instead.",
         icon: FileText,
         href: "/blog",
         color: "bg-green-50 text-green-600",

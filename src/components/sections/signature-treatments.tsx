@@ -26,9 +26,9 @@ export async function SignatureTreatments() {
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="flex justify-between items-end mb-12">
                     <SectionHeader
-                        title="Signature Treatments"
-                        subtitle="Advanced Clinical Excellence"
-                        description="We define the standards of healthcare in the region through specialized procedures and surgical precision."
+                        title="Surgeries That Get You Back to Life Faster"
+                        subtitle="Same-Day Discharge Procedures"
+                        description="Why spend a week recovering when you could be home tonight? Our laser & laparoscopic procedures cut recovery from weeks to hours."
                         className="text-white mb-0 text-left items-start"
                         align="left"
                     />

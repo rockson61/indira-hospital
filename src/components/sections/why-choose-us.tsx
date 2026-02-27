@@ -6,28 +6,28 @@ import { Clock, ShieldCheck, HeartPulse, Trophy, Ambulance, Microscope, Award, U
 const features = [
     {
         name: "24/7 Emergency Care",
-        description: "Round-the-clock emergency services with minimal waiting time and expert trauma care.",
+        description: "Chest pain at 3 AM? Our cardiac team is already scrubbed in. Average door-to-doctor time: 8 minutes.",
         icon: Ambulance,
         color: "from-red-500 to-rose-600",
         stat: "24/7",
     },
     {
-        name: "25+ Expert Doctors",
-        description: "A team of highly qualified doctors, surgeons, and nursing staff dedicated to patient recovery.",
+        name: "25+ Surgeons Who've Done This 1,000+ Times",
+        description: "Every surgeon at Indira has 10+ years of specialised experience. Your procedure isn't their first — it's their thousandth.",
         icon: Users,
         color: "from-teal-500 to-teal-600",
         stat: "25+",
     },
     {
-        name: "Advanced Technology",
-        description: "State-of-the-art Cath Lab, diagnostic imaging, and minimally invasive surgical equipment.",
+        name: "Technology That Cuts Recovery in Half",
+        description: "Laser piles, laparoscopic hernia, keyhole gallbladder removal — go home the same day instead of spending a week in bed.",
         icon: Microscope,
         color: "from-teal-400 to-emerald-600",
         stat: "Latest",
     },
     {
-        name: "Award Winning Care",
-        description: "Recognized for excellence in patient safety, clinical outcomes, and compassionate healthcare.",
+        name: "Outcomes That Speak Louder Than Awards",
+        description: "98.7% patient satisfaction. NABH accredited. 50+ insurance partners. But the real award? You walking out pain-free.",
         icon: Award,
         color: "from-amber-500 to-orange-600",
         stat: "Top",
@@ -42,9 +42,9 @@ export function WhyChooseUs() {
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                 <SectionHeader
-                    title="Why Choose Indira Hospital?"
+                    title="Why 15,000+ Patients Trusted Us With Their Surgery"
                     subtitle="Our Commitment"
-                    description="Trusted by thousands of patients across Tamil Nadu for quality healthcare."
+                    description="They came in scared. They walked out pain-free. Here's why they chose Indira."
                 />
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                     <div className="grid max-w-xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-4">

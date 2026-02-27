@@ -8,16 +8,16 @@ import {
 } from "lucide-react";
 
 const trustItems = [
-    { icon: HeartPulse, label: "15000+", sublabel: "Patients Treated", color: "text-rose-500", bg: "bg-rose-50" },
-    { icon: Stethoscope, label: "15+", sublabel: "Super Specialities", color: "text-teal-600", bg: "bg-teal-50" },
-    { icon: ShieldCheck, label: "50+", sublabel: "Insurance Partners", color: "text-teal-600", bg: "bg-teal-50" },
-    { icon: Zap, label: "24/7", sublabel: "Emergency & ICU", color: "text-amber-600", bg: "bg-amber-50" },
+    { icon: HeartPulse, label: "15,000+", sublabel: "Successful Surgeries", color: "text-rose-500", bg: "bg-rose-50" },
+    { icon: Stethoscope, label: "15+", sublabel: "Surgical Specialities", color: "text-teal-600", bg: "bg-teal-50" },
+    { icon: ShieldCheck, label: "50+", sublabel: "Cashless Insurance", color: "text-teal-600", bg: "bg-teal-50" },
+    { icon: Zap, label: "< 10 min", sublabel: "Emergency Response", color: "text-amber-600", bg: "bg-amber-50" },
 ];
 
 const badges = [
     { icon: BadgeCheck, text: "NABH Accredited" },
-    { icon: BadgeCheck, text: "No-Cost EMI" },
-    { icon: BadgeCheck, text: "Insurance Cashless" },
+    { icon: BadgeCheck, text: "Zero-Cost EMI Available" },
+    { icon: BadgeCheck, text: "Same-Day Discharge" },
 ];
 
 export function TrustStrip() {

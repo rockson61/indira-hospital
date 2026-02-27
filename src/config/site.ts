@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "Indira Super Speciality Hospital",
-    description: "Enterprise healthcare platform delivering world-class medical services with compassion and advanced technology.",
+    description: "Indira Super Speciality Hospital, Vellore — advanced laser & laparoscopic surgeries with same-day discharge. 15,000+ successful surgeries. 50+ cashless insurance partners. NABH accredited.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://indirasuperspecialityhospital.com",
     ogImage: "/images/og.jpg",
     contact: {
