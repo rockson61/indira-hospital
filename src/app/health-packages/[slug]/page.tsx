@@ -36,13 +36,13 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
             {/* Header */}
             <section className="relative pt-48 pb-16 overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-teal-50 blur-[120px] opacity-60" />
-                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-teal-50 blur-[120px] opacity-50" />
+                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-fuchsia-50 blur-[120px] opacity-60" />
+                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-fuchsia-50 blur-[120px] opacity-50" />
                 </div>
                 <SectionContainer>
                     <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-start">
                         <div className="flex-1">
-                            <div className="flex items-center gap-2 text-teal-600 font-bold text-sm uppercase tracking-widest mb-4">
+                            <div className="flex items-center gap-2 text-fuchsia-600 font-bold text-sm uppercase tracking-widest mb-4">
                                 <Shield className="w-4 h-4" />
                                 Wellness & Prevention
                             </div>
@@ -53,8 +53,8 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
 
                             <div className="grid sm:grid-cols-2 gap-4">
                                 <div className="flex items-center gap-3 p-5 bg-white rounded-[2rem] border border-slate-100 shadow-soft">
-                                    <div className="w-12 h-12 rounded-[1rem] bg-teal-50 flex items-center justify-center">
-                                        <Stethoscope className="w-6 h-6 text-teal-600" />
+                                    <div className="w-12 h-12 rounded-[1rem] bg-fuchsia-50 flex items-center justify-center">
+                                        <Stethoscope className="w-6 h-6 text-fuchsia-600" />
                                     </div>
                                     <div>
                                         <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Total Tests</p>
@@ -90,7 +90,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                             <div className="space-y-3 mb-8">
                                 {["NABL Accredited Lab Results", "Free Physician Consultation", "Digital Reports on WhatsApp"].map((item) => (
                                     <div key={item} className="flex items-center gap-3 text-sm text-slate-600 font-medium">
-                                        <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0" />
+                                        <CheckCircle2 className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
                                         {item}
                                     </div>
                                 ))}
@@ -100,7 +100,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                 <a
                                     href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'd like to book the ${pkg.title} health package.`)}`}
                                     target="_blank"
-                                    className="w-full inline-flex items-center justify-center py-4 bg-slate-900 hover:bg-teal-700 text-white font-bold rounded-full transition-all shadow-sm text-base"
+                                    className="w-full inline-flex items-center justify-center py-4 bg-slate-900 hover:bg-fuchsia-700 text-white font-bold rounded-full transition-all shadow-sm text-base"
                                 >
                                     Book Appointment
                                 </a>
@@ -108,7 +108,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                     href="tel:+917010650063"
                                     className="w-full inline-flex items-center justify-center py-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold rounded-full transition-all border border-slate-100 text-base"
                                 >
-                                    <Phone className="w-4 h-4 mr-2 text-teal-600" />
+                                    <Phone className="w-4 h-4 mr-2 text-fuchsia-600" />
                                     Call to Inquire
                                 </a>
                             </div>
@@ -123,15 +123,15 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                     <div className="lg:col-span-2 space-y-12">
                         <div>
                             <h2 className="text-2xl font-heading font-black text-slate-900 mb-8 flex items-center gap-3 tracking-tight">
-                                <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center">
-                                    <FileText className="w-5 h-5 text-teal-600" />
+                                <div className="w-10 h-10 rounded-full bg-fuchsia-50 flex items-center justify-center">
+                                    <FileText className="w-5 h-5 text-fuchsia-600" />
                                 </div>
                                 Tests Included
                             </h2>
                             <div className="grid sm:grid-cols-2 gap-3">
                                 {testList.map((test, i) => (
                                     <div key={i} className="flex items-start gap-3 p-4 bg-white border border-slate-100 rounded-[1.5rem] shadow-sm">
-                                        <CheckCircle2 className="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                                        <CheckCircle2 className="w-5 h-5 text-fuchsia-500 mt-0.5 flex-shrink-0" />
                                         <span className="text-slate-700 font-medium">{test}</span>
                                     </div>
                                 ))}
@@ -165,7 +165,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                             </div>
                             <Link
                                 href="/doctor/near-me/vellore"
-                                className="w-full inline-flex items-center justify-center py-3 bg-slate-50 hover:bg-teal-50 text-slate-700 hover:text-teal-700 font-bold rounded-full transition-all border border-slate-100 text-sm"
+                                className="w-full inline-flex items-center justify-center py-3 bg-slate-50 hover:bg-fuchsia-50 text-slate-700 hover:text-fuchsia-700 font-bold rounded-full transition-all border border-slate-100 text-sm"
                             >
                                 View Map & Directions
                             </Link>

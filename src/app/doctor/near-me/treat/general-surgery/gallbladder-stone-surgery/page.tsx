@@ -101,8 +101,8 @@ export default function GallbladderSurgeryPage() {
                     Our modular operating theaters are equipped with <strong>High-Definition 4K Laparoscopic Towers</strong>. This provides our surgeons with extreme clarity, allowing for safer dissection and better protection of the bile duct and surrounding organs.
                 </p>
 
-                <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-teal-50 to-teal-50 dark:from-indigo-900/10 dark:to-teal-900/10 rounded-[2.5rem] border border-indigo-100 dark:border-teal-700 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-teal-300 mb-6 tracking-tight">Transparent Surgical Packages</h4>
+                <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-fuchsia-50 to-fuchsia-50 dark:from-indigo-900/10 dark:to-fuchsia-900/10 rounded-[2.5rem] border border-indigo-100 dark:border-fuchsia-700 shadow-sm">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-fuchsia-300 mb-6 tracking-tight">Transparent Surgical Packages</h4>
                     <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
                         Our surgical packages are designed for transparency and affordability. We utilize USFDA-approved energy devices for all cases.
                     </p>

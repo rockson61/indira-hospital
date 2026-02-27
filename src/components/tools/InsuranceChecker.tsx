@@ -39,7 +39,7 @@ export function InsuranceChecker() {
     return (
         <Card className="p-6 bg-white shadow-sm border border-gray-100 rounded-xl">
             <div className="flex items-start gap-4 mb-6">
-                <div className="bg-teal-100 p-3 rounded-full text-teal-600">
+                <div className="bg-fuchsia-100 p-3 rounded-full text-fuchsia-600">
                     <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>

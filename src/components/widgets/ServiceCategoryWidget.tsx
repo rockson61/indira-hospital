@@ -43,7 +43,7 @@ export default function ServiceCategoryWidget() {
               >
                 <div className="clay-button p-4 h-full flex flex-col items-center justify-center text-center space-y-2 group-hover:scale-105 transition-transform duration-300">
                   <div className="w-10 h-10 flex items-center justify-center bg-white/50 rounded-full">
-                    <Icon className="w-5 h-5 text-teal-700" />
+                    <Icon className="w-5 h-5 text-fuchsia-700" />
                   </div>
                   <span className="text-sm font-semibold text-gray-700">{category.name}</span>
                 </div>

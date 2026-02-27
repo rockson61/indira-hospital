@@ -48,14 +48,14 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                     )}
                 >
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600 shadow-sm group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all duration-500">
+                        <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 shadow-sm group-hover:scale-110 group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-500">
                             <div className="w-6 h-6">{Icon}</div>
                         </div>
-                        <span className="text-base font-black text-slate-900 group-hover:text-teal-700 transition-colors tracking-tight">
+                        <span className="text-base font-black text-slate-900 group-hover:text-fuchsia-700 transition-colors tracking-tight">
                             {service.title}
                         </span>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-teal-500 transition-colors" />
+                    <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-fuchsia-500 transition-colors" />
                 </Link>
             </motion.div>
         );
@@ -76,14 +76,14 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                         cardClassName
                     )}>
                         {/* Light Streak Animation */}
-                        <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-teal-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
+                        <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                        <div className="w-20 h-20 rounded-[2rem] bg-slate-50 border border-slate-100 group-hover:bg-teal-600 flex items-center justify-center text-teal-600 group-hover:text-white transition-all duration-700 mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 relative z-10">
+                        <div className="w-20 h-20 rounded-[2rem] bg-slate-50 border border-slate-100 group-hover:bg-fuchsia-600 flex items-center justify-center text-fuchsia-600 group-hover:text-white transition-all duration-700 mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 relative z-10">
                             <div className="w-10 h-10">{Icon}</div>
                         </div>
 
                         <div className="relative z-10 flex-grow">
-                            <h3 className="text-2xl font-black text-slate-900 group-hover:text-teal-700 transition-colors mb-4 tracking-tight leading-tight">
+                            <h3 className="text-2xl font-black text-slate-900 group-hover:text-fuchsia-700 transition-colors mb-4 tracking-tight leading-tight">
                                 {service.title}
                             </h3>
 
@@ -93,7 +93,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                         </div>
 
                         <div className="mt-auto pt-6 border-t border-slate-100 w-full relative z-10">
-                            <span className="inline-flex items-center text-slate-400 text-xs font-black tracking-[0.2em] uppercase group-hover:text-teal-600 transition-all">
+                            <span className="inline-flex items-center text-slate-400 text-xs font-black tracking-[0.2em] uppercase group-hover:text-fuchsia-600 transition-all">
                                 Explore Expertise <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </div>
@@ -111,10 +111,10 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                 className
             )}>
                 {/* Light Streak Animation */}
-                <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-teal-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
+                <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
                 <div className="flex items-start justify-between mb-8 relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-lg group-hover:scale-110">
+                    <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 text-fuchsia-600 flex items-center justify-center group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-lg group-hover:scale-110">
                         <div className="w-8 h-8">{Icon}</div>
                     </div>
                     {service.procedure_type && (
@@ -125,7 +125,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                 </div>
 
                 <div className="relative z-10 flex-grow">
-                    <h3 className="text-3xl font-black text-slate-900 mb-4 group-hover:text-teal-700 transition-colors tracking-tight leading-tight">
+                    <h3 className="text-3xl font-black text-slate-900 mb-4 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-tight">
                         <Link href={href} className="before:absolute before:inset-0 outline-none">
                             {service.title}
                         </Link>
@@ -139,8 +139,8 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                         <div className="mb-10 space-y-3">
                             {service.features.slice(0, 3).map((feat: string, i: number) => (
                                 <div key={i} className="flex items-center gap-3 text-sm text-slate-600 font-bold">
-                                    <div className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-teal-500" />
+                                    <div className="w-5 h-5 rounded-full bg-fuchsia-50 flex items-center justify-center flex-shrink-0">
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-fuchsia-500" />
                                     </div>
                                     <span className="truncate">{feat}</span>
                                 </div>
@@ -152,7 +152,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                 <div className="mt-auto relative z-20">
                     <Link
                         href={href}
-                        className="group/btn relative inline-flex items-center justify-center w-full py-5 bg-slate-900 text-white font-black rounded-2xl text-sm transition-all duration-500 overflow-hidden shadow-xl hover:bg-teal-500"
+                        className="group/btn relative inline-flex items-center justify-center w-full py-5 bg-slate-900 text-white font-black rounded-2xl text-sm transition-all duration-500 overflow-hidden shadow-xl hover:bg-fuchsia-500"
                     >
                         <span className="relative z-10 uppercase tracking-[0.2em]">View Details</span>
                         <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

@@ -12,7 +12,7 @@ export function LichenPlanusContent() {
 
                 <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
                     <div className="flex items-start gap-4">
-                        <FileSearch className="w-8 h-8 text-teal-600 shrink-0" />
+                        <FileSearch className="w-8 h-8 text-fuchsia-600 shrink-0" />
                         <div>
                             <h4 className="text-lg font-bold text-foreground mb-2">Requires Monitoring</h4>
                             <p className="text-foreground/80 text-sm">

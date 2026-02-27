@@ -19,7 +19,7 @@ export function CrackedTeethContent() {
                         { title: "Split Tooth", desc: "The tooth is split into two distinct segments. This tooth usually cannot be saved intact." }
                     ].map((type, i) => (
                         <div key={i} className="flex items-start gap-4 p-4 bg-card border border-slate-200 dark:border-slate-700 rounded-lg">
-                            <Activity className="w-5 h-5 text-teal-600 shrink-0 mt-1" />
+                            <Activity className="w-5 h-5 text-fuchsia-600 shrink-0 mt-1" />
                             <div>
                                 <h4 className="font-bold text-foreground">{type.title}</h4>
                                 <p className="text-sm text-muted-foreground">{type.desc}</p>

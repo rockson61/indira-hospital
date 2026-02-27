@@ -26,11 +26,11 @@ export function MedicineSection({
 }: MedicineSectionProps) {
   const typeColors = {
     'Antibiotic': 'bg-red-100 text-red-700 border-red-300',
-    'Pain Relief': 'bg-teal-100 text-teal-700 border-teal-300',
-    'Anti-inflammatory': 'bg-teal-100 text-teal-700 border-teal-300',
+    'Pain Relief': 'bg-fuchsia-100 text-fuchsia-700 border-fuchsia-300',
+    'Anti-inflammatory': 'bg-fuchsia-100 text-fuchsia-700 border-fuchsia-300',
     'Antiseptic': 'bg-green-100 text-green-700 border-green-300',
     'Topical': 'bg-orange-100 text-orange-700 border-orange-300',
-    'Supplement': 'bg-teal-100 text-teal-700 border-teal-300',
+    'Supplement': 'bg-fuchsia-100 text-fuchsia-700 border-fuchsia-300',
   }
 
   // Safety check: return null if no medicines provided
@@ -40,9 +40,9 @@ export function MedicineSection({
 
   return (
     <ModernCard className={`${className} mb-8`}>
-      <ModernCardHeader className="bg-gradient-to-r from-blue-50 to-teal-50 border-b-2 border-blue-200">
+      <ModernCardHeader className="bg-gradient-to-r from-blue-50 to-fuchsia-50 border-b-2 border-blue-200">
         <ModernCardTitle className="flex items-center gap-2 text-2xl">
-          <Pill className="w-7 h-7 text-teal-600" />
+          <Pill className="w-7 h-7 text-fuchsia-600" />
           Medicines & Tablets for {conditionName}
         </ModernCardTitle>
       </ModernCardHeader>
@@ -118,37 +118,37 @@ export function MedicineSection({
         </div>
 
         {/* Additional Information */}
-        <div className="mt-6 bg-teal-50 border-2 border-blue-200 rounded-lg p-4">
+        <div className="mt-6 bg-fuchsia-50 border-2 border-blue-200 rounded-lg p-4">
           <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
             <Info className="w-5 h-5" />
             When to Take Medication
           </h3>
           <ul className="space-y-2 text-sm text-blue-800">
             <li className="flex items-start gap-2">
-              <span className="text-teal-600 font-bold">✓</span>
+              <span className="text-fuchsia-600 font-bold">✓</span>
               <span>Take medications exactly as prescribed by Dr. Rockson Samuel</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-teal-600 font-bold">✓</span>
+              <span className="text-fuchsia-600 font-bold">✓</span>
               <span>Complete the full course of antibiotics even if symptoms improve</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-teal-600 font-bold">✓</span>
+              <span className="text-fuchsia-600 font-bold">✓</span>
               <span>Take pain medication with food to avoid stomach upset</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-teal-600 font-bold">✓</span>
+              <span className="text-fuchsia-600 font-bold">✓</span>
               <span>Contact the clinic immediately if you experience severe side effects</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-teal-600 font-bold">✓</span>
+              <span className="text-fuchsia-600 font-bold">✓</span>
               <span>Avoid alcohol while taking antibiotics</span>
             </li>
           </ul>
         </div>
 
         {/* Prescription Notice */}
-        <div className="mt-6 bg-gradient-to-r from-teal-50 to-blue-50 border-2 border-teal-200 rounded-lg p-5 text-center">
+        <div className="mt-6 bg-gradient-to-r from-fuchsia-50 to-blue-50 border-2 border-fuchsia-200 rounded-lg p-5 text-center">
           <h3 className="font-bold text-foreground mb-2">🏥 Get Proper Prescription</h3>
           <p className="text-sm text-foreground/80 mb-4">
             Visit Indira Dental Clinic for a professional diagnosis and personalized treatment plan. 
@@ -157,13 +157,13 @@ export function MedicineSection({
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-fuchsia-600 text-white rounded-lg font-semibold hover:bg-fuchsia-700 transition-colors"
             >
               Book Consultation
             </a>
             <a
               href="tel:7010650063"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-fuchsia-600 text-white rounded-lg font-semibold hover:bg-fuchsia-700 transition-colors"
             >
               Call: 7010650063
             </a>

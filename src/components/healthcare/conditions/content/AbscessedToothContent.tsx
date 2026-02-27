@@ -44,21 +44,21 @@ export function AbscessedToothContent() {
                 <p className="text-foreground/80 mb-4">The goal of treatment is to get rid of the infection. Depending on severity, we may recommend:</p>
                 <div className="space-y-4">
                     <div className="flex gap-4">
-                        <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center shrink-0 font-bold text-teal-600">1</div>
+                        <div className="w-10 h-10 rounded-full bg-fuchsia-100 flex items-center justify-center shrink-0 font-bold text-fuchsia-600">1</div>
                         <div>
                             <h4 className="font-semibold text-foreground">Drain the Abscess</h4>
                             <p className="text-sm text-muted-foreground">The dentist makes a small incision into the abscess, allowing the pus to drain out, then washes the area with saline.</p>
                         </div>
                     </div>
                     <div className="flex gap-4">
-                        <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center shrink-0 font-bold text-teal-600">2</div>
+                        <div className="w-10 h-10 rounded-full bg-fuchsia-100 flex items-center justify-center shrink-0 font-bold text-fuchsia-600">2</div>
                         <div>
                             <h4 className="font-semibold text-foreground">Root Canal Procedure</h4>
                             <p className="text-sm text-muted-foreground">This can help save your tooth. The dentist drills into your tooth, removes the diseased pulp, and drains the abscess.</p>
                         </div>
                     </div>
                     <div className="flex gap-4">
-                        <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center shrink-0 font-bold text-teal-600">3</div>
+                        <div className="w-10 h-10 rounded-full bg-fuchsia-100 flex items-center justify-center shrink-0 font-bold text-fuchsia-600">3</div>
                         <div>
                             <h4 className="font-semibold text-foreground">Tooth Extraction</h4>
                             <p className="text-sm text-muted-foreground">If the affected tooth can't be saved, the dentist will pull the tooth and drain the abscess to get rid of the infection.</p>

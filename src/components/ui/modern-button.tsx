@@ -13,7 +13,7 @@ const modernButtonVariants = cva(
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm hover:shadow-md',
         ghost: 'text-primary hover:bg-primary/10',
         link: 'text-primary underline-offset-4 hover:underline',
-        gradient: 'bg-gradient-to-r from-teal-500 to-teal-500 text-white hover:from-teal-600 hover:to-teal-600 shadow-lg hover:shadow-teal-500/40 hover:-translate-y-0.5',
+        gradient: 'bg-gradient-to-r from-fuchsia-500 to-fuchsia-500 text-white hover:from-fuchsia-600 hover:to-fuchsia-600 shadow-lg hover:shadow-fuchsia-500/40 hover:-translate-y-0.5',
       },
       size: {
         default: 'h-10 px-4 py-2',

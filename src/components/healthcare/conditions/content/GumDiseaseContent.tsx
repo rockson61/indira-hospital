@@ -63,9 +63,9 @@ export function GumDiseaseContent() {
                 </ul>
             </div>
 
-            <div className="bg-teal-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-teal-100 dark:border-teal-700/40">
-                <h3 className="text-xl font-bold text-teal-900 dark:text-teal-100 mb-3 flex items-center gap-2">
-                    <ShieldCheck className="w-6 h-6 text-teal-600" />
+            <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-fuchsia-100 dark:border-fuchsia-700/40">
+                <h3 className="text-xl font-bold text-fuchsia-900 dark:text-fuchsia-100 mb-3 flex items-center gap-2">
+                    <ShieldCheck className="w-6 h-6 text-fuchsia-600" />
                     Prevention Tips
                 </h3>
                 <ul className="space-y-3">
@@ -76,8 +76,8 @@ export function GumDiseaseContent() {
                         "Quit smoking to improve gum health."
                     ].map((tip, i) => (
                         <li key={i} className="flex items-start gap-3">
-                            <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" />
-                            <span className="text-teal-800">{tip}</span>
+                            <CheckCircle className="w-5 h-5 text-fuchsia-600 mt-0.5 shrink-0" />
+                            <span className="text-fuchsia-800">{tip}</span>
                         </li>
                     ))}
                 </ul>

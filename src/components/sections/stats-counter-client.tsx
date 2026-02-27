@@ -30,8 +30,8 @@ function useCountUp(target: number, duration: number = 2000, start: boolean = fa
 }
 
 const statsMeta = [
-    { key: "patients", label: "Patients Treated", suffix: "+", icon: Users2, color: "text-teal-400", glow: "shadow-teal-500/20" },
-    { key: "doctors", label: "Expert Doctors", suffix: "+", icon: Stethoscope, color: "text-emerald-400", glow: "shadow-emerald-500/20" },
+    { key: "patients", label: "Patients Treated", suffix: "+", icon: Users2, color: "text-fuchsia-400", glow: "shadow-fuchsia-500/20" },
+    { key: "doctors", label: "Expert Doctors", suffix: "+", icon: Stethoscope, color: "text-pink-400", glow: "shadow-pink-500/20" },
     { key: "departments", label: "Specialties", suffix: "+", icon: Activity, color: "text-indigo-400", glow: "shadow-indigo-500/20" },
     { key: "experience", label: "Years Excellence", suffix: "+", icon: Award, color: "text-rose-400", glow: "shadow-rose-500/20" },
 ];

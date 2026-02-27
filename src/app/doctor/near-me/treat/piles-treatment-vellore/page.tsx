@@ -65,7 +65,7 @@ export default async function PilesLandingPage() {
                         <CostCalculator />
                         <div className="space-y-8">
                             <InsuranceChecker />
-                            <div className="bg-teal-600 rounded-2xl p-8 text-white relative overflow-hidden">
+                            <div className="bg-fuchsia-600 rounded-2xl p-8 text-white relative overflow-hidden">
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-bold mb-2">Direct WhatsApp Access</h3>
                                     <p className="text-blue-100 mb-6">Chat directly with our surgical coordinator for price, dates, and doctor availability.</p>

@@ -65,11 +65,11 @@ export default function ServicesPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 selection:bg-teal-200 selection:text-teal-900 pb-20">
+        <div className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* Bold Asymmetrical Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />
                 <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-20">
@@ -79,12 +79,12 @@ export default function ServicesPage() {
                         transition={{ duration: 0.8 }}
                         className="flex-1 text-center lg:text-left"
                     >
-                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-teal-500/30">
+                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <Sparkles className="w-4 h-4" /> Comprehensive Mastery
                         </span>
                         <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[0.95] mb-8">
                             Absolute <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">
                                 Proficiency.
                             </span>
                         </h1>
@@ -100,22 +100,22 @@ export default function ServicesPage() {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="flex-1 w-full grid grid-cols-2 gap-6 relative"
                     >
-                        <div className="absolute inset-0 bg-teal-500/20 rounded-full blur-[100px] pointer-events-none" />
+                        <div className="absolute inset-0 bg-fuchsia-500/20 rounded-full blur-[100px] pointer-events-none" />
 
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/15 transition-all duration-500 group">
-                            <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-300 mb-4 group-hover:scale-110 transition-transform">
+                            <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-300 mb-4 group-hover:scale-110 transition-transform">
                                 <Activity className="w-6 h-6" />
                             </div>
                             <p className="text-5xl font-black text-white mb-2">{services.length || 15}+</p>
-                            <p className="text-xs font-black text-teal-400 uppercase tracking-widest">Specialties</p>
+                            <p className="text-xs font-black text-fuchsia-400 uppercase tracking-widest">Specialties</p>
                         </div>
 
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl mt-12 hover:bg-white/15 transition-all duration-500 group">
-                            <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-300 mb-4 group-hover:scale-110 transition-transform">
+                            <div className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-300 mb-4 group-hover:scale-110 transition-transform">
                                 <Shield className="w-6 h-6" />
                             </div>
                             <p className="text-5xl font-black text-white mb-2">5K+</p>
-                            <p className="text-xs font-black text-emerald-400 uppercase tracking-widest">Surgeries/Yr</p>
+                            <p className="text-xs font-black text-pink-400 uppercase tracking-widest">Surgeries/Yr</p>
                         </div>
 
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/15 transition-all duration-500 group">
@@ -182,15 +182,15 @@ export default function ServicesPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className={`${item.colSpan} relative group overflow-hidden rounded-[3rem] p-10 border ${item.highlighted ? 'bg-slate-900 border-slate-800 shadow-2xl shadow-teal-900/20' : 'bg-white border-slate-100'} hover:border-teal-200 transition-all duration-700 hover:-translate-y-2`}
+                                    className={`${item.colSpan} relative group overflow-hidden rounded-[3rem] p-10 border ${item.highlighted ? 'bg-slate-900 border-slate-800 shadow-2xl shadow-fuchsia-900/20' : 'bg-white border-slate-100'} hover:border-fuchsia-200 transition-all duration-700 hover:-translate-y-2`}
                                 >
                                     {item.highlighted && (
                                         <>
-                                            <div className="absolute -top-24 -right-24 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] group-hover:bg-teal-500/20 transition-colors duration-1000" />
-                                            <div className="absolute inset-0 rounded-[3rem] border-2 border-transparent group-hover:border-teal-500/20 transition-all duration-700 pointer-events-none" />
+                                            <div className="absolute -top-24 -right-24 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-[80px] group-hover:bg-fuchsia-500/20 transition-colors duration-1000" />
+                                            <div className="absolute inset-0 rounded-[3rem] border-2 border-transparent group-hover:border-fuchsia-500/20 transition-all duration-700 pointer-events-none" />
                                         </>
                                     )}
-                                    <div className={`w-16 h-16 rounded-[1.25rem] flex items-center justify-center mb-8 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 ${item.highlighted ? 'bg-white/10 text-teal-300 backdrop-blur-xl border border-white/10' : 'bg-teal-50 text-teal-600 shadow-sm border border-teal-100'}`}>
+                                    <div className={`w-16 h-16 rounded-[1.25rem] flex items-center justify-center mb-8 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 ${item.highlighted ? 'bg-white/10 text-fuchsia-300 backdrop-blur-xl border border-white/10' : 'bg-fuchsia-50 text-fuchsia-600 shadow-sm border border-fuchsia-100'}`}>
                                         <Icon className="w-8 h-8" />
                                     </div>
                                     <h3 className={`text-2xl font-black mb-4 tracking-tight ${item.highlighted ? 'text-white' : 'text-slate-900'}`}>
@@ -201,7 +201,7 @@ export default function ServicesPage() {
                                     </p>
 
                                     {/* Subtle Corner Light */}
-                                    <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-transparent via-teal-500/0 to-teal-500/5 group-hover:to-teal-500/10 transition-all duration-700" />
+                                    <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-transparent via-fuchsia-500/0 to-fuchsia-500/5 group-hover:to-fuchsia-500/10 transition-all duration-700" />
                                 </motion.div>
                             );
                         })}
@@ -211,10 +211,10 @@ export default function ServicesPage() {
 
             {/* Massive Deep CTA Block */}
             <section className="px-6 lg:px-8 max-w-7xl mx-auto my-32">
-                <div className="relative bg-gradient-to-br from-slate-900 via-teal-950 to-emerald-950 rounded-[4rem] p-16 sm:p-24 overflow-hidden shadow-2xl shadow-teal-950/40 group/cta flex flex-col items-center text-center">
+                <div className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-pink-950 rounded-[4rem] p-16 sm:p-24 overflow-hidden shadow-2xl shadow-fuchsia-950/40 group/cta flex flex-col items-center text-center">
                     {/* Ambient Background Lights */}
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-[120px] group-hover/cta:bg-teal-500/20 transition-colors duration-1000 opacity-50" />
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px] opacity-40" />
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[120px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[100px] opacity-40" />
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
                     <div className="relative z-10 w-full max-w-4xl">
@@ -222,21 +222,21 @@ export default function ServicesPage() {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 mb-10 shadow-2xl shadow-teal-500/20"
+                            className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 mb-10 shadow-2xl shadow-fuchsia-500/20"
                         >
                             <PhoneCall className="w-10 h-10" />
                         </motion.div>
                         <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-black text-white mb-10 tracking-tight leading-[1] max-w-3xl mx-auto">
-                            Immediate <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">Certainty.</span>
+                            Immediate <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Certainty.</span>
                         </h2>
-                        <p className="text-xl md:text-2xl text-teal-100/70 font-light mb-16 leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-xl md:text-2xl text-fuchsia-100/70 font-light mb-16 leading-relaxed max-w-2xl mx-auto">
                             Our premier specialists are actively available. Access emergency response or book a clinical consultation now.
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                             <Link
                                 href="/book-appointment"
-                                className="group/btn relative flex items-center justify-between w-full sm:w-auto px-12 py-7 bg-teal-500 text-slate-900 font-black rounded-2xl transition-all duration-500 hover:scale-[1.05] shadow-2xl shadow-teal-500/30 overflow-hidden"
+                                className="group/btn relative flex items-center justify-between w-full sm:w-auto px-12 py-7 bg-fuchsia-500 text-slate-900 font-black rounded-2xl transition-all duration-500 hover:scale-[1.05] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
                             >
                                 <span className="relative z-10 text-lg uppercase tracking-[0.2em] pr-8">Book Specialist</span>
                                 <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

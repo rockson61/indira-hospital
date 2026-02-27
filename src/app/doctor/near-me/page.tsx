@@ -88,11 +88,11 @@ function getCategoryBadge(category: string) {
     const styles: Record<string, string> = {
         city: "bg-red-100 text-red-700",
         district_hq: "bg-indigo-100 text-indigo-700",
-        major_town: "bg-teal-100 text-teal-700",
+        major_town: "bg-fuchsia-100 text-fuchsia-700",
         town: "bg-green-100 text-green-700",
         village: "bg-gray-100 text-gray-600",
         industrial: "bg-amber-100 text-amber-700",
-        historic: "bg-teal-100 text-teal-700",
+        historic: "bg-fuchsia-100 text-fuchsia-700",
     };
     const labels: Record<string, string> = {
         city: "City",
@@ -119,21 +119,21 @@ export default async function LocationsPage() {
     const departments = await getDepartments().catch(() => []);
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-teal-200 selection:text-teal-900 pb-20">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* ELITE GLOBAL REACH HERO */}
             <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-56 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
 
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
-                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-teal-500/30">
+                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <MapPin className="w-4 h-4" /> Serving All of Tamil Nadu
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
                             World-Class Care, <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">Closer to Home.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">Closer to Home.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
                             Indira Super Speciality Hospital serves {locations.length}+ locations across {districtsServed} districts.
@@ -141,13 +141,13 @@ export default async function LocationsPage() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-teal-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-teal-500/25 overflow-hidden">
+                            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
                                 <span className="relative z-10">WhatsApp Us Now</span>
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
                             <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
-                                <Phone className="w-5 h-5 mr-3 text-teal-400" />
+                                <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
                                 {clinicConfig.phone}
                             </a>
                         </div>
@@ -164,14 +164,14 @@ export default async function LocationsPage() {
                         { icon: Users, label: "Patients Treated", value: "1L+" },
                         { icon: Stethoscope, label: "Departments", value: "15+" },
                     ].map((stat, i) => (
-                        <div key={i} className="group bg-white rounded-2xl p-6 text-center shadow-sm border border-slate-100 hover:shadow-xl hover:border-teal-300 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden">
+                        <div key={i} className="group bg-white rounded-2xl p-6 text-center shadow-sm border border-slate-100 hover:shadow-xl hover:border-fuchsia-300 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 group-hover:scale-125 transition-all duration-500">
-                                <stat.icon className="w-16 h-16 text-teal-600" />
+                                <stat.icon className="w-16 h-16 text-fuchsia-600" />
                             </div>
-                            <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-500 transition-colors duration-300 shadow-inner group-hover:shadow-teal-500/50">
-                                <stat.icon className="w-6 h-6 text-teal-600 group-hover:text-white transition-colors duration-300" />
+                            <div className="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-fuchsia-500 transition-colors duration-300 shadow-inner group-hover:shadow-fuchsia-500/50">
+                                <stat.icon className="w-6 h-6 text-fuchsia-600 group-hover:text-white transition-colors duration-300" />
                             </div>
-                            <div className="text-3xl font-black text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-teal-600 group-hover:to-emerald-500 transition-colors mb-1">{stat.value}</div>
+                            <div className="text-3xl font-black text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors mb-1">{stat.value}</div>
                             <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{stat.label}</div>
                         </div>
                     ))}
@@ -181,34 +181,34 @@ export default async function LocationsPage() {
             {/* SIGNATURE TREATMENTS BENTO GRID */}
             <SectionContainer className="py-24 max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
                         <Award className="w-4 h-4" /> Why Patients Choose Us
                     </span>
                     <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
                         #1 for Laparoscopic & <br className="hidden sm:block" />
-                        <span className="text-teal-600">Laser Surgery in Tamil Nadu</span>
+                        <span className="text-fuchsia-600">Laser Surgery in Tamil Nadu</span>
                     </h2>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {/* Treatment Card 1 */}
-                    <div className="group bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 hover:border-teal-300 hover:shadow-2xl hover:shadow-teal-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
-                        <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/5 rounded-full blur-[40px] group-hover:bg-teal-500/10 transition-colors pointer-events-none" />
-                        <div className="w-16 h-16 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-teal-500 group-hover:border-teal-400 group-hover:shadow-teal-500/30 transition-all duration-500">
-                            <Zap className="w-8 h-8 text-teal-600 group-hover:text-white transition-colors" />
+                    <div className="group bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
+                        <div className="absolute top-0 right-0 w-48 h-48 bg-fuchsia-500/5 rounded-full blur-[40px] group-hover:bg-fuchsia-500/10 transition-colors pointer-events-none" />
+                        <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 border border-fuchsia-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-fuchsia-500/30 transition-all duration-500">
+                            <Zap className="w-8 h-8 text-fuchsia-600 group-hover:text-white transition-colors" />
                         </div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-teal-600 transition-colors tracking-tight">Laparoscopic Surgery</h3>
+                        <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-fuchsia-600 transition-colors tracking-tight">Laparoscopic Surgery</h3>
                         <p className="text-slate-500 font-medium leading-relaxed mb-6 flex-grow">
                             Advanced keyhole surgery for Hernia, Gallbladder, Appendix & Bariatric. Minimal scars, same-day discharge.
                         </p>
                         <ul className="space-y-3 mb-8">
                             {["3mm Incision", "Same Day Discharge", "Insurance Cashless", "25+ Years Surgeons"].map(f => (
                                 <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                                    <div className="w-6 h-6 rounded-full bg-teal-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-teal-600" /></div>{f}
+                                    <div className="w-6 h-6 rounded-full bg-fuchsia-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-fuchsia-600" /></div>{f}
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 hover:bg-teal-50 text-slate-900 hover:text-teal-700 font-black rounded-2xl transition-all border border-slate-200 hover:border-teal-200">
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 hover:bg-fuchsia-50 text-slate-900 hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 hover:border-fuchsia-200">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -241,23 +241,23 @@ export default async function LocationsPage() {
                     </div>
 
                     {/* Treatment Card 3 */}
-                    <div className="group bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 hover:border-teal-300 hover:shadow-2xl hover:shadow-teal-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
-                        <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-500/5 rounded-full blur-[40px] group-hover:bg-emerald-500/10 transition-colors pointer-events-none" />
-                        <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:shadow-emerald-500/30 transition-all duration-500 relative z-10">
-                            <Shield className="w-8 h-8 text-emerald-600 group-hover:text-white transition-colors" />
+                    <div className="group bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
+                        <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 rounded-full blur-[40px] group-hover:bg-pink-500/10 transition-colors pointer-events-none" />
+                        <div className="w-16 h-16 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-pink-500 group-hover:border-pink-400 group-hover:shadow-pink-500/30 transition-all duration-500 relative z-10">
+                            <Shield className="w-8 h-8 text-pink-600 group-hover:text-white transition-colors" />
                         </div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-emerald-600 transition-colors tracking-tight relative z-10">Fistula & Fissure</h3>
+                        <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-pink-600 transition-colors tracking-tight relative z-10">Fistula & Fissure</h3>
                         <p className="text-slate-500 font-medium leading-relaxed mb-6 flex-grow relative z-10">
                             Permanent cure using VAAFT / Laser / LIFT techniques. No recurrence, minimal pain, quick recovery.
                         </p>
                         <ul className="space-y-3 mb-8 relative z-10">
                             {["VAAFT Technique", "No Recurrence", "Minimal Downtime", "Expert Proctologists"].map(f => (
                                 <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                                    <div className="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-emerald-600" /></div>{f}
+                                    <div className="w-6 h-6 rounded-full bg-pink-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-pink-600" /></div>{f}
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 hover:bg-emerald-50 text-slate-900 hover:text-emerald-700 font-black rounded-2xl transition-all border border-slate-200 hover:border-emerald-200 relative z-10">
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 hover:bg-pink-50 text-slate-900 hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 hover:border-pink-200 relative z-10">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -270,7 +270,7 @@ export default async function LocationsPage() {
                 <SectionContainer className="relative z-10 max-w-7xl mx-auto skew-y-3">
                     <div className="text-center mb-12">
                         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
-                            <Stethoscope className="w-4 h-4 text-teal-600" /> 15+ Super Specialities
+                            <Stethoscope className="w-4 h-4 text-fuchsia-600" /> 15+ Super Specialities
                         </span>
                         <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Explore Our Departments</h2>
                     </div>
@@ -282,7 +282,7 @@ export default async function LocationsPage() {
                                 className="group px-6 py-3 bg-white rounded-2xl shadow-sm border border-slate-200 text-sm font-bold text-slate-600 hover:bg-slate-900 hover:border-slate-800 hover:text-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
                             >
                                 {dept.title}
-                                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-teal-400" />
+                                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-fuchsia-400" />
                             </Link>
                         ))}
                     </div>
@@ -307,31 +307,31 @@ export default async function LocationsPage() {
 
             {/* ASSISTANCE CTA BENTO */}
             <SectionContainer className="pb-24 max-w-7xl mx-auto px-4">
-                <div className="bg-gradient-to-br from-slate-900 via-emerald-950 to-teal-950 rounded-[4rem] border border-white/10 overflow-hidden shadow-2xl relative group/cta flex flex-col items-center text-center p-12 sm:p-20">
-                    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-teal-500/10 rounded-full blur-[80px] group-hover/cta:bg-teal-500/20 transition-colors duration-700 opacity-50" />
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[80px] opacity-50" />
+                <div className="bg-gradient-to-br from-slate-900 via-pink-950 to-fuchsia-950 rounded-[4rem] border border-white/10 overflow-hidden shadow-2xl relative group/cta flex flex-col items-center text-center p-12 sm:p-20">
+                    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-fuchsia-500/10 rounded-full blur-[80px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-700 opacity-50" />
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[80px] opacity-50" />
                     <div className="absolute w-full h-full inset-0 bg-[url('/images/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
                     <div className="relative z-10 w-full max-w-4xl">
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-8 shadow-[0_0_30px_rgba(20,184,166,0.2)]">
-                            <MapPin className="w-8 h-8 text-teal-300" />
+                            <MapPin className="w-8 h-8 text-fuchsia-300" />
                         </div>
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8 tracking-tight leading-[1.1]">
-                            Can&apos;t Find Your <br className="hidden sm:block" /> <span className="text-teal-400">Location?</span>
+                            Can&apos;t Find Your <br className="hidden sm:block" /> <span className="text-fuchsia-400">Location?</span>
                         </h2>
                         <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
                             We serve patients from across Tamil Nadu and neighboring states. WhatsApp us for instant appointment booking, accurate cost estimates, and VIP transport assistance.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl mx-auto">
-                            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-teal-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-teal-500/25 overflow-hidden">
+                            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
                                 <span className="relative z-10">Chat on WhatsApp</span>
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
 
                             <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
-                                <Phone className="w-5 h-5 mr-3 text-teal-400" />
+                                <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
                                 Call Emergency
                             </a>
                         </div>

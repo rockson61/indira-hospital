@@ -85,7 +85,7 @@ export function ServicePeopleAlsoSearchFor({
     <ModernCard className={`mb-8 ${className}`}>
       <ModernCardHeader>
         <ModernCardTitle className="flex items-center gap-2">
-          <Search className="w-6 h-6 text-teal-600" />
+          <Search className="w-6 h-6 text-fuchsia-600" />
           People Also Search For in India
         </ModernCardTitle>
       </ModernCardHeader>
@@ -95,10 +95,10 @@ export function ServicePeopleAlsoSearchFor({
             <Link
               key={`${query.link}-${index}`}
               href={query.link}
-              className="flex items-center gap-2 p-3 bg-muted rounded-lg hover:bg-teal-50 hover:text-teal-700 transition-colors group"
+              className="flex items-center gap-2 p-3 bg-muted rounded-lg hover:bg-fuchsia-50 hover:text-fuchsia-700 transition-colors group"
             >
-              <ArrowRight className="w-4 h-4 text-teal-500 group-hover:text-teal-700 flex-shrink-0" />
-              <span className="text-sm font-medium text-foreground/90 group-hover:text-teal-700 flex-1">
+              <ArrowRight className="w-4 h-4 text-fuchsia-500 group-hover:text-fuchsia-700 flex-shrink-0" />
+              <span className="text-sm font-medium text-foreground/90 group-hover:text-fuchsia-700 flex-1">
                 Best {query.text} in India
               </span>
               {query.category && (

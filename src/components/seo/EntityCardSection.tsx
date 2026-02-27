@@ -95,7 +95,7 @@ export async function EntityCardSection({
         <section className={`py-20 ${className}`}>
             <SectionContainer>
                 <div className="text-center mb-14">
-                    <span className="text-xs font-black uppercase tracking-[0.2em] text-teal-600 mb-3 block">
+                    <span className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-3 block">
                         {displaySubtitle}
                     </span>
                     <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
@@ -108,7 +108,7 @@ export async function EntityCardSection({
                 <div className="mt-12 text-center">
                     <Link
                         href={defaults.href}
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-teal-700 hover:scale-[1.02] transition-all shadow-lg text-sm"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-fuchsia-700 hover:scale-[1.02] transition-all shadow-lg text-sm"
                     >
                         View All {displaySubtitle}
                         <ArrowRight className="w-4 h-4" />

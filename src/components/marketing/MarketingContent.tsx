@@ -239,7 +239,7 @@ export function MarketingContent({
 
           {section.cta && (
             <div className="flex flex-wrap gap-3">
-              <Button asChild className="bg-primary hover:bg-teal-700">
+              <Button asChild className="bg-primary hover:bg-fuchsia-700">
                 <Link href={section.cta.href}>{section.cta.text}</Link>
               </Button>
             </div>

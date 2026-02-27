@@ -63,7 +63,7 @@ export default async function BlogListingPage() {
                                     </div>
                                 </div>
                                 <CardContent className="pt-6">
-                                    <h2 className="text-xl font-bold mb-3 line-clamp-2 hover:text-teal-600 transition-colors">
+                                    <h2 className="text-xl font-bold mb-3 line-clamp-2 hover:text-fuchsia-600 transition-colors">
                                         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                                     </h2>
                                     <p className="text-muted-foreground line-clamp-3 text-sm mb-4">

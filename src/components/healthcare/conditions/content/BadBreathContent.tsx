@@ -12,7 +12,7 @@ export function BadBreathContent() {
 
                 <div className="bg-muted p-5 rounded-lg border border-border/50">
                     <h4 className="flex items-center gap-2 font-bold text-foreground mb-3">
-                        <Search className="w-5 h-5 text-teal-600" />
+                        <Search className="w-5 h-5 text-fuchsia-600" />
                         Did you know?
                     </h4>
                     <p className="text-foreground/80">
@@ -31,7 +31,7 @@ export function BadBreathContent() {
                         { title: "Dental Checkups", desc: "Treat gum disease and cavities which are breeding grounds for odor." }
                     ].map((item, i) => (
                         <li key={i} className="flex flex-col gap-2 p-4 bg-card border border-border/50 rounded-lg shadow-sm">
-                            <div className="flex items-center gap-2 text-teal-600 font-semibold">
+                            <div className="flex items-center gap-2 text-fuchsia-600 font-semibold">
                                 <CheckCircle className="w-5 h-5" />
                                 {item.title}
                             </div>

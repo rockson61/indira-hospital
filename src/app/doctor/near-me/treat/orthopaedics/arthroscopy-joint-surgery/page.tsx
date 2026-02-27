@@ -112,7 +112,7 @@ export default function ArthroscopyPage() {
                     <li>Can simultaneously address associated pathology (biceps, AC joint, SLAP tears)</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-[2.5rem] border border-teal-100 dark:border-blue-900 shadow-sm">
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-blue-900 shadow-sm">
                     <h4 className="text-2xl font-black text-slate-900 dark:text-blue-300 mb-4 tracking-tight">Sports Medicine & Arthroscopy Unit</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
@@ -122,7 +122,7 @@ export default function ArthroscopyPage() {
                             "In-Hospital Physiotherapy & Rehab"
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
-                                <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0" />
+                                <CheckCircle className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
                                 <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
                             </div>
                         ))}

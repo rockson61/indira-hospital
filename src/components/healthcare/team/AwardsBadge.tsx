@@ -13,7 +13,7 @@ export function AwardsBadge({ title, year, issuer, variant = "gold", className }
         gold: "bg-yellow-50 text-yellow-700 border-yellow-200",
         silver: "bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700",
         bronze: "bg-orange-50 text-orange-700 border-orange-200",
-        blue: "bg-teal-50 text-teal-700 border-teal-200",
+        blue: "bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200",
     };
 
     return (

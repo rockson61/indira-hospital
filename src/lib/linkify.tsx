@@ -27,7 +27,7 @@ export const linkifyTerms = (text: string): React.ReactNode => {
                         <Link
                             key={index}
                             href="/glossary"
-                            className="text-teal-600 font-medium hover:underline decoration-teal-300 underline-offset-2"
+                            className="text-fuchsia-600 font-medium hover:underline decoration-fuchsia-300 underline-offset-2"
                             title={`Definition: ${matchedTerm.definition}`}
                         >
                             {part}

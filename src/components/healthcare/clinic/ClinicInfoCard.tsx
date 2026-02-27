@@ -51,7 +51,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
     <div className={cn("space-y-6", className)}>
       {/* Business Profile Card */}
       <Card className="overflow-hidden">
-        <CardHeader className="bg-gradient-to-r from-teal-600 to-teal-600 text-white">
+        <CardHeader className="bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 text-white">
           <CardTitle className="text-2xl">{clinicInfo.name}</CardTitle>
           <CardDescription className="text-white/90 flex items-center gap-2 text-lg">
             <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -62,7 +62,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
         <CardContent className="p-6 space-y-4">
           {/* Address */}
           <div className="flex items-start gap-3">
-            <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+            <MapPin className="w-5 h-5 text-fuchsia-600 mt-1 flex-shrink-0" />
             <div>
               <p className="font-medium">Address:</p>
               <p className="text-muted-foreground">{clinicInfo.address}</p>
@@ -71,10 +71,10 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
 
           {/* Phone */}
           <div className="flex items-center gap-3">
-            <Phone className="w-5 h-5 text-teal-600 flex-shrink-0" />
+            <Phone className="w-5 h-5 text-fuchsia-600 flex-shrink-0" />
             <div>
               <p className="font-medium">Phone:</p>
-              <a href={`tel:${clinicInfo.phone}`} className="text-teal-600 hover:underline">
+              <a href={`tel:${clinicInfo.phone}`} className="text-fuchsia-600 hover:underline">
                 {clinicInfo.phone}
               </a>
             </div>
@@ -82,7 +82,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
 
           {/* Hours */}
           <div className="flex items-start gap-3">
-            <Clock className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+            <Clock className="w-5 h-5 text-fuchsia-600 mt-1 flex-shrink-0" />
             <div className="flex-1">
               <p className="font-medium mb-2">Hours:</p>
               <div className="grid grid-cols-2 gap-2 text-sm">
@@ -310,7 +310,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                       <strong>GPS Coordinates:</strong> 12.9540278°N, 79.1369615°E
                     </p>
                   </div>
-                  <div className="mt-4 p-4 bg-teal-50 rounded-lg">
+                  <div className="mt-4 p-4 bg-fuchsia-50 rounded-lg">
                     <p className="font-medium text-blue-900 mb-2">How to Find Us:</p>
                     <ul className="list-disc list-inside space-y-1 text-blue-800 text-sm">
                       <li>Look for the Shell Petrol Pump on Katpadi Main Road</li>

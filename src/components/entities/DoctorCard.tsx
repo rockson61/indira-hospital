@@ -35,20 +35,20 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                 viewport={{ once: true }}
                 transition={{ duration: 0.3 }}
             >
-                <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-soft hover:border-teal-100 hover:-translate-y-0.5 transition-all">
-                    <div className="relative w-14 h-14 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm">
+                <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-soft hover:border-fuchsia-100 hover:-translate-y-0.5 transition-all">
+                    <div className="relative w-14 h-14 rounded-full bg-fuchsia-50 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm">
                         {doctor.image && getImageUrl(doctor.image) ? (
                             <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover" />
                         ) : (
-                            <span className="text-teal-700 font-bold text-sm tracking-widest">{initials}</span>
+                            <span className="text-fuchsia-700 font-bold text-sm tracking-widest">{initials}</span>
                         )}
                     </div>
                     <div className="min-w-0 flex-1">
-                        <h3 className="font-bold font-heading text-slate-900 text-base truncate group-hover:text-teal-700 transition-colors">{doctor.name}</h3>
+                        <h3 className="font-bold font-heading text-slate-900 text-base truncate group-hover:text-fuchsia-700 transition-colors">{doctor.name}</h3>
                         <p className="text-xs text-slate-500 font-medium tracking-wide uppercase truncate mt-0.5">{deptName}</p>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-teal-50 transition-colors">
-                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-teal-600 transition-colors" />
+                    <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-fuchsia-50 transition-colors">
+                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600 transition-colors" />
                     </div>
                 </Link>
             </motion.div>
@@ -69,7 +69,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                         {doctor.image && getImageUrl(doctor.image) ? (
                             <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                         ) : (
-                            <div className="w-full h-full flex items-center justify-center bg-teal-50 text-teal-300">
+                            <div className="w-full h-full flex items-center justify-center bg-fuchsia-50 text-fuchsia-300">
                                 <Stethoscope className="w-12 h-12" />
                             </div>
                         )}
@@ -85,16 +85,16 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                         <div className="flex-1">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <h3 className="text-2xl font-black font-heading text-slate-900 group-hover:text-teal-700 transition-colors tracking-tight">
+                                    <h3 className="text-2xl font-black font-heading text-slate-900 group-hover:text-fuchsia-700 transition-colors tracking-tight">
                                         <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="hover:underline">
                                             {doctor.name}
                                         </Link>
                                     </h3>
-                                    <p className="text-teal-600 font-bold text-sm tracking-wide mt-1">{doctor.designation}</p>
+                                    <p className="text-fuchsia-600 font-bold text-sm tracking-wide mt-1">{doctor.designation}</p>
                                 </div>
                                 {showBookButton && (
                                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                        className="hidden sm:inline-flex items-center px-6 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-teal-700 hover:shadow-md transition-all">
+                                        className="hidden sm:inline-flex items-center px-6 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-fuchsia-700 hover:shadow-md transition-all">
                                         <MessageCircle className="w-4 h-4 mr-2" />
                                         Book
                                     </a>
@@ -104,7 +104,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             <div className="flex flex-wrap gap-y-2 gap-x-3 text-sm text-slate-600 mt-4">
                                 {deptName && (
                                     <span className="flex items-center gap-1.5 bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-full font-medium">
-                                        <Stethoscope className="w-4 h-4 text-teal-600" />
+                                        <Stethoscope className="w-4 h-4 text-fuchsia-600" />
                                         {deptName}
                                     </span>
                                 )}
@@ -117,7 +117,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             {doctor.specialties && doctor.specialties.length > 0 && (
                                 <div className="mt-5 flex flex-wrap gap-2">
                                     {doctor.specialties.slice(0, 3).map((spec: string) => (
-                                        <span key={spec} className="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full">
+                                        <span key={spec} className="px-3 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs font-bold rounded-full">
                                             {spec}
                                         </span>
                                     ))}
@@ -152,7 +152,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
             className="h-full"
         >
             <Card className="group overflow-hidden rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-float hover:-translate-y-1 transition-all duration-300 h-full flex flex-col bg-white">
-                <div className="relative aspect-[4/3] bg-teal-50 overflow-hidden m-2 rounded-[1.5rem] shadow-inner">
+                <div className="relative aspect-[4/3] bg-fuchsia-50 overflow-hidden m-2 rounded-[1.5rem] shadow-inner">
                     {doctor.image && getImageUrl(doctor.image) ? (
                         <Image
                             src={getImageUrl(doctor.image)!}
@@ -161,7 +161,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                         />
                     ) : (
-                        <div className="w-full h-full flex items-center justify-center text-teal-200">
+                        <div className="w-full h-full flex items-center justify-center text-fuchsia-200">
                             <Stethoscope className="w-16 h-16" />
                         </div>
                     )}
@@ -169,7 +169,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
 
                     <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                         <h3 className="text-xl font-black font-heading leading-tight tracking-tight">{doctor.name}</h3>
-                        <p className="text-teal-300 text-[10px] uppercase tracking-widest font-bold mt-1 max-w-full truncate">{deptName}</p>
+                        <p className="text-fuchsia-300 text-[10px] uppercase tracking-widest font-bold mt-1 max-w-full truncate">{deptName}</p>
                     </div>
 
                     {doctor.experience_years && (
@@ -194,13 +194,13 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                     <div className="mt-auto flex gap-3 pt-5 border-t border-slate-100">
                         {showBookButton ? (
                             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                className="flex-1 flex items-center justify-center gap-2 bg-slate-900 hover:bg-teal-700 text-white text-[13px] font-bold py-3 rounded-full transition-all shadow-sm">
+                                className="flex-1 flex items-center justify-center gap-2 bg-slate-900 hover:bg-fuchsia-700 text-white text-[13px] font-bold py-3 rounded-full transition-all shadow-sm">
                                 <MessageCircle className="w-4 h-4" />
                                 Book
                             </a>
                         ) : null}
                         <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`}
-                            className="flex-1 flex items-center justify-center gap-2 bg-slate-50 hover:bg-teal-50 hover:text-teal-700 text-slate-700 text-[13px] font-bold py-3 rounded-full transition-all border border-slate-100">
+                            className="flex-1 flex items-center justify-center gap-2 bg-slate-50 hover:bg-fuchsia-50 hover:text-fuchsia-700 text-slate-700 text-[13px] font-bold py-3 rounded-full transition-all border border-slate-100">
                             Profile
                         </Link>
                     </div>

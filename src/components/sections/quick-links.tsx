@@ -8,7 +8,7 @@ const links = [
         description: "3T MRI, Cath Lab, HD Endoscopy — why diagnosis here is faster.",
         icon: Microscope,
         href: "/technology",
-        color: "bg-teal-50 text-teal-600",
+        color: "bg-fuchsia-50 text-fuchsia-600",
         hover: "hover:border-blue-200"
     },
     {
@@ -16,8 +16,8 @@ const links = [
         description: "Airport pickup, translator, visa letter — we handle everything.",
         icon: Globe,
         href: "/patients/international",
-        color: "bg-teal-50 text-teal-600",
-        hover: "hover:border-teal-200"
+        color: "bg-fuchsia-50 text-fuchsia-600",
+        hover: "hover:border-fuchsia-200"
     },
     {
         title: "Don't Google Your Symptoms",
@@ -44,10 +44,10 @@ export function QuickLinks() {
                                 <link.icon className="w-6 h-6" />
                             </div>
                             <div className="flex-1">
-                                <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors">{link.title}</h3>
+                                <h3 className="font-bold text-slate-900 group-hover:text-fuchsia-600 transition-colors">{link.title}</h3>
                                 <p className="text-sm text-slate-500">{link.description}</p>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-teal-500 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-fuchsia-500 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     ))}
                 </div>

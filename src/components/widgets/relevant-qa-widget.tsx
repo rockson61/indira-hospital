@@ -49,7 +49,7 @@ export function RelevantQAWidget({
         {serviceName && (
           <Link
             href="/ask-the-dentist/submit"
-            className="inline-flex items-center mt-4 text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 transition-colors"
+            className="inline-flex items-center mt-4 text-sm font-medium text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 transition-colors"
           >
             <MessageCircle className="w-4 h-4 mr-1" />
             Ask Dr. Rockson Samuel about {serviceName}
@@ -64,8 +64,8 @@ export function RelevantQAWidget({
       <div className="space-y-4">
         {title && (
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 bg-clip-text text-transparent">{title}</h3>
-            <Badge variant="outline" className="border-teal-500 text-teal-600 dark:text-teal-400">
+            <h3 className="text-xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 bg-clip-text text-transparent">{title}</h3>
+            <Badge variant="outline" className="border-fuchsia-500 text-fuchsia-600 dark:text-fuchsia-400">
               <MessageCircle className="w-4 h-4 mr-1" />
               Q&A
             </Badge>
@@ -75,9 +75,9 @@ export function RelevantQAWidget({
         <div className="space-y-4 mb-6">
           {/* Static Generic FAQs */}
           {staticFaqs.map((faq, index) => (
-            <details key={`static-${index}`} className="group backdrop-blur-sm bg-gradient-to-r from-white/80 to-teal-50/50 dark:from-slate-800/60 dark:to-teal-900/40 rounded-2xl border border-teal-200 dark:border-teal-700/40 p-5 shadow-md transition-all hover:shadow-lg">
-              <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-teal-600 dark:group-open:text-teal-300 flex items-center gap-3">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 text-white text-xs shadow-sm">?</span>
+            <details key={`static-${index}`} className="group backdrop-blur-sm bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-md transition-all hover:shadow-lg">
+              <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-fuchsia-600 dark:group-open:text-fuchsia-300 flex items-center gap-3">
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm">?</span>
                 {faq.question}
               </summary>
               <div className="mt-4 pl-9">
@@ -90,9 +90,9 @@ export function RelevantQAWidget({
 
           {/* Dynamic User Questions */}
           {questions.slice(0, 3).map((question) => (
-            <details key={question.id} className="group backdrop-blur-sm bg-gradient-to-r from-white/80 to-teal-50/50 dark:from-slate-800/60 dark:to-teal-900/40 rounded-2xl border border-teal-200 dark:border-teal-700/40 p-5 shadow-md transition-all hover:shadow-lg">
-              <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-teal-600 dark:group-open:text-teal-300 flex items-center gap-3">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 text-white text-xs shadow-sm">?</span>
+            <details key={question.id} className="group backdrop-blur-sm bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-md transition-all hover:shadow-lg">
+              <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-fuchsia-600 dark:group-open:text-fuchsia-300 flex items-center gap-3">
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm">?</span>
                 {question.title}
               </summary>
               <div className="mt-4 pl-9">
@@ -102,7 +102,7 @@ export function RelevantQAWidget({
                 <div className="flex items-center justify-between text-xs text-foreground/60 dark:text-slate-400">
                   <div className="flex items-center space-x-3">
                     <div className="flex items-center">
-                      <Star className="w-3 h-3 text-teal-500 dark:text-teal-400 mr-1" />
+                      <Star className="w-3 h-3 text-fuchsia-500 dark:text-fuchsia-400 mr-1" />
                       <span>{question.helpfulVotes} helpful</span>
                     </div>
                     <div className="flex items-center">
@@ -117,7 +117,7 @@ export function RelevantQAWidget({
                 </div>
                 <Link
                   href={`/ask-the-dentist/${question.slug}`}
-                  className="inline-flex items-center mt-3 text-xs font-semibold text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+                  className="inline-flex items-center mt-3 text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300"
                 >
                   Read Full Answer <ArrowRight className="w-3 h-3 ml-1" />
                 </Link>
@@ -130,7 +130,7 @@ export function RelevantQAWidget({
           <div className="text-center">
             <Link
               href="/ask-the-dentist"
-              className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-teal-500 bg-white/80 dark:bg-slate-800/80 text-sm font-semibold text-teal-600 dark:text-teal-400 transition-all hover:bg-teal-50 dark:hover:bg-teal-900/30 hover:shadow-md"
+              className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/80 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
             >
               View All Questions & Answers
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -139,13 +139,13 @@ export function RelevantQAWidget({
         )}
 
         {serviceName && (
-          <div className="mt-6 pt-6 border-t border-teal-200/50 dark:border-teal-800/50 text-center">
+          <div className="mt-6 pt-6 border-t border-fuchsia-200/50 dark:border-fuchsia-800/50 text-center">
             <p className="text-sm text-foreground/60 mb-3">
               Have questions about {serviceName}?
             </p>
             <Link
               href="/ask-the-dentist/submit"
-              className="inline-flex items-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-teal-600 to-teal-600 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               Ask Dr. Rockson Samuel

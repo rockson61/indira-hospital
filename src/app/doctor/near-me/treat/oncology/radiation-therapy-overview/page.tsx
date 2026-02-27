@@ -98,8 +98,8 @@ export default function RadiationTherapyPage() {
                     <li><strong>Palliative RT:</strong> For pain from bone metastases, brain metastases, or superior vena cava syndrome</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-teal-50 to-teal-50 dark:from-teal-900/10 dark:to-teal-900/10 rounded-[2.5rem] border border-teal-100 dark:border-teal-800 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-teal-300 mb-4 tracking-tight">Cancer Care Coordination</h4>
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-fuchsia-50 to-fuchsia-50 dark:from-fuchsia-900/10 dark:to-fuchsia-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-fuchsia-800 shadow-sm">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-fuchsia-300 mb-4 tracking-tight">Cancer Care Coordination</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                             "Multidisciplinary Tumour Board (MDT)",
@@ -108,7 +108,7 @@ export default function RadiationTherapyPage() {
                             "Home Visits for Frail / Palliative Patients"
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
-                                <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0" />
+                                <CheckCircle className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
                                 <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
                             </div>
                         ))}

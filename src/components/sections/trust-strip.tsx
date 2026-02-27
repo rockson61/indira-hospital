@@ -9,8 +9,8 @@ import {
 
 const trustItems = [
     { icon: HeartPulse, label: "15,000+", sublabel: "Successful Surgeries", color: "text-rose-500", bg: "bg-rose-50" },
-    { icon: Stethoscope, label: "15+", sublabel: "Surgical Specialities", color: "text-teal-600", bg: "bg-teal-50" },
-    { icon: ShieldCheck, label: "50+", sublabel: "Cashless Insurance", color: "text-teal-600", bg: "bg-teal-50" },
+    { icon: Stethoscope, label: "15+", sublabel: "Surgical Specialities", color: "text-fuchsia-600", bg: "bg-fuchsia-50" },
+    { icon: ShieldCheck, label: "50+", sublabel: "Cashless Insurance", color: "text-fuchsia-600", bg: "bg-fuchsia-50" },
     { icon: Zap, label: "< 10 min", sublabel: "Emergency Response", color: "text-amber-600", bg: "bg-amber-50" },
 ];
 
@@ -51,15 +51,15 @@ export function TrustStrip() {
                     {badges.map((badge) => (
                         <div
                             key={badge.text}
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-teal-50 border border-teal-100"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-fuchsia-50 border border-fuchsia-100"
                         >
-                            <badge.icon className="w-4 h-4 text-teal-600" />
-                            <span className="text-sm font-bold text-teal-700">{badge.text}</span>
+                            <badge.icon className="w-4 h-4 text-fuchsia-600" />
+                            <span className="text-sm font-bold text-fuchsia-700">{badge.text}</span>
                         </div>
                     ))}
                     <Link
                         href="/services"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-bold hover:bg-teal-700 transition-all shadow-sm"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-bold hover:bg-fuchsia-700 transition-all shadow-sm"
                     >
                         Explore Services <ArrowRight className="w-3.5 h-3.5" />
                     </Link>

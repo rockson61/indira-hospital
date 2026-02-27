@@ -25,7 +25,7 @@ export function Hero() {
         <section className="relative pt-56 pb-32 lg:pt-64 lg:pb-48 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
             {/* ELITE CINEMATIC BACKGROUND */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
-            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />
             <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
 
             <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
@@ -37,9 +37,9 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-teal-500/30"
+                            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30"
                         >
-                            <span className="flex h-2.5 w-2.5 rounded-full bg-teal-400 animate-pulse" />
+                            <span className="flex h-2.5 w-2.5 rounded-full bg-fuchsia-400 animate-pulse" />
                             15,000+ Surgeries. Zero Compromises.
                         </motion.div>
 
@@ -50,7 +50,7 @@ export function Hero() {
                             className="text-6xl md:text-8xl lg:text-[7rem] font-black text-white leading-[1.05] tracking-tight mb-8"
                         >
                             Stop Suffering. <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">
                                 Start Healing.
                             </span>
                         </motion.h1>
@@ -73,7 +73,7 @@ export function Hero() {
                         >
                             <Link
                                 href="/book-appointment"
-                                className="group/btn relative px-10 py-5 bg-teal-500 hover:bg-teal-400 text-slate-900 rounded-2xl font-black text-xl transition-all shadow-lg shadow-teal-500/25 flex items-center justify-center gap-2 overflow-hidden hover:scale-[1.02]"
+                                className="group/btn relative px-10 py-5 bg-fuchsia-500 hover:bg-fuchsia-400 text-slate-900 rounded-2xl font-black text-xl transition-all shadow-lg shadow-fuchsia-500/25 flex items-center justify-center gap-2 overflow-hidden hover:scale-[1.02]"
                             >
                                 <span className="relative z-10">Get Free Cost Estimate</span>
                                 <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
@@ -92,10 +92,10 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                            className="bg-white/5 backdrop-blur-2xl p-3 rounded-[2.5rem] border border-white/10 flex items-center max-w-2xl relative z-20 group focus-within:border-teal-500/50 transition-all shadow-2xl"
+                            className="bg-white/5 backdrop-blur-2xl p-3 rounded-[2.5rem] border border-white/10 flex items-center max-w-2xl relative z-20 group focus-within:border-fuchsia-500/50 transition-all shadow-2xl"
                         >
-                            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center ml-1 flex-shrink-0 group-focus-within:bg-teal-500 transition-colors">
-                                <Search className="w-6 h-6 text-teal-400 group-focus-within:text-white transition-colors" />
+                            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center ml-1 flex-shrink-0 group-focus-within:bg-fuchsia-500 transition-colors">
+                                <Search className="w-6 h-6 text-fuchsia-400 group-focus-within:text-white transition-colors" />
                             </div>
                             <input
                                 type="text"
@@ -107,7 +107,7 @@ export function Hero() {
                             {searchTerm && (
                                 <Link
                                     href={`/doctors?q=${searchTerm}`}
-                                    className="bg-teal-500 text-slate-900 px-8 py-4 rounded-2xl font-black shadow-lg hover:bg-teal-400 transition-all ml-2 flex-shrink-0"
+                                    className="bg-fuchsia-500 text-slate-900 px-8 py-4 rounded-2xl font-black shadow-lg hover:bg-fuchsia-400 transition-all ml-2 flex-shrink-0"
                                 >
                                     Find Now
                                 </Link>
@@ -132,7 +132,7 @@ export function Hero() {
                             />
 
                             <div className="absolute bottom-10 left-10 z-20">
-                                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/20 backdrop-blur-md border border-teal-500/30 text-teal-300 text-xs font-bold tracking-widest uppercase mb-4">
+                                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-500/20 backdrop-blur-md border border-fuchsia-500/30 text-fuchsia-300 text-xs font-bold tracking-widest uppercase mb-4">
                                     <Monitor className="w-3.5 h-3.5" /> High-Tech OTs
                                 </span>
                                 <h3 className="text-3xl font-black text-white">Smart Infrastructure</h3>
@@ -146,12 +146,12 @@ export function Hero() {
                             className="absolute -bottom-10 left-0 bg-white/10 backdrop-blur-3xl p-8 rounded-[3rem] border border-white/20 z-20 max-w-[320px] shadow-2xl shadow-black/20"
                         >
                             <div className="flex items-center gap-5 mb-2">
-                                <div className="w-14 h-14 bg-teal-500 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-500/20">
+                                <div className="w-14 h-14 bg-fuchsia-500 rounded-2xl flex items-center justify-center shadow-lg shadow-fuchsia-500/20">
                                     <Star className="w-7 h-7 text-white fill-white" />
                                 </div>
                                 <div>
                                     <h4 className="font-black text-white text-2xl tracking-tight">4.9/5 Rating</h4>
-                                    <p className="text-teal-400 font-bold text-sm tracking-widest uppercase">From 2k+ Patients</p>
+                                    <p className="text-fuchsia-400 font-bold text-sm tracking-widest uppercase">From 2k+ Patients</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -182,7 +182,7 @@ export function Hero() {
                 >
                     <div className="flex items-center gap-4 mb-8">
                         <div className="h-px bg-white/10 flex-grow" />
-                        <p className="text-xs font-black text-teal-400 uppercase tracking-[0.3em] whitespace-nowrap">Rapid Access Treatments</p>
+                        <p className="text-xs font-black text-fuchsia-400 uppercase tracking-[0.3em] whitespace-nowrap">Rapid Access Treatments</p>
                         <div className="h-px bg-white/10 flex-grow" />
                     </div>
 
@@ -191,11 +191,11 @@ export function Hero() {
                             <Link
                                 key={t.label}
                                 href={t.href}
-                                className="group relative flex flex-col items-center gap-4 p-6 rounded-[2.5rem] bg-white/5 border border-white/5 hover:bg-white/10 hover:border-teal-500/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-500 overflow-hidden"
+                                className="group relative flex flex-col items-center gap-4 p-6 rounded-[2.5rem] bg-white/5 border border-white/5 hover:bg-white/10 hover:border-fuchsia-500/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-500 overflow-hidden"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <div className="w-16 h-16 rounded-2xl bg-white/5 group-hover:bg-teal-500 flex items-center justify-center transition-all duration-500 shadow-xl group-hover:shadow-teal-500/20">
-                                    <t.icon className="w-7 h-7 text-teal-400 group-hover:text-white transition-colors" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="w-16 h-16 rounded-2xl bg-white/5 group-hover:bg-fuchsia-500 flex items-center justify-center transition-all duration-500 shadow-xl group-hover:shadow-fuchsia-500/20">
+                                    <t.icon className="w-7 h-7 text-fuchsia-400 group-hover:text-white transition-colors" />
                                 </div>
                                 <span className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors text-center">
                                     {t.label}

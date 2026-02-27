@@ -20,9 +20,9 @@ export function ToothacheContent() {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="bg-teal-50 dark:bg-slate-800/60 border-blue-100 dark:border-teal-700/40">
+                    <Card className="bg-fuchsia-50 dark:bg-slate-800/60 border-blue-100 dark:border-fuchsia-700/40">
                         <CardContent className="p-4 flex items-start gap-3">
-                            <HelpCircle className="w-6 h-6 text-teal-600 mt-1 shrink-0" />
+                            <HelpCircle className="w-6 h-6 text-fuchsia-600 mt-1 shrink-0" />
                             <div>
                                 <h4 className="font-semibold text-foreground">Common Triggers</h4>
                                 <p className="text-sm text-muted-foreground">Hot/cold foods, sugary snacks, or biting down can often trigger or worsen the pain.</p>
@@ -44,7 +44,7 @@ export function ToothacheContent() {
                         "Avoid applying aspirin directly to the gums as it can burn the tissue."
                     ].map((tip, i) => (
                         <li key={i} className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted transition-colors">
-                            <CheckCircle className="w-5 h-5 text-teal-600 mt-1 shrink-0" />
+                            <CheckCircle className="w-5 h-5 text-fuchsia-600 mt-1 shrink-0" />
                             <span className="text-foreground/80">{tip}</span>
                         </li>
                     ))}

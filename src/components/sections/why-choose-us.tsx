@@ -15,14 +15,14 @@ const features = [
         name: "25+ Surgeons Who've Done This 1,000+ Times",
         description: "Every surgeon at Indira has 10+ years of specialised experience. Your procedure isn't their first — it's their thousandth.",
         icon: Users,
-        color: "from-teal-500 to-teal-600",
+        color: "from-fuchsia-500 to-fuchsia-600",
         stat: "25+",
     },
     {
         name: "Technology That Cuts Recovery in Half",
         description: "Laser piles, laparoscopic hernia, keyhole gallbladder removal — go home the same day instead of spending a week in bed.",
         icon: Microscope,
-        color: "from-teal-400 to-emerald-600",
+        color: "from-fuchsia-400 to-pink-600",
         stat: "Latest",
     },
     {

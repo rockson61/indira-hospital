@@ -85,7 +85,7 @@ export function DepartmentTemplate({
 
                 <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-20 lg:pt-56 lg:pb-28">
                     {/* Breadcrumbs */}
-                    <nav className="flex items-center text-sm text-teal-200/60 mb-8">
+                    <nav className="flex items-center text-sm text-fuchsia-200/60 mb-8">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <Link href="/departments" className="hover:text-white transition-colors">Departments</Link>
@@ -98,10 +98,10 @@ export function DepartmentTemplate({
                             <div className="inline-flex p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-[#54CAD3] shadow-xl">
                                 {icon || <Stethoscope className="h-10 w-10 text-[#54CAD3]" />}
                             </div>
-                            <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-teal-100 to-white/80">
+                            <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-fuchsia-100 to-white/80">
                                 {title}
                             </h1>
-                            <p className="text-xl text-teal-100/80 max-w-2xl leading-relaxed font-light">
+                            <p className="text-xl text-fuchsia-100/80 max-w-2xl leading-relaxed font-light">
                                 {shortDescription}
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
@@ -132,7 +132,7 @@ export function DepartmentTemplate({
                             ].map((item, i) => (
                                 <div key={i} className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-center flex flex-col items-center gap-2 group hover:bg-white/10 transition-colors">
                                     <item.icon className="w-5 h-5 text-[#54CAD3] mb-1" />
-                                    <p className="text-xs text-teal-200/60 uppercase font-semibold">{item.label}</p>
+                                    <p className="text-xs text-fuchsia-200/60 uppercase font-semibold">{item.label}</p>
                                     <p className="text-sm font-bold text-white">{item.value}</p>
                                 </div>
                             ))}
@@ -156,9 +156,9 @@ export function DepartmentTemplate({
                                 {technology.map((tech, idx) => {
                                     const Icon = iconMap[tech.icon] || Activity;
                                     return (
-                                        <ModernCard key={idx} variant="glass" className="p-6 border-teal-100 bg-teal-50/30">
+                                        <ModernCard key={idx} variant="glass" className="p-6 border-fuchsia-100 bg-fuchsia-50/30">
                                             <div className="flex gap-4">
-                                                <div className="p-3 rounded-lg bg-teal-600 text-white h-fit">
+                                                <div className="p-3 rounded-lg bg-fuchsia-600 text-white h-fit">
                                                     <Icon className="w-6 h-6" />
                                                 </div>
                                                 <div>
@@ -177,17 +177,17 @@ export function DepartmentTemplate({
                     <aside className="lg:col-span-4 space-y-8">
                         <ModernCard className="p-8 bg-white shadow-xl shadow-slate-200/50 border-none sticky top-24">
                             <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                                <Calendar className="w-5 h-5 text-teal-600" />
+                                <Calendar className="w-5 h-5 text-fuchsia-600" />
                                 Department Schedule
                             </h3>
                             <div className="space-y-4">
                                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
                                     <span className="text-slate-600 font-medium">Monday — Friday</span>
-                                    <span className="font-bold text-teal-700">24 Hours</span>
+                                    <span className="font-bold text-fuchsia-700">24 Hours</span>
                                 </div>
                                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
                                     <span className="text-slate-600 font-medium">Saturday</span>
-                                    <span className="font-bold text-teal-700">24 Hours</span>
+                                    <span className="font-bold text-fuchsia-700">24 Hours</span>
                                 </div>
                                 <div className="flex justify-between items-center py-3">
                                     <span className="text-slate-600 font-medium">Emergency</span>
@@ -217,8 +217,8 @@ export function DepartmentTemplate({
                             {procedures.map((proc, idx) => {
                                 const name = typeof proc === 'string' ? proc : proc.name;
                                 return (
-                                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 hover:bg-teal-50 hover:scale-[1.02] transition-all group border border-transparent hover:border-teal-100">
-                                        <div className="bg-teal-100 p-2 rounded-lg text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 hover:bg-fuchsia-50 hover:scale-[1.02] transition-all group border border-transparent hover:border-fuchsia-100">
+                                        <div className="bg-fuchsia-100 p-2 rounded-lg text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors">
                                             <CheckCircle2 className="w-5 h-5" />
                                         </div>
                                         <span className="font-bold text-slate-800 text-lg leading-tight uppercase text-xs tracking-wide">{name}</span>
@@ -263,7 +263,7 @@ export function DepartmentTemplate({
                 <section className="py-24 bg-white overflow-hidden">
                     <SectionContainer>
                         <div className="text-center mb-16 relative">
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-teal-50 rounded-full blur-3xl opacity-50 -z-10" />
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-fuchsia-50 rounded-full blur-3xl opacity-50 -z-10" />
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Meet Our Expert Specialists</h2>
                             <p className="text-slate-500 mt-4 max-w-2xl mx-auto italic">Highly experienced surgeons and clinicians dedicated to your wellbeing.</p>
                         </div>
@@ -293,11 +293,11 @@ export function DepartmentTemplate({
 
             {/* Final CTA */}
             <section className="bg-[#002b36] py-20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px]" />
+                <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-[120px]" />
                 <SectionContainer>
                     <div className="max-w-4xl mx-auto text-center space-y-8">
                         <h2 className="text-4xl font-bold text-white mb-6">Experience Better Healthcare at Indira Hospital</h2>
-                        <p className="text-xl text-teal-100/70 font-light">Join over 1,00,000 satisfied patients who trusted us for their surgical and medical needs.</p>
+                        <p className="text-xl text-fuchsia-100/70 font-light">Join over 1,00,000 satisfied patients who trusted us for their surgical and medical needs.</p>
                         <div className="flex flex-wrap justify-center gap-6 pt-6">
                             <Link
                                 href="/book-appointment"

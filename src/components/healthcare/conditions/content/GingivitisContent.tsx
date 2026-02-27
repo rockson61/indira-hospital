@@ -37,7 +37,7 @@ export function GingivitisContent() {
 
             <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl">
                 <h3 className="font-bold text-foreground mb-2 flex items-center gap-2">
-                    <ArrowUpCircle className="w-5 h-5 text-teal-600" />
+                    <ArrowUpCircle className="w-5 h-5 text-fuchsia-600" />
                     Don't Ignore the Bleeding
                 </h3>
                 <p className="text-foreground/80 text-sm">

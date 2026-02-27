@@ -20,19 +20,19 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
             <Link
                 href={href}
                 className={cn(
-                    "group flex items-center p-4 rounded-[2rem] bg-white hover:shadow-soft border border-slate-100 hover:border-teal-100 hover:-translate-y-0.5 transition-all",
+                    "group flex items-center p-4 rounded-[2rem] bg-white hover:shadow-soft border border-slate-100 hover:border-fuchsia-100 hover:-translate-y-0.5 transition-all",
                     className
                 )}
             >
-                <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 flex-shrink-0 mr-3 shadow-sm">
+                <div className="w-10 h-10 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 flex-shrink-0 mr-3 shadow-sm">
                     <MapPin className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                    <p className="text-sm font-bold text-slate-900 group-hover:text-teal-700 truncate transition-colors">{location.name}</p>
+                    <p className="text-sm font-bold text-slate-900 group-hover:text-fuchsia-700 truncate transition-colors">{location.name}</p>
                     <p className="text-xs text-slate-500 truncate font-medium">{location.city || location.district}</p>
                 </div>
-                <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-teal-50 transition-colors">
-                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-teal-600" />
+                <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-fuchsia-50 transition-colors">
+                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600" />
                 </div>
             </Link>
         );
@@ -56,12 +56,12 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
             <div className="p-6">
                 <div className="space-y-3 mb-5">
                     <div className="flex items-start gap-3 text-sm text-slate-600 font-medium">
-                        <MapPin className="w-4 h-4 text-teal-500 mt-1 flex-shrink-0" />
+                        <MapPin className="w-4 h-4 text-fuchsia-500 mt-1 flex-shrink-0" />
                         <span>{location.address || "Address details currently unavailable."}</span>
                     </div>
                     {location.phone && (
                         <div className="flex items-center gap-3 text-sm text-slate-600 font-medium">
-                            <Phone className="w-4 h-4 text-teal-500 flex-shrink-0" />
+                            <Phone className="w-4 h-4 text-fuchsia-500 flex-shrink-0" />
                             <span>{location.phone}</span>
                         </div>
                     )}
@@ -80,7 +80,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
                 <div className="flex gap-3">
                     <Link
                         href={href}
-                        className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-slate-50 text-slate-700 font-bold rounded-full text-sm hover:bg-teal-50 hover:text-teal-700 transition-all border border-slate-100"
+                        className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-slate-50 text-slate-700 font-bold rounded-full text-sm hover:bg-fuchsia-50 hover:text-fuchsia-700 transition-all border border-slate-100"
                     >
                         View Clinic
                     </Link>
@@ -88,7 +88,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
                         href={location.map_url || "#"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-12 h-12 bg-slate-50 text-slate-600 rounded-full hover:bg-teal-50 hover:text-teal-700 transition-all border border-slate-100"
+                        className="inline-flex items-center justify-center w-12 h-12 bg-slate-50 text-slate-600 rounded-full hover:bg-fuchsia-50 hover:text-fuchsia-700 transition-all border border-slate-100"
                     >
                         <Navigation className="w-4 h-4" />
                     </a>

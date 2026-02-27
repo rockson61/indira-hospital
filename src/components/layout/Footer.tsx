@@ -29,7 +29,7 @@ export function Footer() {
                                 </div>
                                 {siteConfig.contact.address}
                             </div>
-                            <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-sm text-slate-400 hover:text-teal-400 transition-colors">
+                            <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-sm text-slate-400 hover:text-fuchsia-400 transition-colors">
                                 <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0">
                                     <Mail className="w-4 h-4" />
                                 </div>
@@ -44,7 +44,7 @@ export function Footer() {
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.medicalServices.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-teal-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -56,7 +56,7 @@ export function Footer() {
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.procedures.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-teal-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -68,7 +68,7 @@ export function Footer() {
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.quickLinks.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-teal-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -76,7 +76,7 @@ export function Footer() {
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.patientCare.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-teal-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -88,10 +88,10 @@ export function Footer() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                         {LOCATION_HIERARCHY.map((group) => (
                             <div key={group.region}>
-                                <h4 className="text-[11px] font-bold text-teal-500 uppercase tracking-widest mb-4">{group.region}</h4>
+                                <h4 className="text-[11px] font-bold text-fuchsia-500 uppercase tracking-widest mb-4">{group.region}</h4>
                                 <div className="flex flex-col gap-2.5">
                                     {group.locations.map((loc) => (
-                                        <Link key={loc.name} href={loc.url} className="text-sm text-slate-400 hover:text-teal-400 transition-colors font-medium">
+                                        <Link key={loc.name} href={loc.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">
                                             {loc.name}
                                         </Link>
                                     ))}

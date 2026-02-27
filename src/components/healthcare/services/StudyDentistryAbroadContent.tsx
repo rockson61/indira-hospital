@@ -22,7 +22,7 @@ export function StudyDentistryAbroadContent() {
                         <span className="text-sm font-bold tracking-wide">Future Dentists Program</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight font-heading">
-                        Study Dentistry <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-500 dark:from-cyan-300 dark:to-teal-400">Abroad</span>
+                        Study Dentistry <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500 dark:from-cyan-300 dark:to-fuchsia-400">Abroad</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-primary-foreground/90 dark:text-default-500 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                         Your gateway to world-class dental education. Honest guidance, affordable universities, and complete seamless admission support.

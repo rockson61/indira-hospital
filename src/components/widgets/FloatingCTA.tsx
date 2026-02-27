@@ -40,7 +40,7 @@ export function FloatingCTA() {
                         </Button>
                         <Button
                             asChild
-                            className="flex-1 rounded-xl bg-gradient-to-r from-teal-600 to-teal-600 text-white shadow-lg"
+                            className="flex-1 rounded-xl bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 text-white shadow-lg"
                         >
                             <a href="/contact">
                                 <Calendar className="w-4 h-4 mr-2" />

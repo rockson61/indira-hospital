@@ -106,7 +106,7 @@ export default function CardiacStressTestPage() {
                     <li>Do NOT stop medications on your own; always follow your cardiologist's instructions</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/10 dark:to-teal-900/10 rounded-[2.5rem] border border-green-100 dark:border-green-900 shadow-sm">
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-green-50 to-fuchsia-50 dark:from-green-900/10 dark:to-fuchsia-900/10 rounded-[2.5rem] border border-green-100 dark:border-green-900 shadow-sm">
                     <h4 className="text-2xl font-black text-slate-900 dark:text-green-300 mb-4 tracking-tight">Safety & Comfort at Indira Hospital</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[

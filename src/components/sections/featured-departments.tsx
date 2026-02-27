@@ -26,7 +26,7 @@ export async function FeaturedDepartments() {
                     />
                     <Link
                         href="/departments"
-                        className="hidden sm:inline-flex items-center font-bold text-teal-600 hover:text-teal-700 transition-colors"
+                        className="hidden sm:inline-flex items-center font-bold text-fuchsia-600 hover:text-fuchsia-700 transition-colors"
                     >
                         View All Departments <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>

@@ -21,7 +21,7 @@ const ICONS = {
 };
 
 const COLORS = {
-    services: "text-teal-600 bg-teal-50 border-teal-100 hover:border-teal-300",
+    services: "text-fuchsia-600 bg-fuchsia-50 border-fuchsia-100 hover:border-fuchsia-300",
     doctors: "text-blue-600 bg-blue-50 border-blue-100 hover:border-blue-300",
     departments: "text-violet-600 bg-violet-50 border-violet-100 hover:border-violet-300",
     locations: "text-amber-600 bg-amber-50 border-amber-100 hover:border-amber-300",
@@ -113,7 +113,7 @@ export async function InternalLinkGrid({
                 <div className="mt-8 text-center">
                     <Link
                         href={defaults.href}
-                        className="inline-flex items-center gap-2 text-sm font-black text-teal-600 hover:text-teal-700 uppercase tracking-widest transition-colors"
+                        className="inline-flex items-center gap-2 text-sm font-black text-fuchsia-600 hover:text-fuchsia-700 uppercase tracking-widest transition-colors"
                     >
                         View All {displaySubtitle}
                         <ArrowRight className="w-4 h-4" />

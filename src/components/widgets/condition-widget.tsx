@@ -57,14 +57,14 @@ export function ConditionWidget({
   }
 
   return (
-    <ModernCard className="bg-gradient-to-br from-teal-50 to-teal-50 border-teal-200">
+    <ModernCard className="bg-gradient-to-br from-fuchsia-50 to-fuchsia-50 border-fuchsia-200">
       <div className="p-6">
         <div className="flex items-start justify-between mb-4">
           <div>
             <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>
             <p className="text-foreground/80 text-sm leading-relaxed">{description}</p>
           </div>
-          <Badge variant="outline" className="border-teal-600 text-teal-700">
+          <Badge variant="outline" className="border-fuchsia-600 text-fuchsia-700">
             <Shield className="w-4 h-4 mr-1" />
             Treatment
           </Badge>
@@ -82,7 +82,7 @@ export function ConditionWidget({
                   <div>
                     <Link
                       href={`/conditions/${condition.slug}`}
-                      className="text-sm font-semibold text-foreground hover:text-teal-600 transition-colors"
+                      className="text-sm font-semibold text-foreground hover:text-fuchsia-600 transition-colors"
                     >
                       {condition.name}
                     </Link>
@@ -103,14 +103,14 @@ export function ConditionWidget({
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 mb-4">
-          <Button asChild size="sm" className="bg-teal-600 hover:bg-teal-700 text-white">
+          <Button asChild size="sm" className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white">
             <Link href="/conditions">
               View All Conditions
               <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </Button>
 
-          <Button asChild size="sm" variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+          <Button asChild size="sm" variant="outline" className="border-fuchsia-600 text-fuchsia-600 hover:bg-fuchsia-50">
             <Link href="/contact">
               <Phone className="w-4 h-4 mr-1" />
               Consult Now

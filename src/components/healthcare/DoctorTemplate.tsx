@@ -69,7 +69,7 @@ export function DoctorTemplate({
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_25%_25%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-16 lg:pt-56 lg:pb-24 relative z-10">
                     {/* Breadcrumbs */}
-                    <nav className="flex items-center text-sm text-teal-200/60 mb-12">
+                    <nav className="flex items-center text-sm text-fuchsia-200/60 mb-12">
                         <Link href="/" className="hover:text-white transition-colors">{DOCTOR_PROFILE.BREADCRUMB_HOME}</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <Link href={DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX} className="hover:text-white transition-colors">{DOCTOR_PROFILE.BREADCRUMB_DOCTORS}</Link>
@@ -96,7 +96,7 @@ export function DoctorTemplate({
                                         </div>
                                     )}
                                 </div>
-                                <div className="absolute -bottom-6 -right-6 h-32 w-32 bg-teal-500/20 rounded-full blur-3xl" />
+                                <div className="absolute -bottom-6 -right-6 h-32 w-32 bg-fuchsia-500/20 rounded-full blur-3xl" />
                             </div>
                         </div>
 
@@ -117,7 +117,7 @@ export function DoctorTemplate({
                                         <div className="p-2 bg-[#54CAD3]/10 rounded-xl">
                                             <Stethoscope className="w-5 h-5 text-[#54CAD3]" />
                                         </div>
-                                        <span className="text-sm font-bold text-teal-50/90 tracking-wide uppercase">{deptName}</span>
+                                        <span className="text-sm font-bold text-fuchsia-50/90 tracking-wide uppercase">{deptName}</span>
                                     </div>
                                 )}
                                 {doctor.experience_years && (
@@ -125,14 +125,14 @@ export function DoctorTemplate({
                                         <div className="p-2 bg-[#54CAD3]/10 rounded-xl">
                                             <Award className="w-5 h-5 text-[#54CAD3]" />
                                         </div>
-                                        <span className="text-sm font-bold text-teal-50/90 tracking-wide uppercase">{doctor.experience_years}{DOCTOR_PROFILE.EXPERIENCE_EXP_SUFFIX}</span>
+                                        <span className="text-sm font-bold text-fuchsia-50/90 tracking-wide uppercase">{doctor.experience_years}{DOCTOR_PROFILE.EXPERIENCE_EXP_SUFFIX}</span>
                                     </div>
                                 )}
                                 <div className="flex items-center gap-3 bg-white/5 backdrop-blur-md rounded-2xl px-5 py-3 border border-white/10">
                                     <div className="p-2 bg-[#54CAD3]/10 rounded-xl">
                                         <MapPin className="w-5 h-5 text-[#54CAD3]" />
                                     </div>
-                                    <span className="text-sm font-bold text-teal-50/90 tracking-wide uppercase">{DOCTOR_PROFILE.DEFAULT_LOCATION}</span>
+                                    <span className="text-sm font-bold text-fuchsia-50/90 tracking-wide uppercase">{DOCTOR_PROFILE.DEFAULT_LOCATION}</span>
                                 </div>
                             </div>
 
@@ -175,7 +175,7 @@ export function DoctorTemplate({
                         {doctor.education && doctor.education.length > 0 && (
                             <div className="space-y-8 bg-white p-10 rounded-[2.5rem] shadow-sm shadow-slate-200/60 border border-slate-100">
                                 <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
-                                    <GraduationCap className="w-8 h-8 text-teal-600" />
+                                    <GraduationCap className="w-8 h-8 text-fuchsia-600" />
                                     {DOCTOR_PROFILE.SECTION_ACADEMIC_PROFILE}
                                 </h2>
                                 <div className="grid sm:grid-cols-2 gap-8">
@@ -183,11 +183,11 @@ export function DoctorTemplate({
                                         const isString = typeof edu === 'string';
                                         return (
                                             <div key={i} className="flex gap-4">
-                                                <div className="h-2 w-2 rounded-full bg-teal-400 mt-2.5 shrink-0 shadow-glow" />
+                                                <div className="h-2 w-2 rounded-full bg-fuchsia-400 mt-2.5 shrink-0 shadow-glow" />
                                                 <div>
                                                     <h3 className="font-bold text-slate-800 text-lg">{isString ? edu : edu.degree}</h3>
                                                     {!isString && edu.institution && <p className="text-slate-500 font-medium">{edu.institution}</p>}
-                                                    {!isString && edu.year && <span className="inline-block mt-2 px-3 py-1 bg-teal-50 text-teal-600 text-xs font-bold rounded-full tracking-wider">{edu.year}</span>}
+                                                    {!isString && edu.year && <span className="inline-block mt-2 px-3 py-1 bg-fuchsia-50 text-fuchsia-600 text-xs font-bold rounded-full tracking-wider">{edu.year}</span>}
                                                 </div>
                                             </div>
                                         )
@@ -204,8 +204,8 @@ export function DoctorTemplate({
                                 ))
                             ) : (
                                 <>
-                                    <ModernCard className="bg-gradient-to-br from-teal-50/50 to-white border-teal-100 p-8 hover:shadow-xl transition-all group">
-                                        <div className="p-4 bg-teal-600 inline-block rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform">
+                                    <ModernCard className="bg-gradient-to-br from-fuchsia-50/50 to-white border-fuchsia-100 p-8 hover:shadow-xl transition-all group">
+                                        <div className="p-4 bg-fuchsia-600 inline-block rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform">
                                             <Activity className="w-8 h-8" />
                                         </div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-3">{DOCTOR_EXPERTISE_FALLBACK_1.TITLE}</h3>
@@ -226,21 +226,21 @@ export function DoctorTemplate({
                     {/* Profiles Sidebar */}
                     <aside className="lg:col-span-4 space-y-8">
                         {/* Instant Booking Sidebar */}
-                        <Card className="p-8 border-none shadow-2xl shadow-teal-900/10 rounded-[2rem] bg-[#002b36] text-white sticky top-24 overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/10 rounded-full blur-3xl" />
+                        <Card className="p-8 border-none shadow-2xl shadow-fuchsia-900/10 rounded-[2rem] bg-[#002b36] text-white sticky top-24 overflow-hidden">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 rounded-full blur-3xl" />
                             <div className="relative z-10 text-center space-y-6">
-                                <div className="w-20 h-20 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
+                                <div className="w-20 h-20 bg-fuchsia-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-fuchsia-500/30">
                                     <MessageCircle className="w-10 h-10 text-[#54CAD3]" />
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-bold">{DOCTOR_PROFILE.SECTION_QUICK_BOOKING}</h3>
-                                    <p className="text-teal-100/60 mt-2 px-4 italic font-light text-sm">{DOCTOR_PROFILE.QUICK_BOOKING_SUBTEXT}</p>
+                                    <p className="text-fuchsia-100/60 mt-2 px-4 italic font-light text-sm">{DOCTOR_PROFILE.QUICK_BOOKING_SUBTEXT}</p>
                                 </div>
                                 <div className="space-y-4 pt-4">
                                     <a
                                         href={whatsappUrl}
                                         target="_blank" rel="noopener noreferrer"
-                                        className="w-full inline-flex items-center justify-center px-8 py-5 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-xl shadow-teal-500/20 text-lg hover:scale-[1.03]"
+                                        className="w-full inline-flex items-center justify-center px-8 py-5 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-xl shadow-fuchsia-500/20 text-lg hover:scale-[1.03]"
                                     >
                                         <MessageCircle className="w-6 h-6 mr-3" />
                                         {DOCTOR_PROFILE.BTN_WHATSAPP_CHAT}
@@ -253,7 +253,7 @@ export function DoctorTemplate({
                                         {DOCTOR_PROFILE.BTN_CALL_TOKEN}
                                     </a>
                                 </div>
-                                <div className="pt-6 border-t border-white/10 flex items-center justify-between text-xs text-teal-100/40 uppercase tracking-widest font-bold">
+                                <div className="pt-6 border-t border-white/10 flex items-center justify-between text-xs text-fuchsia-100/40 uppercase tracking-widest font-bold">
                                     <span>{DOCTOR_PROFILE.VERIFIED_PROFILE_TEXT}</span>
                                     <Shield className="w-4 h-4" />
                                 </div>
@@ -264,7 +264,7 @@ export function DoctorTemplate({
                         {doctor.languages && doctor.languages.length > 0 && (
                             <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-6">
                                 <h3 className="font-bold text-slate-900 flex items-center gap-3">
-                                    <Languages className="w-5 h-5 text-teal-600" />
+                                    <Languages className="w-5 h-5 text-fuchsia-600" />
                                     {DOCTOR_PROFILE.SECTION_LANGUAGES}
                                 </h3>
                                 <div className="flex flex-wrap gap-2 text-sm font-bold uppercase tracking-wide">
@@ -285,7 +285,7 @@ export function DoctorTemplate({
                                     const IconComponent = item.icon === "Users" ? Users : item.icon === "Clock" ? Clock : Shield;
                                     return (
                                         <li key={idx} className="flex items-center gap-4 text-slate-300 text-sm">
-                                            <IconComponent className="w-5 h-5 text-teal-400" />
+                                            <IconComponent className="w-5 h-5 text-fuchsia-400" />
                                             {item.text}
                                         </li>
                                     );
@@ -301,10 +301,10 @@ export function DoctorTemplate({
                 <SectionContainer>
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                         <div>
-                            <span className="text-teal-600 font-bold text-sm tracking-widest uppercase">{DOCTOR_PROFILE.SECTION_EXPERT_NETWORK}</span>
+                            <span className="text-fuchsia-600 font-bold text-sm tracking-widest uppercase">{DOCTOR_PROFILE.SECTION_EXPERT_NETWORK}</span>
                             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-2">{DOCTOR_PROFILE.SECTION_OTHER_PROFILES}</h2>
                         </div>
-                        <Link href={DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX} className="hidden md:flex items-center gap-2 text-teal-700 font-bold hover:gap-4 transition-all">
+                        <Link href={DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX} className="hidden md:flex items-center gap-2 text-fuchsia-700 font-bold hover:gap-4 transition-all">
                             {DOCTOR_PROFILE.BTN_VIEW_DIRECTORY} <ArrowRight className="w-5 h-5" />
                         </Link>
                     </div>

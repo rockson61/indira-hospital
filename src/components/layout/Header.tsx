@@ -38,7 +38,7 @@ export function Header() {
                                         href={item.href}
                                         className={cn(
                                             "text-[15px] font-bold transition-colors flex items-center gap-1",
-                                            pathname === item.href ? "text-teal-600" : "text-slate-600 hover:text-teal-600"
+                                            pathname === item.href ? "text-fuchsia-600" : "text-slate-600 hover:text-fuchsia-600"
                                         )}
                                     >
                                         {item.title}
@@ -52,7 +52,7 @@ export function Header() {
                                                     <Link
                                                         key={specialty.title}
                                                         href={specialty.href}
-                                                        className="text-sm font-bold text-slate-600 hover:text-teal-600 p-2 rounded-xl hover:bg-teal-50 transition-all flex items-center justify-between group/item"
+                                                        className="text-sm font-bold text-slate-600 hover:text-fuchsia-600 p-2 rounded-xl hover:bg-fuchsia-50 transition-all flex items-center justify-between group/item"
                                                     >
                                                         {specialty.title}
                                                         <ChevronRight className="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" />
@@ -94,7 +94,7 @@ export function Header() {
                                 href="https://wa.me/917010650063"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center p-3 bg-slate-50 hover:bg-emerald-50 text-emerald-600 rounded-2xl border border-slate-100 hover:border-emerald-100 transition-all"
+                                className="flex items-center justify-center p-3 bg-slate-50 hover:bg-pink-50 text-pink-600 rounded-2xl border border-slate-100 hover:border-pink-100 transition-all"
                                 title="WhatsApp"
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
@@ -103,7 +103,7 @@ export function Header() {
                             {/* Book Appointment */}
                             <Link
                                 href="/book-appointment"
-                                className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 hover:bg-teal-600 text-white rounded-2xl font-bold transition-all shadow-lg"
+                                className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 hover:bg-fuchsia-600 text-white rounded-2xl font-bold transition-all shadow-lg"
                                 title="Book Appointment"
                             >
                                 Book Appointment
@@ -132,7 +132,7 @@ export function Header() {
                                 key={item.title}
                                 href={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className={`flex items-center justify-between p-4 rounded-3xl text-lg font-bold transition-all ${pathname === item.href ? "bg-teal-50 text-teal-700" : "text-slate-800 hover:bg-slate-50"
+                                className={`flex items-center justify-between p-4 rounded-3xl text-lg font-bold transition-all ${pathname === item.href ? "bg-fuchsia-50 text-fuchsia-700" : "text-slate-800 hover:bg-slate-50"
                                     }`}
                             >
                                 {item.title}

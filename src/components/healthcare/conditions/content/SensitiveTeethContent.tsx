@@ -12,44 +12,44 @@ export function SensitiveTeethContent() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-teal-50 dark:bg-slate-800/60 p-6 rounded-xl border border-blue-100 dark:border-teal-700/40">
+                <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-xl border border-blue-100 dark:border-fuchsia-700/40">
                     <h4 className="flex items-center gap-2 font-bold text-foreground mb-4">
-                        <Snowflake className="w-5 h-5 text-teal-500" />
+                        <Snowflake className="w-5 h-5 text-fuchsia-500" />
                         Common Triggers
                     </h4>
                     <ul className="space-y-2">
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Ice cream & cold drinks
+                            <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" /> Ice cream & cold drinks
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Hot coffee or tea
+                            <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" /> Hot coffee or tea
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Citrus fruits & acidic foods
+                            <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" /> Citrus fruits & acidic foods
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-teal-400" /> Cold air
+                            <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" /> Cold air
                         </li>
                     </ul>
                 </div>
 
-                <div className="bg-teal-50 dark:bg-slate-800/60 p-6 rounded-xl border border-teal-100 dark:border-teal-700/40">
+                <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-xl border border-fuchsia-100 dark:border-fuchsia-700/40">
                     <h4 className="flex items-center gap-2 font-bold text-foreground mb-4">
-                        <Zap className="w-5 h-5 text-teal-600" />
+                        <Zap className="w-5 h-5 text-fuchsia-600" />
                         Management Tips
                     </h4>
                     <ul className="space-y-2">
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <CheckCircle className="w-4 h-4 text-teal-600" /> Switch to a soft-bristled brush
+                            <CheckCircle className="w-4 h-4 text-fuchsia-600" /> Switch to a soft-bristled brush
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <CheckCircle className="w-4 h-4 text-teal-600" /> Use desensitizing toothpaste
+                            <CheckCircle className="w-4 h-4 text-fuchsia-600" /> Use desensitizing toothpaste
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <CheckCircle className="w-4 h-4 text-teal-600" /> Avoid acidic foods
+                            <CheckCircle className="w-4 h-4 text-fuchsia-600" /> Avoid acidic foods
                         </li>
                         <li className="flex items-center gap-2 text-foreground/80">
-                            <CheckCircle className="w-4 h-4 text-teal-600" /> Ask about fluoride varnish
+                            <CheckCircle className="w-4 h-4 text-fuchsia-600" /> Ask about fluoride varnish
                         </li>
                     </ul>
                 </div>

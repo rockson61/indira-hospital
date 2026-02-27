@@ -37,7 +37,7 @@ export function PageHero({
             <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
                 {subtitle && (
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                        <span className="text-teal-300 text-xs font-bold tracking-widest uppercase">{subtitle}</span>
+                        <span className="text-fuchsia-300 text-xs font-bold tracking-widest uppercase">{subtitle}</span>
                     </div>
                 )}
 

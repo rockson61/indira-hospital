@@ -23,7 +23,7 @@ export function StickyCTA() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-3.5 bg-teal-600 text-white font-bold text-sm rounded-full shadow-sm transition-all active:scale-95"
+                    className="flex-1 flex items-center justify-center gap-2 py-3.5 bg-fuchsia-600 text-white font-bold text-sm rounded-full shadow-sm transition-all active:scale-95"
                 >
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp

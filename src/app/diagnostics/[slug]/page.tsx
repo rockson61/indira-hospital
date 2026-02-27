@@ -39,7 +39,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                 <SectionContainer>
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div>
-                            <span className="inline-block px-3 py-1 bg-teal-100 text-teal-700 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
+                            <span className="inline-block px-3 py-1 bg-fuchsia-100 text-fuchsia-700 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
                                 {test.category}
                             </span>
                             <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{test.name}</h1>
@@ -62,7 +62,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                             {/* Quick info badges */}
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {test.home_collection && (
-                                    <span className="flex items-center gap-1 px-2 py-1 bg-teal-50 text-teal-700 text-xs rounded-full">
+                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs rounded-full">
                                         <Home className="w-3 h-3" /> Home Collection
                                     </span>
                                 )}
@@ -72,19 +72,19 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                                     </span>
                                 )}
                                 {test.sample_type && test.sample_type !== 'N/A - Imaging' && (
-                                    <span className="flex items-center gap-1 px-2 py-1 bg-teal-50 text-teal-700 text-xs rounded-full">
+                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs rounded-full">
                                         <Droplets className="w-3 h-3" /> {test.sample_type}
                                     </span>
                                 )}
                                 {test.parameters_count && test.parameters_count > 0 && (
-                                    <span className="flex items-center gap-1 px-2 py-1 bg-teal-50 text-teal-700 text-xs rounded-full">
+                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs rounded-full">
                                         <Beaker className="w-3 h-3" /> {test.parameters_count} parameters
                                     </span>
                                 )}
                             </div>
 
                             <div className="space-y-3">
-                                <Button className="w-full bg-teal-600 hover:bg-teal-700" asChild>
+                                <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700" asChild>
                                     <a href="https://wa.me/917010650063?text=I%20want%20to%20book%20a%20diagnostic%20test" target="_blank">Book Appointment</a>
                                 </Button>
                                 {test.home_collection && (

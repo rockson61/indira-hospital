@@ -24,10 +24,10 @@ export function ToothDiscolorationContent() {
                     </div>
                     <div>
                         <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                            <Sparkles className="w-5 h-5 text-teal-500" />
+                            <Sparkles className="w-5 h-5 text-fuchsia-500" />
                             Solutions
                         </h4>
-                        <ul className="border-l-2 border-teal-200 pl-4 space-y-2 text-sm text-muted-foreground">
+                        <ul className="border-l-2 border-fuchsia-200 pl-4 space-y-2 text-sm text-muted-foreground">
                             <li><strong>Professional Whitening:</strong> Removes deep stains safely.</li>
                             <li><strong>Veneers:</strong> Covers permanent intrinsic stains.</li>
                             <li><strong>Regular Cleanings:</strong> Polishes away surface stains.</li>

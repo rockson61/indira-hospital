@@ -74,7 +74,7 @@ export function WhyChooseUs() {
           className="text-center mb-16 space-y-4"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white">Why Choose Indira Super Speciality Hospital?</h2>
-          <p className="text-xl text-teal-100/80 max-w-3xl mx-auto">
+          <p className="text-xl text-fuchsia-100/80 max-w-3xl mx-auto">
             <strong>4.9/5 Google Rating</strong> • 500+ Reviews • 50% Lower Than Chennai/Bangalore Prices
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#54CAD3] to-white mx-auto rounded-full"></div>
@@ -102,7 +102,7 @@ export function WhyChooseUs() {
                     <h3 className="text-xl font-bold text-white group-hover:text-[#54CAD3] transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-teal-100/80 leading-relaxed">{feature.description}</p>
+                    <p className="text-fuchsia-100/80 leading-relaxed">{feature.description}</p>
                   </div>
                 </GlassCard>
               </motion.div>
@@ -120,19 +120,19 @@ export function WhyChooseUs() {
         >
           <GlassCard className="p-6 text-center bg-white/10 backdrop-blur-sm border border-white/20">
             <div className="text-4xl font-bold text-[#54CAD3] mb-2">5,000+</div>
-            <div className="text-teal-100/80">Patients Treated</div>
+            <div className="text-fuchsia-100/80">Patients Treated</div>
           </GlassCard>
           <GlassCard className="p-6 text-center bg-white/10 backdrop-blur-sm border border-white/20">
             <div className="text-4xl font-bold text-white mb-2">15+</div>
-            <div className="text-teal-100/80">Years Experience</div>
+            <div className="text-fuchsia-100/80">Years Experience</div>
           </GlassCard>
           <GlassCard className="p-6 text-center bg-white/10 backdrop-blur-sm border border-white/20">
             <div className="text-4xl font-bold text-[#54CAD3] mb-2">4.9★</div>
-            <div className="text-teal-100/80">Google Rating (500+)</div>
+            <div className="text-fuchsia-100/80">Google Rating (500+)</div>
           </GlassCard>
           <GlassCard className="p-6 text-center bg-white/10 backdrop-blur-sm border border-white/20">
             <div className="text-4xl font-bold text-white mb-2">95%+</div>
-            <div className="text-teal-100/80">Success Rate</div>
+            <div className="text-fuchsia-100/80">Success Rate</div>
           </GlassCard>
         </motion.div>
 
@@ -146,7 +146,7 @@ export function WhyChooseUs() {
           <GlassCard className="p-8 bg-gradient-to-r from-white/15 to-[#54CAD3]/20 backdrop-blur-sm border border-white/20">
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold text-white mb-4">Our Guarantees</h3>
-              <p className="text-teal-100/80">We stand behind our work with these commitments to you</p>
+              <p className="text-fuchsia-100/80">We stand behind our work with these commitments to you</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">

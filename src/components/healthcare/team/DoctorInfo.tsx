@@ -12,7 +12,7 @@ export function DoctorInfo() {
 
         <div className="md:w-2/3">
           <h2 className="text-2xl font-heading font-black text-slate-900 mb-2">Dr. Rockson Samuel</h2>
-          <p className="text-teal-600 font-bold mb-4">General Dentist</p>
+          <p className="text-fuchsia-600 font-bold mb-4">General Dentist</p>
 
           <p className="text-slate-600 mb-6 font-medium leading-relaxed">
             Dr. Rockson Samuel is a highly skilled general dentist with extensive experience in providing comprehensive
@@ -23,7 +23,7 @@ export function DoctorInfo() {
             <h3 className="font-heading font-bold text-slate-900 mb-3">Specializations:</h3>
             <div className="flex flex-wrap gap-2">
               {["Root Canal Treatment (RCT)", "Dental Implants", "Orthodontics (Braces)", "Dental Fillings", "General Dentistry"].map((s) => (
-                <span key={s} className="px-4 py-1.5 bg-teal-50 text-teal-700 text-sm font-bold rounded-full border border-teal-100">{s}</span>
+                <span key={s} className="px-4 py-1.5 bg-fuchsia-50 text-fuchsia-700 text-sm font-bold rounded-full border border-fuchsia-100">{s}</span>
               ))}
             </div>
           </div>
@@ -35,7 +35,7 @@ export function DoctorInfo() {
 
           <a
             href="/contact"
-            className="inline-flex items-center px-8 py-3.5 bg-slate-900 text-white rounded-full font-bold hover:bg-teal-700 transition-all shadow-sm"
+            className="inline-flex items-center px-8 py-3.5 bg-slate-900 text-white rounded-full font-bold hover:bg-fuchsia-700 transition-all shadow-sm"
           >
             Book an Appointment
           </a>

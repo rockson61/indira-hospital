@@ -108,16 +108,16 @@ export default function EndoscopyProcedureGuidePage() {
           We maintain the highest standards of hygiene and sterilization. Each endoscope undergoes a 7-step mechanized disinfection process. Our dedicated recovery suites and senior nursing staff ensure you are comfortable before, during, and after the procedure.
         </p>
 
-        <div className="my-8 p-6 bg-teal-50 dark:bg-teal-900/20 rounded-3xl border border-teal-100 dark:border-teal-800">
-          <h4 className="text-xl font-bold text-teal-900 dark:text-teal-300 mb-4 tracking-tight">Same-Day Diagnostic Results</h4>
+        <div className="my-8 p-6 bg-fuchsia-50 dark:bg-fuchsia-900/20 rounded-3xl border border-fuchsia-100 dark:border-fuchsia-800">
+          <h4 className="text-xl font-bold text-fuchsia-900 dark:text-fuchsia-300 mb-4 tracking-tight">Same-Day Diagnostic Results</h4>
           <p className="text-slate-700 dark:text-slate-300">
             We understand the anxiety of waiting for results. Our gastroenterology lab provides <strong>instant high-quality printouts</strong> of your endoscopy images and a detailed report right after your procedure.
           </p>
           <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> NABL Accredited Lab</li>
-            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> HD Digital Imaging</li>
-            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> Certified Sterilization</li>
-            <li className="flex items-center gap-2 font-medium text-teal-800 dark:text-teal-200"><CheckCircle className="w-4 h-4" /> Senior Gastroenterologists</li>
+            <li className="flex items-center gap-2 font-medium text-fuchsia-800 dark:text-fuchsia-200"><CheckCircle className="w-4 h-4" /> NABL Accredited Lab</li>
+            <li className="flex items-center gap-2 font-medium text-fuchsia-800 dark:text-fuchsia-200"><CheckCircle className="w-4 h-4" /> HD Digital Imaging</li>
+            <li className="flex items-center gap-2 font-medium text-fuchsia-800 dark:text-fuchsia-200"><CheckCircle className="w-4 h-4" /> Certified Sterilization</li>
+            <li className="flex items-center gap-2 font-medium text-fuchsia-800 dark:text-fuchsia-200"><CheckCircle className="w-4 h-4" /> Senior Gastroenterologists</li>
           </ul>
         </div>
 

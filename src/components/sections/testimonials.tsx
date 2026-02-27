@@ -27,7 +27,7 @@ export async function Testimonials() {
     return (
         <section className="py-32 bg-slate-900 text-white relative isolate overflow-hidden">
             {/* Background Glows */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal-600/10 rounded-full blur-[160px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-600/10 rounded-full blur-[160px] pointer-events-none" />
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
                 <SectionHeader
@@ -41,18 +41,18 @@ export async function Testimonials() {
                     {testimonials.map((testimonial: any, i: number) => (
                         <div
                             key={testimonial.id}
-                            className="group relative bg-slate-800/40 backdrop-blur-2xl rounded-[2.5rem] p-10 border border-white/5 hover:border-teal-500/30 transition-all duration-700 hover:-translate-y-3 shadow-2xl overflow-hidden"
+                            className="group relative bg-slate-800/40 backdrop-blur-2xl rounded-[2.5rem] p-10 border border-white/5 hover:border-fuchsia-500/30 transition-all duration-700 hover:-translate-y-3 shadow-2xl overflow-hidden"
                         >
                             {/* Decorative Background Pattern */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-teal-500/10 transition-colors" />
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-fuchsia-500/10 transition-colors" />
 
                             {/* VIDEO PLAY OVERLAY (Premium) */}
-                            <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-teal-600 to-teal-600 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-teal-900/40 border border-white/20 cursor-pointer overflow-hidden">
+                            <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-fuchsia-600 to-fuchsia-600 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-fuchsia-900/40 border border-white/20 cursor-pointer overflow-hidden">
                                 <span className="absolute inset-0 bg-white/20 animate-pulse group-hover:hidden" />
                                 <Play className="w-5 h-5 fill-current relative z-10" />
                             </div>
 
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[10px] font-black uppercase tracking-tighter mb-6 group-hover:bg-teal-500/20 transition-colors">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-500/10 border border-fuchsia-500/20 text-fuchsia-400 text-[10px] font-black uppercase tracking-tighter mb-6 group-hover:bg-fuchsia-500/20 transition-colors">
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                                 Verified Video Story
                             </div>
@@ -71,7 +71,7 @@ export async function Testimonials() {
                                         className="h-14 w-14 rounded-2xl bg-gray-800 object-cover ring-2 ring-white/10"
                                     />
                                 ) : (
-                                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-teal-500/20">
+                                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-fuchsia-500/20">
                                         {testimonial.patient_name.charAt(0)}
                                     </div>
                                 )}

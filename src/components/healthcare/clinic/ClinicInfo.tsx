@@ -20,14 +20,14 @@ export function ClinicInfo({ variant = "full", showHours = true, showEmail = tru
       {variant === "full" && <h3 className="text-xl font-bold mb-3">Indira Super Speciality Hospital</h3>}
 
       <div className="flex items-start gap-2 mb-2">
-        <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-teal-600" />
+        <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
         <address className="not-italic">
           Vellore, Tamil Nadu
         </address>
       </div>
 
       <div className="flex items-center gap-2 mb-2">
-        <Phone className="h-5 w-5 flex-shrink-0 text-teal-600" />
+        <Phone className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
         <a href="tel:7010650063" className="hover:underline">
           7010650063
         </a>
@@ -35,7 +35,7 @@ export function ClinicInfo({ variant = "full", showHours = true, showEmail = tru
 
       {showEmail && (
         <div className="flex items-center gap-2 mb-2">
-          <Mail className="h-5 w-5 flex-shrink-0 text-teal-600" />
+          <Mail className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
           <a href="mailto:rockson68@hotmail.com" className="hover:underline">
             rockson68@hotmail.com
           </a>
@@ -45,7 +45,7 @@ export function ClinicInfo({ variant = "full", showHours = true, showEmail = tru
       {showHours && (
         <div className="mt-4">
           <div className="flex items-center gap-2 mb-2">
-            <Clock className="h-5 w-5 flex-shrink-0 text-teal-600" />
+            <Clock className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
             <span className="font-medium">Opening Hours</span>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 ml-7">

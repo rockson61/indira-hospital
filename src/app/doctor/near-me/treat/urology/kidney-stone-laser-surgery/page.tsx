@@ -100,9 +100,9 @@ export default function KidneyStoneLaserSurgeryPage() {
           For stones up to 2cm, we recommend <strong>RIRS</strong>. Using a flexible fiber-optic endoscope, our urologists navigate the urinary tract to reach the stone directly. The laser then "dusts" the stone into particles small enough to be flushed out naturally with urine.
         </p>
 
-        <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-teal-50 to-teal-50 dark:from-teal-900/10 dark:to-teal-900/10 rounded-[2.5rem] border border-teal-100 dark:border-teal-700 shadow-sm relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-          <h4 className="text-2xl font-black text-slate-900 dark:text-teal-300 mb-6 tracking-tight">Transparent Pricing & Insurance</h4>
+        <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-fuchsia-50 to-fuchsia-50 dark:from-fuchsia-900/10 dark:to-fuchsia-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-fuchsia-700 shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+          <h4 className="text-2xl font-black text-slate-900 dark:text-fuchsia-300 mb-6 tracking-tight">Transparent Pricing & Insurance</h4>
           <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
             We provide all-inclusive surgical packages that cover hospital stay, OT charges, and initial medication. No hidden shocks.
           </p>

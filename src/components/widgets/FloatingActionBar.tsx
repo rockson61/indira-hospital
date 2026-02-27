@@ -126,11 +126,11 @@ export default function FloatingActionBar() {
         <div className="action-hub group relative flex items-center justify-center">
 
           {/* Central Hub - Image */}
-          <button className="relative w-24 h-24 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 shadow-2xl flex items-center justify-center">
+          <button className="relative w-24 h-24 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 shadow-2xl flex items-center justify-center">
             {/* <img 
               src="/logo.png" 
               alt="Indira Hospital"
-              className="w-16 h-16 rounded-full object-cover border-4 border-teal-300"
+              className="w-16 h-16 rounded-full object-cover border-4 border-fuchsia-300"
             /> */}
             <span className="text-white font-bold text-xs">Indira Hospital</span>
           </button>
@@ -156,7 +156,7 @@ export default function FloatingActionBar() {
           {/* Petal 2: Left Buttons (Call & WhatsApp) */}
           <div className="petal petal-2 absolute flex gap-2">
             <a href={`tel:${phone}`} title="Call Now">
-              <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 text-white shadow-lg transition-all hover:scale-110">
+              <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-lg transition-all hover:scale-110">
                 <Phone className="w-5 h-5" />
               </Button>
             </a>
@@ -170,7 +170,7 @@ export default function FloatingActionBar() {
           {/* Petal 3: Right Buttons (Directions & Scroll Up) */}
           <div className="petal petal-3 absolute flex gap-2">
             <a href={directionsUrl} target="_blank" rel="noopener noreferrer" title="Get Directions">
-              <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 text-white shadow-lg transition-all hover:scale-110">
+              <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-lg transition-all hover:scale-110">
                 <MapPin className="w-5 h-5" />
               </Button>
             </a>

@@ -26,36 +26,36 @@ export function DepartmentCard({ department, className, variant = "grid" }: Depa
                 <Link
                     href={href}
                     className={cn(
-                        "group flex items-center justify-between p-5 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-soft hover:border-teal-100 hover:-translate-y-0.5 transition-all",
+                        "group flex items-center justify-between p-5 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-soft hover:border-fuchsia-100 hover:-translate-y-0.5 transition-all",
                         className
                     )}
                 >
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors shadow-sm">
+                        <div className="w-12 h-12 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors shadow-sm">
                             <Stethoscope className="w-5 h-5" />
                         </div>
-                        <span className="font-bold text-slate-900 group-hover:text-teal-700 transition-colors text-base">
+                        <span className="font-bold text-slate-900 group-hover:text-fuchsia-700 transition-colors text-base">
                             {department.title || department.name}
                         </span>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-teal-50 transition-colors">
-                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-teal-600" />
+                    <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-fuchsia-50 transition-colors">
+                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600" />
                     </div>
                 </Link>
             ) : (
                 <Link href={href} className={cn("block group h-full", className)}>
                     <Card className="h-full p-8 rounded-[2.5rem] border border-slate-100 shadow-soft hover:shadow-float hover:-translate-y-1 transition-all duration-400 bg-white flex flex-col relative overflow-hidden">
-                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-teal-50 rounded-full blur-3xl opacity-50 group-hover:bg-teal-100 transition-colors duration-500" />
+                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-fuchsia-50 rounded-full blur-3xl opacity-50 group-hover:bg-fuchsia-100 transition-colors duration-500" />
 
                         <div className="absolute bottom-0 right-0 p-6 opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500 transform origin-bottom-right">
-                            <Stethoscope className="w-32 h-32 text-teal-600" />
+                            <Stethoscope className="w-32 h-32 text-fuchsia-600" />
                         </div>
 
-                        <div className="w-16 h-16 rounded-[1.5rem] bg-slate-50 border border-slate-100 text-teal-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm relative z-10">
+                        <div className="w-16 h-16 rounded-[1.5rem] bg-slate-50 border border-slate-100 text-fuchsia-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-300 shadow-sm relative z-10">
                             <Stethoscope className="w-7 h-7" />
                         </div>
 
-                        <h3 className="text-2xl font-black font-heading text-slate-900 mb-3 group-hover:text-teal-700 transition-colors tracking-tight relative z-10">
+                        <h3 className="text-2xl font-black font-heading text-slate-900 mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight relative z-10">
                             {department.title || department.name}
                         </h3>
 
@@ -64,9 +64,9 @@ export function DepartmentCard({ department, className, variant = "grid" }: Depa
                         </p>
 
                         <div className="mt-auto flex items-center justify-between relative z-10">
-                            <span className="text-slate-900 font-bold text-sm tracking-wide uppercase group-hover:text-teal-600 transition-colors">Explore</span>
-                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-teal-50 transition-colors">
-                                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-teal-600 transition-colors group-hover:translate-x-0.5" />
+                            <span className="text-slate-900 font-bold text-sm tracking-wide uppercase group-hover:text-fuchsia-600 transition-colors">Explore</span>
+                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-fuchsia-50 transition-colors">
+                                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-600 transition-colors group-hover:translate-x-0.5" />
                             </div>
                         </div>
                     </Card>

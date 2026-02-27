@@ -47,7 +47,7 @@ export function CompactServiceWidget({
             <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>
             <p className="text-default-600 dark:text-default-400 text-sm leading-relaxed">{description}</p>
           </div>
-          <Badge variant="outline" className="border-teal-600 text-teal-700 dark:text-teal-400 text-xs">
+          <Badge variant="outline" className="border-fuchsia-600 text-fuchsia-700 dark:text-fuchsia-400 text-xs">
             <Star className="w-3 h-3 mr-1" />
             4.9/5
           </Badge>
@@ -59,7 +59,7 @@ export function CompactServiceWidget({
               <div className="flex-1">
                 <Link
                   href={`/doctor/near-me/treat/${service.slug}`}
-                  className="text-sm font-semibold text-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                  className="text-sm font-semibold text-foreground hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors"
                 >
                   {service.name}
                 </Link>
@@ -72,7 +72,7 @@ export function CompactServiceWidget({
               </div>
               {showPricing && service.price && (
                 <div className="text-right">
-                  <div className="text-sm font-bold text-teal-600 dark:text-teal-400">{service.price}</div>
+                  <div className="text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400">{service.price}</div>
                 </div>
               )}
             </div>
@@ -82,7 +82,7 @@ export function CompactServiceWidget({
         <div className="flex flex-col sm:flex-row gap-3">
           <Button
             size="sm"
-            className="bg-teal-600 hover:bg-teal-700 text-white font-semibold"
+            className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-semibold"
             as={Link}
             href={ctaLink}
           >
@@ -93,7 +93,7 @@ export function CompactServiceWidget({
           <Button
             size="sm"
             variant="bordered"
-            className="border-teal-600 text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/20 dark:text-teal-400 dark:border-teal-400 font-semibold"
+            className="border-fuchsia-600 text-fuchsia-600 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/20 dark:text-fuchsia-400 dark:border-fuchsia-400 font-semibold"
             as={Link}
             href="/doctor/near-me"
           >

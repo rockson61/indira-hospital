@@ -21,10 +21,10 @@ export function CTASection() {
             </div>
 
             {/* Main CTA area */}
-            <div className="bg-gradient-to-br from-primary-900 via-primary-800 to-teal-900 py-16 sm:py-24 relative">
+            <div className="bg-gradient-to-br from-primary-900 via-primary-800 to-fuchsia-900 py-16 sm:py-24 relative">
                 {/* Decorative */}
                 <div className="absolute top-0 right-0 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="text-center mb-12">

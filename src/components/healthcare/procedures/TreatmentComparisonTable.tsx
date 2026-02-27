@@ -87,7 +87,7 @@ export function TreatmentComparisonTable({ data }: TreatmentComparisonTableProps
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="bg-gradient-to-r from-teal-600 to-blue-800 text-white">
+      <CardHeader className="bg-gradient-to-r from-fuchsia-600 to-blue-800 text-white">
         <CardTitle>Cost Comparison: India vs. Other Countries</CardTitle>
         <p className="text-sm mt-2">See how much you can save by choosing India for your dental treatments</p>
       </CardHeader>
@@ -100,7 +100,7 @@ export function TreatmentComparisonTable({ data }: TreatmentComparisonTableProps
 
           <TabsContent value="inr" className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-teal-50">
+              <thead className="bg-fuchsia-50">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-bold text-blue-800 uppercase tracking-wider">
                     Treatment
@@ -141,7 +141,7 @@ export function TreatmentComparisonTable({ data }: TreatmentComparisonTableProps
 
           <TabsContent value="usd" className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-teal-50">
+              <thead className="bg-fuchsia-50">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-bold text-blue-800 uppercase tracking-wider">
                     Treatment

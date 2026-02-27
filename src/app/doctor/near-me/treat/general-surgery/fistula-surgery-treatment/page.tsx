@@ -106,8 +106,8 @@ export default function FistulaSurgeryPage() {
                     <li><strong>Extrasphincteric Fistula (very rare):</strong> From above the levator ani — often requires specialist referral</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 rounded-[2.5rem] border border-emerald-100 dark:border-emerald-900 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-emerald-300 mb-4 tracking-tight">Advanced Proctology Unit</h4>
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-pink-50 to-fuchsia-50 dark:from-pink-900/10 dark:to-fuchsia-900/10 rounded-[2.5rem] border border-pink-100 dark:border-pink-900 shadow-sm">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-pink-300 mb-4 tracking-tight">Advanced Proctology Unit</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                             "MRI Fistula Mapping (Pre-operative)",
@@ -116,7 +116,7 @@ export default function FistulaSurgeryPage() {
                             "Day-Surgery Available — Go Home Same Day"
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
-                                <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                                <CheckCircle className="w-5 h-5 text-pink-500 flex-shrink-0" />
                                 <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
                             </div>
                         ))}

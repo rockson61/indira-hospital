@@ -17,22 +17,22 @@ const PROTOCOLS = [
     {
         title: "Infection Control",
         desc: "Strict adherence to WHO hand hygiene guidelines and modular OTs with HEPA filters for 100% sterile surgery.",
-        icon: <HandMetal className="w-8 h-8 text-teal-600" />
+        icon: <HandMetal className="w-8 h-8 text-fuchsia-600" />
     },
     {
         title: "Medication Safety",
         desc: "Double-check protocols for drug administration and automated barcode tracking to prevent errors.",
-        icon: <Microscope className="w-8 h-8 text-teal-600" />
+        icon: <Microscope className="w-8 h-8 text-fuchsia-600" />
     },
     {
         title: "Surgical Safety",
         desc: "Use of the WHO Surgical Safety Checklist for every procedure to ensure the right patient and right site.",
-        icon: <ShieldCheck className="w-8 h-8 text-teal-600" />
+        icon: <ShieldCheck className="w-8 h-8 text-fuchsia-600" />
     },
     {
         title: "Constant Monitoring",
         desc: "24/7 clinical audits and patient feedback loops to continuously improve healthcare delivery.",
-        icon: <Activity className="w-8 h-8 text-teal-600" />
+        icon: <Activity className="w-8 h-8 text-fuchsia-600" />
     }
 ];
 
@@ -44,11 +44,11 @@ export default function QualitySafetyPage() {
             {/* HERO */}
             <section className="bg-slate-900 pt-20 pb-32 text-white relative overflow-hidden text-center">
                 <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 left-0 w-96 h-96 bg-teal-500 rounded-full blur-[120px]" />
+                    <div className="absolute top-0 left-0 w-96 h-96 bg-fuchsia-500 rounded-full blur-[120px]" />
                 </div>
                 <SectionContainer>
                     <div className="max-w-3xl mx-auto">
-                        <div className="inline-flex items-center gap-2 bg-teal-500/20 border border-teal-500/30 rounded-full px-4 py-1.5 mb-6">
+                        <div className="inline-flex items-center gap-2 bg-fuchsia-500/20 border border-fuchsia-500/30 rounded-full px-4 py-1.5 mb-6">
                             <ShieldCheck className="w-4 h-4 text-blue-400" />
                             <span className="text-blue-400 font-medium text-sm tracking-wide">Patient Safety First</span>
                         </div>
@@ -69,7 +69,7 @@ export default function QualitySafetyPage() {
                 <div className="grid md:grid-cols-2 gap-8">
                     {PROTOCOLS.map((item, i) => (
                         <Card key={i} className="p-10 bg-white dark:bg-slate-900 border-none shadow-xl rounded-[3rem] hover:shadow-2xl transition-all">
-                            <div className="mb-6 p-4 bg-teal-50 dark:bg-blue-900/20 rounded-2xl inline-block">
+                            <div className="mb-6 p-4 bg-fuchsia-50 dark:bg-blue-900/20 rounded-2xl inline-block">
                                 {item.icon}
                             </div>
                             <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">{item.title}</h3>
@@ -86,7 +86,7 @@ export default function QualitySafetyPage() {
                 <SectionContainer>
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900 dark:text-white">Our Commitment to <span className="text-teal-600">Clinical Excellence</span></h2>
+                            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900 dark:text-white">Our Commitment to <span className="text-fuchsia-600">Clinical Excellence</span></h2>
                             <div className="space-y-6">
                                 {[
                                     { t: "Evidence-Based Medicine", d: "Treatments based on the latest global clinical research and peer-reviewed studies." },
@@ -95,7 +95,7 @@ export default function QualitySafetyPage() {
                                     { t: "Continuous Innovation", d: "Adopting advanced technologies like Laser and Robotic surgery to minimize patient risk." }
                                 ].map((step, i) => (
                                     <div key={i} className="flex gap-4">
-                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-blue-900/40 flex items-center justify-center text-teal-600 mt-1">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-fuchsia-100 dark:bg-blue-900/40 flex items-center justify-center text-fuchsia-600 mt-1">
                                             <CheckCircle2 className="w-5 h-5" />
                                         </div>
                                         <div>
@@ -111,7 +111,7 @@ export default function QualitySafetyPage() {
                                 <Image src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800"
                                     alt="Clinical Excellence" fill className="object-cover" />
                             </div>
-                            <div className="absolute -bottom-8 -right-8 bg-teal-600 text-white p-10 rounded-3xl shadow-2xl max-w-xs">
+                            <div className="absolute -bottom-8 -right-8 bg-fuchsia-600 text-white p-10 rounded-3xl shadow-2xl max-w-xs">
                                 <Award className="w-12 h-12 mb-4" />
                                 <h4 className="text-xl font-bold mb-2">NABH Standard</h4>
                                 <p className="text-blue-100 text-sm italic">Committed to maintaining the highest benchmarks in Indian healthcare administration.</p>

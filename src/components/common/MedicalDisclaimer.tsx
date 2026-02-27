@@ -11,14 +11,14 @@ export function MedicalDisclaimer() {
                 <div className="grid md:grid-cols-3 gap-6">
                     {/* Box 1: Medical Review */}
                     <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-4">
-                        <div className="bg-teal-100 p-2 rounded-lg shrink-0">
-                            <ShieldCheck className="w-5 h-5 text-teal-700" />
+                        <div className="bg-fuchsia-100 p-2 rounded-lg shrink-0">
+                            <ShieldCheck className="w-5 h-5 text-fuchsia-700" />
                         </div>
                         <div>
                             <h4 className="font-semibold text-gray-900 text-sm mb-1">Medically Reviewed</h4>
                             <p className="text-xs text-gray-600 leading-relaxed">
                                 Content medically reviewed by{" "}
-                                <Link href="/doctors/dr-karan-shankar" className="text-teal-700 font-medium hover:underline">
+                                <Link href="/doctors/dr-karan-shankar" className="text-fuchsia-700 font-medium hover:underline">
                                     Dr. Karan Shankar
                                 </Link>
                                 , Clinical Executive Director, to ensure clinical accuracy.
@@ -41,8 +41,8 @@ export function MedicalDisclaimer() {
 
                     {/* Box 3: References */}
                     <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-4">
-                        <div className="bg-teal-100 p-2 rounded-lg shrink-0">
-                            <BookOpen className="w-5 h-5 text-teal-700" />
+                        <div className="bg-fuchsia-100 p-2 rounded-lg shrink-0">
+                            <BookOpen className="w-5 h-5 text-fuchsia-700" />
                         </div>
                         <div>
                             <h4 className="font-semibold text-gray-900 text-sm mb-1">Trusted Sources</h4>

@@ -45,8 +45,8 @@ export function SpecialtyNav() {
                                 <Link
                                     href={item.href}
                                     className={`flex items-center gap-1 px-4 py-2 text-[13px] font-bold rounded-full transition-all whitespace-nowrap ${isActive
-                                        ? "bg-teal-50 text-teal-700"
-                                        : "text-slate-600 hover:text-teal-700 hover:bg-slate-50"
+                                        ? "bg-fuchsia-50 text-fuchsia-700"
+                                        : "text-slate-600 hover:text-fuchsia-700 hover:bg-slate-50"
                                         }`}
                                 >
                                     {item.title}
@@ -62,7 +62,7 @@ export function SpecialtyNav() {
                                             <Link
                                                 key={subItem.title}
                                                 href={subItem.href}
-                                                className="block px-5 py-2 text-sm font-medium text-slate-600 hover:bg-teal-50 hover:text-teal-700 transition-colors mx-2 rounded-xl"
+                                                className="block px-5 py-2 text-sm font-medium text-slate-600 hover:bg-fuchsia-50 hover:text-fuchsia-700 transition-colors mx-2 rounded-xl"
                                             >
                                                 {subItem.title}
                                             </Link>
@@ -81,8 +81,8 @@ export function SpecialtyNav() {
                         <button
                             onClick={() => setIsHospitalsOpen(!isHospitalsOpen)}
                             className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-bold rounded-full transition-all whitespace-nowrap ${isHospitalsOpen
-                                ? "bg-teal-50 text-teal-700"
-                                : "text-slate-600 hover:text-teal-700 hover:bg-slate-50"
+                                ? "bg-fuchsia-50 text-fuchsia-700"
+                                : "text-slate-600 hover:text-fuchsia-700 hover:bg-slate-50"
                                 }`}
                         >
                             Our Hospitals
@@ -99,7 +99,7 @@ export function SpecialtyNav() {
                                         key={loc.title}
                                         href={loc.href}
                                         onClick={() => setIsHospitalsOpen(false)}
-                                        className="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-teal-50 hover:text-teal-700 transition-colors mx-2 rounded-xl"
+                                        className="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-fuchsia-50 hover:text-fuchsia-700 transition-colors mx-2 rounded-xl"
                                     >
                                         <MapPin className="w-4 h-4 text-slate-400" />
                                         {loc.title}

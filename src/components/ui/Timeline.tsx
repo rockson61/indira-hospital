@@ -42,7 +42,7 @@ function TimelineItem({ step, title, description, date, isLast, index }: Timelin
                     whileInView={{ height: "100%" }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="absolute top-10 left-5 -translate-x-1/2 w-0.5 bg-default-200 dark:bg-default-100/10 group-hover:bg-teal-500/30 transition-colors"
+                    className="absolute top-10 left-5 -translate-x-1/2 w-0.5 bg-default-200 dark:bg-default-100/10 group-hover:bg-fuchsia-500/30 transition-colors"
                 />
             )}
 
@@ -51,7 +51,7 @@ function TimelineItem({ step, title, description, date, isLast, index }: Timelin
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.1 + (index * 0.1) }}
-                className="relative shrink-0 w-10 h-10 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold z-10 border-4 border-background shadow-md group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300"
+                className="relative shrink-0 w-10 h-10 rounded-full bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 flex items-center justify-center font-bold z-10 border-4 border-background shadow-md group-hover:scale-110 group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-300"
             >
                 {step}
             </motion.div>

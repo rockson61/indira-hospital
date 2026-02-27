@@ -30,7 +30,7 @@ export function BleedingGumsContent() {
                         { title: "Balanced Diet", desc: "Vitamin C deficiency can sometimes contribute to bleeding gums." }
                     ].map((item, i) => (
                         <li key={i} className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted transition-colors">
-                            <CheckCircle className="w-5 h-5 text-teal-600 mt-1 shrink-0" />
+                            <CheckCircle className="w-5 h-5 text-fuchsia-600 mt-1 shrink-0" />
                             <div>
                                 <span className="font-semibold text-foreground">{item.title}:</span>
                                 <span className="text-foreground/80 ml-1">{item.desc}</span>

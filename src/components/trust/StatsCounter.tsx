@@ -49,7 +49,7 @@ const statsCardVariants = cva(
     variants: {
       variant: {
         default: "bg-card",
-        highlight: "bg-teal-50 dark:bg-teal-900/20 border-teal-100 dark:border-teal-800",
+        highlight: "bg-fuchsia-50 dark:bg-fuchsia-900/20 border-fuchsia-100 dark:border-fuchsia-800",
       },
     },
     defaultVariants: {
@@ -122,7 +122,7 @@ export function StatsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Trusted by Thousands in <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-600">Vellore</span>
+            Trusted by Thousands in <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-fuchsia-600">Vellore</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Our commitment to excellence has made us the most trusted dental clinic in Vellore. Here are the numbers
@@ -143,9 +143,9 @@ export function StatsSection() {
                 <div className="flex flex-col items-center justify-center p-4 text-center h-full">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="mb-4 p-3 rounded-full bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/30 dark:to-blue-900/30"
+                    className="mb-4 p-3 rounded-full bg-gradient-to-br from-fuchsia-50 to-blue-50 dark:from-fuchsia-900/30 dark:to-blue-900/30"
                   >
-                    <stat.icon className="w-8 h-8 text-teal-600" aria-hidden="true" />
+                    <stat.icon className="w-8 h-8 text-fuchsia-600" aria-hidden="true" />
                   </motion.div>
                   <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 mb-2">
                     <Counter value={stat.value} suffix={stat.suffix} />

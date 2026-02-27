@@ -35,7 +35,7 @@ export function BrokenJawContent() {
                             "Take prescribed antibiotics to prevent infection"
                         ].map((tip, i) => (
                             <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
-                                <div className="w-1.5 h-1.5 bg-teal-50 dark:bg-slate-800/600 rounded-full" />
+                                <div className="w-1.5 h-1.5 bg-fuchsia-50 dark:bg-slate-800/600 rounded-full" />
                                 {tip}
                             </li>
                         ))}

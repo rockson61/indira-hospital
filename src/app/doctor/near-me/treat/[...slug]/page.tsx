@@ -191,12 +191,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
             {/* ========== HERO ========== */}
-            <section className="relative bg-gradient-to-br from-teal-900 via-teal-700 to-teal-700 text-white overflow-hidden">
+            <section className="relative bg-gradient-to-br from-fuchsia-900 via-fuchsia-700 to-fuchsia-700 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-5">
                     <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                 </div>
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-20 relative z-10">
-                    <nav className="flex items-center text-sm text-teal-200 mb-8 overflow-x-auto whitespace-nowrap">
+                    <nav className="flex items-center text-sm text-fuchsia-200 mb-8 overflow-x-auto whitespace-nowrap">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <Link href="/doctor/near-me/treat" className="hover:text-white transition-colors">Treatments</Link>
@@ -218,7 +218,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         </div>
                         <div>
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{service.title}</h1>
-                            <p className="mt-4 text-lg text-teal-100 max-w-3xl leading-relaxed">{service.short_description}</p>
+                            <p className="mt-4 text-lg text-fuchsia-100 max-w-3xl leading-relaxed">{service.short_description}</p>
 
                             <div className="flex flex-wrap gap-4 mt-6">
                                 {procedures.length > 0 && (
@@ -259,7 +259,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         {/* About */}
                         <Card className="p-8 border-none shadow-sm rounded-2xl">
                             <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                                <span className="bg-teal-100 p-2 rounded-lg mr-3 text-teal-600">
+                                <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                     <Stethoscope className="w-5 h-5" />
                                 </span>
                                 About {service.title} — What You Need to Know
@@ -271,16 +271,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         {procedures.length > 0 && (
                             <Card className="p-8 border-none shadow-sm rounded-2xl">
                                 <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                                    <span className="bg-teal-100 p-2 rounded-lg mr-3 text-teal-600">
+                                    <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                         <CheckCircle2 className="w-5 h-5" />
                                     </span>
                                     {isTreatmentPage ? 'Treatment Benefits & Features' : 'Treatments & Procedures'}
                                 </h2>
                                 <ul className="grid sm:grid-cols-2 gap-3">
                                     {procedures.map((proc) => (
-                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-teal-50 transition-colors group">
+                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-fuchsia-50 transition-colors group">
                                             <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                                            <span className="text-gray-700 group-hover:text-teal-700 font-medium text-sm">{proc}</span>
+                                            <span className="text-gray-700 group-hover:text-fuchsia-700 font-medium text-sm">{proc}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -298,7 +298,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         {relatedDoctors.length > 0 && (
                             <div>
                                 <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                                    <span className="bg-teal-100 p-2 rounded-lg mr-3 text-teal-600">
+                                    <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                         <GraduationCap className="w-5 h-5" />
                                     </span>
                                     Surgeons Who Specialise in {service.title}
@@ -313,13 +313,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
                         {/* If Treatment Page, Link to Parent Service */}
                         {isTreatmentPage && treatment && (
-                            <Card className="p-6 border-none shadow-sm rounded-2xl bg-gradient-to-r from-teal-50 to-teal-50">
+                            <Card className="p-6 border-none shadow-sm rounded-2xl bg-gradient-to-r from-fuchsia-50 to-fuchsia-50">
                                 <div className="flex items-center justify-between">
                                     <div>
                                         <h3 className="font-bold text-gray-900">Explore Department</h3>
                                         <p className="text-sm text-gray-600">View all services in {treatment.parentServiceSlug}</p>
                                     </div>
-                                    <Link href={`/doctor/near-me/treat/${treatment.parentServiceSlug}`} className="px-4 py-2 bg-white text-teal-700 font-semibold rounded-lg shadow-sm hover:shadow-md transition-all">
+                                    <Link href={`/doctor/near-me/treat/${treatment.parentServiceSlug}`} className="px-4 py-2 bg-white text-fuchsia-700 font-semibold rounded-lg shadow-sm hover:shadow-md transition-all">
                                         View Department
                                     </Link>
                                 </div>
@@ -331,7 +331,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div className="lg:col-span-1 space-y-6">
                         <div className="lg:sticky lg:top-24 space-y-6">
                             {/* Book Appointment */}
-                            <Card className="p-6 border-none shadow-lg rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50">
+                            <Card className="p-6 border-none shadow-lg rounded-2xl bg-gradient-to-br from-green-50 to-pink-50">
                                 <div className="text-center">
                                     <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <MessageCircle className="w-7 h-7 text-green-600" />

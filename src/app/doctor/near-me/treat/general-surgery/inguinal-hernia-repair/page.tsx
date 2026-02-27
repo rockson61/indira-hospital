@@ -109,7 +109,7 @@ export default function InguinalHerniaRepairPage() {
                     <li><strong>Obstructed hernia:</strong> Intestinal obstruction from trapped bowel</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 rounded-[2.5rem] border border-green-100 dark:border-green-900 shadow-sm">
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-green-50 to-pink-50 dark:from-green-900/10 dark:to-pink-900/10 rounded-[2.5rem] border border-green-100 dark:border-green-900 shadow-sm">
                     <h4 className="text-2xl font-black text-slate-900 dark:text-green-300 mb-4 tracking-tight">Hernia Centre at Indira Hospital</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[

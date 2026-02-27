@@ -19,7 +19,7 @@ export function BruxismContent() {
                     ].map((item, i) => (
                         <Card key={i} className="bg-slate-50 dark:bg-slate-900 border-slate-100 dark:border-slate-800">
                             <CardContent className="p-4 text-center">
-                                <item.icon className="w-8 h-8 text-teal-600 mx-auto mb-3" />
+                                <item.icon className="w-8 h-8 text-fuchsia-600 mx-auto mb-3" />
                                 <h4 className="font-bold text-foreground mb-1">{item.title}</h4>
                                 <p className="text-sm text-muted-foreground">{item.desc}</p>
                             </CardContent>

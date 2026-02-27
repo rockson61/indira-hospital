@@ -99,8 +99,8 @@ export default function TotalKneeReplacementCostPage() {
           Our surgeons utilize "sub-vastus" or "mid-vastus" approaches that don't cut through the main quad muscle. This results in significantly less pain, better early control of the leg, and a much faster return to independent walking compared to traditional methods.
         </p>
 
-        <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-[2.5rem] border border-teal-100 dark:border-blue-800 shadow-sm relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+        <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-blue-800 shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
           <h4 className="text-2xl font-black text-slate-900 dark:text-blue-300 mb-6 tracking-tight">Rapid Recovery & Support</h4>
           <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
             Our surgical packages are comprehensive, covering the implant, hospital stay, and initial physiotherapy.
@@ -113,7 +113,7 @@ export default function TotalKneeReplacementCostPage() {
               "Home Physiotherapy Assistance"
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
                 <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
               </div>
             ))}

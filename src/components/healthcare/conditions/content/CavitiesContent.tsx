@@ -27,7 +27,7 @@ export function CavitiesContent() {
                         }
                     ].map((step, i) => (
                         <div key={i} className="relative">
-                            <div className="absolute -left-[41px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-teal-600 text-white text-xs font-bold ring-4 ring-white">
+                            <div className="absolute -left-[41px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-fuchsia-600 text-white text-xs font-bold ring-4 ring-white">
                                 {i + 1}
                             </div>
                             <h4 className="text-lg font-semibold text-foreground mb-1">{step.title}</h4>
