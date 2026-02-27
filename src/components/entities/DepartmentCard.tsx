@@ -31,21 +31,21 @@ export function DepartmentCard({ department, className, variant = "grid" }: Depa
                     )}
                 >
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors shadow-sm dark:shadow-slate-900/30">
+                        <div className="w-12 h-12 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors shadow-sm dark:shadow-slate-900/30">
                             <Stethoscope className="w-5 h-5" />
                         </div>
                         <span className="font-bold text-slate-900 dark:text-white group-hover:text-fuchsia-700 transition-colors text-base">
                             {department.title || department.name}
                         </span>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-fuchsia-50 transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
                         <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600" />
                     </div>
                 </Link>
             ) : (
                 <Link href={href} className={cn("block group h-full", className)}>
-                    <Card className="h-full p-8 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 shadow-soft hover:shadow-float hover:-translate-y-1 transition-all duration-400 bg-white dark:bg-slate-900 flex flex-col relative overflow-hidden">
-                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-fuchsia-50 rounded-full blur-3xl opacity-50 group-hover:bg-fuchsia-100 transition-colors duration-500" />
+                    <Card className="h-full p-8 rounded-[2.5rem] border border-slate-100 dark:border-slate-700/50 shadow-soft hover:shadow-float dark:hover:shadow-fuchsia-500/5 hover:-translate-y-1 transition-all duration-400 bg-white dark:bg-slate-800/50 flex flex-col relative overflow-hidden">
+                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full blur-3xl opacity-50 group-hover:bg-fuchsia-100 transition-colors duration-500" />
 
                         <div className="absolute bottom-0 right-0 p-6 opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500 transform origin-bottom-right">
                             <Stethoscope className="w-32 h-32 text-fuchsia-600" />
@@ -65,7 +65,7 @@ export function DepartmentCard({ department, className, variant = "grid" }: Depa
 
                         <div className="mt-auto flex items-center justify-between relative z-10">
                             <span className="text-slate-900 dark:text-white font-bold text-sm tracking-wide uppercase group-hover:text-fuchsia-600 transition-colors">Explore</span>
-                            <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-fuchsia-50 transition-colors">
+                            <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
                                 <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-600 transition-colors group-hover:translate-x-0.5" />
                             </div>
                         </div>

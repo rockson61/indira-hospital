@@ -62,7 +62,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                             {/* Quick info badges */}
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {test.home_collection && (
-                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs rounded-full">
+                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs rounded-full">
                                         <Home className="w-3 h-3" /> Home Collection
                                     </span>
                                 )}
@@ -72,12 +72,12 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                                     </span>
                                 )}
                                 {test.sample_type && test.sample_type !== 'N/A - Imaging' && (
-                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs rounded-full">
+                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs rounded-full">
                                         <Droplets className="w-3 h-3" /> {test.sample_type}
                                     </span>
                                 )}
                                 {test.parameters_count && test.parameters_count > 0 && (
-                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs rounded-full">
+                                    <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs rounded-full">
                                         <Beaker className="w-3 h-3" /> {test.parameters_count} parameters
                                     </span>
                                 )}
@@ -141,7 +141,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                                 <h2 className="text-2xl font-bold mb-4">Conditions Detected</h2>
                                 <div className="flex flex-wrap gap-2">
                                     {usedToDiagnose.map((condition: string) => (
-                                        <span key={condition} className="px-3 py-1.5 bg-slate-100 text-slate-700 dark:text-slate-200 rounded-full text-sm">
+                                        <span key={condition} className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-full text-sm">
                                             {condition}
                                         </span>
                                     ))}
@@ -192,7 +192,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                             <p className="text-sm text-muted-foreground mb-6">
                                 Not sure which test to book? Our support team is here to guide you.
                             </p>
-                            <Button variant="ghost" className="w-full flex items-center justify-start gap-3 hover:bg-slate-200" asChild>
+                            <Button variant="ghost" className="w-full flex items-center justify-start gap-3 hover:bg-slate-200 dark:bg-slate-700" asChild>
                                 <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}>
                                     <Phone className="w-4 h-4" />
                                     {clinicConfig.phone}

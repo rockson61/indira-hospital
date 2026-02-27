@@ -18,7 +18,7 @@ export function GeographicTongueContent() {
                             <p className="text-sm text-red-800">Smooth red islands with slightly raised white borders.</p>
                         </div>
                     </div>
-                    <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-4 rounded-lg flex gap-3">
+                    <div className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 p-4 rounded-lg flex gap-3">
                         <RefreshCw className="w-6 h-6 text-fuchsia-500 mt-1 shrink-0" />
                         <div>
                             <h4 className="font-bold text-blue-900 dark:text-blue-100">Comes and Goes</h4>

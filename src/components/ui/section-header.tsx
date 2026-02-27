@@ -5,6 +5,7 @@ interface SectionHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
     subtitle?: string;
     description?: string;
     align?: "left" | "center" | "right";
+    variant?: "light" | "dark";
 }
 
 export function SectionHeader({
@@ -12,9 +13,12 @@ export function SectionHeader({
     subtitle,
     description,
     align = "center",
+    variant = "light",
     className,
     ...props
 }: SectionHeaderProps) {
+    const isDark = variant === "dark";
+
     return (
         <div
             className={cn(
@@ -29,15 +33,24 @@ export function SectionHeader({
             {...props}
         >
             {subtitle && (
-                <span className="text-secondary font-semibold tracking-wide uppercase text-sm">
+                <span className={cn(
+                    "font-semibold tracking-wide uppercase text-sm",
+                    isDark ? "text-fuchsia-400" : "text-secondary"
+                )}>
                     {subtitle}
                 </span>
             )}
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
+            <h2 className={cn(
+                "text-2xl md:text-3xl font-bold tracking-tight",
+                isDark ? "text-white" : "text-gray-900 dark:text-white"
+            )}>
                 {title}
             </h2>
             {description && (
-                <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+                <p className={cn(
+                    "mt-4 text-lg max-w-2xl leading-relaxed",
+                    isDark ? "text-slate-300" : "text-gray-600 dark:text-gray-400"
+                )}>
                     {description}
                 </p>
             )}
@@ -47,3 +60,4 @@ export function SectionHeader({
         </div>
     );
 }
+

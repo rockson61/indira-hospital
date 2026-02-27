@@ -129,7 +129,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                         <div className="text-2xl font-black text-slate-800 dark:text-slate-100">{location.distance}</div>
                                         <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">To Main Campus</div>
                                     </div>
-                                    <div className="px-6 py-4 bg-fuchsia-50 rounded-2xl border border-fuchsia-100">
+                                    <div className="px-6 py-4 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl border border-fuchsia-100">
                                         <div className="text-2xl font-black text-fuchsia-600">{location.travelTime}</div>
                                         <div className="text-xs font-bold text-fuchsia-500 uppercase tracking-widest">Travel Time</div>
                                     </div>
@@ -186,7 +186,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <SectionContainer className="py-24 max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div className="max-w-2xl text-center md:text-left">
-                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-4">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-4">
                             <Stethoscope className="w-4 h-4" /> Top Specialists
                         </span>
                         <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Experts Serving {location.name}</h2>
@@ -320,7 +320,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
                         {/* Local Attractions */}
                         <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-pink-50 rounded-2xl flex items-center justify-center mb-6">
+                            <div className="w-12 h-12 bg-pink-50 dark:bg-pink-950 rounded-2xl flex items-center justify-center mb-6">
                                 <Landmark className="w-6 h-6 text-pink-500" />
                             </div>
                             <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Local Landmarks</h4>
@@ -358,7 +358,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full blur-[100px]" />
                 <div className="grid md:grid-cols-2 gap-20 items-center">
                     <div>
-                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-10">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-10">
                             <Star className="w-4 h-4" /> Served Locations Rank #1
                         </span>
                         <h2 className="text-4xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1] mb-8">
@@ -392,7 +392,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                 href={`/doctor/near-me/treat/${dept.slug}`}
                                 className="p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 shadow-sm hover:border-fuchsia-300 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col"
                             >
-                                <div className="w-14 h-14 bg-fuchsia-50 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-fuchsia-500 transition-colors">
+                                <div className="w-14 h-14 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-fuchsia-500 transition-colors">
                                     <Heart className="w-7 h-7 text-fuchsia-600 group-hover:text-white" />
                                 </div>
                                 <div className="font-black text-slate-900 dark:text-white text-lg group-hover:text-fuchsia-600 transition-colors leading-tight">{dept.title}</div>
@@ -418,7 +418,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-soft transition-all flex flex-col justify-between group"
                         >
                             <div>
-                                <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-fuchsia-50 transition-colors">
+                                <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
                                     <MapPin className="w-5 h-5 text-slate-300 group-hover:text-fuchsia-500" />
                                 </div>
                                 <div className="font-black text-slate-900 dark:text-white text-xl tracking-tight mb-1">{near.name}</div>

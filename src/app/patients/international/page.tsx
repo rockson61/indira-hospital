@@ -106,7 +106,7 @@ export default function InternationalPatientsPage() {
                     </div>
 
                     <div className="order-1 lg:order-2">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-6 border border-fuchsia-100">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-6 border border-fuchsia-100">
                             <Stethoscope className="w-4 h-4" /> Global Hub
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black mb-10 text-slate-900 dark:text-white tracking-tight leading-[1.1]">

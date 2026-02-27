@@ -30,7 +30,7 @@ export default async function EntityFAQs({
     }
 
     return (
-        <section className={cn("bg-[#FAFAFA] py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-700", className)}>
+        <section className={cn("bg-[#FAFAFA] dark:bg-slate-950 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-700", className)}>
             <div className="max-w-7xl mx-auto">
                 <FAQSection
                     title={title || `Frequently Asked Questions about ${entityName}`}

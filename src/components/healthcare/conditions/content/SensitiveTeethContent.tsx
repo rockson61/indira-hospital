@@ -12,7 +12,7 @@ export function SensitiveTeethContent() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-xl border border-blue-100 dark:border-fuchsia-700/40">
+                <div className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 p-6 rounded-xl border border-blue-100 dark:border-fuchsia-700/40">
                     <h4 className="flex items-center gap-2 font-bold text-foreground mb-4">
                         <Snowflake className="w-5 h-5 text-fuchsia-500" />
                         Common Triggers
@@ -33,7 +33,7 @@ export function SensitiveTeethContent() {
                     </ul>
                 </div>
 
-                <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-xl border border-fuchsia-100 dark:border-fuchsia-700/40">
+                <div className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 p-6 rounded-xl border border-fuchsia-100 dark:border-fuchsia-700/40">
                     <h4 className="flex items-center gap-2 font-bold text-foreground mb-4">
                         <Zap className="w-5 h-5 text-fuchsia-600" />
                         Management Tips

@@ -139,16 +139,16 @@ export function SubServiceTemplate({
     }
 
     return (
-        <div className="min-h-screen bg-[#FAFAFA]">
+        <div className="min-h-screen bg-[#FAFAFA] dark:bg-slate-950">
             {/* JSON-LD */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureJsonLd) }} />
 
             {/* ── Hero ─────────────────────────────────────────────────────── */}
-            <section className="relative pt-44 pb-20 lg:pt-52 lg:pb-28 overflow-hidden bg-[#FAFAFA]">
+            <section className="relative pt-44 pb-20 lg:pt-52 lg:pb-28 overflow-hidden bg-[#FAFAFA] dark:bg-slate-950">
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-fuchsia-50 blur-[120px] opacity-60" />
-                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-fuchsia-50 blur-[120px] opacity-50" />
+                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 blur-[120px] opacity-60" />
+                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 blur-[120px] opacity-50" />
                 </div>
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -178,7 +178,7 @@ export function SubServiceTemplate({
                         </p>
                     )}
                     <h1 className="text-5xl sm:text-6xl font-heading font-black tracking-tight mb-4 text-slate-900 dark:text-white">{title}</h1>
-                    <div className="text-lg text-slate-600 max-w-2xl leading-relaxed font-medium">
+                    <div className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-medium">
                         {description}
                     </div>
 
@@ -186,7 +186,7 @@ export function SubServiceTemplate({
                     <div className="flex flex-wrap gap-4 mt-8">
                         <Link
                             href={bookingUrl}
-                            className="inline-flex items-center px-10 py-4 bg-slate-900 text-white font-bold rounded-full transition-all shadow-float hover:-translate-y-1"
+                            className="inline-flex items-center px-10 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-full transition-all shadow-float hover:-translate-y-1 hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200"
                         >
                             <Calendar className="h-5 w-5 mr-2" />
                             Book Consultation
@@ -215,7 +215,7 @@ export function SubServiceTemplate({
                             <div key={index} className="bg-white dark:bg-slate-900 rounded-[2rem] shadow-soft border border-slate-100 dark:border-slate-700 p-6 text-center">
                                 {Icon && (
                                     <div className="flex justify-center mb-2">
-                                        <div className="w-10 h-10 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-600">
+                                        <div className="w-10 h-10 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center text-fuchsia-600">
                                             <Icon className="w-5 h-5" />
                                         </div>
                                     </div>
@@ -280,7 +280,7 @@ export function SubServiceTemplate({
                                 <div className="space-y-4">
                                     <Link
                                         href={bookingUrl}
-                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-900 hover:bg-fuchsia-700 text-white font-bold rounded-full transition-all shadow-sm text-base"
+                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-900 dark:bg-white hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 text-white dark:text-slate-900 font-bold rounded-full transition-all shadow-sm text-base"
                                     >
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Book Consultation
@@ -296,7 +296,7 @@ export function SubServiceTemplate({
                                     </a>
                                     <a
                                         href={`tel:${phone.replace(/\s+/g, '')}`}
-                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 text-slate-700 dark:text-slate-200 font-bold rounded-full transition-all border border-slate-100 dark:border-slate-700 text-base"
+                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-full transition-all border border-slate-100 dark:border-slate-700 text-base"
                                     >
                                         <Phone className="w-5 h-5 mr-2 text-fuchsia-600" />
                                         {phone}
@@ -310,7 +310,7 @@ export function SubServiceTemplate({
                                     <Clock className="w-5 h-5 text-fuchsia-600" />
                                     OPD Schedule
                                 </h3>
-                                <div className="space-y-0 divide-y divide-gray-100">
+                                <div className="space-y-0 divide-y divide-gray-100 dark:divide-slate-700">
                                     {[
                                         { day: 'Monday — Friday', time: '24 Hours' },
                                         { day: 'Saturday', time: '24 Hours' },
@@ -358,7 +358,7 @@ export function SubServiceTemplate({
 
             {/* ── Related Services ──────────────────────────────────────────── */}
             {relatedServices && (
-                <section className="bg-[#FAFAFA] py-20 border-b border-slate-100 dark:border-slate-700">
+                <section className="bg-[#FAFAFA] dark:bg-slate-950 py-20 border-b border-slate-100 dark:border-slate-700">
                     <SectionContainer>
                         <RelatedServices {...relatedServices} />
                     </SectionContainer>
@@ -381,7 +381,7 @@ export function SubServiceTemplate({
             )}
 
             {/* ── Final CTA ─────────────────────────────────────────────────── */}
-            <section className="bg-[#002b36] py-20 relative overflow-hidden">
+            <section className="bg-[#002b36] dark:bg-slate-900 py-20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-[120px]" />
                 <SectionContainer>
                     <div className="max-w-4xl mx-auto text-center space-y-8 relative">

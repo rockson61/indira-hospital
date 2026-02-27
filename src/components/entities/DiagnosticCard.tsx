@@ -58,12 +58,12 @@ export function DiagnosticCard({ test, className }: DiagnosticCardProps) {
 
                     <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700 relative z-10">
                         <div className="flex flex-wrap gap-2 mb-6">
-                            <span className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 bg-slate-100 px-3 py-1.5 rounded-xl">
+                            <span className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">
                                 <Clock className="w-3.5 h-3.5 text-fuchsia-500" />
                                 {test.report_time || '24h'} Report
                             </span>
                             {test.home_collection && (
-                                <span className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-fuchsia-700 bg-fuchsia-50 px-3 py-1.5 rounded-xl border border-fuchsia-100">
+                                <span className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-fuchsia-700 bg-fuchsia-50 dark:bg-fuchsia-950 px-3 py-1.5 rounded-xl border border-fuchsia-100">
                                     <Home className="w-3.5 h-3.5" />
                                     Home Visit
                                 </span>
@@ -72,7 +72,7 @@ export function DiagnosticCard({ test, className }: DiagnosticCardProps) {
 
                         <div className="flex items-center justify-between">
                             <span className="text-xs font-black text-slate-400 uppercase tracking-widest group-hover:text-fuchsia-500 transition-colors">Know More</span>
-                            <div className="w-10 h-10 rounded-full bg-slate-100 group-hover:bg-fuchsia-500 flex items-center justify-center transition-all duration-500 group-hover:rotate-[-45deg]">
+                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 group-hover:bg-fuchsia-500 flex items-center justify-center transition-all duration-500 group-hover:rotate-[-45deg]">
                                 <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" />
                             </div>
                         </div>

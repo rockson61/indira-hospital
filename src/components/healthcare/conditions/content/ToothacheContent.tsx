@@ -20,7 +20,7 @@ export function ToothacheContent() {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="bg-fuchsia-50 dark:bg-slate-800/60 border-blue-100 dark:border-fuchsia-700/40">
+                    <Card className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 border-blue-100 dark:border-fuchsia-700/40">
                         <CardContent className="p-4 flex items-start gap-3">
                             <HelpCircle className="w-6 h-6 text-fuchsia-600 mt-1 shrink-0" />
                             <div>

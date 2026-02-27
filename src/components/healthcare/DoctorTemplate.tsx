@@ -187,7 +187,7 @@ export function DoctorTemplate({
                                                 <div>
                                                     <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg">{isString ? edu : edu.degree}</h3>
                                                     {!isString && edu.institution && <p className="text-slate-500 dark:text-slate-400 font-medium">{edu.institution}</p>}
-                                                    {!isString && edu.year && <span className="inline-block mt-2 px-3 py-1 bg-fuchsia-50 text-fuchsia-600 text-xs font-bold rounded-full tracking-wider">{edu.year}</span>}
+                                                    {!isString && edu.year && <span className="inline-block mt-2 px-3 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600 text-xs font-bold rounded-full tracking-wider">{edu.year}</span>}
                                                 </div>
                                             </div>
                                         )

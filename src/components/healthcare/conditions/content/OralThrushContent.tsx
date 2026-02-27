@@ -29,7 +29,7 @@ export function OralThrushContent() {
                 <p className="text-foreground/80 mb-4">
                     The goal is to stop the rapid spread of the fungus:
                 </p>
-                <div className="p-4 border-l-4 border-fuchsia-500 bg-fuchsia-50 dark:bg-slate-800/60 rounded-r-lg">
+                <div className="p-4 border-l-4 border-fuchsia-500 bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 rounded-r-lg">
                     <strong className="block text-fuchsia-900 dark:text-fuchsia-100 mb-1">Antifungal Medications</strong>
                     <p className="text-sm text-fuchsia-800">Lozenge, tablet, or liquid mouthwash (typically Nystatin) to swish and swallow.</p>
                 </div>

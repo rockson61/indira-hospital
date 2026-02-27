@@ -23,7 +23,7 @@ export function EnamelErosionContent() {
                             <li>• Wine and excessive vitamin C</li>
                         </ul>
                     </div>
-                    <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-xl">
+                    <div className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 p-6 rounded-xl">
                         <h4 className="font-bold text-fuchsia-900 dark:text-fuchsia-100 mb-4 flex items-center gap-2">
                             <Shield className="w-5 h-5 text-fuchsia-600" />
                             How to Stop It

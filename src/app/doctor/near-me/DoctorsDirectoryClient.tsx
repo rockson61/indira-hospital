@@ -120,7 +120,7 @@ export default function DoctorsDirectoryClient() {
                                                 </span>
                                             </div>
                                             <div className="pt-2">
-                                                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-4 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
+                                                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-4 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
                                                     <Sparkles className="w-3 h-3" /> Specialist
                                                 </div>
                                                 <h2 className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-[1.1]">
@@ -167,7 +167,7 @@ export default function DoctorsDirectoryClient() {
                                             </Link>
                                             <Link
                                                 href={`${DOCTORS_DIRECTORY.BOOK_VISIT_HREF_PREFIX}?doctor=${doctor.id}`}
-                                                className="group/btn relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:bg-fuchsia-500 hover:scale-[1.02] shadow-xl transition-all duration-500 overflow-hidden"
+                                                className="group/btn relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-500 dark:hover:bg-fuchsia-200 hover:scale-[1.02] shadow-xl transition-all duration-500 overflow-hidden"
                                             >
                                                 <span className="relative z-10 uppercase tracking-widest mr-4">Book Visit</span>
                                                 <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

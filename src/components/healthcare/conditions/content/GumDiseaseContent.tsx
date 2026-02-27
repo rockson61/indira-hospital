@@ -63,7 +63,7 @@ export function GumDiseaseContent() {
                 </ul>
             </div>
 
-            <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-fuchsia-100 dark:border-fuchsia-700/40">
+            <div className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 p-6 rounded-2xl border border-fuchsia-100 dark:border-fuchsia-700/40">
                 <h3 className="text-xl font-bold text-fuchsia-900 dark:text-fuchsia-100 mb-3 flex items-center gap-2">
                     <ShieldCheck className="w-6 h-6 text-fuchsia-600" />
                     Prevention Tips

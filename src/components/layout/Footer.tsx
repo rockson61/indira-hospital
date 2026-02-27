@@ -9,28 +9,28 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-slate-900 text-white pt-20 pb-10">
+        <footer className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white pt-20 pb-10 border-t border-slate-200 dark:border-slate-800">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Top: Brand + Contact */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     <div className="lg:col-span-1 space-y-5">
-                        <span className="text-2xl font-heading font-black tracking-tight">{siteConfig.name}</span>
-                        <p className="text-slate-400 text-sm leading-relaxed font-medium max-w-xs">{siteConfig.description}</p>
+                        <span className="text-2xl font-heading font-black tracking-tight text-slate-900 dark:text-white">{siteConfig.name}</span>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed font-medium max-w-xs">{siteConfig.description}</p>
                         <div className="space-y-3">
-                            <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center gap-3 text-sm font-bold text-rose-400 hover:text-rose-300 transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-rose-500/10 flex items-center justify-center flex-shrink-0">
+                            <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center gap-3 text-sm font-bold text-rose-600 dark:text-rose-400 hover:text-rose-500 dark:hover:text-rose-300 transition-colors">
+                                <div className="w-8 h-8 rounded-full bg-rose-50 dark:bg-rose-500/10 flex items-center justify-center flex-shrink-0">
                                     <Phone className="w-4 h-4" />
                                 </div>
                                 Emergency: {siteConfig.contact.emergencyPhone}
                             </a>
-                            <div className="flex items-center gap-3 text-sm text-slate-400">
-                                <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0">
+                            <div className="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
                                     <MapPin className="w-4 h-4" />
                                 </div>
                                 {siteConfig.contact.address}
                             </div>
-                            <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-sm text-slate-400 hover:text-fuchsia-400 transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0">
+                            <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors">
+                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
                                     <Mail className="w-4 h-4" />
                                 </div>
                                 {siteConfig.contact.email}
@@ -40,11 +40,11 @@ export function Footer() {
 
                     {/* Services Column */}
                     <div>
-                        <h3 className="font-heading font-bold text-white mb-5 tracking-wide uppercase text-sm">Services</h3>
+                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-5 tracking-wide uppercase text-sm">Services</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.medicalServices.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-500 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -52,11 +52,11 @@ export function Footer() {
 
                     {/* Procedures Column */}
                     <div>
-                        <h3 className="font-heading font-bold text-white mb-5 tracking-wide uppercase text-sm">Key Procedures</h3>
+                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-5 tracking-wide uppercase text-sm">Key Procedures</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.procedures.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-500 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -64,19 +64,19 @@ export function Footer() {
 
                     {/* Quick Links + Legal */}
                     <div>
-                        <h3 className="font-heading font-bold text-white mb-5 tracking-wide uppercase text-sm">Quick Links</h3>
+                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-5 tracking-wide uppercase text-sm">Quick Links</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.quickLinks.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-500 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
-                        <h3 className="font-heading font-bold text-white mb-4 mt-8 tracking-wide uppercase text-sm">Patient Care</h3>
+                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-4 mt-8 tracking-wide uppercase text-sm">Patient Care</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.patientCare.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-500 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -84,14 +84,14 @@ export function Footer() {
                 </div>
 
                 {/* Middle: Locations Hierarchy */}
-                <div className="border-t border-slate-800 py-10">
+                <div className="border-t border-slate-200 dark:border-slate-800 py-10">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                         {LOCATION_HIERARCHY.map((group) => (
                             <div key={group.region}>
-                                <h4 className="text-[11px] font-bold text-fuchsia-500 uppercase tracking-widest mb-4">{group.region}</h4>
+                                <h4 className="text-[11px] font-bold text-fuchsia-600 dark:text-fuchsia-500 uppercase tracking-widest mb-4">{group.region}</h4>
                                 <div className="flex flex-col gap-2.5">
                                     {group.locations.map((loc) => (
-                                        <Link key={loc.name} href={loc.url} className="text-sm text-slate-400 hover:text-fuchsia-400 transition-colors font-medium">
+                                        <Link key={loc.name} href={loc.url} className="text-sm text-slate-500 dark:text-slate-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">
                                             {loc.name}
                                         </Link>
                                     ))}
@@ -102,14 +102,14 @@ export function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
+                <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-sm text-slate-400 dark:text-slate-500 font-medium">
                         &copy; {currentYear} {siteConfig.name}. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
-                        <Link href="/privacy" className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-300 transition-colors font-medium">Privacy</Link>
-                        <Link href="/terms" className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-300 transition-colors font-medium">Terms</Link>
-                        <Link href="/sitemap.xml" className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-300 transition-colors font-medium">Sitemap</Link>
+                        <Link href="/privacy" className="text-sm text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Privacy</Link>
+                        <Link href="/terms" className="text-sm text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Terms</Link>
+                        <Link href="/sitemap.xml" className="text-sm text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Sitemap</Link>
                     </div>
                 </div>
             </div>

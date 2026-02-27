@@ -28,8 +28,8 @@ export default async function LocationDoctorPage({
             </nav>
 
             <div className="mb-8 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-50 rounded-full blur-3xl opacity-60" />
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-fuchsia-50 text-fuchsia-700 text-sm font-medium mb-4">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full blur-3xl opacity-60" />
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm font-medium mb-4">
                     Clinical Consultant in {formattedCity}
                 </span>
                 <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2">{currDoctor.name}</h1>

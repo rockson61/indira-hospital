@@ -39,7 +39,7 @@ export function DepartmentGridSection() {
                             href={`/doctor/near-me/treat/${dept.slug}`}
                             className="group block rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-100 transition-all duration-300"
                         >
-                            <div className="h-16 w-16 rounded-2xl bg-gray-50 dark:bg-slate-950 flex items-center justify-center mb-6 group-hover:bg-fuchsia-50 group-hover:scale-110 transition-all">
+                            <div className="h-16 w-16 rounded-2xl bg-gray-50 dark:bg-slate-950 flex items-center justify-center mb-6 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:scale-110 transition-all">
                                 {iconMap[dept.icon] || <Activity className="h-8 w-8 text-gray-500 dark:text-gray-400" />}
                             </div>
 

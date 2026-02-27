@@ -36,7 +36,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                 transition={{ duration: 0.3 }}
             >
                 <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-soft hover:border-fuchsia-100 hover:-translate-y-0.5 transition-all">
-                    <div className="relative w-14 h-14 rounded-full bg-fuchsia-50 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm dark:shadow-slate-900/30">
+                    <div className="relative w-14 h-14 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm dark:shadow-slate-900/30">
                         {doctor.image && getImageUrl(doctor.image) ? (
                             <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover" />
                         ) : (
@@ -47,7 +47,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                         <h3 className="font-bold font-heading text-slate-900 dark:text-white text-base truncate group-hover:text-fuchsia-700 transition-colors">{doctor.name}</h3>
                         <p className="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase truncate mt-0.5">{deptName}</p>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-fuchsia-50 transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
                         <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600 transition-colors" />
                     </div>
                 </Link>
@@ -69,7 +69,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                         {doctor.image && getImageUrl(doctor.image) ? (
                             <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                         ) : (
-                            <div className="w-full h-full flex items-center justify-center bg-fuchsia-50 text-fuchsia-300">
+                            <div className="w-full h-full flex items-center justify-center bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-300">
                                 <Stethoscope className="w-12 h-12" />
                             </div>
                         )}
@@ -94,14 +94,14 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                                 </div>
                                 {showBookButton && (
                                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                        className="hidden sm:inline-flex items-center px-6 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-fuchsia-700 hover:shadow-md transition-all">
+                                        className="hidden sm:inline-flex items-center px-6 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold rounded-full hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 hover:shadow-md transition-all">
                                         <MessageCircle className="w-4 h-4 mr-2" />
                                         Book
                                     </a>
                                 )}
                             </div>
 
-                            <div className="flex flex-wrap gap-y-2 gap-x-3 text-sm text-slate-600 mt-4">
+                            <div className="flex flex-wrap gap-y-2 gap-x-3 text-sm text-slate-600 dark:text-slate-300 mt-4">
                                 {deptName && (
                                     <span className="flex items-center gap-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-3 py-1.5 rounded-full font-medium">
                                         <Stethoscope className="w-4 h-4 text-fuchsia-600" />
@@ -117,7 +117,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             {doctor.specialties && doctor.specialties.length > 0 && (
                                 <div className="mt-5 flex flex-wrap gap-2">
                                     {doctor.specialties.slice(0, 3).map((spec: string) => (
-                                        <span key={spec} className="px-3 py-1 bg-fuchsia-50 text-fuchsia-700 text-xs font-bold rounded-full">
+                                        <span key={spec} className="px-3 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold rounded-full">
                                             {spec}
                                         </span>
                                     ))}
@@ -129,10 +129,10 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                         </div>
 
                         <div className="mt-6 pt-5 border-t border-slate-100 dark:border-slate-700 flex gap-3 sm:hidden">
-                            <a href={whatsappUrl} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-bold rounded-full shadow-sm dark:shadow-slate-900/30">
+                            <a href={whatsappUrl} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold rounded-full shadow-sm dark:shadow-slate-900/30">
                                 Book
                             </a>
-                            <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 text-slate-700 dark:text-slate-200 text-sm font-bold rounded-full">
+                            <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-bold rounded-full">
                                 Profile
                             </Link>
                         </div>
@@ -151,8 +151,8 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
             transition={{ duration: 0.4 }}
             className="h-full"
         >
-            <Card className="group overflow-hidden rounded-[2rem] border border-slate-100 dark:border-slate-700 shadow-soft hover:shadow-float hover:-translate-y-1 transition-all duration-300 h-full flex flex-col bg-white dark:bg-slate-900">
-                <div className="relative aspect-[4/3] bg-fuchsia-50 overflow-hidden m-2 rounded-[1.5rem] shadow-inner">
+            <Card className="group overflow-hidden rounded-[2rem] border border-slate-100 dark:border-slate-700/50 shadow-soft hover:shadow-float dark:hover:shadow-fuchsia-500/5 hover:-translate-y-1 transition-all duration-300 h-full flex flex-col bg-white dark:bg-slate-800/50">
+                <div className="relative aspect-[4/3] bg-fuchsia-50 dark:bg-fuchsia-950 overflow-hidden m-2 rounded-[1.5rem] shadow-inner">
                     {doctor.image && getImageUrl(doctor.image) ? (
                         <Image
                             src={getImageUrl(doctor.image)!}
@@ -181,7 +181,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                 </div>
 
                 <div className="px-6 py-5 flex-1 flex flex-col">
-                    <p className="text-sm font-bold text-slate-600 line-clamp-1 mb-4 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-full inline-block self-start border border-slate-100 dark:border-slate-700">
+                    <p className="text-sm font-bold text-slate-600 dark:text-slate-300 line-clamp-1 mb-4 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-full inline-block self-start border border-slate-100 dark:border-slate-700">
                         {doctor.designation}
                     </p>
 
@@ -194,13 +194,13 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                     <div className="mt-auto flex gap-3 pt-5 border-t border-slate-100 dark:border-slate-700">
                         {showBookButton ? (
                             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                className="flex-1 flex items-center justify-center gap-2 bg-slate-900 hover:bg-fuchsia-700 text-white text-[13px] font-bold py-3 rounded-full transition-all shadow-sm dark:shadow-slate-900/30">
+                                className="flex-1 flex items-center justify-center gap-2 bg-slate-900 dark:bg-white hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 text-white dark:text-slate-900 text-[13px] font-bold py-3 rounded-full transition-all shadow-sm dark:shadow-slate-900/30">
                                 <MessageCircle className="w-4 h-4" />
                                 Book
                             </a>
                         ) : null}
                         <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`}
-                            className="flex-1 flex items-center justify-center gap-2 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 hover:text-fuchsia-700 text-slate-700 dark:text-slate-200 text-[13px] font-bold py-3 rounded-full transition-all border border-slate-100 dark:border-slate-700">
+                            className="flex-1 flex items-center justify-center gap-2 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 hover:text-fuchsia-700 text-slate-700 dark:text-slate-200 text-[13px] font-bold py-3 rounded-full transition-all border border-slate-100 dark:border-slate-700">
                             Profile
                         </Link>
                     </div>

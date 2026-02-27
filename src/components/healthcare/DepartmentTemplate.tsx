@@ -77,7 +77,7 @@ export function DepartmentTemplate({
     const phone = clinicConfig.phone;
 
     return (
-        <div className="min-h-screen bg-slate-50/30">
+        <div className="min-h-screen bg-slate-50/30 dark:bg-slate-950">
             {/* Premium Hero Section */}
             <section className="relative bg-gradient-to-br from-[#005f73] via-[#0a3d47] to-[#002b36] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/hero-hospital.png')] bg-cover bg-center opacity-10" />
@@ -145,7 +145,7 @@ export function DepartmentTemplate({
             <SectionContainer className="py-20">
                 <div className="grid lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-8 space-y-10">
-                        <div className="prose prose-lg max-w-none prose-slate prose-headings:text-slate-900 dark:text-white prose-p:text-slate-600 prose-strong:text-[#005f73]">
+                        <div className="prose prose-lg max-w-none prose-slate dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-strong:text-[#005f73] dark:prose-strong:text-fuchsia-300">
                             <h2 className="text-3xl font-bold mb-6">Expert Care in {title}</h2>
                             <div dangerouslySetInnerHTML={{ __html: fullDescription }} />
                         </div>
@@ -163,7 +163,7 @@ export function DepartmentTemplate({
                                                 </div>
                                                 <div>
                                                     <h4 className="font-bold text-slate-900 dark:text-white">{tech.name}</h4>
-                                                    <p className="text-sm text-slate-600 mt-1">{tech.description}</p>
+                                                    <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">{tech.description}</p>
                                                 </div>
                                             </div>
                                         </ModernCard>
@@ -182,15 +182,15 @@ export function DepartmentTemplate({
                             </h3>
                             <div className="space-y-4">
                                 <div className="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-700">
-                                    <span className="text-slate-600 font-medium">Monday — Friday</span>
+                                    <span className="text-slate-600 dark:text-slate-300 font-medium">Monday — Friday</span>
                                     <span className="font-bold text-fuchsia-700">24 Hours</span>
                                 </div>
                                 <div className="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-700">
-                                    <span className="text-slate-600 font-medium">Saturday</span>
+                                    <span className="text-slate-600 dark:text-slate-300 font-medium">Saturday</span>
                                     <span className="font-bold text-fuchsia-700">24 Hours</span>
                                 </div>
                                 <div className="flex justify-between items-center py-3">
-                                    <span className="text-slate-600 font-medium">Emergency</span>
+                                    <span className="text-slate-600 dark:text-slate-300 font-medium">Emergency</span>
                                     <span className="px-3 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full">ALWAYS OPEN</span>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@ export function DepartmentTemplate({
                             {procedures.map((proc, idx) => {
                                 const name = typeof proc === 'string' ? proc : proc.name;
                                 return (
-                                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 hover:scale-[1.02] transition-all group border border-transparent hover:border-fuchsia-100">
+                                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 hover:scale-[1.02] transition-all group border border-transparent hover:border-fuchsia-100">
                                         <div className="bg-fuchsia-100 p-2 rounded-lg text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors">
                                             <CheckCircle2 className="w-5 h-5" />
                                         </div>
@@ -232,7 +232,7 @@ export function DepartmentTemplate({
 
             {/* Specialized Centers / Mini Services */}
             {relatedServices.length > 0 && (
-                <section className="bg-slate-50/50 py-24">
+                <section className="bg-slate-50/50 dark:bg-slate-900 py-24">
                     <SectionContainer>
                         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                             <div>
@@ -263,7 +263,7 @@ export function DepartmentTemplate({
                 <section className="py-24 bg-white dark:bg-slate-900 overflow-hidden">
                     <SectionContainer>
                         <div className="text-center mb-16 relative">
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-fuchsia-50 rounded-full blur-3xl opacity-50 -z-10" />
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full blur-3xl opacity-50 -z-10" />
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Meet Our Expert Specialists</h2>
                             <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto italic">Highly experienced surgeons and clinicians dedicated to your wellbeing.</p>
                         </div>
@@ -292,7 +292,7 @@ export function DepartmentTemplate({
             />
 
             {/* Final CTA */}
-            <section className="bg-[#002b36] py-20 relative overflow-hidden">
+            <section className="bg-[#002b36] dark:bg-slate-900 py-20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-[120px]" />
                 <SectionContainer>
                     <div className="max-w-4xl mx-auto text-center space-y-8">

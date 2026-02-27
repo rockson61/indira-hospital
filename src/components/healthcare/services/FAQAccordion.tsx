@@ -177,7 +177,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
                     <Link
                       key={index}
                       href={location.href}
-                      className="inline-flex items-center justify-center px-3 py-2 bg-fuchsia-50 text-fuchsia-700 rounded-lg text-sm font-medium hover:bg-fuchsia-100 transition-colors"
+                      className="inline-flex items-center justify-center px-3 py-2 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 rounded-lg text-sm font-medium hover:bg-fuchsia-100 transition-colors"
                     >
                       {location.name}
                     </Link>
@@ -231,7 +231,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
                   At Indira Hospital, we prioritize your health. Schedule your consultation today with our renowned experts.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="bg-white dark:bg-slate-900 hover:bg-fuchsia-50 text-fuchsia-600">
+                  <Button asChild size="lg" className="bg-white dark:bg-slate-900 hover:bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600">
                     <Link href="/contact">
                       <Phone className="w-5 h-5 mr-2" />
                       Contact Us

@@ -49,7 +49,7 @@ const statsCardVariants = cva(
     variants: {
       variant: {
         default: "bg-card",
-        highlight: "bg-fuchsia-50 dark:bg-fuchsia-900/20 border-fuchsia-100 dark:border-fuchsia-800",
+        highlight: "bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-fuchsia-900/20 border-fuchsia-100 dark:border-fuchsia-800",
       },
     },
     defaultVariants: {

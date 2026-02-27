@@ -73,7 +73,7 @@ export default function InsurancePage() {
                         <div key={b.title} className="group relative bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(20,184,166,0.12)] hover:border-fuchsia-200 transition-all duration-500 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="relative z-10">
-                                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-fuchsia-50 text-fuchsia-600 group-hover:scale-110 group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-fuchsia-500/10">
+                                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600 group-hover:scale-110 group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-fuchsia-500/10">
                                     <b.icon className="h-8 w-8" />
                                 </div>
                                 <h3 className="font-bold text-xl mb-3 text-slate-900 dark:text-white">{b.title}</h3>

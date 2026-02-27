@@ -39,7 +39,7 @@ export default function FAQPage() {
                             <input
                                 type="text"
                                 placeholder="Search for appointments, insurance, surgery..."
-                                className="w-full pl-16 pr-6 py-6 rounded-full bg-white/90 backdrop-blur-xl border border-white/50 text-slate-900 dark:text-white text-lg shadow-2xl outline-none focus:ring-4 focus:ring-fuchsia-500/20 transition-all placeholder:text-slate-400 font-medium"
+                                className="w-full pl-16 pr-6 py-6 rounded-full bg-white/90 backdrop-blur-xl border border-white/50 text-slate-900 dark:text-white text-lg shadow-2xl outline-none focus:ring-4 focus:ring-fuchsia-500/20 transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500 font-medium"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
@@ -81,19 +81,19 @@ export default function FAQPage() {
                                 <details key={i} className="group bg-white/80 backdrop-blur-xl rounded-[2rem] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden transition-all duration-300 open:ring-2 open:ring-fuchsia-500/20 open:bg-white dark:bg-slate-900">
                                     <summary className="flex items-center justify-between p-8 cursor-pointer list-none font-bold text-xl text-slate-900 dark:text-white select-none">
                                         <div className="flex items-start sm:items-center gap-4">
-                                            <div className="mt-1 sm:mt-0 w-10 h-10 shrink-0 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 transition-colors group-open:bg-fuchsia-500 group-open:text-white group-hover:scale-110 duration-300">
+                                            <div className="mt-1 sm:mt-0 w-10 h-10 shrink-0 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center text-fuchsia-600 transition-colors group-open:bg-fuchsia-500 group-open:text-white group-hover:scale-110 duration-300">
                                                 <HelpCircle className="w-5 h-5" />
                                             </div>
                                             <span className="leading-snug">{faq.question}</span>
                                         </div>
-                                        <div className="w-10 h-10 shrink-0 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-open:bg-slate-100 transition-colors ml-4">
+                                        <div className="w-10 h-10 shrink-0 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-open:bg-slate-100 dark:bg-slate-800 transition-colors ml-4">
                                             <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform duration-500 ease-in-out" />
                                         </div>
                                     </summary>
                                     <div className="px-8 pb-8 pt-2 pl-24 text-slate-600 text-lg leading-relaxed border-t border-slate-50/50">
                                         {faq.answer}
                                         <div className="mt-6 flex items-center gap-2">
-                                            <span className="text-[10px] font-black uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full text-slate-400">
+                                            <span className="text-[10px] font-black uppercase tracking-widest bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full text-slate-400">
                                                 {faq.category}
                                             </span>
                                         </div>
@@ -102,7 +102,7 @@ export default function FAQPage() {
                             ))
                         ) : (
                             <div className="text-center py-24 bg-white/50 backdrop-blur-xl rounded-[3rem] border-2 border-dashed border-slate-200 dark:border-slate-700">
-                                <div className="w-24 h-24 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-6">
+                                <div className="w-24 h-24 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-6">
                                     <Search className="w-10 h-10 text-slate-300" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">No results found</h3>

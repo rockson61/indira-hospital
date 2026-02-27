@@ -48,7 +48,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                     )}
                 >
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 shadow-sm group-hover:scale-110 group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-500">
+                        <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center text-fuchsia-600 shadow-sm group-hover:scale-110 group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-500">
                             <div className="w-6 h-6">{Icon}</div>
                         </div>
                         <span className="text-base font-black text-slate-900 dark:text-white group-hover:text-fuchsia-700 transition-colors tracking-tight">
@@ -72,7 +72,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
             >
                 <Link href={href} className={cn("group block h-full", className)}>
                     <div className={cn(
-                        "h-full rounded-[3rem] border border-slate-200 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 bg-white/40 overflow-hidden relative p-10 flex flex-col items-center text-center",
+                        "h-full rounded-[3rem] border border-slate-200 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-700 bg-white/90 dark:bg-slate-800/50 overflow-hidden relative p-10 flex flex-col items-center text-center",
                         cardClassName
                     )}>
                         {/* Light Streak Animation */}
@@ -107,18 +107,18 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
     return (
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className={cn(
-                "group relative h-full rounded-[3rem] border border-slate-200 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 p-10 flex flex-col bg-white/40 overflow-hidden",
+                "group relative h-full rounded-[3rem] border border-slate-200 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-700 p-10 flex flex-col bg-white/90 dark:bg-slate-800/50 overflow-hidden",
                 className
             )}>
                 {/* Light Streak Animation */}
                 <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
                 <div className="flex items-start justify-between mb-8 relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 text-fuchsia-600 flex items-center justify-center group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-lg group-hover:scale-110">
+                    <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600 flex items-center justify-center group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-lg group-hover:scale-110">
                         <div className="w-8 h-8">{Icon}</div>
                     </div>
                     {service.procedure_type && (
-                        <span className="px-4 py-1.5 rounded-full bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-black/10">
+                        <span className="px-4 py-1.5 rounded-full bg-slate-900 dark:bg-slate-700 text-white text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-black/10">
                             {service.procedure_type}
                         </span>
                     )}
@@ -138,8 +138,8 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                     {service.features && service.features.length > 0 && (
                         <div className="mb-10 space-y-3">
                             {service.features.slice(0, 3).map((feat: string, i: number) => (
-                                <div key={i} className="flex items-center gap-3 text-sm text-slate-600 font-bold">
-                                    <div className="w-5 h-5 rounded-full bg-fuchsia-50 flex items-center justify-center flex-shrink-0">
+                                <div key={i} className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 font-bold">
+                                    <div className="w-5 h-5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center flex-shrink-0">
                                         <CheckCircle2 className="w-3.5 h-3.5 text-fuchsia-500" />
                                     </div>
                                     <span className="truncate">{feat}</span>
@@ -152,7 +152,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                 <div className="mt-auto relative z-20">
                     <Link
                         href={href}
-                        className="group/btn relative inline-flex items-center justify-center w-full py-5 bg-slate-900 text-white font-black rounded-2xl text-sm transition-all duration-500 overflow-hidden shadow-xl hover:bg-fuchsia-500"
+                        className="group/btn relative inline-flex items-center justify-center w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl text-sm transition-all duration-500 overflow-hidden shadow-xl hover:bg-fuchsia-500 dark:hover:bg-fuchsia-200 dark:hover:text-white"
                     >
                         <span className="relative z-10 uppercase tracking-[0.2em]">View Details</span>
                         <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

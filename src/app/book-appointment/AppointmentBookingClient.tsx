@@ -51,7 +51,7 @@ export default function AppointmentBookingClient() {
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-[60px] pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col items-center">
-                    <div className="w-24 h-24 bg-pink-50 rounded-full flex items-center justify-center mb-8 shadow-inner animate-bounce delay-100">
+                    <div className="w-24 h-24 bg-pink-50 dark:bg-pink-950 rounded-full flex items-center justify-center mb-8 shadow-inner animate-bounce delay-100">
                         <CheckCircle2 className="h-12 w-12 text-pink-500" />
                     </div>
                     <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Booking Confirmed!</h2>
@@ -79,7 +79,7 @@ export default function AppointmentBookingClient() {
 
             {/* Glowing Premium Progress Tracker */}
             <div className="relative mb-14 max-w-md mx-auto z-10">
-                <div className="absolute left-0 right-0 top-1/2 h-1.5 bg-slate-100 -z-10 -translate-y-1/2 rounded-full overflow-hidden">
+                <div className="absolute left-0 right-0 top-1/2 h-1.5 bg-slate-100 dark:bg-slate-800 -z-10 -translate-y-1/2 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r from-fuchsia-400 to-pink-400 transition-all duration-700 ease-out shadow-[0_0_10px_rgba(45,212,191,0.5)] ${step === 2 ? 'w-full' : 'w-0'}`} />
                 </div>
 

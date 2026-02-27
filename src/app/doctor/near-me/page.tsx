@@ -119,7 +119,7 @@ export default async function LocationsPage() {
     const departments = await getDepartments().catch(() => []);
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* ELITE GLOBAL REACH HERO */}
             <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-56 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -168,7 +168,7 @@ export default async function LocationsPage() {
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 group-hover:scale-125 transition-all duration-500">
                                 <stat.icon className="w-16 h-16 text-fuchsia-600" />
                             </div>
-                            <div className="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-fuchsia-500 transition-colors duration-300 shadow-inner group-hover:shadow-fuchsia-500/50">
+                            <div className="w-12 h-12 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-fuchsia-500 transition-colors duration-300 shadow-inner group-hover:shadow-fuchsia-500/50">
                                 <stat.icon className="w-6 h-6 text-fuchsia-600 group-hover:text-white transition-colors duration-300" />
                             </div>
                             <div className="text-3xl font-black text-slate-800 dark:text-slate-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors mb-1">{stat.value}</div>
@@ -181,7 +181,7 @@ export default async function LocationsPage() {
             {/* SIGNATURE TREATMENTS BENTO GRID */}
             <SectionContainer className="py-24 max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm dark:shadow-slate-900/30">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm dark:shadow-slate-900/30">
                         <Award className="w-4 h-4" /> Why Patients Choose Us
                     </span>
                     <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1]">
@@ -194,7 +194,7 @@ export default async function LocationsPage() {
                     {/* Treatment Card 1 */}
                     <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-fuchsia-500/5 rounded-full blur-[40px] group-hover:bg-fuchsia-500/10 transition-colors pointer-events-none" />
-                        <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 border border-fuchsia-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-fuchsia-500/30 transition-all duration-500">
+                        <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-fuchsia-500/30 transition-all duration-500">
                             <Zap className="w-8 h-8 text-fuchsia-600 group-hover:text-white transition-colors" />
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-fuchsia-600 transition-colors tracking-tight">Laparoscopic Surgery</h3>
@@ -204,11 +204,11 @@ export default async function LocationsPage() {
                         <ul className="space-y-3 mb-8">
                             {["3mm Incision", "Same Day Discharge", "Insurance Cashless", "25+ Years Surgeons"].map(f => (
                                 <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-200">
-                                    <div className="w-6 h-6 rounded-full bg-fuchsia-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-fuchsia-600" /></div>{f}
+                                    <div className="w-6 h-6 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-fuchsia-600" /></div>{f}
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 text-slate-900 dark:text-white hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200">
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 text-slate-900 dark:text-white hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -243,7 +243,7 @@ export default async function LocationsPage() {
                     {/* Treatment Card 3 */}
                     <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 rounded-full blur-[40px] group-hover:bg-pink-500/10 transition-colors pointer-events-none" />
-                        <div className="w-16 h-16 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-pink-500 group-hover:border-pink-400 group-hover:shadow-pink-500/30 transition-all duration-500 relative z-10">
+                        <div className="w-16 h-16 rounded-2xl bg-pink-50 dark:bg-pink-950 border border-pink-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-pink-500 group-hover:border-pink-400 group-hover:shadow-pink-500/30 transition-all duration-500 relative z-10">
                             <Shield className="w-8 h-8 text-pink-600 group-hover:text-white transition-colors" />
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-pink-600 transition-colors tracking-tight relative z-10">Fistula & Fissure</h3>
@@ -253,11 +253,11 @@ export default async function LocationsPage() {
                         <ul className="space-y-3 mb-8 relative z-10">
                             {["VAAFT Technique", "No Recurrence", "Minimal Downtime", "Expert Proctologists"].map(f => (
                                 <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-200">
-                                    <div className="w-6 h-6 rounded-full bg-pink-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-pink-600" /></div>{f}
+                                    <div className="w-6 h-6 rounded-full bg-pink-50 dark:bg-pink-950 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-pink-600" /></div>{f}
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 text-slate-900 dark:text-white hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-pink-200 relative z-10">
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 dark:bg-pink-950 text-slate-900 dark:text-white hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-pink-200 relative z-10">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -265,7 +265,7 @@ export default async function LocationsPage() {
             </SectionContainer>
 
             {/* DEPARTMENTS CROSS-LINK (INTERACTIVE PILLS) */}
-            <section className="py-24 bg-slate-100 relative overflow-hidden -skew-y-3">
+            <section className="py-24 bg-slate-100 dark:bg-slate-800 relative overflow-hidden -skew-y-3">
                 <div className="absolute inset-0 bg-white/50 backdrop-blur-3xl" />
                 <SectionContainer className="relative z-10 max-w-7xl mx-auto skew-y-3">
                     <div className="text-center mb-12">

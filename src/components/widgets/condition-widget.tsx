@@ -110,7 +110,7 @@ export function ConditionWidget({
             </Link>
           </Button>
 
-          <Button asChild size="sm" variant="outline" className="border-fuchsia-600 text-fuchsia-600 hover:bg-fuchsia-50">
+          <Button asChild size="sm" variant="outline" className="border-fuchsia-600 text-fuchsia-600 hover:bg-fuchsia-50 dark:bg-fuchsia-950">
             <Link href="/contact">
               <Phone className="w-4 h-4 mr-1" />
               Consult Now

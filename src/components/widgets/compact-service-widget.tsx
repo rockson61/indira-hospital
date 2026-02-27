@@ -93,7 +93,7 @@ export function CompactServiceWidget({
           <Button
             size="sm"
             variant="bordered"
-            className="border-fuchsia-600 text-fuchsia-600 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/20 dark:text-fuchsia-400 dark:border-fuchsia-400 font-semibold"
+            className="border-fuchsia-600 text-fuchsia-600 hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/20 dark:text-fuchsia-400 dark:border-fuchsia-400 font-semibold"
             as={Link}
             href="/doctor/near-me"
           >

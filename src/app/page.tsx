@@ -13,10 +13,11 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900">
+    <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
       <JsonLdSchema type="hospital" />
       <Hero />
       <StatsBanner />
@@ -25,13 +26,13 @@ export default function Home() {
       <section className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700 py-16 relative z-10 -mt-12 mb-12 rounded-[3rem] mx-4 sm:mx-8 shadow-xl shadow-slate-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center font-black text-slate-400 tracking-[0.3em] uppercase mb-10 text-xs flex items-center justify-center gap-4">
-            <span className="h-px w-12 bg-slate-200" />
+            <span className="h-px w-12 bg-slate-200 dark:bg-slate-700" />
             {HOME_PAGE_CONTENT.ACCREDITATION_TITLE}
-            <span className="h-px w-12 bg-slate-200" />
+            <span className="h-px w-12 bg-slate-200 dark:bg-slate-700" />
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {HOME_PAGE_CONTENT.ACCREDITATION_BADGES.map((badge, index) => (
-              <div key={index} className="group flex items-center gap-3 px-6 py-3 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-200 hover:bg-fuchsia-50 transition-all duration-300 transform hover:-translate-y-1">
+              <div key={index} className="group flex items-center gap-3 px-6 py-3 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-200 hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-all duration-300 transform hover:-translate-y-1">
                 <div className="w-2 h-2 rounded-full bg-fuchsia-500 opacity-40 group-hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-black text-slate-500 dark:text-slate-400 group-hover:text-fuchsia-700 tracking-wider">
                   {badge}
@@ -49,6 +50,7 @@ export default function Home() {
         <WhyChooseUs />
         <DoctorHighlightSection />
         <Testimonials />
+        <HealthLibraryCard />
         <QuickLinks />
       </div>
 

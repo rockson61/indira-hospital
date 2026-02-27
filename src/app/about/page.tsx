@@ -50,7 +50,7 @@ export default function AboutPage() {
                         {/* Light Streak Animation */}
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                        <div className="w-24 h-24 bg-fuchsia-50 rounded-[2rem] flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 group-hover:shadow-xl group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-700 border border-fuchsia-100">
+                        <div className="w-24 h-24 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-[2rem] flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 group-hover:shadow-xl group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-700 border border-fuchsia-100">
                             <Target className="w-12 h-12 text-fuchsia-600 group-hover:text-white transition-colors" />
                         </div>
                         <h2 className="text-4xl font-black mb-6 text-slate-900 dark:text-white tracking-tight group-hover:text-fuchsia-700 transition-colors leading-tight">Our Mission</h2>
@@ -87,8 +87,8 @@ export default function AboutPage() {
             <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { icon: Clock, value: "35+", label: "Years of Service", color: "text-fuchsia-500", bg: "bg-fuchsia-50" },
-                        { icon: HeartPulse, value: "50K+", label: "Patients Treated", color: "text-pink-500", bg: "bg-pink-50" },
+                        { icon: Clock, value: "35+", label: "Years of Service", color: "text-fuchsia-500", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
+                        { icon: HeartPulse, value: "50K+", label: "Patients Treated", color: "text-pink-500", bg: "bg-pink-50 dark:bg-pink-950" },
                         { icon: Award, value: "15+", label: "Specialties", color: "text-blue-500", bg: "bg-blue-50" },
                         { icon: Building, value: "200+", label: "Hospital Beds", color: "text-amber-500", bg: "bg-amber-50" },
                     ].map((stat, idx) => (
@@ -113,7 +113,7 @@ export default function AboutPage() {
             {/* Premium Leadership Bento */}
             <section className="max-w-7xl mx-auto px-6 lg:px-8 pb-32">
                 <div className="text-center max-w-4xl mx-auto mb-24 relative">
-                    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-fuchsia-700 text-sm font-bold tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
+                    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-fuchsia-700 text-sm font-bold tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
                         <ShieldCheck className="w-4 h-4" /> Stewardship
                     </span>
                     <h2 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 dark:text-white tracking-tight leading-tight">Elite Governance</h2>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                             </div>
 
                             <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-fuchsia-700 transition-colors leading-tight">{member.name}</h3>
-                            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
+                            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
                                 {member.role}
                             </div>
                             <p className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed font-medium flex-grow">{member.desc}</p>

@@ -69,7 +69,7 @@ export default function QualitySafetyPage() {
                 <div className="grid md:grid-cols-2 gap-8">
                     {PROTOCOLS.map((item, i) => (
                         <Card key={i} className="p-10 bg-white dark:bg-slate-900 border-none shadow-xl rounded-[3rem] hover:shadow-2xl transition-all">
-                            <div className="mb-6 p-4 bg-fuchsia-50 dark:bg-blue-900/20 rounded-2xl inline-block">
+                            <div className="mb-6 p-4 bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-blue-900/20 rounded-2xl inline-block">
                                 {item.icon}
                             </div>
                             <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">{item.title}</h3>

@@ -51,7 +51,7 @@ export function WhyChooseUs() {
                         {features.map((feature) => (
                             <div
                                 key={feature.name}
-                                className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 hover:shadow-2xl hover:shadow-primary-100/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-100 dark:border-slate-700/50 bg-white dark:bg-slate-800/50 p-8 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
                             >
                                 {/* Top gradient accent */}
                                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />

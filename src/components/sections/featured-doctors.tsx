@@ -17,7 +17,7 @@ export async function FeaturedDoctors() {
     const featuredOnly = doctors.slice(0, 4);
 
     return (
-        <section className="py-24 bg-[#FAFAFA]">
+        <section className="py-24 bg-[#FAFAFA] dark:bg-slate-950">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="flex justify-between items-end mb-12">
                     <SectionHeader
@@ -29,7 +29,7 @@ export async function FeaturedDoctors() {
                     />
                     <Link
                         href="/doctors"
-                        className="hidden sm:inline-flex items-center px-6 py-3 bg-slate-900 text-white font-bold rounded-full hover:bg-fuchsia-700 transition-all shadow-sm text-sm"
+                        className="hidden sm:inline-flex items-center px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-full hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm text-sm"
                     >
                         View All <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -44,7 +44,7 @@ export async function FeaturedDoctors() {
                 <div className="mt-12 text-center sm:hidden">
                     <Link
                         href="/doctors"
-                        className="inline-flex items-center px-6 py-3 bg-slate-900 text-white font-bold rounded-full hover:bg-fuchsia-700 transition-all shadow-sm text-sm"
+                        className="inline-flex items-center px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-full hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm text-sm"
                     >
                         View All Doctors <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

@@ -14,7 +14,7 @@ export function DoctorInfo() {
           <h2 className="text-2xl font-heading font-black text-slate-900 dark:text-white mb-2">Dr. Rockson Samuel</h2>
           <p className="text-fuchsia-600 font-bold mb-4">General Dentist</p>
 
-          <p className="text-slate-600 mb-6 font-medium leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-300 mb-6 font-medium leading-relaxed">
             Dr. Rockson Samuel is a highly skilled general dentist with extensive experience in providing comprehensive
             dental care. He specializes in Root Canal Treatments, Dental Implants, Braces, and Dental Fillings.
           </p>
@@ -23,19 +23,19 @@ export function DoctorInfo() {
             <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-3">Specializations:</h3>
             <div className="flex flex-wrap gap-2">
               {["Root Canal Treatment (RCT)", "Dental Implants", "Orthodontics (Braces)", "Dental Fillings", "General Dentistry"].map((s) => (
-                <span key={s} className="px-4 py-1.5 bg-fuchsia-50 text-fuchsia-700 text-sm font-bold rounded-full border border-fuchsia-100">{s}</span>
+                <span key={s} className="px-4 py-1.5 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm font-bold rounded-full border border-fuchsia-100">{s}</span>
               ))}
             </div>
           </div>
 
-          <div className="mb-6 text-sm text-slate-600 font-medium space-y-1">
+          <div className="mb-6 text-sm text-slate-600 dark:text-slate-300 font-medium space-y-1">
             <p>Email: rockson68@hotmail.com</p>
             <p>Phone: 7010650063</p>
           </div>
 
           <a
             href="/contact"
-            className="inline-flex items-center px-8 py-3.5 bg-slate-900 text-white rounded-full font-bold hover:bg-fuchsia-700 transition-all shadow-sm dark:shadow-slate-900/30"
+            className="inline-flex items-center px-8 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm dark:shadow-slate-900/30"
           >
             Book an Appointment
           </a>

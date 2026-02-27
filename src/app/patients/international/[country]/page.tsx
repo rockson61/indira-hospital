@@ -103,7 +103,7 @@ export default async function CountryGuidePage({ params }: PageProps) {
                         </section>
 
                         {/* WHY CHOOSE US */}
-                        <section className="bg-fuchsia-50 dark:bg-fuchsia-900/10 rounded-[2rem] p-8 md:p-12 border border-fuchsia-100 dark:border-fuchsia-900/30">
+                        <section className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-fuchsia-900/10 rounded-[2rem] p-8 md:p-12 border border-fuchsia-100 dark:border-fuchsia-900/30">
                             <h2 className="text-2xl font-bold mb-4">Why {country.name} Chooses Indira Hospital?</h2>
                             <p className="text-lg text-slate-700 dark:text-slate-200 dark:text-slate-300 leading-relaxed mb-8 italic">
                                 "{country.why_choose_us}"
@@ -129,7 +129,7 @@ export default async function CountryGuidePage({ params }: PageProps) {
                                     { t: "Arrival", d: "Personal pickup at Chennai (MAA) airport." }
                                 ].map((step, i) => (
                                     <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                                        <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-fuchsia-500 group-hover:text-white transition-all">
+                                        <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 dark:bg-slate-700 dark:bg-slate-800 text-slate-500 dark:text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-fuchsia-500 group-hover:text-white transition-all">
                                             {i + 1}
                                         </div>
                                         <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 dark:border-slate-800 shadow-sm dark:shadow-slate-900/30">

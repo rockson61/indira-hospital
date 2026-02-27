@@ -45,7 +45,7 @@ export function WisdomTeethContent() {
                 </ul>
             </div>
 
-            <Card className="bg-fuchsia-50 dark:bg-slate-800/60 border-blue-100 dark:border-fuchsia-700/40">
+            <Card className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 border-blue-100 dark:border-fuchsia-700/40">
                 <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                         <HelpCircle className="w-8 h-8 text-fuchsia-600 shrink-0 mt-1" />

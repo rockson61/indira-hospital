@@ -21,7 +21,7 @@ const ICONS = {
 };
 
 const COLORS = {
-    services: "text-fuchsia-600 bg-fuchsia-50 border-fuchsia-100 hover:border-fuchsia-300",
+    services: "text-fuchsia-600 bg-fuchsia-50 dark:bg-fuchsia-950 border-fuchsia-100 hover:border-fuchsia-300",
     doctors: "text-blue-600 bg-blue-50 border-blue-100 hover:border-blue-300",
     departments: "text-violet-600 bg-violet-50 border-violet-100 hover:border-violet-300",
     locations: "text-amber-600 bg-amber-50 border-amber-100 hover:border-amber-300",

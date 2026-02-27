@@ -100,7 +100,7 @@ export function TreatmentComparisonTable({ data }: TreatmentComparisonTableProps
 
           <TabsContent value="inr" className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-fuchsia-50">
+              <thead className="bg-fuchsia-50 dark:bg-fuchsia-950">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-bold text-blue-800 uppercase tracking-wider">
                     Treatment
@@ -141,7 +141,7 @@ export function TreatmentComparisonTable({ data }: TreatmentComparisonTableProps
 
           <TabsContent value="usd" className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-fuchsia-50">
+              <thead className="bg-fuchsia-50 dark:bg-fuchsia-950">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-bold text-blue-800 uppercase tracking-wider">
                     Treatment

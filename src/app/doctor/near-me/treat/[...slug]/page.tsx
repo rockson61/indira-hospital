@@ -278,7 +278,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 </h2>
                                 <ul className="grid sm:grid-cols-2 gap-3">
                                     {procedures.map((proc) => (
-                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-950 hover:bg-fuchsia-50 transition-colors group">
+                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-950 hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors group">
                                             <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                                             <span className="text-gray-700 dark:text-gray-300 group-hover:text-fuchsia-700 font-medium text-sm">{proc}</span>
                                         </li>

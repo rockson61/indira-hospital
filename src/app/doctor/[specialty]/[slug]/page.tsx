@@ -62,7 +62,7 @@ export default async function DoctorProfileRoute({
     const initials = currDoctor.name.split(" ").map((n: string) => n[0]).join("").slice(0, 2).toUpperCase();
 
     return (
-        <div className="bg-[#FAFAFA] min-h-screen">
+        <div className="bg-[#FAFAFA] dark:bg-slate-950 min-h-screen">
             <JsonLdSchema
                 type="physician"
                 name={currDoctor.name}
@@ -133,14 +133,14 @@ export default async function DoctorProfileRoute({
                             <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Schedule an appointment with {currDoctor.name} at Indira Super Speciality Hospital.</p>
                             <Link
                                 href={`/book-appointment?doctor=${currDoctor.slug}`}
-                                className="block w-full text-center px-6 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-all shadow-md"
+                                className="block w-full text-center px-6 py-4 bg-slate-900 dark:bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-500 transition-all shadow-md"
                             >
                                 <Calendar className="w-5 h-5 inline-block mr-2 -mt-0.5" />
                                 Book Appointment
                             </Link>
                             <a
                                 href="tel:+919809824425"
-                                className="block w-full text-center px-6 py-3 mt-3 bg-rose-50 text-rose-600 font-bold rounded-2xl hover:bg-rose-100 transition-colors"
+                                className="block w-full text-center px-6 py-3 mt-3 bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold rounded-2xl hover:bg-rose-100 transition-colors"
                             >
                                 <Phone className="w-4 h-4 inline-block mr-2 -mt-0.5" />
                                 Call Now
@@ -159,7 +159,7 @@ export default async function DoctorProfileRoute({
                         {((currDoctor.qualifications || currDoctor.education) && (
                             <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-10 h-10 rounded-xl bg-fuchsia-50 flex items-center justify-center">
+                                    <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
                                         <GraduationCap className="w-5 h-5 text-fuchsia-600" />
                                     </div>
                                     <h2 className="text-xl font-black text-slate-900 dark:text-white">Education & Qualifications</h2>
@@ -182,14 +182,14 @@ export default async function DoctorProfileRoute({
                         {/* Availability */}
                         <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-10 h-10 rounded-xl bg-fuchsia-50 flex items-center justify-center">
+                                <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
                                     <Calendar className="w-5 h-5 text-fuchsia-600" />
                                 </div>
                                 <h2 className="text-xl font-black text-slate-900 dark:text-white">Availability Schedule</h2>
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                 {(Array.isArray(currDoctor.availability) ? currDoctor.availability : ['Mon - Sat']).map((day: string, i: number) => (
-                                    <div key={i} className="flex items-center gap-2 px-4 py-3 bg-fuchsia-50 border border-fuchsia-100 rounded-xl">
+                                    <div key={i} className="flex items-center gap-2 px-4 py-3 bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 rounded-xl">
                                         <div className="w-2 h-2 rounded-full bg-fuchsia-500" />
                                         <span className="text-sm font-bold text-fuchsia-700">{day}</span>
                                     </div>
@@ -203,7 +203,7 @@ export default async function DoctorProfileRoute({
                         {/* Location Card */}
                         <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-8 h-8 rounded-lg bg-fuchsia-50 flex items-center justify-center">
+                                <div className="w-8 h-8 rounded-lg bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
                                     <MapPin className="w-4 h-4 text-fuchsia-600" />
                                 </div>
                                 <h3 className="font-bold text-slate-900 dark:text-white">Hospital Location</h3>
@@ -215,7 +215,7 @@ export default async function DoctorProfileRoute({
                         {relatedDoctors.length > 0 && (
                             <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-8 h-8 rounded-lg bg-fuchsia-50 flex items-center justify-center">
+                                    <div className="w-8 h-8 rounded-lg bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
                                         <Stethoscope className="w-4 h-4 text-fuchsia-600" />
                                     </div>
                                     <h3 className="font-bold text-slate-900 dark:text-white">More Specialists</h3>
@@ -247,11 +247,11 @@ export default async function DoctorProfileRoute({
 
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />
-            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-[#FAFAFA]" />
+            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-[#FAFAFA] dark:bg-slate-950" />
             <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={8} className="bg-[#FAFAFA]" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={8} className="bg-[#FAFAFA] dark:bg-slate-950" />
             <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={8} className="bg-white dark:bg-slate-900" />
         </div>
     );

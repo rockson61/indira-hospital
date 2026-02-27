@@ -8,7 +8,7 @@ const links = [
         description: "3T MRI, Cath Lab, HD Endoscopy — why diagnosis here is faster.",
         icon: Microscope,
         href: "/technology",
-        color: "bg-fuchsia-50 text-fuchsia-600",
+        color: "bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600",
         hover: "hover:border-blue-200"
     },
     {
@@ -16,7 +16,7 @@ const links = [
         description: "Airport pickup, translator, visa letter — we handle everything.",
         icon: Globe,
         href: "/patients/international",
-        color: "bg-fuchsia-50 text-fuchsia-600",
+        color: "bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600",
         hover: "hover:border-fuchsia-200"
     },
     {

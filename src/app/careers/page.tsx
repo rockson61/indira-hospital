@@ -65,7 +65,7 @@ export default function CareersPage() {
                             {/* Hover light sheen */}
                             <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                            <div className="mb-8 w-16 h-16 bg-fuchsia-50 rounded-2xl flex items-center justify-center group-hover:bg-fuchsia-100 transition-colors duration-500 relative z-10">
+                            <div className="mb-8 w-16 h-16 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl flex items-center justify-center group-hover:bg-fuchsia-100 transition-colors duration-500 relative z-10">
                                 {item.icon}
                             </div>
                             <h3 className="text-2xl font-black mb-4 text-slate-900 dark:text-white relative z-10 tracking-tight">{item.title}</h3>
@@ -108,11 +108,11 @@ export default function CareersPage() {
                                 <div className="mb-6 sm:mb-0 sm:pl-4">
                                     <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight">{job.title}</h4>
                                     <div className="flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest">
-                                        <span className="flex items-center gap-1.5 bg-slate-100 px-3 py-1 rounded-md"><Globe className="w-4 h-4 text-fuchsia-600" /> {job.dept}</span>
-                                        <span className="flex items-center gap-1.5 bg-slate-100 px-3 py-1 rounded-md"><HeartHandshake className="w-4 h-4 text-pink-600" /> {job.type}</span>
+                                        <span className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-md"><Globe className="w-4 h-4 text-fuchsia-600" /> {job.dept}</span>
+                                        <span className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-md"><HeartHandshake className="w-4 h-4 text-pink-600" /> {job.type}</span>
                                     </div>
                                 </div>
-                                <Link href="mailto:careers@indirahospitals.com" className="sm:mr-2 w-full sm:w-auto text-center px-8 py-3.5 bg-slate-100 text-slate-700 dark:text-slate-200 rounded-xl font-black text-sm uppercase tracking-widest group-hover:bg-gradient-to-r group-hover:from-fuchsia-500 group-hover:to-pink-500 group-hover:text-white group-hover:shadow-lg group-hover:shadow-fuchsia-500/30 transition-all duration-300 transform group-hover:scale-105">
+                                <Link href="mailto:careers@indirahospitals.com" className="sm:mr-2 w-full sm:w-auto text-center px-8 py-3.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-xl font-black text-sm uppercase tracking-widest group-hover:bg-gradient-to-r group-hover:from-fuchsia-500 group-hover:to-pink-500 group-hover:text-white group-hover:shadow-lg group-hover:shadow-fuchsia-500/30 transition-all duration-300 transform group-hover:scale-105">
                                     Apply Now
                                 </Link>
                             </div>

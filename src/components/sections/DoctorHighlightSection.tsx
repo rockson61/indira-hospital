@@ -31,7 +31,7 @@ export async function DoctorHighlightSection() {
                 <div className="mt-16 text-center">
                     <Link
                         href="/doctors"
-                        className="inline-flex items-center justify-center px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:bg-fuchsia-700 hover:scale-[1.02] transition-all shadow-lg"
+                        className="inline-flex items-center justify-center px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 hover:scale-[1.02] transition-all shadow-lg"
                     >
                         Browse All Doctors
                         <ArrowRight className="ml-3 h-5 w-5" />

@@ -36,7 +36,7 @@ export function MalocclusionContent() {
                 </div>
             </div>
 
-            <div className="bg-fuchsia-50 dark:bg-slate-800/60 p-6 rounded-xl text-center">
+            <div className="bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-slate-800/60 p-6 rounded-xl text-center">
                 <Smile className="w-10 h-10 text-fuchsia-600 mx-auto mb-3" />
                 <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-2">Modern Orthodontics</h3>
                 <p className="text-blue-800 text-sm max-w-lg mx-auto">

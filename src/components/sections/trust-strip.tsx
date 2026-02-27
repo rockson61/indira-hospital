@@ -8,10 +8,10 @@ import {
 } from "lucide-react";
 
 const trustItems = [
-    { icon: HeartPulse, label: "15,000+", sublabel: "Successful Surgeries", color: "text-rose-500", bg: "bg-rose-50" },
-    { icon: Stethoscope, label: "15+", sublabel: "Surgical Specialities", color: "text-fuchsia-600", bg: "bg-fuchsia-50" },
-    { icon: ShieldCheck, label: "50+", sublabel: "Cashless Insurance", color: "text-fuchsia-600", bg: "bg-fuchsia-50" },
-    { icon: Zap, label: "< 10 min", sublabel: "Emergency Response", color: "text-amber-600", bg: "bg-amber-50" },
+    { icon: HeartPulse, label: "15,000+", sublabel: "Successful Surgeries", color: "text-rose-500", bg: "bg-rose-50 dark:bg-rose-950" },
+    { icon: Stethoscope, label: "15+", sublabel: "Surgical Specialities", color: "text-fuchsia-600", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
+    { icon: ShieldCheck, label: "50+", sublabel: "Cashless Insurance", color: "text-fuchsia-600", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
+    { icon: Zap, label: "< 10 min", sublabel: "Emergency Response", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-950" },
 ];
 
 const badges = [
@@ -33,7 +33,7 @@ export function TrustStrip() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="flex items-center gap-4 p-5 rounded-[2rem] bg-slate-50/50 border border-slate-100 dark:border-slate-700"
+                            className="flex items-center gap-4 p-5 rounded-[2rem] bg-slate-50/50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700"
                         >
                             <div className={`w-12 h-12 rounded-[1rem] ${item.bg} flex items-center justify-center flex-shrink-0`}>
                                 <item.icon className={`w-6 h-6 ${item.color}`} />
@@ -51,15 +51,15 @@ export function TrustStrip() {
                     {badges.map((badge) => (
                         <div
                             key={badge.text}
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-fuchsia-50 border border-fuchsia-100"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 dark:border-fuchsia-800"
                         >
                             <badge.icon className="w-4 h-4 text-fuchsia-600" />
-                            <span className="text-sm font-bold text-fuchsia-700">{badge.text}</span>
+                            <span className="text-sm font-bold text-fuchsia-700 dark:text-fuchsia-300">{badge.text}</span>
                         </div>
                     ))}
                     <Link
                         href="/services"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-bold hover:bg-fuchsia-700 transition-all shadow-sm dark:shadow-slate-900/30"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm dark:shadow-slate-900/30"
                     >
                         Explore Services <ArrowRight className="w-3.5 h-3.5" />
                     </Link>

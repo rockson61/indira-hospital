@@ -47,7 +47,7 @@ export default async function BlogListingPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map((post) => (
                             <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                                <div className="relative h-48 bg-slate-200">
+                                <div className="relative h-48 bg-slate-200 dark:bg-slate-700">
                                     {post.image ? (
                                         <Image
                                             src={getImageUrl(post.image as string) || BLOG_CONFIGURATION.PLACEHOLDER_IMAGE_PATH}

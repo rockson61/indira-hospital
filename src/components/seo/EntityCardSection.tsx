@@ -108,7 +108,7 @@ export async function EntityCardSection({
                 <div className="mt-12 text-center">
                     <Link
                         href={defaults.href}
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-fuchsia-700 hover:scale-[1.02] transition-all shadow-lg text-sm"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 hover:scale-[1.02] transition-all shadow-lg text-sm"
                     >
                         View All {displaySubtitle}
                         <ArrowRight className="w-4 h-4" />

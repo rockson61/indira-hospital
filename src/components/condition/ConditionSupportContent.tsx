@@ -288,7 +288,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
             </Link>
             <a
               href={`tel:${PHONE_NUMBER}`}
-              className="inline-flex items-center rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 px-6 py-3 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
+              className="inline-flex items-center rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 px-6 py-3 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
             >
               📞 Call {PHONE_NUMBER.replace('+91', '+91-')}
             </a>
@@ -377,10 +377,10 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
             </li>
           </ul>
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link href="/about-us" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/30 hover:shadow-md">
+            <Link href="/about-us" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/30 hover:shadow-md">
               About Us →
             </Link>
-            <Link href="/about-us/our-team" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-fuchsia-600 dark:text-blue-400 transition-all hover:bg-fuchsia-50 dark:hover:bg-blue-900/30 hover:shadow-md">
+            <Link href="/about-us/our-team" className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 text-sm font-semibold text-fuchsia-600 dark:text-blue-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-blue-900/30 hover:shadow-md">
               Meet Our Team →
             </Link>
           </div>
@@ -404,7 +404,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
             </Link>
             <a
               href={`tel:${PHONE_NUMBER}`}
-              className="inline-flex items-center rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 px-6 py-3 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
+              className="inline-flex items-center rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 px-6 py-3 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
             >
               📞 Call {PHONE_NUMBER.replace('+91', '+91-')}
             </a>

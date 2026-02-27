@@ -48,7 +48,7 @@ export function Header() {
 
                                     {item.title === "Treatments" && (
                                         <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50">
-                                            <div className="bg-white dark:bg-slate-900 dark:bg-slate-800 rounded-3xl shadow-float border border-slate-100 dark:border-slate-700 p-6 w-[600px] grid grid-cols-2 gap-x-8 gap-y-2">
+                                            <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-float border border-slate-100 dark:border-slate-700 p-6 w-[600px] grid grid-cols-2 gap-x-8 gap-y-2">
                                                 {navigation.specialtyNav.map((specialty) => (
                                                     <Link
                                                         key={specialty.title}
@@ -117,7 +117,7 @@ export function Header() {
                         {/* Mobile Menu Toggle */}
                         <div className="flex lg:hidden justify-end">
                             <button
-                                className="p-2.5 rounded-full bg-slate-100/80 text-slate-900 dark:text-white hover:bg-slate-200 transition-colors"
+                                className="p-2.5 rounded-full bg-slate-100/80 text-slate-900 dark:text-white hover:bg-slate-200 dark:bg-slate-700 transition-colors"
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
                                 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -128,7 +128,7 @@ export function Header() {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0 z-[90] bg-white/95 backdrop-blur-lg transition-transform duration-300 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`fixed inset-0 z-[90] bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg transition-transform duration-300 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="pt-32 pb-6 px-6 h-full flex flex-col overflow-y-auto">
                     <nav className="flex flex-col space-y-2 flex-1">
                         {navigation.mainNav.map((item) => (
@@ -136,7 +136,7 @@ export function Header() {
                                 key={item.title}
                                 href={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className={`flex items-center justify-between p-4 rounded-3xl text-lg font-bold transition-all ${pathname === item.href ? "bg-fuchsia-50 text-fuchsia-700" : "text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:bg-slate-800"
+                                className={`flex items-center justify-between p-4 rounded-3xl text-lg font-bold transition-all ${pathname === item.href ? "bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700" : "text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:bg-slate-800"
                                     }`}
                             >
                                 {item.title}
@@ -146,14 +146,14 @@ export function Header() {
                     </nav>
 
                     <div className="mt-8 space-y-4">
-                        <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center justify-center space-x-2 w-full p-4 rounded-3xl bg-rose-50 text-rose-600 font-bold">
+                        <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center justify-center space-x-2 w-full p-4 rounded-3xl bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold">
                             <Phone className="h-5 w-5" />
                             <span>Emergency: {siteConfig.contact.emergencyPhone}</span>
                         </a>
                         <Link
                             href="/book-appointment"
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="flex items-center justify-center w-full p-4 rounded-3xl bg-slate-900 text-white font-bold shadow-float"
+                            className="flex items-center justify-center w-full p-4 rounded-3xl bg-slate-900 dark:bg-fuchsia-600 text-white font-bold shadow-float"
                         >
                             Book Appointment
                         </Link>

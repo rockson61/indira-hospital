@@ -79,7 +79,7 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Key Features</h2>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {tech.features.map((feature, idx) => (
-                                        <div key={idx} className="flex items-start gap-3 bg-fuchsia-50 p-4 rounded-xl">
+                                        <div key={idx} className="flex items-start gap-3 bg-fuchsia-50 dark:bg-fuchsia-950 p-4 rounded-xl">
                                             <div className="w-6 h-6 rounded-full bg-fuchsia-200 flex items-center justify-center shrink-0 mt-0.5">
                                                 <div className="w-2 h-2 rounded-full bg-fuchsia-700"></div>
                                             </div>

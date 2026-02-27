@@ -88,11 +88,11 @@ export default async function HealthPackagesPage() {
 
                                 <div className="space-y-4 mb-10">
                                     <p className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                                        <span className="h-px w-6 bg-slate-200"></span> Includes <span className="h-px w-6 bg-slate-200"></span>
+                                        <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span> Includes <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span>
                                     </p>
                                     <div className="flex flex-wrap gap-2">
                                         {pkg.tests_included.split(',').slice(0, 5).map((test, i) => (
-                                            <span key={i} className="flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-3 py-1.5 rounded-xl group-hover:border-fuchsia-100 group-hover:bg-fuchsia-50 shadow-sm transition-colors">
+                                            <span key={i} className="flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-3 py-1.5 rounded-xl group-hover:border-fuchsia-100 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 shadow-sm transition-colors">
                                                 <Check className="w-3.5 h-3.5 text-fuchsia-500" />
                                                 {test.trim()}
                                             </span>
@@ -105,12 +105,12 @@ export default async function HealthPackagesPage() {
                             </div>
 
                             <div className="mt-auto p-8 sm:p-10 pt-0 space-y-3 relative z-10 w-full">
-                                <Link href={`/health-packages/${pkg.slug}`} className="group/btn relative flex items-center justify-center w-full px-6 py-4 bg-slate-900 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl overflow-hidden">
+                                <Link href={`/health-packages/${pkg.slug}`} className="group/btn relative flex items-center justify-center w-full px-6 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl overflow-hidden">
                                     <span className="relative z-10">View Full Details</span>
                                     <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                                 </Link>
-                                <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'm interested in booking the ${pkg.title} package.`)}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-6 py-4 bg-fuchsia-50 text-fuchsia-700 font-bold rounded-2xl hover:bg-fuchsia-600 hover:text-white transition-all duration-300">
+                                <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'm interested in booking the ${pkg.title} package.`)}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-6 py-4 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 font-bold rounded-2xl hover:bg-fuchsia-600 hover:text-white transition-all duration-300">
                                     <Phone className="w-4 h-4 mr-2" />
                                     Book via WhatsApp
                                 </a>
@@ -121,7 +121,7 @@ export default async function HealthPackagesPage() {
 
                 {packages.length === 0 && (
                     <div className="text-center py-24 bg-white/50 backdrop-blur-xl rounded-[3rem] border-2 border-dashed border-slate-200 dark:border-slate-700 mt-12">
-                        <div className="w-24 h-24 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-6">
+                        <div className="w-24 h-24 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-6">
                             <Activity className="w-10 h-10 text-slate-300" />
                         </div>
                         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Packages Coming Soon</h2>

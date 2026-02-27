@@ -310,7 +310,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                       <strong>GPS Coordinates:</strong> 12.9540278°N, 79.1369615°E
                     </p>
                   </div>
-                  <div className="mt-4 p-4 bg-fuchsia-50 rounded-lg">
+                  <div className="mt-4 p-4 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-lg">
                     <p className="font-medium text-blue-900 mb-2">How to Find Us:</p>
                     <ul className="list-disc list-inside space-y-1 text-blue-800 text-sm">
                       <li>Look for the Shell Petrol Pump on Katpadi Main Road</li>

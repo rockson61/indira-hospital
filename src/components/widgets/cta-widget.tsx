@@ -130,7 +130,7 @@ export function CTAWidget({
                 </Badge>
               )}
 
-              <Badge variant="secondary" className="bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-900/20 dark:text-fuchsia-300 dark:border-fuchsia-800 px-3 py-1">
+              <Badge variant="secondary" className="bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-900/20 dark:text-fuchsia-300 dark:border-fuchsia-800 px-3 py-1">
                 <Shield className="w-3.5 h-3.5 mr-1.5" />
                 15+ Years Experience
               </Badge>

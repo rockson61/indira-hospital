@@ -130,7 +130,7 @@ export function RelevantQAWidget({
           <div className="text-center">
             <Link
               href="/ask-the-dentist"
-              className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/80 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
+              className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/80 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
             >
               View All Questions & Answers
               <ArrowRight className="w-4 h-4 ml-2" />

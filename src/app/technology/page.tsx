@@ -44,21 +44,21 @@ export default function TechnologyHubPage() {
                 <div className="bg-white/40 backdrop-blur-3xl rounded-[2.5rem] border border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8">
                     <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
                         <div className="group">
-                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
+                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
                                 <ShieldCheck className="w-7 h-7 text-fuchsia-600" />
                             </div>
                             <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Safety First</h4>
                             <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">All equipment undergoes daily calibration and follows international safety protocols.</p>
                         </div>
                         <div className="group">
-                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
+                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
                                 <Zap className="w-7 h-7 text-fuchsia-600" />
                             </div>
                             <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Zero Waiting</h4>
                             <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">In-house blood bank and modular OTs ensure no delay in life-saving procedures.</p>
                         </div>
                         <div className="group">
-                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
+                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
                                 <Monitor className="w-7 h-7 text-fuchsia-600" />
                             </div>
                             <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Expert Hand</h4>
