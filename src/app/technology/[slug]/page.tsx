@@ -6,6 +6,8 @@ import { getTechnologyBySlug, getAllTechnologies } from "@/lib/data/technology-d
 import { Footer } from "@/components/layout/Footer";
 import { Metadata } from "next";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -147,6 +149,15 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
                 title={`Patient Experiences with ${tech.title}`}
                 description={`See how our advanced medical technology has improved outcomes and comfort for our patients.`}
             />
+
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-gray-50" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-gray-50" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white" />
         </main>
     );
 }

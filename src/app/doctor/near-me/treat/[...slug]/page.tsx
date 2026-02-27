@@ -20,6 +20,8 @@ import { ServiceCard } from "@/components/entities/ServiceCard";
 import { LocationCard } from "@/components/entities/LocationCard";
 import { DepartmentCard } from "@/components/entities/DepartmentCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -378,6 +380,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 title={`Verified Reviews for ${service.title}`}
                 description={`What our patients are saying about their ${service.title} experience at Indira Hospital.`}
             />
+
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white" />
+            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={12} className="bg-slate-50" />
         </div >
     );
 }

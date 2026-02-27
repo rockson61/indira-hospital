@@ -14,6 +14,8 @@ import {
 import { clinicConfig } from "@/lib/data/clinic-config";
 import { LocationCard } from "@/components/entities/LocationCard";
 import { SectionContainer } from "@/components/ui/section-container";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 const WHATSAPP_NUMBER = "917010650063";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
@@ -337,6 +339,15 @@ export default async function LocationsPage() {
                     </div>
                 </div>
             </SectionContainer>
+
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white border-t border-slate-100" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50" />
+            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-white border-t border-slate-100" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-slate-50" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white border-t border-slate-100" />
         </main>
     );
 }

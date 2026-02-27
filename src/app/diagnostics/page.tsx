@@ -6,6 +6,8 @@ import { FlaskConical, ScanLine, Activity, Clock, Zap, ArrowRight, FileText, Che
 import { DiagnosticCard } from "@/components/entities/DiagnosticCard"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { EntityCardSection } from "@/components/seo/EntityCardSection"
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
 export const metadata: Metadata = {
     title: 'Diagnostics & Lab Tests — Indira Super Speciality Hospital Vellore',
@@ -213,6 +215,16 @@ export default async function DiagnosticsPage() {
                     </div>
                 </div>
             </SectionContainer>
+
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white border-t border-slate-100" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white border-t border-slate-100" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50" />
 
             {/* JSON-LD for MedicalTest listing */}
             <script
