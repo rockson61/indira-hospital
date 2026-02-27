@@ -5,6 +5,7 @@ import { getDoctors, getDepartments } from "@/lib/api";
 import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, Stethoscope, GraduationCap } from "lucide-react";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const dynamicParams = true;
 
@@ -244,9 +245,14 @@ export default async function DoctorProfileRoute({
                 </div>
             </section>
 
-            {/* SEO DEEP-LINK GRIDS */}
-            <InternalLinkGrid type="services" title="Treatments Available" subtitle="Our Services" limit={8} className="bg-white" />
-            <InternalLinkGrid type="locations" title="Hospital Near You" subtitle="Our Locations" limit={8} className="bg-[#FAFAFA]" />
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white" />
+            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-[#FAFAFA]" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={8} className="bg-[#FAFAFA]" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={8} className="bg-white" />
         </div>
     );
 }

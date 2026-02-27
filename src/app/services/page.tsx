@@ -7,6 +7,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import { Testimonials } from "@/components/sections/testimonials";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "All Medical Treatments & Services | Indira Super Speciality Hospital",
@@ -53,10 +54,15 @@ export default async function ServicesDirectoryPage() {
 
             <Testimonials />
 
-            {/* SEO DEEP-LINK GRIDS */}
-            <InternalLinkGrid type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={12} className="bg-white border-t border-slate-100" />
-            <InternalLinkGrid type="departments" title="Browse by Department" subtitle="Centres of Excellence" limit={12} className="bg-slate-50" />
-            <InternalLinkGrid type="locations" title="Available Near You" subtitle="Our Locations" limit={12} className="bg-white border-t border-slate-100" />
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white border-t border-slate-100" />
+            <EntityCardSection type="departments" title="Browse by Department" subtitle="Centres of Excellence" limit={6} className="bg-slate-50" />
+            <EntityCardSection type="locations" title="Available Near You" subtitle="Our Locations" limit={6} className="bg-white border-t border-slate-100" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="departments" title="All Departments" subtitle="Department Directory" limit={12} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50" />
         </main>
     );
 }

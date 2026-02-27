@@ -1,0 +1,120 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { getServices, getDoctors, getDepartments } from "@/lib/api";
+import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
+import { SectionContainer } from "@/components/ui/section-container";
+import { DoctorCard } from "@/components/entities/DoctorCard";
+import { ServiceCard } from "@/components/entities/ServiceCard";
+import { DepartmentCard } from "@/components/entities/DepartmentCard";
+import { LocationCard } from "@/components/entities/LocationCard";
+
+interface EntityCardSectionProps {
+    type: "services" | "doctors" | "departments" | "locations";
+    title?: string;
+    subtitle?: string;
+    limit?: number;
+    excludeSlug?: string;
+    className?: string;
+}
+
+const DEFAULTS: Record<string, { title: string; subtitle: string; href: string }> = {
+    services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/services" },
+    doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
+    departments: { title: "Centres of Excellence", subtitle: "Our Departments", href: "/departments" },
+    locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
+};
+
+export async function EntityCardSection({
+    type,
+    title,
+    subtitle,
+    limit = 6,
+    excludeSlug,
+    className = "",
+}: EntityCardSectionProps) {
+    const defaults = DEFAULTS[type];
+    const displayTitle = title || defaults.title;
+    const displaySubtitle = subtitle || defaults.subtitle;
+
+    let content: React.ReactNode = null;
+
+    try {
+        if (type === "services") {
+            const data = await getServices().catch(() => []);
+            const items = data.filter((s: any) => s.slug !== excludeSlug).slice(0, limit);
+            if (!items.length) return null;
+            content = (
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((s: any) => (
+                        <ServiceCard key={s.slug || s.id} service={s} variant="detail" />
+                    ))}
+                </div>
+            );
+        } else if (type === "doctors") {
+            const data = await getDoctors().catch(() => []);
+            const items = data.filter((d: any) => d.slug !== excludeSlug).slice(0, limit);
+            if (!items.length) return null;
+            content = (
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((d: any) => (
+                        <DoctorCard key={d.slug || d.id} doctor={d} variant="grid" />
+                    ))}
+                </div>
+            );
+        } else if (type === "departments") {
+            const data = await getDepartments().catch(() => []);
+            const items = data.filter((d: any) => d.slug !== excludeSlug).slice(0, limit);
+            if (!items.length) return null;
+            content = (
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((d: any) => (
+                        <DepartmentCard key={d.slug || d.id} department={d} variant="grid" />
+                    ))}
+                </div>
+            );
+        } else if (type === "locations") {
+            const items = tamilNaduLocations
+                .filter(l => l.slug !== excludeSlug)
+                .slice(0, limit);
+            if (!items.length) return null;
+            content = (
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((l) => (
+                        <LocationCard key={l.slug} location={l} variant="compact" />
+                    ))}
+                </div>
+            );
+        }
+    } catch {
+        return null;
+    }
+
+    if (!content) return null;
+
+    return (
+        <section className={`py-20 ${className}`}>
+            <SectionContainer>
+                <div className="text-center mb-14">
+                    <span className="text-xs font-black uppercase tracking-[0.2em] text-teal-600 mb-3 block">
+                        {displaySubtitle}
+                    </span>
+                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+                        {displayTitle}
+                    </h2>
+                </div>
+
+                {content}
+
+                <div className="mt-12 text-center">
+                    <Link
+                        href={defaults.href}
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-teal-700 hover:scale-[1.02] transition-all shadow-lg text-sm"
+                    >
+                        View All {displaySubtitle}
+                        <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </div>
+            </SectionContainer>
+        </section>
+    );
+}

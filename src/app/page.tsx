@@ -12,6 +12,7 @@ import { MessageCircle, Phone, ArrowRight, Zap, Sparkles } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export default function Home() {
   return (
@@ -51,9 +52,13 @@ export default function Home() {
         <QuickLinks />
       </div>
 
-      {/* SEO DEEP-LINK GRIDS */}
-      <InternalLinkGrid type="services" title="Popular Treatments" subtitle="Browse Services" limit={16} className="bg-white border-y border-slate-100" />
-      <InternalLinkGrid type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={16} className="bg-slate-50" />
+      {/* ENTITY CARD SECTIONS */}
+      <EntityCardSection type="services" title="Popular Treatments" subtitle="Browse Services" limit={6} className="bg-white border-y border-slate-100" />
+      <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={6} className="bg-slate-50" />
+
+      {/* COMPACT SEO LINK STRIPS */}
+      <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-white border-t border-slate-100" />
+      <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50" />
 
       {/* ELITE SIGNATURE HOME CTA */}
       <SectionContainer className="pb-32 px-4">

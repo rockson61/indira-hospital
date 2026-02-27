@@ -6,6 +6,7 @@ import { DepartmentCard } from "@/components/entities/DepartmentCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "Centres of Excellence & Departments | Indira Super Speciality Hospital",
@@ -50,10 +51,15 @@ export default async function DepartmentsDirectoryPage() {
                 className="bg-white py-24 border-t border-slate-100"
             />
 
-            {/* SEO DEEP-LINK GRIDS */}
-            <InternalLinkGrid type="services" title="Treatments We Offer" subtitle="Our Services" limit={12} className="bg-slate-50" />
-            <InternalLinkGrid type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={12} className="bg-white border-t border-slate-100" />
-            <InternalLinkGrid type="locations" title="Find Us Near You" subtitle="Our Locations" limit={12} className="bg-slate-50" />
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-slate-50" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white border-t border-slate-100" />
+            <EntityCardSection type="locations" title="Find Us Near You" subtitle="Our Locations" limit={6} className="bg-slate-50" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-white border-t border-slate-100" />
         </main>
     );
 }

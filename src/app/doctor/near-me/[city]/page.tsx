@@ -18,6 +18,7 @@ import { getDepartments, getDoctors } from "@/lib/api";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { cn } from "@/lib/utils";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -431,9 +432,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 </div>
             </SectionContainer>
 
-            {/* SEO DEEP-LINK GRIDS */}
-            <InternalLinkGrid type="services" title="Treatments Available" subtitle="Our Services" limit={12} className="bg-white border-t border-slate-100" />
-            <InternalLinkGrid type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={8} className="bg-slate-50" />
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white border-t border-slate-100" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50" />
+            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-white border-t border-slate-100" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white border-t border-slate-100" />
         </main>
     );
 }
