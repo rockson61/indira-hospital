@@ -14,7 +14,7 @@ export async function DoctorHighlightSection() {
     if (!featuredDoctors.length) return null;
 
     return (
-        <section className="py-24 bg-slate-50 border-y border-slate-100">
+        <section className="py-24 bg-slate-50 dark:bg-slate-800 border-y border-slate-100 dark:border-slate-700">
             <SectionContainer>
                 <SectionHeader
                     subtitle="Our Experts"

@@ -33,7 +33,7 @@ export default async function BlogListingPage() {
     return (
         <main className="min-h-screen pb-20">
             {/* Hero */}
-            <div className="bg-slate-50 pt-44 pb-20">
+            <div className="bg-slate-50 dark:bg-slate-800 pt-44 pb-20">
                 <SectionContainer>
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">{BLOG_CONFIGURATION.TITLE}</h1>
                     <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ export default async function BlogListingPage() {
                                     <p className="text-muted-foreground line-clamp-3 text-sm mb-4">
                                         {post.excerpt}
                                     </p>
-                                    <div className="flex items-center gap-4 text-xs text-slate-500">
+                                    <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
                                         <div className="flex items-center gap-1">
                                             <Calendar className="w-3 h-3" />
                                             {format(new Date(post.date_created), "MMM d, yyyy")}
@@ -93,7 +93,7 @@ export default async function BlogListingPage() {
                         ))}
                     </div>
                 ) : (
-                    <div className="text-center py-20 bg-slate-50 rounded-2xl border border-dashed text-muted-foreground">
+                    <div className="text-center py-20 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-dashed text-muted-foreground">
                         <p>{BLOG_CONFIGURATION.NO_ARTICLES_MESSAGE}</p>
                     </div>
                 )}

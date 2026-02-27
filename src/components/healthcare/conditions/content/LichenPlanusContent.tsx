@@ -10,7 +10,7 @@ export function LichenPlanusContent() {
                     Oral lichen planus is an autoimmune condition. It is not an infection, and you cannot catch it from someone else. It often appears as white, lacy patches (Wickham's striae) or red, swollen tissues.
                 </p>
 
-                <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
                     <div className="flex items-start gap-4">
                         <FileSearch className="w-8 h-8 text-fuchsia-600 shrink-0" />
                         <div>

@@ -24,15 +24,15 @@ export function GumRecessionContent() {
             <div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Treatment Approaches</h3>
                 <div className="grid gap-4">
-                    <div className="bg-card p-4 border rounded-lg shadow-sm">
+                    <div className="bg-card p-4 border rounded-lg shadow-sm dark:shadow-slate-900/30">
                         <strong className="block text-foreground mb-1">Deep Cleaning</strong>
                         <p className="text-sm text-muted-foreground">Removing plaque and tartar from roots can help gums reattach.</p>
                     </div>
-                    <div className="bg-card p-4 border rounded-lg shadow-sm">
+                    <div className="bg-card p-4 border rounded-lg shadow-sm dark:shadow-slate-900/30">
                         <strong className="block text-foreground mb-1">Gum Grafting</strong>
                         <p className="text-sm text-muted-foreground">Taking tissue from the roof of your mouth to cover exposed roots over and strengthen the gum line.</p>
                     </div>
-                    <div className="bg-card p-4 border rounded-lg shadow-sm">
+                    <div className="bg-card p-4 border rounded-lg shadow-sm dark:shadow-slate-900/30">
                         <strong className="block text-foreground mb-1">Desensitizing Agents</strong>
                         <p className="text-sm text-muted-foreground">Varnishes or bonding agents applied to the root to reduce sensitivity.</p>
                     </div>

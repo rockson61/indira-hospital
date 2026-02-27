@@ -35,22 +35,22 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
     return (
         <main className="min-h-screen pb-20">
             {/* 1. Hero / Header */}
-            <div className="bg-slate-50 border-b py-12">
+            <div className="bg-slate-50 dark:bg-slate-800 border-b py-12">
                 <SectionContainer>
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div>
                             <span className="inline-block px-3 py-1 bg-fuchsia-100 text-fuchsia-700 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
                                 {test.category}
                             </span>
-                            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{test.name}</h1>
+                            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">{test.name}</h1>
                             <p className="text-muted-foreground max-w-2xl">
                                 {test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 150) || `Comprehensive ${test.name} with accurate reporting and quick turnaround time.`}
                             </p>
                         </div>
-                        <div className="bg-white p-6 rounded-xl border shadow-sm min-w-[300px]">
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border shadow-sm min-w-[300px]">
                             <div className="flex items-baseline gap-1 mb-1">
                                 <span className="text-sm text-muted-foreground">Price:</span>
-                                <span className="text-2xl font-bold text-slate-900">
+                                <span className="text-2xl font-bold text-slate-900 dark:text-white">
                                     {test.price ? `₹${test.price}` : 'Call for Price'}
                                 </span>
                             </div>
@@ -141,7 +141,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                                 <h2 className="text-2xl font-bold mb-4">Conditions Detected</h2>
                                 <div className="flex flex-wrap gap-2">
                                     {usedToDiagnose.map((condition: string) => (
-                                        <span key={condition} className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-full text-sm">
+                                        <span key={condition} className="px-3 py-1.5 bg-slate-100 text-slate-700 dark:text-slate-200 rounded-full text-sm">
                                             {condition}
                                         </span>
                                     ))}
@@ -187,7 +187,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
 
                     {/* Sidebar / Quick Contact */}
                     <div className="space-y-6">
-                        <div className="bg-slate-50 p-6 rounded-xl border">
+                        <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl border">
                             <h3 className="font-bold mb-4">Need Help?</h3>
                             <p className="text-sm text-muted-foreground mb-6">
                                 Not sure which test to book? Our support team is here to guide you.

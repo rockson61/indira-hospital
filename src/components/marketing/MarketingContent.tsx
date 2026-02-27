@@ -131,7 +131,7 @@ export function MarketingContent({
         <section className="card-modern p-6">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
-              <div key={stat.label} className="rounded-xl bg-card px-4 py-5 text-center shadow-sm">
+              <div key={stat.label} className="rounded-xl bg-card px-4 py-5 text-center shadow-sm dark:shadow-slate-900/30">
                 <p className="text-3xl font-bold gradient-text">{stat.value}</p>
                 <p className="text-sm font-semibold text-foreground">{stat.label}</p>
                 {stat.description && <p className="mt-1 text-xs text-muted-foreground">{stat.description}</p>}

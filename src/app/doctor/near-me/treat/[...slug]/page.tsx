@@ -187,7 +187,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     };
 
     return (
-        <div className="bg-gray-50 min-h-screen">
+        <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
             {/* ========== HERO ========== */}
@@ -258,19 +258,19 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div className="lg:col-span-2 space-y-8">
                         {/* About */}
                         <Card className="p-8 border-none shadow-sm rounded-2xl">
-                            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                     <Stethoscope className="w-5 h-5" />
                                 </span>
                                 About {service.title} — What You Need to Know
                             </h2>
-                            <div className="text-gray-600 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
+                            <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
                         </Card>
 
                         {/* Procedures / Features Grid */}
                         {procedures.length > 0 && (
                             <Card className="p-8 border-none shadow-sm rounded-2xl">
-                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                                     <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                         <CheckCircle2 className="w-5 h-5" />
                                     </span>
@@ -278,9 +278,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 </h2>
                                 <ul className="grid sm:grid-cols-2 gap-3">
                                     {procedures.map((proc) => (
-                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-fuchsia-50 transition-colors group">
+                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-950 hover:bg-fuchsia-50 transition-colors group">
                                             <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                                            <span className="text-gray-700 group-hover:text-fuchsia-700 font-medium text-sm">{proc}</span>
+                                            <span className="text-gray-700 dark:text-gray-300 group-hover:text-fuchsia-700 font-medium text-sm">{proc}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -297,7 +297,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         {/* Doctors in this Service */}
                         {relatedDoctors.length > 0 && (
                             <div>
-                                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                                     <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                         <GraduationCap className="w-5 h-5" />
                                     </span>
@@ -316,10 +316,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             <Card className="p-6 border-none shadow-sm rounded-2xl bg-gradient-to-r from-fuchsia-50 to-fuchsia-50">
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h3 className="font-bold text-gray-900">Explore Department</h3>
-                                        <p className="text-sm text-gray-600">View all services in {treatment.parentServiceSlug}</p>
+                                        <h3 className="font-bold text-gray-900 dark:text-white">Explore Department</h3>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">View all services in {treatment.parentServiceSlug}</p>
                                     </div>
-                                    <Link href={`/doctor/near-me/treat/${treatment.parentServiceSlug}`} className="px-4 py-2 bg-white text-fuchsia-700 font-semibold rounded-lg shadow-sm hover:shadow-md transition-all">
+                                    <Link href={`/doctor/near-me/treat/${treatment.parentServiceSlug}`} className="px-4 py-2 bg-white dark:bg-slate-900 text-fuchsia-700 font-semibold rounded-lg shadow-sm hover:shadow-md transition-all">
                                         View Department
                                     </Link>
                                 </div>
@@ -336,8 +336,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <MessageCircle className="w-7 h-7 text-green-600" />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 text-lg">Get a Free Cost Estimate</h3>
-                                    <p className="text-gray-500 text-sm mt-1 mb-5">No hidden charges. Get exact pricing, insurance coverage, and available dates in under 2 minutes.</p>
+                                    <h3 className="font-bold text-gray-900 dark:text-white text-lg">Get a Free Cost Estimate</h3>
+                                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 mb-5">No hidden charges. Get exact pricing, insurance coverage, and available dates in under 2 minutes.</p>
                                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
                                         className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-md text-base">
                                         <MessageCircle className="w-5 h-5 mr-2" />
@@ -349,7 +349,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             {/* M2M: AVAILABLE LOCATIONS */}
                             {(service.available_locations as any[])?.length > 0 && (
                                 <Card className="p-6 border-none shadow-sm rounded-2xl">
-                                    <h3 className="font-bold text-gray-900 mb-4">Available Near You</h3>
+                                    <h3 className="font-bold text-gray-900 dark:text-white mb-4">Available Near You</h3>
                                     <div className="flex flex-col gap-3">
                                         {(service.available_locations as any[]).map((loc: any) => (
                                             <LocationCard key={loc.slug} location={loc} variant="compact" />
@@ -360,7 +360,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
                             {/* Other Services Quick Links */}
                             <Card className="p-6 border-none shadow-sm rounded-2xl">
-                                <h3 className="font-bold text-gray-900 mb-4">Other Treatments You May Need</h3>
+                                <h3 className="font-bold text-gray-900 dark:text-white mb-4">Other Treatments You May Need</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {otherServices.slice(0, 10).map((svc: any) => (
                                         <ServiceCard key={svc.slug} service={svc} variant="compact" />
@@ -382,14 +382,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             />
 
             {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white" />
-            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900" />
+            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-800" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={12} className="bg-slate-50" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={12} className="bg-slate-50 dark:bg-slate-800" />
         </div >
     );
 }

@@ -46,7 +46,7 @@ export default function HeartAttackWarningSignsPage() {
           A <strong>Myocardial Infarction (Heart Attack)</strong> occurs when blood flow to a section of the heart muscle is severely blocked, causing cells to begin dying. Every minute counts. Knowing the signs and acting fast is the single most important thing you can do.
         </p>
 
-        <div className="my-10 p-8 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/10 rounded-[2.5rem] border-2 border-red-200 dark:border-red-800 shadow-sm">
+        <div className="my-10 p-8 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/10 rounded-[2.5rem] border-2 border-red-200 dark:border-red-800 shadow-sm dark:shadow-slate-900/30">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="w-8 h-8 text-red-600" />
             <h3 className="text-2xl font-black text-red-700 dark:text-red-300 tracking-tight">Recognize These Symptoms Immediately</h3>
@@ -60,9 +60,9 @@ export default function HeartAttackWarningSignsPage() {
               "Nausea, dizziness or light-headedness",
               "Feeling of impending doom or intense anxiety"
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-red-100 dark:border-red-900 shadow-sm">
+              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-red-100 dark:border-red-900 shadow-sm dark:shadow-slate-900/30">
                 <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="font-semibold text-slate-700 dark:text-slate-300">{item}</span>
+                <span className="font-semibold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
               </div>
             ))}
           </div>

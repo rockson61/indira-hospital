@@ -28,7 +28,7 @@ export default function ServiceCategoryWidget() {
           scrollbar-width: none;  /* Firefox */
         }
       `}</style>
-      <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">
         Explore <span className="gradient-text">Our Specialities</span>
       </h3>
       <div className="relative">
@@ -45,7 +45,7 @@ export default function ServiceCategoryWidget() {
                   <div className="w-10 h-10 flex items-center justify-center bg-white/50 rounded-full">
                     <Icon className="w-5 h-5 text-fuchsia-700" />
                   </div>
-                  <span className="text-sm font-semibold text-gray-700">{category.name}</span>
+                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">{category.name}</span>
                 </div>
               </Link>
             );

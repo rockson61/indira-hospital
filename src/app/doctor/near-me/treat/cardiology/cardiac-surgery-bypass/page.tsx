@@ -106,8 +106,8 @@ export default function CardiacBypassPage() {
                     <li><strong>Combined with Valve Surgery:</strong> Patients needing both bypass and valve repair simultaneously.</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/10 dark:to-rose-900/10 rounded-[2.5rem] border border-red-100 dark:border-red-900 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-red-300 mb-4 tracking-tight">Why Choose Indira Hospital for Bypass?</h4>
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/10 dark:to-rose-900/10 rounded-[2.5rem] border border-red-100 dark:border-red-900 shadow-sm dark:shadow-slate-900/30">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-red-300 mb-4 tracking-tight">Why Choose Indira Hospital for Bypass?</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                             "Beating-Heart (Off-Pump) CABG Available",
@@ -115,9 +115,9 @@ export default function CardiacBypassPage() {
                             "0% EMI and Cashless Insurance",
                             "Dedicated Cardiac Rehab Program"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800">
                                 <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
                             </div>
                         ))}
                     </div>

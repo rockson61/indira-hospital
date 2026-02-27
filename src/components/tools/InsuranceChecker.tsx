@@ -37,14 +37,14 @@ export function InsuranceChecker() {
     };
 
     return (
-        <Card className="p-6 bg-white shadow-sm border border-gray-100 rounded-xl">
+        <Card className="p-6 bg-white dark:bg-slate-900 shadow-sm border border-gray-100 dark:border-slate-700 rounded-xl">
             <div className="flex items-start gap-4 mb-6">
                 <div className="bg-fuchsia-100 p-3 rounded-full text-fuchsia-600">
                     <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                    <h3 className="text-lg font-bold text-gray-900">Health Insurance Check</h3>
-                    <p className="text-sm text-gray-500">Verify if your TPA/Insurance is accepted.</p>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">Health Insurance Check</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Verify if your TPA/Insurance is accepted.</p>
                 </div>
             </div>
 
@@ -81,7 +81,7 @@ export function InsuranceChecker() {
                 </div>
             )}
 
-            <div className="mt-6 pt-4 border-t border-gray-100">
+            <div className="mt-6 pt-4 border-t border-gray-100 dark:border-slate-700">
                 <p className="text-xs text-center text-gray-400">Accepted: Star Health • HDFC Ergo • TPA • & 30+ more</p>
             </div>
         </Card>

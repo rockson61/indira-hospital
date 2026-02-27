@@ -43,7 +43,7 @@ const benefits = [
 
 export default function InsurancePage() {
     return (
-        <main className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
             {/* ELITE INSURANCE HERO */}
             <section className="bg-slate-900 pt-48 pb-32 lg:pt-60 lg:pb-40 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -70,14 +70,14 @@ export default function InsurancePage() {
             <SectionContainer className="relative z-20 -mt-20 max-w-7xl mx-auto px-4 mb-24">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 hover:shadow-2xl hover:shadow-fuchsia-900/5 transition-shadow duration-700 bg-white/40 p-2 sm:p-4 rounded-[3rem] backdrop-blur-3xl border border-white">
                     {benefits.map((b) => (
-                        <div key={b.title} className="group relative bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(20,184,166,0.12)] hover:border-fuchsia-200 transition-all duration-500 overflow-hidden">
+                        <div key={b.title} className="group relative bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(20,184,166,0.12)] hover:border-fuchsia-200 transition-all duration-500 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="relative z-10">
                                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-fuchsia-50 text-fuchsia-600 group-hover:scale-110 group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-fuchsia-500/10">
                                     <b.icon className="h-8 w-8" />
                                 </div>
-                                <h3 className="font-bold text-xl mb-3 text-slate-900">{b.title}</h3>
-                                <p className="text-sm text-slate-500 font-medium leading-relaxed">{b.description}</p>
+                                <h3 className="font-bold text-xl mb-3 text-slate-900 dark:text-white">{b.title}</h3>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{b.description}</p>
                             </div>
                         </div>
                     ))}
@@ -87,7 +87,7 @@ export default function InsurancePage() {
             {/* INTERACTIVE PARTNER GRID */}
             <SectionContainer className="py-16">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl font-black text-slate-900 mb-6 tracking-tight">Our Empanelled Network</h2>
+                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Our Empanelled Network</h2>
                     <p className="text-lg text-slate-600 font-light leading-relaxed">
                         We are officially allied with the following leading insurance companies and Third-Party Administrators (TPAs) to ensure your care is universally covered.
                     </p>
@@ -97,11 +97,11 @@ export default function InsurancePage() {
                     {insurancePartners.map((name) => (
                         <div
                             key={name}
-                            className="group flex items-center justify-center px-6 py-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-fuchsia-300 hover:-translate-y-1 transition-all duration-300 cursor-default"
+                            className="group flex items-center justify-center px-6 py-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-fuchsia-300 hover:-translate-y-1 transition-all duration-300 cursor-default"
                         >
                             <div className="flex items-center gap-3">
                                 <ShieldCheck className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-500 transition-colors" />
-                                <span className="text-sm font-bold text-slate-700 group-hover:text-slate-900 transition-colors">{name}</span>
+                                <span className="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:text-white transition-colors">{name}</span>
                             </div>
                         </div>
                     ))}

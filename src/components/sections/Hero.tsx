@@ -73,7 +73,7 @@ export function Hero() {
                         >
                             <Link
                                 href="/book-appointment"
-                                className="group/btn relative px-10 py-5 bg-fuchsia-500 hover:bg-fuchsia-400 text-slate-900 rounded-2xl font-black text-xl transition-all shadow-lg shadow-fuchsia-500/25 flex items-center justify-center gap-2 overflow-hidden hover:scale-[1.02]"
+                                className="group/btn relative px-10 py-5 bg-fuchsia-500 hover:bg-fuchsia-400 text-slate-900 dark:text-white rounded-2xl font-black text-xl transition-all shadow-lg shadow-fuchsia-500/25 flex items-center justify-center gap-2 overflow-hidden hover:scale-[1.02]"
                             >
                                 <span className="relative z-10">Get Free Cost Estimate</span>
                                 <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
@@ -107,7 +107,7 @@ export function Hero() {
                             {searchTerm && (
                                 <Link
                                     href={`/doctors?q=${searchTerm}`}
-                                    className="bg-fuchsia-500 text-slate-900 px-8 py-4 rounded-2xl font-black shadow-lg hover:bg-fuchsia-400 transition-all ml-2 flex-shrink-0"
+                                    className="bg-fuchsia-500 text-slate-900 dark:text-white px-8 py-4 rounded-2xl font-black shadow-lg hover:bg-fuchsia-400 transition-all ml-2 flex-shrink-0"
                                 >
                                     Find Now
                                 </Link>

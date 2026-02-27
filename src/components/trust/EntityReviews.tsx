@@ -72,7 +72,7 @@ export default async function EntityReviews({
     };
 
     return (
-        <section className={cn("py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800", className)}>
+        <section className={cn("py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700 dark:border-slate-800", className)}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -120,7 +120,7 @@ export default async function EntityReviews({
                             </ModernCardHeader>
                             <ModernCardContent className="p-8 pt-0 mt-auto">
                                 <div className="flex items-center gap-4 border-t border-slate-100 dark:border-slate-700 pt-6">
-                                    <div className="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500">
+                                    <div className="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400">
                                         <UserCircle className="w-8 h-8" />
                                     </div>
                                     <div>

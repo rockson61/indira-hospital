@@ -90,7 +90,7 @@ function getCategoryBadge(category: string) {
         district_hq: "bg-indigo-100 text-indigo-700",
         major_town: "bg-fuchsia-100 text-fuchsia-700",
         town: "bg-green-100 text-green-700",
-        village: "bg-gray-100 text-gray-600",
+        village: "bg-gray-100 text-gray-600 dark:text-gray-400",
         industrial: "bg-amber-100 text-amber-700",
         historic: "bg-fuchsia-100 text-fuchsia-700",
     };
@@ -119,7 +119,7 @@ export default async function LocationsPage() {
     const departments = await getDepartments().catch(() => []);
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* ELITE GLOBAL REACH HERO */}
             <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-56 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -164,14 +164,14 @@ export default async function LocationsPage() {
                         { icon: Users, label: "Patients Treated", value: "1L+" },
                         { icon: Stethoscope, label: "Departments", value: "15+" },
                     ].map((stat, i) => (
-                        <div key={i} className="group bg-white rounded-2xl p-6 text-center shadow-sm border border-slate-100 hover:shadow-xl hover:border-fuchsia-300 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden">
+                        <div key={i} className="group bg-white dark:bg-slate-900 rounded-2xl p-6 text-center shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-fuchsia-300 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 group-hover:scale-125 transition-all duration-500">
                                 <stat.icon className="w-16 h-16 text-fuchsia-600" />
                             </div>
                             <div className="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-fuchsia-500 transition-colors duration-300 shadow-inner group-hover:shadow-fuchsia-500/50">
                                 <stat.icon className="w-6 h-6 text-fuchsia-600 group-hover:text-white transition-colors duration-300" />
                             </div>
-                            <div className="text-3xl font-black text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors mb-1">{stat.value}</div>
+                            <div className="text-3xl font-black text-slate-800 dark:text-slate-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors mb-1">{stat.value}</div>
                             <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{stat.label}</div>
                         </div>
                     ))}
@@ -181,10 +181,10 @@ export default async function LocationsPage() {
             {/* SIGNATURE TREATMENTS BENTO GRID */}
             <SectionContainer className="py-24 max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm dark:shadow-slate-900/30">
                         <Award className="w-4 h-4" /> Why Patients Choose Us
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
+                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1]">
                         #1 for Laparoscopic & <br className="hidden sm:block" />
                         <span className="text-fuchsia-600">Laser Surgery in Tamil Nadu</span>
                     </h2>
@@ -192,23 +192,23 @@ export default async function LocationsPage() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {/* Treatment Card 1 */}
-                    <div className="group bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
+                    <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-fuchsia-500/5 rounded-full blur-[40px] group-hover:bg-fuchsia-500/10 transition-colors pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 border border-fuchsia-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-fuchsia-500/30 transition-all duration-500">
                             <Zap className="w-8 h-8 text-fuchsia-600 group-hover:text-white transition-colors" />
                         </div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-fuchsia-600 transition-colors tracking-tight">Laparoscopic Surgery</h3>
-                        <p className="text-slate-500 font-medium leading-relaxed mb-6 flex-grow">
+                        <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-fuchsia-600 transition-colors tracking-tight">Laparoscopic Surgery</h3>
+                        <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-6 flex-grow">
                             Advanced keyhole surgery for Hernia, Gallbladder, Appendix & Bariatric. Minimal scars, same-day discharge.
                         </p>
                         <ul className="space-y-3 mb-8">
                             {["3mm Incision", "Same Day Discharge", "Insurance Cashless", "25+ Years Surgeons"].map(f => (
-                                <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700">
+                                <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-200">
                                     <div className="w-6 h-6 rounded-full bg-fuchsia-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-fuchsia-600" /></div>{f}
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 hover:bg-fuchsia-50 text-slate-900 hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 hover:border-fuchsia-200">
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 text-slate-900 dark:text-white hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -241,23 +241,23 @@ export default async function LocationsPage() {
                     </div>
 
                     {/* Treatment Card 3 */}
-                    <div className="group bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
+                    <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 rounded-full blur-[40px] group-hover:bg-pink-500/10 transition-colors pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-pink-500 group-hover:border-pink-400 group-hover:shadow-pink-500/30 transition-all duration-500 relative z-10">
                             <Shield className="w-8 h-8 text-pink-600 group-hover:text-white transition-colors" />
                         </div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-pink-600 transition-colors tracking-tight relative z-10">Fistula & Fissure</h3>
-                        <p className="text-slate-500 font-medium leading-relaxed mb-6 flex-grow relative z-10">
+                        <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-pink-600 transition-colors tracking-tight relative z-10">Fistula & Fissure</h3>
+                        <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-6 flex-grow relative z-10">
                             Permanent cure using VAAFT / Laser / LIFT techniques. No recurrence, minimal pain, quick recovery.
                         </p>
                         <ul className="space-y-3 mb-8 relative z-10">
                             {["VAAFT Technique", "No Recurrence", "Minimal Downtime", "Expert Proctologists"].map(f => (
-                                <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700">
+                                <li key={f} className="flex items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-200">
                                     <div className="w-6 h-6 rounded-full bg-pink-50 flex items-center justify-center"><CheckCircle2 className="w-4 h-4 text-pink-600" /></div>{f}
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 hover:bg-pink-50 text-slate-900 hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 hover:border-pink-200 relative z-10">
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 text-slate-900 dark:text-white hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-pink-200 relative z-10">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -269,17 +269,17 @@ export default async function LocationsPage() {
                 <div className="absolute inset-0 bg-white/50 backdrop-blur-3xl" />
                 <SectionContainer className="relative z-10 max-w-7xl mx-auto skew-y-3">
                     <div className="text-center mb-12">
-                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-600 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm dark:shadow-slate-900/30">
                             <Stethoscope className="w-4 h-4 text-fuchsia-600" /> 15+ Super Specialities
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Explore Our Departments</h2>
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Explore Our Departments</h2>
                     </div>
                     <div className="flex flex-wrap justify-center gap-3 lg:gap-4 max-w-5xl mx-auto">
                         {departments.map((dept: any) => (
                             <Link
                                 key={dept.slug}
                                 href={`/doctor/near-me/treat/${dept.slug}`}
-                                className="group px-6 py-3 bg-white rounded-2xl shadow-sm border border-slate-200 text-sm font-bold text-slate-600 hover:bg-slate-900 hover:border-slate-800 hover:text-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+                                className="group px-6 py-3 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 hover:bg-slate-900 hover:border-slate-800 hover:text-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
                             >
                                 {dept.title}
                                 <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-fuchsia-400" />
@@ -340,13 +340,13 @@ export default async function LocationsPage() {
             </SectionContainer>
 
             {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white border-t border-slate-100" />
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50" />
-            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-white border-t border-slate-100" />
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50 dark:bg-slate-800" />
+            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-slate-50" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
         </main>
     );
 }

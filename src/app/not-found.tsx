@@ -10,7 +10,7 @@ export default function NotFound() {
                         404
                     </span>
                 </div>
-                <h1 className="text-3xl font-heading font-black text-slate-900 mb-4 tracking-tight">
+                <h1 className="text-3xl font-heading font-black text-slate-900 dark:text-white mb-4 tracking-tight">
                     Page Not Found
                 </h1>
                 <p className="text-slate-600 mb-10 leading-relaxed font-medium">
@@ -20,14 +20,14 @@ export default function NotFound() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                         href="/"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-fuchsia-700 transition-all shadow-sm"
+                        className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-fuchsia-700 transition-all shadow-sm dark:shadow-slate-900/30"
                     >
                         <Home className="w-4 h-4 mr-2" />
                         Go Home
                     </Link>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 rounded-full font-bold border border-slate-200 hover:bg-slate-50 transition-all shadow-sm"
+                        className="inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white rounded-full font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:bg-slate-800 transition-all shadow-sm dark:shadow-slate-900/30"
                     >
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Contact Us

@@ -47,10 +47,10 @@ export async function LocationStrip() {
         <section className="py-16 bg-gradient-to-b from-white to-gray-50">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="text-center mb-10">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                         Patients Visit Us From Across Tamil Nadu
                     </h2>
-                    <p className="mt-3 text-gray-600">
+                    <p className="mt-3 text-gray-600 dark:text-gray-400">
                         Find directions and travel info from your city to Indira Hospital, Vellore
                     </p>
                 </div>
@@ -60,13 +60,13 @@ export async function LocationStrip() {
                         <Link
                             key={loc.slug}
                             href={`/doctor/near-me/${loc.slug}`}
-                            className="group flex flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-4 hover:border-primary-300 hover:shadow-lg hover:shadow-primary-100/50 transition-all duration-300 hover:-translate-y-1"
+                            className="group flex flex-col items-center gap-2 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 hover:border-primary-300 hover:shadow-lg hover:shadow-primary-100/50 transition-all duration-300 hover:-translate-y-1"
                         >
                             <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center group-hover:bg-primary-100 transition-colors">
                                 <MapPin className="w-5 h-5 text-primary-600" />
                             </div>
-                            <span className="font-semibold text-gray-900 text-sm">{loc.name}</span>
-                            {loc.distance && <span className="text-xs text-gray-500">{loc.distance}</span>}
+                            <span className="font-semibold text-gray-900 dark:text-white text-sm">{loc.name}</span>
+                            {loc.distance && <span className="text-xs text-gray-500 dark:text-gray-400">{loc.distance}</span>}
                         </Link>
                     ))}
                 </div>

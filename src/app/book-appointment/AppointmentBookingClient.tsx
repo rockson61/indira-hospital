@@ -54,9 +54,9 @@ export default function AppointmentBookingClient() {
                     <div className="w-24 h-24 bg-pink-50 rounded-full flex items-center justify-center mb-8 shadow-inner animate-bounce delay-100">
                         <CheckCircle2 className="h-12 w-12 text-pink-500" />
                     </div>
-                    <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">Booking Confirmed!</h2>
-                    <p className="text-xl text-slate-500 font-medium mb-12 max-w-lg mx-auto">
-                        Thank you, <span className="font-bold text-slate-900">{formData.name}</span>. Your request is secured. Our clinical coordinator will contact you shortly at <span className="font-bold text-slate-900 tracking-wider">{formData.phone}</span> to finalize your precise slot.
+                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Booking Confirmed!</h2>
+                    <p className="text-xl text-slate-500 dark:text-slate-400 font-medium mb-12 max-w-lg mx-auto">
+                        Thank you, <span className="font-bold text-slate-900 dark:text-white">{formData.name}</span>. Your request is secured. Our clinical coordinator will contact you shortly at <span className="font-bold text-slate-900 dark:text-white tracking-wider">{formData.phone}</span> to finalize your precise slot.
                     </p>
                     <Link
                         href="/"
@@ -84,10 +84,10 @@ export default function AppointmentBookingClient() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-lg transition-all duration-500 shadow-md ${step >= 1 ? 'bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-fuchsia-500/40 scale-110' : 'bg-white text-slate-300 border-2 border-slate-100'}`}>
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-lg transition-all duration-500 shadow-md ${step >= 1 ? 'bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-fuchsia-500/40 scale-110' : 'bg-white dark:bg-slate-900 text-slate-300 border-2 border-slate-100'}`}>
                         1
                     </div>
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-lg transition-all duration-500 shadow-md ${step >= 2 ? 'bg-gradient-to-br from-pink-400 to-fuchsia-500 text-white shadow-pink-500/40 scale-110' : 'bg-white text-slate-300 border-2 border-slate-100'}`}>
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-lg transition-all duration-500 shadow-md ${step >= 2 ? 'bg-gradient-to-br from-pink-400 to-fuchsia-500 text-white shadow-pink-500/40 scale-110' : 'bg-white dark:bg-slate-900 text-slate-300 border-2 border-slate-100'}`}>
                         2
                     </div>
                 </div>
@@ -100,20 +100,20 @@ export default function AppointmentBookingClient() {
             <form onSubmit={step === 2 ? handleSubmit : (e) => { e.preventDefault(); handleNext(); }} className="relative z-10">
                 {step === 1 && (
                     <div className="space-y-8 animate-in slide-in-from-right-8 fade-in duration-500 fill-mode-forwards">
-                        <div className="bg-slate-50/50 rounded-[2rem] p-8 border border-slate-100">
-                            <h3 className="text-2xl font-black text-slate-900 mb-8 flex items-center gap-3">
+                        <div className="bg-slate-50/50 rounded-[2rem] p-8 border border-slate-100 dark:border-slate-700">
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 flex items-center gap-3">
                                 <div className="p-2 bg-fuchsia-100/50 rounded-xl text-fuchsia-600"><User className="h-5 w-5" /></div>
                                 Patient Details
                             </h3>
 
                             <div className="space-y-6">
                                 <div className="space-y-2.5">
-                                    <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-slate-500">Full Name <span className="text-rose-500">*</span></label>
+                                    <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">Full Name <span className="text-rose-500">*</span></label>
                                     <input
                                         id="name"
                                         type="text"
                                         required
-                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 bg-white focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 shadow-sm outline-none"
+                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 dark:text-white shadow-sm outline-none"
                                         placeholder="John Doe"
                                         value={formData.name}
                                         onChange={(e) => handleInputChange("name", e.target.value)}
@@ -121,12 +121,12 @@ export default function AppointmentBookingClient() {
                                 </div>
 
                                 <div className="space-y-2.5">
-                                    <label htmlFor="phone" className="text-xs font-black uppercase tracking-widest text-slate-500">Mobile Number <span className="text-rose-500">*</span></label>
+                                    <label htmlFor="phone" className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">Mobile Number <span className="text-rose-500">*</span></label>
                                     <input
                                         id="phone"
                                         type="tel"
                                         required
-                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 bg-white focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 shadow-sm outline-none tracking-wider"
+                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 dark:text-white shadow-sm outline-none tracking-wider"
                                         placeholder="+91 98765 00000"
                                         value={formData.phone}
                                         onChange={(e) => handleInputChange("phone", e.target.value)}
@@ -149,19 +149,19 @@ export default function AppointmentBookingClient() {
 
                 {step === 2 && (
                     <div className="space-y-8 animate-in slide-in-from-right-8 fade-in duration-500 fill-mode-forwards">
-                        <div className="bg-slate-50/50 rounded-[2rem] p-8 border border-slate-100">
-                            <h3 className="text-2xl font-black text-slate-900 mb-8 flex items-center gap-3">
+                        <div className="bg-slate-50/50 rounded-[2rem] p-8 border border-slate-100 dark:border-slate-700">
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 flex items-center gap-3">
                                 <div className="p-2 bg-pink-100/50 rounded-xl text-pink-600"><Activity className="h-5 w-5" /></div>
                                 Clinical Need
                             </h3>
 
                             <div className="space-y-6">
                                 <div className="space-y-2.5">
-                                    <label htmlFor="department" className="text-xs font-black uppercase tracking-widest text-slate-500">Select Department <span className="text-rose-500">*</span></label>
+                                    <label htmlFor="department" className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">Select Department <span className="text-rose-500">*</span></label>
                                     <select
                                         id="department"
                                         required
-                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 bg-white focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 shadow-sm outline-none appearance-none"
+                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 dark:text-white shadow-sm outline-none appearance-none"
                                         value={formData.department}
                                         onChange={(e) => handleInputChange("department", e.target.value)}
                                         style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right 1rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em` }}
@@ -175,10 +175,10 @@ export default function AppointmentBookingClient() {
 
                                 {formData.department && (
                                     <div className="animate-in fade-in slide-in-from-top-4 duration-500 space-y-2.5">
-                                        <label htmlFor="doctor" className="text-xs font-black uppercase tracking-widest text-slate-500">Preferred Specialist (Optional)</label>
+                                        <label htmlFor="doctor" className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">Preferred Specialist (Optional)</label>
                                         <select
                                             id="doctor"
-                                            className="w-full h-14 px-5 rounded-2xl border-slate-200 bg-white focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 shadow-sm outline-none appearance-none"
+                                            className="w-full h-14 px-5 rounded-2xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 dark:text-white shadow-sm outline-none appearance-none"
                                             value={formData.doctor}
                                             onChange={(e) => handleInputChange("doctor", e.target.value)}
                                             style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right 1rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em` }}
@@ -192,7 +192,7 @@ export default function AppointmentBookingClient() {
                                 )}
 
                                 <div className="space-y-2.5">
-                                    <label htmlFor="date" className="text-xs font-black uppercase tracking-widest text-slate-500 flex justify-between items-center">
+                                    <label htmlFor="date" className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 flex justify-between items-center">
                                         <span>Preferred Date <span className="text-rose-500">*</span></span>
                                         <Calendar className="w-4 h-4 text-slate-400" />
                                     </label>
@@ -201,7 +201,7 @@ export default function AppointmentBookingClient() {
                                         type="date"
                                         required
                                         min={new Date().toISOString().split('T')[0]}
-                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 bg-white focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 shadow-sm outline-none uppercase tracking-widest text-sm"
+                                        className="w-full h-14 px-5 rounded-2xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:border-fuchsia-400 focus:ring-4 focus:ring-fuchsia-500/10 transition-all font-medium text-slate-900 dark:text-white shadow-sm outline-none uppercase tracking-widest text-sm"
                                         value={formData.date}
                                         onChange={(e) => handleInputChange("date", e.target.value)}
                                     />
@@ -213,7 +213,7 @@ export default function AppointmentBookingClient() {
                             <button
                                 type="button"
                                 onClick={handleBack}
-                                className="group/back flex items-center justify-center px-8 py-5 bg-white border-2 border-slate-100 hover:border-slate-300 text-slate-700 font-black rounded-2xl transition-all w-full sm:w-auto hover:bg-slate-50"
+                                className="group/back flex items-center justify-center px-8 py-5 bg-white dark:bg-slate-900 border-2 border-slate-100 dark:border-slate-700 hover:border-slate-300 text-slate-700 dark:text-slate-200 font-black rounded-2xl transition-all w-full sm:w-auto hover:bg-slate-50 dark:bg-slate-800"
                             >
                                 <ArrowLeft className="w-5 h-5 mr-3 group-hover/back:-translate-x-1 transition-transform" />
                                 GO BACK

@@ -47,7 +47,7 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
     }
 
     return (
-        <main className="min-h-screen bg-gray-50 pb-12">
+        <main className="min-h-screen bg-gray-50 dark:bg-slate-950 pb-12">
             {/* Hero Section */}
             <section className="bg-fuchsia-900 text-white py-16 md:py-24 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
@@ -64,26 +64,26 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
 
             {/* Content Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
-                <div className="bg-white rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100">
+                <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 dark:border-slate-700">
                     <div className="grid lg:grid-cols-3 gap-10">
                         {/* Main Description */}
                         <div className="lg:col-span-2 space-y-8">
                             <div>
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Overview</h2>
-                                <p className="text-gray-600 leading-relaxed text-lg">
+                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Overview</h2>
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                                     {tech.fullDescription}
                                 </p>
                             </div>
 
                             <div>
-                                <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Key Features</h2>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {tech.features.map((feature, idx) => (
                                         <div key={idx} className="flex items-start gap-3 bg-fuchsia-50 p-4 rounded-xl">
                                             <div className="w-6 h-6 rounded-full bg-fuchsia-200 flex items-center justify-center shrink-0 mt-0.5">
                                                 <div className="w-2 h-2 rounded-full bg-fuchsia-700"></div>
                                             </div>
-                                            <span className="text-gray-800 font-medium">{feature}</span>
+                                            <span className="text-gray-800 dark:text-gray-100 font-medium">{feature}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -92,14 +92,14 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
 
                         {/* Sidebar: Benefits & CTA */}
                         <div className="lg:col-span-1 space-y-6">
-                            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                                <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <div className="bg-gray-50 dark:bg-slate-950 rounded-xl p-6 border border-gray-200 dark:border-slate-700">
+                                <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                                     <CheckCircle2 className="w-5 h-5 text-green-600" />
                                     Benefits
                                 </h3>
                                 <ul className="space-y-3">
                                     {tech.benefits.map((benefit, idx) => (
-                                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-700">
+                                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
                                             <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
                                             {benefit}
                                         </li>
@@ -112,7 +112,7 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
                                 <p className="text-fuchsia-100 text-sm mb-4">Contact our enquiry desk to learn more about this facility.</p>
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center justify-center w-full px-4 py-3 bg-white text-fuchsia-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+                                    className="inline-flex items-center justify-center w-full px-4 py-3 bg-white dark:bg-slate-900 text-fuchsia-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
                                 >
                                     Contact Us <ChevronRight className="w-4 h-4 ml-1" />
                                 </Link>
@@ -124,18 +124,18 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
 
             {/* Other Technologies */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8">Other Advanced Facilities</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Other Advanced Facilities</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {getAllTechnologies().filter(t => t.slug !== tech.slug).slice(0, 4).map((t) => (
                         <Link
                             key={t.slug}
                             href={`/technology/${t.slug}`}
-                            className="block p-5 rounded-xl border border-gray-200 hover:border-fuchsia-300 hover:shadow-md transition-all bg-white group"
+                            className="block p-5 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-md transition-all bg-white dark:bg-slate-900 group"
                         >
-                            <h3 className="font-semibold text-gray-900 group-hover:text-fuchsia-700 transition-colors">
+                            <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-fuchsia-700 transition-colors">
                                 {t.title}
                             </h3>
-                            <p className="text-xs text-gray-500 mt-2 line-clamp-2">{t.shortDescription}</p>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">{t.shortDescription}</p>
                         </Link>
                     ))}
                 </div>
@@ -151,13 +151,13 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
             />
 
             {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white" />
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-gray-50" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white" />
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-gray-50 dark:bg-slate-950" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-gray-50" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-gray-50 dark:bg-slate-950" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
         </main>
     );
 }

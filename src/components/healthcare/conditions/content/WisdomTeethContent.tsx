@@ -11,14 +11,14 @@ export function WisdomTeethContent() {
                     Wisdom teeth, or third molars, are the last teeth to develop and appear. Because they come in so late (usually between ages 17 and 25), many mouths simply don't have room for them. This lack of space causes them to become "impacted."
                 </p>
 
-                <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl">
+                <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-2xl">
                     <h4 className="font-semibold text-foreground mb-4">Types of Impaction</h4>
                     <div className="grid md:grid-cols-2 gap-4">
                         {[
                             { title: "Partial Impaction", desc: "The tooth breaks partly through the gum. This creates a flap of gum tissue where food can get trapped and cause infection." },
                             { title: "Full Impaction", desc: "The tooth never breaks through the gum. It remains stuck in the jawbone, which can cause cysts or damage to adjacent teeth." }
                         ].map((type, i) => (
-                            <div key={i} className="bg-card p-4 rounded-lg shadow-sm">
+                            <div key={i} className="bg-card p-4 rounded-lg shadow-sm dark:shadow-slate-900/30">
                                 <h5 className="font-bold text-foreground/90 mb-1">{type.title}</h5>
                                 <p className="text-sm text-muted-foreground">{type.desc}</p>
                             </div>
@@ -37,7 +37,7 @@ export function WisdomTeethContent() {
                         "Bad breath",
                         "Difficulty opening your mouth"
                     ].map((sign, i) => (
-                        <li key={i} className="flex items-center gap-3 p-3 rounded-lg border border-slate-100 dark:border-slate-800 hover:border-fuchsia-100 dark:border-fuchsia-700/40 transition-colors">
+                        <li key={i} className="flex items-center gap-3 p-3 rounded-lg border border-slate-100 dark:border-slate-700 dark:border-slate-800 hover:border-fuchsia-100 dark:border-fuchsia-700/40 transition-colors">
                             <XCircle className="w-5 h-5 text-red-500 shrink-0" />
                             <span className="text-foreground/80">{sign}</span>
                         </li>

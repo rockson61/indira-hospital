@@ -99,8 +99,8 @@ export default function BladderCancerPage() {
                     <li>Surveillance cystoscopy: Every 3 months for 2 years, then 6-monthly</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/10 dark:to-yellow-900/10 rounded-[2.5rem] border border-amber-100 dark:border-amber-900 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-amber-300 mb-4 tracking-tight">Bladder Cancer Evaluation at Indira Hospital</h4>
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/10 dark:to-yellow-900/10 rounded-[2.5rem] border border-amber-100 dark:border-amber-900 shadow-sm dark:shadow-slate-900/30">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-amber-300 mb-4 tracking-tight">Bladder Cancer Evaluation at Indira Hospital</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                             "Flexible Cystoscopy for Painless Haematuria",
@@ -108,9 +108,9 @@ export default function BladderCancerPage() {
                             "Intravesical BCG Therapy",
                             "Post-TURBT CT Urogram Staging"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800">
                                 <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0" />
-                                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
                             </div>
                         ))}
                     </div>

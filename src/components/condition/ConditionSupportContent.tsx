@@ -244,7 +244,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
           <ul className="grid gap-4 md:grid-cols-2">
             {content.causes.map((cause, index) => (
               <li key={cause} className="glassmorphism-item to-fuchsia-50/50 dark:from-slate-800/80 dark:to-fuchsia-900/30 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 text-foreground/80 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs font-bold mr-3 shadow-sm">{index + 1}</span>
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs font-bold mr-3 shadow-sm dark:shadow-slate-900/30">{index + 1}</span>
                 {cause}
               </li>
             ))}
@@ -344,7 +344,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
         <ul className="grid gap-4 md:grid-cols-2">
           {content.prevention.map((tip, index) => (
             <li key={tip} className="rounded-2xl border border-fuchsia-200/50 dark:border-fuchsia-700/40 bg-gradient-to-br from-white to-fuchsia-50/30 dark:from-slate-800 dark:to-fuchsia-900/20 p-5 shadow-md transition-all hover:shadow-xl hover:scale-[1.02]">
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs font-bold mr-3 shadow-sm">{index + 1}</span>
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs font-bold mr-3 shadow-sm dark:shadow-slate-900/30">{index + 1}</span>
               <span className="text-foreground/80 dark:text-slate-300">{tip}</span>
             </li>
           ))}

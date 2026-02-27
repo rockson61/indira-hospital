@@ -17,7 +17,7 @@ export function BruxismContent() {
                         { icon: Zap, title: "Awake Bruxism", desc: "Clenching due to stress, anxiety, or concentration." },
                         { icon: ShieldCheck, title: "Prevention", desc: "Night guards are the most effective protection." }
                     ].map((item, i) => (
-                        <Card key={i} className="bg-slate-50 dark:bg-slate-900 border-slate-100 dark:border-slate-800">
+                        <Card key={i} className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 border-slate-100 dark:border-slate-700 dark:border-slate-800">
                             <CardContent className="p-4 text-center">
                                 <item.icon className="w-8 h-8 text-fuchsia-600 mx-auto mb-3" />
                                 <h4 className="font-bold text-foreground mb-1">{item.title}</h4>

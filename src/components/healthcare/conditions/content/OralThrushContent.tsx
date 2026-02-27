@@ -10,7 +10,7 @@ export function OralThrushContent() {
                     Oral thrush occurs when a yeast infection develops inside your mouth. It's most common in babies, the elderly, and people with compromised immune systems. It appears as creamy white lesions, usually on your tongue or inner cheeks.
                 </p>
 
-                <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl">
+                <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-xl">
                     <h4 className="font-bold text-foreground mb-4 flex items-center gap-2">
                         <Thermometer className="w-5 h-5 text-red-500" />
                         Common Triggers

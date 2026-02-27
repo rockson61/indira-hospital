@@ -49,7 +49,7 @@ function StatItem({ value, meta, inView, delay }: { value: number; meta: typeof 
         >
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-            <div className={`w-20 h-20 rounded-2xl bg-white/5 ${meta.color} flex items-center justify-center group-hover:bg-white group-hover:text-slate-900 transition-all duration-500 shadow-xl group-hover:scale-110 z-10`}>
+            <div className={`w-20 h-20 rounded-2xl bg-white/5 ${meta.color} flex items-center justify-center group-hover:bg-white dark:bg-slate-900 group-hover:text-slate-900 dark:text-white transition-all duration-500 shadow-xl group-hover:scale-110 z-10`}>
                 <Icon className="w-10 h-10" />
             </div>
 

@@ -26,7 +26,7 @@ export function StickyFooter() {
     return (
         <div
             className={cn(
-                "fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 p-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-transform duration-300 md:hidden",
+                "fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700 p-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-transform duration-300 md:hidden",
                 isVisible ? "translate-y-0" : "translate-y-full"
             )}
         >

@@ -16,7 +16,7 @@ export default function TechnologyHubPage() {
     const technologies = getAllTechnologies();
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
             {/* ELITE TECH HERO */}
             <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
@@ -44,25 +44,25 @@ export default function TechnologyHubPage() {
                 <div className="bg-white/40 backdrop-blur-3xl rounded-[2.5rem] border border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8">
                     <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
                         <div className="group">
-                            <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
+                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
                                 <ShieldCheck className="w-7 h-7 text-fuchsia-600" />
                             </div>
-                            <h4 className="font-black text-xl mb-3 text-slate-800">Safety First</h4>
-                            <p className="text-slate-500 font-medium leading-relaxed">All equipment undergoes daily calibration and follows international safety protocols.</p>
+                            <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Safety First</h4>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">All equipment undergoes daily calibration and follows international safety protocols.</p>
                         </div>
                         <div className="group">
-                            <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
+                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
                                 <Zap className="w-7 h-7 text-fuchsia-600" />
                             </div>
-                            <h4 className="font-black text-xl mb-3 text-slate-800">Zero Waiting</h4>
-                            <p className="text-slate-500 font-medium leading-relaxed">In-house blood bank and modular OTs ensure no delay in life-saving procedures.</p>
+                            <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Zero Waiting</h4>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">In-house blood bank and modular OTs ensure no delay in life-saving procedures.</p>
                         </div>
                         <div className="group">
-                            <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
+                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
                                 <Monitor className="w-7 h-7 text-fuchsia-600" />
                             </div>
-                            <h4 className="font-black text-xl mb-3 text-slate-800">Expert Hand</h4>
-                            <p className="text-slate-500 font-medium leading-relaxed">Technicians and surgeons specially trained at world-class OEM facilities.</p>
+                            <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Expert Hand</h4>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Technicians and surgeons specially trained at world-class OEM facilities.</p>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ export default function TechnologyHubPage() {
                                 </div>
 
                                 <div className="relative z-10 mt-auto flex items-center justify-between pt-6 border-t border-white/10">
-                                    <span className="text-sm font-bold text-slate-500 group-hover:text-fuchsia-400 uppercase tracking-widest transition-colors">Discover</span>
+                                    <span className="text-sm font-bold text-slate-500 dark:text-slate-400 group-hover:text-fuchsia-400 uppercase tracking-widest transition-colors">Discover</span>
                                     <span className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-fuchsia-500 group-hover:text-white transition-all shadow-md">
                                         <ArrowRight className="w-5 h-5" />
                                     </span>

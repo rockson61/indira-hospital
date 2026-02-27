@@ -16,13 +16,13 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900">
       <JsonLdSchema type="hospital" />
       <Hero />
       <StatsBanner />
 
       {/* REFINED TRUST BAR */}
-      <section className="bg-white border-y border-slate-100 py-16 relative z-10 -mt-12 mb-12 rounded-[3rem] mx-4 sm:mx-8 shadow-xl shadow-slate-200/50">
+      <section className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700 py-16 relative z-10 -mt-12 mb-12 rounded-[3rem] mx-4 sm:mx-8 shadow-xl shadow-slate-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center font-black text-slate-400 tracking-[0.3em] uppercase mb-10 text-xs flex items-center justify-center gap-4">
             <span className="h-px w-12 bg-slate-200" />
@@ -31,9 +31,9 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {HOME_PAGE_CONTENT.ACCREDITATION_BADGES.map((badge, index) => (
-              <div key={index} className="group flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-2xl border border-slate-100 hover:border-fuchsia-200 hover:bg-fuchsia-50 transition-all duration-300 transform hover:-translate-y-1">
+              <div key={index} className="group flex items-center gap-3 px-6 py-3 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-200 hover:bg-fuchsia-50 transition-all duration-300 transform hover:-translate-y-1">
                 <div className="w-2 h-2 rounded-full bg-fuchsia-500 opacity-40 group-hover:opacity-100 transition-opacity" />
-                <span className="text-sm font-black text-slate-500 group-hover:text-fuchsia-700 tracking-wider">
+                <span className="text-sm font-black text-slate-500 dark:text-slate-400 group-hover:text-fuchsia-700 tracking-wider">
                   {badge}
                 </span>
               </div>
@@ -53,12 +53,12 @@ export default function Home() {
       </div>
 
       {/* ENTITY CARD SECTIONS */}
-      <EntityCardSection type="services" title="Popular Treatments" subtitle="Browse Services" limit={6} className="bg-white border-y border-slate-100" />
-      <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={6} className="bg-slate-50" />
+      <EntityCardSection type="services" title="Popular Treatments" subtitle="Browse Services" limit={6} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700" />
+      <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={6} className="bg-slate-50 dark:bg-slate-800" />
 
       {/* COMPACT SEO LINK STRIPS */}
-      <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-white border-t border-slate-100" />
-      <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50" />
+      <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+      <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-800" />
 
       {/* ELITE SIGNATURE HOME CTA */}
       <SectionContainer className="pb-32 px-4">
@@ -87,7 +87,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-3xl mx-auto">
               <a
                 href="/book-appointment"
-                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 text-slate-900 font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
+                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
               >
                 <span className="relative z-10">{HOME_PAGE_CONTENT.CTA_BUTTON_BOOK}</span>
                 <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

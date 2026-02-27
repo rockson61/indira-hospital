@@ -11,11 +11,11 @@ export function ImpactedTeethContent() {
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="border p-4 rounded-lg bg-slate-50 dark:bg-slate-900 dark:border-slate-700">
+                    <div className="border p-4 rounded-lg bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 dark:border-slate-700">
                         <h4 className="font-bold text-foreground mb-2">Vertical Impaction</h4>
                         <p className="text-sm text-muted-foreground">The tooth is in the correct position but can't break through the gum.</p>
                     </div>
-                    <div className="border p-4 rounded-lg bg-slate-50 dark:bg-slate-900 dark:border-slate-700">
+                    <div className="border p-4 rounded-lg bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 dark:border-slate-700">
                         <h4 className="font-bold text-foreground mb-2">Horizontal Impaction</h4>
                         <p className="text-sm text-muted-foreground">The tooth is growing sideways, pushing directly into the roots of adjacent teeth. This is very painful.</p>
                     </div>

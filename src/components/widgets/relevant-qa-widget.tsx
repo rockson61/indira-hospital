@@ -77,7 +77,7 @@ export function RelevantQAWidget({
           {staticFaqs.map((faq, index) => (
             <details key={`static-${index}`} className="group backdrop-blur-sm bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-md transition-all hover:shadow-lg">
               <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-fuchsia-600 dark:group-open:text-fuchsia-300 flex items-center gap-3">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm">?</span>
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm dark:shadow-slate-900/30">?</span>
                 {faq.question}
               </summary>
               <div className="mt-4 pl-9">
@@ -92,7 +92,7 @@ export function RelevantQAWidget({
           {questions.slice(0, 3).map((question) => (
             <details key={question.id} className="group backdrop-blur-sm bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-md transition-all hover:shadow-lg">
               <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-fuchsia-600 dark:group-open:text-fuchsia-300 flex items-center gap-3">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm">?</span>
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm dark:shadow-slate-900/30">?</span>
                 {question.title}
               </summary>
               <div className="mt-4 pl-9">

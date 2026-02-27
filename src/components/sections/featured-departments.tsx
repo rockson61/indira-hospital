@@ -14,7 +14,7 @@ export async function FeaturedDepartments() {
     const featuredOnly = departments.slice(0, 6);
 
     return (
-        <section className="py-32 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+        <section className="py-32 bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 relative overflow-hidden">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="flex justify-between items-end mb-12">
                     <SectionHeader

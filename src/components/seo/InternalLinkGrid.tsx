@@ -92,7 +92,7 @@ export async function InternalLinkGrid({
                     <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3 block">
                         {displaySubtitle}
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
                         {displayTitle}
                     </h2>
                 </div>
@@ -105,7 +105,7 @@ export async function InternalLinkGrid({
                             className={`group flex items-center gap-3 px-4 py-3.5 rounded-xl border text-sm font-bold transition-all hover:-translate-y-0.5 hover:shadow-md ${colors}`}
                         >
                             <Icon className="w-4 h-4 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
-                            <span className="truncate text-slate-700 group-hover:text-slate-900">{item.name}</span>
+                            <span className="truncate text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:text-white">{item.name}</span>
                         </Link>
                     ))}
                 </div>

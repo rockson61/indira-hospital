@@ -40,7 +40,7 @@ export default function GlossaryPage() {
     }, [filteredTerms]);
 
     return (
-        <div className="min-h-screen bg-gray-50 pb-20">
+        <div className="min-h-screen bg-gray-50 dark:bg-slate-950 pb-20">
             {/* Hero Section */}
             <div className="bg-gradient-to-r from-fuchsia-900 to-fuchsia-700 text-white py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -52,7 +52,7 @@ export default function GlossaryPage() {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
-                <Card className="p-6 shadow-lg border-none rounded-2xl bg-white">
+                <Card className="p-6 shadow-lg border-none rounded-2xl bg-white dark:bg-slate-900">
                     <div className="flex flex-col md:flex-row gap-4 items-center">
                         <div className="relative flex-1 w-full">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -100,14 +100,14 @@ export default function GlossaryPage() {
                                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {groupedTerms[letter].map((term) => (
                                         <Card key={term.term} className="p-6 hover:shadow-md transition-all border-l-4 border-l-fuchsia-500 rounded-lg group">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-fuchsia-700 transition-colors">
+                                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-fuchsia-700 transition-colors">
                                                 {term.term}
                                             </h3>
-                                            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                                            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
                                                 {term.definition}
                                             </p>
                                             <div className="flex items-center justify-between mt-auto">
-                                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-600 rounded-full">
+                                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-600 dark:text-gray-400 rounded-full">
                                                     {term.category}
                                                 </span>
                                                 {term.relatedService && (
@@ -130,8 +130,8 @@ export default function GlossaryPage() {
                         <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <BookOpen className="w-8 h-8 text-gray-400" />
                         </div>
-                        <h3 className="text-xl font-semibold text-gray-900">No terms found</h3>
-                        <p className="text-gray-500 mt-2">Try adjusting your search or filter.</p>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">No terms found</h3>
+                        <p className="text-gray-500 dark:text-gray-400 mt-2">Try adjusting your search or filter.</p>
                         <Button
                             variant="link"
                             className="text-fuchsia-600 mt-2"

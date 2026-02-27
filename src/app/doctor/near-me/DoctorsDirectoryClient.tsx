@@ -20,7 +20,7 @@ export default function DoctorsDirectoryClient() {
     });
 
     return (
-        <div className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* Bold Asymmetrical Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -82,16 +82,16 @@ export default function DoctorsDirectoryClient() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
-                            className="max-w-3xl mx-auto text-center py-24 bg-white rounded-[4rem] border border-slate-100 shadow-2xl"
+                            className="max-w-3xl mx-auto text-center py-24 bg-white dark:bg-slate-900 rounded-[4rem] border border-slate-100 dark:border-slate-700 shadow-2xl"
                         >
-                            <div className="w-32 h-32 bg-slate-50 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-inner group">
+                            <div className="w-32 h-32 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-inner group">
                                 <Search className="h-14 w-14 text-slate-300 group-hover:scale-110 transition-transform" />
                             </div>
-                            <h3 className="text-4xl font-black text-slate-900 mb-6">{DOCTORS_DIRECTORY.DEFAULT_NO_DOCTORS_MESSAGE}</h3>
-                            <p className="text-slate-500 font-medium text-xl mb-12 max-w-md mx-auto">{DOCTORS_DIRECTORY.DEFAULT_NO_DOCTORS_SUGGESTION}</p>
+                            <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-6">{DOCTORS_DIRECTORY.DEFAULT_NO_DOCTORS_MESSAGE}</h3>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium text-xl mb-12 max-w-md mx-auto">{DOCTORS_DIRECTORY.DEFAULT_NO_DOCTORS_SUGGESTION}</p>
                             <button
                                 onClick={() => { setSearchQuery(""); setSelectedDept(DOCTORS_DIRECTORY.DEFAULT_SEARCH_DEPT); }}
-                                className="group/btn relative px-12 py-6 bg-fuchsia-500 text-slate-900 rounded-2xl font-black text-lg transition-all hover:scale-[1.05] shadow-xl shadow-fuchsia-500/25 overflow-hidden"
+                                className="group/btn relative px-12 py-6 bg-fuchsia-500 text-slate-900 dark:text-white rounded-2xl font-black text-lg transition-all hover:scale-[1.05] shadow-xl shadow-fuchsia-500/25 overflow-hidden"
                             >
                                 <span className="relative z-10 uppercase tracking-widest">{DOCTORS_DIRECTORY.DEFAULT_CLEAR_FILTERS_TEXT}</span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
@@ -108,7 +108,7 @@ export default function DoctorsDirectoryClient() {
                                     transition={{ delay: idx * 0.05 }}
                                     className="group relative"
                                 >
-                                    <div className="relative h-full bg-white/70 backdrop-blur-2xl border border-slate-200/50 rounded-[3.5rem] p-10 lg:p-14 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 flex flex-col overflow-hidden">
+                                    <div className="relative h-full bg-white/70 backdrop-blur-2xl border border-slate-200 dark:border-slate-700/50 rounded-[3.5rem] p-10 lg:p-14 hover:bg-white dark:bg-slate-900 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 flex flex-col overflow-hidden">
                                         {/* Light Streak Animation */}
                                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
@@ -123,7 +123,7 @@ export default function DoctorsDirectoryClient() {
                                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-4 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
                                                     <Sparkles className="w-3 h-3" /> Specialist
                                                 </div>
-                                                <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-[1.1]">
+                                                <h2 className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-[1.1]">
                                                     <Link href={`/doctor/${(doctor.specialty || 'specialist').toLowerCase().replace(/\s+/g, '-')}/${doctor.slug}`} className="before:absolute before:inset-0 outline-none">
                                                         {doctor.name}
                                                     </Link>
@@ -137,28 +137,28 @@ export default function DoctorsDirectoryClient() {
                                             </div>
                                         </div>
 
-                                        <p className="text-slate-500 text-lg lg:text-xl line-clamp-3 leading-relaxed mb-12 flex-grow font-light relative z-10">
+                                        <p className="text-slate-500 dark:text-slate-400 text-lg lg:text-xl line-clamp-3 leading-relaxed mb-12 flex-grow font-light relative z-10">
                                             {doctor.bio}
                                         </p>
 
                                         {/* Elite Stats & Expertise */}
                                         <div className="grid grid-cols-2 gap-4 mb-12 relative z-10">
-                                            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 group-hover:bg-white group-hover:border-fuchsia-100 transition-all">
+                                            <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-4 border border-slate-100 dark:border-slate-700 group-hover:bg-white dark:bg-slate-900 group-hover:border-fuchsia-100 transition-all">
                                                 <div className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">
                                                     <Clock className="w-3 h-3 text-fuchsia-500" /> Experience
                                                 </div>
-                                                <p className="text-lg font-black text-slate-900">{doctor.experience}{DOCTORS_DIRECTORY.EXPERIENCE_SUFFIX}</p>
+                                                <p className="text-lg font-black text-slate-900 dark:text-white">{doctor.experience}{DOCTORS_DIRECTORY.EXPERIENCE_SUFFIX}</p>
                                             </div>
-                                            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 group-hover:bg-white group-hover:border-fuchsia-100 transition-all">
+                                            <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-4 border border-slate-100 dark:border-slate-700 group-hover:bg-white dark:bg-slate-900 group-hover:border-fuchsia-100 transition-all">
                                                 <div className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">
                                                     <Star className="w-3 h-3 text-pink-500" /> Qualification
                                                 </div>
-                                                <p className="text-lg font-black text-slate-900 truncate">{doctor.education[0]}</p>
+                                                <p className="text-lg font-black text-slate-900 dark:text-white truncate">{doctor.education[0]}</p>
                                             </div>
                                         </div>
 
                                         {/* Premium Footer Actions */}
-                                        <div className="pt-10 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-6 relative z-20">
+                                        <div className="pt-10 border-t border-slate-100 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-6 relative z-20">
                                             <Link
                                                 href={`/doctor/${(doctor.specialty || 'specialist').toLowerCase().replace(/\s+/g, '-')}/${doctor.slug}`}
                                                 className="text-sm font-black text-slate-400 hover:text-fuchsia-600 uppercase tracking-[0.2em] transition-all flex items-center gap-2"

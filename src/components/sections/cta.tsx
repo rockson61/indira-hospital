@@ -11,8 +11,8 @@ export function CTASection() {
             <div className="bg-red-600 py-3">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-center gap-3 text-white text-sm font-semibold">
                     <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white dark:bg-slate-900 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-white dark:bg-slate-900"></span>
                     </span>
                     24/7 Emergency Available — Call{" "}
                     <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="underline underline-offset-2 hover:no-underline">{clinicConfig.phone}</a>{" "}

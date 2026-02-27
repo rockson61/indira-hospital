@@ -20,7 +20,7 @@ export default async function LocationDepartmentPage({
     const icons = [CheckCircle2, HeartPulse, Activity, Sparkles];
 
     return (
-        <div className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
             {/* Bold Asymmetrical Hero with Subtle Pattern */}
             <div className="relative pt-44 pb-20 lg:pt-56 lg:pb-32 overflow-hidden bg-slate-900">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
@@ -52,8 +52,8 @@ export default async function LocationDepartmentPage({
 
                     {/* Interactive Bento Box Services Grid */}
                     <div className="lg:col-span-8 space-y-8">
-                        <div className="bg-white rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-slate-200/40 border border-slate-100">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-slate-200/40 border border-slate-100 dark:border-slate-700">
+                            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
                                 <Sparkles className="w-8 h-8 text-fuchsia-500" />
                                 Premium Services Available
                             </h2>
@@ -61,12 +61,12 @@ export default async function LocationDepartmentPage({
                                 {currDept.features.map((feature, i) => {
                                     const RandomIcon = icons[i % icons.length];
                                     return (
-                                        <div key={i} className="group relative p-6 bg-slate-50 rounded-2xl border border-slate-100/60 hover:border-fuchsia-200 hover:bg-fuchsia-50/50 transition-all duration-300 hover:shadow-lg hover:shadow-fuchsia-100/50 hover:-translate-y-1">
+                                        <div key={i} className="group relative p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100/60 hover:border-fuchsia-200 hover:bg-fuchsia-50/50 transition-all duration-300 hover:shadow-lg hover:shadow-fuchsia-100/50 hover:-translate-y-1">
                                             <div className="flex items-start gap-4">
-                                                <div className="p-2.5 bg-white rounded-xl shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors duration-300 text-slate-400">
+                                                <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors duration-300 text-slate-400">
                                                     <RandomIcon className="w-5 h-5" />
                                                 </div>
-                                                <p className="text-slate-700 font-medium leading-relaxed group-hover:text-slate-900 transition-colors">
+                                                <p className="text-slate-700 dark:text-slate-200 font-medium leading-relaxed group-hover:text-slate-900 dark:text-white transition-colors">
                                                     {feature}
                                                 </p>
                                             </div>

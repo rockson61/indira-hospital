@@ -6,7 +6,7 @@ import { Phone, Calendar, MapPin, MessageCircle } from "lucide-react";
 
 export const MobileQuickActions = () => {
     return (
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-safe shadow-[0_-8px_30px_rgb(0,0,0,0.12)]">
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-700 dark:border-slate-800 pb-safe shadow-[0_-8px_30px_rgb(0,0,0,0.12)]">
             <div className="grid grid-cols-4 items-center h-16">
                 <Link
                     href="/book-appointment"

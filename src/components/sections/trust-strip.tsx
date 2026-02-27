@@ -22,7 +22,7 @@ const badges = [
 
 export function TrustStrip() {
     return (
-        <section className="py-12 bg-white border-y border-slate-100">
+        <section className="py-12 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Stats Row */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
@@ -33,14 +33,14 @@ export function TrustStrip() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="flex items-center gap-4 p-5 rounded-[2rem] bg-slate-50/50 border border-slate-100"
+                            className="flex items-center gap-4 p-5 rounded-[2rem] bg-slate-50/50 border border-slate-100 dark:border-slate-700"
                         >
                             <div className={`w-12 h-12 rounded-[1rem] ${item.bg} flex items-center justify-center flex-shrink-0`}>
                                 <item.icon className={`w-6 h-6 ${item.color}`} />
                             </div>
                             <div>
-                                <p className="text-2xl font-heading font-black text-slate-900 leading-none">{item.label}</p>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">{item.sublabel}</p>
+                                <p className="text-2xl font-heading font-black text-slate-900 dark:text-white leading-none">{item.label}</p>
+                                <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1">{item.sublabel}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -59,7 +59,7 @@ export function TrustStrip() {
                     ))}
                     <Link
                         href="/services"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-bold hover:bg-fuchsia-700 transition-all shadow-sm"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-bold hover:bg-fuchsia-700 transition-all shadow-sm dark:shadow-slate-900/30"
                     >
                         Explore Services <ArrowRight className="w-3.5 h-3.5" />
                     </Link>

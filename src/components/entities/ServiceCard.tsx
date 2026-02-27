@@ -43,7 +43,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                 <Link
                     href={href}
                     className={cn(
-                        "group flex items-center justify-between p-5 rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-slate-200/50 hover:bg-white hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 transition-all duration-500",
+                        "group flex items-center justify-between p-5 rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-slate-200 dark:border-slate-700/50 hover:bg-white dark:bg-slate-900 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 transition-all duration-500",
                         className
                     )}
                 >
@@ -51,7 +51,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                         <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 shadow-sm group-hover:scale-110 group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-500">
                             <div className="w-6 h-6">{Icon}</div>
                         </div>
-                        <span className="text-base font-black text-slate-900 group-hover:text-fuchsia-700 transition-colors tracking-tight">
+                        <span className="text-base font-black text-slate-900 dark:text-white group-hover:text-fuchsia-700 transition-colors tracking-tight">
                             {service.title}
                         </span>
                     </div>
@@ -72,27 +72,27 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
             >
                 <Link href={href} className={cn("group block h-full", className)}>
                     <div className={cn(
-                        "h-full rounded-[3rem] border border-slate-200/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 bg-white/40 overflow-hidden relative p-10 flex flex-col items-center text-center",
+                        "h-full rounded-[3rem] border border-slate-200 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 bg-white/40 overflow-hidden relative p-10 flex flex-col items-center text-center",
                         cardClassName
                     )}>
                         {/* Light Streak Animation */}
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                        <div className="w-20 h-20 rounded-[2rem] bg-slate-50 border border-slate-100 group-hover:bg-fuchsia-600 flex items-center justify-center text-fuchsia-600 group-hover:text-white transition-all duration-700 mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 relative z-10">
+                        <div className="w-20 h-20 rounded-[2rem] bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 group-hover:bg-fuchsia-600 flex items-center justify-center text-fuchsia-600 group-hover:text-white transition-all duration-700 mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 relative z-10">
                             <div className="w-10 h-10">{Icon}</div>
                         </div>
 
                         <div className="relative z-10 flex-grow">
-                            <h3 className="text-2xl font-black text-slate-900 group-hover:text-fuchsia-700 transition-colors mb-4 tracking-tight leading-tight">
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white group-hover:text-fuchsia-700 transition-colors mb-4 tracking-tight leading-tight">
                                 {service.title}
                             </h3>
 
-                            <p className="text-[15px] text-slate-500 font-medium line-clamp-3 mb-8 leading-relaxed">
+                            <p className="text-[15px] text-slate-500 dark:text-slate-400 font-medium line-clamp-3 mb-8 leading-relaxed">
                                 {service.short_description}
                             </p>
                         </div>
 
-                        <div className="mt-auto pt-6 border-t border-slate-100 w-full relative z-10">
+                        <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-700 w-full relative z-10">
                             <span className="inline-flex items-center text-slate-400 text-xs font-black tracking-[0.2em] uppercase group-hover:text-fuchsia-600 transition-all">
                                 Explore Expertise <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                             </span>
@@ -107,7 +107,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
     return (
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className={cn(
-                "group relative h-full rounded-[3rem] border border-slate-200/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 p-10 flex flex-col bg-white/40 overflow-hidden",
+                "group relative h-full rounded-[3rem] border border-slate-200 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 p-10 flex flex-col bg-white/40 overflow-hidden",
                 className
             )}>
                 {/* Light Streak Animation */}
@@ -125,13 +125,13 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                 </div>
 
                 <div className="relative z-10 flex-grow">
-                    <h3 className="text-3xl font-black text-slate-900 mb-4 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-tight">
+                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-tight">
                         <Link href={href} className="before:absolute before:inset-0 outline-none">
                             {service.title}
                         </Link>
                     </h3>
 
-                    <p className="text-slate-500 text-lg font-medium mb-8 line-clamp-3 leading-relaxed">
+                    <p className="text-slate-500 dark:text-slate-400 text-lg font-medium mb-8 line-clamp-3 leading-relaxed">
                         {service.short_description}
                     </p>
 

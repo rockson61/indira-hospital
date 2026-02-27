@@ -167,7 +167,7 @@ export function SubServiceTemplate({
                             </>
                         )}
                         <ChevronRight className="w-4 h-4" />
-                        <span className="text-slate-900 font-bold">{title}</span>
+                        <span className="text-slate-900 dark:text-white font-bold">{title}</span>
                     </nav>
 
                     {/* Headline */}
@@ -177,7 +177,7 @@ export function SubServiceTemplate({
                             {eyebrow}
                         </p>
                     )}
-                    <h1 className="text-5xl sm:text-6xl font-heading font-black tracking-tight mb-4 text-slate-900">{title}</h1>
+                    <h1 className="text-5xl sm:text-6xl font-heading font-black tracking-tight mb-4 text-slate-900 dark:text-white">{title}</h1>
                     <div className="text-lg text-slate-600 max-w-2xl leading-relaxed font-medium">
                         {description}
                     </div>
@@ -195,7 +195,7 @@ export function SubServiceTemplate({
                             href={whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center px-10 py-4 bg-white hover:bg-slate-50 text-slate-900 font-bold rounded-full transition-all border border-slate-200 shadow-sm hover:-translate-y-1"
+                            className="inline-flex items-center px-10 py-4 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white font-bold rounded-full transition-all border border-slate-200 dark:border-slate-700 shadow-sm hover:-translate-y-1"
                         >
                             <MessageCircle className="h-5 w-5 mr-2" />
                             WhatsApp Us
@@ -212,7 +212,7 @@ export function SubServiceTemplate({
                             index === 0 ? IndianRupee : index === 1 ? Clock : index === 2 ? ShieldCheck : Star
                         )
                         return (
-                            <div key={index} className="bg-white rounded-[2rem] shadow-soft border border-slate-100 p-6 text-center">
+                            <div key={index} className="bg-white dark:bg-slate-900 rounded-[2rem] shadow-soft border border-slate-100 dark:border-slate-700 p-6 text-center">
                                 {Icon && (
                                     <div className="flex justify-center mb-2">
                                         <div className="w-10 h-10 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-600">
@@ -220,8 +220,8 @@ export function SubServiceTemplate({
                                         </div>
                                     </div>
                                 )}
-                                <p className="text-xl font-heading font-black text-slate-900">{fact.value}</p>
-                                <p className="text-sm text-slate-500 font-bold mt-1 uppercase tracking-wider">{fact.label}</p>
+                                <p className="text-xl font-heading font-black text-slate-900 dark:text-white">{fact.value}</p>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 font-bold mt-1 uppercase tracking-wider">{fact.label}</p>
                             </div>
                         )
                     })}
@@ -238,10 +238,10 @@ export function SubServiceTemplate({
                         {/* Children (rich prose content) */}
                         {children && (
                             <article className="prose prose-lg prose-slate max-w-none
-                                prose-headings:font-heading prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900
+                                prose-headings:font-heading prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900 dark:text-white
                                 prose-h2:text-3xl prose-h2:border-l-4 prose-h2:border-fuchsia-500 prose-h2:pl-4
                                 prose-p:text-slate-600 prose-p:leading-relaxed
-                                prose-strong:text-slate-800
+                                prose-strong:text-slate-800 dark:text-slate-100
                                 prose-a:text-fuchsia-600 prose-a:no-underline hover:prose-a:underline
                                 prose-img:rounded-[2rem] prose-img:shadow-xl">
                                 {typeof children === 'string' ? (
@@ -272,8 +272,8 @@ export function SubServiceTemplate({
                         <div className="sticky top-24 space-y-6">
 
                             {/* Appointment Card */}
-                            <ModernCard className="p-8 bg-white shadow-xl shadow-slate-200/50 border-none">
-                                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                            <ModernCard className="p-8 bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 border-none">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                                     <Calendar className="w-5 h-5 text-fuchsia-600" />
                                     Book an Appointment
                                 </h3>
@@ -296,7 +296,7 @@ export function SubServiceTemplate({
                                     </a>
                                     <a
                                         href={`tel:${phone.replace(/\s+/g, '')}`}
-                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold rounded-full transition-all border border-slate-100 text-base"
+                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 text-slate-700 dark:text-slate-200 font-bold rounded-full transition-all border border-slate-100 dark:border-slate-700 text-base"
                                     >
                                         <Phone className="w-5 h-5 mr-2 text-fuchsia-600" />
                                         {phone}
@@ -305,8 +305,8 @@ export function SubServiceTemplate({
                             </ModernCard>
 
                             {/* Department Schedule Card */}
-                            <ModernCard className="p-8 bg-white border-none shadow-md">
-                                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                            <ModernCard className="p-8 bg-white dark:bg-slate-900 border-none shadow-md">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                                     <Clock className="w-5 h-5 text-fuchsia-600" />
                                     OPD Schedule
                                 </h3>
@@ -317,7 +317,7 @@ export function SubServiceTemplate({
                                         { day: 'Emergency', time: 'Always Open', emergency: true },
                                     ].map((row) => (
                                         <div key={row.day} className="flex justify-between items-center py-3">
-                                            <span className="text-gray-600 font-medium text-sm">{row.day}</span>
+                                            <span className="text-gray-600 dark:text-gray-400 font-medium text-sm">{row.day}</span>
                                             {row.emergency ? (
                                                 <span className="px-2.5 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full">ALWAYS OPEN</span>
                                             ) : (
@@ -358,7 +358,7 @@ export function SubServiceTemplate({
 
             {/* ── Related Services ──────────────────────────────────────────── */}
             {relatedServices && (
-                <section className="bg-[#FAFAFA] py-20 border-b border-slate-100">
+                <section className="bg-[#FAFAFA] py-20 border-b border-slate-100 dark:border-slate-700">
                     <SectionContainer>
                         <RelatedServices {...relatedServices} />
                     </SectionContainer>
@@ -367,7 +367,7 @@ export function SubServiceTemplate({
 
             {/* ── Reviews ──────────────────────────────────────────────────── */}
             {reviews && (
-                <section className="py-20 bg-white">
+                <section className="py-20 bg-white dark:bg-slate-900">
                     <SectionContainer>
                         <EntityReviews
                             entityType={(reviews.entityType || 'department') as any}
@@ -395,7 +395,7 @@ export function SubServiceTemplate({
                         <div className="flex flex-wrap justify-center gap-6 pt-4">
                             <Link
                                 href={bookingUrl}
-                                className="px-10 py-5 bg-white text-slate-900 font-bold rounded-full transition-all shadow-float hover:-translate-y-1 text-lg inline-flex items-center gap-2"
+                                className="px-10 py-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-full transition-all shadow-float hover:-translate-y-1 text-lg inline-flex items-center gap-2"
                             >
                                 <Calendar className="w-5 h-5" />
                                 Book Appointment

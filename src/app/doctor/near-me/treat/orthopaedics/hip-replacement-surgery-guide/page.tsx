@@ -60,8 +60,8 @@ export default function HipReplacementSurgeryGuidePage() {
         <p>
           Our surgeons are trained in the <strong>Direct Anterior Approach (DAA)</strong> to hip replacement — accessing the joint from the front without cutting through any major muscles. This results in less post-operative pain, fewer restrictions, faster return to walking, and a lower hip dislocation rate.
         </p>
-        <div className="my-10 p-8 bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/10 dark:to-pink-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-fuchsia-900 shadow-sm">
-          <h4 className="text-2xl font-black text-slate-900 dark:text-fuchsia-300 mb-6 tracking-tight">All-Inclusive Care Package</h4>
+        <div className="my-10 p-8 bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/10 dark:to-pink-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-fuchsia-900 shadow-sm dark:shadow-slate-900/30">
+          <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-fuchsia-300 mb-6 tracking-tight">All-Inclusive Care Package</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               "FDA-Approved Implants Included",
@@ -69,9 +69,9 @@ export default function HipReplacementSurgeryGuidePage() {
               "Cashless Insurance for 50+ Plans",
               "0% EMI Financing Available"
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800 shadow-sm dark:shadow-slate-900/30">
                 <CheckCircle className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
-                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
               </div>
             ))}
           </div>

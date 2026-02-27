@@ -9,7 +9,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 
 export default async function PilesLandingPage() {
     return (
-        <div className="bg-white">
+        <div className="bg-white dark:bg-slate-900">
             {/* Hero Section */}
             <section className="relative bg-gradient-to-b from-blue-50 to-white py-16 lg:py-24 overflow-hidden">
                 <div className="container mx-auto px-4 max-w-7xl">
@@ -19,10 +19,10 @@ export default async function PilesLandingPage() {
                                 <Star className="w-3 h-3 fill-current" />
                                 #1 Proctology Center in Vellore
                             </div>
-                            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
                                 Permanent Cure for <span className="text-primary-600">Piles, Fissure & Fistula</span> within 30 Minutes
                             </h1>
-                            <p className="text-lg text-gray-600">
+                            <p className="text-lg text-gray-600 dark:text-gray-400">
                                 Advanced USFDA-approved Laser Treatment. No cuts, no stitches, 24-hour recovery.
                             </p>
 
@@ -33,7 +33,7 @@ export default async function PilesLandingPage() {
                                     "Insurance Cashless Approved",
                                     "15+ Years Specialist Surgeons"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                                    <li key={i} className="flex items-center gap-3 text-gray-700 dark:text-gray-300 font-medium">
                                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                                         {item}
                                     </li>
@@ -59,7 +59,7 @@ export default async function PilesLandingPage() {
             </section>
 
             {/* Tools Section */}
-            <section className="py-20 bg-gray-50 border-y border-gray-100">
+            <section className="py-20 bg-gray-50 dark:bg-slate-950 border-y border-gray-100 dark:border-slate-700">
                 <div className="container mx-auto px-4 max-w-7xl">
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         <CostCalculator />

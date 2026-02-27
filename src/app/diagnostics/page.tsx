@@ -42,7 +42,7 @@ export default async function DiagnosticsPage() {
     const categoryOrder = ['radiology', 'pathology', 'cardiology', 'other'];
 
     return (
-        <main className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* Bold Asymmetrical Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -111,7 +111,7 @@ export default async function DiagnosticsPage() {
                                             <Icon className={`w-12 h-12 ${config.color}`} />
                                         </div>
                                         <div>
-                                            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-2">{config.label}</h2>
+                                            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-2">{config.label}</h2>
                                             <div className="flex items-center gap-3">
                                                 <span className="h-1 w-8 bg-fuchsia-500 rounded-full" />
                                                 <p className="text-sm font-black text-slate-400 tracking-[0.2em] uppercase">
@@ -141,12 +141,12 @@ export default async function DiagnosticsPage() {
 
             {/* Fallback if no data */}
             {diagnostics.length === 0 && (
-                <SectionContainer className="py-32 text-center bg-white rounded-[3rem] mx-8 border border-slate-100 shadow-2xl">
-                    <div className="w-32 h-32 bg-slate-50 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-inner">
+                <SectionContainer className="py-32 text-center bg-white dark:bg-slate-900 rounded-[3rem] mx-8 border border-slate-100 dark:border-slate-700 shadow-2xl">
+                    <div className="w-32 h-32 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-inner">
                         <Beaker className="h-14 w-14 text-slate-300" />
                     </div>
-                    <h3 className="text-3xl font-black text-slate-900 mb-4">Inventory Syncing</h3>
-                    <p className="text-slate-500 font-medium text-lg max-w-md mx-auto">Diagnostic database is being updated with real-time pricing. Please call us for immediate assistance.</p>
+                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4">Inventory Syncing</h3>
+                    <p className="text-slate-500 dark:text-slate-400 font-medium text-lg max-w-md mx-auto">Diagnostic database is being updated with real-time pricing. Please call us for immediate assistance.</p>
                 </SectionContainer>
             )}
 
@@ -179,7 +179,7 @@ export default async function DiagnosticsPage() {
                                 href="https://wa.me/917010650063?text=Hi%2C%20I%20want%20to%20book%20home%20sample%20collection"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 text-slate-900 font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
+                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
                             >
                                 <span className="relative z-10 uppercase tracking-wider">Book Home Visit</span>
                                 <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
@@ -217,14 +217,14 @@ export default async function DiagnosticsPage() {
             </SectionContainer>
 
             {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white border-t border-slate-100" />
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white border-t border-slate-100" />
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50 dark:bg-slate-800" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white border-t border-slate-100" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-800" />
 
             {/* JSON-LD for MedicalTest listing */}
             <script

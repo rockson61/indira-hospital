@@ -107,8 +107,8 @@ export default function CervicalCancerScreeningPage() {
                     <li><strong>DES exposure in utero:</strong> Clear-cell adenocarcinoma risk</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/10 dark:to-rose-900/10 rounded-[2.5rem] border border-pink-100 dark:border-pink-900 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-pink-300 mb-4 tracking-tight">Women's Cancer Prevention Clinic</h4>
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/10 dark:to-rose-900/10 rounded-[2.5rem] border border-pink-100 dark:border-pink-900 shadow-sm dark:shadow-slate-900/30">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-pink-300 mb-4 tracking-tight">Women's Cancer Prevention Clinic</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                             "Annual Women's Health Checkup Packages",
@@ -116,9 +116,9 @@ export default function CervicalCancerScreeningPage() {
                             "HPV DNA Typing (all 14 high-risk types)",
                             "Cervavac, Cervarix & Gardasil-9 in Stock"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800">
                                 <CheckCircle className="w-5 h-5 text-pink-500 flex-shrink-0" />
-                                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
                             </div>
                         ))}
                     </div>

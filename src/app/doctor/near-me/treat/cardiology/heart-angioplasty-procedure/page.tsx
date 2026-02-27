@@ -90,9 +90,9 @@ export default function HeartAngioplastyProcedurePage() {
           We use only the latest generation of <strong>Drug-Eluting Stents (DES)</strong>. The drug coating on the stent prevents scar tissue from forming inside the stent, dramatically reducing the relatively small risk of restenosis associated with older bare metal stents.
         </p>
 
-        <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-rose-50 to-red-50 dark:from-rose-900/10 dark:to-red-900/10 rounded-[2.5rem] border border-rose-100 dark:border-rose-900 shadow-sm">
-          <h4 className="text-2xl font-black text-slate-900 dark:text-rose-300 mb-6 tracking-tight">24/7 Emergency Cardiac Services</h4>
-          <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+        <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-rose-50 to-red-50 dark:from-rose-900/10 dark:to-red-900/10 rounded-[2.5rem] border border-rose-100 dark:border-rose-900 shadow-sm dark:shadow-slate-900/30">
+          <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-rose-300 mb-6 tracking-tight">24/7 Emergency Cardiac Services</h4>
+          <p className="text-lg text-slate-700 dark:text-slate-200 dark:text-slate-300 leading-relaxed mb-8">
             Our Cath Lab is operational around the clock for emergency heart attack cases.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -102,9 +102,9 @@ export default function HeartAngioplastyProcedurePage() {
               "Cashless for 60+ Insurers",
               "0% EMI on Self-Pay"
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800 shadow-sm dark:shadow-slate-900/30">
                 <CheckCircle className="w-5 h-5 text-rose-500 flex-shrink-0" />
-                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
               </div>
             ))}
           </div>

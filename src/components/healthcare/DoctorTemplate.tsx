@@ -92,7 +92,7 @@ export function DoctorTemplate({
                                         />
                                     ) : (
                                         <div className="flex items-center justify-center w-full h-full bg-slate-800">
-                                            <UserCircle className="w-32 h-32 text-slate-600" />
+                                            <UserCircle className="w-32 h-32 text-slate-600 dark:text-slate-300" />
                                         </div>
                                     )}
                                 </div>
@@ -164,7 +164,7 @@ export function DoctorTemplate({
                     <div className="lg:col-span-8 space-y-12">
                         {/* Biography / Bio */}
                         <div className="space-y-6">
-                            <h2 className="text-3xl font-bold text-slate-900 border-l-4 border-[#005f73] pl-6 tracking-tight">{DOCTOR_PROFILE.SECTION_BIOGRAPHY}</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 dark:text-white border-l-4 border-[#005f73] pl-6 tracking-tight">{DOCTOR_PROFILE.SECTION_BIOGRAPHY}</h2>
                             <div
                                 className="text-lg text-slate-600 leading-relaxed font-light"
                                 dangerouslySetInnerHTML={{ __html: doctor.bio || DOCTOR_PROFILE.DEFAULT_BIO }}
@@ -173,8 +173,8 @@ export function DoctorTemplate({
 
                         {/* Education Grid */}
                         {doctor.education && doctor.education.length > 0 && (
-                            <div className="space-y-8 bg-white p-10 rounded-[2.5rem] shadow-sm shadow-slate-200/60 border border-slate-100">
-                                <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                            <div className="space-y-8 bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-sm shadow-slate-200/60 border border-slate-100 dark:border-slate-700">
+                                <h2 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
                                     <GraduationCap className="w-8 h-8 text-fuchsia-600" />
                                     {DOCTOR_PROFILE.SECTION_ACADEMIC_PROFILE}
                                 </h2>
@@ -185,8 +185,8 @@ export function DoctorTemplate({
                                             <div key={i} className="flex gap-4">
                                                 <div className="h-2 w-2 rounded-full bg-fuchsia-400 mt-2.5 shrink-0 shadow-glow" />
                                                 <div>
-                                                    <h3 className="font-bold text-slate-800 text-lg">{isString ? edu : edu.degree}</h3>
-                                                    {!isString && edu.institution && <p className="text-slate-500 font-medium">{edu.institution}</p>}
+                                                    <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg">{isString ? edu : edu.degree}</h3>
+                                                    {!isString && edu.institution && <p className="text-slate-500 dark:text-slate-400 font-medium">{edu.institution}</p>}
                                                     {!isString && edu.year && <span className="inline-block mt-2 px-3 py-1 bg-fuchsia-50 text-fuchsia-600 text-xs font-bold rounded-full tracking-wider">{edu.year}</span>}
                                                 </div>
                                             </div>
@@ -208,14 +208,14 @@ export function DoctorTemplate({
                                         <div className="p-4 bg-fuchsia-600 inline-block rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform">
                                             <Activity className="w-8 h-8" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3">{DOCTOR_EXPERTISE_FALLBACK_1.TITLE}</h3>
+                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{DOCTOR_EXPERTISE_FALLBACK_1.TITLE}</h3>
                                         <p className="text-slate-600 leading-relaxed font-light">{DOCTOR_EXPERTISE_FALLBACK_1.DESC}</p>
                                     </ModernCard>
-                                    <ModernCard className="bg-gradient-to-br from-slate-50/50 to-white border-slate-100 p-8 hover:shadow-xl transition-all group">
+                                    <ModernCard className="bg-gradient-to-br from-slate-50/50 to-white border-slate-100 dark:border-slate-700 p-8 hover:shadow-xl transition-all group">
                                         <div className="p-4 bg-slate-800 inline-block rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform">
                                             <Shield className="w-8 h-8" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3">{DOCTOR_EXPERTISE_FALLBACK_2.TITLE}</h3>
+                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{DOCTOR_EXPERTISE_FALLBACK_2.TITLE}</h3>
                                         <p className="text-slate-600 leading-relaxed font-light">{DOCTOR_EXPERTISE_FALLBACK_2.DESC}</p>
                                     </ModernCard>
                                 </>
@@ -262,14 +262,14 @@ export function DoctorTemplate({
 
                         {/* Languages Section */}
                         {doctor.languages && doctor.languages.length > 0 && (
-                            <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-6">
-                                <h3 className="font-bold text-slate-900 flex items-center gap-3">
+                            <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm space-y-6">
+                                <h3 className="font-bold text-slate-900 dark:text-white flex items-center gap-3">
                                     <Languages className="w-5 h-5 text-fuchsia-600" />
                                     {DOCTOR_PROFILE.SECTION_LANGUAGES}
                                 </h3>
                                 <div className="flex flex-wrap gap-2 text-sm font-bold uppercase tracking-wide">
                                     {doctor.languages.map((lang, i) => (
-                                        <span key={i} className="px-5 py-3 bg-slate-50 text-slate-700 rounded-2xl border border-slate-100/50">
+                                        <span key={i} className="px-5 py-3 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-2xl border border-slate-100/50">
                                             {lang}
                                         </span>
                                     ))}
@@ -297,12 +297,12 @@ export function DoctorTemplate({
             </SectionContainer>
 
             {/* Cross Linking Sections */}
-            <section className="bg-slate-50 py-24 border-y border-slate-200/50">
+            <section className="bg-slate-50 dark:bg-slate-800 py-24 border-y border-slate-200 dark:border-slate-700/50">
                 <SectionContainer>
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                         <div>
                             <span className="text-fuchsia-600 font-bold text-sm tracking-widest uppercase">{DOCTOR_PROFILE.SECTION_EXPERT_NETWORK}</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-2">{DOCTOR_PROFILE.SECTION_OTHER_PROFILES}</h2>
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mt-2">{DOCTOR_PROFILE.SECTION_OTHER_PROFILES}</h2>
                         </div>
                         <Link href={DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX} className="hidden md:flex items-center gap-2 text-fuchsia-700 font-bold hover:gap-4 transition-all">
                             {DOCTOR_PROFILE.BTN_VIEW_DIRECTORY} <ArrowRight className="w-5 h-5" />
@@ -320,7 +320,7 @@ export function DoctorTemplate({
                 entityType="doctor"
                 entityName={doctor.name}
                 entitySlug={doctor.slug}
-                className="bg-white py-24"
+                className="bg-white dark:bg-slate-900 py-24"
             />
 
             <EntityReviews

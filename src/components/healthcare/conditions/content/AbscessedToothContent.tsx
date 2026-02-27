@@ -31,7 +31,7 @@ export function AbscessedToothContent() {
                         { title: "Sensitivity", desc: "Extreme reaction to hot/cold temps." },
                         { title: "Swelling", desc: "Swelling in face or lymph nodes." }
                     ].map((symptom, i) => (
-                        <div key={i} className="bg-card border rounded-xl p-4 shadow-sm">
+                        <div key={i} className="bg-card border rounded-xl p-4 shadow-sm dark:shadow-slate-900/30">
                             <h4 className="font-semibold text-foreground mb-1">{symptom.title}</h4>
                             <p className="text-xs text-muted-foreground">{symptom.desc}</p>
                         </div>

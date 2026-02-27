@@ -46,39 +46,39 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                 <Shield className="w-4 h-4" />
                                 Wellness & Prevention
                             </div>
-                            <h1 className="text-5xl md:text-6xl font-heading font-black text-slate-900 tracking-tight mb-6">{pkg.title}</h1>
+                            <h1 className="text-5xl md:text-6xl font-heading font-black text-slate-900 dark:text-white tracking-tight mb-6">{pkg.title}</h1>
                             <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
                                 {pkg.short_description || `Our ${pkg.title} is designed to provide a thorough evaluation of your health status, helping you detect potential issues early.`}
                             </p>
 
                             <div className="grid sm:grid-cols-2 gap-4">
-                                <div className="flex items-center gap-3 p-5 bg-white rounded-[2rem] border border-slate-100 shadow-soft">
+                                <div className="flex items-center gap-3 p-5 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-700 shadow-soft">
                                     <div className="w-12 h-12 rounded-[1rem] bg-fuchsia-50 flex items-center justify-center">
                                         <Stethoscope className="w-6 h-6 text-fuchsia-600" />
                                     </div>
                                     <div>
                                         <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Total Tests</p>
-                                        <p className="font-heading font-black text-slate-900">{testList.length} Parameters</p>
+                                        <p className="font-heading font-black text-slate-900 dark:text-white">{testList.length} Parameters</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-3 p-5 bg-white rounded-[2rem] border border-slate-100 shadow-soft">
+                                <div className="flex items-center gap-3 p-5 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-700 shadow-soft">
                                     <div className="w-12 h-12 rounded-[1rem] bg-amber-50 flex items-center justify-center">
                                         <Clock className="w-6 h-6 text-amber-600" />
                                     </div>
                                     <div>
                                         <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Reporting</p>
-                                        <p className="font-heading font-black text-slate-900">Same Day / 24h</p>
+                                        <p className="font-heading font-black text-slate-900 dark:text-white">Same Day / 24h</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Price Card */}
-                        <div className="w-full lg:w-[400px] bg-white border border-slate-100 rounded-[2.5rem] p-8 shadow-float lg:sticky lg:top-24">
+                        <div className="w-full lg:w-[400px] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 rounded-[2.5rem] p-8 shadow-float lg:sticky lg:top-24">
                             <div className="mb-6">
                                 <div className="flex items-baseline gap-2 mb-1">
                                     <span className="text-sm text-slate-400 font-bold">Package Cost:</span>
-                                    <span className="text-4xl font-heading font-black text-slate-900">₹{pkg.price}</span>
+                                    <span className="text-4xl font-heading font-black text-slate-900 dark:text-white">₹{pkg.price}</span>
                                 </div>
                                 {pkg.original_price && (
                                     <p className="text-slate-400 text-sm font-medium">
@@ -106,7 +106,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                 </a>
                                 <a
                                     href="tel:+917010650063"
-                                    className="w-full inline-flex items-center justify-center py-4 bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold rounded-full transition-all border border-slate-100 text-base"
+                                    className="w-full inline-flex items-center justify-center py-4 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 text-slate-700 dark:text-slate-200 font-bold rounded-full transition-all border border-slate-100 dark:border-slate-700 text-base"
                                 >
                                     <Phone className="w-4 h-4 mr-2 text-fuchsia-600" />
                                     Call to Inquire
@@ -122,7 +122,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                 <div className="grid lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-2 space-y-12">
                         <div>
-                            <h2 className="text-2xl font-heading font-black text-slate-900 mb-8 flex items-center gap-3 tracking-tight">
+                            <h2 className="text-2xl font-heading font-black text-slate-900 dark:text-white mb-8 flex items-center gap-3 tracking-tight">
                                 <div className="w-10 h-10 rounded-full bg-fuchsia-50 flex items-center justify-center">
                                     <FileText className="w-5 h-5 text-fuchsia-600" />
                                 </div>
@@ -130,9 +130,9 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                             </h2>
                             <div className="grid sm:grid-cols-2 gap-3">
                                 {testList.map((test, i) => (
-                                    <div key={i} className="flex items-start gap-3 p-4 bg-white border border-slate-100 rounded-[1.5rem] shadow-sm">
+                                    <div key={i} className="flex items-start gap-3 p-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 rounded-[1.5rem] shadow-sm dark:shadow-slate-900/30">
                                         <CheckCircle2 className="w-5 h-5 text-fuchsia-500 mt-0.5 flex-shrink-0" />
-                                        <span className="text-slate-700 font-medium">{test}</span>
+                                        <span className="text-slate-700 dark:text-slate-200 font-medium">{test}</span>
                                     </div>
                                 ))}
                             </div>
@@ -153,19 +153,19 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                     </div>
 
                     <div className="space-y-8">
-                        <div className="bg-white border border-slate-100 rounded-[2.5rem] p-8 shadow-soft">
-                            <h3 className="font-heading font-black text-slate-900 mb-4">Visit Our Center</h3>
-                            <p className="text-sm text-slate-500 mb-6 font-medium">
+                        <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 rounded-[2.5rem] p-8 shadow-soft">
+                            <h3 className="font-heading font-black text-slate-900 dark:text-white mb-4">Visit Our Center</h3>
+                            <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
                                 All checkups are conducted at our main facility with high-end diagnostic equipment.
                             </p>
-                            <div className="text-sm text-slate-700 space-y-2 mb-8 font-medium">
+                            <div className="text-sm text-slate-700 dark:text-slate-200 space-y-2 mb-8 font-medium">
                                 <p><strong>Indira Hospital</strong></p>
                                 <p>No. 1, Katpadi Road, Vellore - 632004</p>
                                 <p>Tamil Nadu, India</p>
                             </div>
                             <Link
                                 href="/doctor/near-me/vellore"
-                                className="w-full inline-flex items-center justify-center py-3 bg-slate-50 hover:bg-fuchsia-50 text-slate-700 hover:text-fuchsia-700 font-bold rounded-full transition-all border border-slate-100 text-sm"
+                                className="w-full inline-flex items-center justify-center py-3 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 text-slate-700 dark:text-slate-200 hover:text-fuchsia-700 font-bold rounded-full transition-all border border-slate-100 dark:border-slate-700 text-sm"
                             >
                                 View Map & Directions
                             </Link>

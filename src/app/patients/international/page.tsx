@@ -40,7 +40,7 @@ const PROCESS_STEPS = [
 
 export default function InternationalPatientsPage() {
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
             {/* ELITE GLOBAL HERO */}
             <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -72,8 +72,8 @@ export default function InternationalPatientsPage() {
                         { label: "Cost Savings", val: "Up to 70%" },
                         { label: "Waiting Time", val: "Zero" }
                     ].map((stat, i) => (
-                        <div key={i} className="group bg-white rounded-2xl p-6 text-center shadow-sm border border-slate-100 hover:shadow-lg hover:border-fuchsia-200 transition-all duration-300">
-                            <div className="text-3xl font-black text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors mb-1">{stat.val}</div>
+                        <div key={i} className="group bg-white dark:bg-slate-900 rounded-2xl p-6 text-center shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-lg hover:border-fuchsia-200 transition-all duration-300">
+                            <div className="text-3xl font-black text-slate-800 dark:text-slate-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors mb-1">{stat.val}</div>
                             <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{stat.label}</div>
                         </div>
                     ))}
@@ -84,7 +84,7 @@ export default function InternationalPatientsPage() {
             <SectionContainer id="why-india" className="py-24 max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1 relative group">
-                        <div className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-slate-100 relative z-10">
+                        <div className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-slate-100 dark:border-slate-700 relative z-10">
                             <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-700 z-10" />
                             <Image src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200"
                                 alt="Patient Care at Indira Hospital" fill className="object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out" />
@@ -93,14 +93,14 @@ export default function InternationalPatientsPage() {
                         {/* Floating JCI Badge */}
                         <div className="absolute -bottom-8 -right-8 lg:-left-8 lg:right-auto bg-white/90 backdrop-blur-2xl p-6 rounded-[2rem] shadow-2xl border border-white max-w-xs z-20 hover:-translate-y-2 transition-transform duration-500">
                             <div className="absolute -inset-0.5 bg-gradient-to-br from-amber-400 to-orange-500 rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition opacity duration-500"></div>
-                            <div className="relative bg-white rounded-[1.5rem] p-5">
+                            <div className="relative bg-white dark:bg-slate-900 rounded-[1.5rem] p-5">
                                 <div className="flex items-center gap-3 mb-3">
                                     <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
                                         <Sparkles className="w-5 h-5 text-amber-500" />
                                     </div>
-                                    <span className="font-black text-slate-900 text-lg">JCI Standards</span>
+                                    <span className="font-black text-slate-900 dark:text-white text-lg">JCI Standards</span>
                                 </div>
-                                <p className="text-sm text-slate-500 font-medium leading-relaxed">We enforce strict international safety protocols and surgical hygiene standards for every global patient.</p>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">We enforce strict international safety protocols and surgical hygiene standards for every global patient.</p>
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ export default function InternationalPatientsPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-6 border border-fuchsia-100">
                             <Stethoscope className="w-4 h-4" /> Global Hub
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-black mb-10 text-slate-900 tracking-tight leading-[1.1]">
+                        <h2 className="text-4xl md:text-5xl font-black mb-10 text-slate-900 dark:text-white tracking-tight leading-[1.1]">
                             Why Choose <br /> <span className="text-fuchsia-600">Health Tourism in India?</span>
                         </h2>
                         <div className="space-y-6">
@@ -120,12 +120,12 @@ export default function InternationalPatientsPage() {
                                 { t: "Zero Language Barriers", d: "Fluent English medical staff, plus dedicated translators available for Arabic, French, and Russian." }
                             ].map((item, i) => (
                                 <div key={i} className="group flex gap-5 items-start">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-[0_0_20px_rgba(20,184,166,0.3)] transition-all duration-300">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-[0_0_20px_rgba(20,184,166,0.3)] transition-all duration-300">
                                         <CheckCircle2 className="w-6 h-6 text-fuchsia-500 group-hover:text-white transition-colors" />
                                     </div>
                                     <div className="pt-1">
-                                        <h3 className="font-bold text-xl text-slate-900 mb-2 group-hover:text-fuchsia-700 transition-colors">{item.t}</h3>
-                                        <p className="text-slate-500 font-medium leading-relaxed">{item.d}</p>
+                                        <h3 className="font-bold text-xl text-slate-900 dark:text-white mb-2 group-hover:text-fuchsia-700 transition-colors">{item.t}</h3>
+                                        <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{item.d}</p>
                                     </div>
                                 </div>
                             ))}
@@ -167,7 +167,7 @@ export default function InternationalPatientsPage() {
             {/* INTERACTIVE COUNTRY HUB PILLS */}
             <SectionContainer className="py-24 max-w-7xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl font-black mb-6 text-slate-900 tracking-tight">Find Your Country Hub</h2>
+                    <h2 className="text-4xl font-black mb-6 text-slate-900 dark:text-white tracking-tight">Find Your Country Hub</h2>
                     <p className="text-lg text-slate-600 font-light leading-relaxed">Explore specific travel itineraries, visa requirements, and dedicated welcome guides structured for your home nation.</p>
                 </div>
 
@@ -176,9 +176,9 @@ export default function InternationalPatientsPage() {
                         <Link
                             key={c.slug}
                             href={`/patients/international/${c.slug}`}
-                            className="group flex flex-col items-center justify-center min-w-[160px] p-6 rounded-3xl bg-white border border-slate-200 hover:border-fuchsia-400 hover:shadow-[0_10px_30px_rgba(20,184,166,0.15)] hover:-translate-y-1 transition-all duration-300"
+                            className="group flex flex-col items-center justify-center min-w-[160px] p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-fuchsia-400 hover:shadow-[0_10px_30px_rgba(20,184,166,0.15)] hover:-translate-y-1 transition-all duration-300"
                         >
-                            <span className="text-xl font-black text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors">{c.name}</span>
+                            <span className="text-xl font-black text-slate-800 dark:text-slate-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors">{c.name}</span>
                             <span className="text-xs font-bold text-slate-400 tracking-wider uppercase mt-2 group-hover:text-fuchsia-600/60 transition-colors">{c.region}</span>
                         </Link>
                     ))}

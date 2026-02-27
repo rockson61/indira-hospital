@@ -27,7 +27,7 @@ export function FloatingCTA() {
                     exit={{ y: 100, opacity: 0 }}
                     className="fixed bottom-4 left-4 right-4 z-50 md:hidden pb-safe"
                 >
-                    <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border border-slate-200 dark:border-slate-800 p-3 rounded-2xl shadow-2xl flex gap-3">
+                    <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border border-slate-200 dark:border-slate-700 dark:border-slate-800 p-3 rounded-2xl shadow-2xl flex gap-3">
                         <Button
                             asChild
                             variant="outline"

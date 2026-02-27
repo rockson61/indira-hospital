@@ -10,7 +10,7 @@ export function FracturedTeethContent() {
                     A broken tooth is a common dental emergency. If you have the broken piece of tooth, keep it moist (milk or saliva) and bring it with you. Time is of the essence.
                 </p>
 
-                <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
                     <h4 className="font-semibold text-foreground mb-3">Levels of Fracture</h4>
                     <div className="space-y-3">
                         <div className="flex gap-4">

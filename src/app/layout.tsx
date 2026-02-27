@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SpecialtyNav } from "@/components/layout/SpecialtyNav";
 import { StickyCTA } from "@/components/layout/StickyCTA";
+import { ThemeProvider } from "@/components/theme-provider";
 import { defaultSeo } from "@/config/seo";
 
 const inter = Inter({
@@ -34,17 +35,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
-        <Header />
-        <SpecialtyNav />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        <StickyCTA />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <Header />
+          <SpecialtyNav />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <StickyCTA />
+        </ThemeProvider>
       </body>
     </html>
   );

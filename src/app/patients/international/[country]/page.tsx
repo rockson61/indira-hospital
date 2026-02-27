@@ -47,11 +47,11 @@ export default async function CountryGuidePage({ params }: PageProps) {
     const featuredDoctors = allDoctors.slice(0, 2);
 
     return (
-        <main className="min-h-screen bg-white dark:bg-slate-950">
+        <main className="min-h-screen bg-white dark:bg-slate-900 dark:bg-slate-950">
             {/* HEADER / BREADCRUMB */}
-            <div className="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 py-4">
+            <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 dark:border-slate-800 py-4">
                 <SectionContainer>
-                    <Link href="/patients/international" className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-fuchsia-600 transition-colors">
+                    <Link href="/patients/international" className="inline-flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-fuchsia-600 transition-colors">
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Back to International Patients
                     </Link>
@@ -89,12 +89,12 @@ export default async function CountryGuidePage({ params }: PageProps) {
                                 Travel & Logistics from {country.name}
                             </h2>
                             <div className="grid sm:grid-cols-2 gap-6">
-                                <Card className="p-6 border-none shadow-sm bg-slate-50 dark:bg-slate-900/50">
+                                <Card className="p-6 border-none shadow-sm bg-slate-50 dark:bg-slate-800 dark:bg-slate-900/50">
                                     <Clock className="w-5 h-5 text-fuchsia-600 mb-3" />
                                     <h3 className="font-bold mb-1">Flight Duration</h3>
                                     <p className="text-slate-600 dark:text-slate-400 text-sm">{country.flight_duration}</p>
                                 </Card>
-                                <Card className="p-6 border-none shadow-sm bg-slate-50 dark:bg-slate-900/50">
+                                <Card className="p-6 border-none shadow-sm bg-slate-50 dark:bg-slate-800 dark:bg-slate-900/50">
                                     <ShieldCheck className="w-5 h-5 text-fuchsia-600 mb-3" />
                                     <h3 className="font-bold mb-1">Visa Information</h3>
                                     <p className="text-slate-600 dark:text-slate-400 text-sm">{country.visa_info}</p>
@@ -105,14 +105,14 @@ export default async function CountryGuidePage({ params }: PageProps) {
                         {/* WHY CHOOSE US */}
                         <section className="bg-fuchsia-50 dark:bg-fuchsia-900/10 rounded-[2rem] p-8 md:p-12 border border-fuchsia-100 dark:border-fuchsia-900/30">
                             <h2 className="text-2xl font-bold mb-4">Why {country.name} Chooses Indira Hospital?</h2>
-                            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8 italic">
+                            <p className="text-lg text-slate-700 dark:text-slate-200 dark:text-slate-300 leading-relaxed mb-8 italic">
                                 "{country.why_choose_us}"
                             </p>
                             <div className="grid gap-4">
                                 {country.common_treatments.map((t, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm">
+                                    <div key={idx} className="flex items-center gap-3 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm dark:shadow-slate-900/30">
                                         <div className="w-2 h-2 rounded-full bg-fuchsia-500" />
-                                        <span className="font-semibold text-slate-800 dark:text-slate-200">Specialized in {t}</span>
+                                        <span className="font-semibold text-slate-800 dark:text-slate-100 dark:text-slate-200">Specialized in {t}</span>
                                     </div>
                                 ))}
                             </div>
@@ -129,12 +129,12 @@ export default async function CountryGuidePage({ params }: PageProps) {
                                     { t: "Arrival", d: "Personal pickup at Chennai (MAA) airport." }
                                 ].map((step, i) => (
                                     <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                                        <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 dark:bg-slate-800 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-fuchsia-500 group-hover:text-white transition-all">
+                                        <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-fuchsia-500 group-hover:text-white transition-all">
                                             {i + 1}
                                         </div>
-                                        <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+                                        <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 dark:border-slate-800 shadow-sm dark:shadow-slate-900/30">
                                             <h4 className="font-bold text-slate-900 dark:text-white">{step.t}</h4>
-                                            <p className="text-sm text-slate-500">{step.d}</p>
+                                            <p className="text-sm text-slate-500 dark:text-slate-400">{step.d}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -168,11 +168,11 @@ export default async function CountryGuidePage({ params }: PageProps) {
                             <h3 className="font-bold text-slate-900 dark:text-white mb-4">Recommended Specialists</h3>
                             <div className="space-y-4">
                                 {featuredDoctors.map((doc: any, idx: number) => (
-                                    <Link key={idx} href={`/doctors/${doc.slug}`} className="flex items-center gap-4 p-3 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-transparent hover:border-fuchsia-200 transition-all">
+                                    <Link key={idx} href={`/doctors/${doc.slug}`} className="flex items-center gap-4 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 border border-transparent hover:border-fuchsia-200 transition-all">
                                         <Image src={doc.image || doc.photo} alt={doc.name} width={48} height={48} className="rounded-xl object-cover" />
                                         <div>
                                             <p className="font-bold text-sm text-slate-900 dark:text-white">{doc.name}</p>
-                                            <p className="text-xs text-slate-500">{doc.designation}</p>
+                                            <p className="text-xs text-slate-500 dark:text-slate-400">{doc.designation}</p>
                                         </div>
                                     </Link>
                                 ))}
@@ -180,7 +180,7 @@ export default async function CountryGuidePage({ params }: PageProps) {
                         </div>
 
                         {/* HELPFUL LINKS */}
-                        <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800">
+                        <div className="p-6 bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-700 dark:border-slate-800">
                             <h3 className="font-bold mb-4 flex items-center gap-2">
                                 <Info className="w-4 h-4 text-fuchsia-600" />
                                 Resources
@@ -196,23 +196,23 @@ export default async function CountryGuidePage({ params }: PageProps) {
             </SectionContainer>
 
             {/* CTA GRID */}
-            <section className="bg-slate-50 dark:bg-slate-900/30 py-24">
+            <section className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900/30 py-24">
                 <SectionContainer>
                     <div className="text-center max-w-2xl mx-auto mb-16">
                         <h2 className="text-3xl font-bold mb-4">Medical Excellence Awaits</h2>
-                        <p className="text-slate-600">Over 500 successful surgeries performed for guests from {country.name}.</p>
+                        <p className="text-slate-600 dark:text-slate-300">Over 500 successful surgeries performed for guests from {country.name}.</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] shadow-sm border border-slate-100 dark:border-slate-800">
+                        <div className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] shadow-sm border border-slate-100 dark:border-slate-700 dark:border-slate-800">
                             <Stethoscope className="w-10 h-10 text-fuchsia-600 mb-6" />
                             <h4 className="text-2xl font-bold mb-4">Consult a Specialist</h4>
-                            <p className="text-slate-500 mb-8 leading-relaxed">Schedule a video consultation to discuss your reports and treatment plan.</p>
+                            <p className="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">Schedule a video consultation to discuss your reports and treatment plan.</p>
                             <button className="px-8 py-3 bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-colors">Book Video Call</button>
                         </div>
-                        <div className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] shadow-sm border border-slate-100 dark:border-slate-800">
+                        <div className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] shadow-sm border border-slate-100 dark:border-slate-700 dark:border-slate-800">
                             <Activity className="w-10 h-10 text-fuchsia-600 mb-6" />
                             <h4 className="text-2xl font-bold mb-4">Price Transparency</h4>
-                            <p className="text-slate-500 mb-8 leading-relaxed">Receive a detailed cost estimate including hospital stay, surgery, and medicines.</p>
+                            <p className="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">Receive a detailed cost estimate including hospital stay, surgery, and medicines.</p>
                             <button className="px-8 py-3 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-colors">Request Quote</button>
                         </div>
                     </div>

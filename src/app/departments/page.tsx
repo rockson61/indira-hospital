@@ -17,7 +17,7 @@ export default async function DepartmentsDirectoryPage() {
     const departments = await getDepartments().catch(() => []);
 
     return (
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800">
             <JsonLdSchema
                 type="itemList"
                 name="Departments & Centres of Excellence at Indira Hospital"
@@ -38,7 +38,7 @@ export default async function DepartmentsDirectoryPage() {
                         ))}
                     </div>
                 ) : (
-                    <div className="text-center text-slate-500 py-12">
+                    <div className="text-center text-slate-500 dark:text-slate-400 py-12">
                         <p className="text-xl">Loading departments...</p>
                     </div>
                 )}
@@ -48,18 +48,18 @@ export default async function DepartmentsDirectoryPage() {
                 entityType="hospital"
                 entityName="Indira Hospital"
                 entitySlug="indira-hospital"
-                className="bg-white py-24 border-t border-slate-100"
+                className="bg-white dark:bg-slate-900 py-24 border-t border-slate-100 dark:border-slate-700"
             />
 
             {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-slate-50" />
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white border-t border-slate-100" />
-            <EntityCardSection type="locations" title="Find Us Near You" subtitle="Our Locations" limit={6} className="bg-slate-50" />
+            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-slate-50 dark:bg-slate-800" />
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <EntityCardSection type="locations" title="Find Us Near You" subtitle="Our Locations" limit={6} className="bg-slate-50 dark:bg-slate-800" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white border-t border-slate-100" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-white border-t border-slate-100" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
         </main>
     );
 }

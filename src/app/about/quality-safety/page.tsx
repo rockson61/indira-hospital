@@ -40,7 +40,7 @@ import { Activity } from "lucide-react";
 
 export default function QualitySafetyPage() {
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950">
             {/* HERO */}
             <section className="bg-slate-900 pt-20 pb-32 text-white relative overflow-hidden text-center">
                 <div className="absolute inset-0 opacity-10">
@@ -100,7 +100,7 @@ export default function QualitySafetyPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-bold text-lg text-slate-900 dark:text-white">{step.t}</h4>
-                                            <p className="text-slate-500">{step.d}</p>
+                                            <p className="text-slate-500 dark:text-slate-400">{step.d}</p>
                                         </div>
                                     </div>
                                 ))}

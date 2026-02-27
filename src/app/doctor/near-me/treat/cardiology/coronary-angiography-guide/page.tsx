@@ -66,9 +66,9 @@ export default function CoronaryAngiographyGuidePage() {
           <li><strong>Before Major Surgery:</strong> To clear cardiac fitness for high-risk procedures.</li>
         </ul>
 
-        <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/10 dark:to-rose-900/10 rounded-[2.5rem] border border-red-100 dark:border-red-900 shadow-sm">
-          <h4 className="text-2xl font-black text-slate-900 dark:text-red-300 mb-6 tracking-tight">Diagnostic + Interventional in One Session</h4>
-          <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+        <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/10 dark:to-rose-900/10 rounded-[2.5rem] border border-red-100 dark:border-red-900 shadow-sm dark:shadow-slate-900/30">
+          <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-red-300 mb-6 tracking-tight">Diagnostic + Interventional in One Session</h4>
+          <p className="text-lg text-slate-700 dark:text-slate-200 dark:text-slate-300 leading-relaxed mb-8">
             If a significant blockage is found, angioplasty can often be performed in the same session, saving you time and a second procedure.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -78,9 +78,9 @@ export default function CoronaryAngiographyGuidePage() {
               "Real-Time 3D Artery Mapping",
               "Cashless Insurance Accepted"
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800 shadow-sm dark:shadow-slate-900/30">
                 <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
               </div>
             ))}
           </div>

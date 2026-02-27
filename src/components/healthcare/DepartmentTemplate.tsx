@@ -145,7 +145,7 @@ export function DepartmentTemplate({
             <SectionContainer className="py-20">
                 <div className="grid lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-8 space-y-10">
-                        <div className="prose prose-lg max-w-none prose-slate prose-headings:text-slate-900 prose-p:text-slate-600 prose-strong:text-[#005f73]">
+                        <div className="prose prose-lg max-w-none prose-slate prose-headings:text-slate-900 dark:text-white prose-p:text-slate-600 prose-strong:text-[#005f73]">
                             <h2 className="text-3xl font-bold mb-6">Expert Care in {title}</h2>
                             <div dangerouslySetInnerHTML={{ __html: fullDescription }} />
                         </div>
@@ -162,7 +162,7 @@ export function DepartmentTemplate({
                                                     <Icon className="w-6 h-6" />
                                                 </div>
                                                 <div>
-                                                    <h4 className="font-bold text-slate-900">{tech.name}</h4>
+                                                    <h4 className="font-bold text-slate-900 dark:text-white">{tech.name}</h4>
                                                     <p className="text-sm text-slate-600 mt-1">{tech.description}</p>
                                                 </div>
                                             </div>
@@ -175,17 +175,17 @@ export function DepartmentTemplate({
 
                     {/* Sidebar Sidebar */}
                     <aside className="lg:col-span-4 space-y-8">
-                        <ModernCard className="p-8 bg-white shadow-xl shadow-slate-200/50 border-none sticky top-24">
-                            <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <ModernCard className="p-8 bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 border-none sticky top-24">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                                 <Calendar className="w-5 h-5 text-fuchsia-600" />
                                 Department Schedule
                             </h3>
                             <div className="space-y-4">
-                                <div className="flex justify-between items-center py-3 border-b border-slate-100">
+                                <div className="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-700">
                                     <span className="text-slate-600 font-medium">Monday — Friday</span>
                                     <span className="font-bold text-fuchsia-700">24 Hours</span>
                                 </div>
-                                <div className="flex justify-between items-center py-3 border-b border-slate-100">
+                                <div className="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-700">
                                     <span className="text-slate-600 font-medium">Saturday</span>
                                     <span className="font-bold text-fuchsia-700">24 Hours</span>
                                 </div>
@@ -207,21 +207,21 @@ export function DepartmentTemplate({
 
             {/* Key Procedures Section */}
             {procedures.length > 0 && (
-                <section className="bg-white py-20 border-y border-slate-100">
+                <section className="bg-white dark:bg-slate-900 py-20 border-y border-slate-100 dark:border-slate-700">
                     <SectionContainer>
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">World-Class Procedures</h2>
-                            <p className="text-slate-500 max-w-2xl mx-auto">Our specialists at Indira Hospital utilize advanced technology to perform high-precision treatments.</p>
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">World-Class Procedures</h2>
+                            <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Our specialists at Indira Hospital utilize advanced technology to perform high-precision treatments.</p>
                         </div>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {procedures.map((proc, idx) => {
                                 const name = typeof proc === 'string' ? proc : proc.name;
                                 return (
-                                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 hover:bg-fuchsia-50 hover:scale-[1.02] transition-all group border border-transparent hover:border-fuchsia-100">
+                                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 hover:scale-[1.02] transition-all group border border-transparent hover:border-fuchsia-100">
                                         <div className="bg-fuchsia-100 p-2 rounded-lg text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors">
                                             <CheckCircle2 className="w-5 h-5" />
                                         </div>
-                                        <span className="font-bold text-slate-800 text-lg leading-tight uppercase text-xs tracking-wide">{name}</span>
+                                        <span className="font-bold text-slate-800 dark:text-slate-100 text-lg leading-tight uppercase text-xs tracking-wide">{name}</span>
                                     </div>
                                 );
                             })}
@@ -236,8 +236,8 @@ export function DepartmentTemplate({
                     <SectionContainer>
                         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                             <div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Centers of Excellence</h2>
-                                <p className="text-slate-500 mt-2">Highly specialized sub-departments within our {title} unit.</p>
+                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Centers of Excellence</h2>
+                                <p className="text-slate-500 dark:text-slate-400 mt-2">Highly specialized sub-departments within our {title} unit.</p>
                             </div>
                         </div>
                         <div className="grid md:grid-cols-3 gap-8">
@@ -260,12 +260,12 @@ export function DepartmentTemplate({
 
             {/* Meet the Doctors Section */}
             {relatedDoctors.length > 0 && (
-                <section className="py-24 bg-white overflow-hidden">
+                <section className="py-24 bg-white dark:bg-slate-900 overflow-hidden">
                     <SectionContainer>
                         <div className="text-center mb-16 relative">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-fuchsia-50 rounded-full blur-3xl opacity-50 -z-10" />
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Meet Our Expert Specialists</h2>
-                            <p className="text-slate-500 mt-4 max-w-2xl mx-auto italic">Highly experienced surgeons and clinicians dedicated to your wellbeing.</p>
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Meet Our Expert Specialists</h2>
+                            <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto italic">Highly experienced surgeons and clinicians dedicated to your wellbeing.</p>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {relatedDoctors.map((doctor, idx) => (

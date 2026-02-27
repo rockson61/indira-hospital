@@ -24,7 +24,7 @@ export default async function HealthPackagesPage() {
     }
 
     return (
-        <main className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
             {/* ELITE HEALTHCARE HERO */}
             <section className="bg-slate-900 pt-48 pb-48 lg:pt-60 lg:pb-64 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -61,7 +61,7 @@ export default async function HealthPackagesPage() {
             <SectionContainer className="relative z-20 -mt-24 sm:-mt-32 max-w-7xl mx-auto px-4 mb-24">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {packages.map((pkg) => (
-                        <div key={pkg.slug} className={`group bg-white rounded-[2.5rem] border ${pkg.is_featured ? 'border-fuchsia-400 shadow-[0_0_40px_-10px_rgba(20,184,166,0.3)]' : 'border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)]'} hover:shadow-[0_20px_40px_rgba(20,184,166,0.15)] hover:border-fuchsia-300 hover:-translate-y-2 transition-all duration-500 flex flex-col relative overflow-hidden bg-clip-padding`}>
+                        <div key={pkg.slug} className={`group bg-white dark:bg-slate-900 rounded-[2.5rem] border ${pkg.is_featured ? 'border-fuchsia-400 shadow-[0_0_40px_-10px_rgba(20,184,166,0.3)]' : 'border-slate-200 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)]'} hover:shadow-[0_20px_40px_rgba(20,184,166,0.15)] hover:border-fuchsia-300 hover:-translate-y-2 transition-all duration-500 flex flex-col relative overflow-hidden bg-clip-padding`}>
                             {/* Elevated Highlight Background */}
                             {pkg.is_featured && (
                                 <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-fuchsia-400 via-pink-400 to-fuchsia-400" />
@@ -70,17 +70,17 @@ export default async function HealthPackagesPage() {
                             <div className="p-8 sm:p-10 pb-0 relative z-10">
                                 {pkg.is_featured && (
                                     <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black rounded-full mb-6 uppercase tracking-widest shadow-lg shadow-orange-500/30 w-fit">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-white dark:bg-slate-900 animate-pulse"></div>
                                         Best Choice
                                     </span>
                                 )}
-                                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-3 tracking-tight group-hover:text-fuchsia-700 transition-colors">{pkg.title}</h2>
-                                <p className="text-slate-500 text-sm mb-6 line-clamp-2 font-medium leading-relaxed">
+                                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-fuchsia-700 transition-colors">{pkg.title}</h2>
+                                <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-2 font-medium leading-relaxed">
                                     {pkg.short_description || `Comprehensive screening with ${pkg.tests_included}.`}
                                 </p>
 
                                 <div className="flex items-baseline gap-3 mb-8">
-                                    <span className="text-4xl font-black text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-all">₹{pkg.price}</span>
+                                    <span className="text-4xl font-black text-slate-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-all">₹{pkg.price}</span>
                                     {pkg.original_price && (
                                         <span className="text-slate-400 line-through text-lg font-bold decoration-slate-300">₹{pkg.original_price}</span>
                                     )}
@@ -92,13 +92,13 @@ export default async function HealthPackagesPage() {
                                     </p>
                                     <div className="flex flex-wrap gap-2">
                                         {pkg.tests_included.split(',').slice(0, 5).map((test, i) => (
-                                            <span key={i} className="flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-xl group-hover:border-fuchsia-100 group-hover:bg-fuchsia-50 shadow-sm transition-colors">
+                                            <span key={i} className="flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-3 py-1.5 rounded-xl group-hover:border-fuchsia-100 group-hover:bg-fuchsia-50 shadow-sm transition-colors">
                                                 <Check className="w-3.5 h-3.5 text-fuchsia-500" />
                                                 {test.trim()}
                                             </span>
                                         ))}
                                         {pkg.tests_included.split(',').length > 5 && (
-                                            <span className="text-xs font-bold text-slate-400 py-1.5 px-2 bg-slate-50 rounded-xl border border-dashed border-slate-200">+{pkg.tests_included.split(',').length - 5} more</span>
+                                            <span className="text-xs font-bold text-slate-400 py-1.5 px-2 bg-slate-50 dark:bg-slate-800 rounded-xl border border-dashed border-slate-200 dark:border-slate-700">+{pkg.tests_included.split(',').length - 5} more</span>
                                         )}
                                     </div>
                                 </div>
@@ -120,12 +120,12 @@ export default async function HealthPackagesPage() {
                 </div>
 
                 {packages.length === 0 && (
-                    <div className="text-center py-24 bg-white/50 backdrop-blur-xl rounded-[3rem] border-2 border-dashed border-slate-200 mt-12">
+                    <div className="text-center py-24 bg-white/50 backdrop-blur-xl rounded-[3rem] border-2 border-dashed border-slate-200 dark:border-slate-700 mt-12">
                         <div className="w-24 h-24 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-6">
                             <Activity className="w-10 h-10 text-slate-300" />
                         </div>
-                        <h2 className="text-2xl font-bold text-slate-900 mb-2">Packages Coming Soon</h2>
-                        <p className="text-slate-500 max-w-md mx-auto mb-8">
+                        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Packages Coming Soon</h2>
+                        <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-8">
                             We are currently engineering our next-generation preventive screening paths. Please contact us directly for current options.
                         </p>
                         <Link href="/contact" className="inline-flex px-8 py-4 bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-all">

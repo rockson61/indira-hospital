@@ -8,6 +8,7 @@ import { Phone, Menu, X, ChevronRight, Calendar, MapPin, ChevronDown } from "luc
 import { siteConfig } from "@/config/site";
 import { navigation } from "@/config/navigation";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Header() {
     const pathname = usePathname();
@@ -26,8 +27,8 @@ export function Header() {
         <>
             <div className={`fixed top-0 inset-x-0 z-[100] flex justify-center px-4 sm:px-6 transition-all duration-300 ${scrolled ? 'pt-4' : 'pt-6'}`}>
                 <header
-                    className={`w-full max-w-7xl rounded-full transition-all duration-500 border border-white/40 
-                    ${scrolled ? 'bg-white/80 backdrop-blur-xl shadow-glass py-3' : 'bg-white/95 shadow-soft py-4'}`}
+                    className={`w-full max-w-7xl rounded-full transition-all duration-500 border border-white/40 dark:border-slate-700/60
+                    ${scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-glass py-3' : 'bg-white/95 dark:bg-slate-900/95 shadow-soft py-4'}`}
                 >
                     <div className="px-6 md:px-8 flex justify-between items-center w-full lg:grid lg:grid-cols-3">
                         {/* Left: Navigation */}
@@ -38,7 +39,7 @@ export function Header() {
                                         href={item.href}
                                         className={cn(
                                             "text-[15px] font-bold transition-colors flex items-center gap-1",
-                                            pathname === item.href ? "text-fuchsia-600" : "text-slate-600 hover:text-fuchsia-600"
+                                            pathname === item.href ? "text-fuchsia-600" : "text-slate-600 dark:text-slate-300 hover:text-fuchsia-600"
                                         )}
                                     >
                                         {item.title}
@@ -47,12 +48,12 @@ export function Header() {
 
                                     {item.title === "Treatments" && (
                                         <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50">
-                                            <div className="bg-white rounded-3xl shadow-float border border-slate-100 p-6 w-[600px] grid grid-cols-2 gap-x-8 gap-y-2">
+                                            <div className="bg-white dark:bg-slate-900 dark:bg-slate-800 rounded-3xl shadow-float border border-slate-100 dark:border-slate-700 p-6 w-[600px] grid grid-cols-2 gap-x-8 gap-y-2">
                                                 {navigation.specialtyNav.map((specialty) => (
                                                     <Link
                                                         key={specialty.title}
                                                         href={specialty.href}
-                                                        className="text-sm font-bold text-slate-600 hover:text-fuchsia-600 p-2 rounded-xl hover:bg-fuchsia-50 transition-all flex items-center justify-between group/item"
+                                                        className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 p-2 rounded-xl hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950 transition-all flex items-center justify-between group/item"
                                                     >
                                                         {specialty.title}
                                                         <ChevronRight className="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" />
@@ -83,7 +84,7 @@ export function Header() {
                             {/* Call */}
                             <a
                                 href={`tel:${siteConfig.contact.emergencyPhone}`}
-                                className="flex items-center justify-center p-3 bg-slate-50 hover:bg-rose-50 text-rose-600 rounded-2xl border border-slate-100 hover:border-rose-100 transition-all"
+                                className="flex items-center justify-center p-3 bg-slate-50 dark:bg-slate-800 hover:bg-rose-50 dark:hover:bg-rose-950 text-rose-600 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-rose-100 transition-all"
                                 title="Call Now"
                             >
                                 <Phone className="h-5 w-5" />
@@ -94,16 +95,19 @@ export function Header() {
                                 href="https://wa.me/917010650063"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center p-3 bg-slate-50 hover:bg-pink-50 text-pink-600 rounded-2xl border border-slate-100 hover:border-pink-100 transition-all"
+                                className="flex items-center justify-center p-3 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 dark:hover:bg-pink-950 text-pink-600 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-pink-100 transition-all"
                                 title="WhatsApp"
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                             </a>
 
+                            {/* Theme Toggle */}
+                            <ThemeToggle />
+
                             {/* Book Appointment */}
                             <Link
                                 href="/book-appointment"
-                                className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 hover:bg-fuchsia-600 text-white rounded-2xl font-bold transition-all shadow-lg"
+                                className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 dark:bg-fuchsia-600 hover:bg-fuchsia-600 dark:hover:bg-fuchsia-500 text-white rounded-2xl font-bold transition-all shadow-lg"
                                 title="Book Appointment"
                             >
                                 Book Appointment
@@ -113,7 +117,7 @@ export function Header() {
                         {/* Mobile Menu Toggle */}
                         <div className="flex lg:hidden justify-end">
                             <button
-                                className="p-2.5 rounded-full bg-slate-100/80 text-slate-900 hover:bg-slate-200 transition-colors"
+                                className="p-2.5 rounded-full bg-slate-100/80 text-slate-900 dark:text-white hover:bg-slate-200 transition-colors"
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
                                 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -132,7 +136,7 @@ export function Header() {
                                 key={item.title}
                                 href={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className={`flex items-center justify-between p-4 rounded-3xl text-lg font-bold transition-all ${pathname === item.href ? "bg-fuchsia-50 text-fuchsia-700" : "text-slate-800 hover:bg-slate-50"
+                                className={`flex items-center justify-between p-4 rounded-3xl text-lg font-bold transition-all ${pathname === item.href ? "bg-fuchsia-50 text-fuchsia-700" : "text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:bg-slate-800"
                                     }`}
                             >
                                 {item.title}

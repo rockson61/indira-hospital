@@ -65,7 +65,7 @@ export default function ServicesPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* Bold Asymmetrical Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -139,7 +139,7 @@ export default function ServicesPage() {
 
             {/* Services Grid Makeover */}
             <section className="max-w-7xl mx-auto px-6 lg:px-8 py-32 relative z-20 -mt-16">
-                <div className="bg-white rounded-[4rem] p-12 lg:p-24 border border-slate-100 shadow-2xl">
+                <div className="bg-white dark:bg-slate-900 rounded-[4rem] p-12 lg:p-24 border border-slate-100 dark:border-slate-700 shadow-2xl">
                     <SectionHeader
                         title="Specialized Mastery"
                         subtitle="Clinical Excellence"
@@ -182,7 +182,7 @@ export default function ServicesPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className={`${item.colSpan} relative group overflow-hidden rounded-[3rem] p-10 border ${item.highlighted ? 'bg-slate-900 border-slate-800 shadow-2xl shadow-fuchsia-900/20' : 'bg-white border-slate-100'} hover:border-fuchsia-200 transition-all duration-700 hover:-translate-y-2`}
+                                    className={`${item.colSpan} relative group overflow-hidden rounded-[3rem] p-10 border ${item.highlighted ? 'bg-slate-900 border-slate-800 shadow-2xl shadow-fuchsia-900/20' : 'bg-white dark:bg-slate-900 border-slate-100'} hover:border-fuchsia-200 transition-all duration-700 hover:-translate-y-2`}
                                 >
                                     {item.highlighted && (
                                         <>
@@ -193,10 +193,10 @@ export default function ServicesPage() {
                                     <div className={`w-16 h-16 rounded-[1.25rem] flex items-center justify-center mb-8 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 ${item.highlighted ? 'bg-white/10 text-fuchsia-300 backdrop-blur-xl border border-white/10' : 'bg-fuchsia-50 text-fuchsia-600 shadow-sm border border-fuchsia-100'}`}>
                                         <Icon className="w-8 h-8" />
                                     </div>
-                                    <h3 className={`text-2xl font-black mb-4 tracking-tight ${item.highlighted ? 'text-white' : 'text-slate-900'}`}>
+                                    <h3 className={`text-2xl font-black mb-4 tracking-tight ${item.highlighted ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
                                         {item.title}
                                     </h3>
-                                    <p className={`text-lg leading-relaxed font-medium ${item.highlighted ? 'text-slate-400' : 'text-slate-500'}`}>
+                                    <p className={`text-lg leading-relaxed font-medium ${item.highlighted ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'}`}>
                                         {item.desc}
                                     </p>
 
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                             <Link
                                 href="/book-appointment"
-                                className="group/btn relative flex items-center justify-between w-full sm:w-auto px-12 py-7 bg-fuchsia-500 text-slate-900 font-black rounded-2xl transition-all duration-500 hover:scale-[1.05] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
+                                className="group/btn relative flex items-center justify-between w-full sm:w-auto px-12 py-7 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-2xl transition-all duration-500 hover:scale-[1.05] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
                             >
                                 <span className="relative z-10 text-lg uppercase tracking-[0.2em] pr-8">Book Specialist</span>
                                 <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

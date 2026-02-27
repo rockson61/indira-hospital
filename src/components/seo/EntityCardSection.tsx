@@ -98,7 +98,7 @@ export async function EntityCardSection({
                     <span className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-3 block">
                         {displaySubtitle}
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
                         {displayTitle}
                     </h2>
                 </div>

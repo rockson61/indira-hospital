@@ -101,9 +101,9 @@ export default function GallbladderSurgeryPage() {
                     Our modular operating theaters are equipped with <strong>High-Definition 4K Laparoscopic Towers</strong>. This provides our surgeons with extreme clarity, allowing for safer dissection and better protection of the bile duct and surrounding organs.
                 </p>
 
-                <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-fuchsia-50 to-fuchsia-50 dark:from-indigo-900/10 dark:to-fuchsia-900/10 rounded-[2.5rem] border border-indigo-100 dark:border-fuchsia-700 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-fuchsia-300 mb-6 tracking-tight">Transparent Surgical Packages</h4>
-                    <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+                <div className="my-10 p-8 md:p-12 bg-gradient-to-br from-fuchsia-50 to-fuchsia-50 dark:from-indigo-900/10 dark:to-fuchsia-900/10 rounded-[2.5rem] border border-indigo-100 dark:border-fuchsia-700 shadow-sm dark:shadow-slate-900/30">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-fuchsia-300 mb-6 tracking-tight">Transparent Surgical Packages</h4>
+                    <p className="text-lg text-slate-700 dark:text-slate-200 dark:text-slate-300 leading-relaxed mb-8">
                         Our surgical packages are designed for transparency and affordability. We utilize USFDA-approved energy devices for all cases.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -113,9 +113,9 @@ export default function GallbladderSurgeryPage() {
                             "Post-Surgery Diet Counseling",
                             "24/7 Dedicated Gastro Support"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800 shadow-sm dark:shadow-slate-900/30">
                                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
                             </div>
                         ))}
                     </div>

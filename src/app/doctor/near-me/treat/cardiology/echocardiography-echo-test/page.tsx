@@ -108,8 +108,8 @@ export default function EchocardiographyPage() {
                     <li><strong>Congenital Defects:</strong> Holes in the heart (ASD, VSD) and other structural abnormalities.</li>
                 </ul>
 
-                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-blue-50 to-sky-50 dark:from-blue-900/10 dark:to-sky-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-blue-900 shadow-sm">
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-blue-300 mb-6 tracking-tight">Cardiology Lab Features</h4>
+                <div className="my-10 p-8 md:p-10 bg-gradient-to-br from-blue-50 to-sky-50 dark:from-blue-900/10 dark:to-sky-900/10 rounded-[2.5rem] border border-fuchsia-100 dark:border-blue-900 shadow-sm dark:shadow-slate-900/30">
+                    <h4 className="text-2xl font-black text-slate-900 dark:text-white dark:text-blue-300 mb-6 tracking-tight">Cardiology Lab Features</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                             "Advanced 3D / 4D Echo Machines",
@@ -117,9 +117,9 @@ export default function EchocardiographyPage() {
                             "Same-Day Digital Reports",
                             "Cashless Insurance Accepted"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div key={i} className="flex items-center gap-3 bg-white dark:bg-slate-900/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 dark:border-slate-800 shadow-sm dark:shadow-slate-900/30">
                                 <CheckCircle className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
-                                <span className="font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                                <span className="font-bold text-slate-700 dark:text-slate-200 dark:text-slate-300">{item}</span>
                             </div>
                         ))}
                     </div>

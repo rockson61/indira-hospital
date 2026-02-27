@@ -11,7 +11,7 @@ export function StickyCTA() {
 
     return (
         <div className="fixed bottom-0 inset-x-0 z-[80] lg:hidden">
-            <div className="bg-white/95 backdrop-blur-xl border-t border-slate-200 px-4 py-3 flex gap-3">
+            <div className="bg-white/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-700 px-4 py-3 flex gap-3">
                 <a
                     href={`tel:${phone.replace(/\s+/g, "")}`}
                     className="flex-1 flex items-center justify-center gap-2 py-3.5 bg-slate-900 text-white font-bold text-sm rounded-full shadow-sm transition-all active:scale-95"

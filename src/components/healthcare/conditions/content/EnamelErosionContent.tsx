@@ -11,7 +11,7 @@ export function EnamelErosionContent() {
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl">
+                    <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-xl">
                         <h4 className="font-bold text-foreground mb-4 flex items-center gap-2">
                             <ArrowDown className="w-5 h-5 text-red-500" />
                             Acid Sources

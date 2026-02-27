@@ -29,7 +29,7 @@ export function BurningMouthContent() {
                 <p className="text-foreground/80 mb-4">
                     Since BMS has many potential causes, our approach involves a thorough investigation to rule out nutritional deficiencies, allergies, infections, or dry mouth issues.
                 </p>
-                <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl">
+                <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-xl">
                     <p className="text-foreground/80 italic">
                         "While there is no simple cure for primary BMS, we can offer treatments to manage symptoms, including saliva replacements, oral rinses, and addressing underlying factors."
                     </p>

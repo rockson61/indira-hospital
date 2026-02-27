@@ -128,9 +128,9 @@ export default async function DoctorProfileRoute({
                         </div>
 
                         {/* Right: CTA Card */}
-                        <div className="bg-white rounded-[2rem] p-6 md:p-8 shadow-2xl text-slate-900">
+                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 md:p-8 shadow-2xl text-slate-900 dark:text-white">
                             <h3 className="text-lg font-black mb-4">Book a Consultation</h3>
-                            <p className="text-sm text-slate-500 mb-6">Schedule an appointment with {currDoctor.name} at Indira Super Speciality Hospital.</p>
+                            <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Schedule an appointment with {currDoctor.name} at Indira Super Speciality Hospital.</p>
                             <Link
                                 href={`/book-appointment?doctor=${currDoctor.slug}`}
                                 className="block w-full text-center px-6 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-all shadow-md"
@@ -157,19 +157,19 @@ export default async function DoctorProfileRoute({
                     <div className="lg:col-span-2 space-y-10">
                         {/* Education */}
                         {((currDoctor.qualifications || currDoctor.education) && (
-                            <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100">
+                            <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700">
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="w-10 h-10 rounded-xl bg-fuchsia-50 flex items-center justify-center">
                                         <GraduationCap className="w-5 h-5 text-fuchsia-600" />
                                     </div>
-                                    <h2 className="text-xl font-black text-slate-900">Education & Qualifications</h2>
+                                    <h2 className="text-xl font-black text-slate-900 dark:text-white">Education & Qualifications</h2>
                                 </div>
                                 <div className="flex flex-wrap gap-3">
                                     {(Array.isArray(currDoctor.qualifications || currDoctor.education)
                                         ? (currDoctor.qualifications || currDoctor.education)
                                         : [currDoctor.qualifications || currDoctor.education]
                                     ).map((edu: any, i: number) => (
-                                        <span key={i} className="px-4 py-2 bg-slate-50 border border-slate-200 text-slate-700 font-semibold rounded-xl text-sm">
+                                        <span key={i} className="px-4 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-semibold rounded-xl text-sm">
                                             {typeof edu === 'object' && edu !== null
                                                 ? `${edu.degree || edu.name || ''} ${edu.institution ? `(${edu.institution})` : ''}`.trim() || JSON.stringify(edu)
                                                 : edu}
@@ -180,12 +180,12 @@ export default async function DoctorProfileRoute({
                         ))}
 
                         {/* Availability */}
-                        <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100">
+                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-10 h-10 rounded-xl bg-fuchsia-50 flex items-center justify-center">
                                     <Calendar className="w-5 h-5 text-fuchsia-600" />
                                 </div>
-                                <h2 className="text-xl font-black text-slate-900">Availability Schedule</h2>
+                                <h2 className="text-xl font-black text-slate-900 dark:text-white">Availability Schedule</h2>
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                 {(Array.isArray(currDoctor.availability) ? currDoctor.availability : ['Mon - Sat']).map((day: string, i: number) => (
@@ -201,31 +201,31 @@ export default async function DoctorProfileRoute({
                     {/* Sidebar */}
                     <div className="space-y-6">
                         {/* Location Card */}
-                        <div className="bg-white rounded-[2rem] p-6 shadow-sm border border-slate-100">
+                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="w-8 h-8 rounded-lg bg-fuchsia-50 flex items-center justify-center">
                                     <MapPin className="w-4 h-4 text-fuchsia-600" />
                                 </div>
-                                <h3 className="font-bold text-slate-900">Hospital Location</h3>
+                                <h3 className="font-bold text-slate-900 dark:text-white">Hospital Location</h3>
                             </div>
-                            <p className="text-sm text-slate-500">Indira Super Speciality Hospital, Vellore, Tamil Nadu</p>
+                            <p className="text-sm text-slate-500 dark:text-slate-400">Indira Super Speciality Hospital, Vellore, Tamil Nadu</p>
                         </div>
 
                         {/* Related Doctors */}
                         {relatedDoctors.length > 0 && (
-                            <div className="bg-white rounded-[2rem] p-6 shadow-sm border border-slate-100">
+                            <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="w-8 h-8 rounded-lg bg-fuchsia-50 flex items-center justify-center">
                                         <Stethoscope className="w-4 h-4 text-fuchsia-600" />
                                     </div>
-                                    <h3 className="font-bold text-slate-900">More Specialists</h3>
+                                    <h3 className="font-bold text-slate-900 dark:text-white">More Specialists</h3>
                                 </div>
                                 <div className="space-y-3">
                                     {relatedDoctors.map((doc: any) => (
                                         <Link
                                             key={doc.slug}
                                             href={`/doctor/${(doc.department || 'specialist').toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/${doc.slug}`}
-                                            className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group"
+                                            className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 dark:bg-slate-800 transition-colors group"
                                         >
                                             <div className="w-10 h-10 rounded-full bg-fuchsia-100 flex items-center justify-center flex-shrink-0">
                                                 <span className="text-fuchsia-700 font-bold text-xs">
@@ -233,8 +233,8 @@ export default async function DoctorProfileRoute({
                                                 </span>
                                             </div>
                                             <div>
-                                                <p className="text-sm font-bold text-slate-900 group-hover:text-fuchsia-700 transition-colors">{doc.name}</p>
-                                                <p className="text-xs text-slate-500">{doc.specialty}</p>
+                                                <p className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-fuchsia-700 transition-colors">{doc.name}</p>
+                                                <p className="text-xs text-slate-500 dark:text-slate-400">{doc.specialty}</p>
                                             </div>
                                         </Link>
                                     ))}
@@ -246,13 +246,13 @@ export default async function DoctorProfileRoute({
             </section>
 
             {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white" />
+            <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />
             <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-[#FAFAFA]" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white" />
+            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
 
             {/* COMPACT SEO LINK STRIPS */}
             <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={8} className="bg-[#FAFAFA]" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={8} className="bg-white" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={8} className="bg-white dark:bg-slate-900" />
         </div>
     );
 }

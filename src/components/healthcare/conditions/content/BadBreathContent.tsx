@@ -30,7 +30,7 @@ export function BadBreathContent() {
                         { title: "Regular Flossing", desc: "Remove rotting food particles from between teeth daily." },
                         { title: "Dental Checkups", desc: "Treat gum disease and cavities which are breeding grounds for odor." }
                     ].map((item, i) => (
-                        <li key={i} className="flex flex-col gap-2 p-4 bg-card border border-border/50 rounded-lg shadow-sm">
+                        <li key={i} className="flex flex-col gap-2 p-4 bg-card border border-border/50 rounded-lg shadow-sm dark:shadow-slate-900/30">
                             <div className="flex items-center gap-2 text-fuchsia-600 font-semibold">
                                 <CheckCircle className="w-5 h-5" />
                                 {item.title}

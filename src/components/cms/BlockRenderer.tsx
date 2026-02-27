@@ -12,21 +12,21 @@ import { DoctorHighlightSection } from "@/components/sections/DoctorHighlightSec
 const AppointmentCTASection = ({ block }: { block: any }) => (
     <div className="py-20 text-center bg-fuchsia-50 border-y border-fuchsia-100">
         <h2 className="text-3xl font-bold mb-4">{block.title || "Book Appointment"}</h2>
-        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">{block.description}</p>
+        <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">{block.description}</p>
         <a href="/book-appointment" className="px-8 py-4 bg-fuchsia-600 text-white rounded-xl font-bold">{block.buttonText || "Book Now"}</a>
     </div>
 );
 
 const TestimonialSection = ({ block }: { block: any }) => (
-    <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Patient Testimonials"}</h2><p className="text-gray-500 mt-2">[{block.testimonials?.length || 0} Testimonials loaded from CMS]</p></div>
+    <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Patient Testimonials"}</h2><p className="text-gray-500 dark:text-gray-400 mt-2">[{block.testimonials?.length || 0} Testimonials loaded from CMS]</p></div>
 );
 
 const InsuranceSection = ({ block }: { block: any }) => (
-    <div className="py-12 bg-gray-50 text-center border-y border-gray-100"><h2 className="text-xl font-bold mb-6">{block.title || "Insurance Partners"}</h2><div className="flex justify-center gap-8 opacity-50 grayscale font-bold text-gray-400 select-none">[Insurance Logos Rendered Here]</div></div>
+    <div className="py-12 bg-gray-50 dark:bg-slate-950 text-center border-y border-gray-100 dark:border-slate-700"><h2 className="text-xl font-bold mb-6">{block.title || "Insurance Partners"}</h2><div className="flex justify-center gap-8 opacity-50 grayscale font-bold text-gray-400 select-none">[Insurance Logos Rendered Here]</div></div>
 );
 
 const BlogPreviewSection = ({ block }: { block: any }) => (
-    <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Latest Insights"}</h2><p className="text-gray-500 mt-2">Displaying top {block.numberOfPosts || 3} posts from {block.categoryFilter || "all categories"}</p></div>
+    <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Latest Insights"}</h2><p className="text-gray-500 dark:text-gray-400 mt-2">Displaying top {block.numberOfPosts || 3} posts from {block.categoryFilter || "all categories"}</p></div>
 );
 
 interface BlockRendererProps {

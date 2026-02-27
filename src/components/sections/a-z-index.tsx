@@ -42,7 +42,7 @@ export const AZIndex = () => {
                     <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-900 dark:text-white tracking-tight">
                         Health <span className="text-fuchsia-600">A to Z Index</span>
                     </h2>
-                    <p className="text-lg text-slate-500">Quickly find information on medical conditions, procedures, and speciality care across our center.</p>
+                    <p className="text-lg text-slate-500 dark:text-slate-400">Quickly find information on medical conditions, procedures, and speciality care across our center.</p>
                 </div>
 
                 {/* SEARCH BOX */}
@@ -66,7 +66,7 @@ export const AZIndex = () => {
                                 onClick={() => setActiveLetter(group.letter)}
                                 className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl font-bold transition-all ${activeLetter === group.letter
                                     ? "bg-fuchsia-600 text-white shadow-lg shadow-fuchsia-600/30 scale-110"
-                                    : "bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200"
+                                    : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200"
                                     }`}
                             >
                                 {group.letter}
@@ -81,9 +81,9 @@ export const AZIndex = () => {
                         <Link
                             key={i}
                             href={item.url}
-                            className="group bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-transparent hover:border-blue-200 hover:bg-white dark:hover:bg-slate-800 transition-all flex items-center justify-between"
+                            className="group bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-transparent hover:border-blue-200 hover:bg-white dark:bg-slate-900 dark:hover:bg-slate-800 transition-all flex items-center justify-between"
                         >
-                            <span className="font-bold text-slate-800 dark:text-slate-200 group-hover:text-fuchsia-600 transition-colors">{item.name}</span>
+                            <span className="font-bold text-slate-800 dark:text-slate-100 dark:text-slate-200 group-hover:text-fuchsia-600 transition-colors">{item.name}</span>
                             <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all" />
                         </Link>
                     ))}

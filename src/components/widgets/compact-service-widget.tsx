@@ -55,7 +55,7 @@ export function CompactServiceWidget({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
           {services.slice(0, 4).map((service, index) => (
-            <div key={index} className="service-item-card flex items-center justify-between p-3 rounded-lg border shadow-sm">
+            <div key={index} className="service-item-card flex items-center justify-between p-3 rounded-lg border shadow-sm dark:shadow-slate-900/30">
               <div className="flex-1">
                 <Link
                   href={`/doctor/near-me/treat/${service.slug}`}

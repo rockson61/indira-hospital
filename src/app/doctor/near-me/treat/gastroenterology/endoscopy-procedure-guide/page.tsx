@@ -110,7 +110,7 @@ export default function EndoscopyProcedureGuidePage() {
 
         <div className="my-8 p-6 bg-fuchsia-50 dark:bg-fuchsia-900/20 rounded-3xl border border-fuchsia-100 dark:border-fuchsia-800">
           <h4 className="text-xl font-bold text-fuchsia-900 dark:text-fuchsia-300 mb-4 tracking-tight">Same-Day Diagnostic Results</h4>
-          <p className="text-slate-700 dark:text-slate-300">
+          <p className="text-slate-700 dark:text-slate-200 dark:text-slate-300">
             We understand the anxiety of waiting for results. Our gastroenterology lab provides <strong>instant high-quality printouts</strong> of your endoscopy images and a detailed report right after your procedure.
           </p>
           <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">

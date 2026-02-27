@@ -25,7 +25,7 @@ export function BrokenJawContent() {
                 <p className="text-foreground/80 leading-relaxed mb-6">
                     Treatment depends on the severity of the fracture. Minor fractures may heal on their own with a soft diet and pain management, while severe breaks often require surgery to realign the bone and secure it with wires, plates, or screws.
                 </p>
-                <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl">
+                <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-xl">
                     <h4 className="font-semibold text-foreground mb-4">Recovery Tips</h4>
                     <ul className="grid sm:grid-cols-2 gap-4">
                         {[

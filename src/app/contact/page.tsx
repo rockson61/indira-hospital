@@ -10,7 +10,7 @@ import { Metadata } from "next";
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* Bold Asymmetrical Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -48,17 +48,17 @@ export default function ContactPage() {
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-white/70 backdrop-blur-2xl p-10 lg:p-14 rounded-[4rem] border border-slate-200/50 shadow-2xl space-y-10 relative overflow-hidden group"
+                            className="bg-white/70 backdrop-blur-2xl p-10 lg:p-14 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl space-y-10 relative overflow-hidden group"
                         >
                             {/* Light Streak Animation */}
                             <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                            <h2 className="text-4xl font-black text-slate-900 tracking-tight lg:mb-12 relative z-10">Central Station</h2>
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight lg:mb-12 relative z-10">Central Station</h2>
 
                             <div className="space-y-10 relative z-10">
                                 {/* Address Block */}
                                 <div className="flex gap-6 group/item">
-                                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 group-hover/item:bg-fuchsia-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
+                                    <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 dark:border-slate-700 group-hover/item:bg-fuchsia-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
                                         <MapPin className="w-7 h-7" />
                                     </div>
                                     <div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
                                 {/* Phone Block */}
                                 <div className="flex gap-6 group/item cursor-pointer">
-                                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 group-hover/item:bg-rose-500 group-hover/item:text-white transition-all duration-500 shadow-sm relative group-hover/item:scale-110">
+                                    <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 dark:border-slate-700 group-hover/item:bg-rose-500 group-hover/item:text-white transition-all duration-500 shadow-sm relative group-hover/item:scale-110">
                                         <Phone className="w-7 h-7" />
                                     </div>
                                     <div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
 
                                 {/* Email Block */}
                                 <div className="flex gap-6 group/item cursor-pointer">
-                                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 group-hover/item:bg-blue-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
+                                    <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 dark:border-slate-700 group-hover/item:bg-blue-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
                                         <Mail className="w-7 h-7" />
                                     </div>
                                     <div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
 
                                 {/* Timing Block */}
                                 <div className="flex gap-6 group/item">
-                                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 group-hover/item:bg-pink-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
+                                    <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 dark:border-slate-700 group-hover/item:bg-pink-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
                                         <Clock className="w-7 h-7" />
                                     </div>
                                     <div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="h-[400px] bg-white rounded-[4rem] overflow-hidden border border-slate-200/50 shadow-2xl group relative"
+                            className="h-[400px] bg-white dark:bg-slate-900 rounded-[4rem] overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-2xl group relative"
                         >
                             <div className="absolute inset-0 border-[12px] border-white/50 rounded-[4rem] pointer-events-none z-10" />
                             <iframe
@@ -145,7 +145,7 @@ export default function ContactPage() {
                             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] pointer-events-none" />
 
                             <div className="relative z-10 mb-12">
-                                <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-fuchsia-300 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm">
+                                <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-fuchsia-300 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
                                     <ShieldCheck className="w-4 h-4" /> Secure Tactical Unit
                                 </span>
                                 <h2 className="text-5xl font-black text-white tracking-tight leading-tight">Elite Enquiry</h2>
@@ -155,40 +155,40 @@ export default function ContactPage() {
                             <form className="space-y-10 relative z-10">
                                 <div className="grid md:grid-cols-2 gap-8">
                                     <div className="space-y-3">
-                                        <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">First Name <span className="text-rose-500">*</span></label>
+                                        <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">First Name <span className="text-rose-500">*</span></label>
                                         <Input placeholder="John" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
                                     </div>
                                     <div className="space-y-3">
-                                        <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Last Name <span className="text-rose-500">*</span></label>
+                                        <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Last Name <span className="text-rose-500">*</span></label>
                                         <Input placeholder="Doe" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
                                     </div>
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Secure Email <span className="text-rose-500">*</span></label>
+                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Secure Email <span className="text-rose-500">*</span></label>
                                     <Input type="email" placeholder="john.doe@expert.com" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Tactical Number <span className="text-rose-500">*</span></label>
+                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Tactical Number <span className="text-rose-500">*</span></label>
                                     <Input placeholder="+91 98765 00000" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Clinical Query/Message <span className="text-rose-500">*</span></label>
+                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Clinical Query/Message <span className="text-rose-500">*</span></label>
                                     <Textarea className="min-h-[200px] bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 rounded-[2rem] text-lg p-8 font-bold text-white transition-all outline-none resize-none" placeholder="Provide specific details about your clinical history or inquiry..." />
                                 </div>
 
                                 <button
                                     type="button"
-                                    className="group/btn relative flex items-center justify-center w-full px-10 py-7 bg-fuchsia-500 text-slate-900 font-black rounded-3xl transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
+                                    className="group/btn relative flex items-center justify-center w-full px-10 py-7 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-3xl transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
                                 >
                                     <span className="relative z-10 text-xl uppercase tracking-[0.2em] pr-6">Initiate Secure Transmission</span>
                                     <Send className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                                 </button>
 
-                                <p className="text-center text-sm text-slate-500 font-medium">By transmitting this form, you precisely agree to our absolute <a href="/privacy-policy" className="text-fuchsia-400 hover:underline">Privacy Protocols</a> regarding data encryption.</p>
+                                <p className="text-center text-sm text-slate-500 dark:text-slate-400 font-medium">By transmitting this form, you precisely agree to our absolute <a href="/privacy-policy" className="text-fuchsia-400 hover:underline">Privacy Protocols</a> regarding data encryption.</p>
                             </form>
                         </motion.div>
                     </div>

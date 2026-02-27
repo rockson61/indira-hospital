@@ -77,8 +77,8 @@ export function RelatedServices({ serviceSlug, heading = 'Related & Alternative 
   return (
     <div className="grid md:grid-cols-2 gap-6">
       {/* Related Services */}
-      <div className="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-soft">
-        <h3 className="text-xl font-heading font-black text-slate-900 mb-6 flex items-center gap-2">
+      <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 border border-slate-100 dark:border-slate-700 shadow-soft">
+        <h3 className="text-xl font-heading font-black text-slate-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-fuchsia-50 text-fuchsia-600 text-sm font-bold">✓</span>
           Related Services
         </h3>
@@ -87,10 +87,10 @@ export function RelatedServices({ serviceSlug, heading = 'Related & Alternative 
             <li key={s.title || index}>
               <Link
                 href={s.href}
-                className="flex items-center gap-3 p-3 rounded-[1rem] bg-slate-50/50 border border-slate-100 transition-all hover:bg-fuchsia-50 hover:border-fuchsia-100 hover:-translate-x-1"
+                className="flex items-center gap-3 p-3 rounded-[1rem] bg-slate-50/50 border border-slate-100 dark:border-slate-700 transition-all hover:bg-fuchsia-50 hover:border-fuchsia-100 hover:-translate-x-1"
               >
                 <span className="text-fuchsia-500 font-bold">→</span>
-                <span className="font-semibold text-slate-700 hover:text-fuchsia-700">{s.title}</span>
+                <span className="font-semibold text-slate-700 dark:text-slate-200 hover:text-fuchsia-700">{s.title}</span>
               </Link>
             </li>
           ))}
@@ -98,8 +98,8 @@ export function RelatedServices({ serviceSlug, heading = 'Related & Alternative 
       </div>
 
       {/* Alternative Services */}
-      <div className="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-soft">
-        <h3 className="text-xl font-heading font-black text-slate-900 mb-6 flex items-center gap-2">
+      <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 border border-slate-100 dark:border-slate-700 shadow-soft">
+        <h3 className="text-xl font-heading font-black text-slate-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-50 text-amber-600 text-sm font-bold">⭐</span>
           Alternative Options
         </h3>
@@ -108,10 +108,10 @@ export function RelatedServices({ serviceSlug, heading = 'Related & Alternative 
             <li key={s.title || index}>
               <Link
                 href={s.href}
-                className="flex items-center gap-3 p-3 rounded-[1rem] bg-slate-50/50 border border-slate-100 transition-all hover:bg-amber-50 hover:border-amber-100 hover:-translate-x-1"
+                className="flex items-center gap-3 p-3 rounded-[1rem] bg-slate-50/50 border border-slate-100 dark:border-slate-700 transition-all hover:bg-amber-50 hover:border-amber-100 hover:-translate-x-1"
               >
                 <span className="text-amber-500 font-bold">→</span>
-                <span className="font-semibold text-slate-700 hover:text-amber-700">{s.title}</span>
+                <span className="font-semibold text-slate-700 dark:text-slate-200 hover:text-amber-700">{s.title}</span>
               </Link>
             </li>
           ))}

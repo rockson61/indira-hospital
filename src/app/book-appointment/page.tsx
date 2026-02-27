@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function AppointmentPage() {
     return (
-        <main className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
             {/* Bold Asymmetrical Deep Hero for the booking context */}
             <section className="relative pt-48 pb-48 lg:pt-60 lg:pb-64 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 {/* 3D-like glowing spheres and custom grid pattern */}

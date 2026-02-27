@@ -11,7 +11,7 @@ export function TMJContent() {
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl">
+                    <div className="bg-slate-50 dark:bg-slate-800 dark:bg-slate-900 p-6 rounded-xl">
                         <div className="flex items-center gap-3 mb-2">
                             <Headphones className="w-6 h-6 text-fuchsia-600" />
                             <h4 className="font-bold text-foreground">Symptoms</h4>

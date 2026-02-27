@@ -30,8 +30,8 @@ export function FAQSection({
   return (
     <div className="my-12">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-heading font-black text-slate-900 tracking-tight mb-3">{title}</h2>
-        {description && <p className="text-slate-500 font-medium max-w-3xl mx-auto">{description}</p>}
+        <h2 className="text-3xl font-heading font-black text-slate-900 dark:text-white tracking-tight mb-3">{title}</h2>
+        {description && <p className="text-slate-500 dark:text-slate-400 font-medium max-w-3xl mx-auto">{description}</p>}
       </div>
 
       <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">

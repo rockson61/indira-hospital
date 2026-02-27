@@ -47,7 +47,7 @@ export function CostCalculator() {
     const cost = calculateCost();
 
     return (
-        <Card className="p-6 bg-white shadow-xl border-t-4 border-primary-600 rounded-xl">
+        <Card className="p-6 bg-white dark:bg-slate-900 shadow-xl border-t-4 border-primary-600 rounded-xl">
             <div className="flex items-center gap-2 mb-6 text-primary-700">
                 <Calculator className="w-6 h-6" />
                 <h3 className="text-xl font-bold">Surgery Cost Estimator</h3>
@@ -56,7 +56,7 @@ export function CostCalculator() {
             {!showResult ? (
                 <div className="space-y-5">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Select Treatment</label>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Select Treatment</label>
                         <select
                             className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
                             value={selectedTreatment}
@@ -67,17 +67,17 @@ export function CostCalculator() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Technique</label>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Technique</label>
                         <div className="grid grid-cols-2 gap-3">
                             <button
                                 onClick={() => setMethod('laser')}
-                                className={`p-2 text-sm font-medium rounded-md border ${method === 'laser' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'}`}
+                                className={`p-2 text-sm font-medium rounded-md border ${method === 'laser' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:bg-slate-950'}`}
                             >
                                 Laser (Painless)
                             </button>
                             <button
                                 onClick={() => setMethod('open')}
-                                className={`p-2 text-sm font-medium rounded-md border ${method === 'open' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 hover:bg-gray-50'}`}
+                                className={`p-2 text-sm font-medium rounded-md border ${method === 'open' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:bg-slate-950'}`}
                             >
                                 Open Surgery
                             </button>
@@ -85,7 +85,7 @@ export function CostCalculator() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Room Preference</label>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Room Preference</label>
                         <select
                             className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
                             value={roomType}
@@ -103,7 +103,7 @@ export function CostCalculator() {
                             onChange={(e) => setInsurance(e.target.checked)}
                             className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
                         />
-                        <label htmlFor="insurance" className="text-sm text-gray-700">I have Health Insurance</label>
+                        <label htmlFor="insurance" className="text-sm text-gray-700 dark:text-gray-300">I have Health Insurance</label>
                     </div>
 
                     <Button onClick={() => setShowResult(true)} className="w-full mt-2">
@@ -112,8 +112,8 @@ export function CostCalculator() {
                 </div>
             ) : (
                 <div className="text-center animate-in fade-in zoom-in duration-300">
-                    <p className="text-gray-500 text-sm mb-1 uppercase tracking-wider">Estimated Cost</p>
-                    <div className="text-4xl font-bold text-gray-900 mb-2">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-1 uppercase tracking-wider">Estimated Cost</p>
+                    <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
                         ₹{cost.toLocaleString()}*
                     </div>
 

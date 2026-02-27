@@ -18,7 +18,7 @@ export default function FAQPage() {
     );
 
     return (
-        <main className="min-h-screen bg-slate-50 selection:bg-fuchsia-200 selection:text-fuchsia-900">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900">
             {/* ELITE DARK HERO */}
             <section className="bg-slate-900 pt-48 pb-56 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -39,7 +39,7 @@ export default function FAQPage() {
                             <input
                                 type="text"
                                 placeholder="Search for appointments, insurance, surgery..."
-                                className="w-full pl-16 pr-6 py-6 rounded-full bg-white/90 backdrop-blur-xl border border-white/50 text-slate-900 text-lg shadow-2xl outline-none focus:ring-4 focus:ring-fuchsia-500/20 transition-all placeholder:text-slate-400 font-medium"
+                                className="w-full pl-16 pr-6 py-6 rounded-full bg-white/90 backdrop-blur-xl border border-white/50 text-slate-900 dark:text-white text-lg shadow-2xl outline-none focus:ring-4 focus:ring-fuchsia-500/20 transition-all placeholder:text-slate-400 font-medium"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
@@ -53,13 +53,13 @@ export default function FAQPage() {
                 <div className="grid lg:grid-cols-4 gap-12">
                     {/* SIDEBAR */}
                     <div className="lg:col-span-1 space-y-3 sticky top-32 h-fit hidden lg:block bg-white/60 backdrop-blur-xl p-6 rounded-[2rem] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-                        <h3 className="font-black text-slate-900 uppercase tracking-widest text-sm mb-6 flex items-center gap-2">
+                        <h3 className="font-black text-slate-900 dark:text-white uppercase tracking-widest text-sm mb-6 flex items-center gap-2">
                             <div className="w-2 h-2 rounded-full bg-fuchsia-500 animate-pulse"></div>
                             Categories
                         </h3>
                         <button
                             onClick={() => setSearchTerm("")}
-                            className={`w-full text-left px-5 py-4 rounded-2xl font-bold transition-all duration-300 ${searchTerm === "" ? "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white shadow-lg shadow-fuchsia-500/30 scale-105" : "text-slate-500 hover:bg-white hover:text-slate-900 hover:shadow-md border border-transparent hover:border-slate-100 hover:translate-x-1"}`}
+                            className={`w-full text-left px-5 py-4 rounded-2xl font-bold transition-all duration-300 ${searchTerm === "" ? "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white shadow-lg shadow-fuchsia-500/30 scale-105" : "text-slate-500 dark:text-slate-400 hover:bg-white dark:bg-slate-900 hover:text-slate-900 dark:text-white hover:shadow-md border border-transparent hover:border-slate-100 dark:border-slate-700 hover:translate-x-1"}`}
                         >
                             <span className="relative z-10">All Questions</span>
                         </button>
@@ -67,7 +67,7 @@ export default function FAQPage() {
                             <button
                                 key={cat}
                                 onClick={() => setSearchTerm(cat)}
-                                className={`w-full text-left px-5 py-4 rounded-2xl font-bold transition-all duration-300 ${searchTerm === cat ? "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white shadow-lg shadow-fuchsia-500/30 scale-105" : "text-slate-500 hover:bg-white hover:text-slate-900 hover:shadow-md border border-transparent hover:border-slate-100 hover:translate-x-1"}`}
+                                className={`w-full text-left px-5 py-4 rounded-2xl font-bold transition-all duration-300 ${searchTerm === cat ? "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white shadow-lg shadow-fuchsia-500/30 scale-105" : "text-slate-500 dark:text-slate-400 hover:bg-white dark:bg-slate-900 hover:text-slate-900 dark:text-white hover:shadow-md border border-transparent hover:border-slate-100 dark:border-slate-700 hover:translate-x-1"}`}
                             >
                                 <span className="relative z-10">{cat}</span>
                             </button>
@@ -78,15 +78,15 @@ export default function FAQPage() {
                     <div className="lg:col-span-3 space-y-6">
                         {filteredFaqs.length > 0 ? (
                             filteredFaqs.map((faq, i) => (
-                                <details key={i} className="group bg-white/80 backdrop-blur-xl rounded-[2rem] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden transition-all duration-300 open:ring-2 open:ring-fuchsia-500/20 open:bg-white">
-                                    <summary className="flex items-center justify-between p-8 cursor-pointer list-none font-bold text-xl text-slate-900 select-none">
+                                <details key={i} className="group bg-white/80 backdrop-blur-xl rounded-[2rem] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden transition-all duration-300 open:ring-2 open:ring-fuchsia-500/20 open:bg-white dark:bg-slate-900">
+                                    <summary className="flex items-center justify-between p-8 cursor-pointer list-none font-bold text-xl text-slate-900 dark:text-white select-none">
                                         <div className="flex items-start sm:items-center gap-4">
                                             <div className="mt-1 sm:mt-0 w-10 h-10 shrink-0 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-600 transition-colors group-open:bg-fuchsia-500 group-open:text-white group-hover:scale-110 duration-300">
                                                 <HelpCircle className="w-5 h-5" />
                                             </div>
                                             <span className="leading-snug">{faq.question}</span>
                                         </div>
-                                        <div className="w-10 h-10 shrink-0 rounded-full bg-slate-50 flex items-center justify-center group-open:bg-slate-100 transition-colors ml-4">
+                                        <div className="w-10 h-10 shrink-0 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-open:bg-slate-100 transition-colors ml-4">
                                             <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform duration-500 ease-in-out" />
                                         </div>
                                     </summary>
@@ -101,12 +101,12 @@ export default function FAQPage() {
                                 </details>
                             ))
                         ) : (
-                            <div className="text-center py-24 bg-white/50 backdrop-blur-xl rounded-[3rem] border-2 border-dashed border-slate-200">
+                            <div className="text-center py-24 bg-white/50 backdrop-blur-xl rounded-[3rem] border-2 border-dashed border-slate-200 dark:border-slate-700">
                                 <div className="w-24 h-24 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-6">
                                     <Search className="w-10 h-10 text-slate-300" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-900 mb-2">No results found</h3>
-                                <p className="text-slate-500">We couldn't find any questions matching "{searchTerm}".</p>
+                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">No results found</h3>
+                                <p className="text-slate-500 dark:text-slate-400">We couldn't find any questions matching "{searchTerm}".</p>
                             </div>
                         )}
 
@@ -123,7 +123,7 @@ export default function FAQPage() {
                                 <p className="text-slate-300 text-lg leading-relaxed">Our clinical coordinators are standing by to assist you with any further information regarding your procedure.</p>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4 relative z-10 w-full xl:w-auto">
-                                <Link href="/contact" className="group/btn relative flex items-center justify-center px-8 py-5 bg-white text-slate-900 font-black rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-xl overflow-hidden">
+                                <Link href="/contact" className="group/btn relative flex items-center justify-center px-8 py-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-black rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-xl overflow-hidden">
                                     <span className="relative z-10">Get in Touch</span>
                                     <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-100/50 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />

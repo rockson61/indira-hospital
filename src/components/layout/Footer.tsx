@@ -103,13 +103,13 @@ export function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-slate-500 font-medium">
+                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
                         &copy; {currentYear} {siteConfig.name}. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
-                        <Link href="/privacy" className="text-sm text-slate-500 hover:text-slate-300 transition-colors font-medium">Privacy</Link>
-                        <Link href="/terms" className="text-sm text-slate-500 hover:text-slate-300 transition-colors font-medium">Terms</Link>
-                        <Link href="/sitemap.xml" className="text-sm text-slate-500 hover:text-slate-300 transition-colors font-medium">Sitemap</Link>
+                        <Link href="/privacy" className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-300 transition-colors font-medium">Privacy</Link>
+                        <Link href="/terms" className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-300 transition-colors font-medium">Terms</Link>
+                        <Link href="/sitemap.xml" className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-300 transition-colors font-medium">Sitemap</Link>
                     </div>
                 </div>
             </div>
