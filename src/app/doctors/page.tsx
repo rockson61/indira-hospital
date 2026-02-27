@@ -10,8 +10,8 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
-    title: "Best Doctors & Surgeons in Tamil Nadu | Indira Super Speciality Hospital",
-    description: "Find top laparoscopic surgeons, urologists, proctologists, and multi-speciality doctors at Indira Hospital. Book your priority appointment today.",
+    title: "25+ Surgeons with 10,000+ Surgeries Each | Indira Hospital Vellore",
+    description: "Don't risk your surgery with an inexperienced doctor. Our surgeons have performed 10,000+ procedures each. Book a free consultation today.",
 };
 
 export default async function DoctorsDirectoryPage() {
@@ -29,9 +29,9 @@ export default async function DoctorsDirectoryPage() {
                 })}
             />
             <PageHero
-                title="Our Medical Experts"
-                subtitle="Trusted Specialists"
-                description="Meet our team of highly qualified and experienced doctors dedicated to providing world-class healthcare."
+                title="Your Surgery Deserves a Surgeon Who's Done It 1,000+ Times"
+                subtitle="25+ Verified Specialists"
+                description="Every doctor at Indira has 10+ years of specialised experience. Your procedure isn't their first — it's their thousandth."
                 backgroundImage="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200"
             />
 

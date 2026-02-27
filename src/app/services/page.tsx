@@ -10,8 +10,8 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
-    title: "All Medical Treatments & Services | Indira Super Speciality Hospital",
-    description: "Explore over 150+ advanced medical treatments and surgical procedures offered by our expert doctors at Indira Super Speciality Hospital.",
+    title: "150+ Treatments with Same-Day Discharge | Indira Hospital Vellore",
+    description: "Laser piles, laparoscopic hernia, kidney stone removal & more — at half the metro cost. 15,000+ successful surgeries. Get a free cost estimate today.",
 };
 
 export default async function ServicesDirectoryPage() {
@@ -25,9 +25,9 @@ export default async function ServicesDirectoryPage() {
                 items={services.map((s: any) => ({ name: s.title || s.name, url: `/doctor/near-me/treat/${s.slug}` }))}
             />
             <PageHero
-                title="Advanced Medical Treatments"
-                subtitle="Comprehensive Care"
-                description="Discover our extensive range of specialized treatments, cutting-edge procedures, and holistic healthcare services."
+                title="Surgeries That Get You Home Tonight"
+                subtitle="150+ Same-Day Procedures"
+                description="Why spend a week recovering when you could be home tonight? Laser & laparoscopic procedures at half the metro cost — with 50+ cashless insurance options."
                 backgroundImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200"
             />
 

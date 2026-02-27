@@ -10,8 +10,8 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
 export const metadata: Metadata = {
-    title: 'Diagnostics & Lab Tests — Indira Super Speciality Hospital Vellore',
-    description: 'Advanced diagnostic tests and lab services at Indira Hospital Vellore. MRI, CT Scan, Blood Tests, ECG, Echo, and more. NABL accredited labs with home collection.',
+    title: 'Get Test Reports in Under 12 Hours | Diagnostics at Indira Hospital Vellore',
+    description: 'NABL accredited labs. MRI, CT Scan, Blood Tests, ECG, Echo & more. Reports in under 12 hours. Home collection available. Stop guessing — get diagnosed today.',
 }
 
 // Category icons and colors with Elite UI mappings
@@ -51,13 +51,13 @@ export default async function DiagnosticsPage() {
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold tracking-widest uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-teal-500/30">
-                        <ScanLine className="w-4 h-4" /> Precision Diagnostics
+                        <ScanLine className="w-4 h-4" /> Reports in Under 12 Hours
                     </span>
                     <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[1.05] mb-8 max-w-5xl mx-auto">
                         Absolute <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">Certainty.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
-                        Experience unparalleled clinical accuracy utilizing NABL Accredited Labs and an elite, hyper-advanced Radiology Suite.
+                        Stop guessing. NABL accredited labs, home collection, and reports you can trust — all in under 12 hours.
                     </p>
 
                     {/* Integrated Glassmorphic Hero Stats */}

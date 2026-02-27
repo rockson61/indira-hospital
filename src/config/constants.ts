@@ -22,21 +22,21 @@ export const DOCTOR_PROFILE = {
     BREADCRUMB_DOCTORS: "Doctors",
     DEFAULT_LOCATION: "Indira Hospital",
     EXPERIENCE_EXP_SUFFIX: "+ Yrs Exp",
-    BTN_WHATSAPP_BOOK: "Book via WhatsApp",
-    BTN_WHATSAPP_CHAT: "WhatsApp Chat",
-    BTN_CALL_TOKEN: "Call for Token",
-    BTN_VIEW_DIRECTORY: "View Expert Directory",
-    SECTION_BIOGRAPHY: "Biography",
-    SECTION_ACADEMIC_PROFILE: "Academic Profile",
-    SECTION_QUICK_BOOKING: "Quick Booking",
+    BTN_WHATSAPP_BOOK: "Get Free Consultation",
+    BTN_WHATSAPP_CHAT: "Ask a Question Free",
+    BTN_CALL_TOKEN: "Call — It's Free",
+    BTN_VIEW_DIRECTORY: "See All Specialists",
+    SECTION_BIOGRAPHY: "Why This Doctor?",
+    SECTION_ACADEMIC_PROFILE: "Credentials & Training",
+    SECTION_QUICK_BOOKING: "Book in 30 Seconds",
     SECTION_LANGUAGES: "Languages",
-    SECTION_INDIRA_STANDARDS: "Indira Standards",
-    SECTION_EXPERT_NETWORK: "Expert Medical Network",
+    SECTION_INDIRA_STANDARDS: "The Indira Difference",
+    SECTION_EXPERT_NETWORK: "Other Specialists You May Need",
     SECTION_OTHER_PROFILES: "Other Professional Profiles",
     WHATSAPP_MESSAGE_PREFIX: "Hi, I want to book an appointment with",
-    DEFAULT_BIO: "<p>Highly skilled medical professional dedicated to providing superior patient outcomes at Indira Super Speciality Hospital. Expert in advanced medical diagnostics and therapy.</p>",
-    VERIFIED_PROFILE_TEXT: "Verified Profile",
-    QUICK_BOOKING_SUBTEXT: "Preferred mode for instant consultation confirmation and cost estimates.",
+    DEFAULT_BIO: "<p>Highly experienced specialist dedicated to pain-free, same-day discharge procedures. Trusted by thousands of patients across Tamil Nadu for clinical excellence and compassionate care at Indira Super Speciality Hospital.</p>",
+    VERIFIED_PROFILE_TEXT: "Verified & Trusted",
+    QUICK_BOOKING_SUBTEXT: "WhatsApp is the fastest way. Get instant confirmation, cost estimate, and insurance details.",
 } as const;
 
 export const DOCTOR_EXPERTISE_FALLBACK_1 = {
@@ -50,9 +50,9 @@ export const DOCTOR_EXPERTISE_FALLBACK_2 = {
 } as const;
 
 export const INDIRA_STANDARDS = [
-    { icon: "Users", text: "Top-Tier Clinical Excellence" },
-    { icon: "Clock", text: "Advanced Diagnostic Precision" },
-    { icon: "Shield", text: "Patient Privacy First" }
+    { icon: "Users", text: "15,000+ Successful Surgeries" },
+    { icon: "Clock", text: "Same-Day Discharge Available" },
+    { icon: "Shield", text: "50+ Cashless Insurance Partners" }
 ] as const;
 
 export const BLOG_CONFIGURATION = {

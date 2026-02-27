@@ -21,9 +21,8 @@ const WHATSAPP_NUMBER = "917010650063";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
 
 export const metadata: Metadata = {
-    title: "Hospital Near Me - Locations Served Across Tamil Nadu & India | Indira Hospital",
-    description:
-        "Indira Super Speciality Hospital serves 79+ locations across Tamil Nadu and India. #1 for Laparoscopic Surgery, Laser Piles Treatment, Fistula Removal. 15+ departments, 24/7 emergency. WhatsApp us now!",
+    title: "Best Hospital Near You — 79+ Locations Served | Indira Hospital",
+    description: "Indira Hospital serves 79+ locations across Tamil Nadu. Laser piles, laparoscopic surgery, 24/7 emergency. Find the nearest location — your surgery shouldn't mean a long journey.",
     keywords: [
         "hospital near me",
         "best hospital in Tamil Nadu",

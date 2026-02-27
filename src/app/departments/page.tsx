@@ -9,8 +9,8 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
-    title: "Centres of Excellence & Departments | Indira Super Speciality Hospital",
-    description: "Explore the advanced medical departments and tertiary care centres of excellence at Indira Hospital.",
+    title: "15+ Surgical Specialities Under One Roof | Indira Hospital Vellore",
+    description: "From cardiology to proctology — every speciality you need, in one hospital. No referrals, no waiting, no runaround. Get treated today.",
 };
 
 export default async function DepartmentsDirectoryPage() {
@@ -24,9 +24,9 @@ export default async function DepartmentsDirectoryPage() {
                 items={departments.map((d: any) => ({ name: d.title || d.name, url: `/departments/${d.slug}` }))}
             />
             <PageHero
-                title="Centres of Excellence"
-                subtitle="Expert Departments"
-                description="Explore our specialized medical and surgical departments, equipped with state-of-the-art technology and leading healthcare professionals."
+                title="Every Speciality You Need. One Hospital."
+                subtitle="15+ Departments"
+                description="Stop running between hospitals. From heart to hernia, kidney to knee — Indira has every surgical speciality under one NABH-accredited roof."
                 backgroundImage="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1200"
             />
 
