@@ -34,7 +34,7 @@ const DUMMY_EVENTS = [
 
 export function HomeUpcomingEvents() {
     return (
-        <section className="py-24 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+        <section className="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
             <SectionContainer>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>

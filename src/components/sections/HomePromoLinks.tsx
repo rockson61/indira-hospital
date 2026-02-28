@@ -5,7 +5,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 
 export function HomePromoLinks() {
     return (
-        <section className="py-24 bg-white dark:bg-slate-950">
+        <section className="py-16 bg-white dark:bg-slate-950">
             <SectionContainer>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 

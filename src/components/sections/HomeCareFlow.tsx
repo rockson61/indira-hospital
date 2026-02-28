@@ -44,9 +44,9 @@ const flowData = [
 
 export function HomeCareFlow() {
     return (
-        <section className="py-24 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+        <section className="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
             <SectionContainer>
-                <div className="space-y-24">
+                <div className="space-y-16">
                     {flowData.map((item, index) => {
                         const isEven = index % 2 === 0;
                         return (

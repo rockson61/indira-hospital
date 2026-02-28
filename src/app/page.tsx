@@ -48,19 +48,17 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="space-y-32 pb-32">
+      <div className="space-y-20 pb-32">
         <HomeCareFlow />
         <HomePromoLinks />
+        <HomeLatestNews />
+        <HomeUpcomingEvents />
 
         <TrustStrip />
         <DepartmentGridSection />
         <SignatureTreatments />
         <WhyChooseUs />
         <DoctorHighlightSection />
-
-        <HomeUpcomingEvents />
-        <HomeLatestNews />
-
         <Testimonials />
         <HealthLibraryCard />
         <QuickLinks />

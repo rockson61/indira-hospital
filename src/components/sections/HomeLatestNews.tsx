@@ -34,7 +34,7 @@ const DUMMY_NEWS = [
 
 export function HomeLatestNews() {
     return (
-        <section className="py-24 bg-white dark:bg-slate-950">
+        <section className="py-16 bg-white dark:bg-slate-950">
             <SectionContainer>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>
