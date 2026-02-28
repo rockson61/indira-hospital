@@ -7,6 +7,10 @@ import { SignatureTreatments } from "@/components/sections/signature-treatments"
 import { Testimonials } from "@/components/sections/testimonials";
 import { QuickLinks } from "@/components/sections/quick-links";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
+import { HomeCareFlow } from "@/components/sections/HomeCareFlow";
+import { HomePromoLinks } from "@/components/sections/HomePromoLinks";
+import { HomeUpcomingEvents } from "@/components/sections/HomeUpcomingEvents";
+import { HomeLatestNews } from "@/components/sections/HomeLatestNews";
 import { HOME_PAGE_CONTENT } from "@/config/constants";
 import { MessageCircle, Phone, ArrowRight, Zap, Sparkles } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
@@ -45,11 +49,18 @@ export default function Home() {
       </section>
 
       <div className="space-y-32 pb-32">
+        <HomeCareFlow />
+        <HomePromoLinks />
+
         <TrustStrip />
         <DepartmentGridSection />
         <SignatureTreatments />
         <WhyChooseUs />
         <DoctorHighlightSection />
+
+        <HomeUpcomingEvents />
+        <HomeLatestNews />
+
         <Testimonials />
         <HealthLibraryCard />
         <QuickLinks />
