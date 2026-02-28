@@ -47,7 +47,7 @@ export default function HealthLibraryPage() {
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
-            <JsonLdSchema type="medical-clinic" />
+            <JsonLdSchema type="hospital" />
 
             {/* Health Library Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
