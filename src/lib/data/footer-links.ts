@@ -87,13 +87,14 @@ export const FOOTER_LINKS = {
         { name: "Insurance Partners", url: "/patients/insurance" },
         { name: "Patient FAQs", url: "/faq" },
         { name: "Diagnostics", url: "/diagnostics" },
-        { name: "Medical Glossary", url: "/glossary" }
+        { name: "Patient Portal", url: "/patient-portal" }
     ],
     quickLinks: [
         { name: "About Us", url: "/about" },
         { name: "Quality & Safety", url: "/about/quality-safety" },
         { name: "Latest News (Blog)", url: "/blog" },
         { name: "Join Our Team", url: "/careers" },
+        { name: "Gallery", url: "/gallery" },
         { name: "Contact Us", url: "/contact" }
     ]
 };
