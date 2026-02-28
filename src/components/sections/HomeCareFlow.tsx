@@ -44,7 +44,7 @@ const flowData = [
 
 export function HomeCareFlow() {
     return (
-        <section className="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+        <section className="py-16 bg-gradient-to-b from-white to-slate-50/50 dark:from-slate-900 dark:to-slate-900 border-y border-slate-200/60 dark:border-slate-800">
             <SectionContainer>
                 <div className="space-y-16">
                     {flowData.map((item, index) => {
@@ -53,16 +53,16 @@ export function HomeCareFlow() {
                             <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${isEven ? '' : 'lg:flex-row-reverse'}`}>
                                 <div className="w-full lg:w-1/2 relative group">
                                     <div className="absolute inset-0 bg-gradient-to-tr from-fuchsia-500/20 to-blue-500/20 rounded-[3rem] transform rotate-3 scale-105 group-hover:rotate-6 transition-transform duration-500" />
-                                    <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border border-white dark:border-slate-700">
+                                    <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] dark:shadow-2xl border border-slate-200/60 dark:border-slate-700 bg-white dark:bg-transparent">
                                         <Image
                                             src={item.imageSrc}
                                             alt={item.imageAlt}
                                             fill
                                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 dark:from-slate-900/40 to-transparent" />
                                     </div>
-                                    <div className={`absolute -bottom-8 ${isEven ? '-right-8' : '-left-8'} bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl hidden md:block border border-slate-100 dark:border-slate-700 z-10 animate-bounce-slow`}>
+                                    <div className={`absolute -bottom-8 ${isEven ? '-right-8' : '-left-8'} bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-xl hidden md:block border border-slate-200/60 dark:border-slate-700 z-10 animate-bounce-slow`}>
                                         <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-2xl">
                                             {item.icon}
                                         </div>

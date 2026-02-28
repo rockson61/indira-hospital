@@ -5,12 +5,12 @@ import { SectionContainer } from "@/components/ui/section-container";
 
 export function HomePromoLinks() {
     return (
-        <section className="py-16 bg-white dark:bg-slate-950">
+        <section className="py-16 bg-slate-50 dark:bg-slate-950">
             <SectionContainer>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                     {/* Promo 1: Heart Screening */}
-                    <div className="lg:col-span-1 relative rounded-[2rem] overflow-hidden group border border-slate-100 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col h-full bg-slate-50 dark:bg-slate-900">
+                    <div className="lg:col-span-1 relative rounded-[2rem] overflow-hidden group border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none flex flex-col h-full bg-white dark:bg-slate-900">
                         <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
                         <div className="relative aspect-[16/9] w-full overflow-hidden">
                             <Image
@@ -33,16 +33,16 @@ export function HomePromoLinks() {
                     </div>
 
                     {/* Promo 2: Home Visit */}
-                    <div className="lg:col-span-1 relative rounded-[2rem] overflow-hidden group border border-slate-100 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col h-full bg-slate-50 dark:bg-slate-900">
-                        <div className="p-8 md:p-10 flex flex-col flex-grow relative z-10 bg-gradient-to-br from-blue-900 to-indigo-900 text-white h-full">
-                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm border border-white/20">
-                                <HomeIcon className="w-8 h-8 text-blue-300" />
+                    <div className="lg:col-span-1 relative rounded-[2rem] overflow-hidden group border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none flex flex-col h-full bg-white dark:bg-slate-900">
+                        <div className="p-8 md:p-10 flex flex-col flex-grow relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900 dark:to-indigo-900 text-slate-900 dark:text-white h-full">
+                            <div className="w-16 h-16 bg-white/60 dark:bg-white/10 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm border border-white/50 dark:border-white/20 shadow-sm dark:shadow-none">
+                                <HomeIcon className="w-8 h-8 text-blue-600 dark:text-blue-300" />
                             </div>
                             <h3 className="text-2xl font-black mb-4">DispatchHealth & Indira Hospital</h3>
-                            <p className="text-blue-100/80 mb-8 flex-grow">
+                            <p className="text-slate-600 dark:text-blue-100/80 mb-8 flex-grow">
                                 Teaming up to bring world-class healthcare services directly to your home. Expert care, zero travel.
                             </p>
-                            <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-colors font-bold group/link mt-auto">
+                            <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-slate-50 dark:bg-white/10 dark:hover:bg-white/20 border border-slate-200 dark:border-white/20 rounded-xl transition-colors font-bold group/link mt-auto text-blue-700 dark:text-white shadow-sm dark:shadow-none">
                                 Request a Home Visit
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
                             </Link>
@@ -50,7 +50,7 @@ export function HomePromoLinks() {
                     </div>
 
                     {/* Quick Links List */}
-                    <div className="lg:col-span-1 rounded-[2rem] bg-slate-50 dark:bg-slate-900 p-8 md:p-10 border border-slate-100 dark:border-slate-800 flex flex-col shadow-xl shadow-slate-200/50 dark:shadow-none">
+                    <div className="lg:col-span-1 rounded-[2rem] bg-white dark:bg-slate-900 p-8 md:p-10 border border-slate-200/60 dark:border-slate-800 flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none">
                         <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 flex items-center gap-3">
                             <span className="w-2 h-8 bg-fuchsia-500 rounded-full" />
                             Quick Links

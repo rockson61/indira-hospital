@@ -34,7 +34,7 @@ const DUMMY_EVENTS = [
 
 export function HomeUpcomingEvents() {
     return (
-        <section className="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+        <section className="py-16 bg-white dark:bg-slate-900 border-y border-slate-200/60 dark:border-slate-800">
             <SectionContainer>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>
@@ -53,7 +53,7 @@ export function HomeUpcomingEvents() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {DUMMY_EVENTS.map((event) => (
-                        <div key={event.id} className="group bg-white dark:bg-slate-950 rounded-3xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-cyan-200 dark:hover:border-cyan-800 transition-all duration-300 transform hover:-translate-y-1">
+                        <div key={event.id} className="group bg-slate-50/50 dark:bg-slate-950 rounded-3xl border border-slate-200/60 dark:border-slate-800 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-cyan-200 dark:hover:border-cyan-800 transition-all duration-300 transform hover:-translate-y-1">
                             <div className="relative aspect-[16/10] overflow-hidden">
                                 <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-cyan-700 dark:text-cyan-400">
                                     {event.category}

@@ -34,7 +34,7 @@ const DUMMY_NEWS = [
 
 export function HomeLatestNews() {
     return (
-        <section className="py-16 bg-white dark:bg-slate-950">
+        <section className="py-16 bg-slate-50 dark:bg-slate-950">
             <SectionContainer>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>
@@ -53,8 +53,8 @@ export function HomeLatestNews() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {DUMMY_NEWS.map((news) => (
-                        <Link href={`/blog/${news.id}`} key={news.id} className="group flex flex-col h-full">
-                            <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-6 shadow-xl shadow-slate-200/40 dark:shadow-none border border-slate-100 dark:border-slate-800">
+                        <Link href={`/blog/${news.id}`} key={news.id} className="group flex flex-col h-full bg-white dark:bg-slate-900 rounded-[2.5rem] p-4 border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-pink-200 dark:hover:border-pink-800 transition-all duration-300">
+                            <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] mb-6">
                                 <img
                                     src={news.image}
                                     alt={news.title}
@@ -66,7 +66,7 @@ export function HomeLatestNews() {
                                     </span>
                                 </div>
                             </div>
-                            <div className="flex flex-col flex-grow px-2">
+                            <div className="flex flex-col flex-grow px-4 pb-4">
                                 <div className="flex items-center gap-4 text-xs font-bold text-slate-500 dark:text-slate-400 mb-3">
                                     <span className="text-pink-600 dark:text-pink-400">{news.category}</span>
                                     <span>•</span>
