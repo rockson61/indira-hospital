@@ -5,16 +5,18 @@ import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { SectionContainer } from "@/components/ui/section-container";
 
 interface InternalLinkGridProps {
-    type: "services" | "doctors" | "departments" | "locations";
+    type: "services" | "doctors" | "departments" | "locations" | "treatments";
     title?: string;
     subtitle?: string;
     limit?: number;
     excludeSlug?: string;
+    parentSlug?: string;
     className?: string;
 }
 
 const ICONS = {
     services: Stethoscope,
+    treatments: Stethoscope,
     doctors: Users,
     departments: Layers,
     locations: MapPin,
@@ -22,6 +24,7 @@ const ICONS = {
 
 const COLORS = {
     services: "text-fuchsia-600 dark:text-fuchsia-400 bg-fuchsia-50 dark:bg-fuchsia-950/30 border-fuchsia-100 dark:border-fuchsia-900/50 hover:border-fuchsia-300 dark:hover:border-fuchsia-700",
+    treatments: "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-100 dark:border-emerald-900/50 hover:border-emerald-300 dark:hover:border-emerald-700",
     doctors: "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 border-blue-100 dark:border-blue-900/50 hover:border-blue-300 dark:hover:border-blue-700",
     departments: "text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/30 border-violet-100 dark:border-violet-900/50 hover:border-violet-300 dark:hover:border-violet-700",
     locations: "text-amber-600 dark:text-amber-500 bg-amber-50 dark:bg-amber-950/30 border-amber-100 dark:border-amber-900/50 hover:border-amber-300 dark:hover:border-amber-700",
@@ -29,6 +32,7 @@ const COLORS = {
 
 const DEFAULTS = {
     services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/services" },
+    treatments: { title: "Specific Procedures", subtitle: "Available Surgeries", href: "/doctor/near-me/treat" },
     doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
     departments: { title: "Centres of Excellence", subtitle: "Departments", href: "/departments" },
     locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
@@ -40,6 +44,7 @@ export async function InternalLinkGrid({
     subtitle,
     limit = 12,
     excludeSlug,
+    parentSlug,
     className = "",
 }: InternalLinkGridProps) {
     let items: { name: string; slug: string; url: string }[] = [];
@@ -51,6 +56,12 @@ export async function InternalLinkGrid({
                 .filter((s: any) => s.slug !== excludeSlug)
                 .slice(0, limit)
                 .map((s: any) => ({ name: s.title || s.name, slug: s.slug, url: `/doctor/near-me/treat/${s.slug}` }));
+        } else if (type === "treatments" && parentSlug) {
+            const data = (await import("@/lib/data/treatment-data")).getAllTreatments();
+            items = data
+                .filter(t => t.parentServiceSlug === parentSlug && t.slug !== excludeSlug)
+                .slice(0, limit)
+                .map(t => ({ name: t.title, slug: t.slug, url: `/doctor/near-me/treat/${t.parentServiceSlug}/${t.slug}` }));
         } else if (type === "doctors") {
             const data = await getDoctors().catch(() => []);
             items = data

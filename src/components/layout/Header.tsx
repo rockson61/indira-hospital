@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { navigation } from "@/config/navigation";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { HeaderMegaMenu } from "./HeaderMegaMenu";
 
 export function Header() {
     const pathname = usePathname();
@@ -47,20 +48,7 @@ export function Header() {
                                     </Link>
 
                                     {item.title === "Treatments" && (
-                                        <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50">
-                                            <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-float border border-slate-100 dark:border-slate-700 p-6 w-[600px] grid grid-cols-2 gap-x-8 gap-y-2">
-                                                {navigation.specialtyNav.map((specialty) => (
-                                                    <Link
-                                                        key={specialty.title}
-                                                        href={specialty.href}
-                                                        className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 p-2 rounded-xl hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950 transition-all flex items-center justify-between group/item"
-                                                    >
-                                                        {specialty.title}
-                                                        <ChevronRight className="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" />
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
+                                        <HeaderMegaMenu />
                                     )}
                                 </div>
                             ))}

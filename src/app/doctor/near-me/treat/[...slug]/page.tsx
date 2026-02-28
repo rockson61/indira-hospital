@@ -387,7 +387,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
+            {!isTreatmentPage && (
+                <InternalLinkGrid
+                    type="treatments"
+                    parentSlug={lastSlug}
+                    title={`Specialized Procedures`}
+                    subtitle={`Under ${service.title}`}
+                    limit={24}
+                    className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50"
+                />
+            )}
+            <InternalLinkGrid type="services" title="All Departments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
             <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
             <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
         </div >

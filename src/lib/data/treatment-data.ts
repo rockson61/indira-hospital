@@ -402,6 +402,538 @@ export const TREATMENT_DATA: TreatmentItem[] = [
             "Planned timing (for elective)"
         ]
     }
+,
+    // Auto-generated from navigation route gap analysis
+    {
+        id: "t-100",
+        slug: "laser-piles-treatment-cost",
+        parentServiceSlug: "general-surgery",
+        title: "Laser Piles Treatment",
+        shortDescription: "Advanced laser piles treatment at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for laser piles treatment, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-101",
+        slug: "fistula-surgery-treatment",
+        parentServiceSlug: "general-surgery",
+        title: "Fistula Surgery",
+        shortDescription: "Advanced fistula surgery at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for fistula surgery, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-102",
+        slug: "laparoscopic-hernia-repair",
+        parentServiceSlug: "general-surgery",
+        title: "Hernia Repair",
+        shortDescription: "Advanced hernia repair at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for hernia repair, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-103",
+        slug: "gallbladder-removal-recovery",
+        parentServiceSlug: "general-surgery",
+        title: "Gallbladder Removal",
+        shortDescription: "Advanced gallbladder removal at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for gallbladder removal, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-104",
+        slug: "appendix-surgery-steps",
+        parentServiceSlug: "general-surgery",
+        title: "Appendix Surgery",
+        shortDescription: "Advanced appendix surgery at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for appendix surgery, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-105",
+        slug: "laparoscopic-hysterectomy-guide",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Laparoscopic Hysterectomy",
+        shortDescription: "Advanced laparoscopic hysterectomy at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for laparoscopic hysterectomy, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-106",
+        slug: "pcod-pcos-treatment-guide",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "PCOD / PCOS Treatment",
+        shortDescription: "Advanced pcod / pcos treatment at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for pcod / pcos treatment, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-107",
+        slug: "endometriosis-treatment",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Endometriosis",
+        shortDescription: "Advanced endometriosis at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for endometriosis, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-108",
+        slug: "high-risk-pregnancy-care",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "High-Risk Pregnancy",
+        shortDescription: "Advanced high-risk pregnancy at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for high-risk pregnancy, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-109",
+        slug: "painless-delivery-epidural",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Painless Delivery",
+        shortDescription: "Advanced painless delivery at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for painless delivery, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-110",
+        slug: "normal-delivery-vs-c-section",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "C-Section vs Normal",
+        shortDescription: "Advanced c-section vs normal at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for c-section vs normal, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-111",
+        slug: "cervical-cancer-screening",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Cervical Cancer Screening",
+        shortDescription: "Advanced cervical cancer screening at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for cervical cancer screening, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-112",
+        slug: "kidney-stone-laser-surgery",
+        parentServiceSlug: "urology",
+        title: "Kidney Stone Laser",
+        shortDescription: "Advanced kidney stone laser at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for kidney stone laser, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-113",
+        slug: "prostate-turp-surgery",
+        parentServiceSlug: "urology",
+        title: "Prostate TURP",
+        shortDescription: "Advanced prostate turp at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for prostate turp, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-114",
+        slug: "enlarged-prostate-bph-treatment",
+        parentServiceSlug: "urology",
+        title: "Enlarged Prostate (BPH)",
+        shortDescription: "Advanced enlarged prostate (bph) at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for enlarged prostate (bph), ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-115",
+        slug: "bladder-cancer-diagnosis-treatment",
+        parentServiceSlug: "urology",
+        title: "Bladder Cancer",
+        shortDescription: "Advanced bladder cancer at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for bladder cancer, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-116",
+        slug: "uti-treatment-guide",
+        parentServiceSlug: "urology",
+        title: "UTI Treatment",
+        shortDescription: "Advanced uti treatment at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for uti treatment, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-117",
+        slug: "varicose-veins-laser-treatment",
+        parentServiceSlug: "general-surgery",
+        title: "Varicose Veins Laser",
+        shortDescription: "Advanced varicose veins laser at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for varicose veins laser, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-118",
+        slug: "av-fistula-surgery",
+        parentServiceSlug: "nephrology",
+        title: "AV Fistula Surgery",
+        shortDescription: "Advanced av fistula surgery at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for av fistula surgery, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-119",
+        slug: "total-knee-replacement-cost",
+        parentServiceSlug: "orthopaedics",
+        title: "Knee Replacement",
+        shortDescription: "Advanced knee replacement at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for knee replacement, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-120",
+        slug: "hip-replacement-surgery-guide",
+        parentServiceSlug: "orthopaedics",
+        title: "Hip Replacement",
+        shortDescription: "Advanced hip replacement at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for hip replacement, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-121",
+        slug: "arthroscopy-joint-surgery",
+        parentServiceSlug: "orthopaedics",
+        title: "Arthroscopy",
+        shortDescription: "Advanced arthroscopy at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for arthroscopy, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-122",
+        slug: "acl-reconstruction-recovery",
+        parentServiceSlug: "orthopaedics",
+        title: "ACL Reconstruction",
+        shortDescription: "Advanced acl reconstruction at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for acl reconstruction, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-123",
+        slug: "spine-surgery-disc-prolapse",
+        parentServiceSlug: "orthopaedics",
+        title: "Spine Surgery",
+        shortDescription: "Advanced spine surgery at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for spine surgery, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-124",
+        slug: "fracture-care-rehabilitation",
+        parentServiceSlug: "orthopaedics",
+        title: "Fracture Care",
+        shortDescription: "Advanced fracture care at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for fracture care, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-125",
+        slug: "infertility-evaluation-steps",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Infertility Evaluation",
+        shortDescription: "Advanced infertility evaluation at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for infertility evaluation, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-126",
+        slug: "male-infertility-causes",
+        parentServiceSlug: "urology",
+        title: "Male Infertility",
+        shortDescription: "Advanced male infertility at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for male infertility, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-127",
+        slug: "coronary-angiography-guide",
+        parentServiceSlug: "cardiology",
+        title: "Coronary Angiography",
+        shortDescription: "Advanced coronary angiography at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for coronary angiography, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-128",
+        slug: "heart-angioplasty-procedure",
+        parentServiceSlug: "cardiology",
+        title: "Heart Angioplasty",
+        shortDescription: "Advanced heart angioplasty at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for heart angioplasty, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-129",
+        slug: "pacemaker-implantation-steps",
+        parentServiceSlug: "cardiology",
+        title: "Pacemaker Implantation",
+        shortDescription: "Advanced pacemaker implantation at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for pacemaker implantation, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-130",
+        slug: "heart-valve-replacement-surgery",
+        parentServiceSlug: "cardiology",
+        title: "Heart Valve Replacement",
+        shortDescription: "Advanced heart valve replacement at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for heart valve replacement, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-131",
+        slug: "cardiac-surgery-bypass",
+        parentServiceSlug: "cardiology",
+        title: "Cardiac Bypass",
+        shortDescription: "Advanced cardiac bypass at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for cardiac bypass, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-132",
+        slug: "dementia-alzheimers-care",
+        parentServiceSlug: "neurology",
+        title: "Dementia & Alzheimer's",
+        shortDescription: "Advanced dementia & alzheimer's at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for dementia & alzheimer's, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-133",
+        slug: "stroke-recovery-exercises",
+        parentServiceSlug: "neurology",
+        title: "Stroke Recovery",
+        shortDescription: "Advanced stroke recovery at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for stroke recovery, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-134",
+        slug: "epilepsy-treatment-options",
+        parentServiceSlug: "neurology",
+        title: "Epilepsy Treatment",
+        shortDescription: "Advanced epilepsy treatment at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for epilepsy treatment, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-135",
+        slug: "migraine-relief-management",
+        parentServiceSlug: "neurology",
+        title: "Migraine Relief",
+        shortDescription: "Advanced migraine relief at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for migraine relief, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-136",
+        slug: "parkinsons-disease-care",
+        parentServiceSlug: "neurology",
+        title: "Parkinson's Disease",
+        shortDescription: "Advanced parkinson's disease at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for parkinson's disease, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-137",
+        slug: "endoscopy-procedure-guide",
+        parentServiceSlug: "gastroenterology",
+        title: "Endoscopy Guide",
+        shortDescription: "Advanced endoscopy guide at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for endoscopy guide, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-138",
+        slug: "colonoscopy-screening-cost",
+        parentServiceSlug: "gastroenterology",
+        title: "Colonoscopy",
+        shortDescription: "Advanced colonoscopy at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for colonoscopy, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-139",
+        slug: "ercp-bile-duct-stone-removal",
+        parentServiceSlug: "gastroenterology",
+        title: "ERCP Bile Duct",
+        shortDescription: "Advanced ercp bile duct at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for ercp bile duct, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-140",
+        slug: "liver-cirrhosis-treatment",
+        parentServiceSlug: "gastroenterology",
+        title: "Liver Cirrhosis",
+        shortDescription: "Advanced liver cirrhosis at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for liver cirrhosis, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-141",
+        slug: "fatty-liver-treatment-diet",
+        parentServiceSlug: "gastroenterology",
+        title: "Fatty Liver",
+        shortDescription: "Advanced fatty liver at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for fatty liver, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-142",
+        slug: "ibs-treatment-guide",
+        parentServiceSlug: "gastroenterology",
+        title: "IBS Treatment",
+        shortDescription: "Advanced ibs treatment at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for ibs treatment, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-143",
+        slug: "acid-reflux-gerd-management",
+        parentServiceSlug: "gastroenterology",
+        title: "Acid Reflux / GERD",
+        shortDescription: "Advanced acid reflux / gerd at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for acid reflux / gerd, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-144",
+        slug: "dialysis-procedure-guide",
+        parentServiceSlug: "nephrology",
+        title: "Dialysis Guide",
+        shortDescription: "Advanced dialysis guide at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for dialysis guide, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-145",
+        slug: "kidney-transplant-guide",
+        parentServiceSlug: "nephrology",
+        title: "Kidney Transplant",
+        shortDescription: "Advanced kidney transplant at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for kidney transplant, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-146",
+        slug: "diabetic-kidney-disease-ckd",
+        parentServiceSlug: "nephrology",
+        title: "Diabetic Kidney Disease",
+        shortDescription: "Advanced diabetic kidney disease at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for diabetic kidney disease, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-147",
+        slug: "chronic-kidney-disease-stages",
+        parentServiceSlug: "nephrology",
+        title: "CKD Stages",
+        shortDescription: "Advanced ckd stages at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for ckd stages, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-148",
+        slug: "chemotherapy-side-effects",
+        parentServiceSlug: "oncology",
+        title: "Chemotherapy",
+        shortDescription: "Advanced chemotherapy at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for chemotherapy, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-149",
+        slug: "radiation-therapy-overview",
+        parentServiceSlug: "oncology",
+        title: "Radiation Therapy",
+        shortDescription: "Advanced radiation therapy at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for radiation therapy, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-150",
+        slug: "surgical-oncology-overview",
+        parentServiceSlug: "oncology",
+        title: "Surgical Oncology",
+        shortDescription: "Advanced surgical oncology at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for surgical oncology, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-151",
+        slug: "breast-cancer-screening-guide",
+        parentServiceSlug: "oncology",
+        title: "Breast Cancer Screening",
+        shortDescription: "Advanced breast cancer screening at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for breast cancer screening, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    },
+    {
+        id: "t-152",
+        slug: "palliative-care-services",
+        parentServiceSlug: "oncology",
+        title: "Palliative Care",
+        shortDescription: "Advanced palliative care at Indira Hospital with experienced specialists.",
+        fullDescription: "We provide comprehensive care and expert treatment for palliative care, ensuring the best outcomes for our patients using state-of-the-art medical technology and personalized treatment plans at Indira Super Speciality Hospital.",
+        features: ["Expert Specialists","Advanced Technology","Comprehensive Care","Fast Recovery"],
+        benefits: ["Improved Quality of Life","Personalized Treatment Plan","Minimal Discomfort","Safe & Effective"]
+    }
 ];
 
 export const getTreatmentBySlug = (slug: string) => {
