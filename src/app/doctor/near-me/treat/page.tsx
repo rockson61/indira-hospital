@@ -38,8 +38,8 @@ export default function HealthLibraryPage() {
         getDepartments().then(deps => {
             const mapped = deps.map((d: any) => ({
                 ...d,
-                title: d.name,
-                short_description: d.description,
+                title: d.name || d.title,
+                short_description: d.description || d.short_description,
             }));
             setServices(mapped);
         }).catch(() => []);
