@@ -14,7 +14,8 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
-
+import { PatientResources } from "@/components/sections/patient-resources";
+import { ProviderResources } from "@/components/sections/provider-resources";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
@@ -53,6 +54,9 @@ export default function Home() {
         <HealthLibraryCard />
         <QuickLinks />
       </div>
+
+      <PatientResources />
+      <ProviderResources />
 
       {/* ENTITY CARD SECTIONS */}
       <EntityCardSection type="services" title="Popular Treatments" subtitle="Browse Services" limit={6} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700" />
