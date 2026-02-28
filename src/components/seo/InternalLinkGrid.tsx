@@ -21,10 +21,10 @@ const ICONS = {
 };
 
 const COLORS = {
-    services: "text-fuchsia-600 bg-fuchsia-50 dark:bg-fuchsia-950 border-fuchsia-100 hover:border-fuchsia-300",
-    doctors: "text-blue-600 bg-blue-50 border-blue-100 hover:border-blue-300",
-    departments: "text-violet-600 bg-violet-50 border-violet-100 hover:border-violet-300",
-    locations: "text-amber-600 bg-amber-50 border-amber-100 hover:border-amber-300",
+    services: "text-fuchsia-600 dark:text-fuchsia-400 bg-fuchsia-50 dark:bg-fuchsia-950/30 border-fuchsia-100 dark:border-fuchsia-900/50 hover:border-fuchsia-300 dark:hover:border-fuchsia-700",
+    doctors: "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 border-blue-100 dark:border-blue-900/50 hover:border-blue-300 dark:hover:border-blue-700",
+    departments: "text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/30 border-violet-100 dark:border-violet-900/50 hover:border-violet-300 dark:hover:border-violet-700",
+    locations: "text-amber-600 dark:text-amber-500 bg-amber-50 dark:bg-amber-950/30 border-amber-100 dark:border-amber-900/50 hover:border-amber-300 dark:hover:border-amber-700",
 };
 
 const DEFAULTS = {
@@ -105,7 +105,7 @@ export async function InternalLinkGrid({
                             className={`group flex items-center gap-3 px-4 py-3.5 rounded-xl border text-sm font-bold transition-all hover:-translate-y-0.5 hover:shadow-md ${colors}`}
                         >
                             <Icon className="w-4 h-4 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
-                            <span className="truncate text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:text-white">{item.name}</span>
+                            <span className="truncate text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white">{item.name}</span>
                         </Link>
                     ))}
                 </div>

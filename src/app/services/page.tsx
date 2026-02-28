@@ -56,13 +56,13 @@ export default async function ServicesDirectoryPage() {
 
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <EntityCardSection type="departments" title="Browse by Department" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-800" />
+            <EntityCardSection type="departments" title="Browse by Department" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
             <EntityCardSection type="locations" title="Available Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
             <InternalLinkGrid type="departments" title="All Departments" subtitle="Department Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
         </main>
     );
 }

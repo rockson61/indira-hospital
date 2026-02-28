@@ -56,11 +56,11 @@ export default function Home() {
 
       {/* ENTITY CARD SECTIONS */}
       <EntityCardSection type="services" title="Popular Treatments" subtitle="Browse Services" limit={6} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700" />
-      <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={6} className="bg-slate-50 dark:bg-slate-800" />
+      <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
 
       {/* COMPACT SEO LINK STRIPS */}
       <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-      <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-800" />
+      <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
 
       {/* ELITE SIGNATURE HOME CTA */}
       <SectionContainer className="pb-32 px-4">
