@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { SymptomGuide } from "@/components/healthcare/SymptomGuide";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { TreatmentGuides } from "@/components/sections/treatment-guides";
 
 // Hardcoded for demo purposes (expandable via CMS later)
 const bodySystems = [
@@ -81,18 +82,33 @@ export default function HealthLibraryPage() {
             <div className="sticky top-20 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 hidden md:block">
                 <div className="max-w-7xl mx-auto px-6 overflow-x-auto">
                     <div className="flex items-center gap-8 py-4 min-w-max">
-                        <a href="#body-systems" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Body Systems</a>
-                        <a href="#conditions" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Diseases & Conditions</a>
-                        <a href="#treatments" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Treatments</a>
-                        <a href="#pharmacy" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Pharmacy</a>
-                        <a href="/diagnostics" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Diagnostics</a>
                         <a href="#symptoms" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Symptoms Guide</a>
+                        <a href="#body-systems" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Body Systems</a>
+                        <a href="#treatments" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Treatments</a>
+                        <a href="#conditions" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Diseases & Conditions</a>
+                        <a href="#guides" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Treatment Guides</a>
+                        <a href="#pharmacy" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Pharmacy</a>
                     </div>
                 </div>
             </div>
 
             {/* Content Sections */}
             <div className="space-y-32 pt-20">
+
+                {/* Integrating Care Guide / Symptoms Guide */}
+                <section id="symptoms" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
+                    <div className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] p-8 lg:p-16 border border-slate-100 dark:border-slate-800 shadow-inner">
+                        <SectionHeader
+                            title="Interactive Symptom Guide"
+                            subtitle="Choose the Right Care"
+                            description="Use this tool to evaluate your symptoms and decide whether you need a routine checkup, urgent care, or emergency action."
+                            align="center"
+                        />
+                        <div className="mt-12">
+                            <SymptomGuide />
+                        </div>
+                    </div>
+                </section>
 
                 {/* Body Systems */}
                 <section id="body-systems" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
@@ -114,40 +130,7 @@ export default function HealthLibraryPage() {
                     </div>
                 </section>
 
-                {/* Conditions */}
-                <section id="conditions" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
-                    <SectionHeader
-                        title="Diseases & Conditions"
-                        subtitle="A-Z Health Conditions"
-                        description="Detailed information on common ailments, their causes, and how our specialists treat them."
-                        align="left"
-                    />
-                    <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {conditions.map(cond => (
-                            <Link key={cond.name} href={cond.link} className="flex items-center justify-between p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group">
-                                <span className="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[#0086d6]">{cond.name}</span>
-                                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-[#0086d6] group-hover:translate-x-1 transition-all" />
-                            </Link>
-                        ))}
-                    </div>
-                </section>
-
-                {/* Integrating Care Guide / Symptoms Guide */}
-                <section id="symptoms" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
-                    <div className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] p-8 lg:p-16 border border-slate-100 dark:border-slate-800 shadow-inner">
-                        <SectionHeader
-                            title="Interactive Symptom Guide"
-                            subtitle="Choose the Right Care"
-                            description="Use this tool to evaluate your symptoms and decide whether you need a routine checkup, urgent care, or emergency action."
-                            align="center"
-                        />
-                        <div className="mt-12">
-                            <SymptomGuide />
-                        </div>
-                    </div>
-                </section>
-
-                {/* Treatments (formerly the main part of /treat) */}
+                {/* Treatments */}
                 <section id="treatments" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
                     <SectionHeader
                         title="Treatments & Procedures"
@@ -170,6 +153,28 @@ export default function HealthLibraryPage() {
                         ))}
                     </div>
                 </section>
+
+                {/* Conditions */}
+                <section id="conditions" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
+                    <SectionHeader
+                        title="Diseases & Conditions"
+                        subtitle="A-Z Health Conditions"
+                        description="Detailed information on common ailments, their causes, and how our specialists treat them."
+                        align="left"
+                    />
+                    <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {conditions.map(cond => (
+                            <Link key={cond.name} href={cond.link} className="flex items-center justify-between p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group">
+                                <span className="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[#0086d6]">{cond.name}</span>
+                                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-[#0086d6] group-hover:translate-x-1 transition-all" />
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Treatment Guides */}
+                <TreatmentGuides />
+
 
                 {/* Pharmacy / Supplements */}
                 <section id="pharmacy" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
