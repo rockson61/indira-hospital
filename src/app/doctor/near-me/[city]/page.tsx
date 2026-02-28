@@ -115,8 +115,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <SectionContainer className="relative z-20 -mt-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Travel Stats */}
-                    <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 sm:p-12 shadow-xl border border-slate-100 dark:border-slate-700 relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 rounded-full blur-[80px] -mr-32 -mt-32" />
+                    <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[80px] -mr-32 -mt-32" />
 
                         <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
                             <div className="flex-1 text-center md:text-left">
@@ -145,7 +145,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                 ].map((t, idx) => (
                                     <div key={idx} className={cn(
                                         "p-6 rounded-2xl text-center border transition-all",
-                                        t.status ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white border-slate-100 dark:border-slate-700 shadow-sm dark:shadow-slate-900/30" : "bg-slate-50 dark:bg-slate-800 text-slate-300 border-slate-100 dark:border-slate-700 opacity-50"
+                                        t.status ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none" : "bg-slate-50 dark:bg-slate-800 text-slate-300 border-slate-200/60 dark:border-slate-800 opacity-50"
                                     )}>
                                         <t.icon className={cn("w-6 h-6 mx-auto mb-2", t.status ? "text-fuchsia-500" : "text-slate-200")} />
                                         <div className="text-xs font-bold uppercase tracking-tighter">{t.label}</div>
@@ -287,8 +287,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                         {/* Banks & ATMs */}
-                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 transition-all group">
+                            <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6">
                                 <Building2 className="w-6 h-6 text-blue-500" />
                             </div>
                             <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Financial Services</h4>
@@ -303,8 +303,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         </div>
 
                         {/* Restaurants */}
-                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center mb-6">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 transition-all group">
+                            <div className="w-12 h-12 bg-orange-50 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
                                 <UtensilsCrossed className="w-6 h-6 text-orange-500" />
                             </div>
                             <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Dining & Food</h4>
@@ -319,8 +319,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         </div>
 
                         {/* Local Attractions */}
-                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-pink-50 dark:bg-pink-950 rounded-2xl flex items-center justify-center mb-6">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 transition-all group">
+                            <div className="w-12 h-12 bg-pink-50 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center mb-6">
                                 <Landmark className="w-6 h-6 text-pink-500" />
                             </div>
                             <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Local Landmarks</h4>
@@ -377,7 +377,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                 "Cardiac Support",
                                 "24/7 Trauma Care"
                             ].map((text, i) => (
-                                <div key={i} className="flex items-center gap-4 p-5 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-200 transition-colors">
+                                <div key={i} className="flex items-center gap-4 p-5 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-colors">
                                     <CheckCircle2 className="w-6 h-6 text-fuchsia-500" />
                                     <span className="font-black text-slate-700 dark:text-slate-200 text-sm">{text}</span>
                                 </div>
@@ -390,7 +390,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             <Link
                                 key={dept.slug}
                                 href={`/doctor/near-me/treat/${dept.slug}`}
-                                className="p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 shadow-sm hover:border-fuchsia-300 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col"
+                                className="p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:-translate-y-1 transition-all group flex flex-col"
                             >
                                 <div className="w-14 h-14 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-fuchsia-500 transition-colors">
                                     <Heart className="w-7 h-7 text-fuchsia-600 group-hover:text-white" />
@@ -415,7 +415,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         <Link
                             key={near.slug}
                             href={`/doctor/near-me/${near.slug || ''}`}
-                            className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-soft transition-all flex flex-col justify-between group"
+                            className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:-translate-y-1 transition-all flex flex-col justify-between group"
                         >
                             <div>
                                 <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
