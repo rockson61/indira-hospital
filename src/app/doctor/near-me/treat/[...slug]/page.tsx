@@ -22,6 +22,7 @@ import { DepartmentCard } from "@/components/entities/DepartmentCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -371,6 +372,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     </div>
                 </div>
             </div>
+
+            <HealthLibraryCard />
 
             {/* ========== REVIEWS SECTION ========== */}
             <EntityReviews

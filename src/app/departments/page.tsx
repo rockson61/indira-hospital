@@ -7,6 +7,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 export const metadata: Metadata = {
     title: "15+ Surgical Specialities Under One Roof | Indira Hospital Vellore",
@@ -43,6 +44,8 @@ export default async function DepartmentsDirectoryPage() {
                     </div>
                 )}
             </SectionContainer>
+
+            <HealthLibraryCard />
 
             <EntityFAQs
                 entityType="hospital"

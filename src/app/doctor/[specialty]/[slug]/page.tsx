@@ -6,6 +6,7 @@ import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, Stethoscope,
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 export const dynamicParams = true;
 
@@ -244,6 +245,8 @@ export default async function DoctorProfileRoute({
                     </div>
                 </div>
             </section>
+
+            <HealthLibraryCard />
 
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />

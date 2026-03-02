@@ -16,6 +16,7 @@ import { LocationCard } from "@/components/entities/LocationCard";
 import { SectionContainer } from "@/components/ui/section-container";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 const WHATSAPP_NUMBER = "917010650063";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
@@ -164,7 +165,7 @@ export default async function LocationsPage() {
                         { icon: Users, label: "Patients Treated", value: "1L+" },
                         { icon: Stethoscope, label: "Departments", value: "15+" },
                     ].map((stat, i) => (
-                        <div key={i} className="group bg-white dark:bg-slate-900 rounded-2xl p-6 text-center shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-fuchsia-300 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden">
+                        <div key={i} className="group bg-white dark:bg-slate-900 rounded-[2rem] p-6 text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 hover:shadow-xl hover:shadow-fuchsia-100 dark:hover:shadow-fuchsia-900/20 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 group-hover:scale-125 transition-all duration-500">
                                 <stat.icon className="w-16 h-16 text-fuchsia-600" />
                             </div>
@@ -192,7 +193,7 @@ export default async function LocationsPage() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {/* Treatment Card 1 */}
-                    <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
+                    <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-fuchsia-500/5 rounded-full blur-[40px] group-hover:bg-fuchsia-500/10 transition-colors pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-fuchsia-500/30 transition-all duration-500">
                             <Zap className="w-8 h-8 text-fuchsia-600 group-hover:text-white transition-colors" />
@@ -241,7 +242,7 @@ export default async function LocationsPage() {
                     </div>
 
                     {/* Treatment Card 3 */}
-                    <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
+                    <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 rounded-full blur-[40px] group-hover:bg-pink-500/10 transition-colors pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-pink-50 dark:bg-pink-950 border border-pink-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-pink-500 group-hover:border-pink-400 group-hover:shadow-pink-500/30 transition-all duration-500 relative z-10">
                             <Shield className="w-8 h-8 text-pink-600 group-hover:text-white transition-colors" />
@@ -338,6 +339,8 @@ export default async function LocationsPage() {
                     </div>
                 </div>
             </SectionContainer>
+
+            <HealthLibraryCard />
 
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />

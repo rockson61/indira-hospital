@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 export const metadata: Metadata = {
     title: "25+ Surgeons with 10,000+ Surgeries Each | Indira Hospital Vellore",
@@ -48,6 +49,8 @@ export default async function DoctorsDirectoryPage() {
                     </div>
                 )}
             </SectionContainer>
+
+            <HealthLibraryCard />
 
             <EntityFAQs
                 entityType="hospital"

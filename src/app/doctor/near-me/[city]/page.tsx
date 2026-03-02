@@ -19,6 +19,7 @@ import { DoctorCard } from "@/components/entities/DoctorCard";
 import { cn } from "@/lib/utils";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -286,8 +287,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     />
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-                        {/* Banks & ATMs */}
-                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 transition-all group">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5 hover:-translate-y-2 transition-all duration-500 group">
                             <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6">
                                 <Building2 className="w-6 h-6 text-blue-500" />
                             </div>
@@ -302,8 +302,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             </div>
                         </div>
 
-                        {/* Restaurants */}
-                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 transition-all group">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-2xl hover:shadow-orange-500/10 dark:hover:shadow-orange-500/5 hover:-translate-y-2 transition-all duration-500 group">
                             <div className="w-12 h-12 bg-orange-50 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
                                 <UtensilsCrossed className="w-6 h-6 text-orange-500" />
                             </div>
@@ -318,8 +317,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             </div>
                         </div>
 
-                        {/* Local Attractions */}
-                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 transition-all group">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-pink-200 dark:hover:border-pink-800 hover:shadow-2xl hover:shadow-pink-500/10 dark:hover:shadow-pink-500/5 hover:-translate-y-2 transition-all duration-500 group">
                             <div className="w-12 h-12 bg-pink-50 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center mb-6">
                                 <Landmark className="w-6 h-6 text-pink-500" />
                             </div>
@@ -390,7 +388,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             <Link
                                 key={dept.slug}
                                 href={`/doctor/near-me/treat/${dept.slug}`}
-                                className="p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:-translate-y-1 transition-all group flex flex-col"
+                                className="p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 group flex flex-col"
                             >
                                 <div className="w-14 h-14 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-fuchsia-500 transition-colors">
                                     <Heart className="w-7 h-7 text-fuchsia-600 group-hover:text-white" />
@@ -415,7 +413,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         <Link
                             key={near.slug}
                             href={`/doctor/near-me/${near.slug || ''}`}
-                            className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:-translate-y-1 transition-all flex flex-col justify-between group"
+                            className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between group"
                         >
                             <div>
                                 <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
@@ -431,6 +429,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     ) as any)}
                 </div>
             </SectionContainer>
+
+            <HealthLibraryCard />
 
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
