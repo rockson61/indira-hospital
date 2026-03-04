@@ -15,10 +15,10 @@ while ((match = slugRegex.exec(code)) !== null) {
     existingSlugs.add(match[1]);
 }
 
-const newItems = extracted.filter(item => !existingSlugs.has(item.slug));
+const newItems = extracted.filter((item: any) => !existingSlugs.has(item.slug));
 
 if (newItems.length > 0) {
-    let toAppend = newItems.map(item => `    {
+    let toAppend = newItems.map((item: any) => `    {
         id: "${item.id}",
         slug: "${item.slug}",
         parentServiceSlug: "${item.parentServiceSlug}",

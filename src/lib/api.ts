@@ -69,7 +69,7 @@ export const getDepartmentBySlug = unstable_cache(
             const client = await getDirectusClient();
             const data = await client.request(readItems('departments', {
                 filter: { slug: { _eq: slug } },
-                fields: ['*', { related_doctors: ['id', 'name', 'slug'], related_services: ['id', 'title', 'slug'] }],
+                fields: ['*', { related_doctors: ['id', 'name', 'slug'], related_services: ['id', 'title', 'slug'] } as any],
                 limit: 1
             }));
             if (data && data.length > 0) return data[0] as any;

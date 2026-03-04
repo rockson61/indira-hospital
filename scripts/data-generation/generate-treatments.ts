@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { navigation } from './src/config/navigation';
-import { TREATMENT_DATA } from './src/lib/data/treatment-data';
+import { navigation } from '../../src/config/navigation';
+import { TREATMENT_DATA } from '../../src/lib/data/treatment-data';
 
 const existingSlugs = new Set(TREATMENT_DATA.map(t => t.slug));
 
