@@ -3541,13 +3541,7 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
     },
-    {
-        term: "Kidney Stones",
-        definition: "Find expert knowledge and treatments for Kidney Stones at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
+
     {
         term: "Kidney Transplant Program",
         definition: "Find expert knowledge and treatments for Kidney Transplant Program at Indira Hospital.",
