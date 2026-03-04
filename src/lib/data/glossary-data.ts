@@ -787,7 +787,7 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
     }
-,
+    ,
     // Auto-imported bulk terms
     {
         term: "About Your Veins",
@@ -2651,13 +2651,7 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
     },
-    {
-        term: "Fracture",
-        definition: "Find expert knowledge and treatments for Fracture at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
+
     {
         term: "Friends and Family Lung Cancer Screening Program",
         definition: "Find expert knowledge and treatments for Friends and Family Lung Cancer Screening Program at Indira Hospital.",
