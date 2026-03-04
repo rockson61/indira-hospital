@@ -1,5 +1,6 @@
 import { createDirectus, rest, authentication, staticToken, DirectusClient, RestClient, AuthenticationClient } from '@directus/sdk';
 import { Schema } from './schema';
+import { cache } from 'react';
 
 type ClientType = DirectusClient<Schema> & RestClient<Schema> & AuthenticationClient<Schema>;
 
@@ -32,7 +33,7 @@ const createStaticClient = (token: string) => {
 // Global promise singleton
 let clientPromise: Promise<ClientType> | null = globalForDirectus.directusPromise || null;
 
-export async function getDirectusClient() {
+export const getDirectusClient = cache(async function getDirectusClient() {
     if (clientPromise) return clientPromise;
 
     // PREFER STATIC TOKEN FROM ENV (Fixed for Build Process)
@@ -55,7 +56,7 @@ export async function getDirectusClient() {
         globalForDirectus.directusPromise = clientPromise;
     }
     return clientPromise;
-}
+});
 
 export async function getAdminClient() {
     return await getDirectusClient();

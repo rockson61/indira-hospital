@@ -82,6 +82,8 @@ export const FOOTER_LINKS = {
         { name: "General Physicians", url: "/doctor/near-me" }
     ],
     patientCare: [
+        { name: "24/7 Pharmacy", url: "/pharmacy" },
+        { name: "Scans & Imaging", url: "/scans" },
         { name: "International Patients", url: "/patients/international" },
         { name: "Health Packages", url: "/health-packages" },
         { name: "Insurance Partners", url: "/patients/insurance" },
