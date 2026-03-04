@@ -30,9 +30,9 @@ export default async function DoctorsDirectoryPage() {
                 })}
             />
             <PageHero
-                title="Your Surgery Deserves a Surgeon Who's Done It 1,000+ Times"
-                subtitle="25+ Verified Specialists"
-                description="Every doctor at Indira has 10+ years of specialised experience. Your procedure isn't their first — it's their thousandth."
+                title="Best Doctors & Specialist Surgeons in Vellore"
+                subtitle="Expert Care You Can Trust"
+                description="Don't leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
                 backgroundImage="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200"
             />
 

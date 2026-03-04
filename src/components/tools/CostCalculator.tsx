@@ -38,7 +38,7 @@ export function CostCalculator() {
         const fixedPart = baseCost * 0.6;
         const variablePart = baseCost * 0.4 * room.multiplier;
 
-        let total = Math.round(fixedPart + variablePart);
+        const total = Math.round(fixedPart + variablePart);
 
         // Round to nearest 500
         return Math.ceil(total / 500) * 500;

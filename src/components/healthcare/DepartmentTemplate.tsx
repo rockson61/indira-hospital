@@ -293,7 +293,7 @@ export function DepartmentTemplate({
 
             {/* Final CTA */}
             <section className="bg-[#002b36] dark:bg-slate-900 py-20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-[120px]" />
+                <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px]" />
                 <SectionContainer>
                     <div className="max-w-4xl mx-auto text-center space-y-8">
                         <h2 className="text-4xl font-bold text-white mb-6">Experience Better Healthcare at Indira Hospital</h2>

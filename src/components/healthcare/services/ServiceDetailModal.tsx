@@ -82,19 +82,19 @@ export function ServiceDetailModal({ service }: ServiceDetailModalProps) {
           </div>
         )}
         <div className="flex flex-col sm:flex-row gap-3 mt-6">
-          <Button className="flex-1 text-sm md:text-base" asChild>
+          <Button className="flex-1 text-sm md:text-base min-h-[44px]" asChild>
             <a href="tel:07010650063">
               <Phone className="w-4 h-4 mr-2" />
               Call Now
             </a>
           </Button>
-          <Button className="flex-1 text-sm md:text-base" variant="secondary" asChild>
+          <Button className="flex-1 text-sm md:text-base min-h-[44px]" variant="secondary" asChild>
             <a href="https://maps.google.com/?q=Indira+Dental+Clinic+Vellore" target="_blank" rel="noopener noreferrer">
               <MapPin className="w-4 h-4 mr-2" />
               Get Directions
             </a>
           </Button>
-          <Button className="flex-1 text-sm md:text-base" variant="outline" asChild>
+          <Button className="flex-1 text-sm md:text-base min-h-[44px]" variant="outline" asChild>
             <a href="https://wa.me/917010650063" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp

@@ -8,9 +8,11 @@ const libraryLinks = [
     { name: "Diseases & Conditions", href: "/doctor/near-me/treat#conditions", icon: HeartPulse },
     { name: "Treatments", href: "/doctor/near-me/treat#treatments", icon: Stethoscope },
     { name: "Procedures", href: "/doctor/near-me/treat#diagnostics", icon: FileText },
-    { name: "Drugs, Devices & Supplements", href: "/doctor/near-me/treat#pharmacy", icon: Pill },
-    { name: "Diagnostics & Testing", href: "/diagnostics", icon: TestTube },
-    { name: "Symptoms", href: "/doctor/near-me/treat#symptoms", icon: UserSearch }
+    { name: "Drugs, Devices & Supplements", href: "/pharmacy", icon: Pill },
+    { name: "Diagnostics & Testing", href: "/scans", icon: TestTube },
+    { name: "Symptoms Guide", href: "/doctor/near-me/treat#symptoms", icon: UserSearch },
+    { name: "Diet & Nutrition", href: "/doctor/near-me/treat#diet", icon: LayoutGrid },
+    { name: "Women's Wellness", href: "/doctor/near-me/treat/obstetrics-gynaecology", icon: HeartPulse }
 ];
 
 export function HealthLibraryCard() {
@@ -19,7 +21,7 @@ export function HealthLibraryCard() {
             <div className="relative rounded-[3rem] overflow-hidden group/library border border-slate-200/60 dark:border-slate-800 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-all duration-500 bg-white dark:bg-slate-900 flex flex-col lg:flex-row">
 
                 {/* Background Glow Elements */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full blur-[100px] pointer-events-none group-hover/library:bg-fuchsia-500/10 transition-colors duration-700" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px] pointer-events-none group-hover/library:bg-fuchsia-500/10 transition-colors duration-700" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[80px] pointer-events-none" />
 
                 {/* Left Panel: Spotlight Lead */}

@@ -14,8 +14,8 @@ export default function AboutPage() {
             {/* Bold Asymmetrical Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <motion.div
@@ -26,12 +26,12 @@ export default function AboutPage() {
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <Award className="w-4 h-4" /> Established 1988
                         </span>
-                        <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[0.95] mb-8 max-w-6xl mx-auto">
-                            The Legacy of <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Certainty.</span>
+                        <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6 max-w-6xl mx-auto">
+                            The Best Hospital in Vellore: <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">35 Years of Trust.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4">
-                            Indira Super Speciality Hospital stands as a beacon of clinical mastery, driven by an unwavering 35-year legacy of compassion and technological advancement.
+                            Indira Super Speciality Hospital stands as a beacon of clinical mastery, delivering advanced, ethical, and compassionate healthcare to the Vellore community since 1988.
                         </p>
                     </motion.div>
                 </div>
@@ -55,7 +55,7 @@ export default function AboutPage() {
                         </div>
                         <h2 className="text-4xl font-black mb-6 text-slate-900 dark:text-white tracking-tight group-hover:text-fuchsia-700 transition-colors leading-tight">Our Mission</h2>
                         <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                            To provide highly comprehensive, profoundly compassionate, and fiercely cost-effective healthcare services comparable to absolute international standards, guaranteeing maximum patient safety and uncompromising satisfaction.
+                            To deliver highly comprehensive, deeply compassionate, and cost-effective healthcare services that meet rigorous international standard. We guarantee maximum patient safety, rapid recovery, and uncompromising clinical satisfaction.
                         </p>
                     </motion.div>
 
@@ -163,8 +163,8 @@ export default function AboutPage() {
             <section className="px-6 lg:px-8 max-w-7xl mx-auto my-32">
                 <div className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-pink-950 rounded-[4rem] p-16 sm:p-24 overflow-hidden shadow-2xl shadow-fuchsia-950/40 group/cta flex flex-col items-center text-center">
                     {/* Ambient Background Lights */}
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[120px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[100px] opacity-40" />
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full hidden md:block blur-[100px] opacity-40" />
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
                     <div className="relative z-10 w-full max-w-4xl">
@@ -176,12 +176,12 @@ export default function AboutPage() {
                         >
                             <Heart className="w-10 h-10" />
                         </motion.div>
-                        <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-black text-white mb-10 tracking-tight leading-[1] max-w-4xl mx-auto">
-                            The Future <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">of Healing.</span>
+                        <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black text-white mb-10 tracking-tight leading-[1] max-w-4xl mx-auto">
+                            Your Journey to <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Health Starts Here.</span>
                         </h2>
                         <p className="text-xl md:text-2xl text-fuchsia-100/70 font-light mb-16 leading-relaxed max-w-3xl mx-auto">
-                            Experience a synthesis of world-class medical excellence and deeply compassionate care. Our elite team is ready to assist you.
+                            Experience a synthesis of world-class medical excellence and deeply compassionate care. Do not let pain hold you back. Let our elite specialists provide the precise, same-day treatment you deserve.
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-8">

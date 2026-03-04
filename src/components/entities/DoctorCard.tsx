@@ -161,7 +161,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                         />
                     ) : (
-                        <div className="w-full h-full flex items-center justify-center text-fuchsia-200">
+                        <div className="w-full h-full flex items-center justify-center text-fuchsia-100">
                             <Stethoscope className="w-16 h-16" />
                         </div>
                     )}

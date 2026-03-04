@@ -6,7 +6,7 @@ import { getImageUrl } from "@/lib/utils";
 import { Stethoscope, ArrowRight } from "lucide-react";
 
 export async function FeaturedDepartments() {
-    let departments = await getDepartments().catch(() => []);
+    const departments = await getDepartments().catch(() => []);
 
     if (!departments || departments.length === 0) return null;
 

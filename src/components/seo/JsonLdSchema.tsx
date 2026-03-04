@@ -25,7 +25,15 @@ interface BreadcrumbSchemaProps {
     items: { name: string; url: string }[];
 }
 
-type JsonLdSchemaProps = HospitalSchemaProps | ItemListSchemaProps | PhysicianSchemaProps | BreadcrumbSchemaProps;
+interface MedicalProcedureSchemaProps {
+    type: "medicalProcedure";
+    name: string;
+    description: string;
+    url: string;
+    preparation?: string;
+}
+
+type JsonLdSchemaProps = HospitalSchemaProps | ItemListSchemaProps | PhysicianSchemaProps | BreadcrumbSchemaProps | MedicalProcedureSchemaProps;
 
 export function JsonLdSchema(props: JsonLdSchemaProps) {
     let schema: Record<string, any>;
@@ -94,8 +102,21 @@ export function JsonLdSchema(props: JsonLdSchemaProps) {
                 url: siteConfig.url,
             },
         };
+    } else if (props.type === "medicalProcedure") {
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            name: props.name,
+            description: props.description,
+            url: `${siteConfig.url}${props.url}`,
+            provider: {
+                "@type": "Hospital",
+                name: siteConfig.name,
+                url: siteConfig.url,
+            },
+            ...(props.preparation && { bodyLocation: props.preparation }),
+        };
     } else {
-        // breadcrumb
         schema = {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",

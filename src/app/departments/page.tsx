@@ -25,9 +25,9 @@ export default async function DepartmentsDirectoryPage() {
                 items={departments.map((d: any) => ({ name: d.title || d.name, url: `/departments/${d.slug}` }))}
             />
             <PageHero
-                title="Every Speciality You Need. One Hospital."
-                subtitle="15+ Departments"
-                description="Stop running between hospitals. From heart to hernia, kidney to knee — Indira has every surgical speciality under one NABH-accredited roof."
+                title="Best Multispeciality Hospital Departments in Vellore"
+                subtitle="Comprehensive Care Under One Roof"
+                description="Experience world-class treatment across 15+ advanced specialities. From complex cardiac care to minimally invasive laparoscopic surgery, our NABH-accredited hospital in Vellore delivers precise, compassionate, and transparent healthcare."
                 backgroundImage="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1200"
             />
 

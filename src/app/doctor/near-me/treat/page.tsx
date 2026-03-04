@@ -11,7 +11,6 @@ import { SymptomGuide } from "@/components/healthcare/SymptomGuide";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { TreatmentGuides } from "@/components/sections/treatment-guides";
 
-// Hardcoded for demo purposes (expandable via CMS later)
 const bodySystems = [
     { name: "Heart & Circulation", icon: Heart, link: "/doctor/near-me/treat/cardiology" },
     { name: "Bones & Joints", icon: Bone, link: "/doctor/near-me/treat/orthopaedics" },
@@ -19,17 +18,23 @@ const bodySystems = [
     { name: "Digestive System", icon: Activity, link: "/doctor/near-me/treat/gastroenterology" },
     { name: "Women's Health", icon: Baby, link: "/doctor/near-me/treat/obstetrics-gynaecology" },
     { name: "Eyes & Vision", icon: Eye, link: "/doctor/near-me/treat/ophthalmology" },
+    { name: "Kidneys & Urinary Tract", icon: Shield, link: "/doctor/near-me/treat/urology" },
+    { name: "Lungs & Breathing", icon: LayoutGrid, link: "/doctor/near-me/treat/general-medicine" },
 ];
 
 const conditions = [
-    { name: "Heart Attack", link: "/doctor/near-me/treat/cardiology/heart-attack" },
-    { name: "Stroke", link: "/doctor/near-me/treat/neurology" },
+    { name: "Heart Attack", link: "/doctor/near-me/treat/cardiology/heart-attack-warning-signs" },
+    { name: "Stroke", link: "/doctor/near-me/treat/neurology/stroke-recovery-exercises" },
     { name: "Kidney Stones", link: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
     { name: "Hernia", link: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
-    { name: "Piles", link: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
+    { name: "Piles (Hemorrhoids)", link: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
     { name: "Cataract", link: "/doctor/near-me/treat/ophthalmology" },
     { name: "Arthritis", link: "/doctor/near-me/treat/orthopaedics" },
-    { name: "Diabetes", link: "/doctor/near-me/treat/general-medicine" },
+    { name: "Diabetes", link: "/doctor/near-me/treat/nephrology/diabetic-kidney-disease-ckd" },
+    { name: "Migraine", link: "/doctor/near-me/treat/neurology/migraine-relief-management" },
+    { name: "Breast Cancer", link: "/doctor/near-me/treat/oncology/breast-cancer-screening-guide" },
+    { name: "Gallstones", link: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
+    { name: "Prostate Enlargement", link: "/doctor/near-me/treat/urology/enlarged-prostate-bph-treatment" },
 ];
 
 export default function HealthLibraryPage() {
@@ -53,8 +58,8 @@ export default function HealthLibraryPage() {
             {/* Health Library Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#0086d6]/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#0086d6]/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
                     <motion.div
@@ -162,11 +167,11 @@ export default function HealthLibraryPage() {
                         description="Detailed information on common ailments, their causes, and how our specialists treat them."
                         align="left"
                     />
-                    <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {conditions.map(cond => (
                             <Link key={cond.name} href={cond.link} className="flex items-center justify-between p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group">
-                                <span className="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[#0086d6]">{cond.name}</span>
-                                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-[#0086d6] group-hover:translate-x-1 transition-all" />
+                                <span className="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[#0086d6] text-sm md:text-base">{cond.name}</span>
+                                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-[#0086d6] group-hover:translate-x-1 transition-all shrink-0 ml-2" />
                             </Link>
                         ))}
                     </div>

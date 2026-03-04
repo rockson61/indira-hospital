@@ -4,7 +4,7 @@ import { StatsCounterClient } from "./stats-counter-client";
 export async function StatsBanner() {
     let doctorCount = 25;
     let departmentCount = 10;
-    let patientCount = 15000;
+    const patientCount = 15000;
 
     try {
         const [doctors, departments] = await Promise.all([

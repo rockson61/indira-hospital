@@ -70,8 +70,8 @@ export const BLOG_CONFIGURATION = {
 export const HOME_PAGE_CONTENT = {
     ACCREDITATION_TITLE: "Recognized & Accredited By",
     ACCREDITATION_BADGES: ["NABH ACCREDITED", "NABL CERTIFIED", "ISO 9001:2015"],
-    CTA_HEADING: "Every Day You Wait Costs You More",
-    CTA_SUBTEXT: "Delaying surgery doesn't save money — it doubles it. Get a free cost estimate today and stop the pain tomorrow.",
-    CTA_BUTTON_BOOK: "Get Free Estimate",
-    CTA_BUTTON_CONTACT: "Call Now — It's Free"
+    CTA_HEADING: "Your Health Can't Wait. Neither Should You.",
+    CTA_SUBTEXT: "Delaying necessary treatment often leads to worsening symptoms. Get world-class care at Indira Hospital today. Consult our experts for a clear, transparent cost estimate and rapid recovery plan.",
+    CTA_BUTTON_BOOK: "Schedule Consultation",
+    CTA_BUTTON_CONTACT: "Call Admission Desk"
 } as const;

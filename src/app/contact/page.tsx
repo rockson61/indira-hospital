@@ -14,8 +14,8 @@ export default function ContactPage() {
             {/* Bold Asymmetrical Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none animate-pulse" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <motion.div
@@ -26,12 +26,12 @@ export default function ContactPage() {
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-rose-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-rose-500/30">
                             <HeartPulse className="w-4 h-4 animate-pulse" /> Available 24/7
                         </span>
-                        <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[0.95] mb-8 max-w-6xl mx-auto">
-                            Command <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Accessibility.</span>
+                        <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6 max-w-6xl mx-auto">
+                            Contact Indira Hospital <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">in Vellore.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4">
-                            Whether you require urgent emergency response or a clinical consultation, our elite team is structurally prepared to support you instantly.
+                            Need an appointment, emergency trauma care, or a free cost estimate? Reach out to the top multispeciality hospital in Vellore. Our expert team is ready 24/7.
                         </p>
                     </motion.div>
                 </div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                             {/* Light Streak Animation */}
                             <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight lg:mb-12 relative z-10">Central Station</h2>
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight lg:mb-12 relative z-10">Get in Touch</h2>
 
                             <div className="space-y-10 relative z-10">
                                 {/* Address Block */}
@@ -146,10 +146,10 @@ export default function ContactPage() {
 
                             <div className="relative z-10 mb-12">
                                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-fuchsia-300 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
-                                    <ShieldCheck className="w-4 h-4" /> Secure Tactical Unit
+                                    <ShieldCheck className="w-4 h-4" /> Safe & Secure
                                 </span>
-                                <h2 className="text-5xl font-black text-white tracking-tight leading-tight">Elite Enquiry</h2>
-                                <p className="text-slate-400 mt-4 text-lg font-medium">Fields with an asterisk are mandatory. Our specialized response time is &lt; 24 hours.</p>
+                                <h2 className="text-5xl font-black text-white tracking-tight leading-tight">Send a Message</h2>
+                                <p className="text-slate-400 mt-4 text-lg font-medium">Have a question about a treatment, cost, or insurance? Fill out the form and our team will reply within 24 hours.</p>
                             </div>
 
                             <form className="space-y-10 relative z-10">
@@ -183,7 +183,7 @@ export default function ContactPage() {
                                     type="button"
                                     className="group/btn relative flex items-center justify-center w-full px-10 py-7 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-3xl transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
                                 >
-                                    <span className="relative z-10 text-xl uppercase tracking-[0.2em] pr-6">Initiate Secure Transmission</span>
+                                    <span className="relative z-10 text-xl uppercase tracking-[0.2em] pr-6">Send Message</span>
                                     <Send className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                                 </button>

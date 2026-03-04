@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next';
 import { siteConfig } from '@/config/site';
-import { getServices, getDepartments, getDoctors, getLocations } from '@/lib/api';
+import { getServices, getDepartments, getDoctors, getLocations, getHealthPackages, getDiagnostics } from '@/lib/api';
+import { getAllTechnologies } from '@/lib/data/technology-data';
+import { PATIENT_RESOURCES } from '@/lib/data/patient-resources';
+import { getAllTreatments } from '@/lib/data/treatment-data';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = siteConfig.url;
@@ -9,13 +12,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const staticRoutes = [
         '',
         '/about',
+        '/about/quality-safety',
+        '/careers',
+        '/contact',
+        '/events',
+        '/faq',
+        '/gallery',
+        '/glossary',
+        '/patients',
+        '/patients/international',
+        '/pay-bill',
+        '/pharmacy',
+        '/pricing',
+        '/privacy-policy',
+        '/scans',
+        '/terms',
+        '/virtual-tour',
         '/doctors',
         '/departments',
         '/services',
         '/diagnostics',
-        '/contact',
         '/book-appointment',
-        '/blog'
+        '/blog',
+        '/health-packages',
+        '/patient-portal',
+        '/patients/insurance',
+        '/technology'
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
@@ -25,12 +47,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     try {
         // Fetch CMS Data
-        const [services, departments, doctors, locations] = await Promise.all([
+        const [services, departments, doctors, locations, healthPackages, diagnostics] = await Promise.all([
             getServices().catch(() => []),
             getDepartments().catch(() => []),
             getDoctors().catch(() => []),
-            getLocations().catch(() => [])
+            getLocations().catch(() => []),
+            getHealthPackages().catch(() => []),
+            getDiagnostics().catch(() => [])
         ]);
+
+        const technologies = getAllTechnologies();
+        const patientResources = PATIENT_RESOURCES;
+        const treatments = getAllTreatments();
 
         // Map Dynamic URLs
         const serviceRoutes = services.map((s: any) => ({
@@ -41,7 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }));
 
         const departmentRoutes = departments.map((d: any) => ({
-            url: `${baseUrl}/doctor/near-me/treat/${d.slug || d.id}`,
+            url: `${baseUrl}/departments/${d.slug || d.id}`,
             lastModified: new Date(d.date_updated || d.date_created || new Date()),
             changeFrequency: 'weekly' as const,
             priority: 0.9,
@@ -61,12 +89,52 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.9,
         }));
 
+        const healthPackageRoutes = healthPackages.map((hp: any) => ({
+            url: `${baseUrl}/health-packages/${hp.slug || hp.id}`,
+            lastModified: new Date(hp.date_updated || hp.date_created || new Date()),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+        }));
+
+        const diagnosticRoutes = diagnostics.map((dg: any) => ({
+            url: `${baseUrl}/diagnostics/${dg.slug || dg.id}`,
+            lastModified: new Date(dg.date_updated || dg.date_created || new Date()),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+        }));
+
+        const technologyRoutes = technologies.map((tech: any) => ({
+            url: `${baseUrl}/technology/${tech.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        }));
+
+        const patientResourceRoutes = patientResources.map((res: any) => ({
+            url: `${baseUrl}/patients/${res.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        }));
+
+        const treatmentRoutes = treatments.map((t: any) => ({
+            url: `${baseUrl}/doctor/near-me/treat/${t.parentServiceSlug}/${t.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+        }));
+
         return [
             ...staticRoutes,
             ...departmentRoutes,
             ...serviceRoutes,
             ...locationRoutes,
-            ...doctorRoutes
+            ...doctorRoutes,
+            ...healthPackageRoutes,
+            ...diagnosticRoutes,
+            ...technologyRoutes,
+            ...patientResourceRoutes,
+            ...treatmentRoutes
         ];
     } catch (error) {
         console.error("Error generating dynamic sitemap:", error);

@@ -51,7 +51,7 @@ export function HeaderMegaMenu() {
                             ))}
                         </div>
                     ) : (
-                        <div className="h-full flex flex-col items-center justify-center space-y-3 text-slate-500">
+                        <div className="h-full flex flex-col items-center justify-center space-y-3 text-slate-600 dark:text-slate-300">
                             <p className="text-sm text-center">Comprehensive {activeSpecialty.title} treatments and surgeries available.</p>
                             <Link href={activeSpecialty.href} className="text-sm font-bold text-fuchsia-600 hover:underline">
                                 Explore Services →

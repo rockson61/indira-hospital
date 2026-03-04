@@ -1,6 +1,7 @@
 import { PageHeader } from "@/components/ui/page-header";
 import { SectionContainer } from "@/components/ui/section-container";
 import { Play } from "lucide-react";
+import Image from "next/image";
 
 const GALLERY_IMAGES = [
     { id: 1, src: "https://images.unsplash.com/photo-1519494026892-80ba3f524733?auto=format&fit=crop&q=80&w=800", alt: "Hospital Exterior", category: "Infrastructure" },
@@ -24,9 +25,11 @@ export default function GalleryPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {GALLERY_IMAGES.map((image) => (
                             <div key={image.id} className="group relative rounded-[2rem] overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none aspect-[4/3] cursor-pointer">
-                                <img
+                                <Image
                                     src={image.src}
                                     alt={image.alt}
+                                    width={800}
+                                    height={600}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">

@@ -4,7 +4,7 @@ import { TREATMENT_DATA } from './src/lib/data/treatment-data';
 
 const existingSlugs = new Set(TREATMENT_DATA.map(t => t.slug));
 
-let newItems: any[] = [];
+const newItems: any[] = [];
 let idCounter = 100;
 
 for (const cat of navigation.specialtyNav) {

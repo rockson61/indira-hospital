@@ -20,15 +20,15 @@ export async function SignatureTreatments() {
     return (
         <section className="py-28 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
             {/* Background Glows — subtle in light, visible in dark */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/[0.03] dark:bg-fuchsia-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-fuchsia-400/[0.02] dark:bg-fuchsia-400/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/[0.03] dark:bg-fuchsia-600/10 rounded-full hidden md:block blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-fuchsia-400/[0.02] dark:bg-fuchsia-400/5 rounded-full hidden md:block blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="flex justify-between items-end mb-12">
                     <SectionHeader
-                        title="Surgeries That Get You Back to Life Faster"
-                        subtitle="Same-Day Discharge Procedures"
-                        description="Why spend a week recovering when you could be home tonight? Our laser & laparoscopic procedures cut recovery from weeks to hours."
+                        title="Advanced Minimally Invasive & Day-Care Surgeries"
+                        subtitle="Precision Meets Rapid Recovery"
+                        description="Experience the benefits of world-class laparoscopic and laser treatments. By utilizing keyhole techniques, we minimize scarring, significantly reduce pain, and ensure you return to the life you love—often on the exact same day."
                         className="mb-0 text-left items-start"
                         align="left"
                     />

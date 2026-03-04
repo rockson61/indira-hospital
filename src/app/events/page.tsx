@@ -1,6 +1,7 @@
 import { SectionContainer } from "@/components/ui/section-container";
 import { Calendar, Clock, MapPin, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 
 const EVENTS = [
@@ -53,9 +54,11 @@ export default function EventsPage() {
                                     <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-cyan-700 dark:text-cyan-400 border border-white/20">
                                         {event.category}
                                     </div>
-                                    <img
+                                    <Image
                                         src={event.image}
                                         alt={event.title}
+                                        width={800}
+                                        height={500}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>

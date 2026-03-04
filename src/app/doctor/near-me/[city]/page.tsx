@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
     MapPin, Clock, Train, Bus, Car,
     MessageCircle, Phone, Zap, ArrowRight,
-    Building2, UtensilsCrossed, Landmark,
+    Building, UtensilsCrossed, Landmark,
     CheckCircle2, ShieldCheck,
     Navigation, Heart, Stethoscope, Star
 } from "lucide-react";
@@ -207,7 +207,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             {/* DIRECTIONS MODULE (ELITE) */}
             <section className="py-24 bg-slate-900 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] mix-blend-overlay" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-500/10 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] pointer-events-none" />
 
                 <SectionContainer className="relative z-10 max-w-7xl mx-auto">
                     <div className="bg-white/5 backdrop-blur-3xl rounded-[4rem] border border-white/10 p-8 lg:p-16">
@@ -289,7 +289,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                         <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5 hover:-translate-y-2 transition-all duration-500 group">
                             <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6">
-                                <Building2 className="w-6 h-6 text-blue-500" />
+                                <Building className="w-6 h-6 text-blue-500" />
                             </div>
                             <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Financial Services</h4>
                             <div className="space-y-3">
@@ -353,7 +353,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
             {/* SPECIALIZED TREATMENTS FOR LOCALITY */}
             <SectionContainer className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden rounded-[4rem] border-y border-slate-100 dark:border-slate-700">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full blur-[100px]" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px]" />
                 <div className="grid md:grid-cols-2 gap-20 items-center">
                     <div>
                         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-10">

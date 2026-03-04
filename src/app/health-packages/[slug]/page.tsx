@@ -36,8 +36,8 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
             {/* Header */}
             <section className="relative pt-48 pb-16 overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 blur-[120px] opacity-60" />
-                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 blur-[120px] opacity-50" />
+                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 hidden md:block blur-[120px] opacity-60" />
+                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 hidden md:block blur-[120px] opacity-50" />
                 </div>
                 <SectionContainer>
                     <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-start">

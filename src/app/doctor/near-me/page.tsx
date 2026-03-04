@@ -124,8 +124,8 @@ export default async function LocationsPage() {
             {/* ELITE GLOBAL REACH HERO */}
             <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-56 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] opacity-70 pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-pink-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
 
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
@@ -133,12 +133,11 @@ export default async function LocationsPage() {
                             <MapPin className="w-4 h-4" /> Serving All of Tamil Nadu
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
-                            World-Class Care, <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">Closer to Home.</span>
+                            The Best Hospital Near You: <br className="hidden sm:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">{locations.length}+ Locations Served.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
-                            Indira Super Speciality Hospital serves {locations.length}+ locations across {districtsServed} districts.
-                            Direct access to #1 Laparoscopic & Laser treatments from anywhere in Tamil Nadu.
+                            Elite healthcare shouldn't require a long journey. Indira Super Speciality Hospital brings advanced laparoscopic, laser, and emergency treatments directly to {districtsServed} districts across Tamil Nadu.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -9,6 +9,7 @@ import { QuickLinks } from "@/components/sections/quick-links";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { HomeCareFlow } from "@/components/sections/HomeCareFlow";
 import { HomePromoLinks } from "@/components/sections/HomePromoLinks";
+import { FacilitiesShowcase } from "@/components/sections/FacilitiesShowcase";
 import { HomeUpcomingEvents } from "@/components/sections/HomeUpcomingEvents";
 import { HomeLatestNews } from "@/components/sections/HomeLatestNews";
 import { HOME_PAGE_CONTENT } from "@/config/constants";
@@ -55,6 +56,7 @@ export default function Home() {
         <HomeUpcomingEvents />
 
         <TrustStrip />
+        <FacilitiesShowcase />
         <DepartmentGridSection />
         <SignatureTreatments />
         <WhyChooseUs />
@@ -79,7 +81,7 @@ export default function Home() {
       <SectionContainer className="pb-32 px-4">
         <div className="bg-gradient-to-br from-slate-900 via-pink-950 to-fuchsia-950 rounded-[4rem] border border-white/10 overflow-hidden shadow-2xl relative group/cta flex flex-col items-center text-center p-12 sm:p-24">
           {/* Ambient Background Lights */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full blur-[100px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[100px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[80px] opacity-40" />
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 

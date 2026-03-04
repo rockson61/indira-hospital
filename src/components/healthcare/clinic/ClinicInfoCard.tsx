@@ -13,7 +13,7 @@ import {
   Bus,
   ParkingCircle,
   Map,
-  Building2,
+  Building,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -156,7 +156,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                   <span className="hidden sm:inline">Location</span>
                 </TabsTrigger>
                 <TabsTrigger value="vicinity" className="flex items-center gap-2">
-                  <Building2 className="w-4 h-4" />
+                  <Building className="w-4 h-4" />
                   <span className="hidden sm:inline">Vicinity</span>
                 </TabsTrigger>
               </TabsList>
@@ -325,7 +325,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
               <TabsContent value="vicinity" className="space-y-4 mt-4">
                 <div>
                   <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                    <Building2 className="w-5 h-5" />
+                    <Building className="w-5 h-5" />
                     In the Vicinity
                   </h3>
                   <div className="grid md:grid-cols-2 gap-4">

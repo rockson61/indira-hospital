@@ -5,29 +5,29 @@ import { Clock, ShieldCheck, HeartPulse, Trophy, Ambulance, Microscope, Award, U
 
 const features = [
     {
-        name: "24/7 Emergency Care",
-        description: "Chest pain at 3 AM? Our cardiac team is already scrubbed in. Average door-to-doctor time: 8 minutes.",
+        name: "24/7 Trauma & Emergency Response",
+        description: "Medical emergencies don't wait. Our cardiac and trauma teams operate 24/7 with a door-to-doctor time of under 8 minutes.",
         icon: Ambulance,
         color: "from-red-500 to-rose-600",
         stat: "24/7",
     },
     {
-        name: "25+ Surgeons Who've Done This 1,000+ Times",
-        description: "Every surgeon at Indira has 10+ years of specialised experience. Your procedure isn't their first — it's their thousandth.",
+        name: "Elite Specialists & Surgeons",
+        description: "Your health is in the hands of renowned experts. Every surgeon possesses over a decade of specialized experience in advanced procedures.",
         icon: Users,
         color: "from-fuchsia-500 to-fuchsia-600",
         stat: "25+",
     },
     {
-        name: "Technology That Cuts Recovery in Half",
-        description: "Laser piles, laparoscopic hernia, keyhole gallbladder removal — go home the same day instead of spending a week in bed.",
+        name: "Minimally Invasive Technology",
+        description: "Experience advanced keyhole surgery, laser treatments, and laparoscopy. Less pain, minimal scarring, and same-day discharge.",
         icon: Microscope,
         color: "from-fuchsia-400 to-pink-600",
         stat: "Latest",
     },
     {
-        name: "Outcomes That Speak Louder Than Awards",
-        description: "98.7% patient satisfaction. NABH accredited. 50+ insurance partners. But the real award? You walking out pain-free.",
+        name: "Transparent, Evidence-Based Care",
+        description: "We are NABH accredited and boast a 98.7% patient satisfaction rate. Experience transparent pricing and 50+ cashless insurance tie-ups.",
         icon: Award,
         color: "from-amber-500 to-orange-600",
         stat: "Top",
@@ -42,9 +42,9 @@ export function WhyChooseUs() {
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                 <SectionHeader
-                    title="Why 15,000+ Patients Trusted Us With Their Surgery"
+                    title="Why We Are the Best Hospital in Vellore"
                     subtitle="Our Commitment"
-                    description="They came in scared. They walked out pain-free. Here's why they chose Indira."
+                    description="When it concerns your health, you deserve world-class clinical expertise without compromise. Discover why thousands trust Indira Hospital."
                 />
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                     <div className="grid max-w-xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-4">

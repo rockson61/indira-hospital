@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Calendar, User, ArrowUpRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 
@@ -55,9 +56,11 @@ export function HomeLatestNews() {
                     {DUMMY_NEWS.map((news) => (
                         <Link href={`/blog/${news.id}`} key={news.id} className="group flex flex-col h-full bg-white dark:bg-slate-900 rounded-[2.5rem] p-4 border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-pink-200 dark:hover:border-pink-800 transition-all duration-300">
                             <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] mb-6">
-                                <img
+                                <Image
                                     src={news.image}
                                     alt={news.title}
+                                    width={800}
+                                    height={500}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
