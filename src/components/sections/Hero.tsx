@@ -128,11 +128,12 @@ export function Hero() {
                             className="absolute top-0 right-0 w-full h-[550px] rounded-[4rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 z-10 group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-transparent to-transparent opacity-60 z-10" />
-                            <Image
-                                src="https://images.unsplash.com/photo-1551076805-e18690c5e531?q=80&w=2834&auto=format&fit=crop"
-                                alt="Modern Hospital Facility"
-                                fill
-                                className="object-cover group-hover:scale-110 transition-transform duration-[2s]"
+                            <iframe
+                                src="https://www.youtube.com/embed/s9m2Ql_Ro7o?autoplay=1&mute=1&controls=0&loop=1&playlist=s9m2Ql_Ro7o&playsinline=1&modestbranding=1&rel=0"
+                                title="Indira Hospital"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-transform duration-[2s] group-hover:scale-105"
+                                style={{ border: 'none' }}
                             />
 
                             <div className="absolute bottom-10 left-10 z-20">
