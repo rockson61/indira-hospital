@@ -7,7 +7,6 @@ export interface GlossaryTerm {
 }
 
 export const GLOSSARY_DATA: GlossaryTerm[] = [
-    // A
     {
         term: "Ablation",
         definition: "A form of treatment that uses electrical energy, heat, cold, or alcohol to destroy a small section of damaged tissue. Commonly used in heart rhythm treatments.",
@@ -64,8 +63,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "cardiology",
         relatedServiceTitle: "Cardiology"
     },
-
-    // Neurology
     {
         term: "Epilepsy",
         definition: "A central nervous system (neurological) disorder in which brain activity becomes abnormal, causing seizures or periods of unusual behavior, sensations, and sometimes loss of awareness.",
@@ -94,8 +91,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "neurology",
         relatedServiceTitle: "Neurology"
     },
-
-    // Orthopaedics
     {
         term: "Arthroscopy",
         definition: "A minimally invasive surgical procedure on a joint in which an examination and sometimes treatment of damage is performed using an arthroscope.",
@@ -124,8 +119,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "orthopaedics",
         relatedServiceTitle: "Orthopaedics"
     },
-
-    // B
     {
         term: "Bacteria",
         definition: "Tiny single-celled organisms. Some bacteria cause disease, although most are harmless.",
@@ -161,8 +154,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "cardiology",
         relatedServiceTitle: "Cardiology"
     },
-
-    // Gastroenterology
     {
         term: "Endoscopy",
         definition: "A nonsurgical procedure used to examine a person's digestive tract.",
@@ -191,8 +182,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "general-surgery",
         relatedServiceTitle: "General Surgery"
     },
-
-    // Urology
     {
         term: "Dialysis",
         definition: "A treatment that takes over your kidney functions to filter your blood.",
@@ -221,8 +210,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "urology",
         relatedServiceTitle: "Urology"
     },
-
-    // C
     {
         term: "Calcium",
         definition: "A mineral that the body needs for bone formation, heart rate regulation, and muscle contraction.",
@@ -265,8 +252,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "cardiology",
         relatedServiceTitle: "Cardiology"
     },
-
-    // Oncology
     {
         term: "Biopsy",
         definition: "An examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.",
@@ -288,8 +273,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "oncology",
         relatedServiceTitle: "Oncology"
     },
-
-    // Obstetrics & Gynaecology
     {
         term: "Ultrasound",
         definition: "A medical test that uses high-frequency sound waves to capture live images from the inside of your body.",
@@ -300,7 +283,7 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Laparoscopy",
         definition: "A surgical procedure in which a fiber-optic instrument is inserted through the abdominal wall to view the organs in the abdomen or to permit a surgical procedure.",
-        category: "General Surgery", // Often fits here or gynae
+        category: "General Surgery",
         relatedService: "laparoscopic-surgeries",
         relatedServiceTitle: "Laparoscopic Surgery"
     },
@@ -311,8 +294,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "obstetrics-gynaecology",
         relatedServiceTitle: "Obstetrics & Gynaecology"
     },
-
-    // General Terms
     {
         term: "Anesthesia",
         definition: "A temporary state of controlled loss of sensation or awareness that is induced for medical purposes.",
@@ -334,8 +315,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "icu-emergency",
         relatedServiceTitle: "ICU & Emergency"
     },
-
-    // D
     {
         term: "Deep Vein Thrombosis (DVT)",
         definition: "A blood clot that forms in a vein deep in the body, most often in the lower leg or thigh.",
@@ -364,8 +343,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "nephrology",
         relatedServiceTitle: "Nephrology"
     },
-
-    // E
     {
         term: "Edema",
         definition: "Swelling caused by excess fluid trapped in your body's tissues.",
@@ -387,8 +364,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "obstetrics-gynaecology",
         relatedServiceTitle: "Maternity"
     },
-
-    // F
     {
         term: "Fibrillation",
         definition: "Rapid, irregular, and unsynchronized contraction of muscle fibers, particularly of the heart.",
@@ -410,8 +385,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "general-surgery",
         relatedServiceTitle: "General Surgery"
     },
-
-    // G
     {
         term: "Gastroenteritis",
         definition: "Inflammation of the lining of the intestines caused by a virus, bacteria, or parasites.",
@@ -426,8 +399,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "ophthalmology",
         relatedServiceTitle: "Eye Care"
     },
-
-    // H
     {
         term: "Hematoma",
         definition: "A solid swelling of clotted blood within the tissues.",
@@ -463,8 +434,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "obstetrics-gynaecology",
         relatedServiceTitle: "Gynaecology"
     },
-
-    // I
     {
         term: "Immunotherapy",
         definition: "A type of cancer treatment that helps your immune system fight cancer.",
@@ -493,8 +462,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "icu-emergency",
         relatedServiceTitle: "Emergency"
     },
-
-    // J
     {
         term: "Jaundice",
         definition: "A medical condition with yellowing of the skin or whites of the eyes, arising from excess of the pigment bilirubin.",
@@ -502,8 +469,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "gastroenterology",
         relatedServiceTitle: "Gastroenterology"
     },
-
-    // K
     {
         term: "Kidney Failure",
         definition: "A condition in which the kidneys lose the ability to remove waste and balance fluids.",
@@ -511,8 +476,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "nephrology",
         relatedServiceTitle: "Nephrology"
     },
-
-    // L
     {
         term: "Lipid Profile",
         definition: "A blood test that measures the amount of cholesterol and fats called triglycerides in the blood.",
@@ -527,8 +490,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "neurology",
         relatedServiceTitle: "Neurology"
     },
-
-    // M
     {
         term: "MRI (Magnetic Resonance Imaging)",
         definition: "A medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body.",
@@ -557,8 +518,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "endocrinology",
         relatedServiceTitle: "Endocrinology"
     },
-
-    // N
     {
         term: "Nephrology",
         definition: "The branch of medicine that deals with the physiology and diseases of the kidneys.",
@@ -573,8 +532,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "neurology",
         relatedServiceTitle: "Neurology"
     },
-
-    // O
     {
         term: "Oncology",
         definition: "The study and treatment of tumors.",
@@ -589,8 +546,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "dentistry",
         relatedServiceTitle: "Maxillofacial & Dentistry"
     },
-
-    // P
     {
         term: "Pacemaker",
         definition: "An artificial device for stimulating the heart muscle and regulating its contractions.",
@@ -647,8 +602,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "obstetrics-gynaecology",
         relatedServiceTitle: "Maternity"
     },
-
-    // R
     {
         term: "Radiation Therapy",
         definition: "The use of high-energy radiation to damage cancer cells' DNA and destroy their ability to divide and grow.",
@@ -677,8 +630,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "orthopaedics",
         relatedServiceTitle: "Orthopaedics"
     },
-
-    // S
     {
         term: "Sepsis",
         definition: "A life-threatening complication of an infection.",
@@ -700,8 +651,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "pulmonology",
         relatedServiceTitle: "Pulmonology"
     },
-
-    // T
     {
         term: "Tachycardia",
         definition: "A heart rate that exceeds the normal resting rate.",
@@ -730,8 +679,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "oncology",
         relatedServiceTitle: "Oncology"
     },
-
-    // U
     {
         term: "Urology",
         definition: "The branch of medicine and physiology concerned with the function and disorders of the urinary system.",
@@ -739,8 +686,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "urology",
         relatedServiceTitle: "Urology"
     },
-
-    // V
     {
         term: "Vaccination",
         definition: "Treatment with a vaccine to produce immunity against a disease.",
@@ -769,8 +714,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "neurology",
         relatedServiceTitle: "Neurology"
     },
-
-    // X
     {
         term: "X-ray",
         definition: "A photographic or digital image of the internal composition of something, especially a part of the body.",
@@ -778,17 +721,13 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "radiology",
         relatedServiceTitle: "Radiology"
     },
-
-    // Z
     {
         term: "Zoonosis",
         definition: "A disease which can be transmitted to humans from animals.",
         category: "General Medicine",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
-    }
-    ,
-    // Auto-imported bulk terms
+    },
     {
         term: "About Your Veins",
         definition: "Find expert knowledge and treatments for About Your Veins at Indira Hospital.",
@@ -1058,13 +997,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Aphasia",
         definition: "Find expert knowledge and treatments for Aphasia at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Arrhythmia",
-        definition: "Find expert knowledge and treatments for Arrhythmia at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -1436,13 +1368,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Camps for Kids",
         definition: "Find expert knowledge and treatments for Camps for Kids at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Cancer",
-        definition: "Find expert knowledge and treatments for Cancer at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -2099,13 +2024,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Diabetes",
-        definition: "Find expert knowledge and treatments for Diabetes at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Diabetic Retinopathy",
         definition: "Find expert knowledge and treatments for Diabetic Retinopathy at Indira Hospital.",
         category: "General",
@@ -2234,13 +2152,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Eczema",
         definition: "Find expert knowledge and treatments for Eczema at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Electroencephalogram (EEG)",
-        definition: "Find expert knowledge and treatments for Electroencephalogram (EEG) at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -2589,13 +2500,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Fibroids",
-        definition: "Find expert knowledge and treatments for Fibroids at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Fibromuscular Dysplasia",
         definition: "Find expert knowledge and treatments for Fibromuscular Dysplasia at Indira Hospital.",
         category: "General",
@@ -2651,7 +2555,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
     },
-
     {
         term: "Friends and Family Lung Cancer Screening Program",
         definition: "Find expert knowledge and treatments for Friends and Family Lung Cancer Screening Program at Indira Hospital.",
@@ -2802,13 +2705,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Geriatrics Virtual Memory Care Clinic",
         definition: "Find expert knowledge and treatments for Geriatrics Virtual Memory Care Clinic at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Glaucoma",
-        definition: "Find expert knowledge and treatments for Glaucoma at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -3199,13 +3095,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Hypertension",
-        definition: "Find expert knowledge and treatments for Hypertension at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Hyperthyroidism",
         definition: "Find expert knowledge and treatments for Hyperthyroidism at Indira Hospital.",
         category: "General",
@@ -3479,13 +3368,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Joint Replacement",
-        definition: "Find expert knowledge and treatments for Joint Replacement at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Joint Replacement at Northwestern Medicine Palos Hospital",
         definition: "Find expert knowledge and treatments for Joint Replacement at Northwestern Medicine Palos Hospital at Indira Hospital.",
         category: "General",
@@ -3534,14 +3416,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
     },
-    {
-        term: "Kidney Failure",
-        definition: "Find expert knowledge and treatments for Kidney Failure at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-
     {
         term: "Kidney Transplant Program",
         definition: "Find expert knowledge and treatments for Kidney Transplant Program at Indira Hospital.",
@@ -4159,13 +4033,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Nephrology",
-        definition: "Find expert knowledge and treatments for Nephrology at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Nerve Compression Syndrome",
         definition: "Find expert knowledge and treatments for Nerve Compression Syndrome at Indira Hospital.",
         category: "General",
@@ -4628,13 +4495,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Osteoporosis",
-        definition: "Find expert knowledge and treatments for Osteoporosis at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Osteoporotic Fracture",
         definition: "Find expert knowledge and treatments for Osteoporotic Fracture at Indira Hospital.",
         category: "General",
@@ -4791,13 +4651,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Patent Foramen Ovale (PFO)",
         definition: "Find expert knowledge and treatments for Patent Foramen Ovale (PFO) at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Pathology",
-        definition: "Find expert knowledge and treatments for Pathology at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -5419,13 +5272,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Radiology",
-        definition: "Find expert knowledge and treatments for Radiology at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Rare Bleeding Disorders",
         definition: "Find expert knowledge and treatments for Rare Bleeding Disorders at Indira Hospital.",
         category: "General",
@@ -5540,13 +5386,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Restless Legs Syndrome",
         definition: "Find expert knowledge and treatments for Restless Legs Syndrome at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Rheumatoid Arthritis",
-        definition: "Find expert knowledge and treatments for Rheumatoid Arthritis at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -5722,13 +5561,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Skull Base Tumors",
         definition: "Find expert knowledge and treatments for Skull Base Tumors at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Sleep Apnea",
-        definition: "Find expert knowledge and treatments for Sleep Apnea at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -5911,13 +5743,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Strabismus",
         definition: "Find expert knowledge and treatments for Strabismus at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Stroke",
-        definition: "Find expert knowledge and treatments for Stroke at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"
@@ -6259,13 +6084,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Trauma",
-        definition: "Find expert knowledge and treatments for Trauma at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Traumatic Injuries",
         definition: "Find expert knowledge and treatments for Traumatic Injuries at Indira Hospital.",
         category: "General",
@@ -6420,13 +6238,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
         relatedServiceTitle: "General Medicine"
     },
     {
-        term: "Urology",
-        definition: "Find expert knowledge and treatments for Urology at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
         term: "Uterine Cancer",
         definition: "Find expert knowledge and treatments for Uterine Cancer at Indira Hospital.",
         category: "General",
@@ -6471,13 +6282,6 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     {
         term: "Varicocele",
         definition: "Find expert knowledge and treatments for Varicocele at Indira Hospital.",
-        category: "General",
-        relatedService: "general-medicine",
-        relatedServiceTitle: "General Medicine"
-    },
-    {
-        term: "Varicose Veins",
-        definition: "Find expert knowledge and treatments for Varicose Veins at Indira Hospital.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"

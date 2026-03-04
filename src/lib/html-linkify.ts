@@ -13,12 +13,14 @@ import { GLOSSARY_DATA } from './data/glossary-data';
 export const injectInternalLinks = (htmlContent: string): string => {
     if (!htmlContent) return "";
 
+    const slugify = (text: string) => text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
+
     // Sort terms by length (descending) to match longest specific terms first
     // e.g. "Heart Attack" before "Heart"
     const terms = GLOSSARY_DATA
         .map(t => ({
             term: t.term,
-            url: t.relatedService ? `/glossary?term=${encodeURIComponent(t.term)}` : '/glossary',
+            url: `/glossary/${slugify(t.term)}`,
             definition: t.definition
         }))
         .sort((a, b) => b.term.length - a.term.length);

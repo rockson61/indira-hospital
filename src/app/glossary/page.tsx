@@ -98,29 +98,42 @@ export default function GlossaryPage() {
                                     <div className="h-px bg-gray-200 flex-1"></div>
                                 </div>
                                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {groupedTerms[letter].map((term) => (
-                                        <Card key={term.term} className="p-6 hover:shadow-md transition-all border-l-4 border-l-fuchsia-500 rounded-lg group">
-                                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-fuchsia-700 transition-colors">
-                                                {term.term}
-                                            </h3>
-                                            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-                                                {term.definition}
-                                            </p>
-                                            <div className="flex items-center justify-between mt-auto">
-                                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-600 dark:text-gray-400 rounded-full">
-                                                    {term.category}
-                                                </span>
-                                                {term.relatedService && (
-                                                    <Link
-                                                        href={`/department/${term.relatedService}`.replace('department', 'services')} // Mapping check needed, assuming services
-                                                        className="text-fuchsia-600 text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
-                                                    >
-                                                        Learn More <ArrowRight className="w-3 h-3" />
-                                                    </Link>
-                                                )}
-                                            </div>
-                                        </Card>
-                                    ))}
+                                    {groupedTerms[letter].map((term) => {
+                                        const slug = term.term.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
+                                        return (
+                                            <Card key={term.term} className="p-6 hover:shadow-md transition-all border-l-4 border-l-fuchsia-500 rounded-lg group flex flex-col h-full">
+                                                <Link href={`/glossary/${slug}`}>
+                                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-fuchsia-700 transition-colors">
+                                                        {term.term}
+                                                    </h3>
+                                                </Link>
+                                                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+                                                    {term.definition}
+                                                </p>
+                                                <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50 dark:border-slate-800">
+                                                    <span className="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full">
+                                                        {term.category}
+                                                    </span>
+                                                    <div className="flex gap-4">
+                                                        <Link
+                                                            href={`/glossary/${slug}`}
+                                                            className="text-fuchsia-600 text-xs font-semibold flex items-center hover:opacity-80 transition-opacity"
+                                                        >
+                                                            Details
+                                                        </Link>
+                                                        {term.relatedService && (
+                                                            <Link
+                                                                href={`/services/${term.relatedService}`}
+                                                                className="text-[#0086d6] text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                                                            >
+                                                                Service <ArrowRight className="w-3 h-3" />
+                                                            </Link>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </Card>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ))}
