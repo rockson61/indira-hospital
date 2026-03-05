@@ -4,6 +4,7 @@ import { getServices, getDepartments, getDoctors, getLocations, getHealthPackage
 import { getAllTechnologies } from '@/lib/data/technology-data';
 import { PATIENT_RESOURCES } from '@/lib/data/patient-resources';
 import { getAllTreatments } from '@/lib/data/treatment-data';
+import { INTERNATIONAL_COUNTRIES } from '@/lib/data/international-data';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = siteConfig.url;
@@ -21,6 +22,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/glossary',
         '/patients',
         '/patients/international',
+        '/patients/cmc-vellore-alternative',
+        '/patients/medical-visa-india',
+        '/patients/lodging',
         '/pay-bill',
         '/pharmacy',
         '/pricing',
@@ -124,6 +128,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.8,
         }));
 
+        const internationalCountryRoutes = INTERNATIONAL_COUNTRIES.map((c) => ({
+            url: `${baseUrl}/patients/international/${c.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        }));
+
+        // City × Department sub-routes (sample — expand as needed)
+        const cityDeptRoutes = (locations as any[]).flatMap((loc: any) =>
+            (departments as any[]).map((dept: any) => ({
+                url: `${baseUrl}/doctor/near-me/${loc.slug}/departments/${dept.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly' as const,
+                priority: 0.75,
+            }))
+        );
+
+        const cityDoctorRoutes = (locations as any[]).flatMap((loc: any) =>
+            (doctors as any[]).map((doc: any) => ({
+                url: `${baseUrl}/doctor/near-me/${loc.slug}/doctors/${doc.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly' as const,
+                priority: 0.75,
+            }))
+        );
+
         return [
             ...staticRoutes,
             ...departmentRoutes,
@@ -134,7 +164,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             ...diagnosticRoutes,
             ...technologyRoutes,
             ...patientResourceRoutes,
-            ...treatmentRoutes
+            ...treatmentRoutes,
+            ...internationalCountryRoutes,
+            ...cityDeptRoutes,
+            ...cityDoctorRoutes,
         ];
     } catch (error) {
         console.error("Error generating dynamic sitemap:", error);
