@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { departments } from "@/data/departments";
 import { doctors } from "@/data/doctors";
-import { CheckCircle2, User, Calendar, Activity, ArrowRight, ArrowLeft } from "lucide-react";
+import { CheckCircle2, User, Calendar, ArrowRight, ArrowLeft } from "lucide-react";
+import { HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
 
 export default function AppointmentBookingClient() {
@@ -151,7 +152,7 @@ export default function AppointmentBookingClient() {
                     <div className="space-y-8 animate-in slide-in-from-right-8 fade-in duration-500 fill-mode-forwards">
                         <div className="bg-slate-50/50 rounded-[2rem] p-8 border border-slate-100 dark:border-slate-700">
                             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 flex items-center gap-3">
-                                <div className="p-2 bg-pink-100/50 rounded-xl text-pink-600"><Activity className="h-5 w-5" /></div>
+                                <div className="p-2 bg-pink-100/50 rounded-xl text-pink-600"><HeartCardiogram className="h-5 w-5" /></div>
                                 Clinical Need
                             </h3>
 

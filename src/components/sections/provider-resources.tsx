@@ -2,7 +2,8 @@
 // Force cache invalidation
 
 import Link from "next/link";
-import { Stethoscope, Microscope, BriefcaseMedical, ArrowRight } from "lucide-react";
+import { BriefcaseMedical, ArrowRight } from "lucide-react";
+import { Stethoscope, Microscope } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 
 const providerGroups = [

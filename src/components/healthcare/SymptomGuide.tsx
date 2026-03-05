@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2, ChevronRight, Search, PhoneCall, Stethoscope, Video, Activity, Info } from "lucide-react";
+import { CheckCircle2, ChevronRight, Search, PhoneCall, Video, Info } from "lucide-react";
+import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -27,8 +28,8 @@ const SYMPTOMS: Symptom[] = [
 
     { name: "Burns - severe", category: "Trauma & Injuries", recommended: ['emergency'] },
     { name: "Burns - minor", category: "Trauma & Injuries", recommended: ['opd', 'daycare'] },
-    { name: "Bone breaks (large bones or serious breaks)", category: "Trauma & Injuries", recommended: ['emergency'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
-    { name: "Bone breaks (minor)", category: "Trauma & Injuries", recommended: ['daycare'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
+    { name: "Orthopaedics breaks (large bones or serious breaks)", category: "Trauma & Injuries", recommended: ['emergency'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
+    { name: "Orthopaedics breaks (minor)", category: "Trauma & Injuries", recommended: ['daycare'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
     { name: "Cuts that are deep or bleeding that won't stop", category: "Trauma & Injuries", recommended: ['emergency'], departmentLink: "/departments/general-surgery", departmentName: "General Surgery" },
     { name: "Cuts - minor", category: "Trauma & Injuries", recommended: ['opd', 'daycare'] },
     { name: "Sprains", category: "Trauma & Injuries", recommended: ['opd', 'daycare'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
@@ -65,7 +66,7 @@ const SYMPTOMS: Symptom[] = [
 const COLUMNS = [
     { id: 'teleconsult', label: 'Teleconsultation', price: '₹', icon: Video, color: 'bg-indigo-500', hover: 'hover:bg-indigo-600', lightColor: 'bg-indigo-50 text-indigo-700', darkColor: 'dark:bg-indigo-500/10 dark:text-indigo-400' },
     { id: 'opd', label: 'OPD / Clinic', price: '₹₹', icon: Stethoscope, color: 'bg-blue-500', hover: 'hover:bg-blue-600', lightColor: 'bg-blue-50 text-blue-700', darkColor: 'dark:bg-blue-500/10 dark:text-blue-400' },
-    { id: 'daycare', label: 'Daycare / Minor OP', price: '₹₹₹', icon: Activity, color: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', lightColor: 'bg-fuchsia-50 text-fuchsia-700', darkColor: 'dark:bg-fuchsia-500/10 dark:text-fuchsia-400' },
+    { id: 'daycare', label: 'Daycare / Minor OP', price: '₹₹₹', icon: HeartCardiogram, color: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', lightColor: 'bg-fuchsia-50 text-fuchsia-700', darkColor: 'dark:bg-fuchsia-500/10 dark:text-fuchsia-400' },
     { id: 'emergency', label: 'Emergency', price: '₹₹₹₹₹', icon: PhoneCall, color: 'bg-rose-600', hover: 'hover:bg-rose-700', lightColor: 'bg-rose-50 text-rose-700', darkColor: 'dark:bg-rose-500/10 dark:text-rose-400' },
 ];
 

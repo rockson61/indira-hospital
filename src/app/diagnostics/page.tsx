@@ -2,7 +2,8 @@
 import { getDiagnostics } from "@/lib/api"
 import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
-import { FlaskConical, ScanLine, Activity, Clock, Zap, ArrowRight, FileText, CheckCircle2, Sparkles, Beaker, ShieldCheck } from "lucide-react"
+import { Clock, ArrowRight, FileText, CheckCircle2, Sparkles, Beaker, Shield } from "lucide-react"
+import { TestTubes, UltrasoundScanner, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import { DiagnosticCard } from "@/components/entities/DiagnosticCard"
 import Link from "next/link"
 import type { Metadata } from "next"
@@ -16,10 +17,10 @@ export const metadata: Metadata = {
 
 // Category icons and colors with Elite UI mappings
 const categoryConfig: Record<string, { icon: React.ElementType; color: string; bgColor: string; label: string; glow: string }> = {
-    radiology: { icon: ScanLine, color: 'text-fuchsia-400', bgColor: 'bg-fuchsia-500/10 border-fuchsia-500/20', label: 'Radiology & Imaging', glow: 'group-hover:bg-fuchsia-400/20 shadow-fuchsia-500/30 text-fuchsia-300' },
-    pathology: { icon: FlaskConical, color: 'text-pink-400', bgColor: 'bg-pink-500/10 border-pink-500/20', label: 'Pathology & Lab', glow: 'group-hover:bg-pink-400/20 shadow-pink-500/30 text-pink-300' },
-    cardiology: { icon: Activity, color: 'text-rose-400', bgColor: 'bg-rose-500/10 border-rose-500/20', label: 'Cardiology', glow: 'group-hover:bg-rose-400/20 shadow-rose-500/30 text-rose-300' },
-    other: { icon: Zap, color: 'text-indigo-400', bgColor: 'bg-indigo-500/10 border-indigo-500/20', label: 'Other Tests', glow: 'group-hover:bg-indigo-400/20 shadow-indigo-500/30 text-indigo-300' },
+    radiology: { icon: UltrasoundScanner, color: 'text-fuchsia-400', bgColor: 'bg-fuchsia-500/10 border-fuchsia-500/20', label: 'Radiology & Imaging', glow: 'group-hover:bg-fuchsia-400/20 shadow-fuchsia-500/30 text-fuchsia-300' },
+    pathology: { icon: TestTubes, color: 'text-pink-400', bgColor: 'bg-pink-500/10 border-pink-500/20', label: 'Pathology & Lab', glow: 'group-hover:bg-pink-400/20 shadow-pink-500/30 text-pink-300' },
+    cardiology: { icon: HeartCardiogram, color: 'text-rose-400', bgColor: 'bg-rose-500/10 border-rose-500/20', label: 'Cardiology', glow: 'group-hover:bg-rose-400/20 shadow-rose-500/30 text-rose-300' },
+    other: { icon: Electricity, color: 'text-indigo-400', bgColor: 'bg-indigo-500/10 border-indigo-500/20', label: 'Other Tests', glow: 'group-hover:bg-indigo-400/20 shadow-indigo-500/30 text-indigo-300' },
 }
 
 export default async function DiagnosticsPage() {
@@ -51,7 +52,7 @@ export default async function DiagnosticsPage() {
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                        <ScanLine className="w-4 h-4" /> Reports in Under 12 Hours
+                        <UltrasoundScanner className="w-4 h-4" /> Reports in Under 12 Hours
                     </span>
                     <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[1.05] mb-8 max-w-5xl mx-auto">
                         Absolute <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Certainty.</span>
@@ -64,14 +65,14 @@ export default async function DiagnosticsPage() {
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto relative z-20">
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group">
                             <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-fuchsia-500 transition-colors">
-                                <Activity className="w-6 h-6 text-fuchsia-400 group-hover:text-white" />
+                                <HeartCardiogram className="w-6 h-6 text-fuchsia-400 group-hover:text-white" />
                             </div>
                             <p className="text-4xl font-black text-white mb-1 tabular-nums">{diagnostics.length}</p>
                             <p className="text-xs font-black text-fuchsia-300 uppercase tracking-widest">Tests Listed</p>
                         </div>
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group">
                             <div className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-pink-500 transition-colors">
-                                <ShieldCheck className="w-6 h-6 text-pink-400 group-hover:text-white" />
+                                <Shield className="w-6 h-6 text-pink-400 group-hover:text-white" />
                             </div>
                             <p className="text-4xl font-black text-white mb-1">NABL</p>
                             <p className="text-xs font-black text-pink-300 uppercase tracking-widest">Accredited</p>

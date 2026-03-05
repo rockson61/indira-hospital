@@ -3,15 +3,15 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-    ShieldCheck, Zap, HeartPulse, Stethoscope, BadgeCheck, ArrowRight
-} from "lucide-react";
+import { BadgeCheck, ArrowRight, Shield } from "lucide-react";
+;
+import { Electricity, HeartCardiogram, Stethoscope } from "healthicons-react/outline";
 
 const trustItems = [
-    { icon: HeartPulse, label: "15,000+", sublabel: "Successful Surgeries", color: "text-rose-500", bg: "bg-rose-50 dark:bg-rose-950" },
+    { icon: HeartCardiogram, label: "15,000+", sublabel: "Successful Surgeries", color: "text-rose-500", bg: "bg-rose-50 dark:bg-rose-950" },
     { icon: Stethoscope, label: "15+", sublabel: "Surgical Specialities", color: "text-fuchsia-600", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
-    { icon: ShieldCheck, label: "50+", sublabel: "Cashless Insurance", color: "text-fuchsia-600", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
-    { icon: Zap, label: "< 10 min", sublabel: "Emergency Response", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-950" },
+    { icon: Shield, label: "50+", sublabel: "Cashless Insurance", color: "text-fuchsia-600", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
+    { icon: Electricity, label: "< 10 min", sublabel: "Emergency Response", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-950" },
 ];
 
 const badges = [

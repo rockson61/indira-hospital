@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Users, Stethoscope, HeartPulse, Clock, Award, Users2, ShieldCheck, Activity } from "lucide-react";
+import { Users, Clock, Award, Users2, Shield } from "lucide-react";
+;
+import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import { motion, useInView } from "framer-motion";
 
 function useCountUp(target: number, duration: number = 2000, start: boolean = false) {
@@ -32,7 +34,7 @@ function useCountUp(target: number, duration: number = 2000, start: boolean = fa
 const statsMeta = [
     { key: "patients", label: "Patients Treated", suffix: "+", icon: Users2, color: "text-fuchsia-600 dark:text-fuchsia-400", glow: "shadow-fuchsia-500/10 dark:shadow-fuchsia-500/20" },
     { key: "doctors", label: "Expert Doctors", suffix: "+", icon: Stethoscope, color: "text-pink-600 dark:text-pink-400", glow: "shadow-pink-500/10 dark:shadow-pink-500/20" },
-    { key: "departments", label: "Specialties", suffix: "+", icon: Activity, color: "text-indigo-600 dark:text-indigo-400", glow: "shadow-indigo-500/10 dark:shadow-indigo-500/20" },
+    { key: "departments", label: "Specialties", suffix: "+", icon: HeartCardiogram, color: "text-indigo-600 dark:text-indigo-400", glow: "shadow-indigo-500/10 dark:shadow-indigo-500/20" },
     { key: "experience", label: "Years Excellence", suffix: "+", icon: Award, color: "text-rose-600 dark:text-rose-400", glow: "shadow-rose-500/10 dark:shadow-rose-500/20" },
 ];
 

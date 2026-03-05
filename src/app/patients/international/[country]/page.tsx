@@ -1,12 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-    Plane, Globe2, ShieldCheck, Clock,
-    MapPin, CheckCircle2, Languages,
-    ArrowLeft, MessageCircle, Info,
-    Stethoscope, Activity
-} from "lucide-react";
+import { Plane, Globe2, Clock, MapPin, CheckCircle2, Languages, ArrowLeft, MessageCircle, Info, Shield } from "lucide-react";
+import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { Card } from "@/components/ui/card";
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
@@ -95,7 +91,7 @@ export default async function CountryGuidePage({ params }: PageProps) {
                                     <p className="text-slate-600 dark:text-slate-400 text-sm">{country.flight_duration}</p>
                                 </Card>
                                 <Card className="p-6 border-none shadow-sm bg-slate-50 dark:bg-slate-800 dark:bg-slate-900/50">
-                                    <ShieldCheck className="w-5 h-5 text-fuchsia-600 mb-3" />
+                                    <Shield className="w-5 h-5 text-fuchsia-600 mb-3" />
                                     <h3 className="font-bold mb-1">Visa Information</h3>
                                     <p className="text-slate-600 dark:text-slate-400 text-sm">{country.visa_info}</p>
                                 </Card>
@@ -210,7 +206,7 @@ export default async function CountryGuidePage({ params }: PageProps) {
                             <button className="px-8 py-3 bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-colors">Book Video Call</button>
                         </div>
                         <div className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] shadow-sm border border-slate-100 dark:border-slate-700 dark:border-slate-800">
-                            <Activity className="w-10 h-10 text-fuchsia-600 mb-6" />
+                            <HeartCardiogram className="w-10 h-10 text-fuchsia-600 mb-6" />
                             <h4 className="text-2xl font-bold mb-4">Price Transparency</h4>
                             <p className="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">Receive a detailed cost estimate including hospital stay, surgery, and medicines.</p>
                             <button className="px-8 py-3 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-colors">Request Quote</button>

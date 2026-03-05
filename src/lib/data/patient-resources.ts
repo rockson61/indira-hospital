@@ -1,4 +1,5 @@
-import { FileBox, Building, Plane, Globe, Compass, Wallet, Stethoscope, ShieldCheck, HeartPulse, Bus, ClipboardList } from "lucide-react";
+import { FileBox, Building, Plane, Globe, Compass, Wallet, Bus, ClipboardList, Shield } from "lucide-react";
+import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 
 export interface PatientResource {
     id: string;
@@ -67,7 +68,7 @@ Welcome to Indira Super Speciality Hospital. Our admission process is designed t
         slug: "accessibility",
         title: "Accessibility",
         short_description: "Information on wheelchair access, elevators, and accommodations for patients with disabilities.",
-        icon: HeartPulse,
+        icon: HeartCardiogram,
         category: "Information",
         full_content: `
 ## Commitment to Accessibility
@@ -86,7 +87,7 @@ Indira Super Speciality Hospital is fully committed to providing an accessible a
         slug: "masking-policy",
         title: "Masking Policy",
         short_description: "Current infection control and masking guidelines for patients and visitors.",
-        icon: ShieldCheck,
+        icon: Shield,
         category: "Information",
         full_content: `
 ## Current Infection Control Guidelines
@@ -333,7 +334,7 @@ We welcome visitors, as the support of family and friends is vital to recovery.
         slug: "accepted-insurance",
         title: "Accepted Insurance",
         short_description: "A list of health insurance providers we partner with for cashless hospitalization.",
-        icon: ShieldCheck,
+        icon: Shield,
         category: "Billing",
         customHref: "/patients/insurance",
         full_content: `
@@ -383,7 +384,7 @@ For evaluation, please reach out to our medical social worker or financial couns
         slug: "frequently-asked-questions",
         title: "Frequently Asked Questions",
         short_description: "Find quick answers to common questions about billing, insurance, and medical records.",
-        icon: ShieldCheck,
+        icon: Shield,
         category: "Billing",
         full_content: `
 ## Patient Resources FAQs

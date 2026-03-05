@@ -5,16 +5,9 @@ import Link from 'next/link'
 import { ModernCard } from "@/components/ui/modern-card"
 import { Button } from "@heroui/react"
 import { Badge } from "@/components/ui/badge"
-import {
-  Phone,
-  Calendar,
-  MessageCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Shield,
-  CheckCircle
-} from "lucide-react"
+import { Phone, Calendar, MessageCircle, ArrowRight, Star, Clock, CheckCircle, Shield } from "lucide-react"
+;
+;
 
 type CTAIcon = "phone" | "calendar" | "message"
 

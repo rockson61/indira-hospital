@@ -2,7 +2,8 @@
 
 import { ModernCard, ModernCardHeader, ModernCardContent } from "@/components/ui/modern-card"
 import Link from 'next/link'
-import { ArrowRight, Stethoscope, Sparkles } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
+import { Stethoscope } from "healthicons-react/outline";
 import { Chip } from "@heroui/react"
 
 const treatmentsAndConditions = [

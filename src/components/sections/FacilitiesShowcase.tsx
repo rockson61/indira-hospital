@@ -1,13 +1,15 @@
 import Link from "next/link"
 import { SectionContainer } from "@/components/ui/section-container"
-import { Pill, Scan, Clock, Zap, ArrowRight, Activity, ShieldCheck } from "lucide-react"
+import { Scan, Clock, ArrowRight, Shield } from "lucide-react"
+;
+import { Pills2, Electricity, HeartCardiogram } from "healthicons-react/outline";
 
 export function FacilitiesShowcase() {
     return (
         <SectionContainer className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-sm border border-slate-200 dark:border-slate-700">
-                    <Activity className="w-3.5 h-3.5 text-fuchsia-500" /> Advanced Support Facilities
+                    <HeartCardiogram className="w-3.5 h-3.5 text-fuchsia-500" /> Advanced Support Facilities
                 </span>
                 <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
                     Beyond Consultations
@@ -25,7 +27,7 @@ export function FacilitiesShowcase() {
 
                     <div className="relative z-10">
                         <div className="w-20 h-20 rounded-3xl bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center mb-8 shadow-inner group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-emerald-100 dark:border-emerald-900">
-                            <Pill className="w-10 h-10 text-emerald-500" />
+                            <Pills2 className="w-10 h-10 text-emerald-500" />
                         </div>
 
                         <div className="flex items-center gap-3 mb-4">
@@ -33,7 +35,7 @@ export function FacilitiesShowcase() {
                                 <Clock className="w-3 h-3" /> 24x7 Open
                             </div>
                             <div className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1.5">
-                                <ShieldCheck className="w-3 h-3" /> 100% Genuine
+                                <Shield className="w-3 h-3" /> 100% Genuine
                             </div>
                         </div>
 
@@ -65,7 +67,7 @@ export function FacilitiesShowcase() {
 
                         <div className="flex items-center gap-3 mb-4">
                             <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1.5">
-                                <Zap className="w-3 h-3" /> Advanced Tech
+                                <Electricity className="w-3 h-3" /> Advanced Tech
                             </div>
                             <div className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1.5">
                                 <Clock className="w-3 h-3" /> Fast Reports

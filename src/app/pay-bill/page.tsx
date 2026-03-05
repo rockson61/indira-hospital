@@ -1,6 +1,7 @@
 import { PageHeader } from "@/components/ui/page-header";
 import { SectionContainer } from "@/components/ui/section-container";
-import { CreditCard, FileText, ShieldCheck } from "lucide-react";
+import { CreditCard, FileText, Shield } from "lucide-react";
+;
 
 export default function PayBillPage() {
     return (
@@ -17,7 +18,7 @@ export default function PayBillPage() {
 
                             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-slate-100 dark:border-slate-800">
                                 <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-900/30 flex items-center justify-center text-fuchsia-600 dark:text-fuchsia-400">
-                                    <ShieldCheck className="w-6 h-6" />
+                                    <Shield className="w-6 h-6" />
                                 </div>
                                 <div>
                                     <h2 className="text-xl font-bold text-slate-900 dark:text-white">Secure Payment Portal</h2>

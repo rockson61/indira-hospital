@@ -2,18 +2,20 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { GitMerge, Bone, Scissors, Sparkles, Baby, ShieldCheck, HeartPulse, Gem } from 'lucide-react';
+import { GitMerge, Sparkles, Gem, Shield } from "lucide-react";
+;
+import { Orthopaedics, GeneralSurgery, Baby0203m, HeartCardiogram } from "healthicons-react/outline";
 import { cn } from "@/lib/utils";
 
 const serviceCategories = [
-  { name: 'Orthopedics', url: '/departments/orthopedics', icon: Bone, medicalIcon: 'medical-icon-physical-therapy' },
-  { name: 'Cardiology', url: '/departments/cardiology', icon: HeartPulse, medicalIcon: 'medical-icon-cardiology' },
+  { name: 'Orthopedics', url: '/departments/orthopedics', icon: Orthopaedics, medicalIcon: 'medical-icon-physical-therapy' },
+  { name: 'Cardiology', url: '/departments/cardiology', icon: HeartCardiogram, medicalIcon: 'medical-icon-cardiology' },
   { name: 'Neurology', url: '/departments/neurology', icon: GitMerge, medicalIcon: 'medical-icon-neurology' }, // Conceptual icon
   { name: 'Oncology', url: '/departments/oncology', icon: Sparkles, medicalIcon: 'medical-icon-oncology' },
-  { name: 'Pediatrics', url: '/departments/pediatrics', icon: Baby, medicalIcon: 'medical-icon-pediatrics' },
-  { name: 'General', url: '/departments/general-medicine', icon: ShieldCheck, medicalIcon: 'medical-icon-internal-medicine' },
+  { name: 'Pediatrics', url: '/departments/pediatrics', icon: Baby0203m, medicalIcon: 'medical-icon-pediatrics' },
+  { name: 'General', url: '/departments/general-medicine', icon: Shield, medicalIcon: 'medical-icon-internal-medicine' },
   { name: 'Urology', url: '/departments/urology', icon: Gem, medicalIcon: 'medical-icon-kidney' }, // Conceptual
-  { name: 'Surgery', url: '/departments/surgery', icon: Scissors, medicalIcon: 'medical-icon-surgery' },
+  { name: 'Surgery', url: '/departments/surgery', icon: GeneralSurgery, medicalIcon: 'medical-icon-surgery' },
 ];
 
 export default function ServiceCategoryWidget() {

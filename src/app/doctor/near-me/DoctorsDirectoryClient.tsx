@@ -5,7 +5,8 @@ import { doctors } from "@/data/doctors";
 import { departments } from "@/data/departments";
 import { DOCTORS_DIRECTORY } from "@/config/constants";
 import Link from "next/link";
-import { Search, Filter, MapPin, ArrowRight, Stethoscope, Clock, ShieldCheck, Sparkles, Star, ChevronDown } from "lucide-react";
+import { Search, Filter, MapPin, ArrowRight, Clock, Sparkles, Star, ChevronDown, Shield } from "lucide-react";
+import { Stethoscope } from "healthicons-react/outline";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function DoctorsDirectoryClient() {

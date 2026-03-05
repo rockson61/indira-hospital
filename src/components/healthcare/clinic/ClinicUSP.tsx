@@ -1,5 +1,6 @@
 import { ModernCard, ModernCardContent } from "@/components/ui/modern-card"
-import { CheckCircle2, Award, Users, Stethoscope } from "lucide-react"
+import { CheckCircle2, Award, Users } from "lucide-react"
+import { Stethoscope } from "healthicons-react/outline";
 
 const achievements = [
   {
@@ -18,7 +19,7 @@ const achievements = [
     title: "Invisible Aligners",
     count: "600+",
     icon: Users,
-    description: "Smile transformation success stories",
+    description: "Happy transformation success stories",
   },
 ]
 

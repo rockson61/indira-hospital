@@ -1,11 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ServiceDetailModal } from "./ServiceDetailModal"
-import { SmileIcon as Tooth, Smile, Syringe, Scissors, Brain, Bone, Wrench } from "lucide-react"
+import { SmileIcon as Tooth, Wrench } from "lucide-react"
+import { Happy, Syringe, GeneralSurgery, Neurology, Orthopaedics } from "healthicons-react/outline";
 
 const servicesData = {
   orthodontics: {
-    icon: Smile,
+    icon: Happy,
     title: "Orthodontics",
     description:
       "Specialized treatments for <a href='https://en.wikipedia.org/wiki/Teeth_alignment' target='_blank' rel='noopener noreferrer'>teeth alignment</a> and <a href='https://www.nidcr.nih.gov/health-info/orthodontics' target='_blank' rel='noopener noreferrer'>jaw corrections</a>",
@@ -36,24 +37,24 @@ const servicesData = {
     oralHygiene: [
       "Brushing Techniques (Bass Modified, Bass Technique, Roll Technique)",
       "Flossing Techniques (Floss Aid for Bridge, Standard Floss, Stiff End Floss)",
-      "Interdental Brushing (for Braces, Severe Bone Loss)",
+      "Interdental Brushing (for Braces, Severe Orthopaedics Loss)",
       "Other Hygiene Practices (Rubber Tip, Tongue Brushing)",
     ],
     anatomy: ["Tooth Anatomy", "Tooth Eruption Timeline"],
   },
   periodontics: {
-    icon: Scissors,
+    icon: GeneralSurgery,
     title: "Periodontics",
     description:
       "Treatments for <a href='https://www.perio.org/for-patients/periodontal-disease/' target='_blank' rel='noopener noreferrer'>gum diseases</a> and maintaining gum health",
     conditions: [
-      "Periodontal Disease (Bone View, Gum View, Pocket Formation with Calculus)",
+      "Periodontal Disease (Orthopaedics View, Gum View, Pocket Formation with Calculus)",
       "Gingivitis Infection",
       "Periodontal Pocket Symptoms",
       "Periodontal Abscess",
       "Bleeding Gums After Quitting Smoking",
       "Periodontitis Stages",
-      "Bone Loss in Teeth",
+      "Orthopaedics Loss in Teeth",
     ],
     treatments: [
       "Connective Tissue Graft (CTG) for Root Coverage",
@@ -82,7 +83,7 @@ const servicesData = {
     ],
   },
   endodontics: {
-    icon: Brain,
+    icon: Neurology,
     title: "Endodontics",
     description: "Specialized treatments for tooth pulp and root canal procedures",
     conditions: [
@@ -92,10 +93,10 @@ const servicesData = {
       "Toothache Only at Night",
       "Tooth Decay Smell",
       "Tooth Decay & Cavities",
-      "Cavities in Baby Teeth",
+      "Cavities in Baby0203m Teeth",
       "Tooth Decay from Smoking",
       "Do Cavity Fillings Hurt?",
-      "Pediatric Conditions (Loose Baby Tooth with Crown, Baby Tooth Infection, Missing Baby Teeth)",
+      "Pediatric Conditions (Loose Baby0203m Tooth with Crown, Baby0203m Tooth Infection, Missing Baby0203m Teeth)",
     ],
     treatments: ["Antibiotics & Root Canal Treatment (RCT)", "Manual RCT", "Mechanical RCT"],
   },
@@ -115,7 +116,7 @@ const servicesData = {
     ],
   },
   implantology: {
-    icon: Bone,
+    icon: Orthopaedics,
     title: "Implantology",
     description: "Dental implant procedures for replacing missing teeth",
     conditions: ["Loss of First Lower Molar Causing Drifting", "Loss of Posterior Occlusion"],
@@ -124,7 +125,7 @@ const servicesData = {
       "Bridges vs. Implants",
       "Flapless Multiple Implants",
       "Dental Implant Procedure",
-      "Bone Grafting for Dental Implants",
+      "Orthopaedics Grafting for Dental Implants",
       "All-On-4 Dental Implants",
       "Implant Types (Two-Stage, Attached to Teeth, Occlusal Access, Post & Core, Mini Dental Implants, Short Implants)",
       "Sinus Lift with Implant Placement",
@@ -140,14 +141,14 @@ const servicesData = {
       "Oral Hygiene & Maintenance (For Elderly with No Teeth, With Braces, Severe Plaque on Teeth)",
       "Teaching Dental Hygiene to Preschoolers",
       "Fluoride Treatments for Children's Teeth",
-      "Baby Bottle Tooth Decay",
+      "Baby0203m Bottle Tooth Decay",
       "Composite Bonding for Missing Tooth",
       "Silver Fillings vs. White Fillings",
       "Porcelain Fillings",
       "Crown Staining",
       "Placing a Crown on a Cracked Tooth",
       "Dental Bridge for One Tooth",
-      "Gummy Smile Correction",
+      "Gummy Happy Correction",
     ],
   },
   oralSurgery: {

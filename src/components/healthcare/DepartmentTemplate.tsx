@@ -1,18 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-    ArrowLeft,
-    Calendar,
-    Phone,
-    CheckCircle2,
-    Stethoscope,
-    ChevronRight,
-    Zap,
-    Shield,
-    Activity,
-    Award,
-    Users
-} from 'lucide-react';
+import { ArrowLeft, Calendar, Phone, CheckCircle2, ChevronRight, Award, Users, Shield } from "lucide-react";
+;
+import { Stethoscope, Electricity, HeartCardiogram } from "healthicons-react/outline";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionContainer } from "@/components/ui/section-container";
 import { DoctorCard } from "@/components/entities/DoctorCard";
@@ -54,9 +44,9 @@ interface DepartmentTemplateProps {
 }
 
 const iconMap: Record<string, any> = {
-    Zap,
+    Electricity: Electricity,
     Shield,
-    Activity,
+    HeartCardiogram: HeartCardiogram,
     Award,
     Users,
     Stethoscope
@@ -126,7 +116,7 @@ export function DepartmentTemplate({
                         <div className="grid grid-cols-2 gap-4 w-full lg:w-auto">
                             {[
                                 { label: 'Specialists', value: `${relatedDoctors.length}+ Doctors`, icon: Users },
-                                { label: 'Procedures', value: `${procedures.length}+ Expert`, icon: Activity },
+                                { label: 'Procedures', value: `${procedures.length}+ Expert`, icon: HeartCardiogram },
                                 { label: 'Availability', value: '24/7 Care', icon: Shield },
                                 { label: 'Success Rate', value: '99% Positive', icon: Award },
                             ].map((item, i) => (
@@ -154,7 +144,7 @@ export function DepartmentTemplate({
                         {technology.length > 0 && (
                             <div className="grid sm:grid-cols-2 gap-6 mt-12">
                                 {technology.map((tech, idx) => {
-                                    const Icon = iconMap[tech.icon] || Activity;
+                                    const Icon = iconMap[tech.icon] || HeartCardiogram;
                                     return (
                                         <ModernCard key={idx} variant="glass" className="p-6 border-fuchsia-100 bg-fuchsia-50/30">
                                             <div className="flex gap-4">
@@ -248,7 +238,7 @@ export function DepartmentTemplate({
                                         title: service.title,
                                         slug: service.url?.split('/').pop() || service.slug,
                                         short_description: service.description || `Leading ${service.title} specialized care at Indira Super Speciality Hospital.`,
-                                        icon: service.icon || 'Activity'
+                                        icon: service.icon || 'HeartCardiogram'
                                     }}
                                     variant="poster"
                                 />

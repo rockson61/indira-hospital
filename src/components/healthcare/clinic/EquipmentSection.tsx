@@ -1,22 +1,24 @@
 import { IconBox } from "@/components/ui/IconBox";
 import { SectionContainer } from "@/components/ui/section-container";
-import { Microscope, Zap, ScanFace, ShieldCheck, MonitorPlay } from "lucide-react";
+import { MonitorPlay, Shield } from "lucide-react";
+;
+import { Microscope, Electricity, Xray } from "healthicons-react/outline";
 
 import { clinicEquipment } from "@/lib/data/clinic-config";
 import type { LucideIcon } from "lucide-react";
 
 export function EquipmentSection() {
-    const iconMap: Record<string, LucideIcon> = {
-        cbct: ScanFace,
+    const iconMap: Record<string, any> = {
+        cbct: Xray,
         microscope: Microscope,
-        laser: Zap,
+        laser: Electricity,
         scanner: MonitorPlay,
-        autoclave: ShieldCheck,
+        autoclave: Shield,
     };
 
     const equipment = clinicEquipment.map(item => ({
         ...item,
-        icon: iconMap[item.id] || Zap
+        icon: iconMap[item.id] || Electricity
     }));
 
     return (

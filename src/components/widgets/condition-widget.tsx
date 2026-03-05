@@ -5,15 +5,9 @@ import Link from 'next/link'
 import { ModernCard } from "@/components/ui/modern-card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import {
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  ArrowRight,
-  Phone,
-  Calendar,
-  Shield
-} from "lucide-react"
+import { AlertTriangle, CheckCircle, Clock, ArrowRight, Phone, Calendar, Shield } from "lucide-react"
+;
+;
 
 interface Condition {
   name: string

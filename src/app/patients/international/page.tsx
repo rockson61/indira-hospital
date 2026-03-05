@@ -1,11 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import {
-    Plane, Globe2, ShieldCheck, HeartPulse,
-    ArrowRight, MessageCircle, FileText,
-    Clock, MapPin, CheckCircle2, Languages,
-    Sparkles, Stethoscope
-} from "lucide-react";
+import { Plane, Globe2, ArrowRight, MessageCircle, FileText, Clock, MapPin, CheckCircle2, Languages, Sparkles, Shield } from "lucide-react";
+import { HeartCardiogram, Stethoscope } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 import Image from "next/image";
@@ -34,7 +30,7 @@ const PROCESS_STEPS = [
     {
         title: "Care & Recovery",
         desc: "World-class surgery followed by personalized rehabilitation, private suite recovery, and medical follow-up.",
-        icon: <HeartPulse className="w-6 h-6 text-fuchsia-300 group-hover:text-white transition-colors" />
+        icon: <HeartCardiogram className="w-6 h-6 text-fuchsia-300 group-hover:text-white transition-colors" />
     }
 ];
 

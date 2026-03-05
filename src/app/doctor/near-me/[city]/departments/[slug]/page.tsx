@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { departments } from "@/data/departments";
-import { ArrowRight, CheckCircle2, MapPin, Sparkles, HeartPulse, Activity } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Sparkles } from "lucide-react";
+import { HeartCardiogram } from "healthicons-react/outline";
 
 export default async function LocationDepartmentPage({
     params,
@@ -17,7 +18,7 @@ export default async function LocationDepartmentPage({
     const formattedCity = city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
 
     // Randomize some icons for the service grid to look dynamic
-    const icons = [CheckCircle2, HeartPulse, Activity, Sparkles];
+    const icons = [CheckCircle2, HeartCardiogram, HeartCardiogram, Sparkles];
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">

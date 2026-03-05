@@ -3,7 +3,8 @@ import { getHealthPackages } from "@/lib/api"
 import { HealthPackage } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
-import { Heart, Activity, User, ShieldCheck, Zap, Phone, Check, ArrowRight } from "lucide-react"
+import { User, Phone, Check, ArrowRight, Shield } from "lucide-react"
+import { Heart, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -34,7 +35,7 @@ export default async function HealthPackagesPage() {
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                            <Activity className="w-4 h-4" /> Preventive Care
+                            <HeartCardiogram className="w-4 h-4" /> Preventive Care
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
                             Complete Health <br className="hidden sm:block" />
@@ -45,11 +46,11 @@ export default async function HealthPackagesPage() {
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <div className="flex items-center gap-2 bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/10 text-slate-200">
-                                <ShieldCheck className="w-5 h-5 text-fuchsia-400" />
+                                <Shield className="w-5 h-5 text-fuchsia-400" />
                                 <span className="text-sm font-bold tracking-wide">NABL Accredited Lab</span>
                             </div>
                             <div className="flex items-center gap-2 bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/10 text-slate-200">
-                                < Zap className="w-5 h-5 text-indigo-400" />
+                                < Electricity className="w-5 h-5 text-indigo-400" />
                                 <span className="text-sm font-bold tracking-wide">Same Day Reports</span>
                             </div>
                         </div>
@@ -122,7 +123,7 @@ export default async function HealthPackagesPage() {
                 {packages.length === 0 && (
                     <div className="text-center py-24 bg-white/50 backdrop-blur-xl rounded-[3rem] border-2 border-dashed border-slate-200 dark:border-slate-700 mt-12">
                         <div className="w-24 h-24 mx-auto bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-6">
-                            <Activity className="w-10 h-10 text-slate-300" />
+                            <HeartCardiogram className="w-10 h-10 text-slate-300" />
                         </div>
                         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Packages Coming Soon</h2>
                         <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-8">
@@ -152,7 +153,7 @@ export default async function HealthPackagesPage() {
                             <div className="space-y-8">
                                 <div className="flex gap-6 items-start group">
                                     <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:bg-fuchsia-500 transition-colors duration-300">
-                                        <Zap className="w-6 h-6 text-fuchsia-300 group-hover:text-white" />
+                                        <Electricity className="w-6 h-6 text-fuchsia-300 group-hover:text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-bold text-white mb-2">Advanced Radiologists</h4>

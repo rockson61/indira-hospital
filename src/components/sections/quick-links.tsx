@@ -1,6 +1,7 @@
 
 import Link from "next/link";
-import { Microscope, Globe, FileText, ArrowRight } from "lucide-react";
+import { Globe, FileText, ArrowRight } from "lucide-react";
+import { Microscope } from "healthicons-react/outline";
 
 const links = [
     {

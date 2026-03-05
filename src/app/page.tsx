@@ -13,7 +13,8 @@ import { FacilitiesShowcase } from "@/components/sections/FacilitiesShowcase";
 import { HomeUpcomingEvents } from "@/components/sections/HomeUpcomingEvents";
 import { HomeLatestNews } from "@/components/sections/HomeLatestNews";
 import { HOME_PAGE_CONTENT } from "@/config/constants";
-import { MessageCircle, Phone, ArrowRight, Zap, Sparkles } from "lucide-react";
+import { MessageCircle, Phone, ArrowRight, Sparkles } from "lucide-react";
+import { Electricity } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
@@ -122,13 +123,13 @@ export default function Home() {
 
             <div className="mt-16 flex items-center justify-center gap-8 opacity-40 grayscale group-hover/cta:grayscale-0 group-hover/cta:opacity-70 transition-all duration-700">
               <div className="flex items-center gap-2 text-white font-bold tracking-widest text-xs uppercase">
-                <Zap className="w-4 h-4 text-fuchsia-400" /> Professional
+                <Electricity className="w-4 h-4 text-fuchsia-400" /> Professional
               </div>
               <div className="flex items-center gap-2 text-white font-bold tracking-widest text-xs uppercase">
-                <Zap className="w-4 h-4 text-fuchsia-400" /> Precise
+                <Electricity className="w-4 h-4 text-fuchsia-400" /> Precise
               </div>
               <div className="flex items-center gap-2 text-white font-bold tracking-widest text-xs uppercase">
-                <Zap className="w-4 h-4 text-fuchsia-400" /> Patient-First
+                <Electricity className="w-4 h-4 text-fuchsia-400" /> Patient-First
               </div>
             </div>
           </div>

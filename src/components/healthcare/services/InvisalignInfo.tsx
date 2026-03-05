@@ -2,7 +2,9 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Check, ArrowRight, Clock, Smile, Shield, Award } from "lucide-react"
+import { Check, ArrowRight, Clock, Award, Shield } from "lucide-react"
+;
+import { Happy } from "healthicons-react/outline";
 
 interface InvisalignInfoProps {
   location?: string
@@ -248,7 +250,7 @@ export default function InvisalignInfo({ location = "Vellore" }: InvisalignInfoP
 
         <Card className="text-center">
           <CardContent className="pt-6">
-            <Smile className="h-10 w-10 text-primary mx-auto mb-4" />
+            <Happy className="h-10 w-10 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
             <p className="text-muted-foreground dark:text-muted-foreground/70">
               Over 12 million smiles transformed worldwide with the Invisalign system.
@@ -270,7 +272,7 @@ export default function InvisalignInfo({ location = "Vellore" }: InvisalignInfoP
 
       <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 flex flex-col md:flex-row items-center justify-between">
         <div>
-          <h3 className="text-2xl font-bold mb-2">Ready to Transform Your Smile?</h3>
+          <h3 className="text-2xl font-bold mb-2">Ready to Transform Your Happy?</h3>
           <p className="text-foreground/80 dark:text-muted-foreground/50 mb-4 md:mb-0">
             Schedule your Invisalign consultation at our {location} clinic today.
           </p>

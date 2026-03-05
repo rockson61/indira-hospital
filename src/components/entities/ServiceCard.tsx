@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-    Stethoscope, Activity, Heart, Ambulance, Smile, Brain, Ribbon, Droplets, Zap,
-    Baby, Bone, ArrowRight, CheckCircle2, ChevronRight, Sparkles
-} from "lucide-react";
+import { Ambulance, Ribbon, ArrowRight, CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
+import { Stethoscope, HeartCardiogram, Heart, Happy, Neurology, BloodDrop, Electricity, Baby0203m, Orthopaedics } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -19,17 +17,17 @@ interface ServiceCardProps {
 
 const iconMap: Record<string, React.ReactNode> = {
     Scalpel: <Stethoscope className="h-full w-full" />,
-    Activity: <Activity className="h-full w-full" />,
+    HeartCardiogram: <HeartCardiogram className="h-full w-full" />,
     Stethoscope: <Stethoscope className="h-full w-full" />,
-    Baby: <Baby className="h-full w-full" />,
-    Bone: <Bone className="h-full w-full" />,
+    Baby0203m: <Baby0203m className="h-full w-full" />,
+    Orthopaedics: <Orthopaedics className="h-full w-full" />,
     Heart: <Heart className="h-full w-full" />,
     Siren: <Ambulance className="h-full w-full" />,
-    Smile: <Smile className="h-full w-full" />,
-    Brain: <Brain className="h-full w-full" />,
+    Happy: <Happy className="h-full w-full" />,
+    Neurology: <Neurology className="h-full w-full" />,
     Ribbon: <Ribbon className="h-full w-full" />,
-    Droplets: <Droplets className="h-full w-full" />,
-    Zap: <Zap className="h-full w-full" />,
+    BloodDrop: <BloodDrop className="h-full w-full" />,
+    Electricity: <Electricity className="h-full w-full" />,
 };
 
 export function ServiceCard({ service, variant = "detail", className, cardClassName, theme = "teal" }: ServiceCardProps) {

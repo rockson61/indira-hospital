@@ -4,7 +4,8 @@ import { getDiagnosticBySlug } from "@/lib/api"
 import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Clock, AlertCircle, Phone, Home, Droplets, Beaker } from "lucide-react"
+import { CheckCircle2, Clock, AlertCircle, Phone, Home, Beaker } from "lucide-react"
+import { BloodDrop } from "healthicons-react/outline";
 import type { Metadata } from "next"
 import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
@@ -73,7 +74,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                                 )}
                                 {test.sample_type && test.sample_type !== 'N/A - Imaging' && (
                                     <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs rounded-full">
-                                        <Droplets className="w-3 h-3" /> {test.sample_type}
+                                        <BloodDrop className="w-3 h-3" /> {test.sample_type}
                                     </span>
                                 )}
                                 {test.parameters_count && test.parameters_count > 0 && (

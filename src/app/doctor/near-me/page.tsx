@@ -6,11 +6,8 @@ import {
 } from "@/lib/data/enhanced-location-data";
 import { getDepartments } from "@/lib/api";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
-import {
-    MapPin, Clock, ArrowRight, Train, Bus, Car,
-    MessageCircle, Phone, Zap, Star, Shield,
-    CheckCircle2, Award, Users, Stethoscope, Heart, ShieldCheck
-} from "lucide-react";
+import { MapPin, Clock, ArrowRight, Train, Bus, Car, MessageCircle, Phone, Star, CheckCircle2, Award, Users, Shield } from "lucide-react";
+import { Electricity, Stethoscope, Heart } from "healthicons-react/outline";
 import { clinicConfig } from "@/lib/data/clinic-config";
 import { LocationCard } from "@/components/entities/LocationCard";
 import { SectionContainer } from "@/components/ui/section-container";
@@ -195,7 +192,7 @@ export default async function LocationsPage() {
                     <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-fuchsia-500/5 rounded-full blur-[40px] group-hover:bg-fuchsia-500/10 transition-colors pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 flex items-center justify-center mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 group-hover:shadow-fuchsia-500/30 transition-all duration-500">
-                            <Zap className="w-8 h-8 text-fuchsia-600 group-hover:text-white transition-colors" />
+                            <Electricity className="w-8 h-8 text-fuchsia-600 group-hover:text-white transition-colors" />
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-fuchsia-600 transition-colors tracking-tight">Laparoscopic Surgery</h3>
                         <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-6 flex-grow">

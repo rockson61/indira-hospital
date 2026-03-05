@@ -1,18 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import { LayoutGrid, ArrowRight, HeartPulse, Activity, Stethoscope, TestTube, Pill, UserSearch, FileText } from "lucide-react";
+import { LayoutGrid, ArrowRight, TestTube, UserSearch, FileText } from "lucide-react";
+import { HeartCardiogram, Stethoscope, Pills2 } from "healthicons-react/outline";
 import { cn } from "@/lib/utils";
 
 const libraryLinks = [
-    { name: "Body Systems & Organs", href: "/doctor/near-me/treat#body-systems", icon: Activity },
-    { name: "Diseases & Conditions", href: "/doctor/near-me/treat#conditions", icon: HeartPulse },
+    { name: "Body Systems & Organs", href: "/doctor/near-me/treat#body-systems", icon: HeartCardiogram },
+    { name: "Diseases & Conditions", href: "/doctor/near-me/treat#conditions", icon: HeartCardiogram },
     { name: "Treatments", href: "/doctor/near-me/treat#treatments", icon: Stethoscope },
     { name: "Procedures", href: "/doctor/near-me/treat#diagnostics", icon: FileText },
-    { name: "Drugs, Devices & Supplements", href: "/pharmacy", icon: Pill },
+    { name: "Drugs, Devices & Supplements", href: "/pharmacy", icon: Pills2 },
     { name: "Diagnostics & Testing", href: "/scans", icon: TestTube },
     { name: "Symptoms Guide", href: "/doctor/near-me/treat#symptoms", icon: UserSearch },
     { name: "Diet & Nutrition", href: "/doctor/near-me/treat#diet", icon: LayoutGrid },
-    { name: "Women's Wellness", href: "/doctor/near-me/treat/obstetrics-gynaecology", icon: HeartPulse }
+    { name: "Women's Wellness", href: "/doctor/near-me/treat/obstetrics-gynaecology", icon: HeartCardiogram }
 ];
 
 export function HealthLibraryCard() {

@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Stethoscope, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { Stethoscope } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 

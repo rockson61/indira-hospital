@@ -4,7 +4,8 @@ import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail, Clock, ShieldCheck, ArrowRight, HeartPulse, Sparkles, Send } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, ArrowRight, Sparkles, Send, Shield } from "lucide-react"
+import { HeartCardiogram } from "healthicons-react/outline";
 import { motion } from "framer-motion"
 import { Metadata } from "next";
 
@@ -24,7 +25,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-rose-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-rose-500/30">
-                            <HeartPulse className="w-4 h-4 animate-pulse" /> Available 24/7
+                            <HeartCardiogram className="w-4 h-4 animate-pulse" /> Available 24/7
                         </span>
                         <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6 max-w-6xl mx-auto">
                             Contact Indira Hospital <br />
@@ -146,7 +147,7 @@ export default function ContactPage() {
 
                             <div className="relative z-10 mb-12">
                                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-fuchsia-300 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
-                                    <ShieldCheck className="w-4 h-4" /> Safe & Secure
+                                    <Shield className="w-4 h-4" /> Safe & Secure
                                 </span>
                                 <h2 className="text-5xl font-black text-white tracking-tight leading-tight">Send a Message</h2>
                                 <p className="text-slate-400 mt-4 text-lg font-medium">Have a question about a treatment, cost, or insurance? Fill out the form and our team will reply within 24 hours.</p>

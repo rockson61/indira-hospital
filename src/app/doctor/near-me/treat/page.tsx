@@ -3,7 +3,8 @@
 import { SectionHeader } from "@/components/ui/section-header";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 import { getDepartments } from "@/lib/api";
-import { Activity, ShieldCheck, HeartPulse, Stethoscope, Clock, ShieldPlus, ArrowRight, PhoneCall, Sparkles, Star, Shield, LayoutGrid, Heart, Brain, Bone, Baby, Eye } from "lucide-react";
+import { Clock, ShieldPlus, ArrowRight, PhoneCall, Sparkles, Star, LayoutGrid, Shield } from "lucide-react";
+import { HeartCardiogram, Stethoscope, Heart, Neurology, Orthopaedics, Baby0203m, Eye } from "healthicons-react/outline";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -13,10 +14,10 @@ import { TreatmentGuides } from "@/components/sections/treatment-guides";
 
 const bodySystems = [
     { name: "Heart & Circulation", icon: Heart, link: "/doctor/near-me/treat/cardiology" },
-    { name: "Bones & Joints", icon: Bone, link: "/doctor/near-me/treat/orthopaedics" },
-    { name: "Brain & Nerves", icon: Brain, link: "/doctor/near-me/treat/neurology" },
-    { name: "Digestive System", icon: Activity, link: "/doctor/near-me/treat/gastroenterology" },
-    { name: "Women's Health", icon: Baby, link: "/doctor/near-me/treat/obstetrics-gynaecology" },
+    { name: "Bones & Joints", icon: Orthopaedics, link: "/doctor/near-me/treat/orthopaedics" },
+    { name: "Neurology & Nerves", icon: Neurology, link: "/doctor/near-me/treat/neurology" },
+    { name: "Digestive System", icon: HeartCardiogram, link: "/doctor/near-me/treat/gastroenterology" },
+    { name: "Women's Health", icon: Baby0203m, link: "/doctor/near-me/treat/obstetrics-gynaecology" },
     { name: "Eyes & Vision", icon: Eye, link: "/doctor/near-me/treat/ophthalmology" },
     { name: "Kidneys & Urinary Tract", icon: Shield, link: "/doctor/near-me/treat/urology" },
     { name: "Lungs & Breathing", icon: LayoutGrid, link: "/doctor/near-me/treat/general-medicine" },

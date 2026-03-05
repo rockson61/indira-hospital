@@ -1,5 +1,6 @@
 import { SectionContainer } from "@/components/ui/section-container"
-import { Scan, Activity, Clock, FileText, CheckCircle2, ShieldCheck, ArrowRight, Zap, Target } from "lucide-react"
+import { Scan, Clock, FileText, CheckCircle2, ArrowRight, Target, Shield } from "lucide-react"
+import { HeartCardiogram, Electricity } from "healthicons-react/outline";
 import Link from "next/link"
 import { Metadata } from "next"
 
@@ -34,7 +35,7 @@ export default function ScansPage() {
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto relative z-20">
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group">
                             <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-500 transition-colors">
-                                <Activity className="w-6 h-6 text-blue-400 group-hover:text-white" />
+                                <HeartCardiogram className="w-6 h-6 text-blue-400 group-hover:text-white" />
                             </div>
                             <p className="text-4xl font-black text-white mb-1 tabular-nums">3T</p>
                             <p className="text-xs font-black text-blue-300 uppercase tracking-widest">MRI System</p>
@@ -55,7 +56,7 @@ export default function ScansPage() {
                         </div>
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group col-span-2 lg:col-span-1">
                             <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-fuchsia-500 transition-colors">
-                                <ShieldCheck className="w-6 h-6 text-fuchsia-400 group-hover:text-white" />
+                                <Shield className="w-6 h-6 text-fuchsia-400 group-hover:text-white" />
                             </div>
                             <p className="text-4xl font-black text-white mb-1">Low</p>
                             <p className="text-xs font-black text-fuchsia-300 uppercase tracking-widest">Radiation</p>

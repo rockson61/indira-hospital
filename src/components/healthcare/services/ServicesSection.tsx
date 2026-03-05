@@ -3,7 +3,8 @@
 import { useState } from "react"
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, Clock, IndianRupee } from "lucide-react"
-import { Bluetooth as Tooth, Sparkles, AlignJustify, Syringe, Stethoscope, Baby } from "lucide-react"
+import { Syringe, Stethoscope, Baby0203m } from "healthicons-react/outline";
+import { Bluetooth as Tooth, Sparkles, AlignJustify } from "lucide-react"
 import { GlassCard } from "@/components/ui/glass-card"
 import { servicesData } from "@/lib/data/services-data"
 

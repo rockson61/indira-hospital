@@ -3,7 +3,9 @@
 import { Button } from "@/components/ui/button"
 import { GlassCard } from "@/components/ui/glass-card"
 import { SectionContainer } from "@/components/ui/section-container"
-import { Bluetooth as Tooth, Smile, Zap, Shield, Heart, Baby, ArrowRight, CheckCircle } from "lucide-react"
+import { Bluetooth as Tooth, ArrowRight, CheckCircle, Shield } from "lucide-react"
+;
+import { Happy, Electricity, Heart, Baby0203m } from "healthicons-react/outline";
 import { useServices } from "@/hooks/useServices"
 import Image from "next/image"
 import Link from 'next/link'

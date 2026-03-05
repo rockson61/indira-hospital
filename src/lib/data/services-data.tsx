@@ -1,15 +1,5 @@
-import {
-    Shield,
-    Smile,
-    Zap,
-    Heart,
-    Baby,
-    Stethoscope,
-    Sparkles,
-    Activity,
-    Activity as Lung,
-    ClipboardCheck
-} from "lucide-react";
+import { Sparkles, ClipboardCheck, Shield } from "lucide-react";
+import { Happy, Electricity, Heart, Baby0203m, Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 
 export interface ServiceData {
     id: string;
@@ -29,7 +19,7 @@ export const servicesData: ServiceData[] = [
         id: "general-surgery",
         title: "General & Laparoscopic Surgery",
         description: "Laser piles, laparoscopic hernia, gallbladder removal — same-day discharge, half the metro cost. 15,000+ surgeries done.",
-        icon: Zap,
+        icon: Electricity,
         image: "/hero-hospital.png",
         href: "/departments/general-surgery",
         features: ["Laser Piles Treatment", "Laparoscopic Hernia Repair", "Appendix Removal", "Breast Surgery"],
@@ -39,7 +29,7 @@ export const servicesData: ServiceData[] = [
         id: "orthopaedics",
         title: "Orthopaedics & Joint Replacement",
         description: "Walking pain-free again starts here. Total knee & hip replacement by surgeons with 1,000+ joint replacements each.",
-        icon: Activity,
+        icon: HeartCardiogram,
         image: "/hero-hospital.png",
         href: "/departments/orthopaedics",
         features: ["Knee Replacement", "Hip Replacement", "Fracture Management", "Spine Surgery"],
@@ -59,7 +49,7 @@ export const servicesData: ServiceData[] = [
         id: "obstetrics-gynaecology",
         title: "Obstetrics & Gynaecology",
         description: "Painless delivery, high-risk pregnancy care, and laparoscopic gynaecology — because every mother deserves the safest hands.",
-        icon: Baby,
+        icon: Baby0203m,
         image: "/hero-hospital.png",
         href: "/departments/obstetrics-gynaecology",
         features: ["Painless Delivery", "High-Risk Pregnancy", "Laparoscopic Gynaecology", "Infertility"],

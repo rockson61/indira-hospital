@@ -1,7 +1,8 @@
 "use client";
 
 import { SectionContainer } from "@/components/ui/section-container"
-import { Users, Target, Clock, Award, Heart, Building, ShieldCheck, Activity, ArrowRight, HeartPulse, Sparkles, Star } from "lucide-react"
+import { Users, Target, Clock, Award, Building, ArrowRight, Sparkles, Star, Shield } from "lucide-react"
+import { Heart, HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link"
 import { Metadata } from "next";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -88,7 +89,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
                         { icon: Clock, value: "35+", label: "Years of Service", color: "text-fuchsia-500", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
-                        { icon: HeartPulse, value: "50K+", label: "Patients Treated", color: "text-pink-500", bg: "bg-pink-50 dark:bg-pink-950" },
+                        { icon: HeartCardiogram, value: "50K+", label: "Patients Treated", color: "text-pink-500", bg: "bg-pink-50 dark:bg-pink-950" },
                         { icon: Award, value: "15+", label: "Specialties", color: "text-blue-500", bg: "bg-blue-50" },
                         { icon: Building, value: "200+", label: "Hospital Beds", color: "text-amber-500", bg: "bg-amber-50" },
                     ].map((stat, idx) => (
@@ -114,7 +115,7 @@ export default function AboutPage() {
             <section className="max-w-7xl mx-auto px-6 lg:px-8 pb-32">
                 <div className="text-center max-w-4xl mx-auto mb-24 relative">
                     <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-fuchsia-700 text-sm font-bold tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
-                        <ShieldCheck className="w-4 h-4" /> Stewardship
+                        <Shield className="w-4 h-4" /> Stewardship
                     </span>
                     <h2 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 dark:text-white tracking-tight leading-tight">Elite Governance</h2>
                     <p className="text-slate-500 dark:text-slate-400 font-medium text-xl leading-relaxed max-w-3xl mx-auto">

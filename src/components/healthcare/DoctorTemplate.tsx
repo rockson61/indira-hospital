@@ -1,23 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-    Calendar,
-    Phone,
-    Stethoscope,
-    ChevronRight,
-    Award,
-    Clock,
-    GraduationCap,
-    Languages,
-    MapPin,
-    MessageCircle,
-    UserCircle,
-    Star,
-    Shield,
-    Users,
-    Activity,
-    ArrowRight
-} from 'lucide-react';
+import { Calendar, Phone, ChevronRight, Award, Clock, GraduationCap, Languages, MapPin, MessageCircle, UserCircle, Star, Users, ArrowRight, Shield } from "lucide-react";
+;
+import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { Card } from "@/components/ui/card";
 import { ModernCard } from "@/components/ui/modern-card";
@@ -206,7 +191,7 @@ export function DoctorTemplate({
                                 <>
                                     <ModernCard className="bg-gradient-to-br from-fuchsia-50/50 to-white border-fuchsia-100 p-8 hover:shadow-xl transition-all group">
                                         <div className="p-4 bg-fuchsia-600 inline-block rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform">
-                                            <Activity className="w-8 h-8" />
+                                            <HeartCardiogram className="w-8 h-8" />
                                         </div>
                                         <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{DOCTOR_EXPERTISE_FALLBACK_1.TITLE}</h3>
                                         <p className="text-slate-600 leading-relaxed font-light">{DOCTOR_EXPERTISE_FALLBACK_1.DESC}</p>

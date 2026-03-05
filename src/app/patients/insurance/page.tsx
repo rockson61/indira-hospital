@@ -2,7 +2,8 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, FileText, Phone, CheckCircle, ArrowRight, HeartPulse } from "lucide-react";
+import { FileText, Phone, CheckCircle, ArrowRight, Shield } from "lucide-react";
+import { HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
 import { clinicConfig } from "@/lib/data/clinic-config";
 
@@ -35,7 +36,7 @@ const insurancePartners = [
 ];
 
 const benefits = [
-    { title: "Cashless Treatment", description: "Get treated without upfront payment at our hospital.", icon: ShieldCheck },
+    { title: "Cashless Treatment", description: "Get treated without upfront payment at our hospital.", icon: Shield },
     { title: "Quick Pre-Authorization", description: "Fast insurance approval process — usually within 2-4 hours.", icon: FileText },
     { title: "Dedicated Insurance Desk", description: "Our team handles all paperwork and claim processing.", icon: Phone },
     { title: "Wide Network", description: "We are empanelled with 30+ insurance companies and TPAs.", icon: CheckCircle },
@@ -53,7 +54,7 @@ export default function InsurancePage() {
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                            <HeartPulse className="w-4 h-4" /> Financial Peace of Mind
+                            <HeartCardiogram className="w-4 h-4" /> Financial Peace of Mind
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
                             Insurance & <br className="hidden sm:block" />
@@ -100,7 +101,7 @@ export default function InsurancePage() {
                             className="group flex items-center justify-center px-6 py-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-fuchsia-300 hover:-translate-y-1 transition-all duration-300 cursor-default"
                         >
                             <div className="flex items-center gap-3">
-                                <ShieldCheck className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-500 transition-colors" />
+                                <Shield className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-500 transition-colors" />
                                 <span className="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:text-white transition-colors">{name}</span>
                             </div>
                         </div>

@@ -1,13 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-    MapPin, Clock, Train, Bus, Car,
-    MessageCircle, Phone, Zap, ArrowRight,
-    Building, UtensilsCrossed, Landmark,
-    CheckCircle2, ShieldCheck,
-    Navigation, Heart, Stethoscope, Star
-} from "lucide-react";
+import { MapPin, Clock, Train, Bus, Car, MessageCircle, Phone, ArrowRight, Building, UtensilsCrossed, Landmark, CheckCircle2, Navigation, Star, Shield } from "lucide-react";
+import { Electricity, Heart, Stethoscope } from "healthicons-react/outline";
 
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -160,7 +155,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     <div className="bg-slate-900 rounded-[2.5rem] p-8 sm:p-10 text-white shadow-2xl relative overflow-hidden flex flex-col justify-center">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/20 rounded-full blur-3xl opacity-50" />
                         <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
-                            <ShieldCheck className="w-6 h-6 text-fuchsia-400" /> Clinical Excellence
+                            <Shield className="w-6 h-6 text-fuchsia-400" /> Clinical Excellence
                         </h3>
                         <ul className="space-y-6">
                             {[

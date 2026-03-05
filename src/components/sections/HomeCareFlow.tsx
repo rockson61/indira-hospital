@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin, Stethoscope, HeartPulse, Hospital } from "lucide-react";
+import { ArrowRight, MapPin, Hospital } from "lucide-react";
+import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 
 const flowData = [
@@ -11,7 +12,7 @@ const flowData = [
         ctaHref: "/doctors",
         imageSrc: "/images/mother_baby_family.png",
         imageAlt: "Mother and Father with new baby",
-        icon: <HeartPulse className="w-8 h-8 text-fuchsia-500" />
+        icon: <HeartCardiogram className="w-8 h-8 text-fuchsia-500" />
     },
     {
         title: "Care When You Need It",

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Heart, Globe, CircleDollarSign, ArrowRight } from "lucide-react";
+import { Globe, CircleDollarSign, ArrowRight } from "lucide-react";
+import { Heart } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { PATIENT_RESOURCES } from "@/lib/data/patient-resources";
 

@@ -2,14 +2,9 @@
 
 import { ModernButton } from '@/components/ui/modern-button';
 import { ModernCard } from '@/components/ui/modern-card';
-import {
-  Smile,
-  Shield,
-  Zap,
-  Heart,
-  Baby,
-  ArrowRight, CheckCircle, Clock, DollarSign
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, DollarSign, Shield } from "lucide-react";
+;
+import { Happy, Electricity, Heart, Baby0203m } from "healthicons-react/outline";
 import Image from 'next/image';
 import Link from 'next/link';
 import { servicesData } from '@/lib/data/services-data';

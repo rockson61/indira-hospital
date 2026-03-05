@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Search, ShieldCheck } from "lucide-react";
+import { Search, Shield } from "lucide-react";
+;
+;
 import { Input } from "@/components/ui/input";
 
 // In real app, this would come from API
@@ -40,7 +42,7 @@ export function InsuranceChecker() {
         <Card className="p-6 bg-white dark:bg-slate-900 shadow-sm border border-gray-100 dark:border-slate-700 rounded-xl">
             <div className="flex items-start gap-4 mb-6">
                 <div className="bg-fuchsia-100 p-3 rounded-full text-fuchsia-600">
-                    <ShieldCheck className="w-6 h-6" />
+                    <Shield className="w-6 h-6" />
                 </div>
                 <div>
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white">Health Insurance Check</h3>
@@ -66,7 +68,7 @@ export function InsuranceChecker() {
 
             {result === 'found' && (
                 <div className="mt-4 p-3 bg-green-50 border border-green-100 rounded-lg flex items-center gap-2 text-green-700 animate-in slide-in-from-top-2">
-                    <ShieldCheck className="w-5 h-5 flex-shrink-0" />
+                    <Shield className="w-5 h-5 flex-shrink-0" />
                     <div className="text-sm">
                         <strong>Yes!</strong> We accept cashless claims for <strong>{query}</strong> (and associated TPAs).
                     </div>

@@ -5,15 +5,9 @@ import Link from 'next/link'
 import { Button } from "@heroui/react"
 import { ModernCard } from "@/components/ui/modern-card"
 import { Badge } from "@/components/ui/badge"
-import {
-  ArrowRight,
-  Star,
-  Clock,
-  Shield,
-  Phone,
-  Calendar,
-  MapPin
-} from "lucide-react"
+import { ArrowRight, Star, Clock, Phone, Calendar, MapPin, Shield } from "lucide-react"
+;
+;
 
 interface CompactServiceWidgetProps {
   title: string

@@ -1,5 +1,6 @@
 import { SectionContainer } from "@/components/ui/section-container"
-import { Pill, Clock, Truck, ShieldCheck, Phone, ArrowRight, Zap, BadgeCheck, Stethoscope } from "lucide-react"
+import { Clock, Truck, Phone, ArrowRight, BadgeCheck, Shield } from "lucide-react"
+import { Pills2, Electricity, Stethoscope } from "healthicons-react/outline";
 import Link from "next/link"
 import { Metadata } from "next"
 
@@ -41,7 +42,7 @@ export default function PharmacyPage() {
                         </div>
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group">
                             <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-500 transition-colors">
-                                <ShieldCheck className="w-6 h-6 text-blue-400 group-hover:text-white" />
+                                <Shield className="w-6 h-6 text-blue-400 group-hover:text-white" />
                             </div>
                             <p className="text-4xl font-black text-white mb-1">Cold</p>
                             <p className="text-xs font-black text-blue-300 uppercase tracking-widest">Storage Chain</p>
@@ -55,7 +56,7 @@ export default function PharmacyPage() {
                         </div>
                         <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group col-span-2 lg:col-span-1">
                             <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-amber-500 transition-colors">
-                                <Zap className="w-6 h-6 text-amber-400 group-hover:text-white" />
+                                <Electricity className="w-6 h-6 text-amber-400 group-hover:text-white" />
                             </div>
                             <p className="text-4xl font-black text-white mb-1">24/7</p>
                             <p className="text-xs font-black text-amber-300 uppercase tracking-widest">Availability</p>
@@ -71,7 +72,7 @@ export default function PharmacyPage() {
                         {
                             title: "Prescription Medicines",
                             desc: "Complete stock of specialized and rare medicines across oncology, nephrology, and cardiology.",
-                            icon: Pill,
+                            icon: Pills2,
                             color: "text-rose-500",
                             bg: "bg-rose-50 dark:bg-rose-950",
                             border: "border-rose-100 dark:border-rose-900"
@@ -87,7 +88,7 @@ export default function PharmacyPage() {
                         {
                             title: "Cold Chain Integrity",
                             desc: "Strict temperature control guidelines for vaccines, insulin, and sensitive injections.",
-                            icon: ShieldCheck,
+                            icon: Shield,
                             color: "text-emerald-500",
                             bg: "bg-emerald-50 dark:bg-emerald-950",
                             border: "border-emerald-100 dark:border-emerald-900"

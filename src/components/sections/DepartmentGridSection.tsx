@@ -1,12 +1,13 @@
 import { departments } from "@/data/departments";
 import Link from "next/link";
-import { ArrowRight, Activity, Brain, Bone, HeartPulse } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { HeartCardiogram, Neurology, Orthopaedics } from "healthicons-react/outline";
 
 // Icon mapper since we store strings in data
 const iconMap: Record<string, React.ReactNode> = {
-    HeartPulse: <HeartPulse className="h-8 w-8 text-red-500" />,
-    Brain: <Brain className="h-8 w-8 text-fuchsia-500" />,
-    Bone: <Bone className="h-8 w-8 text-orange-500" />,
+    HeartCardiogram: <HeartCardiogram className="h-8 w-8 text-red-500" />,
+    Neurology: <Neurology className="h-8 w-8 text-fuchsia-500" />,
+    Orthopaedics: <Orthopaedics className="h-8 w-8 text-orange-500" />,
 };
 
 export function DepartmentGridSection() {
@@ -40,7 +41,7 @@ export function DepartmentGridSection() {
                             className="group block rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-100 transition-all duration-300"
                         >
                             <div className="h-16 w-16 rounded-2xl bg-gray-50 dark:bg-slate-950 flex items-center justify-center mb-6 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:scale-110 transition-all">
-                                {iconMap[dept.icon] || <Activity className="h-8 w-8 text-gray-500 dark:text-gray-400" />}
+                                {iconMap[dept.icon] || <HeartCardiogram className="h-8 w-8 text-gray-500 dark:text-gray-400" />}
                             </div>
 
                             <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{dept.name}</h4>

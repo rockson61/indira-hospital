@@ -1,4 +1,6 @@
-import { Award, Trophy, Star, ShieldCheck } from "lucide-react";
+import { Award, Trophy, Star, Shield } from "lucide-react";
+;
+;
 import { cn } from "@/lib/utils";
 
 interface AwardItem {

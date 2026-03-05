@@ -1,7 +1,8 @@
 'use client';
 
 import Link from "next/link";
-import { Clock, Home, Droplets, FlaskConical, ScanLine, Activity, Zap, ArrowRight, Sparkles } from "lucide-react";
+import { Clock, Home, ArrowRight, Sparkles } from "lucide-react";
+import { BloodDrop, TestTubes, UltrasoundScanner, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -12,10 +13,10 @@ interface DiagnosticCardProps {
 }
 
 const categoryConfig: Record<string, { icon: React.ElementType; color: string; bgColor: string; label: string }> = {
-    radiology: { icon: ScanLine, color: 'text-fuchsia-400', bgColor: 'bg-fuchsia-500/10', label: 'Radiology & Imaging' },
-    pathology: { icon: FlaskConical, color: 'text-pink-400', bgColor: 'bg-pink-500/10', label: 'Pathology & Lab' },
-    cardiology: { icon: Activity, color: 'text-rose-400', bgColor: 'bg-rose-500/10', label: 'Cardiology' },
-    other: { icon: Zap, color: 'text-indigo-400', bgColor: 'bg-indigo-500/10', label: 'Other Tests' },
+    radiology: { icon: UltrasoundScanner, color: 'text-fuchsia-400', bgColor: 'bg-fuchsia-500/10', label: 'Radiology & Imaging' },
+    pathology: { icon: TestTubes, color: 'text-pink-400', bgColor: 'bg-pink-500/10', label: 'Pathology & Lab' },
+    cardiology: { icon: HeartCardiogram, color: 'text-rose-400', bgColor: 'bg-rose-500/10', label: 'Cardiology' },
+    other: { icon: Electricity, color: 'text-indigo-400', bgColor: 'bg-indigo-500/10', label: 'Other Tests' },
 };
 
 export function DiagnosticCard({ test, className }: DiagnosticCardProps) {

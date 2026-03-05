@@ -5,12 +5,8 @@ import { getServiceBySlug } from "@/lib/api";
 import { getServices, getDoctors } from "@/lib/api";
 import { getTreatmentBySlug, getAllTreatments } from "@/lib/data/treatment-data";
 import { getImageUrl } from "@/lib/utils";
-import {
-    ChevronRight, CheckCircle2, Stethoscope, Heart, Activity, Baby,
-    Siren, Smile, Brain, Ribbon, Droplets, MessageCircle, Phone, Award,
-    Users, Clock, Shield, Star, MapPin, Zap, ArrowRight, GraduationCap,
-    Banknote, HelpCircle, Quote, Info, Sparkles
-} from "lucide-react";
+import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Award, Users, Clock, Star, MapPin, ArrowRight, GraduationCap, Banknote, HelpCircle, Quote, Info, Sparkles, Shield } from "lucide-react";
+import { Stethoscope, Heart, HeartCardiogram, Baby0203m, Happy, Neurology, BloodDrop, Electricity } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
 import EntityReviews from "@/components/trust/EntityReviews";
@@ -29,17 +25,17 @@ const WHATSAPP_NUMBER = "917010650063";
 // Icon map for services
 const iconMap: Record<string, React.ReactNode> = {
     Scalpel: <Stethoscope className="h-8 w-8" />,
-    Activity: <Activity className="h-8 w-8" />,
+    HeartCardiogram: <HeartCardiogram className="h-8 w-8" />,
     Stethoscope: <Stethoscope className="h-8 w-8" />,
-    Baby: <Baby className="h-8 w-8" />,
-    Bone: <Activity className="h-8 w-8" />,
+    Baby0203m: <Baby0203m className="h-8 w-8" />,
+    Orthopaedics: <HeartCardiogram className="h-8 w-8" />,
     Heart: <Heart className="h-8 w-8" />,
     Siren: <Siren className="h-8 w-8" />,
-    Smile: <Smile className="h-8 w-8" />,
-    Brain: <Brain className="h-8 w-8" />,
+    Happy: <Happy className="h-8 w-8" />,
+    Neurology: <Neurology className="h-8 w-8" />,
     Ribbon: <Ribbon className="h-8 w-8" />,
-    Droplets: <Droplets className="h-8 w-8" />,
-    Zap: <Zap className="h-8 w-8" />,
+    BloodDrop: <BloodDrop className="h-8 w-8" />,
+    Electricity: <Electricity className="h-8 w-8" />,
 };
 
 // Key procedures per service/department
@@ -52,7 +48,7 @@ const serviceProcedures: Record<string, string[]> = {
     orthopaedics: ["Total Knee Replacement", "Total Hip Replacement", "Arthroscopy", "Fracture Management", "Spine Surgery", "Sports Medicine", "Ligament Reconstruction", "Joint Injections"],
     cardiology: ["Angiography", "Angioplasty & Stenting", "Pacemaker Implantation", "Echocardiography", "TMT / Stress Test", "Heart Failure Management", "Cardiac Rehabilitation", "Holter Monitoring"],
     "icu-emergency": ["24/7 Emergency Care", "Ventilator Support", "Trauma Management", "Post-Surgical ICU Care", "Cardiac Monitoring", "Sepsis Management", "Stroke Care", "Poison Management"],
-    dentistry: ["Maxillofacial Surgery", "Orthognathic Procedures", "Dental Implants", "Orthodontics", "Root Canal Treatment", "Smile Makeover", "Full Mouth Rehabilitation", "Pediatric Dentistry"],
+    dentistry: ["Maxillofacial Surgery", "Orthognathic Procedures", "Dental Implants", "Orthodontics", "Root Canal Treatment", "Happy Makeover", "Full Mouth Rehabilitation", "Pediatric Dentistry"],
     neurology: ["Stroke Management", "Epilepsy Treatment", "Migraine & Headache Clinic", "Parkinson's Disease Care", "EEG & EMG Studies", "Peripheral Neuropathy", "Multiple Sclerosis Treatment", "Nerve Conduction Studies"],
     oncology: ["Cancer Screening", "Chemotherapy", "Targeted Therapy", "Immunotherapy", "Surgical Oncology", "Palliative Care", "Biopsy & Diagnosis", "Cancer Rehabilitation"],
     nephrology: ["Dialysis Services", "Chronic Kidney Disease", "Kidney Stone Management", "Hypertension Treatment", "Electrolyte Disorders", "Pre-Transplant Evaluation", "Glomerulonephritis Care", "Diabetic Nephropathy"],

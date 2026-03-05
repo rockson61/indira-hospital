@@ -1,9 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import {
-    ChevronRight, Zap, ShieldCheck,
-    ArrowRight, Sparkles, Monitor, Activity
-} from "lucide-react";
+import { ChevronRight, ArrowRight, Sparkles, Monitor, Shield } from "lucide-react";
+import { Electricity, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { getAllTechnologies } from "@/lib/data/technology-data";
 
@@ -26,7 +24,7 @@ export default function TechnologyHubPage() {
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                            <Activity className="w-4 h-4" /> Next-Gen Infrastructure
+                            <HeartCardiogram className="w-4 h-4" /> Next-Gen Infrastructure
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
                             Technology that <br className="hidden sm:block" />
@@ -45,14 +43,14 @@ export default function TechnologyHubPage() {
                     <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
                         <div className="group">
                             <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
-                                <ShieldCheck className="w-7 h-7 text-fuchsia-600" />
+                                <Shield className="w-7 h-7 text-fuchsia-600" />
                             </div>
                             <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Safety First</h4>
                             <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">All equipment undergoes daily calibration and follows international safety protocols.</p>
                         </div>
                         <div className="group">
                             <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
-                                <Zap className="w-7 h-7 text-fuchsia-600" />
+                                <Electricity className="w-7 h-7 text-fuchsia-600" />
                             </div>
                             <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Zero Waiting</h4>
                             <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">In-house blood bank and modular OTs ensure no delay in life-saving procedures.</p>

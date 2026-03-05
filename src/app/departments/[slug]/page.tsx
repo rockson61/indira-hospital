@@ -2,11 +2,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getDepartmentBySlug, getDepartments, getDoctors } from "@/lib/api";
-import {
-    ChevronRight, CheckCircle2, Stethoscope, Heart, Activity, Baby,
-    Siren, Smile, Brain, Ribbon, Droplets, MessageCircle, Phone,
-    Users, GraduationCap
-} from "lucide-react";
+import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Users, GraduationCap } from "lucide-react";
+import { Stethoscope, Heart, HeartCardiogram, Baby0203m, Happy, Neurology, BloodDrop } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
 import EntityReviews from "@/components/trust/EntityReviews";
@@ -23,16 +20,16 @@ const WHATSAPP_NUMBER = "917010650063";
 // Icon map for departments
 const iconMap: Record<string, React.ReactNode> = {
     Scalpel: <Stethoscope className="h-8 w-8" />,
-    Activity: <Activity className="h-8 w-8" />,
+    HeartCardiogram: <HeartCardiogram className="h-8 w-8" />,
     Stethoscope: <Stethoscope className="h-8 w-8" />,
-    Baby: <Baby className="h-8 w-8" />,
-    Bone: <Activity className="h-8 w-8" />,
+    Baby0203m: <Baby0203m className="h-8 w-8" />,
+    Orthopaedics: <HeartCardiogram className="h-8 w-8" />,
     Heart: <Heart className="h-8 w-8" />,
     Siren: <Siren className="h-8 w-8" />,
-    Smile: <Smile className="h-8 w-8" />,
-    Brain: <Brain className="h-8 w-8" />,
+    Happy: <Happy className="h-8 w-8" />,
+    Neurology: <Neurology className="h-8 w-8" />,
     Ribbon: <Ribbon className="h-8 w-8" />,
-    Droplets: <Droplets className="h-8 w-8" />,
+    BloodDrop: <BloodDrop className="h-8 w-8" />,
 };
 
 export const dynamicParams = true;

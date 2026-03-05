@@ -1,4 +1,5 @@
-import { Award, GraduationCap, Calendar, Users, Heart, Activity } from "lucide-react"
+import { Award, GraduationCap, Calendar, Users } from "lucide-react"
+import { Heart, HeartCardiogram } from "healthicons-react/outline";
 
 export const achievements = [
     { icon: GraduationCap, label: "Specialties", value: "15+ Super Specialities" },

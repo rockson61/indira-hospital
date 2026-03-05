@@ -2,7 +2,8 @@
 import * as React from "react"
 import { useRef, useEffect } from "react"
 import { Card } from "@/components/ui/card"
-import { Users, Award, Clock, Heart, Star, Trophy, type LucideIcon } from "lucide-react"
+import { Users, Award, Clock, Star, Trophy, type LucideIcon } from "lucide-react"
+import { Heart } from "healthicons-react/outline";
 import { motion, useInView, useSpring, useMotionValue } from "framer-motion"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Stethoscope, MapPin, Users, Layers } from "lucide-react";
+import { ArrowRight, MapPin, Users, Layers } from "lucide-react";
+import { Stethoscope } from "healthicons-react/outline";
 import { getServices, getDoctors, getDepartments } from "@/lib/api";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { SectionContainer } from "@/components/ui/section-container";

@@ -1,6 +1,7 @@
 import { PageHeader } from "@/components/ui/page-header";
 import { SectionContainer } from "@/components/ui/section-container";
-import { User, FileText, Calendar, ShieldCheck, ArrowRight } from "lucide-react";
+import { User, FileText, Calendar, ArrowRight, Shield } from "lucide-react";
+;
 import Link from "next/link";
 
 export default function PatientPortalPage() {
@@ -79,7 +80,7 @@ export default function PatientPortalPage() {
 
                             <div className="flex gap-6">
                                 <div className="w-14 h-14 rounded-2xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center text-teal-600 dark:text-teal-400 flex-shrink-0">
-                                    <ShieldCheck className="w-6 h-6" />
+                                    <Shield className="w-6 h-6" />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">100% Secure & Private</h3>

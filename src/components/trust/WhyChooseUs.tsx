@@ -2,7 +2,9 @@
 
 import { GlassCard } from "@/components/ui/glass-card"
 import { SectionContainer } from "@/components/ui/section-container"
-import { Shield, Clock, Award, Heart, Zap, Users, CheckCircle, Star } from "lucide-react"
+import { Clock, Award, Users, CheckCircle, Star, Shield } from "lucide-react"
+;
+import { Heart, Electricity } from "healthicons-react/outline";
 import { motion } from "framer-motion"
 
 // Static data moved outside component to prevent recreation on each render
@@ -36,7 +38,7 @@ const FEATURES = [
     color: "text-pink-500",
   },
   {
-    icon: Zap,
+    icon: Electricity,
     title: "Minimally Invasive Surgery",
     description:
       "Advanced laparoscopic and laser surgeries with faster recovery and minimal scarring. Most procedures are day-care.",

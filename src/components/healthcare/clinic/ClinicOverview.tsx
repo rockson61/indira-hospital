@@ -2,7 +2,9 @@ import Link from 'next/link'
 import { ModernCard } from "@/components/ui/modern-card"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@heroui/react"
-import { MapPin, Clock, Phone, Car, Wifi, Shield, Heart, Users, Navigation, Star } from "lucide-react"
+import { MapPin, Clock, Phone, Car, Wifi, Users, Navigation, Star, Shield } from "lucide-react"
+;
+import { Heart } from "healthicons-react/outline";
 
 export function ClinicsOverview() {
   const clinicFeatures = [

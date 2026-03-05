@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, HeartPulse, Home as HomeIcon, Video, MapPin, Calculator, CreditCard, Stethoscope } from "lucide-react";
+import { ArrowRight, Home as HomeIcon, Video, MapPin, Calculator, CreditCard } from "lucide-react";
+import { HeartCardiogram, Stethoscope } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 
 export function HomePromoLinks() {

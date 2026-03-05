@@ -2,7 +2,9 @@
 
 import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from '@/components/ui/modern-card'
 import { Badge } from '@/components/ui/badge'
-import { AlertCircle, Pill, Clock, ShieldAlert, Info } from 'lucide-react'
+import { AlertCircle, Clock, Info, Shield } from "lucide-react"
+;
+import { Pills2 } from "healthicons-react/outline";
 
 interface Medicine {
   name: string
@@ -42,14 +44,14 @@ export function MedicineSection({
     <ModernCard className={`${className} mb-8`}>
       <ModernCardHeader className="bg-gradient-to-r from-blue-50 to-fuchsia-50 border-b-2 border-blue-200">
         <ModernCardTitle className="flex items-center gap-2 text-2xl">
-          <Pill className="w-7 h-7 text-fuchsia-600" />
+          <Pills2 className="w-7 h-7 text-fuchsia-600" />
           Medicines & Tablets for {conditionName}
         </ModernCardTitle>
       </ModernCardHeader>
       <ModernCardContent className="p-6">
         {/* Important Notice */}
         <div className="bg-yellow-50 border-2 border-yellow-300 rounded-lg p-4 mb-6 flex items-start gap-3">
-          <ShieldAlert className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
+          <Shield className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
           <div>
             <h3 className="font-bold text-yellow-900 mb-1">⚠️ Important Medical Disclaimer</h3>
             <p className="text-sm text-yellow-800">
@@ -71,7 +73,7 @@ export function MedicineSection({
                     {medicine.type}
                   </Badge>
                 </div>
-                <Pill className="w-6 h-6 text-muted-foreground flex-shrink-0" />
+                <Pills2 className="w-6 h-6 text-muted-foreground flex-shrink-0" />
               </div>
 
               <div className="space-y-3 mt-4">
@@ -84,7 +86,7 @@ export function MedicineSection({
                 </div>
 
                 <div className="flex items-start gap-2">
-                  <Pill className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-1" />
+                  <Pills2 className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-xs font-semibold text-muted-foreground mb-0.5">Dosage</p>
                     <p className="text-sm text-foreground/90 font-medium">{medicine.dosage}</p>

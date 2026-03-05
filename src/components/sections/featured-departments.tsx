@@ -3,7 +3,8 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { DepartmentCard } from "@/components/entities/DepartmentCard";
 import { getDepartments } from "@/lib/api";
 import { getImageUrl } from "@/lib/utils";
-import { Stethoscope, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Stethoscope } from "healthicons-react/outline";
 
 export async function FeaturedDepartments() {
     const departments = await getDepartments().catch(() => []);

@@ -1,7 +1,9 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/section-header";
-import { Clock, ShieldCheck, HeartPulse, Trophy, Ambulance, Microscope, Award, Users } from "lucide-react";
+import { Clock, Trophy, Ambulance, Award, Users, Shield } from "lucide-react";
+;
+import { HeartCardiogram, Microscope } from "healthicons-react/outline";
 
 const features = [
     {

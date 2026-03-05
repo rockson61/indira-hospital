@@ -2,7 +2,8 @@
 
 import { ModernCard, ModernCardContent } from "@/components/ui/modern-card"
 import Link from 'next/link'
-import { ArrowRight, Drill, Sparkles, Smile, Crown, Stethoscope } from "lucide-react"
+import { ArrowRight, Drill, Sparkles, Crown } from "lucide-react"
+import { Happy, Stethoscope } from "healthicons-react/outline";
 import { cn } from "@/lib/utils"
 import { servicesData } from "@/lib/data/services-data"
 

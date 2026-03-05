@@ -2,7 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-import { ShieldCheck, AlertCircle, BookOpen } from "lucide-react";
+import { AlertCircle, BookOpen, Shield } from "lucide-react";
+;
+;
 
 export function MedicalDisclaimer() {
     return (
@@ -12,7 +14,7 @@ export function MedicalDisclaimer() {
                     {/* Box 1: Medical Review */}
                     <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm flex items-start space-x-4">
                         <div className="bg-fuchsia-100 p-2 rounded-lg shrink-0">
-                            <ShieldCheck className="w-5 h-5 text-fuchsia-700" />
+                            <Shield className="w-5 h-5 text-fuchsia-700" />
                         </div>
                         <div>
                             <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">Medically Reviewed</h4>

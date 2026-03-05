@@ -1,9 +1,6 @@
 import { Metadata } from "next";
-import {
-    ShieldCheck, Award, Microscope,
-    HandMetal, Sparkles, HeartPulse,
-    CheckCircle2, AlertCircle, FileText
-} from "lucide-react";
+import { Award, HandMetal, Sparkles, CheckCircle2, AlertCircle, FileText, Shield } from "lucide-react";
+import { Microscope, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -27,16 +24,16 @@ const PROTOCOLS = [
     {
         title: "Surgical Safety",
         desc: "Use of the WHO Surgical Safety Checklist for every procedure to ensure the right patient and right site.",
-        icon: <ShieldCheck className="w-8 h-8 text-fuchsia-600" />
+        icon: <Shield className="w-8 h-8 text-fuchsia-600" />
     },
     {
         title: "Constant Monitoring",
         desc: "24/7 clinical audits and patient feedback loops to continuously improve healthcare delivery.",
-        icon: <Activity className="w-8 h-8 text-fuchsia-600" />
+        icon: <HeartCardiogram className="w-8 h-8 text-fuchsia-600" />
     }
 ];
 
-import { Activity } from "lucide-react";
+// removed lucide import;
 
 export default function QualitySafetyPage() {
     return (
@@ -49,7 +46,7 @@ export default function QualitySafetyPage() {
                 <SectionContainer>
                     <div className="max-w-3xl mx-auto">
                         <div className="inline-flex items-center gap-2 bg-fuchsia-500/20 border border-fuchsia-500/30 rounded-full px-4 py-1.5 mb-6">
-                            <ShieldCheck className="w-4 h-4 text-blue-400" />
+                            <Shield className="w-4 h-4 text-blue-400" />
                             <span className="text-blue-400 font-medium text-sm tracking-wide">Patient Safety First</span>
                         </div>
                         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">

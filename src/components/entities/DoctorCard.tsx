@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { getImageUrl } from "@/lib/utils";
-import { Stethoscope, Clock, ArrowRight, MessageCircle, Award } from "lucide-react";
+import { Clock, ArrowRight, MessageCircle, Award } from "lucide-react";
+import { Stethoscope } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 

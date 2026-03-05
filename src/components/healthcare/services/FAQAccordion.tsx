@@ -5,7 +5,9 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { HelpCircle, Phone, Calendar, MapPin, Heart, Activity, Stethoscope, Shield, Clock, Baby } from 'lucide-react'
+import { HelpCircle, Phone, Calendar, MapPin, Clock, Shield } from "lucide-react"
+;
+import { Heart, HeartCardiogram, Stethoscope, Baby0203m } from "healthicons-react/outline";
 import Link from 'next/link'
 
 interface FAQItem {
@@ -28,7 +30,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
     {
       title: "General Surgery",
       description: "Advanced laparoscopic and laser surgeries for piles, hernia, and more.",
-      icon: Activity,
+      icon: HeartCardiogram,
       link: "/doctor/near-me/treat/general-surgery"
     },
     {
@@ -40,7 +42,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
     {
       title: "Obstetrics & Gynaecology",
       description: "Comprehensive women's care including maternity and painless delivery.",
-      icon: Baby,
+      icon: Baby0203m,
       link: "/doctor/near-me/treat/obstetrics-gynaecology"
     },
     {

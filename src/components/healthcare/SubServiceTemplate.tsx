@@ -2,42 +2,9 @@
 
 import React from 'react'
 import Link from 'next/link'
-import {
-    ChevronRight,
-    Phone,
-    Calendar,
-    CheckCircle2,
-    MessageCircle,
-    Stethoscope,
-    Clock,
-    Zap,
-    Star,
-    Activity,
-    IndianRupee,
-    ShieldCheck,
-    Microscope,
-    Heart,
-    Siren,
-    Baby,
-    Dna,
-    Bone,
-    Eye,
-    Wind,
-    Apple,
-    Brain,
-    Scale,
-    Syringe,
-    Smile,
-    UserCheck,
-    Ear,
-    Ribbon,
-    Droplets,
-    Cpu,
-    Shield,
-    MapPin,
-    Sparkles,
-    ArrowRight,
-} from 'lucide-react'
+import { ChevronRight, Phone, Calendar, CheckCircle2, MessageCircle, Clock, Star, IndianRupee, Siren, Dna, Wind, Apple, Scale, UserCheck, Ear, Ribbon, Cpu, MapPin, Sparkles, ArrowRight, Shield } from "lucide-react"
+    ;
+import { Stethoscope, Electricity, HeartCardiogram, Microscope, Heart, Baby0203m, Orthopaedics, Eye, Neurology, Syringe, Happy, BloodDrop } from "healthicons-react/outline";
 import { SectionContainer } from '@/components/ui/section-container'
 import { SectionHeader } from '@/components/ui/section-header'
 import { MarketingContent, MarketingContentProps } from '@/components/marketing/MarketingContent'
@@ -50,10 +17,10 @@ import { injectInternalLinks } from '@/lib/html-linkify'
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
 const iconMap: Record<string, React.ElementType> = {
-    IndianRupee, Clock, Activity, Star, Zap, ShieldCheck, Microscope,
-    Stethoscope, Heart, Siren, Baby, Dna, Bone, Eye, Wind, Apple,
-    Brain, Scale, Syringe, Smile, UserCheck, Ear, Ribbon, Droplets,
-    Cpu, Shield, MapPin, CheckCircle2,
+    IndianRupee, Clock, HeartCardiogram, Star, Electricity, Shield, Microscope,
+    Stethoscope, Heart, Siren, Baby0203m, Dna, Orthopaedics, Eye, Wind, Apple,
+    Neurology, Scale, Syringe, Happy, UserCheck, Ear, Ribbon, BloodDrop,
+    Cpu, MapPin, CheckCircle2,
 }
 
 // ─── Types ──────────────────────────────────────────────────────────────────
@@ -209,7 +176,7 @@ export function SubServiceTemplate({
                 <div className={`grid gap-4 ${quickFacts.length <= 2 ? 'grid-cols-2' : quickFacts.length === 3 ? 'grid-cols-3' : 'grid-cols-2 sm:grid-cols-4'}`}>
                     {quickFacts.map((fact, index) => {
                         const Icon = fact.icon ? iconMap[fact.icon] : (
-                            index === 0 ? IndianRupee : index === 1 ? Clock : index === 2 ? ShieldCheck : Star
+                            index === 0 ? IndianRupee : index === 1 ? Clock : index === 2 ? Shield : Star
                         )
                         return (
                             <div key={index} className="bg-white dark:bg-slate-900 rounded-[2rem] shadow-soft border border-slate-100 dark:border-slate-700 p-6 text-center">
@@ -331,7 +298,7 @@ export function SubServiceTemplate({
                             {/* Why Indira card */}
                             <ModernCard className="p-8 bg-slate-900 border-none shadow-xl text-white rounded-[2rem]">
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <ShieldCheck className="w-5 h-5 text-pink-400" />
+                                    <Shield className="w-5 h-5 text-pink-400" />
                                     Why Indira Hospital?
                                 </h3>
                                 <ul className="space-y-3">
