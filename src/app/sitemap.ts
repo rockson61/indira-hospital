@@ -25,6 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/patients/cmc-vellore-alternative',
         '/patients/medical-visa-india',
         '/patients/lodging',
+        '/patients/transportation',
+        '/patients/visiting-our-main-campus',
         '/pay-bill',
         '/pharmacy',
         '/pricing',
