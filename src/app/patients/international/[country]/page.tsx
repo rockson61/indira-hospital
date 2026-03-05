@@ -17,6 +17,7 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { getImageUrl } from "@/lib/utils";
 import { clinicConfig } from "@/lib/data/clinic-config";
+import { ProctologyLaparoscopyHighlight } from "@/components/specialties/ProctologyLaparoscopyHighlight";
 
 const WA_NUMBER = "917010650063";
 const HOSPITAL_NAME = "Indira Super Speciality Hospital";
@@ -274,6 +275,14 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                                     </div>
                                 </div>
                             )}
+                        </section>
+
+                        {/* PROCTOLOGY & LAPAROSCOPY HIGHLIGHT */}
+                        <section>
+                            <ProctologyLaparoscopyHighlight
+                                countryName={country.name}
+                                waUrl={waUrl}
+                            />
                         </section>
 
                         {/* 3. CMC Vellore vs Indira */}

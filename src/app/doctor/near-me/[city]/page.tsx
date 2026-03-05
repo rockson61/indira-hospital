@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { ProctologyLaparoscopyHighlight } from "@/components/specialties/ProctologyLaparoscopyHighlight";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -345,6 +346,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     </div>
                 </SectionContainer>
             )}
+
+            {/* PROCTOLOGY & LAPAROSCOPY HIGHLIGHT */}
+            <SectionContainer className="py-16 max-w-7xl mx-auto">
+                <ProctologyLaparoscopyHighlight
+                    cityName={location.name}
+                    waUrl={WHATSAPP_URL}
+                />
+            </SectionContainer>
 
             {/* SPECIALIZED TREATMENTS FOR LOCALITY */}
             <SectionContainer className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden rounded-[4rem] border-y border-slate-100 dark:border-slate-700">
