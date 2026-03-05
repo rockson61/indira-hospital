@@ -22,6 +22,10 @@ const WHATSAPP_NUMBER = "917010650063";
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
+    // On Vercel, the Directus CMS API is not accessible from build servers.
+    // Return [] so pages are rendered on-demand instead of pre-building 600+ combinations.
+    if (process.env.VERCEL) return [];
+
     const [allDoctors, locations] = await Promise.all([
         getDoctors().catch(() => []),
         Promise.resolve(tamilNaduLocations),
@@ -34,6 +38,7 @@ export async function generateStaticParams() {
     }
     return params;
 }
+
 
 export async function generateMetadata({
     params,

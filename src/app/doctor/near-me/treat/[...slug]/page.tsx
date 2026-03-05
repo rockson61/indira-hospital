@@ -58,6 +58,13 @@ const serviceProcedures: Record<string, string[]> = {
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
+    // On Vercel the CMS API is unreachable — skip getServices() to avoid build timeouts.
+    // Treatment pages from local data are still pre-built; CMS service pages use dynamicParams.
+    if (process.env.VERCEL) {
+        return getAllTreatments().map((treatment) => ({
+            slug: [treatment.parentServiceSlug, treatment.slug]
+        }));
+    }
     const services = await getServices().catch(() => []);
     const serviceParams = services.map((service: any) => ({ slug: [service.slug] }));
     const treatmentParams = getAllTreatments().map((treatment) => ({
