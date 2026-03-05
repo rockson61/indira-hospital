@@ -40,22 +40,42 @@ export function HospitalCard() {
                     Premium State of the Art High level Quaternary care Superspeciality Hospital at the heart of Gandhinagar, Vellore.
                 </p>
 
-                <div className="space-y-3 mb-6">
-                    <div className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
-                        <MapPin className="w-4 h-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
-                        <span className="leading-snug">54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, IN 632006</span>
+                <div className="space-y-4 mb-6">
+                    <div className="flex flex-col gap-3">
+                        <div className="flex items-start gap-3 text-sm text-slate-800 dark:text-slate-200">
+                            <MapPin className="w-4 h-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
+                            <div>
+                                <p className="font-bold">Gandhi Nagar (HQ)</p>
+                                <p className="text-xs text-slate-500">54, Katpadi Road, Gandhi Nagar, Vellore</p>
+                                <a href="tel:+919842324425" className="text-fuchsia-600 font-bold">+91 98423 24425</a>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-3 text-sm text-slate-800 dark:text-slate-200">
+                            <MapPin className="w-4 h-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
+                            <div>
+                                <p className="font-bold">Konavattam Branch</p>
+                                <p className="text-xs text-slate-500">Bangalore Road, Konavattam, Vellore</p>
+                                <a href="tel:+919443334425" className="text-fuchsia-600 font-bold">+91 94433 34425</a>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-3 text-sm text-slate-800 dark:text-slate-200">
+                            <MapPin className="w-4 h-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
+                            <div>
+                                <p className="font-bold">Saidapet Branch</p>
+                                <p className="text-xs text-slate-500">Saidapet, Vellore</p>
+                                <a href="tel:+919443724425" className="text-fuchsia-600 font-bold">+91 94437 24425</a>
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
-                        <Phone className="w-4 h-4 text-fuchsia-600 flex-shrink-0" />
-                        <a href="tel:+919842324425" className="hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">
-                            +91 98423 24425
-                        </a>
-                    </div>
-                    <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
+
+                    <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 border-t border-slate-100 dark:border-slate-800 pt-3">
                         <Clock className="w-4 h-4 text-fuchsia-600 flex-shrink-0" />
-                        <span className="font-medium">Open 24/7 Hours</span>
+                        <span className="font-medium">24/7 Emergency & ICU</span>
                     </div>
                 </div>
+
 
                 <div className="pt-2">
                     <a

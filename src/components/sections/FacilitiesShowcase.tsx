@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { SectionContainer } from "@/components/ui/section-container"
-import { Scan, Clock, ArrowRight, Shield } from "lucide-react"
-;
+import { Scan, Clock, ArrowRight, Shield, Microscope, Activity, Baby, ShieldCheck, Ambulance, Heart, Zap, Compass, UserCheck } from "lucide-react"
+
 import { Pills2, Electricity, HeartCardiogram } from "healthicons-react/outline";
+import { clinicFacilities } from "@/lib/data/clinic-config";
 
 export function FacilitiesShowcase() {
     return (
@@ -15,83 +16,73 @@ export function FacilitiesShowcase() {
                     Beyond Consultations
                 </h2>
                 <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-medium">
-                    Comprehensive healthcare requires uninterrupted support. Explore our state-of-the-art diagnostic imaging and round-the-clock pharmacy services.
+                    Comprehensive healthcare requires uninterrupted support. Explore our state-of-the-art diagnostic imaging and round-the-clock hospital services.
                 </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {clinicFacilities.map((facility, index) => (
+                        <div
+                            key={index}
+                            className="group bg-white dark:bg-slate-800/50 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-200 dark:hover:border-fuchsia-900 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4"
+                        >
+                            <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                {index === 0 && <Microscope className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 1 && <Zap className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 2 && <HeartCardiogram className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 3 && <Activity className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 4 && <Scan className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 5 && <Pills2 className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 6 && <Compass className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 7 && <Activity className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 8 && <UserCheck className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 9 && <Ambulance className="w-6 h-6 text-fuchsia-600" />}
+                                {index === 10 && <ShieldCheck className="w-6 h-6 text-fuchsia-600" />}
+                                {!([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].includes(index)) && <Shield className="w-6 h-6 text-fuchsia-600" />}
+                            </div>
+                            <span className="text-sm font-bold text-slate-700 dark:text-slate-200 leading-tight">
+                                {facility}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
-                {/* 24/7 Pharmacy Card */}
-                <div className="group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 lg:p-12 border border-emerald-100 dark:border-emerald-900/30 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] transition-all duration-500 flex flex-col">
-                    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[80px] group-hover:bg-emerald-500/10 transition-colors duration-700 pointer-events-none" />
-
+            <div className="mt-16 flex flex-col md:flex-row gap-8 max-w-7xl mx-auto px-4">
+                {/* 24/7 Pharmacy Card (Keep as Highlight) */}
+                <div className="flex-1 group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 border border-emerald-100 dark:border-emerald-900/30 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
                     <div className="relative z-10">
-                        <div className="w-20 h-20 rounded-3xl bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center mb-8 shadow-inner group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-emerald-100 dark:border-emerald-900">
-                            <Pills2 className="w-10 h-10 text-emerald-500" />
+                        <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center mb-6 border border-emerald-100 dark:border-emerald-900">
+                            <Pills2 className="w-8 h-8 text-emerald-500" />
                         </div>
-
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1.5">
-                                <Clock className="w-3 h-3" /> 24x7 Open
-                            </div>
-                            <div className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1.5">
-                                <Shield className="w-3 h-3" /> 100% Genuine
-                            </div>
-                        </div>
-
-                        <h3 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-6 tracking-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                            The Indira Pharmacy
-                        </h3>
-
-                        <p className="text-slate-500 dark:text-slate-400 text-lg font-medium leading-relaxed mb-10 flex-grow">
-                            Never worry about medication availability. We stock critical, life-saving, and rare medications with verified cold-chain integrity and offer ultra-fast home delivery across Vellore.
+                        <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4">The Indira Pharmacy</h3>
+                        <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">
+                            24x7 stock of critical, life-saving medications with verified cold-chain integrity.
                         </p>
-                    </div>
-
-                    <div className="relative z-10 mt-auto">
-                        <Link href="/pharmacy" className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-500 text-emerald-700 hover:text-white font-bold rounded-2xl transition-all duration-300 border border-emerald-200 dark:border-emerald-800/50 overflow-hidden w-full sm:w-auto justify-center">
-                            <span className="relative z-10">Visit Pharmacy Hub</span>
-                            <ArrowRight className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                        <Link href="/pharmacy" className="inline-flex items-center gap-2 text-emerald-600 font-bold hover:gap-3 transition-all">
+                            Visit Pharmacy <ArrowRight className="w-4 h-4" />
                         </Link>
                     </div>
                 </div>
 
-                {/* Scans & Imaging Card */}
-                <div className="group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 lg:p-12 border border-blue-100 dark:border-blue-900/30 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.1)] transition-all duration-500 flex flex-col">
-                    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[80px] group-hover:bg-blue-500/10 transition-colors duration-700 pointer-events-none" />
-
+                {/* Scans & Imaging Card (Keep as Highlight) */}
+                <div className="flex-1 group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 border border-blue-100 dark:border-blue-900/30 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
                     <div className="relative z-10">
-                        <div className="w-20 h-20 rounded-3xl bg-blue-50 dark:bg-blue-950 flex items-center justify-center mb-8 shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 border border-blue-100 dark:border-blue-900">
-                            <Scan className="w-10 h-10 text-blue-500" />
+                        <div className="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-950 flex items-center justify-center mb-6 border border-blue-100 dark:border-blue-900">
+                            <Scan className="w-8 h-8 text-blue-500" />
                         </div>
-
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1.5">
-                                <Electricity className="w-3 h-3" /> Advanced Tech
-                            </div>
-                            <div className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1.5">
-                                <Clock className="w-3 h-3" /> Fast Reports
-                            </div>
-                        </div>
-
-                        <h3 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-6 tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                            Scans & Imaging Center
-                        </h3>
-
-                        <p className="text-slate-500 dark:text-slate-400 text-lg font-medium leading-relaxed mb-10 flex-grow">
-                            Equipped with a silent 3T MRI, 128-Slice CT, and 4D Ultrasound arrays. We provide the highest resolution diagnostic clarity, allowing our specialists to treat with absolute precision.
+                        <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4">Scans & Imaging</h3>
+                        <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">
+                            High-precision diagnostics including MRI, 128-Slice CT, and 4D Ultrasound arrays.
                         </p>
-                    </div>
-
-                    <div className="relative z-10 mt-auto">
-                        <Link href="/scans" className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-500 text-blue-700 hover:text-white font-bold rounded-2xl transition-all duration-300 border border-blue-200 dark:border-blue-800/50 overflow-hidden w-full sm:w-auto justify-center">
-                            <span className="relative z-10">View Scan Details</span>
-                            <ArrowRight className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                        <Link href="/scans" className="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">
+                            View Scan Details <ArrowRight className="w-4 h-4" />
                         </Link>
                     </div>
                 </div>
-
             </div>
         </SectionContainer>
     )
 }
+

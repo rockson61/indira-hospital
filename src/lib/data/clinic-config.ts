@@ -10,81 +10,89 @@ export const clinicTimings = [
 
 export const clinicConfig = {
     name: "Indira Super Speciality Hospital",
-    phone: "098423 24425",
+    phone: "+91 098423 24425",
     email: "info@indirasuperspecialityhospital.com",
     address: "54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006",
-    // Actually, let's use the safer "Vellore" if unsure to avoid specific branch confusion, but user said "take from website".
-    // The website footer usually lists the main address. I'll stick to a verified one or placeholder "Vellore".
-    // I will use "No. 33, Officer's Line, Vellore" which is a common location, or just "Vellore, Tamil Nadu" to be safe.
-    // Wait, the scraped text was "Vellore, Tamil Nadu, India". I'll update phone/email specifically.
     googleMapsUrl: "https://maps.app.goo.gl/Check",
     socials: {
         facebook: "https://www.facebook.com/indirasuperspecialityhospitals/",
         instagram: "https://www.instagram.com/indirasuperspecialityhospitals/?hl=en",
         youtube: "https://www.youtube.com/@IndiraHospital"
-    }
+    },
+    branches: [
+        { name: "Gandhi Nagar", address: "54, Katpadi Main Rd, Gandhi Nagar, Vellore", phone: "+91 098423 24425" },
+        { name: "Konavattam", address: "Bangalore Road, Konavattam, Vellore", phone: "+91 94433 34425" },
+        { name: "Saidapet", address: "Saidapet, Vellore", phone: "+91 94437 24425" },
+    ]
 };
+
+export const clinicFacilities = [
+    "24 Hrs Hitech in house Laboratory",
+    "Digital X-Ray / ECG (Electro Cardiogram)",
+    "ECHO / Holter / Treadmill",
+    "Nuclear Medicine (In Process)",
+    "USG / CT Scan",
+    "24 Hrs Pharmacy / 24 Hrs ICU",
+    "Endoscopy / Colonoscopy",
+    "Lithotripsy / Dialysis Facility",
+    "24 Hrs Qualified Doctors / Nurses",
+    "Ambulance Services",
+    "State of the art Modular Operation Theatres"
+];
+
+export const insurancePartners = [
+    "MD India Insurance Private Limited",
+    "Chief Minister Comprehensive Health Insurance Scheme",
+    "Employee Health Insurance Scheme",
+    "Pensioners Health Insurance Scheme",
+    "Co-Operative Society Health Insurance Scheme",
+    "Aavi",
+    "Star Health Insurance",
+    "HDFC ERGO Health Insurance",
+    "Reliance General Insurance",
+    "TATA AIG Insurance",
+    "Cholamandalam MS General Insurance",
+    "ICICI Lombard General Insurance",
+    "Oriental Insurance Company",
+    "National Insurance Company",
+    "New India Assurance",
+    "United India Insurance",
+    "Aditya Birla Health Insurance",
+    "Niva Bupa Health Insurance",
+    "Care Health Insurance",
+];
 
 export const clinicEquipment = [
     {
-        id: 'mri',
-        icon: 'Microscope',
-        title: '3T MRI Scanner',
-        description: 'Advanced magnetic resonance imaging for precise neurological and musculoskeletal diagnosis.',
+        id: 'xray',
+        title: 'Digital X-Ray',
+        description: 'Advanced digital radiography for high-resolution imaging with minimal radiation exposure.',
     },
     {
         id: 'ct-scan',
-        icon: 'ScanFace',
-        title: '128-Slice CT Scanner',
-        description: 'Ultra-fast, low-radiation imaging for cardiac, trauma, and abdominal emergencies.',
+        title: 'USG / CT Scan',
+        description: 'High-speed 128-slice CT and advanced ultrasound mapping for precise diagnostics.',
     },
     {
         id: 'dialysis',
-        icon: 'Activity',
-        title: 'Advanced Dialysis Unit',
-        description: 'State-of-the-art Fresenius machines for 24/7 renal support.',
+        title: 'Dialysis Facility',
+        description: 'Modern renal support unit providing 24/7 life-sustaining dialysis treatments.',
     },
     {
-        id: 'nicu',
-        icon: 'Baby',
-        title: 'Level 3 NICU',
-        description: 'Comprehensive neonatal intensive care for premature and high-risk newborns.',
-    },
-    {
-        id: 'theatres',
-        icon: 'ShieldCheck',
+        id: 'ot',
         title: 'Modular OTs',
-        description: 'Hepa-filtered operating theatres for infection-free complex surgeries.',
+        description: 'State-of-the-art modular operating theatres with Hepa-filters for sterile surgical environments.',
+    },
+    {
+        id: 'icu',
+        title: '24 Hrs ICU',
+        description: 'Fully equipped intensive care units with advanced life support and continuous monitoring.',
     },
 ];
 
 export const insurancePlans = [
-    {
-        provider: 'Star Health',
-        type: 'Cashless',
-        coverage: 'All procedures',
-        treatments: ['Cardiology', 'Orthopaedics', 'General Surgery'],
-        cashless: 'Yes',
-    },
-    {
-        provider: 'Aditya Birla',
-        type: 'Reimbursement',
-        coverage: 'Major surgeries',
-        treatments: ['Nephrology', 'Trauma Care'],
-        cashless: 'No',
-    },
-    {
-        provider: 'HDFC Ergo',
-        type: 'Cashless',
-        coverage: 'Accident & Emergency',
-        treatments: ['Emergency Care', 'Fractures'],
-        cashless: 'Yes',
-    },
-    {
-        provider: 'ICICI Lombard',
-        type: 'Reimbursement',
-        coverage: 'In-patient care',
-        treatments: ['Hospitalization', 'Critical Care'],
-        cashless: 'No',
-    },
+    { provider: 'MD India Insurance', type: 'Cashless', coverage: 'Full', cashless: 'Yes', treatments: ['All Procedures'] },
+    { provider: 'Star Health', type: 'Cashless', coverage: 'Full', cashless: 'Yes', treatments: ['All Procedures'] },
+    { provider: 'HDFC ERGO', type: 'Cashless', coverage: 'Full', cashless: 'Yes', treatments: ['All Procedures'] },
+    { provider: 'Reliance General', type: 'Cashless', coverage: 'Full', cashless: 'Yes', treatments: ['All Procedures'] },
 ];

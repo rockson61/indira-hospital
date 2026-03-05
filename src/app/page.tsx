@@ -12,6 +12,7 @@ import { HomePromoLinks } from "@/components/sections/HomePromoLinks";
 import { FacilitiesShowcase } from "@/components/sections/FacilitiesShowcase";
 import { HomeUpcomingEvents } from "@/components/sections/HomeUpcomingEvents";
 import { HomeLatestNews } from "@/components/sections/HomeLatestNews";
+import { InsuranceMarquee } from "@/components/sections/InsuranceMarquee";
 import { HOME_PAGE_CONTENT } from "@/config/constants";
 import { MessageCircle, Phone, ArrowRight, Sparkles } from "lucide-react";
 import { Metadata } from "next";
@@ -134,6 +135,7 @@ export default function Home() {
         <DepartmentGridSection />
         <SignatureTreatments />
         <WhyChooseUs />
+        <InsuranceMarquee />
         <DoctorHighlightSection />
         <Testimonials />
         <HealthLibraryCard />
