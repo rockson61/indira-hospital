@@ -6,14 +6,14 @@ import { GitMerge, Bone, Scissors, Sparkles, Baby, ShieldCheck, HeartPulse, Gem 
 import { cn } from "@/lib/utils";
 
 const serviceCategories = [
-  { name: 'Orthopedics', url: '/departments/orthopedics', icon: Bone },
-  { name: 'Cardiology', url: '/departments/cardiology', icon: HeartPulse },
-  { name: 'Neurology', url: '/departments/neurology', icon: GitMerge }, // Conceptual icon
-  { name: 'Oncology', url: '/departments/oncology', icon: Sparkles },
-  { name: 'Pediatrics', url: '/departments/pediatrics', icon: Baby },
-  { name: 'General', url: '/departments/general-medicine', icon: ShieldCheck },
-  { name: 'Urology', url: '/departments/urology', icon: Gem }, // Conceptual
-  { name: 'Surgery', url: '/departments/surgery', icon: Scissors },
+  { name: 'Orthopedics', url: '/departments/orthopedics', icon: Bone, medicalIcon: 'medical-icon-physical-therapy' },
+  { name: 'Cardiology', url: '/departments/cardiology', icon: HeartPulse, medicalIcon: 'medical-icon-cardiology' },
+  { name: 'Neurology', url: '/departments/neurology', icon: GitMerge, medicalIcon: 'medical-icon-neurology' }, // Conceptual icon
+  { name: 'Oncology', url: '/departments/oncology', icon: Sparkles, medicalIcon: 'medical-icon-oncology' },
+  { name: 'Pediatrics', url: '/departments/pediatrics', icon: Baby, medicalIcon: 'medical-icon-pediatrics' },
+  { name: 'General', url: '/departments/general-medicine', icon: ShieldCheck, medicalIcon: 'medical-icon-internal-medicine' },
+  { name: 'Urology', url: '/departments/urology', icon: Gem, medicalIcon: 'medical-icon-kidney' }, // Conceptual
+  { name: 'Surgery', url: '/departments/surgery', icon: Scissors, medicalIcon: 'medical-icon-surgery' },
 ];
 
 export default function ServiceCategoryWidget() {
@@ -43,7 +43,11 @@ export default function ServiceCategoryWidget() {
               >
                 <div className="clay-button p-4 h-full flex flex-col items-center justify-center text-center space-y-2 group-hover:scale-105 transition-transform duration-300">
                   <div className="w-10 h-10 flex items-center justify-center bg-white/50 rounded-full">
-                    <Icon className="w-5 h-5 text-fuchsia-700" />
+                    {category.medicalIcon ? (
+                      <span className={`${category.medicalIcon} text-xl text-fuchsia-700`} aria-hidden="true"></span>
+                    ) : (
+                      <Icon className="w-5 h-5 text-fuchsia-700" />
+                    )}
                   </div>
                   <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">{category.name}</span>
                 </div>

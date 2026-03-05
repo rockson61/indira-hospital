@@ -36,6 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="stylesheet" href="/css/wfmi-style.css" />
+      </head>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
       >

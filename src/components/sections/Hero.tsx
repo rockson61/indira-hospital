@@ -8,14 +8,14 @@ import { siteConfig } from "@/config/site";
 import Image from "next/image";
 
 const popularTreatments = [
-    { label: "Piles", icon: Zap, href: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
-    { label: "Fistula", icon: Scissors, href: "/doctor/near-me/treat/general-surgery/fistula-surgery-treatment" },
-    { label: "Kidney Stones", icon: Heart, href: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
-    { label: "Hernia", icon: Stethoscope, href: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
-    { label: "Gallstone", icon: Activity, href: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
-    { label: "Knee Replace", icon: Bone, href: "/doctor/near-me/treat/orthopaedics/total-knee-replacement-cost" },
-    { label: "Cataract", icon: Eye, href: "/doctor/near-me/treat/ophthalmology" },
-    { label: "Gynaecology", icon: Baby, href: "/doctor/near-me/treat/obstetrics-gynaecology" },
+    { label: "Piles", icon: Zap, href: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost", medicalIcon: "medical-icon-surgery" },
+    { label: "Fistula", icon: Scissors, href: "/doctor/near-me/treat/general-surgery/fistula-surgery-treatment", medicalIcon: "medical-icon-surgery" },
+    { label: "Kidney Stones", icon: Heart, href: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery", medicalIcon: "medical-icon-kidney" },
+    { label: "Hernia", icon: Stethoscope, href: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair", medicalIcon: "medical-icon-surgery" },
+    { label: "Gallstone", icon: Activity, href: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery", medicalIcon: "medical-icon-surgery" },
+    { label: "Knee Replace", icon: Bone, href: "/doctor/near-me/treat/orthopaedics/total-knee-replacement-cost", medicalIcon: "medical-icon-surgery" },
+    { label: "Cataract", icon: Eye, href: "/doctor/near-me/treat/ophthalmology", medicalIcon: "medical-icon-ophthalmology" },
+    { label: "Gynaecology", icon: Baby, href: "/doctor/near-me/treat/obstetrics-gynaecology", medicalIcon: "medical-icon-womens-health" },
 ];
 
 export function Hero() {
@@ -200,7 +200,11 @@ export function Hero() {
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-white/5 group-hover:bg-fuchsia-500 flex items-center justify-center transition-all duration-500 shadow-lg dark:shadow-xl group-hover:shadow-fuchsia-500/20">
-                                    <t.icon className="w-7 h-7 text-fuchsia-500 dark:text-fuchsia-400 group-hover:text-white transition-colors" />
+                                    {t.medicalIcon ? (
+                                        <span className={`${t.medicalIcon} text-3xl text-fuchsia-500 dark:text-fuchsia-400 group-hover:text-white transition-colors`} aria-hidden="true"></span>
+                                    ) : (
+                                        <t.icon className="w-7 h-7 text-fuchsia-500 dark:text-fuchsia-400 group-hover:text-white transition-colors" />
+                                    )}
                                 </div>
                                 <span className="text-sm font-bold text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors text-center">
                                     {t.label}
@@ -214,6 +218,7 @@ export function Hero() {
                     </div>
                 </motion.div>
             </div>
+
         </section>
     );
 }
