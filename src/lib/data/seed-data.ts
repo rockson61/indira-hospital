@@ -528,8 +528,8 @@ export const SEED_DATA = {
             ]
         },
         {
-            "title": "Opthalmology",
-            "slug": "opthalmology",
+            "title": "Ophthalmology",
+            "slug": "ophthalmology",
             "short_description": "World-class Ophthalmology offering micro-incision cataract surgery and comprehensive eye care.",
             "icon": "Eye",
             "full_description": "<h2>Advanced Ophthalmology & Vision Restoration</h2>\n<p>Your eyesight is your window to the world. The <strong>Department of Ophthalmology</strong> at Indira Super Speciality Hospital is deeply committed to preserving, correcting, and entirely restoring your vision through state-of-the-art diagnostic imaging and microscopic surgical precision.</p>\n<h3>Comprehensive Eye Care Interventions</h3>\n<p>Our renowned eye specialists utilize the latest optical technologies to deliver crystal-clear results:</p>\n<ul>\n<li><strong>Advanced Cataract Surgery</strong>: Stitchless, completely painless Micro-Incision Cataract Surgery (Phacoemulsification) featuring the implantation of premium, high-definition Intraocular Lenses (IOLs) for immediate vision clarity.</li>\n<li><strong>Precision Vision Correction</strong>: Expert medical evaluation and advanced treatment pathways for severe refractive errors, including high-degree myopia, hyperopia, and complex astigmatism.</li>\n<li><strong>Diabetic Retinopathy & Glaucoma</strong>: Thorough, high-resolution retinal screening and aggressive, long-term management strategies to prevent irreversible vision loss in diabetic and high-pressure eye patients.</li>\n<li><strong>Specialized Pediatric Eye Care</strong>: Empathetic, child-friendly diagnostics and treatments for early-onset vision issues, including the critical evaluation and surgical correction of strabismus (squint).</li>\n</ul>\n<p>We combine deep clinical expertise with cutting-edge ophthalmic instrumentation to protect your sight for a lifetime.</p>"
