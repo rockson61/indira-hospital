@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { FOOTER_LINKS } from "@/lib/data/footer-links";
 import { LOCATION_HIERARCHY } from "@/lib/data/location-hierarchy";
 import { Phone, MapPin, Mail, ArrowUpRight } from "lucide-react";
+import { HospitalCard } from "@/components/entities/HospitalCard";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -13,29 +14,8 @@ export function Footer() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Top: Brand + Contact */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    <div className="lg:col-span-1 space-y-5">
-                        <span className="text-2xl font-heading font-black tracking-tight text-slate-900 dark:text-white">{siteConfig.name}</span>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed font-medium max-w-xs">{siteConfig.description}</p>
-                        <div className="space-y-3">
-                            <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center gap-3 text-sm font-bold text-rose-600 dark:text-rose-400 hover:text-rose-500 dark:hover:text-rose-300 transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-rose-50 dark:bg-rose-500/10 flex items-center justify-center flex-shrink-0">
-                                    <Phone className="w-4 h-4" />
-                                </div>
-                                Emergency: {siteConfig.contact.emergencyPhone}
-                            </a>
-                            <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
-                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-                                    <MapPin className="w-4 h-4" />
-                                </div>
-                                {siteConfig.contact.address}
-                            </div>
-                            <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-                                    <Mail className="w-4 h-4" />
-                                </div>
-                                {siteConfig.contact.email}
-                            </a>
-                        </div>
+                    <div className="lg:col-span-1">
+                        <HospitalCard />
                     </div>
 
                     {/* Services Column */}
