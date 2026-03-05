@@ -14,6 +14,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { siteConfig } from "@/config/site";
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -80,9 +81,9 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
 
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "MedicalClinic", // Or "MedicalSpecialty"
+        "@type": "MedicalClinic",
         name: `${department.title} Department`,
-        url: `https://www.indirasuperspecialityhospital.com/departments/${slug}`,
+        url: `${siteConfig.url}/departments/${slug}`,
         description: department.seo_description || department.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || department.short_description,
         medicalSpecialty: {
             "@type": "MedicalSpecialty",
@@ -90,8 +91,8 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
         },
         provider: {
             "@type": "Hospital",
-            name: "Indira Super Speciality Hospital",
-            url: "https://www.indirasuperspecialityhospital.com",
+            name: siteConfig.name,
+            url: siteConfig.url,
         },
     };
 

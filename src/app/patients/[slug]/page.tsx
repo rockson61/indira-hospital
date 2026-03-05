@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { PATIENT_RESOURCES } from "@/lib/data/patient-resources";
 import { notFound } from "next/navigation";
 import { SectionContainer } from "@/components/ui/section-container";
@@ -11,6 +12,25 @@ export async function generateStaticParams() {
         slug: resource.slug,
     }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const resource = PATIENT_RESOURCES.find((r) => r.slug === slug);
+
+    if (!resource) return { title: "Resource Not Found" };
+
+    return {
+        title: `${resource.title} | Patient Guide | Indira Hospital`,
+        description: `${resource.short_description} Learn about ${resource.title.toLowerCase()} at Indira Super Speciality Hospital, Vellore. Find details on ${resource.category.toLowerCase()} and more.`,
+        keywords: [resource.title, resource.category, "Patient Resources", "Indira Hospital", "Vellore", "India"],
+        openGraph: {
+            title: `${resource.title} | Indira Hospital`,
+            description: resource.short_description,
+            type: "article",
+        },
+    };
+}
+
 
 export default async function PatientResourcePage({ params }: { params: Promise<{ slug: string }> }) {
     const resolvedParams = await params;

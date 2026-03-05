@@ -10,7 +10,7 @@ const flowData = [
         description: "Well Connected by Indira Hospital helps you find doctors based on what matters most to you. Because the right care starts with the right fit.",
         ctaText: "Learn more",
         ctaHref: "/doctors",
-        imageSrc: "/images/mother_baby_family.png",
+        imageSrc: "/images/hospital/Reception.webp",
         imageAlt: "Mother and Father with new baby",
         icon: <HeartCardiogram className="w-8 h-8 text-fuchsia-500" />
     },
@@ -19,7 +19,7 @@ const flowData = [
         description: "Experience unparalleled service and peace of mind with our comprehensive services; ensuring you receive the care you need, whenever you need it.",
         ctaText: "Find a Doctor",
         ctaHref: "/doctors",
-        imageSrc: "/images/hospital_exterior.png",
+        imageSrc: "/images/hospital/Hospital view.webp",
         imageAlt: "Indira Hospital exterior",
         icon: <Hospital className="w-8 h-8 text-blue-500" />
     },
@@ -28,7 +28,7 @@ const flowData = [
         description: "Indira Hospital offers many locations across Tamil Nadu to provide convenient care for you and your family. We're nearby when you need us.",
         ctaText: "View Our Locations",
         ctaHref: "/doctor/near-me",
-        imageSrc: "https://images.unsplash.com/photo-1538108149393-cebb92afe46d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        imageSrc: "/images/hospital/Hospital.webp",
         imageAlt: "Hospital location map",
         icon: <MapPin className="w-8 h-8 text-amber-500" />
     },
@@ -37,7 +37,7 @@ const flowData = [
         description: "We're proud to offer comprehensive healthcare services for our community, including heart care, cancer care, primary care and pediatrics. We provide healthcare for life.",
         ctaText: "View Our Services",
         ctaHref: "/doctor/near-me/treat",
-        imageSrc: "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        imageSrc: "/images/hospital/OT.webp",
         imageAlt: "Doctor checking patient",
         icon: <Stethoscope className="w-8 h-8 text-emerald-500" />
     }

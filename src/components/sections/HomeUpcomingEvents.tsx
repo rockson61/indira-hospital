@@ -11,7 +11,7 @@ const DUMMY_EVENTS = [
         time: "10:00 AM - 12:00 PM",
         speaker: "Dr. Sudhir Reddy",
         category: "Seminar",
-        image: "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/hospital/OT.webp"
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const DUMMY_EVENTS = [
         time: "09:00 AM - 05:00 PM",
         speaker: "Dr. Lokesh Kumar",
         category: "Conference",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/hospital/Hospital view 2.webp"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const DUMMY_EVENTS = [
         time: "08:00 AM - 02:00 PM",
         speaker: "Public Health Team",
         category: "Community",
-        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/hospital/Consultation.webp"
     }
 ];
 

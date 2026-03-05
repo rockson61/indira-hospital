@@ -171,7 +171,7 @@ export default async function HealthPackagesPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="hidden lg:block relative min-h-[400px] border-l border-white/10 rounded-r-[4rem] overflow-hidden bg-[url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop')] bg-cover bg-center">
+                        <div className="hidden lg:block relative min-h-[400px] border-l border-white/10 rounded-r-[4rem] overflow-hidden bg-[url('/images/hospital/Consultation.webp')] bg-cover bg-center">
                             <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px]"></div>
                         </div>
                     </div>

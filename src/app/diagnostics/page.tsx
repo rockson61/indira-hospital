@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { getDiagnostics } from "@/lib/api"
+import { siteConfig } from "@/config/site"
 import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Clock, ArrowRight, FileText, CheckCircle2, Sparkles, Beaker, Shield } from "lucide-react"
@@ -234,13 +235,13 @@ export default async function DiagnosticsPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "MedicalClinic",
-                        "name": "Indira Super Speciality Hospital — Diagnostics",
-                        "url": "https://www.indirasuperspecialityhospital.com/diagnostics",
+                        "name": `${siteConfig.name} — Diagnostics`,
+                        "url": `${siteConfig.url}/diagnostics`,
                         "medicalSpecialty": "Diagnostic",
                         "availableService": diagnostics.map((t: Diagnostic) => ({
                             "@type": "MedicalTest",
                             "name": t.name,
-                            "url": `https://www.indirasuperspecialityhospital.com/diagnostics/${t.slug}`,
+                            "url": `${siteConfig.url}/diagnostics/${t.slug}`,
                             "description": (t as any).seo_description || t.short_description,
                             ...(t.price && { "offers": { "@type": "Offer", "price": t.price, "priceCurrency": "INR" } }),
                         })),

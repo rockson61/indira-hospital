@@ -16,7 +16,7 @@ import { getDoctors } from "@/lib/api";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { getImageUrl } from "@/lib/utils";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 import { ProctologyLaparoscopyHighlight } from "@/components/specialties/ProctologyLaparoscopyHighlight";
 
 const WA_NUMBER = "917010650063";
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
             locale: "en_IN",
         },
         alternates: {
-            canonical: `https://www.indirasuperspecialityhospital.com/patients/international/${slug}`,
+            canonical: `${siteConfig.url}/patients/international/${slug}`,
         },
     };
 }
@@ -75,9 +75,9 @@ export default async function InternationalCountryPage({ params }: { params: Pro
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": ["MedicalOrganization", "TouristInformationCenter"],
-        name: HOSPITAL_NAME,
+        name: siteConfig.name,
         description: `International patient services for patients from ${country.name}`,
-        url: `https://www.indirasuperspecialityhospital.com/patients/international/${slug}`,
+        url: `${siteConfig.url}/patients/international/${slug}`,
         address: {
             "@type": "PostalAddress",
             streetAddress: "54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar",
@@ -85,7 +85,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
             postalCode: "632006",
             addressCountry: "IN",
         },
-        telephone: clinicConfig.phone,
+        telephone: siteConfig.contact.phone,
         areaServed: [
             { "@type": "Country", name: country.name },
             { "@type": "Country", name: "India" },
@@ -173,7 +173,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                             <MessageCircle className="w-5 h-5" />
                             WhatsApp — Free Consultation
                         </a>
-                        <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                             className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl border border-white/20 transition-all">
                             <Phone className="w-5 h-5" />
                             Call Us Now
@@ -498,10 +498,10 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                                     <MessageCircle className="w-4 h-4" />
                                     Chat on WhatsApp
                                 </a>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                                     className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all text-sm">
                                     <Phone className="w-4 h-4" />
-                                    {clinicConfig.phone}
+                                    {siteConfig.contact.phone}
                                 </a>
                                 <p className="text-center text-fuchsia-300/60 text-xs mt-4">We reply in &lt; 2 hours</p>
                             </div>

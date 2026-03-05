@@ -11,7 +11,7 @@ const DUMMY_NEWS = [
         date: "March 12, 2026",
         author: "Media Desk",
         category: "Hospital News",
-        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/hospital/Diagnostic.webp"
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const DUMMY_NEWS = [
         date: "March 05, 2026",
         author: "Cardiology Dept",
         category: "Technology",
-        image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/hospital/CT.webp"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const DUMMY_NEWS = [
         date: "February 28, 2026",
         author: "Dr. Lokesh Kumar",
         category: "Health Tips",
-        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/hospital/ER.webp"
     }
 ];
 

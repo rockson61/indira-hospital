@@ -33,7 +33,7 @@ export default async function DoctorsDirectoryPage() {
                 title="Best Doctors & Specialist Surgeons in Vellore"
                 subtitle="Expert Care You Can Trust"
                 description="Don't leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
-                backgroundImage="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200"
+                backgroundImage="/images/hospital/Consultation.webp"
             />
 
             <SectionContainer className="py-24 -mt-16 relative z-10 min-h-[50vh]">

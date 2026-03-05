@@ -58,9 +58,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             `hospital in ${location.name}`,
             `best hospital near ${location.name}`,
             `laparoscopic surgery in ${location.name}`,
-            `laser piles treatment ${location.name}`,
-            `doctors in ${location.name}`,
+            `laser piles treatment near ${location.name}`,
+            `emergency hospital ${location.name}`,
+            `specialist doctors in ${location.name}`,
+            "Indira Hospital Vellore",
+            "medical tourism India",
         ],
+        openGraph: {
+            title: `Best Hospital in ${location.name} | Indira Super Speciality Hospital`,
+            description: `Advanced laser & laparoscopic surgeries for patients in ${location.name}. NABH accredited, 24/7 emergency care, and cashless insurance.`,
+            type: "website",
+        },
     };
 }
 

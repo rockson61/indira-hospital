@@ -9,6 +9,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
+import { siteConfig } from "@/config/site"
 
 const WHATSAPP_NUMBER = "917010650063";
 
@@ -204,11 +205,11 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                             "price": pkg.price,
                             "priceCurrency": "INR",
                             "availability": "https://schema.org/InStock",
-                            "url": `https://www.indirasuperspecialityhospital.com/health-packages/${slug}`
+                            "url": `${siteConfig.url}/health-packages/${slug}`
                         },
                         "brand": {
                             "@type": "MedicalOrganization",
-                            "name": "Indira Super Speciality Hospital"
+                            "name": siteConfig.name
                         }
                     })
                 }}

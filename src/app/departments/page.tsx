@@ -28,7 +28,7 @@ export default async function DepartmentsDirectoryPage() {
                 title="Best Multispeciality Hospital Departments in Vellore"
                 subtitle="Comprehensive Care Under One Roof"
                 description="Experience world-class treatment across 15+ advanced specialities. From complex cardiac care to minimally invasive laparoscopic surgery, our NABH-accredited hospital in Vellore delivers precise, compassionate, and transparent healthcare."
-                backgroundImage="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1200"
+                backgroundImage="/images/hospital/Hospital.webp"
             />
 
             <SectionContainer className="py-24 -mt-16 relative z-10 min-h-[50vh]">

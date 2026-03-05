@@ -5,6 +5,9 @@ import { getAllTechnologies } from '@/lib/data/technology-data';
 import { PATIENT_RESOURCES } from '@/lib/data/patient-resources';
 import { getAllTreatments } from '@/lib/data/treatment-data';
 import { INTERNATIONAL_COUNTRIES } from '@/lib/data/international-data';
+import { GLOSSARY_DATA } from '@/lib/data/glossary-data';
+
+const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = siteConfig.url;
@@ -140,6 +143,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.8,
         }));
 
+        const glossaryRoutes = GLOSSARY_DATA.map((item) => ({
+            url: `${baseUrl}/glossary/${slugify(item.term)}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.6,
+        }));
+
         // City × Department sub-routes (sample — expand as needed)
         const cityDeptRoutes = (locations as any[]).flatMap((loc: any) =>
             (departments as any[]).map((dept: any) => ({
@@ -171,6 +181,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             ...patientResourceRoutes,
             ...treatmentRoutes,
             ...internationalCountryRoutes,
+            ...glossaryRoutes,
             ...cityDeptRoutes,
             ...cityDoctorRoutes,
         ];

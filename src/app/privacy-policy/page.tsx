@@ -1,4 +1,5 @@
 import { SectionContainer } from "@/components/ui/section-container"
+import { siteConfig } from "@/config/site"
 
 export default function PrivacyPolicyPage() {
     return (
@@ -7,9 +8,8 @@ export default function PrivacyPolicyPage() {
                 <h1>Privacy Policy</h1>
                 <p>Last updated: January 1, 2026</p>
 
-                <h2>1. Introduction</h2>
                 <p>
-                    Indira Hospital ("us", "we", or "our") operates the https://www.indirasuperspecialityhospital.com website (the "Service").
+                    Indira Hospital ("us", "we", or "our") operates the {siteConfig.url} website (the "Service").
                     This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
                 </p>
 
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
                 </ul>
 
                 <h2>4. Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy, please contact us by email: info@indirasuperspecialityhospital.com</p>
+                <p>If you have any questions about this Privacy Policy, please contact us by email: {siteConfig.contact.email}</p>
             </SectionContainer>
         </main>
     )

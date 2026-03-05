@@ -10,7 +10,7 @@ export const DOCTORS_DIRECTORY = {
 } as const;
 
 export const DOCTORS_DATA = {
-    PLACEHOLDER_IMAGE: "/images/doctors/placeholder.jpg",
+    PLACEHOLDER_IMAGE: "/images/hospital/Hospital view 2.webp",
 } as const;
 
 export const DEPARTMENTS_DATA = {
@@ -59,7 +59,7 @@ export const BLOG_CONFIGURATION = {
     TITLE: "Health Insights & News",
     SUBTITLE: "Expert advice, wellness tips, and the latest updates from Indira Super Speciality Hospital.",
     NO_IMAGE_PLACEHOLDER: "No Image",
-    PLACEHOLDER_IMAGE_PATH: "/images/hospital-placeholder.jpg",
+    PLACEHOLDER_IMAGE_PATH: "/images/hospital/Hospital view 2.webp",
     DEFAULT_CATEGORY: "Health",
     DEFAULT_AUTHOR: "Indira Hospital",
     READ_ARTICLE_BUTTON: "Read Article",

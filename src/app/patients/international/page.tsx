@@ -82,7 +82,7 @@ export default function InternationalPatientsPage() {
                     <div className="order-2 lg:order-1 relative group">
                         <div className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-slate-100 dark:border-slate-700 relative z-10">
                             <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-700 z-10" />
-                            <Image src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200"
+                            <Image src="/images/hospital/Hospital view.webp"
                                 alt="Patient Care at Indira Hospital" fill className="object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out" />
                         </div>
 

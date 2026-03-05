@@ -105,7 +105,7 @@ export default function QualitySafetyPage() {
                         </div>
                         <div className="relative">
                             <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                <Image src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800"
+                                <Image src="/images/hospital/OT.webp"
                                     alt="Clinical Excellence" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-8 -right-8 bg-fuchsia-600 text-white p-10 rounded-3xl shadow-2xl max-w-xs">

@@ -129,19 +129,18 @@ export function Hero() {
                             className="absolute top-0 right-0 w-full h-[550px] rounded-[4rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 z-10 group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-transparent to-transparent opacity-60 z-10" />
-                            <iframe
-                                src="https://www.youtube.com/embed/s9m2Ql_Ro7o?autoplay=1&mute=1&controls=0&loop=1&playlist=s9m2Ql_Ro7o&playsinline=1&modestbranding=1&rel=0"
-                                title="Indira Hospital"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-transform duration-[2s] group-hover:scale-105"
-                                style={{ border: 'none' }}
+                            <Image
+                                src="/images/hospital/Hospital view 2.webp"
+                                alt="Indira Super Speciality Hospital"
+                                fill
+                                className="object-cover transition-transform duration-[2s] group-hover:scale-105"
                             />
 
                             <div className="absolute bottom-10 left-10 z-20">
                                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-100 dark:bg-fuchsia-500/20 backdrop-blur-md border border-fuchsia-200 dark:border-fuchsia-500/30 text-fuchsia-700 dark:text-fuchsia-300 text-xs font-bold tracking-widest uppercase mb-4">
-                                    <Monitor className="w-3.5 h-3.5" /> High-Tech OTs
+                                    <Monitor className="w-3.5 h-3.5" /> High-Tech Care
                                 </span>
-                                <h3 className="text-3xl font-black text-slate-900 dark:text-white">Smart Infrastructure</h3>
+                                <h3 className="text-3xl font-black text-slate-900 dark:text-white">World-Class Infrastructure</h3>
                             </div>
                         </motion.div>
 

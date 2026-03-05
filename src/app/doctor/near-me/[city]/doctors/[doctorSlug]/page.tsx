@@ -9,7 +9,7 @@ import {
     Clock, Shield, GraduationCap, CheckCircle2, ArrowRight, Users, Calendar
 } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import EntityReviews from "@/components/trust/EntityReviews";
@@ -51,13 +51,27 @@ export async function generateMetadata({
     if (!doctor || !location) return { title: "Doctor Not Found" };
 
     const title = `${doctor.name} — ${doctor.designation || "Specialist"} in ${location.name} | Indira Hospital`;
-    const description = `Book an appointment with ${doctor.name}, ${doctor.designation || "specialist"} in ${location.name}. Serving patients from ${location.name} and nearby areas at Indira Super Speciality Hospital, Vellore.`;
+    const description = `Book an appointment with ${doctor.name}, ${doctor.designation || "specialist"} in ${location.name}. Over ${doctor.experience || "many years"} of experience. Serving patients from ${location.name} and nearby areas at Indira Super Speciality Hospital, Vellore.`;
 
     return {
         title,
         description,
-        keywords: [doctor.name, location.name, doctor.department || "", "doctor near me", "specialist", "Tamil Nadu"],
-        openGraph: { title, description },
+        keywords: [
+            doctor.name,
+            location.name,
+            doctor.department || "",
+            `${doctor.department || "specialist"} in ${location.name}`,
+            "doctor near me",
+            "best specialist in Vellore",
+            "laparoscopic surgeon Tamil Nadu",
+            "Indira Hospital",
+        ],
+        openGraph: {
+            title,
+            description,
+            type: "profile",
+            images: [getImageUrl(doctor.image)],
+        },
     };
 }
 
@@ -100,7 +114,7 @@ export default async function LocationDoctorPage({
                 addressCountry: "IN",
             },
         },
-        url: `https://www.indirasuperspecialityhospital.com/doctor/near-me/${city}/doctors/${doctorSlug}`,
+        url: `${siteConfig.url}/doctor/near-me/${city}/doctors/${doctorSlug}`,
     };
 
     const yearsExperience = doctor.experience_years || doctor.experience || 10;
@@ -179,7 +193,7 @@ export default async function LocationDoctorPage({
                                     <MessageCircle className="w-4 h-4 mr-2" />
                                     Book via WhatsApp
                                 </a>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                                     className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl border border-white/20">
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call Now
@@ -307,10 +321,10 @@ export default async function LocationDoctorPage({
                                     <MessageCircle className="w-4 h-4" />
                                     WhatsApp to Book
                                 </a>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                                     className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all text-sm">
                                     <Phone className="w-4 h-4" />
-                                    {clinicConfig.phone}
+                                    {siteConfig.contact.phone}
                                 </a>
                             </div>
 

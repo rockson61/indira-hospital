@@ -10,6 +10,7 @@ import type { Metadata } from "next"
 import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
 import { clinicConfig } from "@/lib/data/clinic-config"
+import { siteConfig } from "@/config/site"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
@@ -222,7 +223,6 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                 description={`What our patients are saying about their diagnostic experience at Indira Hospital.`}
             />
 
-            {/* JSON-LD: MedicalTest */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
@@ -230,7 +230,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                         "@context": "https://schema.org",
                         "@type": "MedicalTest",
                         "name": test.name,
-                        "url": `https://www.indirasuperspecialityhospital.com/diagnostics/${slug}`,
+                        "url": `${siteConfig.url}/diagnostics/${slug}`,
                         "description": test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 200),
                         ...(test.body_system && { "bodySystem": test.body_system }),
                         ...(usedToDiagnose.length > 0 && { "usedToDiagnose": usedToDiagnose.join(', ') }),
@@ -245,13 +245,13 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                         }),
                         "provider": {
                             "@type": "Hospital",
-                            "name": "Indira Super Speciality Hospital",
+                            "name": siteConfig.name,
                             "address": {
                                 "@type": "PostalAddress",
-                                "streetAddress": "Katpadi Road",
+                                "streetAddress": siteConfig.contact.address.split(',')[0],
                                 "addressLocality": "Vellore",
                                 "addressRegion": "Tamil Nadu",
-                                "postalCode": "632004"
+                                "postalCode": "632001"
                             }
                         },
                     })

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { siteConfig } from "@/config/site";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -31,7 +32,7 @@ export const viewport: Viewport = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@id": "https://indirasuperspecialityhospital.com/",
+  "@id": siteConfig.url,
   "@type": "LocalBusiness",
   "address": {
     "@type": "PostalAddress",
@@ -115,7 +116,7 @@ const localBusinessSchema = {
     "https://promoteyourads.com/author/indira-super-speciality-hospital/"
   ],
   "telephone": "+91 98423 24425",
-  "url": "https://indirasuperspecialityhospital.com/"
+  "url": siteConfig.url
 };
 
 export default function RootLayout({

@@ -2,7 +2,7 @@ export const siteConfig = {
     name: "Indira Super Speciality Hospital",
     description: "Indira Super Speciality Hospital, Vellore — advanced laser & laparoscopic surgeries with same-day discharge. 15,000+ successful surgeries. 50+ cashless insurance partners. NABH accredited.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://indirasuperspecialityhospital.com",
-    ogImage: "/images/og.jpg",
+    ogImage: "/images/hospital/Hospital view 2.webp",
     contact: {
         phone: "+91 098423 24425",
         emergencyPhone: "+91 098423 24425",

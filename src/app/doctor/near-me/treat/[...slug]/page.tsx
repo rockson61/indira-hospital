@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getServiceBySlug } from "@/lib/api";
-import { getServices, getDoctors } from "@/lib/api";
+import { getServices, getServiceBySlug, getDoctors } from "@/lib/api";
+import { siteConfig } from "@/config/site";
 import { getTreatmentBySlug, getAllTreatments } from "@/lib/data/treatment-data";
 import { getImageUrl } from "@/lib/utils";
 import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Award, Users, Clock, Star, MapPin, ArrowRight, GraduationCap, Banknote, HelpCircle, Quote, Info, Sparkles, Shield } from "lucide-react";
@@ -80,10 +80,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Check for Treatment
     const treatment = getTreatmentBySlug(lastSlug);
     if (treatment) {
+        const title = `${treatment.title} — Cost, Recovery & Same-Day Discharge | Indira Hospital`;
+        const description = `${treatment.shortDescription} Advanced laparoscopic & laser options at Indira Hospital, Vellore. Serving patients across Tamil Nadu. Get a free cost estimate today.`;
         return {
-            title: `${treatment.title} — Cost, Recovery & Same-Day Discharge | Indira Hospital`,
-            description: `${treatment.shortDescription} Get a free cost estimate today.`,
-            keywords: [treatment.title, "Tamil Nadu", "India", "cost", "treatment", "same day discharge", ...treatment.features]
+            title,
+            description,
+            keywords: [
+                treatment.title,
+                `${treatment.title} cost in India`,
+                `${treatment.title} recovery time`,
+                "Tamil Nadu",
+                "India",
+                "same day discharge",
+                "Indira Hospital Vellore",
+                "laser surgery",
+                "laparoscopy",
+                ...treatment.features
+            ],
+            openGraph: {
+                title,
+                description,
+                type: "article",
+            }
         };
     }
 
@@ -149,7 +167,21 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         service = await getServiceBySlug(lastSlug).catch(() => null);
 
         if (service) {
-            procedures = serviceProcedures[lastSlug] || [];
+            // Get treatments from TREATMENT_DATA that belong to this service
+            const relevantTreatments = getAllTreatments().filter(t => t.parentServiceSlug === lastSlug);
+
+            // Get procedures from our static map
+            const staticProcedures = serviceProcedures[lastSlug] || [];
+
+            // Merge them, prioritizing items that have detailed pages
+            const treatmentTitles = relevantTreatments.map(t => t.title);
+            const otherProcedures = staticProcedures.filter(p => !treatmentTitles.includes(p));
+
+            // We store objects with title and optional slug to handle linking
+            procedures = [
+                ...relevantTreatments.map(t => ({ title: t.title, slug: t.slug, isTreatment: true })),
+                ...otherProcedures.map(p => ({ title: p, isTreatment: false }))
+            ] as any;
         }
     }
 
@@ -176,17 +208,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
 
-    // JSON-LD
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": isTreatmentPage ? "MedicalProcedure" : (service.procedure_type || "MedicalProcedure"),
         name: service.title,
-        url: `https://www.indirasuperspecialityhospital.com/doctor/near-me/treat/${slug.join('/')}`,
+        url: `${siteConfig.url}/doctor/near-me/treat/${slug.join('/')}`,
         description: service.seo_description || service.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || service.short_description,
         provider: {
             "@type": "Hospital",
-            name: "Indira Super Speciality Hospital",
-            url: "https://www.indirasuperspecialityhospital.com",
+            name: siteConfig.name,
+            url: siteConfig.url,
         },
     };
 
@@ -281,12 +312,33 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     {isTreatmentPage ? 'Treatment Benefits & Features' : 'Treatments & Procedures'}
                                 </h2>
                                 <ul className="grid sm:grid-cols-2 gap-3">
-                                    {procedures.map((proc) => (
-                                        <li key={proc} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-950 hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors group">
-                                            <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                                            <span className="text-gray-700 dark:text-gray-300 group-hover:text-fuchsia-700 font-medium text-sm">{proc}</span>
-                                        </li>
-                                    ))}
+                                    {(procedures as any[]).map((proc) => {
+                                        const title = typeof proc === 'string' ? proc : proc.title;
+                                        const hasLink = !isTreatmentPage && typeof proc === 'object' && proc.isTreatment;
+                                        const content = (
+                                            <div className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-950 hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors group h-full">
+                                                <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                                                <span className="text-gray-700 dark:text-gray-300 group-hover:text-fuchsia-700 font-medium text-sm">{title}</span>
+                                                {hasLink && <ChevronRight className="w-4 h-4 ml-auto text-gray-300 group-hover:text-fuchsia-400" />}
+                                            </div>
+                                        );
+
+                                        if (hasLink) {
+                                            return (
+                                                <li key={title}>
+                                                    <Link href={`/doctor/near-me/treat/${lastSlug}/${proc.slug}`} className="block h-full">
+                                                        {content}
+                                                    </Link>
+                                                </li>
+                                            );
+                                        }
+
+                                        return (
+                                            <li key={title}>
+                                                {content}
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </Card>
                         )}

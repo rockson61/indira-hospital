@@ -14,6 +14,78 @@ import { HomeUpcomingEvents } from "@/components/sections/HomeUpcomingEvents";
 import { HomeLatestNews } from "@/components/sections/HomeLatestNews";
 import { HOME_PAGE_CONTENT } from "@/config/constants";
 import { MessageCircle, Phone, ArrowRight, Sparkles } from "lucide-react";
+import { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Indira Super Speciality Hospital | Best Hospital in Vellore, Tamil Nadu",
+  description: "Indira Super Speciality Hospital is a NABH accredited quaternary care center in Vellore. We specialize in laser & laparoscopic surgeries, cardiology, orthopaedics, and oncology with same-day discharge options. 15,000+ successful surgeries.",
+  keywords: [
+    "best hospital in Vellore",
+    "super speciality hospital Tamil Nadu",
+    "laser surgery hospital",
+    "laparoscopic surgery Vellore",
+    "NABH accredited hospital Vellore",
+    "top doctors in Vellore",
+    "cashless insurance hospital Vellore",
+    "medical tourism India",
+  ],
+  openGraph: {
+    title: "Indira Super Speciality Hospital | Advanced Care in Vellore",
+    description: "150+ bed quaternary care hospital in Vellore offering advanced laser surgeries, critical care, and affordable international patient packages.",
+    type: "website",
+  },
+};
+
+const SemanticLinkBlock = () => (
+  <section className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+    <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <h2 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-6">Explore Indira Hospital</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+        <div>
+          <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Top Specialties</h3>
+          <ul className="space-y-2">
+            <li><Link href="/departments/cardiology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cardiology</Link></li>
+            <li><Link href="/departments/orthopaedics" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Orthopaedics</Link></li>
+            <li><Link href="/departments/general-surgery" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">General Surgery</Link></li>
+            <li><Link href="/departments/obstetrics-gynecology-reproductive-medicine" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Maternity & Gynaecology</Link></li>
+            <li><Link href="/departments/neurology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Neurology</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Featured Treatments</h3>
+          <ul className="space-y-2">
+            <li><Link href="/doctor/near-me/treat/orthopaedics/knee-replacement" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Knee Replacement</Link></li>
+            <li><Link href="/doctor/near-me/treat/cardiology/angioplasty" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Heart Angioplasty</Link></li>
+            <li><Link href="/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Piles Surgery</Link></li>
+            <li><Link href="/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laparoscopic Hernia</Link></li>
+            <li><Link href="/doctor/near-me/treat/urology/kidney-stone-laser-surgery" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Kidney Stone</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Patient Hubs</h3>
+          <ul className="space-y-2">
+            <li><Link href="/doctor/near-me" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Find Doctors Near You</Link></li>
+            <li><Link href="/patients/international" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">International Patients</Link></li>
+            <li><Link href="/patients/insurance" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cashless Insurance</Link></li>
+            <li><Link href="/patients/visiting-our-main-campus" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Visiting Campus</Link></li>
+            <li><Link href="/health-packages" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Health Checkup Packages</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-slate-900 dark:text-white mb-3">International Tools</h3>
+          <ul className="space-y-2">
+            <li><Link href="/patients/international/cost-estimator" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Treatment Cost Estimator</Link></li>
+            <li><Link href="/patients/international/second-opinion" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Free Second Opinion</Link></li>
+            <li><Link href="/patients/international/testimonials" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Patient Testimonials</Link></li>
+            <li><Link href="/patients/medical-visa-india" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Medical Visa Assistance</Link></li>
+            <li><Link href="/patients/cmc-vellore-alternative" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">CMC Vellore Alternative</Link></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 import { Electricity } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
@@ -53,6 +125,7 @@ export default function Home() {
       <div className="space-y-20 pb-32">
         <HomeCareFlow />
         <HomePromoLinks />
+        <SemanticLinkBlock />
         <HomeLatestNews />
         <HomeUpcomingEvents />
 
@@ -84,7 +157,7 @@ export default function Home() {
           {/* Ambient Background Lights */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[100px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[80px] opacity-40" />
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+          <div className="absolute inset-0 bg-[url('/images/hospital/Hospital.webp')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
           <div className="relative z-10 w-full max-w-4xl">
             <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 mb-10 shadow-[0_0_40px_rgba(20,184,166,0.3)] group-hover/cta:scale-110 transition-transform duration-500">

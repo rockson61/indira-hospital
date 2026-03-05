@@ -4,12 +4,15 @@ import { Play } from "lucide-react";
 import Image from "next/image";
 
 const GALLERY_IMAGES = [
-    { id: 1, src: "https://images.unsplash.com/photo-1519494026892-80ba3f524733?auto=format&fit=crop&q=80&w=800", alt: "Hospital Exterior", category: "Infrastructure" },
-    { id: 2, src: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800", alt: "Modern Operating Room", category: "Facilities" },
-    { id: 3, src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800", alt: "Patient Room", category: "Accommodation" },
-    { id: 4, src: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=800", alt: "Advanced MRI Machine", category: "Technology" },
-    { id: 5, src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=800", alt: "NICU Ward", category: "Departments" },
-    { id: 6, src: "https://images.unsplash.com/photo-1582719478250-c89402eb7ae6?auto=format&fit=crop&q=80&w=800", alt: "Reception Area", category: "Infrastructure" },
+    { id: 1, src: "/images/hospital/Hospital view.webp", alt: "Hospital Exterior View", category: "Infrastructure" },
+    { id: 2, src: "/images/hospital/Reception.webp", alt: "Modern Reception Desk", category: "Facilities" },
+    { id: 3, src: "/images/hospital/OT.webp", alt: "Advanced Operating Theatre", category: "Clinical" },
+    { id: 4, src: "/images/hospital/CT.webp", alt: "128-Slice CT Scanner", category: "Diagnostics" },
+    { id: 5, src: "/images/hospital/Diagnostic.webp", alt: "Diagnostic Laboratory", category: "Diagnostics" },
+    { id: 6, src: "/images/hospital/Consultation.webp", alt: "Specialist Consultation Room", category: "Departments" },
+    { id: 7, src: "/images/hospital/ER.webp", alt: "24/7 Emergency Room", category: "Clinical" },
+    { id: 8, src: "/images/hospital/Private room.webp", alt: "Premium Private Suite", category: "Facilities" },
+    { id: 9, src: "/images/hospital/Hospital view 2.webp", alt: "Main Hospital Campus", category: "Infrastructure" },
 ];
 
 export default function GalleryPage() {

@@ -8,7 +8,7 @@ import {
     Star, Users, Award, Clock, Shield, Sparkles, GraduationCap
 } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
@@ -92,7 +92,7 @@ export default async function LocationDepartmentPage({
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "MedicalClinic",
-        name: `Indira Super Speciality Hospital — ${service.title}`,
+        name: `${siteConfig.name} — ${service.title}`,
         description: `${service.title} services available in ${location.name}, Tamil Nadu.`,
         address: {
             "@type": "PostalAddress",
@@ -101,7 +101,7 @@ export default async function LocationDepartmentPage({
             addressCountry: "IN",
         },
         medicalSpecialty: service.title,
-        url: `https://www.indirasuperspecialityhospital.com/doctor/near-me/${city}/departments/${slug}`,
+        url: `${siteConfig.url}/doctor/near-me/${city}/departments/${slug}`,
     };
 
     const badges = [
@@ -167,7 +167,7 @@ export default async function LocationDepartmentPage({
                             <MessageCircle className="w-5 h-5 mr-2" />
                             Book on WhatsApp — Free
                         </a>
-                        <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                             className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl border border-white/20">
                             <Phone className="w-5 h-5 mr-2" />
                             Call Now
@@ -259,10 +259,10 @@ export default async function LocationDepartmentPage({
                                     <MessageCircle className="w-4 h-4" />
                                     WhatsApp Us Now
                                 </a>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                                     className="w-full flex items-center justify-center gap-2 px-5 py-3 mt-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all text-sm">
                                     <Phone className="w-4 h-4" />
-                                    {clinicConfig.phone}
+                                    {siteConfig.contact.phone}
                                 </a>
                             </div>
 

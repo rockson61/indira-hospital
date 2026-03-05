@@ -344,6 +344,8 @@ export const getHealthPackageBySlug = unstable_cache(
     { revalidate: 3600 }
 );
 
+import { siteConfig } from '@/config/site';
+
 export const getGlobalSiteSettings = unstable_cache(
     async () => {
         try {
@@ -355,11 +357,11 @@ export const getGlobalSiteSettings = unstable_cache(
         }
 
         return {
-            hospitalName: "Indira Hospital",
-            emergencyPhone: "0416-2253456",
-            helplinePhone: "+91 80560 99990",
-            address: "71F, Filterbed Road, Vellore, Tamilnadu - 632001",
-            email: "contact@indirahospital.com",
+            hospitalName: siteConfig.name,
+            emergencyPhone: siteConfig.contact.emergencyPhone,
+            helplinePhone: siteConfig.contact.phone,
+            address: siteConfig.contact.address,
+            email: siteConfig.contact.email,
         } as any;
     },
     ['directus-global-settings'],

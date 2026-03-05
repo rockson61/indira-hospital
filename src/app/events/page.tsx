@@ -12,7 +12,7 @@ const EVENTS = [
         time: "10:00 AM - 12:00 PM",
         location: "Main Auditorium, Indira Hospital",
         category: "Seminar",
-        image: "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/images/hospital/OT.webp",
         description: "Join us for an immersive seminar detailing the critical protocols and real-time decision-making of our elite trauma team during emergency operations."
     },
     {
@@ -22,7 +22,7 @@ const EVENTS = [
         time: "09:00 AM - 05:00 PM",
         location: "Conference Center, Level 2",
         category: "Conference",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/images/hospital/Hospital view 2.webp",
         description: "A comprehensive gathering of leading cardiologists discussing the latest advancements in minimally invasive heart surgery and primary angioplasty."
     },
     {
@@ -32,7 +32,7 @@ const EVENTS = [
         time: "08:00 AM - 02:00 PM",
         location: "Community Hall, Whitefield",
         category: "Community",
-        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/images/hospital/Consultation.webp",
         description: "As part of our community outreach, we are offering free basic health screenings including BP, blood sugar, and BMI checks for all attendees."
     }
 ];

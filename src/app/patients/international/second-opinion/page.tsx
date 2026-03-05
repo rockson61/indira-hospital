@@ -4,11 +4,11 @@ import {
     FileText, MessageCircle, Phone, CheckCircle2, ChevronRight,
     Clock, ArrowRight, Star, Shield, Stethoscope
 } from "lucide-react";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 
-const WA = "https://wa.me/917010650063?text=" + encodeURIComponent("Hi, I have a diagnosis and I need a free second opinion from your specialists. Please help.");
-const EMAIL = "secondopinion@indirasuperspecialityhospital.com";
+const WA = "https://wa.me/" + siteConfig.contact.phone.replace(/\+/g, '').replace(/\s/g, '') + "?text=" + encodeURIComponent("Hi, I have a diagnosis and I need a free second opinion from your specialists. Please help.");
+const EMAIL = "secondopinion@" + siteConfig.url.replace(/^https?:\/\/(www\.)?/, "");
 
 export const metadata: Metadata = {
     title: "Free Second Opinion from India | Specialist Review in 24 Hours | Indira Hospital",
@@ -108,7 +108,7 @@ export default function SecondOpinionPage() {
                             className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl shadow-lg transition-all hover:scale-[1.02]">
                             <MessageCircle className="w-5 h-5" /> Send Reports via WhatsApp
                         </a>
-                        <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                             className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">
                             <Phone className="w-5 h-5" /> Call Us
                         </a>
