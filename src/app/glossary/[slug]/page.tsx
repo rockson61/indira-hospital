@@ -8,11 +8,10 @@ import { Metadata } from "next";
 
 const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
 
-export async function generateStaticParams() {
-    return GLOSSARY_DATA.map((item) => ({
-        slug: slugify(item.term),
-    }));
-}
+// Do NOT generate all 6500+ glossary pages at build time — that exceeds Vercel's 75MB body limit.
+// Pages are rendered on-demand and cached after first visit (ISR).
+export const dynamicParams = true;
+export const revalidate = 86400; // Re-validate once per day
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const glossaryItem = GLOSSARY_DATA.find(item => slugify(item.term) === params.slug);
