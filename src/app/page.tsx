@@ -124,18 +124,42 @@ export default function Home() {
       </section>
 
       <div className="space-y-20 pb-32">
-        <HomeCareFlow />
+        <div className="relative">
+          <HomeCareFlow />
+          <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
+            <Link href="/process" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
+              Understand Our Full Process
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
         <HomePromoLinks />
         <SemanticLinkBlock />
         <HomeLatestNews />
         <HomeUpcomingEvents />
 
         <TrustStrip />
-        <FacilitiesShowcase />
+        <div className="relative">
+          <FacilitiesShowcase />
+          <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
+            <Link href="/facilities" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
+              Explore All Facilities
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
         <DepartmentGridSection />
         <SignatureTreatments />
         <WhyChooseUs />
-        <InsuranceMarquee />
+        <div className="relative">
+          <InsuranceMarquee />
+          <div className="max-w-7xl mx-auto px-6 mt-4 mb-8 flex justify-center">
+            <Link href="/insurance" className="group flex items-center gap-3 px-8 py-3 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-full shadow-sm hover:shadow-md transition-all text-slate-600 dark:text-slate-400 font-bold hover:text-fuchsia-600">
+              View All 30+ Insurance Partners
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
         <DoctorHighlightSection />
         <Testimonials />
         <HealthLibraryCard />

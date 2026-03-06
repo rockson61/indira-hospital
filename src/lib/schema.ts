@@ -51,6 +51,10 @@ export interface Doctor {
     designation?: string;
     experience_years?: number;
     specialties?: string[];
+    procedures?: string[];
+    faqs?: { question: string; answer: string }[];
+    reviews?: { patient_name: string; content: string; rating: number; date?: string }[];
+    memberships?: string[];
     related_services?: Service[] | any[];
     available_locations?: Location[] | any[];
 }

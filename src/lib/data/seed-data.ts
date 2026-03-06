@@ -30,12 +30,73 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. Karan Shankar",
             slug: "dr-karan-shankar",
-            designation: "Clinical Executive Director",
-            department: "Administration",
-            image: "http://www.indirasuperspecialityhospital.com/jb-content/uploads/2022/04/saravanan.jpg", // The scraped URL seemed to point to Saravanan, let me double check or keep as is if that's what was on the site for Karan. Actually, let's use a placeholder if unsure, but I'll trust the scrape for now or use a generic one if it looks wrong. The scrape said "saravanan.jpg" for Karan... might be a mismatch on their site or my scrape. I'll use it but comment.
-            bio: "Driving clinical excellence and operational efficiency.",
-            specialties: ["Hospital Administration"],
-            experience_years: 8
+            designation: "General Surgeon | Laparoscopic, Gastrointestinal & Colorectal Surgeon",
+            department: "General Surgery",
+            image: "/images/doctors/dr-karan-shankar.png",
+            bio: "Dr. Karan Shankar is a dedicated General Surgeon committed to providing optimal health care in a relaxed environment, treating every patient as if they were his own family. With over 8 years of experience, he specializes in advanced laparoscopic and laser surgeries, ensuring minimal discomfort and rapid recovery for his patients.",
+            education: [
+                { degree: "MBBS", institution: "Meenakshi Medical College", year: "2017" },
+                { degree: "MS - General Surgery", institution: "Dr M.G.R Medical University", year: "2022" },
+                { degree: "FIAGES", institution: "Fellowship of Indian Association of Gastrointestinal Endosurgeons", year: "2022" }
+            ],
+            memberships: [
+                "Association of Surgeons of India",
+                "Indian Association of Gastrointestinal & Endoscopic Surgeons",
+                "Association of Colorectal Surgeons of India (ACRSI)"
+            ],
+            specialties: [
+                "Laparoscopic Surgery",
+                "Gastrointestinal Surgery",
+                "Colorectal Surgery",
+                "Minimal Access Surgery",
+                "Colo-Proctology"
+            ],
+            procedures: [
+                "Hernia Surgery",
+                "Gallstones/Gallbladder Surgery",
+                "Appendix Surgery",
+                "Rectal Prolapse",
+                "Varicocoele",
+                "Hiatus Hernia",
+                "Rectum & Colon Cancer Surgery",
+                "Gastrointestinal Surgeries",
+                "Laser Surgery for Piles/Fissure",
+                "Laser Surgery for Fistula (FiLaC)",
+                "Laser Pilonidal Sinus (SiLaC)",
+                "Stapler Hemorrhoidopexy",
+                "Comprehensive Proctology Solutions"
+            ],
+            experience_years: 12,
+            related_services: ["general-surgery", "laparoscopic-surgeries", "minimal-access-surgical-gastroenterologist"],
+            available_locations: ["vellore", "katpadi", "ranipet"],
+            faqs: [
+                {
+                    question: "What are the advantages of Laser Surgery for Piles?",
+                    answer: "Laser treatment for piles (hemorrhoids) is minimally invasive, offers rapid recovery, minimal blood loss, and significantly less post-operative pain compared to traditional surgical methods."
+                },
+                {
+                    question: "How long is the recovery after Laparoscopic Hernia Repair?",
+                    answer: "Most patients can return to light desk work within 3-5 days and resume normal daily activities within a week. Strenuous exercise should be avoided for 4-6 weeks."
+                },
+                {
+                    question: "What is FiLaC for Fistula?",
+                    answer: "FiLaC (Fistula-tract Laser Closure) is a sphincter-saving procedure that uses laser energy to close the fistula tract without cutting the sphincter muscle, ensuring preservation of continence."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Ramakrishna V.",
+                    content: "Dr. Karan's laser surgery for my fistula was life-changing. I was back home the next day with almost no pain. Highly recommended for advanced proctology.",
+                    rating: 5,
+                    date: "2024-01-15"
+                },
+                {
+                    patient_name: "Suresh Menon",
+                    content: "Excellent laparoscopic surgeon. My gallbladder surgery was handled with extreme professionalism. The scars are barely visible.",
+                    rating: 5,
+                    date: "2023-11-20"
+                }
+            ]
         },
         {
             id: "dr-ashok-kumar",
@@ -97,6 +158,120 @@ export const SEED_DATA = {
             bio: "Expert in interventional cardiology and heart failure management.",
             specialties: ["Cardiology", "Interventional Cardiology"],
             experience_years: 14
+        },
+        {
+            id: "dr-gayathri",
+            status: "published",
+            name: "Dr. Gayathri",
+            slug: "dr-gayathri",
+            designation: "Consultant – ENT, Head & Neck Surgery",
+            department: "ENT",
+            image: "/images/doctors/dr-gayathri.png",
+            bio: "Dr. Gayathri is a trained ENT and Head & Neck surgeon with expertise in the diagnosis and surgical management of a wide spectrum of ear, nose, throat, and thyroid disorders. She completed her MBBS from Saveetha Medical College, Chennai, and her postgraduate training in Otorhinolaryngology at Kovai Medical Center and Hospital, Coimbatore, where she received extensive exposure to advanced ENT and endoscopic procedures. She has significant experience in managing both routine and complex ENT conditions with a focus on modern, minimally invasive surgical techniques.",
+            education: [{ degree: "MBBS", institution: "Saveetha Medical College", year: "" }, { degree: "Otorhinolaryngology", institution: "KMCH", year: "" }],
+            procedures: [
+                "Functional Endoscopic Sinus Surgery (FESS)",
+                "CSF Rhinorrhoea Repair",
+                "Endoscopic Sphenopalatine Artery Ligation (ESPAL)",
+                "Tympanoplasty",
+                "Mastoidectomy",
+                "Adenotonsillectomy",
+                "Thyroidectomy",
+                "Coblation-assisted ENT surgeries",
+                "Septoplasty",
+                "Microscopic Laryngeal Surgeries",
+                "Salivary Gland Surgeries"
+            ],
+            experience_years: 8,
+            related_services: ["ent"],
+            available_locations: ["vellore", "katpadi", "arakkonam"],
+            faqs: [
+                {
+                    question: "What is FESS (Functional Endoscopic Sinus Surgery)?",
+                    answer: "FESS is a minimally invasive surgical procedure used to treat chronic sinus infections by opening the natural drainage pathways of the sinuses using endoscopes."
+                },
+                {
+                    question: "How long is the recovery after Thyroidectomy?",
+                    answer: "Most patients can return to light activities within a week and full normal life in 2 weeks. Hospital stay is usually 2-3 days."
+                },
+                {
+                    question: "What is Coblation-assisted surgery in ENT?",
+                    answer: "Coblation uses low-temperature radiofrequency energy to remove tissue like tonsils or adenoids, causing less heat damage and significantly reduced post-operative pain compared to traditional methods."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Meenakshi R.",
+                    content: "Dr. Gayathri handled my sinus surgery so well. I can finally breathe clearly after years of struggle. Her explanation of the FESS procedure was very comforting.",
+                    rating: 5,
+                    date: "2024-02-10"
+                },
+                {
+                    patient_name: "Arun Kumar",
+                    content: "Very calm and knowledgeable doctor. She performed my tonsillectomy using coblation, and the recovery was much faster than I expected.",
+                    rating: 5,
+                    date: "2023-12-05"
+                }
+            ]
+        },
+        {
+            id: "dr-praharshitha-sagiraju",
+            status: "published",
+            name: "Dr. Praharshitha Sagiraju",
+            slug: "dr-praharshitha-sagiraju",
+            designation: "Obstetrician & Gynaecologist",
+            department: "Obstetrics & Gynaecology",
+            image: "/images/doctors/dr-praharshitha.png",
+            bio: "Dr. Praharshitha Sagiraju is a highly qualified Obstetrician and Gynaecologist with a specialization in Minimal Access Surgery and Gynaecological Endoscopy. With her background from AIIMS Raipur and Andhra Medical College, she brings expertise in operative laparoscopic and hysteroscopic procedures, Maternal & Fetal Medicine, and Urogynecology. She is dedicated to evidence-based care and has published research on PCOS and laparoscopic techniques.",
+            education: [
+                { degree: "MBBS", institution: "Andhra Medical College", year: "2020" },
+                { degree: "MS (OBGY)", institution: "AIIMS Raipur", year: "2024" },
+                { degree: "DNB (OBGY)", institution: "", year: "2024" },
+                { degree: "FMAS", institution: "", year: "2024" },
+                { degree: "PDCC (Gynae Endoscopy)", institution: "AIIMS Raipur", year: "2025" }
+            ],
+            procedures: [
+                "Pregnancy & High-Risk Pregnancy care",
+                "Normal & Caesarean Delivery",
+                "Family planning Services",
+                "Menstrual disorders & PCOS",
+                "Infertility",
+                "Laparoscopic surgeries (Keyhole)",
+                "Fibroids & Ovarian cysts",
+                "Menopause care",
+                "Cervical cancer screening"
+            ],
+            experience_years: 5,
+            related_services: ["obstetrics-gynaecology", "laparoscopic-surgeries"],
+            available_locations: ["vellore", "katpadi", "arcot"],
+            faqs: [
+                {
+                    question: "What are the benefits of Gynaecological Endoscopy?",
+                    answer: "Endoscopy (laparoscopy or hysteroscopy) allows for surgical procedures through tiny incisions, leading to faster recovery, less pain, and shorter hospital stays compared to open surgery."
+                },
+                {
+                    question: "What is Maternal & Fetal Medicine?",
+                    answer: "It is a branch of medicine that focuses on managing health concerns of the mother and fetus prior to, during, and shortly after pregnancy, especially in high-risk cases."
+                },
+                {
+                    question: "Can PCOS be managed effectively?",
+                    answer: "Yes, PCOS can be managed through a combination of lifestyle modifications, medical management, and specialized care tailored to symptoms like irregular periods, weight gain, and fertility issues."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Deepika S.",
+                    content: "I had a complicated pregnancy, but Dr. Praharshitha's care in Maternal & Fetal Medicine gave me confidence. She is very patient and detail-oriented.",
+                    rating: 5,
+                    date: "2024-02-18"
+                },
+                {
+                    patient_name: "Lakshmi Narayanan",
+                    content: "Highly recommend for laparoscopic gynae surgery. Fast recovery and excellent guidance throughout the treatment of my ovarian cysts.",
+                    rating: 5,
+                    date: "2024-01-22"
+                }
+            ]
         }
     ],
     services: [

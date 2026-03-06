@@ -40,8 +40,8 @@ export const getDoctorBySlug = unstable_cache(
         if (!doctor) return null;
         return {
             ...doctor,
-            related_services: [],
-            available_locations: []
+            related_services: (doctor as any).related_services || [],
+            available_locations: (doctor as any).available_locations || []
         } as any;
     },
     ['directus-doctor-by-slug'],
