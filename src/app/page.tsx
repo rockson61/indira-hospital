@@ -92,9 +92,10 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
-import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { PatientResources } from "@/components/sections/patient-resources";
 import { ProviderResources } from "@/components/sections/provider-resources";
+import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
@@ -158,7 +159,6 @@ export default function Home() {
         </div>
         <DepartmentGridSection />
         <SignatureTreatments />
-        <SignatureTreatments />
         <div className="relative">
           <WhyChooseUs />
           <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
@@ -202,13 +202,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ENTITY CARD SECTIONS */}
-      <EntityCardSection type="services" title="Popular Treatments" subtitle="Browse Services" limit={6} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700" />
-      <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Coverage" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
-
-      {/* COMPACT SEO LINK STRIPS */}
-      <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-      <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
+      {/* UNIFIED ENTITY/SEO SECTIONS */}
+      <UnifiedEntitySection type="services" title="Popular Treatments" subtitle="Browse Services" featuredLimit={6} linkLimit={16} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700" />
+      <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Coverage" featuredLimit={6} linkLimit={16} className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800/50" />
 
       {/* ELITE SIGNATURE HOME CTA */}
       <SectionContainer className="pb-32 px-4">

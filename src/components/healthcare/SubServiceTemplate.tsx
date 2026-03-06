@@ -79,9 +79,9 @@ export function SubServiceTemplate({
         '@type': 'BreadcrumbList',
         itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://indira-hospital.vercel.app/' },
-            { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://indira-hospital.vercel.app/services' },
+            { '@type': 'ListItem', position: 2, name: 'Treatments', item: 'https://indira-hospital.vercel.app/doctor/near-me/treat' },
             ...(departmentName && departmentSlug
-                ? [{ '@type': 'ListItem', position: 3, name: departmentName, item: `https://indira-hospital.vercel.app/services/${departmentSlug}` }]
+                ? [{ '@type': 'ListItem', position: 3, name: departmentName, item: `https://indira-hospital.vercel.app/doctor/near-me/treat/${departmentSlug}` }]
                 : []),
             { '@type': 'ListItem', position: departmentSlug ? 4 : 3, name: title },
         ],
@@ -124,11 +124,11 @@ export function SubServiceTemplate({
                     <nav aria-label="breadcrumb" className="flex items-center flex-wrap gap-1 text-sm text-slate-400 mb-8">
                         <Link href="/" className="hover:text-fuchsia-600 transition-colors font-medium">Home</Link>
                         <ChevronRight className="w-4 h-4" />
-                        <Link href="/services" className="hover:text-fuchsia-600 transition-colors font-medium">Services</Link>
+                        <Link href="/doctor/near-me/treat" className="hover:text-fuchsia-600 transition-colors font-medium">Treatments</Link>
                         {departmentName && departmentSlug && (
                             <>
                                 <ChevronRight className="w-4 h-4" />
-                                <Link href={`/services/${departmentSlug}`} className="hover:text-fuchsia-600 transition-colors font-medium">
+                                <Link href={`/doctor/near-me/treat/${departmentSlug}`} className="hover:text-fuchsia-600 transition-colors font-medium">
                                     {departmentName}
                                 </Link>
                             </>

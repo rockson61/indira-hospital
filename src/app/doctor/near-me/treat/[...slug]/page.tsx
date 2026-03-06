@@ -17,6 +17,7 @@ import { LocationCard } from "@/components/entities/LocationCard";
 import { DepartmentCard } from "@/components/entities/DepartmentCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
@@ -439,12 +440,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 description={`Read verified reviews from patients who chose Indira Hospital for their ${service.title} procedure.`}
             />
 
-            {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900" />
-            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
+            {/* UNIFIED ENTITY QUERIES */}
+            <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
+            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800/50" />
+            <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
 
-            {/* COMPACT SEO LINK STRIPS */}
+            {/* KEEP SPECIALIZED SUB-TREATMENT LINKS IF ON PARENT SERVICE PAGE */}
             {!isTreatmentPage && (
                 <InternalLinkGrid
                     type="treatments"
@@ -452,12 +453,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     title={`Specialized Procedures`}
                     subtitle={`Under ${service.title}`}
                     limit={24}
-                    className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50"
+                    className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50"
                 />
             )}
-            <InternalLinkGrid type="services" title="All Departments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
         </div >
     );
 }

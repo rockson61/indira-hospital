@@ -22,7 +22,7 @@ export function ServicesWithImages() {
         <h2 className="text-3xl font-bold text-center mb-12">Our Premier Dental Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Invisalign Featured Card */}
-          <Link href="/services/invisalign" className="group">
+          <Link href="/doctor/near-me/treat/dentistry" className="group">
             <div className="bg-card rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
               <div className="relative h-48">
                 <Image

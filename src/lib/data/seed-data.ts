@@ -86,26 +86,31 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. Karan Shankar",
             slug: "dr-karan-shankar",
-            designation: "General Surgeon | Laparoscopic, Gastrointestinal & Colorectal Surgeon",
+            designation: "Clinical/Speciality Lead - Indira Laser & Laparoscopy Centre | Executive Director",
             department: "General Surgery",
             image: "/images/doctors/dr-karan-shankar.png",
-            bio: "Dr. Karan Shankar is a dedicated General Surgeon committed to providing optimal health care in a relaxed environment, treating every patient as if they were his own family. With over 8 years of experience, he specializes in advanced laparoscopic and laser surgeries, ensuring minimal discomfort and rapid recovery for his patients.",
+            bio: "As the Executive Director of Indira Super Speciality Hospital & Clinical Lead of Indira Laser & Laparoscopy Centre in Vellore, Tamil Nadu, Dr. Karan Shankar leads a team dedicated towards providing exceptional multidisciplinary healthcare services. With extensive expertise as a General Surgeon, specializing in Advanced Laparoscopic and Colorectal surgeries, he is committed to advancing the standards of surgical healthcare in the community for delivering precise, patient-centric treatments.\n\nHis career is marked by a strong focus on Minimal Access Surgery and Proctology, where he has developed a robust brand value for delivering precise, patient-centric treatments. He strives to utilize the latest technological advancements and minimally invasive techniques to ensure faster recovery times and improved outcomes for patients.",
             education: [
                 { degree: "MBBS", institution: "Meenakshi Medical College", year: "2017" },
-                { degree: "MS - General Surgery", institution: "Dr M.G.R Medical University", year: "2022" },
-                { degree: "FIAGES", institution: "Fellowship of Indian Association of Gastrointestinal Endosurgeons", year: "2022" }
+                { degree: "MS (General Surgery)", institution: "Dr M.G.R Medical University", year: "2022" },
+                { degree: "FIAGES", institution: "Fellowship of Indian Association of Gastrointestinal Endosurgeons", year: "2022" },
+                { degree: "FMAS", institution: "Fellowship in Minimal Access Surgery", year: "" },
+                { degree: "DMAS (WALS)", institution: "Diploma in Minimal Access Surgery – World Association of Laparoscopic Surgeons", year: "" },
+                { degree: "FAGIE", institution: "Fellow of Asian Gastrointestinal Endoscopy Association", year: "" }
             ],
             memberships: [
                 "Association of Surgeons of India",
                 "Indian Association of Gastrointestinal & Endoscopic Surgeons",
-                "Association of Colorectal Surgeons of India (ACRSI)"
+                "Association of Colorectal Surgeons of India (ACRSI)",
+                "World Association of Laparoscopic Surgeons (WALS)"
             ],
             specialties: [
-                "Laparoscopic Surgery",
-                "Gastrointestinal Surgery",
+                "General Surgery",
+                "Advanced Laparoscopic Surgery",
                 "Colorectal Surgery",
                 "Minimal Access Surgery",
-                "Colo-Proctology"
+                "Abdominal Wall Reconstructive Surgery",
+                "Proctology"
             ],
             procedures: [
                 "Hernia Surgery",
@@ -120,6 +125,7 @@ export const SEED_DATA = {
                 "Laser Surgery for Fistula (FiLaC)",
                 "Laser Pilonidal Sinus (SiLaC)",
                 "Stapler Hemorrhoidopexy",
+                "Abdominal Wall Reconstruction",
                 "Comprehensive Proctology Solutions"
             ],
             experience_years: 12,

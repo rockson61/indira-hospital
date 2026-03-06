@@ -3,7 +3,7 @@ import { siteConfig } from '@/config/site';
 import { getServices, getDepartments, getDoctors, getLocations, getHealthPackages, getDiagnostics } from '@/lib/api';
 import { getAllTechnologies } from '@/lib/data/technology-data';
 import { PATIENT_RESOURCES } from '@/lib/data/patient-resources';
-import { getAllTreatments } from '@/lib/data/treatment-data';
+import { getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data';
 import { INTERNATIONAL_COUNTRIES } from '@/lib/data/international-data';
 import { GLOSSARY_DATA } from '@/lib/data/glossary-data';
 
@@ -42,7 +42,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/virtual-tour',
         '/doctors',
         '/departments',
-        '/services',
+        '/doctor/near-me/treat',
+        '/treatments',
         '/diagnostics',
         '/book-appointment',
         '/blog',
@@ -129,11 +130,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         }));
 
-        const treatmentRoutes = treatments.map((t: any) => ({
+        const treatmentRoutes = TREATMENT_DATA.map((t) => ({
             url: `${baseUrl}/doctor/near-me/treat/${t.parentServiceSlug}/${t.slug}`,
             lastModified: new Date(),
             changeFrequency: 'weekly' as const,
-            priority: 0.8,
+            priority: 0.85,
         }));
 
         const internationalCountryRoutes = INTERNATIONAL_COUNTRIES.map((c) => ({

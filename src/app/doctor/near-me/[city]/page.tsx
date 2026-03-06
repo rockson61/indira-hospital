@@ -12,8 +12,8 @@ import { clinicConfig } from "@/lib/data/clinic-config";
 import { getDepartments, getDoctors } from "@/lib/api";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { cn } from "@/lib/utils";
-import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { ProctologyLaparoscopyHighlight } from "@/components/specialties/ProctologyLaparoscopyHighlight";
 
@@ -444,14 +444,10 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
             <HealthLibraryCard />
 
-            {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
-            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-
-            {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            {/* UNIFIED ENTITY QUERIES */}
+            <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
+            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={0} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
         </main>
     );
 }

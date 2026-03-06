@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { GlassCard } from "@/components/ui/glass-card"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Bluetooth as Tooth, ArrowRight, CheckCircle, Shield } from "lucide-react"
-;
+  ;
 import { Happy, Electricity, Heart, Baby0203m } from "healthicons-react/outline";
 import { useServices } from "@/hooks/useServices"
 import Image from "next/image"
@@ -118,7 +118,7 @@ export function ServicesOverview() {
                 className="border-white text-white hover:bg-card/10 bg-transparent"
                 asChild
               >
-                <Link href="/services/emergency-dentistry">Emergency Services</Link>
+                <Link href="/doctor/near-me/treat/general-surgery">Emergency Services</Link>
               </Button>
             </div>
           </div>
@@ -132,7 +132,7 @@ export function ServicesOverview() {
             className="border-2 border-primary text-primary hover:bg-primary/10 px-8 bg-transparent transition-all duration-300"
             asChild
           >
-            <Link href="/services">
+            <Link href="/doctor/near-me/treat">
               View All Services
               <ArrowRight className="h-5 w-5 ml-2" />
             </Link>

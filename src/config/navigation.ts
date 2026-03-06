@@ -148,7 +148,7 @@ export const navigation = {
         ],
         legal: [
             { title: "Privacy Policy", href: "/privacy-policy" },
-            { title: "Terms of Service", href: "/terms-of-service" },
+            { title: "Terms of Service", href: "/terms" },
         ],
     }
 };

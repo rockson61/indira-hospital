@@ -151,7 +151,7 @@ export function ServicesSection() {
         {/* View All Services CTA */}
         <div className="text-center mt-12">
           <Link
-            href="/services"
+            href="/doctor/near-me/treat"
             className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors font-semibold text-lg shadow-lg shadow-accent/20"
           >
             View All Services

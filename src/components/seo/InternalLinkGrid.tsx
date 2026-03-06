@@ -32,7 +32,7 @@ const COLORS = {
 };
 
 const DEFAULTS = {
-    services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/services" },
+    services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/doctor/near-me/treat" },
     treatments: { title: "Specific Procedures", subtitle: "Available Surgeries", href: "/doctor/near-me/treat" },
     doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
     departments: { title: "Centres of Excellence", subtitle: "Departments", href: "/departments" },

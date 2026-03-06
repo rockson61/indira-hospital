@@ -109,7 +109,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                     <nav className="flex items-center text-sm text-indigo-200 mb-8 overflow-x-auto whitespace-nowrap">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <Link href="/services" className="hover:text-white transition-colors">Departments</Link>
+                        <Link href="/departments" className="hover:text-white transition-colors">Departments</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="text-white font-medium">{department.title}</span>
                     </nav>

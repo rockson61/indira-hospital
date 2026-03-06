@@ -2,14 +2,38 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getDoctors, getDepartments } from "@/lib/api";
-import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, GraduationCap, Settings, MessageCircle, Quote, Activity } from "lucide-react";
+import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, GraduationCap, Settings, MessageCircle, Quote, Activity, Tag } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
-import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
-import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import EntityReviews from "@/components/trust/EntityReviews";
+import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { HospitalCard } from "@/components/entities/HospitalCard";
 import { DoctorAvatar } from "@/components/entities/DoctorAvatar";
+import { TREATMENT_DATA } from "@/lib/data/treatment-data";
+
+/** Build a title → treatment lookup for O(1) resolution */
+const treatmentByTitle = new Map(
+    TREATMENT_DATA.map(t => [t.title.toLowerCase(), t])
+);
+
+/** Given any procedure display text, return the best-match href */
+function getProcedureHref(procedure: string, doctorDeptSlug?: string): string {
+    const key = procedure.toLowerCase();
+    // 1. Exact title match
+    const exact = treatmentByTitle.get(key);
+    if (exact) return `/doctor/near-me/treat/${exact.parentServiceSlug}/${exact.slug}`;
+    // 2. Partial match (procedure text contains treatment title or vice versa)
+    for (const [title, t] of treatmentByTitle) {
+        if (key.includes(title) || title.includes(key)) {
+            return `/doctor/near-me/treat/${t.parentServiceSlug}/${t.slug}`;
+        }
+    }
+    // 3. Fall back to department / service-level treat page
+    const toSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    if (doctorDeptSlug) return `/doctor/near-me/treat/${doctorDeptSlug}`;
+    return `/doctor/near-me/treat/${toSlug(procedure)}`;
+}
 
 export const dynamicParams = true;
 
@@ -100,16 +124,45 @@ export default async function DoctorProfileRoute({
                                 />
                                 <div>
                                     <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">{currDoctor.name}</h1>
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        <span className="px-4 py-1.5 bg-fuchsia-500/20 border border-fuchsia-400/30 rounded-full text-sm font-bold text-fuchsia-300">
-                                            {currDoctor.specialty}
-                                        </span>
-                                        {dept && (
-                                            <Link href={`/departments/${dept.slug}`} className="px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-sm font-medium text-white/80 hover:bg-white/20 transition-colors">
-                                                {dept.title} Dept.
-                                            </Link>
-                                        )}
-                                    </div>
+
+                                    {/* Keyword Tags */}
+                                    {currDoctor.specialties && currDoctor.specialties.length > 0 && (
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                            {(currDoctor.specialties as string[]).slice(0, 5).map((tag: string) => (
+                                                <span
+                                                    key={tag}
+                                                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-fuchsia-500/20 border border-fuchsia-400/30 rounded-full text-xs font-semibold text-fuchsia-200 tracking-wide"
+                                                >
+                                                    <Tag className="w-3 h-3 opacity-70" />
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                            {dept && (
+                                                <Link
+                                                    href={`/departments/${dept.slug}`}
+                                                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-semibold text-white/70 hover:bg-white/20 transition-colors"
+                                                >
+                                                    {dept.title} Dept.
+                                                </Link>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {/* Designation / specialty fallback badge */}
+                                    {(!currDoctor.specialties || currDoctor.specialties.length === 0) && (
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-fuchsia-500/20 border border-fuchsia-400/30 rounded-full text-xs font-semibold text-fuchsia-200">
+                                                <Tag className="w-3 h-3 opacity-70" />
+                                                {currDoctor.specialty}
+                                            </span>
+                                            {dept && (
+                                                <Link href={`/departments/${dept.slug}`} className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-semibold text-white/70 hover:bg-white/20 transition-colors">
+                                                    {dept.title} Dept.
+                                                </Link>
+                                            )}
+                                        </div>
+                                    )}
+
                                     <p className="text-slate-300 leading-relaxed max-w-2xl text-lg">{currDoctor.bio}</p>
                                 </div>
                             </div>
@@ -163,26 +216,44 @@ export default async function DoctorProfileRoute({
                     {/* Main Content */}
                     <div className="lg:col-span-2 space-y-10">
                         {/* Expertise & Procedures */}
-                        {((currDoctor.specialties && currDoctor.specialties.length > 0) || (currDoctor.procedures && currDoctor.procedures.length > 0)) && (
-                            <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700">
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
-                                        <Award className="w-5 h-5 text-fuchsia-600" />
-                                    </div>
-                                    <h2 className="text-xl font-black text-slate-900 dark:text-white">Expertise & Procedures</h2>
-                                </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {[...(currDoctor.specialties || []), ...(currDoctor.procedures || [])].map((item: string, i: number) => (
-                                        <div key={i} className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-700/50 group hover:border-fuchsia-200 dark:hover:border-fuchsia-900 transition-colors">
-                                            <div className="w-6 h-6 rounded-lg bg-white dark:bg-slate-700 flex items-center justify-center flex-shrink-0 shadow-sm text-fuchsia-600 font-bold text-xs">
-                                                {i + 1}
-                                            </div>
-                                            <span className="text-slate-700 dark:text-slate-200 font-semibold leading-snug">{item}</span>
+                        {((currDoctor.specialties && currDoctor.specialties.length > 0) || (currDoctor.procedures && currDoctor.procedures.length > 0)) && (() => {
+                            const toSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                            const specialtySet = new Set<string>(currDoctor.specialties || []);
+                            const deptSlug = dept ? dept.slug : undefined;
+                            const allItems: string[] = [...(currDoctor.specialties || []), ...(currDoctor.procedures || [])];
+                            return (
+                                <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700">
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
+                                            <Award className="w-5 h-5 text-fuchsia-600" />
                                         </div>
-                                    ))}
+                                        <h2 className="text-xl font-black text-slate-900 dark:text-white">Expertise & Procedures</h2>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {allItems.map((item: string, i: number) => {
+                                            const href = specialtySet.has(item)
+                                                ? `/departments/${toSlug(item)}`
+                                                : getProcedureHref(item, deptSlug || specialty);
+                                            return (
+                                                <Link
+                                                    key={i}
+                                                    href={href}
+                                                    className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-700/50 group hover:border-fuchsia-400 dark:hover:border-fuchsia-700 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30 transition-all"
+                                                >
+                                                    <div className="w-6 h-6 rounded-lg bg-white dark:bg-slate-700 flex items-center justify-center flex-shrink-0 shadow-sm text-fuchsia-600 font-bold text-xs">
+                                                        {i + 1}
+                                                    </div>
+                                                    <span className="flex-1 text-slate-700 dark:text-slate-200 font-semibold leading-snug group-hover:text-fuchsia-700 dark:group-hover:text-fuchsia-300 transition-colors">
+                                                        {item}
+                                                    </span>
+                                                    <Activity className="w-3.5 h-3.5 text-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                                                </Link>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            );
+                        })()}
 
                         {/* Education */}
                         {((currDoctor.qualifications || currDoctor.education) && (
@@ -415,14 +486,10 @@ export default async function DoctorProfileRoute({
 
             <HealthLibraryCard />
 
-            {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments Available" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />
-            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-[#FAFAFA] dark:bg-slate-950" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
-
-            {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={8} className="bg-[#FAFAFA] dark:bg-slate-950" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={8} className="bg-white dark:bg-slate-900" />
+            {/* UNIFIED ENTITY QUERIES */}
+            <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800" />
+            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={12} className="bg-[#FAFAFA] dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/50" />
+            <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800" />
         </div >
     );
 }

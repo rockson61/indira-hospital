@@ -32,7 +32,7 @@ export function StickyFooter() {
         >
             <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" className="w-full gap-2 border-primary-600 text-primary-600 hover:bg-primary-50" asChild>
-                    <a href="tel:+919876543210">
+                    <a href="tel:+917010650063">
                         <Phone className="h-4 w-4" />
                         call Now
                     </a>

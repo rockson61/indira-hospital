@@ -6,7 +6,7 @@ import { getDoctors, getDoctorBySlug, getServices } from "@/lib/api";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import {
     ChevronRight, MapPin, Phone, MessageCircle, Star, Award,
-    Clock, Shield, GraduationCap, CheckCircle2, ArrowRight, Users, Calendar
+    Clock, Shield, GraduationCap, CheckCircle2, ArrowRight, Users, Calendar, Tag
 } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
 import { siteConfig } from "@/config/site";
@@ -167,9 +167,24 @@ export default async function LocationDoctorPage({
                             <p className="text-xl text-fuchsia-300 font-semibold mb-1">
                                 {doctor.designation || `${dept} Specialist`}
                             </p>
-                            <p className="text-slate-400 text-sm mb-6">
+                            <p className="text-slate-400 text-sm mb-3">
                                 {dept && `${dept} • `}Indira Super Speciality Hospital, Vellore
                             </p>
+
+                            {/* Keyword Tags */}
+                            {doctor.specialties && doctor.specialties.length > 0 && (
+                                <div className="flex flex-wrap gap-2 mb-5">
+                                    {(doctor.specialties as string[]).slice(0, 5).map((tag: string) => (
+                                        <span
+                                            key={tag}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-semibold text-fuchsia-200 backdrop-blur"
+                                        >
+                                            <Tag className="w-3 h-3 opacity-70" />
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
 
                             {/* Stats row */}
                             <div className="flex flex-wrap gap-3 mb-6">
@@ -248,10 +263,14 @@ export default async function LocationDoctorPage({
                                     </h3>
                                     <div className="grid sm:grid-cols-2 gap-2">
                                         {doctor.specialties.map((spec: string) => (
-                                            <div key={spec} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                                                <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
-                                                {spec}
-                                            </div>
+                                            <Link
+                                                key={spec}
+                                                href={`/departments/${spec.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                                                className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 group hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors rounded-lg px-2 py-1 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30"
+                                            >
+                                                <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 group-hover:text-fuchsia-500 transition-colors" />
+                                                <span className="font-medium">{spec}</span>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>

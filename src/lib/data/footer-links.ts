@@ -70,16 +70,16 @@ export const FOOTER_LINKS = {
         { name: "Chittoor", url: "/doctor/near-me/chittoor" }
     ],
     specialists: [
-        { name: "Cardiologists", url: "/doctor/near-me" },
-        { name: "Neurologists", url: "/doctor/near-me" },
-        { name: "Orthopedicians", url: "/doctor/near-me" },
-        { name: "Gastroenterologists", url: "/doctor/near-me" },
-        { name: "Oncologists", url: "/doctor/near-me" },
-        { name: "Urologists", url: "/doctor/near-me" },
-        { name: "Nephrologists", url: "/doctor/near-me" },
-        { name: "Gynaecologists", url: "/doctor/near-me" },
-        { name: "General Surgeons", url: "/doctor/near-me" },
-        { name: "General Physicians", url: "/doctor/near-me" }
+        { name: "Cardiologists", url: "/doctor/near-me/treat/cardiology" },
+        { name: "Neurologists", url: "/doctor/near-me/treat/neurology" },
+        { name: "Orthopedicians", url: "/doctor/near-me/treat/orthopaedics" },
+        { name: "Gastroenterologists", url: "/doctor/near-me/treat/gastroenterology" },
+        { name: "Oncologists", url: "/doctor/near-me/treat/oncology" },
+        { name: "Urologists", url: "/doctor/near-me/treat/urology" },
+        { name: "Nephrologists", url: "/doctor/near-me/treat/nephrology" },
+        { name: "Gynaecologists", url: "/doctor/near-me/treat/obstetrics-gynaecology" },
+        { name: "General Surgeons", url: "/doctor/near-me/treat/general-surgery" },
+        { name: "General Physicians", url: "/doctors" }
     ],
     patientCare: [
         { name: "24/7 Pharmacy", url: "/pharmacy" },

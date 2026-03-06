@@ -20,7 +20,7 @@ export function MedicalDisclaimer() {
                             <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">Medically Reviewed</h4>
                             <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                                 Content medically reviewed by{" "}
-                                <Link href="/doctors/dr-karan-shankar" className="text-fuchsia-700 font-medium hover:underline">
+                                <Link href="/doctor/general-surgery/dr-karan-shankar" className="text-fuchsia-700 font-medium hover:underline">
                                     Dr. Karan Shankar
                                 </Link>
                                 , Clinical Executive Director, to ensure clinical accuracy.

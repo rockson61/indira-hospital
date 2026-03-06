@@ -58,7 +58,7 @@ export function TrustStrip() {
                         </div>
                     ))}
                     <Link
-                        href="/services"
+                        href="/doctor/near-me/treat"
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm dark:shadow-slate-900/30"
                     >
                         Explore Services <ArrowRight className="w-3.5 h-3.5" />
