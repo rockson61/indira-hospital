@@ -25,7 +25,7 @@ const LAPAROSCOPY_TREATMENTS = [
     { name: "Laparoscopic Hysterectomy", slug: "laparoscopic-hysterectomy-guide", icon: "🌸", tag: "Minimally Invasive", benefit: "Minimal blood loss · Uterine preservation option" },
 ];
 
-const PARENT_SLUG = "laparoscopic-surgeries";
+const PARENT_SLUG = "general-surgery";
 
 const WA_DEFAULT = "https://wa.me/917010650063?text=" + encodeURIComponent("Hi, I want to know more about Proctology (Piles/Fistula) or Laparoscopic surgery at Indira Hospital. Please help.");
 
