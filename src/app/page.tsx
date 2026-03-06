@@ -266,3 +266,5 @@ export default function Home() {
     </main>
   );
 }
+
+// trigger hmr
