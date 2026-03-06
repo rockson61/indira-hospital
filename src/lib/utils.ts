@@ -6,9 +6,17 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getImageUrl(id?: string) {
-  if (!id || !process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_API_URL === 'undefined') {
+  if (!id) return '/images/hospital/Hospital view 2.webp';
+
+  // If it's already a full URL or a local path, return as is
+  if (id.startsWith('http') || id.startsWith('/') || id.startsWith('data:')) {
+    return id;
+  }
+
+  if (!process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_API_URL === 'undefined') {
     return '/images/hospital/Hospital view 2.webp';
   }
+
   return `${process.env.NEXT_PUBLIC_API_URL}/assets/${id}`;
 }
 

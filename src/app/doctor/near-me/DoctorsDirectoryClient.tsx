@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Search, Filter, MapPin, ArrowRight, Clock, Sparkles, Star, ChevronDown, Shield } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
 import { motion, AnimatePresence } from "framer-motion";
+import { DoctorAvatar } from "@/components/entities/DoctorAvatar";
 
 export default function DoctorsDirectoryClient() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -114,12 +115,12 @@ export default function DoctorsDirectoryClient() {
                                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
                                         <div className="flex flex-col sm:flex-row gap-10 mb-10 items-start relative z-10">
-                                            <div className="h-32 w-32 lg:h-40 lg:w-40 rounded-[2.5rem] bg-gradient-to-br from-fuchsia-50 to-pink-50 border border-fuchsia-100 flex-shrink-0 flex items-center justify-center shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-700 relative overflow-hidden">
-                                                <div className="absolute inset-0 bg-fuchsia-500/5 opacity-0 group-hover:opacity-100 transition-opacity animate-pulse" />
-                                                <span className="text-fuchsia-700 font-black text-5xl tracking-tighter uppercase relative z-10">
-                                                    {doctor.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
-                                                </span>
-                                            </div>
+                                            <DoctorAvatar
+                                                src={doctor.imageUrl}
+                                                name={doctor.name}
+                                                initials={doctor.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
+                                                className="h-32 w-32 lg:h-40 lg:w-40 rounded-[2.5rem] relative z-10"
+                                            />
                                             <div className="pt-2">
                                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-4 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
                                                     <Sparkles className="w-3 h-3" /> Specialist

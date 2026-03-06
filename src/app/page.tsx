@@ -138,7 +138,15 @@ export default function Home() {
         <HomeLatestNews />
         <HomeUpcomingEvents />
 
-        <TrustStrip />
+        <div className="relative">
+          <TrustStrip />
+          <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end tracking-tighter">
+            <Link href="/quality-accreditations" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
+              Our Safety Standards & NABH
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
         <div className="relative">
           <FacilitiesShowcase />
           <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
@@ -150,7 +158,16 @@ export default function Home() {
         </div>
         <DepartmentGridSection />
         <SignatureTreatments />
-        <WhyChooseUs />
+        <SignatureTreatments />
+        <div className="relative">
+          <WhyChooseUs />
+          <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
+            <Link href="/why-choose-indira" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
+              Our Values & Mission
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
         <div className="relative">
           <InsuranceMarquee />
           <div className="max-w-7xl mx-auto px-6 mt-4 mb-8 flex justify-center">
@@ -162,12 +179,28 @@ export default function Home() {
         </div>
         <DoctorHighlightSection />
         <Testimonials />
-        <HealthLibraryCard />
+        <div className="relative">
+          <HealthLibraryCard />
+          <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
+            <Link href="/health-library" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
+              Access Full Health Library
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
         <QuickLinks />
       </div>
 
       <PatientResources />
-      <ProviderResources />
+      <div className="relative">
+        <ProviderResources />
+        <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
+          <Link href="/provider-resources" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
+            For Referring Physicians
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </div>
 
       {/* ENTITY CARD SECTIONS */}
       <EntityCardSection type="services" title="Popular Treatments" subtitle="Browse Services" limit={6} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-700" />

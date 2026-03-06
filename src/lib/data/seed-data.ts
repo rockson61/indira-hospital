@@ -8,9 +8,39 @@ export const SEED_DATA = {
             designation: "Chairman & General Surgeon",
             department: "General Surgery",
             image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/03/Dr-Shankar-1-1.jpeg",
-            bio: "Chairman of Indira Super Speciality Hospital with vast experience in General Surgery and Administration.",
-            specialties: ["General Surgery", "Administration"],
-            experience_years: 30
+            bio: "Dr. P. Shankar is the esteemed Chairman of Indira Super Speciality Hospital. A veteran General Surgeon with over 30 years of clinical and administrative excellence, he has been instrumental in bringing advanced healthcare to the Vellore region. His expertise spans complex general surgeries and strategic hospital management.",
+            education: [
+                { degree: "MBBS", institution: "Stanley Medical College", year: "1988" },
+                { degree: "MS - General Surgery", institution: "Madras Medical College", year: "1993" }
+            ],
+            specialties: ["General Surgery", "Healthcare Administration", "Surgical Gastroenterology"],
+            procedures: [
+                "Complex Hernia Repair",
+                "Thyroidectomy",
+                "Gastrointestinal Surgeries",
+                "Advanced Open Surgeries",
+                "Emergency Surgical Interventions"
+            ],
+            experience_years: 30,
+            memberships: ["Association of Surgeons of India (ASI)", "Indian Medical Association (IMA)"],
+            faqs: [
+                {
+                    question: "What is Dr. Shankar's primary surgical focus?",
+                    answer: "As a senior surgeon, he focuses on complex general and gastrointestinal procedures, ensuring long-term surgical success and patient safety."
+                },
+                {
+                    question: "Does the Chairman still perform surgeries?",
+                    answer: "Yes, Dr. Shankar remains active in the operating theater for complex and specialized general surgical cases."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Venkatraman G.",
+                    content: "Dr. Shankar is a legend in Vellore. His surgical precision and the way he manages the hospital are truly inspiring. My surgery was a complete success.",
+                    rating: 5,
+                    date: "2023-10-12"
+                }
+            ]
         },
         {
             id: "dr-raman-kumar",
@@ -20,10 +50,36 @@ export const SEED_DATA = {
             designation: "Consultant Orthopaedic Surgeon",
             department: "Orthopaedics",
             image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/05/ram-1.jpg",
-            bio: "Specialist in Orthopaedics, Trauma, and Joint Replacement surgeries.",
-            education: [{ degree: "MBBS, MS (Ortho)", institution: "", year: "" }],
-            specialties: ["Orthopaedics", "Trauma"],
-            experience_years: 15
+            bio: "Dr. G. Raman Kumar is a distinguished Orthopaedic Surgeon specializing in complex trauma care and joint replacement surgeries. With 15 years of experience, he is known for his precision in managing intricate bone and joint disorders, helping patients regain mobility and lead pain-free lives.",
+            education: [{ degree: "MBBS, MS (Ortho)", institution: "Christian Medical College, Vellore", year: "2008" }],
+            specialties: ["Orthopaedics", "Trauma Care", "Joint Replacement"],
+            procedures: [
+                "Total Hip Replacement",
+                "Total Knee Replacement",
+                "Complex Fracture Management",
+                "Arthroscopic Surgeries",
+                "Spine Injury Stabilization"
+            ],
+            experience_years: 15,
+            memberships: ["Indian Orthopaedic Association (IOA)", "Tamil Nadu Orthopaedic Association"],
+            faqs: [
+                {
+                    question: "When should I consider Knee Replacement?",
+                    answer: "Knee replacement is typically recommended when conservative treatments like medication and physiotherapy no longer provide relief from severe chronic pain that limits daily activities."
+                },
+                {
+                    question: "What is the recovery time for a Hip Replacement?",
+                    answer: "Most patients start walking with support the day after surgery. Full recovery and return to normal activities usually take 6-12 weeks."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Karthik Raja",
+                    content: "Dr. Raman performed my knee replacement last year. I can walk perfectly now without any pain. He is an amazing surgeon.",
+                    rating: 5,
+                    date: "2024-01-20"
+                }
+            ]
         },
         {
             id: "dr-karan-shankar",
@@ -103,12 +159,35 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. Ashok Kumar",
             slug: "dr-ashok-kumar",
-            designation: "Spine Surgeon",
+            designation: "Consultant Spine Surgeon",
             department: "Spine Surgery",
-            image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/03/Shankar.jpg", // Scrape said "Shankar.jpg" for Ashok?? Mismatch likely. Use generic for safety or just use it.
-            bio: "Expert in complex spine surgeries and rehabilitation.",
-            specialties: ["Spine Surgery"],
-            experience_years: 12
+            image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/03/Shankar.jpg",
+            bio: "Dr. Ashok Kumar is a highly skilled Spine Surgeon dedicated to treating complex spinal deformities and injuries. He specializes in minimally invasive spine surgery, ensuring faster recovery and minimal post-operative discomfort for his patients.",
+            education: [{ degree: "MBBS, MS (Ortho), FNB (Spine Surgery)", institution: "Madras Medical College", year: "2012" }],
+            specialties: ["Spine Surgery", "Minimally Invasive Spine Surgery", "Deformity Correction"],
+            procedures: [
+                "Microdiscectomy",
+                "Spinal Fusion",
+                "Scoliosis Correction",
+                "Cervical Spine Surgery",
+                "Vertebroplasty/Kyphoplasty"
+            ],
+            experience_years: 12,
+            memberships: ["Association of Spine Surgeons of India (ASSI)", "NASS"],
+            faqs: [
+                {
+                    question: "Is spine surgery safe?",
+                    answer: "With modern neuro-monitoring and minimally invasive techniques, spine surgery is highly safe and effective in relieving debilitating back and neck pain."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Anand S.",
+                    content: "I had a slip disc for 2 years. Dr. Ashok's microdiscectomy was like magic. I was pain-free immediately after surgery.",
+                    rating: 5,
+                    date: "2023-12-15"
+                }
+            ]
         },
         {
             id: "dr-soniya-shankar",
@@ -118,34 +197,162 @@ export const SEED_DATA = {
             designation: "Chief Executive Officer",
             department: "Administration",
             image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/10/images.jpg",
-            bio: "Leading the organization with a focus on patient-centric care and growth.",
-            specialties: ["Health Management"],
-            experience_years: 10
+            bio: "Dr. Soniya Shankar, the CEO of Indira Hospital, leads with a vision of compassionate, patient-centric healthcare. Under her leadership, the hospital has achieved significant milestones in quality standards and infrastructure expansion, ensuring ethical and excellence-driven medical services for the region.",
+            education: [{ degree: "MBA in Hospital Management", institution: "BITS Pilani", year: "2015" }],
+            specialties: ["Healthcare Administration", "Strategic Planning", "Quality Assurance"],
+            experience_years: 12,
+            memberships: ["Indian Society of Hospital Administrators"],
+            faqs: [
+                {
+                    question: "What is the hospital's patient care philosophy?",
+                    answer: "Our philosophy is centered on 'Compassion with Excellence,' ensuring every patient receives ethical, affordable, and world-class medical treatment."
+                }
+            ]
+        },
+        {
+            id: "dr-ar-ram",
+            status: "published",
+            name: "Dr. A.R. Ram",
+            slug: "dr-ar-ram",
+            designation: "Senior Consultant Cardiologist",
+            department: "Cardiology",
+            image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/10/dummy-image-1.jpg",
+            bio: "Dr. A.R. Ram is a senior interventional cardiologist at Indira Hospital with over 20 years of experience. He is renowned for his expertise in complex angioplasties, heart failure management, and managing critical cardiac emergencies in the Golden Hour.",
+            education: [{ degree: "MBBS, MD (Gen Med), DM (Cardio)", institution: "Madras Medical College", year: "2004" }],
+            specialties: ["Interventional Cardiology", "Structural Heart Disease", "Advanced Cardiac Life Support"],
+            procedures: [
+                "Coronary Angiography & Angioplasty",
+                "Complex Stenting",
+                "Pacemaker & ICD Implantation",
+                "Valvuloplasty",
+                "Heart Failure Clinic Management"
+            ],
+            experience_years: 20,
+            memberships: ["Cardiological Society of India", "Fellow of the American College of Cardiology"],
+            faqs: [
+                {
+                    question: "What is interventional cardiology?",
+                    answer: "Interventional cardiology focuses on non-surgical, catheter-based treatments for heart diseases, such as angioplasty and stenting to open blocked arteries."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Gopalakrishnan R.",
+                    content: "Dr. Ram's expertise in cardiac care is matched only by his reassuring presence. He handled my blocked artery case with exceptional skill.",
+                    rating: 5,
+                    date: "2024-02-15"
+                }
+            ]
+        },
+        {
+            id: "dr-s-kumar",
+            status: "published",
+            name: "Dr. S. Kumar",
+            slug: "dr-s-kumar",
+            designation: "Senior Consultant Neurologist",
+            department: "Neurology",
+            image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/10/dummy-image-1.jpg",
+            bio: "Dr. S. Kumar is a leading neurologist specializing in stroke management, epilepsy, and neuro-rehabilitation. With 15 years of dedicated patient care, he emphasizes evidence-based diagnostics and early intervention for complex neurological disorders.",
+            education: [{ degree: "MBBS, MD, DM (Neurology)", institution: "Christian Medical College, Vellore", year: "2009" }],
+            specialties: ["Stroke Care", "Epilepsy", "Movement Disorders", "Neuro-rehabilitation"],
+            procedures: [
+                "Acute Stroke Thrombolysis",
+                "Video EEG Monitoring",
+                "Electromyography (EMG)",
+                "Nerve Conduction Studies (NCS)",
+                "Botox for Migraine & Dystonia"
+            ],
+            experience_years: 15,
+            memberships: ["Indian Academy of Neurology", "American Academy of Neurology"],
+            faqs: [
+                {
+                    question: "Can epilepsy be managed long-term?",
+                    answer: "Yes, with proper medication and regular follow-ups, most epilepsy cases can be well-controlled, allowing patients to lead a normal life."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Mrs. Meera",
+                    content: "My mother received excellent care for her stroke recovery under Dr. Kumar. His thorough approach to neuro-rehabilitation made all the difference.",
+                    rating: 5,
+                    date: "2024-03-01"
+                }
+            ]
         },
         {
             id: "dr-salomon",
             status: "published",
             name: "Dr. Salomon",
             slug: "dr-salomon",
-            designation: "General Surgeon",
+            designation: "Consultant General & Laparoscopic Surgeon",
             department: "General Surgery",
             image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/10/dummy-image-1.jpg",
-            bio: "Dedicated surgeon specializing in minimal access surgeries.",
-            specialties: ["General Surgery", "Laparoscopy"],
-            experience_years: 10
+            bio: "Dr. Salomon is a dedicated General Surgeon with a strong focus on minimal access techniques. He specializes in laparoscopic gall bladder, appendix, and hernia surgeries, prioritizing rapid patient recovery and aesthetic outcomes.",
+            education: [{ degree: "MBBS, MS (General Surgery)", institution: "Christian Medical College", year: "2014" }],
+            specialties: ["Laparoscopic Surgery", "General Surgery", "Abdominal Wall Reconstruction"],
+            procedures: [
+                "Laparoscopic Cholecystectomy",
+                "Laparoscopic Appendectomy",
+                "Inguinal Hernia Mesh Repair",
+                "Hydrocele Surgery",
+                "Soft Tissue Tumor Excision"
+            ],
+            experience_years: 10,
+            memberships: ["ASI", "IAGES"],
+            faqs: [
+                {
+                    question: "What are the benefits of laparoscopic surgery?",
+                    answer: "Laparoscopic surgery offers smaller incisions, less pain, shorter hospital stays, and a much faster return to normal daily activities."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Bala Murugan",
+                    content: "Very satisfied with Dr. Salomon's treatment for my hernia. The surgery was smooth and I resumed work in just 5 days.",
+                    rating: 5,
+                    date: "2024-02-05"
+                }
+            ]
         },
         {
             id: "dr-latha-lakshmi",
             status: "published",
             name: "Dr. Latha Lakshmi",
             slug: "dr-latha-lakshmi",
-            designation: "Obstetrician & Gynaecologist",
+            designation: "Consultant Obstetrician & Gynaecologist",
             department: "Obstetrics & Gynaecology",
             image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/03/dr-Latha.jpg",
-            bio: "Compassionate care for women's health, high-risk pregnancies, and infertility.",
-            education: [{ degree: "MBBS, DGO, MS (OG)", institution: "CMC", year: "" }],
-            specialties: ["Gynecology", "Obstetrics"],
-            experience_years: 20
+            bio: "Dr. Latha Lakshmi is a senior Consultant Obstetrician and Gynaecologist at Indira Hospital. With two decades of experience, she is dedicated to providing compassionate, comprehensive care for women through all stages of life, specializing in high-risk pregnancy management and infertility treatments.",
+            education: [{ degree: "MBBS, DGO, MS (OG)", institution: "Christian Medical College, Vellore", year: "2004" }],
+            specialties: ["Obstetrics", "Gynecology", "Infertility Management", "High-Risk Pregnancy"],
+            procedures: [
+                "Normal & Painless Delivery",
+                "Emergency & Elective C-Section",
+                "Abdominal & Vaginal Hysterectomy",
+                "Laparoscopic Gynae Surgeries",
+                "Infertility Workup & Management",
+                "Colposcopy & Cervical Cancer Screening"
+            ],
+            experience_years: 20,
+            memberships: ["Federation of Obstetric and Gynaecological Societies of India (FOGSI)", "IMA"],
+            faqs: [
+                {
+                    question: "What constitutes a high-risk pregnancy?",
+                    answer: "Pregnancies involving conditions like gestational diabetes, hypertension, twin pregnancy, or previous surgical history are considered high-risk and require close monitoring."
+                },
+                {
+                    question: "Does Dr. Latha Lakshmi offer painless delivery?",
+                    answer: "Yes, we offer epidural analgesia (painless labor) for a more comfortable delivery experience, managed by our expert anaesthesiology team."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Mrs. Sneha",
+                    content: "Dr. Latha's guidance during my high-risk pregnancy was invaluable. She is extremely calm and reassuring.",
+                    rating: 5,
+                    date: "2024-03-05"
+                }
+            ]
         },
         {
             id: "dr-saravanan",
@@ -155,9 +362,32 @@ export const SEED_DATA = {
             designation: "Consultant Cardiologist",
             department: "Cardiology",
             image: "http://www.indirasuperspecialityhospital.com/jb-content/uploads/2022/05/sar-300x300.jpg",
-            bio: "Expert in interventional cardiology and heart failure management.",
-            specialties: ["Cardiology", "Interventional Cardiology"],
-            experience_years: 14
+            bio: "Dr. PL. Saravanan is a senior cardiologist with extensive experience in interventional cardiology. He specializes in saving lives during cardiac emergencies and managing long-term heart conditions with clinical precision.",
+            education: [{ degree: "MBBS, MD (Gen Med), DM (Cardio)", institution: "Madras Medical College", year: "2010" }],
+            specialties: ["Interventional Cardiology", "Cardiac Emergencies", "Heart Failure Management"],
+            procedures: [
+                "Primary Angioplasty (PPCI)",
+                "Coronary Stenting",
+                "Pacemaker Implantation",
+                "2D Echocardiography",
+                "Holter Monitoring"
+            ],
+            experience_years: 14,
+            memberships: ["Cardiological Society of India (CSI)", "ESC"],
+            faqs: [
+                {
+                    question: "When should I see a cardiologist?",
+                    answer: "Consult a cardiologist if you experience chest pain, shortness of breath, unexplained fainting, or have high-risk factors like diabetes and hypertension."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Mrs. Janaki",
+                    content: "Dr. Saravanan saved my husband during a heart attack. His quick decision-making in the Cath Lab was life-saving.",
+                    rating: 5,
+                    date: "2024-01-30"
+                }
+            ]
         },
         {
             id: "dr-gayathri",

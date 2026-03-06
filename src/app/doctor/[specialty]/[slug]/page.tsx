@@ -8,6 +8,8 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { HospitalCard } from "@/components/entities/HospitalCard";
+import { DoctorAvatar } from "@/components/entities/DoctorAvatar";
 
 export const dynamicParams = true;
 
@@ -90,9 +92,12 @@ export default async function DoctorProfileRoute({
                         <div className="lg:col-span-2">
                             <div className="flex items-start gap-6">
                                 {/* Avatar */}
-                                <div className="w-24 h-24 md:w-32 md:h-32 rounded-[2rem] bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 flex items-center justify-center text-white font-black text-3xl md:text-4xl shadow-xl flex-shrink-0">
-                                    {initials}
-                                </div>
+                                <DoctorAvatar
+                                    src={currDoctor.image}
+                                    name={currDoctor.name}
+                                    initials={initials}
+                                    className="w-24 h-24 md:w-32 md:h-32 rounded-[2rem]"
+                                />
                                 <div>
                                     <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">{currDoctor.name}</h1>
                                     <div className="flex flex-wrap gap-2 mb-4">
@@ -295,6 +300,11 @@ export default async function DoctorProfileRoute({
 
                     {/* Sidebar */}
                     <div className="space-y-8">
+                        {/* Hospital Card - User Requested */}
+                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-1 shadow-sm border border-slate-100 dark:border-slate-700">
+                            <HospitalCard />
+                        </div>
+
                         {/* Professional Memberships Card */}
                         {currDoctor.memberships && currDoctor.memberships.length > 0 && (
                             <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 shadow-sm border border-slate-100 dark:border-slate-700">
