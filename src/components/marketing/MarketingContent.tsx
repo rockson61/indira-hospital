@@ -274,7 +274,7 @@ export function MarketingContent({
           <div className="space-y-4 text-center">
             <span className="inline-flex items-center justify-center gap-2 rounded-full bg-card/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="h-4 w-4" />
-              Let's get started
+              Let&apos;s get started
             </span>
             <h2 className="text-3xl font-bold md:text-4xl">{cta.heading}</h2>
             {cta.description && <p className="text-base text-white/80 md:text-lg">{cta.description}</p>}

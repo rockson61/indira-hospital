@@ -1,15 +1,18 @@
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 import { getDoctors, getDepartments } from "@/lib/api";
 import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, GraduationCap, Settings, MessageCircle, Quote, Activity, Tag } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import EntityReviews from "@/components/trust/EntityReviews";
+import EntityFAQs from "@/components/trust/EntityFAQs";
 import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { HospitalCard } from "@/components/entities/HospitalCard";
 import { DoctorAvatar } from "@/components/entities/DoctorAvatar";
+import { LocationCard } from "@/components/entities/LocationCard";
 import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 
 /** Build a title → treatment lookup for O(1) resolution */
@@ -199,7 +202,16 @@ export default async function DoctorProfileRoute({
                                 Book Appointment
                             </Link>
                             <a
-                                href="tel:+919809824425"
+                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'd like to book an appointment with ${currDoctor.name}.`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full text-center px-6 py-3 mt-3 bg-green-500 text-white font-bold rounded-2xl hover:bg-green-600 transition-all shadow-md"
+                            >
+                                <MessageCircle className="w-5 h-5 inline-block mr-2 -mt-0.5" />
+                                WhatsApp Chat
+                            </a>
+                            <a
+                                href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
                                 className="block w-full text-center px-6 py-3 mt-3 bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold rounded-2xl hover:bg-rose-100 transition-colors"
                             >
                                 <Phone className="w-4 h-4 inline-block mr-2 -mt-0.5" />
@@ -280,75 +292,23 @@ export default async function DoctorProfileRoute({
                         ))}
 
                         {/* FAQ Section */}
-                        {currDoctor.faqs && currDoctor.faqs.length > 0 && (
-                            <div className="space-y-6">
-                                <div className="flex items-center gap-3 px-4">
-                                    <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
-                                        <ChevronRight className="w-5 h-5 text-fuchsia-600 rotate-90" />
-                                    </div>
-                                    <div>
-                                        <h2 className="text-2xl font-black text-slate-900 dark:text-white">Common Questions</h2>
-                                        <p className="text-slate-500 text-sm font-medium">Expert answers from {currDoctor.name}</p>
-                                    </div>
-                                </div>
-                                <div className="space-y-4">
-                                    {currDoctor.faqs.map((faq: any, i: number) => (
-                                        <div key={i} className="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-sm border border-slate-100 dark:border-slate-700">
-                                            <h3 className="font-bold text-slate-900 dark:text-white mb-2 flex items-start gap-2">
-                                                <span className="text-fuchsia-500 font-black">Q.</span>
-                                                {faq.question}
-                                            </h3>
-                                            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 border-l-2 border-fuchsia-100 dark:border-fuchsia-900/30">
-                                                {faq.answer}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                        <EntityFAQs
+                            entityType="doctor"
+                            entityName={currDoctor.name}
+                            entitySlug={slug}
+                            title={`Common Questions for ${currDoctor.name}`}
+                            description={`Expert answers and patient queries for ${currDoctor.name} at Indira Hospital.`}
+                        />
 
                         {/* REVIEWS SECTION */}
-                        {currDoctor.reviews && currDoctor.reviews.length > 0 && (
-                            <div id="reviews" className="bg-slate-50 dark:bg-slate-900/50 rounded-[3rem] p-10 border border-slate-100 dark:border-slate-800 mb-12 scroll-mt-24">
-                                <div className="flex items-center justify-between mb-10">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
-                                            <MessageCircle className="w-5 h-5 text-fuchsia-600" />
-                                        </div>
-                                        <h2 className="text-2xl font-black text-slate-900 dark:text-white">Patient Reviews</h2>
-                                    </div>
-                                    <div className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-slate-100 dark:border-slate-700">
-                                        <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                                        <span className="font-black text-slate-900 dark:text-white">4.9</span>
-                                        <span className="text-slate-400 text-xs font-bold">/ 5.0</span>
-                                    </div>
-                                </div>
-                                <div className="grid gap-6">
-                                    {currDoctor.reviews.map((review: any, i: number) => (
-                                        <div key={i} className="bg-white dark:bg-slate-800 p-8 rounded-[2rem] border border-slate-100 dark:border-slate-700 shadow-sm relative overflow-hidden group">
-                                            <div className="absolute top-0 right-0 p-4 opacity-5">
-                                                <Quote className="w-12 h-12 text-slate-900 dark:text-white" />
-                                            </div>
-                                            <div className="flex items-center gap-1 mb-4">
-                                                {[...Array(5)].map((_, starI) => (
-                                                    <Star
-                                                        key={starI}
-                                                        className={`w-4 h-4 ${starI < review.rating ? 'text-amber-500 fill-amber-500' : 'text-slate-200 dark:text-slate-700'}`}
-                                                    />
-                                                ))}
-                                            </div>
-                                            <p className="text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-6 italic italic group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
-                                                &quot;{review.content}&quot;
-                                            </p>
-                                            <div className="flex items-center justify-between">
-                                                <span className="font-black text-fuchsia-600 text-sm uppercase tracking-widest">{review.patient_name}</span>
-                                                {review.date && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{review.date}</span>}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                        <EntityReviews
+                            entityType="doctor"
+                            entityName={currDoctor.name}
+                            entitySlug={slug}
+                            title={`Patient Reviews for ${currDoctor.name}`}
+                            description={`Real patient experiences and feedback for ${currDoctor.name} at Indira Hospital.`}
+                            className="bg-transparent border-none shadow-none p-0"
+                        />
 
                         {/* Availability */}
                         <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700">
@@ -485,6 +445,21 @@ export default async function DoctorProfileRoute({
             </section >
 
             <HealthLibraryCard />
+
+            <EntityFAQs
+                entityType="doctor"
+                entityName={currDoctor.name}
+                entitySlug={slug}
+                title={`Common Questions about ${currDoctor.name}`}
+            />
+
+            <EntityReviews
+                entityType="doctor"
+                entityName={currDoctor.name}
+                entitySlug={slug}
+                title={`${currDoctor.name} — Patient Reviews`}
+                description={`Read what patients from Indira Hospital and nearby areas say about their experience with ${currDoctor.name}.`}
+            />
 
             {/* UNIFIED ENTITY QUERIES */}
             <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800" />

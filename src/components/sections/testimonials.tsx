@@ -1,7 +1,8 @@
 import { SectionHeader } from "@/components/ui/section-header";
 import { getTestimonials } from "@/lib/api";
 import { getImageUrl } from "@/lib/utils";
-import { Star, Play, ArrowRight } from "lucide-react";
+import { Star, Play, ArrowRight, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { testimonials as localTestimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
 
@@ -90,6 +91,23 @@ export async function Testimonials() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="mt-20 flex flex-col items-center justify-center p-12 bg-fuchsia-100 dark:bg-fuchsia-950/30 rounded-[3rem] border border-fuchsia-200 dark:border-fuchsia-500/20 text-center">
+                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4">Start Your Own Healing Journey</h3>
+                    <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-xl">
+                        Our experts are ready to provide you with the same world-class care these patients received. Chat with us now for a free consultation estimate.
+                    </p>
+                    <a
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was inspired by the testimonials. I'd like to book a consultation.")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white rounded-2xl font-black text-xl transition-all shadow-xl shadow-fuchsia-500/20"
+                    >
+                        <MessageCircle className="w-6 h-6" />
+                        Book via WhatsApp
+                        <ArrowRight className="w-6 h-6" />
+                    </a>
                 </div>
             </div>
         </section>

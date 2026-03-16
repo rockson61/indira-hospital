@@ -1,6 +1,8 @@
 import { SectionContainer } from "@/components/ui/section-container";
 import { Sparkles, Heart, Zap, Shield, Users, Clock, Target } from "lucide-react";
 import { Metadata } from "next";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: "Why Choose Indira Hospital | Our Values & Mission",
@@ -56,6 +58,26 @@ export default function WhyChoosePage() {
                             <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed text-sm">{value.description}</p>
                         </div>
                     ))}
+                </div>
+            </SectionContainer>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="why-choose-indira"
+                        title="The Indira Advantage"
+                        description="Answers to why Indira Hospital is the preferred choice for super-speciality care."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="indira-hospital"
+                        title="What Our Patients Say"
+                        description="Verified patient experiences showcasing our commitment to excellence."
+                    />
                 </div>
             </SectionContainer>
 

@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
+import { siteConfig } from "@/config/site";
 import { MessageCircle, CheckCircle2, Star, TrendingDown } from "lucide-react";
 
-const WA_BASE = "https://wa.me/917010650063?text=";
+const WA_BASE = `https://wa.me/${siteConfig.contact.whatsapp}?text=`;
 
 const PROCEDURE_LIST = [
     { procedure: "Knee Replacement (Unilateral)", indira: "₹2.5 – 4 Lakh", usa: "$30,000 – $50,000", uk: "£15,000 – £25,000", uae: "AED 60,000 – 90,000", savings: "93%" },
@@ -87,7 +88,7 @@ export function EstimatorWidget() {
 
                 <div className="space-y-4">
                     <div className="p-5 bg-white/5 rounded-xl border border-white/10">
-                        <p className="text-sm text-slate-300 mb-4">Want a <strong className="text-white">personalised quote</strong> for your specific case? Send us your reports and we'll reply within 24 hours.</p>
+                        <p className="text-sm text-slate-300 mb-4">Want a <strong className="text-white">personalised quote</strong> for your specific case? Send us your reports and we&apos;ll reply within 24 hours.</p>
                         <a href={waUrl} target="_blank" rel="noopener noreferrer"
                             className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all text-sm">
                             <MessageCircle className="w-4 h-4" />

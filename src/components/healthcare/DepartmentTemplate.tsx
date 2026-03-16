@@ -11,7 +11,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { WhyChooseUs } from "@/components/trust/WhyChooseUs";
 import { ModernCard } from "@/components/ui/modern-card";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 
 interface Procedure {
     name: string;
@@ -64,7 +64,7 @@ export function DepartmentTemplate({
     pricing = [],
     technology = []
 }: DepartmentTemplateProps) {
-    const phone = clinicConfig.phone;
+    const phone = siteConfig.contact.phone;
 
     return (
         <div className="min-h-screen bg-slate-50/30 dark:bg-slate-950">

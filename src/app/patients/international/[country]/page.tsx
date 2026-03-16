@@ -14,12 +14,14 @@ import {
 } from "@/lib/data/international-data";
 import { getDoctors } from "@/lib/api";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { getImageUrl } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { ProctologyLaparoscopyHighlight } from "@/components/specialties/ProctologyLaparoscopyHighlight";
 
-const WA_NUMBER = "917010650063";
+
 const HOSPITAL_NAME = "Indira Super Speciality Hospital";
 const HOSPITAL_ADDRESS = "54, Katpadi Road, Gandhi Nagar, Vellore — 632006";
 
@@ -68,7 +70,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
     const allDoctors: any[] = await getDoctors().catch(() => []);
     const featuredDoctors = allDoctors.slice(0, 4);
 
-    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+    const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
         `Hi, I am a patient from ${country.name} and I need medical treatment at Indira Hospital. Please help.`
     )}`;
 
@@ -146,7 +148,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                         </span>
                     </h1>
                     <p className="mt-3 text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed">
-                        Indira Super Speciality Hospital, Vellore — India's trusted quaternary care hospital for international patients.
+                        Indira Super Speciality Hospital, Vellore — India&apos;s trusted quaternary care hospital for international patients.
                         NABH Accredited · 15,000+ successful surgeries · <strong className="text-white">{country.cost_savings || "Save 60–80%"}</strong> vs home country costs.
                     </p>
 
@@ -442,7 +444,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                                 Why {country.name} Trusts Indira Hospital
                             </h2>
-                            <p className="text-gray-600 dark:text-gray-400 italic mb-6 text-base">"{country.why_choose_us}"</p>
+                            <p className="text-gray-600 dark:text-gray-400 italic mb-6 text-base">&quot;{country.why_choose_us}&quot;</p>
                             <div className="grid sm:grid-cols-2 gap-3">
                                 {[
                                     "NABH accreditation — equivalent to JCI standards",
@@ -462,24 +464,22 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                             </div>
                         </section>
 
-                        {/* 9. FAQ */}
-                        <section>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                                Frequently Asked Questions — {country.name} Patients
-                            </h2>
-                            <div className="space-y-3">
-                                {INTERNATIONAL_FAQS.map((faq, i) => (
-                                    <details key={i} className="group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
-                                        <summary className="flex justify-between items-center p-5 cursor-pointer list-none font-semibold text-gray-900 dark:text-white hover:text-fuchsia-700">
-                                            <span className="pr-4">{faq.q}</span>
-                                            <ChevronDown className="w-5 h-5 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform" />
-                                        </summary>
-                                        <div className="px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800 pt-4">
-                                            {faq.a}
-                                        </div>
-                                    </details>
-                                ))}
-                            </div>
+                        {/* 9. FAQ & Reviews */}
+                        <section className="space-y-16 pt-8">
+                            <EntityFAQs
+                                entityType="hospital"
+                                entityName={`Indira Hospital (${country.name})`}
+                                entitySlug="international"
+                                title={`Frequently Asked Questions — ${country.name} Patients`}
+                                description="Answers to common queries about medical travel, visas, and coordination."
+                            />
+                            <EntityReviews
+                                entityType="hospital"
+                                entityName={`Indira Hospital (${country.name})`}
+                                entitySlug="international"
+                                title={`Success Stories: Patients from ${country.name}`}
+                                description="Real clinical outcomes and coordination experiences shared by our global guests."
+                            />
                         </section>
                     </div>
 

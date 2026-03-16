@@ -1,15 +1,15 @@
-// @ts-nocheck
+import React from "react"
 import { notFound } from "next/navigation"
 import { getDiagnosticBySlug } from "@/lib/api"
 import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Clock, AlertCircle, Phone, Home, Beaker } from "lucide-react"
+import { AlertCircle, Beaker, CheckCircle2, Clock, Home, MapPin, MessageCircle, Phone, Share2, Star } from "lucide-react"
 import { BloodDrop } from "healthicons-react/outline";
 import type { Metadata } from "next"
 import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
-import { clinicConfig } from "@/lib/data/clinic-config"
+
 import { siteConfig } from "@/config/site"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -86,13 +86,16 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                             </div>
 
                             <div className="space-y-3">
-                                <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700" asChild>
-                                    <a href="https://wa.me/917010650063?text=I%20want%20to%20book%20a%20diagnostic%20test" target="_blank">Book Appointment</a>
+                                <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 h-14 rounded-2xl" asChild>
+                                    <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I want to book a ${test.name} diagnostic test.`)}`} target="_blank" rel="noopener noreferrer">
+                                        <MessageCircle className="w-5 h-5 mr-2" />
+                                        Book via WhatsApp
+                                    </a>
                                 </Button>
                                 {test.home_collection && (
-                                    <Button variant="outline" className="w-full" asChild>
-                                        <a href="https://wa.me/917010650063?text=I%20want%20home%20sample%20collection" target="_blank">
-                                            Book Home Collection
+                                    <Button variant="outline" className="w-full h-14 rounded-2xl" asChild>
+                                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I want home sample collection for ${test.name}.`)}`} target="_blank" rel="noopener noreferrer">
+                                            Home Collection
                                         </a>
                                     </Button>
                                 )}
@@ -194,34 +197,32 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                             <p className="text-sm text-muted-foreground mb-6">
                                 Not sure which test to book? Our support team is here to guide you.
                             </p>
-                            <Button variant="ghost" className="w-full flex items-center justify-start gap-3 hover:bg-slate-200 dark:bg-slate-700" asChild>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}>
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center gap-3">
                                     <Phone className="w-4 h-4" />
-                                    {clinicConfig.phone}
+                                    {siteConfig.contact.phone}
                                 </a>
-                            </Button>
                         </div>
                     </div>
                 </div>
+
+                <div className="mt-16 space-y-16">
+                    <EntityFAQs
+                        entityType="diagnostic"
+                        entityName={test.name}
+                        entitySlug={slug}
+                        title={`Questions about ${test.name}`}
+                        description={`Get answers to common queries about ${test.name}, preparation, and reporting at Indira Diagnostics.`}
+                    />
+
+                    <EntityReviews
+                        entityType="diagnostic"
+                        entityName={test.name}
+                        entitySlug={slug}
+                        title={`Patient Feedback for ${test.name}`}
+                        description={`What our patients are saying about their diagnostic experience at Indira Hospital.`}
+                    />
+                </div>
             </SectionContainer>
-
-            {/* ========== FAQ SECTION ========== */}
-            <EntityFAQs
-                entityType="diagnostic"
-                entityName={test.name}
-                entitySlug={slug}
-                title={`Common Questions about ${test.name}`}
-                description={`Get answers to common queries about ${test.name}, preparation, and reporting at Indira Diagnostics.`}
-            />
-
-            {/* ========== REVIEWS SECTION ========== */}
-            <EntityReviews
-                entityType="diagnostic"
-                entityName={test.name}
-                entitySlug={slug}
-                title={`Verified Reviews for ${test.name}`}
-                description={`What our patients are saying about their diagnostic experience at Indira Hospital.`}
-            />
 
             <script
                 type="application/ld+json"

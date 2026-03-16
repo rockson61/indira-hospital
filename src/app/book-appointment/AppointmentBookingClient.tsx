@@ -6,6 +6,7 @@ import { doctors } from "@/data/doctors";
 import { CheckCircle2, User, Calendar, ArrowRight, ArrowLeft } from "lucide-react";
 import { HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
+import { submitAppointment } from "@/app/actions/appointment-actions";
 
 export default function AppointmentBookingClient() {
     const [step, setStep] = useState(1);
@@ -31,13 +32,23 @@ export default function AppointmentBookingClient() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setSubmitError("");
 
-        // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        setIsSubmitting(false);
-        setIsSuccess(true);
+        try {
+            const result = await submitAppointment(formData);
+            if (result.success) {
+                setIsSuccess(true);
+            } else {
+                setSubmitError(result.error || "Failed to book appointment.");
+            }
+        } catch (error) {
+            setSubmitError("An unexpected error occurred.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
+
+    const [submitError, setSubmitError] = useState("");
 
     const handleInputChange = (field: string, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));

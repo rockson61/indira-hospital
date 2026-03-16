@@ -1,9 +1,8 @@
-// @ts-nocheck
 import { notFound } from "next/navigation"
 import { getHealthPackageBySlug } from "@/lib/api"
 import { HealthPackage } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
-import { CheckCircle2, Clock, Info, Phone, FileText, Shield } from "lucide-react"
+import { CheckCircle2, Clock, Info, Phone, FileText, Shield, MessageCircle } from "lucide-react"
 import { Stethoscope } from "healthicons-react/outline";
 import Link from "next/link"
 import type { Metadata } from "next"
@@ -11,15 +10,13 @@ import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
 import { siteConfig } from "@/config/site"
 
-const WHATSAPP_NUMBER = "917010650063";
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const pkg = await getHealthPackageBySlug(slug) as HealthPackage | null;
     if (!pkg) return {};
     return {
         title: pkg.seo_title || `${pkg.title} Health Checkup — Indira Hospital Vellore`,
-        description: pkg.seo_description || `Book ${pkg.title} at Indira Hospital Vellore. Comprehensive screening with ${pkg.tests_included.slice(0, 100)}... Price: ₹${pkg.price}.`,
+        description: pkg.seo_description || `Book ${pkg.title} at Indira Hospital Vellore. Comprehensive screening with ${pkg.tests_included?.slice(0, 100)}... Price: ₹${pkg.price}.`,
     };
 }
 
@@ -31,7 +28,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
         notFound();
     }
 
-    const testList = pkg.tests_included.split(',').map(t => t.trim()).filter(Boolean);
+    const testList = pkg.tests_included?.split(',').map(t => t.trim()).filter(Boolean) || [];
 
     return (
         <main className="min-h-screen pb-20 bg-[#FAFAFA] dark:bg-slate-950">
@@ -84,7 +81,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                 </div>
                                 {pkg.original_price && (
                                     <p className="text-slate-400 text-sm font-medium">
-                                        Was <span className="line-through">₹{pkg.original_price}</span> • Save ₹{pkg.original_price - pkg.price}
+                                        Was <span className="line-through">₹{pkg.original_price}</span> • Save ₹{(pkg.original_price || 0) - (pkg.price || 0)}
                                     </p>
                                 )}
                             </div>
@@ -100,18 +97,20 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
 
                             <div className="space-y-3">
                                 <a
-                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'd like to book the ${pkg.title} health package.`)}`}
+                                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'd like to book the ${pkg.title} health package.`)}`}
                                     target="_blank"
-                                    className="w-full inline-flex items-center justify-center py-4 bg-slate-900 dark:bg-white hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 text-white dark:text-slate-900 font-bold rounded-full transition-all shadow-sm text-base"
+                                    rel="noopener noreferrer"
+                                    className="w-full inline-flex items-center justify-center py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold rounded-2xl transition-all shadow-xl shadow-fuchsia-500/20 text-base"
                                 >
-                                    Book Appointment
+                                    <MessageCircle className="w-5 h-5 mr-3" />
+                                    Book via WhatsApp
                                 </a>
                                 <a
-                                    href="tel:+917010650063"
-                                    className="w-full inline-flex items-center justify-center py-4 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-full transition-all border border-slate-100 dark:border-slate-700 text-base"
+                                    href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                                    className="w-full inline-flex items-center justify-center py-4 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold rounded-2xl transition-all border border-slate-100 dark:border-slate-700 text-base"
                                 >
                                     <Phone className="w-4 h-4 mr-2 text-fuchsia-600" />
-                                    Call to Inquire
+                                    {siteConfig.contact.phone}
                                 </a>
                             </div>
                         </div>

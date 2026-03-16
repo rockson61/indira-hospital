@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
                 <p>Last updated: January 1, 2026</p>
 
                 <p>
-                    Indira Hospital ("us", "we", or "our") operates the {siteConfig.url} website (the "Service").
+                    Indira Hospital (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;) operates the {siteConfig.url} website (the &quot;Service&quot;).
                     This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
                 </p>
 

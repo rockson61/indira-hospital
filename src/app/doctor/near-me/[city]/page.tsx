@@ -8,7 +8,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { enhancedVelloreLocations } from "@/lib/data/enhanced-location-data";
-import { clinicConfig } from "@/lib/data/clinic-config";
+
 import { getDepartments, getDoctors } from "@/lib/api";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { cn } from "@/lib/utils";
@@ -16,8 +16,10 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { ProctologyLaparoscopyHighlight } from "@/components/specialties/ProctologyLaparoscopyHighlight";
+import EntityReviews from "@/components/trust/EntityReviews";
+import EntityFAQs from "@/components/trust/EntityFAQs";
 
-const WHATSAPP_NUMBER = "917010650063";
+import { siteConfig } from "@/config/site";
 
 export const dynamicParams = true;
 
@@ -79,7 +81,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
     const departments = await getDepartments().catch(() => []);
     const allDoctors = await getDoctors().catch(() => []);
-    const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'm from ${location.name} and I want to book an appointment at Indira Super Speciality Hospital.`)}`;
+    const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm from ${location.name} and I want to book an appointment at Indira Super Speciality Hospital.`)}`;
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
@@ -107,9 +109,9 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
-                            <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center px-10 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
+                            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center px-10 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
                                 <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
-                                {clinicConfig.phone}
+                                {siteConfig.contact.phone}
                             </a>
                         </div>
                     </div>
@@ -252,7 +254,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                         <MapPin className="w-5 h-5" /> Open in Google Maps
                                     </a>
                                     <a
-                                        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I need driving directions from ${location.name} to Indira Hospital Vellore.`)}`}
+                                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I need driving directions from ${location.name} to Indira Hospital Vellore.`)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-3 px-8 py-4 bg-white/5 text-white border border-white/10 font-black rounded-2xl hover:bg-white/10 transition-colors"
@@ -439,6 +441,27 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             </div>
                         </Link>
                     ) as any)}
+                </div>
+            </SectionContainer>
+            {/* REGIONAL TRUST SIGNALS */}
+            <SectionContainer className="py-24 max-w-7xl mx-auto border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="location"
+                        entityName={location.name}
+                        entitySlug={city}
+                        title={`FAQs for Patients from ${location.name}`}
+                        description={`Common questions about travel, treatment, and visiting Indira Hospital from ${location.name}, ${location.district}.`}
+                        className="bg-transparent border-none shadow-none p-0"
+                    />
+                    <EntityReviews
+                        entityType="location"
+                        entityName={location.name}
+                        entitySlug={city}
+                        title={`Patient Stories from ${location.name}`}
+                        description={`Read experiences from residents of ${location.name} who traveled to Indira Hospital for specialized care.`}
+                        className="bg-transparent border-none shadow-none p-0"
+                    />
                 </div>
             </SectionContainer>
 

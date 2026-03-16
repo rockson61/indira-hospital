@@ -4,6 +4,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionContainer } from "@/components/ui/section-container";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 import { Testimonials } from "@/components/sections/testimonials";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
@@ -59,7 +60,14 @@ export default async function DoctorsDirectoryPage() {
                 className="bg-white dark:bg-slate-900 py-24 border-t border-slate-100 dark:border-slate-700"
             />
 
-            <Testimonials />
+            <EntityReviews
+                entityType="hospital"
+                entityName="Indira Hospital"
+                entitySlug="indira-hospital"
+                title="Verified Patient Experiences"
+                description="Real stories from patients treated by our expert medical team."
+                className="bg-slate-50 dark:bg-slate-900/50 py-24 border-t border-slate-100 dark:border-slate-700"
+            />
 
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />

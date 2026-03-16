@@ -10,7 +10,9 @@ interface ConditionSupportContentProps {
   clinicName?: string
 }
 
-const PHONE_NUMBER = '+917010650063'
+import { siteConfig } from "@/config/site"
+
+const PHONE_NUMBER = siteConfig.contact.phone;
 
 type ConditionContentConfig = {
   intro?: string
@@ -365,7 +367,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
             </li>
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-fuchsia-900/30 rounded-xl p-4 border border-fuchsia-200 dark:border-fuchsia-700/40">
               <span className="mt-0.5 text-fuchsia-500 text-lg">✓</span>
-              <span className="text-foreground/80 dark:text-slate-300"><strong>Same-Day Emergency</strong>: WhatsApp +91-7010650063 for urgent cases. Most emergencies treated within 2 hours.</span>
+              <span className="text-foreground/80 dark:text-slate-300"><strong>Same-Day Emergency</strong>: WhatsApp {siteConfig.contact.whatsapp} for urgent cases. Most emergencies treated within 2 hours.</span>
             </li>
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-fuchsia-900/30 rounded-xl p-4 border border-fuchsia-200 dark:border-fuchsia-700/40">
               <span className="mt-0.5 text-fuchsia-500 text-lg">✓</span>
@@ -393,7 +395,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📅 Book Appointment</h2>
           <p className="text-foreground/80 leading-relaxed mb-6">
-            <strong>Free consultation available.</strong> Stop {conditionName.toLowerCase()} pain today. Call or WhatsApp +91-7010650063 to book with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day emergency appointments available.
+            <strong>Free consultation available.</strong> Stop {conditionName.toLowerCase()} pain today. Call or WhatsApp {siteConfig.contact.phone} to book with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day emergency appointments available.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -409,9 +411,9 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
               📞 Call {PHONE_NUMBER.replace('+91', '+91-')}
             </a>
             <a
-              href="https://wa.me/917010650063"
+              href={`https://wa.me/${siteConfig.contact.whatsapp}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center rounded-xl border-2 border-green-500 bg-white/80 dark:bg-slate-800/60 px-6 py-3 text-sm font-semibold text-green-600 dark:text-green-400 transition-all hover:bg-green-50 dark:hover:bg-green-900/30 hover:shadow-md"
             >
               💬 WhatsApp Us

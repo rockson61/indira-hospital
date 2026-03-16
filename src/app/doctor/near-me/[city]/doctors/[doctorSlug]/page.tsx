@@ -11,13 +11,14 @@ import {
 import { Stethoscope } from "healthicons-react/outline";
 import { siteConfig } from "@/config/site";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
-import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
-import EntityReviews from "@/components/trust/EntityReviews";
+import { LocationCard } from "@/components/entities/LocationCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { getImageUrl } from "@/lib/utils";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 
-const WHATSAPP_NUMBER = "917010650063";
+
 
 export const dynamicParams = true;
 
@@ -94,7 +95,7 @@ export default async function LocationDoctorPage({
         dept.toLowerCase().includes(s.title.toLowerCase())
     ).slice(0, 6);
 
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
         `Hi, I want to book an appointment with ${doctor.name} in ${location.name}. Please help.`
     )}`;
 
@@ -402,6 +403,12 @@ export default async function LocationDoctorPage({
             </div>
 
             {/* Reviews */}
+            <EntityFAQs
+                entityType="doctor"
+                entityName={doctor.name}
+                entitySlug={doctorSlug}
+            />
+
             <EntityReviews
                 entityType="doctor"
                 entityName={doctor.name}

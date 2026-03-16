@@ -14,9 +14,20 @@ import { HomeUpcomingEvents } from "@/components/sections/HomeUpcomingEvents";
 import { HomeLatestNews } from "@/components/sections/HomeLatestNews";
 import { InsuranceMarquee } from "@/components/sections/InsuranceMarquee";
 import { HOME_PAGE_CONTENT } from "@/config/constants";
+import { siteConfig } from "@/config/site";
 import { MessageCircle, Phone, ArrowRight, Sparkles } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { Electricity } from "healthicons-react/outline";
+import { SectionContainer } from "@/components/ui/section-container";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { PatientResources } from "@/components/sections/patient-resources";
+import { ProviderResources } from "@/components/sections/provider-resources";
+import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
+import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Indira Super Speciality Hospital | Best Hospital in Vellore, Tamil Nadu",
@@ -87,15 +98,6 @@ const SemanticLinkBlock = () => (
     </div>
   </section>
 );
-import { Electricity } from "healthicons-react/outline";
-import { SectionContainer } from "@/components/ui/section-container";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
-import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
-import { EntityCardSection } from "@/components/seo/EntityCardSection";
-import { PatientResources } from "@/components/sections/patient-resources";
-import { ProviderResources } from "@/components/sections/provider-resources";
-import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
-import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
@@ -230,7 +232,7 @@ export default function Home() {
               {HOME_PAGE_CONTENT.CTA_SUBTEXT}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-3xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-4xl mx-auto">
               <a
                 href="/book-appointment"
                 className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
@@ -241,10 +243,20 @@ export default function Home() {
               </a>
 
               <a
-                href="/contact"
-                className="flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all text-xl"
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/whatsapp relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all text-xl"
               >
-                <Phone className="w-6 h-6 mr-3 text-fuchsia-400" />
+                <MessageCircle className="w-6 h-6 mr-3 text-fuchsia-400 group-hover/whatsapp:scale-110 transition-transform" />
+                WhatsApp Us
+              </a>
+
+              <a
+                href="/contact"
+                className="flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-white/5 backdrop-blur-md text-white/70 border border-white/5 font-bold rounded-2xl hover:bg-white/10 transition-all text-xl"
+              >
+                <Phone className="w-6 h-6 mr-3 text-slate-400" />
                 {HOME_PAGE_CONTENT.CTA_BUTTON_CONTACT}
               </a>
             </div>

@@ -6,8 +6,9 @@ import {
 } from "lucide-react";
 import { EstimatorWidget } from "./EstimatorWidget";
 
-const WA_BASE = "https://wa.me/917010650063?text=";
-const waUrl = WA_BASE + encodeURIComponent("Hi, I am an international patient seeking a cost estimate. Please help.");
+import { siteConfig } from "@/config/site";
+
+const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I am an international patient seeking a cost estimate. Please help.")}`;
 
 export const metadata: Metadata = {
     title: "Treatment Cost in India vs USA, UK & UAE | Free Estimate | Indira Hospital",
@@ -189,7 +190,7 @@ export default function CostEstimatorPage() {
                     <p className="text-green-100 text-lg mb-8">Share your diagnosis report via WhatsApp. Our specialist will respond with a full cost breakdown within 24 hours.</p>
                     <a href={waUrl} target="_blank" rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-black rounded-2xl shadow-lg text-lg hover:scale-[1.02] transition-all">
-                        <MessageCircle className="w-5 h-5" /> WhatsApp Now — It's Free
+                        <MessageCircle className="w-5 h-5" /> WhatsApp Now — It&apos;s Free
                     </a>
                 </div>
             </section>

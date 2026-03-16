@@ -61,7 +61,7 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-foreground/80 leading-relaxed italic">"{testimonial.text}"</p>
+                <p className="text-foreground/80 leading-relaxed italic">&quot;{testimonial.text}&quot;</p>
 
                 {/* Treatment Info */}
                 <div className="bg-primary/10 rounded-lg p-3">

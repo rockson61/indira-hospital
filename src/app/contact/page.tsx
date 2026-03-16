@@ -1,15 +1,88 @@
 "use client";
 
 import { SectionContainer } from "@/components/ui/section-container"
+import { motion } from "framer-motion"
+import { siteConfig } from "@/config/site"
+import { MessageCircle, MapPin, Phone, Mail, Clock, Send, Shield } from "lucide-react"
+import React, { useState } from "react";
+import EntityReviews from "@/components/trust/EntityReviews";
+import { submitContactForm } from "@/app/actions/contact-actions";
+import { HeartCardiogram } from "healthicons-react/outline";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail, Clock, ArrowRight, Sparkles, Send, Shield } from "lucide-react"
-import { HeartCardiogram } from "healthicons-react/outline";
-import { motion } from "framer-motion"
-import { Metadata } from "next";
+import EntityFAQs from "@/components/trust/EntityFAQs";
 
 export default function ContactPage() {
+    const [formData, setFormData] = useState({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setError("");
+
+        try {
+            const result: any = await submitContactForm(formData);
+            if (result.success) {
+                setIsSuccess(true);
+                // Optionally reset form data after successful submission
+                setFormData({
+                    first_name: "",
+                    last_name: "",
+                    email: "",
+                    phone: "",
+                    message: ""
+                });
+            } else {
+                setError(result.error || "Failed to send message.");
+            }
+        } catch (err) {
+            setError("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    if (isSuccess) {
+        return (
+            <main className="min-h-screen bg-slate-900 flex items-center justify-center px-6">
+                <motion.div 
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="bg-white/10 backdrop-blur-2xl p-12 rounded-[3rem] border border-white/20 text-center max-w-2xl"
+                >
+                    <div className="w-20 h-20 bg-fuchsia-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_40px_rgba(217,70,239,0.5)]">
+                        <Send className="w-10 h-10 text-white" />
+                    </div>
+                    <h2 className="text-4xl font-black text-white mb-4">Message Sent!</h2>
+                    <p className="text-xl text-slate-300 mb-10">
+                        Thank you for reaching out. Our team will review your message and get back to you within 24 hours.
+                    </p>
+                    <Button 
+                        onClick={() => setIsSuccess(false)}
+                        className="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-10 py-6 rounded-2xl font-bold text-lg"
+                    >
+                        Send Another Message
+                    </Button>
+                </motion.div>
+            </main>
+        );
+    }
+
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* Bold Asymmetrical Deep Hero */}
@@ -57,6 +130,18 @@ export default function ContactPage() {
                             <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight lg:mb-12 relative z-10">Get in Touch</h2>
 
                             <div className="space-y-10 relative z-10">
+                                {/* WhatsApp Block */}
+                                <div className="flex gap-6 group/item cursor-pointer">
+                                    <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 dark:border-slate-700 group-hover/item:bg-green-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
+                                        <MessageCircle className="w-7 h-7" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">WhatsApp Support</h3>
+                                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="block text-green-600 font-black hover:text-green-700 transition-colors text-2xl mb-2">Chat Now</a>
+                                        <p className="text-xs text-slate-400 uppercase tracking-widest font-bold">Free Instant Consult</p>
+                                    </div>
+                                </div>
+
                                 {/* Address Block */}
                                 <div className="flex gap-6 group/item">
                                     <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 border border-slate-100 dark:border-slate-700 group-hover/item:bg-fuchsia-500 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:scale-110">
@@ -65,9 +150,11 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Address</h3>
                                         <p className="text-xl text-slate-600 leading-relaxed font-bold group-hover/item:text-fuchsia-700 transition-colors">
-                                            No. 12, Gandhi Road,<br />
-                                            Near New Bus Stand,<br />
-                                            Vellore, Tamil Nadu - 632004
+                                            {siteConfig.contact.address.split(', ').map((line, i) => (
+                                                <React.Fragment key={i}>
+                                                    {line}{i < siteConfig.contact.address.split(', ').length - 1 ? <br /> : ''}
+                                                </React.Fragment>
+                                            ))}
                                         </p>
                                     </div>
                                 </div>
@@ -79,8 +166,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Rapid Response</h3>
-                                        <a href="tel:+9104162248888" className="block text-rose-600 font-black hover:text-rose-700 transition-colors text-2xl mb-2">+91 0416 224 8888</a>
-                                        <a href="tel:+9104162223333" className="block text-slate-600 font-bold hover:text-fuchsia-600 transition-colors text-lg">+91 0416 222 3333 <span className="text-xs text-slate-400 uppercase tracking-widest ml-2">(Admin)</span></a>
+                                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="block text-rose-600 font-black hover:text-rose-700 transition-colors text-2xl mb-2">{siteConfig.contact.phone}</a>
+                                        <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`} className="block text-slate-600 font-bold hover:text-fuchsia-600 transition-colors text-lg">{siteConfig.contact.emergencyPhone} <span className="text-xs text-slate-400 uppercase tracking-widest ml-2">(Emergency)</span></a>
                                     </div>
                                 </div>
 
@@ -91,7 +178,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Digital Enquiry</h3>
-                                        <a href="mailto:info@indirasuperspecialityhospital.com" className="text-xl text-slate-600 font-bold hover:text-blue-600 transition-colors break-all">info@indirahospital.com</a>
+                                        <a href={`mailto:${siteConfig.contact.email}`} className="text-xl text-slate-600 font-bold hover:text-blue-600 transition-colors break-all">{siteConfig.contact.email}</a>
                                     </div>
                                 </div>
 
@@ -153,40 +240,88 @@ export default function ContactPage() {
                                 <p className="text-slate-400 mt-4 text-lg font-medium">Have a question about a treatment, cost, or insurance? Fill out the form and our team will reply within 24 hours.</p>
                             </div>
 
-                            <form className="space-y-10 relative z-10">
+                            <form onSubmit={handleSubmit} className="space-y-10 relative z-10">
+                                {error && (
+                                    <div className="p-4 bg-rose-500/20 border border-rose-500/50 rounded-2xl text-rose-300 text-sm font-bold">
+                                        {error}
+                                    </div>
+                                )}
                                 <div className="grid md:grid-cols-2 gap-8">
                                     <div className="space-y-3">
                                         <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">First Name <span className="text-rose-500">*</span></label>
-                                        <Input placeholder="John" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
+                                        <Input 
+                                            name="first_name"
+                                            value={formData.first_name}
+                                            onChange={handleChange}
+                                            required
+                                            placeholder="John" 
+                                            className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
+                                        />
                                     </div>
                                     <div className="space-y-3">
                                         <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Last Name <span className="text-rose-500">*</span></label>
-                                        <Input placeholder="Doe" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
+                                        <Input 
+                                            name="last_name"
+                                            value={formData.last_name}
+                                            onChange={handleChange}
+                                            required
+                                            placeholder="Doe" 
+                                            className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
+                                        />
                                     </div>
                                 </div>
 
                                 <div className="space-y-3">
                                     <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Secure Email <span className="text-rose-500">*</span></label>
-                                    <Input type="email" placeholder="john.doe@expert.com" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
+                                    <Input 
+                                        name="email"
+                                        type="email" 
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="john.doe@expert.com" 
+                                        className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
+                                    />
                                 </div>
 
                                 <div className="space-y-3">
                                     <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Tactical Number <span className="text-rose-500">*</span></label>
-                                    <Input placeholder="+91 98765 00000" className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" />
+                                    <Input 
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="+91 98765 00000" 
+                                        className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
+                                    />
                                 </div>
 
                                 <div className="space-y-3">
                                     <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Clinical Query/Message <span className="text-rose-500">*</span></label>
-                                    <Textarea className="min-h-[200px] bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 rounded-[2rem] text-lg p-8 font-bold text-white transition-all outline-none resize-none" placeholder="Provide specific details about your clinical history or inquiry..." />
+                                    <Textarea 
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        className="min-h-[200px] bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 rounded-[2rem] text-lg p-8 font-bold text-white transition-all outline-none resize-none" 
+                                        placeholder="Provide specific details about your clinical history or inquiry..." 
+                                    />
                                 </div>
 
                                 <button
-                                    type="button"
+                                    type="submit"
+                                    disabled={isSubmitting}
                                     className="group/btn relative flex items-center justify-center w-full px-10 py-7 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-3xl transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
                                 >
-                                    <span className="relative z-10 text-xl uppercase tracking-[0.2em] pr-6">Send Message</span>
-                                    <Send className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+                                    {isSubmitting ? (
+                                        <div className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                                    ) : (
+                                        <>
+                                            <span className="relative z-10 text-xl uppercase tracking-[0.2em] pr-6">Send Message</span>
+                                            <Send className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+                                        </>
+                                    )}
                                 </button>
 
                                 <p className="text-center text-sm text-slate-500 dark:text-slate-400 font-medium">By transmitting this form, you precisely agree to our absolute <a href="/privacy-policy" className="text-fuchsia-400 hover:underline">Privacy Protocols</a> regarding data encryption.</p>
@@ -195,6 +330,26 @@ export default function ContactPage() {
                     </div>
                 </div>
             </section>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="insurance"
+                        title="Logistical & Billing FAQs"
+                        description="Questions about appointments, insurance desks, and visiting hours at Indira Hospital."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="indira-hospital"
+                        title="Patient Feedback"
+                        description="Real patient experiences with our support and administration."
+                    />
+                </div>
+            </SectionContainer>
         </main>
     )
 }

@@ -3,9 +3,10 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Phone, CheckCircle, ArrowRight, Shield } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
-import { clinicConfig } from "@/lib/data/clinic-config";
+
 
 export const metadata = {
     title: "Insurance & TPA Partners",
@@ -133,9 +134,9 @@ export default function InsurancePage() {
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </Link>
 
-                            <a href={`tel:${clinicConfig.phone}`} className="flex items-center justify-center w-full sm:w-auto px-8 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
+                            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center w-full sm:w-auto px-8 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
                                 <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
-                                Call Support
+                                {siteConfig.contact.phone}
                             </a>
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { CalendarCheck, MessageCircle, Phone, MapPin, ArrowRight, Calendar } from "lucide-react";
-import { clinicConfig } from "@/lib/data/clinic-config";
 
-const WHATSAPP_NUMBER = "917010650063";
+
+import { siteConfig } from "@/config/site";
 
 export function CTASection() {
     return (
@@ -15,7 +15,7 @@ export function CTASection() {
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-white dark:bg-slate-900"></span>
                     </span>
                     24/7 Emergency Available — Call{" "}
-                    <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="underline underline-offset-2 hover:no-underline">{clinicConfig.phone}</a>{" "}
+                    <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`} className="underline underline-offset-2 hover:no-underline">{siteConfig.contact.emergencyPhone}</a>{" "}
                     for immediate assistance
                 </div>
             </div>
@@ -32,7 +32,7 @@ export function CTASection() {
                             Ready to Prioritize Your Health?
                         </h2>
                         <p className="text-lg text-white/70 max-w-2xl mx-auto">
-                            Book an appointment with our specialists today. Choose the method that's most convenient for you.
+                            Book an appointment with our specialists today. Choose the method that&apos;s most convenient for you.
                         </p>
                     </div>
 
@@ -40,7 +40,7 @@ export function CTASection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                         {/* WhatsApp card */}
                         <a
-                            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`}
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group rounded-2xl bg-green-500 hover:bg-green-600 p-8 text-center transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/30 hover:-translate-y-1"
@@ -56,8 +56,8 @@ export function CTASection() {
                         </a>
 
                         {/* Phone card */}
-                        <a
-                            href="tel:+919842342525"
+                         <a
+                            href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
                             className="group rounded-2xl bg-white/10 hover:bg-white/15 backdrop-blur-sm ring-1 ring-white/20 p-8 text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                         >
                             <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -66,7 +66,7 @@ export function CTASection() {
                             <h3 className="text-xl font-bold text-white mb-2">Call to Book</h3>
                             <p className="text-white/70 text-sm mb-4">Speak directly with our reception team for appointment booking.</p>
                             <span className="inline-flex items-center gap-2 text-white font-semibold">
-                                {clinicConfig.phone} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                {siteConfig.contact.phone} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </a>
                     </div>

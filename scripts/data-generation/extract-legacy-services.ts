@@ -58,7 +58,7 @@ if (fs.existsSync(servicesDir)) {
 
 // Read treatment-data.ts, replace the closing array bracket ']' with the new JSON items, then add the bracket back
 const targetFile = path.join(process.cwd(), "src/lib/data/treatment-data.ts");
-let currentTreatmentData = fs.readFileSync(targetFile, "utf8");
+const currentTreatmentData = fs.readFileSync(targetFile, "utf8");
 
 // Try to parse out the array portion using regex or just look for the last ']' before the last function
 const lastBracketIndex = currentTreatmentData.lastIndexOf(']');

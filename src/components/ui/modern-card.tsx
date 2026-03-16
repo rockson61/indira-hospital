@@ -26,7 +26,7 @@
  */
 
 import { cn } from '@/lib/utils';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 
 /**
  * Props for the ModernCard component
@@ -66,7 +66,7 @@ const ModernCard = forwardRef<HTMLDivElement, ModernCardProps>(
 
 ModernCard.displayName = 'ModernCard';
 
-interface ModernCardHeaderProps extends React.HTMLAttributes<HTMLDivElement> { }
+export type ModernCardHeaderProps = React.HTMLAttributes<HTMLDivElement>
 
 const ModernCardHeader = forwardRef<HTMLDivElement, ModernCardHeaderProps>(
   ({ className, ...props }, ref) => (
@@ -80,7 +80,7 @@ const ModernCardHeader = forwardRef<HTMLDivElement, ModernCardHeaderProps>(
 
 ModernCardHeader.displayName = 'ModernCardHeader';
 
-interface ModernCardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> { }
+export type ModernCardTitleProps = React.HTMLAttributes<HTMLHeadingElement>
 
 const ModernCardTitle = forwardRef<HTMLParagraphElement, ModernCardTitleProps>(
   ({ className, ...props }, ref) => (
@@ -94,7 +94,7 @@ const ModernCardTitle = forwardRef<HTMLParagraphElement, ModernCardTitleProps>(
 
 ModernCardTitle.displayName = 'ModernCardTitle';
 
-interface ModernCardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> { }
+export type ModernCardDescriptionProps = React.HTMLAttributes<HTMLParagraphElement>
 
 const ModernCardDescription = forwardRef<HTMLParagraphElement, ModernCardDescriptionProps>(
   ({ className, ...props }, ref) => (
@@ -108,7 +108,7 @@ const ModernCardDescription = forwardRef<HTMLParagraphElement, ModernCardDescrip
 
 ModernCardDescription.displayName = 'ModernCardDescription';
 
-interface ModernCardContentProps extends React.HTMLAttributes<HTMLDivElement> { }
+export type ModernCardContentProps = React.HTMLAttributes<HTMLDivElement>
 
 const ModernCardContent = forwardRef<HTMLDivElement, ModernCardContentProps>(
   ({ className, ...props }, ref) => (
@@ -118,7 +118,7 @@ const ModernCardContent = forwardRef<HTMLDivElement, ModernCardContentProps>(
 
 ModernCardContent.displayName = 'ModernCardContent';
 
-interface ModernCardFooterProps extends React.HTMLAttributes<HTMLDivElement> { }
+export type ModernCardFooterProps = React.HTMLAttributes<HTMLDivElement>
 
 const ModernCardFooter = forwardRef<HTMLDivElement, ModernCardFooterProps>(
   ({ className, ...props }, ref) => (

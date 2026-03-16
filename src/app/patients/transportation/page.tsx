@@ -4,7 +4,8 @@ import {
     Car, Train, Bus, Plane, MessageCircle, Phone, MapPin,
     ArrowRight, ChevronRight, Clock, CheckCircle2, Navigation, AlertCircle
 } from "lucide-react";
-import { clinicConfig } from "@/lib/data/clinic-config";
+
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
     title: "How to Reach Indira Hospital Vellore | Transport Guide | Directions",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     ],
 };
 
-const WA = `https://wa.me/917010650063?text=${encodeURIComponent("Hi, I need transport help to reach Indira Hospital, Vellore. Please help.")}`;
+const WA = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need transport help to reach Indira Hospital, Vellore. Please help.")}`;
 
 const TRANSPORT_MODES = [
     {
@@ -141,7 +142,7 @@ export default function TransportationPage() {
                     {[
                         { icon: MapPin, v: "54, Katpadi Road, Gandhi Nagar, Vellore — 632006" },
                         { icon: Clock, v: "Open 24/7 — Emergency always ready" },
-                        { icon: Phone, v: clinicConfig.phone },
+                        { icon: Phone, v: siteConfig.contact.phone },
                     ].map(({ icon: Icon, v }) => (
                         <div key={v} className="flex items-center gap-2 text-fuchsia-100">
                             <Icon className="w-4 h-4 text-fuchsia-200 flex-shrink-0" />
@@ -212,7 +213,7 @@ export default function TransportationPage() {
                                     </div>
                                 ))}
                             </div>
-                            <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                            <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, "")}`}
                                 className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl text-sm transition-all">
                                 <Phone className="w-4 h-4" /> Call Emergency Now
                             </a>
@@ -243,7 +244,7 @@ export default function TransportationPage() {
                             </div>
                             <div className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`} className="font-semibold text-fuchsia-700 hover:underline">{clinicConfig.phone}</a>
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="font-semibold text-fuchsia-700 hover:underline">{siteConfig.contact.phone}</a>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Clock className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />

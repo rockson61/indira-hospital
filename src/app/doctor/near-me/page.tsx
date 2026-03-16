@@ -8,15 +8,17 @@ import { getDepartments } from "@/lib/api";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { MapPin, Clock, ArrowRight, Train, Bus, Car, MessageCircle, Phone, Star, CheckCircle2, Award, Users, Shield } from "lucide-react";
 import { Electricity, Stethoscope, Heart } from "healthicons-react/outline";
-import { clinicConfig } from "@/lib/data/clinic-config";
+
 import { LocationCard } from "@/components/entities/LocationCard";
 import { SectionContainer } from "@/components/ui/section-container";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { siteConfig } from "@/config/site";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
-const WHATSAPP_NUMBER = "917010650063";
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
+const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
 
 export const metadata: Metadata = {
     title: "Best Hospital Near You — 79+ Locations Served | Indira Hospital",
@@ -134,7 +136,7 @@ export default async function LocationsPage() {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">{locations.length}+ Locations Served.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
-                            Elite healthcare shouldn't require a long journey. Indira Super Speciality Hospital brings advanced laparoscopic, laser, and emergency treatments directly to {districtsServed} districts across Tamil Nadu.
+                            Elite healthcare shouldn&apos;t require a long journey. Indira Super Speciality Hospital brings advanced laparoscopic, laser, and emergency treatments directly to {districtsServed} districts across Tamil Nadu.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -143,9 +145,9 @@ export default async function LocationsPage() {
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
-                            <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
+                            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
                                 <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
-                                {clinicConfig.phone}
+                                {siteConfig.contact.phone}
                             </a>
                         </div>
                     </div>
@@ -205,11 +207,11 @@ export default async function LocationsPage() {
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 text-slate-900 dark:text-white hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200">
+                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 text-slate-900 dark:text-white hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
-
+ 
                     {/* Treatment Card 2 (Popular) */}
                     <div className="group bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.2)] border border-slate-800 hover:border-rose-500/50 hover:shadow-2xl hover:shadow-rose-500/20 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/10 rounded-full blur-[50px] group-hover:bg-rose-500/20 transition-colors pointer-events-none" />
@@ -232,11 +234,11 @@ export default async function LocationsPage() {
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Laser Piles Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-white/10 hover:bg-rose-500 text-white font-black rounded-2xl transition-all border border-white/20 hover:border-transparent relative z-10">
+                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need information about Laser Piles Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-white/10 hover:bg-rose-500 text-white font-black rounded-2xl transition-all border border-white/20 hover:border-transparent relative z-10">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
-
+ 
                     {/* Treatment Card 3 */}
                     <div className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 rounded-full blur-[40px] group-hover:bg-pink-500/10 transition-colors pointer-events-none" />
@@ -254,7 +256,7 @@ export default async function LocationsPage() {
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 dark:bg-pink-950 text-slate-900 dark:text-white hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-pink-200 relative z-10">
+                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 dark:bg-pink-950 text-slate-900 dark:text-white hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-pink-200 relative z-10">
                             Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -327,9 +329,9 @@ export default async function LocationsPage() {
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
 
-                            <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
+                             <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
                                 <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
-                                Call Emergency
+                                {siteConfig.contact.phone}
                             </a>
                         </div>
                     </div>
@@ -337,6 +339,26 @@ export default async function LocationsPage() {
             </SectionContainer>
 
             <HealthLibraryCard />
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="indira-hospital"
+                        title="Common Patient Questions"
+                        description="Essential information about visiting Indira Hospital from anywhere in Tamil Nadu."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="indira-hospital"
+                        title="Patient Success Stories"
+                        description="Hear from patients who traveled to Indira Hospital for world-class surgical care."
+                    />
+                </div>
+            </SectionContainer>
 
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />

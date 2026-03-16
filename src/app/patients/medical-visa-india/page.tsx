@@ -4,10 +4,10 @@ import {
     FileText, CheckCircle2, Clock, Globe2, MessageCircle, Phone,
     ChevronRight, ArrowRight, Shield, AlertCircle
 } from "lucide-react";
-import { clinicConfig } from "@/lib/data/clinic-config";
+
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 
-const WA_NUMBER = "917010650063";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
     title: "Medical Visa for India — Complete Guide for International Patients | Indira Hospital Vellore",
@@ -46,7 +46,7 @@ const TIPS = [
     { tip: "Add your attendant", detail: "Attendants (companions) can also apply for an attendant visa (same M-Visa category). They are allowed to accompany you throughout your stay." },
 ];
 
-const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi, I need a hospital invitation letter for my Indian Medical Visa. Please help.")}`;
+const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need a hospital invitation letter for my Indian Medical Visa. Please help.")}`;
 
 const jsonLd = {
     "@context": "https://schema.org",
@@ -96,9 +96,9 @@ export default function MedicalVisaIndiaPage() {
                             className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl shadow-lg transition-all">
                             <MessageCircle className="w-5 h-5" /> Request Invitation Letter — Free
                         </a>
-                        <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                             className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20">
-                            <Phone className="w-5 h-5" /> Call Us
+                            <Phone className="w-5 h-5" /> {siteConfig.contact.phone}
                         </a>
                     </div>
                 </div>
@@ -208,9 +208,9 @@ export default function MedicalVisaIndiaPage() {
                                     className="w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl mb-3 transition-all">
                                     <MessageCircle className="w-4 h-4" /> WhatsApp Now
                                 </a>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                                     className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all text-sm">
-                                    <Phone className="w-4 h-4" /> {clinicConfig.phone}
+                                    <Phone className="w-4 h-4" /> {siteConfig.contact.phone}
                                 </a>
                             </div>
                             <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">

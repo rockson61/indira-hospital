@@ -135,7 +135,7 @@ export function CTAWidget({
           <div className="mt-8 p-4 bg-red-100/50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl backdrop-blur-sm">
             <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-center">
               <span className="text-sm font-bold text-red-800 dark:text-red-200">
-                ⚠️ Don't wait! Dental problems can worsen quickly.
+                ⚠️ Don&apos;t wait! Dental problems can worsen quickly.
               </span>
               <span className="text-sm text-red-700 dark:text-red-300">
                 Call now: <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="font-black hover:underline">{siteConfig.contact.phone}</a>

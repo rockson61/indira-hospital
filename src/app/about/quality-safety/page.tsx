@@ -53,7 +53,7 @@ export default function QualitySafetyPage() {
                             Quality You Can <span className="text-blue-400">Trust.</span>
                         </h1>
                         <p className="text-xl text-slate-300 leading-relaxed">
-                            At Indira Hospital, quality is not just a checkbox; it's our clinical
+                            At Indira Hospital, quality is not just a checkbox; it&apos;s our clinical
                             foundation. We follow global benchmarks to ensure every patient
                             receives safe, error-free medical care.
                         </p>

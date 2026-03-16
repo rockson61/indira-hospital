@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Phone, Search, Star, Sparkles, Monitor } from "lucide-react";
+import { ArrowRight, Phone, Search, Star, Sparkles, Monitor, MessageCircle } from "lucide-react";
 import { HeartCardiogram, GeneralSurgery, Orthopaedics, Heart, Electricity, Stethoscope, Baby0203m, Kidneys, Eye, Gynecology } from "healthicons-react/outline";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
@@ -85,10 +85,18 @@ export function Hero() {
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </Link>
                             <a
-                                href={`tel:${siteConfig.contact.emergencyPhone}`}
-                                className="px-10 py-5 bg-slate-100 dark:bg-white/5 backdrop-blur-md text-slate-900 dark:text-white rounded-2xl font-black text-xl border border-slate-200 dark:border-white/10 transition-all hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center gap-3"
+                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group/whatsapp px-10 py-5 bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 rounded-2xl font-black text-xl border border-pink-100 dark:border-pink-900/50 transition-all hover:bg-pink-100 dark:hover:bg-pink-900/30 flex items-center justify-center gap-3"
                             >
-                                <Phone className="w-6 h-6 text-rose-500 dark:text-rose-400" /> Talk to a Doctor Now
+                                <MessageCircle className="w-6 h-6 group-hover/whatsapp:scale-110 transition-transform" /> WhatsApp
+                            </a>
+                            <a
+                                href={`tel:${siteConfig.contact.emergencyPhone}`}
+                                className="px-10 py-5 bg-slate-100 dark:bg-white/5 backdrop-blur-md text-slate-700 dark:text-slate-300 rounded-2xl font-bold text-lg border border-slate-200 dark:border-white/10 transition-all hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center gap-3"
+                            >
+                                <Phone className="w-5 h-5 text-slate-400" /> {siteConfig.contact.emergencyPhone}
                             </a>
                         </motion.div>
 

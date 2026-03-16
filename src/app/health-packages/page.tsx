@@ -1,9 +1,10 @@
-// @ts-nocheck
+import React from "react"
 import { getHealthPackages } from "@/lib/api"
 import { HealthPackage } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
-import { Button } from "@/components/ui/button"
-import { User, Phone, Check, ArrowRight, Shield } from "lucide-react"
+import { siteConfig } from "@/config/site";
+import EntityReviews from "@/components/trust/EntityReviews";
+import { User, Phone, Check, ArrowRight, Shield, MessageCircle } from "lucide-react"
 import { Heart, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import Link from "next/link"
 import type { Metadata } from "next"
@@ -12,8 +13,6 @@ export const metadata: Metadata = {
     title: 'Health Checkup Packages — Indira Super Speciality Hospital Vellore',
     description: 'Comprehensive health screening packages at Indira Hospital Vellore. Master Health Checkup, Cardiac, Diabetic, and Executive packages starting from ₹999.',
 }
-
-const WHATSAPP_NUMBER = "917010650063";
 
 export default async function HealthPackagesPage() {
     let packages: HealthPackage[] = [];
@@ -92,13 +91,13 @@ export default async function HealthPackagesPage() {
                                         <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span> Includes <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span>
                                     </p>
                                     <div className="flex flex-wrap gap-2">
-                                        {pkg.tests_included.split(',').slice(0, 5).map((test, i) => (
+                                        {pkg.tests_included && pkg.tests_included.split(',').slice(0, 5).map((test: string, i: number) => (
                                             <span key={i} className="flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-3 py-1.5 rounded-xl group-hover:border-fuchsia-100 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 shadow-sm transition-colors">
                                                 <Check className="w-3.5 h-3.5 text-fuchsia-500" />
                                                 {test.trim()}
                                             </span>
                                         ))}
-                                        {pkg.tests_included.split(',').length > 5 && (
+                                        {pkg.tests_included && pkg.tests_included.split(',').length > 5 && (
                                             <span className="text-xs font-bold text-slate-400 py-1.5 px-2 bg-slate-50 dark:bg-slate-800 rounded-xl border border-dashed border-slate-200 dark:border-slate-700">+{pkg.tests_included.split(',').length - 5} more</span>
                                         )}
                                     </div>
@@ -111,8 +110,8 @@ export default async function HealthPackagesPage() {
                                     <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                                 </Link>
-                                <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'm interested in booking the ${pkg.title} package.`)}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-6 py-4 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 font-bold rounded-2xl hover:bg-fuchsia-600 hover:text-white transition-all duration-300">
-                                    <Phone className="w-4 h-4 mr-2" />
+                                <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in booking the ${pkg.title} package.`)}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-6 py-4 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 font-bold rounded-2xl hover:bg-fuchsia-600 hover:text-white transition-all duration-300">
+                                    <MessageCircle className="w-4 h-4 mr-2" />
                                     Book via WhatsApp
                                 </a>
                             </div>
@@ -166,7 +165,7 @@ export default async function HealthPackagesPage() {
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-bold text-white mb-2">Patient Caring</h4>
-                                        <p className="text-slate-400 leading-relaxed font-light">We don't merely provide reports; our clinical team provides a structured path to ongoing wellness and recovery.</p>
+                                        <p className="text-slate-400 leading-relaxed font-light">We don&apos;t merely provide reports; our clinical team provides a structured path to ongoing wellness and recovery.</p>
                                     </div>
                                 </div>
                             </div>

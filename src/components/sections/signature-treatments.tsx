@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ArrowRight } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 import { getServices } from "@/lib/api";
 
@@ -32,12 +33,22 @@ export async function SignatureTreatments() {
                         className="mb-0 text-left items-start"
                         align="left"
                     />
-                    <Link
-                        href="/doctor/near-me/treat"
-                        className="hidden sm:inline-flex items-center font-bold text-fuchsia-600 dark:text-fuchsia-400 hover:text-fuchsia-700 dark:hover:text-fuchsia-300 transition-colors"
-                    >
-                        View All Treatments <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
+                    <div className="hidden sm:flex items-center gap-6">
+                        <Link
+                            href="/doctor/near-me/treat"
+                            className="inline-flex items-center font-bold text-slate-500 hover:text-fuchsia-600 transition-colors"
+                        >
+                            View All Treatments <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                        <a
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to know more about the signature treatments at Indira Super Speciality Hospital.")}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-6 py-2.5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white rounded-full font-bold text-sm transition-all shadow-lg shadow-fuchsia-500/20"
+                        >
+                            Enquire via WhatsApp <ArrowRight className="ml-2 w-4 h-4" />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

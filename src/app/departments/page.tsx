@@ -8,6 +8,8 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { MessageCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
     title: "15+ Surgical Specialities Under One Roof | Indira Hospital Vellore",
@@ -43,6 +45,28 @@ export default async function DepartmentsDirectoryPage() {
                         <p className="text-xl">Loading departments...</p>
                     </div>
                 )}
+            </SectionContainer>
+ 
+            <SectionContainer className="pb-24">
+                <div className="bg-gradient-to-br from-fuchsia-600 to-pink-600 rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
+                    <div className="absolute inset-0 bg-[url('/images/hospital/Hospital.webp')] opacity-10 mix-blend-overlay" />
+                    <div className="relative z-10 w-full max-w-2xl mx-auto">
+                        <MessageCircle className="w-16 h-16 mx-auto mb-6 opacity-80" />
+                        <h2 className="text-4xl font-black mb-4">Don&apos;t See Your Speciality?</h2>
+                        <p className="text-xl text-white/80 mb-8 font-medium">
+                            Our hospital houses 30+ medical departments. Chat with our clinical assistance team to find the right specialist for your condition.
+                        </p>
+                        <a 
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I'm looking for a specialist at Indira Hospital.")}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 px-10 py-5 bg-white text-fuchsia-700 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-xl"
+                        >
+                            <MessageCircle className="w-6 h-6" />
+                            Chat with Experts
+                        </a>
+                    </div>
+                </div>
             </SectionContainer>
 
             <HealthLibraryCard />

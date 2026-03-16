@@ -13,7 +13,9 @@ interface ServiceSupportContentProps {
   showPriceComparison?: boolean
 }
 
-const PHONE_NUMBER = '+917010650063'
+import { siteConfig } from "@/config/site"
+
+const PHONE_NUMBER = siteConfig.contact.phone;
 
 export function ServiceSupportContent({
   serviceName,
@@ -220,7 +222,7 @@ export function ServiceSupportContent({
             ))}
           </ul>
           <p className="mt-6 text-foreground/70 dark:text-slate-400 italic">
-            <strong>Early treatment saves 30–50% in costs.</strong> Free 15-minute assessment available. Call +91-7010650063 or WhatsApp to check if you need {serviceName.toLowerCase()}.
+            <strong>Early treatment saves 30–50% in costs.</strong> Free 15-minute assessment available. Call {siteConfig.contact.phone} or WhatsApp to check if you need {serviceName.toLowerCase()}.
           </p>
         </div>
       </SectionContainer>
@@ -361,7 +363,7 @@ export function ServiceSupportContent({
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">📅 Book Your {serviceName} Appointment</h2>
           <p className="text-foreground/80 dark:text-slate-300 leading-relaxed">
-            <strong>Free consultation available.</strong> Call or WhatsApp +91-7010650063 to book your appointment with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day appointments available for emergencies. Upload previous X-rays via WhatsApp for faster evaluation.
+            <strong>Free consultation available.</strong> Call or WhatsApp {siteConfig.contact.phone} to book your appointment with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day appointments available for emergencies. Upload previous X-rays via WhatsApp for faster evaluation.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
@@ -374,12 +376,12 @@ export function ServiceSupportContent({
               href={`tel:${PHONE_NUMBER}`}
               className="inline-flex items-center rounded-xl border-2 border-fuchsia-500 bg-white/80 dark:bg-slate-800/60 px-6 py-3 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/40 hover:shadow-md"
             >
-              Call {PHONE_NUMBER.replace('+91', '+91-')}
+              Call {PHONE_NUMBER}
             </a>
             <a
-              href="https://wa.me/917010650063"
+              href={`https://wa.me/${siteConfig.contact.whatsapp}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center rounded-xl border-2 border-green-500 bg-white/80 dark:bg-slate-800/60 px-6 py-3 text-sm font-semibold text-green-600 dark:text-green-400 transition-all hover:bg-green-50 dark:hover:bg-green-900/40 hover:shadow-md"
             >
               WhatsApp Our Dentist Team

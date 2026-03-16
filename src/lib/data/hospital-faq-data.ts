@@ -6,13 +6,13 @@ export interface FAQItem {
 
 
 
-import { clinicConfig } from "./clinic-config";
+import { siteConfig } from "@/config/site";
 
 export const hospitalFaqs: FAQItem[] = [
     {
         category: "General & Appointments",
         question: "How can I book an appointment?",
-        answer: `You can book via WhatsApp at +91 70106 50063, by calling ${clinicConfig.phone}, or through our website. We also accept walk-in consultations during OPD hours.`
+        answer: `You can book via WhatsApp at ${siteConfig.contact.whatsapp}, by calling ${siteConfig.contact.phone}, or through our website. We also accept walk-in consultations during OPD hours.`
     },
     {
         category: "General & Appointments",

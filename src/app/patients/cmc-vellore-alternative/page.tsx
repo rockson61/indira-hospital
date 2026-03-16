@@ -2,14 +2,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
     CheckCircle2, XCircle, MessageCircle, Phone, Clock, Star, Award,
-    Users, Shield, ArrowRight, ChevronRight, MapPin, TrendingDown, Calendar, Plane
+    Users, Shield, ArrowRight, ChevronRight, MapPin, TrendingDown, Calendar, Plane, CreditCard, AlertCircle
 } from "lucide-react";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
+import EntityFAQs from "@/components/trust/EntityFAQs";
 import { CMC_VS_INDIRA, INTERNATIONAL_FAQS, JOURNEY_STEPS } from "@/lib/data/international-data";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
-
-const WA_NUMBER = "917010650063";
 
 export const metadata: Metadata = {
     title: "CMC Vellore Alternative — Get Treatment This Week | Indira Super Speciality Hospital",
@@ -58,7 +57,7 @@ const FAQs = [
     { q: "Can I get a second opinion at Indira if I've already consulted at CMC?", a: "Absolutely. Send us your CMC diagnosis and reports via WhatsApp. Our specialist will review and provide a free second opinion within hours. Many patients use this to confirm their treatment plan before proceeding." },
 ];
 
-const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi, I was looking at CMC Vellore but the waiting list is too long. Can I get an appointment at Indira Hospital this week?")}`;
+const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was looking at CMC Vellore but the waiting list is too long. Can I get an appointment at Indira Hospital this week?")}`;
 
 const jsonLd = {
     "@context": "https://schema.org",
@@ -123,10 +122,10 @@ export default function CMCVelloreAlternativePage() {
                             <MessageCircle className="w-5 h-5" />
                             Book Appointment This Week
                         </a>
-                        <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                             className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl border border-white/20">
                             <Phone className="w-5 h-5" />
-                            Call Now
+                            {siteConfig.contact.phone}
                         </a>
                     </div>
                 </div>
@@ -286,9 +285,9 @@ export default function CMCVelloreAlternativePage() {
                     <div className="flex items-start gap-4">
                         <MapPin className="w-6 h-6 text-fuchsia-500 flex-shrink-0 mt-1" />
                         <div>
-                            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">We're in the Same City as CMC Vellore</h2>
+                            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">We&apos;re in the Same City as CMC Vellore</h2>
                             <p className="text-gray-600 dark:text-gray-400 mb-4">
-                                Indira Super Speciality Hospital is located in <strong>Gandhi Nagar, Vellore</strong> — in the same medical hub as CMC. You don't need to travel to Chennai or Bangalore. Same city. Better availability.
+                                Indira Super Speciality Hospital is located in <strong>Gandhi Nagar, Vellore</strong> — in the same medical hub as CMC. You don&apos;t need to travel to Chennai or Bangalore. Same city. Better availability.
                             </p>
                             <p className="text-sm text-gray-500 dark:text-gray-400">
                                 <strong>Address:</strong> 54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore — 632006
@@ -306,7 +305,7 @@ export default function CMCVelloreAlternativePage() {
             <section className="bg-gradient-to-r from-fuchsia-700 to-purple-700 text-white py-16">
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h2 className="text-3xl sm:text-4xl font-black mb-4">
-                        Don't Wait Months.<br />
+                        Don&apos;t Wait Months.<br />
                         <span className="text-fuchsia-200">Get Treated This Week at Indira.</span>
                     </h2>
                     <p className="text-fuchsia-100 text-lg mb-8">Send your reports via WhatsApp and get a free specialist opinion + same-week appointment.</p>

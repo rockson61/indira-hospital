@@ -8,6 +8,7 @@ import { Happy, Electricity, Heart, Baby0203m } from "healthicons-react/outline"
 import Image from 'next/image';
 import Link from 'next/link';
 import { servicesData } from '@/lib/data/services-data';
+import { siteConfig } from "@/config/site";
 
 interface ModernServicesSectionProps {
   locationName?: string;
@@ -165,8 +166,8 @@ export function ModernServicesSection({ locationName = 'Vellore' }: ModernServic
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <ModernButton size="lg" variant="gradient" asChild>
-                <a href="tel:7010650063">
-                  📞 Call for Consultation
+                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}>
+                  📞 {siteConfig.contact.phone}
                 </a>
               </ModernButton>
               <ModernButton size="lg" variant="outline" asChild>

@@ -37,7 +37,7 @@ export default function QualityPage() {
                         Our Commitment to <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">Quality</span>
                     </h1>
                     <p className="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-                        At Indira Hospital, quality is not just a certification—it's a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.
+                        At Indira Hospital, quality is not just a certification—it&apos;s a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.
                     </p>
                 </div>
             </SectionContainer>

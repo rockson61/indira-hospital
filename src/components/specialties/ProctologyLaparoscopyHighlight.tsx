@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CheckCircle2, ArrowRight, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 interface Props {
     /** City name for localised copy, e.g. "Vellore" */
@@ -27,7 +28,7 @@ const LAPAROSCOPY_TREATMENTS = [
 
 const PARENT_SLUG = "general-surgery";
 
-const WA_DEFAULT = "https://wa.me/917010650063?text=" + encodeURIComponent("Hi, I want to know more about Proctology (Piles/Fistula) or Laparoscopic surgery at Indira Hospital. Please help.");
+const WA_DEFAULT = "https://wa.me/" + siteConfig.contact.whatsapp + "?text=" + encodeURIComponent("Hi, I want to know more about Proctology (Piles/Fistula) or Laparoscopic surgery at Indira Hospital. Please help.");
 
 export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, className = "" }: Props) {
     const locationLabel = countryName

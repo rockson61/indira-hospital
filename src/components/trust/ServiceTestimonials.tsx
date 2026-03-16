@@ -29,7 +29,7 @@ export function ServiceTestimonials({ testimonials }: ServiceTestimonialsProps) 
                 />
               ))}
             </div>
-            <p className="italic mb-4">"{testimonial.quote}"</p>
+            <p className="italic mb-4">&quot;{testimonial.quote}&quot;</p>
             <div className="flex items-center justify-between">
               <div>
                 <p className="font-semibold">{testimonial.name}</p>

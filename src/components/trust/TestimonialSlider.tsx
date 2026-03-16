@@ -8,6 +8,7 @@ import { RelevantQAWidget } from "@/components/widgets/relevant-qa-widget"
 import { CompactServiceWidget } from "@/components/widgets/compact-service-widget"
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { siteConfig } from "@/config/site";
 
 interface ModernTestimonialsSectionProps {
   locationName?: string;
@@ -52,7 +53,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
             transition={{ delay: 0.2 }}
             className="text-xl text-default-600 dark:text-default-400 max-w-3xl mx-auto leading-relaxed"
           >
-            Don't just take our word for it. Here's what our patients have to say about their
+            Don&apos;t just take our word for it. Here&apos;s what our patients have to say about their
             experience at Indira Dental Clinic in {locationName}.
           </motion.p>
         </div>
@@ -92,7 +93,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
 
                 {/* Testimonial Text */}
                 <p className="text-foreground dark:text-foreground/90 mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
 
                 {/* Patient Info */}
@@ -221,9 +222,9 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
                 startContent={<Phone className="w-5 h-5" />}
                 className="font-bold"
                 as={Link}
-                href="tel:7010650063"
+                href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
               >
-                Call: 7010650063
+                Call: {siteConfig.contact.phone}
               </Button>
               <Button
                 variant="bordered"

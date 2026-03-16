@@ -1,5 +1,5 @@
 import { getFaqsByEntity } from "@/lib/api";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 import { FAQAccordionClient } from "./faq-accordion-client";
 
 /**
@@ -27,7 +27,7 @@ export async function FAQSection() {
         faqs = [
             { question: "What are the visiting hours at Indira Hospital?", answer: "Visiting hours are 10:00 AM – 12:00 PM and 4:00 PM – 6:00 PM daily. ICU visiting is restricted. Emergency is open 24/7." },
             { question: "Does Indira Hospital accept health insurance?", answer: "Yes, we accept all major health insurance providers and offer cashless treatment facility." },
-            { question: "How can I book an appointment?", answer: `You can book via WhatsApp at +91 70106 50063, by calling ${clinicConfig.phone}, or through our website.` },
+            { question: "How can I book an appointment?", answer: `You can book via WhatsApp at ${siteConfig.contact.whatsapp}, by calling ${siteConfig.contact.phone}, or through our website.` },
             { question: "What emergency services are available?", answer: "Our emergency department operates 24/7 with trauma specialists, ICU, ambulance services, and rapid response teams." },
         ];
     }

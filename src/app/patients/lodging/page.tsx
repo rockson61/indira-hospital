@@ -4,7 +4,10 @@ import {
     MapPin, MessageCircle, Phone, ArrowRight, ChevronRight,
     Home, Star, Clock, Bed, Wifi, Car, CheckCircle2
 } from "lucide-react";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
+import { SectionContainer } from "@/components/ui/section-container";
 
 export const metadata: Metadata = {
     title: "Accommodation Near Indira Hospital Vellore | Patient Lodging Guide",
@@ -21,7 +24,7 @@ const HOTELS = [
     { name: "Indira Hospital Attendant Rooms", distance: "In hospital", stars: 0, price: "₹500–₹800/night", halal: false, features: ["Inside hospital", "Attendant beds", "Shared bathroom", "24/7 security"] },
 ];
 
-const WA = `https://wa.me/917010650063?text=${encodeURIComponent("Hi, I need help with accommodation near Indira Hospital Vellore. Please help.")}`;
+const WA = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need help with accommodation near Indira Hospital Vellore. Please help.")}`;
 
 export default function LodgingPage() {
     return (
@@ -113,6 +116,26 @@ export default function LodgingPage() {
                     </div>
                 </section>
             </div>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="facilities"
+                        title="Accommodation & Stay FAQs"
+                        description="Common questions about hospital rooms, guest houses, and attendant facilities."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="facilities"
+                        title="What Our Guests Say"
+                        description="Feedback from international guests about their stay in Vellore."
+                    />
+                </div>
+            </SectionContainer>
 
             {/* CTA */}
             <div className="bg-fuchsia-700 text-white py-12 text-center">

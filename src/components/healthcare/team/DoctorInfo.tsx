@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { siteConfig } from "@/config/site"
 
 export function DoctorInfo() {
   return (
@@ -29,8 +30,8 @@ export function DoctorInfo() {
           </div>
 
           <div className="mb-6 text-sm text-slate-600 dark:text-slate-300 font-medium space-y-1">
-            <p>Email: rockson68@hotmail.com</p>
-            <p>Phone: 7010650063</p>
+            <p>Email: {siteConfig.contact.email}</p>
+            <p>Phone: {siteConfig.contact.phone}</p>
           </div>
 
           <a

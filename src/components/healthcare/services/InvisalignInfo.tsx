@@ -263,7 +263,7 @@ export default function InvisalignInfo({ location = "Vellore" }: InvisalignInfoP
             <Shield className="h-10 w-10 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Satisfaction Guarantee</h3>
             <p className="text-muted-foreground dark:text-muted-foreground/70">
-              We're committed to your satisfaction with additional refinement aligners if needed to achieve your desired
+              We&apos;re committed to your satisfaction with additional refinement aligners if needed to achieve your desired
               results.
             </p>
           </CardContent>
@@ -303,7 +303,7 @@ export function WhyInvisalignExpensive() {
               Advanced Technology
             </h3>
             <p className="text-muted-foreground dark:text-muted-foreground/70">
-              Invisalign utilizes proprietary 3D computer imaging technology and SmartTrack® material that's been
+              Invisalign utilizes proprietary 3D computer imaging technology and SmartTrack® material that&apos;s been
               researched and tested for over 8 years. The precision engineering behind each aligner requires
               sophisticated software and manufacturing processes.
             </p>
@@ -316,7 +316,7 @@ export function WhyInvisalignExpensive() {
             </h3>
             <p className="text-muted-foreground dark:text-muted-foreground/70">
               Each Invisalign treatment is completely customized to the individual patient. Your aligners are designed
-              specifically for your teeth based on the treatment plan created by your dentist using Invisalign's
+              specifically for your teeth based on the treatment plan created by your dentist using Invisalign&apos;s
               ClinCheck® software.
             </p>
           </div>
@@ -327,7 +327,7 @@ export function WhyInvisalignExpensive() {
               Professional Expertise
             </h3>
             <p className="text-muted-foreground dark:text-muted-foreground/70">
-              Invisalign providers undergo specialized training to offer this treatment. The cost includes the dentist's
+              Invisalign providers undergo specialized training to offer this treatment. The cost includes the dentist&apos;s
               expertise in planning and monitoring your treatment, ensuring optimal results and addressing any issues
               that arise.
             </p>

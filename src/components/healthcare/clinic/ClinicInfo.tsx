@@ -2,6 +2,7 @@
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import { clinicTimings } from "@/lib/data/clinic-config"
+import { siteConfig } from "@/config/site"
 
 interface ClinicInfoProps {
   variant?: "full" | "compact"
@@ -28,16 +29,16 @@ export function ClinicInfo({ variant = "full", showHours = true, showEmail = tru
 
       <div className="flex items-center gap-2 mb-2">
         <Phone className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
-        <a href="tel:7010650063" className="hover:underline">
-          7010650063
+        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="hover:underline">
+          {siteConfig.contact.phone}
         </a>
       </div>
 
       {showEmail && (
         <div className="flex items-center gap-2 mb-2">
           <Mail className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
-          <a href="mailto:rockson68@hotmail.com" className="hover:underline">
-            rockson68@hotmail.com
+          <a href={`mailto:${siteConfig.contact.email}`} className="hover:underline">
+            {siteConfig.contact.email}
           </a>
         </div>
       )}

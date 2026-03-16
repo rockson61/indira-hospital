@@ -23,7 +23,7 @@ export default async function EntityFAQs({
     description,
     className
 }: EntityFAQsProps) {
-    const faqs = await getFaqsByEntity(entityType, entityName);
+    const faqs = await getFaqsByEntity(entityType, entityName, entitySlug);
 
     if (!faqs || faqs.length === 0) {
         return null; // Don't render if no FAQs available

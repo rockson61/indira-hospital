@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site";
+
 export interface InternationalCountry {
     name: string;
     slug: string;
@@ -42,7 +44,7 @@ export const COST_COMPARISON = [
 ];
 
 export const JOURNEY_STEPS = [
-    { step: 1, icon: "📄", title: "Share Medical Records", desc: "Send your reports, scans, and history via WhatsApp (+91 70106 50063) or email. We respond within 4 hours." },
+    { step: 1, icon: "📄", title: "Share Medical Records", desc: `Send your reports, scans, and history via WhatsApp (${siteConfig.contact.whatsapp}) or email. We respond within 4 hours.` },
     { step: 2, icon: "🩺", title: "Free Online Consultation", desc: "Our specialist reviews your case and gives a detailed opinion via video call — completely free." },
     { step: 3, icon: "💬", title: "Treatment Plan & Cost Estimate", desc: "You receive a complete itemised treatment plan with transparent, all-inclusive pricing." },
     { step: 4, icon: "✈️", title: "Travel & Visa Assistance", desc: "We send the hospital invitation letter within 24 hours to help you secure your medical visa." },

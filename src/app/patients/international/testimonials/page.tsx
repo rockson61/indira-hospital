@@ -171,7 +171,9 @@ const jsonLd = {
     })),
 };
 
-const WA = "https://wa.me/917010650063?text=" + encodeURIComponent("Hi, I read the patient stories and I want to book treatment at Indira Hospital. Please help.");
+import { siteConfig } from "@/config/site";
+
+const WA = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I read the patient stories and I want to book treatment at Indira Hospital. Please help.")}`;
 
 export default function InternationalTestimonialsPage() {
     return (

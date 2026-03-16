@@ -80,7 +80,7 @@ export function Header() {
 
                             {/* WhatsApp */}
                             <a
-                                href="https://wa.me/917010650063"
+                                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center p-3 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 dark:hover:bg-pink-950 text-pink-600 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-pink-100 transition-all"
@@ -134,9 +134,19 @@ export function Header() {
                     </nav>
 
                     <div className="mt-8 space-y-4">
-                        <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center justify-center space-x-2 w-full p-4 rounded-3xl bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold">
+                        <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center justify-center space-x-2 w-full p-4 rounded-3xl bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold border border-rose-100 dark:border-rose-900">
                             <Phone className="h-5 w-5" />
                             <span>Emergency: {siteConfig.contact.emergencyPhone}</span>
+                        </a>
+                        <a 
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="flex items-center justify-center space-x-2 w-full p-4 rounded-3xl bg-pink-50 dark:bg-pink-950 text-pink-600 font-bold border border-pink-100 dark:border-pink-900"
+                        >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <span>WhatsApp Us</span>
                         </a>
                         <Link
                             href="/book-appointment"

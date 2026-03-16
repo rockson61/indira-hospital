@@ -1,8 +1,8 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/section-header";
-import { Clock, Trophy, Ambulance, Award, Users, Shield } from "lucide-react";
-;
+import { Clock, Trophy, Ambulance, Award, Users, Shield, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { HeartCardiogram, Microscope } from "healthicons-react/outline";
 
 const features = [
@@ -76,7 +76,22 @@ export function WhyChooseUs() {
                                 </dd>
                             </div>
                         ))}
-                    </div>
+                </div>
+            </div>
+
+                <div className="mt-20 flex flex-col items-center">
+                    <a
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I'm clinical inquiry. I want to book an appointment.")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-3 px-12 py-6 bg-slate-900 dark:bg-fuchsia-600 text-white rounded-[2rem] font-black text-xl hover:scale-105 transition-all shadow-xl shadow-fuchsia-500/20"
+                    >
+                        <MessageCircle className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                        Chat with our Experts Now
+                    </a>
+                    <p className="mt-6 text-sm font-bold text-slate-400 uppercase tracking-widest">
+                        Available 24/7 for Medical Inquiries
+                    </p>
                 </div>
             </div>
         </section>

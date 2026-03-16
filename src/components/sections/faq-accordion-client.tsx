@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 interface FAQAccordionClientProps {
     faqs: { question: string; answer: string }[];
@@ -65,7 +66,7 @@ export function FAQAccordionClient({ faqs }: FAQAccordionClientProps) {
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                         Still have questions?{" "}
                         <a
-                            href="https://wa.me/917010650063?text=Hi%2C%20I%20have%20a%20question%20about%20Indira%20Hospital."
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I have a question about Indira Hospital.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-green-600 font-semibold hover:text-green-700"

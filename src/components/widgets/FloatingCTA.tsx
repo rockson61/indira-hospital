@@ -1,9 +1,10 @@
 "use client"
 
-import { Phone, Calendar } from 'lucide-react'
+import { Phone, Calendar, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { siteConfig } from '@/config/site'
 
 export function FloatingCTA() {
     const [isVisible, setIsVisible] = useState(false)
@@ -33,8 +34,12 @@ export function FloatingCTA() {
                             variant="outline"
                             className="flex-1 rounded-xl border-green-500 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20"
                         >
-                            <a href="https://wa.me/917010650063">
-                                <Phone className="w-4 h-4 mr-2" />
+                            <a 
+                                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <MessageCircle className="w-4 h-4 mr-2" />
                                 WhatsApp
                             </a>
                         </Button>

@@ -13,6 +13,7 @@ import {
   Wind,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site';
 // import { InvokeLLM } from '@/api/integrations'; // API not present
 
 export default function FloatingActionBar() {
@@ -21,8 +22,8 @@ export default function FloatingActionBar() {
   const [greeting, setGreeting] = useState('');
   const [weather, setWeather] = useState<{ temperature: number; icon: string } | null>(null);
 
-  const whatsappUrl = "https://wa.me/91XXXXXXXXXX";
-  const phone = "+91 0000000000";
+  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}`;
+  const phone = siteConfig.contact.phone;
   const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=Indira+Super+Speciality+Hospital+Vellore";
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });

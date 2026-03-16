@@ -1,15 +1,17 @@
-// @ts-nocheck
+import React from "react";
 import { getDiagnostics } from "@/lib/api"
 import { siteConfig } from "@/config/site"
 import { Diagnostic } from "@/lib/schema"
 import { SectionContainer } from "@/components/ui/section-container"
-import { Clock, ArrowRight, FileText, CheckCircle2, Sparkles, Beaker, Shield } from "lucide-react"
+import { Clock, ArrowRight, FileText, CheckCircle2, Sparkles, Beaker, Shield, MessageCircle } from "lucide-react"
 import { TestTubes, UltrasoundScanner, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import { DiagnosticCard } from "@/components/entities/DiagnosticCard"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { EntityCardSection } from "@/components/seo/EntityCardSection"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: 'Get Test Reports in Under 12 Hours | Diagnostics at Indira Hospital Vellore',
@@ -178,11 +180,12 @@ export default async function DiagnosticsPage() {
 
                         <div className="flex flex-col sm:flex-row gap-8 justify-center w-full max-w-3xl mx-auto mb-16">
                             <a
-                                href="https://wa.me/917010650063?text=Hi%2C%20I%20want%20to%20book%20home%20sample%20collection"
+                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book home sample collection.")}`}
                                 target="_blank"
-                                rel="noreferrer"
-                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
+                                rel="noopener noreferrer"
+                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 hover:bg-fuchsia-600 text-slate-900 dark:text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
                             >
+                                <MessageCircle className="w-6 h-6 mr-3" />
                                 <span className="relative z-10 uppercase tracking-wider">Book Home Visit</span>
                                 <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
@@ -218,6 +221,26 @@ export default async function DiagnosticsPage() {
                 </div>
             </SectionContainer>
 
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto px-6 lg:px-8 py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="scans"
+                        title="Diagnostic & Safety FAQs"
+                        description="Common questions about imaging safety, prep, and report turnaround at Indira Hospital."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="diagnostics"
+                        title="What Patients Say about Our Diagnostics"
+                        description="Real patient experiences from our pathology and imaging centers."
+                    />
+                </div>
+            </SectionContainer>
+
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
@@ -242,7 +265,7 @@ export default async function DiagnosticsPage() {
                             "@type": "MedicalTest",
                             "name": t.name,
                             "url": `${siteConfig.url}/diagnostics/${t.slug}`,
-                            "description": (t as any).seo_description || t.short_description,
+                            "description": t.seo_description || t.short_description,
                             ...(t.price && { "offers": { "@type": "Offer", "price": t.price, "priceCurrency": "INR" } }),
                         })),
                     })

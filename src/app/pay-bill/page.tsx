@@ -1,9 +1,74 @@
+"use client";
+
+import { useState } from "react";
 import { PageHeader } from "@/components/ui/page-header";
 import { SectionContainer } from "@/components/ui/section-container";
-import { CreditCard, FileText, Shield } from "lucide-react";
-;
+import { CreditCard, FileText, Shield, CheckCircle2, ArrowRight } from "lucide-react";
+import { submitBillingPayment } from "@/app/actions/billing-actions";
+import Link from "next/link";
+import EntityFAQs from "@/components/trust/EntityFAQs";
 
 export default function PayBillPage() {
+    const [formData, setFormData] = useState({
+        patient_id: "",
+        invoice_number: "",
+        amount: 0
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setError("");
+
+        try {
+            const result = await submitBillingPayment({
+                ...formData,
+                status: 'success'
+            });
+            if (result.success) {
+                setIsSuccess(true);
+            } else {
+                setError(result.error || "Payment processing failed.");
+            }
+        } catch (err) {
+            setError("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { id, value } = e.target;
+        setFormData(prev => ({ 
+            ...prev, 
+            [id === 'patient-id' ? 'patient_id' : id === 'invoice-number' ? 'invoice_number' : 'amount']: id === 'amount' ? parseFloat(value) : value 
+        }));
+    };
+
+    if (isSuccess) {
+        return (
+            <main className="min-h-screen bg-slate-50 dark:bg-slate-950 flex items-center justify-center px-6">
+                <div className="bg-white dark:bg-slate-900 p-12 rounded-[3rem] border border-slate-200 dark:border-slate-800 text-center max-w-2xl shadow-xl">
+                    <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_40px_rgba(16,185,129,0.3)]">
+                        <CheckCircle2 className="w-10 h-10 text-white" />
+                    </div>
+                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-4">Payment Successful!</h2>
+                    <p className="text-xl text-slate-500 dark:text-slate-400 mb-10">
+                        Thank you. Your payment of <span className="font-bold text-slate-900 dark:text-white">₹{formData.amount}</span> has been processed successfully. A confirmation receipt has been sent to your registered mobile/email.
+                    </p>
+                    <Link href="/">
+                        <button className="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all flex items-center gap-3 mx-auto">
+                            Go to Homepage <ArrowRight className="w-5 h-5" />
+                        </button>
+                    </Link>
+                </div>
+            </main>
+        );
+    }
+
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-950">
             <PageHeader
@@ -26,12 +91,20 @@ export default function PayBillPage() {
                                 </div>
                             </div>
 
-                            <form className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                {error && (
+                                    <div className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-2xl text-rose-500 text-sm font-bold">
+                                        {error}
+                                    </div>
+                                )}
                                 <div className="space-y-2">
                                     <label htmlFor="patient-id" className="text-sm font-bold text-slate-700 dark:text-slate-300">Patient ID / MRN *</label>
                                     <input
                                         type="text"
                                         id="patient-id"
+                                        required
+                                        value={formData.patient_id}
+                                        onChange={handleChange}
                                         placeholder="e.g. IND-123456"
                                         className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-fuchsia-500/20 focus:border-fuchsia-500 transition-all text-slate-900 dark:text-white"
                                     />
@@ -42,6 +115,8 @@ export default function PayBillPage() {
                                     <input
                                         type="text"
                                         id="invoice-number"
+                                        value={formData.invoice_number}
+                                        onChange={handleChange}
                                         placeholder="e.g. INV-2026-001"
                                         className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-fuchsia-500/20 focus:border-fuchsia-500 transition-all text-slate-900 dark:text-white"
                                     />
@@ -56,26 +131,51 @@ export default function PayBillPage() {
                                         <input
                                             type="number"
                                             id="amount"
+                                            required
+                                            min="1"
+                                            value={formData.amount || ""}
+                                            onChange={handleChange}
                                             placeholder="0.00"
                                             className="w-full pl-10 pr-5 py-4 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-fuchsia-500/20 focus:border-fuchsia-500 transition-all text-slate-900 dark:text-white"
                                         />
                                     </div>
                                 </div>
 
-                                <button type="button" className="w-full py-4 mt-4 bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-all shadow-lg shadow-fuchsia-500/25 flex items-center justify-center gap-2">
-                                    <CreditCard className="w-5 h-5" />
-                                    Proceed to Payment
+                                <button 
+                                    type="submit" 
+                                    disabled={isSubmitting}
+                                    className="w-full py-5 mt-4 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-700 transition-all shadow-lg shadow-fuchsia-500/25 flex items-center justify-center gap-2 disabled:bg-slate-300"
+                                >
+                                    {isSubmitting ? (
+                                        <div className="w-6 h-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                                    ) : (
+                                        <>
+                                            <CreditCard className="w-5 h-5" />
+                                            Proceed to Payment
+                                        </>
+                                    )}
                                 </button>
                             </form>
 
                             <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 bg-amber-50 dark:bg-amber-900/10 p-4 rounded-xl">
                                 <FileText className="w-5 h-5 text-amber-600 dark:text-amber-500 flex-shrink-0" />
-                                <p>If you don't know your Patient ID or Invoice Number, please contact our billing department at <span className="font-bold text-slate-700 dark:text-slate-300">080 4716 1616</span>.</p>
+                                <p>If you don&apos;t know your Patient ID or Invoice Number, please contact our billing department at <span className="font-bold text-slate-700 dark:text-slate-300">080 4716 1616</span>.</p>
                             </div>
                         </div>
                     </div>
                 </SectionContainer>
             </section>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-3xl mx-auto pb-24">
+                <EntityFAQs
+                    entityType="hospital"
+                    entityName="Indira Hospital"
+                    entitySlug="insurance"
+                    title="Payment & Billing FAQs"
+                    description="Questions about UPI, credit cards, and online payment security."
+                />
+            </SectionContainer>
         </main>
     );
 }

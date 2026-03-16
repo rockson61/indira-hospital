@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { AlertCircle, Clock, Info, Shield } from "lucide-react"
 ;
 import { Pills2 } from "healthicons-react/outline";
+import { siteConfig } from "@/config/site";
 
 interface Medicine {
   name: string
@@ -164,10 +165,10 @@ export function MedicineSection({
               Book Consultation
             </a>
             <a
-              href="tel:7010650063"
+              href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-fuchsia-600 text-white rounded-lg font-semibold hover:bg-fuchsia-700 transition-colors"
             >
-              Call: 7010650063
+              Call: {siteConfig.contact.phone}
             </a>
           </div>
         </div>

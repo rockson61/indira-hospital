@@ -16,7 +16,7 @@ import EntityReviews from "@/components/trust/EntityReviews";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { injectInternalLinks } from "@/lib/html-linkify";
 
-const WHATSAPP_NUMBER = "917010650063";
+
 
 export const dynamicParams = true;
 
@@ -85,7 +85,7 @@ export default async function LocationDepartmentPage({
         );
     });
 
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
         `Hi, I need ${service.title} treatment in ${location.name}. Please help.`
     )}`;
 

@@ -8,13 +8,13 @@ import { Stethoscope } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
+import { siteConfig } from "@/config/site";
+
 interface DoctorCardProps {
     doctor: any;
     variant?: "grid" | "list" | "compact" | "featured";
     showBookButton?: boolean;
 }
-
-const WHATSAPP_NUMBER = "917010650063";
 
 // Must match the slug derivation logic in doctor/[specialty]/[slug]/page.tsx generateStaticParams
 function getSpecialtySlug(doctor: any): string {
@@ -24,7 +24,7 @@ function getSpecialtySlug(doctor: any): string {
 
 export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: DoctorCardProps) {
     const deptName = typeof doctor.department === 'string' ? doctor.department : (doctor.department?.name || '');
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I would like to book an appointment with ${doctor.name}.`)}`;
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I would like to book an appointment with ${doctor.name}.`)}`;
     const initials = doctor.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2);
 
     // --- VARIANT: COMPACT (Sidebar / Minimal) ---

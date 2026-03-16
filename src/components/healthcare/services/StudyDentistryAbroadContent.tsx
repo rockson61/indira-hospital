@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { GraduationCap, Globe, BookOpen, CheckCircle, Phone, ArrowRight } from 'lucide-react'
 import { Button } from '@heroui/react'
 import { ModernCard, ModernCardContent } from '@/components/ui/modern-card'
+import { siteConfig } from "@/config/site";
 
 export function StudyDentistryAbroadContent() {
     return (
@@ -84,24 +85,26 @@ export function StudyDentistryAbroadContent() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white dark:text-foreground font-heading">Start Your Dental Journey Today</h2>
                     <p className="text-xl text-white/90 dark:text-default-500 mb-10 max-w-2xl mx-auto">
-                        Get personalized guidance from Dr. Rockson Samuel's team for admissions in Top Medical Universities.
+                        Get personalized guidance from Dr. Rockson Samuel&apos;s team for admissions in Top Medical Universities.
                     </p>
                     <div className="inline-flex flex-col sm:flex-row gap-4 justify-center">
                         <Button
                             as={Link}
-                            href="tel:+917010650063"
+                            href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                             size="lg"
                             className="bg-card text-primary font-bold shadow-xl hover:bg-muted dark:bg-primary dark:text-white"
                             startContent={<Phone className="w-5 h-5" />}
                         >
-                            Call: +91 70106 50063
+                            Call: {siteConfig.contact.phone}
                         </Button>
                         <Button
                             as={Link}
-                            href="https://wa.me/917010650063"
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                             size="lg"
                             variant="bordered"
                             className="border-white text-white hover:bg-card/10 dark:border-default-200 dark:text-foreground font-bold"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             WhatsApp Us
                         </Button>

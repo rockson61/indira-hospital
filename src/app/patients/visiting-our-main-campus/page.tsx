@@ -4,7 +4,7 @@ import {
     Clock, MapPin, MessageCircle, Phone, ChevronRight,
     Shield, Users, Coffee, Pill, CreditCard, Wifi, ParkingCircle, Heart
 } from "lucide-react";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
     title: "Visiting Indira Hospital Vellore | Campus Guide, Hours & Amenities",
@@ -40,7 +40,7 @@ const RULES = [
     "Aggressive or disruptive behaviour will result in immediate removal",
 ];
 
-const WA = `https://wa.me/917010650063?text=${encodeURIComponent("Hi, I want to know visiting hours or plan a visit to Indira Hospital, Vellore.")}`;
+const WA = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to know visiting hours or plan a visit to Indira Hospital, Vellore.")}`;
 
 export default function VisitingMainCampusPage() {
     return (
@@ -64,7 +64,7 @@ export default function VisitingMainCampusPage() {
                     </h1>
                     <p className="text-slate-300 text-lg max-w-2xl">Visiting hours, campus layout, amenities, and general rules — everything you need for a smooth visit to our hospital.</p>
                     <div className="flex gap-4 mt-6">
-                        <a href={`tel:${clinicConfig.phone.replace(/\s+/g, "")}`}
+                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
                             className="inline-flex items-center gap-2 px-6 py-3 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold rounded-xl transition-all">
                             <Phone className="w-4 h-4" /> Call Reception
                         </a>

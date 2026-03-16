@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BadgeCheck, ArrowRight, Shield } from "lucide-react";
-;
+import { siteConfig } from "@/config/site";
 import { Electricity, HeartCardiogram, Stethoscope } from "healthicons-react/outline";
 
 const trustItems = [
@@ -59,10 +59,18 @@ export function TrustStrip() {
                     ))}
                     <Link
                         href="/doctor/near-me/treat"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm dark:shadow-slate-900/30"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 dark:bg-slate-700 text-white text-sm font-bold hover:bg-slate-800 dark:hover:bg-slate-600 transition-all shadow-sm"
                     >
                         Explore Services <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
+                    <a
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-fuchsia-600 dark:bg-fuchsia-600 text-white text-sm font-bold hover:bg-fuchsia-500 transition-all shadow-md shadow-fuchsia-200 dark:shadow-none"
+                    >
+                        Chat on WhatsApp <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
                 </div>
             </div>
         </section>

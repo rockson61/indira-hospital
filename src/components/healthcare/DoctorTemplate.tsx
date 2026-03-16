@@ -14,7 +14,7 @@ import { DepartmentCard } from "@/components/entities/DepartmentCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { getImageUrl } from "@/lib/utils";
-import { clinicConfig } from "@/lib/data/clinic-config";
+import { siteConfig } from "@/config/site";
 import { DOCTOR_PROFILE, DOCTOR_EXPERTISE_FALLBACK_1, DOCTOR_EXPERTISE_FALLBACK_2, DOCTORS_DIRECTORY, INDIRA_STANDARDS } from "@/config/constants";
 import { Doctor } from "@/data/doctors";
 import { Department } from "@/data/departments";
@@ -131,11 +131,11 @@ export function DoctorTemplate({
                                     {DOCTOR_PROFILE.BTN_WHATSAPP_BOOK}
                                 </a>
                                 <a
-                                    href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
+                                    href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
                                     className="inline-flex items-center px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold rounded-2xl transition-all border border-white/20 hover:scale-105 active:scale-95 text-xl"
                                 >
                                     <Phone className="w-6 h-6 mr-3" />
-                                    {clinicConfig.phone}
+                                    {siteConfig.contact.phone}
                                 </a>
                             </div>
                         </div>
@@ -231,7 +231,7 @@ export function DoctorTemplate({
                                         {DOCTOR_PROFILE.BTN_WHATSAPP_CHAT}
                                     </a>
                                     <a
-                                        href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
+                                        href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
                                         className="w-full inline-flex items-center justify-center px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-2xl border border-white/10 transition-all text-sm uppercase tracking-widest"
                                     >
                                         <Phone className="w-5 h-5 mr-3" />

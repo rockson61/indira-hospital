@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Ambulance, Ribbon, ArrowRight, CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
+import { Ambulance, Ribbon, ArrowRight, CheckCircle2, ChevronRight, Sparkles, MessageCircle } from "lucide-react";
 import { Stethoscope, HeartCardiogram, Heart, Happy, Neurology, BloodDrop, Electricity, Baby0203m, Orthopaedics } from "healthicons-react/outline";
+import { siteConfig } from "@/config/site";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -147,15 +148,23 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                     )}
                 </div>
 
-                <div className="mt-auto relative z-20">
+                <div className="mt-auto relative z-20 flex gap-3">
                     <Link
                         href={href}
-                        className="group/btn relative inline-flex items-center justify-center w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl text-sm transition-all duration-500 overflow-hidden shadow-xl hover:bg-fuchsia-500 dark:hover:bg-fuchsia-200 dark:hover:text-white"
+                        className="group/btn relative flex-1 inline-flex items-center justify-center py-5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-black rounded-2xl text-xs transition-all duration-500 overflow-hidden shadow-sm hover:bg-slate-200 dark:hover:bg-slate-600 uppercase tracking-widest"
                     >
-                        <span className="relative z-10 uppercase tracking-[0.2em]">View Details</span>
-                        <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+                        Details
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
+                    <a
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in learning more about ${service.title}.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/wa relative flex-1 inline-flex items-center justify-center py-5 bg-fuchsia-600 text-white font-black rounded-2xl text-xs transition-all duration-500 overflow-hidden shadow-xl hover:bg-fuchsia-500 uppercase tracking-widest"
+                    >
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        Chat
+                    </a>
                 </div>
             </div>
         </motion.div>

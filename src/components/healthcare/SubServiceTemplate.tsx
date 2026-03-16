@@ -12,7 +12,7 @@ import { ProcedureTimeline } from '@/components/healthcare/services/ProcedureTim
 import EntityReviews from '@/components/trust/EntityReviews'
 import { RelatedServices, RelatedServicesProps } from '@/components/healthcare/services/RelatedServices'
 import { ModernCard } from '@/components/ui/modern-card'
-import { clinicConfig } from '@/lib/data/clinic-config'
+import { siteConfig } from "@/config/site";
 import { injectInternalLinks } from '@/lib/html-linkify'
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
@@ -68,7 +68,7 @@ export function SubServiceTemplate({
     departmentSlug,
     children,
 }: SubServiceTemplateProps) {
-    const phone = clinicConfig.phone
+    const phone = siteConfig.contact.phone
     const whatsappNumber = phone.replace(/\D/g, '')
     const whatsappUrl = `https://wa.me/91${whatsappNumber}?text=${encodeURIComponent(`Hi, I need information about ${title} at Indira Hospital.`)}`
     const bookingUrl = '/book-appointment'

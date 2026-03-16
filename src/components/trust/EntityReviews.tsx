@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { ModernCard, ModernCardHeader, ModernCardContent } from "@/components/ui/modern-card";
 import { cn } from "@/lib/utils";
 import { Star, UserCircle, MapPin, Quote } from "lucide-react";
@@ -7,7 +6,7 @@ import { getReviewsByEntity } from "@/lib/api";
 import { Testimonial } from "@/lib/schema";
 
 interface EntityReviewsProps {
-    entityType: 'doctor' | 'department' | 'service' | 'diagnostic' | 'location' | 'blog' | 'technology';
+    entityType: 'doctor' | 'department' | 'service' | 'diagnostic' | 'location' | 'blog' | 'technology' | 'hospital';
     entityName: string;
     entitySlug: string;
     title?: string;
@@ -25,7 +24,7 @@ export default async function EntityReviews({
 }: EntityReviewsProps) {
     let reviews = [];
     try {
-        reviews = await getReviewsByEntity(entityType, entityName);
+        reviews = await getReviewsByEntity(entityType, entityName, entitySlug);
     } catch (error: any) {
         // Only log real errors, not just "not found"
         if (error.response?.status !== 404) {
@@ -42,13 +41,23 @@ export default async function EntityReviews({
     }
 
     // Calculate average rating
-    const totalRating = reviews.reduce((acc, rev) => acc + (rev.rating || 5), 0);
+    const totalRating = reviews.reduce((acc: number, rev: any) => acc + (rev.rating || 5), 0);
     const avgRating = (totalRating / reviews.length).toFixed(1);
+
+    // Determine Schema @type based on entityType
+    let schemaType = "MedicalOrganization";
+    if (entityType === 'doctor') schemaType = "Physician";
+    if (entityType === 'service' || entityType === 'diagnostic') schemaType = "Service";
 
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": entityType === 'doctor' ? 'Physician' : 'MedicalOrganization',
+        "@type": schemaType,
         "name": entityName,
+        "description": description,
+        "provider": {
+            "@type": "MedicalOrganization",
+            "name": "Indira Super Speciality Hospital"
+        },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": avgRating.toString(),
@@ -56,7 +65,7 @@ export default async function EntityReviews({
             "bestRating": "5",
             "worstRating": "1"
         },
-        "review": reviews.map(review => ({
+        "review": reviews.map((review: any) => ({
             "@type": "Review",
             "author": {
                 "@type": "Person",
@@ -101,7 +110,7 @@ export default async function EntityReviews({
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {reviews.map((review, index) => (
+                    {reviews.map((review: any) => (
                         <ModernCard key={review.id} variant="default" hover className="flex flex-col h-full bg-slate-50/50 dark:bg-slate-800/50 border-none shadow-none hover:shadow-xl transition-all duration-500">
                             <ModernCardHeader className="p-8 pb-4">
                                 <div className="flex justify-between items-start mb-6">
@@ -115,7 +124,7 @@ export default async function EntityReviews({
                                     </div>
                                 </div>
                                 <p className="text-slate-600 dark:text-slate-300 italic leading-relaxed text-lg mb-6">
-                                    "{review.content}"
+                                    &quot;{review.content}&quot;
                                 </p>
                             </ModernCardHeader>
                             <ModernCardContent className="p-8 pt-0 mt-auto">

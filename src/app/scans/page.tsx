@@ -9,7 +9,10 @@ export const metadata: Metadata = {
     description: 'High-precision scans with 3T MRI, 128-Slice CT, and Digital X-Rays. Ultra-fast <12 hour turnaround time for critical reports.',
 }
 
-const WHATSAPP_NUMBER = "917010650063";
+import { siteConfig } from "@/config/site";
+import { MessageCircle } from "lucide-react";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export default function ScansPage() {
     return (
@@ -117,6 +120,27 @@ export default function ScansPage() {
                     ))}
                 </div>
             </SectionContainer>
+            {/* REGIONAL TRUST SIGNALS */}
+            <SectionContainer className="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="service"
+                        entityName="Scans & Imaging"
+                        entitySlug="scans"
+                        title="Common Questions about Imaging"
+                        description="Expert answers on MRI safety, CT prep, and report turnaround times at Indira Hospital."
+                        className="bg-transparent border-none shadow-none p-0"
+                    />
+                    <EntityReviews
+                        entityType="service"
+                        entityName="Scans & Imaging"
+                        entitySlug="scans"
+                        title="Diagnostic Experiences"
+                        description="Real patient feedback on our imaging center and reporting speed."
+                        className="bg-transparent border-none shadow-none p-0"
+                    />
+                </div>
+            </SectionContainer>
 
             {/* CTA */}
             <SectionContainer className="px-4">
@@ -132,18 +156,19 @@ export default function ScansPage() {
                             Book Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Scan Today.</span>
                         </h2>
                         <p className="text-xl sm:text-2xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-                            Don't wait hours for an emergency scan. Schedule your appointment instantly and get your comprehensive digital diagnostic report lightning fast.
+                            Don&apos;t wait hours for an emergency scan. Schedule your appointment instantly and get your comprehensive digital diagnostic report lightning fast.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-3xl mx-auto">
-                            <a
-                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I would like to book an appointment for a scan/imaging test.")}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-blue-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-blue-500/25 overflow-hidden text-xl"
-                            >
-                                <span className="relative z-10 uppercase tracking-wider">Book Appointment</span>
-                                <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                            </a>
+                                <a
+                                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for a scan/imaging test.")}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-blue-500 hover:bg-blue-600 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-blue-500/25 overflow-hidden text-xl"
+                                >
+                                    <MessageCircle className="w-6 h-6 mr-3" />
+                                    Book via WhatsApp
+                                    <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                                </a>
                         </div>
                     </div>
                 </div>

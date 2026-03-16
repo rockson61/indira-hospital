@@ -9,6 +9,7 @@ import { Happy, Electricity, Heart, Baby0203m } from "healthicons-react/outline"
 import { useServices } from "@/hooks/useServices"
 import Image from "next/image"
 import Link from 'next/link'
+import { siteConfig } from "@/config/site";
 // import { useTranslations } from 'next-intl';
 
 export function ServicesOverview() {
@@ -110,7 +111,7 @@ export function ServicesOverview() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-card text-red-600 hover:bg-muted font-bold" asChild>
-                <a href="tel:7010650063">Call Emergency</a>
+                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}>Call Emergency</a>
               </Button>
               <Button
                 size="lg"

@@ -178,8 +178,8 @@ export function WhyChooseUs() {
                 ))}
               </div>
               <blockquote className="text-2xl font-medium text-white/90 italic">
-                "The team at Indira Super Speciality Hospital provided exceptional care. The facility is modern,
-                clean, and the staff is incredibly professional. I highly recommend them for any medical needs."
+                &quot;The team at Indira Super Speciality Hospital provided exceptional care. The facility is modern,
+                clean, and the staff is incredibly professional. I highly recommend them for any medical needs.&quot;
               </blockquote>
               <div className="text-[#54CAD3] font-semibold">- Priya Sharma, Gandhi Nagar, Vellore</div>
             </div>

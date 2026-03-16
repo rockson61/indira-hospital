@@ -9,7 +9,10 @@ export const metadata: Metadata = {
     description: '100% genuine medicines available 24/7. Fast home delivery in Vellore, temperature-controlled storage, and expert pharmacist consultations.',
 }
 
-const WHATSAPP_NUMBER = "917010650063";
+import { siteConfig } from "@/config/site";
+import { MessageCircle } from "lucide-react";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export default function PharmacyPage() {
     return (
@@ -130,6 +133,27 @@ export default function PharmacyPage() {
                     ))}
                 </div>
             </SectionContainer>
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto px-6 lg:px-8 py-24 border-t border-slate-200 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="service"
+                        entityName="Pharmacy"
+                        entitySlug="pharmacy"
+                        title="Pharmacy Service FAQs"
+                        description="Common questions about home delivery, genuine medicines, and 24/7 availability."
+                        className="bg-transparent border-none shadow-none p-0"
+                    />
+                    <EntityReviews
+                        entityType="service"
+                        entityName="Pharmacy"
+                        entitySlug="pharmacy"
+                        title="Patient Stories"
+                        description="Experiences from patients who used our 24/7 pharmacy and delivery services."
+                        className="bg-transparent border-none shadow-none p-0"
+                    />
+                </div>
+            </SectionContainer>
 
             {/* CTA */}
             <SectionContainer className="px-4">
@@ -146,11 +170,12 @@ export default function PharmacyPage() {
                         </h2>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-3xl mx-auto">
                             <a
-                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I would like to order medicines. Here is my prescription.")}`}
+                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I would like to order medicines. Here is my prescription.")}`}
                                 target="_blank"
-                                rel="noreferrer"
-                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-emerald-500 text-slate-900 font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-emerald-500/25 overflow-hidden text-xl"
+                                rel="noopener noreferrer"
+                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-emerald-500/25 overflow-hidden text-xl"
                             >
+                                <MessageCircle className="w-6 h-6 mr-3" />
                                 <span className="relative z-10 uppercase tracking-wider">Order via WhatsApp</span>
                                 <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                             </a>

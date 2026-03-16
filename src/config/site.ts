@@ -5,6 +5,7 @@ export const siteConfig = {
     ogImage: "/images/hospital/Hospital view 2.webp",
     contact: {
         phone: "+91 098423 24425",
+        whatsapp: "917010650063",
         emergencyPhone: "+91 098423 24425",
         email: "info@indirasuperspecialityhospital.com",
         address: "54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006",

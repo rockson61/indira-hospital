@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
+import { siteConfig } from "@/config/site"
 
 interface ClinicInfoCardProps {
   showDirections?: boolean
@@ -32,8 +33,8 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
     rating: 5.0,
     reviewCount: 119,
     address: "3rd Floor, 54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006",
-    phone: "7010650063",
-    whatsapp: "917010650063",
+    phone: siteConfig.contact.phone,
+    whatsapp: siteConfig.contact.whatsapp,
     website: "https://www.velloredental.com",
     directionsUrl: "https://maps.app.goo.gl/7NrdTAXtqLrAoC5U8",
     hours: [
@@ -111,7 +112,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
               </a>
             </Button>
             <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-              <a href={`tel:${clinicInfo.phone}`}>
+              <a href={`tel:${clinicInfo.phone.replace(/\s+/g, "")}`}>
                 <Phone className="w-4 h-4 mr-2" />
                 Call
               </a>
@@ -211,7 +212,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                     <li>Exit Katpadi Railway Station and head towards the main road</li>
                     <li>Take an auto-rickshaw or taxi (₹50-80, 5-10 minutes)</li>
-                    <li>Ask the driver to take you to "Indira Dental Clinic, Gandhi Nagar, Katpadi Main Road"</li>
+                    <li>Ask the driver to take you to &quot;Indira Dental Clinic, Gandhi Nagar, Katpadi Main Road&quot;</li>
                   </ul>
                 </div>
 
@@ -251,7 +252,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                   </h3>
                   <p className="text-muted-foreground">
                     Bus routes 1, 2, 5, and 12 pass through Katpadi Main Road and stop near Gandhi Nagar. Ask the
-                    conductor for "Gandhi Nagar" or "Shell Petrol Pump" stop.
+                    conductor for &quot;Gandhi Nagar&quot; or &quot;Shell Petrol Pump&quot; stop.
                   </p>
                 </div>
               </TabsContent>
@@ -316,7 +317,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                       <li>Look for the Shell Petrol Pump on Katpadi Main Road</li>
                       <li>The clinic building is right next to the petrol pump</li>
                       <li>Take the elevator or stairs to the 3rd floor</li>
-                      <li>You'll see our signboard at the entrance</li>
+                      <li>You&apos;ll see our signboard at the entrance</li>
                     </ul>
                   </div>
                 </div>
@@ -431,7 +432,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
               dayOfWeek: schedule.day.toUpperCase(),
               opens: schedule.hours.split("–")[0].trim(),
             })),
-            telephone: `+91 ${clinicInfo.phone}`,
+            telephone: siteConfig.contact.phone,
             url: clinicInfo.website,
           }),
         }}

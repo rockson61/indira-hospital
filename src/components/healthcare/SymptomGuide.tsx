@@ -5,6 +5,7 @@ import { CheckCircle2, ChevronRight, Search, PhoneCall, Video, Info } from "luci
 import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 type CareLevel = 'teleconsult' | 'opd' | 'daycare' | 'emergency';
 
@@ -196,7 +197,7 @@ export function SymptomGuide() {
                     <Link href="/book-appointment" className="flex-1 md:flex-none text-center px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">
                         Book OPD
                     </Link>
-                    <a href="tel:08041414141" className="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-rose-600/20">
+                    <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`} className="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-rose-600/20">
                         <PhoneCall className="w-4 h-4" /> Call Emergency
                     </a>
                 </div>

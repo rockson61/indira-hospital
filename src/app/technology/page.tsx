@@ -4,6 +4,8 @@ import { ChevronRight, ArrowRight, Sparkles, Monitor, Shield } from "lucide-reac
 import { Electricity, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { getAllTechnologies } from "@/lib/data/technology-data";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: "Advanced Medical Technology | Indira Super Speciality Hospital",
@@ -31,7 +33,7 @@ export default function TechnologyHubPage() {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Saves Lives.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
-                            At Indira Hospital, we invest in the world's most advanced diagnostic and surgical systems to provide our patients with safer, faster, and more precise treatments.
+                            At Indira Hospital, we invest in the world&apos;s most advanced diagnostic and surgical systems to provide our patients with safer, faster, and more precise treatments.
                         </p>
                     </div>
                 </SectionContainer>
@@ -141,6 +143,26 @@ export default function TechnologyHubPage() {
                             </Link>
                         </div>
                     </div>
+                </div>
+            </SectionContainer>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-white/10">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="technology"
+                        title="Infra & Maintenance FAQs"
+                        description="Learn about our sterilization protocols and technology upgrade cycles."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="technology"
+                        title="Patient Experience: Outcomes"
+                        description="How our advanced technology translated into faster recovery for real patients."
+                    />
                 </div>
             </SectionContainer>
         </main>

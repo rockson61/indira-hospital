@@ -6,8 +6,7 @@ import { siteConfig } from "@/config/site";
 
 export function StickyCTA() {
     const phone = siteConfig.contact.emergencyPhone;
-    const whatsappNumber = phone.replace(/\D/g, "");
-    const whatsappUrl = `https://wa.me/91${whatsappNumber}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
 
     return (
         <div className="fixed bottom-0 inset-x-0 z-[80] lg:hidden">

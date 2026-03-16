@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Phone, Calendar, MapPin, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 export const MobileQuickActions = () => {
     return (
@@ -17,7 +18,7 @@ export const MobileQuickActions = () => {
                 </Link>
 
                 <Link
-                    href="tel:+917010650063"
+                    href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`}
                     className="flex flex-col items-center justify-center gap-1 text-red-600 active:scale-95 transition-transform"
                 >
                     <div className="relative">
@@ -35,7 +36,9 @@ export const MobileQuickActions = () => {
                 </Link>
 
                 <Link
-                    href="https://wa.me/917010650063"
+                    href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center gap-1 text-green-600 active:scale-95 transition-transform"
                 >
                     <MessageCircle className="w-5 h-5" />

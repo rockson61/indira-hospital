@@ -90,7 +90,7 @@ export async function UnifiedEntitySection({
     // or just pass 0 to featuredLimit when calling it.
     const featuredItems = allItems.slice(0, featuredLimit);
     const linkItems = allItems.slice(featuredLimit, featuredLimit + linkLimit).map((item: any) => {
-        let name = item.title || item.name;
+        const name = item.title || item.name;
         let url = "";
 
         if (type === "services") url = `/doctor/near-me/treat/${item.slug}`;

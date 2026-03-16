@@ -10,7 +10,7 @@ import { Stethoscope, Heart, HeartCardiogram, Baby0203m, Happy, Neurology, Blood
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
 import EntityReviews from "@/components/trust/EntityReviews";
-import { clinicConfig } from "@/lib/data/clinic-config";
+
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 import { LocationCard } from "@/components/entities/LocationCard";
@@ -21,7 +21,7 @@ import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
-const WHATSAPP_NUMBER = "917010650063";
+
 
 // Icon map for services
 const iconMap: Record<string, React.ReactNode> = {
@@ -207,7 +207,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     const allServices = await getServices().catch(() => []);
     const otherServices = allServices.filter((s: any) => s.slug !== lastSlug);
 
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -275,9 +275,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
                                     className="inline-flex items-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-green-500/30 text-lg">
                                     <MessageCircle className="w-5 h-5 mr-2" />
-                                    Book on WhatsApp — It's Free
+                                    Book on WhatsApp — It&apos;s Free
                                 </a>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
                                     className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Talk to a Doctor Now

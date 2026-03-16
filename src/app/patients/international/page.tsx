@@ -1,9 +1,12 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Plane, Globe2, ArrowRight, MessageCircle, FileText, Clock, MapPin, CheckCircle2, Languages, Sparkles, Shield } from "lucide-react";
+import { MapPin, Plane, Shield, Clock, MessageCircle, Phone, ArrowRight, CheckCircle2, ChevronRight, Globe, HelpCircle, Globe2, FileText, Sparkles } from "lucide-react";
 import { HeartCardiogram, Stethoscope } from "healthicons-react/outline";
+import { siteConfig } from "@/config/site";
 import { SectionContainer } from "@/components/ui/section-container";
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -197,12 +200,12 @@ export default function InternationalPatientsPage() {
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8 tracking-tight leading-[1.1]">
                             Ready for a Free <br /> <span className="text-fuchsia-400">Cost Estimate?</span>
                         </h2>
-                        <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-                            Share your medical reports via secure WhatsApp or Email. Our senior specialists will review your case and construct a comprehensive treatment plan within 24 hours.
-                        </p>
+                            <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Share your medical reports via secure WhatsApp or Email. Our senior specialists will review your case and construct a comprehensive treatment plan within 24 hours.
+                            </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl mx-auto">
-                            <a href="https://wa.me/917010650063?text=Hi, I am an international patient. Can I get a cost estimate?" target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
+                            <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I am an international patient. Can I get a cost estimate?")}`} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
                                 <span className="relative z-10">WhatsApp Us</span>
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
@@ -214,6 +217,26 @@ export default function InternationalPatientsPage() {
                             </a>
                         </div>
                     </div>
+                </div>
+            </SectionContainer>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="international"
+                        title="Global Patient Services FAQs"
+                        description="Important information for patients traveling to India for surgery."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="international"
+                        title="Global Patient Success Stories"
+                        description="Real experiences from international patients treated at Indira Hospital."
+                    />
                 </div>
             </SectionContainer>
         </main>

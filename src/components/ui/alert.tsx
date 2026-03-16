@@ -8,9 +8,9 @@ interface AlertProps {
   className?: string
 }
 
-interface AlertTitleProps extends React.HTMLAttributes<HTMLParagraphElement> {}
+type AlertTitleProps = React.HTMLAttributes<HTMLParagraphElement>
 
-interface AlertDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}
+type AlertDescriptionProps = React.HTMLAttributes<HTMLParagraphElement>
 
 const variants = {
   default: {

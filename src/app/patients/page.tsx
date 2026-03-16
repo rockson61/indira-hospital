@@ -33,7 +33,7 @@ export default function PatientsHubPage() {
                     </h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
                         At Indira Super Speciality Hospital, we believe that informed patients make the best decisions about their health.
-                        We've consolidated all the necessary tools and information you need into one convenient hub to help you focus on what truly matters—your healing.
+                        We&apos;ve consolidated all the necessary tools and information you need into one convenient hub to help you focus on what truly matters—your healing.
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4">
                         {guidePoints.map((point, idx) => (

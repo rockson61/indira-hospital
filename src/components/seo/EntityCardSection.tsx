@@ -36,60 +36,25 @@ export async function EntityCardSection({
     const displayTitle = title || defaults.title;
     const displaySubtitle = subtitle || defaults.subtitle;
 
-    let content: React.ReactNode = null;
-
+    let items: any[] = [];
     try {
         if (type === "services") {
             const data = await getServices().catch(() => []);
-            const items = data.filter((s: any) => s.slug !== excludeSlug).slice(0, limit);
-            if (!items.length) return null;
-            content = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {items.map((s: any) => (
-                        <ServiceCard key={s.slug || s.id} service={s} variant="detail" />
-                    ))}
-                </div>
-            );
+            items = data.filter((s: any) => s.slug !== excludeSlug).slice(0, limit);
         } else if (type === "doctors") {
             const data = await getDoctors().catch(() => []);
-            const items = data.filter((d: any) => d.slug !== excludeSlug).slice(0, limit);
-            if (!items.length) return null;
-            content = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {items.map((d: any) => (
-                        <DoctorCard key={d.slug || d.id} doctor={d} variant="grid" />
-                    ))}
-                </div>
-            );
+            items = data.filter((d: any) => d.slug !== excludeSlug).slice(0, limit);
         } else if (type === "departments") {
             const data = await getDepartments().catch(() => []);
-            const items = data.filter((d: any) => d.slug !== excludeSlug).slice(0, limit);
-            if (!items.length) return null;
-            content = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {items.map((d: any) => (
-                        <DepartmentCard key={d.slug || d.id} department={d} variant="grid" />
-                    ))}
-                </div>
-            );
+            items = data.filter((d: any) => d.slug !== excludeSlug).slice(0, limit);
         } else if (type === "locations") {
-            const items = tamilNaduLocations
-                .filter(l => l.slug !== excludeSlug)
-                .slice(0, limit);
-            if (!items.length) return null;
-            content = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {items.map((l) => (
-                        <LocationCard key={l.slug} location={l} variant="compact" />
-                    ))}
-                </div>
-            );
+            items = tamilNaduLocations.filter(l => l.slug !== excludeSlug).slice(0, limit);
         }
     } catch {
         return null;
     }
 
-    if (!content) return null;
+    if (!items.length) return null;
 
     return (
         <section className={`py-20 ${className}`}>
@@ -103,7 +68,15 @@ export async function EntityCardSection({
                     </h2>
                 </div>
 
-                {content}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((item: any) => {
+                        if (type === "services") return <ServiceCard key={item.slug || item.id} service={item} variant="detail" />;
+                        if (type === "doctors") return <DoctorCard key={item.slug || item.id} doctor={item} variant="grid" />;
+                        if (type === "departments") return <DepartmentCard key={item.slug || item.id} department={item} variant="grid" />;
+                        if (type === "locations") return <LocationCard key={item.slug} location={item} variant="compact" />;
+                        return null;
+                    })}
+                </div>
 
                 <div className="mt-12 text-center">
                     <Link

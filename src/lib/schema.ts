@@ -8,7 +8,7 @@ export interface SEOObject {
     ogImage?: string;
     canonicalURL?: string;
     noIndex?: boolean;
-    structuredDataOverride?: Record<string, any>;
+    structuredDataOverride?: Record<string, unknown>;
 }
 
 export interface GlobalSiteSettings {
@@ -55,8 +55,8 @@ export interface Doctor {
     faqs?: { question: string; answer: string }[];
     reviews?: { patient_name: string; content: string; rating: number; date?: string }[];
     memberships?: string[];
-    related_services?: Service[] | any[];
-    available_locations?: Location[] | any[];
+    related_services?: Service[];
+    available_locations?: Location[];
 }
 
 export interface Department {
@@ -101,7 +101,7 @@ export interface Post {
     excerpt?: string;
     featuredImage?: string;
     content?: string;
-    author?: { name: string; avatar?: string; bio?: string } | string | any;
+    author?: { name: string; avatar?: string; bio?: string } | string;
     category?: string;
     tags?: string[];
     publishedDate?: string;
@@ -245,7 +245,12 @@ export interface HealthPackage {
     // Legacy
     status?: string;
     tests_included?: string;
-    related_services?: any[];
+    short_description?: string;
+    original_price?: number;
+    is_featured?: boolean;
+    seo_title?: string;
+    seo_description?: string;
+    related_services?: Service[] | string[];
 }
 
 export interface DoctorSchedule {
@@ -315,9 +320,19 @@ export interface Diagnostic {
 
     // Legacy
     status?: string;
+    category?: string;
+    description?: string;
     short_description?: string;
+    report_time?: string;
+    home_collection?: boolean;
+    fasting_required?: boolean;
+    sample_type?: string;
+    parameters_count?: number;
+    preparation_instructions?: string;
+    seo_title?: string;
+    seo_description?: string;
     body_system?: string;
-    used_to_diagnose?: string[] | string | any;
+    used_to_diagnose?: string[] | string;
     normal_range?: string;
 }
 
@@ -328,8 +343,8 @@ export interface Service {
     icon?: string;
     shortDescription?: string;
     procedureType?: string;
-    relatedDoctors?: any[];
-    availableLocations?: any[];
+    relatedDoctors?: Doctor[] | string[];
+    availableLocations?: Location[] | string[];
     seo?: SEOObject;
 
     // Legacy mappings
@@ -339,8 +354,40 @@ export interface Service {
     procedure_type?: string;
     seo_title?: string;
     seo_description?: string;
-    related_doctors?: any[];
-    available_locations?: any[];
+    related_doctors?: Doctor[] | string[];
+    available_locations?: Location[] | string[];
+}
+
+export interface Appointment {
+    id?: string;
+    name: string;
+    phone: string;
+    department: string;
+    doctor?: string;
+    date: string;
+    notes?: string;
+    status?: 'pending' | 'confirmed' | 'cancelled';
+    date_created?: string;
+}
+
+export interface ContactMessage {
+    id?: string;
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    message: string;
+    status?: 'new' | 'read' | 'replied';
+    date_created?: string;
+}
+
+export interface BillingPayment {
+    id?: string;
+    patient_id: string;
+    invoice_number?: string;
+    amount: number;
+    status: 'pending' | 'success' | 'failed';
+    date_created?: string;
 }
 
 // ─────────────────────────────────────────
@@ -364,4 +411,7 @@ export interface Schema {
     clinical_procedures: ClinicalProcedure[];
     patient_education: PatientEducationResource[];
     telemedicine_profiles: TelemedicineProfile[];
+    appointments: Appointment[];
+    contacts: ContactMessage[];
+    billing_payments: BillingPayment[];
 }

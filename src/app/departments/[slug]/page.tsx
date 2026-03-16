@@ -7,7 +7,7 @@ import { Stethoscope, Heart, HeartCardiogram, Baby0203m, Happy, Neurology, Blood
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
 import EntityReviews from "@/components/trust/EntityReviews";
-import { clinicConfig } from "@/lib/data/clinic-config";
+
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
@@ -16,7 +16,7 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { siteConfig } from "@/config/site";
 
-const WHATSAPP_NUMBER = "917010650063";
+
 
 // Icon map for departments
 const iconMap: Record<string, React.ReactNode> = {
@@ -77,7 +77,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
     const allDepartments = await getDepartments().catch(() => []);
     const otherDepartments = allDepartments.filter((d: any) => d.slug !== slug);
 
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I need information about the ${department.title} department at Indira Hospital.`)}`;
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I need information about the ${department.title} department at Indira Hospital.`)}`;
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -128,7 +128,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                                     <MessageCircle className="w-5 h-5 mr-2" />
                                     Contact Department
                                 </a>
-                                <a href={`tel:${clinicConfig.phone.replace(/\s+/g, '')}`}
+                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
                                     className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Call Helpline
@@ -154,11 +154,19 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                             <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(department.full_description) }} />
                         </Card>
 
-                        {/* FAQs Section */}
                         <EntityFAQs
                             entityType="department"
                             entityName={department.title}
                             entitySlug={slug}
+                        />
+
+                        {/* Patient Reviews */}
+                        <EntityReviews
+                            entityType="department"
+                            entityName={department.title}
+                            entitySlug={slug}
+                            title={`${department.title} Patient Experiences`}
+                            description={`Real stories from patients treated in our ${department.title} department.`}
                         />
 
                         {/* Doctors in this Department */}

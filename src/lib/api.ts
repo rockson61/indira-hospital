@@ -197,42 +197,146 @@ export const getTestimonials = unstable_cache(
 );
 
 export const getReviewsByEntity = unstable_cache(
-    async (type: string, name: string) => {
+    async (type: string, name: string, slug?: string) => {
         try {
             const client = await getDirectusClient();
             const data = await client.request(readItems('testimonials', {
+                filter: {
+                    _or: [
+                        { treatment: { _icontains: name } },
+                        { content: { _icontains: name } },
+                        { patient_name: { _icontains: name } }
+                    ]
+                } as any,
                 fields: ['*'],
             }));
             if (data && data.length > 0) return data as any;
         } catch (error) {
-            console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getReviewsByEntity ${type} ${name}`, error);
+            console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getReviewsByEntity ${type} ${name} ${slug}`, error);
         }
 
-        return localTestimonials.map((t, i) => ({
-            id: `rev-${i}`,
-            patient_name: t.name,
-            treatment_received: t.treatment,
-            rating: t.rating,
-            content: t.text,
-            verified: t.verified
-        })) as any;
+        // Granular filtering
+        if (slug) {
+            const slugMatches = (localTestimonials as any[]).filter(t => t.relatedSlugs?.includes(slug));
+            if (slugMatches.length > 0) {
+                return slugMatches.map((t, i) => ({
+                    id: `rev-${slug}-${i}`,
+                    patient_name: t.name,
+                    treatment_received: t.treatment,
+                    rating: t.rating,
+                    content: t.text,
+                    verified: t.verified
+                }));
+            }
+
+            // Doctor-specific fallback from intrinsic data
+            if (type === 'doctor') {
+                const allDocs = await getDoctors();
+                const doc = allDocs.find((d: any) => d.slug === slug);
+                if (doc?.reviews && doc.reviews.length > 0) {
+                    return doc.reviews.map((r: any, i: number) => ({
+                        id: `rev-doc-${slug}-${i}`,
+                        patient_name: r.patient_name,
+                        treatment_received: doc.designation,
+                        rating: r.rating,
+                        content: r.content,
+                        verified: true
+                    }));
+                }
+            }
+        }
+
+        let finalReviews: any[] = [];
+        const typeMatches = (localTestimonials as any[]).filter(t => 
+            t.treatment?.toLowerCase().includes(type.toLowerCase()) || 
+            t.treatment?.toLowerCase().includes(name.toLowerCase())
+        );
+
+        if (typeMatches.length > 0) {
+            finalReviews = typeMatches.map((t, i) => ({
+                id: `rev-type-${i}`,
+                patient_name: t.name,
+                treatment_received: t.treatment,
+                rating: t.rating,
+                content: t.text,
+                verified: t.verified
+            }));
+        }
+
+        // Fill up to 3 with general testimonials if needed
+        if (finalReviews.length < 3) {
+            const general = localTestimonials.slice(0, 5).map((t, i) => ({
+                id: `rev-gen-${i}`,
+                patient_name: t.name,
+                treatment_received: t.treatment,
+                rating: t.rating,
+                content: t.text,
+                verified: t.verified
+            })).filter(gr => !finalReviews.some(fr => fr.patient_name === gr.patient_name));
+            
+            finalReviews = [...finalReviews, ...general].slice(0, 3);
+        }
+
+        return finalReviews.slice(0, 3) as any;
     },
     ['directus-reviews-by-entity'],
     { revalidate: 3600 }
 );
 
 export const getFaqsByEntity = unstable_cache(
-    async (type: string, name: string) => {
+    async (type: string, name: string, slug?: string) => {
         try {
             const client = await getDirectusClient();
             const data = await client.request(readItems('faqs', {
+                filter: {
+                    _or: [
+                        { category: { _eq: name } },
+                        { category: { _eq: type } },
+                        { question: { _icontains: name } }
+                    ]
+                },
                 fields: ['*'],
             }));
             if (data && data.length > 0) return data as any;
         } catch (error) {
-            console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getFaqsByEntity ${type} ${name}`, error);
+            console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getFaqsByEntity ${type} ${name} ${slug}`, error);
         }
-        return comprehensiveFaqs as any;
+
+        let finalFaqs: any[] = [];
+        
+        // 1. Try Slug Matches
+        if (slug) {
+            const slugMatches = (comprehensiveFaqs as any[]).filter(f => f.relatedSlugs?.includes(slug));
+            if (slugMatches.length > 0) finalFaqs = [...slugMatches];
+
+            if (type === 'doctor') {
+                const allDocs = await getDoctors();
+                const doc = allDocs.find((d: any) => d.slug === slug);
+                if (doc?.faqs && doc.faqs.length > 0) {
+                    finalFaqs = [...finalFaqs, ...doc.faqs];
+                }
+            }
+        }
+
+        // 2. Try Category Matches
+        const typeMatches = (comprehensiveFaqs as any[]).filter(f => 
+            f.category?.toLowerCase() === type.toLowerCase() || 
+            f.category?.toLowerCase() === name.toLowerCase()
+        );
+        finalFaqs = [...finalFaqs, ...typeMatches];
+
+        // 3. De-duplicate by question
+        const uniqueFaqs = Array.from(new Map(finalFaqs.map(item => [item.question, item])).values());
+
+        // 4. Fill up to 8 with General FAQs
+        if (uniqueFaqs.length < 8) {
+            const general = comprehensiveFaqs.filter(f => f.category === "General");
+            const combined = [...uniqueFaqs, ...general];
+            const finalUnique = Array.from(new Map(combined.map(item => [item.question, item])).values());
+            return finalUnique.slice(0, 8) as any;
+        }
+
+        return uniqueFaqs.slice(0, 8) as any;
     },
     ['directus-faqs-by-entity'],
     { revalidate: 3600 }

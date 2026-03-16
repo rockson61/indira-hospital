@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, MessageCircle } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
+import { siteConfig } from "@/config/site";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -64,11 +65,22 @@ export function DepartmentCard({ department, className, variant = "grid" }: Depa
                             {department.description || `${department.title || 'This'} department at Indira Hospital provides world-class care and advanced treatments.`}
                         </p>
 
-                        <div className="mt-auto flex items-center justify-between relative z-10">
-                            <span className="text-slate-900 dark:text-white font-bold text-sm tracking-wide uppercase group-hover:text-fuchsia-600 transition-colors">Explore</span>
-                            <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
-                                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-600 transition-colors group-hover:translate-x-0.5" />
-                            </div>
+                        <div className="mt-auto flex gap-3 relative z-10">
+                            <Link 
+                                href={href}
+                                className="flex-1 flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white rounded-2xl font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-600 transition-all"
+                            >
+                                Explore
+                            </Link>
+                            <a
+                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm clinical inquiry for ${department.title || department.name}.`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 flex items-center justify-center p-4 bg-fuchsia-600 text-white rounded-2xl font-bold text-sm hover:bg-fuchsia-500 transition-all shadow-md shadow-fuchsia-200 dark:shadow-none"
+                            >
+                                <MessageCircle className="w-4 h-4 mr-2" />
+                                Chat
+                            </a>
                         </div>
                     </Card>
                 </Link>

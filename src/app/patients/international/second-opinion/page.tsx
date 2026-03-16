@@ -58,7 +58,7 @@ const WHY_POINTS = [
 
 const FAQs = [
     { q: "Is the second opinion completely free?", a: "Yes. The initial written second opinion based on your submitted reports is completely free of charge. A video consultation with the specialist, if needed, may have a nominal fee." },
-    { q: "How do I send my reports?", a: "WhatsApp them directly to our number (+91 70106 50063) or email them to our international desk. We accept PDF scans, JPG/PNG images, and DICOM files for radiology." },
+    { q: "How do I send my reports?", a: `WhatsApp them directly to our number (${siteConfig.contact.whatsapp}) or email them to our international desk. We accept PDF scans, JPG/PNG images, and DICOM files for radiology.` },
     { q: "Which doctors will review my case?", a: "Your case is assigned to the most relevant senior specialist (e.g., a cardiac surgeon for heart cases, an oncologist for cancer). All reviewers have 15+ years of specialized experience." },
     { q: "Will my privacy be protected?", a: "Absolutely. Your medical documents and personal information are handled confidentially and used only for the purpose of your second opinion. We follow strict patient data privacy protocols." },
     { q: "How is this different from an online platform?", a: "Our second opinions come directly from practicing senior specialists at a real NABH-accredited hospital — not AI tools or junior residents. The doctor who reviews your case is the same one who would operate on you." },
@@ -159,7 +159,7 @@ export default function SecondOpinionPage() {
                             <MessageCircle className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform" />
                             <div>
                                 <p className="font-black text-lg">WhatsApp</p>
-                                <p className="text-green-300 text-sm">+91 70106 50063</p>
+                                <p className="text-green-300 text-sm">{siteConfig.contact.whatsapp}</p>
                                 <p className="text-slate-400 text-xs mt-1">Send photos, PDFs, DICOM — all accepted</p>
                             </div>
                         </a>
@@ -256,7 +256,7 @@ export default function SecondOpinionPage() {
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <Clock className="w-10 h-10 mx-auto text-blue-200 mb-4" />
                     <h2 className="text-3xl font-black mb-3">Second Opinion Within 24 Hours — Free</h2>
-                    <p className="text-blue-100 text-lg mb-8">No payment. No obligation. Just an honest specialist opinion from India's leading quaternary care hospital.</p>
+                    <p className="text-blue-100 text-lg mb-8">No payment. No obligation. Just an honest specialist opinion from India&apos;s leading quaternary care hospital.</p>
                     <a href={WA} target="_blank" rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-400 text-white font-black rounded-2xl shadow-lg text-lg transition-all">
                         <MessageCircle className="w-5 h-5" /> Send Reports — Get Opinion

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { siteConfig } from "@/config/site"
 import { ModernCard } from "@/components/ui/modern-card"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@heroui/react"
@@ -91,8 +92,8 @@ export function ClinicsOverview() {
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Contact Information</h3>
                 <div className="space-y-1">
-                  <a href="tel:7010650063" className="text-foreground/80 hover:text-primary transition-colors block">
-                    📞 7010650063
+                  <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="text-foreground/80 hover:text-primary transition-colors block">
+                    📞 {siteConfig.contact.phone}
                   </a>
                   <a
                     href="mailto:info@indirasuperspecialityhospital.com"
@@ -101,10 +102,12 @@ export function ClinicsOverview() {
                     ✉️ info@indirasuperspecialityhospital.com
                   </a>
                   <a
-                    href="https://wa.me/917010650063"
+                    href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-primary transition-colors block"
                   >
-                    💬 WhatsApp: +91 7010650063
+                    💬 WhatsApp: {siteConfig.contact.whatsapp}
                   </a>
                 </div>
               </div>

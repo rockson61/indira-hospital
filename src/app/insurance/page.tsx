@@ -3,6 +3,8 @@ import { insurancePartners, insurancePlans } from "@/lib/data/clinic-config";
 import { ShieldCheck, CheckCircle2, Info, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: "Insurance Partners | Cashless Treatment at Indira Hospital",
@@ -65,6 +67,26 @@ export default function InsurancePage() {
             </SectionContainer>
 
             {/* Important Information */}
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="service"
+                        entityName="Insurance"
+                        entitySlug="insurance"
+                        title="Insurance & Billing FAQs"
+                        description="Common questions about cashless treatment, documentation, and CMCHIS at Indira Hospital."
+                    />
+                    <EntityReviews
+                        entityType="service"
+                        entityName="Insurance"
+                        entitySlug="insurance"
+                        title="Billing & Insurance Stories"
+                        description="Hear from patients who utilized our cashless facilities and insurance assistance for their treatment."
+                    />
+                </div>
+            </SectionContainer>
+
             <SectionContainer>
                 <div className="bg-slate-900 text-white rounded-[3rem] p-12 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-fuchsia-500/10 rounded-full blur-[100px]" />

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Phone, MapPin, MessageCircle } from "lucide-react"
+import { siteConfig } from "@/config/site"
 
 interface ServiceDetailModalProps {
   service: {
@@ -83,7 +84,7 @@ export function ServiceDetailModal({ service }: ServiceDetailModalProps) {
         )}
         <div className="flex flex-col sm:flex-row gap-3 mt-6">
           <Button className="flex-1 text-sm md:text-base min-h-[44px]" asChild>
-            <a href="tel:07010650063">
+            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}>
               <Phone className="w-4 h-4 mr-2" />
               Call Now
             </a>
@@ -95,7 +96,7 @@ export function ServiceDetailModal({ service }: ServiceDetailModalProps) {
             </a>
           </Button>
           <Button className="flex-1 text-sm md:text-base min-h-[44px]" variant="outline" asChild>
-            <a href="https://wa.me/917010650063" target="_blank" rel="noopener noreferrer">
+            <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp
             </a>

@@ -6,6 +6,7 @@ import { ModernCard } from "@/components/ui/modern-card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { AlertTriangle, CheckCircle, Clock, ArrowRight, Phone, Calendar, Shield } from "lucide-react"
+import { siteConfig } from "@/config/site"
 ;
 ;
 
@@ -120,7 +121,7 @@ export function ConditionWidget({
             </div>
             <p className="text-xs text-red-700 mt-1">
               For severe pain or dental emergencies, call us immediately at{" "}
-              <a href="tel:7010650063" className="font-semibold underline">7010650063</a>
+              <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="font-semibold underline">{siteConfig.contact.phone}</a>
             </p>
           </div>
         )}

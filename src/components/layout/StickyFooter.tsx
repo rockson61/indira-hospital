@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, CalendarCheck } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 export function StickyFooter() {
     const [isVisible, setIsVisible] = useState(false);
@@ -32,13 +33,13 @@ export function StickyFooter() {
         >
             <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" className="w-full gap-2 border-primary-600 text-primary-600 hover:bg-primary-50" asChild>
-                    <a href="tel:+917010650063">
+                    <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`}>
                         <Phone className="h-4 w-4" />
-                        call Now
+                        Call Now
                     </a>
                 </Button>
                 <Button className="w-full gap-2 bg-primary-600 hover:bg-primary-700 text-white" asChild>
-                    <Link href="/contact">
+                    <Link href="/book-appointment">
                         <CalendarCheck className="h-4 w-4" />
                         Book Now
                     </Link>

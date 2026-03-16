@@ -6,6 +6,7 @@ import { Search, HelpCircle, ChevronDown, MessageCircle, ArrowRight } from "luci
 import { SectionContainer } from "@/components/ui/section-container";
 import { hospitalFaqs } from "@/lib/data/hospital-faq-data";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export default function FAQPage() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -106,7 +107,7 @@ export default function FAQPage() {
                                     <Search className="w-10 h-10 text-slate-300" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">No results found</h3>
-                                <p className="text-slate-500 dark:text-slate-400">We couldn't find any questions matching "{searchTerm}".</p>
+                                <p className="text-slate-500 dark:text-slate-400">We couldn&apos;t find any questions matching &quot;{searchTerm}&quot;.</p>
                             </div>
                         )}
 
@@ -128,11 +129,16 @@ export default function FAQPage() {
                                     <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-100/50 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                                 </Link>
-                                <Link href="https://wa.me/917010650063" className="group/btn relative flex items-center justify-center px-8 py-5 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-500 transition-all duration-300 hover:scale-[1.02] shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30 overflow-hidden">
+                                <a 
+                                    href={`https://wa.me/${siteConfig.contact.whatsapp}`} 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group/btn relative flex items-center justify-center px-8 py-5 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-500 transition-all duration-300 hover:scale-[1.02] shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30 overflow-hidden"
+                                >
                                     <MessageCircle className="w-5 h-5 mr-3 relative z-10" />
                                     <span className="relative z-10">WhatsApp</span>
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

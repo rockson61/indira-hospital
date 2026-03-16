@@ -2,6 +2,8 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { clinicFacilities, clinicEquipment } from "@/lib/data/clinic-config";
 import { Sparkles, CheckCircle2, Building2, Beaker, Zap, Activity, Microscope } from "lucide-react";
 import { Metadata } from "next";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: "World-Class Infrastructure | Facilities at Indira Hospital",
@@ -62,6 +64,25 @@ export default function FacilitiesPage() {
                             ))}
                         </div>
                     </div>
+                </div>
+            </SectionContainer>
+
+            <SectionContainer className="py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Facilities"
+                        entitySlug="facilities"
+                        title="Infrastructure & Facility FAQs"
+                        description="Questions about our visiting hours, emergency services, and patient infrastructure."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Facilities"
+                        entitySlug="hospital"
+                        title="Facility Feedback"
+                        description="What our patients say about our hospitality and infrastructure."
+                    />
                 </div>
             </SectionContainer>
 

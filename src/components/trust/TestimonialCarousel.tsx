@@ -50,7 +50,7 @@ export function TestimonialCarousel({ testimonials = [], autoPlay = true, interv
             </div>
 
             <div className="text-center mb-6">
-              <p className="text-lg text-foreground italic mb-6">"{testimonials[currentIndex].text}"</p>
+              <p className="text-lg text-foreground italic mb-6">&quot;{testimonials[currentIndex].text}&quot;</p>
 
               <div className="flex justify-center mb-2">
                 {[...Array(5)].map((_, i) => (

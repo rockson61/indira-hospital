@@ -45,7 +45,7 @@ export function JsonLdSchema(props: JsonLdSchemaProps) {
             name: siteConfig.name,
             url: siteConfig.url,
             description: siteConfig.description,
-            telephone: "+91-7010650063",
+            telephone: siteConfig.contact.phone,
             address: {
                 "@type": "PostalAddress",
                 streetAddress: "Vellore",

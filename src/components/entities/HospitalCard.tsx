@@ -1,6 +1,6 @@
-import React from 'react';
-import { Star, MapPin, Phone, ExternalLink, Clock } from "lucide-react";
 import Image from "next/image";
+import { siteConfig } from "@/config/site";
+import { MessageCircle, Star, MapPin, Clock, ExternalLink } from "lucide-react";
 
 export function HospitalCard() {
     return (
@@ -42,12 +42,17 @@ export function HospitalCard() {
 
                 <div className="space-y-4 mb-6">
                     <div className="flex flex-col gap-3">
-                        <div className="flex items-start gap-3 text-sm text-slate-800 dark:text-slate-200">
+                         <div className="flex items-start gap-3 text-sm text-slate-800 dark:text-slate-200">
                             <MapPin className="w-4 h-4 mt-0.5 text-fuchsia-600 flex-shrink-0" />
                             <div>
                                 <p className="font-bold">Gandhi Nagar (HQ)</p>
                                 <p className="text-xs text-slate-500">54, Katpadi Road, Gandhi Nagar, Vellore</p>
-                                <a href="tel:+919842324425" className="text-fuchsia-600 font-bold">+91 98423 24425</a>
+                                <div className="flex items-center gap-3">
+                                    <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="text-fuchsia-600 font-bold">{siteConfig.contact.phone}</a>
+                                    <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                                        <MessageCircle className="w-4 h-4" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -56,7 +61,12 @@ export function HospitalCard() {
                             <div>
                                 <p className="font-bold">Konavattam Branch</p>
                                 <p className="text-xs text-slate-500">Bangalore Road, Konavattam, Vellore</p>
-                                <a href="tel:+919443334425" className="text-fuchsia-600 font-bold">+91 94433 34425</a>
+                                <div className="flex items-center gap-3">
+                                    <a href="tel:+919443334425" className="text-fuchsia-600 font-bold">+91 94433 34425</a>
+                                    <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                                        <MessageCircle className="w-4 h-4" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -65,7 +75,12 @@ export function HospitalCard() {
                             <div>
                                 <p className="font-bold">Saidapet Branch</p>
                                 <p className="text-xs text-slate-500">Saidapet, Vellore</p>
-                                <a href="tel:+919443724425" className="text-fuchsia-600 font-bold">+91 94437 24425</a>
+                                <div className="flex items-center gap-3">
+                                    <a href="tel:+919443724425" className="text-fuchsia-600 font-bold">+91 94437 24425</a>
+                                    <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                                        <MessageCircle className="w-4 h-4" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

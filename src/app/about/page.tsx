@@ -8,6 +8,8 @@ import { Metadata } from "next";
 import { Testimonials } from "@/components/sections/testimonials";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export default function AboutPage() {
     return (
@@ -156,6 +158,26 @@ export default function AboutPage() {
                     ))}
                 </div>
             </section>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="about"
+                        title="Common Questions about Indira"
+                        description="Learn more about our legacy, clinical standards, and 35-year history in Vellore."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="indira-hospital"
+                        title="35 Years of Patient Stories"
+                        description="Hear from some of the 50,000+ patients who have trusted us with their health."
+                    />
+                </div>
+            </SectionContainer>
 
             {/* Testimonials */}
             <Testimonials />

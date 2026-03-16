@@ -11,6 +11,8 @@ import Link from "next/link";
 import { SymptomGuide } from "@/components/healthcare/SymptomGuide";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { TreatmentGuides } from "@/components/sections/treatment-guides";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 const bodySystems = [
     { name: "Heart & Circulation", icon: Heart, link: "/doctor/near-me/treat/cardiology" },
@@ -201,6 +203,26 @@ export default function HealthLibraryPage() {
                         <div className="relative z-10 hidden lg:flex items-center justify-center p-8 bg-white/10 backdrop-blur-3xl rounded-[2.5rem] border border-white/20">
                             <ShieldPlus className="w-32 h-32 text-white" />
                         </div>
+                    </div>
+                </section>
+
+                {/* TRUST SIGNALS */}
+                <section className="max-w-7xl mx-auto px-6 lg:px-8 py-24 border-t border-slate-100 dark:border-slate-800">
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        <EntityFAQs
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="diagnostics"
+                            title="Treatment & Procedure FAQs"
+                            description="Expert insights on recovery times, surgical prep, and clinical safety at Indira Hospital."
+                        />
+                        <EntityReviews
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="indira-hospital"
+                            title="Patient Success Stories"
+                            description="Hear from patients who underwent life-changing treatments at our super-speciality centers."
+                        />
                     </div>
                 </section>
 
