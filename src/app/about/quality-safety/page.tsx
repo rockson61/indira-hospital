@@ -4,6 +4,7 @@ import { Microscope, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = {
     title: "Quality & Patient Safety | Clinical Protocols | Indira Hospital",
@@ -50,7 +51,8 @@ export default function QualitySafetyPage() {
                             <span className="text-blue-400 font-medium text-sm tracking-wide">Patient Safety First</span>
                         </div>
                         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
-                            Quality You Can <span className="text-blue-400">Trust.</span>
+                            Hospital Quality & <br />
+                            <span className="text-blue-400">Patient Safety in Vellore.</span>
                         </h1>
                         <p className="text-xl text-slate-300 leading-relaxed">
                             At Indira Hospital, quality is not just a checkbox; it&apos;s our clinical
@@ -136,6 +138,10 @@ export default function QualitySafetyPage() {
                         </div>
                     </div>
                 </div>
+            </SectionContainer>
+            <SectionContainer className="pb-24">
+                <InternalLinkGrid type="services" title="Clinical Specialties" subtitle="Excellence in Care" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
+                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Our Infrastructure" limit={8} className="mt-12 bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border" />
             </SectionContainer>
         </main>
     );

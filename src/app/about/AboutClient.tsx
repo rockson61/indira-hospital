@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export default function AboutClient() {
     return (
@@ -221,6 +222,10 @@ export default function AboutClient() {
                     </div>
                 </div>
             </section>
+            <SectionContainer className="pb-32">
+                <InternalLinkGrid type="departments" title="Our Specialties" subtitle="Advanced Clinical Care" limit={8} className="bg-white dark:bg-slate-950 border rounded-[4rem]" />
+                <InternalLinkGrid type="services" title="A-Z Procedures" subtitle="Surgical Excellence" limit={12} className="mt-12 bg-slate-50 dark:bg-slate-900/50 border rounded-[4rem]" />
+            </SectionContainer>
         </main>
-    )
+    );
 }

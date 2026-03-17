@@ -3,6 +3,7 @@ import { Sparkles, Heart, Zap, Shield, Users, Clock, Target } from "lucide-react
 import { Metadata } from "next";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = {
     title: "Why Choose Indira Hospital | Our Values & Mission",
@@ -118,6 +119,10 @@ export default function WhyChoosePage() {
                     </div>
                 </div>
             </SectionContainer>
+            <div className="mt-24 border-t border-slate-100 dark:border-slate-800 pt-20">
+                <InternalLinkGrid type="health-packages" title="Preventive Wellness" subtitle="Indira Health First" limit={8} className="bg-white dark:bg-slate-950" />
+                <InternalLinkGrid type="diagnostics" title="Diagnostic Excellence" subtitle="NABL Accredited Lab" limit={12} className="bg-slate-50 dark:bg-slate-900/50" />
+            </div>
         </main>
     );
 }
