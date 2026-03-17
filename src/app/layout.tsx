@@ -8,6 +8,7 @@ import { SpecialtyNav } from "@/components/layout/SpecialtyNav";
 import { StickyCTA } from "@/components/layout/StickyCTA";
 import { ThemeProvider } from "@/components/theme-provider";
 import { defaultSeo } from "@/config/seo";
+import DynamicSEOKeywordBlock from "@/components/DynamicSEOKeywordBlock";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -141,6 +142,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <StickyCTA />
+          <DynamicSEOKeywordBlock />
         </ThemeProvider>
       </body>
     </html>
