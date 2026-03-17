@@ -14,8 +14,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: 'Get Test Reports in Under 12 Hours | Diagnostics at Indira Hospital Vellore',
-    description: 'NABL accredited labs. MRI, CT Scan, Blood Tests, ECG, Echo & more. Reports in under 12 hours. Home collection available. Stop guessing — get diagnosed today.',
+    title: 'NABL Accredited Diagnostics & Lab Tests in Vellore, Tamil Nadu | Indira Hospital',
+    description: 'Book 500+ diagnostic tests at Indira Hospital, Vellore. NABL accredited labs, home sample collection, and reports under 12 hours. MRI, CT, Blood Tests in Tamil Nadu, India.',
 }
 
 // Category icons and colors with Elite UI mappings
@@ -58,7 +58,7 @@ export default async function DiagnosticsPage() {
                         <UltrasoundScanner className="w-4 h-4" /> Reports in Under 12 Hours
                     </span>
                     <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[1.05] mb-8 max-w-5xl mx-auto">
-                        Absolute <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Certainty.</span>
+                        Diagnostics in <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Vellore.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
                         Stop guessing. NABL accredited labs, home collection, and reports you can trust — all in under 12 hours.

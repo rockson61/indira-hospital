@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Health Library | Medical Education & Patient Guides at Indira Hospital",
-    description: "Explore the Indira Health Library for expert-backed medical blogs, patient education guides, and the latest health updates from our super-speciality doctors.",
+    title: "Health Library & Medical Resource Hub in Vellore, India | Indira Hospital",
+    description: "Explore the Indira Health Library for expert-backed medical blogs, patient education guides, and the latest health updates from our super-speciality doctors in Vellore, Tamil Nadu.",
 };
 
 const categories = [

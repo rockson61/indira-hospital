@@ -59,8 +59,9 @@ export async function generateMetadata({ params }: { params: Promise<{ specialty
     const doc = doctors.find((d: any) => d.slug === slug);
     if (!doc) return { title: "Doctor Not Found" };
     return {
-        title: `${doc.name} — ${typeof doc.department === 'string' ? doc.department : doc.department?.name || "Specialist"} | Best Hospital in TN & India | Indira Hospital`,
-        description: doc.bio || `Book an appointment with ${doc.name}`,
+        title: `${doc.name} — Best ${typeof doc.department === 'string' ? doc.department : doc.department?.name || "Specialist"} in Vellore, Tamil Nadu | Indira Hospital`,
+        description: doc.bio?.substring(0, 155) || `Consult with ${doc.name}, a leading specialist at Indira Hospital, Vellore. Expert healthcare in Tamil Nadu, India with advanced treatment options.`,
+        keywords: [doc.name, doc.specialty, "Best Doctor in Vellore", "Tamil Nadu", "India", "Indira Hospital"],
     };
 }
 
@@ -126,7 +127,9 @@ export default async function DoctorProfileRoute({
                                     className="w-24 h-24 md:w-32 md:h-32 rounded-[2rem]"
                                 />
                                 <div>
-                                    <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">{currDoctor.name}</h1>
+                                    <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">
+                                        {currDoctor.name} — {currDoctor.specialty || (typeof currDoctor.department === 'string' ? currDoctor.department : currDoctor.department?.name)} in Vellore
+                                    </h1>
 
                                     {/* Keyword Tags */}
                                     {currDoctor.specialties && currDoctor.specialties.length > 0 && (

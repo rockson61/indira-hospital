@@ -10,6 +10,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { format } from "date-fns"
 import { BLOG_CONFIGURATION } from "@/config/constants"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: 'Medical Blog & Surgical Insights in Vellore, Tamil Nadu | Indira Hospital',
+    description: 'Expert medical articles, surgical insights, and health tips from the specialists at Indira Hospital, Vellore. Leading healthcare blog in Tamil Nadu, India.',
+}
 
 export const revalidate = 3600; // Revalidate every hour
 

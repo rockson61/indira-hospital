@@ -10,8 +10,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: 'Health Checkup Packages — Indira Super Speciality Hospital Vellore',
-    description: 'Comprehensive health screening packages at Indira Hospital Vellore. Master Health Checkup, Cardiac, Diabetic, and Executive packages with transparent pricing.',
+    title: 'Master Health Checkup Packages in Vellore, Tamil Nadu | Indira Hospital',
+    description: 'Affordable health screening packages in Vellore, India. Master health checkups, Cardiac, Diabetic, and Executive packages at Indira Super Speciality Hospital, Tamil Nadu.',
 }
 
 export default async function HealthPackagesPage() {

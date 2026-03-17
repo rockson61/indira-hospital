@@ -12,8 +12,8 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 export const metadata: Metadata = {
-    title: "25+ Surgeons with 10,000+ Surgeries Each | Indira Hospital Vellore",
-    description: "Don't risk your surgery with an inexperienced doctor. Our surgeons have performed 10,000+ procedures each. Book a free consultation today.",
+    title: "Best Doctors & Specialist Surgeons in Vellore, Tamil Nadu | Indira Hospital",
+    description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, India. Book your appointment today.",
 };
 
 export default async function DoctorsDirectoryPage() {

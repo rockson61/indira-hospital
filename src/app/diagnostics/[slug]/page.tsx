@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const test = await getDiagnosticBySlug(slug) as any;
     if (!test) return {};
     return {
-        title: test.seo_title || `${test.name} — Indira Hospital Vellore`,
-        description: test.seo_description || `Book ${test.name} at Indira Hospital Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} Get accurate results at affordable rates.`,
+        title: test.seo_title || `${test.name} Test Cost & Booking in Vellore, Tamil Nadu | Indira Hospital`,
+        description: test.seo_description || `Book ${test.name} at Indira Hospital, Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} Trusted diagnostic services in Tamil Nadu, India with home collection.`,
     };
 }
 

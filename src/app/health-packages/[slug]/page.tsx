@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const pkg = await getHealthPackageBySlug(slug) as HealthPackage | null;
     if (!pkg) return {};
     return {
-        title: pkg.seo_title || `${pkg.title} Health Checkup — Indira Hospital Vellore`,
-        description: pkg.seo_description || `Book ${pkg.title} at Indira Hospital Vellore. Comprehensive screening with ${pkg.tests_included?.slice(0, 100)}... with transparent pricing.`,
+        title: pkg.seo_title || `${pkg.title} Master Health Checkup in Vellore, Tamil Nadu | Indira Hospital`,
+        description: pkg.seo_description || `Book the ${pkg.title} package at Indira Hospital, Vellore. Comprehensive screening in Tamil Nadu, India with ${pkg.tests_included?.slice(0, 80)}... and expert consultation.`,
     };
 }
 
