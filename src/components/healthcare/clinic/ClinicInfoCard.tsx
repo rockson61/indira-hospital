@@ -211,7 +211,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                     <li>Exit Katpadi Railway Station and head towards the main road</li>
-                    <li>Take an auto-rickshaw or taxi (₹50-80, 5-10 minutes)</li>
+                    <li>Take a budget-friendly auto-rickshaw or taxi (5-10 minutes)</li>
                     <li>Ask the driver to take you to &quot;Indira Dental Clinic, Gandhi Nagar, Katpadi Main Road&quot;</li>
                   </ul>
                 </div>
@@ -222,7 +222,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
                     From Vellore Cantonment Railway Station
                   </h3>
                   <p className="text-muted-foreground">
-                    Distance: 5 km from the clinic. Take an auto-rickshaw or taxi (₹100-150, 15 minutes). The clinic is
+                    Distance: 5 km from the clinic. Take a budget-friendly auto-rickshaw or taxi (15 minutes). The clinic is
                     located on Katpadi Main Road at Gandhi Nagar.
                   </p>
                 </div>

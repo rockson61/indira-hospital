@@ -114,7 +114,7 @@ export function CostCalculator() {
                 <div className="text-center animate-in fade-in zoom-in duration-300">
                     <p className="text-gray-500 dark:text-gray-400 text-sm mb-1 uppercase tracking-wider">Estimated Cost</p>
                     <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                        ₹{cost.toLocaleString()}*
+                        Transparent Pricing
                     </div>
 
                     {insurance && (
@@ -123,11 +123,11 @@ export function CostCalculator() {
                         </div>
                     )}
 
-                    <p className="text-xs text-gray-400 mb-6">
-                        *This is an approximate estimate. Final cost depends on patient condition and actual consumables used.
+                    <p className="text-xs text-gray-400 mb-6 font-medium">
+                        *Get a personalized, all-inclusive quote for your specific needs.
                     </p>
 
-                    <Button className="w-full mb-3">Book Consultation</Button>
+                    <Button className="w-full mb-3" onClick={() => window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in a cost estimate for ${TREATMENTS.find(t => t.id === selectedTreatment)?.name}.`)}`, '_blank')}>Get Detailed Quote</Button>
 
                     <button
                         onClick={() => setShowResult(false)}

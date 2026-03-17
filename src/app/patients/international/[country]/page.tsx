@@ -358,7 +358,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                                     </tbody>
                                 </table>
                             </div>
-                            <p className="text-xs text-gray-400 mt-3">*Prices in Indian Rupees (₹). Costs include hospital stay, surgery, anaesthesia, and standard medicines. Send reports for exact pricing.</p>
+                            <p className="text-xs text-gray-400 mt-3">*Costs include hospital stay, surgery, anaesthesia, and standard medicines. Send reports for a transparent, all-inclusive quote.</p>
                         </section>
 
                         {/* 5. Patient Journey */}

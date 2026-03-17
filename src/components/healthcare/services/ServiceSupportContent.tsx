@@ -66,7 +66,7 @@ export function ServiceSupportContent({
     `Natural appearance: Bio-compatible materials matched to your tooth shade for invisible results.`,
     `Durability: ${serviceName} at Indira Dental Clinic lasts 10–20+ years with proper care.`,
     `Safety: Hospital-grade sterilization (Class B autoclave) and same-day instrument processing.`,
-    `50% lower cost: Save ₹15,000–₹40,000 compared to Chennai and Bangalore dental clinics.`,
+    `Significantly lower cost: Save extensively compared to Chennai and Bangalore dental clinics.`,
     `0% EMI available: 3–12 month payment plans through Bajaj Finserv, HDFC, and ICICI.`,
   ]
 
@@ -81,17 +81,17 @@ export function ServiceSupportContent({
   const costPackages = [
     {
       label: `Standard ${serviceName}`,
-      price: '₹15,000–₹25,000',
+      price: 'Standard Rate',
       includes: 'Consultation, CBCT scan, procedure by Dr. Rockson Samuel, 2 review visits, WhatsApp support',
     },
     {
       label: `Premium ${serviceName}`,
-      price: '₹28,000–₹45,000',
+      price: 'Premium Package',
       includes: 'All Standard features + IV sedation option, imported materials, priority scheduling, 4 review visits',
     },
     {
       label: `${serviceName} + Smile Makeover`,
-      price: '₹45,000–₹75,000',
+      price: 'Custom Quote',
       includes: 'Core procedure + teeth whitening + smile design consultation + 12-month maintenance plan',
     },
   ]
@@ -105,7 +105,7 @@ export function ServiceSupportContent({
     {
       question: `Is ${serviceName.toLowerCase()} painful?`,
       answer:
-        `**No.** Dr. Rockson Samuel uses local anaesthesia for all procedures. Patients rate pain as 2/10 on average. IV sedation available for anxious patients at ₹3,000 additional cost.`,
+        `**No.** Dr. Rockson Samuel uses local anaesthesia for all procedures. Patients rate pain as 2/10 on average. IV sedation available for anxious patients.`,
     },
     {
       question: `What is ${serviceName.toLowerCase()} recovery time?`,
@@ -115,12 +115,12 @@ export function ServiceSupportContent({
     {
       question: `Can I combine ${serviceName.toLowerCase()} with other treatments?`,
       answer:
-        `**Yes.** Common combinations: ${serviceName.toLowerCase()} + teeth whitening (save ₹5,000), ${serviceName.toLowerCase()} + gum contouring, ${serviceName.toLowerCase()} + aligners. Dr. Rockson Samuel creates sequenced treatment plans.`,
+        `**Yes.** Common combinations: ${serviceName.toLowerCase()} + teeth whitening, ${serviceName.toLowerCase()} + gum contouring, ${serviceName.toLowerCase()} + aligners. Dr. Rockson Samuel creates sequenced treatment plans.`,
     },
     {
       question: `What EMI options are available for ${serviceName.toLowerCase()}?`,
       answer:
-        `**0% EMI for 3–6 months** through Bajaj Finserv, HDFC, and ICICI. 12-month EMI at 12% interest. No-cost EMI requires ₹5,000 minimum treatment value. Insurance claims assistance provided.`,
+        `**0% EMI for 3–6 months** through Bajaj Finserv, HDFC, and ICICI. 12-month EMI options available. No-cost EMI available for eligible treatments. Insurance claims assistance provided.`,
     },
   ]
 
@@ -259,7 +259,7 @@ export function ServiceSupportContent({
       <SectionContainer className="py-12 bg-gradient-to-br from-cyan-50/50 via-white to-blue-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.cost}>
         <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">{serviceName} Cost &amp; Packages</h2>
         <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-6">
-          <strong>All-inclusive pricing</strong>—no hidden fees. Each package includes: consultation, CBCT scan, procedure, materials, and follow-up visits. <strong>0% EMI available</strong> for treatments above ₹5,000. Serving patients from {cityName}, {locationName}, and nearby districts.
+          <strong>All-inclusive pricing</strong>—no hidden fees. Each package includes: consultation, CBCT scan, procedure, materials, and follow-up visits. <strong>0% EMI available</strong> for eligible treatments. Serving patients from {cityName}, {locationName}, and nearby districts.
         </p>
         <div className="overflow-x-auto rounded-2xl border border-fuchsia-200/50 dark:border-fuchsia-700/40 shadow-lg">
           <table className="min-w-full divide-y divide-fuchsia-200/50 dark:divide-fuchsia-700/40">

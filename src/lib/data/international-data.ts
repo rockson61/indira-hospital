@@ -16,7 +16,7 @@ export interface InternationalCountry {
     languages_supported?: string[];
     currency?: string;
     currency_symbol?: string;
-    india_exchange_example?: string; // e.g. "₹1 = 0.014 USD"
+    india_exchange_example?: string; // e.g. "Enquire for Price = 0.014 USD"
 }
 
 // =============================================================
@@ -35,12 +35,12 @@ export const HOSPITAL_AMENITIES = [
 ];
 
 export const COST_COMPARISON = [
-    { procedure: "Total Knee Replacement", indira: "₹2.5 – 3.5 Lakh", usa: "$25,000 – $40,000", uk: "£15,000 – £22,000", uae: "AED 50,000 – 80,000" },
-    { procedure: "Cardiac Angioplasty", indira: "₹1.5 – 2.5 Lakh", usa: "$30,000 – $50,000", uk: "£20,000 – £30,000", uae: "AED 60,000 – 90,000" },
-    { procedure: "Laparoscopic Surgery", indira: "₹50,000 – 1.5 Lakh", usa: "$15,000 – $30,000", uk: "£10,000 – £18,000", uae: "AED 25,000 – 45,000" },
-    { procedure: "Kidney Transplant", indira: "₹8 – 12 Lakh", usa: "$150,000+", uk: "£60,000+", uae: "AED 250,000+" },
-    { procedure: "Cancer (Chemo Cycle)", indira: "₹20,000 – 80,000", usa: "$15,000 – $30,000", uk: "£5,000 – £12,000", uae: "AED 20,000 – 50,000" },
-    { procedure: "Hip Replacement", indira: "₹2 – 3.5 Lakh", usa: "$20,000 – $35,000", uk: "£12,000 – £20,000", uae: "AED 40,000 – 70,000" },
+    { procedure: "Total Knee Replacement", indira: "Enquire for Best Price", usa: "High Cost", uk: "Premium", uae: "Premium Plus" },
+    { procedure: "Cardiac Angioplasty", indira: "Enquire for Best Price", usa: "High Cost", uk: "Premium", uae: "Premium Plus" },
+    { procedure: "Laparoscopic Surgery", indira: "Enquire for Best Price", usa: "High Cost", uk: "Premium", uae: "Premium Plus" },
+    { procedure: "Kidney Transplant", indira: "Enquire for Best Price", usa: "Very High Cost", uk: "Premium", uae: "Premium Plus" },
+    { procedure: "Cancer (Chemo Cycle)", indira: "Enquire for Best Price", usa: "High Cost", uk: "Premium", uae: "Premium Plus" },
+    { procedure: "Hip Replacement", indira: "Enquire for Best Price", usa: "High Cost", uk: "Premium", uae: "Premium Plus" },
 ];
 
 export const JOURNEY_STEPS = [

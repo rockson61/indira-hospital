@@ -2,14 +2,14 @@ export const dentalReviews = [
     {
         name: "Rajesh Kumar",
         location: "Gandhi Nagar, Vellore",
-        review: "Dr. Rockson Samuel provided excellent care for my root canal treatment. The procedure was painless and his explanation of the process was very thorough. Best dentist in Vellore for RCT!",
+        review: "The dental team provided excellent care for my root canal treatment. The procedure was painless and their explanation of the process was very thorough. Best dentist in Vellore for RCT!",
         rating: 5,
         date: "2024-01-15",
     },
     {
         name: "Priya Sharma",
         location: "Katpadi, Vellore",
-        review: "From regular cleanings to my recent dental implant procedure, Dr. Rockson Samuel and his team provide top-notch care. Indira Dental Clinic is truly the best dental clinic in Vellore.",
+        review: "From regular cleanings to my recent dental implant procedure, the dental team and his team provide top-notch care. Indira Dental Clinic is truly the best dental clinic in Vellore.",
         rating: 5,
         date: "2024-01-10",
     },
@@ -48,28 +48,28 @@ export const dentalReviews = [
     {
         name: "Arjun Reddy",
         location: "Rangapuram, Vellore",
-        review: "Had a great experience with teeth whitening at Indira Dental Clinic with Dr. Rockson Samuel. The staff was friendly, and the results exceeded my expectations. Best cosmetic dentistry in Vellore!",
+        review: "Had a great experience with teeth whitening at Indira Dental Clinic with the dental team. The staff was friendly, and the results exceeded my expectations. Best cosmetic dentistry in Vellore!",
         rating: 5,
         date: "2024-01-25",
     },
     {
         name: "Sneha Patel",
         location: "Sainathapuram, Vellore",
-        review: "Dr. Rockson Samuel's expertise in dental implants is unmatched. The whole process was smooth, and I can't stop smiling now. Thank you for restoring my confidence!",
+        review: "the dental team's expertise in dental implants is unmatched. The whole process was smooth, and I can't stop smiling now. Thank you for restoring my confidence!",
         rating: 5,
         date: "2024-02-01",
     },
     {
         name: "Karthik Rajan",
         location: "Thorapadi, Vellore",
-        review: "I've been coming to Indira Dental Clinic for years, and their preventive care under Dr. Rockson Samuel is excellent. Regular check-ups and cleanings have kept my teeth in great shape.",
+        review: "I've been coming to Indira Dental Clinic for years, and their preventive care under the dental team is excellent. Regular check-ups and cleanings have kept my teeth in great shape.",
         rating: 5,
         date: "2024-02-05",
     },
     {
         name: "Fathima Begum",
         location: "Kosapet, Vellore",
-        review: "Had a wisdom tooth extraction done by Dr. Rockson Samuel. The procedure was quick, and recovery was smooth. Best oral surgeon in Vellore, hands down!",
+        review: "Had a wisdom tooth extraction done by the dental team. The procedure was quick, and recovery was smooth. Best oral surgeon in Vellore, hands down!",
         rating: 5,
         date: "2024-02-10",
     }
@@ -94,15 +94,15 @@ export const dentalFaqs = [
     },
     {
         question: "Is root canal treatment painful?",
-        answer: "With modern techniques and anesthesia, root canal treatment is typically not painful. You might experience some discomfort after the procedure, but this can be managed with over-the-counter pain relievers. Dr. Rockson Samuel ensures patient comfort throughout the treatment.",
+        answer: "With modern techniques and anesthesia, root canal treatment is typically not painful. You might experience some discomfort after the procedure, but this can be managed with over-the-counter pain relievers. the dental team ensures patient comfort throughout the treatment.",
     },
     {
         question: "What are the signs that I might need a root canal?",
-        answer: "Signs that you might need a root canal include severe toothache, prolonged sensitivity to hot or cold, darkening of the tooth, swelling or tenderness in nearby gums, and a persistent pimple on the gums. If you experience these symptoms, it's important to consult Dr. Rockson Samuel promptly.",
+        answer: "Signs that you might need a root canal include severe toothache, prolonged sensitivity to hot or cold, darkening of the tooth, swelling or tenderness in nearby gums, and a persistent pimple on the gums. If you experience these symptoms, it's important to consult the dental team promptly.",
     },
     {
         question: "How much do dental implants cost in Vellore?",
-        answer: "The cost of dental implants in Vellore can vary depending on factors such as the number of implants needed and any additional procedures required. At Indira Dental Clinic, a single tooth implant typically ranges from ₹25,000 to ₹45,000. We offer free consultations to provide you with an accurate estimate based on your specific needs.",
+        answer: "The cost of dental implants in Vellore can vary depending on factors such as the number of implants needed and any additional procedures required. At Indira Dental Clinic, a single tooth implant typically ranges from Available on Request to Available on Request We offer free consultations to provide you with an accurate estimate based on your specific needs.",
     },
     {
         question: "Do you offer teeth whitening services?",
@@ -110,7 +110,7 @@ export const dentalFaqs = [
     },
     {
         question: "What types of braces do you offer?",
-        answer: "We offer various types of braces to suit different needs and preferences. These include traditional metal braces, ceramic braces (which are less visible), and clear aligners like Invisalign. During your consultation, Dr. Rockson Samuel will recommend the best option based on your specific orthodontic needs and lifestyle.",
+        answer: "We offer various types of braces to suit different needs and preferences. These include traditional metal braces, ceramic braces (which are less visible), and clear aligners like Invisalign. During your consultation, the dental team will recommend the best option based on your specific orthodontic needs and lifestyle.",
     },
     {
         question: "How can I maintain good oral hygiene between dental visits?",

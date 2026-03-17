@@ -11,7 +11,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: 'Health Checkup Packages — Indira Super Speciality Hospital Vellore',
-    description: 'Comprehensive health screening packages at Indira Hospital Vellore. Master Health Checkup, Cardiac, Diabetic, and Executive packages starting from ₹999.',
+    description: 'Comprehensive health screening packages at Indira Hospital Vellore. Master Health Checkup, Cardiac, Diabetic, and Executive packages with transparent pricing.',
 }
 
 export default async function HealthPackagesPage() {
@@ -80,10 +80,7 @@ export default async function HealthPackagesPage() {
                                 </p>
 
                                 <div className="flex items-baseline gap-3 mb-8">
-                                    <span className="text-4xl font-black text-slate-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-all">₹{pkg.price}</span>
-                                    {pkg.original_price && (
-                                        <span className="text-slate-400 line-through text-lg font-bold decoration-slate-300">₹{pkg.original_price}</span>
-                                    )}
+                                    <span className="text-4xl font-black text-slate-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-all">Transparent Pricing</span>
                                 </div>
 
                                 <div className="space-y-4 mb-10">

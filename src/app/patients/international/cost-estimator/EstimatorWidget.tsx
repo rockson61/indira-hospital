@@ -6,18 +6,18 @@ import { MessageCircle, CheckCircle2, Star, TrendingDown } from "lucide-react";
 const WA_BASE = `https://wa.me/${siteConfig.contact.whatsapp}?text=`;
 
 const PROCEDURE_LIST = [
-    { procedure: "Knee Replacement (Unilateral)", indira: "₹2.5 – 4 Lakh", usa: "$30,000 – $50,000", uk: "£15,000 – £25,000", uae: "AED 60,000 – 90,000", savings: "93%" },
-    { procedure: "Hip Replacement", indira: "₹3 – 5 Lakh", usa: "$35,000 – $60,000", uk: "£18,000 – £30,000", uae: "AED 70,000 – 100,000", savings: "92%" },
-    { procedure: "Cardiac Bypass (CABG)", indira: "₹3.5 – 6 Lakh", usa: "$80,000 – $120,000", uk: "£25,000 – £40,000", uae: "AED 90,000 – 150,000", savings: "95%" },
-    { procedure: "Angioplasty (Stent)", indira: "₹1.5 – 3 Lakh", usa: "$30,000 – $50,000", uk: "£12,000 – £20,000", uae: "AED 40,000 – 70,000", savings: "90%" },
-    { procedure: "Spinal Surgery (Disc)", indira: "₹2 – 4 Lakh", usa: "$50,000 – $80,000", uk: "£20,000 – £35,000", uae: "AED 60,000 – 100,000", savings: "94%" },
-    { procedure: "Kidney Transplant", indira: "₹8 – 15 Lakh", usa: "$150,000 – $350,000", uk: "£80,000 – £150,000", uae: "AED 250,000 – 500,000", savings: "96%" },
-    { procedure: "Laparoscopic Surgery", indira: "₹50,000 – 1.5 Lakh", usa: "$15,000 – $30,000", uk: "£10,000 – £18,000", uae: "AED 25,000 – 45,000", savings: "90%" },
-    { procedure: "Laser Piles Treatment", indira: "₹30,000 – 60,000", usa: "$5,000 – $10,000", uk: "£3,000 – £6,000", uae: "AED 8,000 – 15,000", savings: "85%" },
-    { procedure: "Oncology (Chemo cycle)", indira: "₹20,000 – 80,000", usa: "$10,000 – $30,000", uk: "£5,000 – £15,000", uae: "AED 15,000 – 40,000", savings: "88%" },
-    { procedure: "IVF / Infertility Cycle", indira: "₹1 – 2 Lakh", usa: "$15,000 – $25,000", uk: "£5,000 – £10,000", uae: "AED 20,000 – 35,000", savings: "88%" },
-    { procedure: "Cataract Surgery (per eye)", indira: "₹15,000 – 40,000", usa: "$3,000 – $6,000", uk: "£1,500 – £3,000", uae: "AED 5,000 – 10,000", savings: "82%" },
-    { procedure: "Hernia Repair (Laparoscopic)", indira: "₹40,000 – 80,000", usa: "$10,000 – $15,000", uk: "£5,000 – £8,000", uae: "AED 12,000 – 20,000", savings: "85%" },
+    { procedure: "Knee Replacement (Unilateral)", indira: "Transparent Pricing", usa: "High Cost", uk: "Premium", uae: "Premium Plus", savings: "90%+" },
+    { procedure: "Hip Replacement", indira: "Transparent Pricing", usa: "High Cost", uk: "Premium", uae: "Premium Plus", savings: "90%+" },
+    { procedure: "Cardiac Bypass (CABG)", indira: "Transparent Pricing", usa: "Very High Cost", uk: "Premium", uae: "Premium Plus", savings: "95%+" },
+    { procedure: "Angioplasty (Stent)", indira: "Transparent Pricing", usa: "High Cost", uk: "Premium", uae: "Premium Plus", savings: "90%+" },
+    { procedure: "Spinal Surgery (Disc)", indira: "Transparent Pricing", usa: "High Cost", uk: "Premium", uae: "Premium Plus", savings: "90%+" },
+    { procedure: "Kidney Transplant", indira: "Transparent Pricing", usa: "Very High Cost", uk: "Premium", uae: "Premium Plus", savings: "95%+" },
+    { procedure: "Laparoscopic Surgery", indira: "Transparent Pricing", usa: "High Cost", uk: "Premium", uae: "Premium Plus", savings: "90%+" },
+    { procedure: "Laser Piles Treatment", indira: "Transparent Pricing", usa: "Premium", uk: "Standard", uae: "Premium", savings: "85%+" },
+    { procedure: "Oncology (Chemo cycle)", indira: "Transparent Pricing", usa: "High Cost", uk: "Premium", uae: "Premium Plus", savings: "85%+" },
+    { procedure: "IVF / Infertility Cycle", indira: "Transparent Pricing", usa: "Premium", uk: "Standard", uae: "Premium", savings: "85%+" },
+    { procedure: "Cataract Surgery (per eye)", indira: "Transparent Pricing", usa: "Premium", uk: "Standard", uae: "Premium", savings: "80%+" },
+    { procedure: "Hernia Repair (Laparoscopic)", indira: "Transparent Pricing", usa: "Premium", uk: "Standard", uae: "Premium", savings: "85%+" },
 ];
 
 const WHATS_INCLUDED = [

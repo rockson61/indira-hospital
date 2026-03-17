@@ -24,7 +24,7 @@ export function HomePromoLinks() {
                         <div className="p-8 md:p-10 flex flex-col flex-grow relative z-10">
                             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4">Be True to Your Heart</h3>
                             <p className="text-slate-600 dark:text-slate-400 mb-8 flex-grow">
-                                Schedule your ₹999 comprehensive heart screening package today. Early detection saves lives.
+                                Schedule your affordable comprehensive heart screening package today. Early detection saves lives.
                             </p>
                             <Link href="/doctor/near-me/treat/cardiology" className="inline-flex items-center text-fuchsia-600 font-bold group/link">
                                 Schedule a Screening

@@ -194,10 +194,10 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
               title="Popular Treatments"
               description="Most requested dental treatments by our patients."
               services={[
-                { name: "Root Canal Treatment", slug: "root-canal-treatment", price: "₹3,000 - ₹8,000", duration: "1-2 hours" },
-                { name: "Dental Implants", slug: "dental-implants", price: "₹25,000 - ₹45,000", duration: "2-3 hours" },
-                { name: "Teeth Whitening", slug: "cosmetic-dentistry/teeth-whitening", price: "₹5,000 - ₹15,000", duration: "1-2 hours" },
-                { name: "Dental Crowns", slug: "restorative-dentistry/crowns", price: "₹8,000 - ₹15,000", duration: "2 visits" }
+                { name: "Root Canal Treatment", slug: "root-canal-treatment", price: "Standard Rate", duration: "1-2 hours" },
+                { name: "Dental Implants", slug: "dental-implants", price: "Standard Rate", duration: "2-3 hours" },
+                { name: "Teeth Whitening", slug: "cosmetic-dentistry/teeth-whitening", price: "Standard Rate", duration: "1-2 hours" },
+                { name: "Dental Crowns", slug: "restorative-dentistry/crowns", price: "Standard Rate", duration: "2 visits" }
               ]}
               ctaText="View All Services"
               ctaLink="/services"

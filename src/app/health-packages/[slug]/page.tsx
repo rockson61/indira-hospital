@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!pkg) return {};
     return {
         title: pkg.seo_title || `${pkg.title} Health Checkup — Indira Hospital Vellore`,
-        description: pkg.seo_description || `Book ${pkg.title} at Indira Hospital Vellore. Comprehensive screening with ${pkg.tests_included?.slice(0, 100)}... Price: ₹${pkg.price}.`,
+        description: pkg.seo_description || `Book ${pkg.title} at Indira Hospital Vellore. Comprehensive screening with ${pkg.tests_included?.slice(0, 100)}... with transparent pricing.`,
     };
 }
 
@@ -76,14 +76,9 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                         <div className="w-full lg:w-[400px] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 rounded-[2.5rem] p-8 shadow-float lg:sticky lg:top-24">
                             <div className="mb-6">
                                 <div className="flex items-baseline gap-2 mb-1">
-                                    <span className="text-sm text-slate-400 font-bold">Package Cost:</span>
-                                    <span className="text-4xl font-heading font-black text-slate-900 dark:text-white">₹{pkg.price}</span>
+                                    <span className="text-sm text-slate-400 font-bold">Package Value:</span>
+                                    <span className="text-4xl font-heading font-black text-slate-900 dark:text-white">Transparent Pricing</span>
                                 </div>
-                                {pkg.original_price && (
-                                    <p className="text-slate-400 text-sm font-medium">
-                                        Was <span className="line-through">₹{pkg.original_price}</span> • Save ₹{(pkg.original_price || 0) - (pkg.price || 0)}
-                                    </p>
-                                )}
                             </div>
 
                             <div className="space-y-3 mb-8">
@@ -199,13 +194,6 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                         "@type": "Product",
                         "name": pkg.title,
                         "description": pkg.short_description || `Comprehensive health package with ${testList.length} tests.`,
-                        "offers": {
-                            "@type": "Offer",
-                            "price": pkg.price,
-                            "priceCurrency": "INR",
-                            "availability": "https://schema.org/InStock",
-                            "url": `${siteConfig.url}/health-packages/${slug}`
-                        },
                         "brand": {
                             "@type": "MedicalOrganization",
                             "name": siteConfig.name

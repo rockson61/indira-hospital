@@ -57,7 +57,7 @@ export default function PayBillPage() {
                     </div>
                     <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-4">Payment Successful!</h2>
                     <p className="text-xl text-slate-500 dark:text-slate-400 mb-10">
-                        Thank you. Your payment of <span className="font-bold text-slate-900 dark:text-white">₹{formData.amount}</span> has been processed successfully. A confirmation receipt has been sent to your registered mobile/email.
+                        Thank you. Your payment of <span className="font-bold text-slate-900 dark:text-white">{formData.amount}</span> has been processed successfully. A confirmation receipt has been sent to your registered mobile/email.
                     </p>
                     <Link href="/">
                         <button className="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all flex items-center gap-3 mx-auto">
@@ -123,10 +123,10 @@ export default function PayBillPage() {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="amount" className="text-sm font-bold text-slate-700 dark:text-slate-300">Amount (₹) *</label>
+                                    <label htmlFor="amount" className="text-sm font-bold text-slate-700 dark:text-slate-300">Amount *</label>
                                     <div className="relative">
                                         <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                                            <span className="text-slate-400 font-bold">₹</span>
+                                            <span className="text-slate-400 font-bold">Amt</span>
                                         </div>
                                         <input
                                             type="number"

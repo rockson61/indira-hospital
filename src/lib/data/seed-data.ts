@@ -679,7 +679,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Laser Piles Treatment",
-                    "cost": "₹35,000 - ₹50,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Day Care Procedure",
                         "Painless/No Cuts",
@@ -688,7 +688,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Laparoscopic Hernia Repair",
-                    "cost": "₹45,000 - ₹65,000",
+                    "cost": "Available on Request",
                     "features": [
                         "3D Mesh Used",
                         "1-Day Hospital Stay",
@@ -697,7 +697,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Thyroidectomy",
-                    "cost": "₹40,000 - ₹60,000",
+                    "cost": "Available on Request",
                     "features": [
                         "General Ward / Semi-Private",
                         "Histopathology Included",
@@ -814,7 +814,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Hemodialysis (per session)",
-                    "cost": "₹1,500 - ₹2,500",
+                    "cost": "Available on Request",
                     "features": [
                         "4 Hours",
                         "Disposable Dialyzer",
@@ -823,7 +823,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Dialysis Fistula Surgery",
-                    "cost": "₹15,000 - ₹25,000",
+                    "cost": "Available on Request",
                     "features": [
                         "AV Fistula",
                         "Local Anesthesia",
@@ -832,7 +832,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Kidney Biopsy",
-                    "cost": "₹8,000 - ₹12,000",
+                    "cost": "Available on Request",
                     "features": [
                         "USG Guided",
                         "Histopathology",
@@ -925,7 +925,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Chemotherapy Cycle",
-                    "cost": "₹5,000 - ₹30,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Day Care",
                         "Nursing Charge",
@@ -934,7 +934,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Breast Cancer Surgery",
-                    "cost": "₹60,000 - ₹90,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Mastectomy",
                         "Reconstruction",
@@ -943,7 +943,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Cancer Screening",
-                    "cost": "₹2,500 - ₹5,000",
+                    "cost": "Available on Request",
                     "features": [
                         "All tests",
                         "Consultation",
@@ -1093,7 +1093,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "RIRS (Laser Stone Removal)",
-                    "cost": "₹50,000 - ₹70,000",
+                    "cost": "Available on Request",
                     "features": [
                         "No Cuts",
                         "Flexible Scope",
@@ -1102,7 +1102,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "TURP (Prostate Surgery)",
-                    "cost": "₹45,000 - ₹60,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Gold Standard",
                         "3 Days Stay",
@@ -1111,7 +1111,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "URSL (Ureter Stone)",
-                    "cost": "₹30,000 - ₹45,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Rigid Scope",
                         "Laser/Lithoclast",
@@ -1183,7 +1183,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Laparoscopic Gallbladder",
-                    "cost": "₹45,000 - ₹65,000",
+                    "cost": "Available on Request",
                     "features": [
                         "General Anesthesia",
                         "2 Days Stay",
@@ -1192,7 +1192,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Laparoscopic Appendex",
-                    "cost": "₹35,000 - ₹50,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Emergency Care",
                         "1-2 Days Stay",
@@ -1201,7 +1201,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Diagnostic Laparoscopy",
-                    "cost": "₹25,000 - ₹35,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Day Care",
                         "Investigation",
@@ -1266,7 +1266,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Upper GI Endoscopy (OGD)",
-                    "cost": "₹3,000 - ₹5,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Diagnostic",
                         "Sedation Optional",
@@ -1275,7 +1275,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Colonoscopy",
-                    "cost": "₹5,000 - ₹8,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Full Bowel Exam",
                         "Biopsy if needed",
@@ -1284,7 +1284,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "ERCP",
-                    "cost": "₹25,000 - ₹40,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Stone Removal",
                         "Stenting",
@@ -1349,7 +1349,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Normal Delivery",
-                    "cost": "₹30,000 - ₹45,000",
+                    "cost": "Available on Request",
                     "features": [
                         "LDR Suite Available",
                         "Baby Care",
@@ -1358,7 +1358,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "C-Section Delivery",
-                    "cost": "₹45,000 - ₹65,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Emergency/Elective",
                         "Pediatrician Support",
@@ -1367,7 +1367,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Laparoscopic Hysterectomy",
-                    "cost": "₹50,000 - ₹70,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Uterus Removal",
                         "Keyhole Surgery",
@@ -1432,7 +1432,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Total Knee Replacement",
-                    "cost": "₹1.4L - ₹1.8L",
+                    "cost": "Available on Request",
                     "features": [
                         "Imported Implant",
                         "Physiotherapy",
@@ -1441,7 +1441,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "ACL Reconstruction",
-                    "cost": "₹70,000 - ₹90,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Arthroscopic",
                         "Bio-screw",
@@ -1450,7 +1450,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Hip Replacement",
-                    "cost": "₹1.5L - ₹2.0L",
+                    "cost": "Available on Request",
                     "features": [
                         "Ceramic/Poly",
                         "Long life",
@@ -1515,7 +1515,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Coronary Angiography",
-                    "cost": "₹12,000 - ₹15,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Radial Access",
                         "Day Care",
@@ -1524,7 +1524,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Angioplasty (Stent)",
-                    "cost": "₹1.2L - ₹1.8L",
+                    "cost": "Available on Request",
                     "features": [
                         "Drug Eluting Stent",
                         "ICU Stay",
@@ -1533,7 +1533,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Pacemaker (Single Chamber)",
-                    "cost": "₹1.0L - ₹1.5L",
+                    "cost": "Available on Request",
                     "features": [
                         "Device Cost",
                         "Implantation",
@@ -1598,7 +1598,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "ICU Bed Charges",
-                    "cost": "₹5,000 - ₹8,000 / day",
+                    "cost": "Available on Request",
                     "features": [
                         "Monitoring",
                         "Nursing 1:1",
@@ -1607,7 +1607,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Ventilator Support",
-                    "cost": "₹8,000 - ₹12,000 / day",
+                    "cost": "Available on Request",
                     "features": [
                         "Advanced Mode",
                         "Respiratory Care"
@@ -1680,7 +1680,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Root Canal Treatment",
-                    "cost": "₹3,500 - ₹5,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Single Sitting",
                         "X-Ray Included",
@@ -1689,7 +1689,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Dental Implant",
-                    "cost": "₹25,000 - ₹35,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Titanium Implant",
                         "Surgery",
@@ -1698,7 +1698,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Ceramic Braces",
-                    "cost": "₹35,000 - ₹50,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Esthetic",
                         "Full Kit",
@@ -1768,7 +1768,7 @@ export const SEED_DATA = {
             "pricing": [
                 {
                     "package_name": "Stroke Thrombolysis",
-                    "cost": "₹40,000 - ₹60,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Clot Buster Inj",
                         "ICU Monitoring",
@@ -1777,7 +1777,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "EEG Study",
-                    "cost": "₹1,500 - ₹3,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Digital EEG",
                         "Report by Neurologist",
@@ -1786,7 +1786,7 @@ export const SEED_DATA = {
                 },
                 {
                     "package_name": "Botox for Migraine",
-                    "cost": "₹15,000 - ₹25,000",
+                    "cost": "Available on Request",
                     "features": [
                         "Injection",
                         "Chronic Migraine",

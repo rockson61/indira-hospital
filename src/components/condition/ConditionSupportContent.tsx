@@ -95,9 +95,9 @@ function buildContent(
       'Brush twice daily (2 minutes each) with fluoride toothpaste. Replace brush every 3 months.',
       'Floss once daily to remove plaque between teeth. Use interdental brushes for gaps.',
       'Limit sugar intake: max 6 teaspoons/day. Avoid acidic drinks (cola, citrus juice).',
-      'Dental checkups every 6 months: Early cavity detection saves ₹10,000+ in treatment costs.',
+      'Dental checkups every 6 months: Early cavity detection ensures transparent, lower-cost preventive care.',
       'Treat small cavities immediately. Untreated decay progresses to root canal within 6–12 months.',
-      'Night guard recommended for teeth grinders. Cost: ₹3,000–₹8,000 at Indira Dental Clinic.',
+      'Night guard recommended for teeth grinders. Available at Indira Dental Clinic.',
     ],
     relatedConditions: [
       { title: 'Gum Bleeding', href: '/conditions/bleeding-gums' },
@@ -107,11 +107,11 @@ function buildContent(
       { title: 'Wisdom Tooth Pain', href: '/conditions/impacted-teeth' },
     ],
     treatmentMap: [
-      { issue: 'Tooth Decay (Cavity)', treatment: 'Dental Filling (₹1,500–₹5,000) or Root Canal (₹8,000–₹15,000)', href: '/services/root-canal-treatment' },
-      { issue: 'Gum Disease', treatment: 'Scaling & Root Planing (₹2,000–₹6,000)', href: '/services/periodontics/scaling-root-planing' },
-      { issue: 'Cracked Tooth', treatment: 'Dental Crown (₹8,000–₹25,000) or Bonding (₹3,000–₹8,000)', href: '/services/restorative-dentistry/dental-crowns' },
-      { issue: 'Tooth Infection', treatment: 'Antibiotics + Root Canal or Extraction (₹3,000–₹8,000)', href: '/services/tooth-extraction' },
-      { issue: 'Impacted Wisdom Tooth', treatment: 'Surgical Extraction (₹5,000–₹15,000)', href: '/services/oral-surgery/impacted-wisdom-teeth' },
+      { issue: 'Tooth Decay (Cavity)', treatment: 'Dental Filling or Root Canal (Standard Rate)', href: '/services/root-canal-treatment' },
+      { issue: 'Gum Disease', treatment: 'Scaling & Root Planing (Standard Rate)', href: '/services/periodontics/scaling-root-planing' },
+      { issue: 'Cracked Tooth', treatment: 'Dental Crown or Bonding (Standard Rate)', href: '/services/restorative-dentistry/dental-crowns' },
+      { issue: 'Tooth Infection', treatment: 'Antibiotics + Root Canal or Extraction (Standard Rate)', href: '/services/tooth-extraction' },
+      { issue: 'Impacted Wisdom Tooth', treatment: 'Surgical Extraction (Standard Rate)', href: '/services/oral-surgery/impacted-wisdom-teeth' },
     ],
     faqs: [
       {
@@ -127,7 +127,7 @@ function buildContent(
       {
         question: `Is treatment for ${conditionName.toLowerCase()} painful?`,
         answer:
-          '**No.** Dr. Rockson Samuel uses local anaesthesia for all procedures. Patients rate pain as 2/10 on average. IV sedation available for anxious patients (₹3,000 additional).',
+          '**No.** Dr. Rockson Samuel uses local anaesthesia for all procedures. Patients rate pain as 2/10 on average. IV sedation available for anxious patients.',
       },
       {
         question: `Can ${conditionName.toLowerCase()} cause headaches?`,

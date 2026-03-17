@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!test) return {};
     return {
         title: test.seo_title || `${test.name} — Indira Hospital Vellore`,
-        description: test.seo_description || `Book ${test.name} at Indira Hospital Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} ${test.price ? `Price: ₹${test.price}.` : ''}`,
+        description: test.seo_description || `Book ${test.name} at Indira Hospital Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} Get accurate results at affordable rates.`,
     };
 }
 
@@ -51,9 +51,8 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                         </div>
                         <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border shadow-sm min-w-[300px]">
                             <div className="flex items-baseline gap-1 mb-1">
-                                <span className="text-sm text-muted-foreground">Price:</span>
                                 <span className="text-2xl font-bold text-slate-900 dark:text-white">
-                                    {test.price ? `₹${test.price}` : 'Call for Price'}
+                                    Transparent Pricing
                                 </span>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
@@ -236,14 +235,6 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                         ...(test.body_system && { "bodySystem": test.body_system }),
                         ...(usedToDiagnose.length > 0 && { "usedToDiagnose": usedToDiagnose.join(', ') }),
                         ...(test.normal_range && { "normalRange": test.normal_range }),
-                        ...(test.price && {
-                            "offers": {
-                                "@type": "Offer",
-                                "price": test.price,
-                                "priceCurrency": "INR",
-                                "availability": "https://schema.org/InStock",
-                            }
-                        }),
                         "provider": {
                             "@type": "Hospital",
                             "name": siteConfig.name,

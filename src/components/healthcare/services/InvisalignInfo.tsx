@@ -221,8 +221,7 @@ export default function InvisalignInfo({ location = "Vellore" }: InvisalignInfoP
             <div>
               <h4 className="font-semibold mb-1">How much does Invisalign cost in {location}?</h4>
               <p className="text-muted-foreground dark:text-muted-foreground/70">
-                Invisalign treatment in {location} typically ranges from ₹50,000 to ₹1,50,000 depending on the
-                complexity of your case. We offer flexible payment plans to make treatment more affordable.
+                Invisalign treatment in {location} follows a transparent pricing model. We offer flexible payment plans and 0% EMI options to make your dream smile achievable.
               </p>
             </div>
 

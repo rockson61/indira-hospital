@@ -65,10 +65,10 @@ const SYMPTOMS: Symptom[] = [
 ];
 
 const COLUMNS = [
-    { id: 'teleconsult', label: 'Teleconsultation', price: '₹', icon: Video, color: 'bg-indigo-500', hover: 'hover:bg-indigo-600', lightColor: 'bg-indigo-50 text-indigo-700', darkColor: 'dark:bg-indigo-500/10 dark:text-indigo-400' },
-    { id: 'opd', label: 'OPD / Clinic', price: '₹₹', icon: Stethoscope, color: 'bg-blue-500', hover: 'hover:bg-blue-600', lightColor: 'bg-blue-50 text-blue-700', darkColor: 'dark:bg-blue-500/10 dark:text-blue-400' },
-    { id: 'daycare', label: 'Daycare / Minor OP', price: '₹₹₹', icon: HeartCardiogram, color: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', lightColor: 'bg-fuchsia-50 text-fuchsia-700', darkColor: 'dark:bg-fuchsia-500/10 dark:text-fuchsia-400' },
-    { id: 'emergency', label: 'Emergency', price: '₹₹₹₹₹', icon: PhoneCall, color: 'bg-rose-600', hover: 'hover:bg-rose-700', lightColor: 'bg-rose-50 text-rose-700', darkColor: 'dark:bg-rose-500/10 dark:text-rose-400' },
+    { id: 'teleconsult', label: 'Teleconsultation', price: 'Standard', icon: Video, color: 'bg-indigo-500', hover: 'hover:bg-indigo-600', lightColor: 'bg-indigo-50 text-indigo-700', darkColor: 'dark:bg-indigo-500/10 dark:text-indigo-400' },
+    { id: 'opd', label: 'OPD / Clinic', price: 'Standard', icon: Stethoscope, color: 'bg-blue-500', hover: 'hover:bg-blue-600', lightColor: 'bg-blue-50 text-blue-700', darkColor: 'dark:bg-blue-500/10 dark:text-blue-400' },
+    { id: 'daycare', label: 'Daycare / Minor OP', price: 'Advanced', icon: HeartCardiogram, color: 'bg-fuchsia-500', hover: 'hover:bg-fuchsia-600', lightColor: 'bg-fuchsia-50 text-fuchsia-700', darkColor: 'dark:bg-fuchsia-500/10 dark:text-fuchsia-400' },
+    { id: 'emergency', label: 'Emergency', price: 'Priority Case', icon: PhoneCall, color: 'bg-rose-600', hover: 'hover:bg-rose-700', lightColor: 'bg-rose-50 text-rose-700', darkColor: 'dark:bg-rose-500/10 dark:text-rose-400' },
 ];
 
 export function SymptomGuide() {

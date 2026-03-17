@@ -266,7 +266,6 @@ export default async function DiagnosticsPage() {
                             "name": t.name,
                             "url": `${siteConfig.url}/diagnostics/${t.slug}`,
                             "description": t.seo_description || t.short_description,
-                            ...(t.price && { "offers": { "@type": "Offer", "price": t.price, "priceCurrency": "INR" } }),
                         })),
                     })
                 }}

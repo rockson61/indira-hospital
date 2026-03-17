@@ -12,37 +12,37 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
   const services = [
     {
       name: 'Root Canal Treatment',
-      ourPrice: '₹3,500 – ₹6,500',
-      marketPrice: '₹6,000 – ₹12,000 (Chennai)',
-      savings: 'Save ₹2,500–₹5,500',
+      ourPrice: 'Standard Rate',
+      marketPrice: 'Metro Pricing',
+      savings: 'High Savings',
       features: ['Single sitting (45-60 min)', 'Digital X-Ray included', 'By Dr. Rockson Samuel']
     },
     {
       name: 'Dental Implants',
-      ourPrice: '₹20,000 – ₹35,000',
-      marketPrice: '₹40,000 – ₹60,000 (Bangalore)',
-      savings: 'Save ₹20,000–₹25,000',
+      ourPrice: 'Standard Rate',
+      marketPrice: 'Metro Pricing',
+      savings: 'High Savings',
       features: ['Titanium/Zirconia', 'Lifetime warranty', '95%+ success rate']
     },
     {
       name: 'Braces (Complete)',
-      ourPrice: '₹25,000 – ₹50,000',
-      marketPrice: '₹45,000 – ₹80,000 (Chennai)',
-      savings: 'Save ₹20,000–₹30,000',
+      ourPrice: 'Standard Rate',
+      marketPrice: 'Metro Pricing',
+      savings: 'High Savings',
       features: ['Metal/Ceramic/Invisible', '12-24 months', 'Retainers included']
     },
     {
       name: 'Teeth Whitening',
-      ourPrice: '₹5,000 – ₹12,000',
-      marketPrice: '₹10,000 – ₹20,000 (Bangalore)',
-      savings: 'Save ₹5,000–₹8,000',
+      ourPrice: 'Standard Rate',
+      marketPrice: 'Metro Pricing',
+      savings: 'High Savings',
       features: ['Zoom/Laser whitening', '8 shades lighter', 'Results in 1 hour']
     },
     {
       name: 'Dental Crown (Zirconia)',
-      ourPrice: '₹6,000 – ₹12,000',
-      marketPrice: '₹12,000 – ₹20,000 (Chennai)',
-      savings: 'Save ₹6,000–₹8,000',
+      ourPrice: 'Standard Rate',
+      marketPrice: 'Metro Pricing',
+      savings: 'High Savings',
       features: ['Metal-free', 'Same-day fitting', '10-15 year lifespan']
     },
   ];
@@ -57,7 +57,7 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
       </ModernCardHeader>
       <ModernCardContent>
         <p className="text-muted-foreground mb-6">
-          <strong>50% lower than metro city prices.</strong> Compare Indira Dental Clinic, Vellore with Chennai and Bangalore rates. All prices include consultation, procedure, and follow-up visits.
+          <strong>Significantly lower than metro city prices.</strong> Compare Indira Dental Clinic, Vellore with Chennai and Bangalore rates. All services include consultation, procedure, and follow-up visits.
         </p>
 
         <div className="overflow-x-auto">
@@ -108,9 +108,9 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
               <IndianRupee className="w-6 h-6 text-white" />
             </div>
             <div>
-              <p className="font-bold text-foreground text-lg">Save 40-50% on Dental Treatments</p>
+              <p className="font-bold text-foreground text-lg">Massive Savings on Dental Treatments</p>
               <p className="text-sm text-muted-foreground">
-                All-inclusive pricing • No hidden costs • 0% EMI via Bajaj Finserv, HDFC, ICICI
+                Transparent pricing • No hidden costs • 0% EMI via Bajaj Finserv, HDFC, ICICI
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="flex items-center gap-2 text-sm text-foreground/80">
             <CheckCircle className="w-4 h-4 text-fuchsia-500" />
-            <span>Free Consultation (₹300 value)</span>
+            <span>Complimentary Consultation</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-foreground/80">
             <CheckCircle className="w-4 h-4 text-fuchsia-500" />

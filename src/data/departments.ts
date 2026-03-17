@@ -176,5 +176,13 @@ export const departments: readonly Department[] = [
         icon: "Eye",
         features: ["Acne Treatment", "Skin Allergy Care", "Cosmetic Dermatology"],
     },
+    {
+        id: "administration",
+        name: "Administration",
+        slug: "administration",
+        description: "Leading the vision of compassionate, patient-centric healthcare at Indira Hospital.",
+        icon: "Stethoscope",
+        features: ["Strategic Leadership", "Quality Assurance", "Patient Experience"],
+    },
 ];
 

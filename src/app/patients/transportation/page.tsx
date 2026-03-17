@@ -39,10 +39,10 @@ const TRANSPORT_MODES = [
         icon: Train,
         color: "blue",
         title: "By Train — Katpadi Junction",
-        badge: "₹10–50 Auto",
+        badge: "Budget Friendly",
         steps: [
             "Alight at Katpadi Junction (KPD) — the main railway station serving Vellore",
-            "Take an auto or cab to Gandhi Nagar (10–12 minutes, ~₹30)",
+            "Take an auto or cab to Gandhi Nagar (10–12 minutes)",
             "The hospital is on Katpadi Road, 5 minutes from the main road",
         ],
         tip: "Express trains from Chennai Central (MAS) take ~1.5 hrs. From Bangalore ~3 hrs. From Tirupati ~2 hrs.",

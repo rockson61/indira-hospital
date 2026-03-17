@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 };
 
 const HOTELS = [
-    { name: "Fortune Inn Valley View", distance: "800m", stars: 4, price: "₹3,500–₹6,000/night", halal: true, features: ["AC rooms", "Restaurant", "Wi-Fi", "Taxi service"] },
-    { name: "The Vellore Park Hotel", distance: "1.2 km", stars: 4, price: "₹4,000–₹7,500/night", halal: true, features: ["Business centre", "Restaurant", "Gym", "24/7 reception"] },
-    { name: "Hotel Darling Classic", distance: "400m", stars: 3, price: "₹1,500–₹2,500/night", halal: false, features: ["Walking distance", "Budget friendly", "Clean rooms", "Wi-Fi"] },
-    { name: "Vijay Park Hotel", distance: "600m", stars: 3, price: "₹1,200–₹2,000/night", halal: false, features: ["South Indian food", "Laundry", "24/7 reception"] },
-    { name: "Hotel Anand Regency", distance: "700m", stars: 3, price: "₹2,000–₹3,500/night", halal: false, features: ["AC rooms", "Room service", "Parking", "Wi-Fi"] },
-    { name: "Indira Hospital Attendant Rooms", distance: "In hospital", stars: 0, price: "₹500–₹800/night", halal: false, features: ["Inside hospital", "Attendant beds", "Shared bathroom", "24/7 security"] },
+    { name: "Fortune Inn Valley View", distance: "800m", stars: 4, price: "Premium stay", halal: true, features: ["AC rooms", "Restaurant", "Wi-Fi", "Taxi service"] },
+    { name: "The Vellore Park Hotel", distance: "1.2 km", stars: 4, price: "Premium stay", halal: true, features: ["Business centre", "Restaurant", "Gym", "24/7 reception"] },
+    { name: "Hotel Darling Classic", distance: "400m", stars: 3, price: "Mid-range", halal: false, features: ["Walking distance", "Budget friendly", "Clean rooms", "Wi-Fi"] },
+    { name: "Vijay Park Hotel", distance: "600m", stars: 3, price: "Budget friendly", halal: false, features: ["South Indian food", "Laundry", "24/7 reception"] },
+    { name: "Hotel Anand Regency", distance: "700m", stars: 3, price: "Mid-range", halal: false, features: ["AC rooms", "Room service", "Parking", "Wi-Fi"] },
+    { name: "Indira Hospital Attendant Rooms", distance: "In hospital", stars: 0, price: "Budget stay", halal: false, features: ["Inside hospital", "Attendant beds", "Shared bathroom", "24/7 security"] },
 ];
 
 const WA = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need help with accommodation near Indira Hospital Vellore. Please help.")}`;

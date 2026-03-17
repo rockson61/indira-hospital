@@ -41,9 +41,8 @@ export function DiagnosticCard({ test, className }: DiagnosticCardProps) {
                             <config.icon className={cn("w-7 h-7", config.color)} />
                         </div>
                         <div className="text-right">
-                            <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Pricing</div>
-                            <span className="text-2xl font-black text-slate-900 dark:text-white tabular-nums">
-                                {test.price ? `₹${test.price}` : 'Book'}
+                            <span className="text-lg font-black text-slate-900 dark:text-white tabular-nums">
+                                {test.price ? 'Standard Rate' : 'Book Test'}
                             </span>
                         </div>
                     </div>
