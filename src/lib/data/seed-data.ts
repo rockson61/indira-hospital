@@ -265,7 +265,7 @@ export const SEED_DATA = {
             slug: "dr-srinivasan-karbar",
             designation: "Emergency Medicine Specialist",
             department: "Emergency Medicine",
-            image: "/images/doctors/dr-jackson-p-john.jpg",
+            image: "/images/doctors/dr-srinivasan-karbar.jpg",
             bio: "Dr. Srinivasan Karbar is an experienced Emergency Medicine specialist with over 10 years of clinical experience. He currently serves as a consultant Emergency physician at Indira Super Speciality Hospital. He is actively involved in leading the emergency team, mentoring junior doctors, and ensuring the delivery of high-quality critical care.",
             education: [
                 { degree: "MRCEM Part A", institution: "Royal College Of Emergency Medicine, UK", year: "2024" },
@@ -295,7 +295,7 @@ export const SEED_DATA = {
             slug: "dr-jackson-p-john",
             designation: "Emergency Medicine Specialist",
             department: "Emergency Medicine",
-            image: "/images/doctors/dr-srinivasan-karbar.jpg",
+            image: "/images/doctors/dr-jackson-p-john.jpg",
             bio: "Dr. Jackson P John is an Emergency Medicine Specialist with over 8 years of experience. He is well-versed in emergency procedures like airway management, resuscitation, and surgical & trauma management. He previously served as an Emergency Medicine Specialist in the Oman Ministry of Health.",
             education: [
                 { degree: "MBBS", institution: "D.Y Patil University Navi Mumbai", year: "2017" },
