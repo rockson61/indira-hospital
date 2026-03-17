@@ -145,5 +145,39 @@ export const doctors: readonly Doctor[] = [
         imageUrl: "http://www.indirasuperspecialityhospital.com/jb-content/uploads/2022/05/sar-300x300.jpg",
         availability: ["Mon-Sat"],
         bio: "Dr. PL. Saravanan is a senior cardiologist specializing in interventional cardiology and cardiac emergencies.",
+    },
+    {
+        id: "dr-srinivasan-karbar",
+        name: "Dr. Srinivasan Karbar",
+        slug: "dr-srinivasan-karbar",
+        specialty: "Emergency Medicine Specialist",
+        departmentId: "emergency-services",
+        experience: 10,
+        education: [
+            "MRCEM Part A (Royal College Of Emergency Medicine, UK), 2024",
+            "GWU MEM (Global Hospital Chennai), 2017",
+            "MBBS (Kempegowda Institute of Medical Sciences), 2012",
+            "Fellowship in Neuro Emergencies (TICEM Madhurai)",
+            "CCEBDM (PHFI India)",
+            "PGDMLE (National Law School Bangalore, ongoing)"
+        ],
+        imageUrl: "/images/doctors/dr-srinivasan-karbar.jpg",
+        availability: ["Mon-Sat"],
+        bio: "Dr. Srinivasan Karbar is an experienced Emergency Medicine specialist with over 10 years of clinical experience. He currently serves as a consultant Emergency physician at Indira Super Speciality Hospital. He is actively involved in leading the emergency team, mentoring junior doctors, and ensuring the delivery of high-quality critical care. His expertise includes Trauma care, Acute pain management, Emergency procedures, and Ultrasonography.",
+    },
+    {
+        id: "dr-jackson-p-john",
+        name: "Dr. Jackson P John",
+        slug: "dr-jackson-p-john",
+        specialty: "Emergency Medicine Specialist",
+        departmentId: "emergency-services",
+        experience: 8,
+        education: [
+            "MBBS (D.Y Patil University Navi Mumbai)",
+            "Master's in Emergency Medicine (Kokilaben Dhirubhai Ambani Hospital Mumbai)"
+        ],
+        imageUrl: "/images/doctors/dr-jackson-p-john.jpg",
+        availability: ["Mon-Sat"],
+        bio: "Dr. Jackson P John is an Emergency Medicine Specialist with over 8 years of experience. He previously worked in Oman Ministry of Health. He is well-versed in emergency procedures like airway management (Intubation & Resuscitation), IV access (Central Line, Arterial Line), and surgical & trauma management. Registration number: 2017051750.",
     }
 ];
