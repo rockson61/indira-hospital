@@ -38,7 +38,7 @@ const localBusinessSchema = {
     "@type": "PostalAddress",
     "addressCountry": "IN",
     "addressLocality": "Vellore",
-    "addressRegion": "IN",
+    "addressRegion": "Tamil Nadu",
     "postalCode": "632006",
     "streetAddress": "54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar"
   },
@@ -48,7 +48,7 @@ const localBusinessSchema = {
     "ratingCount": "296",
     "ratingValue": "4.1"
   },
-  "description": "Premium State of the Art High level Quaternary care Superspeciality Hospital at the heart of Gandhinagar, Vellore.",
+  "description": "Indira Super Speciality Hospital is a premium NABH-accredited quaternary care hospital in Vellore, Tamil Nadu, India, specializing in advanced laser & laparoscopic surgeries.",
   "hasMap": "https://maps.google.com/maps?cid=9667111072695054632",
   "image": "https://lh3.googleusercontent.com/La0fYC-XT-E8lRPk31cNfPmEgsfyWxy9VdOaX9wB81jgu-LOVYZVFeWqi4CcbxW_tOiyiECskDHNbb4vQQ=s0",
   "makesOffer": [

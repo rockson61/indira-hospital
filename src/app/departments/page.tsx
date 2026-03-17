@@ -12,8 +12,8 @@ import { MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-    title: "15+ Surgical Specialities Under One Roof | Indira Hospital Vellore",
-    description: "From cardiology to proctology — every speciality you need, in one hospital. No referrals, no waiting, no runaround. Get treated today.",
+    title: "World-Class Hospital Departments in Vellore, Tamil Nadu — Indira Hospital",
+    description: "Explore 15+ advanced medical departments at Indira Hospital, Vellore. From cardiology to proctology, get expert care with same-day discharge options in Tamil Nadu, India.",
 };
 
 export default async function DepartmentsDirectoryPage() {

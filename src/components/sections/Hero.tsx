@@ -41,7 +41,7 @@ export function Hero() {
                             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-white/10 backdrop-blur-md border border-fuchsia-200 dark:border-white/20 text-fuchsia-700 dark:text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-sm dark:shadow-[0_0_30px_-5px_var(--tw-shadow-color)] dark:shadow-fuchsia-500/30"
                         >
                             <span className="flex h-2.5 w-2.5 rounded-full bg-fuchsia-500 dark:bg-fuchsia-400 animate-pulse" />
-                            #1 Rated Hospital in Vellore
+                            #1 Rated Super Speciality Hospital in Vellore, Tamil Nadu
                         </motion.div>
 
                         <motion.h1

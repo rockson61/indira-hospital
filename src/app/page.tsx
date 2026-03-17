@@ -35,12 +35,14 @@ export const metadata: Metadata = {
   keywords: [
     "best hospital in Vellore",
     "super speciality hospital Tamil Nadu",
-    "laser surgery hospital",
+    "laser surgery hospital India",
     "laparoscopic surgery Vellore",
     "NABH accredited hospital Vellore",
-    "top doctors in Vellore",
+    "top doctors in Vellore Tamil Nadu",
     "cashless insurance hospital Vellore",
     "medical tourism India",
+    "affordable surgery India",
+    "same-day discharge surgery Vellore"
   ],
   openGraph: {
     title: "Indira Super Speciality Hospital | Advanced Care in Vellore",

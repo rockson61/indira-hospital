@@ -47,9 +47,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!department) return { title: "Department Not Found" };
 
     return {
-        title: department.seo_title || `${department.title} Department | Indira Hospital`,
-        description: department.seo_description || `${department.full_description?.replace(/<[^>]*>?/gm, '').substring(0, 140) || department.short_description} Discover world-class care at Indira Hospital.`,
-        keywords: [department.title, "Department", "Tamil Nadu", "India", "Indira Hospital", "Specialists"],
+        title: department.seo_title || `Best ${department.title} Department in Vellore, Tamil Nadu | Indira Hospital`,
+        description: department.seo_description || `Discover expert ${department.title} care at Indira Hospital, Vellore. Leading specialists in Tamil Nadu, India, offering advanced treatments and same-day discharge.`,
+        keywords: [department.title, "Best Hospital in Vellore", "Tamil Nadu", "India", "Indira Hospital", "Specialist Doctor"],
     };
 }
 
@@ -119,7 +119,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                             {iconMap[department.icon] || <Stethoscope className="h-8 w-8" />}
                         </div>
                         <div>
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{department.title}</h1>
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{department.title} Specialists in Vellore, Tamil Nadu</h1>
                             <p className="mt-4 text-lg text-indigo-100 max-w-3xl leading-relaxed">{department.short_description}</p>
 
                             <div className="flex flex-wrap gap-4 mt-8">

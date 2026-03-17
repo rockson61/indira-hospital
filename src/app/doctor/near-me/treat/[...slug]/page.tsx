@@ -81,21 +81,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Check for Treatment
     const treatment = getTreatmentBySlug(lastSlug);
     if (treatment) {
-        const title = `${treatment.title} — Cost, Recovery & Same-Day Discharge | Indira Hospital`;
-        const description = `${treatment.shortDescription} Advanced laparoscopic & laser options at Indira Hospital, Vellore. Serving patients across Tamil Nadu. Get a free cost estimate today.`;
+        const title = `${treatment.title} Treatment Cost, Recovery & Experts in Vellore, Tamil Nadu | Indira Hospital`;
+        const description = `${treatment.shortDescription} Leading ${treatment.title} specialists at Indira Hospital, Vellore. Advanced laparoscopic & laser options with same-day discharge in India.`;
         return {
             title,
             description,
             keywords: [
                 treatment.title,
-                `${treatment.title} cost in India`,
+                `${treatment.title} cost in Vellore`,
                 `${treatment.title} recovery time`,
                 "Tamil Nadu",
                 "India",
-                "same day discharge",
+                "best surgeon for ${treatment.title}",
                 "Indira Hospital Vellore",
-                "laser surgery",
-                "laparoscopy",
+                "laser surgery India",
+                "laparoscopy Tamil Nadu",
                 ...treatment.features
             ],
             openGraph: {
@@ -111,9 +111,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!service) return { title: "Page Not Found" };
 
     return {
-        title: service.seo_title || `${service.title} — Cost, Recovery & Same-Day Discharge | Indira Hospital`,
-        description: service.seo_description || `${service.full_description?.replace(/<[^>]*>?/gm, '').substring(0, 140) || service.short_description} Get a free cost estimate at Indira Hospital.`,
-        keywords: [service.title, "cost", "same day", "Tamil Nadu", "India", "Indira Hospital", "treatment", "surgery"],
+        title: service.seo_title || `${service.title} Specialists & Procedures in Vellore, Tamil Nadu | Indira Hospital`,
+        description: service.seo_description || `${service.full_description?.replace(/<[^>]*>?/gm, '').substring(0, 140) || service.short_description} Expert ${service.title} care at Indira Hospital, India. High success rates & affordable costs.`,
+        keywords: [service.title, "best doctor in Vellore", "same day surgery", "Tamil Nadu", "India", "Indira Hospital", "treatment cost", "surgery Vellore"],
     };
 }
 
@@ -253,7 +253,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             {iconMap[service.icon] || <Stethoscope className="h-8 w-8" />}
                         </div>
                         <div>
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{service.title}</h1>
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{service.title} in Vellore, Tamil Nadu</h1>
                             <p className="mt-4 text-lg text-fuchsia-100 max-w-3xl leading-relaxed">{service.short_description}</p>
 
                             <div className="flex flex-wrap gap-4 mt-6">
@@ -445,17 +445,15 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800/50" />
             <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
 
-            {/* KEEP SPECIALIZED SUB-TREATMENT LINKS IF ON PARENT SERVICE PAGE */}
-            {!isTreatmentPage && (
-                <InternalLinkGrid
-                    type="treatments"
-                    parentSlug={lastSlug}
-                    title={`Specialized Procedures`}
-                    subtitle={`Under ${service.title}`}
-                    limit={24}
-                    className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50"
-                />
-            )}
+            {/* INTERNAL LINKING MESH */}
+            <InternalLinkGrid
+                type={isTreatmentPage ? "services" : "treatments"}
+                parentSlug={isTreatmentPage ? undefined : lastSlug}
+                title={isTreatmentPage ? "Explore Other Specialities" : `Specialized Procedures`}
+                subtitle={isTreatmentPage ? "Comprehensive Care" : `Under ${service.title}`}
+                limit={24}
+                className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50"
+            />
         </div >
     );
 }
