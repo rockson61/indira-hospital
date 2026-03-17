@@ -14,6 +14,7 @@ import { HospitalCard } from "@/components/entities/HospitalCard";
 import { DoctorAvatar } from "@/components/entities/DoctorAvatar";
 import { LocationCard } from "@/components/entities/LocationCard";
 import { TREATMENT_DATA } from "@/lib/data/treatment-data";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 /** Build a title → treatment lookup for O(1) resolution */
 const treatmentByTitle = new Map(
@@ -477,6 +478,9 @@ export default async function DoctorProfileRoute({
             <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800" />
             <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={12} className="bg-[#FAFAFA] dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/50" />
             <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800" />
+
+            <InternalLinkGrid type="diagnostics" title="Related Diagnostics" subtitle="Laboratory Support" limit={12} className="bg-slate-50 dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="health-packages" title="Wellness Monitoring" subtitle="Health Packages" limit={8} className="bg-white dark:bg-slate-900 border-t" />
         </div >
     );
 }

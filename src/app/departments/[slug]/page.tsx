@@ -218,6 +218,9 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                 limit={12}
                 className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50"
             />
+            <InternalLinkGrid type="diagnostics" title={`Diagnostics for ${department.title}`} subtitle="Clinical Lab Support" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title={`Checkups for ${department.title}`} subtitle="Wellness Monitoring" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+
             <InternalLinkGrid type="departments" title="All Departments A-Z" subtitle="Departments Directory" limit={12} className="bg-white dark:bg-slate-900" />
             <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
         </div >

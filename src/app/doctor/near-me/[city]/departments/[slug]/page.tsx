@@ -317,6 +317,9 @@ export default async function LocationDepartmentPage({
             <EntityCardSection type="departments" title="All Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-900/50" />
 
             {/* SEO link grids */}
+            <InternalLinkGrid type="diagnostics" title={`Diagnostics for ${service.title} in ${location.name}`} subtitle="Lab Support" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title={`Checkups in ${location.name}`} subtitle="Wellness Packages" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+
             <InternalLinkGrid type="services" title="All Departments A–Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50" />
             <InternalLinkGrid type="doctors" title="All Doctors" subtitle="Doctor Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
         </div>

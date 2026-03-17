@@ -450,6 +450,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800/50" />
             <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
 
+            <InternalLinkGrid type="diagnostics" title="Diagnostic Support" subtitle="Lab Tests for this Procedure" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b" />
+            <InternalLinkGrid type="health-packages" title="Post-Treatment Checkups" subtitle="Wellness Care" limit={8} className="bg-white dark:bg-slate-900 border-b" />
+
             {/* INTERNAL LINKING MESH */}
             <InternalLinkGrid
                 type={isTreatmentPage ? "services" : "treatments"}

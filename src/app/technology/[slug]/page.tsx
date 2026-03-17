@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     return {
-        title: `${tech.title} | Advanced Technology at Indira Hospital`,
-        description: tech.shortDescription,
+        title: `${tech.title} in Vellore, Tamil Nadu | Advanced Infrastructure at Indira Hospital`,
+        description: tech.shortDescription + " Experience the best medical technology in India.",
     };
 }
 
@@ -156,7 +156,9 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
             <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
 
             {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-gray-50 dark:bg-slate-950" />
+            <InternalLinkGrid type="diagnostics" title="Related Diagnostics" subtitle="Infrastructure Support" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title="Related Wellness" subtitle="Care Packages" limit={8} className="bg-slate-50 dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900" />
             <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
         </main>
     );

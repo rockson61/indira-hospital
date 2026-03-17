@@ -4,9 +4,11 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Signature Treatments | Advanced Surgical Excellence at Indira Hospital",
-    description: "Specialized in Laser Proctology, Laparoscopic Surgery, and Modern Interventions. Discover our same-day discharge surgical options and signature treatments.",
+    title: "Signature Treatments in Vellore, Tamil Nadu | Advanced Surgical Excellence",
+    description: "Specialized in Laser Proctology, Laparoscopic Surgery, and Modern Interventions at Indira Hospital, Vellore. Discover our same-day discharge surgical options in India.",
 };
+
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 const treatments = [
     {
@@ -47,8 +49,9 @@ export default function TreatmentsPage() {
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-fuchsia-100 dark:bg-fuchsia-950 rounded-full text-xs font-black text-fuchsia-600 uppercase mb-8">
                         <Sparkles className="w-4 h-4" /> Surgical Excellence
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8">
-                        Signature <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">Treatments</span>
+                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
+                        Signature Treatments <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">in Vellore, Tamil Nadu</span>
                     </h1>
                     <p className="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
                         Indira Hospital specialize in the latest surgical interventions that prioritize rapid healing and minimal discomfort.
@@ -74,7 +77,7 @@ export default function TreatmentsPage() {
                             </div>
 
                             <Link
-                                href={`/service/${treatment.slug}`}
+                                href={`/doctor/near-me/treat/${treatment.slug}`}
                                 className="inline-flex items-center justify-between w-full p-6 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30 rounded-2xl border border-slate-100 dark:border-slate-700 transition-all font-black text-slate-900 dark:text-white"
                             >
                                 View Detailed Procedure
@@ -104,6 +107,11 @@ export default function TreatmentsPage() {
                     </div>
                 </div>
             </SectionContainer>
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="diagnostics" title="Advanced Diagnostics in Vellore" subtitle="Lab Services" limit={12} className="bg-white dark:bg-slate-900 border-t mt-24" />
+            <InternalLinkGrid type="health-packages" title="Wellness Packages in India" subtitle="Health Checkups" limit={8} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="doctors" title="Consult Specialists" subtitle="Expert Doctors" limit={12} className="bg-white dark:bg-slate-900 border-t" />
         </main>
     );
 }

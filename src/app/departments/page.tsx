@@ -83,6 +83,9 @@ export default async function DepartmentsDirectoryPage() {
             <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <EntityCardSection type="locations" title="Find Us Near You" subtitle="Our Locations" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
 
+            <InternalLinkGrid type="diagnostics" title="Department Diagnostics" subtitle="Laboratory Services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title="Specialized Checkups" subtitle="Health Packages" limit={8} className="bg-slate-50 dark:bg-slate-800" />
+
             {/* COMPACT SEO LINK STRIPS */}
             <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50 dark:bg-slate-800" />

@@ -7,6 +7,7 @@ import { getAllTechnologies } from "@/lib/data/technology-data";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = {
     title: "Advanced Medical Technology | Indira Super Speciality Hospital",
@@ -167,6 +168,9 @@ export default function TechnologyHubPage() {
                     />
                 </div>
             </SectionContainer>
+
+            <InternalLinkGrid type="diagnostics" title="Precision Diagnostics" subtitle="Advanced Imaging & Lab" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title="Technology-Driven Checkups" subtitle="Wellness Packages" limit={8} className="bg-slate-50 dark:bg-slate-800" />
         </main>
     );
 }
