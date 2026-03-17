@@ -111,6 +111,7 @@ export default function TreatmentsPage() {
             {/* COMPACT SEO LINK STRIPS */}
             <InternalLinkGrid type="diagnostics" title="Advanced Diagnostics in Vellore" subtitle="Lab Services" limit={12} className="bg-white dark:bg-slate-900 border-t mt-24" />
             <InternalLinkGrid type="health-packages" title="Wellness Packages in India" subtitle="Health Checkups" limit={8} className="bg-slate-50 dark:bg-slate-800" />
+            <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Our Specialities" limit={12} className="bg-slate-50 dark:bg-slate-800 border-t" />
             <InternalLinkGrid type="doctors" title="Consult Specialists" subtitle="Expert Doctors" limit={12} className="bg-white dark:bg-slate-900 border-t" />
         </main>
     );

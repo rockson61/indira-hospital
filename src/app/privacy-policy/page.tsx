@@ -1,5 +1,7 @@
-import { SectionContainer } from "@/components/ui/section-container"
 import { siteConfig } from "@/config/site"
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
+import { SectionContainer } from "@/components/ui/section-container"
+import { PageHero } from "@/components/ui/page-hero"
 
 export default function PrivacyPolicyPage() {
     return (
@@ -37,6 +39,10 @@ export default function PrivacyPolicyPage() {
                 <h2>4. Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, please contact us by email: {siteConfig.contact.email}</p>
             </SectionContainer>
+            <SectionContainer className="pb-32">
+                <InternalLinkGrid type="departments" title="Clinical Specialities" subtitle="Centres of Excellence" limit={12} className="bg-white dark:bg-slate-950 border rounded-[4rem]" />
+                <InternalLinkGrid type="services" title="A-Z Procedures" subtitle="Surgical Excellence" limit={12} className="mt-12 bg-slate-50 dark:bg-slate-900/50 border rounded-[4rem]" />
+            </SectionContainer>
         </main>
-    )
+    );
 }
