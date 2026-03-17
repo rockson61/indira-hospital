@@ -988,7 +988,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-308",
         slug: "arrhythmia-treatment-options",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "cardiology",
         title: "arrhythmia treatment options",
         shortDescription: "Comprehensive care and treatment for arrhythmia treatment options....",
         fullDescription: "Comprehensive care and treatment for arrhythmia treatment options.",
@@ -1018,7 +1018,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-312",
         slug: "bleeding-gums-causes",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "bleeding gums causes",
         shortDescription: "Comprehensive care and treatment for bleeding gums causes....",
         fullDescription: "Comprehensive care and treatment for bleeding gums causes.",
@@ -1108,7 +1108,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-322",
         slug: "breast-lump-removal",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "general-surgery",
         title: "breast lump removal",
         shortDescription: "Comprehensive care and treatment for breast lump removal....",
         fullDescription: "Comprehensive care and treatment for breast lump removal.",
@@ -1158,7 +1158,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-327",
         slug: "cervical-cancer-screening-pap",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "cervical cancer screening pap",
         shortDescription: "Comprehensive care and treatment for cervical cancer screening pap....",
         fullDescription: "Comprehensive care and treatment for cervical cancer screening pap.",
@@ -1188,7 +1188,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-332",
         slug: "circumcision-surgery-guide",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "urology",
         title: "circumcision surgery guide",
         shortDescription: "Comprehensive care and treatment for circumcision surgery guide....",
         fullDescription: "Comprehensive care and treatment for circumcision surgery guide.",
