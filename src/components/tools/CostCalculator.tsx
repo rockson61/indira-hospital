@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Plus, Minus, Calculator, RefreshCw } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 const TREATMENTS = [
     { id: 'piles', name: 'Piles (Hemorrhoids)', base: 25000, laser_extra: 10000 },
