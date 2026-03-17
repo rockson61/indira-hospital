@@ -255,7 +255,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             {iconMap[service.icon] || <Stethoscope className="h-8 w-8" />}
                         </div>
                         <div>
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{service.title} in Vellore, Tamil Nadu</h1>
+                            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
+                                {service.title} <br className="hidden sm:block" />
+                                <span className="text-amber-400">in Vellore, Tamil Nadu</span>
+                            </h1>
                             <p className="mt-4 text-lg text-fuchsia-100 max-w-3xl leading-relaxed">{service.short_description}</p>
 
                             <div className="flex flex-wrap gap-4 mt-6">

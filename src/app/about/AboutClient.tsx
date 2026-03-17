@@ -29,8 +29,8 @@ export default function AboutClient() {
                             <Award className="w-4 h-4" /> Established 1988
                         </span>
                         <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6 max-w-6xl mx-auto">
-                            The Best Hospital in Vellore: <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">35 Years of Trust.</span>
+                            The Best Hospital in <span className="text-white">Vellore, Tamil Nadu:</span> <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">35 Years of Clinical Excellence in India.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4">
                             Indira Super Speciality Hospital stands as a beacon of clinical mastery, delivering advanced, ethical, and compassionate healthcare to the Vellore community since 1988.

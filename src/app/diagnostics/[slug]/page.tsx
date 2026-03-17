@@ -45,7 +45,10 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                             <span className="inline-block px-3 py-1 bg-fuchsia-100 text-fuchsia-700 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
                                 {test.category}
                             </span>
-                            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">{test.name}</h1>
+                            <h1 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-2 leading-tight">
+                                {test.name} <br className="hidden sm:block" />
+                                <span className="text-fuchsia-600 dark:text-fuchsia-400">in Vellore, Tamil Nadu</span>
+                            </h1>
                             <p className="text-muted-foreground max-w-2xl">
                                 {test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 150) || `Comprehensive ${test.name} with accurate reporting and quick turnaround time.`}
                             </p>
@@ -251,10 +254,11 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                 }}
             />
             <InternalLinkGrid
-                type="services"
-                title="Other Clinical Services"
-                subtitle="All Diagnostics"
+                type="diagnostics"
+                title="Explore Other Diagnostic Tests"
+                subtitle="NABL Accredited Lab"
                 limit={12}
+                excludeSlug={slug}
                 className="bg-slate-50 dark:bg-slate-900 border-t"
             />
         </main>

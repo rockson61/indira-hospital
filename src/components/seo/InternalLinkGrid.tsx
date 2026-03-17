@@ -6,7 +6,7 @@ import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { SectionContainer } from "@/components/ui/section-container";
 
 interface InternalLinkGridProps {
-    type: "services" | "doctors" | "departments" | "locations" | "treatments";
+    type: "services" | "doctors" | "departments" | "locations" | "treatments" | "diagnostics" | "health-packages";
     title?: string;
     subtitle?: string;
     limit?: number;
@@ -21,6 +21,8 @@ const ICONS = {
     doctors: Users,
     departments: Layers,
     locations: MapPin,
+    diagnostics: Stethoscope,
+    "health-packages": Layers,
 };
 
 const COLORS = {
@@ -29,6 +31,8 @@ const COLORS = {
     doctors: "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 border-blue-100 dark:border-blue-900/50 hover:border-blue-300 dark:hover:border-blue-700",
     departments: "text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/30 border-violet-100 dark:border-violet-900/50 hover:border-violet-300 dark:hover:border-violet-700",
     locations: "text-amber-600 dark:text-amber-500 bg-amber-50 dark:bg-amber-950/30 border-amber-100 dark:border-amber-900/50 hover:border-amber-300 dark:hover:border-amber-700",
+    diagnostics: "text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 border-pink-100 dark:border-pink-900/50 hover:border-pink-300 dark:hover:border-pink-700",
+    "health-packages": "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 border-indigo-100 dark:border-indigo-900/50 hover:border-indigo-300 dark:hover:border-indigo-700",
 };
 
 const DEFAULTS = {
@@ -37,6 +41,8 @@ const DEFAULTS = {
     doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
     departments: { title: "Centres of Excellence", subtitle: "Departments", href: "/departments" },
     locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
+    diagnostics: { title: "Accurate Lab Tests", subtitle: "Indira Diagnostics", href: "/diagnostics" },
+    "health-packages": { title: "Complete Health Screenings", subtitle: "Wellness Packages", href: "/health-packages" },
 };
 
 export async function InternalLinkGrid({
@@ -84,6 +90,18 @@ export async function InternalLinkGrid({
                 .filter(l => l.slug !== excludeSlug)
                 .slice(0, limit)
                 .map(l => ({ name: l.name, slug: l.slug, url: `/doctor/near-me/${l.slug}` }));
+        } else if (type === "diagnostics") {
+            const data = await (await import("@/lib/api")).getDiagnostics().catch(() => []);
+            items = data
+                .filter((d: any) => d.slug !== excludeSlug)
+                .slice(0, limit)
+                .map((d: any) => ({ name: d.name, slug: d.slug, url: `/diagnostics/${d.slug}` }));
+        } else if (type === "health-packages") {
+            const data = await (await import("@/lib/api")).getHealthPackages().catch(() => []);
+            items = data
+                .filter((p: any) => p.slug !== excludeSlug)
+                .slice(0, limit)
+                .map((p: any) => ({ name: p.title, slug: p.slug, url: `/health-packages/${p.slug}` }));
         }
     } catch {
         return null;

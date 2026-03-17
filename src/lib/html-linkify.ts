@@ -51,6 +51,8 @@ export const injectInternalLinks = (htmlContent: string): string => {
         // Better approach: Create a single massive regex.
         // Escape terms for regex
         const escapedTerms = terms.map(t => t.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+        // Sort escaped terms by length to ensure longest match
+        escapedTerms.sort((a, b) => b.length - a.length);
         const pattern = new RegExp(`\\b(${escapedTerms.join('|')})\\b`, 'gi');
 
         // We use a replacement function to look up the correct URL

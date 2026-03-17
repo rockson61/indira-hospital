@@ -46,7 +46,10 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                 <Shield className="w-4 h-4" />
                                 Wellness & Prevention
                             </div>
-                            <h1 className="text-5xl md:text-6xl font-heading font-black text-slate-900 dark:text-white tracking-tight mb-6">{pkg.title}</h1>
+                            <h1 className="text-5xl md:text-7xl font-heading font-black text-slate-900 dark:text-white tracking-tight mb-6 leading-[1.1]">
+                                {pkg.title} <br className="hidden sm:block" />
+                                <span className="text-fuchsia-600">in Vellore, India</span>
+                            </h1>
                             <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed font-medium">
                                 {pkg.short_description || `Our ${pkg.title} is designed to provide a thorough evaluation of your health status, helping you detect potential issues early.`}
                             </p>
@@ -203,10 +206,11 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                 }}
             />
             <InternalLinkGrid
-                type="services"
-                title="Relevant Medical Services"
+                type="health-packages"
+                title="Other Preventive Checkups"
                 subtitle="Health & Wellness"
                 limit={12}
+                excludeSlug={slug}
                 className="bg-white dark:bg-slate-900 border-t border-slate-100"
             />
         </main>
