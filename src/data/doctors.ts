@@ -11,6 +11,9 @@ export interface Doctor {
     imageUrl: string;
     availability: string[];
     bio: string;
+    specialties?: string[];
+    procedures?: string[];
+    years_of_experience?: number;
 }
 
 export const doctors: readonly Doctor[] = [
@@ -49,6 +52,16 @@ export const doctors: readonly Doctor[] = [
         imageUrl: "/images/doctors/dr-karan-shankar.png",
         availability: ["Daily"],
         bio: "As the Executive Director of Indira Super Speciality Hospital & Clinical Lead of Indira Laser & Laparoscopy Centre in Vellore, Tamil Nadu, Dr. Karan Shankar leads a team dedicated towards providing exceptional multidisciplinary healthcare services. With extensive expertise as a General Surgeon, specializing in Advanced Laparoscopic and Colorectal surgeries, he is committed to advancing the standards of surgical healthcare in the community for delivering precise, patient-centric treatments.",
+        specialties: ["Laparoscopic Surgery", "Proctology", "General Surgery", "Colorectal Surgery"],
+        procedures: [
+            "Laparoscopic Hernia Repair",
+            "Laparoscopic Gallbladder (Cholecystectomy)",
+            "Laparoscopic Appendix",
+            "Laser Piles (Hemorrhoids)",
+            "Laser Fistula (FiLaC)",
+            "Laser Fissure",
+            "Stapler Circumcision"
+        ],
     },
     {
         id: "dr-shankar",
@@ -61,6 +74,18 @@ export const doctors: readonly Doctor[] = [
         imageUrl: "/images/doctors/dr-shankar.jpg",
         availability: ["Mon-Sat"],
         bio: "Dr. P. Shankar is the esteemed Chairman of Indira Hospital and is widely recognized as the best proctologist in India and Tamil Nadu. A veteran General Surgeon with over 30 years of clinical and administrative excellence, he specializes in advanced Proctology (Laser Piles, Laser Fistula, Fissure), Laparoscopic Surgery (Hernia, Gallbladder, Appendix), and Surgical Gastroenterology. His expertise also extends to Diabetic Foot Care and complex General Surgical procedures. Under his leadership, Indira Hospital has become a center of excellence for minimally invasive and day-care surgeries, ensuring world-class healthcare delivery with a focus on patient safety and rapid recovery.",
+        years_of_experience: 30,
+        specialties: ["General Surgery", "Proctology", "Laparoscopic Surgery", "Surgical Gastroenterology", "Diabetic Foot Care"],
+        procedures: [
+            "Laser Piles Treatment",
+            "Laser Fistula Closure (FiLaC)",
+            "Laser Fissure Surgery",
+            "Advanced Laparoscopic Surgeries",
+            "Complex Hernia Repair",
+            "Thyroidectomy",
+            "Gastrointestinal Surgeries",
+            "Diabetic Foot Management"
+        ],
     },
     {
         id: "dr-soniya-shankar",

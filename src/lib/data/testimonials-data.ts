@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
         rating: 5,
         date: '3 weeks ago',
         image: '',
-        text: 'Dr. Raman Kumar treated my chronic gastritis issue effectively. His diagnostic approach was thorough and the treatment plan worked brilliantly. Highly recommend the gastro department.',
+        text: 'The surgical team at Indira Hospital treated my chronic gastritis issue effectively. Their diagnostic approach was thorough and the treatment plan worked brilliantly. Highly recommend the gastro department.',
         verified: true,
     },
     {
@@ -275,7 +275,7 @@ export const testimonials: Testimonial[] = [
         image: '',
         rating: 5,
         treatment: "Hip Replacement",
-        text: "Dr. Raman Kumar performed my hip replacement. I was back on my feet within weeks. The physiotherapy team at Indira is also excellent. Truly life-changing care.",
+        text: "The orthopaedic team at Indira Hospital performed my hip replacement. I was back on my feet within weeks. The physiotherapy team is also excellent. Truly life-changing care.",
         date: "1 month ago",
         verified: true,
         relatedSlugs: ['orthopaedics', 'hip-replacement']
@@ -383,7 +383,7 @@ export const testimonials: Testimonial[] = [
         image: '',
         rating: 5,
         treatment: "Kidney Disease Management",
-        text: "Dr. Raman Kumar has helped me manage my early-stage CKD through diet and medication. My parameters have stabilized significantly.",
+        text: "The nephrology specialists have helped me manage my early-stage CKD through diet and medication. My parameters have stabilized significantly.",
         date: "2 months ago",
         verified: true,
         relatedSlugs: ['nephrology']
