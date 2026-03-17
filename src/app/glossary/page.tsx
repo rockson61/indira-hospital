@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { GLOSSARY_DATA, GlossaryTerm } from "@/lib/data/glossary-data";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export default function GlossaryPage() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -154,6 +155,10 @@ export default function GlossaryPage() {
                         </Button>
                     </div>
                 )}
+            </div>
+            <div className="mt-20 border-t border-slate-100 dark:border-slate-800">
+                <InternalLinkGrid type="services" title="Medical Procedures Directory" subtitle="Clinical Excellence" limit={12} className="bg-white dark:bg-slate-950" />
+                <InternalLinkGrid type="diagnostics" title="Diagnostics & Lab Services" subtitle="NABL Accredited" limit={8} className="bg-slate-50 dark:bg-slate-900/50" />
             </div>
         </div>
     );

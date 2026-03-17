@@ -2,6 +2,8 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { BookOpen, Search, ArrowRight, PlayCircle, FileText, Activity, Microscope, Brain } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "Health Library & Medical Resource Hub in Vellore, India | Indira Hospital",
@@ -100,6 +102,11 @@ export default function HealthLibraryPage() {
                     </div>
                 </div>
             </SectionContainer>
+            <div className="mt-20 border-t border-slate-100 dark:border-slate-800 pt-20">
+                <InternalLinkGrid type="services" title="A-Z Medical Procedures" subtitle="Clinical Excellence" limit={12} className="bg-white dark:bg-slate-950" />
+                <InternalLinkGrid type="diagnostics" title="Diagnostic & Lab Services" subtitle="NABL Accredited" limit={8} className="bg-slate-50 dark:bg-slate-900/50" />
+                <InternalLinkGrid type="health-packages" title="Preventive Health Packages" subtitle="Wellness First" limit={8} className="bg-white dark:bg-slate-950" />
+            </div>
         </main>
     );
 }

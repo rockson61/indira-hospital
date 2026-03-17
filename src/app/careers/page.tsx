@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import Link from "next/link";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = {
     title: "Careers | Join Our Team | Indira Super Speciality Hospital",
@@ -147,6 +148,9 @@ export default function CareersPage() {
                         </div>
                     </div>
                 </div>
+            </SectionContainer>
+            <SectionContainer className="pb-24">
+                <InternalLinkGrid type="departments" title="Clinical Specialties" subtitle="Where You Will Work" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
             </SectionContainer>
         </main>
     );

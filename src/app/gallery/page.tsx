@@ -2,6 +2,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { SectionContainer } from "@/components/ui/section-container";
 import { Play } from "lucide-react";
 import Image from "next/image";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 const GALLERY_IMAGES = [
     { id: 1, src: "/images/hospital/Hospital view.webp", alt: "Hospital Exterior View", category: "Infrastructure" },
@@ -44,6 +45,10 @@ export default function GalleryPage() {
                     </div>
                 </SectionContainer>
             </section>
+            <div className="border-t border-slate-200 dark:border-slate-800">
+                <InternalLinkGrid type="services" title="Clinical Excellence in Action" subtitle="Our Treatments" limit={12} className="bg-white dark:bg-slate-950" />
+                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50" />
+            </div>
         </main>
     );
 }

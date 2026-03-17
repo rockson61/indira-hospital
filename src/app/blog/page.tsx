@@ -11,6 +11,7 @@ import Image from "next/image"
 import { format } from "date-fns"
 import { BLOG_CONFIGURATION } from "@/config/constants"
 import type { Metadata } from "next"
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
 export const metadata: Metadata = {
     title: 'Medical Blog & Surgical Insights in Vellore, Tamil Nadu | Indira Hospital',
@@ -104,6 +105,8 @@ export default async function BlogListingPage() {
                     </div>
                 )}
             </SectionContainer>
+            <InternalLinkGrid type="services" title="Expert Surgical Procedures" subtitle="Clinical Services" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+            <InternalLinkGrid type="diagnostics" title="Advanced Diagnostic Tests" subtitle="NABL Accredited" limit={8} className="bg-white dark:bg-slate-950 border-t" />
         </main>
     )
 }
