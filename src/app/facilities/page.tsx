@@ -4,6 +4,7 @@ import { Sparkles, CheckCircle2, Building2, Beaker, Zap, Activity, Microscope } 
 import { Metadata } from "next";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
     title: "World-Class Infrastructure | Facilities at Indira Hospital",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function FacilitiesPage() {
     return (
         <main className="min-h-screen pt-24 pb-20 bg-white dark:bg-slate-950">
+            <JsonLdSchema type="hospital" />
             {/* Elite Hero Section */}
             <SectionContainer className="mb-20">
                 <div className="max-w-4xl">

@@ -17,6 +17,7 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { getImageUrl } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { ProctologyLaparoscopyHighlight } from "@/components/specialties/ProctologyLaparoscopyHighlight";
@@ -112,6 +113,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
 
     return (
         <div className="min-h-screen bg-white dark:bg-slate-950">
+            <JsonLdSchema type="hospital" />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 

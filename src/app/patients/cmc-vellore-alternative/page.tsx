@@ -9,6 +9,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import { CMC_VS_INDIRA, INTERNATIONAL_FAQS, JOURNEY_STEPS } from "@/lib/data/international-data";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
     title: "CMC Vellore Alternative — Get Treatment This Week | Indira Super Speciality Hospital",
@@ -59,20 +60,26 @@ const FAQs = [
 
 const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was looking at CMC Vellore but the waiting list is too long. Can I get an appointment at Indira Hospital this week?")}`;
 
-const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQs.map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: { "@type": "Answer", text: faq.a },
-    })),
-};
-
 export default function CMCVelloreAlternativePage() {
     return (
         <div className="min-h-screen bg-white dark:bg-slate-950">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            <JsonLdSchema
+                type="hospital"
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: FAQs.map((faq) => ({
+                            "@type": "Question",
+                            name: faq.q,
+                            acceptedAnswer: { "@type": "Answer", text: faq.a },
+                        })),
+                    })
+                }}
+            />
 
             {/* HERO */}
             <section className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-slate-900 text-white overflow-hidden">
@@ -325,6 +332,7 @@ export default function CMCVelloreAlternativePage() {
             <EntityCardSection type="doctors" title="Our Specialists" subtitle="Expert Care" limit={6} className="bg-white dark:bg-slate-900" />
             <EntityCardSection type="departments" title="All Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-900/50" />
             <InternalLinkGrid type="services" title="All Treatments A–Z" subtitle="Browse all services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="locations" title="Serving Patients Across Tamil Nadu" subtitle="Find a Branch" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
         </div>
     );
 }

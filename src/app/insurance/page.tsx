@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
     title: "Insurance Partners | Cashless Treatment at Indira Hospital",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function InsurancePage() {
     return (
         <main className="min-h-screen pt-24 pb-20 bg-slate-50 dark:bg-slate-950">
+            <JsonLdSchema type="hospital" />
             {/* Hero Section */}
             <SectionContainer className="mb-12">
                 <div className="max-w-4xl">

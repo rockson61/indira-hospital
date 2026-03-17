@@ -6,6 +6,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { getAllTechnologies } from "@/lib/data/technology-data";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
     title: "Advanced Medical Technology | Indira Super Speciality Hospital",
@@ -17,6 +18,7 @@ export default function TechnologyHubPage() {
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+            <JsonLdSchema type="hospital" />
             {/* ELITE TECH HERO */}
             <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
