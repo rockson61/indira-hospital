@@ -28,6 +28,7 @@ import { ProviderResources } from "@/components/sections/provider-resources";
 import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import React from "react";
+import HospitalSEOBlock from "@/components/HospitalSEOBlock";
 
 export const metadata: Metadata = {
   title: "Indira Super Speciality Hospital | Best Hospital in Vellore, Tamil Nadu",
@@ -277,6 +278,7 @@ export default function Home() {
           </div>
         </div>
       </SectionContainer>
+      <HospitalSEOBlock />
     </main>
   );
 }
