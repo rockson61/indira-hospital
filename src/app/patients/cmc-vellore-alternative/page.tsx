@@ -331,6 +331,8 @@ export default function CMCVelloreAlternativePage() {
 
             <EntityCardSection type="doctors" title="Our Specialists" subtitle="Expert Care" limit={6} className="bg-white dark:bg-slate-900" />
             <EntityCardSection type="departments" title="All Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-900/50" />
+            <InternalLinkGrid type="health-packages" title="Preventive Health Checkups" subtitle="Wellness Screening" limit={8} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="diagnostics" title="Diagnostic & Lab Support" subtitle="NABL Accredited" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
             <InternalLinkGrid type="services" title="All Treatments A–Z" subtitle="Browse all services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
             <InternalLinkGrid type="locations" title="Serving Patients Across Tamil Nadu" subtitle="Find a Branch" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
         </div>

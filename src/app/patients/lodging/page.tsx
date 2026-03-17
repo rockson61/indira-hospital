@@ -8,6 +8,8 @@ import { siteConfig } from "@/config/site";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { SectionContainer } from "@/components/ui/section-container";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "Accommodation Near Indira Hospital Vellore | Patient Lodging Guide",
@@ -136,6 +138,10 @@ export default function LodgingPage() {
                     />
                 </div>
             </SectionContainer>
+
+            <EntityCardSection type="doctors" title="Our Specialists" subtitle="Expert Care" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="health-packages" title="Wellness Packages" subtitle="Health Screening" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="diagnostics" title="Diagnostic Services" subtitle="NABL Accredited" limit={12} className="bg-white dark:bg-slate-950 border-b" />
 
             {/* CTA */}
             <div className="bg-fuchsia-700 text-white py-12 text-center">

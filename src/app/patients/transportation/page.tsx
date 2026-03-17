@@ -6,6 +6,8 @@ import {
 } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "How to Reach Indira Hospital Vellore | Transport Guide | Directions",
@@ -293,6 +295,10 @@ export default function TransportationPage() {
                     </div>
                 </section>
             </div>
+
+            <EntityCardSection type="locations" title="Our Centers Across Vellore" subtitle="Find a Branch" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="services" title="All Treatments A–Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="diagnostics" title="NABL Accredited Diagnostics" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-950 border-b" />
         </div>
     );
 }

@@ -261,6 +261,8 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                 excludeSlug={slug}
                 className="bg-slate-50 dark:bg-slate-900 border-t"
             />
+            <InternalLinkGrid type="health-packages" title={`Checkup Packages for ${test.name} Patients`} subtitle="Wellness Screening" limit={8} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="services" title="Related Treatments" subtitle="Clinical Care" limit={12} className="bg-slate-50 dark:bg-slate-900 border-t" />
         </main>
     )
 }

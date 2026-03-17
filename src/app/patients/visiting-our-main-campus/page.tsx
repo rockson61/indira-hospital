@@ -5,6 +5,8 @@ import {
     Shield, Users, Coffee, Pill, CreditCard, Wifi, ParkingCircle, Heart
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "Visiting Indira Hospital Vellore | Campus Guide, Hours & Amenities",
@@ -160,6 +162,10 @@ export default function VisitingMainCampusPage() {
                     </div>
                 </section>
             </div>
+
+            <EntityCardSection type="services" title="Available Specialities" subtitle="Clinical Care" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="health-packages" title="Preventive Wellness Packages" subtitle="Early Detection" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="diagnostics" title="All Diagnostic Tests" subtitle="NABL Accredited Lab" limit={12} className="bg-white dark:bg-slate-950 border-b" />
         </div>
     );
 }

@@ -6,6 +6,8 @@ import { FileText, Phone, CheckCircle, ArrowRight, Shield } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 
 export const metadata = {
@@ -59,7 +61,7 @@ export default function InsurancePage() {
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
                             Insurance & <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">TPA Partners.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">TPAs in Vellore.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
                             We accept all major health insurance policies. Enjoy rapid, hassle-free cashless treatment at Indira Super Speciality Hospital.
@@ -142,6 +144,11 @@ export default function InsurancePage() {
                     </div>
                 </div>
             </SectionContainer>
+
+            <EntityCardSection type="doctors" title="Specialists for Insured Patients" subtitle="Expert Care" limit={6} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title="Wellness & Checkup Packages" subtitle="Preventive Care" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+            <InternalLinkGrid type="diagnostics" title="Diagnostics & Lab Tests" subtitle="NABL Accredited" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
         </main>
     );
 }

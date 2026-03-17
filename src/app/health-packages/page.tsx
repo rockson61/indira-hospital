@@ -8,6 +8,8 @@ import { User, Phone, Check, ArrowRight, Shield, MessageCircle } from "lucide-re
 import { Heart, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import Link from "next/link"
 import type { Metadata } from "next"
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: 'Master Health Checkup Packages in Vellore, Tamil Nadu | Indira Hospital',
@@ -37,8 +39,7 @@ export default async function HealthPackagesPage() {
                             <HeartCardiogram className="w-4 h-4" /> Preventive Care
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
-                            Complete Health <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Screening Packages.</span>
+                            Master Health <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Checkups in Vellore.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
                             Early detection is the best protection. Choose from our specially curated health screening packages for you and your family.
@@ -131,6 +132,27 @@ export default async function HealthPackagesPage() {
                     </div>
                 )}
             </SectionContainer>
+
+            {/* TRUST SIGNALS */}
+            <SectionContainer className="max-w-7xl mx-auto px-6 lg:px-8 py-24 border-t border-slate-100 dark:border-slate-800">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="health-packages"
+                        title="Patient Feedback on Checkups"
+                        description="Real stories from patients who completed their master health checkups at Indira Hospital."
+                    />
+                </div>
+            </SectionContainer>
+
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="services" title="Treatments & Procedures" subtitle="Our Expertise" limit={6} className="bg-white dark:bg-slate-900 border-t" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="diagnostics" title="Individual Lab Tests" subtitle="Pathology & Imaging" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="locations" title="Serving Patients Across Tamil Nadu" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
 
             {/* WHY DIAGNOSTIC BENTO */}
             <SectionContainer className="pb-24">

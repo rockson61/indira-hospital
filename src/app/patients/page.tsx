@@ -4,6 +4,8 @@ import { PageHero } from "@/components/ui/page-hero";
 import { CTASection } from "@/components/sections/cta";
 import { SectionContainer } from "@/components/ui/section-container";
 import { CheckCircle2 } from "lucide-react";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "Patient Resources | Indira Super Speciality Hospital",
@@ -21,8 +23,8 @@ export default function PatientsHubPage() {
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-950">
             <PageHero
-                title="Patient Resources"
-                subtitle="Everything you need for a smooth, stress-free healthcare experience at Indira Super Speciality Hospital."
+                title="Patient Resources in Vellore"
+                subtitle="Everything you need for a smooth, stress-free healthcare experience at Indira Super Speciality Hospital, Tamil Nadu."
             />
 
             {/* Introduction Section */}
@@ -50,6 +52,14 @@ export default function PatientsHubPage() {
             <div className="-mt-12">
                 <PatientResources hideViewAll={true} />
             </div>
+
+            {/* ENTITY CARD SECTIONS */}
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900 border-t" />
+
+            {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="services" title="Treatments & Procedures" subtitle="Clinical Services" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+            <InternalLinkGrid type="diagnostics" title="Diagnostic Tests" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title="Health Checkups" subtitle="Preventive Care" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
 
             {/* CTA Section */}
             <CTASection />

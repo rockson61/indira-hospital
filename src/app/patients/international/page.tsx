@@ -8,6 +8,8 @@ import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import Image from "next/image";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "International Patients | Medical Tourism in India | Indira Super Speciality Hospital",
@@ -239,6 +241,10 @@ export default function InternationalPatientsPage() {
                     />
                 </div>
             </SectionContainer>
+
+            <EntityCardSection type="services" title="Centres of Excellence" subtitle="Our Specialities" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="health-packages" title="Master Health Checkups" subtitle="Wellness Screening" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="diagnostics" title="NABL Accredited Diagnostics" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-950 border-b" />
         </main>
     );
 }

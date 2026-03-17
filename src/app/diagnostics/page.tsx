@@ -58,7 +58,7 @@ export default async function DiagnosticsPage() {
                         <UltrasoundScanner className="w-4 h-4" /> Reports in Under 12 Hours
                     </span>
                     <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[1.05] mb-8 max-w-5xl mx-auto">
-                        Diagnostics in <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Vellore.</span>
+                        NABL Accredited <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Diagnostics in Vellore.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
                         Stop guessing. NABL accredited labs, home collection, and reports you can trust — all in under 12 hours.
@@ -247,6 +247,7 @@ export default async function DiagnosticsPage() {
             <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
 
             {/* COMPACT SEO LINK STRIPS */}
+            <InternalLinkGrid type="health-packages" title="Wellness & Checkup Packages" subtitle="Health Screening" limit={8} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
             <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />

@@ -213,6 +213,8 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                 excludeSlug={slug}
                 className="bg-white dark:bg-slate-900 border-t border-slate-100"
             />
+            <InternalLinkGrid type="diagnostics" title={`Diagnostics for ${pkg.title}`} subtitle="Lab Support" limit={12} className="bg-slate-50 dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="services" title="Related Treatments" subtitle="Clinical Care" limit={12} className="bg-white dark:bg-slate-900 border-t" />
         </main>
     )
 }
