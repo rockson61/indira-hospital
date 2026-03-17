@@ -1,6 +1,7 @@
 import { siteConfig } from "./site";
 
 export const defaultSeo = {
+    metadataBase: new URL(siteConfig.url),
     title: {
         default: siteConfig.name,
         template: `%s | ${siteConfig.name}`,
