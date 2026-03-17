@@ -5,38 +5,41 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. P. Shankar",
             slug: "dr-p-shankar",
-            designation: "Chairman & General Surgeon",
+            designation: "Chairman & HOD - General Surgery | Proctology & Laparoscopic Surgery",
             department: "General Surgery",
-            image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/03/Dr-Shankar-1-1.jpeg",
-            bio: "Dr. P. Shankar is the esteemed Chairman of Indira Super Speciality Hospital. A veteran General Surgeon with over 30 years of clinical and administrative excellence, he has been instrumental in bringing advanced healthcare to the Vellore region. His expertise spans complex general surgeries and strategic hospital management.",
+            image: "/images/doctors/dr-shankar.jpg",
+            bio: "Dr. P. Shankar is the esteemed Chairman of Indira Hospital and is widely recognized as the best proctologist in India and Tamil Nadu. A veteran General Surgeon with over 30 years of clinical and administrative excellence, he has been instrumental in bringing advanced healthcare to the Vellore region. He specializes in advanced Proctology (Laser Piles, Fistula, Fissure), Laparoscopic Surgery, and Surgical Gastroenterology. His expertise also extends to Diabetic Foot Care and complex General Surgical procedures, ensuring world-class healthcare delivery.",
             education: [
                 { degree: "MBBS", institution: "Stanley Medical College", year: "1988" },
                 { degree: "MS - General Surgery", institution: "Madras Medical College", year: "1993" }
             ],
-            specialties: ["General Surgery", "Healthcare Administration", "Surgical Gastroenterology"],
+            specialties: ["General Surgery", "Proctology", "Laparoscopic Surgery", "Surgical Gastroenterology", "Diabetic Foot Care"],
             procedures: [
+                "Laser Piles Treatment",
+                "Laser Fistula Closure (FiLaC)",
+                "Laser Fissure Surgery",
+                "Advanced Laparoscopic Surgeries",
                 "Complex Hernia Repair",
                 "Thyroidectomy",
                 "Gastrointestinal Surgeries",
-                "Advanced Open Surgeries",
-                "Emergency Surgical Interventions"
+                "Diabetic Foot Management"
             ],
             experience_years: 30,
             memberships: ["Association of Surgeons of India (ASI)", "Indian Medical Association (IMA)"],
             faqs: [
                 {
                     question: "What is Dr. Shankar's primary surgical focus?",
-                    answer: "As a senior surgeon, he focuses on complex general and gastrointestinal procedures, ensuring long-term surgical success and patient safety."
+                    answer: "As a senior surgeon, he focuses on advanced proctology and complex laparoscopic procedures, ensuring long-term surgical success and patient safety."
                 },
                 {
                     question: "Does the Chairman still perform surgeries?",
-                    answer: "Yes, Dr. Shankar remains active in the operating theater for complex and specialized general surgical cases."
+                    answer: "Yes, Dr. Shankar remains active in the operating theater for complex and specialized laser and laparoscopic cases."
                 }
             ],
             reviews: [
                 {
                     patient_name: "Venkatraman G.",
-                    content: "Dr. Shankar is a legend in Vellore. His surgical precision and the way he manages the hospital are truly inspiring. My surgery was a complete success.",
+                    content: "Dr. Shankar is a legend in Vellore. His surgical precision in laser proctology and the way he manages the hospital are truly inspiring.",
                     rating: 5,
                     date: "2023-10-12"
                 }
@@ -506,6 +509,64 @@ export const SEED_DATA = {
                     content: "Highly recommend for laparoscopic gynae surgery. Fast recovery and excellent guidance throughout the treatment of my ovarian cysts.",
                     rating: 5,
                     date: "2024-01-22"
+                }
+            ]
+        },
+        {
+            id: "dr-srinivasan-karbar",
+            status: "published",
+            name: "Dr. Srinivasan Karbar",
+            slug: "dr-srinivasan-karbar",
+            designation: "Emergency Medicine Specialist",
+            department: "Emergency Medicine",
+            image: "/images/doctors/dr-srinivasan-karbar.jpg",
+            bio: "Dr. Srinivasan Karbar is an experienced Emergency Medicine specialist with over 10 years of clinical experience. He currently serves as a consultant Emergency physician at Indira Super Speciality Hospital. He is actively involved in leading the emergency team, mentoring junior doctors, and ensuring the delivery of high-quality critical care.",
+            education: [
+                { degree: "MRCEM Part A", institution: "Royal College Of Emergency Medicine, UK", year: "2024" },
+                { degree: "GWU MEM", institution: "Global Hospital Chennai", year: "2017" },
+                { degree: "MBBS", institution: "Kempegowda Institute of Medical Sciences", year: "2012" }
+            ],
+            specialties: ["Emergency Medicine", "Resuscitation", "Trauma Care"],
+            procedures: [
+                "Emergency Resuscitation",
+                "Trauma Care",
+                "Acute Pain Management",
+                "Emergency Procedures",
+                "Ultrasonography"
+            ],
+            experience_years: 10,
+            faqs: [
+                {
+                    question: "What is Dr. Srinivasan's area of expertise?",
+                    answer: "He specializes in emergency resuscitation, trauma care, and managing high-acuity patients in critical care settings."
+                }
+            ]
+        },
+        {
+            id: "dr-jackson-p-john",
+            status: "published",
+            name: "Dr. Jackson P John",
+            slug: "dr-jackson-p-john",
+            designation: "Emergency Medicine Specialist",
+            department: "Emergency Medicine",
+            image: "/images/doctors/dr-jackson-p-john.jpg",
+            bio: "Dr. Jackson P John is an Emergency Medicine Specialist with over 8 years of experience. He is well-versed in emergency procedures like airway management, resuscitation, and surgical & trauma management. He previously served as an Emergency Medicine Specialist in the Oman Ministry of Health.",
+            education: [
+                { degree: "MBBS", institution: "D.Y Patil University Navi Mumbai", year: "2017" },
+                { degree: "Master's in Emergency Medicine", institution: "Kokilaben Dhirubhai Ambani Hospital Mumbai", year: "" }
+            ],
+            specialties: ["Emergency Medicine", "Airway Management", "Trauma Management"],
+            procedures: [
+                "Intubation & Resuscitation",
+                "Central Line Access",
+                "Arterial Line Access",
+                "Surgical & Trauma Management"
+            ],
+            experience_years: 8,
+            faqs: [
+                {
+                    question: "What registration does Dr. Jackson hold?",
+                    answer: "He is a registered medical practitioner with registration number 2017051750."
                 }
             ]
         }
