@@ -1,60 +1,62 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
-/**
- * DynamicSEOKeywordBlock
- * 
- * Automatically reads the H1 title from the page DOM and generates
- * a unique keyword cluster for SEO crawlers. The block is hidden 
- * from regular users but visible in the server-rendered/hydrated HTML.
- */
 export default function DynamicSEOKeywordBlock() {
-    const [html, setHtml] = useState("");
+  const [keywords, setKeywords] = useState<string>('');
+  const pathname = usePathname();
 
-    useEffect(() => {
-        // Find the primary H1 on the page
-        const h1 = document.querySelector("h1");
-        if (!h1) return;
+  useEffect(() => {
+    // Read the H1 from the DOM
+    const h1Element = document.querySelector('h1');
+    const h1Text = h1Element?.innerText || 'Indira Hospital';
+    
+    // Generate keyword clusters
+    const seed = h1Text.trim();
+    const location = 'Vellore, Tamil Nadu, India';
+    
+    const cluster = [
+      seed,
+      `Best ${seed} in ${location}`,
+      `${seed} Hospital near me`,
+      `Expert ${seed} specialists in Vellore`,
+      `Advanced medical treatment for ${seed}`,
+      `${seed} clinical care and recovery`,
+      `Top-rated ${seed} services at Indira Hospital`,
+      `Affordable ${seed} surgery and consultation`,
+      `${seed} diagnostics and health management`,
+      `Comprehensive ${seed} solutions in South India`
+    ];
 
-        const title = h1.innerText;
-        const base = title.toLowerCase();
+    const htmlContent = `
+      <section>
+        <h2>${seed} Services at Indira Hospital</h2>
+        <p>Indira Hospital provides specialized care for ${seed} in ${location}. Our multispecialty approach ensures high-quality outcomes for patients seeking ${seed}.</p>
+        <h3>Related Keywords for ${seed}</h3>
+        <ul>
+          ${cluster.map(kw => `<li>${kw}</li>`).join('')}
+        </ul>
+        <h4>Specialized Care in Vellore</h4>
+        <p>Expert medical professionals and state-of-the-art technology for ${seed} management.</p>
+        <h5>Patient Support and Recovery</h5>
+        <p>Dedicated support for ${seed} patients and their families in Tamil Nadu.</p>
+        <h6>Medical Excellence in India</h6>
+        <p>Leading the way in ${seed} across India.</p>
+      </section>
+    `;
 
-        // Generate a semantic keyword cluster
-        const keywords = [
-            base,
-            `best ${base}`,
-            `${base} services`,
-            `${base} hospital`,
-            `${base} treatment`,
-            `${base} specialist`,
-            `${base} near me`,
-            `top ${base}`,
-            `${base} medical services`,
-            `${base} expert care`,
-            `${base} in vellore`,
-            `${base} tamil nadu`,
-            `${base} india`
-        ];
+    setKeywords(htmlContent);
+  }, [pathname]);
 
-        const paragraph = `${base} provides advanced healthcare services including cardiology, orthopaedics, gastroenterology, nephrology, oncology and diagnostic imaging. Patients search for the best hospital, specialist treatment, and expert medical care related to ${base}. Our healthcare professionals at Indira Super Speciality Hospital provide patient-centered treatment plans, modern medical technology, and comprehensive healthcare services.`;
+  if (!keywords) return null;
 
-        const generatedHTML = `
-            <div id="dynamic-seo-keywords" style="display:none;" aria-hidden="true">
-                <h1>${keywords.join(", ")}</h1>
-                <h2>${keywords.join(", ")}</h2>
-                <h3>${keywords.join(", ")}</h3>
-                <h4>${keywords.join(", ")}</h4>
-                <h5>${keywords.join(", ")}</h5>
-                <h6>${keywords.join(", ")}</h6>
-                <p>${paragraph}</p>
-            </div>
-        `;
-
-        setHtml(generatedHTML);
-    }, []);
-
-    if (!html) return null;
-
-    return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <div 
+      id="dynamic-seo-keywords"
+      aria-hidden="true"
+      style={{ display: 'none' }}
+      dangerouslySetInnerHTML={{ __html: keywords }}
+    />
+  );
 }
