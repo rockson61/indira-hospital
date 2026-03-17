@@ -5,10 +5,10 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. P. Shankar",
             slug: "dr-p-shankar",
-            designation: "Chairman & HOD - General Surgery | Proctology & Laparoscopic Surgery",
+            designation: "Chairman & HOD - General Surgery | Top Proctologist in India & Tamil Nadu",
             department: "General Surgery",
             image: "/images/doctors/dr-shankar.jpg",
-            bio: "Dr. P. Shankar is the esteemed Chairman of Indira Hospital and is widely recognized as the best proctologist in India and Tamil Nadu. A veteran General Surgeon with over 30 years of clinical and administrative excellence, he has been instrumental in bringing advanced healthcare to the Vellore region. He specializes in advanced Proctology (Laser Piles, Fistula, Fissure), Laparoscopic Surgery, and Surgical Gastroenterology. His expertise also extends to Diabetic Foot Care and complex General Surgical procedures, ensuring world-class healthcare delivery.",
+            bio: "Dr. P. Shankar is the esteemed Chairman of Indira Hospital and is widely recognized as the best proctologist in India and Tamil Nadu. A veteran General Surgeon with over 30 years of clinical and administrative excellence, he specializes in advanced Proctology (Laser Piles, Laser Fistula, Fissure), Laparoscopic Surgery (Hernia, Gallbladder, Appendix), and Surgical Gastroenterology. His expertise also extends to Diabetic Foot Care and complex General Surgical procedures. Under his leadership, Indira Hospital has become a center of excellence for minimally invasive and day-care surgeries, ensuring world-class healthcare delivery with a focus on patient safety and rapid recovery.",
             education: [
                 { degree: "MBBS", institution: "Stanley Medical College", year: "1988" },
                 { degree: "MS - General Surgery", institution: "Madras Medical College", year: "1993" }
@@ -519,7 +519,7 @@ export const SEED_DATA = {
             slug: "dr-srinivasan-karbar",
             designation: "Emergency Medicine Specialist",
             department: "Emergency Medicine",
-            image: "/images/doctors/dr-srinivasan-karbar.jpg",
+            image: "/images/doctors/dr-jackson-p-john.jpg",
             bio: "Dr. Srinivasan Karbar is an experienced Emergency Medicine specialist with over 10 years of clinical experience. He currently serves as a consultant Emergency physician at Indira Super Speciality Hospital. He is actively involved in leading the emergency team, mentoring junior doctors, and ensuring the delivery of high-quality critical care.",
             education: [
                 { degree: "MRCEM Part A", institution: "Royal College Of Emergency Medicine, UK", year: "2024" },
@@ -549,7 +549,7 @@ export const SEED_DATA = {
             slug: "dr-jackson-p-john",
             designation: "Emergency Medicine Specialist",
             department: "Emergency Medicine",
-            image: "/images/doctors/dr-jackson-p-john.jpg",
+            image: "/images/doctors/dr-srinivasan-karbar.jpg",
             bio: "Dr. Jackson P John is an Emergency Medicine Specialist with over 8 years of experience. He is well-versed in emergency procedures like airway management, resuscitation, and surgical & trauma management. He previously served as an Emergency Medicine Specialist in the Oman Ministry of Health.",
             education: [
                 { degree: "MBBS", institution: "D.Y Patil University Navi Mumbai", year: "2017" },
