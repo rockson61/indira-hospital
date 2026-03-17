@@ -3,10 +3,16 @@
 import React from "react";
 import { Phone, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { usePathname } from "next/navigation";
 
 export function StickyCTA() {
-    const phone = siteConfig.contact.emergencyPhone;
-    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
+    const pathname = usePathname();
+    const isDentalPage = pathname?.toLowerCase().includes('dental') || pathname?.toLowerCase().includes('dentistry');
+    const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;
+    const contactWhatsapp = isDentalPage ? "917010650063" : siteConfig.contact.whatsapp;
+
+    const phone = contactPhone;
+    const whatsappUrl = `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
 
     return (
         <div className="fixed bottom-0 inset-x-0 z-[80] lg:hidden">

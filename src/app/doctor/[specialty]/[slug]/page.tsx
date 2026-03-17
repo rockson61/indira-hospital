@@ -194,33 +194,42 @@ export default async function DoctorProfileRoute({
                         </div>
 
                         {/* Right: CTA Card */}
-                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 md:p-8 shadow-2xl text-slate-900 dark:text-white">
-                            <h3 className="text-lg font-black mb-4">Book a Consultation</h3>
-                            <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Schedule an appointment with {currDoctor.name} at Indira Super Speciality Hospital.</p>
-                            <Link
-                                href={`/book-appointment?doctor=${currDoctor.slug}`}
-                                className="block w-full text-center px-6 py-4 bg-slate-900 dark:bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-500 transition-all shadow-md"
-                            >
-                                <Calendar className="w-5 h-5 inline-block mr-2 -mt-0.5" />
-                                Book Appointment
-                            </Link>
-                            <a
-                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'd like to book an appointment with ${currDoctor.name}.`)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block w-full text-center px-6 py-3 mt-3 bg-green-500 text-white font-bold rounded-2xl hover:bg-green-600 transition-all shadow-md"
-                            >
-                                <MessageCircle className="w-5 h-5 inline-block mr-2 -mt-0.5" />
-                                WhatsApp Chat
-                            </a>
-                            <a
-                                href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                                className="block w-full text-center px-6 py-3 mt-3 bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold rounded-2xl hover:bg-rose-100 transition-colors"
-                            >
-                                <Phone className="w-4 h-4 inline-block mr-2 -mt-0.5" />
-                                Call Now
-                            </a>
-                        </div>
+                        {(() => {
+                            const isDentalDoctor = currDoctor.department?.toLowerCase().includes('dental') || currDoctor.specialty?.toLowerCase().includes('dental') || specialty.includes('dental');
+                            const doctorPhone = isDentalDoctor ? "+91 7010650063" : siteConfig.contact.phone;
+                            const doctorWhatsapp = isDentalDoctor ? "917010650063" : siteConfig.contact.whatsapp;
+
+                            return (
+                                <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-6 md:p-8 shadow-2xl text-slate-900 dark:text-white">
+                                    <h3 className="text-lg font-black mb-4">Book a Consultation</h3>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Schedule an appointment with {currDoctor.name} at Indira Super Speciality Hospital.</p>
+                                    <Link
+                                        href={`/book-appointment?doctor=${currDoctor.slug}`}
+                                        className="block w-full text-center px-6 py-4 bg-slate-900 dark:bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-500 transition-all shadow-md"
+                                    >
+                                        <Calendar className="w-5 h-5 inline-block mr-2 -mt-0.5" />
+                                        Book Appointment
+                                    </Link>
+                                    <a
+                                        href={`https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent(`Hi, I'd like to book an appointment with ${currDoctor.name}.`)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block w-full text-center px-6 py-3 mt-3 bg-green-500 text-white font-bold rounded-2xl hover:bg-green-600 transition-all shadow-md"
+                                    >
+                                        <MessageCircle className="w-5 h-5 inline-block mr-2 -mt-0.5" />
+                                        WhatsApp Chat
+                                    </a>
+                                    <a
+                                        href={`tel:${doctorPhone.replace(/\s+/g, '')}`}
+                                        className="block w-full text-center px-6 py-3 mt-3 bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold rounded-2xl hover:bg-rose-100 transition-colors"
+                                    >
+                                        <Phone className="w-4 h-4 inline-block mr-2 -mt-0.5" />
+                                        Call Now
+                                    </a>
+                                </div>
+                            );
+                        })()}
+
                     </div>
                 </div>
             </section>

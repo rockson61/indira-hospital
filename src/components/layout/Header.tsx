@@ -15,6 +15,9 @@ export function Header() {
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const isDentalPage = pathname?.toLowerCase().includes('dental') || pathname?.toLowerCase().includes('dentistry');
+    const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;
+    const contactWhatsapp = isDentalPage ? "917010650063" : siteConfig.contact.whatsapp;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -71,7 +74,7 @@ export function Header() {
                         <div className="hidden lg:flex items-center space-x-4 justify-end">
                             {/* Call */}
                             <a
-                                href={`tel:${siteConfig.contact.emergencyPhone}`}
+                                href={`tel:${contactPhone.replace(/\s+/g, '')}`}
                                 className="flex items-center justify-center p-3 bg-slate-50 dark:bg-slate-800 hover:bg-rose-50 dark:hover:bg-rose-950 text-rose-600 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-rose-100 transition-all"
                                 title="Call Now"
                             >
@@ -80,7 +83,7 @@ export function Header() {
 
                             {/* WhatsApp */}
                             <a
-                                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                                href={`https://wa.me/${contactWhatsapp}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center p-3 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 dark:hover:bg-pink-950 text-pink-600 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-pink-100 transition-all"
@@ -134,12 +137,12 @@ export function Header() {
                     </nav>
 
                     <div className="mt-8 space-y-4">
-                        <a href={`tel:${siteConfig.contact.emergencyPhone}`} className="flex items-center justify-center space-x-2 w-full p-4 rounded-3xl bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold border border-rose-100 dark:border-rose-900">
+                        <a href={`tel:${contactPhone.replace(/\s+/g, '')}`} className="flex items-center justify-center space-x-2 w-full p-4 rounded-3xl bg-rose-50 dark:bg-rose-950 text-rose-600 font-bold border border-rose-100 dark:border-rose-900">
                             <Phone className="h-5 w-5" />
-                            <span>Emergency: {siteConfig.contact.emergencyPhone}</span>
+                            <span>Contact: {contactPhone}</span>
                         </a>
                         <a 
-                            href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                            href={`https://wa.me/${contactWhatsapp}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setIsMobileMenuOpen(false)}

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
+import { usePathname } from 'next/navigation';
 // import { InvokeLLM } from '@/api/integrations'; // API not present
 
 export default function FloatingActionBar() {
@@ -22,8 +23,13 @@ export default function FloatingActionBar() {
   const [greeting, setGreeting] = useState('');
   const [weather, setWeather] = useState<{ temperature: number; icon: string } | null>(null);
 
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}`;
-  const phone = siteConfig.contact.phone;
+  const pathname = usePathname();
+  const isDentalPage = pathname?.toLowerCase().includes('dental') || pathname?.toLowerCase().includes('dentistry');
+  const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;
+  const contactWhatsapp = isDentalPage ? "917010650063" : siteConfig.contact.whatsapp;
+
+  const whatsappUrl = `https://wa.me/${contactWhatsapp}`;
+  const phone = contactPhone;
   const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=Indira+Super+Speciality+Hospital+Vellore";
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -68,9 +68,9 @@ export function SubServiceTemplate({
     departmentSlug,
     children,
 }: SubServiceTemplateProps) {
-    const phone = siteConfig.contact.phone
-    const whatsappNumber = phone.replace(/\D/g, '')
-    const whatsappUrl = `https://wa.me/91${whatsappNumber}?text=${encodeURIComponent(`Hi, I need information about ${title} at Indira Hospital.`)}`
+    const isDental = title.toLowerCase().includes('dental') || title.toLowerCase().includes('dentistry') || eyebrow?.toLowerCase().includes('dental') || departmentName?.toLowerCase().includes('dental');
+    const contactPhone = isDental ? "+91 7010650063" : siteConfig.contact.phone;
+    const whatsappUrl = `https://wa.me/${contactPhone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi, I need information about ${title} at Indira Hospital.`)}`;
     const bookingUrl = '/book-appointment'
 
     // ── JSON-LD ──────────────────────────────────────────────────────────────
@@ -262,11 +262,11 @@ export function SubServiceTemplate({
                                         WhatsApp Now
                                     </a>
                                     <a
-                                        href={`tel:${phone.replace(/\s+/g, '')}`}
+                                        href={`tel:${contactPhone.replace(/\s+/g, '')}`}
                                         className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-full transition-all border border-slate-100 dark:border-slate-700 text-base"
                                     >
                                         <Phone className="w-5 h-5 mr-2 text-fuchsia-600" />
-                                        {phone}
+                                        {contactPhone}
                                     </a>
                                 </div>
                             </ModernCard>

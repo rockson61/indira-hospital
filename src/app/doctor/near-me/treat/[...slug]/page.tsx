@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getServices, getServiceBySlug, getDoctors } from "@/lib/api";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from '@/config/site';
 import { getTreatmentBySlug, getAllTreatments } from "@/lib/data/treatment-data";
 import { getImageUrl } from "@/lib/utils";
 import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Award, Users, Clock, Star, MapPin, ArrowRight, GraduationCap, Banknote, HelpCircle, Quote, Info, Sparkles, Shield } from "lucide-react";
@@ -208,7 +208,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     const allServices = await getServices().catch(() => []);
     const otherServices = allServices.filter((s: any) => s.slug !== lastSlug);
 
-    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
+    // Use usePathname for client-side context detection
+    // This component is a Server Component, so usePathname cannot be called directly here.
+    // The instruction implies this logic is for a client-side component like FloatingActionBar.
+    // For the current server component, we'll keep the slug-based detection for initial render.
+    // If a client component needs this, it would call usePathname itself.
+    const isDentalPage = slug.some(s => s.toLowerCase().includes('dental') || s.toLowerCase().includes('dentistry'));
+    const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;
+    const contactWhatsapp = isDentalPage ? "917010650063" : siteConfig.contact.whatsapp;
+
+    const whatsappUrl = `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
 
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
@@ -270,7 +279,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <MessageCircle className="w-5 h-5 mr-2" />
                                     Book on WhatsApp — It&apos;s Free
                                 </a>
-                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                                <a href={`tel:${contactPhone.replace(/\s+/g, '')}`}
                                     className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Talk to a Doctor Now
