@@ -123,23 +123,20 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-6",
         slug: "knee-replacement",
         parentServiceSlug: "orthopaedics",
-        title: "Total Knee Replacement",
-        shortDescription: "Pain-free mobility with advanced joint replacement.",
-        fullDescription: "Our Joint Replacement Centre performs Total Knee Replacement (TKR) using computer navigation and minimally invasive techniques. This ensures perfect alignment, longer implant life, and faster recovery.",
+        title: "Advanced Total Knee Replacement (TKR)",
+        shortDescription: "Pain-free mobility with high-precision joint replacement and rapid recovery.",
+        fullDescription: "Regain your mobility with the most advanced **Total Knee Replacement** surgery in Vellore. At Indira Hospital, we utilize high-precision computer navigation and minimally invasive 'Sub-vastus' approaches that preserve muscle integrity. This ensures accurate implant alignment, reduced post-operative pain, and a significantly longer lifespan for your new joint, allowing you to return to an active, pain-free lifestyle.",
         features: [
-            "Computer Navigated Surgery",
-            "Minimally Invasive Sub-vastus approach",
-            "High-flex rotating platform knees",
-            "Rapid Recovery Protocol"
+            "Computer Navigated Surgery for Perfect Alignment",
+            "Minimally Invasive Sub-vastus (Muscle-Sparing) Approach",
+            "High-Flexion Long-Life Implant Systems",
+            "Dedicated Pain-Free Rapid Recovery Protocol"
         ],
         benefits: [
-            "Walk within 24 hours",
-            "Long-lasting implants (20+ years)",
-            "Painless post-op period",
-            "Stitch-less skin closure"
-        ],
-        faq: [
-            { question: "When can I walk after surgery?", answer: "Most patients walk with support on the same day or next day after surgery." }
+            "Walk within 24 Hours of Surgery",
+            "Long-Lasting Results (up to 20-25 Years)",
+            "Significantly Reduced Post-Operative Pain",
+            "Quick Return to Stair Climbing and Daily Activities"
         ]
     },
     {
@@ -245,61 +242,81 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-12",
         slug: "gallbladder-removal",
-        parentServiceSlug: "gastroenterology",
-        title: "Laparoscopic Gallbladder Removal",
-        shortDescription: "Minimally invasive surgery for gallstones.",
-        fullDescription: "Cholecystectomy is the surgical removal of the gallbladder. Laparoscopic removal is the gold standard, offering minimal pain and quick recovery.",
+        parentServiceSlug: "general-surgery",
+        title: "Laparoscopic Gallbladder Surgery",
+        shortDescription: "Safe, minimally invasive keyhole surgery for gallstones with one-day recovery.",
+        fullDescription: "Laparoscopic Cholecystectomy (Gallbladder Removal) is our specialty. Using high-definition laparoscopy, our senior surgeons remove the gallbladder through tiny keyhole incisions. This gold-standard approach ensures minimal blood loss, minimal scarring, and allows most patients to return home within 24 hours.",
         features: [
-            "Keyhole incisions",
-            "HD Laparoscopy",
-            "Day-care option",
-            "Low complication rate"
+            "Advanced HD Laparoscopic Imaging",
+            "Precision Keyhole Incisions",
+            "Harmonic Scalpel for Bloodless Dissection",
+            "Day-Care Surgery Option Available"
         ],
         benefits: [
-            "No dietary restrictions post-recovery",
-            "Prevention of complications",
-            "Cosmetic advantage",
-            "Return to work in days"
+            "Virtually Scar-Free Outcome",
+            "Rapid Return to Regular Diet",
+            "Minimal Post-Operative Discomfort",
+            "Avoidance of Gallbladder Complications"
         ]
     },
     {
         id: "t-13",
         slug: "root-canal-treatment",
-        parentServiceSlug: "dental",
-        title: "Root Canal Treatment",
-        shortDescription: "Save your natural tooth with painless root canal therapy.",
-        fullDescription: "Root canal treatment is designed to eliminate bacteria from the infected root canal, prevent reinfection of the tooth and save the natural tooth.",
+        parentServiceSlug: "dentistry",
+        title: "Single-Sitting Laser Root Canal",
+        shortDescription: "Painless, expert root canal therapy to save your natural teeth.",
+        fullDescription: "Experience a stress-free, painless **Root Canal Treatment** (RCT) at Indira Hospital. We use advanced rotary endodontics and diode lasers to thoroughly disinfect and seal the tooth canal in a single visit. Our precision approach saves your natural tooth while eliminating infection and severe pain, preserving your smile effectively.",
         features: [
-            "Single-sitting option",
-            "Rotary Endodontics",
-            "Digital X-rays",
-            "Painless anesthesia"
+            "Single-Sitting Completion for Most Cases",
+            "Advanced Laser Disinfection of Canals",
+            "High-Precision Rotary Endodontics",
+            "Digital Apex Locators for Accuracy"
         ],
         benefits: [
-            "Saves natural tooth",
-            "Relieves severe pain",
-            "Prevents spread of infection",
-            "Durable functionality"
+            "Permanent Relief from Toothache",
+            "Preserves Your Original Natural Tooth",
+            "Prevents Bone Loss and Abscess Spread",
+            "Perfect Foundation for Zirconia Crowns"
         ]
     },
     {
         id: "t-14",
         slug: "dental-implants",
-        parentServiceSlug: "dental",
-        title: "Dental Implants",
-        shortDescription: "Permanent solution for missing teeth.",
-        fullDescription: "Dental implants are replacement tooth roots. Implants provide a strong foundation for fixed (permanent) or removable replacement teeth that are made to match your natural teeth.",
+        parentServiceSlug: "dentistry",
+        title: "Advanced Dental Implants",
+        shortDescription: "Permanent, natural-looking solution for missing teeth with world-class implants.",
+        fullDescription: "Restore your smile and confidence with permanent **Dental Implants**. Using 3D-guided surgery and premium titanium or zirconia implants, we provide a replacement that looks, feels, and functions exactly like your natural teeth. Whether it is a single tooth or full-mouth rehabilitation, our dental specialists ensure a lifetime of comfort and durability.",
         features: [
-            "Titanium implants",
-            "Immediate Loading option",
-            "Bone grafting if needed",
-            "3D Guide planning"
+            "USFDA Approved Titanium & Zirconia Implants",
+            "3D Guided Implant Placement Planning",
+            "Immediate Loading Implants for Quick Smile",
+            "Bone Grafting and Sinus Lift Facilities"
         ],
         benefits: [
-            "Looks and feels like natural teeth",
-            "Improved speech",
-            "Easier eating",
-            "Durability (Life-long)"
+            "Restores Natural Chewing Efficiency",
+            "Prevents Facial Bone Resorption",
+            "Looks and Feels Completely Natural",
+            "Lifetime Solution with Proper Care"
+        ]
+    },
+    {
+        id: "t-14-1",
+        slug: "cataract-surgery-phaco",
+        parentServiceSlug: "ophthalmology",
+        title: "Micro-Incision Cataract Surgery (Phaco)",
+        shortDescription: "Stitch-less, painless cataract removal with premium IOL implantation.",
+        fullDescription: "Experience crystal clear vision with our advanced **Phacoemulsification** (Cataract Surgery). Using micro-incision techniques and premium high-definition intraocular lenses (IOLs), we restore your sight in a painless, stitch-less 15-minute procedure. Most patients experience immediate improvement in vision and can return to normal activities the very next day.",
+        features: [
+            "Advanced Phacoemulsification Technology",
+            "Premium Foldable & Trifocal IOL Options",
+            "Topical (Drop-based) No-Injection Anesthesia",
+            "Zero Stitch, Zero Bandage Procedure"
+        ],
+        benefits: [
+            "Immediate Restoration of Vision Clarity",
+            "Rapid Recovery and No Hospital Stay",
+            "Minimal Post-Operative Restrictions",
+            "Enhanced Contrast and Vibrant Colors"
         ]
     },
     {
@@ -528,11 +545,21 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-112",
         slug: "kidney-stone-laser-surgery",
         parentServiceSlug: "urology",
-        title: "Kidney Stone Laser",
-        shortDescription: "Non-invasive laser fragmentation (RIRS/URSL) for kidney stones.",
-        fullDescription: "Say goodbye to excruciating stone pain. We specialize in advanced **Kidney Stone Laser Surgery** options like Retrograde Intrarenal Surgery (RIRS) and URSL. Using ultra-fine flexible scopes and Holmium lasers, we pulverize stones without a single cut on your body.",
-        features: ["Holmium Laser Lithotripsy", "RIRS (Flexible Ureteroscopy)", "PCNL for Giant Staghorn Stones", "Stent Placement and Removal"],
-        benefits: ["No Cuts or Scars (RIRS)", "Discharge in 24 Hours", "Clearance of Complex Stones", "Rapid Relief from Pain"]
+        title: "Laser Surgery for Kidney Stones (RIRS/PCNL)",
+        shortDescription: "Incision-less laser treatment (RIRS) and Mini-PCNL for complete stone clearance.",
+        fullDescription: "Say goodbye to the pain of kidney stones with our advanced **Laser Lithotripsy** solutions. We specialize in RIRS (Retrograde Intrarenal Surgery) and Mini-PCNL, using high-power Holmium lasers to dust stones into fine particles without major incisions. These precise procedures ensure maximum stone clearance with minimal risk and rapid recovery.",
+        features: [
+            "Flexible RIRS (No Cuts/No Scars approach)",
+            "Holmium Laser Stone Dusting Technology",
+            "Mini-PCNL for Larger Kidney Stones",
+            "State-of-the-Art Urodynamic Evaluation"
+        ],
+        benefits: [
+            "Complete Clearance of Complex Stones",
+            "Rapid Recovery and Same-Day Discharge",
+            "Minimal Post-Operative Pain and Bleeding",
+            "Prevention of Recurrent Stone Formation"
+        ]
     },
     {
         id: "t-113",
@@ -1128,7 +1155,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-324",
         slug: "cancer-pain-management",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "cancer pain management",
         shortDescription: "Comprehensive care and treatment for cancer pain management....",
         fullDescription: "Comprehensive care and treatment for cancer pain management.",
@@ -1138,7 +1165,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-325",
         slug: "carpal-tunnel-release",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "orthopaedics",
         title: "carpal tunnel release",
         shortDescription: "Comprehensive care and treatment for carpal tunnel release....",
         fullDescription: "Comprehensive care and treatment for carpal tunnel release.",
@@ -1168,7 +1195,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-328",
         slug: "cervical-cancer-vaccines",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "cervical cancer vaccines",
         shortDescription: "Comprehensive care and treatment for cervical cancer vaccines....",
         fullDescription: "Comprehensive care and treatment for cervical cancer vaccines.",
@@ -1198,7 +1225,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-333",
         slug: "colon-cancer-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "colon cancer treatment",
         shortDescription: "Comprehensive care and treatment for colon cancer treatment....",
         fullDescription: "Comprehensive care and treatment for colon cancer treatment.",
@@ -1208,7 +1235,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-335",
         slug: "colposcopy-procedure-details",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "colposcopy procedure details",
         shortDescription: "Comprehensive care and treatment for colposcopy procedure details....",
         fullDescription: "Comprehensive care and treatment for colposcopy procedure details.",
@@ -1218,7 +1245,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-336",
         slug: "composite-bonding-guide",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "composite bonding guide",
         shortDescription: "Comprehensive care and treatment for composite bonding guide....",
         fullDescription: "Comprehensive care and treatment for composite bonding guide.",
@@ -1238,7 +1265,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-339",
         slug: "crossbite-correction",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "crossbite correction",
         shortDescription: "Comprehensive care and treatment for crossbite correction....",
         fullDescription: "Comprehensive care and treatment for crossbite correction.",
@@ -1248,7 +1275,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-340",
         slug: "deep-cleaning-scaling",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "deep cleaning scaling",
         shortDescription: "Comprehensive care and treatment for deep cleaning scaling....",
         fullDescription: "Comprehensive care and treatment for deep cleaning scaling.",
@@ -1318,7 +1345,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-347",
         slug: "diabetic-foot-ulcer-care",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "general-surgery",
         title: "diabetic foot ulcer care",
         shortDescription: "Comprehensive care and treatment for diabetic foot ulcer care....",
         fullDescription: "Comprehensive care and treatment for diabetic foot ulcer care.",
@@ -1348,7 +1375,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-351",
         slug: "ectopic-pregnancy-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "ectopic pregnancy treatment",
         shortDescription: "Comprehensive care and treatment for ectopic pregnancy treatment....",
         fullDescription: "Comprehensive care and treatment for ectopic pregnancy treatment.",
@@ -1368,7 +1395,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-353",
         slug: "endometriosis-pain-management",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "endometriosis pain management",
         shortDescription: "Comprehensive care and treatment for endometriosis pain management....",
         fullDescription: "Comprehensive care and treatment for endometriosis pain management.",
@@ -1388,7 +1415,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-358",
         slug: "fibroid-removal-surgery",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "fibroid removal surgery",
         shortDescription: "Comprehensive care and treatment for fibroid removal surgery....",
         fullDescription: "Comprehensive care and treatment for fibroid removal surgery.",
@@ -1398,7 +1425,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-359",
         slug: "fissure-surgery-recovery",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "general-surgery",
         title: "fissure surgery recovery",
         shortDescription: "Comprehensive care and treatment for fissure surgery recovery....",
         fullDescription: "Comprehensive care and treatment for fissure surgery recovery.",
@@ -1438,7 +1465,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-365",
         slug: "gingivitis-treatment-guide",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "gingivitis treatment guide",
         shortDescription: "Comprehensive care and treatment for gingivitis treatment guide....",
         fullDescription: "Comprehensive care and treatment for gingivitis treatment guide.",
@@ -1458,7 +1485,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-367",
         slug: "gum-disease-prevention",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "gum disease prevention",
         shortDescription: "Comprehensive care and treatment for gum disease prevention....",
         fullDescription: "Comprehensive care and treatment for gum disease prevention.",
@@ -1468,7 +1495,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-368",
         slug: "gum-grafting-procedure",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "gum grafting procedure",
         shortDescription: "Comprehensive care and treatment for gum grafting procedure....",
         fullDescription: "Comprehensive care and treatment for gum grafting procedure.",
@@ -1478,7 +1505,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-369",
         slug: "gum-pocket-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "gum pocket treatment",
         shortDescription: "Comprehensive care and treatment for gum pocket treatment....",
         fullDescription: "Comprehensive care and treatment for gum pocket treatment.",
@@ -1488,7 +1515,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-370",
         slug: "gum-recession-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "gum recession treatment",
         shortDescription: "Comprehensive care and treatment for gum recession treatment....",
         fullDescription: "Comprehensive care and treatment for gum recession treatment.",
@@ -1498,7 +1525,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-371",
         slug: "gum-surgery-recovery",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "gum surgery recovery",
         shortDescription: "Comprehensive care and treatment for gum surgery recovery....",
         fullDescription: "Comprehensive care and treatment for gum surgery recovery.",
@@ -1508,7 +1535,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-372",
         slug: "gummy-smile-correction",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "gummy smile correction",
         shortDescription: "Comprehensive care and treatment for gummy smile correction....",
         fullDescription: "Comprehensive care and treatment for gummy smile correction.",
@@ -1528,7 +1555,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-374",
         slug: "head-and-neck-cancer-care",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "head and neck cancer care",
         shortDescription: "Comprehensive care and treatment for head and neck cancer care....",
         fullDescription: "Comprehensive care and treatment for head and neck cancer care.",
@@ -1608,7 +1635,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-385",
         slug: "hydrocele-surgery-cost",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "urology",
         title: "hydrocele surgery cost",
         shortDescription: "Comprehensive care and treatment for hydrocele surgery cost....",
         fullDescription: "Comprehensive care and treatment for hydrocele surgery cost.",
@@ -1618,7 +1645,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-386",
         slug: "hypertension-control-diet",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "cardiology",
         title: "hypertension control diet",
         shortDescription: "Comprehensive care and treatment for hypertension control diet....",
         fullDescription: "Comprehensive care and treatment for hypertension control diet.",
@@ -1638,7 +1665,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-388",
         slug: "immunotherapy-treatment-options",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "immunotherapy treatment options",
         shortDescription: "Comprehensive care and treatment for immunotherapy treatment options....",
         fullDescription: "Comprehensive care and treatment for immunotherapy treatment options.",
@@ -1698,7 +1725,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-395",
         slug: "invisalign-treatment-guide",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "invisalign treatment guide",
         shortDescription: "Comprehensive care and treatment for invisalign treatment guide....",
         fullDescription: "Comprehensive care and treatment for invisalign treatment guide.",
@@ -1788,7 +1815,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-407",
         slug: "laser-gum-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "laser gum treatment",
         shortDescription: "Comprehensive care and treatment for laser gum treatment....",
         fullDescription: "Comprehensive care and treatment for laser gum treatment.",
@@ -1818,7 +1845,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-411",
         slug: "lipoma-excision-surgery",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "general-surgery",
         title: "lipoma excision surgery",
         shortDescription: "Comprehensive care and treatment for lipoma excision surgery....",
         fullDescription: "Comprehensive care and treatment for lipoma excision surgery.",
@@ -1838,7 +1865,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-413",
         slug: "lung-cancer-early-signs",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "lung cancer early signs",
         shortDescription: "Comprehensive care and treatment for lung cancer early signs....",
         fullDescription: "Comprehensive care and treatment for lung cancer early signs.",
@@ -1848,7 +1875,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-415",
         slug: "menopause-symptom-relief",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "menopause symptom relief",
         shortDescription: "Comprehensive care and treatment for menopause symptom relief....",
         fullDescription: "Comprehensive care and treatment for menopause symptom relief.",
@@ -1888,7 +1915,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-420",
         slug: "myomectomy-surgery-cost",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "myomectomy surgery cost",
         shortDescription: "Comprehensive care and treatment for myomectomy surgery cost....",
         fullDescription: "Comprehensive care and treatment for myomectomy surgery cost.",
@@ -1938,7 +1965,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-426",
         slug: "ovarian-cyst-laparoscopy",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "ovarian cyst laparoscopy",
         shortDescription: "Comprehensive care and treatment for ovarian cyst laparoscopy....",
         fullDescription: "Comprehensive care and treatment for ovarian cyst laparoscopy.",
@@ -1958,7 +1985,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-428",
         slug: "overbite-correction",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "overbite correction",
         shortDescription: "Comprehensive care and treatment for overbite correction....",
         fullDescription: "Comprehensive care and treatment for overbite correction.",
@@ -1988,7 +2015,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-436",
         slug: "peptic-ulcer-disease-treatment",
-        parentServiceSlug: "cardiology",
+        parentServiceSlug: "gastroenterology",
         title: "peptic ulcer disease treatment",
         shortDescription: "Comprehensive care and treatment for peptic ulcer disease treatment....",
         fullDescription: "Comprehensive care and treatment for peptic ulcer disease treatment.",
@@ -1998,7 +2025,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-437",
         slug: "periodontitis-stages",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "periodontitis stages",
         shortDescription: "Comprehensive care and treatment for periodontitis stages....",
         fullDescription: "Comprehensive care and treatment for periodontitis stages.",
@@ -2008,7 +2035,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-438",
         slug: "pet-scan-for-cancer",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "pet scan for cancer",
         shortDescription: "Comprehensive care and treatment for pet scan for cancer....",
         fullDescription: "Comprehensive care and treatment for pet scan for cancer.",
@@ -2028,7 +2055,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-440",
         slug: "pilonidal-sinus-laser-surgery",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "general-surgery",
         title: "pilonidal sinus laser surgery",
         shortDescription: "Comprehensive care and treatment for pilonidal sinus laser surgery....",
         fullDescription: "Comprehensive care and treatment for pilonidal sinus laser surgery.",
@@ -2058,7 +2085,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-443",
         slug: "prostate-cancer-screening",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "urology",
         title: "prostate cancer screening",
         shortDescription: "Comprehensive care and treatment for prostate cancer screening....",
         fullDescription: "Comprehensive care and treatment for prostate cancer screening.",
@@ -2068,7 +2095,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-444",
         slug: "prostate-cancer-treatment-options",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "urology",
         title: "prostate cancer treatment options",
         shortDescription: "Comprehensive care and treatment for prostate cancer treatment options....",
         fullDescription: "Comprehensive care and treatment for prostate cancer treatment options.",
@@ -2078,7 +2105,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-446",
         slug: "proteinuria-treatment-options",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "nephrology",
         title: "proteinuria treatment options",
         shortDescription: "Comprehensive care and treatment for proteinuria treatment options....",
         fullDescription: "Comprehensive care and treatment for proteinuria treatment options.",
@@ -2088,7 +2115,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-447",
         slug: "radiation-therapy-guide",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "radiation therapy guide",
         shortDescription: "Comprehensive care and treatment for radiation therapy guide....",
         fullDescription: "Comprehensive care and treatment for radiation therapy guide.",
@@ -2208,7 +2235,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-459",
         slug: "sebaceous-cyst-removal",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "general-surgery",
         title: "sebaceous cyst removal",
         shortDescription: "Comprehensive care and treatment for sebaceous cyst removal....",
         fullDescription: "Comprehensive care and treatment for sebaceous cyst removal.",
@@ -2268,7 +2295,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-465",
         slug: "smile-makeover-process",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "smile makeover process",
         shortDescription: "Comprehensive care and treatment for smile makeover process....",
         fullDescription: "Comprehensive care and treatment for smile makeover process.",
@@ -2288,7 +2315,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-468",
         slug: "sports-injury-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "orthopaedics",
         title: "sports injury treatment",
         shortDescription: "Comprehensive care and treatment for sports injury treatment....",
         fullDescription: "Comprehensive care and treatment for sports injury treatment.",
@@ -2298,7 +2325,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-471",
         slug: "targeted-therapy-for-cancer",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "oncology",
         title: "targeted therapy for cancer",
         shortDescription: "Comprehensive care and treatment for targeted therapy for cancer....",
         fullDescription: "Comprehensive care and treatment for targeted therapy for cancer.",
@@ -2348,7 +2375,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-476",
         slug: "thyroid-surgery-guide",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "general-surgery",
         title: "thyroid surgery guide",
         shortDescription: "Comprehensive care and treatment for thyroid surgery guide....",
         fullDescription: "Comprehensive care and treatment for thyroid surgery guide.",
@@ -2388,7 +2415,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-481",
         slug: "tubal-ligation-procedure",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "obstetrics-gynaecology",
         title: "tubal ligation procedure",
         shortDescription: "Comprehensive care and treatment for tubal ligation procedure....",
         fullDescription: "Comprehensive care and treatment for tubal ligation procedure.",
@@ -2398,7 +2425,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-482",
         slug: "ulcerative-colitis-treatment",
-        parentServiceSlug: "cardiology",
+        parentServiceSlug: "gastroenterology",
         title: "ulcerative colitis treatment",
         shortDescription: "Comprehensive care and treatment for ulcerative colitis treatment....",
         fullDescription: "Comprehensive care and treatment for ulcerative colitis treatment.",
@@ -2408,7 +2435,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-483",
         slug: "underbite-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "dentistry",
         title: "underbite treatment",
         shortDescription: "Comprehensive care and treatment for underbite treatment....",
         fullDescription: "Comprehensive care and treatment for underbite treatment.",
@@ -2438,7 +2465,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-486",
         slug: "urinary-incontinence-treatment",
-        parentServiceSlug: "gastroenterology",
+        parentServiceSlug: "urology",
         title: "urinary incontinence treatment",
         shortDescription: "Comprehensive care and treatment for urinary incontinence treatment....",
         fullDescription: "Comprehensive care and treatment for urinary incontinence treatment.",
