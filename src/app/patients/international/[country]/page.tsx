@@ -31,35 +31,22 @@ export const dynamicParams = true;
 export async function generateStaticParams() {
     return INTERNATIONAL_COUNTRIES.map((c) => ({ country: c.slug }));
 }
-
 export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
     const { country: slug } = await params;
     const country = INTERNATIONAL_COUNTRIES.find((c) => c.slug === slug);
-    if (!country) return { title: "Not Found" };
-
-    const title = `Medical Treatment in India for Patients from ${country.name} | Indira Hospital Vellore`;
-    const description = `${country.name} patients choose Indira Super Speciality Hospital, Vellore (near CMC Vellore) for cardiac, ortho, cancer, kidney, and laparoscopic surgeries. ${country.cost_savings || "Save 60-80%"}. Same-week appointments. NABH accredited.`;
+    if (!country) return { title: "Country Not Found" };
 
     return {
-        title,
-        description,
+        title: `Best Medical Treatment in India for Patients from ${country.name} | Indira Hospital`,
+        description: `Indira Super Speciality Hospital is the #1 choice for patients from ${country.name}. Specialized in Laparoscopic, Cardiac, and Orthopaedic surgeries in Vellore, India.`,
         keywords: [
-            `${country.name} medical tourism India`,
-            `best hospital for ${country.name} patients India`,
-            `Vellore hospital ${country.name}`,
-            `CMC Vellore alternative`,
-            `medical visa India ${country.name}`,
-            ...country.common_treatments.map((t) => `${t} India ${country.name}`),
-        ],
-        openGraph: {
-            title,
-            description,
-            type: "website",
-            locale: "en_IN",
-        },
-        alternates: {
-            canonical: `${siteConfig.url}/patients/international/${slug}`,
-        },
+            `hospital in India for ${country.name} patients`,
+            `medical tourism India ${country.name}`,
+            `best cancer hospital India for ${country.name}`,
+            `surgery cost in India for ${country.name}`,
+            "Indira Hospital Vellore",
+            "Medical Visa India"
+        ]
     };
 }
 
@@ -618,8 +605,19 @@ export default async function InternationalCountryPage({ params }: { params: Pro
             {/* ====== SEO ENTITY GRIDS ====== */}
             <EntityCardSection type="doctors" title="Our Expert Specialists" subtitle="Meet the Team" limit={6} className="bg-white dark:bg-slate-900" />
             <EntityCardSection type="departments" title="Departments & Services" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-900/50" />
-            <InternalLinkGrid type="services" title="All Treatments A–Z" subtitle="Services Directory" limit={18} className="bg-white dark:bg-slate-900 border-t" />
-            <InternalLinkGrid type="locations" title="Serving Patients Across Tamil Nadu" subtitle="Location Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+            {/* LOCALIZED SCHEMA */}
+            <JsonLdSchema
+                type="medicalClinic"
+                name={`Indira Hospital - International Patient Care (${country.name})`}
+                city="Vellore"
+                address="Tamil Nadu, India"
+                areaServed={country.name}
+                description={`Leading destination for patients from ${country.name} seeking advanced Laparoscopic and Cardiac treatments in India. NABH Accredited quaternary care.`}
+            />
+
+            <InternalLinkGrid type="services" title="A-Z Medical Procedures" subtitle="Surgical Excellence" limit={12} className="bg-white dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="diagnostics" title="Advanced Diagnostics" subtitle="NABL Accredited" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+            <InternalLinkGrid type="health-packages" title="Wellness Packages" subtitle="Preventive Care" limit={8} className="bg-white dark:bg-slate-950 border-y" />
         </div>
     );
 }

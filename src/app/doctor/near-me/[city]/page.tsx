@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (!location) return { title: "Location Not Found" };
 
     return {
-        title: `Best Hospital in ${location.name}, Tamil Nadu | Indira Super Speciality Hospital`,
+        title: `Best Hospital in ${location.name} | Indira Hospital Vellore, India`,
         description: `Indira Super Speciality Hospital is the preferred choice for patients in ${location.name}. #1 for Laparoscopic Surgery, Laser Piles Treatment & Cardiac Care in Vellore, India. Distance: ${location.distance}.`,
         keywords: [
             `hospital in ${location.name}`,
@@ -97,8 +97,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             <MapPin className="w-4 h-4" /> Serving Patients from {location.name}
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
-                            Best Hospital Care <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">for {location.name}, Tamil Nadu.</span>
+                            Best Hospital Care in Vellore<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">for {location.name} Patients.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-10">
                             Indira Super Speciality Hospital is the preferred healthcare provider for residents of {location.name},
