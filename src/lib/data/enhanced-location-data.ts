@@ -97,7 +97,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
       { name: 'Sholingur', distance: '15 km', slug: 'sholingur' },
       { name: 'Walajapet', distance: '25 km', slug: 'walajapet' },
       { name: 'Kanchipuram', distance: '40 km', slug: 'kanchipuram' },
-      { name: 'Vellore', distance: '35 km', slug: '' },
+      { name: 'Vellore', distance: '35 km', slug: 'vellore' },
       { name: 'Chennai', distance: '75 km', slug: 'chennai' },
     ],
     transportOptions: {
@@ -163,7 +163,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
       { name: 'Kalavai', distance: '12 km', slug: 'kalavai' },
       { name: 'Walajapet', distance: '20 km', slug: 'walajapet' },
       { name: 'Timiri', distance: '15 km', slug: 'timiri' },
-      { name: 'Vellore', distance: '25 km', slug: '' },
+      { name: 'Vellore', distance: '25 km', slug: 'vellore' },
       { name: 'Ranipet', distance: '18 km', slug: 'ranipet' },
     ],
     transportOptions: {
@@ -234,7 +234,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
       { name: 'Walajapet', distance: '8 km', slug: 'walajapet' },
       { name: 'Melvisharam', distance: '5 km', slug: 'melvisharam' },
       { name: 'Arcot', distance: '18 km', slug: 'arcot' },
-      { name: 'Vellore', distance: '20 km', slug: '' },
+      { name: 'Vellore', distance: '20 km', slug: 'vellore' },
       { name: 'Katpadi', distance: '22 km', slug: 'katpadi' },
     ],
     transportOptions: {
@@ -301,7 +301,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
       { name: 'Vaniyambadi', distance: '18 km', slug: 'vaniyambadi' },
       { name: 'Jolarpet', distance: '25 km', slug: 'jolarpet' },
       { name: 'Ambur', distance: '22 km', slug: 'ambur' },
-      { name: 'Vellore', distance: '65 km', slug: '' },
+      { name: 'Vellore', distance: '65 km', slug: 'vellore' },
     ],
     transportOptions: {
       bus: true,
@@ -361,7 +361,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
       { name: 'Ambur', distance: '12 km', slug: 'ambur' },
       { name: 'Tirupattur', distance: '18 km', slug: 'tirupattur' },
       { name: 'Alangayam', distance: '20 km', slug: 'alangayam' },
-      { name: 'Vellore', distance: '55 km', slug: '' },
+      { name: 'Vellore', distance: '55 km', slug: 'vellore' },
     ],
     transportOptions: {
       bus: true,
@@ -448,7 +448,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
     category: 'district_hq',
     amenities: { banks: [], atms: [], postOffices: [], hospitals: [], shopping: [], restaurants: [], hotels: [] },
     touristPlaces: [{ name: 'Arunachaleswarar Temple', type: 'temple' }, { name: 'Girivalam Path', type: 'temple' }],
-    nearbyLocations: [{ name: 'Vellore', distance: '85 km', slug: '' }, { name: 'Villupuram', distance: '65 km', slug: 'villupuram' }],
+    nearbyLocations: [{ name: 'Vellore', distance: '85 km', slug: 'vellore' }, { name: 'Villupuram', distance: '65 km', slug: 'villupuram' }],
     transportOptions: { bus: true, train: true, auto: true, taxi: true },
     specialFeatures: ['Pilgrimage Center', 'District HQ', 'Spiritual Tourism'],
   },
@@ -468,7 +468,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
     category: 'district_hq',
     amenities: { banks: [], atms: [], postOffices: [], hospitals: [], shopping: [], restaurants: [], hotels: [] },
     touristPlaces: [{ name: 'Kailasanathar Temple', type: 'temple' }, { name: 'Ekambareswarar Temple', type: 'temple' }],
-    nearbyLocations: [{ name: 'Chennai', distance: '72 km', slug: 'chennai' }, { name: 'Vellore', distance: '70 km', slug: '' }],
+    nearbyLocations: [{ name: 'Chennai', distance: '72 km', slug: 'chennai' }, { name: 'Vellore', distance: '70 km', slug: 'vellore' }],
     transportOptions: { bus: true, train: true, auto: true, taxi: true },
     specialFeatures: ['Silk Industry', 'UNESCO Heritage', 'Temple City'],
   },

@@ -37,8 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
     if (!country) return { title: "Country Not Found" };
 
     return {
-        title: `Best Medical Treatment in India for Patients from ${country.name} | Indira Hospital`,
-        description: `Indira Super Speciality Hospital is the #1 choice for patients from ${country.name}. Specialized in Laparoscopic, Cardiac, and Orthopaedic surgeries in Vellore, India.`,
+        title: country.seoTitle || `Best Medical Treatment in India for Patients from ${country.name} | Indira Hospital`,
+        description: country.seoDescription || `Indira Super Speciality Hospital is the #1 choice for patients from ${country.name}. Specialized in Laparoscopic, Cardiac, and Orthopaedic surgeries in Vellore, India.`,
         keywords: [
             `hospital in India for ${country.name} patients`,
             `medical tourism India ${country.name}`,

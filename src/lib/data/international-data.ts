@@ -17,6 +17,8 @@ export interface InternationalCountry {
     currency?: string;
     currency_symbol?: string;
     india_exchange_example?: string; // e.g. "Enquire for Price = 0.014 USD"
+    seoTitle?: string;
+    seoDescription?: string;
 }
 
 // =============================================================
@@ -106,6 +108,8 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         languages_supported: ["Bengali", "English", "Hindi"],
         currency: "Bangladeshi Taka",
         currency_symbol: "BDT",
+        seoTitle: "Best Hospital in India for Patients from Bangladesh | Indira Hospital",
+        seoDescription: "Indira Hospital offers world-class quaternary care for patients from Bangladesh. Specialised in Cardiology, Oncology, and Kidney Transplants with 24/7 support.",
     },
     {
         name: "United Arab Emirates",
@@ -122,6 +126,8 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         languages_supported: ["Arabic", "English", "Hindi"],
         currency: "UAE Dirham",
         currency_symbol: "AED",
+        seoTitle: "Medical Tourism in India for UAE Patients | Indira Super Speciality Hospital",
+        seoDescription: "Top-rated hospital in India for UAE residents. Affordable Orthopaedics, Cardiac Care & Neurosurgery with Arabic-speaking coordinators.",
     },
     {
         name: "Oman",
@@ -137,6 +143,8 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         languages_supported: ["Arabic", "English"],
         currency: "Omani Rial",
         currency_symbol: "OMR",
+        seoTitle: "Best Medical Care for Omani Patients in India | Indira Hospital",
+        seoDescription: "Indira Hospital is a trusted healthcare partner for Omani families. Specialised Urology and Cardiology services with dedicated Arabic translators.",
     },
     {
         name: "Nigeria",
@@ -152,6 +160,8 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         languages_supported: ["English", "Yoruba (limited)"],
         currency: "Nigerian Naira",
         currency_symbol: "NGN",
+        seoTitle: "Affordable Specialist Healthcare in India for Nigerian Patients | Indira Hospital",
+        seoDescription: "Advanced Cancer, Kidney Transplant, and Cardiac Surgery in India for Nigerian patients. High success rates and dedicated international support.",
     },
     {
         name: "Kenya",
@@ -167,6 +177,8 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         languages_supported: ["English", "Swahili (limited)"],
         currency: "Kenyan Shilling",
         currency_symbol: "KES",
+        seoTitle: "World-Class Healthcare in India for Patients from Kenya | Indira Hospital",
+        seoDescription: "Indira Hospital provides high-success rate Cardiac Surgery, IVF, and Oncology for Kenyan patients. Affordable tertiary care with English-speaking staff.",
     },
     {
         name: "United Kingdom",
@@ -182,6 +194,8 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         languages_supported: ["English"],
         currency: "British Pound",
         currency_symbol: "GBP",
+        seoTitle: "Zero Waiting Lists: Medical Surgery in India for UK Patients | Indira Hospital",
+        seoDescription: "Skip NHS waiting lists. Indira Hospital offers 70% cost savings on Knee & Hip Replacements for UK patients in a NABH-accredited facility.",
     },
     {
         name: "United States",
@@ -197,6 +211,8 @@ export const INTERNATIONAL_COUNTRIES: InternationalCountry[] = [
         languages_supported: ["English"],
         currency: "US Dollar",
         currency_symbol: "USD",
+        seoTitle: "High-End Medical Surgery in India for US Patients | Indira Hospital",
+        seoDescription: "Save 80% on complex surgeries. Indira Hospital offers US-standard medical care with high-end technology and no insurance battles for US patients.",
     },
     {
         name: "Sri Lanka",

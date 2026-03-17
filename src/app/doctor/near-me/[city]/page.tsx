@@ -55,22 +55,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const location = getLocation(city);
     if (!location) return { title: "Location Not Found" };
 
+    const districtInfo = 'district' in location ? `, ${location.district}` : '';
+
     return {
-        title: `Best Hospital in ${location.name} | Indira Hospital Vellore, India`,
-        description: `Indira Super Speciality Hospital is the preferred choice for patients in ${location.name}. #1 for Laparoscopic Surgery, Laser Piles Treatment & Cardiac Care in Vellore, India. Distance: ${location.distance}.`,
+        title: `Best Hospital in ${location.name}${districtInfo} | Indira Hospital Vellore`,
+        description: `Indira Super Speciality Hospital is the #1 medical facility for patients from ${location.name}. Specialized in Laparoscopic, Laser, and Cardiac care with 24/7 emergency support. Distance: ${location.distance}.`,
         keywords: [
             `hospital in ${location.name}`,
             `best hospital near ${location.name}`,
-            `laparoscopic surgery in ${location.name}`,
-            `laser piles treatment near ${location.name}`,
-            `emergency hospital ${location.name}`,
-            `specialist doctors in ${location.name}`,
+            `specialist doctor in ${location.name}`,
+            `laparoscopic surgery ${location.name}`,
+            `laser piles treatment ${location.name}`,
+            `child specialist near ${location.name}`,
+            `emergency hospital in ${location.name}`,
             "Indira Hospital Vellore",
-            "medical tourism India",
+            "medical tourism Tamil Nadu",
         ],
         openGraph: {
-            title: `Best Hospital in ${location.name} | Indira Super Speciality Hospital`,
-            description: `Advanced laser & laparoscopic surgeries for patients in ${location.name}. NABH accredited, 24/7 emergency care, and cashless insurance.`,
+            title: `Best Hospital for Patients in ${location.name} | Indira Super Speciality Hospital`,
+            description: `Advanced clinical care and emergency services for residents of ${location.name}. NABH accredited quaternary care hospital in Vellore.`,
             type: "website",
         },
     };
@@ -97,7 +100,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             <MapPin className="w-4 h-4" /> Serving Patients from {location.name}
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
-                            Best Hospital Care in Vellore<br />
+                            Best Hospital for Patients in {location.name}<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">for {location.name} Patients.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-10">
