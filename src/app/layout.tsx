@@ -107,7 +107,7 @@ const localBusinessSchema = {
     }
   ],
   "sameAs": [
-    "https://indirasuperspecialityhospital.com/",
+    "https://www.indirasuperspecialityhospital.com/",
     "https://www.mappls.com/9w6owz",
     "https://www.justdial.com/Vellore/Indira-Superspeciality-Hospital-Gandhi-Nagar-East/9999PX416-X416-220613215915-A1A6_BZDET",
     "https://www.bajajfinservhealth.in/hospitals/vellore/indira-super-speciality-hospital-gandhi-nagar",
