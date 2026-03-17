@@ -11,6 +11,7 @@ import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
 
 import { siteConfig } from "@/config/site"
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
@@ -248,6 +249,13 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                         },
                     })
                 }}
+            />
+            <InternalLinkGrid
+                type="services"
+                title="Other Clinical Services"
+                subtitle="All Diagnostics"
+                limit={12}
+                className="bg-slate-50 dark:bg-slate-900 border-t"
             />
         </main>
     )

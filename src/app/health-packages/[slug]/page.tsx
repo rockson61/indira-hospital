@@ -9,6 +9,7 @@ import type { Metadata } from "next"
 import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
 import { siteConfig } from "@/config/site"
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
@@ -200,6 +201,13 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                         }
                     })
                 }}
+            />
+            <InternalLinkGrid
+                type="services"
+                title="Relevant Medical Services"
+                subtitle="Health & Wellness"
+                limit={12}
+                className="bg-white dark:bg-slate-900 border-t border-slate-100"
             />
         </main>
     )

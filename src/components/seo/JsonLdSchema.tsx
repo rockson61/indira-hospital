@@ -1,9 +1,18 @@
 import { siteConfig } from "@/config/site";
 
-type SchemaType = "hospital" | "itemList" | "physician" | "breadcrumb";
+type SchemaType = "hospital" | "itemList" | "physician" | "breadcrumb" | "medicalClinic";
 
 interface HospitalSchemaProps {
     type: "hospital";
+}
+
+interface MedicalClinicSchemaProps {
+    type: "medicalClinic";
+    name: string;
+    description: string;
+    address: string;
+    city: string;
+    areaServed: string;
 }
 
 interface ItemListSchemaProps {
@@ -33,7 +42,7 @@ interface MedicalProcedureSchemaProps {
     preparation?: string;
 }
 
-type JsonLdSchemaProps = HospitalSchemaProps | ItemListSchemaProps | PhysicianSchemaProps | BreadcrumbSchemaProps | MedicalProcedureSchemaProps;
+type JsonLdSchemaProps = HospitalSchemaProps | MedicalClinicSchemaProps | ItemListSchemaProps | PhysicianSchemaProps | BreadcrumbSchemaProps | MedicalProcedureSchemaProps;
 
 export function JsonLdSchema(props: JsonLdSchemaProps) {
     let schema: Record<string, any>;
@@ -73,6 +82,31 @@ export function JsonLdSchema(props: JsonLdSchemaProps) {
                 dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
                 opens: "00:00",
                 closes: "23:59",
+            },
+        };
+    } else if (props.type === "medicalClinic") {
+        schema = {
+            "@context": "https://schema.org",
+            "@type": ["MedicalClinic", "Hospital"],
+            name: `${siteConfig.name} - Serving ${props.city}`,
+            description: props.description,
+            url: siteConfig.url,
+            telephone: siteConfig.contact.phone,
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: props.address,
+                addressLocality: props.city,
+                addressRegion: "Tamil Nadu",
+                addressCountry: "IN",
+            },
+            areaServed: {
+                "@type": "AdministrativeArea",
+                name: props.areaServed,
+            },
+            parentOrganization: {
+                "@type": "Hospital",
+                name: siteConfig.name,
+                url: siteConfig.url,
             },
         };
     } else if (props.type === "itemList") {

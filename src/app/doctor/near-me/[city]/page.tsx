@@ -20,6 +20,7 @@ import EntityReviews from "@/components/trust/EntityReviews";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 
 import { siteConfig } from "@/config/site";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const dynamicParams = true;
 
@@ -468,6 +469,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <HealthLibraryCard />
 
             {/* UNIFIED ENTITY QUERIES */}
+            <JsonLdSchema
+                type="medicalClinic"
+                name={`Indira Hospital - ${location.name}`}
+                city={location.name}
+                address={location.district}
+                areaServed={location.name}
+                description={`Indira Super Speciality Hospital provides advanced clinical care for patients from ${location.name}, ${location.district}. Nearest high-end center for Laparoscopic and Laser surgeries.`}
+            />
             <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
             <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={0} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />

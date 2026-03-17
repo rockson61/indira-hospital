@@ -19,6 +19,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 
 
@@ -209,22 +210,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
     const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": isTreatmentPage ? "MedicalProcedure" : (service.procedure_type || "MedicalProcedure"),
-        name: service.title,
-        url: `${siteConfig.url}/doctor/near-me/treat/${slug.join('/')}`,
-        description: service.seo_description || service.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || service.short_description,
-        provider: {
-            "@type": "Hospital",
-            name: siteConfig.name,
-            url: siteConfig.url,
-        },
-    };
-
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            <JsonLdSchema
+                type="medicalProcedure"
+                name={service.title}
+                description={service.seo_description || service.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || service.short_description}
+                url={`/doctor/near-me/treat/${slug.join('/')}`}
+            />
 
             {/* ========== HERO ========== */}
             <section className="relative bg-gradient-to-br from-fuchsia-900 via-fuchsia-700 to-fuchsia-700 text-white overflow-hidden">
