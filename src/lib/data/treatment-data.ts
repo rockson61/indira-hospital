@@ -459,10 +459,10 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         slug: "laparoscopic-hysterectomy-guide",
         parentServiceSlug: "obstetrics-gynaecology",
         title: "Laparoscopic Hysterectomy",
-        shortDescription: "Minimally invasive uterus removal by expert gynecologists.",
-        fullDescription: "When surgical removal of the uterus is medically required, our **Laparoscopic Hysterectomy** offers a modern alternative to traditional open surgery. This advanced approach treats fibroids, heavy bleeding, and prolapse with unparalleled precision and comfort.",
+        shortDescription: "Minimally invasive uterus removal by expert gynecologists with rapid recovery.",
+        fullDescription: "When surgical removal of the uterus is medically required, our **Laparoscopic Hysterectomy** (Total Laparoscopic Hysterectomy or TLH) offers a modern alternative to traditional open surgery. Using high-definition cameras and specialized instruments, the uterus is removed through tiny abdominal incisions. This approach treats fibroids, abnormal bleeding, and endometriosis with unparalleled precision while ensuring minimal scarring and a much faster return to daily activities.",
         features: ["Total Laparoscopic Approach (TLH)", "Vaginal Hysterectomy Options", "Specialized Gynae-Surgeons", "Minimal Blood Loss"],
-        benefits: ["No Large Abdominal Incisions", "Shorter Hospitalization", "Rapid Return to Daily Life", "Reduced Post-Surgical Adhesions"]
+        benefits: ["No Large Abdominal Incisions", "Shorter Hospitalization (1-2 days)", "Rapid Return to Daily Life", "Reduced Post-Surgical Adhesions"]
     },
     {
         id: "t-106",
@@ -1408,12 +1408,12 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-360",
         slug: "fistula-laser-treatment",
-        parentServiceSlug: "gastroenterology",
-        title: "fistula laser treatment",
-        shortDescription: "Comprehensive care and treatment for fistula laser treatment....",
-        fullDescription: "Comprehensive care and treatment for fistula laser treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        parentServiceSlug: "general-surgery",
+        title: "Laser Fistula Surgery (FiLaC)",
+        shortDescription: "Advanced laser closure (FiLaC) for anal fistula, preserving sphincter function.",
+        fullDescription: "Anal fistula is a complex condition that traditionally required extensive surgery. We specialize in **FiLaC (Fistula-tract Laser Closure)**, a minimally invasive technique where laser energy is used to effectively seal the fistula tract without cutting the sphincter muscles. This ensures thorough healing while drastically reducing the risk of incontinence and post-operative pain.",
+        features: ["Anal Sphincter Preservation", "FiLaC Laser Technology", "VAAFT Video Assisted Tech", "High Success Rate"],
+        benefits: ["Minimizes Risk of Incontinence", "Faster Wound Healing", "Shorter Hospital Stay", "Less Post-operative Pain"]
     },
     {
         id: "t-361",
@@ -2484,6 +2484,56 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         fullDescription: "Comprehensive care and treatment for zirconia vs titanium implants.",
         features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
         benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+    },
+    {
+        id: "t-501",
+        slug: "laser-piles-treatment",
+        parentServiceSlug: "general-surgery",
+        title: "Laser Piles Treatment",
+        shortDescription: "Advanced, painless laser treatment for Hemorrhoids (Piles) with same-day discharge.",
+        fullDescription: "Experience the most advanced **Laser Piles Treatment** in Vellore. Using precision diode lasers, we treat hemorrhoids without cuts, stitches, or significant bleeding. This minimally invasive approach ensures rapid healing and allows most patients to return to work within 48 hours, with practically no post-operative discomfort.",
+        features: ["No Cuts or Stitches", "USFDA Approved Laser Tech", "30-Minute Procedure", "Same-Day Discharge"],
+        benefits: ["Virtually Painless Recovery", "Minimal to No Bleeding", "Get Back to Work in 48 Hours", "Very Low Recurrence Rate"]
+    },
+    {
+        id: "t-502",
+        slug: "anal-fissure-treatment",
+        parentServiceSlug: "general-surgery",
+        title: "Anal Fissure Treatment",
+        shortDescription: "Specialized laser surgery and medical management for chronic anal fissures.",
+        fullDescription: "An **Anal Fissure** can be incredibly painful, but modern treatment offers rapid relief. Our specialists provide comprehensive care ranging from specialized medical management to minimally invasive laser sphincterotomy. Laser treatment provides immediate relief from pain and promotes faster healing of the fissure without the discomfort of traditional surgical methods.",
+        features: ["Laser Lateral Sphincterotomy", "Minimal Tissue Trauma", "Immediate Pain Relief", "Local/Regional Anesthesia"],
+        benefits: ["Faster Healing", "Minimal Post-Op Discomfort", "Early Return to Activity", "High Success Rate"]
+    },
+    {
+        id: "t-503",
+        slug: "pilonidal-sinus",
+        parentServiceSlug: "general-surgery",
+        title: "Pilonidal Sinus",
+        shortDescription: "Modern laser treatment (SiLaC) and EPSiT for pilonidal sinus, ensuring minimal recurrence.",
+        fullDescription: "Pilonidal sinus treatment has evolved. We offer **SiLaC (Sinus Laser Closure)** and **EPSiT (Endoscopic Pilonidal Sinus Treatment)**. These advanced techniques allow us to thoroughly clean and close the sinus tract through tiny punctures, avoiding the large, painful, and slow-healing wounds associated with traditional open surgery.",
+        features: ["SiLaC Laser Technology", "EPSiT Endoscopic Access", "No Large Wounds", "Reduced Recurrence Rate"],
+        benefits: ["Painless Recovery", "Faster Wound Closure", "Minimal Scarring", "No Long-Term Dressings"]
+    },
+    {
+        id: "t-504",
+        slug: "laparoscopic-gallbladder-removal",
+        parentServiceSlug: "general-surgery",
+        title: "Laparoscopic Gallbladder Removal",
+        shortDescription: "Minimally invasive keyhole surgery for gallstones and gallbladder inflammation.",
+        fullDescription: "Laparoscopic Cholecystectomy is the gold standard for **Gallbladder Removal**. Using high-definition laparoscopes and precision instruments, our surgeons remove the gallbladder through 3-4 tiny keyhole incisions. This approach ensures safety, minimal pain, and a rapid recovery, allowing most patients to be discharged within 24 hours.",
+        features: ["HD Laparoscopic Imaging", "Tiny Keyhole Punctures", "Advanced Harmonic Scalpel", "Day-Care Surgery Option"],
+        benefits: ["Minimal Scarring", "Reduced Infection Risk", "Fast Return to Work", "Relief from Gallstone Pain"]
+    },
+    {
+        id: "t-505",
+        slug: "laparoscopic-appendix-surgery",
+        parentServiceSlug: "general-surgery",
+        title: "Laparoscopic Appendix Surgery",
+        shortDescription: "Emergency and elective keyhole surgery for appendicitis with rapid recovery.",
+        fullDescription: "Appendicitis requires urgent surgical intervention. Our **Laparoscopic Appendix Surgery** (Appendectomy) allows for the safe removal of the appendix through small keyhole incisions. This minimally invasive approach significantly reduces the risk of wound infections, minimizes post-operative pain, and facilitates a much faster return to daily activities compared to traditional open surgery.",
+        features: ["24/7 Emergency Readiness", "Laparoscopic (Keyhole) Approach", "Advanced Infection Control", "Rapid Recovery Protocol"],
+        benefits: ["Small Cosmetic Scars", "Lower Infection Risk", "Reduced Post-Op Pain", "Short Hospital Stay"]
     }
 ];
 
