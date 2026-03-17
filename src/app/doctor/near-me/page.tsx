@@ -132,8 +132,8 @@ export default async function LocationsPage() {
                             <MapPin className="w-4 h-4" /> Serving All of Tamil Nadu
                         </span>
                         <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
-                            The Best Hospital Near You: <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">{locations.length}+ Locations Served.</span>
+                            Best Hospital in Vellore: <br className="hidden sm:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">Serving {locations.length}+ Cities.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
                             Elite healthcare shouldn&apos;t require a long journey. Indira Super Speciality Hospital brings advanced laparoscopic, laser, and emergency treatments directly to {districtsServed} districts across Tamil Nadu.

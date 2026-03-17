@@ -82,7 +82,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Check for Treatment
     const treatment = getTreatmentBySlug(lastSlug);
     if (treatment) {
-        const title = `${treatment.title} Treatment Cost, Recovery & Experts in Vellore, Tamil Nadu | Indira Hospital`;
+        const title = `Best ${treatment.title} in Vellore, India | Cost & Recovery | Indira Hospital`;
         const description = `${treatment.shortDescription} Leading ${treatment.title} specialists at Indira Hospital, Vellore. Advanced laparoscopic & laser options with same-day discharge in India.`;
         return {
             title,
@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
                 `${treatment.title} recovery time`,
                 "Tamil Nadu",
                 "India",
-                "best surgeon for ${treatment.title}",
+                `best surgeon for ${treatment.title}`,
                 "Indira Hospital Vellore",
                 "laser surgery India",
                 "laparoscopy Tamil Nadu",
