@@ -74,13 +74,13 @@ export default function HealthLibraryClient() {
                             <LayoutGrid className="w-12 h-12" />
                         </div>
                         <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[0.95] mb-8">
-                            Health <br className="sm:hidden" />
+                            Advanced <br className="sm:hidden" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0086d6] to-cyan-300">
-                                Library.
+                                Treatments.
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-12">
-                            Explore comprehensive medical resources, decode your symptoms, and discover advanced treatments and procedures. Information you can trust, care you can rely on.
+                            Explore world-class surgical procedures, decode your symptoms, and access comprehensive medical guides. Expert care from India's leading specialists.
                         </p>
                     </motion.div>
                 </div>

@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/doctor',
+        destination: '/doctors',
+        permanent: true,
+      },
+      {
         source: '/treatments/piles',
         destination: '/doctor/near-me/treat/general-surgery/laser-piles-treatment',
         permanent: true,
