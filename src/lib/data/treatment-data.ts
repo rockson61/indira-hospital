@@ -966,11 +966,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-302",
         slug: "acute-kidney-injury-care",
         parentServiceSlug: "nephrology",
-        title: "acute kidney injury care",
-        shortDescription: "Comprehensive care and treatment for acute kidney injury care....",
-        fullDescription: "Comprehensive care and treatment for acute kidney injury care.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Acute Kidney Injury (AKI)",
+        shortDescription: "Rapid diagnostic and critical care for sudden loss of kidney function.",
+        fullDescription: "Acute Kidney Injury (AKI) requires immediate clinical intervention. Our nephrology team specializes in identifying the cause—whether pre-renal (blood flow), intrinsic (tissue), or post-renal (obstruction)—and implementing advanced fluid management and emergency dialysis (CRRT) to prevent permanent kidney damage.",
+        features: ["Emergency CRRT Capabilities","Advanced Fluid Monitoring","Urine Output Auditing","Electrolyte Correction Tech"],
+        benefits: ["Prevents Chronic Failure","Restores Fluid Balance","Rapid Functional Recovery","Critical Care Integration"]
     },
     {
         id: "t-303",
@@ -996,11 +996,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-305",
         slug: "alzheimers-dementia-care",
         parentServiceSlug: "neurology",
-        title: "alzheimers dementia care",
-        shortDescription: "Comprehensive care and treatment for alzheimers dementia care....",
-        fullDescription: "Comprehensive care and treatment for alzheimers dementia care.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Dementia & Alzheimer's (Clinical)",
+        shortDescription: "Compassionate, high-intensity care for memory loss and cognitive decline.",
+        fullDescription: "Alzheimer's and related dementias require more than just medication—they need a structured environment and specialist neurological support. Our dementia care unit provides precise neuro-cognitive profiling, medication management (cholinesterase inhibitors), and caregiver training to maintain dignity and slow cognitive progression.",
+        features: ["Cognitive Profiling Suite","3T Brain MRI Imaging","Medication Management Lab","Caregiver Support Training"],
+        benefits: ["Slows Memory Decline","Manages Behavioral Symptoms","Improves Patient Vigor","Peace of Mind for Families"]
     },
     {
         id: "t-306",
@@ -1026,21 +1026,21 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-310",
         slug: "bell-palsy-recovery",
         parentServiceSlug: "neurology",
-        title: "bell palsy recovery",
-        shortDescription: "Comprehensive care and treatment for bell palsy recovery....",
-        fullDescription: "Comprehensive care and treatment for bell palsy recovery.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Bell's Palsy Recovery",
+        shortDescription: "Rapid diagnostic and steroid therapy for sudden facial paralysis.",
+        fullDescription: "Bell's Palsy is a sudden weakness in the muscles on one half of the face. Our neurology team provides immediate intervention using high-dose corticosteroids and antiviral therapies to reduce nerve inflammation, coupled with specialized facial physiotherapy to ensure complete functional recovery and minimize long-term facial drooping.",
+        features: ["Nerve Conduction Mapping","Facial Physio Protocols","Advanced Steroid Therapy","Rapid Diagnostic Audit"],
+        benefits: ["Faster Functional Regain","Prevents Muscle Atrophy","Full Aesthetic Recovery","Reduces Nerve Inflammation"]
     },
     {
         id: "t-311",
         slug: "bladder-cancer-treatment-options",
         parentServiceSlug: "nephrology",
-        title: "bladder cancer treatment options",
-        shortDescription: "Comprehensive care and treatment for bladder cancer treatment options....",
-        fullDescription: "Comprehensive care and treatment for bladder cancer treatment options.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Bladder Cancer Overview",
+        shortDescription: "Diagnostic and therapeutic strategies for urothelial carcinoma.",
+        fullDescription: "Bladder cancer detection involves advanced cystoscopy and molecular testing. Our treatment protocols include Transurethral Resection (TURBT), intravesical immunotherapy (BCG), and radical surgical options for muscle-invasive cases, ensuring a focus on both cancer clearance and functional preservation.",
+        features: ["HD Blue Light Cystoscopy","TURBT Surgical Precision","Intravesical BCG Therapy","Tumor Molecular Profiling"],
+        benefits: ["Early Stage Detection","Preserves Bladder Function","High Remission Rates","Advanced Uro-Oncology Support"]
     },
     {
         id: "t-312",
@@ -1126,21 +1126,21 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-320",
         slug: "brain-tumor-surgery-guide",
         parentServiceSlug: "neurology",
-        title: "brain tumor surgery guide",
-        shortDescription: "Comprehensive care and treatment for brain tumor surgery guide....",
-        fullDescription: "Comprehensive care and treatment for brain tumor surgery guide.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Brain Tumor Microsurgery",
+        shortDescription: "Precision neuro-oncology for benign and malignant brain tumors.",
+        fullDescription: "Tumors of the brain and spine require unparalleled surgical precision. Our neuro-oncology unit utilizes high-definition microscopes, neuronavigation systems, and intraoperative monitoring to safely excise tumors while preserving critical neurological functions. We provide end-to-end care from biopsy to advanced recovery.",
+        features: ["HD Neuronavigation Systems","Intraoperative Monitoring","Micro-Surgical Suites","Neuro-Oncology Specialists"],
+        benefits: ["Maximizes Tumor Clearance","Preserves Motor Functions","Minimal Surgical Trauma","Complete Life Support Back-up"]
     },
     {
         id: "t-322",
         slug: "breast-lump-removal",
         parentServiceSlug: "general-surgery",
-        title: "breast lump removal",
-        shortDescription: "Comprehensive care and treatment for breast lump removal....",
-        fullDescription: "Comprehensive care and treatment for breast lump removal.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Breast Lump Removal",
+        shortDescription: "Surgical excision (Lumpectomy) for benign or suspicious lumps.",
+        fullDescription: "While many breast lumps are non-cancerous (benign), they often need removal for biopsy or comfort. Our general surgeons provide precise lumpectomies using aesthetic incision techniques to minimize visible scarring while ensuring the entire lump is removed for definitive pathological analysis.",
+        features: ["Aesthetic Incision Lab","Precision Lumpectomy","Rapid Pathology Link","Minimally Invasive Entry"],
+        benefits: ["Definitive Diagnosis Path","Instantly Relieves Anxiety","Superior Cosmetic Results","Quick Outpatient Recovery"]
     },
     {
         id: "t-323",
@@ -1156,11 +1156,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-324",
         slug: "cancer-pain-management",
         parentServiceSlug: "oncology",
-        title: "cancer pain management",
-        shortDescription: "Comprehensive care and treatment for cancer pain management....",
-        fullDescription: "Comprehensive care and treatment for cancer pain management.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Cancer Pain Management",
+        shortDescription: "Advanced palliative care and multi-modal pain relief strategies.",
+        fullDescription: "Chronic pain is a significant challenge in oncology. Our pain management team utilizes a WHO-compliant analgesic ladder, including specialized nerve blocks, PCA pumps, and pharmaceutical interventions, to ensure maximum comfort and improved quality of life for patients undergoing active treatment or palliative care.",
+        features: ["WHO-Ladder Analgesia","Specialized Nerve Blocks","Multi-Modal Pain Protocols","Palliative Support Team"],
+        benefits: ["Significant Pain Reduction","Improves Sleep & Appetite","Enhances Patient Comfort","Dignified Care Approach"]
     },
     {
         id: "t-325",
@@ -1186,21 +1186,21 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-327",
         slug: "cervical-cancer-screening-pap",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "cervical cancer screening pap",
-        shortDescription: "Comprehensive care and treatment for cervical cancer screening pap....",
-        fullDescription: "Comprehensive care and treatment for cervical cancer screening pap.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Cervical Cancer Screening",
+        shortDescription: "Pap smear and HPV testing for early detection and prevention.",
+        fullDescription: "Cervical cancer is highly preventable with regular screening. We offer advanced liquid-based cytology (Pap Smear) and high-risk HPV DNA testing to identify precancerous changes early. Our specialists provide clear guidance on results and follow-up colposcopy if needed for definitive diagnosis.",
+        features: ["Liquid-Based Cytology","HPV DNA Typing Lab","Colposcopy Suites","Rapid Result Audits"],
+        benefits: ["Prevents Cancer Progress","Early Pre-Cancer Discovery","Safe and Routine Procedure","Guided Prevention Path"]
     },
     {
         id: "t-328",
         slug: "cervical-cancer-vaccines",
         parentServiceSlug: "oncology",
-        title: "cervical cancer vaccines",
-        shortDescription: "Comprehensive care and treatment for cervical cancer vaccines....",
-        fullDescription: "Comprehensive care and treatment for cervical cancer vaccines.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "HPV Vaccination (Cervical)",
+        shortDescription: "Preventative immunization against cancer-causing HPV strains.",
+        fullDescription: "The HPV vaccine is a breakthrough in cancer prevention. Consisting of a course of injections, it protects against the most common types of Human Papillomavirus that cause cervical, vaginal, and vulvar cancers. We provide screening and vaccination for girls and young women in a safe clinical environment.",
+        features: ["WHO-Approved Vaccines","Pain-Free Injection Tech","Adolescent Health Suite","Immunization Tracking"],
+        benefits: ["Lifelong Cancer Shield","High Prevention Efficacy","Safe Clinical Standards","Invests in Future Health"]
     },
     {
         id: "t-330",
@@ -1216,31 +1216,31 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-332",
         slug: "circumcision-surgery-guide",
         parentServiceSlug: "urology",
-        title: "circumcision surgery guide",
-        shortDescription: "Comprehensive care and treatment for circumcision surgery guide....",
-        fullDescription: "Comprehensive care and treatment for circumcision surgery guide.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "ZSR Stapler Circumcision",
+        shortDescription: "Modern, stitch-less circumcision for phimosis and aesthetics.",
+        fullDescription: "We provide the latest in urological technology with ZSR Stapler Circumcision. Unlike traditional surgery, this method is stitch-free, virtually bloodless, and offers a perfect cosmetic finish. It is the preferred solution for both medical (Phimosis, Balanitis) and aesthetic requirements with minimal downtime.",
+        features: ["ZSR Stitchless Tech","Bloodless Procedure Flow","Perfect Cosmetic Result","15-Minute Surgical Time"],
+        benefits: ["Superior Aesthetic Finish","Virtually Painless Post-Op","No Stitch Removal Needed","Same-Day Work Return"]
     },
     {
         id: "t-333",
         slug: "colon-cancer-treatment",
         parentServiceSlug: "oncology",
-        title: "colon cancer treatment",
-        shortDescription: "Comprehensive care and treatment for colon cancer treatment....",
-        fullDescription: "Comprehensive care and treatment for colon cancer treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Colon Cancer Surgery",
+        shortDescription: "Advanced resection and chemotherapy for colorectal malignancies.",
+        fullDescription: "Colorectal cancer requires a combination of surgery and systemic therapy. Our gastro-oncologists perform precise tumor resections—including laparoscopic colectomies—followed by targeted chemotherapy protocols. We focus on preserving bowel function and achieving the highest possible cure rates through multidisciplinary care.",
+        features: ["Laparoscopic Colectomy","Precision Tumor Staging","Advanced Chemotherapy Lab","Stoma Management Support"],
+        benefits: ["Maximizes Cure Potential","Preserves Bowel Integrity","Faster Surgical Recovery","Targeted Cancer Clearance"]
     },
     {
         id: "t-335",
         slug: "colposcopy-procedure-details",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "colposcopy procedure details",
-        shortDescription: "Comprehensive care and treatment for colposcopy procedure details....",
-        fullDescription: "Comprehensive care and treatment for colposcopy procedure details.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Diagnostic Colposcopy",
+        shortDescription: "Detailed cervical examination following an abnormal Pap smear.",
+        fullDescription: "A colposcopy is a more detailed look at the cervix using a specialized magnifying instrument. If your screening results were atypical, our gynecologists use colposcopy to identify potential precancerous areas. We can perform a micro-biopsy during the same session if any suspicious cells are detected.",
+        features: ["High-Mag Colposcope","Digital Imaging Capture","In-Office Micro-Biopsy","Guided Prevention Audit"],
+        benefits: ["Pinpoint Diagnostic Focus","Prevents Cancer Progress","Quick 15-Minute Procedure","Clear Guided Next Steps"]
     },
     {
         id: "t-336",
@@ -1346,21 +1346,21 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-347",
         slug: "diabetic-foot-ulcer-care",
         parentServiceSlug: "general-surgery",
-        title: "diabetic foot ulcer care",
-        shortDescription: "Comprehensive care and treatment for diabetic foot ulcer care....",
-        fullDescription: "Comprehensive care and treatment for diabetic foot ulcer care.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Diabetic Foot Salvage",
+        shortDescription: "Advanced wound care and offloading for chronic ulcers.",
+        fullDescription: "Diabetic foot ulcers require aggressive and multidisciplinary management to prevent amputation. Our 'Foot Salvage' program includes specialized debridement, vacuum-assisted closure (VAC) therapy, and customized offloading. We focus on improving vascular flow and preventing infection to facilitate rapid healing.",
+        features: ["VAC Therapy Modules","Vascular Flow Doppler","Specialized Debridement","Total Contact Casting"],
+        benefits: ["Prevents Amputation Risk","Heals Non-Closing Wounds","Reduces Infection Spread","Restores Safe Mobility"]
     },
     {
         id: "t-348",
         slug: "diabetic-nephropathy-prevention",
         parentServiceSlug: "nephrology",
-        title: "diabetic nephropathy prevention",
-        shortDescription: "Comprehensive care and treatment for diabetic nephropathy prevention....",
-        fullDescription: "Comprehensive care and treatment for diabetic nephropathy prevention.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Diabetic Kidney Prevention",
+        shortDescription: "Proactive screening and medical strategies to protect diabetic kidneys.",
+        fullDescription: "Diabetes is the leading cause of renal failure. Our prevention program focuses on early microalbuminuria detection, blood pressure optimization using ACE/ARBs, and advanced SGLT2 inhibitor therapy to shield the kidneys from glucose-related damage and halt the progression of nephropathy.",
+        features: ["Microalbuminuria Screening","Precision BP Management","SGLT2 Shielding Therapy","Renal-Diabetic Dietotics"],
+        benefits: ["Prevents Dialysis Need","Slows Filtration Decline","Protects Heart Health","Early Detection Security"]
     },
     {
         id: "t-350",
@@ -1376,61 +1376,61 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-351",
         slug: "ectopic-pregnancy-treatment",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "ectopic pregnancy treatment",
-        shortDescription: "Comprehensive care and treatment for ectopic pregnancy treatment....",
-        fullDescription: "Comprehensive care and treatment for ectopic pregnancy treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Ectopic Pregnancy Care",
+        shortDescription: "Emergency medical and surgical management of tubal pregnancies.",
+        fullDescription: "An ectopic pregnancy is a life-threatening condition where the fetus grows outside the uterus. We provide rapid diagnostic ultrasound and beta-hCG monitoring, followed by emergency laparoscopic surgery or medical management (Methotrexate) to safely resolve the pregnancy and preserve future fertility.",
+        features: ["Emergency USG Diagnostics","Laparoscopic Salpingectomy","Methotrexate Protocols","Fertility Preservation Focus"],
+        benefits: ["Saves Maternal Health","Prevents Internal Bleeding","Rapid Emergency Response","Emotional Support Care"]
     },
     {
         id: "t-352",
         slug: "eeg-test-procedure",
         parentServiceSlug: "neurology",
-        title: "eeg test procedure",
-        shortDescription: "Comprehensive care and treatment for eeg test procedure....",
-        fullDescription: "Comprehensive care and treatment for eeg test procedure.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "EEG (Brain Wave) Study",
+        shortDescription: "Diagnostic brain wave monitoring to detect seizures and epilepsy.",
+        fullDescription: "An Electroencephalogram (EEG) is a non-invasive test that records the electrical activity of your brain. Our advanced digital EEG systems can capture even subtle abnormal activity, aiding in the diagnosis of epilepsy, sleep disorders, and other encephalopathies. We offer both standard and long-term video EEG monitoring.",
+        features: ["Digital Waveform Capture","Video EEG Synchronization","Specialist Neurologist Audit","Comfortable Testing Suite"],
+        benefits: ["Precise Seizure Discovery","Identifies Epilepsy Type","Non-Invasive and Safe","Accurate Diagnostic Roadmap"]
     },
     {
         id: "t-353",
         slug: "endometriosis-pain-management",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "endometriosis pain management",
-        shortDescription: "Comprehensive care and treatment for endometriosis pain management....",
-        fullDescription: "Comprehensive care and treatment for endometriosis pain management.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Endometriosis Care",
+        shortDescription: "Advanced laparoscopic excision and hormonal pain management.",
+        fullDescription: "Endometriosis is a complex condition where uterine-like tissue grows elsewhere. We provide 'Gold Standard' laparoscopic excision of lesions, rather than just ablation, to ensure the most durable pain relief. Our team also offers advanced hormonal therapies to manage symptoms and preserve your fertility options.",
+        features: ["Cold-Excision Laparoscopy","Expert Pelvic Mapping","Hormonal Balance Suite","Fertility Preservation Lab"],
+        benefits: ["Resolves Chronic Pain","Improves Fertility Path","Reduces Cyst Recurrence","Holistic Quality of Life"]
     },
     {
         id: "t-356",
         slug: "erectile-dysfunction-treatment",
         parentServiceSlug: "nephrology",
-        title: "erectile dysfunction treatment",
-        shortDescription: "Comprehensive care and treatment for erectile dysfunction treatment....",
-        fullDescription: "Comprehensive care and treatment for erectile dysfunction treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Erectile Dysfunction (Urological)",
+        shortDescription: "Clinical diagnosis and treatment for male sexual health concerns.",
+        fullDescription: "Erectile dysfunction (ED) is often linked to vascular health or chronic conditions like diabetes and kidney disease. We offer a discreet clinical environment to diagnose the root cause—whether hormonal, neurological, or vascular—and provide effective medical and surgical (penile implant) solutions.",
+        features: ["Hormonal Profiling Suite","Penile Doppler Imaging","Medical Therapy Protocols","Discrete Specialist Care"],
+        benefits: ["Restores Sexual Confidence","Identifies Vascular Risks","Personalized Treatment Plan","Confidential Clinical Setting"]
     },
     {
         id: "t-358",
         slug: "fibroid-removal-surgery",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "fibroid removal surgery",
-        shortDescription: "Comprehensive care and treatment for fibroid removal surgery....",
-        fullDescription: "Comprehensive care and treatment for fibroid removal surgery.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Fibroid Removal (Myomectomy)",
+        shortDescription: "Surgical excision of uterine fibroids to restore health and fertility.",
+        fullDescription: "Uterine fibroids can cause heavy bleeding and pain. Our surgical team specializes in both open and minimally invasive (Laparoscopic) myomectomies to remove fibroids while keeping the uterus intact. This is the preferred solution for women who wish to preserve their fertility and resolve chronic symptoms.",
+        features: ["Laparoscopic Myomectomy","Precision Uterine Suture","Minimally Invasive Entry","Post-Op Recovery Support"],
+        benefits: ["Stops Heavy Bleeding","Preserves Fertility Paths","Reduces Pelvic Pressure","Faster Return to Work"]
     },
     {
         id: "t-359",
         slug: "fissure-surgery-recovery",
         parentServiceSlug: "general-surgery",
-        title: "fissure surgery recovery",
-        shortDescription: "Comprehensive care and treatment for fissure surgery recovery....",
-        fullDescription: "Comprehensive care and treatment for fissure surgery recovery.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Laser Fissure Treatment",
+        shortDescription: "Painless laser surgery for chronic anal fissures.",
+        fullDescription: "Anal fissures can cause severe pain during bowel movements. We offer advanced Laser Sphincterotomy (LHP) which is a stitch-less, 15-minute procedure. Unlike traditional surgery, there is no cutting of the muscle and no large wounds, ensuring an almost painless recovery and immediate relief from chronic symptoms.",
+        features: ["Advanced LHP Laser","No-Cut Surgical Flow","15-Minute Procedure Time","Painless Post-Op Phase"],
+        benefits: ["Instant Pain Relief","No Stitches Required","Same-Day Work Return","Zero Risk of Incontinence"]
     },
     {
         id: "t-360",
@@ -1446,11 +1446,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-361",
         slug: "fluid-restriction-guidelines",
         parentServiceSlug: "nephrology",
-        title: "fluid restriction guidelines",
-        shortDescription: "Comprehensive care and treatment for fluid restriction guidelines....",
-        fullDescription: "Comprehensive care and treatment for fluid restriction guidelines.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Fluid Management Guide",
+        shortDescription: "Clinical daily fluid limits for patients on dialysis or with advanced CKD.",
+        fullDescription: "For patients with end-stage renal disease, managing fluid intake is critical to prevent pulmonary edema and heart failure. We provide personalized 'pints-per-day' guidelines, low-sodium dietary strategies, and weight-tracking protocols to ensure you stay in a safe fluid balance between dialysis sessions.",
+        features: ["Daily Intake Mapping","Sodium Retention Audit","Weight Gain Tracking","Clinical Edema Screening"],
+        benefits: ["Prevents Heart Strain","Reduces Breathing Issues","Improves Dialysis Efficacy","Ensures Patient Safety"]
     },
     {
         id: "t-364",
@@ -1476,11 +1476,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-366",
         slug: "glomerulonephritis-treatment",
         parentServiceSlug: "nephrology",
-        title: "glomerulonephritis treatment",
-        shortDescription: "Comprehensive care and treatment for glomerulonephritis treatment....",
-        fullDescription: "Comprehensive care and treatment for glomerulonephritis treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Glomerulonephritis Care",
+        shortDescription: "Advanced immunomodulation for inflammation of the kidney filters.",
+        fullDescription: "Inflammation of the glomeruli (Glomerulonephritis) can lead to rapid kidney failure. We use kidney biopsies to identify the specific type—IgA, Membranous, or Lupus Nephritis—and apply targeted immunotherapy, steroids, and ACE inhibitors to stop protein leakage and preserve filtration function.",
+        features: ["Biopsy-Guided Diagnosis","Advanced Immunotherapy","Proteinuria Tracking","Auto-Immune Screening"],
+        benefits: ["Prevents Renal Progress","Stops Protein Leakage","Reduces Body Swelling","Customized Clinical Protocols"]
     },
     {
         id: "t-367",
@@ -1556,11 +1556,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-374",
         slug: "head-and-neck-cancer-care",
         parentServiceSlug: "oncology",
-        title: "head and neck cancer care",
-        shortDescription: "Comprehensive care and treatment for head and neck cancer care....",
-        fullDescription: "Comprehensive care and treatment for head and neck cancer care.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Head & Neck Oncology",
+        shortDescription: "Oral, throat, and thyroid cancer management.",
+        fullDescription: "Head and neck cancers affect critical functions like speech, swallowing, and appearance. Our multidisciplinary team provides advanced surgical resections, reconstructive micro-surgery, and precision radiation therapy. We focus on eradicating the cancer while maximizing functional and aesthetic outcomes for every patient.",
+        features: ["Micro-Vascular Reconstruction","Precision Radiation (IMRT)","Speech Therapy Modules","Swallowing Rehab Support"],
+        benefits: ["Preserves Speech & Swallow","High Reconstruction Success","Dedicated Support Team","Holistic Recovery Path"]
     },
     {
         id: "t-376",
@@ -1596,11 +1596,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-379",
         slug: "hemodialysis-vs-peritoneal-dialysis",
         parentServiceSlug: "nephrology",
-        title: "hemodialysis vs peritoneal dialysis",
-        shortDescription: "Comprehensive care and treatment for hemodialysis vs peritoneal dialysis....",
-        fullDescription: "Comprehensive care and treatment for hemodialysis vs peritoneal dialysis.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Hemodialysis vs PD Options",
+        shortDescription: "Comparing blood-based and abdominal-based dialysis for better life quality.",
+        fullDescription: "Choosing between Hemodialysis (HD) and Peritoneal Dialysis (PD) depends on your lifestyle and medical history. While HD offers high-efficiency filtration in our 24/7 center, PD provides greater mobility for home-based care. We help you choose the modality that offers the best quality of life and clinical outcomes.",
+        features: ["HD Efficiency Audit","PD Training Program","Vascular Access Mapping","Home Mobility Evaluation"],
+        benefits: ["Tailored Lifestyle Fit","Ensures Optimal Clearance","Informed Modality Choice","Continuous Clinical Support"]
     },
     {
         id: "t-380",
@@ -1616,11 +1616,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-381",
         slug: "high-creatinine-levels-causes",
         parentServiceSlug: "nephrology",
-        title: "high creatinine levels causes",
-        shortDescription: "Comprehensive care and treatment for high creatinine levels causes....",
-        fullDescription: "Comprehensive care and treatment for high creatinine levels causes.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "High Creatinine Diagnosis",
+        shortDescription: "Identifying the root cause of elevated kidney markers in blood.",
+        fullDescription: "Elevated creatinine is a warning sign of reduced kidney function. We perform a deep clinical audit—including GFR calculation, ultrasound imaging, and serum analysis—to determine if the cause is dehydration, infection, medical toxicity, or underlying CKD, allowing for immediate corrective therapy.",
+        features: ["eGFR Precision Mapping","Serum Electrolyte Screen","Renal Ultrasound Audit","Drug Toxicity Review"],
+        benefits: ["Early Kidney Protection","Accurate Marker Analysis","Prevents Future Damage","Guided Treatment Plan"]
     },
     {
         id: "t-384",
@@ -1636,11 +1636,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-385",
         slug: "hydrocele-surgery-cost",
         parentServiceSlug: "urology",
-        title: "hydrocele surgery cost",
-        shortDescription: "Comprehensive care and treatment for hydrocele surgery cost....",
-        fullDescription: "Comprehensive care and treatment for hydrocele surgery cost.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Hydrocele Surgery",
+        shortDescription: "Minimally invasive correction of scrotal fluid swelling.",
+        fullDescription: "A hydrocele is a collection of fluid around the testicle that causes painless swelling. Our urologists provide surgical correction (Hydrocelectomy) using advanced techniques to ensure minimal discomfort and rapid recovery. We focus on achieving a definitive solution with excellent cosmetic results.",
+        features: ["Precision Hydrocelectomy","Incision-less Drainage Options","Day-Care Surgical Flow","Minimal Post-Op Swelling"],
+        benefits: ["Resolves Scrotal Heaviness","Painless Recovery Path","Eliminates Infection Risk","Rapid Return to Routine"]
     },
     {
         id: "t-386",
@@ -1666,11 +1666,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-388",
         slug: "immunotherapy-treatment-options",
         parentServiceSlug: "oncology",
-        title: "immunotherapy treatment options",
-        shortDescription: "Comprehensive care and treatment for immunotherapy treatment options....",
-        fullDescription: "Comprehensive care and treatment for immunotherapy treatment options.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Cancer Immunotherapy",
+        shortDescription: "Harnessing the immune system to recognize and attack cancer cells.",
+        fullDescription: "Immunotherapy is a revolutionary cancer treatment that helps your own immune system fight the disease. We offer a range of options including checkpoint inhibitors and monoclonal antibodies, tailored to your specific cancer type. This approach can lead to long-term remission with a different side-effect profile than traditional chemotherapy.",
+        features: ["Checkpoint Inhibitor Access","Monoclonal Antibody Suite","Immune Response Monitoring","Advanced Side-Effect Labs"],
+        benefits: ["Long-Term Disease Control","Targeted Immune Response","Spares Healthy Cells","Personalized Treatment Flow"]
     },
     {
         id: "t-389",
@@ -1756,41 +1756,41 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-398",
         slug: "kidney-biopsy-procedure",
         parentServiceSlug: "nephrology",
-        title: "kidney biopsy procedure",
-        shortDescription: "Comprehensive care and treatment for kidney biopsy procedure....",
-        fullDescription: "Comprehensive care and treatment for kidney biopsy procedure.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Kidney Biopsy (Renal)",
+        shortDescription: "Ultrasound-guided tissue sampling for precise kidney diagnosis.",
+        fullDescription: "A kidney biopsy is the gold standard for diagnosing complex renal diseases. Using real-time ultrasound guidance and automated biopsy needles, we safely extract a tiny tissue sample under local anesthesia. This allows for detailed histopathology and immunofluorescence to determine the exact cause of kidney dysfunction.",
+        features: ["USG-Guided Precision","Local Anesthesia Suite","Automated Biopsy Tech","Rapid Histopathology Audit"],
+        benefits: ["Accurate Disease Staging","Informed Treatment Path","Minimally Invasive Entry","Safe Clinical Execution"]
     },
     {
         id: "t-399",
         slug: "kidney-diet-plan",
         parentServiceSlug: "nephrology",
-        title: "kidney diet plan",
-        shortDescription: "Comprehensive care and treatment for kidney diet plan....",
-        fullDescription: "Comprehensive care and treatment for kidney diet plan.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Renal Nutrition Plan",
+        shortDescription: "Customized diets to manage phosphorus, potassium, and protein.",
+        fullDescription: "Diet is as important as medication in renal care. Our clinical nutritionists provide evidence-based renal meal plans that strictly manage electrolytes (Sodium, Potassium, Phosphorus) and calculate your ideal protein intake. This diet reduces the workload on your kidneys and prevents the build-up of metabolic toxins.",
+        features: ["Renal Calorie Mapping","Electrolyte Conscious Lab","Personalized Meal Charts","Phosphorus Management Tech"],
+        benefits: ["Lowers Metabolic Toxins","Prevents Heart Complications","Sustains Kidney Function","Improves Patient Vigor"]
     },
     {
         id: "t-401",
         slug: "kidney-stone-prevention-tips",
         parentServiceSlug: "nephrology",
-        title: "kidney stone prevention tips",
-        shortDescription: "Comprehensive care and treatment for kidney stone prevention tips....",
-        fullDescription: "Comprehensive care and treatment for kidney stone prevention tips.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Preventing Kidney Stones",
+        shortDescription: "Clinical strategies to stop stone recurrence through hydration and diet.",
+        fullDescription: "Once you've had a kidney stone, the risk of recurrence is high. Our prevention clinic provides metabolic stone analysis (24-hour urine collection) to identify why stones form. We then provide targeted hydration targets, citrate therapy, and calcium-balance diets to keep your kidneys stone-free forever.",
+        features: ["Metabolic Stone Analysis","24-Hour Urine Profiling","Citrate Therapy Protocols","Oxalate Management Guides"],
+        benefits: ["Stops Painful Recurrence","Avoids Repeated Surgeries","Protects Kidney Tissue","Natural Preventive Care"]
     },
     {
         id: "t-402",
         slug: "kidney-transplant-preparation",
         parentServiceSlug: "nephrology",
-        title: "kidney transplant preparation",
-        shortDescription: "Comprehensive care and treatment for kidney transplant preparation....",
-        fullDescription: "Comprehensive care and treatment for kidney transplant preparation.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Transplant Prep (Renal)",
+        shortDescription: "Surgical and medical optimization for kidney transplant candidates.",
+        fullDescription: "Preparing for a kidney transplant involves rigorous physical and psychological optimization. We ensure all pre-transplant clearances—including cardiac fitness, cross-matching, and HLA typing—are completed meticulously. Our goal is to ensure both donor and recipient are in peak clinical condition for the most successful outcome.",
+        features: ["HLA Cross-Matching Lab","Cardiac Fitness Clearance","Pre-Transplant Stabilization","Donor Optimization Suite"],
+        benefits: ["Higher Transplant Success","Lower Rejection Risk","Ensures Patient Safety","Detailed Clinical Readiness"]
     },
     {
         id: "t-403",
@@ -1826,11 +1826,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-409",
         slug: "laser-prostatectomy-holep",
         parentServiceSlug: "nephrology",
-        title: "laser prostatectomy holep",
-        shortDescription: "Comprehensive care and treatment for laser prostatectomy holep....",
-        fullDescription: "Comprehensive care and treatment for laser prostatectomy holep.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "HoLEP Laser Prostatectomy",
+        shortDescription: "Advanced holmium laser enucleation for severe BPH.",
+        fullDescription: "Holmium Laser Enucleation of the Prostate (HoLEP) is a modern, minimally invasive alternative to traditional TURP. Using a high-power laser, we surgically remove the obstructive part of the prostate without any external incisions. This technique is ideal for very large prostates and ensures minimal bleeding with rapid recovery.",
+        features: ["Holmium Laser Precision","Incision-less Endoscopy","Large Prostate Specialists","Real-Time Flow Monitoring"],
+        benefits: ["Safe for Blood-Thinner Patients","Superior Urinary Flow","Virtually No Bleeding","Rapid Discharge (24 Hours)"]
     },
     {
         id: "t-410",
@@ -1846,11 +1846,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-411",
         slug: "lipoma-excision-surgery",
         parentServiceSlug: "general-surgery",
-        title: "lipoma excision surgery",
-        shortDescription: "Comprehensive care and treatment for lipoma excision surgery....",
-        fullDescription: "Comprehensive care and treatment for lipoma excision surgery.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Lipoma Removal",
+        shortDescription: "Surgical removal of benign fatty tumors for comfort and aesthetics.",
+        fullDescription: "Lipomas are slow-growing fatty lumps that are usually harmless but can become painful or aesthetically bothersome. We offer precise surgical excision under local or general anesthesia, ensuring minimal scarring and a complete removal to prevent recurrence. The procedure is quick, safe, and done in a day-care setting.",
+        features: ["Aesthetic Minimal Scarring","Precision Tumor Staging","Local Anesthesia Suite","Rapid Day-Care Discharge"],
+        benefits: ["Resolves Lumps & Bumps","Painless Clinical Flow","Superior Cosmetic Outcome","Eliminates Pressure Pain"]
     },
     {
         id: "t-412",
@@ -1866,21 +1866,21 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-413",
         slug: "lung-cancer-early-signs",
         parentServiceSlug: "oncology",
-        title: "lung cancer early signs",
-        shortDescription: "Comprehensive care and treatment for lung cancer early signs....",
-        fullDescription: "Comprehensive care and treatment for lung cancer early signs.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Lung Cancer Diagnostics",
+        shortDescription: "Rapid screening and staging for early-stage lung malignancies.",
+        fullDescription: "Early detection is key to surviving lung cancer. Our diagnostic suite includes Low-Dose CT (LDCT) scans, bronchoscopy with biopsy, and advanced molecular markers to identify tumors at their most treatable stage. We provide immediate staging and a clear roadmap for surgery or systemic therapy.",
+        features: ["Low-Dose CT Screening","Bronchoscopy Suite","Molecular Marker Lab","Rapid Staging Protocols"],
+        benefits: ["Early Detection Security","Informs Treatment Choice","Minimally Invasive Biopsy","Guided Clinical Support"]
     },
     {
         id: "t-415",
         slug: "menopause-symptom-relief",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "menopause symptom relief",
-        shortDescription: "Comprehensive care and treatment for menopause symptom relief....",
-        fullDescription: "Comprehensive care and treatment for menopause symptom relief.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Menopause Wellness",
+        shortDescription: "Clinical management of hot flashes, mood swings, and bone health.",
+        fullDescription: "Menopause marks a significant transition in a woman's life. We provide comprehensive symptom management, including Hormone Replacement Therapy (HRT), nutritional counseling, and bone density monitoring (DEXA) to manage hot flashes, night sweats, and the long-term risk of osteoporosis.",
+        features: ["Custom HRT Protocols","Bone Density Screening","Lifestyle Wellness Lab","Nutritional Menopause Diet"],
+        benefits: ["Reduces Hot Flashes","Protects Bone Density","Improves Sleep Quality","Stabilizes Mood Profiles"]
     },
     {
         id: "t-416",
@@ -1896,61 +1896,61 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-418",
         slug: "multiple-sclerosis-treatment",
         parentServiceSlug: "neurology",
-        title: "multiple sclerosis treatment",
-        shortDescription: "Comprehensive care and treatment for multiple sclerosis treatment....",
-        fullDescription: "Comprehensive care and treatment for multiple sclerosis treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Multiple Sclerosis (MS)",
+        shortDescription: "Advanced immunomodulation to manage chronic nerve inflammation.",
+        fullDescription: "Multiple Sclerosis (MS) is an autoimmune disorder affecting the central nervous system. We provide comprehensive Disease-Modifying Therapy (DMT) to slow progression and manage relapses. Our team also offers specialized neuro-rehabilitation and symptomatic management for fatigue, spasticity, and mobility challenges.",
+        features: ["Disease Modifying Therapy","Flare-Up Steroid Protocols","Neuro-Mobility Training","Bladder & Fatigue Support"],
+        benefits: ["Slower Disease Progression","Reduced Relapse Frequency","Improves Daily Mobility","Comprehensive Life Support"]
     },
     {
         id: "t-419",
         slug: "myasthenia-gravis-care",
         parentServiceSlug: "neurology",
-        title: "myasthenia gravis care",
-        shortDescription: "Comprehensive care and treatment for myasthenia gravis care....",
-        fullDescription: "Comprehensive care and treatment for myasthenia gravis care.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Myasthenia Gravis Clinic",
+        shortDescription: "Clinical management of muscle weakness and neuromuscular junction fatigue.",
+        fullDescription: "Myasthenia Gravis is a chronic autoimmune neuromuscular disease that causes weakness in the skeletal muscles. Our clinic provides expert diagnosis via Repetitive Nerve Stimulation and antibody testing. Treatment focus includes pyridostigmine, immunosuppressive therapy, and plasma exchange for severe myasthenic crises.",
+        features: ["Repetitive Nerve Stimulation","Antibody Diagnostic Lab","Plasma Exchange Suite","IVIG Therapy Options"],
+        benefits: ["Restores Muscle Strength","Prevents Respiratory Crisis","Improves Daily Mobility","Consistent Symptom Control"]
     },
     {
         id: "t-420",
         slug: "myomectomy-surgery-cost",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "myomectomy surgery cost",
-        shortDescription: "Comprehensive care and treatment for myomectomy surgery cost....",
-        fullDescription: "Comprehensive care and treatment for myomectomy surgery cost.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Advanced Myomectomy",
+        shortDescription: "Evidence-based surgical resection of uterine fibroids.",
+        fullDescription: "Myomectomy is the surgical removal of fibroids from the uterus. We offer advanced surgical options—including laparoscopic and hysteroscopic approaches—tailored to the size and location of your fibroids. Our goal is to provide a permanent solution to symptomatic fibroids while prioritizing a quick and safe recovery.",
+        features: ["Microsurgical Suturing","Laparoscopic Precision","Hysteroscopic Access","Comprehensive Post-Op Care"],
+        benefits: ["Permanent Symptom Relief","Preserves Uterine Integrity","Minimally Invasive Options","High Success Rates"]
     },
     {
         id: "t-421",
         slug: "ncs-emg-test-guide",
         parentServiceSlug: "neurology",
-        title: "ncs emg test guide",
-        shortDescription: "Comprehensive care and treatment for ncs emg test guide....",
-        fullDescription: "Comprehensive care and treatment for ncs emg test guide.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "NCS & EMG Diagnostic",
+        shortDescription: "Electrophysiological testing for nerve and muscle health.",
+        fullDescription: "Nerve Conduction Studies (NCS) and Electromyography (EMG) are essential for diagnosing nerve damage, muscle disease, or neuromuscular issues. These tests help identify conditions like carpal tunnel syndrome, neuropathy, or radiculopathy, allowing our neurologists to design a precise treatment roadmap for your recovery.",
+        features: ["Advanced Electromyography","Nerve Conduction Velocities","Specialist Neuro-interpretation","Rapid Diagnostic Reporting"],
+        benefits: ["Identifies Nerve Compression","Pinpoints Muscle Weakness","Guides Precise Therapy","Non-Invasive Diagnosis"]
     },
     {
         id: "t-422",
         slug: "nephrotic-syndrome-cure",
         parentServiceSlug: "nephrology",
-        title: "nephrotic syndrome cure",
-        shortDescription: "Comprehensive care and treatment for nephrotic syndrome cure....",
-        fullDescription: "Comprehensive care and treatment for nephrotic syndrome cure.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Nephrotic Syndrome Care",
+        shortDescription: "Clinical management of severe protein leakage and body swelling.",
+        fullDescription: "Nephrotic syndrome is characterized by heavy proteinuria, low blood albumin, and severe edema (swelling). We use advanced diagnostic profiling to identify primary causes (like Minimal Change Disease) or secondary triggers. Treatment focuses on steroids, immunosuppressants, and strict dietary sodium control to restore kidney integrity.",
+        features: ["Steroid Sparing Protocols","Daily Proteinuria Tracking","Advanced Edema Control","Serum Albumin Monitoring"],
+        benefits: ["Resolves Severe Swelling","Restores Protein Balance","Prevents Kidney Scarring","Customized Patient Care"]
     },
     {
         id: "t-423",
         slug: "neuropathy-pain-relief",
         parentServiceSlug: "neurology",
-        title: "neuropathy pain relief",
-        shortDescription: "Comprehensive care and treatment for neuropathy pain relief....",
-        fullDescription: "Comprehensive care and treatment for neuropathy pain relief.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Neuropathy Pain Relief",
+        shortDescription: "Targeted clinical therapy for nerve pain and numbness.",
+        fullDescription: "Chronic nerve pain (neuropathy) can be debilitating. We provide a comprehensive relief program focusing on identify the root cause—whether diabetic, nutritional, or toxic—and implementing advanced therapies like neuropathic agents, vitamin infusions, and lifestyle modifications to restore nerve health and comfort.",
+        features: ["Nerve Damage Mapping","Targeted Pain Meds","Vitamin Infusion Therapy","Diabetic Foot Shielding"],
+        benefits: ["Reduces Burning & Pain","Restores Normal Sensation","Prevents Future Damage","Significantly Improved Comfort"]
     },
     {
         id: "t-425",
@@ -1966,21 +1966,21 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-426",
         slug: "ovarian-cyst-laparoscopy",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "ovarian cyst laparoscopy",
-        shortDescription: "Comprehensive care and treatment for ovarian cyst laparoscopy....",
-        fullDescription: "Comprehensive care and treatment for ovarian cyst laparoscopy.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Ovarian Cyst Surgery",
+        shortDescription: "Minimally invasive removal of painful or persistent ovarian cysts.",
+        fullDescription: "Ovarian cysts that are large, persistent, or causing pain may require surgical removal. Using advanced laparoscopic (keyhole) surgery, we can precisely remove the cyst while preserving the healthy ovary. This ensures minimal pain, tiny scars, and a much faster return to your daily routine.",
+        features: ["Keyhole Surgical Access","Ovarian Tissue Preservation","Rapid Staging Analysis","Minimal Incision Tech"],
+        benefits: ["Significantly Less Pain","Preserves Ovarian Function","Tiny Aesthetic Scars","Rapid Hospital Discharge"]
     },
     {
         id: "t-427",
         slug: "overactive-bladder-relief",
         parentServiceSlug: "nephrology",
-        title: "overactive bladder relief",
-        shortDescription: "Comprehensive care and treatment for overactive bladder relief....",
-        fullDescription: "Comprehensive care and treatment for overactive bladder relief.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Overactive Bladder (OAB)",
+        shortDescription: "Restoring bladder control and reducing urinary urgency.",
+        fullDescription: "Overactive bladder (OAB) causes frequent, sudden urges to urinate that may be difficult to control. We provide a stepwise approach to relief, encompassing bladder retraining, pharmaceutical anticholinergics, and advanced therapies like Botox injections or Sacral Neuromodulation for refractory cases.",
+        features: ["Urodynamic Flow Studies","Bladder Volume Mapping","Advanced Pharmacotherapy","Neuromodulation Options"],
+        benefits: ["Stops Sudden Urgency","Restores Sleep (No Nocturia)","Increases Social Confidence","Non-Surgical Relief Paths"]
     },
     {
         id: "t-428",
@@ -2036,41 +2036,41 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-438",
         slug: "pet-scan-for-cancer",
         parentServiceSlug: "oncology",
-        title: "pet scan for cancer",
-        shortDescription: "Comprehensive care and treatment for pet scan for cancer....",
-        fullDescription: "Comprehensive care and treatment for pet scan for cancer.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "PET/CT Cancer Imaging",
+        shortDescription: "High-resolution metabolic imaging for precise cancer staging.",
+        fullDescription: "PET/CT scans provide a detailed metabolic map of your body, allowing oncologists to detect cancer cells that might be missed by traditional CT or MRI. This technology is vital for accurate staging, monitoring treatment response, and planning precision radiation or surgical interventions with unparalleled accuracy.",
+        features: ["High-Res PET Integration","Metabolic Tumor Mapping","Precise Staging Reports","Radiation Planning Mesh"],
+        benefits: ["Detects Tiny Metastases","Validates Treatment Success","Clear Clinical Roadmap","Reduces Unnecessary Surgery"]
     },
     {
         id: "t-439",
         slug: "phimosis-treatment-options",
         parentServiceSlug: "nephrology",
-        title: "phimosis treatment options",
-        shortDescription: "Comprehensive care and treatment for phimosis treatment options....",
-        fullDescription: "Comprehensive care and treatment for phimosis treatment options.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Phimosis Treatment",
+        shortDescription: "Medical and surgical solutions for tight foreskin issues.",
+        fullDescription: "Phimosis can lead to recurrent infections and urinary difficulties. We offer a full spectrum of care, from conservative steroid cream applications to painless ZSR Stapler Circumcision. The stapler technique ensures a perfectly aesthetic result with zero stitches and minimal post-operative downtime.",
+        features: ["ZSR Stapler Technology","No-Stitch Procedure","Steroid Cream Mapping","Pediatric and Adult Care"],
+        benefits: ["Painless Procedural Flow","Superior Aesthetic Outcome","Immediate Return to Work","Eliminates Infection Risk"]
     },
     {
         id: "t-440",
         slug: "pilonidal-sinus-laser-surgery",
         parentServiceSlug: "general-surgery",
-        title: "pilonidal sinus laser surgery",
-        shortDescription: "Comprehensive care and treatment for pilonidal sinus laser surgery....",
-        fullDescription: "Comprehensive care and treatment for pilonidal sinus laser surgery.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Laser Pilonidal (SiLaC)",
+        shortDescription: "Minimally invasive laser ablation for pilonidal disease.",
+        fullDescription: "Pilonidal sinus disease is effectively treated using SiLaC (Sinus Laser Closure). This advanced technique uses a flexible laser fiber to seal the tract without creating large open wounds. This leads to a significantly lower recurrence rate and a much faster, painless recovery compared to traditional 'open' surgery.",
+        features: ["SiLaC Laser Fiber","Painless Wound Sealing","Minimal Downtime Flow","Expert Proctology Lead"],
+        benefits: ["No Daily Dressings","Virtually Zero Recurrence","Quickest Recovery Path","Painless Clinical Outcome"]
     },
     {
         id: "t-441",
         slug: "polycystic-kidney-disease-management",
         parentServiceSlug: "nephrology",
-        title: "polycystic kidney disease management",
-        shortDescription: "Comprehensive care and treatment for polycystic kidney disease management....",
-        fullDescription: "Comprehensive care and treatment for polycystic kidney disease management.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "PKD Management (Polycystic)",
+        shortDescription: "Expert care for inherited cystic kidney disorders.",
+        fullDescription: "Polycystic Kidney Disease (PKD) requires vigilant lifelong management to protect renal function. Our specialists focus on intensive blood pressure control, cyst volume monitoring via imaging, and the use of modern V2-receptor antagonists (Tolvaptan) to slow the growth of cysts and preserve native kidney function.",
+        features: ["Genetic Risk Counseling","Cyst Volume MRI Tracking","Advanced BP Stabilization","Tolvaptan Access Program"],
+        benefits: ["Slows Kidney Decline","Manages Chronic Pain","Lower Stroke Risk","Family Screening Support"]
     },
     {
         id: "t-442",
@@ -2086,41 +2086,41 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-443",
         slug: "prostate-cancer-screening",
         parentServiceSlug: "urology",
-        title: "prostate cancer screening",
-        shortDescription: "Comprehensive care and treatment for prostate cancer screening....",
-        fullDescription: "Comprehensive care and treatment for prostate cancer screening.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Prostate Health Screen",
+        shortDescription: "PSA testing and clinical exams for early prostate cancer detection.",
+        fullDescription: "Prostate cancer is often asymptomatic in its early stages. Our screening program includes Prostate-Specific Antigen (PSA) blood tests and Digital Rectal Exams (DRE). For elevated results, we utilize advanced Multi-Parametric MRI (mpMRI) to identify clinical significance before recommending biopsy.",
+        features: ["High-Precision PSA Lab","Multi-Parametric MRI","Specialist Uro-Analysis","Risk Stratification Audit"],
+        benefits: ["Early-Stage Detection","Avoids Biopsy if Unnecessary","Informed Clinical Roadmap","Peace of Mind for Men"]
     },
     {
         id: "t-444",
         slug: "prostate-cancer-treatment-options",
         parentServiceSlug: "urology",
-        title: "prostate cancer treatment options",
-        shortDescription: "Comprehensive care and treatment for prostate cancer treatment options....",
-        fullDescription: "Comprehensive care and treatment for prostate cancer treatment options.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Prostate Cancer Care",
+        shortDescription: "Surgical and medical solutions including Radical Prostatectomy.",
+        fullDescription: "When prostate cancer is diagnosed, we provide a full spectrum of treatment options tailored to the tumor grade. This includes Active Surveillance, Nerve-Sparing Radical Prostatectomy, and advanced Hormone Therapy. Our goal is to achieve cancer clearance while prioritizing your quality of life and functionality.",
+        features: ["Nerve-Sparing Surgery","Hormone Therapy Suite","Active Surveillance Log","Radiation Oncology Link"],
+        benefits: ["High Cancer Clearance","Preserves Continence","Maintains Sexual Health","Customized Treatment Plan"]
     },
     {
         id: "t-446",
         slug: "proteinuria-treatment-options",
         parentServiceSlug: "nephrology",
-        title: "proteinuria treatment options",
-        shortDescription: "Comprehensive care and treatment for proteinuria treatment options....",
-        fullDescription: "Comprehensive care and treatment for proteinuria treatment options.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Proteinuria Management",
+        shortDescription: "Clinical strategies to stop protein leakage and protect kidneys.",
+        fullDescription: "Protein in the urine (proteinuria) is a key marker of kidney stress. Our nephrology team provide targeted therapies including ACE inhibitors, ARBs, and dietary modifications to reduce the workload on your kidneys. We focus on stabilizing the glomerular basement membrane and preventing the progression to chronic kidney disease.",
+        features: ["Precision Protein Tracking","ACE/ARB Stabilization","24-Hour Urine Profiling","Renal Dietetics Support"],
+        benefits: ["Stops Kidney Scarring","Lowers Filtration Stress","Prevents Fluid Retention","Long-Term Renal Protection"]
     },
     {
         id: "t-447",
         slug: "radiation-therapy-guide",
         parentServiceSlug: "oncology",
-        title: "radiation therapy guide",
-        shortDescription: "Comprehensive care and treatment for radiation therapy guide....",
-        fullDescription: "Comprehensive care and treatment for radiation therapy guide.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Radiation Therapy (IMRT)",
+        shortDescription: "Ultra-precise radiation delivery for deep-seated tumors.",
+        fullDescription: "Radiation therapy uses high-energy beams to destroy cancer cells. We utilize Intensity Modulated Radiation Therapy (IMRT) and IG-RT to target tumors with sub-millimeter precision. This maximizes the dose to the cancer while sparing the surrounding healthy organs, leading to better control and fewer side effects.",
+        features: ["Precision IMRT Planning","IG-RT Real-Time Imaging","Advanced Linear Accelerator","Multi-Leaf Collimation Tech"],
+        benefits: ["Painless, Non-Invasive","Protects Healthy Tissue","Shrinks Tumors Effectively","Outpatient Treatment Flow"]
     },
     {
         id: "t-448",
@@ -2236,11 +2236,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-459",
         slug: "sebaceous-cyst-removal",
         parentServiceSlug: "general-surgery",
-        title: "sebaceous cyst removal",
-        shortDescription: "Comprehensive care and treatment for sebaceous cyst removal....",
-        fullDescription: "Comprehensive care and treatment for sebaceous cyst removal.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Skilled Cyst Excision",
+        shortDescription: "Painless removal of sebaceous and skin cysts.",
+        fullDescription: "We provide expert surgical excision for sebaceous cysts under local anesthesia. Our technique focuses on the complete removal of the 'sac' to prevent the cyst from returning. This is a quick outpatient procedure that leaves a barely visible scar and provides immediate relief from pressure or aesthetic concerns.",
+        features: ["Full Capsule Removal","Local Anesthesia Suite","Aesthetic Wound Closure","Rapid Day-Care Discharge"],
+        benefits: ["Prevents Cyst Recurrence","Eliminates Local Pain","Superior Aesthetic Result","Minutes to Complete"]
     },
     {
         id: "t-460",
@@ -2286,11 +2286,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-464",
         slug: "sleep-apnea-study",
         parentServiceSlug: "neurology",
-        title: "sleep apnea study",
-        shortDescription: "Comprehensive care and treatment for sleep apnea study....",
-        fullDescription: "Comprehensive care and treatment for sleep apnea study.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Polysomnography (Sleep Study)",
+        shortDescription: "Comprehensive overnight monitoring to diagnose sleep apnea.",
+        fullDescription: "Do you snore excessively or feel tired all day? A Polysomnography (Sleep Study) is the gold standard for diagnosing obstructive sleep apnea and other sleep-related breathing disorders. Our specialists monitor brain waves, oxygen levels, and heart rhythm overnight to tailor your CPAP or surgical treatment path.",
+        features: ["Overnight Monitoring Suite","Oxygen Saturation Tracking","Digital EEG Integration","CPAP Titration Service"],
+        benefits: ["Prevents Heart Strain","Restores Restful Sleep","Eliminating Daytime Fatigue","Long-Term Cardiac Protection"]
     },
     {
         id: "t-465",
@@ -2306,11 +2306,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-466",
         slug: "spinal-cord-injury-rehab",
         parentServiceSlug: "neurology",
-        title: "spinal cord injury rehab",
-        shortDescription: "Comprehensive care and treatment for spinal cord injury rehab....",
-        fullDescription: "Comprehensive care and treatment for spinal cord injury rehab.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Spinal Cord Rehab",
+        shortDescription: "Intensive neuro-rehabilitation for spinal trauma and surgery recovery.",
+        fullDescription: "Recovering from a spinal cord injury requires a multidisciplinary approach. Our center combines expert neurology, intensive physiotherapy, and occupational therapy to help patients regain maximum possible motor function and independence. We use evidence-based protocols to manage spasticity and promote neuro-plastic recovery.",
+        features: ["Gait Training Modules","Spasticity Control Clinic","Neuro-Physiotherapist Team","Occupational Daily Training"],
+        benefits: ["Maximizes Functional Regain","Prevents Pressure Ulcers","Drives Patient Independence","Holistic Recovery Support"]
     },
     {
         id: "t-468",
@@ -2326,11 +2326,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-471",
         slug: "targeted-therapy-for-cancer",
         parentServiceSlug: "oncology",
-        title: "targeted therapy for cancer",
-        shortDescription: "Comprehensive care and treatment for targeted therapy for cancer....",
-        fullDescription: "Comprehensive care and treatment for targeted therapy for cancer.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Targeted Cancer Therapy",
+        shortDescription: "Precision medicine designed to attack specific cancer cell markers.",
+        fullDescription: "Targeted therapy is at the forefront of modern oncology. Unlike traditional chemotherapy, these drugs are designed to interfere with specific molecules involved in tumor growth. We use genetic profiling to identify if your cancer has markers that can be effectively targeted, leading to better outcomes with fewer side effects.",
+        features: ["Genetic Tumor Profiling","Specific Marker Meds","Molecular Oncology Suite","Side-Effect Shielding"],
+        benefits: ["Higher Treatment Efficacy","Fewer Systemic Side Effects","Tailored to Your Cancer","Advanced Clinical Standard"]
     },
     {
         id: "t-472",
@@ -2365,22 +2365,22 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-475",
         slug: "testicular-torsion-emergency",
-        parentServiceSlug: "nephrology",
-        title: "testicular torsion emergency",
-        shortDescription: "Comprehensive care and treatment for testicular torsion emergency....",
-        fullDescription: "Comprehensive care and treatment for testicular torsion emergency.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        parentServiceSlug: "urology",
+        title: "Torsion Rescue Surgery",
+        shortDescription: "Emergency 24/7 detorsion for acute scrotal pain.",
+        fullDescription: "Testicular torsion is an absolute emergency. When the blood supply is cut off, every minute counts in saving the testicle. Our urology team is on-call 24/7 for immediate Doppler diagnosis and emergency Orchidopexy (surgical detorsion and fixation) to restore blood flow and prevent permanent loss of the organ.",
+        features: ["24/7 Emergency Detorsion","Immediate Doppler Lab","Rapid Surgical Access","Bilateral Fixation Flow"],
+        benefits: ["Saves Organ Viability","Rapid Pain Resolution","Prevents Future Episode","Preserves Male Fertility"]
     },
     {
         id: "t-476",
         slug: "thyroid-surgery-guide",
         parentServiceSlug: "general-surgery",
-        title: "thyroid surgery guide",
-        shortDescription: "Comprehensive care and treatment for thyroid surgery guide....",
-        fullDescription: "Comprehensive care and treatment for thyroid surgery guide.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Thyroidectomy (Surgical)",
+        shortDescription: "Expert removal of thyroid nodules or cancerous tissue.",
+        fullDescription: "Thyroid surgery (Thyroidectomy) is used to treat thyroid nodules, overactive thyroid, and thyroid cancer. Our surgical team focuses on preserving the parathyroid glands and laryngeal nerves while achieving a complete resection. We provide meticulous pre-op optimization and long-term hormone replacement planning.",
+        features: ["Nerve-Preserving Tech","Parathyroid Monitoring","Minimally Invasive Entry","Thyroid Hormone Planning"],
+        benefits: ["Effective Cancer Clearance","Resolves Large Goitres","Safe Surgical Execution","Expert Endocrine Support"]
     },
     {
         id: "t-477",
@@ -2416,11 +2416,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-481",
         slug: "tubal-ligation-procedure",
         parentServiceSlug: "obstetrics-gynaecology",
-        title: "tubal ligation procedure",
-        shortDescription: "Comprehensive care and treatment for tubal ligation procedure....",
-        fullDescription: "Comprehensive care and treatment for tubal ligation procedure.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Tubal Ligation (Sterilization)",
+        shortDescription: "Permanent contraceptive surgery via keyhole technique.",
+        fullDescription: "Tubal ligation is a safe and permanent form of birth control for women who have completed their families. Using minimally invasive laparoscopic techniques, we block or seal the fallopian tubes to prevent pregnancy. The procedure is reliable, permanent, and allows for a quick return to normal activities.",
+        features: ["Laparoscopic Keyhole Entry","Permanent Birth Control","Day-Care Surgical Flow","Sterile Clinical Precision"],
+        benefits: ["High Contraceptive Efficacy","Quick Recovery Time","No Long-Term Medication","Reliable Family Planning"]
     },
     {
         id: "t-482",
@@ -2456,51 +2456,51 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-485",
         slug: "urethral-stricture-repair",
         parentServiceSlug: "nephrology",
-        title: "urethral stricture repair",
-        shortDescription: "Comprehensive care and treatment for urethral stricture repair....",
-        fullDescription: "Comprehensive care and treatment for urethral stricture repair.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Urethral Stricture Repair",
+        shortDescription: "Advanced endoscopic and surgical widening of the urinary passage.",
+        fullDescription: "Narrowing of the urethra (stricture) causes significant urinary blockage and pain. We offer specialized solutions including minimally invasive Optical Internal Urethrotomy (OIU) and complex Urethroplasty using buccal mucosa grafts, ensuring a permanent and robust restoration of urinary flow.",
+        features: ["Laser Urethrotomy (OIU)","Buccal Mucosa Grafting","Uroflowmetry Validation","Advanced Urodynamics"],
+        benefits: ["Permanent Passage Widening","Restores Strong Flow","Low Recurrence Rate","Minimally Invasive Options"]
     },
     {
         id: "t-486",
         slug: "urinary-incontinence-treatment",
         parentServiceSlug: "urology",
-        title: "urinary incontinence treatment",
-        shortDescription: "Comprehensive care and treatment for urinary incontinence treatment....",
-        fullDescription: "Comprehensive care and treatment for urinary incontinence treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Urinary Incontinence",
+        shortDescription: "Restoring bladder control through medical and surgical means.",
+        fullDescription: "Urinary incontinence can significantly impact your quality of life. We provide a comprehensive diagnostic evaluation, including urodynamics, to identify the type—whether stress, urge, or overflow. Treatment ranges from pelvic floor rehabilitation and medication to advanced surgical 'sling' procedures for durable relief.",
+        features: ["Urodynamic Flow Studies","Pelvic Floor Rehab","Advanced Surgical Slings","Medication Management Suite"],
+        benefits: ["Stops Involuntary Leaks","Restores Social Confidence","Improves Physical Comfort","Tailored Relief Journey"]
     },
     {
         id: "t-487",
         slug: "urinary-tract-infection-treatment",
         parentServiceSlug: "nephrology",
-        title: "urinary tract infection treatment",
-        shortDescription: "Comprehensive care and treatment for urinary tract infection treatment....",
-        fullDescription: "Comprehensive care and treatment for urinary tract infection treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "UTI Clinical Management",
+        shortDescription: "Expert diagnosis and targeted therapy for persistent urinary infections.",
+        fullDescription: "Urinary Tract Infections (UTIs) can range from simple cystitis to severe kidney infections (Pyelonephritis). We provide rapid urine culture analysis to identify specific pathogens and deliver targeted antimicrobial therapy, along with investigating structural causes to prevent painful recurrences.",
+        features: ["Rapid Culture Assessments","Structural passage Imaging","Targeted Antibiotic Lab","Recurrence Prevention Audit"],
+        benefits: ["Rapid Pain Relief","Prevents Kidney Damage","Stops Chronic Recurrences","Safe Pregnancy Protocols"]
     },
     {
         id: "t-488",
         slug: "varicocele-surgery-guide",
-        parentServiceSlug: "nephrology",
-        title: "varicocele surgery guide",
-        shortDescription: "Comprehensive care and treatment for varicocele surgery guide....",
-        fullDescription: "Comprehensive care and treatment for varicocele surgery guide.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        parentServiceSlug: "urology",
+        title: "Varicocele Microsurgery",
+        shortDescription: "Advanced correction of scrotal veins to improve fertility.",
+        fullDescription: "A varicocele is an enlargement of the veins within the scrotum, which can cause pain and male infertility. We specialize in microsurgical sub-inguinal varicocelectomy—the gold standard approach—which provides the highest success rates and lowest recurrence with the fastest post-operative recovery.",
+        features: ["Gold-Standard Microsurgery","High Magnification Optics","Infertility Risk Profiling","Rapid Recovery Protocols"],
+        benefits: ["Improves Sperm Quality","Resolves Chronic Scrotal Pain","Minimally Invasive Entry","Maximizes Fertility Success"]
     },
     {
         id: "t-490",
         slug: "vertigo-dizziness-treatment",
         parentServiceSlug: "neurology",
-        title: "vertigo dizziness treatment",
-        shortDescription: "Comprehensive care and treatment for vertigo dizziness treatment....",
-        fullDescription: "Comprehensive care and treatment for vertigo dizziness treatment.",
-        features: ["Advanced Medical Technology","Expert Specialists","Compassionate Care","High Success Rates"],
-        benefits: ["Faster Recovery","Minimal Pain","Premium Hospital Facilities","Dedicated Support"]
+        title: "Vertigo & Balance Care",
+        shortDescription: "Clinical diagnosis and vestibular rehab for dizziness disorders.",
+        fullDescription: "Dizziness and vertigo can be caused by inner ear issues or central neurological problems. We provide comprehensive vestibular assessments and maneuver-based therapies (like Epley) to resolve vertigo rapidly. Our balance clinic focuses on restoring stability and preventing falls in elderly and high-risk patients.",
+        features: ["Vestibular Flow Audit","Epley Maneuver Specialists","Balance Training Tech","Central Neuro-screening"],
+        benefits: ["Instantly Resolves Vertigo","Prevents Fall-Related Injury","Restores Stable Walking","Clear Diagnostic Certainty"]
     },
     {
         id: "t-491",
