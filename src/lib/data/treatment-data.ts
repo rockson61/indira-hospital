@@ -265,7 +265,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         parentServiceSlug: "dentistry",
         title: "Single-Sitting Laser Root Canal",
         shortDescription: "Painless, expert root canal therapy to save your natural teeth.",
-        fullDescription: "Experience a stress-free, painless **Root Canal Treatment** (RCT) at Indira Hospital. We use advanced rotary endodontics and diode lasers to thoroughly disinfect and seal the tooth canal in a single visit. Our precision approach saves your natural tooth while eliminating infection and severe pain, preserving your smile effectively.",
+        fullDescription: "Experience a stress-free, painless **Root Canal Treatment** (RCT) at Indira Hospital. Led by **Dr. Rockson Samuel**, we use advanced rotary endodontics and diode lasers to thoroughly disinfect and seal the tooth canal in a single visit. Our precision approach saves your natural tooth while eliminating infection and severe pain, preserving your smile effectively.",
         features: [
             "Single-Sitting Completion for Most Cases",
             "Advanced Laser Disinfection of Canals",
@@ -285,7 +285,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         parentServiceSlug: "dentistry",
         title: "Advanced Dental Implants",
         shortDescription: "Permanent, natural-looking solution for missing teeth with world-class implants.",
-        fullDescription: "Restore your smile and confidence with permanent **Dental Implants**. Using 3D-guided surgery and premium titanium or zirconia implants, we provide a replacement that looks, feels, and functions exactly like your natural teeth. Whether it is a single tooth or full-mouth rehabilitation, our dental specialists ensure a lifetime of comfort and durability.",
+        fullDescription: "Restore your smile and confidence with permanent **Dental Implants**. Under the expert hands of **Dr. Rockson Samuel**, we use 3D-guided surgery and premium titanium or zirconia implants to provide a replacement that looks, feels, and functions exactly like your natural teeth. Whether it is a single tooth or full-mouth rehabilitation, our dental specialists ensure a lifetime of comfort and durability.",
         features: [
             "USFDA Approved Titanium & Zirconia Implants",
             "3D Guided Implant Placement Planning",

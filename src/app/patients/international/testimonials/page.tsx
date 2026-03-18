@@ -155,6 +155,7 @@ const AGGREGATE = {
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
+    "@id": "https://www.indirasuperspecialityhospital.com/patients/international/testimonials#reviews",
     name: "Indira Super Speciality Hospital",
     aggregateRating: {
         "@type": "AggregateRating",

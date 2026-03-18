@@ -52,6 +52,7 @@ export default async function EntityReviews({
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": schemaType,
+        "@id": `https://www.indirasuperspecialityhospital.com/${entityType}/${entitySlug}#${entityType}`,
         "name": entityName,
         "description": description,
         "provider": {

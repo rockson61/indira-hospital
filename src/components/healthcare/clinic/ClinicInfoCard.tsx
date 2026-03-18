@@ -404,7 +404,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@id": "https://www.velloredental.com",
+            "@id": "https://www.indirasuperspecialityhospital.com/clinic#localbusiness",
             "@type": "LocalBusiness",
             address: {
               "@type": "PostalAddress",

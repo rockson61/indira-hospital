@@ -70,18 +70,35 @@ export default function HealthLibraryClient() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center justify-center w-24 h-24 mb-8 rounded-3xl bg-[#0086d6]/20 backdrop-blur-md border border-[#0086d6]/30 text-[#0086d6]">
-                            <LayoutGrid className="w-12 h-12" />
+                        <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-[2rem] bg-[#0086d6]/20 backdrop-blur-md border border-[#0086d6]/30 text-[#0086d6]">
+                            <LayoutGrid className="w-10 h-10" />
                         </div>
-                        <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[0.95] mb-8">
-                            Advanced <br className="sm:hidden" />
+                        <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[1] mb-6">
+                            Departments & <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0086d6] to-cyan-300">
-                                Treatments.
+                                Specialities
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-12">
-                            Explore world-class surgical procedures, decode your symptoms, and access comprehensive medical guides. Expert care from India's leading specialists.
+                            Explore world-class surgical procedures, decode your symptoms, and access comprehensive medical guides. Select a department below to begin.
                         </p>
+
+                        <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto mt-8">
+                            {services.length > 0 ? (
+                                services.map(dept => (
+                                    <Link 
+                                        key={dept.slug} 
+                                        href={`/doctor/near-me/treat/${dept.slug}`}
+                                        className="group inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/10 rounded-full text-white font-semibold transition-all hover:scale-105 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+                                    >
+                                        {dept.title}
+                                        <ArrowRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-cyan-300 transition-all" />
+                                    </Link>
+                                ))
+                            ) : (
+                                <div className="text-slate-400 animate-pulse">Loading departments...</div>
+                            )}
+                        </div>
                     </motion.div>
                 </div>
             </section>

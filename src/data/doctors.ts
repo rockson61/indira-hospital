@@ -132,5 +132,29 @@ export const doctors: readonly Doctor[] = [
         imageUrl: "/images/doctors/dr-jackson-p-john.jpg",
         availability: ["Mon-Sat"],
         bio: "Dr. Jackson P John is an Emergency Medicine Specialist with over 8 years of experience. He previously worked in Oman Ministry of Health. He is well-versed in emergency procedures like airway management (Intubation & Resuscitation), IV access (Central Line, Arterial Line), and surgical & trauma management. Registration number: 2017051750.",
+    },
+    {
+        id: "dr-t-s-dhanushmi",
+        name: "Dr. T. S. Dhanushmi",
+        slug: "dr-t-s-dhanushmi",
+        specialty: "Specialist Dentist",
+        departmentId: "dentistry",
+        experience: 5,
+        education: ["BDS", "F.C.E (Advanced Clinical Training)"],
+        imageUrl: "/images/doctors/dr-dhanushmi.jpg",
+        availability: ["Mon-Sat"],
+        bio: "Dr. T. S. Dhanushmi is a compassionate and skilled General Dentist with clinical experience in preventive, restorative, and basic surgical dental procedures. She is dedicated to delivering patient-centered dental care, focusing on accurate diagnosis, gentle treatment, and long-term oral health outcomes."
+    },
+    {
+        id: "dr-rockson-samuel",
+        name: "Dr. Rockson Samuel",
+        slug: "dr-rockson-samuel",
+        specialty: "Chief Dentist",
+        departmentId: "dentistry",
+        experience: 5,
+        education: ["BDS", "BDA", "PgD DM"],
+        imageUrl: "/images/doctors/dr-rockson-samuel.jpg",
+        availability: ["Mon-Sat"],
+        bio: "Dr. Rockson Samuel is the Chief Dentist at Indira Dental Clinic – Smile Happy Dental Club, dedicated to providing comprehensive, patient-focused dental care. With a strong background in clinical dentistry and healthcare innovation, he focuses on delivering safe, effective, and personalized dental treatments for patients of all ages."
     }
 ];

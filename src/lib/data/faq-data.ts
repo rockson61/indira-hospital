@@ -107,13 +107,13 @@ export const dentalFaqs: FAQItem[] = [
     },
     {
         question: "Is the dental implant procedure painful?",
-        answer: "The procedure is typically performed under local anesthesia, so you shouldn't feel pain during the surgery. Most patients report that it's less uncomfortable than a tooth extraction.",
+        answer: "The procedure is typically performed under local anesthesia, so you shouldn't feel pain during the surgery. Dr. Rockson Samuel ensures a stress-free experience, and most patients report that it's less uncomfortable than a tooth extraction.",
         category: "Dentistry",
         relatedSlugs: ["dental-implants"]
     },
     {
         question: "At what age should children have their first dental visit?",
-        answer: "The American Academy of Pediatric Dentistry recommends a first visit by the age of one, or when the first tooth appears, to establish a 'dental home'.",
+        answer: "The American Academy of Pediatric Dentistry recommends a first visit by the age of one. At Indira Hospital, Dr. Dhanushmi provides gentle care to establish a 'dental home' for your child.",
         category: "Dentistry",
         relatedSlugs: ["dentistry"]
     },
@@ -125,7 +125,7 @@ export const dentalFaqs: FAQItem[] = [
     },
     {
         question: "What is a root canal treatment (RCT)?",
-        answer: "RCT is a procedure to save a severely damaged or infected tooth by removing the damaged pulp, cleaning the canal, and sealing it. It is a highly effective way to preserve natural teeth.",
+        answer: "RCT is a procedure to save an infected tooth. Under the expertise of Dr. Rockson Samuel, we use advanced lasers and rotary endodontics for a painless, single-sitting experience.",
         category: "Dentistry",
         relatedSlugs: ["dentistry", "root-canal"]
     },

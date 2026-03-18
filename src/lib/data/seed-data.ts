@@ -315,6 +315,86 @@ export const SEED_DATA = {
                     answer: "He is a registered medical practitioner with registration number 2017051750."
                 }
             ]
+        },
+        {
+            id: "dr-t-s-dhanushmi",
+            status: "published",
+            name: "Dr. T. S. Dhanushmi",
+            slug: "dr-t-s-dhanushmi",
+            designation: "Specialist Dentist",
+            department: "Dentistry",
+            image: "/images/doctors/dr-dhanushmi.jpg",
+            bio: "Dr. T. S. Dhanushmi is a compassionate and skilled General Dentist with clinical experience in preventive, restorative, and basic surgical dental procedures. She is dedicated to delivering patient-centered dental care, focusing on accurate diagnosis, gentle treatment, and long-term oral health outcomes.\n\nWith professional experience across multiple dental clinics and hospitals in South India, Dr. Dhanushmi has handled a wide range of dental conditions, from routine preventive treatments to complex restorative cases. Her approach combines clinical precision, patient education, and preventive dentistry to help patients maintain healthy and confident smiles. She is known for her excellent communication skills, patience with patients, and commitment to high-quality dental care.\n\nDr. Dhanushmi also has extensive hands-on experience in community dental health programs and has assisted in advanced surgical procedures, strengthening her clinical judgment and interdisciplinary collaboration.",
+            education: [
+                { degree: "Bachelor of Dental Surgery (BDS)", institution: "Raja Rajeswari Dental College & Hospital, Bengaluru", year: "2019" },
+                { degree: "F.C.E (Advanced Clinical Training)", institution: "Asian Institute of Advanced Dentistry", year: "2021" }
+            ],
+            specialties: ["Preventive Dentistry", "Restorative Dentistry", "Patient Education", "Routine Dental Surgery"],
+            procedures: [
+                "Ultrasonic scaling and polishing",
+                "Routine dental cleaning procedures",
+                "Preventive dental education",
+                "Oral hygiene maintenance",
+                "Class II composite restorations",
+                "Aesthetic corrections of anterior teeth",
+                "Tooth restorations with modern restorative materials",
+                "Surgical extractions",
+                "Extraction of grossly decayed teeth and root stumps",
+                "Alveoloplasty procedures",
+                "Access cavity preparation",
+                "Root canal treatment assistance",
+                "Restoration after endodontic therapy"
+            ],
+            experience_years: 5,
+            related_services: ["dentistry"],
+            available_locations: ["vellore"],
+            faqs: [
+                {
+                    question: "What is Dr. Dhanushmi's specialty?",
+                    answer: "She specializes in preventive and restorative dentistry, ensuring long-term oral health through gentle and precise treatments."
+                },
+                {
+                    question: "Does she treat children?",
+                    answer: "Yes, Dr. Dhanushmi provides compassionate dental care for patients of all ages, including pediatric preventive treatments."
+                }
+            ],
+            reviews: []
+        },
+        {
+            id: "dr-rockson-samuel",
+            status: "published",
+            name: "Dr. Rockson Samuel",
+            slug: "dr-rockson-samuel",
+            designation: "Chief Dentist",
+            department: "Dentistry",
+            image: "/images/doctors/dr-rockson-samuel.jpg",
+            bio: "Dr. Rockson Samuel is the Chief Dentist at Indira Dental Clinic – Smile Happy Dental Club, dedicated to providing comprehensive, patient-focused dental care. With a strong background in clinical dentistry and healthcare innovation, he focuses on delivering safe, effective, and personalized dental treatments for patients of all ages.",
+            education: [
+                { degree: "BDS", institution: "Rajiv Gandhi University of Health Sciences", year: "" },
+                { degree: "BDA", institution: "", year: "" },
+                { degree: "PgD DM", institution: "", year: "" }
+            ],
+            specialties: ["Clinical Dentistry", "Healthcare Innovation", "Preventive Care", "Cosmetic Dentistry"],
+            procedures: [
+                "Preventive dental care and oral health check-ups",
+                "Dental fillings and restorative treatments",
+                "Tooth extractions and minor oral surgery",
+                "Cosmetic dental treatments and smile enhancement"
+            ],
+            experience_years: 5,
+            related_services: ["dentistry"],
+            available_locations: ["vellore"],
+            faqs: [
+                {
+                    question: "What is Dr. Rockson Samuel's approach to patient care?",
+                    answer: "He emphasizes accurate diagnosis, personalized treatment plans, comfortable and stress-free visits, and ethical, evidence-based dental care."
+                },
+                {
+                    question: "What languages does Dr. Rockson Samuel speak?",
+                    answer: "He communicates in English, Tamil, Hindi, Malayalam, Telugu, and Kannada."
+                }
+            ],
+            reviews: []
         }
     ],
     services: [
@@ -358,7 +438,7 @@ export const SEED_DATA = {
             "slug": "dentistry",
             "short_description": "Advanced specialized care in Dentistry at Indira Super Speciality Hospital.",
             "icon": "Smile",
-            "full_description": "<h2>Advanced Dentistry & Maxillofacial Care</h2>\n<p>A healthy smile is foundational to your overall well-being. The <strong>Department of Dentistry</strong> at Indira Super Speciality Hospital is equipped with state-of-the-art dental chairs, digital imaging, and a highly experienced team of prosthodontists, endodontists, and oral surgeons to solve complex dental challenges.</p>\n<h3>Comprehensive Dental Services</h3>\n<p>Our aesthetic and functional dental solutions include:</p>\n<ul>\n<li><strong>Restorative Dentistry</strong>: Painless single-sitting root canals, zirconium crowns, and high-quality dental bridges securely restoring your bite.</li>\n<li><strong>Implantology</strong>: Precision-guided, permanent titanium dental implants replicating the look and feel of natural teeth.</li>\n<li><strong>Maxillofacial Surgery</strong>: Advanced surgical correction for facial trauma, jaw deformities, and complex wisdom tooth extractions.</li>\n<li><strong>Cosmetic Odontology</strong>: Professional teeth whitening, customized veneers, and complete smile makeovers perfectly aligned with your facial structure.</li>\n</ul>\n<p>From routine scaling and polishing to advanced full-mouth rehabilitations, our protocols ensure a virtually pain-free experience in a sterile, modern environment.</p>"
+            "full_description": "<h2>Advanced Dentistry & Maxillofacial Care</h2>\n<p>A healthy smile is foundational to your overall well-being. The <strong>Department of Dentistry</strong> at Indira Super Speciality Hospital, led by <strong>Dr. Rockson Samuel</strong>, is equipped with state-of-the-art dental chairs, digital imaging, and a highly experienced team of specialists to solve complex dental challenges.</p>\n<h3>Comprehensive Dental Services</h3>\n<p>Our aesthetic and functional dental solutions include:</p>\n<ul>\n<li><strong>Restorative Dentistry</strong>: Painless single-sitting root canals, zirconium crowns, and high-quality dental bridges securely restoring your bite.</li>\n<li><strong>Implantology</strong>: Precision-guided, permanent titanium dental implants replicating the look and feel of natural teeth.</li>\n<li><strong>Maxillofacial Surgery</strong>: Advanced surgical correction for facial trauma, jaw deformities, and complex wisdom tooth extractions.</li>\n<li><strong>Cosmetic Odontology</strong>: Professional teeth whitening, customized veneers, and complete smile makeovers perfectly aligned with your facial structure.</li>\n</ul>\n<p>From routine scaling and polishing to advanced full-mouth rehabilitations, Dr. Rockson Samuel and his team ensure a virtually pain-free experience in a sterile, modern environment.</p>"
         },
         {
             "title": "Dermatology",
