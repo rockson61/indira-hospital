@@ -43,21 +43,25 @@ const treatments = [
 
 export default function TreatmentsPage() {
     return (
-        <main className="min-h-screen pt-24 pb-20 bg-slate-50 dark:bg-slate-950">
-            <SectionContainer className="mb-16">
-                <div className="max-w-4xl">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-fuchsia-100 dark:bg-fuchsia-950 rounded-full text-xs font-black text-fuchsia-600 uppercase mb-8">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
+            {/* Cinematic Hero */}
+            <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10">
                         <Sparkles className="w-4 h-4" /> Surgical Excellence
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
-                        Signature Treatments <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">in Vellore, Tamil Nadu</span>
+                    <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6">
+                        Signature Treatments <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">in Vellore, TN.</span>
                     </h1>
-                    <p className="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         Indira Hospital specialize in the latest surgical interventions that prioritize rapid healing and minimal discomfort.
                     </p>
                 </div>
-            </SectionContainer>
+            </section>
 
             <SectionContainer>
                 <div className="grid md:grid-cols-2 gap-8">

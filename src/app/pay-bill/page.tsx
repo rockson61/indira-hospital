@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { PageHeader } from "@/components/ui/page-header";
-import { SectionContainer } from "@/components/ui/section-container";
-import { CreditCard, FileText, Shield, CheckCircle2, ArrowRight } from "lucide-react";
+import { CreditCard, FileText, Shield, CheckCircle2, ArrowRight, Lock } from "lucide-react";
 import { submitBillingPayment } from "@/app/actions/billing-actions";
+import { SectionContainer } from "@/components/ui/section-container";
 import Link from "next/link";
 import EntityFAQs from "@/components/trust/EntityFAQs";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export default function PayBillPage() {
     const [formData, setFormData] = useState({
@@ -42,9 +42,9 @@ export default function PayBillPage() {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { id, value } = e.target;
-        setFormData(prev => ({ 
-            ...prev, 
-            [id === 'patient-id' ? 'patient_id' : id === 'invoice-number' ? 'invoice_number' : 'amount']: id === 'amount' ? parseFloat(value) : value 
+        setFormData(prev => ({
+            ...prev,
+            [id === 'patient-id' ? 'patient_id' : id === 'invoice-number' ? 'invoice_number' : 'amount']: id === 'amount' ? parseFloat(value) : value
         }));
     };
 
@@ -57,7 +57,7 @@ export default function PayBillPage() {
                     </div>
                     <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-4">Payment Successful!</h2>
                     <p className="text-xl text-slate-500 dark:text-slate-400 mb-10">
-                        Thank you. Your payment of <span className="font-bold text-slate-900 dark:text-white">{formData.amount}</span> has been processed successfully. A confirmation receipt has been sent to your registered mobile/email.
+                        Thank you. Your payment of <span className="font-bold text-slate-900 dark:text-white">{formData.amount}</span> has been processed. A confirmation has been sent to your registered mobile/email.
                     </p>
                     <Link href="/">
                         <button className="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all flex items-center gap-3 mx-auto">
@@ -70,15 +70,28 @@ export default function PayBillPage() {
     }
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950">
-            <PageHeader
-                title="Pay Your Bill Online"
-                description="Securely and conveniently pay your Indira Hospital bills online. We accept all major credit cards, UPI, and net banking."
-            />
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
+            {/* Cinematic Hero */}
+            <section className="relative pt-48 pb-40 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none" />
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10">
+                        <Lock className="w-4 h-4" /> Secure Payment
+                    </div>
+                    <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6">
+                        Pay Your Bill <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Online, Instantly.</span>
+                    </h1>
+                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                        Secure online bill payment via UPI, credit card, or net banking — in 60 seconds.
+                    </p>
+                </div>
+            </section>
 
-            <section className="py-20">
-                <SectionContainer>
-                    <div className="max-w-3xl mx-auto">
+            {/* Form Card */}
+            <section className="max-w-3xl mx-auto px-6 lg:px-8 -mt-20 relative z-20">
+
                         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800">
 
                             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-slate-100 dark:border-slate-800">
@@ -162,8 +175,6 @@ export default function PayBillPage() {
                                 <p>If you don&apos;t know your Patient ID or Invoice Number, please contact our billing department at <span className="font-bold text-slate-700 dark:text-slate-300">080 4716 1616</span>.</p>
                             </div>
                         </div>
-                    </div>
-                </SectionContainer>
             </section>
 
             {/* TRUST SIGNALS */}

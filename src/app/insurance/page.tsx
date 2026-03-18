@@ -14,19 +14,27 @@ export const metadata: Metadata = {
 
 export default function InsurancePage() {
     return (
-        <main className="min-h-screen pt-24 pb-20 bg-slate-50 dark:bg-slate-950">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
             <JsonLdSchema type="hospital" />
-            {/* Hero Section */}
-            <SectionContainer className="mb-12">
-                <div className="max-w-4xl">
-                    <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 leading-[1.1]">
-                        Seamless <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">Cashless Therapy</span> & Insurance
+
+            {/* Cinematic Hero */}
+            <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 text-sm font-bold tracking-[0.2em] uppercase mb-10">
+                        <ShieldCheck className="w-4 h-4 animate-pulse" /> Cashless Treatment
+                    </div>
+                    <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6">
+                        Seamless <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Cashless Therapy.</span>
                     </h1>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-2xl">
-                        We are committed to making quality healthcare accessible. Indira Hospital partners with all major health insurance providers and government schemes to ensure you focus on recovery, not paperwork.
+                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                        We are committed to making quality healthcare accessible. We partner with all major health insurance providers and government schemes.
                     </p>
                 </div>
-            </SectionContainer>
+            </section>
 
             {/* Government Schemes */}
             <SectionContainer className="mb-16">
