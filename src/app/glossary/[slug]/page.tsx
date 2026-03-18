@@ -13,8 +13,9 @@ const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replac
 export const dynamicParams = true;
 export const revalidate = 86400; // Re-validate once per day
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const glossaryItem = GLOSSARY_DATA.find(item => slugify(item.term) === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const glossaryItem = GLOSSARY_DATA.find(item => slugify(item.term) === slug);
 
     if (!glossaryItem) {
         return { title: 'Term Not Found' }
@@ -26,8 +27,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
 }
 
-export default function GlossaryTermPage({ params }: { params: { slug: string } }) {
-    const glossaryItem = GLOSSARY_DATA.find(item => slugify(item.term) === params.slug);
+export default async function GlossaryTermPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const glossaryItem = GLOSSARY_DATA.find(item => slugify(item.term) === slug);
 
     if (!glossaryItem) {
         notFound();
