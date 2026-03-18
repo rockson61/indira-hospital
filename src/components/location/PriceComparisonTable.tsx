@@ -60,25 +60,26 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
           <strong>Significantly lower than metro city prices.</strong> Compare Indira Dental Clinic, Vellore with Chennai and Bangalore rates. All services include consultation, procedure, and follow-up visits.
         </p>
 
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="overflow-x-auto rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-sm bg-white/40 dark:bg-slate-900/40 backdrop-blur-xl">
+          <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b-2 border-border">
-                <th className="text-left py-3 px-4 font-semibold text-foreground">Treatment</th>
-                <th className="text-left py-3 px-4 font-semibold text-fuchsia-600">Our Price</th>
-                <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Market Price</th>
-                <th className="text-left py-3 px-4 font-semibold text-green-600">You Save</th>
+              <tr className="bg-slate-50/80 dark:bg-slate-800/80 border-b border-slate-200/60 dark:border-slate-700/50">
+                <th className="py-4 px-5 font-black text-slate-900 dark:text-white uppercase tracking-wider text-xs">Treatment</th>
+                <th className="py-4 px-5 font-black text-fuchsia-700 dark:text-fuchsia-400 uppercase tracking-wider text-xs bg-fuchsia-50/50 dark:bg-fuchsia-900/10">Indira Hospital Price</th>
+                <th className="py-4 px-5 font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-xs">Metro City Price</th>
+                <th className="py-4 px-5 font-black text-green-600 dark:text-green-500 uppercase tracking-wider text-xs">Your Benefit</th>
+                <th className="py-4 px-5 font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-xs text-right">Action</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
               {services.map((service, index) => (
-                <tr key={index} className="border-b border-border/50 hover:bg-muted transition-colors">
-                  <td className="py-4 px-4">
+                <tr key={index} className="group hover:bg-white dark:hover:bg-slate-800/50 transition-colors duration-300">
+                  <td className="py-4 px-5">
                     <div>
-                      <p className="font-semibold text-foreground">{service.name}</p>
-                      <div className="flex flex-wrap gap-1 mt-1">
+                      <p className="font-bold text-[15px] text-slate-900 dark:text-white mb-1.5">{service.name}</p>
+                      <div className="flex flex-wrap gap-1.5">
                         {service.features.map((feature, i) => (
-                          <span key={i} className="text-xs text-muted-foreground flex items-center gap-1">
+                          <span key={i} className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md flex items-center gap-1 border border-slate-200 dark:border-slate-700">
                             <CheckCircle className="w-3 h-3 text-fuchsia-500" />
                             {feature}
                           </span>
@@ -86,14 +87,19 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
                       </div>
                     </div>
                   </td>
-                  <td className="py-4 px-4">
-                    <span className="text-lg font-bold text-fuchsia-600">{service.ourPrice}</span>
+                  <td className="py-4 px-5 bg-fuchsia-50/30 dark:bg-fuchsia-500/5 group-hover:bg-fuchsia-50/80 dark:group-hover:bg-fuchsia-500/10 transition-colors border-x border-fuchsia-100/50 dark:border-fuchsia-900/20">
+                    <span className="text-lg font-black text-fuchsia-700 dark:text-fuchsia-400 flex items-center">{service.ourPrice}</span>
                   </td>
-                  <td className="py-4 px-4">
-                    <span className="text-muted-foreground line-through">{service.marketPrice}</span>
+                  <td className="py-4 px-5">
+                    <span className="text-[13px] font-bold text-slate-400 dark:text-slate-500 line-through decoration-slate-300 dark:decoration-slate-600">{service.marketPrice}</span>
                   </td>
-                  <td className="py-4 px-4">
-                    <span className="text-green-600 font-semibold">{service.savings}</span>
+                  <td className="py-4 px-5">
+                    <span className="text-[13px] font-black text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/30 px-2.5 py-1 rounded-full border border-green-100 dark:border-green-900/50">{service.savings}</span>
+                  </td>
+                  <td className="py-4 px-5 text-right">
+                    <button className="inline-flex items-center justify-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white dark:bg-fuchsia-600 dark:hover:bg-fuchsia-500 text-[12px] font-bold rounded-xl transition-all shadow-sm hover:shadow-md active:scale-95 uppercase tracking-wider whitespace-nowrap">
+                        Book Now
+                    </button>
                   </td>
                 </tr>
               ))}

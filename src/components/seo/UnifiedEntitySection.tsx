@@ -112,26 +112,26 @@ export async function UnifiedEntitySection({
     if (featuredItems.length > 0) {
         if (type === "services") {
             FeaturedContent = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
                     {featuredItems.map((s: any) => <ServiceCard key={s.slug || s.id} service={s} variant="detail" />)}
                 </div>
             );
         } else if (type === "doctors") {
             FeaturedContent = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
                     {featuredItems.map((d: any) => <DoctorCard key={d.slug || d.id} doctor={d} variant="grid" />)}
                 </div>
             );
         } else if (type === "departments") {
             FeaturedContent = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
                     {featuredItems.map((d: any) => <DepartmentCard key={d.slug || d.id} department={d} variant="grid" />)}
                 </div>
             );
         } else if (type === "locations") {
             FeaturedContent = (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    {featuredItems.map((l: any) => <LocationCard key={l.slug} location={l} variant="compact" />)}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+                    {featuredItems.map((l: any) => <LocationCard key={l.slug} location={l} variant="card" />)}
                 </div>
             );
         }

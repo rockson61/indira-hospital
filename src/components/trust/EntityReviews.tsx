@@ -110,46 +110,46 @@ export default async function EntityReviews({
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {reviews.map((review: any) => (
-                        <ModernCard key={review.id} variant="default" hover className="flex flex-col h-full bg-slate-50/50 dark:bg-slate-800/50 border-none shadow-none hover:shadow-xl transition-all duration-500">
-                            <ModernCardHeader className="p-8 pb-4">
-                                <div className="flex justify-between items-start mb-6">
-                                    <div className="bg-fuchsia-500/10 dark:bg-fuchsia-500/20 p-3 rounded-xl text-fuchsia-600 dark:text-fuchsia-400">
-                                        <Quote className="w-6 h-6 fill-current" />
+                        <article key={review.id} className="group relative flex flex-col h-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/60 dark:border-slate-700/50 rounded-[2rem] p-6 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 overflow-hidden">
+                            {/* Decorative Background Blur */}
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-100 dark:bg-fuchsia-900/20 rounded-full blur-3xl opacity-0 group-hover:opacity-60 transition-opacity duration-700 pointer-events-none -mr-10 -mt-10" />
+
+                            <div className="flex justify-between items-start mb-5 relative z-10">
+                                    <div className="bg-fuchsia-50 dark:bg-fuchsia-950/50 p-2.5 rounded-xl text-fuchsia-600 dark:text-fuchsia-400 border border-fuchsia-100 dark:border-fuchsia-900/50">
+                                        <Quote className="w-5 h-5 fill-current opacity-70" />
                                     </div>
-                                    <div className="flex gap-0.5">
+                                    <div className="flex gap-0.5 bg-amber-50 dark:bg-amber-950/30 px-2.5 py-1 rounded-full border border-amber-100 dark:border-amber-900/50">
                                         {[...Array(review.rating || 5)].map((_, i) => (
-                                            <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                                            <Star key={i} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                                         ))}
                                     </div>
                                 </div>
-                                <p className="text-slate-600 dark:text-slate-300 italic leading-relaxed text-lg mb-6">
+                                <p className="text-slate-600 dark:text-slate-300 italic leading-relaxed text-[15px] font-medium mb-6 flex-grow relative z-10">
                                     &quot;{review.content}&quot;
                                 </p>
-                            </ModernCardHeader>
-                            <ModernCardContent className="p-8 pt-0 mt-auto">
-                                <div className="flex items-center gap-4 border-t border-slate-100 dark:border-slate-700 pt-6">
-                                    <div className="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400">
-                                        <UserCircle className="w-8 h-8" />
+
+                                <div className="flex items-center gap-3 border-t border-slate-100 dark:border-slate-800/60 pt-5 mt-auto relative z-10">
+                                    <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 shrink-0 border border-slate-200 dark:border-slate-700">
+                                        <UserCircle className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-slate-900 dark:text-white">{review.patient_name}</h4>
-                                        <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                                        <h4 className="font-bold text-slate-900 dark:text-white text-sm">{review.patient_name}</h4>
+                                        <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wider font-semibold">
                                             {review.treatment_received && (
                                                 <>
-                                                    <span className="bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded uppercase font-medium">
+                                                    <span className="bg-slate-50 dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-100 dark:border-slate-700 truncate max-w-[120px]">
                                                         {review.treatment_received}
                                                     </span>
-                                                    <span>•</span>
+                                                    <span className="text-slate-300 dark:text-slate-600">•</span>
                                                 </>
                                             )}
-                                            <span>{review.date_of_visit ? formatDate(review.date_of_visit) : 'Recently Verified'}</span>
+                                            <span>{review.date_of_visit ? formatDate(review.date_of_visit) : 'Verified Patient'}</span>
                                         </div>
                                     </div>
                                 </div>
-                            </ModernCardContent>
-                        </ModernCard>
+                        </article>
                     ))}
                 </div>
             </div>

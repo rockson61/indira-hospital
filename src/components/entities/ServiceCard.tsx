@@ -104,15 +104,15 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
 
     // --- VARIANT: DETAIL (Default) ---
     return (
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <div className={cn(
-                "group relative h-full rounded-[3rem] border border-slate-200 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-700 p-10 flex flex-col bg-white/90 dark:bg-slate-800/50 overflow-hidden",
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="h-full">
+            <article className={cn(
+                "group relative h-full rounded-[2.5rem] border border-slate-200/60 dark:border-slate-700/50 backdrop-blur-2xl hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)] dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 p-7 sm:p-8 flex flex-col bg-white/80 dark:bg-slate-900/80 overflow-hidden",
                 className
             )}>
                 {/* Light Streak Animation */}
                 <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                <div className="flex items-start justify-between mb-8 relative z-10">
+                <div className="flex items-start justify-between mb-6 relative z-10">
                     <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600 flex items-center justify-center group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-lg group-hover:scale-110">
                         <div className="w-8 h-8">{Icon}</div>
                     </div>
@@ -124,20 +124,20 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                 </div>
 
                 <div className="relative z-10 flex-grow">
-                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-tight">
-                        <Link href={href} className="before:absolute before:inset-0 outline-none">
+                    <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-tight">
+                        <Link href={href} className="before:absolute before:inset-0 outline-none" aria-label={`Learn more about ${service.title}`}>
                             {service.title}
                         </Link>
                     </h3>
 
-                    <p className="text-slate-500 dark:text-slate-400 text-lg font-medium mb-8 line-clamp-3 leading-relaxed">
+                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-6 line-clamp-3 leading-relaxed">
                         {service.short_description}
                     </p>
 
                     {service.features && service.features.length > 0 && (
-                        <div className="mb-10 space-y-3">
+                        <div className="mb-8 space-y-2">
                             {service.features.slice(0, 3).map((feat: string, i: number) => (
-                                <div key={i} className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300 font-bold">
+                                <div key={i} className="flex items-center gap-3 text-[13px] text-slate-600 dark:text-slate-300 font-bold">
                                     <div className="w-5 h-5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center flex-shrink-0">
                                         <CheckCircle2 className="w-3.5 h-3.5 text-fuchsia-500" />
                                     </div>
@@ -148,25 +148,27 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
                     )}
                 </div>
 
-                <div className="mt-auto relative z-20 flex gap-3">
-                    <Link
-                        href={href}
-                        className="group/btn relative flex-1 inline-flex items-center justify-center py-5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-black rounded-2xl text-xs transition-all duration-500 overflow-hidden shadow-sm hover:bg-slate-200 dark:hover:bg-slate-600 uppercase tracking-widest"
-                    >
-                        Details
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
+                <div className="mt-auto relative z-20 flex gap-2 pt-4 border-t border-slate-100 dark:border-slate-800/60">
                     <a
                         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in learning more about ${service.title}.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group/wa relative flex-1 inline-flex items-center justify-center py-5 bg-fuchsia-600 text-white font-black rounded-2xl text-xs transition-all duration-500 overflow-hidden shadow-xl hover:bg-fuchsia-500 uppercase tracking-widest"
+                        className="group/wa relative flex-[1.5] inline-flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all duration-300 shadow-md hover:shadow-lg dark:shadow-none hover:bg-fuchsia-500 uppercase tracking-wider"
+                        aria-label={`Inquire about ${service.title} on WhatsApp`}
                     >
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                        <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
                         Chat
                     </a>
+                    <Link
+                        href={href}
+                        className="group/btn relative flex-1 inline-flex items-center justify-center py-2.5 bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 font-bold rounded-xl text-[12px] transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 uppercase tracking-wider"
+                        aria-label={`View details for ${service.title}`}
+                    >
+                        Details
+                        <ArrowRight className="w-3 h-3 ml-1 group-hover/btn:translate-x-0.5 transition-transform" />
+                    </Link>
                 </div>
-            </div>
+            </article>
         </motion.div>
     );
 }

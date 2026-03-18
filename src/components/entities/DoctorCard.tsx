@@ -152,7 +152,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
             transition={{ duration: 0.4 }}
             className="h-full"
         >
-            <Card className="group overflow-hidden rounded-[2rem] border border-slate-100 dark:border-slate-700/50 shadow-soft hover:shadow-float dark:hover:shadow-fuchsia-500/5 hover:-translate-y-1 transition-all duration-300 h-full flex flex-col bg-white dark:bg-slate-800/50">
+            <article className="group relative overflow-hidden rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 backdrop-blur-xl shadow-sm hover:shadow-2xl dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col bg-white/80 dark:bg-slate-900/80">
                 <div className="relative aspect-[4/3] bg-fuchsia-50 dark:bg-fuchsia-950 overflow-hidden m-2 rounded-[1.5rem] shadow-inner">
                     {doctor.image && getImageUrl(doctor.image) ? (
                         <Image
@@ -168,9 +168,13 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
 
-                    <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                        <h3 className="text-xl font-black font-heading leading-tight tracking-tight">{doctor.name}</h3>
-                        <p className="text-fuchsia-300 text-[10px] uppercase tracking-widest font-bold mt-1 max-w-full truncate">{deptName}</p>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <h3 className="text-lg font-black font-heading leading-tight tracking-tight drop-shadow-md">
+                            <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="before:absolute before:inset-0" aria-label={`View profile of ${doctor.name}`}>
+                                {doctor.name}
+                            </Link>
+                        </h3>
+                        <p className="text-fuchsia-300 text-[10px] uppercase tracking-widest font-bold mt-0.5 max-w-full truncate drop-shadow">{deptName}</p>
                     </div>
 
                     {doctor.experience_years && (
@@ -181,32 +185,37 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                     )}
                 </div>
 
-                <div className="px-6 py-5 flex-1 flex flex-col">
-                    <p className="text-sm font-bold text-slate-600 dark:text-slate-300 line-clamp-1 mb-4 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-full inline-block self-start border border-slate-100 dark:border-slate-700">
-                        {doctor.designation}
-                    </p>
+                <div className="px-5 py-4 flex-1 flex flex-col relative z-10">
+                    <div className="flex items-center gap-2 mb-3">
+                        <p className="text-xs font-bold text-slate-700 dark:text-slate-200 truncate bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700">
+                            {doctor.designation}
+                        </p>
+                    </div>
 
                     {doctor.specialties && (
-                        <p className="text-[13px] text-slate-500 dark:text-slate-400 font-medium line-clamp-2 mb-5 h-10 leading-relaxed">
+                        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium line-clamp-2 mb-4 leading-relaxed">
                             {doctor.specialties.join(", ")}
                         </p>
                     )}
 
-                    <div className="mt-auto flex gap-3 pt-5 border-t border-slate-100 dark:border-slate-700">
-                        {showBookButton ? (
+                    <div className="mt-auto flex gap-2 pt-4 border-t border-slate-100 dark:border-slate-800/60">
+                        {showBookButton && (
                             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                className="flex-1 flex items-center justify-center gap-2 bg-slate-900 dark:bg-white hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 text-white dark:text-slate-900 text-[13px] font-bold py-3 rounded-full transition-all shadow-sm dark:shadow-slate-900/30">
-                                <MessageCircle className="w-4 h-4" />
-                                Book
+                                className="relative z-20 flex-[1.5] flex items-center justify-center gap-1.5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white text-[12px] uppercase tracking-wider font-black py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg dark:shadow-none"
+                                aria-label={`Book an appointment with ${doctor.name} via WhatsApp`}
+                            >
+                                <MessageCircle className="w-3.5 h-3.5" /> Book
                             </a>
-                        ) : null}
+                        )}
                         <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`}
-                            className="flex-1 flex items-center justify-center gap-2 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 hover:text-fuchsia-700 text-slate-700 dark:text-slate-200 text-[13px] font-bold py-3 rounded-full transition-all border border-slate-100 dark:border-slate-700">
-                            Profile
+                            className="relative z-20 flex-1 flex items-center justify-center gap-1 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-[12px] uppercase tracking-wider font-bold py-2.5 rounded-xl transition-all border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600"
+                            aria-label={`View full profile of ${doctor.name}`}
+                        >
+                            Profile <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                         </Link>
                     </div>
                 </div>
-            </Card>
+            </article>
         </motion.div>
     );
 }

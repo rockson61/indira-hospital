@@ -34,13 +34,19 @@ export function FAQSection({
         {description && <p className="text-slate-500 dark:text-slate-400 font-medium max-w-3xl mx-auto">{description}</p>}
       </div>
 
-      <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+      <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto space-y-4">
         {faqs.map((faq, index) => (
-          <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="text-left font-medium">{faq.question}</AccordionTrigger>
-            <AccordionContent>
+          <AccordionItem 
+              key={index} 
+              value={`item-${index}`} 
+              className="bg-white/60 dark:bg-slate-900/40 backdrop-blur-md rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md hover:bg-white/90 dark:hover:bg-slate-900/80"
+          >
+            <AccordionTrigger className="text-left font-bold text-[15px] sm:text-base text-slate-900 dark:text-white px-5 sm:px-6 py-5 hover:no-underline hover:text-fuchsia-600 dark:hover:text-fuchsia-400">
+                {faq.question}
+            </AccordionTrigger>
+            <AccordionContent className="px-5 sm:px-6 pb-6 pt-0">
               {typeof faq.answer === "string" ? (
-                <p className="text-muted-foreground dark:text-muted-foreground/70">{faq.answer}</p>
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">{faq.answer}</p>
               ) : (
                 faq.answer
               )}

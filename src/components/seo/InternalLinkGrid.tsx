@@ -127,18 +127,28 @@ export async function InternalLinkGrid({
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                    {items.map((item) => (
-                        <Link
-                            key={item.slug}
-                            href={item.url}
-                            className={`group flex items-center gap-3 px-4 py-3.5 rounded-xl border text-sm font-bold transition-all hover:-translate-y-0.5 hover:shadow-md ${colors}`}
-                        >
-                            <Icon className="w-4 h-4 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
-                            <span className="truncate text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white">{item.name}</span>
-                        </Link>
-                    ))}
-                </div>
+                <nav aria-label={`Links to related ${displayTitle.toLowerCase()}`}>
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                        {items.map((item) => (
+                            <li key={item.slug}>
+                                <Link
+                                    href={item.url}
+                                    className={`group flex items-center justify-between px-4 py-3 rounded-2xl border text-[13px] font-bold transition-all duration-300 hover:shadow-lg dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1 ${colors} bg-white/80 dark:bg-slate-900/50 backdrop-blur-md relative overflow-hidden`}
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent -translate-x-[150%] skew-x-[-25deg] group-hover:translate-x-[150%] transition-transform duration-1000" />
+                                    
+                                    <div className="flex items-center gap-3 w-[85%] relative z-10">
+                                        <div className="p-1.5 rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200/50 dark:border-slate-700/50 shadow-sm shrink-0">
+                                            <Icon className="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                                        </div>
+                                        <span className="truncate text-slate-700 dark:text-slate-300 group-hover:text-fuchsia-700 dark:group-hover:text-fuchsia-400 leading-tight block w-full">{item.name}</span>
+                                    </div>
+                                    <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-fuchsia-600 dark:text-fuchsia-400 relative z-10 shrink-0" />
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
                 <div className="mt-8 text-center">
                     <Link

@@ -68,12 +68,12 @@ export async function EntityCardSection({
                     </h2>
                 </div>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                     {items.map((item: any) => {
                         if (type === "services") return <ServiceCard key={item.slug || item.id} service={item} variant="detail" />;
                         if (type === "doctors") return <DoctorCard key={item.slug || item.id} doctor={item} variant="grid" />;
                         if (type === "departments") return <DepartmentCard key={item.slug || item.id} department={item} variant="grid" />;
-                        if (type === "locations") return <LocationCard key={item.slug} location={item} variant="compact" />;
+                        if (type === "locations") return <LocationCard key={item.slug} location={item} variant="card" />;
                         return null;
                     })}
                 </div>

@@ -46,43 +46,36 @@ export function DepartmentCard({ department, className, variant = "grid" }: Depa
                 </Link>
             ) : (
                 <Link href={href} className={cn("block group h-full", className)}>
-                    <Card className="h-full p-8 rounded-[2.5rem] border border-slate-100 dark:border-slate-700/50 shadow-soft hover:shadow-float dark:hover:shadow-fuchsia-500/5 hover:-translate-y-1 transition-all duration-400 bg-white dark:bg-slate-800/50 flex flex-col relative overflow-hidden">
-                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full blur-3xl opacity-50 group-hover:bg-fuchsia-100 transition-colors duration-500" />
+                    <article className="h-full p-6 sm:p-7 rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 backdrop-blur-xl shadow-sm hover:shadow-2xl dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 bg-white/80 dark:bg-slate-900/80 flex flex-col relative overflow-hidden">
+                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full blur-3xl opacity-50 group-hover:bg-fuchsia-100 transition-colors duration-500 pointer-events-none" />
 
-                        <div className="absolute bottom-0 right-0 p-6 opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500 transform origin-bottom-right">
+                        <div className="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500 transform origin-bottom-right pointer-events-none">
                             <Stethoscope className="w-32 h-32 text-fuchsia-600" />
                         </div>
 
-                        <div className="w-16 h-16 rounded-[1.5rem] bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 text-fuchsia-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-300 shadow-sm relative z-10">
-                            <Stethoscope className="w-7 h-7" />
+                        <div className="w-14 h-14 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 border border-slate-100 dark:border-slate-700 text-fuchsia-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-300 shadow-sm relative z-10 flex-shrink-0">
+                            <Stethoscope className="w-6 h-6" />
                         </div>
 
-                        <h3 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight relative z-10">
+                        <h3 className="text-xl font-black font-heading text-slate-900 dark:text-white mb-2.5 group-hover:text-fuchsia-700 transition-colors tracking-tight relative z-10">
                             {department.title || department.name}
                         </h3>
 
-                        <p className="text-base text-slate-500 dark:text-slate-400 font-medium line-clamp-3 mb-8 relative z-10 leading-relaxed">
+                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium line-clamp-3 mb-6 relative z-10 leading-relaxed max-w-[95%]">
                             {department.description || `${department.title || 'This'} department at Indira Hospital provides world-class care and advanced treatments.`}
                         </p>
 
-                        <div className="mt-auto flex gap-3 relative z-10">
-                            <Link 
-                                href={href}
-                                className="flex-1 flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white rounded-2xl font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-600 transition-all"
-                            >
+                        <div className="mt-auto flex gap-2 pt-4 border-t border-slate-100 dark:border-slate-800/60 relative z-10">
+                            <div className="group/btn relative flex-1 flex items-center justify-center py-2.5 bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 font-bold rounded-xl text-[12px] transition-all border border-slate-200 dark:border-slate-700 group-hover:border-fuchsia-200 dark:group-hover:border-fuchsia-900 hover:bg-slate-100 dark:hover:bg-slate-800 uppercase tracking-wider">
                                 Explore
-                            </Link>
-                            <a
-                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm clinical inquiry for ${department.title || department.name}.`)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex-1 flex items-center justify-center p-4 bg-fuchsia-600 text-white rounded-2xl font-bold text-sm hover:bg-fuchsia-500 transition-all shadow-md shadow-fuchsia-200 dark:shadow-none"
-                            >
-                                <MessageCircle className="w-4 h-4 mr-2" />
+                                <ArrowRight className="w-3 h-3 ml-1 group-hover/btn:translate-x-0.5 transition-transform" />
+                            </div>
+                            <div className="group/wa relative flex-[1.5] flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all border border-transparent hover:bg-fuchsia-500 shadow-md hover:shadow-lg dark:shadow-none uppercase tracking-wider">
+                                <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
                                 Chat
-                            </a>
+                            </div>
                         </div>
-                    </Card>
+                    </article>
                 </Link>
             )}
         </motion.div>
