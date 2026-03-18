@@ -22,8 +22,8 @@ export function HealthLibraryCard() {
             <div className="relative rounded-[3rem] overflow-hidden group/library border border-slate-200/60 dark:border-slate-800 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-all duration-500 bg-white dark:bg-slate-900 flex flex-col lg:flex-row">
 
                 {/* Background Glow Elements */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px] pointer-events-none group-hover/library:bg-fuchsia-500/10 transition-colors duration-700" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[80px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu pointer-events-none group-hover/library:bg-fuchsia-500/10 transition-colors duration-700" />
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[80px] will-change-transform transform-gpu pointer-events-none" />
 
                 {/* Left Panel: Spotlight Lead */}
                 <div className="relative p-12 lg:p-16 flex flex-col justify-center lg:w-5/12 min-h-[300px] bg-gradient-to-br from-fuchsia-600 to-pink-600 text-white overflow-hidden">

@@ -212,7 +212,8 @@ export const getReviewsByEntity = unstable_cache(
             }));
             if (data && data.length > 0) return data as any;
         } catch (error) {
-            console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getReviewsByEntity ${type} ${name} ${slug}`, error);
+            // Silencing this specific warning as fallbacks are expected for many treatments
+            // console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getReviewsByEntity ${type} ${name} ${slug}`, error);
         }
 
         // Granular filtering
@@ -299,7 +300,8 @@ export const getFaqsByEntity = unstable_cache(
             }));
             if (data && data.length > 0) return data as any;
         } catch (error) {
-            console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getFaqsByEntity ${type} ${name} ${slug}`, error);
+            // Silencing this specific warning as fallbacks are expected for many treatments
+            // console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getFaqsByEntity ${type} ${name} ${slug}`, error);
         }
 
         let finalFaqs: any[] = [];

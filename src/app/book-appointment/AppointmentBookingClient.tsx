@@ -86,8 +86,8 @@ export default function AppointmentBookingClient() {
     return (
         <div className="bg-white/90 backdrop-blur-3xl rounded-[3rem] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.1)] border border-white/50 p-8 sm:p-12 relative overflow-hidden group/form">
             {/* Form Background Orbs matching Hero depth */}
-            <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-fuchsia-100/50 to-transparent rounded-full blur-[80px] pointer-events-none" />
-            <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-pink-100/30 to-transparent rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-fuchsia-100/50 to-transparent rounded-full blur-[80px] will-change-transform transform-gpu pointer-events-none" />
+            <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-pink-100/30 to-transparent rounded-full blur-[80px] will-change-transform transform-gpu pointer-events-none" />
 
             {/* Glowing Premium Progress Tracker */}
             <div className="relative mb-14 max-w-md mx-auto z-10">

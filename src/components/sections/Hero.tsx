@@ -26,8 +26,8 @@ export function Hero() {
         <section className="relative pt-56 pb-32 lg:pt-64 lg:pb-48 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-fuchsia-50/30 dark:bg-none dark:bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
             {/* BACKGROUND — subtle in light, cinematic in dark */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.04] dark:opacity-30" />
-            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/5 dark:bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
-            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/5 dark:bg-indigo-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
+            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/5 dark:bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
+            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/5 dark:bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
 
             <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="grid lg:grid-cols-12 gap-16 items-center">

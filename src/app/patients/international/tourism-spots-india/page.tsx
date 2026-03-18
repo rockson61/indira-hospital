@@ -64,7 +64,7 @@ export default function TourismSpotsPage() {
             {/* ====== HERO ====== */}
             <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 rounded-b-[4rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] will-change-transform transform-gpu pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
@@ -179,7 +179,7 @@ export default function TourismSpotsPage() {
             <section className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
                 <div className="bg-gradient-to-br from-slate-900 to-fuchsia-950 rounded-[4rem] p-10 sm:p-20 text-white relative overflow-hidden">
                     {/* Decorative Elements */}
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-[100px] pointer-events-none" />
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-[100px] will-change-transform transform-gpu pointer-events-none" />
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] pointer-events-none" />
 
                     <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">

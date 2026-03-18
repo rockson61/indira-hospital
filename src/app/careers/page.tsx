@@ -37,8 +37,8 @@ export default function CareersPage() {
             {/* ELITE RECRUITMENT HERO */}
             <section className="bg-slate-900 pt-48 pb-48 lg:pt-60 lg:pb-64 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
 
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-4xl mx-auto">
@@ -125,8 +125,8 @@ export default function CareersPage() {
             {/* MASSIVE CTA BENTO */}
             <SectionContainer className="py-24">
                 <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-fuchsia-950 rounded-[4rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl group/cta">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[100px] group-hover/cta:bg-fuchsia-500/20 transition-colors duration-700" />
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full hidden md:block blur-[100px]" />
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu group-hover/cta:bg-fuchsia-500/20 transition-colors duration-700" />
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu" />
 
                     <div className="max-w-3xl mx-auto relative z-10">
                         <div className="w-24 h-24 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-8 backdrop-blur-md shadow-inner border border-white/20 group-hover/cta:scale-110 transition-transform duration-500">

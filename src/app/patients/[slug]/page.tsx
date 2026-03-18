@@ -59,7 +59,7 @@ export default async function PatientResourcePage({ params }: { params: Promise<
 
                     <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 md:p-12 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800 relative overflow-hidden">
                         {/* Decorative Icon */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-50 dark:bg-fuchsia-900/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-50 dark:bg-fuchsia-900/10 rounded-full blur-[80px] will-change-transform transform-gpu -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
                         <div className="relative z-10 flex items-center gap-6 mb-10 pb-10 border-b border-slate-100 dark:border-slate-800">
                             <div className="w-20 h-20 rounded-2xl bg-fuchsia-100 dark:bg-fuchsia-900/50 flex items-center justify-center flex-shrink-0 text-fuchsia-600 dark:text-fuchsia-400 border border-fuchsia-200 dark:border-fuchsia-800 shadow-sm">

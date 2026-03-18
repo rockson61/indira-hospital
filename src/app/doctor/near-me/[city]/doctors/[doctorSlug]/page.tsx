@@ -128,7 +128,7 @@ export default async function LocationDoctorPage({
             <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-fuchsia-950 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-5"
                     style={{ backgroundImage: "radial-gradient(circle at 30% 30%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/20 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/20 rounded-full blur-[100px] will-change-transform transform-gpu pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-20 relative z-10">
                     {/* Breadcrumbs */}

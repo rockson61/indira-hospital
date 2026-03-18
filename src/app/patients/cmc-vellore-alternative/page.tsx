@@ -85,7 +85,7 @@ export default function CMCVelloreAlternativePage() {
             <section className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-slate-900 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.06]"
                     style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[100px] will-change-transform transform-gpu pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-16 lg:pt-52 lg:pb-20 relative z-10">
                     <nav className="flex items-center text-sm text-fuchsia-300 mb-6 gap-1 flex-wrap">

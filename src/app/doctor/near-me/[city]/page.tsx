@@ -128,7 +128,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Travel Stats */}
                     <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[80px] -mr-32 -mt-32" />
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[80px] will-change-transform transform-gpu -mr-32 -mt-32" />
 
                         <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
                             <div className="flex-1 text-center md:text-left">
@@ -218,7 +218,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             {/* DIRECTIONS MODULE (ELITE) */}
             <section className="py-24 bg-slate-900 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] mix-blend-overlay" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu pointer-events-none" />
 
                 <SectionContainer className="relative z-10 max-w-7xl mx-auto">
                     <div className="bg-white/5 backdrop-blur-3xl rounded-[4rem] border border-white/10 p-8 lg:p-16">
@@ -372,7 +372,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
             {/* SPECIALIZED TREATMENTS FOR LOCALITY */}
             <SectionContainer className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden rounded-[4rem] border-y border-slate-100 dark:border-slate-700">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px]" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu" />
                 <div className="grid md:grid-cols-2 gap-20 items-center">
                     <div>
                         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-10">

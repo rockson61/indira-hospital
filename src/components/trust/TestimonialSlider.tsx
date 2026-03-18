@@ -102,7 +102,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
 
         {/* Stats Band */}
         <div className="relative bg-slate-900 rounded-[4rem] p-12 lg:p-16 mb-24 overflow-hidden">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full blur-[100px]" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full blur-[100px] will-change-transform transform-gpu" />
             <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
                 {STATS.map((stat, i) => (
                     <div key={i} className="group cursor-default">

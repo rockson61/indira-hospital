@@ -61,8 +61,8 @@ export default function HealthLibraryClient() {
             {/* Health Library Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#0086d6]/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#0086d6]/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
                     <motion.div
@@ -205,7 +205,7 @@ export default function HealthLibraryClient() {
                 <section id="pharmacy" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
                     <div className="bg-[#0086d6] rounded-[3rem] p-12 lg:p-24 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12">
                         {/* Abstract Backgrounds */}
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[80px]" />
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[80px] will-change-transform transform-gpu" />
 
                         <div className="relative z-10 max-w-2xl text-white">
                             <h2 className="text-4xl lg:text-6xl font-black mb-6">Drugs, Devices & Supplements</h2>

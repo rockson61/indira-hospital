@@ -108,7 +108,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
             <section className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-slate-900 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.07]"
                     style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-                <div className="absolute -top-32 -right-32 w-[700px] h-[700px] bg-fuchsia-600/20 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute -top-32 -right-32 w-[700px] h-[700px] bg-fuchsia-600/20 rounded-full blur-[120px] will-change-transform transform-gpu pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-16 lg:pt-52 lg:pb-24 relative z-10">
                     {/* Breadcrumb */}
@@ -278,7 +278,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
 
                         {/* 3. CMC Vellore vs Indira */}
                         <section className="bg-gradient-to-br from-slate-900 to-fuchsia-950 rounded-3xl p-8 text-white overflow-hidden relative">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-[80px] pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-[80px] will-change-transform transform-gpu pointer-events-none" />
                             <div className="relative z-10">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/20 border border-amber-400/30 rounded-full text-amber-300 text-xs font-bold mb-4 uppercase tracking-widest">
                                     🔥 CMC Vellore Alternative Guide

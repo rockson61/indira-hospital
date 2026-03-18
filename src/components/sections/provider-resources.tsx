@@ -46,7 +46,7 @@ export function ProviderResources() {
     return (
         <section className="py-24 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800/50 relative overflow-hidden">
             {/* Background Accents */}
-            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full hidden md:block blur-[100px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
             <SectionContainer className="relative z-10">
                 <div className="max-w-4xl mb-16">

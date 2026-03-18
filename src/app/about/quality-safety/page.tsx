@@ -42,7 +42,7 @@ export default function QualitySafetyPage() {
             {/* HERO */}
             <section className="bg-slate-900 pt-20 pb-32 text-white relative overflow-hidden text-center">
                 <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 left-0 w-96 h-96 bg-fuchsia-500 rounded-full hidden md:block blur-[120px]" />
+                    <div className="absolute top-0 left-0 w-96 h-96 bg-fuchsia-500 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu" />
                 </div>
                 <SectionContainer>
                     <div className="max-w-3xl mx-auto">

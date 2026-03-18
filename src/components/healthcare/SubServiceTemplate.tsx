@@ -114,8 +114,8 @@ export function SubServiceTemplate({
             {/* ── Hero ─────────────────────────────────────────────────────── */}
             <section className="relative pt-44 pb-20 lg:pt-52 lg:pb-28 overflow-hidden bg-[#FAFAFA] dark:bg-slate-950">
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 hidden md:block blur-[120px] opacity-60" />
-                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 hidden md:block blur-[120px] opacity-50" />
+                    <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 hidden md:block blur-[120px] will-change-transform transform-gpu opacity-60" />
+                    <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 hidden md:block blur-[120px] will-change-transform transform-gpu opacity-50" />
                 </div>
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -349,7 +349,7 @@ export function SubServiceTemplate({
 
             {/* ── Final CTA ─────────────────────────────────────────────────── */}
             <section className="bg-[#002b36] dark:bg-slate-900 py-20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px]" />
+                <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu" />
                 <SectionContainer>
                     <div className="max-w-4xl mx-auto text-center space-y-8 relative">
                         <h2 className="text-4xl font-bold text-white">
