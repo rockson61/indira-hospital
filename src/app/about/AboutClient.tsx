@@ -22,9 +22,9 @@ export default function AboutClient() {
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
+                        className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out"
                     >
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <Award className="w-4 h-4" /> Established 1988
@@ -45,10 +45,9 @@ export default function AboutClient() {
                 <div className="grid md:grid-cols-2 gap-10">
                     {/* Mission Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="group relative bg-white/70 backdrop-blur-2xl p-12 lg:p-16 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden"
+                        className="group relative bg-white/70 backdrop-blur-2xl p-12 lg:p-16 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
                     >
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
@@ -63,10 +62,9 @@ export default function AboutClient() {
 
                     {/* Vision Card (Dark Mode Variant) */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="group relative bg-slate-900 p-12 lg:p-16 rounded-[4rem] border border-slate-800 shadow-2xl hover:shadow-pink-900/40 transition-all duration-700 hover:-translate-y-2 overflow-hidden"
+                        className="group relative bg-slate-900 p-12 lg:p-16 rounded-[4rem] border border-slate-800 shadow-2xl hover:shadow-pink-900/40 transition-all duration-700 hover:-translate-y-2 overflow-hidden animate-in fade-in slide-in-from-right-8 duration-1000 ease-out"
                     >
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-pink-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 

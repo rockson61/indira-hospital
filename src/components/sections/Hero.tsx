@@ -35,7 +35,6 @@ export function Hero() {
                     {/* Left Typography Content */}
                     <div className="lg:col-span-7">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-white/10 backdrop-blur-md border border-fuchsia-200 dark:border-white/20 text-fuchsia-700 dark:text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-sm dark:shadow-[0_0_30px_-5px_var(--tw-shadow-color)] dark:shadow-fuchsia-500/30"
@@ -45,7 +44,6 @@ export function Hero() {
                         </motion.div>
 
                         <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                             className="text-6xl md:text-8xl lg:text-[7rem] font-black text-slate-900 dark:text-white leading-[1.05] tracking-tight mb-8"
@@ -57,7 +55,6 @@ export function Hero() {
                         </motion.h1>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             className="mb-12"
@@ -71,7 +68,6 @@ export function Hero() {
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                             className="flex flex-col sm:flex-row gap-5 mb-16"
@@ -102,7 +98,6 @@ export function Hero() {
 
                         {/* Glassmorphic Tactical Search */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                             className="bg-white dark:bg-white/5 backdrop-blur-2xl p-3 rounded-[2.5rem] border border-slate-200 dark:border-white/10 flex items-center max-w-2xl relative z-20 group focus-within:border-fuchsia-500/50 transition-all shadow-xl dark:shadow-2xl"
@@ -131,7 +126,6 @@ export function Hero() {
                     {/* Right Bento Cinematic Gallery */}
                     <div className="lg:col-span-5 relative h-[650px] hidden lg:block">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95, x: 20 }}
                             animate={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                             className="absolute top-0 right-0 w-full h-[550px] rounded-[4rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 z-10 group"

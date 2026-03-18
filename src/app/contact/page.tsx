@@ -93,9 +93,9 @@ export default function ContactPage() {
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
+                        className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out"
                     >
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-rose-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-rose-500/30">
                             <HeartCardiogram className="w-4 h-4 animate-pulse" /> Available 24/7
@@ -119,10 +119,9 @@ export default function ContactPage() {
                     <div className="lg:col-span-5 space-y-10">
                         {/* Primary Contact Details */}
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-white/70 backdrop-blur-2xl p-10 lg:p-14 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl space-y-10 relative overflow-hidden group"
+                            className="bg-white/70 backdrop-blur-2xl p-10 lg:p-14 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl space-y-10 relative overflow-hidden group animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
                         >
                             {/* Light Streak Animation */}
                             <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
@@ -222,10 +221,9 @@ export default function ContactPage() {
                     {/* Right Column: Premium Tactical Command Enquiry Form */}
                     <div className="lg:col-span-7">
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-slate-900 p-10 sm:p-16 rounded-[4rem] border border-slate-800 shadow-2xl relative overflow-hidden group"
+                            className="bg-slate-900 p-10 sm:p-16 rounded-[4rem] border border-slate-800 shadow-2xl relative overflow-hidden group animate-in fade-in slide-in-from-right-8 duration-1000 ease-out"
                         >
                             {/* Light Streak Animation */}
                             <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
