@@ -95,7 +95,7 @@ export default function ContactPage() {
                     <motion.div
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out"
+                        className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out fill-mode-both"
                     >
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-rose-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-rose-500/30">
                             <HeartCardiogram className="w-4 h-4 animate-pulse" /> Available 24/7

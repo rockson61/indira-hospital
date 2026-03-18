@@ -37,7 +37,7 @@ export function Hero() {
                         <motion.div
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-white/10 backdrop-blur-md border border-fuchsia-200 dark:border-white/20 text-fuchsia-700 dark:text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-sm dark:shadow-[0_0_30px_-5px_var(--tw-shadow-color)] dark:shadow-fuchsia-500/30"
+                            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-white/10 backdrop-blur-md border border-fuchsia-200 dark:border-white/20 text-fuchsia-700 dark:text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-sm dark:shadow-[0_0_30px_-5px_var(--tw-shadow-color)] dark:shadow-fuchsia-500/30 animate-in fade-in slide-in-from-bottom-4 fill-mode-both"
                         >
                             <span className="flex h-2.5 w-2.5 rounded-full bg-fuchsia-500 dark:bg-fuchsia-400 animate-pulse" />
                             #1 Rated Super Speciality Hospital in Vellore, Tamil Nadu
@@ -46,7 +46,7 @@ export function Hero() {
                         <motion.h1
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                            className="text-6xl md:text-8xl lg:text-[7rem] font-black text-slate-900 dark:text-white leading-[1.05] tracking-tight mb-8"
+                            className="text-6xl md:text-8xl lg:text-[7rem] font-black text-slate-900 dark:text-white leading-[1.05] tracking-tight mb-8 animate-in fade-in slide-in-from-bottom-6 fill-mode-both"
                         >
                             Stop Suffering. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500 dark:from-fuchsia-400 dark:to-pink-300">
@@ -57,7 +57,7 @@ export function Hero() {
                         <motion.div
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                            className="mb-12"
+                            className="mb-12 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
                         >
                             <h2 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 tracking-tight">
                                 Advanced Multispeciality & Laparoscopic Care.

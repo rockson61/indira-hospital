@@ -1,4 +1,4 @@
-import { Star } from "lucide-react"
+import { Star, CheckCircle, Quote } from "lucide-react"
 
 interface Testimonial {
   name: string
@@ -9,36 +9,56 @@ interface Testimonial {
 
 interface ServiceTestimonialsProps {
   testimonials: Testimonial[]
+  title?: string
 }
 
-export function ServiceTestimonials({ testimonials }: ServiceTestimonialsProps) {
+export function ServiceTestimonials({ testimonials, title = "What Our Patients Say" }: ServiceTestimonialsProps) {
   return (
-    <section className="py-8">
-      <h2 className="text-3xl font-bold mb-8 text-center">What Our Patients Say</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="bg-card p-6 rounded-lg shadow-md border border-border/50 hover:shadow-lg transition-shadow"
-          >
-            <div className="flex mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`w-5 h-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-muted-foreground/50"}`}
-                />
-              ))}
-            </div>
-            <p className="italic mb-4">&quot;{testimonial.quote}&quot;</p>
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="font-semibold">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <section className="py-16">
+        <div className="text-center mb-14">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950/30 border border-fuchsia-100 dark:border-fuchsia-900/50 text-fuchsia-700 dark:text-fuchsia-400 text-xs font-black tracking-widest uppercase mb-6">
+                <Quote className="w-3.5 h-3.5" /> Verified Reviews
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">{title}</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+                <div
+                    key={index}
+                    className="group relative bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+                >
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
+                    
+                    <div className="absolute top-5 right-5 w-9 h-9 bg-fuchsia-50 dark:bg-fuchsia-950/30 rounded-xl flex items-center justify-center">
+                        <Quote className="w-4 h-4 text-fuchsia-500 dark:text-fuchsia-400" />
+                    </div>
+
+                    <div className="flex mb-5">
+                        {[...Array(5)].map((_, i) => (
+                            <Star
+                                key={i}
+                                className={`w-5 h-5 ${i < testimonial.rating ? "text-amber-400 fill-amber-400" : "text-slate-200 dark:text-slate-700"}`}
+                            />
+                        ))}
+                    </div>
+
+                    <p className="text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-8">&ldquo;{testimonial.quote}&rdquo;</p>
+                    
+                    <div className="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-fuchsia-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                            <span className="text-white font-black text-sm">{testimonial.name.charAt(0)}</span>
+                        </div>
+                        <div>
+                            <div className="flex items-center gap-1.5">
+                                <p className="font-black text-slate-900 dark:text-white text-sm">{testimonial.name}</p>
+                                <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
+                            </div>
+                            <p className="text-xs text-slate-400 font-medium">{testimonial.location}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
     </section>
   )
 }

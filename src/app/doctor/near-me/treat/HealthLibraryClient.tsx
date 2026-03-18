@@ -68,7 +68,7 @@ export default function HealthLibraryClient() {
                     <motion.div
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="animate-in fade-in zoom-in-95 duration-1000 ease-out"
+                        className="animate-in fade-in zoom-in-95 duration-1000 ease-out fill-mode-both"
                     >
                         <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-[2rem] bg-[#0086d6]/20 backdrop-blur-md border border-[#0086d6]/30 text-[#0086d6]">
                             <LayoutGrid className="w-10 h-10" />
