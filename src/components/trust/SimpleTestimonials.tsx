@@ -1,125 +1,120 @@
 'use client'
 
-import { GlassCard } from "@/components/ui/glass-card"
 import { SectionContainer } from "@/components/ui/section-container"
-import { Star, Quote } from "lucide-react"
+import { Star, Quote, CheckCircle, MapPin } from "lucide-react"
 import Image from "next/image"
-// Use hooks for translation
 import { useTestimonials } from "@/hooks/useTestimonials"
+import Link from "next/link"
+
+const REVIEW_PLATFORMS = [
+    { rating: "4.9", platform: "Google Reviews", color: "text-blue-500" },
+    { rating: "4.8", platform: "JustDial", color: "text-orange-500" },
+    { rating: "4.9", platform: "Practo", color: "text-primary" },
+    { rating: "5.0", platform: "Facebook", color: "text-blue-600" },
+];
 
 export function TestimonialsSection() {
   const allTestimonials = useTestimonials();
   const testimonials = allTestimonials.slice(0, 6);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900/50 dark:to-background transition-colors duration-300">
+    <section className="py-32 bg-slate-50 dark:bg-slate-950">
       <SectionContainer>
         {/* Section Header */}
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text">What Our Patients Say</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real experiences from our satisfied patients across Vellore
-          </p>
-          <div className="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+        <div className="text-center mb-20">
+            <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950/30 border border-fuchsia-100 dark:border-fuchsia-900/50 text-fuchsia-700 dark:text-fuchsia-400 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm">
+                <Quote className="w-4 h-4" /> Patient Views
+            </span>
+            <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
+                What Our Patients{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">
+                    Say About Us
+                </span>
+            </h2>
+            <p className="text-xl text-slate-500 dark:text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Real experiences from our verified patients across Vellore
+            </p>
         </div>
 
-        {/* Overall Rating */}
-        <div className="text-center mb-12">
-          <div className="card-modern inline-block p-8">
-            <div className="space-y-4">
-              <div className="text-6xl font-bold gradient-text">4.9</div>
-              <div className="flex justify-center">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="h-8 w-8 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <div className="text-muted-foreground">
-                <div className="text-lg font-semibold">Based on 126+ Reviews</div>
-                <div className="text-sm">Google Reviews & Patient Feedback</div>
-              </div>
+        {/* Aggregate Rating Block */}
+        <div className="flex justify-center mb-24">
+            <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[3rem] p-10 shadow-xl flex flex-col items-center gap-4">
+                <div className="text-7xl font-black text-slate-900 dark:text-white tracking-tighter">4.9</div>
+                <div className="flex">
+                    {[1,2,3,4,5].map(s => (
+                        <Star key={s} className="w-7 h-7 text-amber-400 fill-amber-400" />
+                    ))}
+                </div>
+                <div className="text-center">
+                    <div className="text-lg font-black text-slate-700 dark:text-slate-300">Based on 2,000+ Reviews</div>
+                    <div className="text-sm text-slate-400 font-medium">Google · JustDial · Practo · Facebook</div>
+                </div>
             </div>
-          </div>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="card-modern p-6 hover:scale-[1.02] hover:shadow-2xl transition-all duration-500">
-              <div className="space-y-4">
-                {/* Quote Icon */}
-                <Quote className="h-8 w-8 text-primary opacity-50" />
+            <div
+              key={index}
+              className="group relative bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col"
+            >
+                <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
-                {/* Rating */}
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star
-                      key={star}
-                      className={`h-5 w-5 ${star <= testimonial.rating ? "text-yellow-500 fill-current" : "text-muted-foreground/50"
-                        }`}
-                    />
-                  ))}
+                <div className="absolute top-6 right-6 w-10 h-10 bg-fuchsia-50 dark:bg-fuchsia-950/30 rounded-[1.2rem] flex items-center justify-center flex-shrink-0">
+                    <Quote className="w-5 h-5 text-fuchsia-500 dark:text-fuchsia-400" />
                 </div>
 
-                {/* Testimonial Text */}
-                <p className="text-foreground/80 leading-relaxed italic">&quot;{testimonial.text}&quot;</p>
-
-                {/* Treatment Info */}
-                <div className="bg-primary/10 rounded-lg p-3">
-                  <div className="text-sm font-semibold text-foreground">Treatment: {testimonial.treatment}</div>
+                <div className="flex items-center gap-1 mb-5">
+                    {[1,2,3,4,5].map(s => (
+                        <Star key={s} className={`w-5 h-5 ${s <= testimonial.rating ? "text-amber-400 fill-amber-400" : "text-slate-200 dark:text-slate-700"}`} />
+                    ))}
                 </div>
 
-                {/* Patient Info */}
-                <div className="flex items-center gap-4 pt-4 border-t border-border">
-                  <div className="relative w-12 h-12">
-                    <Image
-                      src={testimonial.image || "/dental-clinic-vellore.jpg"}
-                      alt={testimonial.name}
-                      fill
-                      className="rounded-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-foreground">
-                      {testimonial.name}, {testimonial.age}
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed font-medium mb-5 flex-grow">
+                    &ldquo;{testimonial.text}&rdquo;
+                </p>
+
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-fuchsia-50 dark:bg-fuchsia-950/30 rounded-xl mb-6">
+                    <span className="text-xs font-bold text-fuchsia-600 dark:text-fuchsia-400">{testimonial.treatment}</span>
+                </div>
+
+                <div className="flex items-center gap-4 pt-5 border-t border-slate-100 dark:border-slate-800">
+                    <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-slate-100 dark:border-slate-700 flex-shrink-0">
+                        <Image
+                            src={testimonial.image || "/images/hospital/Hospital.webp"}
+                            alt={testimonial.name}
+                            fill
+                            loading="lazy"
+                            className="object-cover"
+                        />
                     </div>
-                    <div className="text-sm text-muted-foreground">{testimonial.location}</div>
-                    <div className="text-xs text-muted-foreground">{testimonial.date}</div>
-                  </div>
+                    <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-0.5">
+                            <h4 className="font-black text-slate-900 dark:text-white text-sm truncate">{testimonial.name}{(testimonial as any).age ? `, ${(testimonial as any).age}` : ""}</h4>
+                            <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                        </div>
+                        <div className="flex items-center gap-1 text-xs text-slate-400">
+                            <MapPin className="w-3 h-3 flex-shrink-0" />
+                            <span className="truncate">{testimonial.location}</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>
 
-        {/* Review Platforms */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold gradient-text mb-8">Find Us On</h3>
-          <div className="flex flex-wrap justify-center gap-8">
-            <div className="card-modern p-4 hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">4.9★</div>
-                <div className="text-sm text-muted-foreground">Google Reviews</div>
-              </div>
+        {/* Platform Ratings */}
+        <div className="text-center">
+            <p className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-8">Find Us On</p>
+            <div className="flex flex-wrap justify-center gap-6">
+                {REVIEW_PLATFORMS.map((p, i) => (
+                    <div key={i} className="group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl px-8 py-5 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div className={`text-2xl font-black ${p.color} mb-1`}>{p.rating}★</div>
+                        <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">{p.platform}</div>
+                    </div>
+                ))}
             </div>
-            <div className="card-modern p-4 hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">4.8★</div>
-                <div className="text-sm text-muted-foreground">JustDial</div>
-              </div>
-            </div>
-            <div className="card-modern p-4 hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">4.9★</div>
-                <div className="text-sm text-muted-foreground">Practo</div>
-              </div>
-            </div>
-            <div className="card-modern p-4 hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">5.0★</div>
-                <div className="text-sm text-muted-foreground">Facebook</div>
-              </div>
-            </div>
-          </div>
         </div>
       </SectionContainer>
     </section>
