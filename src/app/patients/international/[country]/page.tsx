@@ -131,9 +131,9 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4">
-                        Leading Medical Treatment in India for<br />
+                        Best Hospitals in India for <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">
-                            Patients from {country.name}
+                            {country.name} Patients
                         </span>
                     </h1>
                     <p className="mt-3 text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed">

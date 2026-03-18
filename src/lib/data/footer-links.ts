@@ -97,6 +97,9 @@ export const FOOTER_LINKS = {
         { name: "Latest News (Blog)", url: "/blog" },
         { name: "Join Our Team", url: "/careers" },
         { name: "Gallery", url: "/gallery" },
+        { name: "Top Doctors By Speciality", url: "/doctors" },
+        { name: "Best Hospitals For Treatments", url: "/patients/international" },
+        { name: "Treatment cost in India", url: "/patients/international/cost-estimator" },
         { name: "Contact Us", url: "/contact" }
     ]
 };
