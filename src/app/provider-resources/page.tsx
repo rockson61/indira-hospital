@@ -32,22 +32,27 @@ const resources = [
 
 export default function ProviderResourcesPage() {
     return (
-        <main className="min-h-screen pt-24 pb-20 bg-white dark:bg-slate-950">
-            <SectionContainer className="mb-20">
-                <div className="max-w-4xl">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-fuchsia-100 dark:bg-fuchsia-950 rounded-full text-xs font-black text-fuchsia-600 uppercase mb-8">
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
+            {/* Cinematic Hero */}
+            <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10">
                         <Building2 className="w-4 h-4" /> Professional Partnership
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8">
-                        For Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-600">Healthcare Partners</span>
+                    <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6">
+                        For Our <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Healthcare Partners.</span>
                     </h1>
-                    <p className="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-2xl">
-                        At Indira Hospital, we believe in a collaborative healthcare ecosystem. Our provider portal is designed to support referring physicians with streamlined processes and shared clinical excellence.
+                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                        We believe in a collaborative ecosystem. Our provider portal is designed to support referring physicians with streamlined clinical excellence.
                     </p>
                 </div>
-            </SectionContainer>
+            </section>
 
-            <SectionContainer>
+            <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-24 relative z-20">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {resources.map((resource, i) => (
                         <div key={i} className="bg-slate-50 dark:bg-slate-900/50 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-800 hover:border-fuchsia-200 transition-all group">
@@ -59,7 +64,7 @@ export default function ProviderResourcesPage() {
                         </div>
                     ))}
                 </div>
-            </SectionContainer>
+            </section>
 
             {/* Collaboration Block */}
             <SectionContainer className="mt-24">
