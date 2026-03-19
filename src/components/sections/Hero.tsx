@@ -48,9 +48,9 @@ export function Hero() {
                             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                             className="text-6xl md:text-8xl lg:text-[7rem] font-black text-slate-900 dark:text-white leading-[1.05] tracking-tight mb-8 animate-in fade-in slide-in-from-bottom-6 fill-mode-both"
                         >
-                            Stop Suffering. <br />
+                            Best Hospital <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500 dark:from-fuchsia-400 dark:to-pink-300">
-                                Start Healing.
+                                in Vellore.
                             </span>
                         </motion.h1>
 

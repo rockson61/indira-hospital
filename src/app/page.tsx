@@ -31,8 +31,8 @@ import React from "react";
 import HospitalSEOBlock from "@/components/HospitalSEOBlock";
 
 export const metadata: Metadata = {
-  title: "Indira Super Speciality Hospital | Best Hospital in Vellore, Tamil Nadu",
-  description: "Indira Super Speciality Hospital is a NABH accredited quaternary care center in Vellore. We specialize in laser & laparoscopic surgeries, cardiology, orthopaedics, and oncology with same-day discharge options. 15,000+ successful surgeries.",
+  title: "Best Hospital in Vellore | Indira Super Speciality Hospital Tamil Nadu",
+  description: "Experience world-class healthcare at the Best Hospital in Vellore. Indira Super Speciality Hospital offers advanced laser & laparoscopic surgeries, cardiology, and orthopaedics with 15,000+ successful outcomes. NABH Accredited.",
   keywords: [
     "best hospital in Vellore",
     "super speciality hospital Tamil Nadu",
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     "same-day discharge surgery Vellore"
   ],
   openGraph: {
-    title: "Indira Super Speciality Hospital | Advanced Care in Vellore",
-    description: "150+ bed quaternary care hospital in Vellore offering advanced laser surgeries, critical care, and affordable international patient packages.",
+    title: "Best Hospital in Vellore | Indira Super Speciality Hospital",
+    description: "The Best Hospital in Vellore for advanced laser surgeries and quaternary care. 150+ beds, NABH accredited, and affordable international care.",
     type: "website",
   },
 };
@@ -55,16 +55,22 @@ export const metadata: Metadata = {
 const SemanticLinkBlock = () => (
   <section className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
     <div className="max-w-7xl mx-auto px-6 lg:px-8">
-      <h2 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-6">Explore Indira Hospital</h2>
+      <div className="flex flex-col md:flex-row justify-between items-start mb-8 gap-4">
+        <h2 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Explore the Best Hospital in Vellore</h2>
+        <div className="flex gap-4 text-xs font-bold uppercase tracking-widest text-fuchsia-600">
+          <a href="https://www.nabh.co/" target="_blank" rel="noopener noreferrer" className="hover:text-fuchsia-700 underline">NABH Accredited</a>
+          <a href="https://main.mohfw.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-fuchsia-700 underline">Govt Healthcare India</a>
+        </div>
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
         <div>
           <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Top Specialties</h3>
           <ul className="space-y-2">
-            <li><Link href="/departments/cardiology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cardiology</Link></li>
-            <li><Link href="/departments/orthopaedics" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Orthopaedics</Link></li>
-            <li><Link href="/departments/general-surgery" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">General Surgery</Link></li>
+            <li><Link href="/departments/cardiology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cardiology at Best Hospital in Vellore</Link></li>
+            <li><Link href="/departments/orthopaedics" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Orthopaedics in Vellore</Link></li>
+            <li><Link href="/departments/general-surgery" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">General Surgery Specialists</Link></li>
             <li><Link href="/departments/obstetrics-gynecology-reproductive-medicine" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Maternity & Gynaecology</Link></li>
-            <li><Link href="/departments/neurology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Neurology</Link></li>
+            <li><Link href="/departments/neurology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Neurology Care</Link></li>
           </ul>
         </div>
         <div>
