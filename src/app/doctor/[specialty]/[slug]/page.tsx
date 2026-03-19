@@ -55,14 +55,33 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ specialty: string; slug: string }> }): Promise<Metadata> {
-    const { slug } = await params;
+    const { slug, specialty } = await params;
     const doctors = await getDoctors().catch(() => []);
     const doc = doctors.find((d: any) => d.slug === slug);
     if (!doc) return { title: "Doctor Not Found" };
+    const deptName = typeof doc.department === 'string' ? doc.department : doc.department?.name || 'Specialist';
+    const title = doc.seo_title || `${doc.name} — Best ${deptName} in Vellore, Tamil Nadu | Indira Hospital`;
+    const desc = doc.seo_description || doc.bio?.substring(0, 155) || `Consult with ${doc.name}, a leading ${deptName} at Indira Super Speciality Hospital, Vellore. Expert healthcare in Tamil Nadu with advanced treatment options.`;
     return {
-        title: `${doc.name} — Best ${typeof doc.department === 'string' ? doc.department : doc.department?.name || "Specialist"} in Vellore, Tamil Nadu | Indira Hospital`,
-        description: doc.bio?.substring(0, 155) || `Consult with ${doc.name}, a leading specialist at Indira Hospital, Vellore. Expert healthcare in Tamil Nadu, India with advanced treatment options.`,
-        keywords: [doc.name, doc.specialty, "Best Doctor in Vellore", "Tamil Nadu", "India", "Indira Hospital"],
+        title,
+        description: desc,
+        keywords: [doc.name, deptName, `Best ${deptName} in Vellore`, 'Tamil Nadu', 'Indira Hospital'],
+        alternates: {
+            canonical: `/doctor/${specialty}/${slug}`,
+        },
+        openGraph: {
+            title,
+            description: desc,
+            url: `/doctor/${specialty}/${slug}`,
+            type: 'profile',
+            images: doc.image ? [{ url: doc.image, alt: doc.name }] : [],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description: desc,
+            images: doc.image ? [doc.image] : [],
+        },
     };
 }
 
@@ -102,6 +121,14 @@ export default async function DoctorProfileRoute({
                 specialty={currDoctor.specialty || (typeof currDoctor.department === 'string' ? currDoctor.department : currDoctor.department?.name || 'Specialist')}
                 description={currDoctor.bio || `Expert doctor at Indira Hospital`}
                 url={`/doctor/${specialty}/${slug}`}
+            />
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Doctors', url: '/doctors' },
+                    { name: currDoctor.name, url: `/doctor/${specialty}/${slug}` },
+                ]}
             />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-fuchsia-900 text-white overflow-hidden">

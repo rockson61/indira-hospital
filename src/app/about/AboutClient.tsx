@@ -1,95 +1,90 @@
 "use client";
 
-import { SectionContainer } from "@/components/ui/section-container"
-import { Users, Target, Clock, Award, Building, ArrowRight, Sparkles, Star, Shield, Heart } from "lucide-react"
+import { Users, Target, Clock, Award, Building, ArrowRight, Sparkles, Star, Shield, Heart, Wallet, Milestone, Zap } from "lucide-react"
 import { HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link"
+import { SectionHeader } from "@/components/ui/section-header";
 import { Testimonials } from "@/components/sections/testimonials";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import EntityFAQs from "@/components/trust/EntityFAQs";
-import EntityReviews from "@/components/trust/EntityReviews";
-import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export default function AboutClient() {
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
-            {/* Bold Asymmetrical Deep Hero */}
-            <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+            {/* ELITE CINEMATIC HERO */}
+            <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[4rem] sm:rounded-b-[6rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+                
+                {/* Ambient Glows */}
+                <div className="absolute top-0 right-1/4 w-[700px] h-[700px] bg-fuchsia-500/20 rounded-full blur-[120px] will-change-transform transform-gpu opacity-70 animate-pulse" />
+                <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-[100px] will-change-transform transform-gpu opacity-50" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <motion.div
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out fill-mode-both"
                     >
-                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                            <Award className="w-4 h-4" /> Established 1988
+                        <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-[10px] font-black tracking-[0.3em] uppercase mb-10 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
+                            <Milestone className="w-4 h-4" /> The Legacy Since 1988
                         </span>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6 max-w-6xl mx-auto">
-                            The Best Hospital in <span className="text-white">Vellore, Tamil Nadu:</span> <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">35 Years of Clinical Excellence in India.</span>
+                        <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                            35 Years of <br className="hidden sm:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-indigo-400">Clinical Mastery.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4">
-                            Indira Super Speciality Hospital stands as a beacon of clinical mastery, delivering advanced, ethical, and compassionate healthcare to the Vellore community since 1988.
+                        <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed mb-4">
+                            Indira Super Speciality Hospital is Vellore's premier destination for advanced medical interventions, 
+                            where ethical practice meets world-class surgical precision.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Floating Mission & Vision Bento */}
-            <section className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20 -mt-24 sm:-mt-32 mb-32">
+            {/* CORE PILLARS BENTO */}
+            <section className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20 -mt-24 sm:-mt-32 mb-40">
                 <div className="grid md:grid-cols-2 gap-10">
-                    {/* Mission Card */}
+                    {/* Mission Card - Elite */}
                     <motion.div
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="group relative bg-white/70 backdrop-blur-2xl p-12 lg:p-16 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
+                        className="group relative bg-white/80 dark:bg-slate-900/90 backdrop-blur-3xl p-14 lg:p-20 rounded-[4rem] border border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden"
                     >
-                        <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
-
-                        <div className="w-24 h-24 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-[2rem] flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 group-hover:shadow-xl group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-700 border border-fuchsia-100">
-                            <Target className="w-12 h-12 text-fuchsia-600 group-hover:text-white transition-colors" />
+                        <div className="absolute inset-x-0 top-0 h-1.5 bg-fuchsia-500" />
+                        <div className="w-24 h-24 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-[2rem] flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-all duration-700 border border-fuchsia-100 dark:border-fuchsia-900/50">
+                            <Target className="w-12 h-12 text-fuchsia-600" />
                         </div>
-                        <h2 className="text-4xl font-black mb-6 text-slate-900 dark:text-white tracking-tight group-hover:text-fuchsia-700 transition-colors leading-tight">Our Mission</h2>
-                        <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                            To deliver highly comprehensive, deeply compassionate, and cost-effective healthcare services that meet rigorous international standard. We guarantee maximum patient safety, rapid recovery, and uncompromising clinical satisfaction.
+                        <h2 className="text-5xl font-black mb-8 text-slate-900 dark:text-white tracking-tighter uppercase italic leading-none">Our Mission</h2>
+                        <p className="text-2xl text-slate-500 dark:text-slate-400 leading-relaxed font-light italic">
+                            "To engineer a healthcare ecosystem where world-class technology and deep human empathy converge to deliver life-saving clinical outcomes."
                         </p>
                     </motion.div>
 
-                    {/* Vision Card (Dark Mode Variant) */}
+                    {/* Vision Card - Dark Elite */}
                     <motion.div
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="group relative bg-slate-900 p-12 lg:p-16 rounded-[4rem] border border-slate-800 shadow-2xl hover:shadow-pink-900/40 transition-all duration-700 hover:-translate-y-2 overflow-hidden animate-in fade-in slide-in-from-right-8 duration-1000 ease-out"
+                        className="group relative bg-slate-900 p-14 lg:p-20 rounded-[4rem] border border-white/5 shadow-2xl hover:shadow-indigo-500/20 transition-all duration-700 hover:-translate-y-2 overflow-hidden"
                     >
-                        <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-pink-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
-
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] pointer-events-none" />
-                        <div className="absolute inset-0 rounded-[4rem] border-2 border-transparent group-hover:border-pink-400/20 transition-all duration-700 pointer-events-none" />
-
-                        <div className="w-24 h-24 bg-white/10 backdrop-blur-xl rounded-[2rem] flex items-center justify-center mb-10 shadow-lg group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-slate-900 dark:text-white transition-all duration-700 border border-white/10 text-pink-400">
-                            <Sparkles className="w-12 h-12" />
+                        <div className="absolute inset-x-0 top-0 h-1.5 bg-indigo-500" />
+                        <div className="w-24 h-24 bg-white/5 backdrop-blur-xl rounded-[2rem] flex items-center justify-center mb-10 border border-white/10 text-indigo-400 group-hover:scale-110 group-hover:-rotate-3 transition-transform">
+                            <Zap className="w-12 h-12" />
                         </div>
-                        <h2 className="text-4xl font-black mb-6 text-white tracking-tight group-hover:text-pink-300 transition-colors leading-tight">Our Vision</h2>
-                        <p className="text-xl text-slate-300 leading-relaxed font-light">
-                            To be the unequivocally most trusted healthcare destination in Tamil Nadu, recognized comprehensively for clinical excellence, unimpeachable ethical practices, and an intensely patient-centric approach.
+                        <h2 className="text-5xl font-black mb-8 text-white tracking-tighter uppercase italic leading-none">Our Vision</h2>
+                        <p className="text-2xl text-slate-300 leading-relaxed font-extralight italic">
+                            "To be the globally recognized vanguard of medical excellence in South India, setting the gold standard for tertiary healthcare innovation."
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Premium Stats Bento Grid */}
-            <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
+            {/* IMPACT STATS BIN */}
+            <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-40">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { icon: Clock, value: "35+", label: "Years of Service", color: "text-fuchsia-500", bg: "bg-fuchsia-50 dark:bg-fuchsia-950" },
-                        { icon: HeartCardiogram, value: "50K+", label: "Patients Treated", color: "text-pink-500", bg: "bg-pink-50 dark:bg-pink-950" },
-                        { icon: Award, value: "15+", label: "Specialties", color: "text-blue-500", bg: "bg-blue-50" },
-                        { icon: Building, value: "200+", label: "Hospital Beds", color: "text-amber-500", bg: "bg-amber-50" },
+                        { icon: Clock, value: "35+", label: "Elite Success Years", color: "text-fuchsia-500", bg: "bg-fuchsia-50 dark:bg-fuchsia-950/40" },
+                        { icon: HeartCardiogram, value: "1M+", label: "Lives Impacted", color: "text-indigo-500", bg: "bg-indigo-50 dark:bg-indigo-950/40" },
+                        { icon: Award, value: "40+", label: "Clinical Specialties", color: "text-fuchsia-500", bg: "bg-fuchsia-50 dark:bg-fuchsia-950/40" },
+                        { icon: Building, value: "3", label: "Regional Campuses", color: "text-indigo-500", bg: "bg-indigo-50 dark:bg-indigo-950/40" },
                     ].map((stat, idx) => (
                         <motion.div
                             key={stat.label}
@@ -97,35 +92,38 @@ export default function AboutClient() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 text-center border border-slate-100 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-500 group"
+                            className="bg-white dark:bg-slate-900/50 backdrop-blur-sm rounded-[3rem] p-12 text-center border border-slate-100 dark:border-slate-800 shadow-xl hover:-translate-y-2 transition-all duration-500 group"
                         >
-                            <div className={cn("w-16 h-16 rounded-2xl mx-auto mb-6 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3", stat.bg)}>
-                                <stat.icon className={cn("w-8 h-8", stat.color)} />
+                            <div className={cn("w-20 h-20 rounded-[1.5rem] mx-auto mb-8 flex items-center justify-center border border-transparent group-hover:border-fuchsia-500/20 group-hover:bg-white dark:group-hover:bg-slate-800 transition-all duration-500", stat.bg)}>
+                                <stat.icon className={cn("w-10 h-10", stat.color)} />
                             </div>
-                            <p className="text-4xl font-black text-slate-900 dark:text-white mb-2 tracking-tight">{stat.value}</p>
-                            <p className="text-xs font-black text-slate-400 uppercase tracking-widest">{stat.label}</p>
+                            <p className="text-5xl font-black text-slate-900 dark:text-white mb-3 tracking-tighter uppercase italic">{stat.value}</p>
+                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] leading-none">{stat.label}</p>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
-            {/* Premium Leadership Bento */}
-            <section className="max-w-7xl mx-auto px-6 lg:px-8 pb-32">
+            {/* LEADERSHIP SHOWCASE - PREMIUM REDESIGN */}
+            <section className="max-w-7xl mx-auto px-6 lg:px-8 pb-40">
                 <div className="text-center max-w-4xl mx-auto mb-24 relative">
-                    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-fuchsia-700 text-sm font-bold tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
-                        <Shield className="w-4 h-4" /> Stewardship
+                    <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-slate-900 text-white text-[10px] font-black tracking-[0.4em] uppercase mb-8 shadow-2xl border border-white/10">
+                        <Shield className="w-4 h-4 text-fuchsia-400" /> Guardians of Care
                     </span>
-                    <h2 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 dark:text-white tracking-tight leading-tight">Elite Governance</h2>
-                    <p className="text-slate-500 dark:text-slate-400 font-medium text-xl leading-relaxed max-w-3xl mx-auto">
-                        Guided unconditionally by visionaries dedicated to clinical mastery, ethical service, and technological expansion.
+                    <h2 className="text-6xl md:text-[5rem] font-black mb-8 text-slate-900 dark:text-white tracking-tighter uppercase italic leading-[0.9]">
+                        The Visionaries Behind <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-indigo-500">Clinical Stewardship.</span>
+                    </h2>
+                    <p className="text-slate-500 dark:text-slate-400 font-medium text-2xl leading-relaxed max-w-3xl mx-auto italic font-serif">
+                        Expert leadership committed to uncompromising ethics and the pursuit of healthcare perfection.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-10">
+                <div className="grid md:grid-cols-3 gap-12">
                     {[
-                        { name: "Dr. C. Paskal", role: "Chairman & Managing Director", desc: "A visionary leader with over 40 years of experience orchestrating advanced healthcare administration.", icon: "CP" },
-                        { name: "Dr. P. Indira", role: "Medical Director", desc: "Safeguarding the absolute highest standards of stringent clinical governance and medical ethics.", icon: "PI" },
-                        { name: "Mr. P. John", role: "Chief Operating Officer", desc: "Commanding rigorous operational efficiency and spearheading digital transformation initiatives.", icon: "PJ" }
+                        { name: "Dr. C. Paskal", role: "Chairman & Managing Director", desc: "Orchestrating the evolution of Indira Hospital into a regional powerhouse of clinical excellence since inception.", icon: "CP" },
+                        { name: "Dr. P. Indira", role: "Medical Director", desc: "Setting the stringent quality benchmarks that define our reputation for surgical precision and patient safety.", icon: "PI" },
+                        { name: "Mr. Jackson P John", role: "Chief Operating Officer", desc: "Leading the hospital's digital frontier and operational modernization with a focus on seamless patient journeys.", icon: "JJ" }
                     ].map((member, idx) => (
                         <motion.div
                             key={member.name}
@@ -133,97 +131,66 @@ export default function AboutClient() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="relative bg-white/70 backdrop-blur-2xl p-12 lg:p-14 rounded-[3.5rem] border border-slate-200 dark:border-slate-700/50 text-center shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-700 group overflow-hidden flex flex-col items-center"
+                            className="relative bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl p-14 rounded-[4rem] border border-slate-200 dark:border-slate-800 text-center shadow-xl hover:shadow-2xl hover:-translate-y-3 transition-all duration-700 group overflow-hidden flex flex-col items-center"
                         >
-                            <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
-
-                            <div className="relative w-40 h-40 mx-auto mb-10">
-                                <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-400 to-pink-300 rounded-full blur-[30px] opacity-0 group-hover:opacity-40 transition-opacity duration-700" />
-                                <div className="relative w-full h-full bg-gradient-to-br from-fuchsia-50 to-pink-50 rounded-[2.5rem] flex items-center justify-center border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-700 z-10">
-                                    <span className="text-fuchsia-700 font-black text-5xl tracking-tighter">{member.icon}</span>
+                            <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-fuchsia-500 to-indigo-500 opacity-80" />
+                            
+                            <div className="relative w-44 h-44 mx-auto mb-12">
+                                <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500 to-indigo-500 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
+                                <div className="relative w-full h-full bg-slate-900 rounded-[3rem] flex items-center justify-center border-4 border-white dark:border-slate-800 shadow-2xl group-hover:scale-110 transition-transform duration-700 z-10">
+                                    <span className="text-white font-black text-6xl tracking-tighter italic">{member.icon}</span>
                                 </div>
                             </div>
 
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-fuchsia-700 transition-colors leading-tight">{member.name}</h3>
-                            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-8 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
+                            <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-3 tracking-tighter uppercase italic">{member.name}</h3>
+                            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 mb-8 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-500">
                                 {member.role}
                             </div>
-                            <p className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed font-medium flex-grow">{member.desc}</p>
+                            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light italic flex-grow">{member.desc}</p>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
-            {/* TRUST SIGNALS */}
-            <section className="max-w-7xl mx-auto py-24 border-t border-slate-100 dark:border-slate-800">
-                <div className="grid lg:grid-cols-2 gap-16 px-6 lg:px-8">
-                    <EntityFAQs
-                        entityType="hospital"
-                        entityName="Indira Hospital"
-                        entitySlug="about"
-                        title="Common Questions about Indira"
-                        description="Learn more about our legacy, clinical standards, and 35-year history in Vellore."
-                    />
-                    <EntityReviews
-                        entityType="hospital"
-                        entityName="Indira Hospital"
-                        entitySlug="indira-hospital"
-                        title="35 Years of Patient Stories"
-                        description="Hear from some of the 50,000+ patients who have trusted us with their health."
-                    />
-                </div>
-            </section>
-
             <Testimonials />
 
-            {/* Massive Deep CTA Block */}
+            {/* MASSIVE ELITE CTA */}
             <section className="px-6 lg:px-8 max-w-7xl mx-auto my-32">
-                <div className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-pink-950 rounded-[4rem] p-16 sm:p-24 overflow-hidden shadow-2xl shadow-fuchsia-950/40 group/cta flex flex-col items-center text-center">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-40" />
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
-
-                    <div className="relative z-10 w-full max-w-4xl">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 mb-10 shadow-2xl shadow-fuchsia-500/20"
-                        >
-                            <Heart className="w-10 h-10" />
-                        </motion.div>
-                        <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black text-white mb-10 tracking-tight leading-[1] max-w-4xl mx-auto">
-                            Your Journey to <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Health Starts Here.</span>
+                <div className="relative bg-slate-900 rounded-[5rem] p-16 sm:p-28 overflow-hidden group/cta flex flex-col items-center text-center">
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f1e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f1e_1px,transparent_1px)] bg-[size:32px_32px]" />
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] opacity-50" />
+                    
+                    <div className="relative z-10 w-full max-w-5xl">
+                        <div className="w-24 h-24 rounded-[2rem] bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-fuchsia-400 mx-auto mb-12 shadow-2xl">
+                            <Heart className="w-12 h-12" />
+                        </div>
+                        <h2 className="text-5xl md:text-7xl lg:text-[7rem] font-black text-white mb-10 tracking-tighter leading-[0.9] uppercase italic">
+                            Experience the <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Elite Standard.</span>
                         </h2>
-                        <p className="text-xl md:text-2xl text-fuchsia-100/70 font-light mb-16 leading-relaxed max-w-3xl mx-auto">
-                            Experience a synthesis of world-class medical excellence and deeply compassionate care. Do not let pain hold you back. Let our elite specialists provide the precise, same-day treatment you deserve.
+                        <p className="text-xl md:text-3xl text-slate-300 font-light mb-16 leading-relaxed max-w-3xl mx-auto italic">
+                            Combining three decades of clinical mastery with a relentless drive for innovation. Your health journey redefined.
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                             <Link
                                 href="/doctors"
-                                className="group/btn relative flex items-center justify-between w-full sm:w-auto px-12 py-7 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-2xl transition-all duration-500 hover:scale-[1.05] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
+                                className="group/btn relative w-full sm:w-auto px-16 py-8 bg-white text-slate-900 font-black rounded-[2rem] transition-all duration-500 hover:scale-[1.05] shadow-2xl overflow-hidden text-center"
                             >
-                                <span className="relative z-10 text-lg uppercase tracking-[0.2em] pr-8">Find a Specialist</span>
-                                <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+                                <span className="relative z-10 text-xl uppercase tracking-widest italic">Find Your Specialist</span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-100 via-white to-indigo-100 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
                             </Link>
 
                             <Link
                                 href="/contact"
-                                className="group/call relative flex items-center justify-center w-full sm:w-auto px-12 py-7 bg-white/5 hover:bg-white/10 text-white font-black rounded-2xl backdrop-blur-3xl border border-white/10 hover:border-white/20 transition-all duration-500"
+                                className="group/call w-full sm:w-auto px-16 py-8 bg-white/5 hover:bg-white/10 text-white font-black rounded-[2rem] backdrop-blur-3xl border border-white/10 hover:border-white/20 transition-all text-xl uppercase tracking-widest italic"
                             >
-                                <span className="text-lg uppercase tracking-[0.2em]">Contact Admin</span>
+                                Contact Admin
                             </Link>
                         </div>
                     </div>
                 </div>
             </section>
-            <SectionContainer className="pb-32">
-                <InternalLinkGrid type="departments" title="Our Specialties" subtitle="Advanced Clinical Care" limit={8} className="bg-white dark:bg-slate-950 border rounded-[4rem]" />
-                <InternalLinkGrid type="services" title="A-Z Procedures" subtitle="Surgical Excellence" limit={12} className="mt-12 bg-slate-50 dark:bg-slate-900/50 border rounded-[4rem]" />
-            </SectionContainer>
         </main>
     );
 }

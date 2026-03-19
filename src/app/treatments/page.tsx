@@ -6,9 +6,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Signature Treatments in Vellore, Tamil Nadu | Advanced Surgical Excellence",
     description: "Specialized in Laser Proctology, Laparoscopic Surgery, and Modern Interventions at Indira Hospital, Vellore. Discover our same-day discharge surgical options in India.",
+    alternates: {
+        canonical: "/treatments"
+    }
 };
 
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 const treatments = [
     {
@@ -44,6 +48,13 @@ const treatments = [
 export default function TreatmentsPage() {
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: "Home", url: "/" },
+                    { name: "Treatments", url: "/treatments" }
+                ]}
+            />
             {/* Cinematic Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />

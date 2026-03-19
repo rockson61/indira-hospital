@@ -45,11 +45,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const department = await getDepartmentBySlug(slug).catch(() => null);
 
     if (!department) return { title: "Department Not Found" };
+    const title = department.seo_title || `Best ${department.title} Department in Vellore, Tamil Nadu | Indira Hospital`;
+    const desc = department.seo_description || `Expert ${department.title} care at Indira Super Speciality Hospital, Vellore. Leading specialists in Tamil Nadu offering advanced treatments with same-day discharge.`;
 
     return {
-        title: department.seo_title || `Best ${department.title} Department in Vellore, Tamil Nadu | Indira Hospital`,
-        description: department.seo_description || `Discover expert ${department.title} care at Indira Hospital, Vellore. Leading specialists in Tamil Nadu, India, offering advanced treatments and same-day discharge.`,
-        keywords: [department.title, "Best Hospital in Vellore", "Tamil Nadu", "India", "Indira Hospital", "Specialist Doctor"],
+        title,
+        description: desc,
+        keywords: [department.title, 'Best Hospital in Vellore', 'Tamil Nadu', 'India', 'Indira Hospital', 'Specialist Doctor'],
+        alternates: {
+            canonical: `/departments/${slug}`,
+        },
+        openGraph: {
+            title,
+            description: desc,
+            url: `/departments/${slug}`,
+            type: 'website',
+        },
     };
 }
 
@@ -99,6 +110,15 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.url}/` },
+                    { '@type': 'ListItem', position: 2, name: 'Departments', item: `${siteConfig.url}/departments` },
+                    { '@type': 'ListItem', position: 3, name: department!.title, item: `${siteConfig.url}/departments/${slug}` },
+                ],
+            }) }} />
 
             {/* ========== HERO ========== */}
             <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-indigo-900 text-white overflow-hidden">

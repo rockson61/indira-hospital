@@ -54,6 +54,11 @@ const nextConfig: NextConfig = {
         source: '/treatments/hysterectomy',
         destination: '/doctor/near-me/treat/obstetrics-gynaecology/laparoscopic-hysterectomy-guide',
         permanent: true,
+      },
+      {
+        source: '/insurance',
+        destination: '/patients/insurance',
+        permanent: true,
       }
     ]
   },

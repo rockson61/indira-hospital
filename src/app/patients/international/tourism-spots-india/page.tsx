@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Plane, MapPin, CheckCircle2, Star, Calendar, ArrowRight, Camera, Palmtree, Mountain, Building2, Utensils, HeartPulse, Globe2, Sparkles, Phone } from "lucide-react";
+import { Plane, MapPin, CheckCircle2, Star, Calendar, ArrowRight, Camera, Palmtree, Mountain, Building2, Utensils, HeartPulse, Globe2, Sparkles, Phone, ChevronRight, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { SectionContainer } from "@/components/ui/section-container";
 import EntityFAQs from "@/components/trust/EntityFAQs";

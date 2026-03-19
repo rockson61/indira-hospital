@@ -8,6 +8,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema"
 import { siteConfig } from "@/config/site"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
@@ -18,6 +19,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: pkg.seo_title || `${pkg.title} Master Health Checkup in Vellore, Tamil Nadu | Indira Hospital`,
         description: pkg.seo_description || `Book the ${pkg.title} package at Indira Hospital, Vellore. Comprehensive screening in Tamil Nadu, India with ${pkg.tests_included?.slice(0, 80)}... and expert consultation.`,
+        alternates: {
+            canonical: `/health-packages/${slug}`,
+        },
+        openGraph: {
+            title: pkg.seo_title || `${pkg.title} | Indira Hospital`,
+            description: pkg.seo_description || `Health screening package in Vellore.`,
+            url: `/health-packages/${slug}`,
+            type: 'website',
+        },
     };
 }
 
@@ -33,6 +43,14 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
 
     return (
         <main className="min-h-screen pb-20 bg-[#FAFAFA] dark:bg-slate-950">
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: "Home", url: "/" },
+                    { name: "Health Packages", url: "/health-packages" },
+                    { name: pkg.title, url: `/health-packages/${slug}` }
+                ]}
+            />
             {/* Header */}
             <section className="relative pt-48 pb-16 overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">

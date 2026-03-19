@@ -1,78 +1,427 @@
-// =========================================================
-// HEADLESS CMS CONTENT ARCHITECTURE & INTEGRATION SCHEMAS
-// =========================================================
+/**
+ * Centralized Schema.org Structured Data Library
+ * All schema generators return valid JSON-LD objects ready for use
+ * in <script type="application/ld+json"> tags.
+ */
+import { siteConfig } from '@/config/site';
 
-export interface SEOObject {
-    metaTitle?: string;
-    metaDescription?: string;
-    ogImage?: string;
-    canonicalURL?: string;
-    noIndex?: boolean;
-    structuredDataOverride?: Record<string, unknown>;
+const BASE_URL = siteConfig.url;
+const HOSPITAL_NAME = 'Indira Super Speciality Hospital';
+const HOSPITAL_ADDRESS = {
+    '@type': 'PostalAddress',
+    streetAddress: '54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar',
+    addressLocality: 'Vellore',
+    addressRegion: 'Tamil Nadu',
+    postalCode: '632006',
+    addressCountry: 'IN',
+};
+const HOSPITAL_IMAGE = 'https://lh3.googleusercontent.com/La0fYC-XT-E8lRPk31cNfPmEgsfyWxy9VdOaX9wB81jgu-LOVYZVFeWqi4CcbxW_tOiyiECskDHNbb4vQQ=s0';
+const HOSPITAL_PHONE = '+91 98423 24425';
+
+/**
+ * Global MedicalOrganization + Hospital schema for the root layout
+ */
+export function getHospitalSchema() {
+    return {
+        '@context': 'https://schema.org',
+        '@type': ['Hospital', 'MedicalOrganization', 'LocalBusiness'],
+        '@id': BASE_URL,
+        name: HOSPITAL_NAME,
+        url: BASE_URL,
+        logo: `${BASE_URL}/logo.png`,
+        image: HOSPITAL_IMAGE,
+        description: 'NABH-accredited quaternary care hospital in Vellore, Tamil Nadu specializing in advanced laser & laparoscopic surgeries, cardiology, oncology, and orthopaedics.',
+        telephone: HOSPITAL_PHONE,
+        email: 'care@indirahospital.com',
+        address: HOSPITAL_ADDRESS,
+        geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 12.9344,
+            longitude: 79.1293,
+        },
+        hasMap: 'https://maps.google.com/maps?cid=9667111072695054632',
+        openingHoursSpecification: [
+            { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '00:00', closes: '23:59' },
+            { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Tuesday', opens: '00:00', closes: '23:59' },
+            { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '00:00', closes: '23:59' },
+            { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday', opens: '00:00', closes: '23:59' },
+            { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '00:00', closes: '23:59' },
+            { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '00:00', closes: '23:59' },
+            { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '00:00', closes: '23:59' },
+        ],
+        availableService: ['Emergency Care', 'Laparoscopic Surgery', 'Laser Surgery', 'Cardiology', 'Oncology', 'Orthopaedics'],
+        medicalSpecialty: [
+            'Cardiovascular', 'Gastroenterology', 'Oncology', 'Orthopedic', 'Proctology', 'Urology'
+        ],
+        accreditation: 'NABH',
+        priceRange: '$$',
+        currenciesAccepted: 'INR',
+        paymentAccepted: 'Cash, Credit Card, Debit Card, UPI, Insurance',
+        sameAs: [
+            'https://www.instagram.com/indirasuperspecialityhospitals/',
+            'https://www.facebook.com/indirasuperspecialityhospitals/',
+            'https://www.mappls.com/9w6owz',
+        ],
+        contactPoint: [
+            {
+                '@type': 'ContactPoint',
+                telephone: HOSPITAL_PHONE,
+                contactType: 'customer service',
+                availableLanguage: ['English', 'Tamil', 'Hindi'],
+                areaServed: 'IN',
+            },
+            {
+                '@type': 'ContactPoint',
+                telephone: '+91 98423 24425',
+                contactType: 'emergency',
+                availableLanguage: ['English', 'Tamil'],
+            },
+        ],
+    };
 }
 
-export interface GlobalSiteSettings {
-    id: string;
-    hospitalName: string;
-    tagline?: string;
-    logo?: string;
-    favicon?: string;
-    primaryPhone?: string;
-    emergencyPhone?: string;
+/**
+ * Website/Organization schema for sitelinks search box
+ */
+export function getWebsiteSchema() {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': `${BASE_URL}/#website`,
+        url: BASE_URL,
+        name: HOSPITAL_NAME,
+        description: 'Indira Super Speciality Hospital — NABH-accredited quaternary care hospital in Vellore, Tamil Nadu.',
+        potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${BASE_URL}/search?q={search_term_string}`,
+            },
+            'query-input': 'required name=search_term_string',
+        },
+    };
+}
+
+/**
+ * Breadcrumb schema for inner pages
+ */
+export function getBreadcrumbSchema(items: { name: string; url: string }[]) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.name,
+            item: `${BASE_URL}${item.url}`,
+        })),
+    };
+}
+
+/**
+ * Physician/Doctor schema
+ */
+export function getPhysicianSchema(doctor: {
+    name: string;
+    slug: string;
+    specialty: string;
+    designation: string;
+    image?: string;
+    bio?: string;
+    education?: { degree: string; institution: string }[];
+    telephone?: string;
+}) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Physician',
+        '@id': `${BASE_URL}/doctor/specialists/${doctor.slug}`,
+        name: doctor.name,
+        description: doctor.bio || `${doctor.name} is a ${doctor.designation} at ${HOSPITAL_NAME}.`,
+        image: doctor.image ? `${BASE_URL}${doctor.image}` : HOSPITAL_IMAGE,
+        url: `${BASE_URL}/doctor/specialists/${doctor.slug}`,
+        jobTitle: doctor.designation,
+        medicalSpecialty: doctor.specialty,
+        worksFor: {
+            '@type': 'Hospital',
+            name: HOSPITAL_NAME,
+            address: HOSPITAL_ADDRESS,
+        },
+        affiliation: {
+            '@type': 'Hospital',
+            name: HOSPITAL_NAME,
+            url: BASE_URL,
+        },
+        address: HOSPITAL_ADDRESS,
+        telephone: doctor.telephone || HOSPITAL_PHONE,
+        alumniOf: doctor.education?.map(edu => ({
+            '@type': 'EducationalOrganization',
+            name: edu.institution,
+        })),
+    };
+}
+
+/**
+ * Medical Specialty / Department schema
+ */
+export function getDepartmentSchema(dept: {
+    name: string;
+    slug: string;
+    description?: string;
+    medicalSpecialty?: string;
+}) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': ['MedicalSpecialty', 'MedicalBusiness'],
+        '@id': `${BASE_URL}/departments/${dept.slug}`,
+        name: `${dept.name} Department`,
+        url: `${BASE_URL}/departments/${dept.slug}`,
+        description: dept.description || `Expert ${dept.name} care at ${HOSPITAL_NAME}`,
+        medicalSpecialty: dept.medicalSpecialty || dept.name,
+        parentOrganization: {
+            '@type': 'Hospital',
+            name: HOSPITAL_NAME,
+            url: BASE_URL,
+        },
+        address: HOSPITAL_ADDRESS,
+        telephone: HOSPITAL_PHONE,
+    };
+}
+
+/**
+ * Medical Procedure / Service schema
+ */
+export function getServiceSchema(service: {
+    name: string;
+    slug: string;
+    description?: string;
+    bodyLocation?: string;
+}) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'MedicalProcedure',
+        '@id': `${BASE_URL}/services/${service.slug}`,
+        name: service.name,
+        url: `${BASE_URL}/services/${service.slug}`,
+        description: service.description || `${service.name} performed by expert surgeons at ${HOSPITAL_NAME}.`,
+        bodyLocation: service.bodyLocation,
+        followup: 'Post-surgical care and physiotherapy as required.',
+        howPerformed: 'Minimally invasive techniques with state-of-the-art equipment.',
+        recognizingAuthority: {
+            '@type': 'Organization',
+            name: 'NABH',
+        },
+        study: { '@type': 'MedicalStudy' },
+        performer: {
+            '@type': 'Hospital',
+            name: HOSPITAL_NAME,
+            url: BASE_URL,
+        },
+    };
+}
+
+/**
+ * FAQ / Q&A schema
+ */
+export function getFAQSchema(faqs: { question: string; answer: string }[]) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+            },
+        })),
+    };
+}
+
+/**
+ * LocalBusiness schema for location/city pages
+ */
+export function getLocalBusinessSchema(city: string, citySlug: string) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': ['Hospital', 'LocalBusiness'],
+        name: `${HOSPITAL_NAME} — Serving ${city}`,
+        url: `${BASE_URL}/doctor/near-me/${citySlug}`,
+        description: `Indira Super Speciality Hospital provides world-class surgical and medical care to patients from ${city}, Tamil Nadu.`,
+        telephone: HOSPITAL_PHONE,
+        address: HOSPITAL_ADDRESS,
+        areaServed: {
+            '@type': 'City',
+            name: city,
+            addressRegion: 'Tamil Nadu',
+            addressCountry: 'IN',
+        },
+        hasMap: 'https://maps.google.com/maps?cid=9667111072695054632',
+    };
+}
+
+/**
+ * Article / Blog Post schema
+ */
+export function getArticleSchema(post: {
+    title: string;
+    slug: string;
+    description: string;
+    author?: string;
+    datePublished?: string;
+    dateModified?: string;
+    image?: string;
+}) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'MedicalWebPage',
+        '@id': `${BASE_URL}/blog/${post.slug}`,
+        headline: post.title,
+        description: post.description,
+        url: `${BASE_URL}/blog/${post.slug}`,
+        image: post.image || HOSPITAL_IMAGE,
+        author: {
+            '@type': 'Person',
+            name: post.author || 'Indira Hospital Medical Team',
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: HOSPITAL_NAME,
+            logo: { '@type': 'ImageObject', url: `${BASE_URL}/logo.png` },
+        },
+        datePublished: post.datePublished || new Date().toISOString(),
+        dateModified: post.dateModified || new Date().toISOString(),
+        medicalAudience: 'Patient',
+        about: { '@type': 'MedicalCondition' },
+    };
+}
+
+/**
+ * Health Package / Offer schema
+ */
+export function getHealthPackageSchema(pkg: {
+    name: string;
+    slug: string;
+    description?: string;
+    price?: string;
+}) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Offer',
+        '@id': `${BASE_URL}/health-packages/${pkg.slug}`,
+        name: pkg.name,
+        url: `${BASE_URL}/health-packages/${pkg.slug}`,
+        description: pkg.description || `${pkg.name} at ${HOSPITAL_NAME}.`,
+        seller: {
+            '@type': 'Hospital',
+            name: HOSPITAL_NAME,
+            url: BASE_URL,
+        },
+        priceSpecification: pkg.price
+            ? { '@type': 'PriceSpecification', price: pkg.price, priceCurrency: 'INR' }
+            : undefined,
+        availability: 'https://schema.org/InStock',
+        areaServed: { '@type': 'State', name: 'Tamil Nadu' },
+    };
+}
+
+/**
+ * Core Data Models (Interfaces)
+ * Shared across the application for type safety
+ */
+
+export interface Appointment {
+    id?: string;
+    name: string;
+    phone: string;
     email?: string;
-    socialLinks?: Record<string, string>;
-    primaryColor?: string;
-    secondaryColor?: string;
-    trustBadges?: string[];
-    footerText?: string;
-    defaultSEO?: SEOObject;
+    department?: string;
+    doctor?: string;
+    date: string;
+    notes?: string;
+    status?: 'pending' | 'confirmed' | 'cancelled';
 }
 
 export interface Doctor {
     id: string;
+    status: string;
     name: string;
     slug: string;
-    photo?: string;
-    qualifications?: string[];
-    specialization: string;
-    department?: string | Department;
-    yearsOfExperience?: number;
-    languagesSpoken?: string[];
-    bio?: string;
-    availability?: string[];
-    consultationFee?: number;
-    location?: string | Location;
-    featured?: boolean;
-    seo?: SEOObject;
-
-    // Legacy
-    image?: string;
-    status?: string;
-    designation?: string;
-    experience_years?: number;
-    specialties?: string[];
-    procedures?: string[];
-    faqs?: { question: string; answer: string }[];
-    reviews?: { patient_name: string; content: string; rating: number; date?: string }[];
-    memberships?: string[];
+    designation: string;
+    department: string;
+    image: string;
+    bio: string;
+    education: { degree: string; institution: string; year?: string }[];
+    specialties: string[];
+    procedures: string[];
+    experience_years: number;
+    memberships: string[];
+    faqs: { question: string; answer: string }[];
+    reviews: { patient_name: string; content: string; rating: number; date: string }[];
     related_services?: Service[];
     available_locations?: Location[];
 }
 
 export interface Department {
     id: string;
+    status: string;
+    title: string;
+    slug: string;
+    description: string;
+    image?: string;
+    icon?: string;
+    features?: string[];
+    related_doctors?: Doctor[];
+    related_services?: Service[];
+}
+
+export interface Diagnostic {
+    id: string;
+    status: string;
     name: string;
     slug: string;
-    icon?: string;
-    shortDescription?: string;
-    fullDescription?: string;
-    featuredImage?: string;
-    doctors?: string[] | Doctor[];
-    location?: string | Location;
-    seo?: SEOObject;
+    category: string;
+    description: string;
+    short_description?: string;
+    price?: number;
+    report_time?: string;
+    home_collection?: boolean;
+    fasting_required?: boolean;
+    sample_type?: string;
+    parameters_count?: number;
+    preparation_instructions?: string;
+    normal_range?: string;
+    used_to_diagnose?: string | string[];
+    body_system?: string;
+    seo_title?: string;
+    seo_description?: string;
+}
 
-    // Legacy
-    status?: string;
+export interface HealthPackage {
+    id: string;
+    status: string;
+    title: string;
+    slug: string;
+    description: string;
+    short_description?: string;
+    category?: string;
+    is_featured?: boolean;
+    price: string;
+    discounted_price?: string;
+    tests_included: string;
+    benefits?: string[];
+    ideal_for?: string[];
+    seo_title?: string;
+    seo_description?: string;
+}
+
+export interface Service {
+    id: string;
+    status: string;
+    title: string;
+    slug: string;
+    description: string;
+    related_doctors?: Doctor[];
+    available_locations?: Location[];
 }
 
 export interface Location {
@@ -80,294 +429,32 @@ export interface Location {
     name: string;
     slug: string;
     address?: string;
-    mapEmbed?: string;
-    phone?: string;
-    emergencyPhone?: string;
-    operatingHours?: string;
-    departments?: string[] | Department[];
-    doctors?: string[] | Doctor[];
-    seo?: SEOObject;
-
-    // Legacy
-    status?: string;
-    related_doctors?: Doctor[] | any[];
-    related_services?: Service[] | any[];
+    coordinates?: { lat: number; lng: number };
 }
 
 export interface Post {
     id: string;
+    status: string;
     title: string;
     slug: string;
+    content: string;
     excerpt?: string;
-    featuredImage?: string;
-    content?: string;
-    author?: { name: string; avatar?: string; bio?: string } | string;
-    category?: string;
-    tags?: string[];
-    publishedDate?: string;
-    seo?: SEOObject;
-
-    // Legacy mappings
     date_created: string;
+    author?: BlogAuthor | string;
     image?: string;
-    status?: string;
-    related_doctors?: Doctor[] | any[];
-    related_services?: Service[] | any[];
-}
-
-export interface Testimonial {
-    id: string;
-    patientName: string;
-    patientPhoto?: string;
-    quote: string;
-    rating?: number;
-    relatedDepartment?: string | Department;
-    location?: string | Location;
-}
-
-export interface InsurancePartner {
-    id: string;
-    name: string;
-    logo?: string;
-    link?: string;
-    description?: string;
-}
-
-// ─────────────────────────────────────────
-// 4️⃣ MODULAR SECTION BLOCKS
-// ─────────────────────────────────────────
-export interface HeroSectionBlock {
-    _type: 'hero';
-    heading: string;
-    subheading?: string;
-    backgroundImage?: string;
-    primaryCTALabel?: string;
-    primaryCTALink?: string;
-    secondaryCTA?: string;
-    showEmergencyBadge?: boolean;
-}
-
-export interface DepartmentGridBlock {
-    _type: 'department_grid';
-    title: string;
-    description?: string;
-    departments?: Department[];
-    layoutVariant?: 'grid' | 'carousel';
-}
-
-export interface DoctorHighlightBlock {
-    _type: 'doctor_highlight';
-    title: string;
-    doctors?: Doctor[];
-    showFilter?: boolean;
-}
-
-export interface AppointmentCTABlock {
-    _type: 'appointment_cta';
-    title: string;
-    description?: string;
-    buttonText?: string;
-    backgroundStyle?: 'primary' | 'secondary' | 'light' | 'image';
-}
-
-export interface TestimonialSectionBlock {
-    _type: 'testimonial_section';
-    title: string;
-    testimonials?: Testimonial[];
-    autoSlide?: boolean;
-}
-
-export interface InsuranceSectionBlock {
-    _type: 'insurance_section';
-    title: string;
-    insurancePartners?: InsurancePartner[];
-}
-
-export interface BlogPreviewBlock {
-    _type: 'blog_preview';
-    title: string;
-    numberOfPosts?: number;
-    categoryFilter?: string;
-}
-
-export type CMSBlock =
-    | HeroSectionBlock
-    | DepartmentGridBlock
-    | DoctorHighlightBlock
-    | AppointmentCTABlock
-    | TestimonialSectionBlock
-    | InsuranceSectionBlock
-    | BlogPreviewBlock;
-
-// ─────────────────────────────────────────
-// 3️⃣ PAGE-LEVEL CONTENT MODEL
-// ─────────────────────────────────────────
-export interface Page {
-    id: string;
-    title: string;
-    slug: string;
-    heroSection?: HeroSectionBlock;
-    sections?: CMSBlock[];
-    seo?: SEOObject;
-}
-
-// ─────────────────────────────────────────
-// 5️⃣ ADVANCED ENTERPRISE MODELS
-// ─────────────────────────────────────────
-export interface Event {
-    id: string;
-    title: string;
-    slug: string;
-    description?: string; // Rich Text
-    startDate: string;
-    endDate?: string;
-    location?: string | Location;
-    isVirtual?: boolean;
-    registrationLink?: string;
-    featuredImage?: string;
-    seo?: SEOObject;
-}
-
-export interface HealthPackage {
-    id: string;
-    title: string;
-    slug: string;
-    price?: number;
-    originalPrice?: number;
-    testsIncluded?: string[]; // Array of test names
-    thumbnail?: string;
-    shortDescription?: string;
-    fullDescription?: string; // Rich Text
-    isFeatured?: boolean;
-    relatedDepartments?: string[] | Department[];
-    seo?: SEOObject;
-
-    // Legacy
-    status?: string;
-    tests_included?: string;
-    short_description?: string;
-    original_price?: number;
-    is_featured?: boolean;
-    seo_title?: string;
-    seo_description?: string;
-    related_services?: Service[] | string[];
-}
-
-export interface DoctorSchedule {
-    id: string;
-    doctor: string | Doctor;
-    location: string | Location;
-    dayOfWeek: string; // e.g. "Monday"
-    startTime: string; // e.g. "09:00"
-    endTime: string;   // e.g. "17:00"
-    exceptions?: { date: string; isAvailable: boolean; reason?: string }[];
-}
-
-export interface FAQ {
-    id: string;
-    question: string;
-    answer: string; // Rich Text or plain text
     category?: string;
-    relatedEntity?: string; // Polymorphic reference ID
-
-    // Legacy
-    status?: string;
 }
 
-export interface ClinicalProcedure {
-    id: string;
-    title: string;
-    slug: string;
-    overview?: string; // Rich text
-    preparation?: string; // Rich text
-    recovery?: string; // Rich text
-    risks?: string; // Rich text
-    relatedDepartments?: string[] | Department[];
-    relatedDoctors?: string[] | Doctor[];
-    faqs?: FAQ[];
-    seo?: SEOObject;
-}
-
-export interface PatientEducationResource {
-    id: string;
-    title: string;
-    slug: string;
-    resourceType: 'article' | 'video' | 'pdf_guide';
-    fileUrl?: string;
-    videoUrl?: string;
-    content?: string; // Rich Text
-    relatedDepartments?: string[] | Department[];
-    seo?: SEOObject;
-}
-
-export interface TelemedicineProfile {
-    id: string;
-    doctor: string | Doctor;
-    isAvailable: boolean;
-    consultationFee: number;
-    platformLink?: string;
-    languagesSpoken: string[];
-}
-
-export interface Diagnostic {
+export interface BlogAuthor {
     id: string;
     name: string;
-    slug: string;
-    shortDescription?: string;
-    price?: number;
-    reportTimeHours?: number;
-    thumbnail?: string;
-
-    // Legacy
-    status?: string;
-    category?: string;
-    description?: string;
-    short_description?: string;
-    report_time?: string;
-    home_collection?: boolean;
-    fasting_required?: boolean;
-    sample_type?: string;
-    parameters_count?: number;
-    preparation_instructions?: string;
-    seo_title?: string;
-    seo_description?: string;
-    body_system?: string;
-    used_to_diagnose?: string[] | string;
-    normal_range?: string;
+    avatar?: string;
+    bio?: string;
 }
 
-export interface Service {
-    id: string;
-    title: string;
-    slug: string;
-    icon?: string;
-    shortDescription?: string;
-    procedureType?: string;
-    relatedDoctors?: Doctor[] | string[];
-    availableLocations?: Location[] | string[];
-    seo?: SEOObject;
-
-    // Legacy mappings
-    status?: string;
-    short_description?: string;
-    full_description?: string;
-    procedure_type?: string;
-    seo_title?: string;
-    seo_description?: string;
-    related_doctors?: Doctor[] | string[];
-    available_locations?: Location[] | string[];
-}
-
-export interface Appointment {
-    id?: string;
-    name: string;
-    phone: string;
-    department: string;
-    doctor?: string;
-    date: string;
-    notes?: string;
-    status?: 'pending' | 'confirmed' | 'cancelled';
-    date_created?: string;
+export interface CMSBlock {
+    _type: string;
+    [key: string]: any;
 }
 
 export interface ContactMessage {
@@ -376,42 +463,69 @@ export interface ContactMessage {
     last_name: string;
     email: string;
     phone: string;
+    subject?: string;
     message: string;
     status?: 'new' | 'read' | 'replied';
-    date_created?: string;
 }
 
 export interface BillingPayment {
     id?: string;
     patient_id: string;
-    invoice_number?: string;
+    invoice_number: string;
     amount: number;
-    status: 'pending' | 'success' | 'failed';
-    date_created?: string;
+    phone?: string;
+    payment_method?: string;
+    transaction_id?: string;
+    status?: 'pending' | 'success' | 'failed';
 }
 
-// ─────────────────────────────────────────
-// Aggregate Schema for Directus SDK
-// ─────────────────────────────────────────
+export interface GlobalSiteSettings {
+    hospitalName: string;
+    emergencyPhone: string;
+    helplinePhone: string;
+    address: string;
+    email: string;
+}
+
+export interface Testimonial {
+    id: string;
+    patient_name: string;
+    treatment_received: string;
+    rating: number;
+    content: string;
+    verified: boolean;
+}
+
+export interface FAQ {
+    id: string;
+    question: string;
+    answer: string;
+    category: string;
+}
+
+export interface InsurancePartner {
+    id: string;
+    name: string;
+    logo: string;
+}
+
+/**
+ * Directus Schema Definition
+ */
 export interface Schema {
-    hospital_settings: GlobalSiteSettings;
     doctors: Doctor[];
     departments: Department[];
     services: Service[];
-    testimonials: Testimonial[];
-    health_packages: HealthPackage[];
     locations: Location[];
-    pages: Page[];
+    posts: Post[];
+    testimonials: Testimonial[];
     faqs: FAQ[];
     insurances: InsurancePartner[];
     diagnostics: Diagnostic[];
-    posts: Post[];
-    events: Event[];
-    doctor_schedules: DoctorSchedule[];
-    clinical_procedures: ClinicalProcedure[];
-    patient_education: PatientEducationResource[];
-    telemedicine_profiles: TelemedicineProfile[];
+    health_packages: HealthPackage[];
+    hospital_settings: GlobalSiteSettings;
     appointments: Appointment[];
     contacts: ContactMessage[];
     billing_payments: BillingPayment[];
 }
+

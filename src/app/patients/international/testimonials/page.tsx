@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
     Star, MessageCircle, ChevronRight, ArrowRight,
-    Quote, Globe2, Heart, Sparkles, Phone, Award
+    Quote, Globe2, Heart, Sparkles, Phone, Award, CheckCircle2
 } from "lucide-react";
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 import { siteConfig } from "@/config/site";

@@ -9,6 +9,7 @@ import { BloodDrop } from "healthicons-react/outline";
 import type { Metadata } from "next"
 import EntityReviews from "@/components/trust/EntityReviews"
 import EntityFAQs from "@/components/trust/EntityFAQs"
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema"
 
 import { siteConfig } from "@/config/site"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
@@ -20,6 +21,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: test.seo_title || `${test.name} Test Cost & Booking in Vellore, Tamil Nadu | Indira Hospital`,
         description: test.seo_description || `Book ${test.name} at Indira Hospital, Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} Trusted diagnostic services in Tamil Nadu, India with home collection.`,
+        alternates: {
+            canonical: `/diagnostics/${slug}`,
+        },
+        openGraph: {
+            title: test.seo_title || `${test.name} Test | Indira Hospital`,
+            description: test.seo_description || `Accurate ${test.name} test in Vellore.`,
+            url: `/diagnostics/${slug}`,
+            type: 'website',
+        },
     };
 }
 
@@ -37,6 +47,14 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
 
     return (
         <main className="min-h-screen pb-20">
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: "Home", url: "/" },
+                    { name: "Diagnostics", url: "/diagnostics" },
+                    { name: test.name, url: `/diagnostics/${slug}` }
+                ]}
+            />
             {/* 1. Hero / Header */}
             <div className="bg-slate-50 dark:bg-slate-800 border-b py-12">
                 <SectionContainer>

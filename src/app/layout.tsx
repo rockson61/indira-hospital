@@ -9,6 +9,7 @@ import { StickyCTA } from "@/components/layout/StickyCTA";
 import { ThemeProvider } from "@/components/theme-provider";
 import { defaultSeo } from "@/config/seo";
 import DynamicSEOKeywordBlock from "@/components/DynamicSEOKeywordBlock";
+import { getHospitalSchema, getWebsiteSchema } from "@/lib/schema";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,96 +23,29 @@ const outfit = Outfit({
   display: "swap",
 });
 
-export const metadata: Metadata = defaultSeo;
+export const metadata: Metadata = {
+  ...defaultSeo,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 export const viewport: Viewport = {
   themeColor: "#841F74",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@id": siteConfig.url,
-  "@type": "LocalBusiness",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IN",
-    "addressLocality": "Vellore",
-    "addressRegion": "Tamil Nadu",
-    "postalCode": "632006",
-    "streetAddress": "54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar"
-  },
-  "description": "Indira Super Speciality Hospital is a premium NABH-accredited quaternary care hospital in Vellore, Tamil Nadu, India, specializing in advanced laser & laparoscopic surgeries.",
-  "hasMap": "https://maps.google.com/maps?cid=9667111072695054632",
-  "image": "https://lh3.googleusercontent.com/La0fYC-XT-E8lRPk31cNfPmEgsfyWxy9VdOaX9wB81jgu-LOVYZVFeWqi4CcbxW_tOiyiECskDHNbb4vQQ=s0",
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "name": "Hospital"
-    },
-    {
-      "@type": "Offer",
-      "name": "Gastrointestinal surgeon"
-    }
-  ],
-  "name": "Indira Superspeciality Hospital",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "closes": "23:59:59",
-      "dayOfWeek": "SUNDAY",
-      "opens": "00:00:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "closes": "23:59:59",
-      "dayOfWeek": "MONDAY",
-      "opens": "00:00:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "closes": "23:59:59",
-      "dayOfWeek": "TUESDAY",
-      "opens": "00:00:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "closes": "23:59:59",
-      "dayOfWeek": "WEDNESDAY",
-      "opens": "00:00:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "closes": "23:59:59",
-      "dayOfWeek": "THURSDAY",
-      "opens": "00:00:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "closes": "23:59:59",
-      "dayOfWeek": "FRIDAY",
-      "opens": "00:00:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "closes": "23:59:59",
-      "dayOfWeek": "SATURDAY",
-      "opens": "00:00:00"
-    }
-  ],
-  "sameAs": [
-    "https://www.indirasuperspecialityhospital.com/",
-    "https://www.mappls.com/9w6owz",
-    "https://www.justdial.com/Vellore/Indira-Superspeciality-Hospital-Gandhi-Nagar-East/9999PX416-X416-220613215915-A1A6_BZDET",
-    "https://www.bajajfinservhealth.in/hospitals/vellore/indira-super-speciality-hospital-gandhi-nagar",
-    "https://www.instagram.com/indirasuperspecialityhospitals/?hl=en",
-    "https://www.facebook.com/indirasuperspecialityhospitals/",
-    "https://promoteyourads.com/author/indira-super-speciality-hospital/"
-  ],
-  "telephone": "+91 98423 24425",
-  "url": siteConfig.url
 };
 
 export default function RootLayout({
@@ -124,9 +58,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
+        {/* Hospital / MedicalOrganization Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getHospitalSchema()) }}
+        />
+        {/* Website Schema with Sitelinks Searchbox */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebsiteSchema()) }}
         />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Header />

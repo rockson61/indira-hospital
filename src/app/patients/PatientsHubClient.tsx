@@ -33,7 +33,7 @@ const itemVariants = {
             ease: "easeOut"
         }
     }
-};
+} as const;
 
 export function PatientsHubClient() {
     const categories = [

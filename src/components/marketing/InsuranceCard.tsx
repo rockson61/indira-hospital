@@ -37,7 +37,7 @@ export function InsuranceCard() {
                 </div>
 
                 <Link 
-                    href="/insurance"
+                    href="/patients/insurance"
                     className="group/btn relative w-full flex items-center justify-center gap-2 px-6 py-4 bg-white text-emerald-900 rounded-xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] transition-all overflow-hidden"
                 >
                     <span className="relative z-10">View All Providers</span>

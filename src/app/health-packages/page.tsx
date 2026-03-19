@@ -10,10 +10,14 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
     title: 'Master Health Checkup Packages in Vellore, Tamil Nadu | Indira Hospital',
     description: 'Affordable health screening packages in Vellore, India. Master health checkups, Cardiac, Diabetic, and Executive packages at Indira Super Speciality Hospital, Tamil Nadu.',
+    alternates: {
+        canonical: "/health-packages"
+    }
 }
 
 export default async function HealthPackagesPage() {
@@ -27,6 +31,13 @@ export default async function HealthPackagesPage() {
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: "Home", url: "/" },
+                    { name: "Health Packages", url: "/health-packages" }
+                ]}
+            />
             {/* ELITE HEALTHCARE HERO */}
             <section className="bg-slate-900 pt-48 pb-48 lg:pt-60 lg:pb-64 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />

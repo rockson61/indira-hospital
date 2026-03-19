@@ -11,8 +11,6 @@ import Link from "next/link";
 import { SymptomGuide } from "@/components/healthcare/SymptomGuide";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { TreatmentGuides } from "@/components/sections/treatment-guides";
-import EntityFAQs from "@/components/trust/EntityFAQs";
-import EntityReviews from "@/components/trust/EntityReviews";
 
 const bodySystems = [
     { name: "Heart & Circulation", icon: Heart, link: "/doctor/near-me/treat/cardiology" },
@@ -200,7 +198,6 @@ export default function HealthLibraryClient() {
                 {/* Treatment Guides */}
                 <TreatmentGuides />
 
-
                 {/* Pharmacy / Supplements */}
                 <section id="pharmacy" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
                     <div className="bg-[#0086d6] rounded-[3rem] p-12 lg:p-24 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -222,27 +219,6 @@ export default function HealthLibraryClient() {
                         </div>
                     </div>
                 </section>
-
-                {/* TRUST SIGNALS */}
-                <section className="max-w-7xl mx-auto px-6 lg:px-8 py-24 border-t border-slate-100 dark:border-slate-800">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        <EntityFAQs
-                            entityType="hospital"
-                            entityName="Indira Hospital"
-                            entitySlug="diagnostics"
-                            title="Treatment & Procedure FAQs"
-                            description="Expert insights on recovery times, surgical prep, and clinical safety at Indira Hospital."
-                        />
-                        <EntityReviews
-                            entityType="hospital"
-                            entityName="Indira Hospital"
-                            entitySlug="indira-hospital"
-                            title="Patient Success Stories"
-                            description="Hear from patients who underwent life-changing treatments at our super-speciality centers."
-                        />
-                    </div>
-                </section>
-
             </div>
         </div>
     );

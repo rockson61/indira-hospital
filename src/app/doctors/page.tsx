@@ -14,6 +14,9 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 export const metadata: Metadata = {
     title: "Best Doctors & Specialist Surgeons in Vellore, Tamil Nadu | Indira Hospital",
     description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, India. Book your appointment today.",
+    alternates: {
+        canonical: "/doctors"
+    }
 };
 
 export default async function DoctorsDirectoryPage() {
@@ -29,6 +32,13 @@ export default async function DoctorsDirectoryPage() {
                     const specialtySlug = dept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                     return { name: d.name, url: `/doctor/${specialtySlug}/${d.slug}` };
                 })}
+            />
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: "Home", url: "/" },
+                    { name: "Doctors", url: "/doctors" }
+                ]}
             />
             <PageHero
                 title="Best Doctors & Specialist Surgeons in Vellore"

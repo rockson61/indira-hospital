@@ -1,12 +1,31 @@
-import { Metadata } from "next";
 import HealthLibraryClient from "./HealthLibraryClient";
-
-export const metadata: Metadata = {
-    title: "Advanced Surgical Treatments & Medical Guides in Vellore | Indira Hospital",
-    description: "Explore world-class surgical treatments including Laser Proctology, Laparoscopic Surgery, and specialized clinical care at Indira Hospital, Vellore. Comprehensive medical guides for patients.",
-    keywords: ["Surgical Treatments Vellore", "Laser Piles Treatment India", "Laparoscopic Surgery Vellore", "Medical Guides", "Indira Hospital Treatments"],
-};
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export default function HealthLibraryPage() {
-    return <HealthLibraryClient />;
+    return (
+        <>
+            <HealthLibraryClient />
+            
+            {/* TRUST SIGNALS */}
+            <section className="max-w-7xl mx-auto px-6 lg:px-8 py-24 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 pb-32">
+                <div className="grid lg:grid-cols-2 gap-16">
+                    <EntityFAQs
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="diagnostics"
+                        title="Treatment & Procedure FAQs"
+                        description="Expert insights on recovery times, surgical prep, and clinical safety at Indira Hospital."
+                    />
+                    <EntityReviews
+                        entityType="hospital"
+                        entityName="Indira Hospital"
+                        entitySlug="indira-hospital"
+                        title="Patient Success Stories"
+                        description="Hear from patients who underwent life-changing treatments at our super-speciality centers."
+                    />
+                </div>
+            </section>
+        </>
+    );
 }

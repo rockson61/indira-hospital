@@ -71,10 +71,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             "Indira Hospital Vellore",
             "medical tourism Tamil Nadu",
         ],
+        alternates: {
+            canonical: `/doctor/near-me/${city}`,
+        },
         openGraph: {
             title: `Best Hospital for Patients in ${location.name} | Indira Super Speciality Hospital`,
             description: `Advanced clinical care and emergency services for residents of ${location.name}. NABH accredited quaternary care hospital in Vellore.`,
             type: "website",
+            url: `/doctor/near-me/${city}`,
         },
     };
 }
@@ -480,6 +484,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 address={location.district}
                 areaServed={location.name}
                 description={`Indira Super Speciality Hospital provides advanced clinical care for patients from ${location.name}, ${location.district}. Nearest high-end center for Laparoscopic and Laser surgeries.`}
+            />
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Locations', url: '/doctor/near-me' },
+                    { name: location.name, url: `/doctor/near-me/${city}` },
+                ]}
             />
             <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />

@@ -14,6 +14,9 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
     title: "World-Class Hospital Departments in Vellore, Tamil Nadu — Indira Hospital",
     description: "Explore 15+ advanced medical departments at Indira Hospital, Vellore. From cardiology to proctology, get expert care with same-day discharge options in Tamil Nadu, India.",
+    alternates: {
+        canonical: "/departments"
+    }
 };
 
 export default async function DepartmentsDirectoryPage() {
@@ -25,6 +28,13 @@ export default async function DepartmentsDirectoryPage() {
                 type="itemList"
                 name="Departments & Centres of Excellence at Indira Hospital"
                 items={departments.map((d: any) => ({ name: d.title || d.name, url: `/departments/${d.slug}` }))}
+            />
+            <JsonLdSchema
+                type="breadcrumb"
+                items={[
+                    { name: "Home", url: "/" },
+                    { name: "Departments", url: "/departments" }
+                ]}
             />
             <PageHero
                 title="Best Multispeciality Hospital Departments in Vellore"

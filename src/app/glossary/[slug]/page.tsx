@@ -1,15 +1,13 @@
 import { GLOSSARY_DATA } from "@/lib/data/glossary-data";
 import { notFound } from "next/navigation";
 import { SectionContainer } from "@/components/ui/section-container";
-import { PageHeader } from "@/components/ui/page-header";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, Heart, Sparkles, ArrowRight, Shield } from "lucide-react";
 import { Metadata } from "next";
+import { motion } from "framer-motion";
 
 const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
 
-// Do NOT generate all 6500+ glossary pages at build time — that exceeds Vercel's 75MB body limit.
-// Pages are rendered on-demand and cached after first visit (ISR).
 export const dynamicParams = true;
 export const revalidate = 86400; // Re-validate once per day
 
@@ -22,8 +20,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
 
     return {
-        title: `${glossaryItem.term} | Medical Glossary | Indira Hospital`,
-        description: glossaryItem.definition.substring(0, 160) + '...',
+        title: `${glossaryItem.term} | Medical Glossary | Indira Super Speciality Hospital`,
+        description: `Learn about ${glossaryItem.term} — a ${glossaryItem.category} term. ${glossaryItem.definition.substring(0, 130)}...`,
+        robots: {
+            index: false,
+            follow: false,
+            googleBot: {
+                index: false,
+                follow: false,
+            },
+        },
     }
 }
 
@@ -36,34 +42,102 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
     }
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
-            <PageHeader
-                title={glossaryItem.term}
-                description={`${glossaryItem.category} Glossary Term`}
-            />
-            <SectionContainer>
-                <div className="max-w-4xl mx-auto">
-                    <Link href="/glossary" className="inline-flex items-center text-fuchsia-600 hover:text-fuchsia-700 font-medium mb-8 hover:underline">
-                        <ArrowLeft className="w-4 h-4 mr-2" /> Back to Glossary
-                    </Link>
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20 selection:bg-fuchsia-200 selection:text-fuchsia-900">
+            {/* ELITE CINEMATIC HEADER FOR TERM */}
+            <section className="relative pt-48 pb-40 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[4rem] sm:rounded-b-[6rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+                
+                {/* Ambient Glows */}
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] will-change-transform transform-gpu opacity-60 animate-pulse" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] will-change-transform transform-gpu opacity-40" />
 
-                    <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-slate-800">
-                        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Definition</h2>
-                        <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-8">
-                            {glossaryItem.definition}
-                        </p>
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                    <div className="flex flex-col items-center text-center">
+                        <Link href="/glossary" className="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-slate-300 text-xs font-black uppercase tracking-[0.2em] mb-12 hover:bg-white/10 hover:border-white/20 transition-all">
+                            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Dictionary
+                        </Link>
+                        
+                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-500/10 backdrop-blur-md border border-fuchsia-500/20 text-fuchsia-300 text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
+                            <BookOpen className="w-4 h-4" /> Medical Reference: {glossaryItem.category}
+                        </div>
+                        
+                        <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                            {glossaryItem.term}
+                        </h1>
+                    </div>
+                </div>
+            </section>
 
-                        {glossaryItem.relatedService && (
-                            <div className="mt-10 pt-8 border-t border-slate-100 dark:border-slate-800">
-                                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Related Department / Service</h3>
-                                <Link
-                                    href={`/services/${glossaryItem.relatedService}`}
-                                    className="inline-flex items-center px-6 py-3 bg-fuchsia-50 hover:bg-fuchsia-100 dark:bg-fuchsia-900/20 dark:hover:bg-fuchsia-900/40 text-fuchsia-600 dark:text-fuchsia-400 font-medium rounded-xl transition-colors"
-                                >
-                                    {glossaryItem.relatedServiceTitle || glossaryItem.relatedService}
-                                </Link>
+            <SectionContainer className="-mt-24 relative z-20">
+                <div className="max-w-5xl mx-auto">
+                    <div className="bg-white/80 dark:bg-slate-900/90 backdrop-blur-3xl rounded-[4rem] p-10 md:p-20 shadow-2xl border border-slate-200 dark:border-slate-800 relative overflow-hidden group">
+                        
+                        {/* Interactive Shine */}
+                        <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-fuchsia-500 via-indigo-500 to-fuchsia-500 opacity-80" />
+                        
+                        <div className="relative z-10">
+                            <div className="flex items-center gap-4 mb-10">
+                                <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950/30 flex items-center justify-center text-fuchsia-600 border border-fuchsia-100 dark:border-fuchsia-900/50">
+                                    <Shield className="w-6 h-6" />
+                                </div>
+                                <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase italic">Clinical Definition</h2>
                             </div>
-                        )}
+
+                            <p className="text-slate-600 dark:text-slate-300 text-2xl md:text-3xl leading-relaxed font-light mb-16 italic first-letter:text-6xl first-letter:font-black first-letter:text-fuchsia-600 first-letter:mr-4 first-letter:float-left first-letter:mt-2">
+                                {glossaryItem.definition}
+                            </p>
+
+                            <div className="grid sm:grid-cols-2 gap-8 mt-16 pt-16 border-t border-slate-100 dark:border-slate-800">
+                                <div>
+                                    <h3 className="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6">Expertise Pillar</h3>
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-900 dark:text-white">
+                                            <Heart className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <p className="text-slate-900 dark:text-white font-black text-lg">{glossaryItem.category}</p>
+                                            <p className="text-slate-500 text-xs font-medium uppercase tracking-widest leading-none">Category</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {glossaryItem.relatedService && (
+                                    <div>
+                                        <h3 className="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6">Related Excellence</h3>
+                                        <Link
+                                            href={`/services/${glossaryItem.relatedService}`}
+                                            className="group/link flex items-center gap-4 hover:scale-[1.02] transition-transform"
+                                        >
+                                            <div className="w-12 h-12 rounded-full bg-fuchsia-50 dark:bg-fuchsia-900/30 border border-fuchsia-100 dark:border-fuchsia-800 flex items-center justify-center text-fuchsia-600">
+                                                <ArrowRight className="w-6 h-6 group-hover/link:translate-x-1 transition-transform" />
+                                            </div>
+                                            <div>
+                                                <p className="text-fuchsia-600 dark:text-fuchsia-400 font-black text-lg group-hover/link:underline">
+                                                    {glossaryItem.relatedServiceTitle || glossaryItem.relatedService}
+                                                </p>
+                                                <p className="text-slate-500 text-xs font-medium uppercase tracking-widest leading-none">View Service</p>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Ambient Texture */}
+                        <div className="absolute bottom-0 right-0 p-12 opacity-5 pointer-events-none">
+                            <BookOpen className="w-64 h-64 text-slate-900 dark:text-white -rotate-12" />
+                        </div>
+                    </div>
+
+                    <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 p-12 bg-slate-900 rounded-[3rem] text-white border border-white/10 relative overflow-hidden group/cta">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[80px]" />
+                        <div className="relative z-10">
+                            <h4 className="text-2xl font-black mb-2 tracking-tight">Still have questions?</h4>
+                            <p className="text-slate-400 font-medium">Connect with our clinical coordinators for precise guidance.</p>
+                        </div>
+                        <Link href="/contact" className="relative z-10 px-10 py-5 bg-white text-slate-900 font-black rounded-2xl hover:bg-slate-100 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-white/5 uppercase tracking-widest text-sm italic">
+                            Consult Expert
+                        </Link>
                     </div>
                 </div>
             </SectionContainer>
