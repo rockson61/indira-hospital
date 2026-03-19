@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
     MessageCircle, ChevronRight, ArrowRight,
-    TrendingDown, Shield, Clock, CheckCircle2
+    TrendingDown, Shield, Clock, CheckCircle2, Sparkles, Phone, Calculator
 } from "lucide-react";
 import { EstimatorWidget } from "./EstimatorWidget";
-
 import { siteConfig } from "@/config/site";
-
-const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I am an international patient seeking a cost estimate. Please help.")}`;
+import { SectionContainer } from "@/components/ui/section-container";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: "Treatment Cost in India vs USA, UK & UAE | Free Estimate | Indira Hospital",
@@ -50,166 +50,215 @@ const WHY_AFFORDABLE = [
     { t: "Same international equipment", d: "We use Siemens, GE, Stryker, J&J implants and instruments — identical to what US and UK hospitals use." },
 ];
 
+const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I am an international patient seeking a cost estimate. Please help.")}`;
+
 export default function CostEstimatorPage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-slate-950">
-            {/* HERO */}
-            <section className="relative bg-gradient-to-br from-slate-900 via-green-950 to-slate-900 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-[0.05]"
-                    style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-16 lg:pt-52 lg:pb-20 relative z-10">
-                    <nav className="flex items-center text-sm text-green-300 mb-6 gap-1 flex-wrap">
-                        <Link href="/" className="hover:text-white">Home</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <Link href="/patients/international" className="hover:text-white">International</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-white">Cost Estimator</span>
-                    </nav>
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-bold mb-6">
-                        🧮 Free Cost Estimate — Response in 24 Hours
-                    </div>
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4">
-                        Treatment Cost in India<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
-                            vs USA, UK &amp; UAE
+        <main className="min-h-screen bg-white dark:bg-slate-950">
+            {/* ELITE GLOBAL HERO (GREEN THEME) */}
+            <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-emerald-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+                
+                <SectionContainer className="relative z-10">
+                    <div className="max-w-4xl mx-auto text-center lg:text-left lg:mx-0">
+                        <nav className="flex items-center justify-center lg:justify-start text-sm text-slate-400 mb-8 gap-1 flex-wrap">
+                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <Link href="/patients" className="hover:text-white transition-colors">Patients</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <Link href="/patients/international" className="hover:text-white transition-colors">International</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <span className="text-emerald-400 font-medium">Cost Estimator</span>
+                        </nav>
+
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-lg shadow-emerald-500/20">
+                            🧮 Free Cost Estimate — Response in 24 Hours
                         </span>
-                    </h1>
-                    <p className="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed mt-4">
-                        At Indira Super Speciality Hospital, Vellore, you get <strong className="text-white">NABH-accredited quaternary care</strong> at 80–95% lower cost than Western countries. Browse our price guide and WhatsApp us for a <strong className="text-white">personalised cost estimate within 24 hours</strong>.
-                    </p>
-                    <div className="flex flex-wrap gap-4 mt-8">
-                        <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl shadow-lg transition-all hover:scale-[1.02]">
-                            <MessageCircle className="w-5 h-5" /> WhatsApp for Free Estimate
-                        </a>
+                        
+                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                            Treatment Cost in India <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">vs USA, UK & UAE</span>
+                        </h1>
+                        
+                        <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10 italic">
+                            NABH-accredited quaternary care at 80–95% lower cost than the West. Get your personalised estimate today.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href={waUrl} target="_blank" rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-500/20">
+                                <MessageCircle className="w-5 h-5" /> WhatsApp for Free Estimate
+                            </a>
+                            <Link href="/patients/international/second-opinion"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">
+                                Get Second Opinion <ArrowRight className="w-4 h-4 text-emerald-400" />
+                            </Link>
+                        </div>
                     </div>
-                </div>
+                </SectionContainer>
             </section>
 
-            {/* STATS BAR */}
-            <div className="bg-green-700 text-white py-4">
-                <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-around gap-4 text-center">
+            {/* QUICK STATS BAR */}
+            <div className="bg-emerald-700 text-white py-6 border-b border-emerald-800">
+                <SectionContainer className="flex flex-wrap justify-between gap-8 text-center sm:text-left">
                     {[
                         { v: "80–95%", l: "Cost Savings vs USA" },
-                        { v: "24 hrs", l: "Estimate Response Time" },
+                        { v: "24 hrs", l: "Typical Response Time" },
                         { v: "NABH", l: "Quality Accreditation" },
-                        { v: "Free", l: "Consultation to Estimate" },
-                        { v: "50+", l: "Countries Served" },
-                    ].map(({ v, l }) => (
-                        <div key={l}>
-                            <div className="text-2xl font-black">{v}</div>
-                            <div className="text-green-200 text-xs font-semibold uppercase tracking-wider">{l}</div>
+                        { v: "Free", l: "Detailed Estimate" },
+                    ].map((stat, i) => (
+                        <div key={i} className="flex-1 min-w-[150px]">
+                            <div className="text-3xl font-black tracking-tight">{stat.v}</div>
+                            <div className="text-[10px] font-bold text-emerald-200 uppercase tracking-widest">{stat.l}</div>
                         </div>
                     ))}
-                </div>
+                </SectionContainer>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14 space-y-12">
+            <SectionContainer className="py-24 max-w-7xl mx-auto space-y-24">
+                
+                {/* WIDGET SECTION */}
+                <div className="relative">
+                    <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[80%] h-32 bg-emerald-500/10 blur-[100px] pointer-events-none rounded-full" />
+                    <EstimatorWidget />
+                </div>
 
-                {/* INTERACTIVE WIDGET — client component */}
-                <EstimatorWidget />
-
-                {/* FULL PRICING TABLE — server rendered */}
+                {/* PRICING TABLE ELITE */}
                 <section>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                        Procedure Cost Guide — India vs USA / UK / UAE
-                    </h2>
-                    <div className="overflow-x-auto rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
-                        <table className="w-full text-sm">
-                            <thead className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
-                                <tr>
-                                    <th className="py-3 px-5 text-left font-bold text-gray-700 dark:text-gray-300">Procedure</th>
-                                    <th className="py-3 px-4 text-center font-bold text-green-600 dark:text-green-400">🇮🇳 Indira Hospital</th>
-                                    <th className="py-3 px-4 text-center font-bold text-gray-500">🇺🇸 USA</th>
-                                    <th className="py-3 px-4 text-center font-bold text-gray-500">🇬🇧 UK</th>
-                                    <th className="py-3 px-4 text-center font-bold text-gray-500">🇦🇪 UAE</th>
-                                    <th className="py-3 px-4 text-center font-bold text-amber-600 dark:text-amber-400">Savings</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-slate-50 dark:divide-slate-800 bg-white dark:bg-slate-900/50">
-                                {PROCEDURE_TABLE.map((row) => (
-                                    <tr key={row.procedure} className="hover:bg-green-50/50 dark:hover:bg-green-950/20 transition-colors">
-                                        <td className="py-3 px-5 font-semibold text-gray-900 dark:text-white">{row.procedure}</td>
-                                        <td className="py-3 px-4 text-center font-bold text-green-600 dark:text-green-400">{row.indira}</td>
-                                        <td className="py-3 px-4 text-center text-gray-500 dark:text-gray-400 text-xs">{row.usa}</td>
-                                        <td className="py-3 px-4 text-center text-gray-500 dark:text-gray-400 text-xs">{row.uk}</td>
-                                        <td className="py-3 px-4 text-center text-gray-500 dark:text-gray-400 text-xs">{row.uae}</td>
-                                        <td className="py-3 px-4 text-center">
-                                            <span className="inline-flex items-center gap-1 text-amber-600 dark:text-amber-400 font-bold text-xs">
-                                                <TrendingDown className="w-3.5 h-3.5" /> {row.savings}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                    <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+                        <div className="max-w-2xl">
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight uppercase">Procedure <br /><span className="text-emerald-600">Cost Comparison</span></h2>
+                            <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium italic">Indicative ranges showing how much you can save without compromising on clinical quality.</p>
+                        </div>
+                        <div className="flex gap-2">
+                            <span className="w-3 h-3 rounded-full bg-emerald-500" />
+                            <span className="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-800" />
+                            <span className="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-800" />
+                        </div>
                     </div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 italic">
-                        * All prices are indicative ranges. Actual costs vary based on complexity, implants, and length of stay. WhatsApp us for a case-specific estimate.
-                    </p>
+
+                    <div className="overflow-hidden rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-2xl bg-white dark:bg-slate-900">
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left">
+                                <thead className="bg-slate-900 text-white">
+                                    <tr>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-[10px]">Procedure Name</th>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-[10px] text-center text-emerald-400">🇮🇳 Indira Hospital</th>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-[10px] text-center text-slate-400">🇺🇸 USA</th>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-[10px] text-center text-slate-400">🇬🇧 UK</th>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-[10px] text-center text-slate-400">🇦🇪 UAE</th>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-[10px] text-center text-amber-400">Est. Savings</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-slate-50 dark:divide-slate-800">
+                                    {PROCEDURE_TABLE.map((row) => (
+                                        <tr key={row.procedure} className="hover:bg-emerald-50/30 dark:hover:bg-emerald-900/10 transition-colors group">
+                                            <td className="py-5 px-8 font-black text-slate-700 dark:text-slate-300 uppercase tracking-tight text-sm group-hover:text-emerald-600 transition-colors">{row.procedure}</td>
+                                            <td className="py-5 px-8 text-center text-emerald-600 font-black text-sm">{row.indira}</td>
+                                            <td className="py-5 px-8 text-center text-slate-400 text-xs font-bold">{row.usa}</td>
+                                            <td className="py-5 px-8 text-center text-slate-400 text-xs font-bold">{row.uk}</td>
+                                            <td className="py-5 px-8 text-center text-slate-400 text-xs font-bold">{row.uae}</td>
+                                            <td className="py-5 px-8 text-center">
+                                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 text-[10px] font-black uppercase tracking-widest border border-amber-100 dark:border-amber-900/30">
+                                                    <TrendingDown className="w-3 h-3" /> {row.savings}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </section>
 
-                {/* WHY SO AFFORDABLE */}
-                <section className="bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 border border-slate-100 dark:border-slate-800">
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Why Is Treatment So Affordable in India?</h2>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                        {WHY_AFFORDABLE.map(({ t, d }) => (
-                            <div key={t} className="flex items-start gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                <div>
-                                    <p className="font-semibold text-gray-900 dark:text-white text-sm">{t}</p>
-                                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 leading-relaxed">{d}</p>
+                {/* BENTO WHY AFFORDABLE */}
+                <section>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-8 tracking-tight uppercase leading-none">Why is it <br /><span className="text-emerald-600">So Affordable?</span></h2>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium italic text-lg leading-relaxed mb-10">Lower prices in India are driven by operational efficiency and volume, not a compromise on clinical outcomes or technology.</p>
+                            
+                            <div className="grid sm:grid-cols-2 gap-6">
+                                {WHY_AFFORDABLE.map((item, i) => (
+                                    <div key={i} className="group p-6 bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-emerald-200 transition-all">
+                                        <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 flex items-center justify-center text-emerald-600 shadow-sm border border-slate-100 dark:border-slate-700 mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                            <CheckCircle2 className="w-5 h-5" />
+                                        </div>
+                                        <h3 className="font-black text-slate-900 dark:text-white text-sm uppercase tracking-tight mb-2">{item.t}</h3>
+                                        <p className="text-slate-500 dark:text-slate-400 text-xs font-medium leading-relaxed italic">{item.d}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="bg-slate-900 rounded-[3.5rem] p-12 text-white border border-white/5 shadow-2xl relative overflow-hidden flex flex-col justify-center text-center">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[60px] pointer-events-none" />
+                            <div className="w-20 h-20 rounded-[2rem] bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-8 mx-auto shadow-inner border border-emerald-500/30">
+                                <Shield className="w-10 h-10" />
+                            </div>
+                            <h3 className="text-3xl font-black mb-6 tracking-tight uppercase">NABH Quality Standards</h3>
+                            <p className="text-slate-400 font-medium mb-10 italic">Indira Hospital is NABH-accredited, ensuring the same surgical safety protocols and technology standards as elite hospitals in the US and Europe.</p>
+                            
+                            <div className="space-y-4 mb-10 text-left max-w-xs mx-auto">
+                                <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-emerald-400">
+                                    <CheckCircle2 className="w-4 h-4" /> International Implants (J&J, Stryker)
+                                </div>
+                                <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-emerald-400">
+                                    <CheckCircle2 className="w-4 h-4" /> Siemens & GE Diagnostics
+                                </div>
+                                <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-emerald-400">
+                                    <CheckCircle2 className="w-4 h-4" /> US-Trained Lead Surgeons
                                 </div>
                             </div>
-                        ))}
+
+                            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-emerald-600 text-white font-black rounded-2xl hover:scale-105 transition-all uppercase tracking-widest text-xs shadow-2xl shadow-emerald-900/50">
+                                <MessageCircle className="w-6 h-6" /> WhatsApp Reports for Quote
+                            </a>
+                        </div>
                     </div>
                 </section>
 
-                {/* TRUST BADGES */}
-                <div className="grid sm:grid-cols-3 gap-5">
-                    {[
-                        { icon: Shield, title: "NABH Accredited", desc: "Same quality standard as CMC Vellore and top Indian hospitals." },
-                        { icon: Clock, title: "Estimate in 24 Hours", desc: "Send reports on WhatsApp and get a detailed breakdown by our specialist." },
-                        { icon: CheckCircle2, title: "No Hidden Charges", desc: "Our estimates are transparent. We detail every line item before you travel." },
-                    ].map(({ icon: Icon, title, desc }) => (
-                        <div key={title} className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 shadow-sm text-center">
-                            <div className="w-12 h-12 bg-green-100 dark:bg-green-950 rounded-xl flex items-center justify-center mx-auto mb-3 text-green-600">
-                                <Icon className="w-5 h-5" />
-                            </div>
-                            <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">{title}</h3>
-                            <p className="text-xs text-gray-500 dark:text-gray-400">{desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+                {/* TRUST SIGNALS */}
+                <section className="pt-24 border-t border-slate-100 dark:border-slate-800">
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        <EntityFAQs 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="cost-estimator"
+                            title="Pricing & Billing FAQs"
+                            description="Transparent answers about international billing and currency."
+                        />
+                        <EntityReviews 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="cost-estimator"
+                            title="Value Success Stories"
+                            description="How patients achieved elite care at a fraction of the cost."
+                        />
+                    </div>
+                </section>
+            </SectionContainer>
 
-            {/* CTA BAND */}
-            <section className="bg-gradient-to-r from-green-700 to-emerald-700 text-white py-14">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl font-black mb-4">Get Your Personalised Cost Estimate — Free</h2>
-                    <p className="text-green-100 text-lg mb-8">Share your diagnosis report via WhatsApp. Our specialist will respond with a full cost breakdown within 24 hours.</p>
-                    <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-black rounded-2xl shadow-lg text-lg hover:scale-[1.02] transition-all">
-                        <MessageCircle className="w-5 h-5" /> WhatsApp Now — It&apos;s Free
-                    </a>
+            {/* CTA BAND ELITE */}
+            <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none" />
+                <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+                    <h2 className="text-5xl sm:text-7xl font-black text-white mb-10 tracking-tight leading-[0.95] uppercase">Your Health <br /><span className="text-emerald-500 italic">Affordable Once Again.</span></h2>
+                    <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">Save up to 90% on world-class quaternary care. Get your free personalized cost estimate within 24 hours.</p>
+                    
+                    <div className="flex flex-wrap justify-center gap-6">
+                        <a href={waUrl} target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center gap-4 px-12 py-6 bg-emerald-600 hover:bg-emerald-500 text-white font-black rounded-[2.5rem] shadow-2xl shadow-emerald-500/20 text-xl transition-all hover:scale-105">
+                            <MessageCircle className="w-6 h-6" /> Get My Free Quote
+                        </a>
+                        <Link href="/patients/international/testimonials"
+                            className="inline-flex items-center gap-4 px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black rounded-[2.5rem] hover:bg-white/10 text-xl transition-all">
+                            View Lab & Scans
+                        </Link>
+                    </div>
                 </div>
             </section>
-
-            <div className="border-t border-slate-100 dark:border-slate-800 py-8">
-                <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-4 justify-center text-sm">
-                    {[
-                        { href: "/patients/international", label: "International Hub" },
-                        { href: "/patients/cmc-vellore-alternative", label: "CMC Alternative" },
-                        { href: "/patients/medical-visa-india", label: "Visa Guide" },
-                        { href: "/patients/international/second-opinion", label: "Free Second Opinion" },
-                    ].map(({ href, label }) => (
-                        <Link key={href} href={href}
-                            className="inline-flex items-center gap-1 text-fuchsia-600 hover:text-fuchsia-700 font-semibold">
-                            {label} <ArrowRight className="w-3.5 h-3.5" />
-                        </Link>
-                    ))}
-                </div>
-            </div>
-        </div>
+        </main>
     );
 }

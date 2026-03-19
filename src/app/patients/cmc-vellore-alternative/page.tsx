@@ -2,14 +2,16 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
     CheckCircle2, XCircle, MessageCircle, Phone, Clock, Star, Award,
-    Users, Shield, ArrowRight, ChevronRight, MapPin, TrendingDown, Calendar, Plane, CreditCard, AlertCircle
+    Users, Shield, ArrowRight, ChevronRight, MapPin, TrendingDown, Calendar, Plane, CreditCard, AlertCircle, Sparkles
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 import { CMC_VS_INDIRA, INTERNATIONAL_FAQS, JOURNEY_STEPS } from "@/lib/data/international-data";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { SectionContainer } from "@/components/ui/section-container";
 
 export const metadata: Metadata = {
     title: "CMC Vellore Alternative — Get Treatment This Week | Indira Super Speciality Hospital",
@@ -50,291 +52,273 @@ const WHY_POINTS = [
     { icon: MapPin, title: "Same City — Near CMC", desc: "Located in Vellore, the same medical hub. You don't need to travel to another city.", color: "red" },
 ];
 
-const FAQs = [
-    { q: "Is Indira Hospital as good as CMC Vellore?", a: "Indira Super Speciality Hospital is NABH accredited — the same gold standard accreditation as CMC Vellore. Our surgeons are trained at India's top institutions and have performed 15,000+ successful procedures. While CMC is a world-renowned institution, Indira provides equivalent quaternary care for the vast majority of procedures, with the key advantage of immediate availability." },
-    { q: "How much shorter is the waiting period at Indira vs CMC?", a: "CMC Vellore is known for waiting lists of 3–6 months for elective procedures and 4–8 weeks even for urgent cases. At Indira Hospital, we provide appointments within days for most specialties and same-day care for emergencies." },
-    { q: "Do you treat international patients like CMC Vellore does?", a: "Yes — we have a dedicated International Patient Desk that provides visa invitation letters (within 24 hours), airport pickup, multi-lingual staff (Arabic, French, English, Hindi), dietary arrangements (Halal, vegetarian), and a 24/7 personal coordinator." },
-    { q: "Is the cost similar to CMC?", a: "Indira Hospital's treatment costs are comparable to or lower than CMC Vellore for most procedures, with the added benefit of immediate availability and more personalized attention for international patients." },
-    { q: "Can I get a second opinion at Indira if I've already consulted at CMC?", a: "Absolutely. Send us your CMC diagnosis and reports via WhatsApp. Our specialist will review and provide a free second opinion within hours. Many patients use this to confirm their treatment plan before proceeding." },
-];
-
 const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was looking at CMC Vellore but the waiting list is too long. Can I get an appointment at Indira Hospital this week?")}`;
 
 export default function CMCVelloreAlternativePage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-slate-950">
-            <JsonLdSchema
-                type="hospital"
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: FAQs.map((faq) => ({
-                            "@type": "Question",
-                            name: faq.q,
-                            acceptedAnswer: { "@type": "Answer", text: faq.a },
-                        })),
-                    })
-                }}
-            />
+        <main className="min-h-screen bg-white dark:bg-slate-950">
+            <JsonLdSchema type="hospital" />
 
-            {/* HERO */}
-            <section className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-slate-900 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-[0.06]"
-                    style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[100px] will-change-transform transform-gpu pointer-events-none" />
+            {/* ELITE GLOBAL HERO */}
+            <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
 
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-16 lg:pt-52 lg:pb-20 relative z-10">
-                    <nav className="flex items-center text-sm text-fuchsia-300 mb-6 gap-1 flex-wrap">
-                        <Link href="/" className="hover:text-white">Home</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <Link href="/patients/international" className="hover:text-white">International Patients</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-white">CMC Vellore Alternative</span>
-                    </nav>
+                <SectionContainer className="relative z-10">
+                    <div className="max-w-4xl">
+                        <nav className="flex items-center text-sm text-slate-400 mb-8 gap-1 flex-wrap">
+                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <Link href="/patients" className="hover:text-white transition-colors">Patient Resources</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <span className="text-fuchsia-400 font-medium">CMC Alternative</span>
+                        </nav>
 
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/20 border border-amber-400/30 rounded-full text-amber-300 text-sm font-bold mb-6">
-                        ⚡ No Waiting Lists — Same-Week Appointments Available
-                    </div>
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4">
-                        CMC Vellore Waiting List<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">
-                            Too Long? Come to Indira.
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-lg shadow-amber-500/20">
+                            ⚡ No Waiting Lists — Same-Week Appointments
                         </span>
-                    </h1>
-                    <p className="mt-4 text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed">
-                        Indira Super Speciality Hospital is located in <strong className="text-white">the same city as CMC Vellore</strong>. We offer equivalent NABH-accredited quaternary care — with <strong className="text-white">same-week appointments</strong>, dedicated international support, and lower costs.
-                    </p>
+                        
+                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                            CMC Waiting List <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Too Long? Come to Indira.</span>
+                        </h1>
+                        
+                        <p className="text-xl text-slate-300 leading-relaxed max-w-2xl font-light mb-10">
+                            Indira Super Speciality Hospital is located in <strong className="text-white">the same city as CMC Vellore</strong>. Equivalent NABH quaternary care with <strong className="text-white">immediate availability</strong>.
+                        </p>
 
-                    <div className="flex flex-wrap gap-3 mt-8">
-                        {[
-                            { icon: Award, label: "NABH Accredited" },
-                            { icon: Clock, label: "Appointments in Days" },
-                            { icon: Star, label: "4.1★ Google Rated" },
-                            { icon: Users, label: "24/7 Intl Desk" },
-                        ].map(({ icon: Icon, label }) => (
-                            <div key={label} className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2">
-                                <Icon className="w-4 h-4 text-amber-400" />
-                                <span className="text-sm font-semibold">{label}</span>
-                            </div>
-                        ))}
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <a href={waUrl} target="_blank" rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-fuchsia-500/25">
+                                <MessageCircle className="w-4 h-4" /> Book Same-Week Appointment
+                            </a>
+                            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">
+                                <Phone className="w-4 h-4 text-emerald-400" /> WhatsApp Coordinator
+                            </a>
+                        </div>
                     </div>
-
-                    <div className="flex flex-wrap gap-4 mt-8">
-                        <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl shadow-lg shadow-green-500/30 transition-all hover:scale-[1.02]">
-                            <MessageCircle className="w-5 h-5" />
-                            Book Appointment This Week
-                        </a>
-                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-                            className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl border border-white/20">
-                            <Phone className="w-5 h-5" />
-                            {siteConfig.contact.phone}
-                        </a>
-                    </div>
-                </div>
+                </SectionContainer>
             </section>
 
-            {/* STATS BAR */}
-            <div className="bg-fuchsia-700 text-white py-4">
-                <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-around gap-4 text-center">
+            {/* QUICK STATS */}
+            <div className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+                <div className="max-w-7xl mx-auto px-6 py-8 flex flex-wrap justify-between gap-8">
                     {[
-                        { v: "15,000+", l: "Surgeries Done" },
-                        { v: "NABH", l: "Accredited" },
-                        { v: "Same Week", l: "Appointments" },
-                        { v: "24/7", l: "Emergency Care" },
-                        { v: "50+", l: "Specialties" },
-                    ].map(({ v, l }) => (
-                        <div key={l}>
-                            <div className="text-2xl font-black">{v}</div>
-                            <div className="text-fuchsia-200 text-xs font-semibold uppercase tracking-wider">{l}</div>
+                        { v: "15,000+", l: "Surgeries Done", color: "text-fuchsia-500" },
+                        { v: "NABH", l: "Accredited Quality", color: "text-indigo-500" },
+                        { v: "SAME WEEK", l: "Appointments", color: "text-amber-500" },
+                        { v: "50+", l: "Specialties", color: "text-emerald-500" },
+                    ].map((stat, i) => (
+                        <div key={i} className="flex flex-col items-center sm:items-start">
+                            <div className={`text-3xl font-black ${stat.color} tracking-tight`}>{stat.v}</div>
+                            <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">{stat.l}</div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14 space-y-16">
-
-                {/* WAITING TIME COMPARISON */}
+            <SectionContainer className="py-24 max-w-7xl mx-auto space-y-24">
+                
+                {/* WAITING TIME BENTO */}
                 <section>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                        Waiting Time Comparison — Indira vs CMC Vellore
-                    </h2>
-                    <p className="text-gray-500 text-sm mb-6">Approximate waiting times for elective procedures. Emergencies seen same day at Indira.</p>
-                    <div className="overflow-x-auto rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
-                        <table className="w-full text-sm">
-                            <thead className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
-                                <tr>
-                                    <th className="py-3 px-5 text-left font-bold text-gray-700 dark:text-gray-300">Specialty / Procedure</th>
-                                    <th className="py-3 px-5 text-center font-bold text-red-600 dark:text-red-400">❌ CMC Vellore Wait</th>
-                                    <th className="py-3 px-5 text-center font-bold text-green-600 dark:text-green-400">✅ Indira Hospital</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-slate-50 dark:divide-slate-800 bg-white dark:bg-slate-900/50">
-                                {WAITING_COMPARISON.map((row) => (
-                                    <tr key={row.dept} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                                        <td className="py-3 px-5 font-medium text-gray-900 dark:text-white">{row.dept}</td>
-                                        <td className="py-3 px-5 text-center">
-                                            <span className="inline-flex items-center gap-1 text-red-600 dark:text-red-400 font-semibold">
-                                                <XCircle className="w-4 h-4" /> {row.cmc}
-                                            </span>
-                                        </td>
-                                        <td className="py-3 px-5 text-center">
-                                            <span className="inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-bold">
-                                                <CheckCircle2 className="w-4 h-4" /> {row.indira}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                    <div className="flex items-center justify-between mb-12 flex-wrap gap-4">
+                        <div>
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight uppercase">Wait Time <br /><span className="text-fuchsia-600">Comparison</span></h2>
+                            <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg font-medium italic">Why wait months when you can be treated this week?</p>
+                        </div>
+                        <div className="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 border border-slate-200 dark:border-slate-700">
+                            <Clock className="w-8 h-8" />
+                        </div>
                     </div>
-                </section>
 
-                {/* HEAD TO HEAD */}
-                <section className="bg-gradient-to-br from-slate-900 to-fuchsia-950 rounded-3xl p-8 text-white">
-                    <h2 className="text-2xl font-black mb-6">Full Comparison — CMC Vellore vs Indira Hospital</h2>
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-sm">
-                            <thead>
-                                <tr className="border-b border-white/10">
-                                    <th className="py-3 pr-6 text-left text-slate-400">Factor</th>
-                                    <th className="py-3 px-4 text-center text-red-400">CMC Vellore</th>
-                                    <th className="py-3 pl-4 text-center text-green-400 font-bold">Indira Hospital ✅</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-white/5">
-                                {CMC_VS_INDIRA.map((row) => (
-                                    <tr key={row.factor}>
-                                        <td className="py-3 pr-6 text-slate-300 font-medium">{row.factor}</td>
-                                        <td className={`py-3 px-4 text-center text-sm ${row.winner === "cmc" ? "text-green-400" : row.winner === "tie" ? "text-slate-400" : "text-red-400"}`}>{row.cmc}</td>
-                                        <td className={`py-3 pl-4 text-center text-sm font-bold ${row.winner === "indira" ? "text-green-400" : row.winner === "tie" ? "text-slate-300" : "text-slate-300"}`}>{row.indira}</td>
+                    <div className="grid lg:grid-cols-3 gap-8">
+                        <div className="lg:col-span-2 overflow-hidden rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-2xl bg-white dark:bg-slate-900">
+                            <table className="w-full text-left">
+                                <thead className="bg-slate-900 text-white">
+                                    <tr>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-xs">Specialty</th>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-xs text-center text-red-400">CMC Wait</th>
+                                        <th className="py-6 px-8 font-black uppercase tracking-widest text-xs text-center text-emerald-400">Indira Wait</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                    <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all text-sm shadow-lg">
-                        <MessageCircle className="w-4 h-4" /> Get Same-Week Appointment
-                    </a>
-                </section>
+                                </thead>
+                                <tbody className="divide-y divide-slate-50 dark:divide-slate-800">
+                                    {WAITING_COMPARISON.map((row) => (
+                                        <tr key={row.dept} className="hover:bg-fuchsia-50/30 dark:hover:bg-fuchsia-900/10 transition-colors group">
+                                            <td className="py-5 px-8 font-black text-slate-700 dark:text-slate-300 uppercase tracking-tight text-sm group-hover:text-fuchsia-600 transition-colors">{row.dept}</td>
+                                            <td className="py-5 px-8 text-center">
+                                                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-xs font-black uppercase tracking-widest border border-red-100 dark:border-red-900/30">
+                                                    <XCircle className="w-3 h-3" /> {row.cmc}
+                                                </span>
+                                            </td>
+                                            <td className="py-5 px-8 text-center text-emerald-600 dark:text-emerald-400 font-black text-sm uppercase tracking-tight">
+                                                {row.indira}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
 
-                {/* WHY POINTS */}
-                <section>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                        Why Choose Indira Hospital Instead of Waiting at CMC?
-                    </h2>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {WHY_POINTS.map(({ icon: Icon, title, desc }) => (
-                            <div key={title} className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-fuchsia-200 hover:shadow-md transition-all">
-                                <div className="w-11 h-11 bg-fuchsia-100 dark:bg-fuchsia-950 rounded-xl flex items-center justify-center mb-4 text-fuchsia-600">
-                                    <Icon className="w-5 h-5" />
+                        <div className="bg-slate-900 rounded-[3rem] p-10 text-white border border-white/5 shadow-2xl relative overflow-hidden flex flex-col justify-center">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/20 rounded-full blur-[40px] pointer-events-none" />
+                            <div className="relative z-10">
+                                <h3 className="text-3xl font-black mb-6 tracking-tight uppercase leading-tight">Same City. <br /><span className="text-fuchsia-400 italic">No Waiting.</span></h3>
+                                <p className="text-slate-400 font-medium mb-8 leading-relaxed">Indira Hospital is located in Gandhi Nagar, Vellore — just minutes away from CMC. You get the same medical hub benefits without the long queues.</p>
+                                
+                                <div className="space-y-4 mb-10">
+                                    <div className="flex items-center gap-4 text-sm font-black uppercase tracking-widest text-emerald-400">
+                                        <CheckCircle2 className="w-5 h-5" /> Appointments in 2-5 Days
+                                    </div>
+                                    <div className="flex items-center gap-4 text-sm font-black uppercase tracking-widest text-emerald-400">
+                                        <CheckCircle2 className="w-5 h-5" /> Direct Specialist Access
+                                    </div>
+                                    <div className="flex items-center gap-4 text-sm font-black uppercase tracking-widest text-emerald-400">
+                                        <CheckCircle2 className="w-5 h-5" /> Private Suite Availability
+                                    </div>
                                 </div>
-                                <h3 className="font-bold text-gray-900 dark:text-white mb-2">{title}</h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{desc}</p>
+
+                                <a href={waUrl} className="flex items-center justify-center gap-2 px-8 py-5 bg-white text-slate-900 font-black rounded-2xl hover:bg-fuchsia-50 transition-all uppercase tracking-widest text-xs">
+                                    WhatsApp for Slot <ArrowRight className="w-4 h-4 text-fuchsia-600" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* WHY CHOOSE INDIRA GRID */}
+                <section>
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6 tracking-tight uppercase leading-tight">Why Choose Indira <br /><span className="text-fuchsia-600">Over a 3-Month Wait?</span></h2>
+                        <p className="text-lg text-slate-500 dark:text-slate-400 font-medium italic">NABH-accredited care doesn&apos;t have to be a queue.</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {WHY_POINTS.map(({ icon: Icon, title, desc }) => (
+                            <div key={title} className="group bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all duration-500">
+                                <div className="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-900 dark:text-white border border-slate-100 dark:border-slate-700 shadow-inner group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-500 mb-8">
+                                    <Icon className="w-8 h-8" />
+                                </div>
+                                <h3 className="text-xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight group-hover:text-fuchsia-600 transition-colors">{title}</h3>
+                                <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed italic text-sm">{desc}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* PATIENT JOURNEY */}
-                <section>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                        From CMC Rejection to Indira Treatment — How It Works
-                    </h2>
-                    <div className="relative">
-                        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-fuchsia-300 via-fuchsia-400 to-transparent ml-[1px]" />
-                        <div className="space-y-6">
-                            {JOURNEY_STEPS.map((step) => (
-                                <div key={step.step} className="relative flex gap-6 pl-4">
-                                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-fuchsia-500 to-pink-600 flex items-center justify-center text-white font-black shadow-lg z-10">
-                                        {step.step}
-                                    </div>
-                                    <div className="flex-1 bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className="text-lg">{step.icon}</span>
-                                            <h3 className="font-bold text-gray-900 dark:text-white text-sm">{step.title}</h3>
-                                        </div>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{step.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
+                {/* COMPARISON TABLE ELITE */}
+                <section className="bg-slate-900 rounded-[3.5rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.1),transparent_50%)] pointer-events-none" />
+                    
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-black text-white mb-12 tracking-tight uppercase leading-tight text-center lg:text-left">Full Comparison: <br /><small className="text-fuchsia-400 opacity-80 text-2xl lowercase italic">no compromises, just faster care.</small></h2>
+                        
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left">
+                                <thead>
+                                    <tr className="border-b border-white/10 uppercase tracking-[0.2em] text-[10px] font-black text-slate-500">
+                                        <th className="py-6 pr-8">Factor</th>
+                                        <th className="py-6 px-8 text-center">CMC Vellore</th>
+                                        <th className="py-6 pl-8 text-center text-white">Indira Hospital ✅</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5">
+                                    {CMC_VS_INDIRA.map((row) => (
+                                        <tr key={row.factor} className="group hover:bg-white/5 transition-colors">
+                                            <td className="py-6 pr-8 font-black text-slate-400 group-hover:text-fuchsia-400 transition-colors uppercase tracking-tight text-sm">{row.factor}</td>
+                                            <td className={`py-6 px-8 text-center text-sm font-medium ${row.winner === "cmc" ? "text-emerald-400" : row.winner === "tie" ? "text-slate-500" : "text-red-400/70"}`}>{row.cmc}</td>
+                                            <td className={`py-6 pl-8 text-center text-sm font-black uppercase tracking-tight ${row.winner === "indira" ? "text-emerald-400" : "text-white"}`}>{row.indira}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </section>
 
-                {/* FAQs */}
+                {/* JOURNEY BENTO */}
                 <section>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                        Questions from CMC Patients About Indira Hospital
-                    </h2>
-                    <div className="space-y-3">
-                        {FAQs.map((faq, i) => (
-                            <details key={i} className="group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
-                                <summary className="flex justify-between items-center p-5 cursor-pointer list-none font-semibold text-gray-900 dark:text-white hover:text-fuchsia-700">
-                                    <span className="pr-4">{faq.q}</span>
-                                    <span className="text-gray-400 group-open:rotate-180 transition-transform text-xl flex-shrink-0">˅</span>
-                                </summary>
-                                <div className="px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800 pt-4">
-                                    {faq.a}
-                                </div>
-                            </details>
-                        ))}
-                    </div>
-                </section>
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950 text-emerald-700 text-xs font-black tracking-widest uppercase mb-6 border border-emerald-100">
+                                <TrendingDown className="w-4 h-4" /> Fast-Track Process
+                            </div>
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-8 tracking-tight uppercase leading-[0.95]">From CMC Rejection to <br /><span className="text-emerald-600">Immediate Care.</span></h2>
+                            
+                            <div className="space-y-4">
+                                {JOURNEY_STEPS.map((step) => (
+                                    <div key={step.step} className="group flex items-start gap-6 p-6 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-800 hover:border-emerald-200 hover:shadow-xl transition-all duration-300">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:scale-110 transition-all duration-500">
+                                            {step.icon}
+                                        </div>
+                                        <div>
+                                            <h3 className="font-black text-slate-900 dark:text-white uppercase tracking-tight text-sm mb-1">{step.title}</h3>
+                                            <p className="text-slate-500 dark:text-slate-400 font-medium italic text-xs leading-relaxed">{step.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
-                {/* NEARBY CMC LINK */}
-                <section className="bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 border border-slate-100 dark:border-slate-800">
-                    <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 text-fuchsia-500 flex-shrink-0 mt-1" />
-                        <div>
-                            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">We&apos;re in the Same City as CMC Vellore</h2>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">
-                                Indira Super Speciality Hospital is located in <strong>Gandhi Nagar, Vellore</strong> — in the same medical hub as CMC. You don&apos;t need to travel to Chennai or Bangalore. Same city. Better availability.
-                            </p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">
-                                <strong>Address:</strong> 54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore — 632006
-                            </p>
-                            <a href="https://maps.google.com/maps?cid=9667111072695054632" target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 mt-3 text-sm text-fuchsia-600 hover:text-fuchsia-700 font-semibold">
-                                Get Directions <ArrowRight className="w-3.5 h-3.5" />
+                        <div className="bg-slate-100 dark:bg-slate-900 rounded-[3.5rem] p-10 md:p-16 border border-slate-200 dark:border-slate-800 flex flex-col justify-center text-center">
+                            <div className="w-20 h-20 rounded-[2rem] bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 mb-10 mx-auto shadow-inner border border-indigo-100 dark:border-indigo-800 animate-bounce">
+                                <Sparkles className="w-10 h-10" />
+                            </div>
+                            <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Get a Second Opinion <br /><span className="text-indigo-600 italic">Free of Cost.</span></h3>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium italic mb-10 px-4 leading-relaxed">Send your existing reports and CMC diagnosis. Our senior specialists will review them and provide a complete treatment plan within 24 hours.</p>
+                            
+                            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm shadow-2xl">
+                                <MessageCircle className="w-6 h-6 text-green-400" /> WhatsApp Reports
                             </a>
                         </div>
                     </div>
                 </section>
-            </div>
 
-            {/* CTA BAND */}
-            <section className="bg-gradient-to-r from-fuchsia-700 to-purple-700 text-white py-16">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl sm:text-4xl font-black mb-4">
-                        Don&apos;t Wait Months.<br />
-                        <span className="text-fuchsia-200">Get Treated This Week at Indira.</span>
-                    </h2>
-                    <p className="text-fuchsia-100 text-lg mb-8">Send your reports via WhatsApp and get a free specialist opinion + same-week appointment.</p>
-                    <div className="flex flex-wrap justify-center gap-4">
+                {/* TRUST SIGNALS */}
+                <section className="pt-24 border-t border-slate-100 dark:border-slate-800">
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        <EntityFAQs 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="cmc-alternative"
+                            title="CMC Alternative FAQs"
+                            description="Direct answers for patients seeking immediate care in Vellore."
+                        />
+                        <EntityReviews 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="cmc-alternative"
+                            title="Fast-Track Success Stories"
+                            description="How patients received same-quality care without the waiting list."
+                        />
+                    </div>
+                </section>
+            </SectionContainer>
+
+            {/* CALL TO ACTION ELITE */}
+            <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.1),transparent_70%)] pointer-events-none" />
+                <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+                    <h2 className="text-5xl sm:text-7xl font-black text-white mb-10 tracking-tight leading-[0.95] uppercase">Your Health <br /><span className="text-fuchsia-500 italic">Can&apos;t Wait Months.</span></h2>
+                    <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">NABH Quality care at Indira Hospital starts this week. Join 50,000+ satisfied patients today.</p>
+                    
+                    <div className="flex flex-wrap justify-center gap-6">
                         <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-400 text-white font-black rounded-2xl shadow-lg text-lg transition-all">
-                            <MessageCircle className="w-5 h-5" /> WhatsApp — Book Now
+                            className="inline-flex items-center gap-4 px-12 py-6 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-[2rem] shadow-2xl shadow-fuchsia-500/20 text-xl transition-all hover:scale-105">
+                            <MessageCircle className="w-6 h-6" /> WhatsApp Appointment
                         </a>
                         <Link href="/book-appointment"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-fuchsia-700 font-black rounded-2xl shadow-lg text-lg hover:scale-[1.02] transition-all">
-                            Book Online
+                            className="inline-flex items-center gap-4 px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black rounded-[2rem] hover:bg-white/10 text-xl transition-all">
+                            Book Online Now
                         </Link>
                     </div>
                 </div>
             </section>
 
-            <EntityCardSection type="doctors" title="Our Specialists" subtitle="Expert Care" limit={6} className="bg-white dark:bg-slate-900" />
-            <EntityCardSection type="departments" title="All Departments" subtitle="Centres of Excellence" limit={6} className="bg-slate-50 dark:bg-slate-900/50" />
-            <InternalLinkGrid type="health-packages" title="Preventive Health Checkups" subtitle="Wellness Screening" limit={8} className="bg-white dark:bg-slate-900 border-t" />
-            <InternalLinkGrid type="diagnostics" title="Diagnostic & Lab Support" subtitle="NABL Accredited" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
-            <InternalLinkGrid type="services" title="All Treatments A–Z" subtitle="Browse all services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
-            <InternalLinkGrid type="locations" title="Serving Patients Across Tamil Nadu" subtitle="Find a Branch" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
-        </div>
+            <EntityCardSection type="doctors" title="Expert Specialists" subtitle="Centres of Excellence" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="health-packages" title="Wellness Screening" subtitle="Preventive Health" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="diagnostics" title="NABL Accredited Lab" subtitle="Accurate Results" limit={12} className="bg-white dark:bg-slate-950 border-b" />
+        </main>
     );
 }

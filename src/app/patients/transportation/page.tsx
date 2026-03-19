@@ -2,12 +2,15 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
     Car, Train, Bus, Plane, MessageCircle, Phone, MapPin,
-    ArrowRight, ChevronRight, Clock, CheckCircle2, Navigation, AlertCircle
+    ArrowRight, ChevronRight, Clock, CheckCircle2, Navigation, AlertCircle, Sparkles
 } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { SectionContainer } from "@/components/ui/section-container";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: "How to Reach Indira Hospital Vellore | Transport Guide | Directions",
@@ -28,62 +31,56 @@ const TRANSPORT_MODES = [
     {
         icon: Car,
         color: "fuchsia",
-        title: "Taxi / Cab",
-        badge: "Easiest",
+        title: "Taxi / Cab / Auto",
+        badge: "Easiest & Fastest",
         steps: [
-            "Book Ola or Uber from anywhere in Vellore or Katpadi",
+            "Book Ola or Uber from anywhere in Vellore or Katpadi Junction",
             "Search: Indira Super Speciality Hospital, Gandhi Nagar, Vellore",
-            "Arrive at 54, Katpadi Road — main entrance is on the left",
+            "The hospital is located on 54, Katpadi Road — main entrance on left",
         ],
-        tip: "Autos are also readily available near Katpadi Junction and Vellore Bus Stand.",
+        tip: "Autos are readily available 24/7 near Katpadi Junction and Vellore Bus Stand.",
+        gradient: "from-fuchsia-500/10 to-purple-500/10"
     },
     {
         icon: Train,
         color: "blue",
         title: "By Train — Katpadi Junction",
-        badge: "Budget Friendly",
+        badge: "Inter-State Connectivity",
         steps: [
-            "Alight at Katpadi Junction (KPD) — the main railway station serving Vellore",
-            "Take an auto or cab to Gandhi Nagar (10–12 minutes)",
-            "The hospital is on Katpadi Road, 5 minutes from the main road",
+            "Alight at Katpadi Junction (KPD) — the main railway hub serving Vellore",
+            "Take an auto or cab to Gandhi Nagar (approx. 10–12 minutes drive)",
+            "The hospital is on Katpadi Road, 5 mins before reaching the main city",
         ],
-        tip: "Express trains from Chennai Central (MAS) take ~1.5 hrs. From Bangalore ~3 hrs. From Tirupati ~2 hrs.",
+        tip: "Express trains from Chennai Central (MAS) take ~1.5 hrs. From Bangalore ~3 hrs.",
+        gradient: "from-blue-500/10 to-cyan-500/10"
     },
     {
         icon: Bus,
         color: "green",
-        title: "By Bus",
-        badge: "City & Intercity",
+        title: "By Bus — Local & Intercity",
+        badge: "Budget Friendly",
         steps: [
-            "State-run TNSTC buses from Chennai, Bangalore, and Tirupati stop at Vellore Bus Stand",
-            "Take city bus Route 1, 4, or 27 towards Gandhi Nagar / Sathuvachari",
-            "Alight at Gandhi Nagar — Indira Hospital is a 2-min walk on Katpadi Road",
+            "TNSTC/Private buses from Chennai, Bangalore stop at Vellore New Bus Stand",
+            "Transfer to city bus Route 1, 4, or 27 towards Sathuvachari",
+            "Alight at Gandhi Nagar — we are just 200m walk from the stop",
         ],
-        tip: "Direct private buses from Chennai (180km) run frequently via Poonamallee.",
+        tip: "Frequent AC/Deluxe buses run throughout the day from Chennai Silk Board.",
+        gradient: "from-green-500/10 to-teal-500/10"
     },
     {
         icon: Plane,
         color: "amber",
-        title: "From Chennai Airport (MAA)",
-        badge: "International Patients",
+        title: "Chennai Airport (MAA)",
+        badge: "Global Connection",
         steps: [
-            "Fly into Chennai International Airport (MAA) — nearest major airport",
-            "Hospital arranges complimentary pickup for international patients",
-            "Drive time: 2.5–3 hours (130km) via NH48 Chennai–Vellore highway",
+            "Fly into Chennai International Airport (MAA) — closest major airport",
+            "Indira Hospital provides complimentary pickup for international guests",
+            "Drive time: ~3 hours (130km) via the scenic Chennai–Vellore Highway",
         ],
-        tip: "WhatsApp us your flight details and we will arrange a driver to meet you at arrivals.",
+        tip: "Our host desk monitors your flight status and greets you at the terminal gates.",
+        gradient: "from-amber-500/10 to-orange-500/10"
     },
 ];
-
-const EMERGENCY = {
-    title: "Emergency or Ambulance",
-    desc: "Our 24/7 advanced life support ambulance can be dispatched to your location anywhere in Vellore district and neighboring areas.",
-    steps: [
-        "Call our emergency number immediately",
-        "Provide your exact GPS location or address",
-        "Our paramedic team will be dispatched within minutes",
-    ],
-};
 
 const jsonLd = {
     "@context": "https://schema.org",
@@ -100,97 +97,113 @@ const jsonLd = {
 
 export default function TransportationPage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-slate-950">
+        <main className="min-h-screen bg-white dark:bg-slate-950">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-            {/* HERO */}
-            <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-14 lg:pt-52 lg:pb-16">
-                    <nav className="flex items-center text-sm text-slate-400 mb-6 gap-1 flex-wrap">
-                        <Link href="/" className="hover:text-white">Home</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <Link href="/patients" className="hover:text-white">Patient Resources</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-white">Transportation</span>
-                    </nav>
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-slate-200 text-sm font-bold mb-5">
-                        <Navigation className="w-4 h-4 text-fuchsia-400" /> Getting to Indira Hospital
+            {/* ELITE GLOBAL HERO */}
+            <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-indigo-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
+
+                <SectionContainer className="relative z-10">
+                    <div className="max-w-4xl">
+                        <nav className="flex items-center text-sm text-slate-400 mb-8 gap-1 flex-wrap">
+                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <Link href="/patients" className="hover:text-white transition-colors">Patient Resources</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <span className="text-emerald-400 font-medium">Transportation</span>
+                        </nav>
+
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-lg shadow-emerald-500/20">
+                            <Navigation className="w-4 h-4" /> Getting to Indira Hospital
+                        </span>
+                        
+                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                            How to Reach <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-indigo-400">Vellore — Directions.</span>
+                        </h1>
+                        
+                        <p className="text-xl text-slate-300 leading-relaxed max-w-2xl font-light mb-10">
+                            54, Katpadi Road, Gandhi Nagar, Vellore. Whether you arrive by rail, road, or air, we ensure your journey to our facility is safe and straightforward.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Indira+Super+Speciality+Hospital+Vellore"
+                                target="_blank" rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-emerald-500/25">
+                                <MapPin className="w-4 h-4" /> Open Navigation
+                            </a>
+                            <a href={WA} target="_blank" rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">
+                                <MessageCircle className="w-4 h-4 text-green-400" /> WhatsApp for Help
+                            </a>
+                        </div>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-black tracking-tight mb-4">
-                        How to Reach<br />
-                        <span className="text-fuchsia-400">Indira Hospital, Vellore</span>
-                    </h1>
-                    <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
-                        54, Katpadi Road, Gandhi Nagar, Vellore — 632006.<br />
-                        Accessible by taxi, auto, bus, and train (Katpadi Junction). International patients get complimentary airport pickup from Chennai.
-                    </p>
-                    <div className="flex flex-wrap gap-4 mt-7">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Indira+Super+Speciality+Hospital+Vellore"
-                            target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold rounded-xl transition-all">
-                            <MapPin className="w-4 h-4" /> Open in Google Maps
-                        </a>
-                        <a href={WA} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all">
-                            <MessageCircle className="w-4 h-4" /> WhatsApp for Help
-                        </a>
-                    </div>
-                </div>
+                </SectionContainer>
             </section>
 
-            {/* ADDRESS BAR */}
-            <div className="bg-fuchsia-700 text-white py-3.5">
-                <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-6 text-sm text-center">
+            {/* QUICK ADDRESS INFO */}
+            <div className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+                <div className="max-w-7xl mx-auto px-6 py-6 flex flex-wrap justify-center gap-8 md:gap-16">
                     {[
-                        { icon: MapPin, v: "54, Katpadi Road, Gandhi Nagar, Vellore — 632006" },
-                        { icon: Clock, v: "Open 24/7 — Emergency always ready" },
-                        { icon: Phone, v: siteConfig.contact.phone },
-                    ].map(({ icon: Icon, v }) => (
-                        <div key={v} className="flex items-center gap-2 text-fuchsia-100">
-                            <Icon className="w-4 h-4 text-fuchsia-200 flex-shrink-0" />
-                            <span>{v}</span>
+                        { icon: MapPin, text: "54, Katpadi Road, Gandhi Nagar, Vellore — 632006", color: "text-emerald-500" },
+                        { icon: Clock, text: "Open 24/7 — Emergency & Trauma Ready", color: "text-indigo-500" },
+                        { icon: Phone, text: siteConfig.contact.phone, color: "text-fuchsia-500" },
+                    ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                            <item.icon className={`w-5 h-5 ${item.color}`} />
+                            <span className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-wider">{item.text}</span>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14 space-y-12">
-
-                {/* TRANSPORT MODES */}
+            <SectionContainer className="py-24 max-w-7xl mx-auto space-y-24">
+                {/* TRANSPORT MODES BENTO */}
                 <section>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Getting Here — All Transport Options</h2>
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="flex items-center justify-between mb-12 flex-wrap gap-4">
+                        <div>
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight uppercase">Getting Here <br /><span className="text-emerald-600">Travel Options</span></h2>
+                            <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg font-medium">Clear instructions based on your point of origin.</p>
+                        </div>
+                        <div className="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                            <Navigation className="w-8 h-8" />
+                        </div>
+                    </div>
+                    
+                    <div className="grid sm:grid-cols-2 gap-8">
                         {TRANSPORT_MODES.map((mode) => {
                             const Icon = mode.icon;
-                            const colorMap: Record<string, string> = {
-                                fuchsia: "bg-fuchsia-50 dark:bg-fuchsia-950 border-fuchsia-100 dark:border-fuchsia-900 text-fuchsia-600",
-                                blue: "bg-blue-50 dark:bg-blue-950 border-blue-100 dark:border-blue-900 text-blue-600",
-                                green: "bg-green-50 dark:bg-green-950 border-green-100 dark:border-green-900 text-green-600",
-                                amber: "bg-amber-50 dark:bg-amber-950 border-amber-100 dark:border-amber-900 text-amber-600",
-                            };
-                            const iconClass = colorMap[mode.color] || colorMap.fuchsia;
                             return (
-                                <div key={mode.title} className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className={`w-11 h-11 rounded-xl flex items-center justify-center border ${iconClass}`}>
-                                            <Icon className="w-5 h-5" />
+                                <div key={mode.title} className="group relative bg-white dark:bg-slate-900 rounded-[3rem] p-10 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col">
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${mode.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[3rem]`} />
+                                    
+                                    <div className="relative z-10">
+                                        <div className="flex items-center gap-5 mb-8">
+                                            <div className="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-900 dark:text-white border border-slate-100 dark:border-slate-700 shadow-inner group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-500">
+                                                <Icon className="w-8 h-8" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight uppercase leading-none mb-2">{mode.title}</h3>
+                                                <span className="inline-block text-[10px] font-black px-3 py-1 bg-emerald-50 dark:bg-emerald-950/20 text-emerald-700 dark:text-emerald-400 rounded-full border border-emerald-100 dark:border-emerald-800 uppercase tracking-[0.2em]">{mode.badge}</span>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h3 className="font-bold text-gray-900 dark:text-white">{mode.title}</h3>
-                                            <span className="inline-block text-[10px] font-bold px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-gray-500 rounded-full">{mode.badge}</span>
+
+                                        <ol className="space-y-4 mb-8">
+                                            {mode.steps.map((step, i) => (
+                                                <li key={i} className="flex items-start gap-4 text-slate-700 dark:text-slate-300 font-medium">
+                                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center font-black text-[10px] mt-0.5">{i + 1}</span>
+                                                    <span className="leading-relaxed">{step}</span>
+                                                </li>
+                                            ))}
+                                        </ol>
+
+                                        <div className="mt-auto flex items-start gap-3 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-700">
+                                            <AlertCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                                            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed italic">{mode.tip}</p>
                                         </div>
-                                    </div>
-                                    <ol className="space-y-2 mb-4">
-                                        {mode.steps.map((step, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
-                                                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-fuchsia-500 to-purple-600 flex items-center justify-center text-white font-bold text-xs mt-0.5">{i + 1}</span>
-                                                {step}
-                                            </li>
-                                        ))}
-                                    </ol>
-                                    <div className="flex items-center gap-2 p-3 bg-slate-50 dark:bg-slate-800 rounded-xl text-xs text-gray-600 dark:text-gray-400">
-                                        <AlertCircle className="w-4 h-4 text-fuchsia-500 flex-shrink-0" />
-                                        {mode.tip}
                                     </div>
                                 </div>
                             );
@@ -198,107 +211,112 @@ export default function TransportationPage() {
                     </div>
                 </section>
 
-                {/* EMERGENCY */}
-                <section className="bg-red-50 dark:bg-red-950/30 border border-red-100 dark:border-red-900/40 rounded-2xl p-7">
-                    <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-red-100 dark:bg-red-950 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <Phone className="w-5 h-5 text-red-600" />
-                        </div>
-                        <div className="flex-1">
-                            <h2 className="text-xl font-bold text-red-900 dark:text-red-200 mb-2">🚑 {EMERGENCY.title}</h2>
-                            <p className="text-red-700 dark:text-red-300 text-sm mb-4">{EMERGENCY.desc}</p>
-                            <div className="space-y-2">
-                                {EMERGENCY.steps.map((s, i) => (
-                                    <div key={i} className="flex items-start gap-2 text-sm text-red-800 dark:text-red-200">
-                                        <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-                                        {s}
-                                    </div>
-                                ))}
+                {/* EMERGENCY RED ALARM */}
+                <section className="bg-slate-900 rounded-[3.5rem] p-10 md:p-16 border border-red-500/20 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.1),transparent_50%)] pointer-events-none" />
+                    
+                    <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 text-red-500 text-xs font-black uppercase tracking-widest mb-6 border border-red-500/20">
+                                <AlertCircle className="w-4 h-4" /> 24/7 Dispatch
                             </div>
+                            <h2 className="text-4xl font-black text-white mb-6 tracking-tight">Emergency or <br /><span className="text-red-500 underline underline-offset-8">Ambulance Service</span></h2>
+                            <p className="text-slate-400 text-lg font-light leading-relaxed mb-8 max-w-lg">Our advanced life support (ALS) ambulances are equipped with ventilators and monitoring equipment, ready to serve anywhere in Vellore and nearby districts.</p>
+                            
                             <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, "")}`}
-                                className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl text-sm transition-all">
-                                <Phone className="w-4 h-4" /> Call Emergency Now
+                                className="inline-flex items-center gap-3 px-10 py-5 bg-red-600 hover:bg-red-500 text-white font-black rounded-2xl transition-all shadow-2xl shadow-red-500/30 text-lg group/btn">
+                                <Phone className="w-6 h-6 animate-pulse" /> Call Emergency Now
                             </a>
                         </div>
-                    </div>
-                </section>
-
-                {/* MAP + ADDRESS */}
-                <div className="grid lg:grid-cols-2 gap-8">
-                    <section className="rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm h-[380px]">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6000000000004!2d79.1333333!3d12.9166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad38e61fa2e667%3A0x5397944bf009778c!2sIndira%20Super%20Speciality%20Hospital!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                            className="w-full h-full"
-                            loading="lazy"
-                            title="Indira Hospital Location Map"
-                        />
-                    </section>
-
-                    <section className="bg-white dark:bg-slate-900 rounded-2xl p-7 border border-slate-100 dark:border-slate-800 shadow-sm space-y-5">
-                        <h2 className="text-xl font-bold text-gray-900 dark:text-white">Hospital Address & Contact</h2>
-                        <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
-                            <div className="flex items-start gap-3">
-                                <MapPin className="w-5 h-5 text-fuchsia-500 mt-0.5 flex-shrink-0" />
-                                <div>
-                                    <p className="font-semibold text-gray-900 dark:text-white">Indira Super Speciality Hospital</p>
-                                    <p>54, Katpadi Road, Suthanthira Ponvizha Nagar,<br />Gandhi Nagar, Vellore — 632006, Tamil Nadu, India</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <Phone className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
-                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="font-semibold text-fuchsia-700 hover:underline">{siteConfig.contact.phone}</a>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <Clock className="w-5 h-5 text-fuchsia-500 flex-shrink-0" />
-                                <span><strong>24 × 7</strong> — Emergency, OPD & Pharmacy</span>
-                            </div>
-                        </div>
-                        <div className="border-t border-slate-100 dark:border-slate-800 pt-5 space-y-3">
-                            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Nearest Landmarks</p>
+                        
+                        <div className="grid gap-4">
                             {[
-                                "Katpadi Railway Junction — ~10 min auto",
-                                "Vellore Bus Stand — ~15 min by city bus",
-                                "CMC Vellore Hospital — ~5 min drive",
-                                "Vellore Fort — ~8 min",
-                            ].map((l) => (
-                                <div key={l} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                                    <div className="w-1.5 h-1.5 bg-fuchsia-400 rounded-full flex-shrink-0" />
-                                    {l}
+                                "Call our 24/7 dedicated emergency line immediately",
+                                "Provide your exact GPS location or landmark via WhatsApp",
+                                "Our paramedic team will be dispatched within minutes of confirmation",
+                                "Hospital trauma team notified and ready before arrival"
+                            ].map((s, i) => (
+                                <div key={i} className="flex items-start gap-5 p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                                    <div className="w-6 h-6 rounded-full bg-red-500 flex items-center justify-center text-white text-[10px] font-black flex-shrink-0 mt-0.5 shadow-lg shadow-red-500/20">
+                                        {i + 1}
+                                    </div>
+                                    <p className="text-slate-200 font-medium leading-relaxed">{s}</p>
                                 </div>
                             ))}
                         </div>
-                        <a href={WA} target="_blank" rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 mt-3 px-5 py-3 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all w-full text-sm">
-                            <MessageCircle className="w-4 h-4" /> WhatsApp for Directions
-                        </a>
-                    </section>
-                </div>
-
-                {/* INTERNATIONAL NOTE */}
-                <section className="bg-gradient-to-r from-fuchsia-50 to-blue-50 dark:from-fuchsia-950/30 dark:to-blue-950/30 rounded-2xl p-7 border border-fuchsia-100 dark:border-fuchsia-900/30">
-                    <div className="flex items-start gap-4">
-                        <Plane className="w-6 h-6 text-fuchsia-500 flex-shrink-0 mt-1" />
-                        <div className="flex-1">
-                            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">International Patients — Airport Pickup</h2>
-                            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                                We provide <strong className="text-fuchsia-700 dark:text-fuchsia-300">complimentary airport transfer</strong> for international patients from Chennai Airport (MAA). WhatsApp us your flight number and arrival time at least 48 hours in advance.
-                            </p>
-                            <div className="flex flex-wrap gap-3">
-                                <Link href="/patients/international" className="inline-flex items-center gap-2 text-sm text-fuchsia-600 hover:text-fuchsia-700 font-bold">
-                                    International Patient Guide <ArrowRight className="w-4 h-4" />
-                                </Link>
-                                <Link href="/patients/medical-visa-india" className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 font-bold">
-                                    Medical Visa Guide <ArrowRight className="w-4 h-4" />
-                                </Link>
-                            </div>
-                        </div>
                     </div>
                 </section>
-            </div>
+
+                {/* MAP + ADDRESS BENTO */}
+                <div className="grid lg:grid-cols-2 gap-8">
+                    <div className="rounded-[3rem] overflow-hidden border border-slate-100 dark:border-slate-800 shadow-2xl h-[500px] relative group">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6000000000004!2d79.1333333!3d12.9166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad38e61fa2e667%3A0x5397944bf009778c!2sIndira%20Super%20Speciality%20Hospital!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                            loading="lazy"
+                            title="Indira Hospital Location Map"
+                        />
+                        <div className="absolute top-6 left-6 inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 rounded-full shadow-xl border border-slate-100 dark:border-slate-800 text-sm font-black uppercase tracking-widest text-emerald-600">
+                            Satellite View <Sparkles className="w-3 h-3" />
+                        </div>
+                    </div>
+
+                    <div className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 md:p-14 border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-center">
+                        <div className="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 mb-8 border border-indigo-100 dark:border-indigo-800 shadow-inner">
+                            <MapPin className="w-8 h-8" />
+                        </div>
+                        <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-6 tracking-tight uppercase">Hospital Landmark & <br /><span className="text-indigo-600">Central Location</span></h2>
+                        
+                        <div className="space-y-6 text-slate-600 dark:text-slate-400 text-lg font-medium leading-relaxed">
+                            <p>54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore — 632006, Tamil Nadu, India</p>
+                            
+                            <div className="grid gap-3 pt-4">
+                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Distance From Landmarks</p>
+                                {[
+                                    { l: "Katpadi Railway Junction", d: "4.5 KM (approx. 10 mins)" },
+                                    { l: "CMC Vellore Main Campus", d: "2.8 KM (approx. 7 mins)" },
+                                    { l: "Vellore New Bus Stand", d: "3.2 KM (approx. 12 mins)" },
+                                    { l: "Vellore Fort & Museum", d: "2.5 KM (approx. 8 mins)" },
+                                ].map((item) => (
+                                    <div key={item.l} className="flex items-center justify-between py-3 border-b border-slate-50 dark:border-slate-800 group/item">
+                                        <span className="group-hover/item:text-indigo-600 transition-colors">{item.l}</span>
+                                        <span className="text-xs font-black text-slate-900 dark:text-white">{item.d}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <a href={WA} target="_blank" rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 mt-10 px-8 py-5 bg-green-500 hover:bg-green-400 text-white font-black rounded-2xl transition-all w-full shadow-xl shadow-green-500/20 text-lg">
+                            <MessageCircle className="w-6 h-6" /> WhatsApp for Direct Pin
+                        </a>
+                    </div>
+                </div>
+
+                {/* TRUST SIGNALS */}
+                <section className="pt-24 border-t border-slate-100 dark:border-slate-800">
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        <EntityFAQs 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="transportation"
+                            title="Travel & Transport FAQs"
+                            description="Answers regarding airport pickups, parking, and public transport access."
+                        />
+                        <EntityReviews 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="transportation"
+                            title="Patient Travel Stories"
+                            description="How patients from other states and countries reached us comfortably."
+                        />
+                    </div>
+                </section>
+            </SectionContainer>
 
             <EntityCardSection type="locations" title="Our Centers Across Vellore" subtitle="Find a Branch" limit={6} className="bg-white dark:bg-slate-950 border-t" />
             <InternalLinkGrid type="services" title="All Treatments A–Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
             <InternalLinkGrid type="diagnostics" title="NABL Accredited Diagnostics" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-950 border-b" />
-        </div>
+        </main>
     );
 }

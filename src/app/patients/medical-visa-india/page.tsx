@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
     FileText, CheckCircle2, Clock, Globe2, MessageCircle, Phone,
-    ChevronRight, ArrowRight, Shield, AlertCircle
+    ChevronRight, ArrowRight, Shield, AlertCircle, Sparkles
 } from "lucide-react";
 
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
@@ -10,6 +10,9 @@ import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 import { siteConfig } from "@/config/site";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
+import { SectionContainer } from "@/components/ui/section-container";
+import EntityFAQs from "@/components/trust/EntityFAQs";
+import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
     title: "Medical Visa for India — Complete Guide for International Patients | Indira Hospital Vellore",
@@ -21,34 +24,25 @@ export const metadata: Metadata = {
 };
 
 const STEPS = [
-    { icon: "📋", title: "Get the Hospital Invitation Letter", desc: "Request the official invitation letter from Indira Hospital by WhatsApp or email. We issue it within 24 hours of your appointment confirmation. This is a mandatory document for the visa." },
-    { icon: "📄", title: "Prepare Your Documents", desc: "Gather: valid passport (6+ months), passport-size photos, completed visa application form, hospital invitation letter, medical records/reports, and proof of financial means (bank statement)." },
-    { icon: "🌐", title: "Apply Online or at the Embassy", desc: "Apply via the Indian Visa Online portal (indianvisaonline.gov.in) for an e-Medical Visa (available for 150+ countries), or visit the nearest Indian Embassy/High Commission in your country." },
-    { icon: "✅", title: "Receive Your Visa", desc: "M-Visa is typically issued within 3–7 business days for most countries. The e-Medical Visa is valid for 60 days with double entry. Extend in India via FRRO if needed." },
-    { icon: "✈️", title: "Travel to Vellore", desc: "Fly to Chennai International Airport (MAA). Indira Hospital arranges complimentary pickup from Chennai Airport. The hospital is 2.5 hours from the airport." },
+    { icon: "📋", title: "Hospital Invitation Letter", desc: "Request the official invitation letter from Indira Hospital via WhatsApp or email. We issue it within 24 hours of your appointment confirmation. This is a mandatory document for the visa." },
+    { icon: "📄", title: "Document Preparation", desc: "Gather: valid passport (6+ months), passport-size photos, completed visa application form, hospital invitation letter, medical records, and proof of financial means (bank statement)." },
+    { icon: "🌐", title: "Online Application", desc: "Apply via the Indian Visa Online portal (indianvisaonline.gov.in) for an e-Medical Visa (available for 150+ countries), or visit the nearest Indian Embassy in your country." },
+    { icon: "✅", title: "Visa Issuance", desc: "M-Visa is typically issued within 3–7 business days. The e-Medical Visa is valid for 60 days with double entry. Extensions in India are possible via FRRO with our support." },
+    { icon: "✈️", title: "Arrival & Pickup", desc: "Fly to Chennai International Airport (MAA). Indira Hospital arranges complimentary pickup for international guests — the hospital is just a 2.5-hour drive from the terminal." },
 ];
 
 const DOCS_CHECKLIST = [
     "Valid passport (at least 6 months remaining)",
     "Completed Indian Medical Visa (M-Visa) Application Form",
     "2 recent passport-size photographs (white background)",
-    "Official Hospital Invitation Letter from Indira Hospital (we provide within 24 hrs)",
-    "Medical reports, diagnosis documents, prescriptions",
-    "Proof of financial capacity (bank statement / sponsor letter)",
-    "Travel insurance documents (recommended)",
-    "Confirmed return flight ticket (recommended for visa approval)",
-    "Accommodation confirmation in India",
+    "Official Hospital Invitation Letter from Indira Hospital (provided within 24 hrs)",
+    "Comprehensive medical reports, scans, and diagnosis documents",
+    "Proof of financial capacity (recent bank statement / sponsor letter)",
+    "Travel insurance documents (strongly recommended)",
+    "Confirmed return flight ticket and accommodation confirmation",
 ];
 
-const TIPS = [
-    { tip: "Apply for M-Visa specifically", detail: "Do NOT apply for a Tourist Visa. Medical Visa (M-Visa) allows longer stays and treatment. Applying for the wrong visa type can cause problems at immigration." },
-    { tip: "Request the letter ASAP", detail: "The hospital invitation letter is a mandatory requirement. Contact us first — we issue it within 24 hours, so you can then apply for the visa immediately." },
-    { tip: "Bring all medical records", detail: "Bring physical and digital copies of all your reports, scans, and diagnosis documents. Our specialists need these to plan your treatment." },
-    { tip: "Extension is possible", detail: "If you need to stay longer for treatment or recovery, you can extend your M-Visa in India via the FRRO (Foreigners Regional Registration Office). We help with the extension letter." },
-    { tip: "Add your attendant", detail: "Attendants (companions) can also apply for an attendant visa (same M-Visa category). They are allowed to accompany you throughout your stay." },
-];
-
-const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need a hospital invitation letter for my Indian Medical Visa. Please help.")}`;
+const WA = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need a hospital invitation letter for my Indian Medical Visa. Please help.")}`;
 
 const jsonLd = {
     "@context": "https://schema.org",
@@ -65,202 +59,212 @@ const jsonLd = {
 
 export default function MedicalVisaIndiaPage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-slate-950">
+        <main className="min-h-screen bg-white dark:bg-slate-950">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-            {/* HERO */}
-            <section className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-[0.06]"
-                    style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-44 pb-16 lg:pt-52 lg:pb-20 relative z-10">
-                    <nav className="flex items-center text-sm text-blue-300 mb-6 gap-1 flex-wrap">
-                        <Link href="/" className="hover:text-white">Home</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <Link href="/patients/international" className="hover:text-white">International</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-white">Medical Visa Guide</span>
-                    </nav>
+            {/* ELITE GLOBAL HERO */}
+            <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[100px] opacity-50 pointer-events-none" />
 
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-300 text-sm font-bold mb-6">
-                        <FileText className="w-4 h-4" /> Complete M-Visa Guide for 45+ Countries
-                    </div>
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4">
-                        Getting an Indian Medical<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-fuchsia-300">
-                            Visa — Complete Guide
+                <SectionContainer className="relative z-10">
+                    <div className="max-w-4xl">
+                        <nav className="flex items-center text-sm text-slate-400 mb-8 gap-1 flex-wrap">
+                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <Link href="/patients/international" className="hover:text-white transition-colors">International</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <span className="text-blue-400 font-medium">Medical Visa Guide</span>
+                        </nav>
+
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-lg shadow-blue-500/20">
+                            <FileText className="w-4 h-4" /> Official M-Visa Support
                         </span>
-                    </h1>
-                    <p className="mt-4 text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed">
-                        Indira Hospital issues an official invitation letter within <strong className="text-white">24 hours</strong> to help you get your Indian Medical Visa. This guide covers everything you need — documents, steps, tips, and country-specific information.
-                    </p>
-                    <div className="flex flex-wrap gap-4 mt-8">
-                        <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl shadow-lg transition-all">
-                            <MessageCircle className="w-5 h-5" /> Request Invitation Letter — Free
-                        </a>
-                        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-                            className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20">
-                            <Phone className="w-5 h-5" /> {siteConfig.contact.phone}
-                        </a>
+                        
+                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                            Indian Medical <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-fuchsia-400 font-black">Visa — Complete Guide.</span>
+                        </h1>
+                        
+                        <p className="text-xl text-slate-300 leading-relaxed max-w-2xl font-light mb-10">
+                            We issue official hospital invitation letters within <strong className="text-white">24 hours</strong>. This guide explains how to secure your M-Visa safely and efficiently for treatment in Vellore.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <a href={WA} target="_blank" rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-blue-500/25">
+                                <FileText className="w-4 h-4" /> Request Invitation Letter
+                            </a>
+                            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">
+                                <Phone className="w-4 h-4 text-fuchsia-400" /> WhatsApp Coordinator
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </SectionContainer>
             </section>
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
-                <div className="grid lg:grid-cols-3 gap-10">
-                    <div className="lg:col-span-2 space-y-12">
-
-                        {/* Important notice */}
-                        <div className="flex items-start gap-4 p-5 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/40 rounded-2xl">
-                            <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                            <div>
-                                <p className="font-bold text-amber-800 dark:text-amber-200 text-sm">Important: Apply for Medical Visa (M-Visa), NOT Tourist Visa</p>
-                                <p className="text-amber-700 dark:text-amber-300 text-sm mt-1">The M-Visa is specifically for medical treatment. It allows a longer stay and is the correct visa type for hospital treatment in India. Tourist Visas are not suitable and may cause issues at immigration.</p>
+            <SectionContainer className="py-24 max-w-7xl mx-auto space-y-24">
+                <div className="grid lg:grid-cols-3 gap-16">
+                    <div className="lg:col-span-2 space-y-16">
+                        
+                        {/* WARNING BLOCK */}
+                        <div className="relative group overflow-hidden bg-amber-500/10 rounded-[2.5rem] p-10 border border-amber-500/20 shadow-lg">
+                            <div className="relative z-10 flex items-start gap-6">
+                                <div className="w-14 h-14 rounded-2xl bg-amber-500 flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                                    <AlertCircle className="w-8 h-8" />
+                                </div>
+                                <div>
+                                    <h2 className="text-2xl font-black text-amber-900 dark:text-amber-200 mb-3 tracking-tight uppercase">Critical: Apply for M-Visa ONLY</h2>
+                                    <p className="text-amber-800 dark:text-amber-300/80 font-medium leading-relaxed">
+                                        Do not apply for a Tourist Visa for medical treatment. The Indian Medical Visa (M-Visa) is specific for healthcare, allows longer stays, and covers all hospital procedures. Tourist Visas may be rejected if medical purpose is discovered at immigration.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Step by Step */}
+                        {/* STEP BY STEP BENTO */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                                Step-by-Step: How to Get Your Indian Medical Visa
-                            </h2>
-                            <div className="space-y-5">
+                            <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-10 tracking-tight uppercase">Visa Process <br /><span className="text-blue-600">Step-by-Step</span></h2>
+                            <div className="grid gap-6">
                                 {STEPS.map((step, i) => (
-                                    <div key={i} className="flex gap-5 p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
-                                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-fuchsia-500 to-blue-500 flex items-center justify-center text-white font-black text-base shadow-md">
-                                            {i + 1}
+                                    <div key={i} className="group flex flex-col md:flex-row gap-8 p-10 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all duration-500">
+                                        <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-3xl shadow-inner group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                                            {step.icon}
                                         </div>
                                         <div>
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <span className="text-xl">{step.icon}</span>
-                                                <h3 className="font-bold text-gray-900 dark:text-white">{step.title}</h3>
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <span className="text-[10px] font-black px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full border border-blue-100 dark:border-blue-800 uppercase tracking-widest">Phase 0{i+1}</span>
+                                                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight leading-none">{step.title}</h3>
                                             </div>
-                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>
+                                            <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{step.desc}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </section>
 
-                        {/* Documents Checklist */}
-                        <section>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                                📋 Documents Checklist
-                            </h2>
-                            <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 space-y-3">
-                                {DOCS_CHECKLIST.map((doc, i) => (
-                                    <div key={i} className="flex items-start gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                        <p className="text-sm text-gray-700 dark:text-gray-300">{doc}</p>
-                                    </div>
-                                ))}
+                        {/* DOCUMENT CHECKLIST BENTO */}
+                        <section className="bg-slate-900 rounded-[3.5rem] p-10 md:p-16 border border-white/5 relative overflow-hidden text-white">
+                            <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)] pointer-events-none" />
+                            <div className="relative z-10">
+                                <h2 className="text-4xl font-black mb-10 tracking-tight uppercase">M-Visa <br /><span className="text-blue-400">Document Checklist</span></h2>
+                                <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6">
+                                    {DOCS_CHECKLIST.map((doc, i) => (
+                                        <div key={i} className="flex items-start gap-4 p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors border border-white/5">
+                                            <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white text-[10px] font-black flex-shrink-0 mt-0.5">
+                                                <CheckCircle2 className="w-4 h-4" />
+                                            </div>
+                                            <span className="text-slate-300 font-medium text-sm leading-relaxed">{doc}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </section>
 
-                        {/* Key Tips */}
+                        {/* COUNTRY LINKS */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                                💡 Key Tips for a Smooth Visa Process
-                            </h2>
-                            <div className="space-y-4">
-                                {TIPS.map(({ tip, detail }) => (
-                                    <div key={tip} className="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800">
-                                        <h3 className="font-bold text-gray-900 dark:text-white mb-1">{tip}</h3>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{detail}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* Country-specific links */}
-                        <section>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                                Country-Specific Visa Guides
-                            </h2>
-                            <div className="grid sm:grid-cols-2 gap-3">
-                                {INTERNATIONAL_COUNTRIES.filter(c => c.flag).slice(0, 20).map((c) => (
+                            <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-10 tracking-tight uppercase">Country-Specific <br /><span className="text-fuchsia-600">Visa Information</span></h2>
+                            <div className="grid sm:grid-cols-2 gap-4">
+                                {INTERNATIONAL_COUNTRIES.filter(c => c.flag).slice(0, 16).map((c) => (
                                     <Link key={c.slug} href={`/patients/international/${c.slug}`}
-                                        className="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-fuchsia-200 hover:shadow-sm transition-all group">
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-xl">{c.flag}</span>
+                                        className="group flex items-center justify-between p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+                                        <div className="flex items-center gap-4">
+                                            <span className="text-3xl group-hover:scale-125 transition-transform duration-500">{c.flag}</span>
                                             <div>
-                                                <p className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-fuchsia-700">{c.name}</p>
-                                                <p className="text-xs text-gray-400">{c.visa_info.split(".")[0]}</p>
+                                                <p className="font-black text-slate-900 dark:text-white uppercase tracking-tight leading-none mb-1 group-hover:text-blue-600 transition-colors">{c.name}</p>
+                                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Visa Guide</p>
                                             </div>
                                         </div>
-                                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-fuchsia-600" />
+                                        <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                                            <ArrowRight className="w-5 h-5" />
+                                        </div>
                                     </Link>
                                 ))}
                             </div>
-                            <div className="mt-4 text-center">
-                                <Link href="/patients/international" className="inline-flex items-center gap-2 text-fuchsia-600 hover:text-fuchsia-700 font-bold">
-                                    View all 45+ countries <ArrowRight className="w-4 h-4" />
+                            <div className="mt-12 text-center">
+                                <Link href="/patients/international" className="inline-flex items-center gap-3 px-10 py-5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-black rounded-2xl hover:bg-slate-200 transition-all uppercase tracking-widest text-sm">
+                                    Browse All 45+ Countries <ArrowRight className="w-5 h-5 text-blue-500" />
                                 </Link>
                             </div>
                         </section>
                     </div>
 
-                    {/* SIDEBAR */}
-                    <div className="lg:col-span-1 space-y-6">
-                        <div className="lg:sticky lg:top-24 space-y-5">
-                            <div className="bg-gradient-to-br from-slate-900 via-fuchsia-950 to-slate-900 rounded-2xl p-6 text-white shadow-xl">
-                                <h3 className="font-black text-lg mb-2">Get Your Invitation Letter</h3>
-                                <p className="text-slate-300 text-sm mb-5">We issue it within 24 hours. No cost. Required for M-Visa application.</p>
-                                <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                                    className="w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl mb-3 transition-all">
-                                    <MessageCircle className="w-4 h-4" /> WhatsApp Now
-                                </a>
-                                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-                                    className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all text-sm">
-                                    <Phone className="w-4 h-4" /> {siteConfig.contact.phone}
-                                </a>
+                    {/* SIDEBAR BENTO */}
+                    <div className="lg:col-span-1 space-y-8">
+                        <div className="lg:sticky lg:top-24 space-y-8">
+                            
+                            {/* CALL TO ACTION CARD */}
+                            <div className="relative group overflow-hidden bg-slate-900 rounded-[2.5rem] p-10 text-white border border-white/5 shadow-2xl">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-[40px] pointer-events-none" />
+                                <div className="relative z-10">
+                                    <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-blue-400 mb-8 border border-white/5">
+                                        <Sparkles className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-2xl font-black mb-4 tracking-tight uppercase leading-tight">Instant Invitation Letter</h3>
+                                    <p className="text-slate-400 font-medium mb-10 leading-relaxed text-sm">We provide the official hospital invitation letter required for your M-Visa within 24 hours. Free of cost.</p>
+                                    
+                                    <a href={WA} target="_blank" rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-3 w-full py-5 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-blue-500/20 text-lg">
+                                        <MessageCircle className="w-5 h-5 text-green-400" /> WhatsApp Our Desk
+                                    </a>
+                                </div>
                             </div>
-                            <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
-                                <h3 className="font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                                    <Globe2 className="w-4 h-4 text-fuchsia-500" /> Visa Quick Facts
-                                </h3>
-                                <div className="space-y-2 text-sm">
+
+                            {/* QUICK FACTS BENTO */}
+                            <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-800 shadow-sm transition-all duration-500 hover:shadow-xl group">
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 border border-indigo-100 dark:border-indigo-800 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
+                                        <Globe2 className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Visa Quick Facts</h3>
+                                </div>
+                                <div className="space-y-4">
                                     {[
                                         { l: "Visa Type", v: "Medical Visa (M-Visa)" },
-                                        { l: "Processing Time", v: "3–7 business days" },
-                                        { l: "e-Visa Valid For", v: "60 days (double entry)" },
-                                        { l: "Invitation Letter", v: "Issued in 24 hours" },
-                                        { l: "Portal", v: "indianvisaonline.gov.in" },
-                                        { l: "Extension", v: "Via FRRO in India" },
+                                        { l: "Timeline", v: "3–7 Business Days" },
+                                        { l: "Validity", v: "60 Days (Double Entry)" },
+                                        { l: "Invitation", v: "Issued in 24 Hours" },
+                                        { l: "Official Portal", v: "indianvisaonline.gov.in" },
+                                        { l: "Attendant", v: "Attendant Visa (MX)" },
                                     ].map(({ l, v }) => (
-                                        <div key={l} className="flex justify-between">
-                                            <span className="text-gray-500">{l}</span>
-                                            <span className="font-semibold text-gray-900 dark:text-white text-right max-w-[55%]">{v}</span>
+                                        <div key={l} className="flex flex-col py-3 border-b border-slate-50 dark:border-slate-800 last:border-0 group/row">
+                                            <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1 group-hover/row:text-blue-500 transition-colors">{l}</span>
+                                            <span className="font-black text-slate-900 dark:text-white uppercase tracking-tight">{v}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
-                            <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
-                                <h3 className="font-bold text-gray-900 dark:text-white mb-3">Useful Links</h3>
-                                <div className="space-y-2">
-                                    {[
-                                        { href: "/patients/international", label: "International Patient Hub" },
-                                        { href: "/patients/cmc-vellore-alternative", label: "CMC Vellore Alternative" },
-                                        { href: "/patients/lodging", label: "Accommodation Guide" },
-                                        { href: "/patients/transportation", label: "Transport — Airport to Hospital" },
-                                        { href: "/contact", label: "Contact International Desk" },
-                                    ].map(({ href, label }) => (
-                                        <Link key={href} href={href}
-                                            className="flex items-center justify-between p-3 rounded-xl hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/40 transition-colors text-sm group">
-                                            <span className="text-gray-600 dark:text-gray-400 group-hover:text-fuchsia-700">{label}</span>
-                                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-fuchsia-600" />
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <EntityCardSection type="doctors" title="International Patient Specialists" subtitle="Expert Care" limit={6} className="bg-white dark:bg-slate-950 border-t" />
-            <InternalLinkGrid type="health-packages" title="Preventive Checkup Packages" subtitle="Wellness Screening" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
-            <InternalLinkGrid type="diagnostics" title="Diagnostic & Imaging Services" subtitle="NABL Accredited" limit={12} className="bg-white dark:bg-slate-950 border-b" />
-        </div>
+
+                {/* TRUST SIGNALS */}
+                <section className="pt-24 border-t border-slate-100 dark:border-slate-800">
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        <EntityFAQs 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="medical-visa"
+                            title="Medical Visa FAQs"
+                            description="Common questions regarding M-Visa, e-Visas, and FRRO registration."
+                        />
+                        <EntityReviews 
+                            entityType="hospital"
+                            entityName="Indira Hospital"
+                            entitySlug="medical-visa"
+                            title="Visa Support Feedback"
+                            description="Real stories from patients who used our visa assistance service."
+                        />
+                    </div>
+                </section>
+            </SectionContainer>
+
+            <EntityCardSection type="doctors" title="Specialists for International Care" subtitle="Clinical Excellence" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <InternalLinkGrid type="health-packages" title="Wellness Screning Packages" subtitle="Preventive Health" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="diagnostics" title="Lab & Imaging Services" subtitle="NABL Accredited" limit={12} className="bg-white dark:bg-slate-950 border-b" />
+        </main>
     );
 }
