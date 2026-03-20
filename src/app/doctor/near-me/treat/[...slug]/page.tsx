@@ -254,68 +254,76 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             />
 
             {/* ========== HERO ========== */}
-            <section className="relative bg-gradient-to-br from-fuchsia-900 via-fuchsia-700 to-fuchsia-700 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-5">
-                    <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-                </div>
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-20 relative z-10">
-                    <nav className="flex items-center text-sm text-fuchsia-200 mb-8 overflow-x-auto whitespace-nowrap">
+            <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
+                
+                {/* Elite Ambient Glows */}
+                <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-32 relative z-10">
+                    <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap italic">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
                         <Link href="/doctor/near-me/treat" className="hover:text-white transition-colors">Treatments</Link>
                         {treatment && (
                             <>
-                                <ChevronRight className="w-4 h-4 mx-2" />
+                                <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
                                 <Link href={`/doctor/near-me/treat/${treatment.parentServiceSlug}`} className="hover:text-white transition-colors capitalize">
                                     {treatment.parentServiceSlug.replace('-', ' ')}
                                 </Link>
                             </>
                         )}
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white font-medium">{service.title}</span>
+                        <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
+                        <span className="text-white font-black">{service.title}</span>
                     </nav>
 
-                    <div className="flex items-start gap-6">
-                        <div className="hidden sm:flex h-16 w-16 rounded-2xl bg-white/10 backdrop-blur items-center justify-center text-white">
-                            {iconMap[service.icon] || <Stethoscope className="h-8 w-8" />}
-                        </div>
-                        <div>
-                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-fuchsia-500/20">
-                                <Shield className="w-3 h-3 text-amber-400" /> Advanced Treatment Centre • Vellore
+                    <div className="flex flex-col lg:flex-row items-start gap-12">
+                        <div className="flex-1">
+                            <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
+                                <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Advanced Treatment Centre • Vellore
                             </span>
-                             <h1 className="text-4xl sm:text-6xl lg:text-[8.5rem] font-black tracking-tight leading-[0.9] uppercase italic mb-10">
+                             <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-12">
                                 {service.title}<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-white to-orange-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase">Centre of Excellence Vellore.</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Centre of Excellence.</span>
                             </h1>
-                            <p className="mt-4 text-lg sm:text-xl text-fuchsia-100 max-w-2xl leading-relaxed font-medium opacity-80">{service.short_description}</p>
+                            <p className="mt-4 text-xl sm:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light mb-12 opacity-80 italic">{service.short_description}</p>
 
-                            <div className="flex flex-wrap gap-4 mt-6">
+                            <div className="flex flex-wrap gap-4 mt-12 mb-12">
                                 {procedures.length > 0 && (
-                                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                                    <div className="flex items-center gap-3 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl px-5 py-3 shadow-2xl text-indigo-200">
                                         <CheckCircle2 className="w-5 h-5 text-amber-400" />
-                                        <span className="text-sm font-medium">{isTreatmentPage ? 'Key Features' : `${procedures.length}+ Procedures`}</span>
+                                        <span className="text-xs font-black uppercase tracking-widest">{isTreatmentPage ? 'Key Features' : `${procedures.length}+ Procedures`}</span>
                                     </div>
                                 )}
                                 {relatedDoctors.length > 0 && (
-                                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                                    <div className="flex items-center gap-3 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl px-5 py-3 shadow-2xl text-indigo-200">
                                         <Users className="w-5 h-5 text-amber-400" />
-                                        <span className="text-sm font-medium">{relatedDoctors.length} Specialist{relatedDoctors.length > 1 ? 's' : ''}</span>
+                                        <span className="text-xs font-black uppercase tracking-widest">{relatedDoctors.length} Specialist{relatedDoctors.length > 1 ? 's' : ''}</span>
                                     </div>
                                 )}
                             </div>
 
-                            <div className="flex flex-wrap gap-4 mt-8">
+                            <div className="flex flex-wrap gap-6">
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-green-500/30 text-lg">
-                                    <MessageCircle className="w-5 h-5 mr-2" />
-                                    Book on WhatsApp — It&apos;s Free
+                                    className="inline-flex items-center px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-lg shadow-fuchsia-500/25 text-sm uppercase tracking-widest">
+                                    <MessageCircle className="w-6 h-6 mr-3" />
+                                    Book Expert Consultation
                                 </a>
                                 <a href={`tel:${contactPhone.replace(/\s+/g, '')}`}
-                                    className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
-                                    <Phone className="w-5 h-5 mr-2" />
-                                    Talk to a Doctor Now
+                                    className="inline-flex items-center px-10 py-5 bg-white/5 hover:bg-white/10 backdrop-blur-3xl text-white font-bold rounded-2xl transition-colors border border-white/10">
+                                    <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
+                                    Talk to Specialist
                                 </a>
                             </div>
+                        </div>
+                        
+                        <div className="hidden lg:flex flex-shrink-0 lg:w-96 h-96 rounded-[3.5rem] bg-white/5 backdrop-blur-3xl border border-white/10 items-center justify-center text-white/20 shadow-2xl group overflow-hidden relative">
+                             <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                             <div className="relative z-10 scale-150 group-hover:scale-[1.75] transition-transform duration-[2s]">
+                                {iconMap[service.icon] || <Stethoscope className="h-24 w-24" />}
+                             </div>
+                             <div className="absolute top-0 right-0 p-8 opacity-20 capitalize text-[8px] font-black tracking-[0.5em] [writing-mode:vertical-lr]">Indira Elite Infrastructure</div>
                         </div>
                     </div>
                 </div>
