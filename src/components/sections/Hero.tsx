@@ -49,7 +49,7 @@ export function Hero() {
                         <motion.h1
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                            className="text-6xl md:text-8xl lg:text-[8.5rem] font-black text-slate-950 dark:text-white leading-[0.9] tracking-tighter mb-10 animate-in fade-in slide-in-from-bottom-6 fill-mode-both uppercase italic"
+                            className="text-6xl md:text-8xl lg:text-[7.5rem] font-black text-slate-950 dark:text-white leading-[0.9] tracking-tighter mb-10 animate-in fade-in slide-in-from-bottom-6 fill-mode-both uppercase italic"
                         >
                             Best Hospital <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 via-pink-500 to-indigo-600 dark:from-fuchsia-400 dark:via-white dark:to-indigo-400 drop-shadow-sm">
