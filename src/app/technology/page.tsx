@@ -21,21 +21,23 @@ export default function TechnologyHubPage() {
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
             <JsonLdSchema type="hospital" />
             {/* ELITE TECH HERO */}
-            <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
-                <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none" />
-                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
+            <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
+                
+                {/* Elite Ambient Glows */}
+                <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
                 <SectionContainer className="relative z-10 text-center">
-                    <div className="max-w-4xl mx-auto">
-                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                            <HeartCardiogram className="w-4 h-4" /> Next-Gen Infrastructure
+                    <div className="max-w-6xl mx-auto">
+                        <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
+                            <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Next-Gen Infrastructure
                         </span>
-                        <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
-                            Technology that <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Saves Lives.</span>
+                        <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] font-black mb-12 tracking-tighter leading-[0.9] uppercase italic">
+                            Technology that<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Saves Lives.</span>
                         </h1>
-                        <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
+                        <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-12 opacity-80 italic">
                             At Indira Hospital, we invest in the world&apos;s most advanced diagnostic and surgical systems to provide our patients with safer, faster, and more precise treatments.
                         </p>
                     </div>
