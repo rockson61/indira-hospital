@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { MapPin, Clock, Train, Bus, Car, MessageCircle, Phone, ArrowRight, Building, UtensilsCrossed, Landmark, CheckCircle2, Navigation, Star, Shield } from "lucide-react";
+import { MapPin, Clock, Train, Bus, Car, MessageCircle, Phone, ArrowRight, Building, UtensilsCrossed, Landmark, CheckCircle2, Navigation, Star, Shield, Sparkles } from "lucide-react";
 import { Electricity, Heart, Stethoscope } from "healthicons-react/outline";
 
 import { SectionContainer } from "@/components/ui/section-container";
@@ -96,19 +96,23 @@ export default async function LocationDetailPage({ params }: PageProps) {
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
             {/* ELITE LOCATION HERO */}
-            <section className="bg-slate-900 pt-48 pb-32 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
+            <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 pt-48 pb-32 lg:pt-60 lg:pb-48 text-white overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
+                
+                {/* Elite Ambient Glows */}
+                <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
                 <SectionContainer className="relative z-10">
-                    <div className="max-w-4xl">
-                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-fuchsia-500/30">
-                            <MapPin className="w-4 h-4" /> Serving Patients from {location.name}
+                    <div className="max-w-5xl">
+                        <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
+                            <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Serving Patients from {location.name}
                         </span>
-                        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black mb-10 tracking-tight leading-[0.9] uppercase italic">
-                            Best Hospital Near<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">{location.name}.</span>
+                        <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black mb-12 tracking-tighter leading-[0.9] uppercase italic group">
+                            Best Hospital<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Near {location.name}.</span>
                         </h1>
-                        <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-10">
+                        <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-12 opacity-80 italic">
                             Indira Super Speciality Hospital is the preferred healthcare provider for residents of {location.name},
                             offering advanced Laparoscopic, Laser, and Cardiac treatments just {location.distance} away.
                         </p>

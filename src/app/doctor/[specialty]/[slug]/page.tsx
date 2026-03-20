@@ -134,39 +134,45 @@ export default async function DoctorProfileRoute({
                 ]}
             />
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-fuchsia-900 text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.15),transparent_70%)]" />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-24">
+            <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
+                <div className="absolute inset-0 opacity-20" 
+                    style={{ backgroundImage: "radial-gradient(circle at 30% 30%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+                
+                {/* Elite Ambient Glows */}
+                <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-32 z-10">
                     {/* Breadcrumb */}
-                    <nav className="flex items-center text-sm text-slate-300 mb-8">
+                    <nav className="flex items-center text-sm text-indigo-300/60 mb-10 italic">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
                         <Link href="/doctor/near-me" className="hover:text-white transition-colors capitalize">Our Specialists</Link>
                         <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
-                        <span className="text-fuchsia-300 font-medium">{currDoctor.name}</span>
+                        <span className="text-white font-black">{currDoctor.name}</span>
                     </nav>
 
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left: Doctor Info */}
                         <div className="lg:col-span-2">
-                            <div className="flex items-start gap-6">
+                            <div className="flex flex-col sm:flex-row items-start gap-10">
                                 {/* Avatar */}
                                 <DoctorAvatar
                                     src={currDoctor.image}
                                     name={currDoctor.name}
                                     initials={initials}
-                                    className="w-24 h-24 md:w-32 md:h-32 rounded-[2rem]"
+                                    className="w-32 h-32 md:w-44 md:h-44 rounded-[2.5rem] border-4 border-white/10 shadow-2xl backdrop-blur-3xl bg-white/5"
                                 />
                                 <div>
-                                    <div className="mb-6">
-                                        <h1 className="text-sm md:text-base font-bold text-fuchsia-300 uppercase tracking-[0.2em] mb-3 flex items-center gap-2 drop-shadow-sm">
-                                            <Sparkles className="w-4 h-4 text-amber-400 fill-amber-400/20" />
-                                            Best {deptName} Doctors in Vellore
+                                    <div className="mb-10">
+                                        <h1 className="text-[10px] font-black text-fuchsia-300 uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+                                            <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
+                                            Best {deptName} Doctor in Vellore
                                         </h1>
-                                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.9] text-white uppercase italic mb-4">
+                                        <h2 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] text-white uppercase italic mb-8">
                                             {currDoctor.name}
                                         </h2>
-                                        <p className="text-xl md:text-2xl text-fuchsia-300 mt-2 font-bold opacity-90 tracking-tight">
+                                        <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">
                                             {currDoctor.designation || currDoctor.specialty || deptName}
                                         </p>
                                     </div>

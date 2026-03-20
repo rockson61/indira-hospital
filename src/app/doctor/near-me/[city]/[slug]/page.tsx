@@ -141,57 +141,61 @@ async function DoctorView({ doctor, location, city, slug }: any) {
 
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
-            <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-fuchsia-950 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-5"
+            <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
+                <div className="absolute inset-0 opacity-20"
                     style={{ backgroundImage: "radial-gradient(circle at 30% 30%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/20 rounded-full blur-[100px] pointer-events-none" />
+                
+                {/* Elite Ambient Glows */}
+                <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-20 relative z-10">
-                    <nav className="flex flex-wrap items-center text-sm text-fuchsia-300 mb-8 gap-1">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-24 relative z-10">
+                    <nav className="flex flex-wrap items-center text-sm text-indigo-300/60 mb-10 gap-1 italic">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4" />
                         <Link href="/doctor/near-me" className="hover:text-white transition-colors">Near Me</Link>
                         <ChevronRight className="w-4 h-4" />
                         <Link href={`/doctor/near-me/${city}`} className="hover:text-white transition-colors capitalize">{location.name}</Link>
                         <ChevronRight className="w-4 h-4" />
-                        <span className="text-white font-medium">{doctor.name}</span>
+                        <span className="text-white font-black">{doctor.name}</span>
                     </nav>
 
-                    <div className="flex flex-col sm:flex-row items-start gap-8">
+                    <div className="flex flex-col sm:flex-row items-start gap-10">
                         {doctor.image && (
                             <div className="flex-shrink-0">
-                                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl">
+                                <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-2xl backdrop-blur-3xl bg-white/5">
                                     <img src={getImageUrl(doctor.image)} alt={doctor.name} className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         )}
-                                <div>
-                                    <div className="mb-6">
-                                        <h1 className="text-sm md:text-base font-bold text-fuchsia-300 uppercase tracking-[0.2em] mb-3 flex items-center gap-2 drop-shadow-sm">
-                                            <Sparkles className="w-4 h-4 text-amber-400 fill-amber-400/20" />
-                                            Best {dept} Doctors in {location.name}
-                                        </h1>
-                                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.9] text-white uppercase italic mb-6">
-                                            {doctor.name}
-                                        </h2>
-                                    </div>
-                            <p className="text-xl text-fuchsia-300 font-semibold mb-1">{doctor.designation || `${dept} Specialist`}</p>
-                            <p className="text-slate-400 text-sm mb-3">{dept && `${dept} • `}Indira Super Speciality Hospital, Vellore</p>
-                            <div className="flex flex-wrap gap-3 mb-6">
+                        <div className="flex-1">
+                            <div className="mb-8">
+                                <h1 className="text-[10px] font-black text-fuchsia-300 uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+                                    <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
+                                    Elite {dept} Specialist in {location.name}
+                                </h1>
+                                <h2 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] text-white uppercase italic mb-10">
+                                    {doctor.name}
+                                </h2>
+                            </div>
+                            <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">{doctor.designation || `${dept} Specialist`}</p>
+                            <p className="text-slate-400 text-lg mb-8 font-medium">Centre of Excellence • Indira Super Speciality Hospital, Vellore</p>
+                            
+                            <div className="flex flex-wrap gap-4 mb-10">
                                 {[
                                     { icon: Award, label: `${yearsExperience}+ Years Experience` },
                                     { icon: Shield, label: "NABH Accredited" },
                                     { icon: Users, label: "Trusted by thousands" },
                                 ].map(({ icon: Icon, label }) => (
-                                    <div key={label} className="flex items-center gap-2 bg-white/10 backdrop-blur rounded-xl px-3 py-2">
-                                        <Icon className="w-4 h-4 text-amber-400" />
-                                        <span className="text-xs font-semibold">{label}</span>
+                                    <div key={label} className="flex items-center gap-3 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl px-5 py-3 shadow-2xl">
+                                        <Icon className="w-5 h-5 text-amber-400" />
+                                        <span className="text-xs font-black uppercase tracking-widest">{label}</span>
                                     </div>
                                 ))}
                             </div>
-                            <div className="flex flex-wrap gap-3">
-                                <a href={whatsappUrl} className="inline-flex items-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg">
-                                    <MessageCircle className="w-4 h-4 mr-2" /> Book via WhatsApp
+                            <div className="flex flex-wrap gap-4">
+                                <a href={whatsappUrl} className="inline-flex items-center px-8 py-5 bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-black rounded-2xl transition-all shadow-lg shadow-fuchsia-500/25 uppercase tracking-widest text-sm">
+                                    <MessageCircle className="w-5 h-5 mr-3" /> Book Expert Consultation
                                 </a>
                             </div>
                         </div>
@@ -244,33 +248,36 @@ async function ServiceView({ service, location, city, slug }: any) {
 
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
-            <section className="relative bg-gradient-to-br from-slate-900 via-fuchsia-950 to-slate-900 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-10"
-                    style={{ backgroundImage: "radial-gradient(circle at 25% 25%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-600/20 rounded-full blur-[120px] pointer-events-none" />
+            <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
+                <div className="absolute inset-0 opacity-20"
+                    style={{ backgroundImage: "radial-gradient(circle at 30% 30%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+                
+                {/* Elite Ambient Glows */}
+                <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-20 relative z-10">
-                    <nav className="flex flex-wrap items-center text-sm text-fuchsia-300 mb-8 gap-1">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-24 relative z-10">
+                    <nav className="flex flex-wrap items-center text-sm text-indigo-300/60 mb-10 gap-1 italic">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4" />
                         <Link href="/doctor/near-me" className="hover:text-white transition-colors">Near Me</Link>
                         <ChevronRight className="w-4 h-4" />
                         <Link href={`/doctor/near-me/${city}`} className="hover:text-white transition-colors capitalize">{location.name}</Link>
                         <ChevronRight className="w-4 h-4" />
-                        <span className="text-white font-medium">{service.title}</span>
+                        <span className="text-white font-black">{service.title}</span>
                     </nav>
 
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/20 text-fuchsia-200 text-sm font-semibold mb-6">
-                        <MapPin className="w-4 h-4" /> Serving {location.name} & Nearby
+                    <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-indigo-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
+                        <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Providing Specialised Care for {location.name}
                     </div>
 
-                    <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black tracking-tight leading-[0.9] uppercase italic mb-8">
+                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-12">
                         {service.title}<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300 text-2xl sm:text-3xl lg:text-4xl block mt-4 not-italic font-bold tracking-normal opacity-90">in {location.name}, Tamil Nadu.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Precision Specialists in {location.name}.</span>
                     </h1>
-                    <div className="flex flex-wrap gap-4 mt-8">
-                        <a href={whatsappUrl} className="inline-flex items-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg text-base">
-                            <MessageCircle className="w-5 h-5 mr-2" /> Book on WhatsApp
+                    <div className="flex flex-wrap gap-4 mt-12">
+                        <a href={whatsappUrl} className="inline-flex items-center px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white font-black rounded-2xl transition-all shadow-lg shadow-indigo-500/25 uppercase tracking-widest text-sm">
+                            <MessageCircle className="w-5 h-5 mr-3" /> Consult Specialists
                         </a>
                     </div>
                 </div>
