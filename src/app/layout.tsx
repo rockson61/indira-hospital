@@ -57,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
+        className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
         {/* Hospital / MedicalOrganization Schema */}
         <script

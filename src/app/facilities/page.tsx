@@ -24,12 +24,12 @@ export default function FacilitiesPage() {
                 <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10">
+                    <div className="elite-tag mb-10">
                         <Sparkles className="w-4 h-4" /> Advanced Infrastructure
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 uppercase italic">
+                    <h1 className="elite-hero-title mb-10">
                         Where <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-400">Technology</span> <br className="hidden sm:block"/>Meets Compassion.
+                        <span className="elite-gradient-text">Technology</span> <br className="hidden sm:block"/>Meets Compassion.
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         Indira Hospital is equipped with the latest medical technology and premium infrastructure designed to provide superior patient outcomes and absolute safety.

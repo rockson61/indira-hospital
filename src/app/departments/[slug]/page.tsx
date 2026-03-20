@@ -146,25 +146,25 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                             {iconMap[department.icon] || <Stethoscope className="h-10 w-10" />}
                         </div>
                         <div>
-                            <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-blue-400 text-[10px] font-black uppercase tracking-[0.4em] mb-8 shadow-2xl">
+                            <div className="elite-tag mb-10">
                                 <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> NABH Accredited Centre of Excellence
-                            </span>
-                            <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-10">
+                            </div>
+                            <h1 className="elite-hero-title mb-10 text-left">
                                 {department.title}<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Precision Specialists in Vellore.</span>
+                                <span className="elite-gradient-text !text-4xl md:!text-5xl !block !mt-6 !not-italic !tracking-widest !opacity-90">Precision Specialists in Vellore.</span>
                             </h1>
                             <p className="mt-8 text-xl sm:text-2xl text-indigo-100 max-w-3xl leading-relaxed font-light opacity-70 italic">{department.short_description}</p>
 
-                            <div className="flex flex-wrap gap-4 mt-8">
+                            <div className="flex flex-wrap gap-5 mt-10">
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-green-500/30 text-lg">
-                                    <MessageCircle className="w-5 h-5 mr-2" />
+                                    className="elite-button-primary gap-3">
+                                    <MessageCircle className="w-5 h-5" />
                                     Contact Department
                                 </a>
                                 <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                                    className="inline-flex items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold rounded-xl transition-colors border border-white/20">
-                                    <Phone className="w-5 h-5 mr-2" />
-                                    Call Helpline
+                                    className="elite-button-secondary gap-3">
+                                    <Phone className="w-5 h-5 text-fuchsia-400" />
+                                    Talk to Specialist
                                 </a>
                             </div>
                         </div>

@@ -37,12 +37,12 @@ export default function QualityPage() {
                 <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
                 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-emerald-500/30">
+                    <div className="elite-tag mb-10">
                         <ShieldCheck className="w-4 h-4 animate-pulse" /> Excellence in Healthcare
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 max-w-6xl mx-auto uppercase italic">
+                    <h1 className="elite-hero-title mb-10 max-w-6xl mx-auto">
                         Commitment to <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-white to-cyan-400">Quality.</span>
+                        <span className="elite-gradient-text">Quality.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         At Indira Hospital, quality is not just a certification—it&apos;s a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.
@@ -54,7 +54,7 @@ export default function QualityPage() {
             <section className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20 -mt-24 sm:-mt-32">
                 <div className="grid md:grid-cols-3 gap-8">
                     {certifications.map((cert, i) => (
-                        <div key={i} className="group relative bg-white/70 dark:bg-slate-900/80 backdrop-blur-2xl p-10 rounded-[3.5rem] border border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                        <div key={i} className="elite-card p-10 group hover:-translate-y-2 relative overflow-hidden">
                             <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
                             
                             <div className="w-20 h-20 bg-emerald-50 dark:bg-emerald-950/30 rounded-3xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">

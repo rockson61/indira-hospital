@@ -40,19 +40,19 @@ export function Hero() {
                         <motion.div
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-white/10 backdrop-blur-md border border-fuchsia-200 dark:border-white/20 text-fuchsia-700 dark:text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-sm dark:shadow-[0_0_30px_-5px_var(--tw-shadow-color)] dark:shadow-fuchsia-500/30 animate-in fade-in slide-in-from-bottom-4 fill-mode-both"
+                            className="elite-tag mb-8 animate-in fade-in slide-in-from-bottom-4 fill-mode-both"
                         >
-                            <span className="flex h-2.5 w-2.5 rounded-full bg-fuchsia-500 dark:bg-fuchsia-400 animate-pulse" />
-                            #1 Rated Super Speciality Hospital in Vellore, Tamil Nadu
+                            <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
+                            #1 Rated Super Speciality Hospital in Vellore
                         </motion.div>
 
                         <motion.h1
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                            className="text-6xl md:text-8xl lg:text-[7.5rem] font-black text-slate-950 dark:text-white leading-[0.9] tracking-tighter mb-10 animate-in fade-in slide-in-from-bottom-6 fill-mode-both uppercase italic"
+                            className="elite-hero-title text-slate-950 dark:text-white mb-10 animate-in fade-in slide-in-from-bottom-6 fill-mode-both"
                         >
                             Best Hospital <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 via-pink-500 to-indigo-600 dark:from-fuchsia-400 dark:via-white dark:to-indigo-400 drop-shadow-sm">
+                            <span className="elite-gradient-text drop-shadow-sm">
                                 in Vellore.
                             </span>
                         </motion.h1>
@@ -62,7 +62,7 @@ export function Hero() {
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             className="mb-14 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
                         >
-                            <h2 className="text-2xl md:text-4xl font-black text-slate-800 dark:text-slate-100 mb-6 tracking-tight uppercase italic opacity-90">
+                            <h2 className="elite-section-title text-slate-800 dark:text-slate-100 mb-6 opacity-90">
                                 Advanced Multispeciality & Laparoscopic Care.
                             </h2>
                             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-light italic">
@@ -77,10 +77,10 @@ export function Hero() {
                         >
                             <Link
                                 href="/book-appointment"
-                                className="group/btn relative px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-500 dark:bg-fuchsia-500 dark:hover:bg-fuchsia-400 text-white rounded-2xl font-black text-xl transition-all shadow-lg shadow-fuchsia-500/25 flex items-center justify-center gap-2 overflow-hidden hover:scale-[1.02]"
+                                className="elite-button-primary hover:scale-[1.02] gap-3"
                             >
                                 <span className="relative z-10">Get Free Cost Estimate</span>
-                                <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </Link>
                             <a
@@ -93,9 +93,9 @@ export function Hero() {
                             </a>
                             <a
                                 href={`tel:${siteConfig.contact.emergencyPhone}`}
-                                className="px-10 py-5 bg-slate-100 dark:bg-white/5 backdrop-blur-md text-slate-700 dark:text-slate-300 rounded-2xl font-bold text-lg border border-slate-200 dark:border-white/10 transition-all hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center gap-3"
+                                className="elite-button-secondary gap-3"
                             >
-                                <Phone className="w-5 h-5 text-slate-400" /> {siteConfig.contact.emergencyPhone}
+                                <Phone className="w-5 h-5 text-fuchsia-400" /> Emergency: {siteConfig.contact.emergencyPhone}
                             </a>
                         </motion.div>
 

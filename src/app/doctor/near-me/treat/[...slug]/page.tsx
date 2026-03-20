@@ -280,12 +280,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
                     <div className="flex flex-col lg:flex-row items-start gap-12">
                         <div className="flex-1">
-                            <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
+                            <div className="elite-tag mb-10">
                                 <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Advanced Treatment Centre • Vellore
-                            </span>
-                             <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-12">
+                            </div>
+                             <h1 className="elite-hero-title mb-10 text-left">
                                 {service.title}<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Centre of Excellence.</span>
+                                <span className="elite-gradient-text">Centre of Excellence.</span>
                             </h1>
                             <p className="mt-4 text-xl sm:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light mb-12 opacity-80 italic">{service.short_description}</p>
 
@@ -304,15 +304,15 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 )}
                             </div>
 
-                            <div className="flex flex-wrap gap-6">
+                            <div className="flex flex-wrap gap-5">
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-lg shadow-fuchsia-500/25 text-sm uppercase tracking-widest">
-                                    <MessageCircle className="w-6 h-6 mr-3" />
+                                    className="elite-button-primary gap-3">
+                                    <MessageCircle className="w-6 h-6" />
                                     Book Expert Consultation
                                 </a>
                                 <a href={`tel:${contactPhone.replace(/\s+/g, '')}`}
-                                    className="inline-flex items-center px-10 py-5 bg-white/5 hover:bg-white/10 backdrop-blur-3xl text-white font-bold rounded-2xl transition-colors border border-white/10">
-                                    <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
+                                    className="elite-button-secondary gap-3">
+                                    <Phone className="w-5 h-5 text-fuchsia-400" />
                                     Talk to Specialist
                                 </a>
                             </div>

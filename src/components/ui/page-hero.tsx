@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { Sparkles } from "lucide-react";
 
 interface PageHeroProps {
     title: string;
@@ -43,13 +44,12 @@ export function PageHero({
             {/* Content */}
             <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
                 {subtitle && (
-                    <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700 shadow-2xl">
-                        <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-500 animate-pulse" />
-                        <span className="text-fuchsia-300 text-[10px] font-black tracking-[0.4em] uppercase">{subtitle}</span>
+                    <div className="elite-tag animate-in fade-in slide-in-from-bottom-4 duration-700">
+                        <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> {subtitle}
                     </div>
                 )}
 
-                <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9] mb-10 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 uppercase italic">
+                <h1 className="elite-hero-title mb-10 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
                     {title}
                 </h1>
 

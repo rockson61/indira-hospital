@@ -163,20 +163,20 @@ async function DoctorView({ doctor, location, city, slug }: any) {
                     <div className="flex flex-col sm:flex-row items-start gap-10">
                         {doctor.image && (
                             <div className="flex-shrink-0">
-                                <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-2xl backdrop-blur-3xl bg-white/5">
-                                    <img src={getImageUrl(doctor.image)} alt={doctor.name} className="w-full h-full object-cover" />
+                                <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-2xl backdrop-blur-3xl bg-white/5 group hover:scale-105 transition-transform duration-500">
+                                    <img src={getImageUrl(doctor.image)} alt={doctor.name} className="w-full h-full object-cover grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-700" />
                                 </div>
                             </div>
                         )}
                         <div className="flex-1">
                             <div className="mb-8">
-                                <h1 className="text-[10px] font-black text-fuchsia-300 uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+                                <div className="elite-tag mb-10">
                                     <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
                                     Elite {dept} Specialist in {location.name}
-                                </h1>
-                                <h2 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] text-white uppercase italic mb-10">
+                                </div>
+                                <h1 className="elite-hero-title mb-10 text-left">
                                     {doctor.name}
-                                </h2>
+                                </h1>
                             </div>
                             <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">{doctor.designation || `${dept} Specialist`}</p>
                             <p className="text-slate-400 text-lg mb-8 font-medium">Centre of Excellence • Indira Super Speciality Hospital, Vellore</p>

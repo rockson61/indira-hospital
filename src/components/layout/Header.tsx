@@ -98,7 +98,7 @@ export function Header() {
                             {/* Book Appointment */}
                             <Link
                                 href="/book-appointment"
-                                className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 dark:bg-fuchsia-600 hover:bg-fuchsia-600 dark:hover:bg-fuchsia-500 text-white rounded-2xl font-bold transition-all shadow-lg"
+                                className="elite-button-primary !px-6 !py-3 !text-xs"
                                 title="Book Appointment"
                             >
                                 Book Appointment

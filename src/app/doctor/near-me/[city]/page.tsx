@@ -105,26 +105,26 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
                 <SectionContainer className="relative z-10">
                     <div className="max-w-5xl">
-                        <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
+                        <div className="elite-tag animate-in fade-in slide-in-from-bottom-4 duration-700">
                             <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Serving Patients from {location.name}
-                        </span>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black mb-12 tracking-tighter leading-[0.9] uppercase italic group">
+                        </div>
+                        <h1 className="elite-hero-title mb-12 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
                             Best Hospital<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Near {location.name}.</span>
+                            <span className="elite-gradient-text drop-shadow-sm">Near {location.name}.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-12 opacity-80 italic">
                             Indira Super Speciality Hospital is the preferred healthcare provider for residents of {location.name},
                             offering advanced Laparoscopic, Laser, and Cardiac treatments just {location.distance} away.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
+                        <div className="flex flex-col sm:flex-row gap-5">
+                            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="elite-button-primary gap-3 hover:scale-[1.02]">
                                 <span className="relative z-10">WhatsApp Appointment</span>
-                                <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
+                                <MessageCircle className="w-5 h-5 ml-1 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
-                            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center justify-center px-10 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-colors">
-                                <Phone className="w-5 h-5 mr-3 text-fuchsia-400" />
+                            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="elite-button-secondary gap-3">
+                                <Phone className="w-5 h-5 text-fuchsia-400" />
                                 {siteConfig.contact.phone}
                             </a>
                         </div>

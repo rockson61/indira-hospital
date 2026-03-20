@@ -38,12 +38,12 @@ export default function GalleryPage() {
                 <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-fuchsia-500/20 rounded-full blur-[100px] will-change-transform transform-gpu opacity-40" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-indigo-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_40px_-5px_rgba(99,102,241,0.3)]">
+                    <div className="elite-tag mb-10">
                         <Camera className="w-4 h-4" /> Visual Hospital Tour
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 uppercase italic">
+                    <h1 className="elite-hero-title mb-10">
                         Experience Our <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-white to-fuchsia-400">World-Class Mastery.</span>
+                        <span className="elite-gradient-text">World-Class Mastery.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4">
                         Step inside our state-of-the-art operation theaters, diagnostic suites, and premium patient environments designed for absolute healing.

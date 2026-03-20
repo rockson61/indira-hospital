@@ -62,11 +62,11 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
                             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Dictionary
                         </Link>
                         
-                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-500/10 backdrop-blur-md border border-fuchsia-500/20 text-fuchsia-300 text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
+                        <div className="elite-tag mb-10">
                             <BookOpen className="w-4 h-4" /> Medical Reference: {glossaryItem.category}
                         </div>
                         
-                        <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                        <h1 className="elite-hero-title mb-10">
                             {glossaryItem.term}
                         </h1>
                     </div>

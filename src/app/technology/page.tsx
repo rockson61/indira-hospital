@@ -30,12 +30,12 @@ export default function TechnologyHubPage() {
 
                 <SectionContainer className="relative z-10 text-center">
                     <div className="max-w-6xl mx-auto">
-                        <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
+                        <div className="elite-tag mb-10">
                             <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Next-Gen Infrastructure
-                        </span>
-                        <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] font-black mb-12 tracking-tighter leading-[0.9] uppercase italic">
+                        </div>
+                        <h1 className="elite-hero-title mb-12">
                             Technology that<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Saves Lives.</span>
+                            <span className="elite-gradient-text">Saves Lives.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-12 opacity-80 italic">
                             At Indira Hospital, we invest in the world&apos;s most advanced diagnostic and surgical systems to provide our patients with safer, faster, and more precise treatments.

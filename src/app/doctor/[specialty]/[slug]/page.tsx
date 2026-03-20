@@ -165,13 +165,13 @@ export default async function DoctorProfileRoute({
                                 />
                                 <div>
                                     <div className="mb-10">
-                                        <h1 className="text-[10px] font-black text-fuchsia-300 uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+                                        <div className="elite-tag mb-10">
                                             <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
                                             Best {deptName} Doctor in Vellore
-                                        </h1>
-                                        <h2 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] text-white uppercase italic mb-8">
+                                        </div>
+                                        <h1 className="elite-hero-title mb-10 text-left">
                                             {currDoctor.name}
-                                        </h2>
+                                        </h1>
                                         <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">
                                             {currDoctor.designation || currDoctor.specialty || deptName}
                                         </p>

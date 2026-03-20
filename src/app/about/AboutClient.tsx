@@ -25,12 +25,12 @@ export default function AboutClient() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-[10px] font-black tracking-[0.3em] uppercase mb-10 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
+                        <div className="elite-tag mb-10">
                             <Milestone className="w-4 h-4" /> The Legacy Since 1988
-                        </span>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                        </div>
+                        <h1 className="elite-hero-title mb-10 relative">
                             35 Years of <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-indigo-400">Clinical Mastery.</span>
+                            <span className="elite-gradient-text text-6xl md:text-8xl lg:text-[inherit]">Clinical Mastery.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed mb-4">
                             Indira Super Speciality Hospital is Vellore's premier destination for advanced medical interventions, 

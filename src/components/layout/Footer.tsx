@@ -20,11 +20,11 @@ export function Footer() {
 
                     {/* Services Column */}
                     <div>
-                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-5 tracking-wide uppercase text-sm">Services</h3>
+                        <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Services</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.medicalServices.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -32,11 +32,11 @@ export function Footer() {
 
                     {/* Procedures Column */}
                     <div>
-                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-5 tracking-wide uppercase text-sm">Key Procedures</h3>
+                        <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Key Procedures</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.procedures.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -44,19 +44,19 @@ export function Footer() {
 
                     {/* Quick Links + Legal */}
                     <div>
-                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-5 tracking-wide uppercase text-sm">Quick Links</h3>
+                        <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Quick Links</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.quickLinks.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
-                        <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-4 mt-8 tracking-wide uppercase text-sm">Patient Care</h3>
+                        <h3 className="elite-section-title !text-sm !leading-tight mb-4 mt-8 !italic">Patient Care</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.patientCare.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">{item.name}</Link>
+                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
