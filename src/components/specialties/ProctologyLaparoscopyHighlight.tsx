@@ -156,6 +156,5 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
                 </div>
             </div>
         </section>
-        </section>
     );
 }
