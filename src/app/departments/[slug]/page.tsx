@@ -149,7 +149,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                             <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-blue-400 text-[10px] font-black uppercase tracking-[0.4em] mb-8 shadow-2xl">
                                 <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> NABH Accredited Centre of Excellence
                             </span>
-                            <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-10">
+                            <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-10">
                                 {department.title}<br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Precision Specialists in Vellore.</span>
                             </h1>
