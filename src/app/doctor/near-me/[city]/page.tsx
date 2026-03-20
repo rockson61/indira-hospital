@@ -22,6 +22,7 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 import { siteConfig } from "@/config/site";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const dynamicParams = true;
 
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const districtInfo = 'district' in location ? `, ${location.district}` : '';
 
     return {
-        title: `Best Hospital in ${location.name}${districtInfo} | Indira Hospital Vellore`,
+        title: `Best Hospital in ${location.name} | Top Speciality Doctors Near Me | Indira Hospital`,
         description: `Indira Super Speciality Hospital is the #1 medical facility for patients from ${location.name}. Specialized in Laparoscopic, Laser, and Cardiac care with 24/7 emergency support. Distance: ${location.distance}.`,
         keywords: [
             `hospital in ${location.name}`,
@@ -103,9 +104,9 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-fuchsia-500/30">
                             <MapPin className="w-4 h-4" /> Serving Patients from {location.name}
                         </span>
-                        <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
-                            Best Hospital for Patients in {location.name}<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">for {location.name} Patients.</span>
+                        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black mb-10 tracking-tight leading-[0.9] uppercase italic">
+                            Best Hospital Near<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">{location.name}.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-10">
                             Indira Super Speciality Hospital is the preferred healthcare provider for residents of {location.name},
@@ -214,7 +215,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {allDoctors.slice(0, 4).map((doctor: any) => (
-                        <DoctorCard key={doctor.slug} doctor={doctor} />
+                        <DoctorCard key={doctor.slug} doctor={doctor} city={city} />
                     ))}
                 </div>
             </SectionContainer>
@@ -410,7 +411,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         {departments.slice(0, 4).map((dept: any) => (
                             <Link
                                 key={dept.slug}
-                                href={`/doctor/near-me/treat/${dept.slug}`}
+                                href={`/doctor/near-me/${city}/${dept.slug}`}
                                 className="p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 group flex flex-col"
                             >
                                 <div className="w-14 h-14 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-fuchsia-500 transition-colors">
@@ -452,6 +453,19 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     ) as any)}
                 </div>
             </SectionContainer>
+            <SectionContainer className="py-24 max-w-7xl mx-auto">
+                <PeopleAlsoSearchCard
+                    keywords={[
+                        { text: `Best hospital in ${location.name}`, href: `/doctor/near-me/${city}` },
+                        { text: `Surgery cost in ${location.name}`, href: `/doctor/near-me/${city}` },
+                        { text: `Top specialist doctors in ${location.name}`, href: `/doctor/near-me/${city}` },
+                        { text: `Indira Hospital ${location.name} address`, href: `/doctor/near-me/${city}` },
+                        { text: `Laser surgery specialists ${location.name}`, href: `/doctor/near-me/${city}` },
+                        { text: `Laparoscopic surgery ${location.name}`, href: `/doctor/near-me/${city}` },
+                    ]}
+                />
+            </SectionContainer>
+
             {/* REGIONAL TRUST SIGNALS */}
             <SectionContainer className="py-24 max-w-7xl mx-auto border-t border-slate-100 dark:border-slate-800">
                 <div className="grid lg:grid-cols-2 gap-16">
@@ -493,13 +507,13 @@ export default async function LocationDetailPage({ params }: PageProps) {
                     { name: location.name, url: `/doctor/near-me/${city}` },
                 ]}
             />
-            <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
+            <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} city={city} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} city={city} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
             
             <InternalLinkGrid type="diagnostics" title={`Diagnostics for ${location.name}`} subtitle="Local Lab Services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
             <InternalLinkGrid type="health-packages" title={`Checkups for ${location.name}`} subtitle="Regional Wellness" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
 
-            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={0} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
+            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={0} city={city} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
         </main>
     );
 }

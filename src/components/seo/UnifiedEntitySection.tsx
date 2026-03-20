@@ -18,6 +18,7 @@ interface UnifiedEntitySectionProps {
     excludeSlug?: string;
     parentSlug?: string;    // specifically for 'treatments' type
     className?: string;
+    city?: string;          // Pass when rendered on a location hub page
 }
 
 const ICONS = {
@@ -53,6 +54,7 @@ export async function UnifiedEntitySection({
     excludeSlug,
     parentSlug,
     className = "",
+    city,
 }: UnifiedEntitySectionProps) {
     const defaults = DEFAULTS[type];
     const displayTitle = title || defaults.title;
@@ -93,14 +95,25 @@ export async function UnifiedEntitySection({
         const name = item.title || item.name;
         let url = "";
 
-        if (type === "services") url = `/doctor/near-me/treat/${item.slug}`;
-        else if (type === "treatments") url = `/doctor/near-me/treat/${item.parentServiceSlug}/${item.slug}`;
-        else if (type === "doctors") {
-            const dept = typeof item.department === 'string' ? item.department : item.department?.name || item.specialty || 'specialist';
-            const specialtySlug = dept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-            url = `/doctor/${specialtySlug}/${item.slug}`;
+        if (type === "services") {
+            url = city ? `/doctor/near-me/${city}/${item.slug}` : `/doctor/near-me/treat/${item.slug}`;
         }
-        else if (type === "departments") url = `/departments/${item.slug}`;
+        else if (type === "treatments") {
+            // Treatments stay in /treat/ hierarchy but could be simplified if needed.
+            url = `/doctor/near-me/treat/${item.parentServiceSlug}/${item.slug}`;
+        }
+        else if (type === "doctors") {
+            if (city) {
+                url = `/doctor/near-me/${city}/${item.slug}`;
+            } else {
+                const dept = typeof item.department === 'string' ? item.department : item.department?.name || item.specialty || 'specialist';
+                const specialtySlug = dept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                url = `/doctor/${specialtySlug}/${item.slug}`;
+            }
+        }
+        else if (type === "departments") {
+            url = city ? `/doctor/near-me/${city}/${item.slug}` : `/departments/${item.slug}`;
+        }
         else if (type === "locations") url = `/doctor/near-me/${item.slug}`;
 
         return { name, slug: item.slug, url };
@@ -119,13 +132,13 @@ export async function UnifiedEntitySection({
         } else if (type === "doctors") {
             FeaturedContent = (
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
-                    {featuredItems.map((d: any) => <DoctorCard key={d.slug || d.id} doctor={d} variant="grid" />)}
+                    {featuredItems.map((d: any) => <DoctorCard key={d.slug || d.id} doctor={d} variant="grid" city={city} />)}
                 </div>
             );
         } else if (type === "departments") {
             FeaturedContent = (
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
-                    {featuredItems.map((d: any) => <DepartmentCard key={d.slug || d.id} department={d} variant="grid" />)}
+                    {featuredItems.map((d: any) => <DepartmentCard key={d.slug || d.id} department={d} variant="grid" city={city} />)}
                 </div>
             );
         } else if (type === "locations") {

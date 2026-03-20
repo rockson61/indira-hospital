@@ -2,7 +2,7 @@ import AppointmentBookingClient from "./AppointmentBookingClient";
 import { Clock } from "lucide-react";
 
 export const metadata = {
-    title: "Book an Appointment",
+    title: "Book Appointment with Best Specialists in Vellore — Same-Week Surgery | Indira Hospital",
     description: "Schedule your consultation with top specialists at Indira Hospital.",
 };
 

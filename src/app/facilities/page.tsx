@@ -5,6 +5,8 @@ import { Metadata } from "next";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = {
     title: "World-Class Infrastructure | Facilities at Indira Hospital",
@@ -25,8 +27,9 @@ export default function FacilitiesPage() {
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10">
                         <Sparkles className="w-4 h-4" /> Advanced Infrastructure
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6">
-                        Where <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Technology</span> <br className="hidden sm:block"/>Meets Compassion.
+                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 uppercase italic">
+                        Where <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-400">Technology</span> <br className="hidden sm:block"/>Meets Compassion.
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         Indira Hospital is equipped with the latest medical technology and premium infrastructure designed to provide superior patient outcomes and absolute safety.
@@ -93,7 +96,7 @@ export default function FacilitiesPage() {
             </SectionContainer>
 
             {/* High-Impact Stat Strip */}
-            <SectionContainer className="mt-24">
+            <SectionContainer className="mt-24 mb-32">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {[
                         { label: "Beds Available", value: "150+" },
@@ -102,12 +105,30 @@ export default function FacilitiesPage() {
                         { label: "Successful Surgeries", value: "15k+" }
                     ].map((stat, i) => (
                         <div key={i} className="text-center">
-                            <div className="text-4xl font-black text-slate-900 dark:text-white mb-2">{stat.value}</div>
-                            <div className="text-sm font-black text-slate-400 uppercase tracking-widest">{stat.label}</div>
+                            <div className="text-4xl font-black text-slate-900 dark:text-white mb-2 uppercase italic">{stat.value}</div>
+                            <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{stat.label}</div>
                         </div>
                     ))}
                 </div>
             </SectionContainer>
+
+            <SectionContainer className="mb-32 max-w-7xl mx-auto px-6 lg:px-8">
+                <PeopleAlsoSearchCard 
+                    keywords={[
+                        { text: "Best Hospital in Vellore Facilities", href: "/facilities" },
+                        { text: "Modular OT hospitals near me", href: "/facilities" },
+                        { text: "24/7 ICU hospital Vellore", href: "/facilities" },
+                        { text: "Digital X-Ray cost Vellore", href: "/facilities" },
+                        { text: "128 slice CT scan hospital", href: "/facilities" },
+                        { text: "NABH accredited care Vellore", href: "/quality-accreditations" }
+                    ]}
+                />
+            </SectionContainer>
+
+            <div className="space-y-12">
+                <InternalLinkGrid type="services" title="Clinical Excellence" subtitle="Our Treatments" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
+                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
+            </div>
         </main>
     );
 }

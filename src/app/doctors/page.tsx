@@ -10,9 +10,10 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = {
-    title: "Best Doctors & Specialist Surgeons in Vellore, Tamil Nadu | Indira Hospital",
+    title: "Best Doctors in Vellore — Book Appointment with Top Specialist Surgeons | Indira Hospital",
     description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, India. Book your appointment today.",
     alternates: {
         canonical: "/doctors"
@@ -62,6 +63,19 @@ export default async function DoctorsDirectoryPage() {
             </SectionContainer>
 
             <HealthLibraryCard />
+
+            <SectionContainer className="py-24 max-w-7xl mx-auto">
+                <PeopleAlsoSearchCard
+                    keywords={[
+                        { text: "Best surgeons in Vellore", href: "/doctors" },
+                        { text: "Top specialists in Tamil Nadu", href: "/doctors" },
+                        { text: "Indira Hospital doctors list", href: "/doctors" },
+                        { text: "Doctor consultation in Vellore", href: "/doctors" },
+                        { text: "Same-day surgery specialists", href: "/doctors" },
+                        { text: "Laparoscopic surgery experts", href: "/doctors" },
+                    ]}
+                />
+            </SectionContainer>
 
             <EntityFAQs
                 entityType="hospital"

@@ -1,6 +1,8 @@
 import { SectionContainer } from "@/components/ui/section-container";
 import { Sparkles, CheckCircle2, Layout, Clock, UserCheck, ShieldCheck, Heart, Activity, Zap } from "lucide-react";
 import { Metadata } from "next";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = {
     title: "Patient Care Process | Your Journey at Indira Hospital",
@@ -46,9 +48,9 @@ export default function ProcessPage() {
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10">
                         <Layout className="w-4 h-4" /> Seamless Patient Journey
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6">
-                        Our Patient <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Care Process.</span>
+                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 uppercase italic">
+                        Our Patient <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-400">Care Process.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         From the moment you walk through our doors to your final recovery at home, every step is optimized for precision, comfort, and clinical excellence.
@@ -107,6 +109,23 @@ export default function ProcessPage() {
                     </div>
                 </div>
             </SectionContainer>
+            <SectionContainer className="mb-32 max-w-7xl mx-auto px-6 lg:px-8 mt-24">
+                <PeopleAlsoSearchCard 
+                    keywords={[
+                        { text: "Patient care journey Indira Hospital", href: "/process" },
+                        { text: "HomeCareFlow recovery system", href: "/process" },
+                        { text: "Same-day discharge surgeries Vellore", href: "/process" },
+                        { text: "Pre-auth and insurance process", href: "/patients/insurance" },
+                        { text: "Digital follow-up healthcare", href: "/process" },
+                        { text: "Clinical excellence standards India", href: "/why-choose-indira" }
+                    ]}
+                />
+            </SectionContainer>
+
+            <div className="space-y-12">
+                <InternalLinkGrid type="services" title="Clinical Excellence" subtitle="Our Treatments" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
+                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
+            </div>
         </main>
     );
 }

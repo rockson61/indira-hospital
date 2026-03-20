@@ -19,15 +19,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         return { title: 'Term Not Found' }
     }
 
+    const isGeneric = glossaryItem.definition.includes("Find expert knowledge and treatments");
+    const displayDefinition = isGeneric 
+        ? `${glossaryItem.term} is a key medical term related to ${glossaryItem.category}. Learn about our advanced care and treatment options at Indira Hospital, Vellore.`
+        : glossaryItem.definition;
+
     return {
         title: `${glossaryItem.term} | Medical Glossary | Indira Super Speciality Hospital`,
-        description: `Learn about ${glossaryItem.term} — a ${glossaryItem.category} term. ${glossaryItem.definition.substring(0, 130)}...`,
+        description: `${displayDefinition.substring(0, 155)}...`,
         robots: {
-            index: false,
-            follow: false,
+            index: !isGeneric,
+            follow: !isGeneric,
             googleBot: {
-                index: false,
-                follow: false,
+                index: !isGeneric,
+                follow: !isGeneric,
             },
         },
     }
@@ -84,7 +89,9 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
                             </div>
 
                             <p className="text-slate-600 dark:text-slate-300 text-2xl md:text-3xl leading-relaxed font-light mb-16 italic first-letter:text-6xl first-letter:font-black first-letter:text-fuchsia-600 first-letter:mr-4 first-letter:float-left first-letter:mt-2">
-                                {glossaryItem.definition}
+                                {glossaryItem.definition.includes("Find expert knowledge and treatments")
+                                    ? `${glossaryItem.term} is a critical medical concept within the field of ${glossaryItem.category}. At Indira Super Speciality Hospital, our specialists utilize advanced diagnostics and evidence-based protocols to manage conditions and procedures related to ${glossaryItem.term.toLowerCase()} for patients in Vellore and across Tamil Nadu.`
+                                    : glossaryItem.definition}
                             </p>
 
                             <div className="grid sm:grid-cols-2 gap-8 mt-16 pt-16 border-t border-slate-100 dark:border-slate-800">

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getDepartmentBySlug, getDepartments, getDoctors } from "@/lib/api";
-import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Users, GraduationCap } from "lucide-react";
+import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Users, GraduationCap, Sparkles } from "lucide-react";
 import { Stethoscope, Heart, HeartCardiogram, Baby0203m, Happy, Neurology, BloodDrop } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
@@ -14,6 +14,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
+import { SectionContainer } from "@/components/ui/section-container";
 import { siteConfig } from "@/config/site";
 
 
@@ -45,8 +47,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const department = await getDepartmentBySlug(slug).catch(() => null);
 
     if (!department) return { title: "Department Not Found" };
-    const title = department.seo_title || `Best ${department.title} Department in Vellore, Tamil Nadu | Indira Hospital`;
-    const desc = department.seo_description || `Expert ${department.title} care at Indira Super Speciality Hospital, Vellore. Leading specialists in Tamil Nadu offering advanced treatments with same-day discharge.`;
+    const title = department.seo_title || `Best ${department.title} Clinic in Vellore — Same-Day Discharge Doctors | Indira Hospital`;
+    const desc = department.seo_description || `Leading ${department.title} specialists at Indira Hospital, Vellore. Advanced clinical care, 24/7 emergency support, and same-day discharge surgeries in Tamil Nadu.`;
 
     return {
         title,
@@ -121,26 +123,37 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
             }) }} />
 
             {/* ========== HERO ========== */}
-            <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-indigo-900 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
+            <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
+                <div className="absolute inset-0 opacity-20">
                     <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                 </div>
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-20 relative z-10">
-                    <nav className="flex items-center text-sm text-indigo-200 mb-8 overflow-x-auto whitespace-nowrap">
+                
+                {/* Elite Ambient Glows */}
+                <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-24 relative z-10">
+                    <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap italic">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <Link href="/departments" className="hover:text-white transition-colors">Departments</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white font-medium">{department.title}</span>
+                        <span className="text-white font-black">{department.title}</span>
                     </nav>
 
-                    <div className="flex items-start gap-6">
-                        <div className="hidden sm:flex h-16 w-16 rounded-2xl bg-white/10 backdrop-blur items-center justify-center text-white">
-                            {iconMap[department.icon] || <Stethoscope className="h-8 w-8" />}
+                    <div className="flex items-start gap-8">
+                        <div className="hidden sm:flex h-20 w-20 rounded-[2rem] bg-white/5 backdrop-blur-3xl border border-white/10 items-center justify-center text-white shadow-2xl">
+                            {iconMap[department.icon] || <Stethoscope className="h-10 w-10" />}
                         </div>
                         <div>
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">{department.title} Specialists in Vellore, Tamil Nadu</h1>
-                            <p className="mt-4 text-lg text-indigo-100 max-w-3xl leading-relaxed">{department.short_description}</p>
+                            <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-blue-400 text-[10px] font-black uppercase tracking-[0.4em] mb-8 shadow-2xl">
+                                <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> NABH Accredited Centre of Excellence
+                            </span>
+                            <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-10">
+                                {department.title}<br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Precision Specialists in Vellore.</span>
+                            </h1>
+                            <p className="mt-8 text-xl sm:text-2xl text-indigo-100 max-w-3xl leading-relaxed font-light opacity-70 italic">{department.short_description}</p>
 
                             <div className="flex flex-wrap gap-4 mt-8">
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
@@ -224,6 +237,19 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                     </div>
                 </div>
             </div>
+
+            <SectionContainer className="py-24 max-w-7xl mx-auto">
+                <PeopleAlsoSearchCard
+                    keywords={[
+                        { text: `Best ${department.title} in Vellore`, href: `/departments/${slug}` },
+                        { text: `${department.title} specialists near me`, href: `/departments/${slug}` },
+                        { text: `${department.title} treatment cost in India`, href: `/departments/${slug}` },
+                        { text: `Indira Hospital ${department.title} reviews`, href: `/departments/${slug}` },
+                        { text: `Top doctors for ${department.title}`, href: `/departments/${slug}` },
+                        { text: `Advanced surgical care Tamil Nadu`, href: `/doctor/near-me/treat` },
+                    ]}
+                />
+            </SectionContainer>
 
             <HealthLibraryCard />
 

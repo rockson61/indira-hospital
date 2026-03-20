@@ -10,6 +10,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { defaultSeo } from "@/config/seo";
 import DynamicSEOKeywordBlock from "@/components/DynamicSEOKeywordBlock";
 import { getHospitalSchema, getWebsiteSchema } from "@/lib/schema";
+import { LocalBusinessJsonLd, OrganizationJsonLd } from 'next-seo';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -69,6 +70,51 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebsiteSchema()) }}
         />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <LocalBusinessJsonLd
+            type="Hospital"
+            name={siteConfig.name}
+            description={siteConfig.description}
+            url={siteConfig.url}
+            telephone={siteConfig.contact.phone}
+            address={{
+              streetAddress: '54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar',
+              addressLocality: 'Vellore',
+              addressRegion: 'Tamil Nadu',
+              postalCode: '632006',
+              addressCountry: 'IN',
+            }}
+            geo={{
+              latitude: 12.9344,
+              longitude: 79.1293,
+            }}
+            image={`${siteConfig.url}${siteConfig.ogImage}`}
+            openingHoursSpecification={[
+              {
+                opens: '09:00',
+                closes: '21:00',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+              },
+              {
+                opens: '10:00',
+                closes: '14:00',
+                dayOfWeek: 'Sunday',
+              },
+            ]}
+          />
+          <OrganizationJsonLd
+            url={siteConfig.url}
+            logo={`${siteConfig.url}/logo.png`}
+            contactPoint={[
+              {
+                telephone: siteConfig.contact.phone,
+                contactType: 'customer service',
+              },
+              {
+                telephone: siteConfig.contact.emergencyPhone,
+                contactType: 'emergency',
+              },
+            ]}
+          />
           <Header />
           <SpecialtyNav />
           <main className="flex-1">

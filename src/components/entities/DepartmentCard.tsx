@@ -12,10 +12,13 @@ interface DepartmentCardProps {
     department: any;
     className?: string;
     variant?: "grid" | "compact";
+    city?: string;
 }
 
-export function DepartmentCard({ department, className, variant = "grid" }: DepartmentCardProps) {
-    const href = `/doctor/near-me/treat/${department.slug || department.id}`;
+export function DepartmentCard({ department, className, variant = "grid", city }: DepartmentCardProps) {
+    const href = city 
+        ? `/doctor/near-me/${city}/${department.slug || department.id}`
+        : `/doctor/near-me/treat/${department.slug || department.id}`;
 
     return (
         <motion.div

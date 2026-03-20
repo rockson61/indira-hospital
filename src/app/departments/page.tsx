@@ -8,11 +8,12 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 import { MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-    title: "World-Class Hospital Departments in Vellore, Tamil Nadu — Indira Hospital",
+    title: "Best Hospital Departments in Vellore — Same-Day Discharge | Indira Hospital",
     description: "Explore 15+ advanced medical departments at Indira Hospital, Vellore. From cardiology to proctology, get expert care with same-day discharge options in Tamil Nadu, India.",
     alternates: {
         canonical: "/departments"
@@ -80,6 +81,19 @@ export default async function DepartmentsDirectoryPage() {
             </SectionContainer>
 
             <HealthLibraryCard />
+
+            <SectionContainer className="py-24 max-w-7xl mx-auto">
+                <PeopleAlsoSearchCard
+                    keywords={[
+                        { text: "Best hospital departments in Vellore", href: "/departments" },
+                        { text: "Multispeciality hospital Tamil Nadu", href: "/departments" },
+                        { text: "Cardiology hospital in Vellore", href: "/departments" },
+                        { text: "Best proctology hospital India", href: "/departments" },
+                        { text: "Advanced medical centres Vellore", href: "/departments" },
+                        { text: "NABH accredited hospital Tamil Nadu", href: "/departments" },
+                    ]}
+                />
+            </SectionContainer>
 
             <EntityFAQs
                 entityType="hospital"

@@ -23,11 +23,14 @@ export function Hero() {
     const [searchTerm, setSearchTerm] = useState("");
 
     return (
-        <section className="relative pt-56 pb-32 lg:pt-64 lg:pb-48 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-fuchsia-50/30 dark:bg-none dark:bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
-            {/* BACKGROUND — subtle in light, cinematic in dark */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.04] dark:opacity-30" />
-            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/5 dark:bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
-            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/5 dark:bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
+        <section className="relative pt-56 pb-32 lg:pt-64 lg:pb-56 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-fuchsia-50/30 dark:bg-none dark:bg-slate-950 rounded-b-[3rem] sm:rounded-b-[5rem]">
+            {/* BACKGROUND — cinematic in dark, medical in light */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f1e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f1e_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.06] dark:opacity-40" />
+            
+            {/* Elite Ambient Glows */}
+            <div className="absolute top-0 right-[-10%] w-[800px] h-[800px] bg-fuchsia-600/10 dark:bg-fuchsia-500/20 rounded-full hidden md:block blur-[150px] animate-pulse pointer-events-none" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[700px] h-[700px] bg-indigo-600/10 dark:bg-indigo-500/20 rounded-full hidden md:block blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-fuchsia-500/5 to-transparent blur-[100px] pointer-events-none" />
 
             <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="grid lg:grid-cols-12 gap-16 items-center">
@@ -45,11 +48,11 @@ export function Hero() {
 
                         <motion.h1
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                            className="text-6xl md:text-8xl lg:text-[7rem] font-black text-slate-900 dark:text-white leading-[1.05] tracking-tight mb-8 animate-in fade-in slide-in-from-bottom-6 fill-mode-both"
+                            transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                            className="text-6xl md:text-8xl lg:text-[8.5rem] font-black text-slate-950 dark:text-white leading-[0.9] tracking-tighter mb-10 animate-in fade-in slide-in-from-bottom-6 fill-mode-both uppercase italic"
                         >
                             Best Hospital <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500 dark:from-fuchsia-400 dark:to-pink-300">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 via-pink-500 to-indigo-600 dark:from-fuchsia-400 dark:via-white dark:to-indigo-400 drop-shadow-sm">
                                 in Vellore.
                             </span>
                         </motion.h1>
@@ -57,13 +60,13 @@ export function Hero() {
                         <motion.div
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                            className="mb-12 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
+                            className="mb-14 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
                         >
-                            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 tracking-tight">
+                            <h2 className="text-2xl md:text-4xl font-black text-slate-800 dark:text-slate-100 mb-6 tracking-tight uppercase italic opacity-90">
                                 Advanced Multispeciality & Laparoscopic Care.
                             </h2>
-                            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-light">
-                                Top-tier surgical expertise at half the metro cost. Walk in with pain. Walk out the same day. That&apos;s the Indira promise.
+                            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-light italic">
+                                Top-tier surgical expertise at half the metro cost. Walk in with pain. Walk out the same day. That&apos;s the <span className="text-fuchsia-600 dark:text-fuchsia-400 font-bold">Indira promise.</span>
                             </p>
                         </motion.div>
 
@@ -99,16 +102,16 @@ export function Hero() {
                         {/* Glassmorphic Tactical Search */}
                         <motion.div
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                            className="bg-white dark:bg-white/5 backdrop-blur-2xl p-3 rounded-[2.5rem] border border-slate-200 dark:border-white/10 flex items-center max-w-2xl relative z-20 group focus-within:border-fuchsia-500/50 transition-all shadow-xl dark:shadow-2xl"
+                            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                            className="bg-white/40 dark:bg-white/5 backdrop-blur-3xl p-4 rounded-[3rem] border border-fuchsia-500/10 dark:border-white/10 flex items-center max-w-2xl relative z-20 group focus-within:border-fuchsia-500/30 transition-all shadow-2xl dark:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] active:scale-[0.99]"
                         >
-                            <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-white/5 flex items-center justify-center ml-1 flex-shrink-0 group-focus-within:bg-fuchsia-500 transition-colors">
-                                <Search className="w-6 h-6 text-fuchsia-500 dark:text-fuchsia-400 group-focus-within:text-white transition-colors" />
+                            <div className="w-16 h-16 rounded-[1.5rem] bg-fuchsia-50 dark:bg-white/5 flex items-center justify-center ml-1 flex-shrink-0 group-focus-within:bg-fuchsia-600 transition-all duration-500 group-focus-within:scale-110">
+                                <Search className="w-7 h-7 text-fuchsia-600 dark:text-fuchsia-400 group-focus-within:text-white transition-colors" />
                             </div>
                             <input
                                 type="text"
                                 placeholder="Search by speciality or doctor name..."
-                                className="w-full bg-transparent border-none outline-none px-6 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 font-light text-xl"
+                                className="w-full bg-transparent border-none outline-none px-6 text-slate-950 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 font-medium text-xl italic"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
@@ -127,15 +130,15 @@ export function Hero() {
                     <div className="lg:col-span-5 relative h-[650px] hidden lg:block">
                         <motion.div
                             animate={{ opacity: 1, scale: 1, x: 0 }}
-                            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                            className="absolute top-0 right-0 w-full h-[550px] rounded-[4rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 z-10 group"
+                            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                            className="absolute top-0 right-0 w-full h-[580px] rounded-[4.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-white/10 z-10 group bg-slate-100 dark:bg-slate-800"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-transparent to-transparent opacity-60 z-10" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-60 z-10" />
                             <Image
                                 src="/images/hospital/Hospital view 2.webp"
                                 alt="Indira Super Speciality Hospital"
                                 fill
-                                className="object-cover transition-transform duration-[2s] group-hover:scale-105"
+                                className="object-cover transition-transform duration-[3s] group-hover:scale-110 group-hover:rotate-1"
                             />
 
                             <div className="absolute bottom-10 left-10 z-20">

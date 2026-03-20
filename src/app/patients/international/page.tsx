@@ -12,7 +12,7 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
-    title: "International Patients | Medical Tourism in India | Indira Super Speciality Hospital",
+    title: "Medical Tourism India: Best Affordable Hospital for International Patients | Indira Hospital",
     description: "Indira Super Speciality Hospital welcomes patients from around the world. High-quality medical care, dedicated international desk, and seamless travel support.",
 };
 

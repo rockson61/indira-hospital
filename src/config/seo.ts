@@ -3,8 +3,8 @@ import { siteConfig } from "./site";
 export const defaultSeo = {
     metadataBase: new URL(siteConfig.url),
     title: {
-        default: siteConfig.name,
-        template: `%s | ${siteConfig.name}`,
+        default: `${siteConfig.name} | Best Hospital in Vellore | Laser & Laparoscopic Surgery`,
+        template: `%s | ${siteConfig.name} | Vellore`,
     },
     description: siteConfig.description,
     openGraph: {

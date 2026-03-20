@@ -13,7 +13,7 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
-    title: 'Master Health Checkup Packages in Vellore, Tamil Nadu | Indira Hospital',
+    title: 'Best Master Health Checkup Packages in Vellore — Same Day Reports | Indira Hospital',
     description: 'Affordable health screening packages in Vellore, India. Master health checkups, Cardiac, Diabetic, and Executive packages at Indira Super Speciality Hospital, Tamil Nadu.',
     alternates: {
         canonical: "/health-packages"

@@ -15,7 +15,7 @@ import EntityReviews from "@/components/trust/EntityReviews";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
-    title: 'NABL Accredited Diagnostics & Lab Tests in Vellore, Tamil Nadu | Indira Hospital',
+    title: 'Best Diagnostics & Lab Tests in Vellore — Same-Day Reports | Indira Hospital',
     description: 'Book 500+ diagnostic tests at Indira Hospital, Vellore. NABL accredited labs, home sample collection, and reports under 12 hours. MRI, CT, Blood Tests in Tamil Nadu, India.',
     alternates: {
         canonical: "/diagnostics"

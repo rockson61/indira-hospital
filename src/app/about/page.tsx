@@ -7,7 +7,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "About Us | 35 Years of Clinical Excellence | Indira Super Speciality Hospital",
+    title: "Best Multi-Speciality Hospital in Vellore — 35 Years of Trust | Indira Hospital",
     description: "Established in 1988, Indira Super Speciality Hospital is the most trusted healthcare destination in Vellore, Tamil Nadu. Delivering advanced, ethical, and compassionate quaternary care.",
     keywords: ["best hospital in Vellore", "Indira Hospital history", "top multi-speciality hospital Tamil Nadu", "NABH accredited hospital Vellore"],
     openGraph: {

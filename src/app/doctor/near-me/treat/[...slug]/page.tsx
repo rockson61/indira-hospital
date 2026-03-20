@@ -10,6 +10,7 @@ import { Stethoscope, Heart, HeartCardiogram, Baby0203m, Happy, Neurology, Blood
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { SectionContainer } from "@/components/ui/section-container";
 
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { ServiceCard } from "@/components/entities/ServiceCard";
@@ -21,6 +22,7 @@ import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 
 
@@ -79,11 +81,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const lastSlug = slug[slug.length - 1];
 
+    const getSpecialistTitle = (title: string) => {
+        const lower = title.toLowerCase();
+        if (lower.includes('cardiology')) return 'Cardiologists';
+        if (lower.includes('neurology')) return 'Neurologists';
+        if (lower.includes('urology')) return 'Urologists';
+        if (lower.includes('oncology')) return 'Oncologists';
+        if (lower.includes('gynaecology') || lower.includes('obstetrics')) return 'Gynaecologists & Obstetricians';
+        if (lower.includes('orthopaedics')) return 'Orthopedicians';
+        if (lower.includes('gastroenterology')) return 'Gastroenterologists';
+        if (lower.includes('nephrology')) return 'Nephrologists';
+        if (lower.includes('general surgery')) return 'General Surgeons';
+        if (lower.includes('laparoscopic')) return 'Laparoscopic Surgeons';
+        if (lower.includes('robotic')) return 'Robotic Surgeons';
+        if (lower.includes('vascular')) return 'Vascular Surgeons';
+        if (lower.includes('general medicine')) return 'General Medicine Doctors';
+        if (lower.includes('transplant')) return 'Organ Transplant Experts';
+        if (lower.endsWith('y')) return title.slice(0, -1) + 'ists';
+        return title + ' Specialists';
+    };
+
     // Check for Treatment
     const treatment = getTreatmentBySlug(lastSlug);
     if (treatment) {
-        const title = `Best ${treatment.title} in Vellore, India | Cost & Recovery | Indira Hospital`;
-        const description = `${treatment.shortDescription} Leading ${treatment.title} specialists at Indira Hospital, Vellore. Advanced laparoscopic & laser options with same-day discharge in India.`;
+        const title = `Best ${treatment.title} Specialists in Vellore — Cost-Effective & Expert Care | Indira Hospital`;
+        const description = `${treatment.shortDescription} NABH accredited ${treatment.title} procedures at Indira Hospital, Vellore. Advanced technology, affordable costs, and same-day discharge in India.`;
         return {
             title,
             description,
@@ -108,12 +130,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
 
     // Check for Service
-    const service = await getServiceBySlug(lastSlug).catch(() => null);
+    const service = await getServiceBySlug(lastSlug).catch(() => null) as any;
     if (!service) return { title: "Page Not Found" };
 
+    const specialistTitle = getSpecialistTitle(service.title);
+    const title = service.seo_title || `Best ${specialistTitle} in Vellore — Top-Rated Specialist Clinic | Indira Hospital`;
+    const description = service.seo_description || `Searching for top ${specialistTitle.toLowerCase()} in Vellore? Indira Super Speciality Hospital offers world-class ${service.title.toLowerCase()} care, same-day appointments, and expert surgeons. Visit us today.`;
     return {
-        title: service.seo_title || `${service.title} Specialists & Procedures in Vellore, Tamil Nadu | Indira Hospital`,
-        description: service.seo_description || `${service.full_description?.replace(/<[^>]*>?/gm, '').substring(0, 140) || service.short_description} Expert ${service.title} care at Indira Hospital, India. High success rates & affordable costs.`,
+        title,
+        description,
         keywords: [service.title, "best doctor in Vellore", "same day surgery", "Tamil Nadu", "India", "Indira Hospital", "treatment cost", "surgery Vellore"],
     };
 }
@@ -255,11 +280,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             {iconMap[service.icon] || <Stethoscope className="h-8 w-8" />}
                         </div>
                         <div>
-                            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
-                                {service.title} <br className="hidden sm:block" />
-                                <span className="text-amber-400">in Vellore, Tamil Nadu</span>
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-fuchsia-500/20">
+                                <Shield className="w-3 h-3 text-amber-400" /> Advanced Treatment Centre • Vellore
+                            </span>
+                             <h1 className="text-4xl sm:text-6xl lg:text-[8.5rem] font-black tracking-tight leading-[0.9] uppercase italic mb-10">
+                                {service.title}<br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-white to-orange-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase">Centre of Excellence Vellore.</span>
                             </h1>
-                            <p className="mt-4 text-lg text-fuchsia-100 max-w-3xl leading-relaxed">{service.short_description}</p>
+                            <p className="mt-4 text-lg sm:text-xl text-fuchsia-100 max-w-2xl leading-relaxed font-medium opacity-80">{service.short_description}</p>
 
                             <div className="flex flex-wrap gap-4 mt-6">
                                 {procedures.length > 0 && (
@@ -393,17 +421,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div className="lg:col-span-1 space-y-6">
                         <div className="lg:sticky lg:top-24 space-y-6">
                             {/* Book Appointment */}
-                            <Card className="p-6 border-none shadow-lg rounded-2xl bg-gradient-to-br from-green-50 to-pink-50">
-                                <div className="text-center">
-                                    <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <MessageCircle className="w-7 h-7 text-green-600" />
+                             <Card className="p-8 border border-white/10 shadow-2xl rounded-[3rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden group/side">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-[40px] group-hover/side:bg-green-500/20 transition-colors" />
+                                <div className="relative text-center">
+                                    <div className="w-20 h-20 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover/side:scale-110 transition-transform">
+                                        <MessageCircle className="w-10 h-10 text-green-400" />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 dark:text-white text-lg">Get a Free Cost Estimate</h3>
-                                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 mb-5">No hidden charges. Get exact pricing, insurance coverage, and available dates in under 2 minutes.</p>
+                                    <h3 className="font-black text-white text-2xl tracking-tight mb-2 uppercase italic">Free Cost Estimate</h3>
+                                    <p className="text-slate-400 text-sm mt-1 mb-8 italic">No hidden charges. Get exact pricing, insurance coverage, and schedules in under 2 mins.</p>
                                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                                        className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-md text-base">
-                                        <MessageCircle className="w-5 h-5 mr-2" />
-                                        Get Free Estimate on WhatsApp
+                                        className="w-full inline-flex items-center justify-center px-8 py-5 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-xl shadow-green-500/20 text-lg uppercase tracking-widest italic group-hover/side:scale-105">
+                                        WhatsApp Now
                                     </a>
                                 </div>
                             </Card>
@@ -435,6 +463,19 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
 
             <HealthLibraryCard />
+
+            <SectionContainer className="py-24 max-w-7xl mx-auto">
+                <PeopleAlsoSearchCard
+                    keywords={[
+                        { text: `Best hospital for ${service.title} in Vellore`, href: `/doctor/near-me/treat/${slug.join('/')}` },
+                        { text: `${service.title} surgery cost in India`, href: `/doctor/near-me/treat/${slug.join('/')}` },
+                        { text: `Top ${service.title} specialists near me`, href: `/doctor/near-me/treat/${slug.join('/')}` },
+                        { text: `Advanced ${service.title} treatment`, href: `/doctor/near-me/treat/${slug.join('/')}` },
+                        { text: `Indira Hospital ${service.title} reviews`, href: `/doctor/near-me/treat/${slug.join('/')}` },
+                        { text: `Laser ${service.title} surgery vellore`, href: `/doctor/near-me/treat/${slug.join('/')}` },
+                    ]}
+                />
+            </SectionContainer>
 
             {/* ========== REVIEWS SECTION ========== */}
             <EntityReviews

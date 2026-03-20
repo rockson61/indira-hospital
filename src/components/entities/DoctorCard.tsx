@@ -14,6 +14,7 @@ interface DoctorCardProps {
     doctor: any;
     variant?: "grid" | "list" | "compact" | "featured";
     showBookButton?: boolean;
+    city?: string;
 }
 
 // Must match the slug derivation logic in doctor/[specialty]/[slug]/page.tsx generateStaticParams
@@ -22,7 +23,11 @@ function getSpecialtySlug(doctor: any): string {
     return rawDept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: DoctorCardProps) {
+export function DoctorCard({ doctor, variant = "grid", showBookButton = true, city }: DoctorCardProps) {
+    const doctorUrl = city 
+        ? `/doctor/near-me/${city}/${doctor.slug}`
+        : `/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`;
+
     const deptName = typeof doctor.department === 'string' ? doctor.department : (doctor.department?.name || '');
     const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I would like to book an appointment with ${doctor.name}.`)}`;
     const initials = doctor.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2);
@@ -36,7 +41,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                 viewport={{ once: true }}
                 transition={{ duration: 0.3 }}
             >
-                <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-soft hover:border-fuchsia-100 hover:-translate-y-0.5 transition-all">
+                <Link href={doctorUrl} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-soft hover:border-fuchsia-100 hover:-translate-y-0.5 transition-all">
                     <div className="relative w-14 h-14 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm dark:shadow-slate-900/30">
                         {doctor.image && getImageUrl(doctor.image) ? (
                             <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover" />
@@ -87,7 +92,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             <div className="flex justify-between items-start">
                                 <div>
                                     <h3 className="text-2xl font-black font-heading text-slate-900 dark:text-white group-hover:text-fuchsia-700 transition-colors tracking-tight">
-                                        <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="hover:underline">
+                                        <Link href={doctorUrl} className="hover:underline">
                                             {doctor.name}
                                         </Link>
                                     </h3>
@@ -133,7 +138,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                             <a href={whatsappUrl} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold rounded-full shadow-sm dark:shadow-slate-900/30">
                                 Book
                             </a>
-                            <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-bold rounded-full">
+                            <Link href={doctorUrl} className="flex-1 flex items-center justify-center px-5 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-bold rounded-full">
                                 Profile
                             </Link>
                         </div>
@@ -170,7 +175,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
 
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                         <h3 className="text-lg font-black font-heading leading-tight tracking-tight drop-shadow-md">
-                            <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`} className="before:absolute before:inset-0" aria-label={`View profile of ${doctor.name}`}>
+                            <Link href={doctorUrl} className="before:absolute before:inset-0" aria-label={`View profile of ${doctor.name}`}>
                                 {doctor.name}
                             </Link>
                         </h3>
@@ -207,7 +212,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true }: 
                                 <MessageCircle className="w-3.5 h-3.5" /> Book
                             </a>
                         )}
-                        <Link href={`/doctor/${getSpecialtySlug(doctor)}/${doctor.slug}`}
+                        <Link href={doctorUrl}
                             className="relative z-20 flex-1 flex items-center justify-center gap-1 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-[12px] uppercase tracking-wider font-bold py-2.5 rounded-xl transition-all border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600"
                             aria-label={`View full profile of ${doctor.name}`}
                         >

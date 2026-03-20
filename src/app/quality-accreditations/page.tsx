@@ -3,7 +3,7 @@ import { ShieldCheck, Award, CheckCircle2, Star, Sparkles, Building2 } from "luc
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Quality & Accreditations | NABH Certified Indira Hospital",
+    title: "NABH Accredited Hospital in Vellore — Quality & Patient Safety | Indira Hospital",
     description: "Indira Super Speciality Hospital is committed to high standards of patient safety and clinical excellence. Learn about our NABH accreditation and quality benchmarks.",
 };
 
@@ -26,6 +26,7 @@ const certifications = [
 ];
 
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export default function QualityPage() {
     return (
@@ -39,9 +40,9 @@ export default function QualityPage() {
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-emerald-500/30">
                         <ShieldCheck className="w-4 h-4 animate-pulse" /> Excellence in Healthcare
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[7rem] font-black text-white tracking-tight leading-[0.95] mb-8 max-w-5xl mx-auto">
-                        Commitment to <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-300">Quality.</span>
+                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 max-w-6xl mx-auto uppercase italic">
+                        Commitment to <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-white to-cyan-400">Quality.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         At Indira Hospital, quality is not just a certification—it&apos;s a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.
@@ -113,7 +114,20 @@ export default function QualityPage() {
                 </div>
             </section>
 
-            <div className="border-t border-slate-200 dark:border-slate-800 pt-32">
+            <SectionContainer className="mb-32 max-w-7xl mx-auto px-6 lg:px-8 mt-24">
+                <PeopleAlsoSearchCard 
+                    keywords={[
+                        { text: "NABH accredited hospital Vellore", href: "/quality-accreditations" },
+                        { text: "NABL certified lab near me", href: "/quality-accreditations" },
+                        { text: "Hospital clinical success rates India", href: "/quality-accreditations" },
+                        { text: "Patient safety standards Tamil Nadu", href: "/quality-accreditations" },
+                        { text: "Best multi-speciality hospital awards", href: "/quality-accreditations" },
+                        { text: "NABH nursing standards guide", href: "/quality-accreditations" }
+                    ]}
+                />
+            </SectionContainer>
+
+            <div className="border-t border-slate-200 dark:border-slate-800 pt-32 space-y-12">
                 <InternalLinkGrid type="diagnostics" title="Diagnostic Quality" subtitle="NABL Accredited Lab" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
                 <InternalLinkGrid type="departments" title="Clinical Specialities" subtitle="NABH Standards" limit={8} className="mt-16 bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border" />
             </div>

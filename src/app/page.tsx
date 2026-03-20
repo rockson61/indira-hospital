@@ -110,7 +110,6 @@ const SemanticLinkBlock = () => (
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
-      <JsonLdSchema type="hospital" />
       <Hero />
       <StatsBanner />
 
@@ -230,9 +229,9 @@ export default function Home() {
               <Sparkles className="w-10 h-10 text-fuchsia-300" />
             </div>
 
-            <h2 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-black text-white mb-10 tracking-tight leading-[1.05]">
+            <h2 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black text-white mb-10 tracking-tighter leading-[0.9] uppercase italic grayscale group-hover/cta:grayscale-0 transition-all duration-1000">
               {HOME_PAGE_CONTENT.CTA_HEADING.split(' ').slice(0, -1).join(' ')} <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-400">
                 {HOME_PAGE_CONTENT.CTA_HEADING.split(' ').pop()}
               </span>
             </h2>

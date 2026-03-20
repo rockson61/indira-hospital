@@ -5105,7 +5105,7 @@ export const GLOSSARY_DATA: GlossaryTerm[] = [
     },
     {
         term: "Precision Medicine",
-        definition: "Find expert knowledge and treatments for Precision Medicine at Indira Hospital.",
+        definition: "An innovative approach to disease treatment and prevention that takes into account individual variability in genes, environment, and lifestyle for each person, allowing doctors to select treatments that are most likely to help specific patients.",
         category: "General",
         relatedService: "general-medicine",
         relatedServiceTitle: "General Medicine"

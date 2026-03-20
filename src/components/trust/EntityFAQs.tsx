@@ -30,15 +30,35 @@ export default async function EntityFAQs({
     }
 
     return (
-        <section className={cn("bg-[#FAFAFA] dark:bg-slate-950 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-700", className)}>
-            <div className="max-w-7xl mx-auto">
-                <FAQSection
-                    title={title || `Frequently Asked Questions about ${entityName}`}
-                    description={description || `Find answers to common questions about ${entityName} at Indira Super Speciality Hospital.`}
-                    faqs={faqs.map((f: any) => ({ question: f.question, answer: f.answer }))}
-                    category={entityType}
-                />
-            </div>
-        </section>
+        <>
+            {/* FAQ SCHEMAS for Rich Result Snippets */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map((f: any) => ({
+                            "@type": "Question",
+                            "name": f.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": f.answer.replace(/<[^>]*>?/gm, '') // Strip HTML for schema
+                            }
+                        }))
+                    })
+                }}
+            />
+            <section className={cn("bg-[#FAFAFA] dark:bg-slate-950 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-700", className)}>
+                <div className="max-w-7xl mx-auto">
+                    <FAQSection
+                        title={title || `Frequently Asked Questions about ${entityName}`}
+                        description={description || `Find answers to common questions about ${entityName} at Indira Super Speciality Hospital.`}
+                        faqs={faqs.map((f: any) => ({ question: f.question, answer: f.answer }))}
+                        category={entityType}
+                    />
+                </div>
+            </section>
+        </>
     );
 }

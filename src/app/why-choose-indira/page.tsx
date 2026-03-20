@@ -1,9 +1,10 @@
-import { SectionContainer } from "@/components/ui/section-container";
-import { Sparkles, Heart, Zap, Shield, Users, Clock, Target } from "lucide-react";
 import { Metadata } from "next";
+import { Sparkles, Heart, Zap, Shield, Users, Clock, Target } from "lucide-react";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
+import { SectionContainer } from "@/components/ui/section-container";
 
 export const metadata: Metadata = {
     title: "Why Choose Indira Hospital | Our Values & Mission",
@@ -45,9 +46,9 @@ export default function WhyChoosePage() {
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                         <Sparkles className="w-4 h-4 animate-pulse" /> The Indira Difference
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[7rem] font-black text-white tracking-tight leading-[0.95] mb-8 max-w-5xl mx-auto">
-                        Why Patients <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Trust Us.</span>
+                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 max-w-6xl mx-auto uppercase italic">
+                        Why Patients <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Trust Us.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         Founded on the principle of elite, super-speciality care with a compassionate heart. We combine world-class infrastructure with personalized attention that puts you first.
@@ -146,7 +147,20 @@ export default function WhyChoosePage() {
                 </div>
             </section>
 
-            <div className="border-t border-slate-200 dark:border-slate-800 pt-32">
+            <SectionContainer className="mb-32 max-w-7xl mx-auto px-6 lg:px-8 mt-24">
+                <PeopleAlsoSearchCard 
+                    keywords={[
+                        { text: "Why patients choose Indira Hospital", href: "/why-choose-indira" },
+                        { text: "Indira Hospital clinical success rate", href: "/why-choose-indira" },
+                        { text: "Best multi-speciality hospital values", href: "/why-choose-indira" },
+                        { text: "Patient stories Indira Hospital", href: "/why-choose-indira" },
+                        { text: "NABH accredited hospital standard", href: "/quality-accreditations" },
+                        { text: "Award winning doctors in Tamil Nadu", href: "/doctors" }
+                    ]}
+                />
+            </SectionContainer>
+
+            <div className="border-t border-slate-200 dark:border-slate-800 pt-32 space-y-12">
                 <InternalLinkGrid type="health-packages" title="Preventive Wellness" subtitle="Indira Health First" limit={8} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
                 <InternalLinkGrid type="diagnostics" title="Diagnostic Excellence" subtitle="NABL Accredited Lab" limit={12} className="mt-16 bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border" />
             </div>

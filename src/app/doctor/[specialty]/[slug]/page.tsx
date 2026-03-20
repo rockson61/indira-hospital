@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { getDoctors, getDepartments } from "@/lib/api";
-import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, GraduationCap, Settings, MessageCircle, Quote, Activity, Tag } from "lucide-react";
+import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, GraduationCap, Settings, MessageCircle, Quote, Activity, Tag, Sparkles } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import EntityReviews from "@/components/trust/EntityReviews";
@@ -13,6 +13,8 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { HospitalCard } from "@/components/entities/HospitalCard";
 import { DoctorAvatar } from "@/components/entities/DoctorAvatar";
 import { LocationCard } from "@/components/entities/LocationCard";
+import { SectionContainer } from "@/components/ui/section-container";
+import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
@@ -60,8 +62,8 @@ export async function generateMetadata({ params }: { params: Promise<{ specialty
     const doc = doctors.find((d: any) => d.slug === slug);
     if (!doc) return { title: "Doctor Not Found" };
     const deptName = typeof doc.department === 'string' ? doc.department : doc.department?.name || 'Specialist';
-    const title = doc.seo_title || `${doc.name} — Best ${deptName} in Vellore, Tamil Nadu | Indira Hospital`;
-    const desc = doc.seo_description || doc.bio?.substring(0, 155) || `Consult with ${doc.name}, a leading ${deptName} at Indira Super Speciality Hospital, Vellore. Expert healthcare in Tamil Nadu with advanced treatment options.`;
+    const title = doc.seo_title || `Best ${deptName} in Vellore — Dr. ${doc.name} | Same-Day Discharge | Indira Hospital`;
+    const desc = doc.seo_description || doc.bio?.substring(0, 155) || `Consult with Dr. ${doc.name}, a leading ${deptName} at Indira Super Speciality Hospital, Vellore. NABH accredited care with advanced 24/7 laser and laparoscopic treatment.`;
     return {
         title,
         description: desc,
@@ -112,6 +114,7 @@ export default async function DoctorProfileRoute({
     );
 
     const initials = currDoctor.name.split(" ").map((n: string) => n[0]).join("").slice(0, 2).toUpperCase();
+    const deptName = typeof currDoctor.department === 'string' ? currDoctor.department : currDoctor.department?.name || currDoctor.specialty || 'Specialist';
 
     return (
         <div className="bg-[#FAFAFA] dark:bg-slate-950 min-h-screen">
@@ -155,9 +158,18 @@ export default async function DoctorProfileRoute({
                                     className="w-24 h-24 md:w-32 md:h-32 rounded-[2rem]"
                                 />
                                 <div>
-                                    <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">
-                                        {currDoctor.name} — {currDoctor.specialty || (typeof currDoctor.department === 'string' ? currDoctor.department : currDoctor.department?.name)} in Vellore
-                                    </h1>
+                                    <div className="mb-6">
+                                        <h1 className="text-sm md:text-base font-bold text-fuchsia-300 uppercase tracking-[0.2em] mb-3 flex items-center gap-2 drop-shadow-sm">
+                                            <Sparkles className="w-4 h-4 text-amber-400 fill-amber-400/20" />
+                                            Best {deptName} Doctors in Vellore
+                                        </h1>
+                                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.9] text-white uppercase italic mb-4">
+                                            {currDoctor.name}
+                                        </h2>
+                                        <p className="text-xl md:text-2xl text-fuchsia-300 mt-2 font-bold opacity-90 tracking-tight">
+                                            {currDoctor.designation || currDoctor.specialty || deptName}
+                                        </p>
+                                    </div>
 
                                     {/* Keyword Tags */}
                                     {currDoctor.specialties && currDoctor.specialties.length > 0 && (
@@ -492,6 +504,19 @@ export default async function DoctorProfileRoute({
                 entitySlug={slug}
                 title={`Common Questions about ${currDoctor.name}`}
             />
+
+            <SectionContainer className="py-24 max-w-7xl mx-auto">
+                <PeopleAlsoSearchCard
+                    keywords={[
+                        { text: `Best ${deptName} in Vellore`, href: `/doctor/near-me` },
+                        { text: `${currDoctor.name} reviews`, href: `/doctor/${specialty}/${slug}` },
+                        { text: `${deptName} treatment cost`, href: `/departments/${getDoctorSpecialtySlug(currDoctor)}` },
+                        { text: `Indira Hospital ${currDoctor.name} appointment`, href: `/book-appointment?doctor=${slug}` },
+                        { text: `Top specialists in Tamil Nadu`, href: `/doctor/near-me` },
+                        { text: `Laser & Laparoscopic surgery Vellore`, href: `/doctor/near-me/treat` },
+                    ]}
+                />
+            </SectionContainer>
 
             <EntityReviews
                 entityType="doctor"

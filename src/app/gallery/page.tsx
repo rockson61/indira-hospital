@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
+import GalleryClient from "./GalleryClient";
 
 export const metadata: Metadata = {
     title: "Photo Gallery | Indira Super Speciality Hospital",
@@ -40,7 +41,7 @@ export default function GalleryPage() {
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-indigo-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_40px_-5px_rgba(99,102,241,0.3)]">
                         <Camera className="w-4 h-4" /> Visual Hospital Tour
                     </div>
-                    <h1 className="text-5xl sm:text-7xl lg:text-[7rem] font-black text-white tracking-tighter leading-[0.9] mb-8">
+                    <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black text-white tracking-tight leading-[0.9] mb-10 uppercase italic">
                         Experience Our <br className="hidden sm:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-white to-fuchsia-400">World-Class Mastery.</span>
                     </h1>
@@ -52,43 +53,7 @@ export default function GalleryPage() {
 
             {/* ENHANCED GALLERY GRID */}
             <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-24 sm:-mt-32 relative z-20 pt-4 mb-24">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[320px]">
-                    {GALLERY_IMAGES.map((image, index) => (
-                        <div
-                            key={image.id}
-                            className={`group relative overflow-hidden rounded-[3rem] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-700 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 ${index === 0 ? 'sm:col-span-2 sm:row-span-2' : ''}`}
-                        >
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                fill
-                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                            />
-                            
-                            {/* Elite Overlay */}
-                            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
-                                <span className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.3em] mb-3">
-                                    {image.category}
-                                </span>
-                                <h3 className="text-white font-black text-2xl tracking-tight leading-tight mb-2 uppercase italic">{image.alt}</h3>
-                                <div className="h-1 w-12 bg-indigo-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 delay-100" />
-                            </div>
-
-                            {/* Always-visible category chip (Premium Version) */}
-                            <div className="absolute top-6 left-6 z-20">
-                                <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl text-white text-[10px] font-black uppercase tracking-widest border border-white/10 shadow-xl">
-                                    {image.category}
-                                </span>
-                            </div>
-
-                            <div className="absolute top-6 right-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white">
-                                    <Sparkles className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <GalleryClient images={GALLERY_IMAGES} />
 
                 <div className="text-center mt-20">
                     <Link

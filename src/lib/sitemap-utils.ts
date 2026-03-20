@@ -76,7 +76,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
         case 'location-departments':
             return tamilNaduLocations.flatMap((loc) =>
                 (departments as any[]).map((dept: any) => ({
-                    url: `${baseUrl}/doctor/near-me/${loc.slug}/departments/${dept.slug}`,
+                    url: `${baseUrl}/doctor/near-me/${loc.slug}/${dept.slug}`,
                     lastModified: new Date(),
                     changeFrequency: 'weekly' as const,
                     priority: 0.75,
@@ -86,7 +86,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
         case 'location-treatments':
             return tamilNaduLocations.flatMap((loc) =>
                 (services as any[]).map((serv: any) => ({
-                    url: `${baseUrl}/doctor/near-me/${loc.slug}/treat/${serv.slug || serv.id}`,
+                    url: `${baseUrl}/doctor/near-me/${loc.slug}/${serv.slug || serv.id}`,
                     lastModified: new Date(),
                     changeFrequency: 'weekly' as const,
                     priority: 0.75,
@@ -96,7 +96,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
         case 'location-doctors':
             return tamilNaduLocations.flatMap((loc) =>
                 (doctors as any[]).map((doc: any) => ({
-                    url: `${baseUrl}/doctor/near-me/${loc.slug}/doctors/${doc.slug}`,
+                    url: `${baseUrl}/doctor/near-me/${loc.slug}/${doc.slug}`,
                     lastModified: new Date(),
                     changeFrequency: 'weekly' as const,
                     priority: 0.75,

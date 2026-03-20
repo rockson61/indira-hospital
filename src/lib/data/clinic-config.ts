@@ -97,28 +97,28 @@ export const insurancePartners = [
 export const clinicEquipment = [
     {
         id: 'xray',
-        title: 'Digital X-Ray',
-        description: 'Advanced digital radiography for high-resolution imaging with minimal radiation exposure.',
+        title: 'Digital X-Ray & Imaging',
+        description: 'Advanced high-resolution digital radiography with ultra-low radiation protocols and instant PACS integration.',
     },
     {
         id: 'ct-scan',
-        title: 'USG / CT Scan',
-        description: 'High-speed 128-slice CT and advanced ultrasound mapping for precise diagnostics.',
+        title: '128-Slice CT & Advanced USG',
+        description: 'Elite diagnostics featuring 128-slice CT for sub-millimeter precision and high-definition 4D ultrasound mapping.',
     },
     {
         id: 'dialysis',
-        title: 'Dialysis Facility',
-        description: 'Modern renal support unit providing 24/7 life-sustaining dialysis treatments.',
+        title: '24/7 Renal Dialysis Unit',
+        description: 'Premier life-support dialysis facility with dual stage RO water filtration and dedicated clinical supervision.',
     },
     {
         id: 'ot',
-        title: 'Modular OTs',
-        description: 'State-of-the-art modular operating theatres with Hepa-filters for sterile surgical environments.',
+        title: 'Modular OTs (Hepa-Filtered)',
+        description: 'State-of-the-art modular operating theatres designed with Hepa-filters for absolute sterility during complex surgeries.',
     },
     {
         id: 'icu',
-        title: '24 Hrs ICU',
-        description: 'Fully equipped intensive care units with advanced life support and continuous monitoring.',
+        title: 'Elite 24/7 Critical Care',
+        description: 'Level-3 Intensive Care Units with centralized monitoring, advanced mechanical ventilation, and one-to-one nursing.',
     },
 ];
 

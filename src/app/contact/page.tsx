@@ -7,7 +7,7 @@ import { Metadata } from "next";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
-    title: "Contact Us | Multi-Speciality Care in Vellore | Indira Hospital",
+    title: "Contact Best Hospital in Vellore — 24/7 Emergency & Appointments | Indira Hospital",
     description: "Get in touch with Indira Super Speciality Hospital, Vellore. Available 24/7 for appointments, emergency trauma care, and healthcare inquiries. Contact our expert team today.",
     alternates: {
         canonical: "/contact"

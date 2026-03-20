@@ -42,7 +42,24 @@ interface MedicalProcedureSchemaProps {
     preparation?: string;
 }
 
-type JsonLdSchemaProps = HospitalSchemaProps | MedicalClinicSchemaProps | ItemListSchemaProps | PhysicianSchemaProps | BreadcrumbSchemaProps | MedicalProcedureSchemaProps;
+interface ArticleSchemaProps {
+    type: "article";
+    name: string;
+    description: string;
+    url: string;
+    image?: string;
+    author?: string;
+    datePublished?: string;
+}
+
+type JsonLdSchemaProps = 
+    | HospitalSchemaProps 
+    | MedicalClinicSchemaProps 
+    | ItemListSchemaProps 
+    | PhysicianSchemaProps 
+    | BreadcrumbSchemaProps 
+    | MedicalProcedureSchemaProps
+    | ArticleSchemaProps;
 
 export function JsonLdSchema(props: JsonLdSchemaProps) {
     let schema: Record<string, any>;
@@ -135,6 +152,28 @@ export function JsonLdSchema(props: JsonLdSchemaProps) {
                 name: siteConfig.name,
                 url: siteConfig.url,
             },
+        };
+    } else if (props.type === "article") {
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: props.name,
+            description: props.description,
+            url: `${siteConfig.url}${props.url}`,
+            image: props.image || `${siteConfig.url}/og-image.jpg`,
+            author: {
+                "@type": "Person",
+                name: props.author || siteConfig.name,
+            },
+            publisher: {
+                "@type": "Hospital",
+                name: siteConfig.name,
+                logo: {
+                    "@type": "ImageObject",
+                    url: `${siteConfig.url}/logo.png`,
+                },
+            },
+            datePublished: props.datePublished || new Date().toISOString(),
         };
     } else if (props.type === "medicalProcedure") {
         schema = {
