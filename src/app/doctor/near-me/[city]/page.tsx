@@ -108,7 +108,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         <span className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.4em] mb-10 shadow-2xl">
                             <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Serving Patients from {location.name}
                         </span>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black mb-12 tracking-tighter leading-[0.9] uppercase italic group">
+                        <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black mb-12 tracking-tighter leading-[0.9] uppercase italic group">
                             Best Hospital<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-pink-300">Near {location.name}.</span>
                         </h1>

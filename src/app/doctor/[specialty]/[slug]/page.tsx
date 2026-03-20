@@ -169,7 +169,7 @@ export default async function DoctorProfileRoute({
                                             <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
                                             Best {deptName} Doctor in Vellore
                                         </h1>
-                                        <h2 className="text-5xl sm:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] text-white uppercase italic mb-8">
+                                        <h2 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] text-white uppercase italic mb-8">
                                             {currDoctor.name}
                                         </h2>
                                         <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">
