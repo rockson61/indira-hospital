@@ -40,111 +40,122 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
     const waLink = waUrl || WA_DEFAULT;
 
     return (
-        <section className={`${className}`}>
+        <section className={`${className} relative`}>
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
                 <div>
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-fuchsia-100 dark:bg-fuchsia-950 rounded-full text-fuchsia-700 dark:text-fuchsia-300 text-xs font-bold uppercase tracking-wider mb-3">
-                        ⭐ Most Requested Surgeries
+                    <div className="inline-flex items-center gap-3 px-5 py-2 bg-fuchsia-50 dark:bg-white/5 rounded-full border border-fuchsia-100 dark:border-white/10 text-fuchsia-600 dark:text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.3em] mb-4 shadow-sm animate-pulse">
+                        ⭐ Most Requested Elite Surgeries
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white leading-tight">
-                        Proctology &amp; Laparoscopic Surgery<br />
-                        <span className="text-fuchsia-600 font-semibold text-xl">{locationLabel}</span>
+                    <h2 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] uppercase italic tracking-tighter">
+                        Proctology & Laparoscopic<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-600 dark:from-fuchsia-400 dark:to-indigo-300">{locationLabel}</span>
                     </h2>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-2 max-w-xl">
-                        Indira Hospital is a pioneer in laser proctology and minimally invasive laparoscopic surgery — offering same-day discharge, stitchless procedures, and 60–80% cost savings vs metro hospitals.
+                    <p className="text-slate-500 dark:text-slate-400 text-base mt-4 max-w-2xl font-light italic">
+                        Indira Hospital is a pioneer in laser proctology and minimally invasive laparoscopic surgery — offering same-day discharge, stitchless procedures, and world-class care at half the metro cost.
                     </p>
                 </div>
                 <Link href={`/doctor/near-me/treat/${PARENT_SLUG}`}
-                    className="flex-shrink-0 inline-flex items-center gap-2 text-sm text-fuchsia-600 hover:text-fuchsia-700 font-bold transition-colors whitespace-nowrap">
-                    View all surgeries <ArrowRight className="w-4 h-4" />
+                    className="group/all flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-white/5 text-white dark:text-indigo-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all hover:bg-fuchsia-600 dark:hover:bg-fuchsia-500 hover:text-white whitespace-nowrap shadow-xl">
+                    View all surgeries <ArrowRight className="w-4 h-4 group-hover/all:translate-x-1 transition-transform" />
                 </Link>
             </div>
 
-            {/* PROCTOLOGY CARD */}
-            <div className="mb-6">
-                <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-xl bg-red-100 dark:bg-red-950 flex items-center justify-center text-red-500 text-sm font-black">✚</div>
-                    <div>
-                        <h3 className="font-black text-gray-900 dark:text-white text-base">Laser Proctology — Piles, Fistula &amp; Fissure</h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Painless · Bloodless · Stitchless · Same-Day Discharge</p>
+            <div className="grid lg:grid-cols-2 gap-8">
+                {/* PROCTOLOGY CARD */}
+                <div className="bg-white/40 dark:bg-white/5 backdrop-blur-3xl p-8 rounded-[3rem] border border-slate-100 dark:border-white/10 shadow-2xl relative overflow-hidden group/procto">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-[40px]" />
+                    <div className="flex items-center gap-5 mb-8 relative z-10">
+                        <div className="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-950/30 border border-red-100 dark:border-red-900/40 flex items-center justify-center text-red-500 shadow-inner group-hover/procto:scale-110 transition-transform">
+                            <span className="text-2xl font-black">✚</span>
+                        </div>
+                        <div>
+                            <h3 className="font-black text-slate-900 dark:text-white text-xl uppercase italic tracking-tight mb-1">Laser Proctology</h3>
+                            <p className="text-xs text-red-600 dark:text-red-400 font-bold tracking-widest uppercase">Piles • Fistula • Fissure • Sinus</p>
+                        </div>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4 relative z-10">
+                        {PROCTOLOGY_TREATMENTS.map((t) => (
+                            <Link key={t.slug}
+                                href={`/doctor/near-me/treat/${PARENT_SLUG}/${t.slug}`}
+                                className="group/item relative flex flex-col gap-3 p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 rounded-3xl shadow-sm hover:shadow-xl hover:border-red-200 dark:hover:border-red-900/50 transition-all overflow-hidden h-full">
+                                <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-transparent dark:from-red-950/10 opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-white/5 flex items-center justify-center text-xl shadow-inner group-hover/item:bg-red-500 group-hover/item:text-white transition-all">
+                                            {t.icon}
+                                        </div>
+                                        <span className="text-[8px] font-black px-3 py-1 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400 rounded-full uppercase tracking-tighter">{t.tag}</span>
+                                    </div>
+                                    <p className="font-black text-slate-900 dark:text-white text-sm leading-tight mb-2 group-hover/item:text-red-700 dark:group-hover/item:text-red-400 transition-colors uppercase italic tracking-tight">{t.name}</p>
+                                    <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium italic opacity-80">{t.benefit}</p>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                    {PROCTOLOGY_TREATMENTS.map((t) => (
-                        <Link key={t.slug}
-                            href={`/doctor/near-me/treat/${PARENT_SLUG}/${t.slug}`}
-                            className="group relative flex flex-col gap-2 p-4 bg-white dark:bg-slate-900 border border-red-100 dark:border-red-900/30 rounded-2xl shadow-sm hover:shadow-md hover:border-red-300 dark:hover:border-red-700 transition-all overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-transparent dark:from-red-950/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="relative z-10">
-                                <div className="flex items-center justify-between mb-2">
-                                    <span className="text-xl">{t.icon}</span>
-                                    <span className="text-[10px] font-bold px-2 py-0.5 bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 rounded-full">{t.tag}</span>
-                                </div>
-                                <p className="font-bold text-gray-900 dark:text-white text-sm leading-tight mb-1 group-hover:text-red-700">{t.name}</p>
-                                <p className="text-xs text-gray-500 dark:text-gray-400">{t.benefit}</p>
-                                <div className="flex items-center gap-1 mt-2 text-xs text-red-600 dark:text-red-400 font-semibold">
-                                    Learn more <ArrowRight className="w-3 h-3" />
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </div>
 
-            {/* LAPAROSCOPY CARD */}
-            <div className="mb-8">
-                <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-xl bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-blue-500 text-sm font-black">🔬</div>
-                    <div>
-                        <h3 className="font-black text-gray-900 dark:text-white text-base">Laparoscopic &amp; Minimally Invasive Surgery</h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Keyhole technique · Less pain · Faster recovery · Smaller scars</p>
+                {/* LAPAROSCOPY CARD */}
+                <div className="bg-white/40 dark:bg-white/5 backdrop-blur-3xl p-8 rounded-[3rem] border border-slate-100 dark:border-white/10 shadow-2xl relative overflow-hidden group/laparo">
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/5 rounded-full blur-[40px]" />
+                    <div className="flex items-center gap-5 mb-8 relative z-10">
+                        <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 flex items-center justify-center text-blue-500 shadow-inner group-hover/laparo:scale-110 transition-transform">
+                            <span className="text-2xl font-black">🔬</span>
+                        </div>
+                        <div>
+                            <h3 className="font-black text-slate-900 dark:text-white text-xl uppercase italic tracking-tight mb-1">Laparoscopic Surgery</h3>
+                            <p className="text-xs text-blue-600 dark:text-blue-400 font-bold tracking-widest uppercase">Keyhole • Scarless • Rapid Recovery</p>
+                        </div>
                     </div>
-                </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                    {LAPAROSCOPY_TREATMENTS.map((t) => (
-                        <Link key={t.slug}
-                            href={`/doctor/near-me/treat/${PARENT_SLUG}/${t.slug}`}
-                            className="group relative flex flex-col gap-2 p-4 bg-white dark:bg-slate-900 border border-blue-100 dark:border-blue-900/30 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700 transition-all overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-950/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="relative z-10">
-                                <div className="flex items-center justify-between mb-2">
-                                    <span className="text-xl">{t.icon}</span>
-                                    <span className="text-[10px] font-bold px-2 py-0.5 bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 rounded-full">{t.tag}</span>
+                    <div className="grid sm:grid-cols-2 gap-4 relative z-10">
+                        {LAPAROSCOPY_TREATMENTS.map((t) => (
+                            <Link key={t.slug}
+                                href={`/doctor/near-me/treat/${PARENT_SLUG}/${t.slug}`}
+                                className="group/item relative flex flex-col gap-3 p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 rounded-3xl shadow-sm hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-900/50 transition-all overflow-hidden h-full">
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-950/10 opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-white/5 flex items-center justify-center text-xl shadow-inner group-hover/item:bg-blue-500 group-hover/item:text-white transition-all">
+                                            {t.icon}
+                                        </div>
+                                        <span className="text-[8px] font-black px-3 py-1 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 rounded-full uppercase tracking-tighter">{t.tag}</span>
+                                    </div>
+                                    <p className="font-black text-slate-900 dark:text-white text-sm leading-tight mb-2 group-hover/item:text-blue-700 dark:group-hover/item:text-blue-400 transition-colors uppercase italic tracking-tight">{t.name}</p>
+                                    <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium italic opacity-80">{t.benefit}</p>
                                 </div>
-                                <p className="font-bold text-gray-900 dark:text-white text-sm leading-tight mb-1 group-hover:text-blue-700">{t.name}</p>
-                                <p className="text-xs text-gray-500 dark:text-gray-400">{t.benefit}</p>
-                                <div className="flex items-center gap-1 mt-2 text-xs text-blue-600 dark:text-blue-400 font-semibold">
-                                    Learn more <ArrowRight className="w-3 h-3" />
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </div>
 
             {/* USP Strip */}
-            <div className="bg-gradient-to-r from-fuchsia-50 to-red-50/50 dark:from-fuchsia-950/40 dark:to-red-950/30 rounded-2xl p-5 border border-fuchsia-100 dark:border-fuchsia-900/30">
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 flex-1">
+            <div className="mt-12 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-[2.5rem] p-8 border border-white/10 shadow-2xl relative overflow-hidden group/usp">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 rounded-full blur-[60px]" />
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-1">
                         {[
                             "Same-day discharge for most proctology cases",
                             "HD Laparoscopy — 4K vision, precise cuts",
                             "Diode laser technology — minimal bleeding",
                             "60–80% cheaper than metro hospitals",
                         ].map((pt) => (
-                            <div key={pt} className="flex items-start gap-2">
-                                <CheckCircle2 className="w-4 h-4 text-fuchsia-500 flex-shrink-0 mt-0.5" />
-                                <p className="text-xs text-gray-700 dark:text-gray-300 font-medium">{pt}</p>
+                            <div key={pt} className="flex items-start gap-3 group/pt">
+                                <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover/pt:bg-fuchsia-500 transition-all">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-fuchsia-400 group-hover:text-white transition-colors" />
+                                </div>
+                                <p className="text-xs text-indigo-100 font-bold uppercase tracking-tight leading-relaxed italic opacity-80">{pt}</p>
                             </div>
                         ))}
                     </div>
                     <a href={waLink} target="_blank" rel="noopener noreferrer"
-                        className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all shadow-sm text-sm whitespace-nowrap">
-                        <MessageCircle className="w-4 h-4" /> Book Now
+                        className="group/wa flex-shrink-0 inline-flex items-center gap-3 px-10 py-5 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-xl shadow-green-500/25 text-sm uppercase tracking-widest group-hover/wa:scale-105 active:scale-95">
+                        <MessageCircle className="w-6 h-6 group-hover/wa:rotate-12 transition-transform" /> 
+                        Claim Free Consultation
                     </a>
                 </div>
             </div>
+        </section>
         </section>
     );
 }
