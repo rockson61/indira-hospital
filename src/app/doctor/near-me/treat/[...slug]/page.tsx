@@ -493,7 +493,31 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
             <HealthLibraryCard />
 
-            <SectionContainer className="py-24 max-w-7xl mx-auto">
+            {/* ========== DEEP SEO HIERARCHY (H4, H5, H6) ========== */}
+            <SectionContainer className="py-12 max-w-4xl mx-auto text-center border-t border-slate-100 dark:border-slate-800/50">
+                <div className="space-y-10">
+                    <div>
+                        <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-3">Comprehensive {service.title} Care in Vellore, Tamil Nadu</h4>
+                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            At Indira Hospital, our multidisciplinary approach to <strong>{service.title}</strong> leverages modern medical protocols, ensuring you receive the highest standard of advanced clinical care locally in Vellore. We merge <strong>advanced technology</strong> with compassionate treatment.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-2">State-of-the-Art Facilities for {service.title}</h5>
+                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Equipped with ultra-sterile operation theaters and specialized ICUs, our infrastructure is designed to handle both routine and complex <strong>{service.title}</strong> interventions safely. We strictly maintain <strong>NABH accredited</strong> hygiene and safety standards.
+                        </p>
+                    </div>
+                    <div>
+                        <h6 className="text-[17px] font-semibold text-slate-700 dark:text-slate-300 mb-2">Why Consult Our {service.title} Specialists?</h6>
+                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Our team consists of the <strong>Best doctors</strong> and the <strong>Best surgeons</strong> across Tamil Nadu, offering personalized diagnostics and <strong>affordable cost</strong> treatment plans. From initial consultation to <strong>same-day discharge</strong> capabilities, your health is our priority.
+                        </p>
+                    </div>
+                </div>
+            </SectionContainer>
+
+            <SectionContainer className="py-16 max-w-7xl mx-auto">
                 <PeopleAlsoSearchCard
                     keywords={[
                         { text: `Best hospital for ${service.title} in Vellore`, href: `/doctor/near-me/treat/${slug.join('/')}` },
