@@ -44,7 +44,7 @@ export async function SignatureTreatments() {
                             href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to know more about the signature treatments at Indira Super Speciality Hospital.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-2.5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white rounded-full font-bold text-sm transition-all shadow-lg shadow-fuchsia-500/20"
+                            className="elite-button-primary rounded-full"
                         >
                             Enquire via WhatsApp <ArrowRight className="ml-2 w-4 h-4" />
                         </a>

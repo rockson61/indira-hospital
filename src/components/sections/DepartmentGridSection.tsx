@@ -16,11 +16,13 @@ export function DepartmentGridSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
                     <div className="max-w-2xl">
-                        <h2 className="text-sm font-bold tracking-widest text-fuchsia-600 uppercase mb-3">Our Expertise</h2>
-                        <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-6">
+                            Our Expertise
+                        </div>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white">
                             Centers of Excellence
-                        </h3>
-                        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+                        </h2>
+                        <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
                             Comprehensive care across all major medical disciplines, led by industry veterans.
                         </p>
                     </div>
@@ -60,7 +62,7 @@ export function DepartmentGridSection() {
                 <div className="mt-10 text-center md:hidden">
                     <Link
                         href="/doctor/near-me/treat"
-                        className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 dark:border-slate-700 font-semibold rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:bg-slate-950 transition-colors w-full"
+                        className="elite-button-secondary w-full"
                     >
                         View all departments
                     </Link>

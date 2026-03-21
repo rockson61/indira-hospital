@@ -77,7 +77,7 @@ export function HomeCareFlow() {
                                     <p className="text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
                                         {item.description}
                                     </p>
-                                    <Link href={item.ctaHref} className="inline-flex items-center justify-center px-8 py-4 mt-4 bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-all shadow-lg shadow-fuchsia-500/25 group/btn">
+                                    <Link href={item.ctaHref} className="elite-button-primary mt-4 group/btn">
                                         {item.ctaText}
                                         <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                                     </Link>

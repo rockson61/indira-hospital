@@ -39,10 +39,10 @@ export function HomeLatestNews() {
             <SectionContainer>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>
-                        <span className="text-xs font-black uppercase tracking-[0.2em] text-pink-600 dark:text-pink-400 mb-3 block">
+                        <div className="elite-tag mb-4 inline-flex">
                             Stay Informed
-                        </span>
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+                        </div>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white tracking-tight">
                             Latest News
                         </h2>
                     </div>

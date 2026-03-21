@@ -84,7 +84,7 @@ export function WhyChooseUs() {
                         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I'm clinical inquiry. I want to book an appointment.")}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center gap-3 px-12 py-6 bg-slate-900 dark:bg-fuchsia-600 text-white rounded-[2rem] font-black text-xl hover:scale-105 transition-all shadow-xl shadow-fuchsia-500/20"
+                        className="elite-button-primary text-base"
                     >
                         <MessageCircle className="w-6 h-6 group-hover:rotate-12 transition-transform" />
                         Chat with our Experts Now

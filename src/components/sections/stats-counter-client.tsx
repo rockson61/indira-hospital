@@ -81,7 +81,7 @@ export function StatsCounterClient({ doctorCount, departmentCount, patientCount 
     const values = [patientCount, doctorCount, departmentCount, 25];
 
     return (
-        <section className="relative z-30 -mt-24 sm:-mt-32 pb-24">
+        <section className="relative z-30 py-16 sm:py-24 bg-white dark:bg-slate-950">
             <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {statsMeta.map((meta, i) => (

@@ -102,7 +102,7 @@ export async function Testimonials() {
                         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was inspired by the testimonials. I'd like to book a consultation.")}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white rounded-2xl font-black text-xl transition-all shadow-xl shadow-fuchsia-500/20"
+                        className="elite-button-primary text-base mt-2"
                     >
                         <MessageCircle className="w-6 h-6" />
                         Book via WhatsApp
