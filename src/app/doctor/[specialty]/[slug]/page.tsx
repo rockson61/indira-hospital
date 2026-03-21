@@ -17,6 +17,8 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { injectInternalLinks } from "@/lib/html-linkify";
+import { EliteComparisonBank } from "@/components/seo/EliteComparisonBank";
 
 /** Build a title → treatment lookup for O(1) resolution */
 const treatmentByTitle = new Map(
@@ -99,6 +101,13 @@ export default async function DoctorProfileRoute({
     if (!currDoctor) {
         notFound();
     }
+
+    const isLaserSpecialty = (currDoctor.specialty + (currDoctor.bio || "")).toLowerCase().match(/piles|fistula|fissure|laser|proctology|varicose/);
+    const isLapSpecialty = (currDoctor.specialty + (currDoctor.bio || "")).toLowerCase().match(/laparoscopic|hernia|gallbladder|appendix/);
+    const isOrthoSpecialty = (currDoctor.specialty + (currDoctor.bio || "")).toLowerCase().match(/ortho|joint|knee|hip|replacement|robotic/);
+    const isEyeSpecialty = (currDoctor.specialty + (currDoctor.bio || "")).toLowerCase().match(/eye|ophthalmology|cataract|vision/);
+
+    const comparisonType = isLaserSpecialty ? 'laser' : isLapSpecialty ? 'laparoscopy' : isOrthoSpecialty ? 'orthopedics' : isEyeSpecialty ? 'ophthalmology' : null;
 
     // Fetch departments to find the matching one
     let departments: any[] = [];
@@ -215,7 +224,23 @@ export default async function DoctorProfileRoute({
                                         </div>
                                     )}
 
-                                    <p className="text-slate-300 leading-relaxed max-w-2xl text-lg">{currDoctor.bio}</p>
+                                    <p 
+                                        className="text-slate-300 leading-relaxed max-w-2xl text-lg"
+                                        dangerouslySetInnerHTML={{ __html: injectInternalLinks(currDoctor.bio || "") }}
+                                    />
+                                    
+                                    {/* Elite Specialty Badge */}
+                                    {comparisonType && (
+                                        <div className="mt-8 inline-flex items-center gap-4 p-4 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl shadow-xl">
+                                            <div className="w-12 h-12 rounded-2xl bg-fuchsia-600 flex items-center justify-center text-white shadow-lg shadow-fuchsia-500/30">
+                                                <Activity className="w-6 h-6 animate-pulse" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] text-fuchsia-400 font-black uppercase tracking-[0.2em]">Indira Elite Standard</p>
+                                                <p className="text-sm font-bold text-white leading-tight">Master Surgeon in {comparisonType === 'laser' ? 'Advanced Laser Proctology' : comparisonType === 'laparoscopy' ? 'Minimally Invasive Surgery' : comparisonType === 'orthopedics' ? 'Robotic Joint Reconstruction' : 'Micro-Incision Ophthalmology'}</p>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
 
