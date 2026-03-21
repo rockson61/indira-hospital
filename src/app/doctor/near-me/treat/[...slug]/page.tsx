@@ -248,9 +248,19 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     // Comparison Logic
     const isLaserSpecialty = slug.some(s => ['piles', 'fistula', 'fissure', 'proctology', 'varicose', 'laser'].some(k => s.toLowerCase().includes(k)));
     const isLapSpecialty = slug.some(s => ['laparoscopic', 'hernia', 'gallbladder', 'appendix', 'cholecystectomy'].some(k => s.toLowerCase().includes(k)));
-    const comparisonType = isLaserSpecialty ? 'laser' : (isLapSpecialty ? 'laparoscopy' : null);
+    const isOrthoSpecialty = slug.some(s => ['ortho', 'joint', 'knee', 'hip', 'replacement', 'bone', 'spine'].some(k => s.toLowerCase().includes(k)));
+    const isEyeSpecialty = slug.some(s => ['eye', 'ophthalmology', 'cataract', 'lasik', 'vision'].some(k => s.toLowerCase().includes(k)));
+    
+    let comparisonType: 'laser' | 'laparoscopy' | 'orthopedics' | 'ophthalmology' | null = null;
+    if (isLaserSpecialty) comparisonType = 'laser';
+    else if (isLapSpecialty) comparisonType = 'laparoscopy';
+    else if (isOrthoSpecialty) comparisonType = 'orthopedics';
+    else if (isEyeSpecialty) comparisonType = 'ophthalmology';
 
-    const isHighValueSurgical = isLaserSpecialty || isLapSpecialty || slug.some(s => ['surgery', 'replacement', 'urology', 'cardiology'].some(k => s.toLowerCase().includes(k)));
+    const isHighValueSurgical = isLaserSpecialty || isLapSpecialty || isOrthoSpecialty || isEyeSpecialty || slug.some(s => ['surgery', 'urology', 'cardiology'].some(k => s.toLowerCase().includes(k)));
+
+    // Dynamic Pricing Logic
+    const pricingRange = isOrthoSpecialty ? { min: '₹1.5L', max: '₹2.8L+' } : (isEyeSpecialty ? { min: '₹15k', max: '₹45k' } : { min: '₹35k', max: '₹65k+' });
 
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
@@ -435,12 +445,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                                 <p className="text-[10px] uppercase font-black text-slate-500 mb-2 tracking-widest text-center">Standard Procedure Window</p>
                                                 <div className="flex justify-between items-end">
                                                     <div className="text-center flex-1">
-                                                        <p className="text-2xl font-black text-white italic">₹35k</p>
-                                                        <p className="text-[8px] text-slate-500 uppercase font-bold">Semi-Private</p>
+                                                        <p className="text-2xl font-black text-white italic">{pricingRange.min}</p>
+                                                        <p className="text-[8px] text-slate-500 uppercase font-bold">Standard</p>
                                                     </div>
                                                     <div className="h-8 w-px bg-white/10 mb-1" />
                                                     <div className="text-center flex-1">
-                                                        <p className="text-2xl font-black text-fuchsia-400 italic">₹65k+</p>
+                                                        <p className="text-2xl font-black text-fuchsia-400 italic">{pricingRange.max}</p>
                                                         <p className="text-[8px] text-slate-500 uppercase font-bold">Elite Suite</p>
                                                     </div>
                                                 </div>

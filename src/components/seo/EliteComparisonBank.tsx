@@ -23,7 +23,7 @@ const ComparisonRow = ({ feature, traditional, elite, isPositive = true }: Compa
     </div>
 );
 
-export const EliteComparisonBank = ({ type = 'laser' }: { type?: 'laser' | 'laparoscopy' | 'general' }) => {
+export const EliteComparisonBank = ({ type = 'laser' }: { type?: 'laser' | 'laparoscopy' | 'orthopedics' | 'ophthalmology' | 'general' }) => {
     return (
         <div className="my-16">
             <div className="bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 p-8 md:p-12 shadow-2xl relative overflow-hidden">
@@ -66,6 +66,26 @@ export const EliteComparisonBank = ({ type = 'laser' }: { type?: 'laser' | 'lapa
                                 <ComparisonRow feature="Pain Score" traditional="Intense Post-Op Pain" elite="Minimal Discomfort" />
                                 <ComparisonRow feature="Internal Scarring" traditional="Risk of Adhesions" elite="Near-Zero Scarring" />
                                 <ComparisonRow feature="Food/Activity" traditional="Restricted for Weeks" elite="Diet Resumed Same Day" />
+                            </>
+                        )}
+
+                        {type === 'orthopedics' && (
+                            <>
+                                <ComparisonRow feature="Precision" traditional="Manual Visual Alignment" elite="Sub-Millimeter Robotic AI" />
+                                <ComparisonRow feature="Tissue Damage" traditional="Significant Muscle Cutting" elite="Suture-less Muscle Sparing" />
+                                <ComparisonRow feature="Recovery" traditional="Bed Rest for 24-48h" elite="Supported Walk in 4 Hours" />
+                                <ComparisonRow feature="Knee Feel" traditional="Rigid / Occasional Clicks" elite="Natural Fluid Mobility" />
+                                <ComparisonRow feature="Longevity" traditional="10-15 Years (Wear Risk)" elite="25+ Years (Precision Fit)" />
+                            </>
+                        )}
+
+                        {type === 'ophthalmology' && (
+                            <>
+                                <ComparisonRow feature="Incision Size" traditional="6-10mm (Manual SICS)" elite="1.8mm Micro-Incision (MICS)" />
+                                <ComparisonRow feature="Stitches" traditional="2-4 Sutures Required" elite="100% Stitch-less Healing" />
+                                <ComparisonRow feature="Recovery" traditional="2-4 Weeks Patching" elite="Crystal Clear Vision in 1h" />
+                                <ComparisonRow feature="Vision Quality" traditional="Standard Distance Build" elite="Multifocal HD / Blue-Light Filter" />
+                                <ComparisonRow feature="Safety" traditional="Infection Risk (Open Air)" elite="Closed-Chamber Phacoemulsification" />
                             </>
                         )}
                     </div>
