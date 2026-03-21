@@ -6,7 +6,7 @@ export default function NotFound() {
         <div className="min-h-[70vh] flex items-center justify-center px-6 bg-[#FAFAFA] dark:bg-slate-950">
             <div className="text-center max-w-lg">
                 <div className="mb-8">
-                    <span className="text-8xl font-heading font-black bg-gradient-to-br from-fuchsia-600 to-pink-500 bg-clip-text text-transparent">
+                    <span className="elite-hero-title elite-gradient-text">
                         404
                     </span>
                 </div>

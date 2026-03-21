@@ -25,7 +25,7 @@ export default function PatientPortalClient() {
                         <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
                             <Lock className="w-4 h-4" /> Secure Patient Access
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[7rem] font-black text-white tracking-tighter leading-[0.9] mb-8">
+                        <h1 className="elite-hero-title text-white mb-8">
                             Your Health, <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-indigo-400">Under Your Control.</span>
                         </h1>

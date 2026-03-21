@@ -24,7 +24,7 @@ export default function VirtualTourPage() {
                         <Map className="w-4 h-4" /> Immersive Experience
                     </div>
                     
-                    <h1 className="text-6xl sm:text-8xl lg:text-[10rem] font-black tracking-tighter leading-[0.85] mb-12 uppercase italic">
+                    <h1 className="elite-hero-title text-white mb-12">
                         The <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-white to-fuchsia-400">360° Mastery</span> <br className="hidden lg:block" /> Experience.
                     </h1>
 

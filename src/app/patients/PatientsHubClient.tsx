@@ -80,7 +80,7 @@ export function PatientsHubClient() {
                             <Sparkles className="w-4 h-4" /> Patient Experience Hub
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl lg:text-[7rem] font-black text-white tracking-tighter leading-[0.9] mb-8">
+                        <h1 className="elite-hero-title text-white mb-8">
                             Your Care <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-white to-indigo-400">Journey Redefined.</span>
                         </h1>

@@ -57,7 +57,7 @@ export function GlossaryClient() {
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <BookOpen className="w-4 h-4" /> Medical Dictionary
                         </span>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[0.95] mb-6 max-w-6xl mx-auto">
+                        <h1 className="elite-hero-title text-white mb-6 max-w-6xl mx-auto">
                             The Comprehensive <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Clinical Glossary.</span>
                         </h1>

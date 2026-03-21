@@ -62,7 +62,7 @@ export default async function BlogPostPage({
                         Clinical Guide & Research
                     </div>
                     
-                    <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-white tracking-tight leading-[0.9] mb-8 uppercase italic">
+                    <h1 className="elite-hero-title text-white mb-8">
                         {formattedTitle}
                     </h1>
                     

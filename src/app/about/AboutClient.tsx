@@ -30,7 +30,7 @@ export default function AboutClient() {
                         </div>
                         <h1 className="elite-hero-title mb-10 relative">
                             35 Years of <br className="hidden sm:block" />
-                            <span className="elite-gradient-text text-6xl md:text-8xl lg:text-[inherit]">Clinical Mastery.</span>
+                            <span className="elite-gradient-text">Clinical Mastery.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed mb-4">
                             Indira Super Speciality Hospital is Vellore's premier destination for advanced medical interventions, 
@@ -164,7 +164,7 @@ export default function AboutClient() {
                         <div className="w-24 h-24 rounded-[2rem] bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-fuchsia-400 mx-auto mb-12 shadow-2xl">
                             <Heart className="w-12 h-12" />
                         </div>
-                        <h2 className="text-5xl md:text-7xl lg:text-[7rem] font-black text-white mb-10 tracking-tighter leading-[0.9] uppercase italic">
+                        <h2 className="elite-hero-title text-white mb-10">
                             Experience the <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Elite Standard.</span>
                         </h2>

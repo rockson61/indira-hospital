@@ -33,7 +33,7 @@ export default function DoctorsDirectoryClient() {
                     <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                         <Stethoscope className="w-4 h-4" /> Specialist Directory
                     </span>
-                    <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black text-white tracking-tight leading-[1.05] mb-8 max-w-5xl mx-auto">
+                    <h1 className="elite-hero-title text-white mb-8 max-w-5xl mx-auto">
                         Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Proficiency.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-300 mb-16 max-w-3xl mx-auto font-light leading-relaxed">

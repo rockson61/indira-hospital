@@ -71,7 +71,7 @@ export default function HealthLibraryClient() {
                         <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-[2rem] bg-[#0086d6]/20 backdrop-blur-md border border-[#0086d6]/30 text-[#0086d6]">
                             <LayoutGrid className="w-10 h-10" />
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-black text-white tracking-tight leading-[1] mb-6">
+                        <h1 className="elite-hero-title text-white mb-6">
                             Departments & <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0086d6] to-cyan-300">
                                 Specialities

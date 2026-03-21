@@ -271,7 +271,7 @@ async function ServiceView({ service, location, city, slug }: any) {
                         <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Providing Specialised Care for {location.name}
                     </div>
 
-                    <h1 className="text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] uppercase italic mb-12">
+                    <h1 className="elite-hero-title mb-12">
                         {service.title}<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Precision Specialists in {location.name}.</span>
                     </h1>
