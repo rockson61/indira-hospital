@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { LeadershipMessage } from "@/components/sections/LeadershipMessage";
 import { StatsBanner } from "@/components/sections/stats-banner";
 import { TrustStrip } from "@/components/sections/trust-strip";
 import { DepartmentGridSection } from "@/components/sections/DepartmentGridSection";
@@ -111,6 +112,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
       <Hero />
+      <LeadershipMessage />
       <StatsBanner />
 
       {/* REFINED TRUST BAR */}
