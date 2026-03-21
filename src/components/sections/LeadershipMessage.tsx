@@ -8,14 +8,14 @@ import { motion } from "framer-motion";
 
 export function LeadershipMessage() {
     return (
-        <SectionContainer className="py-24 sm:py-32 relative z-20 overflow-hidden bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-900">
+        <SectionContainer className="pt-16 sm:pt-24 pb-24 sm:pb-32 relative z-20 overflow-hidden bg-white dark:bg-slate-950 border-y border-slate-100 dark:border-slate-900">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
                     
                     {/* Left: Photos & Badge */}
-                    <div className="relative flex justify-center lg:justify-start">
+                    <div className="relative flex justify-center lg:justify-start pt-10 sm:pt-16 lg:pt-0 pb-20 sm:pb-24 lg:pb-12">
                         {/* Dramatic background glow */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-gradient-to-tr from-fuchsia-500/10 to-blue-500/10 dark:from-fuchsia-500/20 dark:to-blue-500/20 blur-3xl rounded-full pointer-events-none" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] bg-gradient-to-tr from-fuchsia-500/5 to-blue-500/5 dark:from-fuchsia-500/10 dark:to-blue-500/10 blur-[100px] rounded-full pointer-events-none" />
                         
                         <div className="relative w-full max-w-md mx-auto lg:mx-0">
                             <motion.div 
@@ -34,6 +34,7 @@ export function LeadershipMessage() {
                                         fill 
                                         className="object-cover object-top"
                                         sizes="(max-width: 768px) 192px, 256px"
+                                        priority
                                     />
                                 </div>
                                 {/* Dr. Karan Shankar */}
@@ -45,6 +46,7 @@ export function LeadershipMessage() {
                                         fill 
                                         className="object-cover object-top" 
                                         sizes="(max-width: 768px) 192px, 256px"
+                                        priority
                                     />
                                 </div>
                             </motion.div>
@@ -55,7 +57,7 @@ export function LeadershipMessage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                                className="absolute -bottom-8 -right-4 sm:-right-8 z-30 elite-card p-5 sm:p-6 rounded-3xl max-w-[260px] sm:max-w-[300px]"
+                                className="absolute -bottom-16 sm:-bottom-20 -right-4 sm:-right-8 z-30 elite-card p-5 sm:p-6 rounded-3xl max-w-[280px] sm:max-w-[320px] shadow-2xl"
                             >
                                 <div className="flex items-center gap-4 mb-3">
                                     <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/30">
@@ -65,7 +67,7 @@ export function LeadershipMessage() {
                                         Top Leading Proctology Center
                                     </p>
                                 </div>
-                                <div className="flex items-center gap-2 pl-16">
+                                <div className="flex items-center gap-2 pl-[4.5rem]">
                                     <Sparkles className="w-4 h-4 text-amber-500" />
                                     <p className="text-xs sm:text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 uppercase tracking-widest">
                                         India & Tamil Nadu
@@ -81,11 +83,11 @@ export function LeadershipMessage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="relative mt-20 lg:mt-0"
+                        className="relative mt-8 sm:mt-16 lg:mt-0"
                     >
-                        <Quote className="absolute -top-12 -left-8 w-24 h-24 text-slate-100 dark:text-slate-800/80 -rotate-12" />
+                        <Quote className="absolute -top-12 -left-8 w-24 h-24 text-slate-100 dark:text-slate-800/50 -rotate-12" />
                         
-                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-8">
+                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-8 relative z-10">
                             Chairman&apos;s Message
                         </div>
 
@@ -103,14 +105,24 @@ export function LeadershipMessage() {
                             </p>
                         </div>
                         
-                        <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-4">
-                            <div>
-                                <h4 className="font-black text-slate-900 dark:text-white text-lg lg:text-xl">Dr. P. Shankar</h4>
-                                <p className="text-xs sm:text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 tracking-widest uppercase mt-1">Chairman</p>
+                        <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-full overflow-hidden relative shadow-md">
+                                    <Image src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" fill className="object-cover" sizes="48px" />
+                                </div>
+                                <div>
+                                    <h4 className="font-black text-slate-900 dark:text-white text-base">Dr. P. Shankar</h4>
+                                    <p className="text-[10px] font-bold text-fuchsia-600 dark:text-fuchsia-400 tracking-widest uppercase mt-0.5">Chairman</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 className="font-black text-slate-900 dark:text-white text-lg lg:text-xl">Dr. Karan Shankar</h4>
-                                <p className="text-xs sm:text-sm font-bold text-fuchsia-600 dark:text-fuchsia-400 tracking-widest uppercase mt-1">Executive Director</p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-full overflow-hidden relative shadow-md bg-slate-100">
+                                    <Image src="/images/doctors/dr-karan-shankar.png" alt="Dr Karan Shankar" fill className="object-cover object-top" sizes="48px" />
+                                </div>
+                                <div>
+                                    <h4 className="font-black text-slate-900 dark:text-white text-base">Dr. Karan Shankar</h4>
+                                    <p className="text-[10px] font-bold text-fuchsia-600 dark:text-fuchsia-400 tracking-widest uppercase mt-0.5">Exec. Director</p>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
