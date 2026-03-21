@@ -147,7 +147,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
                         </div>
                         <div>
                             <div className="elite-tag mb-10">
-                                <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> NABH Accredited Centre of Excellence
+                                <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> NABH Accredited Hospital
                             </div>
                             <h1 className="elite-hero-title mb-10 text-left">
                                 {department.title}<br />

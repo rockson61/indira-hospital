@@ -283,9 +283,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             <div className="elite-tag mb-10">
                                 <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Advanced Treatment Centre • Vellore
                             </div>
-                             <h1 className="elite-hero-title mb-10 text-left">
+                            <h1 className="elite-hero-title mb-10 text-left">
                                 Best {service.title} in India<br />
-                                <span className="elite-gradient-text">Centre of Excellence.</span>
                             </h1>
                             <p className="mt-4 text-xl sm:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light mb-12 opacity-80 italic">{service.short_description}</p>
 

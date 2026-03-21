@@ -179,7 +179,7 @@ async function DoctorView({ doctor, location, city, slug }: any) {
                                 </h1>
                             </div>
                             <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">{doctor.designation || `${dept} Specialist`}</p>
-                            <p className="text-slate-400 text-lg mb-8 font-medium">Centre of Excellence • Indira Super Speciality Hospital, Vellore</p>
+                            <p className="text-slate-400 text-lg mb-8 font-medium">Indira Super Speciality Hospital, Vellore</p>
                             
                             <div className="flex flex-wrap gap-4 mb-10">
                                 {[
