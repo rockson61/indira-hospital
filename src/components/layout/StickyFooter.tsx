@@ -27,23 +27,25 @@ export function StickyFooter() {
     return (
         <div
             className={cn(
-                "fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700 p-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-transform duration-300 md:hidden",
-                isVisible ? "translate-y-0" : "translate-y-full"
+                "fixed bottom-4 left-4 right-4 z-50 transition-all duration-500 md:hidden",
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
             )}
         >
-            <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="w-full gap-2 border-primary-600 text-primary-600 hover:bg-primary-50" asChild>
-                    <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`}>
-                        <Phone className="h-4 w-4" />
-                        Call Now
-                    </a>
-                </Button>
-                <Button className="w-full gap-2 bg-primary-600 hover:bg-primary-700 text-white" asChild>
-                    <Link href="/book-appointment">
-                        <CalendarCheck className="h-4 w-4" />
-                        Book Now
-                    </Link>
-                </Button>
+            <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl border border-white dark:border-slate-800 p-2 rounded-[2rem] shadow-2xl shadow-indigo-500/10 max-w-sm mx-auto flex items-center gap-2">
+                <a 
+                    href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`}
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-[1.5rem] bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-sm tracking-wide hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                >
+                    <Phone className="h-4 w-4 text-fuchsia-600 dark:text-fuchsia-400" />
+                    Call Now
+                </a>
+                <Link 
+                    href="/book-appointment"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-[1.5rem] bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-bold text-sm tracking-wide shadow-lg shadow-fuchsia-500/25 hover:shadow-fuchsia-500/40 hover:scale-[1.02] transition-all"
+                >
+                    <CalendarCheck className="h-4 w-4" />
+                    Book Now
+                </Link>
             </div>
         </div>
     );
