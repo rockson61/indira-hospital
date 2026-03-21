@@ -19,6 +19,7 @@ import { ProctologyLaparoscopyHighlight } from "@/components/specialties/Proctol
 import EntityReviews from "@/components/trust/EntityReviews";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { injectInternalLinks } from "@/lib/html-linkify";
 
 import { siteConfig } from "@/config/site";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
@@ -142,9 +143,10 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
                             <div className="flex-1 text-center md:text-left">
                                 <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Reaching Us from {location.name}</h2>
-                                <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-8">
-                                    {location.description} For patients in {location.district}, our main campus in Vellore provides the closest access to tertiary care and specialized surgeries.
-                                </p>
+                                    <p 
+                                        className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-8"
+                                        dangerouslySetInnerHTML={{ __html: injectInternalLinks(location.description || "") }}
+                                    />
                                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                                     <div className="px-6 py-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
                                         <div className="text-2xl font-black text-slate-800 dark:text-slate-100">{location.distance}</div>
@@ -517,7 +519,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <InternalLinkGrid type="diagnostics" title={`Diagnostics for ${location.name}`} subtitle="Local Lab Services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
             <InternalLinkGrid type="health-packages" title={`Checkups for ${location.name}`} subtitle="Regional Wellness" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
 
-            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={0} city={city} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
+            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Indira Elite Medical Units" featuredLimit={6} linkLimit={0} city={city} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
         </main>
     );
 }
