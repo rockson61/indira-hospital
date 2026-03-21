@@ -92,6 +92,28 @@ export function Footer() {
                         <Link href="/sitemap.xml" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Sitemap</Link>
                     </div>
                 </div>
+
+                {/* Bottom SEO & Legal Text */}
+                <div className="mt-8 pt-6 border-t border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-4 text-xs text-slate-500 dark:text-slate-400 text-center md:text-left">
+                    <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 font-bold text-slate-600 dark:text-slate-300">
+                        <Link href="/" className="hover:text-fuchsia-600 transition-colors">Best Hospital in Vellore</Link>
+                        <span className="hidden md:inline text-slate-300 dark:text-slate-700">•</span>
+                        <Link href="/doctor/near-me" className="hover:text-fuchsia-600 transition-colors">Hospital near me</Link>
+                        <span className="hidden md:inline text-slate-300 dark:text-slate-700">•</span>
+                        <Link href="/doctors" className="hover:text-fuchsia-600 transition-colors">Find best Doctors in Vellore</Link>
+                    </div>
+                    <div className="space-y-2 max-w-5xl md:mx-0 mx-auto leading-relaxed">
+                        <p>
+                            <strong>Disclaimer:</strong> This website is for informational purposes only and is not a substitute for professional medical treatment. Please visit a doctor for treatment.
+                        </p>
+                        <p>
+                            All content is medically reviewed by Dr. Karan Shankar and Dr. Rockson Samuel.
+                        </p>
+                        <p className="pt-2 flex items-center justify-center md:justify-start gap-1 font-medium">
+                            Made with <span className="text-red-500">❤️</span> by <span className="font-bold text-slate-700 dark:text-slate-200">Dr. Rockson Samuel</span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </footer>
     );
