@@ -17,7 +17,7 @@ export function InsuranceMarquee() {
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-4">
                             <ShieldCheck className="w-3 h-3" /> Cashless Partners
                         </span>
-                        <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+                        <h2 className="elite-section-title text-slate-900 dark:text-white">
                             Insurance & TPA Partners
                         </h2>
                     </div>

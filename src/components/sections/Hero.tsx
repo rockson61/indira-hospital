@@ -145,7 +145,7 @@ export function Hero() {
                                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-100 dark:bg-fuchsia-500/20 backdrop-blur-md border border-fuchsia-200 dark:border-fuchsia-500/30 text-fuchsia-700 dark:text-fuchsia-300 text-xs font-bold tracking-widest uppercase mb-4">
                                     <Monitor className="w-3.5 h-3.5" /> High-Tech Care
                                 </span>
-                                <h3 className="text-3xl font-black text-slate-900 dark:text-white">World-Class Infrastructure</h3>
+                                <h3 className="elite-section-title text-slate-900 dark:text-white">World-Class Infrastructure</h3>
                             </div>
                         </motion.div>
 

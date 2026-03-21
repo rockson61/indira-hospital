@@ -47,7 +47,7 @@ export async function LocationStrip() {
         <section className="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-slate-950 dark:to-slate-900">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="text-center mb-10">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                    <h2 className="elite-section-title text-gray-900 dark:text-white">
                         Patients Visit Us From Across Tamil Nadu
                     </h2>
                     <p className="mt-3 text-gray-600 dark:text-gray-400">

@@ -39,7 +39,7 @@ export const AZIndex = () => {
         <section className="bg-white dark:bg-slate-900 py-24 overflow-hidden">
             <SectionContainer>
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-900 dark:text-white tracking-tight">
+                    <h2 className="elite-section-title mb-6 text-slate-900 dark:text-white">
                         Health <span className="text-fuchsia-600">A to Z Index</span>
                     </h2>
                     <p className="text-lg text-slate-500 dark:text-slate-400">Quickly find information on medical conditions, procedures, and speciality care across our center.</p>

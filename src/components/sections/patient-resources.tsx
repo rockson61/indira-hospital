@@ -31,7 +31,7 @@ export function PatientResources({ hideViewAll = false }: { hideViewAll?: boolea
             <SectionContainer>
                 {/* Addition: Title for Patients on Homepage */}
                 <div className="max-w-4xl mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">
                         For Patients
                     </h2>
                     <p className="text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">

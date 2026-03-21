@@ -34,7 +34,7 @@ export function HealthLibraryCard() {
                         <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-8 shadow-inner shadow-white/10">
                             <LayoutGrid className="w-8 h-8 text-fuchsia-100" />
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-black tracking-tight mb-6 leading-[1.1]">
+                        <h2 className="elite-section-title mb-6">
                             Explore Our <br />
                             <span className="text-fuchsia-200">Health Library</span>
                         </h2>

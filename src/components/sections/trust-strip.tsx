@@ -59,7 +59,7 @@ export function TrustStrip() {
                     ))}
                     <Link
                         href="/doctor/near-me/treat"
-                        className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-slate-900 dark:bg-white/10 text-white rounded-2xl text-xs font-black uppercase tracking-[0.2em] transition-all hover:bg-fuchsia-600 shadow-xl"
+                        className="elite-button-secondary"
                     >
                         Explore Services <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
@@ -67,7 +67,7 @@ export function TrustStrip() {
                         href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group/wa inline-flex items-center gap-3 px-8 py-4 bg-fuchsia-600 text-white rounded-2xl text-xs font-black uppercase tracking-[0.2em] hover:bg-fuchsia-500 transition-all shadow-xl shadow-fuchsia-500/20"
+                        className="elite-button-primary"
                     >
                         <MessageCircle className="w-4 h-4 group-hover/wa:rotate-12 transition-transform" /> Chat with Expert
                     </a>

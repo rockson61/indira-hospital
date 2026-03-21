@@ -145,7 +145,7 @@ export function TreatmentGuides() {
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-600 dark:text-fuchsia-400 mb-6">
                         <BookOpen className="w-8 h-8" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">
                         Browse Our Free Guides
                     </h2>
                     <p className="text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">

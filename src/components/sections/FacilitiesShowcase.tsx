@@ -12,7 +12,7 @@ export function FacilitiesShowcase() {
                 <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-sm border border-slate-200 dark:border-slate-700">
                     <HeartCardiogram className="w-3.5 h-3.5 text-fuchsia-500" /> Advanced Support Facilities
                 </span>
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
+                <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">
                     Beyond Consultations
                 </h2>
                 <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-medium">

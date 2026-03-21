@@ -94,7 +94,7 @@ export async function Testimonials() {
                 </div>
 
                 <div className="mt-20 flex flex-col items-center justify-center p-12 bg-fuchsia-100 dark:bg-fuchsia-950/30 rounded-[3rem] border border-fuchsia-200 dark:border-fuchsia-500/20 text-center">
-                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4">Start Your Own Healing Journey</h3>
+                    <h3 className="elite-section-title text-slate-900 dark:text-white mb-4">Start Your Own Healing Journey</h3>
                     <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-xl">
                         Our experts are ready to provide you with the same world-class care these patients received. Chat with us now for a free consultation estimate.
                     </p>

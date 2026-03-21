@@ -71,7 +71,7 @@ export function HomeCareFlow() {
                                 </div>
 
                                 <div className="w-full lg:w-1/2 space-y-6">
-                                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+                                    <h2 className="elite-section-title text-slate-900 dark:text-white">
                                         {item.title}
                                     </h2>
                                     <p className="text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">

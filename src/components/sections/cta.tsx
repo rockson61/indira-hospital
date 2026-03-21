@@ -28,7 +28,7 @@ export function CTASection() {
 
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                        <h2 className="elite-section-title text-white mb-4">
                             Ready to Prioritize Your Health?
                         </h2>
                         <p className="text-lg text-white/70 max-w-2xl mx-auto">

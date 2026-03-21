@@ -29,7 +29,7 @@ export async function FeaturedDoctors() {
                     />
                     <Link
                         href="/doctors"
-                        className="hidden sm:inline-flex items-center px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-full hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm text-sm"
+                        className="elite-button-secondary"
                     >
                         View All <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -44,7 +44,7 @@ export async function FeaturedDoctors() {
                 <div className="mt-12 text-center sm:hidden">
                     <Link
                         href="/doctors"
-                        className="inline-flex items-center px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-full hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm text-sm"
+                        className="elite-button-secondary"
                     >
                         View All Doctors <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

@@ -43,7 +43,7 @@ export function FAQAccordionClient({ faqs }: FAQAccordionClientProps) {
                         <HelpCircle className="w-4 h-4" />
                         Frequently Asked Questions
                     </div>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+                    <h2 className="elite-section-title text-gray-900 dark:text-white">
                         Have Questions? We Have Answers
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
