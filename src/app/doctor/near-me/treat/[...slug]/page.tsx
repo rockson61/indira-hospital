@@ -284,7 +284,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Advanced Treatment Centre • Vellore
                             </div>
                              <h1 className="elite-hero-title mb-10 text-left">
-                                {service.title}<br />
+                                Best {service.title} in India<br />
                                 <span className="elite-gradient-text">Centre of Excellence.</span>
                             </h1>
                             <p className="mt-4 text-xl sm:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light mb-12 opacity-80 italic">{service.short_description}</p>
@@ -335,12 +335,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div className="lg:col-span-2 space-y-8">
                         {/* About */}
                         <Card className="p-8 border-none shadow-sm rounded-2xl">
-                            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
                                 <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                     <Stethoscope className="w-5 h-5" />
                                 </span>
-                                About {service.title} — What You Need to Know
+                                Best Hospital for {service.title} in Vellore, Tamil Nadu
                             </h2>
+                            <h3 className="text-lg font-semibold text-slate-600 dark:text-slate-400 mb-6 italic">Best {service.title} in Vellore, Tamil Nadu</h3>
                             <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
                         </Card>
 
@@ -395,12 +396,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         {/* Doctors in this Service */}
                         {relatedDoctors.length > 0 && (
                             <div>
-                                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                                     <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                         <GraduationCap className="w-5 h-5" />
                                     </span>
-                                    Surgeons Who Specialise in {service.title}
-                                </h2>
+                                    Best Doctors for {service.title} in Vellore, Tamil Nadu
+                                </h3>
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     {relatedDoctors.map((doc) => (
                                         <DoctorCard key={doc.slug} doctor={doc} variant="compact" />
@@ -428,6 +429,27 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     {/* RIGHT SIDEBAR */}
                     <div className="lg:col-span-1 space-y-6">
                         <div className="lg:sticky lg:top-24 space-y-6">
+                            {/* Entity Clinic Card */}
+                            <Card className="p-6 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+                                <h3 className="font-black text-slate-900 dark:text-white mb-4 text-lg border-b border-slate-200 dark:border-slate-700 pb-3 flex items-center gap-2">
+                                    <MapPin className="w-5 h-5 text-fuchsia-600" /> Indira Hospital, Vellore
+                                </h3>
+                                <div className="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                                    <p className="flex items-start gap-3">
+                                        <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5" />
+                                        <span>Recognized as the <strong>Best Hospital for {service.title}</strong> in North Tamil Nadu.</span>
+                                    </p>
+                                    <p className="flex items-start gap-3">
+                                        <Award className="w-4 h-4 text-amber-500 mt-0.5" />
+                                        <span>NABH Accredited & ISO Certified care quality.</span>
+                                    </p>
+                                    <p className="flex items-start gap-3">
+                                        <Users className="w-4 h-4 text-blue-500 mt-0.5" />
+                                        <span>Highly experienced <strong>Best Doctors for {service.title}</strong> on staff 24/7.</span>
+                                    </p>
+                                </div>
+                            </Card>
+
                             {/* Book Appointment */}
                              <Card className="p-8 border border-white/10 shadow-2xl rounded-[3rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden group/side">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-[40px] group-hover/side:bg-green-500/20 transition-colors" />
@@ -435,7 +457,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     <div className="w-20 h-20 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover/side:scale-110 transition-transform">
                                         <MessageCircle className="w-10 h-10 text-green-400" />
                                     </div>
-                                    <h3 className="font-black text-white text-2xl tracking-tight mb-2 uppercase italic">Free Cost Estimate</h3>
+                                    <h4 className="font-black text-white text-2xl tracking-tight mb-2 uppercase italic">Free Cost Estimate</h4>
                                     <p className="text-slate-400 text-sm mt-1 mb-8 italic">No hidden charges. Get exact pricing, insurance coverage, and schedules in under 2 mins.</p>
                                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
                                         className="w-full inline-flex items-center justify-center px-8 py-5 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-xl shadow-green-500/20 text-lg uppercase tracking-widest italic group-hover/side:scale-105">
