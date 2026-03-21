@@ -70,7 +70,7 @@ export default function VisitingMainCampusPage() {
                             <MapPin className="w-4 h-4" /> Campus Visitor Guide
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             Visiting Indira Hospital <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Vellore — What to Know.</span>
                         </h1>
@@ -81,7 +81,7 @@ export default function VisitingMainCampusPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-fuchsia-500/25">
+                                className="elite-button-primary">
                                 <Phone className="w-4 h-4" /> Call Reception
                             </a>
                             <a href={WA} target="_blank" rel="noopener noreferrer"
@@ -101,7 +101,7 @@ export default function VisitingMainCampusPage() {
                             <Clock className="w-6 h-6" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Visiting Hours by Zone</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white">Visiting Hours by Zone</h2>
                             <p className="text-slate-500 dark:text-slate-400 font-medium">To ensure patient recovery and safety, please adhere to these timings.</p>
                         </div>
                     </div>
@@ -147,7 +147,7 @@ export default function VisitingMainCampusPage() {
                             <Sparkles className="w-6 h-6" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Campus Amenities</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white">Campus Amenities</h2>
                             <p className="text-slate-500 dark:text-slate-400 font-medium">Facilities designed for your comfort and convenience during your stay.</p>
                         </div>
                     </div>
@@ -173,7 +173,7 @@ export default function VisitingMainCampusPage() {
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-widest mb-6">
                                 <Shield className="w-4 h-4 text-fuchsia-400" /> Security First
                             </div>
-                            <h2 className="text-4xl font-black text-white mb-6 tracking-tight">Visitor Rules & <br /><span className="text-fuchsia-400">Strict Guidelines</span></h2>
+                            <h2 className="elite-section-title text-white mb-6">Visitor Rules & <br /><span className="text-fuchsia-400">Strict Guidelines</span></h2>
                             <p className="text-slate-400 text-lg font-light leading-relaxed mb-8">To maintain a sterile, quiet, and professional healing environment, all visitors must strictly follow these protocols.</p>
                             
                             <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="inline-flex items-center text-fuchsia-400 font-black uppercase tracking-widest text-sm hover:text-white transition-colors group/link">
@@ -204,7 +204,7 @@ export default function VisitingMainCampusPage() {
                             <MapPin className="w-12 h-12" />
                         </div>
                         <div className="flex-1 text-center md:text-left">
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-2 tracking-tight">Hospital Address</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-2">Hospital Address</h2>
                             <p className="text-slate-500 dark:text-slate-400 text-lg font-medium leading-relaxed max-w-2xl">54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore — 632006, Tamil Nadu</p>
                             
                             <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">

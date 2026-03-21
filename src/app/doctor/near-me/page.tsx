@@ -131,7 +131,7 @@ export default async function LocationsPage() {
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <MapPin className="w-4 h-4" /> Serving All of Tamil Nadu
                         </span>
-                        <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-6">
                             Best Hospital in Vellore: <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">Serving {locations.length}+ Cities.</span>
                         </h1>
@@ -183,7 +183,7 @@ export default async function LocationsPage() {
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm dark:shadow-slate-900/30">
                         <Award className="w-4 h-4" /> Why Patients Choose Us
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1]">
+                    <h2 className="elite-section-title text-slate-900 dark:text-white">
                         #1 for Laparoscopic & <br className="hidden sm:block" />
                         <span className="text-fuchsia-600">Laser Surgery in Tamil Nadu</span>
                     </h2>
@@ -271,7 +271,7 @@ export default async function LocationsPage() {
                         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-600 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm dark:shadow-slate-900/30">
                             <Stethoscope className="w-4 h-4 text-fuchsia-600" /> 15+ Super Specialities
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Explore Our Departments</h2>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white">Explore Our Departments</h2>
                     </div>
                     <div className="flex flex-wrap justify-center gap-3 lg:gap-4 max-w-5xl mx-auto">
                         {departments.map((dept: any) => (
@@ -315,7 +315,7 @@ export default async function LocationsPage() {
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-8 shadow-[0_0_30px_rgba(20,184,166,0.2)]">
                             <MapPin className="w-8 h-8 text-fuchsia-300" />
                         </div>
-                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+                        <h2 className="elite-section-title text-white mb-8">
                             Can&apos;t Find Your <br className="hidden sm:block" /> <span className="text-fuchsia-400">Location?</span>
                         </h2>
                         <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">

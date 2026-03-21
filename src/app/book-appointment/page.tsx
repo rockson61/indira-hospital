@@ -20,7 +20,7 @@ export default function AppointmentPage() {
                     <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                         <Clock className="w-4 h-4" /> Fast Track Booking
                     </span>
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05] mb-6 max-w-4xl mx-auto">
+                    <h1 className="elite-hero-title text-white mb-6 max-w-4xl mx-auto">
                         Secure Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-200">Consultation.</span>
                     </h1>
                     <p className="text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">

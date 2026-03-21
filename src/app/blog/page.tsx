@@ -42,7 +42,7 @@ export default async function BlogListingPage() {
             {/* Hero */}
             <div className="bg-slate-50 dark:bg-slate-800 pt-44 pb-20">
                 <SectionContainer>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">{BLOG_CONFIGURATION.TITLE}</h1>
+                    <h1 className="elite-hero-title font-bold mb-6 text-center">{BLOG_CONFIGURATION.TITLE}</h1>
                     <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto">
                         {BLOG_CONFIGURATION.SUBTITLE}
                     </p>

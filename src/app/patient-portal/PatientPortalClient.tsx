@@ -54,7 +54,7 @@ export default function PatientPortalClient() {
                                 <User className="w-8 h-8" />
                             </div>
                             <div>
-                                <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Portal Sign In</h2>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white">Portal Sign In</h2>
                                 <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Authentication Required</p>
                             </div>
                         </div>

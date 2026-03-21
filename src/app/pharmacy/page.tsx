@@ -111,7 +111,7 @@ export default function PharmacyPage() {
             {/* Order Flow */}
             <SectionContainer className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">How to Order Medicines</h2>
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">How to Order Medicines</h2>
                     <p className="text-slate-500 dark:text-slate-400 text-lg">Send us your prescription directly on WhatsApp and get your medicines delivered securely.</p>
                 </div>
 
@@ -165,7 +165,7 @@ export default function PharmacyPage() {
                         <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 mb-10 shadow-[0_0_40px_rgba(16,185,129,0.3)]">
                             <Phone className="w-10 h-10 text-emerald-300" />
                         </div>
-                        <h2 className="text-5xl sm:text-7xl font-black text-white mb-10 tracking-tight leading-[1.05]">
+                        <h2 className="elite-section-title text-white mb-10">
                             Need Medicines <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Urgently?</span>
                         </h2>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-3xl mx-auto">

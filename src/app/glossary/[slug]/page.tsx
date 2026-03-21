@@ -85,7 +85,7 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
                                 <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950/30 flex items-center justify-center text-fuchsia-600 border border-fuchsia-100 dark:border-fuchsia-900/50">
                                     <Shield className="w-6 h-6" />
                                 </div>
-                                <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase italic">Clinical Definition</h2>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white uppercase italic">Clinical Definition</h2>
                             </div>
 
                             <p className="text-slate-600 dark:text-slate-300 text-2xl md:text-3xl leading-relaxed font-light mb-16 italic first-letter:text-6xl first-letter:font-black first-letter:text-fuchsia-600 first-letter:mr-4 first-letter:float-left first-letter:mt-2">

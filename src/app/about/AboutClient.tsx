@@ -53,7 +53,7 @@ export default function AboutClient() {
                         <div className="w-24 h-24 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-[2rem] flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-all duration-700 border border-fuchsia-100 dark:border-fuchsia-900/50">
                             <Target className="w-12 h-12 text-fuchsia-600" />
                         </div>
-                        <h2 className="text-5xl font-black mb-8 text-slate-900 dark:text-white tracking-tighter uppercase italic leading-none">Our Mission</h2>
+                        <h2 className="elite-section-title mb-8 text-slate-900 dark:text-white er uppercase italic">Our Mission</h2>
                         <p className="text-2xl text-slate-500 dark:text-slate-400 leading-relaxed font-light italic">
                             "To engineer a healthcare ecosystem where world-class technology and deep human empathy converge to deliver life-saving clinical outcomes."
                         </p>
@@ -69,7 +69,7 @@ export default function AboutClient() {
                         <div className="w-24 h-24 bg-white/5 backdrop-blur-xl rounded-[2rem] flex items-center justify-center mb-10 border border-white/10 text-indigo-400 group-hover:scale-110 group-hover:-rotate-3 transition-transform">
                             <Zap className="w-12 h-12" />
                         </div>
-                        <h2 className="text-5xl font-black mb-8 text-white tracking-tighter uppercase italic leading-none">Our Vision</h2>
+                        <h2 className="elite-section-title mb-8 text-white er uppercase italic">Our Vision</h2>
                         <p className="text-2xl text-slate-300 leading-relaxed font-extralight italic">
                             "To be the globally recognized vanguard of medical excellence in South India, setting the gold standard for tertiary healthcare innovation."
                         </p>
@@ -110,7 +110,7 @@ export default function AboutClient() {
                     <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-slate-900 text-white text-[10px] font-black tracking-[0.4em] uppercase mb-8 shadow-2xl border border-white/10">
                         <Shield className="w-4 h-4 text-fuchsia-400" /> Guardians of Care
                     </span>
-                    <h2 className="text-6xl md:text-[5rem] font-black mb-8 text-slate-900 dark:text-white tracking-tighter uppercase italic leading-[0.9]">
+                    <h2 className="elite-section-title md:mb-8 text-slate-900 dark:text-white er uppercase italic">
                         The Visionaries Behind <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-indigo-500">Clinical Stewardship.</span>
                     </h2>
@@ -142,7 +142,7 @@ export default function AboutClient() {
                                 </div>
                             </div>
 
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-3 tracking-tighter uppercase italic">{member.name}</h3>
+                            <h3 className="elite-section-title text-slate-900 dark:text-white mb-3 er uppercase italic">{member.name}</h3>
                             <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 mb-8 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-500">
                                 {member.role}
                             </div>

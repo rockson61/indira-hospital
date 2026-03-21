@@ -63,7 +63,7 @@ export default async function DepartmentsDirectoryPage() {
                     <div className="absolute inset-0 bg-[url('/images/hospital/Hospital.webp')] opacity-10 mix-blend-overlay" />
                     <div className="relative z-10 w-full max-w-2xl mx-auto">
                         <MessageCircle className="w-16 h-16 mx-auto mb-6 opacity-80" />
-                        <h2 className="text-4xl font-black mb-4">Don&apos;t See Your Speciality?</h2>
+                        <h2 className="elite-section-title mb-4">Don&apos;t See Your Speciality?</h2>
                         <p className="text-xl text-white/80 mb-8 font-medium">
                             Our hospital houses 30+ medical departments. Chat with our clinical assistance team to find the right specialist for your condition.
                         </p>

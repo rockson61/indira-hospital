@@ -51,7 +51,7 @@ export default function LodgingPage() {
                             <Home className="w-4 h-4" /> Patient Accommodation
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             Where to Stay Near <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Indira Hospital, Vellore.</span>
                         </h1>
@@ -62,7 +62,7 @@ export default function LodgingPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a href={WA} target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-fuchsia-500/25">
+                                className="elite-button-primary">
                                 <MessageCircle className="w-4 h-4" /> Book Consultation
                             </a>
                             <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
@@ -83,7 +83,7 @@ export default function LodgingPage() {
                             <Bed className="w-10 h-10" />
                         </div>
                         <div className="flex-1 text-center lg:text-left">
-                            <h2 className="text-3xl font-black text-white mb-4 tracking-tight">Stay Inside the Hospital Campus</h2>
+                            <h2 className="elite-section-title text-white mb-4">Stay Inside the Hospital Campus</h2>
                             <p className="text-slate-400 text-lg font-light leading-relaxed mb-6">
                                 Indira Hospital offers private rooms with dedicated attendant cots and shared attendant facilities. For long-stay patients and those requiring constant monitoring, this remains the most secure and convenient choice.
                             </p>
@@ -102,7 +102,7 @@ export default function LodgingPage() {
                             <Star className="w-6 h-6" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Nearby Hotels & Lodges</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white">Nearby Hotels & Lodges</h2>
                             <p className="text-slate-500 dark:text-slate-400 font-medium">Curated accommodation options within a 1.5km radius of the hospital.</p>
                         </div>
                     </div>
@@ -150,7 +150,7 @@ export default function LodgingPage() {
                 {/* What's included BENTO */}
                 <section className="bg-slate-50 dark:bg-slate-900/50 rounded-[3.5rem] p-10 md:p-16 border border-slate-100 dark:border-slate-800">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">What Indira Hospital <br /><span className="text-fuchsia-600">Arranges for You</span></h2>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white">What Indira Hospital <br /><span className="text-fuchsia-600">Arranges for You</span></h2>
                         <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium">Full concierge support to make your medical stay as comfortable as possible.</p>
                     </div>
                     
@@ -207,10 +207,10 @@ export default function LodgingPage() {
                         <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mx-auto mb-10">
                             <Sparkles className="w-10 h-10 text-fuchsia-400 shadow-[0_0_20px_rgba(232,121,249,0.5)]" />
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">Need a Personalized Stay Plan?</h2>
+                        <h2 className="elite-section-title text-white mb-6">Need a Personalized Stay Plan?</h2>
                         <p className="text-xl text-slate-400 font-light mb-12">Our international host desk will suggest the most suitable lodging based on your clinical needs and preferences.</p>
                         <a href={WA} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-2xl shadow-fuchsia-500/30 text-lg">
+                            className="elite-button-primary text-base">
                             <MessageCircle className="w-6 h-6" /> Talk to Our Coordinator
                         </a>
                     </div>

@@ -88,7 +88,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                             </span>
                         </div>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             The Best Care in India <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">for {country.name}.</span>
                         </h1>
@@ -135,7 +135,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                         
                         {/* TRAVEL INFO */}
                         <section>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-10 uppercase tracking-tight">Travel & <span className="text-fuchsia-600">Visa Guide</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-10 uppercase">Travel & <span className="text-fuchsia-600">Visa Guide</span></h2>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 {[
                                     { icon: Clock, title: "Flight Duration", value: country.flight_duration, color: "blue" },
@@ -156,7 +156,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
 
                         {/* TREATMENT HIGHLIGHTS */}
                         <section>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-10 uppercase tracking-tight">Most <span className="text-fuchsia-600">Requested Care</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-10 uppercase">Most <span className="text-fuchsia-600">Requested Care</span></h2>
                             <div className="grid sm:grid-cols-2 gap-4">
                                 {TOP_TREATMENTS_INTL.map((t) => (
                                     <Link href={`/doctor/near-me/treat/${t.slug}`} key={t.slug}
@@ -181,7 +181,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-[10px] font-black tracking-widest uppercase mb-6">
                                     🔥 Same-Week Appointments
                                 </span>
-                                <h2 className="text-3xl font-black mb-4 uppercase tracking-tighter">Why {country.name} Chooses <br /><span className="text-fuchsia-400">Indira Over CMC Vellore</span></h2>
+                                <h2 className="elite-section-title mb-4 uppercase er">Why {country.name} Chooses <br /><span className="text-fuchsia-400">Indira Over CMC Vellore</span></h2>
                                 <p className="text-slate-400 text-sm mb-10 italic font-light leading-relaxed max-w-xl">
                                     Avoid the 3–6 month waitlists. Indira Hospital offers equivalent quaternary care with immediate access and dedicated international coordination.
                                 </p>
@@ -196,7 +196,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                                 </div>
                                 
                                 <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 mt-10 px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-fuchsia-900/40 text-xs tracking-widest uppercase">
+                                    className="elite-button-primary mt-10">
                                     <MessageCircle className="w-4 h-4" /> Skip the Waitlist
                                 </a>
                             </div>
@@ -204,7 +204,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
 
                         {/* COST TABLE */}
                         <section>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight text-center lg:text-left">Transparent <span className="text-fuchsia-600">Pricing</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-4 uppercase text-center lg:text-left">Transparent <span className="text-fuchsia-600">Pricing</span></h2>
                             <p className="text-slate-500 dark:text-slate-400 text-sm mb-10 italic font-medium text-center lg:text-left">Save up to 85% compared to home country costs.</p>
                             
                             <div className="overflow-x-auto rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm">
@@ -319,7 +319,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
             <section className="bg-slate-900 py-32 relative overflow-hidden text-center rounded-t-[5rem]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,121,249,0.1),transparent_70%)] pointer-events-none" />
                 <div className="max-w-4xl mx-auto px-6 relative z-10">
-                    <h2 className="text-5xl sm:text-7xl font-black text-white mb-10 tracking-tight leading-[0.95] uppercase">Indira <br /><span className="text-fuchsia-500 italic">Global Care.</span></h2>
+                    <h2 className="elite-section-title text-white mb-10 uppercase">Indira <br /><span className="text-fuchsia-500 italic">Global Care.</span></h2>
                     <p className="text-xl text-slate-400 font-light mb-16 italic leading-relaxed">Join 15,000+ international patients who transformed their lives at Indira Hospital.</p>
                     <a href={waUrl} target="_blank" rel="noopener noreferrer"
                         className="inline-flex items-center gap-4 px-12 py-6 bg-green-600 hover:bg-green-500 text-white font-black rounded-[2.5rem] shadow-2xl shadow-green-900/40 text-xl transition-all hover:scale-105">

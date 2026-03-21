@@ -79,7 +79,7 @@ export default function TechnologyHubPage() {
 
                 <SectionContainer className="relative z-10 -skew-y-3 max-w-7xl mx-auto py-12">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-4xl md:text-5xl font-black mb-6 text-white tracking-tight">Advanced Medical Systems</h2>
+                        <h2 className="elite-section-title mb-6 text-white">Advanced Medical Systems</h2>
                         <p className="text-xl text-slate-400 font-light leading-relaxed">Explore the cutting-edge robotic, imaging, and surgical technology housed within our facility.</p>
                     </div>
 
@@ -129,7 +129,7 @@ export default function TechnologyHubPage() {
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-8 shadow-[0_0_30px_rgba(20,184,166,0.2)]">
                             <Sparkles className="w-8 h-8 text-fuchsia-300" />
                         </div>
-                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+                        <h2 className="elite-section-title text-white mb-8">
                             Experience Digital <br /> <span className="text-fuchsia-400">Healthcare.</span>
                         </h2>
                         <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">

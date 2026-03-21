@@ -141,7 +141,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
                         <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
                             <div className="flex-1 text-center md:text-left">
-                                <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Reaching Us from {location.name}</h2>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Reaching Us from {location.name}</h2>
                                 <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-8">
                                     {location.description} For patients in {location.district}, our main campus in Vellore provides the closest access to tertiary care and specialized surgeries.
                                 </p>
@@ -210,7 +210,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-4">
                             <Stethoscope className="w-4 h-4" /> Top Specialists
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Experts Serving {location.name}</h2>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white">Experts Serving {location.name}</h2>
                         <p className="text-slate-500 dark:text-slate-400 font-medium text-lg mt-4">Consult with Tamil Nadu&apos;s leading surgeons and physicians. Advanced care is just a message away.</p>
                     </div>
                     <Link href="/doctor/near-me" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase text-sm tracking-widest hover:text-fuchsia-700 transition-colors">
@@ -236,7 +236,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-fuchsia-300 text-xs font-bold uppercase tracking-widest mb-10">
                                     <Navigation className="w-4 h-4" /> Directions from {location.name}
                                 </div>
-                                <h2 className="text-4xl lg:text-5xl font-black text-white mb-10 tracking-tight leading-[1.1]">
+                                <h2 className="elite-section-title text-white mb-10">
                                     How to reach <br /> <span className="text-fuchsia-400">Main Campus Vellore</span>
                                 </h2>
 
@@ -387,7 +387,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-10">
                             <Star className="w-4 h-4" /> Served Locations Rank #1
                         </span>
-                        <h2 className="text-4xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1] mb-8">
+                        <h2 className="elite-section-title text-slate-900 dark:text-white mb-8">
                             Advanced Surgery <br />
                             <span className="text-fuchsia-600">is Now Local.</span>
                         </h2>
@@ -433,7 +433,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             <SectionContainer className="py-24 max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <span className="text-fuchsia-600 font-black uppercase text-xs tracking-[0.2em] mb-4 block">Regional Network</span>
-                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Other Areas Near {location.name}</h2>
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Other Areas Near {location.name}</h2>
                     <p className="text-slate-500 dark:text-slate-400 font-medium text-lg max-w-2xl mx-auto leading-relaxed">Providing high-end clinical support across the entire {location.district} district and neighboring regions.</p>
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

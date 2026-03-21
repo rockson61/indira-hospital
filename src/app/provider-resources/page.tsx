@@ -75,7 +75,7 @@ export default function ProviderResourcesPage() {
                             <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-8">
                                 <MessageSquare className="w-8 h-8 text-fuchsia-400" />
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">Elite Care Coordination</h2>
+                            <h2 className="elite-section-title mb-8">Elite Care Coordination</h2>
                             <p className="text-slate-300 text-xl font-light leading-relaxed mb-8">
                                 We ensure that your referred patients receive a seamless transition back to your primary care with detailed surgical summaries and rehabilitation plans.
                             </p>

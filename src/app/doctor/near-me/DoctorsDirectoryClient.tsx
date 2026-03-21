@@ -89,7 +89,7 @@ export default function DoctorsDirectoryClient() {
                             <div className="w-32 h-32 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-inner group">
                                 <Search className="h-14 w-14 text-slate-300 group-hover:scale-110 transition-transform" />
                             </div>
-                            <h3 className="text-4xl font-black text-slate-900 dark:text-white mb-6">{DOCTORS_DIRECTORY.DEFAULT_NO_DOCTORS_MESSAGE}</h3>
+                            <h3 className="elite-section-title text-slate-900 dark:text-white mb-6">{DOCTORS_DIRECTORY.DEFAULT_NO_DOCTORS_MESSAGE}</h3>
                             <p className="text-slate-500 dark:text-slate-400 font-medium text-xl mb-12 max-w-md mx-auto">{DOCTORS_DIRECTORY.DEFAULT_NO_DOCTORS_SUGGESTION}</p>
                             <button
                                 onClick={() => { setSearchQuery(""); setSelectedDept(DOCTORS_DIRECTORY.DEFAULT_SEARCH_DEPT); }}
@@ -125,7 +125,7 @@ export default function DoctorsDirectoryClient() {
                                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 border border-fuchsia-100 text-[10px] font-black uppercase tracking-[0.2em] text-fuchsia-600 mb-4 shadow-sm group-hover:bg-fuchsia-500 group-hover:text-white transition-colors">
                                                     <Sparkles className="w-3 h-3" /> Specialist
                                                 </div>
-                                                <h2 className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors tracking-tight leading-[1.1]">
+                                                <h2 className="elite-section-title text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors">
                                                     <Link href={`/doctor/${(doctor.specialty || 'specialist').toLowerCase().replace(/\s+/g, '-')}/${doctor.slug}`} className="before:absolute before:inset-0 outline-none">
                                                         {doctor.name}
                                                     </Link>
@@ -169,7 +169,7 @@ export default function DoctorsDirectoryClient() {
                                             </Link>
                                             <Link
                                                 href={`${DOCTORS_DIRECTORY.BOOK_VISIT_HREF_PREFIX}?doctor=${doctor.id}`}
-                                                className="group/btn relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-500 dark:hover:bg-fuchsia-200 hover:scale-[1.02] shadow-xl transition-all duration-500 overflow-hidden"
+                                                className="elite-button-primary text-base w-full sm:w-auto overflow-hidden"
                                             >
                                                 <span className="relative z-10 uppercase tracking-widest mr-4">Book Visit</span>
                                                 <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

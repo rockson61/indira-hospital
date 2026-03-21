@@ -82,7 +82,7 @@ export default function MedicalVisaIndiaPage() {
                             <FileText className="w-4 h-4" /> Official M-Visa Support
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             Indian Medical <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-fuchsia-400 font-black">Visa — Complete Guide.</span>
                         </h1>
@@ -126,7 +126,7 @@ export default function MedicalVisaIndiaPage() {
 
                         {/* STEP BY STEP BENTO */}
                         <section>
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-10 tracking-tight uppercase">Visa Process <br /><span className="text-blue-600">Step-by-Step</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-10 uppercase">Visa Process <br /><span className="text-blue-600">Step-by-Step</span></h2>
                             <div className="grid gap-6">
                                 {STEPS.map((step, i) => (
                                     <div key={i} className="group flex flex-col md:flex-row gap-8 p-10 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all duration-500">
@@ -149,7 +149,7 @@ export default function MedicalVisaIndiaPage() {
                         <section className="bg-slate-900 rounded-[3.5rem] p-10 md:p-16 border border-white/5 relative overflow-hidden text-white">
                             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)] pointer-events-none" />
                             <div className="relative z-10">
-                                <h2 className="text-4xl font-black mb-10 tracking-tight uppercase">M-Visa <br /><span className="text-blue-400">Document Checklist</span></h2>
+                                <h2 className="elite-section-title mb-10 uppercase">M-Visa <br /><span className="text-blue-400">Document Checklist</span></h2>
                                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6">
                                     {DOCS_CHECKLIST.map((doc, i) => (
                                         <div key={i} className="flex items-start gap-4 p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors border border-white/5">
@@ -165,7 +165,7 @@ export default function MedicalVisaIndiaPage() {
 
                         {/* COUNTRY LINKS */}
                         <section>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-10 tracking-tight uppercase">Country-Specific <br /><span className="text-fuchsia-600">Visa Information</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-10 uppercase">Country-Specific <br /><span className="text-fuchsia-600">Visa Information</span></h2>
                             <div className="grid sm:grid-cols-2 gap-4">
                                 {INTERNATIONAL_COUNTRIES.filter(c => c.flag).slice(0, 16).map((c) => (
                                     <Link key={c.slug} href={`/patients/international/${c.slug}`}

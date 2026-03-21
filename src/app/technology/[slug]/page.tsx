@@ -56,7 +56,7 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
                         <Link href="/technology" className="inline-flex items-center text-fuchsia-200 hover:text-white mb-6 transition-colors text-sm">
                             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Technology
                         </Link>
-                        <h1 className="text-3xl md:text-5xl font-bold mb-4">{tech.title}</h1>
+                        <h1 className="elite-hero-title font-bold mb-4">{tech.title}</h1>
                         <p className="text-xl text-fuchsia-100">{tech.shortDescription}</p>
                     </div>
                 </div>

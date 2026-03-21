@@ -79,7 +79,7 @@ export default function TreatmentsPage() {
                     {treatments.map((treatment) => (
                         <div key={treatment.slug} className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col h-full group">
                             <div className="mb-8">{treatment.icon}</div>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-4">{treatment.title}</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-4">{treatment.title}</h2>
                             <p className="text-slate-500 font-medium mb-8 flex-grow">{treatment.description}</p>
 
                             <div className="space-y-4 mb-10">
@@ -108,7 +108,7 @@ export default function TreatmentsPage() {
                 <div className="bg-gradient-to-br from-slate-900 to-fuchsia-950 rounded-[4rem] p-12 lg:p-24 text-center relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] will-change-transform transform-gpu" />
                     <div className="relative z-10 w-full max-w-3xl mx-auto">
-                        <h2 className="text-4xl md:text-6xl font-black text-white mb-8">Why Laser Surgery?</h2>
+                        <h2 className="elite-section-title text-white mb-8">Why Laser Surgery?</h2>
                         <p className="text-slate-300 text-lg md:text-xl font-light mb-12 leading-relaxed">
                             Laser surgery represents the pinnacle of modern proctology. By using concentrated light energy, we achieve surgical precision unreachable by traditional scalpels, leading to less tissue damage and faster recovery.
                         </p>

@@ -30,7 +30,7 @@ export default function FAQPage() {
                     <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                         <HelpCircle className="w-4 h-4" /> Patient Help Center
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tight">
+                    <h1 className="elite-hero-title mb-8">
                         How can we <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">help you?</span>
                     </h1>
                     <div className="max-w-2xl mx-auto relative group">
@@ -120,7 +120,7 @@ export default function FAQPage() {
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-fuchsia-300 text-xs font-bold tracking-widest uppercase mb-6">
                                     Support Available 24/7
                                 </div>
-                                <h3 className="text-3xl sm:text-4xl font-black mb-4 tracking-tight">Still have questions?</h3>
+                                <h3 className="elite-section-title mb-4">Still have questions?</h3>
                                 <p className="text-slate-300 text-lg leading-relaxed">Our clinical coordinators are standing by to assist you with any further information regarding your procedure.</p>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4 relative z-10 w-full xl:w-auto">

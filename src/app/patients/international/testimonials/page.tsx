@@ -114,7 +114,7 @@ export default function InternationalTestimonialsPage() {
                             <Heart className="w-4 h-4 text-fuchsia-400" /> Real Stories · Verified Patients
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             International <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">Success Stories.</span>
                         </h1>
@@ -125,7 +125,7 @@ export default function InternationalTestimonialsPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href={WA} target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-fuchsia-500/20">
+                                className="elite-button-primary">
                                 <MessageCircle className="w-5 h-5" /> Start Your Journey
                             </a>
                             <Link href="/patients/international/cost-estimator"
@@ -211,7 +211,7 @@ export default function InternationalTestimonialsPage() {
                     
                     <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
                         <div>
-                            <h2 className="text-4xl font-black text-white mb-6 uppercase tracking-tight leading-none">Find Your <br /><span className="text-fuchsia-400 italic">Country Hub.</span></h2>
+                            <h2 className="elite-section-title text-white mb-6 uppercase">Find Your <br /><span className="text-fuchsia-400 italic">Country Hub.</span></h2>
                             <p className="text-slate-400 font-medium mb-10 leading-relaxed italic text-lg">Detailed travel guides, visa requirements, and specific success stories tailored for your home nation.</p>
                         </div>
 
@@ -254,12 +254,12 @@ export default function InternationalTestimonialsPage() {
             <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,121,249,0.1),transparent_70%)] pointer-events-none" />
                 <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-5xl sm:text-7xl font-black text-white mb-10 tracking-tight leading-[0.95] uppercase">Join Our <br /><span className="text-fuchsia-500 italic">Success Stories.</span></h2>
+                    <h2 className="elite-section-title text-white mb-10 uppercase">Join Our <br /><span className="text-fuchsia-500 italic">Success Stories.</span></h2>
                     <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">Your journey to world-class health begins with a single conversation. Our international desk is ready to assist you.</p>
                     
                     <div className="flex flex-wrap justify-center gap-6">
                         <a href={WA} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-4 px-12 py-6 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-[2.5rem] shadow-2xl shadow-fuchsia-500/20 text-xl transition-all hover:scale-105">
+                            className="elite-button-primary text-base">
                             <MessageCircle className="w-6 h-6" /> WhatsApp Us Now
                         </a>
                         <Link href="/patients/international/cost-estimator"

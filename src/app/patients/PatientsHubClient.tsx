@@ -124,7 +124,7 @@ export function PatientsHubClient() {
                                     <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-gradient-to-r ${cat.gradient} text-white text-xs font-black uppercase tracking-widest mb-3`}>
                                         <cat.icon className="w-3.5 h-3.5" /> {cat.id}
                                     </div>
-                                    <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">{cat.title}</h2>
+                                    <h2 className="elite-section-title text-slate-900 dark:text-white">{cat.title}</h2>
                                     <p className="text-slate-500 dark:text-slate-400 mt-2 font-medium">{cat.description}</p>
                                 </div>
                             </div>

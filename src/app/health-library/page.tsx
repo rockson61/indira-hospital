@@ -58,7 +58,7 @@ export default function HealthLibraryPage() {
             <SectionContainer>
                 <div className="grid lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-2 space-y-12">
-                        <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-8">Latest Insights</h2>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white mb-8">Latest Insights</h2>
                         {[
                             { title: "Understanding Laser Proctology: Benefits and Recovery", date: "Jan 12, 2024", cat: "Surgery", slug: "laser-proctology-benefits" },
                             { title: "How to Manage PCOS through Lifestyle Integration", date: "Feb 05, 2024", cat: "Women's Health", slug: "pcos-lifestyle-management" },

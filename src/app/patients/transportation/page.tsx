@@ -120,7 +120,7 @@ export default function TransportationPage() {
                             <Navigation className="w-4 h-4" /> Getting to Indira Hospital
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             How to Reach <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-indigo-400">Vellore — Directions.</span>
                         </h1>
@@ -165,7 +165,7 @@ export default function TransportationPage() {
                 <section>
                     <div className="flex items-center justify-between mb-12 flex-wrap gap-4">
                         <div>
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight uppercase">Getting Here <br /><span className="text-emerald-600">Travel Options</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">Getting Here <br /><span className="text-emerald-600">Travel Options</span></h2>
                             <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg font-medium">Clear instructions based on your point of origin.</p>
                         </div>
                         <div className="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400">
@@ -220,7 +220,7 @@ export default function TransportationPage() {
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 text-red-500 text-xs font-black uppercase tracking-widest mb-6 border border-red-500/20">
                                 <AlertCircle className="w-4 h-4" /> 24/7 Dispatch
                             </div>
-                            <h2 className="text-4xl font-black text-white mb-6 tracking-tight">Emergency or <br /><span className="text-red-500 underline underline-offset-8">Ambulance Service</span></h2>
+                            <h2 className="elite-section-title text-white mb-6">Emergency or <br /><span className="text-red-500 underline underline-offset-8">Ambulance Service</span></h2>
                             <p className="text-slate-400 text-lg font-light leading-relaxed mb-8 max-w-lg">Our advanced life support (ALS) ambulances are equipped with ventilators and monitoring equipment, ready to serve anywhere in Vellore and nearby districts.</p>
                             
                             <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, "")}`}
@@ -265,7 +265,7 @@ export default function TransportationPage() {
                         <div className="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 mb-8 border border-indigo-100 dark:border-indigo-800 shadow-inner">
                             <MapPin className="w-8 h-8" />
                         </div>
-                        <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-6 tracking-tight uppercase">Hospital Landmark & <br /><span className="text-indigo-600">Central Location</span></h2>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white mb-6 uppercase">Hospital Landmark & <br /><span className="text-indigo-600">Central Location</span></h2>
                         
                         <div className="space-y-6 text-slate-600 dark:text-slate-400 text-lg font-medium leading-relaxed">
                             <p>54, Katpadi Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore — 632006, Tamil Nadu, India</p>

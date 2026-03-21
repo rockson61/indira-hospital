@@ -57,7 +57,7 @@ export default function CareersPage() {
                             <div className="w-2 h-2 rounded-full bg-fuchsia-400 animate-pulse"></div>
                             Join our Clinical Legacy
                         </div>
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             Build Your Career in <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Excellence.</span>
                         </h1>
@@ -94,7 +94,7 @@ export default function CareersPage() {
                 <SectionContainer>
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
                         <div className="max-w-2xl">
-                            <h2 className="text-4xl sm:text-5xl font-black mb-6 text-slate-900 dark:text-white tracking-tight">Active <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">Opportunities</span></h2>
+                            <h2 className="elite-section-title mb-6 text-slate-900 dark:text-white">Active <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">Opportunities</span></h2>
                             <p className="text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">
                                 We are actively hiring for the following departments. Even if you don&apos;t see your
                                 exact role listed, we would love to hear from talented professionals.
@@ -143,7 +143,7 @@ export default function CareersPage() {
                         <div className="w-24 h-24 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-8 backdrop-blur-md shadow-inner border border-white/20 group-hover/cta:scale-110 transition-transform duration-500">
                             <Mail className="w-10 h-10 text-fuchsia-300" />
                         </div>
-                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h2 className="elite-section-title mb-8">
                             Ready to join the <br /> best team in Vellore?
                         </h2>
                         <p className="text-xl text-fuchsia-100/80 mb-12 font-light leading-relaxed">

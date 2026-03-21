@@ -81,7 +81,7 @@ export default function TourismSpotsPage() {
                             <Palmtree className="w-4 h-4 text-amber-400" /> Heal. Recover. Discover.
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             Explore Incredible <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Recovery Spots.</span>
                         </h1>
@@ -146,7 +146,7 @@ export default function TourismSpotsPage() {
                 <section>
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6 text-center lg:text-left mx-auto max-w-4xl lg:mx-0 lg:max-w-full">
                         <div className="max-w-2xl">
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight uppercase">Curated <br /><span className="text-amber-600">Destinations</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">Curated <br /><span className="text-amber-600">Destinations</span></h2>
                             <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium italic">Explore the best recovery spots handpicked for our international guests.</p>
                         </div>
                         <div className="w-16 h-16 rounded-full bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 border border-amber-100 dark:border-amber-800">
@@ -159,7 +159,7 @@ export default function TourismSpotsPage() {
                             <article key={state.name} className="group bg-white dark:bg-slate-900 rounded-[3.5rem] border border-slate-100 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col">
                                 <div className="p-10 pb-0">
                                     <div className="flex justify-between items-start mb-6">
-                                        <h3 className="text-3xl font-black text-slate-900 dark:text-white group-hover:text-amber-600 transition-colors uppercase tracking-tighter">{state.name}</h3>
+                                        <h3 className="elite-section-title text-slate-900 dark:text-white group-hover:text-amber-600 transition-colors uppercase er">{state.name}</h3>
                                         <span className="px-4 py-1.5 bg-slate-50 dark:bg-slate-800 text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-full border border-slate-100 dark:border-slate-700">
                                             {state.type}
                                         </span>
@@ -194,7 +194,7 @@ export default function TourismSpotsPage() {
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/20 text-amber-300 text-[10px] font-black tracking-widest uppercase mb-8">
                                 <Sparkles className="w-4 h-4" /> 24/7 Concierge Support
                             </span>
-                            <h2 className="text-4xl sm:text-6xl font-black mb-8 leading-[0.95] uppercase tracking-tighter">
+                            <h2 className="elite-section-title mb-8 uppercase er">
                                 You Focus on Healing. <br/>
                                 <span className="text-amber-500 italic">We Handle the Rest.</span>
                             </h2>

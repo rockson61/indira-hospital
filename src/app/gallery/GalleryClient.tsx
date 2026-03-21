@@ -134,7 +134,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
                                 <span className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.4em] mb-4 block">
                                     {selectedImage.category}
                                 </span>
-                                <h2 className="text-4xl lg:text-7xl font-black text-white tracking-tighter leading-none mb-6 uppercase italic">
+                                <h2 className="elite-section-title text-white er mb-6 uppercase italic">
                                     {selectedImage.alt}
                                 </h2>
                                 <div className="h-2 w-32 bg-gradient-to-r from-indigo-500 to-fuchsia-500 rounded-full" />

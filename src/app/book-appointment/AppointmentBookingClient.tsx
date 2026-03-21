@@ -66,7 +66,7 @@ export default function AppointmentBookingClient() {
                     <div className="w-24 h-24 bg-pink-50 dark:bg-pink-950 rounded-full flex items-center justify-center mb-8 shadow-inner animate-bounce delay-100">
                         <CheckCircle2 className="h-12 w-12 text-pink-500" />
                     </div>
-                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Booking Confirmed!</h2>
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-4">Booking Confirmed!</h2>
                     <p className="text-xl text-slate-500 dark:text-slate-400 font-medium mb-12 max-w-lg mx-auto">
                         Thank you, <span className="font-bold text-slate-900 dark:text-white">{formData.name}</span>. Your request is secured. Our clinical coordinator will contact you shortly at <span className="font-bold text-slate-900 dark:text-white tracking-wider">{formData.phone}</span> to finalize your precise slot.
                     </p>

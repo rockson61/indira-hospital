@@ -194,7 +194,7 @@ async function DoctorView({ doctor, location, city, slug }: any) {
                                 ))}
                             </div>
                             <div className="flex flex-wrap gap-4">
-                                <a href={whatsappUrl} className="inline-flex items-center px-8 py-5 bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-black rounded-2xl transition-all shadow-lg shadow-fuchsia-500/25 uppercase tracking-widest text-sm">
+                                <a href={whatsappUrl} className="elite-button-primary text-sm">
                                     <MessageCircle className="w-5 h-5 mr-3" /> Book Expert Consultation
                                 </a>
                             </div>

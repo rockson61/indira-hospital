@@ -72,7 +72,7 @@ export default function InsurancePage() {
                         <div className="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center">
                             <ShieldCheck className="w-6 h-6 text-emerald-600" />
                         </div>
-                        <h2 className="text-3xl font-black text-slate-900 dark:text-white">Government Health Schemes</h2>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white">Government Health Schemes</h2>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                         {[
@@ -95,7 +95,7 @@ export default function InsurancePage() {
             {/* Private Insurance Partners Grid */}
             <SectionContainer className="mb-24">
                 <div className="mb-10 text-center">
-                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Our Empanelled Network</h2>
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Our Empanelled Network</h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-3xl mx-auto">
                         We are officially allied with 40+ leading insurance companies and Third-Party Administrators (TPAs) to ensure your care is universally covered.
                     </p>
@@ -125,7 +125,7 @@ export default function InsurancePage() {
             {/* In-depth SEO Content Section */}
             <SectionContainer className="mb-24">
                 <div className="bg-emerald-50 dark:bg-slate-900 rounded-[3rem] p-8 md:p-12 border border-emerald-100 dark:border-slate-800">
-                    <h2 className="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white mb-6">Cashless Hospitalization in Vellore</h2>
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Cashless Hospitalization in Vellore</h2>
                     <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
                         <p>
                             Medical emergencies and planned surgeries shouldn't be a financial burden. At <strong>Indira Super Speciality Hospital, Vellore</strong>, we bridge the gap between world-class healthcare and financial peace of mind through our extensive network of cashless insurance tie-ups.
@@ -172,7 +172,7 @@ export default function InsurancePage() {
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                                 <Info className="w-4 h-4 text-emerald-400" /> Essential Guide
                             </div>
-                            <h2 className="text-4xl font-black mb-6">How to avail Cashless Treatment?</h2>
+                            <h2 className="elite-section-title mb-6">How to avail Cashless Treatment?</h2>
                             <ul className="space-y-4">
                                 {[
                                     "Present your valid Insurance ID card and Govt ID at the TPA desk.",

@@ -80,7 +80,7 @@ export default function SecondOpinionPage() {
                             ⚡ Free · No Obligation · 24hr Response
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             Get a Free Second <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-fuchsia-400">Medical Opinion.</span>
                         </h1>
@@ -120,7 +120,7 @@ export default function SecondOpinionPage() {
                 <section>
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                         <div className="max-w-2xl">
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight uppercase">How It <br /><span className="text-blue-600">Works</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">How It <br /><span className="text-blue-600">Works</span></h2>
                             <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium italic">Four simple steps to clarity and confidence in your medical journey.</p>
                         </div>
                         <div className="w-16 h-16 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 border border-blue-100 dark:border-blue-800">
@@ -148,7 +148,7 @@ export default function SecondOpinionPage() {
                     
                     <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
                         <div>
-                            <h2 className="text-4xl font-black text-white mb-6 uppercase tracking-tight leading-none">Send Your Reports <br /><span className="text-blue-400 italic">Today.</span></h2>
+                            <h2 className="elite-section-title text-white mb-6 uppercase">Send Your Reports <br /><span className="text-blue-400 italic">Today.</span></h2>
                             <p className="text-slate-400 font-medium mb-10 leading-relaxed italic text-lg">Our international desk will assign your case to the right senior specialist immediately upon receipt.</p>
                             
                             <div className="space-y-4 mb-4 text-left inline-block">
@@ -189,7 +189,7 @@ export default function SecondOpinionPage() {
                 {/* SPECIALTIES GRID */}
                 <section>
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6 tracking-tight uppercase leading-tight">Elite Clinical <br /><span className="text-blue-600">Review Board</span></h2>
+                        <h2 className="elite-section-title text-slate-900 dark:text-white mb-6 uppercase">Elite Clinical <br /><span className="text-blue-600">Review Board</span></h2>
                         <p className="text-lg text-slate-500 dark:text-slate-400 font-medium italic">We provide second opinions across all major surgical and medical specialties.</p>
                     </div>
 
@@ -231,7 +231,7 @@ export default function SecondOpinionPage() {
             <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent_70%)] pointer-events-none" />
                 <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-5xl sm:text-7xl font-black text-white mb-10 tracking-tight leading-[0.95] uppercase">Indira <br /><span className="text-blue-500 italic">Independent Review.</span></h2>
+                    <h2 className="elite-section-title text-white mb-10 uppercase">Indira <br /><span className="text-blue-500 italic">Independent Review.</span></h2>
                     <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">No payment. No obligation. Just an honest specialist opinion from India&apos;s leading quaternary care hospital.</p>
                     
                     <div className="flex flex-wrap justify-center gap-6">

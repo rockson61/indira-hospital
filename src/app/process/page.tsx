@@ -68,7 +68,7 @@ export default function ProcessPage() {
                                     {step.icon}
                                 </div>
                                 <div className="text-sm font-black text-fuchsia-500 uppercase tracking-widest mb-2">Step {i + 1}</div>
-                                <h2 className="text-3xl font-black text-slate-900 dark:text-white">{step.title}</h2>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white">{step.title}</h2>
                             </div>
                             <div className="md:w-2/3 p-8 lg:p-12 bg-slate-50 dark:bg-slate-900/50 rounded-[3rem] border border-slate-100 dark:border-slate-800 group-hover:border-fuchsia-200 dark:group-hover:border-fuchsia-900 transition-all">
                                 <p className="text-xl text-slate-700 dark:text-slate-300 font-bold mb-4 leading-relaxed">{step.description}</p>
@@ -88,7 +88,7 @@ export default function ProcessPage() {
                             <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-8">
                                 <Clock className="w-8 h-8 text-fuchsia-400" />
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">Same-Day Discharge Philosophy</h2>
+                            <h2 className="elite-section-title mb-8">Same-Day Discharge Philosophy</h2>
                             <p className="text-slate-300 text-xl font-light leading-relaxed">
                                 Our surgical precision and advanced anaesthesia allow a high percentage of our patients to return home the very same day, significantly reducing hospital stays.
                             </p>

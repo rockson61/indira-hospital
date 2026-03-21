@@ -14,7 +14,7 @@ export default function AppointmentBookingPage() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
                 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-                    <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1] mb-6">
+                    <h1 className="elite-hero-title text-white mb-6">
                         Secure Your <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Priority Booking.</span>
                     </h1>

@@ -64,7 +64,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                 <Shield className="w-4 h-4" />
                                 Wellness & Prevention
                             </div>
-                            <h1 className="text-5xl md:text-7xl font-heading font-black text-slate-900 dark:text-white tracking-tight mb-6 leading-[1.1]">
+                            <h1 className="elite-hero-title text-slate-900 dark:text-white mb-6">
                                 {pkg.title} <br className="hidden sm:block" />
                                 <span className="text-fuchsia-600">in Vellore, India</span>
                             </h1>
@@ -117,7 +117,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
                                     href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'd like to book the ${pkg.title} health package.`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full inline-flex items-center justify-center py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold rounded-2xl transition-all shadow-xl shadow-fuchsia-500/20 text-base"
+                                    className="elite-button-primary w-full text-base"
                                 >
                                     <MessageCircle className="w-5 h-5 mr-3" />
                                     Book via WhatsApp

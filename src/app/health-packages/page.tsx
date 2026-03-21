@@ -49,7 +49,7 @@ export default async function HealthPackagesPage() {
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <HeartCardiogram className="w-4 h-4" /> Preventive Care
                         </span>
-                        <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-6">
                             Master Health <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Checkups in Vellore.</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
@@ -86,7 +86,7 @@ export default async function HealthPackagesPage() {
                                         Best Choice
                                     </span>
                                 )}
-                                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-fuchsia-700 transition-colors">{pkg.title}</h2>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white mb-3 group-hover:text-fuchsia-700 transition-colors">{pkg.title}</h2>
                                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-2 font-medium leading-relaxed">
                                     {pkg.short_description || `Comprehensive screening with ${pkg.tests_included}.`}
                                 </p>
@@ -176,7 +176,7 @@ export default async function HealthPackagesPage() {
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-fuchsia-300 text-xs font-bold tracking-widest uppercase mb-6 w-fit">
                                 Clinical Excellence
                             </div>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 text-white tracking-tight leading-[1.1]">
+                            <h2 className="elite-section-title mb-10 text-white">
                                 Why Health Checkups at <br className="hidden sm:block" /> <span className="text-fuchsia-400">Indira Hospital?</span>
                             </h2>
                             <div className="space-y-8">

@@ -67,7 +67,7 @@ export default async function PatientResourcePage({ params }: { params: Promise<
                             <Sparkles className="w-4 h-4" /> Comprehensive Guide
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             {resource.title}
                         </h1>
                         
@@ -77,7 +77,7 @@ export default async function PatientResourcePage({ params }: { params: Promise<
 
                         <div className="flex flex-wrap gap-4">
                             <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-fuchsia-500/20">
+                                className="elite-button-primary">
                                 <MessageCircle className="w-5 h-5" /> Enquire via WhatsApp
                             </a>
                             <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
@@ -104,7 +104,7 @@ export default async function PatientResourcePage({ params }: { params: Promise<
                                     <div className="text-xs font-black text-fuchsia-600 dark:text-fuchsia-400 uppercase tracking-widest mb-2">
                                         Resource Category: {resource.category}
                                     </div>
-                                    <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+                                    <h2 className="elite-section-title text-slate-900 dark:text-white">
                                         Overview
                                     </h2>
                                 </div>

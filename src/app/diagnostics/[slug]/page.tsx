@@ -63,7 +63,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
                             <span className="inline-block px-3 py-1 bg-fuchsia-100 text-fuchsia-700 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
                                 {test.category}
                             </span>
-                            <h1 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-2 leading-tight">
+                            <h1 className="elite-hero-title text-slate-900 dark:text-white mb-2">
                                 {test.name} <br className="hidden sm:block" />
                                 <span className="text-fuchsia-600 dark:text-fuchsia-400">in Vellore, Tamil Nadu</span>
                             </h1>

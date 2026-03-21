@@ -50,7 +50,7 @@ export default function QualitySafetyPage() {
                             <Shield className="w-4 h-4 text-blue-400" />
                             <span className="text-blue-400 font-medium text-sm tracking-wide">Patient Safety First</span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+                        <h1 className="elite-hero-title mb-6">
                             Hospital Quality & <br />
                             <span className="text-blue-400">Patient Safety in Vellore.</span>
                         </h1>
@@ -85,7 +85,7 @@ export default function QualitySafetyPage() {
                 <SectionContainer>
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900 dark:text-white">Our Commitment to <span className="text-fuchsia-600">Clinical Excellence</span></h2>
+                            <h2 className="elite-section-title font-bold mb-8 text-slate-900 dark:text-white">Our Commitment to <span className="text-fuchsia-600">Clinical Excellence</span></h2>
                             <div className="space-y-6">
                                 {[
                                     { t: "Evidence-Based Medicine", d: "Treatments based on the latest global clinical research and peer-reviewed studies." },

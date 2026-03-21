@@ -126,7 +126,7 @@ export default async function DiagnosticsPage() {
                                             <Icon className={`w-12 h-12 ${config.color}`} />
                                         </div>
                                         <div>
-                                            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-2">{config.label}</h2>
+                                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-2">{config.label}</h2>
                                             <div className="flex items-center gap-3">
                                                 <span className="h-1 w-8 bg-fuchsia-500 rounded-full" />
                                                 <p className="text-sm font-black text-slate-400 tracking-[0.2em] uppercase">
@@ -160,7 +160,7 @@ export default async function DiagnosticsPage() {
                     <div className="w-32 h-32 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-inner">
                         <Beaker className="h-14 w-14 text-slate-300" />
                     </div>
-                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4">Inventory Syncing</h3>
+                    <h3 className="elite-section-title text-slate-900 dark:text-white mb-4">Inventory Syncing</h3>
                     <p className="text-slate-500 dark:text-slate-400 font-medium text-lg max-w-md mx-auto">Diagnostic database is being updated with real-time pricing. Please call us for immediate assistance.</p>
                 </SectionContainer>
             )}
@@ -178,7 +178,7 @@ export default async function DiagnosticsPage() {
                             <Sparkles className="w-12 h-12 text-fuchsia-300" />
                         </div>
 
-                        <h2 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-black text-white mb-10 tracking-tight leading-[1.05]">
+                        <h2 className="elite-section-title lg:text-white mb-10">
                             Lab Tests At <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">
                                 Your Doorstep.

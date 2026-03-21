@@ -106,7 +106,7 @@ export default function ScansPage() {
                         },
                     ].map((scan, idx) => (
                         <div key={idx} className={`bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 lg:p-12 border ${scan.border} shadow-xl hover:-translate-y-2 transition-transform duration-500 group flex flex-col`}>
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4 leading-tight">{scan.title}</h3>
+                            <h3 className="elite-section-title text-slate-900 dark:text-white mb-4">{scan.title}</h3>
                             <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed text-lg mb-8 flex-grow">{scan.desc}</p>
                             <div className="space-y-3">
                                 {scan.features.map((feature, fIdx) => (
@@ -152,7 +152,7 @@ export default function ScansPage() {
                         <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 mb-10 shadow-[0_0_40px_rgba(59,130,246,0.3)]">
                             <FileText className="w-10 h-10 text-blue-300" />
                         </div>
-                        <h2 className="text-5xl sm:text-7xl font-black text-white mb-6 tracking-tight leading-[1.05]">
+                        <h2 className="elite-section-title text-white mb-6">
                             Book Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Scan Today.</span>
                         </h2>
                         <p className="text-xl sm:text-2xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">

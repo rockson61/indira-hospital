@@ -88,7 +88,7 @@ export default function WhyChoosePage() {
                             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-fuchsia-300 text-xs font-black tracking-widest uppercase mb-8">
                                 <Zap className="w-3.5 h-3.5" /> Clinical Impact
                             </span>
-                            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter leading-tight">
+                            <h2 className="elite-section-title text-white mb-8 er">
                                 Empowering Health <br /> through Excellence
                             </h2>
                             <p className="text-slate-400 text-xl font-light leading-relaxed mb-12 max-w-xl">

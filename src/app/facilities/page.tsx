@@ -61,7 +61,7 @@ export default function FacilitiesPage() {
                 <div className="bg-slate-900 rounded-[3.5rem] p-12 lg:p-20 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[120px] will-change-transform transform-gpu" />
                     <div className="relative z-10">
-                        <h2 className="text-4xl lg:text-5xl font-black text-white mb-12">Infrastructure Excellence</h2>
+                        <h2 className="elite-section-title text-white mb-12">Infrastructure Excellence</h2>
                         <div className="grid md:grid-cols-2 gap-x-16 gap-y-6">
                             {clinicFacilities.map((facility, i) => (
                                 <div key={i} className="flex items-center gap-4 py-4 border-b border-white/10 group">

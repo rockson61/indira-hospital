@@ -76,7 +76,7 @@ export default function CostEstimatorPage() {
                             🧮 Free Cost Estimate — Response in 24 Hours
                         </span>
                         
-                        <h1 className="text-5xl sm:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-8">
                             Treatment Cost in India <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">vs USA, UK & UAE</span>
                         </h1>
@@ -128,7 +128,7 @@ export default function CostEstimatorPage() {
                 <section>
                     <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
                         <div className="max-w-2xl">
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight uppercase">Procedure <br /><span className="text-emerald-600">Cost Comparison</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">Procedure <br /><span className="text-emerald-600">Cost Comparison</span></h2>
                             <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium italic">Indicative ranges showing how much you can save without compromising on clinical quality.</p>
                         </div>
                         <div className="flex gap-2">
@@ -176,7 +176,7 @@ export default function CostEstimatorPage() {
                 <section>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-8 tracking-tight uppercase leading-none">Why is it <br /><span className="text-emerald-600">So Affordable?</span></h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-8 uppercase">Why is it <br /><span className="text-emerald-600">So Affordable?</span></h2>
                             <p className="text-slate-500 dark:text-slate-400 font-medium italic text-lg leading-relaxed mb-10">Lower prices in India are driven by operational efficiency and volume, not a compromise on clinical outcomes or technology.</p>
                             
                             <div className="grid sm:grid-cols-2 gap-6">
@@ -197,7 +197,7 @@ export default function CostEstimatorPage() {
                             <div className="w-20 h-20 rounded-[2rem] bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-8 mx-auto shadow-inner border border-emerald-500/30">
                                 <Shield className="w-10 h-10" />
                             </div>
-                            <h3 className="text-3xl font-black mb-6 tracking-tight uppercase">NABH Quality Standards</h3>
+                            <h3 className="elite-section-title mb-6 uppercase">NABH Quality Standards</h3>
                             <p className="text-slate-400 font-medium mb-10 italic">Indira Hospital is NABH-accredited, ensuring the same surgical safety protocols and technology standards as elite hospitals in the US and Europe.</p>
                             
                             <div className="space-y-4 mb-10 text-left max-w-xs mx-auto">
@@ -244,7 +244,7 @@ export default function CostEstimatorPage() {
             <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none" />
                 <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-5xl sm:text-7xl font-black text-white mb-10 tracking-tight leading-[0.95] uppercase">Your Health <br /><span className="text-emerald-500 italic">Affordable Once Again.</span></h2>
+                    <h2 className="elite-section-title text-white mb-10 uppercase">Your Health <br /><span className="text-emerald-500 italic">Affordable Once Again.</span></h2>
                     <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">Save up to 90% on world-class quaternary care. Get your free personalized cost estimate within 24 hours.</p>
                     
                     <div className="flex flex-wrap justify-center gap-6">

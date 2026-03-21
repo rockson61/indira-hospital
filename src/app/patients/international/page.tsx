@@ -53,7 +53,7 @@ export default function InternationalPatientsPage() {
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
                             <Globe2 className="w-4 h-4" /> Global Tourism Hub
                         </span>
-                        <h1 className="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[1.1]">
+                        <h1 className="elite-hero-title mb-6">
                             Leading Medical Tourism <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Hospital in India.</span>
                         </h1>
@@ -110,7 +110,7 @@ export default function InternationalPatientsPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold tracking-widest uppercase mb-6 border border-fuchsia-100">
                             <Stethoscope className="w-4 h-4" /> Global Hub
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-black mb-10 text-slate-900 dark:text-white tracking-tight leading-[1.1]">
+                        <h2 className="elite-section-title mb-10 text-slate-900 dark:text-white">
                             Why Choose <br /> <span className="text-fuchsia-600">Health Tourism in India?</span>
                         </h2>
                         <div className="space-y-6">
@@ -142,7 +142,7 @@ export default function InternationalPatientsPage() {
 
                 <SectionContainer className="relative z-10 max-w-7xl mx-auto">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-4xl md:text-5xl font-black mb-6 text-white tracking-tight">Our Seamless Process</h2>
+                        <h2 className="elite-section-title mb-6 text-white">Our Seamless Process</h2>
                         <p className="text-xl text-slate-400 font-light leading-relaxed">Continuous, step-by-step concierge support from your first global inquiry to your final localized recovery.</p>
                     </div>
 
@@ -168,7 +168,7 @@ export default function InternationalPatientsPage() {
             {/* INTERACTIVE COUNTRY HUB PILLS */}
             <SectionContainer className="py-24 max-w-7xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl font-black mb-6 text-slate-900 dark:text-white tracking-tight">Find Your Country Hub</h2>
+                    <h2 className="elite-section-title mb-6 text-slate-900 dark:text-white">Find Your Country Hub</h2>
                     <p className="text-lg text-slate-600 font-light leading-relaxed">Explore specific travel itineraries, visa requirements, and dedicated welcome guides structured for your home nation.</p>
                 </div>
 
@@ -199,7 +199,7 @@ export default function InternationalPatientsPage() {
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-8 shadow-[0_0_30px_rgba(20,184,166,0.2)]">
                             <Plane className="w-8 h-8 text-fuchsia-300" />
                         </div>
-                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+                        <h2 className="elite-section-title text-white mb-8">
                             Ready for a Free <br /> <span className="text-fuchsia-400">Cost Estimate?</span>
                         </h2>
                             <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">

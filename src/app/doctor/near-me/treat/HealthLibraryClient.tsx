@@ -205,7 +205,7 @@ export default function HealthLibraryClient() {
                         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[80px] will-change-transform transform-gpu" />
 
                         <div className="relative z-10 max-w-2xl text-white">
-                            <h2 className="text-4xl lg:text-6xl font-black mb-6">Drugs, Devices & Supplements</h2>
+                            <h2 className="elite-section-title mb-6">Drugs, Devices & Supplements</h2>
                             <p className="text-xl text-blue-100 font-light leading-relaxed mb-8">
                                 Get genuine medicines, surgical supplies, and health supplements from our in-house 24/7 pharmacy.
                             </p>
