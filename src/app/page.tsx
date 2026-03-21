@@ -243,28 +243,27 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-4xl mx-auto">
               <a
                 href="/book-appointment"
-                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
+                className="elite-button-primary w-full sm:w-auto text-base"
               >
                 <span className="relative z-10">{HOME_PAGE_CONTENT.CTA_BUTTON_BOOK}</span>
-                <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+                <ArrowRight className="w-5 h-5 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
               </a>
 
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/whatsapp relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all text-xl"
+                className="elite-button-secondary w-full sm:w-auto bg-fuchsia-500/10 hover:bg-fuchsia-500/20 text-fuchsia-100 border-fuchsia-500/30 text-base"
               >
-                <MessageCircle className="w-6 h-6 mr-3 text-fuchsia-400 group-hover/whatsapp:scale-110 transition-transform" />
+                <MessageCircle className="w-5 h-5 mr-3 text-fuchsia-400 group-hover/whatsapp:scale-110 transition-transform" />
                 WhatsApp Us
               </a>
 
               <a
                 href="/contact"
-                className="flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-white/5 backdrop-blur-md text-white/70 border border-white/5 font-bold rounded-2xl hover:bg-white/10 transition-all text-xl"
+                className="elite-button-secondary w-full sm:w-auto text-base"
               >
-                <Phone className="w-6 h-6 mr-3 text-slate-400" />
+                <Phone className="w-5 h-5 mr-3 text-slate-400" />
                 {HOME_PAGE_CONTENT.CTA_BUTTON_CONTACT}
               </a>
             </div>

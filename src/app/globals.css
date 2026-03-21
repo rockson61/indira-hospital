@@ -249,12 +249,12 @@
   }
 
   .elite-gradient-text {
-    @apply text-transparent bg-clip-text;
+    @apply text-transparent bg-clip-text bg-[var(--elite-gradient)];
     background-image: var(--elite-gradient);
   }
 
   .elite-tag {
-    @apply inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-xl;
+    @apply inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-xl;
   }
 
   .elite-card {
@@ -262,10 +262,10 @@
   }
 
   .elite-button-primary {
-    @apply relative inline-flex items-center justify-center px-10 py-5 bg-fuchsia-600 dark:bg-fuchsia-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-sm uppercase tracking-widest hover:bg-fuchsia-500 dark:hover:bg-fuchsia-400;
+    @apply relative inline-flex items-center justify-center px-6 py-3 bg-fuchsia-600 dark:bg-fuchsia-500 text-white font-black rounded-xl transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xs uppercase tracking-widest hover:bg-fuchsia-500 dark:hover:bg-fuchsia-400 hover:-translate-y-0.5;
   }
 
   .elite-button-secondary {
-    @apply relative inline-flex items-center justify-center px-10 py-5 bg-white/5 backdrop-blur-3xl text-white font-bold rounded-2xl transition-all border border-white/10 hover:bg-white/10 text-sm uppercase tracking-widest;
+    @apply relative inline-flex items-center justify-center px-6 py-3 bg-white/5 backdrop-blur-3xl text-white font-bold rounded-xl transition-all border border-white/10 hover:bg-white/10 text-xs uppercase tracking-widest hover:-translate-y-0.5;
   }
 }

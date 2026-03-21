@@ -151,7 +151,7 @@ export default function CareersPage() {
                             We review elite applications on a rolling basis.
                         </p>
                         <div className="flex justify-center">
-                            <Link href="mailto:careers@indirahospitals.com" className="group/btn relative flex items-center justify-center px-10 py-6 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-black rounded-2xl hover:bg-slate-50 dark:bg-slate-800 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] overflow-hidden text-lg w-full sm:w-auto">
+                            <Link href="mailto:careers@indirahospitals.com" className="elite-button-primary w-full sm:w-auto">
                                 <span className="relative z-10 tracking-wide">careers@indirahospitals.com</span>
                                 <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-200/50 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />

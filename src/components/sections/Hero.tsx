@@ -87,9 +87,9 @@ export function Hero() {
                                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group/whatsapp px-10 py-5 bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 rounded-2xl font-black text-xl border border-pink-100 dark:border-pink-900/50 transition-all hover:bg-pink-100 dark:hover:bg-pink-900/30 flex items-center justify-center gap-3"
+                                className="elite-button-secondary bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 border-pink-200 dark:border-pink-900/50 hover:bg-pink-100 dark:hover:bg-pink-900/30 gap-3"
                             >
-                                <MessageCircle className="w-6 h-6 group-hover/whatsapp:scale-110 transition-transform" /> WhatsApp
+                                <MessageCircle className="w-5 h-5 group-hover/whatsapp:scale-110 transition-transform" /> WhatsApp
                             </a>
                             <a
                                 href={`tel:${siteConfig.contact.emergencyPhone}`}

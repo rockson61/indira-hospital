@@ -79,7 +79,7 @@ export default function ProviderResourcesPage() {
                             <p className="text-slate-300 text-xl font-light leading-relaxed mb-8">
                                 We ensure that your referred patients receive a seamless transition back to your primary care with detailed surgical summaries and rehabilitation plans.
                             </p>
-                            <button className="px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-700 rounded-2xl font-black uppercase tracking-widest text-sm transition-all shadow-xl shadow-fuchsia-600/20">
+                            <button className="elite-button-primary hover:bg-fuchsia-700">
                                 Contact Referral Desk
                             </button>
                         </div>

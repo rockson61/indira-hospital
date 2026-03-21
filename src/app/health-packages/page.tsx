@@ -114,7 +114,7 @@ export default async function HealthPackagesPage() {
                             </div>
 
                             <div className="mt-auto p-8 sm:p-10 pt-0 space-y-3 relative z-10 w-full">
-                                <Link href={`/health-packages/${pkg.slug}`} className="group/btn relative flex items-center justify-center w-full px-6 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl overflow-hidden">
+                                <Link href={`/health-packages/${pkg.slug}`} className="elite-button-primary w-full">
                                     <span className="relative z-10">View Full Details</span>
                                     <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
@@ -137,8 +137,8 @@ export default async function HealthPackagesPage() {
                         <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-8">
                             We are currently engineering our next-generation preventive screening paths. Please contact us directly for current options.
                         </p>
-                        <Link href="/contact" className="inline-flex px-8 py-4 bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 transition-all">
-                            Contact Us
+                        <Link href="/contact" className="elite-button-primary hover:bg-fuchsia-700">
+                            Custom Corporate Packages <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>
                 )}

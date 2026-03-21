@@ -30,11 +30,20 @@ export function Header() {
     return (
         <>
             <div className={`fixed top-0 inset-x-0 z-[100] flex justify-center px-4 sm:px-6 transition-all duration-300 ${scrolled ? 'pt-4' : 'pt-6'}`}>
-                <header
-                    className={`w-full max-w-7xl rounded-full transition-all duration-500 border border-white/40 dark:border-slate-700/60
-                    ${scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-glass py-3' : 'bg-white/95 dark:bg-slate-900/95 shadow-soft py-4'}`}
-                >
-                    <div className="px-6 md:px-8 flex justify-between items-center w-full lg:grid lg:grid-cols-3">
+                <header className="w-full max-w-7xl relative">
+                    {/* Background Capsule (Isolated to prevent blur clipping) */}
+                    <div 
+                        className={cn(
+                            "absolute inset-0 rounded-full transition-all duration-500 pointer-events-none border border-white/40 dark:border-slate-700/60",
+                            scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-glass' : 'bg-white/95 dark:bg-slate-900/95 shadow-soft'
+                        )} 
+                    />
+
+                    {/* Content Container */}
+                    <div className={cn(
+                        "relative z-10 px-6 md:px-8 flex justify-between items-center w-full lg:grid lg:grid-cols-3 transition-all duration-500",
+                        scrolled ? "py-3" : "py-4"
+                    )}>
                         {/* Left: Navigation */}
                         <nav className="hidden lg:flex items-center space-x-8 justify-start">
                             {navigation.mainNav.map((item) => (
