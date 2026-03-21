@@ -92,7 +92,7 @@ export default async function EntityReviews({
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div className="max-w-2xl">
                         <span className="text-primary font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-                        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-slate-900 dark:text-white">{title}</h2>
+                        <h2 className="elite-section-title mt-2 text-slate-900 dark:text-white">{title}</h2>
                         <p className="mt-4 text-slate-500 dark:text-slate-400 text-lg">
                             {description}
                         </p>

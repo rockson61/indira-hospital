@@ -64,7 +64,7 @@ export function ModernServicesSection({ locationName = 'Vellore' }: ModernServic
             <CheckCircle className="w-4 h-4 mr-2" />
             Comprehensive Dental Services
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+          <h2 className="elite-section-title text-neutral-900 mb-6">
             Expert Dental Care in <span className="text-primary-600">{locationName}</span>
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">

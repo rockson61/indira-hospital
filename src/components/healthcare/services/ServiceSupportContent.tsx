@@ -197,7 +197,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-white via-fuchsia-50/30 to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.what}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/30 dark:border-fuchsia-600/30 shadow-lg">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">📖 What Is {serviceName}?</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">📖 What Is {serviceName}?</h2>
           <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-4">
             <strong>{serviceName}</strong> restores tooth function, eliminates pain, and improves smile aesthetics. At Indira Dental Clinic in {cityName}, Dr. Rockson Samuel (BDS, PgDM, BDM, 15+ years experience) performs this procedure using 3D CBCT imaging and digital planning for predictable outcomes.
           </p>
@@ -209,7 +209,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-fuchsia-50 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.when}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">🔍 When Do You Need {serviceName}?</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">🔍 When Do You Need {serviceName}?</h2>
           <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-6">
             <strong>Book a consultation at Indira Dental Clinic, {cityName}</strong> if you experience any of these symptoms:
           </p>
@@ -228,7 +228,7 @@ export function ServiceSupportContent({
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50/50 via-white to-fuchsia-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.procedure}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">Step-by-Step {serviceName} Procedure</h2>
+        <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">Step-by-Step {serviceName} Procedure</h2>
         <div className="grid gap-6 md:grid-cols-2">
           {procedureSteps.map((step, index) => (
             <div key={step.title} className="rounded-2xl border border-fuchsia-200/50 dark:border-fuchsia-700/40 bg-gradient-to-br from-white to-fuchsia-50/30 dark:from-slate-900/80 dark:to-fuchsia-950/40 p-6 shadow-md transition-all hover:shadow-xl hover:scale-[1.02]">
@@ -244,7 +244,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-fuchsia-100/70 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.benefits}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">✨ Benefits of {serviceName} in {cityName}</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">✨ Benefits of {serviceName} in {cityName}</h2>
           <ul className="grid gap-4 md:grid-cols-2">
             {benefitHighlights.map((benefit, index) => (
               <li key={benefit} className="glassmorphism-item dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-6 text-foreground/80 dark:text-slate-300 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]">
@@ -257,7 +257,7 @@ export function ServiceSupportContent({
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-cyan-50/50 via-white to-blue-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.cost}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">{serviceName} Cost &amp; Packages</h2>
+        <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">{serviceName} Cost &amp; Packages</h2>
         <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-6">
           <strong>All-inclusive pricing</strong>—no hidden fees. Each package includes: consultation, CBCT scan, procedure, materials, and follow-up visits. <strong>0% EMI available</strong> for eligible treatments. Serving patients from {cityName}, {locationName}, and nearby districts.
         </p>
@@ -293,7 +293,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-fuchsia-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.beforeAfter}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-blue-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">📸 Before & After Results</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">📸 Before & After Results</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="glassmorphism-item dark:from-slate-800/60 dark:to-blue-900/40 rounded-2xl border border-blue-200 dark:border-fuchsia-700/40 p-6 shadow-lg transition-all hover:shadow-xl hover:scale-[1.01]">
               <div className="flex items-center gap-3 mb-4">
@@ -323,7 +323,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-fuchsia-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.why}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {serviceName}?</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {serviceName}?</h2>
           <ul className="grid gap-3 md:grid-cols-2">
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-xl p-4 border border-fuchsia-200 dark:border-fuchsia-700/40">
               <span className="mt-0.5 text-fuchsia-500 dark:text-fuchsia-400 text-lg">✓</span>
@@ -361,7 +361,7 @@ export function ServiceSupportContent({
 
       <SectionContainer className="py-12 bg-gradient-to-br from-fuchsia-100/70 via-blue-50/50 to-cyan-100/70 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.book}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">📅 Book Your {serviceName} Appointment</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">📅 Book Your {serviceName} Appointment</h2>
           <p className="text-foreground/80 dark:text-slate-300 leading-relaxed">
             <strong>Free consultation available.</strong> Call or WhatsApp {siteConfig.contact.phone} to book your appointment with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day appointments available for emergencies. Upload previous X-rays via WhatsApp for faster evaluation.
           </p>

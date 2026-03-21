@@ -122,7 +122,7 @@ export function StatsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h2 className="elite-section-title text-slate-900 dark:text-white mb-4">
             Trusted by Thousands in <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-fuchsia-600">Vellore</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">

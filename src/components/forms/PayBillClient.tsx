@@ -52,7 +52,7 @@ export function PayBillClient() {
                     <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_40px_rgba(16,185,129,0.3)]">
                         <CheckCircle2 className="w-10 h-10 text-white" />
                     </div>
-                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-4">Payment Successful!</h2>
+                    <h2 className="elite-section-title text-slate-900 dark:text-white mb-4">Payment Successful!</h2>
                     <p className="text-xl text-slate-500 dark:text-slate-400 mb-10">
                         Thank you. Your payment of <span className="font-bold text-slate-900 dark:text-white">{formData.amount}</span> has been processed. A confirmation has been sent to your registered mobile/email.
                     </p>

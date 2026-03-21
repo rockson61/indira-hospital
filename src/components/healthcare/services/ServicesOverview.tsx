@@ -19,7 +19,7 @@ export function ServicesOverview({ locationName }: ServicesOverviewProps) {
         <section className="py-20">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4 font-heading text-foreground">
+                    <h2 className="elite-section-title mb-4 font-heading text-foreground">
                         Our Dental Services {locationName ? `in ${locationName}` : ""}
                     </h2>
                     <p className="text-default-500 max-w-2xl mx-auto">

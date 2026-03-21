@@ -22,7 +22,7 @@ export function StudyDentistryAbroadContent() {
                         <GraduationCap className="w-5 h-5 mr-2 text-warning" />
                         <span className="text-sm font-bold tracking-wide">Future Dentists Program</span>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight font-heading">
+                    <h1 className="elite-hero-title mb-6 font-heading">
                         Study Dentistry <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500 dark:from-cyan-300 dark:to-fuchsia-400">Abroad</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-primary-foreground/90 dark:text-default-500 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
@@ -56,7 +56,7 @@ export function StudyDentistryAbroadContent() {
             {/* Why Choose Us */}
             <section className="py-24 px-4 bg-default-50/50 dark:bg-background">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 font-heading">Why Study Dentistry Abroad?</h2>
+                    <h2 className="elite-section-title text-center mb-16 font-heading">Why Study Dentistry Abroad?</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             { icon: Globe, title: "Global Recognition", desc: "Degrees recognized by WHO, DCI, and global medical councils." },
@@ -83,7 +83,7 @@ export function StudyDentistryAbroadContent() {
                     <div className="absolute inset-0 bg-grid-pattern opacity-10 mix-blend-overlay" />
                 </div>
                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white dark:text-foreground font-heading">Start Your Dental Journey Today</h2>
+                    <h2 className="elite-section-title mb-6 text-white dark:text-foreground font-heading">Start Your Dental Journey Today</h2>
                     <p className="text-xl text-white/90 dark:text-default-500 mb-10 max-w-2xl mx-auto">
                         Get personalized guidance from Dr. Rockson Samuel&apos;s team for admissions in Top Medical Universities.
                     </p>

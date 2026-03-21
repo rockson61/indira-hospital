@@ -19,7 +19,7 @@ export function ServicesWithImages() {
   return (
     <section className="py-16 bg-gradient-to-b from-background to-primary/5">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Premier Dental Services</h2>
+        <h2 className="elite-section-title text-center mb-12">Our Premier Dental Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Invisalign Featured Card */}
           <Link href="/doctor/near-me/treat/dentistry" className="group">

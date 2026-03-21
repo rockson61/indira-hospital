@@ -91,7 +91,7 @@ export function DoctorTemplate({
                                 <span className="inline-block px-4 py-1.5 bg-[#54CAD3]/20 border border-[#54CAD3]/30 rounded-full text-[#54CAD3] text-sm font-bold tracking-widest uppercase">
                                     {doctor.designation}
                                 </span>
-                                <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-[1.1]">
+                                <h1 className="elite-hero-title text-white">
                                     {doctor.name}
                                 </h1>
                             </div>
@@ -149,7 +149,7 @@ export function DoctorTemplate({
                     <div className="lg:col-span-8 space-y-12">
                         {/* Biography / Bio */}
                         <div className="space-y-6">
-                            <h2 className="text-3xl font-bold text-slate-900 dark:text-white border-l-4 border-[#005f73] pl-6 tracking-tight">{DOCTOR_PROFILE.SECTION_BIOGRAPHY}</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white border-l-4 border-[#005f73] pl-6">{DOCTOR_PROFILE.SECTION_BIOGRAPHY}</h2>
                             <div
                                 className="text-lg text-slate-600 leading-relaxed font-light"
                                 dangerouslySetInnerHTML={{ __html: doctor.bio || DOCTOR_PROFILE.DEFAULT_BIO }}
@@ -287,7 +287,7 @@ export function DoctorTemplate({
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                         <div>
                             <span className="text-fuchsia-600 font-bold text-sm tracking-widest uppercase">{DOCTOR_PROFILE.SECTION_EXPERT_NETWORK}</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mt-2">{DOCTOR_PROFILE.SECTION_OTHER_PROFILES}</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mt-2">{DOCTOR_PROFILE.SECTION_OTHER_PROFILES}</h2>
                         </div>
                         <Link href={DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX} className="hidden md:flex items-center gap-2 text-fuchsia-700 font-bold hover:gap-4 transition-all">
                             {DOCTOR_PROFILE.BTN_VIEW_DIRECTORY} <ArrowRight className="w-5 h-5" />

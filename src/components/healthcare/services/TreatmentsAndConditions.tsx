@@ -34,7 +34,7 @@ export function TreatmentsAndConditions() {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold font-heading mb-4 text-foreground">Treatments and Conditions</h2>
+          <h2 className="elite-section-title font-heading mb-4 text-foreground">Treatments and Conditions</h2>
           <p className="text-default-500">Explore our comprehensive care options.</p>
         </div>
 

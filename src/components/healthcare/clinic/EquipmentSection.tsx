@@ -24,7 +24,7 @@ export function EquipmentSection() {
     return (
         <SectionContainer className="bg-card">
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">World-Class Infrastructure</h2>
+                <h2 className="elite-section-title mb-4">World-Class Infrastructure</h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                     We invest in the latest dental technology to provide you with safer, faster, and more comfortable treatments.
                 </p>

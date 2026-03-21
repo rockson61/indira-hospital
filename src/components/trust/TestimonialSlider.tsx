@@ -31,7 +31,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
             <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950/30 border border-fuchsia-100 dark:border-fuchsia-900/50 text-fuchsia-700 dark:text-fuchsia-400 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm">
                 <Quote className="w-4 h-4" /> Patient Success Stories
             </span>
-            <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tight mb-6">
+            <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">
                 What Our Patients{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">
                     Say About Us
@@ -117,7 +117,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
         <div className="relative bg-gradient-to-br from-fuchsia-600 to-pink-600 rounded-[4rem] p-12 lg:p-20 overflow-hidden text-center">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.05] mix-blend-overlay pointer-events-none" />
             <div className="relative z-10">
-                <h3 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">
+                <h3 className="elite-section-title text-white mb-6">
                     Ready to Join Our Happy Patients?
                 </h3>
                 <p className="text-fuchsia-100 mb-12 max-w-2xl mx-auto text-lg font-light leading-relaxed">

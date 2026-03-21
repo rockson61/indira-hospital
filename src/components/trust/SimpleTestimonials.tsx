@@ -25,7 +25,7 @@ export function TestimonialsSection() {
             <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950/30 border border-fuchsia-100 dark:border-fuchsia-900/50 text-fuchsia-700 dark:text-fuchsia-400 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm">
                 <Quote className="w-4 h-4" /> Patient Views
             </span>
-            <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
+            <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">
                 What Our Patients{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">
                     Say About Us

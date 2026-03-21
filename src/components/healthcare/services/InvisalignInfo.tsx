@@ -14,7 +14,7 @@ export default function InvisalignInfo({ location = "Vellore" }: InvisalignInfoP
   return (
     <div className="my-12">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold mb-4">Invisalign Clear Aligners in {location}</h2>
+        <h2 className="elite-section-title mb-4">Invisalign Clear Aligners in {location}</h2>
         <p className="text-lg text-muted-foreground dark:text-muted-foreground/70 max-w-3xl mx-auto">
           The modern, nearly invisible way to straighten your teeth without metal braces. Our {location} clinic is an
           authorized Invisalign provider offering personalized treatment plans.

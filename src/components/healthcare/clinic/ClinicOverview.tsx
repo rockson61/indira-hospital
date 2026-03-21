@@ -41,7 +41,7 @@ export function ClinicsOverview() {
   return (
     <SectionContainer>
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold gradient-text mb-6">Our Modern Medical Facility</h2>
+        <h2 className="elite-section-title gradient-text mb-6">Our Modern Medical Facility</h2>
         <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
           Experience healthcare in a state-of-the-art facility designed for your comfort and safety, conveniently
           located in the heart of Vellore.

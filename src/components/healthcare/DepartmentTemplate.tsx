@@ -88,7 +88,7 @@ export function DepartmentTemplate({
                             <div className="inline-flex p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-[#54CAD3] shadow-xl">
                                 {icon || <Stethoscope className="h-10 w-10 text-[#54CAD3]" />}
                             </div>
-                            <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-fuchsia-100 to-white/80">
+                            <h1 className="elite-hero-title bg-clip-text text-transparent bg-gradient-to-r from-white via-fuchsia-100 to-white/80">
                                 {title}
                             </h1>
                             <p className="text-xl text-fuchsia-100/80 max-w-2xl leading-relaxed font-light">
@@ -136,7 +136,7 @@ export function DepartmentTemplate({
                 <div className="grid lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-8 space-y-10">
                         <div className="prose prose-lg max-w-none prose-slate dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-strong:text-[#005f73] dark:prose-strong:text-fuchsia-300">
-                            <h2 className="text-3xl font-bold mb-6">Expert Care in {title}</h2>
+                            <h2 className="elite-section-title mb-6">Expert Care in {title}</h2>
                             <div dangerouslySetInnerHTML={{ __html: fullDescription }} />
                         </div>
 
@@ -200,7 +200,7 @@ export function DepartmentTemplate({
                 <section className="bg-white dark:bg-slate-900 py-20 border-y border-slate-100 dark:border-slate-700">
                     <SectionContainer>
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">World-Class Procedures</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-4">World-Class Procedures</h2>
                             <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Our specialists at Indira Hospital utilize advanced technology to perform high-precision treatments.</p>
                         </div>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -226,7 +226,7 @@ export function DepartmentTemplate({
                     <SectionContainer>
                         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                             <div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Centers of Excellence</h2>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white">Centers of Excellence</h2>
                                 <p className="text-slate-500 dark:text-slate-400 mt-2">Highly specialized sub-departments within our {title} unit.</p>
                             </div>
                         </div>
@@ -254,7 +254,7 @@ export function DepartmentTemplate({
                     <SectionContainer>
                         <div className="text-center mb-16 relative">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full blur-3xl opacity-50 -z-10" />
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Meet Our Expert Specialists</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white">Meet Our Expert Specialists</h2>
                             <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto italic">Highly experienced surgeons and clinicians dedicated to your wellbeing.</p>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -286,7 +286,7 @@ export function DepartmentTemplate({
                 <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu" />
                 <SectionContainer>
                     <div className="max-w-4xl mx-auto text-center space-y-8">
-                        <h2 className="text-4xl font-bold text-white mb-6">Experience Better Healthcare at Indira Hospital</h2>
+                        <h2 className="elite-section-title text-white mb-6">Experience Better Healthcare at Indira Hospital</h2>
                         <p className="text-xl text-fuchsia-100/70 font-light">Join over 1,00,000 satisfied patients who trusted us for their surgical and medical needs.</p>
                         <div className="flex flex-wrap justify-center gap-6 pt-6">
                             <Link

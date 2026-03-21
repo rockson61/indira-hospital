@@ -101,7 +101,7 @@ export function MarketingContent({
       {intro && (
         <div className="text-center max-w-3xl mx-auto space-y-3">
           {intro.eyebrow && <span className="text-sm font-semibold uppercase tracking-wide text-primary">{intro.eyebrow}</span>}
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">{intro.heading}</h2>
+          <h2 className="elite-section-title text-foreground md:">{intro.heading}</h2>
           {intro.description && <p className="text-base text-slate-600 dark:text-slate-300 md:text-lg">{intro.description}</p>}
         </div>
       )}
@@ -145,7 +145,7 @@ export function MarketingContent({
         <section key={section.id} id={section.id} className="card-modern scroll-mt-24 space-y-6 p-8">
           <header className="space-y-2">
             {section.eyebrow && <span className="text-xs font-semibold uppercase tracking-wider text-primary">{section.eyebrow}</span>}
-            <h2 className="text-2xl font-bold md:text-3xl gradient-text">{section.heading}</h2>
+            <h2 className="elite-section-title md:gradient-text">{section.heading}</h2>
             {section.description && <p className="text-base text-muted-foreground">{section.description}</p>}
           </header>
 
@@ -251,7 +251,7 @@ export function MarketingContent({
         <section className="card-modern p-8" id="faqs">
           <header className="mb-6">
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">FAQs</span>
-            <h2 className="mt-1 text-2xl font-bold md:text-3xl gradient-text">Frequently Asked Questions</h2>
+            <h2 className="elite-section-title mt-1 md:gradient-text">Frequently Asked Questions</h2>
             <p className="mt-2 text-sm text-muted-foreground">Answers to the questions we hear most from patients.</p>
           </header>
           <Accordion type="single" collapsible className="space-y-3">
@@ -276,7 +276,7 @@ export function MarketingContent({
               <Sparkles className="h-4 w-4" />
               Let&apos;s get started
             </span>
-            <h2 className="text-3xl font-bold md:text-4xl">{cta.heading}</h2>
+            <h2 className="elite-section-title md:">{cta.heading}</h2>
             {cta.description && <p className="text-base text-white/80 md:text-lg">{cta.description}</p>}
             <div className="flex flex-wrap justify-center gap-3">
               <Button asChild size="lg" className="bg-card text-primary hover:bg-muted">

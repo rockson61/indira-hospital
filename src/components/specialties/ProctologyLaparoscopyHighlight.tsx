@@ -47,7 +47,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
                     <div className="inline-flex items-center gap-3 px-5 py-2 bg-fuchsia-50 dark:bg-white/5 rounded-full border border-fuchsia-100 dark:border-white/10 text-fuchsia-600 dark:text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.3em] mb-4 shadow-sm animate-pulse">
                         ⭐ Most Requested Elite Surgeries
                     </div>
-                    <h2 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] uppercase italic tracking-tighter">
+                    <h2 className="elite-section-title text-slate-900 dark:text-white uppercase italic er">
                         Proctology & Laparoscopic<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-600 dark:from-fuchsia-400 dark:to-indigo-300">{locationLabel}</span>
                     </h2>
@@ -56,7 +56,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
                     </p>
                 </div>
                 <Link href={`/doctor/near-me/treat/${PARENT_SLUG}`}
-                    className="group/all flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-white/5 text-white dark:text-indigo-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all hover:bg-fuchsia-600 dark:hover:bg-fuchsia-500 hover:text-white whitespace-nowrap shadow-xl">
+                    className="elite-button-secondary">
                     View all surgeries <ArrowRight className="w-4 h-4 group-hover/all:translate-x-1 transition-transform" />
                 </Link>
             </div>

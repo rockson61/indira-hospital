@@ -21,7 +21,7 @@ export function ServicesOverview() {
       <SectionContainer>
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text">Our Premium Services</h2>
+          <h2 className="elite-section-title gradient-text">Our Premium Services</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive dental care including implants, orthodontics, oral surgery, and cosmetic dentistry.
           </p>

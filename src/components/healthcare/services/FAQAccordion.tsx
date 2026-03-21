@@ -94,7 +94,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
               <HelpCircle className="w-4 h-4 mr-2" />
               Frequently Asked Questions
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="elite-section-title text-foreground mb-4">
               Best Super Speciality Hospital in {locationName}: Comprehensive Care Near You
             </h2>
             <p className="text-lg text-foreground/80 max-w-4xl mx-auto leading-relaxed">
@@ -164,7 +164,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
 
           {/* Knowledge Hub */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Patient Care Resources</h2>
+            <h2 className="elite-section-title text-foreground mb-6 text-center">Patient Care Resources</h2>
 
             {/* Location Services */}
             <ModernCard className="mb-6">

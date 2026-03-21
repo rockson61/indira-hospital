@@ -22,7 +22,7 @@ export function ProcedureTimeline({
         <div className="py-12 bg-default-50 dark:bg-default-50/5 rounded-3xl border border-default-100 dark:border-default-50/10">
             <SectionContainer>
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold font-heading text-foreground mb-4">{title}</h2>
+                    <h2 className="elite-section-title font-heading text-foreground mb-4">{title}</h2>
                     <p className="text-lg text-default-500 max-w-2xl mx-auto">{description}</p>
                 </div>
 

@@ -232,7 +232,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-white via-fuchsia-50/30 to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.what}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/30 dark:border-fuchsia-700/30 shadow-lg">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📖 What Is {conditionName}?</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📖 What Is {conditionName}?</h2>
           <p className="text-foreground/80 leading-relaxed mb-4">{content.intro}</p>
           <p className="text-foreground/80 leading-relaxed">
             <strong>Warning:</strong> Ignoring {conditionName.toLowerCase()} leads to abscess formation (within 1–2 weeks), potential tooth loss, and spread of infection to jaw bone. <strong>Treatment cost increases 3–5x</strong> if delayed. Book a free 15-minute assessment at Indira Dental Clinic, {cityName}.
@@ -242,7 +242,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-fuchsia-100/70 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.causes}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">⚠️ Common Causes of {conditionName}</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">⚠️ Common Causes of {conditionName}</h2>
           <ul className="grid gap-4 md:grid-cols-2">
             {content.causes.map((cause, index) => (
               <li key={cause} className="glassmorphism-item to-fuchsia-50/50 dark:from-slate-800/80 dark:to-fuchsia-900/30 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 text-foreground/80 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]">
@@ -256,7 +256,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50/50 via-white to-fuchsia-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.symptoms}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/30 dark:border-fuchsia-700/30 shadow-lg">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🔍 Symptoms to Watch For</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🔍 Symptoms to Watch For</h2>
           <ul className="grid gap-3 md:grid-cols-2">
             {content.symptoms.map((symptom) => (
               <li key={symptom} className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-fuchsia-900/30 rounded-xl p-4 border border-fuchsia-200 dark:border-fuchsia-700/40">
@@ -270,7 +270,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-fuchsia-50 via-blue-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.when}>
         <div className="glassmorphism-card-light dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🚨 When to See a Dentist</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🚨 When to See a Dentist</h2>
           <p className="text-foreground/80 leading-relaxed mb-6">
             <strong>See a dentist immediately</strong> if you experience any of these symptoms. Treatment within 48 hours prevents complications and reduces costs by 50%.
           </p>
@@ -299,7 +299,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-cyan-50/50 via-white to-blue-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.treatments}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-4">💊 Treatment Options</h2>
+        <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">💊 Treatment Options</h2>
         <p className="text-foreground/80 leading-relaxed mb-6">
           Treatment depends on the root cause. Dr. Rockson Samuel at Indira Dental Clinic, {cityName} combines restorative, periodontal, and surgical expertise. <strong>All costs below are all-inclusive</strong> (consultation + procedure + follow-up).
         </p>
@@ -331,7 +331,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-fuchsia-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.remedies}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🌿 Home Remedies &amp; Myths</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🌿 Home Remedies &amp; Myths</h2>
           <p className="text-foreground/80 leading-relaxed mb-4">
             <strong>Temporary relief options:</strong> Warm salt-water rinses (1 tsp salt in 250ml water), cold compress (15 minutes on/off), ibuprofen 400mg every 6 hours. <strong>Avoid:</strong> Aspirin on gums (causes burns), undiluted clove oil, hot compresses (increases swelling).
           </p>
@@ -342,7 +342,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-fuchsia-50 via-cyan-50/50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.prevention}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-6">🛡️ Prevention Tips</h2>
+        <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🛡️ Prevention Tips</h2>
         <ul className="grid gap-4 md:grid-cols-2">
           {content.prevention.map((tip, index) => (
             <li key={tip} className="rounded-2xl border border-fuchsia-200/50 dark:border-fuchsia-700/40 bg-gradient-to-br from-white to-fuchsia-50/30 dark:from-slate-800 dark:to-fuchsia-900/20 p-5 shadow-md transition-all hover:shadow-xl hover:scale-[1.02]">
@@ -355,7 +355,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-fuchsia-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.why}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {conditionName} Care?</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🏆 Why Choose {clinicName} for {conditionName} Care?</h2>
           <ul className="grid gap-3 md:grid-cols-2">
             <li className="flex items-start gap-3 glassmorphism-item dark:from-slate-800/80 dark:to-fuchsia-900/30 rounded-xl p-4 border border-fuchsia-200 dark:border-fuchsia-700/40">
               <span className="mt-0.5 text-fuchsia-500 text-lg">✓</span>
@@ -393,7 +393,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
       <SectionContainer className="py-12 bg-gradient-to-br from-fuchsia-100/70 via-blue-50/50 to-cyan-100/70 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.book}>
         <div className="glassmorphism-card dark:bg-slate-900/80 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-xl">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📅 Book Appointment</h2>
+          <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">📅 Book Appointment</h2>
           <p className="text-foreground/80 leading-relaxed mb-6">
             <strong>Free consultation available.</strong> Stop {conditionName.toLowerCase()} pain today. Call or WhatsApp {siteConfig.contact.phone} to book with Dr. Rockson Samuel at Indira Dental Clinic, {cityName}. Same-day emergency appointments available.
           </p>
@@ -423,7 +423,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
       </SectionContainer>
 
       <SectionContainer className="py-12 bg-gradient-to-br from-blue-50/50 via-white to-fuchsia-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.related}>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent font-bold mb-6">🔗 Related Conditions</h2>
+        <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-6">🔗 Related Conditions</h2>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
           {content.relatedConditions.map((item) => (
             <Link

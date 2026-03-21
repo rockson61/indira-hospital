@@ -64,7 +64,7 @@ export function ContactFormClient() {
                     <div className="w-20 h-20 bg-fuchsia-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_40px_rgba(217,70,239,0.5)]">
                         <Send className="w-10 h-10 text-white" />
                     </div>
-                    <h2 className="text-4xl font-black text-white mb-4">Message Sent!</h2>
+                    <h2 className="elite-section-title text-white mb-4">Message Sent!</h2>
                     <p className="text-xl text-slate-300 mb-10">
                         Thank you for reaching out. Our team will review your message and get back to you within 24 hours.
                     </p>
@@ -120,7 +120,7 @@ export function ContactFormClient() {
                             className="bg-white/70 backdrop-blur-2xl p-10 lg:p-14 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl space-y-10 relative overflow-hidden group animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
                         >
                             <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
-                            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight lg:mb-12 relative z-10">Get in Touch</h2>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white lg:mb-12 relative z-10">Get in Touch</h2>
 
                             <div className="space-y-10 relative z-10">
                                 <div className="flex gap-6 group/item cursor-pointer">
@@ -220,7 +220,7 @@ export function ContactFormClient() {
                                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-fuchsia-300 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
                                     <Shield className="w-4 h-4" /> Safe & Secure
                                 </span>
-                                <h2 className="text-5xl font-black text-white tracking-tight leading-tight">Send a Message</h2>
+                                <h2 className="elite-section-title text-white">Send a Message</h2>
                                 <p className="text-slate-400 mt-4 text-lg font-medium">Have a question about a treatment, cost, or insurance? Fill out the form and our team will reply within 24 hours.</p>
                             </div>
 

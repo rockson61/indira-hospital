@@ -144,7 +144,7 @@ export function SubServiceTemplate({
                             {eyebrow}
                         </p>
                     )}
-                    <h1 className="text-5xl sm:text-6xl font-heading font-black tracking-tight mb-4 text-slate-900 dark:text-white">{title}</h1>
+                    <h1 className="elite-hero-title font-heading mb-4 text-slate-900 dark:text-white">{title}</h1>
                     <div className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-medium">
                         {description}
                     </div>
@@ -352,7 +352,7 @@ export function SubServiceTemplate({
                 <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu" />
                 <SectionContainer>
                     <div className="max-w-4xl mx-auto text-center space-y-8 relative">
-                        <h2 className="text-4xl font-bold text-white">
+                        <h2 className="elite-section-title text-white">
                             Get Expert Care for{' '}
                             <span className="text-fuchsia-400">{title}</span>
                         </h2>

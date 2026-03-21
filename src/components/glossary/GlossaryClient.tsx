@@ -121,7 +121,7 @@ export function GlossaryClient() {
                                 >
                                     <div className="flex items-center gap-6 mb-12">
                                         <div className="w-20 h-20 rounded-[2rem] bg-slate-900 border border-slate-700/50 flex items-center justify-center shadow-xl shadow-slate-900/10">
-                                            <h2 className="text-5xl font-black text-white">{letter}</h2>
+                                            <h2 className="elite-section-title text-white">{letter}</h2>
                                         </div>
                                         <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1"></div>
                                     </div>
@@ -175,7 +175,7 @@ export function GlossaryClient() {
                             <div className="w-24 h-24 bg-slate-100 dark:bg-slate-800 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-inner">
                                 <BookOpen className="w-10 h-10 text-slate-400" />
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4">No precise match</h3>
+                            <h3 className="elite-section-title text-slate-900 dark:text-white mb-4">No precise match</h3>
                             <p className="text-slate-500 dark:text-slate-400 font-medium text-lg mb-8 px-8">We couldn't locate any terminology in our glossary matching your exact query.</p>
                             <button
                                 onClick={() => { setSearchQuery(""); setSelectedLetter(null); }}

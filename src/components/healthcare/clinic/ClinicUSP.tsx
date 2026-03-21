@@ -58,7 +58,7 @@ export function ClinicUSP() {
     <section className="py-20 bg-gradient-to-b from-primary/5 to-background relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-[0.03] pointer-events-none" />
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-12 font-heading gradient-text">Why Choose Indira Dental Clinic?</h2>
+        <h2 className="elite-section-title text-center mb-12 font-heading gradient-text">Why Choose Indira Dental Clinic?</h2>
 
         <div className="mb-20">
           <h3 className="text-2xl font-bold text-center mb-8 text-foreground">Successful Dental Treatments</h3>

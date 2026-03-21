@@ -160,7 +160,7 @@ export async function UnifiedEntitySection({
                         <span className="text-xs font-black uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-3 flex items-center gap-2">
                             <Icon className="w-4 h-4" /> {displaySubtitle}
                         </span>
-                        <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+                        <h2 className="elite-section-title text-slate-900 dark:text-white">
                             {displayTitle}
                         </h2>
                     </div>

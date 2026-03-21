@@ -19,7 +19,7 @@ export function ServiceTestimonials({ testimonials, title = "What Our Patients S
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950/30 border border-fuchsia-100 dark:border-fuchsia-900/50 text-fuchsia-700 dark:text-fuchsia-400 text-xs font-black tracking-widest uppercase mb-6">
                 <Quote className="w-3.5 h-3.5" /> Verified Reviews
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">{title}</h2>
+            <h2 className="elite-section-title text-slate-900 dark:text-white">{title}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (

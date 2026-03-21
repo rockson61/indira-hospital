@@ -35,7 +35,7 @@ export function ServicesSection() {
             <Sparkles className="w-3 h-3" />
             Specialized Care
           </motion.div>
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          <h2 className="elite-section-title text-white mb-6">
             Advanced Clinical <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Centers of Excellence</span>
           </h2>
@@ -110,7 +110,7 @@ export function ServicesSection() {
                     </div>
                   </div>
 
-                  <h3 className="text-3xl font-black text-white mb-6 tracking-tight">
+                  <h3 className="elite-section-title text-white mb-6">
                     {services[activeService].title}
                   </h3>
                   <p className="text-xl text-gray-400 mb-8 leading-relaxed">

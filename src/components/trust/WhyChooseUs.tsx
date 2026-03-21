@@ -75,7 +75,7 @@ export function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Why Choose Indira Super Speciality Hospital?</h2>
+          <h2 className="elite-section-title text-white">Why Choose Indira Super Speciality Hospital?</h2>
           <p className="text-xl text-fuchsia-100/80 max-w-3xl mx-auto">
             <strong>4.9/5 Google Rating</strong> • 500+ Reviews • 50% Lower Than Chennai/Bangalore Prices
           </p>
@@ -147,7 +147,7 @@ export function WhyChooseUs() {
         >
           <GlassCard className="p-8 bg-gradient-to-r from-white/15 to-[#54CAD3]/20 backdrop-blur-sm border border-white/20">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-white mb-4">Our Guarantees</h3>
+              <h3 className="elite-section-title text-white mb-4">Our Guarantees</h3>
               <p className="text-fuchsia-100/80">We stand behind our work with these commitments to you</p>
             </div>
 

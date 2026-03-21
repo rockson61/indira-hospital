@@ -173,7 +173,7 @@ export function Services() {
   return (
     <section className="py-12 md:py-20 bg-muted/40">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Our Comprehensive Dental Services</h2>
+        <h2 className="elite-section-title text-center mb-8 md:mb-12">Our Comprehensive Dental Services</h2>
         <Tabs defaultValue="orthodontics" className="w-full">
           <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-2 mb-8 overflow-x-auto">
             {Object.keys(servicesData).map((category) => (

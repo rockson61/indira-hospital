@@ -7,7 +7,7 @@ export function InsuranceCoverage() {
   return (
     <section className="py-20 bg-gradient-to-b from-background via-primary/5 to-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Insurance Coverage</h2>
+        <h2 className="elite-section-title text-center mb-12">Insurance Coverage</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {insurancePlans.map((plan, index) => (
             <article 
