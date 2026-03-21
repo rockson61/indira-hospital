@@ -13,6 +13,8 @@ import { BLOG_CONFIGURATION } from "@/config/constants"
 import type { Metadata } from "next"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
+import { FALLBACK_BLOG_POSTS } from "@/lib/data/fallback-blog-data"
+
 export const metadata: Metadata = {
     title: 'Medical Blog & Surgical Insights in Vellore, Tamil Nadu | Indira Hospital',
     description: 'Expert medical articles, surgical insights, and health tips from the specialists at Indira Hospital, Vellore. Leading healthcare blog in Tamil Nadu, India.',
@@ -34,7 +36,11 @@ export default async function BlogListingPage() {
         })) as unknown as Post[];
     } catch (error) {
         console.warn("Failed to fetch blog posts:", error);
-        // Fallback or empty state will be handled by UI
+    }
+
+    // Use fallback if CMS is empty or failed
+    if (posts.length === 0) {
+        posts = FALLBACK_BLOG_POSTS;
     }
 
     return (

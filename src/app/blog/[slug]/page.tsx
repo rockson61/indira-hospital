@@ -1,4 +1,12 @@
 import { Metadata } from "next";
+import { getDirectusClient } from "@/lib/directus";
+import { readItems } from "@directus/sdk";
+import { Post } from "@/lib/schema";
+import { FALLBACK_BLOG_POSTS } from "@/lib/data/fallback-blog-data";
+import { notFound } from "next/navigation";
+import { format } from "date-fns";
+import { getImageUrl } from "@/lib/utils";
+import Image from "next/image";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { BLOG_CONFIGURATION } from "@/config/constants";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
@@ -31,23 +39,38 @@ export default async function BlogPostPage({
 }) {
     const { slug } = await params;
     
-    const formattedTitle = slug.replace(/-/g, ' ');
+    // First, try CMS
+    const client = await getDirectusClient();
+    let post: Post | null = null;
+    
+    try {
+        const posts = await client.request(readItems('posts', {
+            filter: { slug: { _eq: slug }, status: { _eq: 'published' } },
+            fields: ['*', 'author.*'] as never[],
+            limit: 1
+        })) as unknown as Post[];
+        if (posts.length > 0) post = posts[0];
+    } catch (e) {
+        console.warn("Detail fetch failed, trying fallback:", e);
+    }
+
+    // Fallback detection
+    if (!post) {
+        post = FALLBACK_BLOG_POSTS.find(p => p.slug === slug) || null;
+    }
+
+    if (!post) notFound();
+
+    const formattedTitle = post.title;
+    const authorName = typeof post.author === 'object' && post.author !== null && 'name' in post.author ? String(post.author.name) : BLOG_CONFIGURATION.DEFAULT_AUTHOR;
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
             <JsonLdSchema
                 type="article"
                 name={formattedTitle}
-                description="Learn about the latest advancements, risks, and post-operative care involved in this clinical procedure."
+                description={post.excerpt || BLOG_CONFIGURATION.SUBTITLE}
                 url={`/blog/${slug}`}
-            />
-            <JsonLdSchema
-                type="breadcrumb"
-                items={[
-                    { name: 'Home', url: '/' },
-                    { name: 'Blog', url: '/blog' },
-                    { name: formattedTitle, url: `/blog/${slug}` },
-                ]}
             />
             {/* ELITE CINEMATIC HEADER */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-40 overflow-hidden bg-slate-900 rounded-b-[4rem] sm:rounded-b-[6rem]">
@@ -59,7 +82,7 @@ export default async function BlogPostPage({
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-500/10 backdrop-blur-md border border-fuchsia-500/20 text-fuchsia-300 text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
-                        Clinical Guide & Research
+                        {post.category || 'Clinical Guide'}
                     </div>
                     
                     <h1 className="elite-hero-title text-white mb-8">
@@ -67,7 +90,7 @@ export default async function BlogPostPage({
                     </h1>
                     
                     <p className="text-xl sm:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed italic opacity-80">
-                        Expert medical insights and advanced treatment protocols from Indira Super Speciality Hospital specialists.
+                        {post.excerpt}
                     </p>
                 </div>
             </section>
@@ -77,13 +100,7 @@ export default async function BlogPostPage({
                     {/* Primary Content (8 Cols) */}
                     <div className="lg:col-span-8 space-y-12">
                         <article className="prose prose-lg prose-slate dark:prose-invert max-w-none">
-                            <p>{BLOG_CONFIGURATION.DYNAMIC_CONTENT_PLACEHOLDER}</p>
-                            
-                            {/* Injected Content Example */}
-                            <p>This is a placeholder for dynamically fetched CMS content. In production, rich text blocks, imagery, and medical schemas will render within this domain.</p>
-                            
-                            <h2>Understanding the Procedure</h2>
-                            <p>Patients undergoing this specific methodology can expect a significantly reduced recovery time compared to traditional interventions, allowing for rapid rehabilitation.</p>
+                            <div dangerouslySetInnerHTML={{ __html: post.content }} />
                         </article>
 
                         {/* Mid-Article Comparison Card Breakout */}

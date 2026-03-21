@@ -5,7 +5,7 @@ import { getServices, getServiceBySlug, getDoctors } from "@/lib/api";
 import { siteConfig } from '@/config/site';
 import { getTreatmentBySlug, getAllTreatments } from "@/lib/data/treatment-data";
 import { getImageUrl } from "@/lib/utils";
-import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Award, Users, Clock, Star, MapPin, ArrowRight, GraduationCap, Banknote, HelpCircle, Quote, Info, Sparkles, Shield } from "lucide-react";
+import { ChevronRight, CheckCircle2, Siren, Ribbon, MessageCircle, Phone, Award, Users, Clock, Star, MapPin, ArrowRight, GraduationCap, Banknote, HelpCircle, Quote, Info, Sparkles, Shield, IndianRupee, HandCoins } from "lucide-react";
 import { Stethoscope, Heart, HeartCardiogram, Baby0203m, Happy, Neurology, BloodDrop, Electricity } from "healthicons-react/outline";
 import { Card } from "@/components/ui/card";
 import { injectInternalLinks } from "@/lib/html-linkify";
@@ -23,6 +23,7 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
+import { EliteComparisonBank } from "@/components/seo/EliteComparisonBank";
 
 
 
@@ -244,6 +245,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
     const whatsappUrl = `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
 
+    // Comparison Logic
+    const isLaserSpecialty = slug.some(s => ['piles', 'fistula', 'fissure', 'proctology', 'varicose', 'laser'].some(k => s.toLowerCase().includes(k)));
+    const isLapSpecialty = slug.some(s => ['laparoscopic', 'hernia', 'gallbladder', 'appendix', 'cholecystectomy'].some(k => s.toLowerCase().includes(k)));
+    const comparisonType = isLaserSpecialty ? 'laser' : (isLapSpecialty ? 'laparoscopy' : null);
+
+    const isHighValueSurgical = isLaserSpecialty || isLapSpecialty || slug.some(s => ['surgery', 'replacement', 'urology', 'cardiology'].some(k => s.toLowerCase().includes(k)));
+
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
             <JsonLdSchema
@@ -382,6 +390,71 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                         );
                                     })}
                                 </ul>
+                            </Card>
+                        )}
+
+                        {/* ELITE COMPARISON BANK */}
+                        {comparisonType && (
+                            <EliteComparisonBank type={comparisonType} />
+                        )}
+
+                        {/* PRICING TRANSPARENCY BLOCK */}
+                        {isHighValueSurgical && (
+                            <Card className="p-8 border-none shadow-sm rounded-[2rem] bg-slate-900 text-white relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -mr-32 -mt-32" />
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center border border-emerald-500/30">
+                                            <HandCoins className="w-6 h-6 text-emerald-400" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-bold">Elite Pricing Transparency</h3>
+                                            <p className="text-emerald-400 text-xs font-black uppercase tracking-widest">Ethical Billing Guarantee</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="grid md:grid-cols-2 gap-8 divide-x divide-white/10">
+                                        <div className="space-y-4">
+                                            <div className="flex items-start gap-3">
+                                                <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
+                                                <div>
+                                                    <p className="font-bold text-sm">All-Inclusive Estimates</p>
+                                                    <p className="text-xs text-slate-400 leading-relaxed">No separate charges for nursing, OT consumables, or post-op consultation.</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-start gap-3">
+                                                <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
+                                                <div>
+                                                    <p className="font-bold text-sm">Cashless Hospitalization</p>
+                                                    <p className="text-xs text-slate-400 leading-relaxed">Direct tie-ups with 50+ IRDAI approved insurance providers for pre-auth.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="pl-0 md:pl-8 space-y-6">
+                                            <div className="bg-white/5 p-4 rounded-2xl border border-white/10">
+                                                <p className="text-[10px] uppercase font-black text-slate-500 mb-2 tracking-widest text-center">Standard Procedure Window</p>
+                                                <div className="flex justify-between items-end">
+                                                    <div className="text-center flex-1">
+                                                        <p className="text-2xl font-black text-white italic">₹35k</p>
+                                                        <p className="text-[8px] text-slate-500 uppercase font-bold">Semi-Private</p>
+                                                    </div>
+                                                    <div className="h-8 w-px bg-white/10 mb-1" />
+                                                    <div className="text-center flex-1">
+                                                        <p className="text-2xl font-black text-fuchsia-400 italic">₹65k+</p>
+                                                        <p className="text-[8px] text-slate-500 uppercase font-bold">Elite Suite</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p className="text-[9px] text-slate-500 text-center uppercase tracking-widest font-bold">Disclaimer: Final cost depends on surgical complexity and hospital stay grade.</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="mt-8 flex justify-center">
+                                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-black uppercase text-emerald-400 tracking-[0.2em] hover:text-emerald-300 transition-colors">
+                                            Request My Free Estimate <ArrowRight className="w-4 h-4" />
+                                        </a>
+                                    </div>
+                                </div>
                             </Card>
                         )}
 
