@@ -20,279 +20,82 @@ import { generateUniqueContent } from "./content-engine.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ROOT = path.join(__dirname, "..");
-
-const CONFIG = {
+const ROOT = path.join(__dirname, "..");const CONFIG = {
   appDir: path.join(ROOT, "src/app"),
-  outputDir: path.join(__dirname, "generated-pages"),
+  outputDir: path.join(ROOT, "src/app/seo"),
   outputReport: path.join(__dirname, "reports/topical-gaps-report.json"),
 
-  // Complete topic taxonomy for dental clinic
+  // Complete topic taxonomy for Indira Elite Hospital
   topicTaxonomy: {
-    "dental-implants": {
-      hub: "/services/dental-implants",
+    "proctology": {
+      hub: "/services/proctology",
       requiredSubtopics: [
-        "single tooth implant cost",
-        "all-on-4 implants guide",
-        "all-on-6 implants guide",
-        "dental implant procedure steps",
-        "dental implant recovery time",
-        "dental implant failure signs",
-        "bone grafting for implants",
-        "sinus lift before implants",
-        "immediate load implants",
-        "implant vs bridge comparison",
-        "implant aftercare instructions",
-        "dental implant pain management",
-        "zirconia vs titanium implants",
-        "implant cost in vellore",
-        "implant warranty policy"
-      ]
-    },
-    "root-canal": {
-      hub: "/services/root-canal-treatment",
-      requiredSubtopics: [
-        "single sitting root canal",
-        "root canal pain during treatment",
-        "root canal vs extraction",
-        "root canal aftercare",
-        "root canal crown needed",
-        "root canal cost breakdown",
-        "root canal failure symptoms",
-        "re-root canal treatment",
-        "apicoectomy procedure",
-        "root canal during pregnancy",
-        "root canal for children",
-        "laser root canal benefits"
-      ]
-    },
-    "orthodontics": {
-      hub: "/services/orthodontics",
-      requiredSubtopics: [
-        "metal braces guide",
-        "ceramic braces vs metal",
-        "invisalign treatment guide",
-        "braces for adults",
-        "braces age limit",
-        "braces cost in vellore",
-        "braces treatment duration",
-        "braces pain management",
-        "retainer after braces",
-        "overbite correction",
-        "underbite treatment",
-        "crossbite correction",
-        "teeth gaps treatment"
-      ]
-    },
-    "gum-treatment": {
-      hub: "/services/gum-treatment",
-      requiredSubtopics: [
-        "gingivitis treatment guide",
-        "periodontitis stages",
-        "deep cleaning scaling",
-        "laser gum treatment",
-        "gum grafting procedure",
-        "gum recession treatment",
-        "gum pocket treatment",
-        "bleeding gums causes",
-        "gum disease prevention",
-        "gum surgery recovery"
-      ]
-    },
-    "cosmetic-dentistry": {
-      hub: "/services/cosmetic-dentistry",
-      requiredSubtopics: [
-        "teeth whitening guide",
-        "dental veneers types",
-        "smile makeover process",
-        "composite bonding guide",
-        "gummy smile correction",
-        "teeth contouring reshaping",
-        "dental bonding vs veneers"
-      ]
-    },
-    "general-surgery": {
-      hub: "/services/general-surgery",
-      requiredSubtopics: [
-        "laser piles treatment cost",
-        "laparoscopic hernia repair",
-        "thyroid surgery guide",
-        "varicose veins laser treatment",
-        "gallbladder removal recovery",
-        "appendix surgery steps",
-        "breast lump removal",
-        "fistula laser treatment",
-        "fissure surgery recovery",
-        "pilonidal sinus laser surgery",
-        "diabetic foot ulcer care",
-        "lipoma excision surgery",
-        "sebaceous cyst removal",
-        "circumcision surgery guide",
-        "hydrocele surgery cost"
-      ]
-    },
-    "gastroenterology": {
-      hub: "/services/gastroenterology",
-      requiredSubtopics: [
-        "endoscopy procedure guide",
-        "colonoscopy screening cost",
-        "fatty liver treatment diet",
-        "acid reflux Gerd management",
-        "pancreatitis treatment steps",
-        "h-pylori infection cure",
-        "peptic ulcer disease treatment",
-        "irritable bowel syndrome IBS relief",
-        "inflammatory bowel disease IBD care",
-        "crohns disease management",
-        "ulcerative colitis treatment",
-        "liver cirrhosis care plan",
-        "hepatitis B treatment options",
-        "gastric balloon weight loss",
-        "upper GI endoscopy prep"
-      ]
-    },
-    "urology": {
-      hub: "/services/urology",
-      requiredSubtopics: [
-        "kidney stone laser surgery",
-        "prostate TURP surgery",
-        "urinary tract infection treatment",
-        "male infertility causes",
-        "kidney stone prevention tips",
-        "bladder cancer treatment options",
-        "prostate cancer screening",
-        "erectile dysfunction treatment",
-        "varicocele surgery guide",
-        "urethral stricture repair",
-        "overactive bladder relief",
-        "urinary incontinence treatment",
-        "laser prostatectomy HOLEP",
-        "testicular torsion emergency",
-        "phimosis treatment options"
-      ]
-    },
-    "obstetrics-gynaecology": {
-      hub: "/services/obstetrics-gynaecology",
-      requiredSubtopics: [
-        "normal delivery vs c-section",
-        "high risk pregnancy care",
-        "pcod pcos treatment guide",
-        "painless delivery epidural",
-        "laparoscopic hysterectomy guide",
-        "infertility evaluation steps",
-        "fibroid removal surgery",
-        "endometriosis pain management",
-        "ovarian cyst laparoscopy",
-        "cervical cancer screening PAP",
-        "menopause symptom relief",
-        "tubal ligation procedure",
-        "ectopic pregnancy treatment",
-        "myomectomy surgery cost",
-        "colposcopy procedure details"
+        "laser piles treatment cost vellore",
+        "painless fistula surgery recovery",
+        "fissure laser treatment benefits",
+        "pilonidal sinus robotic surgery",
+        "advanced proctology diagnostics",
+        "laser piles specialist vellore",
+        "haemorrhoids treatment options",
+        "chronic constipation management",
+        "anal fistula laser closure FILAC",
+        "sphincter sparing surgery",
+        "proctology post-op care guide",
+        "robotic piles surgery advantages"
       ]
     },
     "orthopaedics": {
       hub: "/services/orthopaedics",
       requiredSubtopics: [
-        "total knee replacement cost",
-        "acl reconstruction recovery",
-        "hip replacement surgery guide",
-        "spine surgery disc prolapse",
-        "fracture care rehabilitation",
-        "shoulder arthroscopy guide",
-        "rotator cuff repair surgery",
-        "carpal tunnel release",
-        "knee arthroscopy recovery",
-        "sports injury treatment",
-        "knee cartilage repair",
-        "joint pain relief injections",
-        "osteoporosis management plan",
-        "total shoulder replacement",
-        "trigger finger release"
+        "robotic knee replacement vellore",
+        "total hip replacement recovery",
+        "acl reconstruction rehab guide",
+        "spine surgery for disc prolapse",
+        "robotic joint replacement benefits",
+        "orthopaedic sports medicine vellore",
+        "minimally invasive hip surgery",
+        "knee replacement cost estimate",
+        "physiotherapy after joint surgery",
+        "bone health screening vellore",
+        "arthritis management plan",
+        "pediatric orthopaedics vellore"
+      ]
+    },
+    "ophthalmology": {
+      hub: "/services/ophthalmology",
+      requiredSubtopics: [
+        "robotic cataract surgery vellore",
+        "contoura vision lasik benefits",
+        "mics cataract surgery recovery",
+        "glaucoma screening and treatment",
+        "diabetic retinopathy management",
+        "eye specialist doctor vellore",
+        "pediatric ophthalmology clinic",
+        "lasik eye surgery cost vellore",
+        "dry eye syndrome treatment",
+        "phacoemulsification cataract surgery",
+        "icl eye surgery guide",
+        "keratoconus treatment options"
       ]
     },
     "cardiology": {
       hub: "/services/cardiology",
       requiredSubtopics: [
-        "heart angioplasty procedure",
-        "coronary angiography guide",
-        "pacemaker implantation steps",
-        "heart attack warning signs",
-        "preventive heart checkup",
-        "bypass surgery CABG",
-        "heart valve replacement",
-        "arrhythmia treatment options",
-        "echocardiogram test details",
-        "tmt test for heart",
-        "heart failure management",
-        "pediatric cardiology care",
-        "hypertension control diet",
-        "cholesterol management plan",
-        "holter monitor test"
-      ]
-    },
-    "neurology": {
-      hub: "/services/neurology",
-      requiredSubtopics: [
-        "stroke recovery exercises",
-        "epilepsy treatment options",
-        "migraine relief management",
-        "parkinsons disease care",
-        "eeg test procedure",
-        "alzheimers dementia care",
-        "multiple sclerosis treatment",
-        "neuropathy pain relief",
-        "brain tumor surgery guide",
-        "spinal cord injury rehab",
-        "sleep apnea study",
-        "vertigo dizziness treatment",
-        "myasthenia gravis care",
-        "bell palsy recovery",
-        "ncs emg test guide"
-      ]
-    },
-    "oncology": {
-      hub: "/services/oncology",
-      requiredSubtopics: [
-        "chemotherapy side effects",
-        "breast cancer screening guide",
-        "surgical oncology overview",
-        "palliative care services",
-        "radiation therapy guide",
-        "targeted therapy for cancer",
-        "immunotherapy treatment options",
-        "pet scan for cancer",
-        "colon cancer treatment",
-        "lung cancer early signs",
-        "prostate cancer treatment options",
-        "cervical cancer vaccines",
-        "head and neck cancer care",
-        "bone marrow transplant prep",
-        "cancer pain management"
-      ]
-    },
-    "nephrology": {
-      hub: "/services/nephrology",
-      requiredSubtopics: [
-        "dialysis procedure guide",
-        "chronic kidney disease stages",
-        "diabetic nephropathy prevention",
-        "av fistula surgery",
-        "kidney biopsy procedure",
-        "acute kidney injury care",
-        "kidney transplant preparation",
-        "glomerulonephritis treatment",
-        "polycystic kidney disease management",
-        "nephrotic syndrome cure",
-        "proteinuria treatment options",
-        "hemodialysis vs peritoneal dialysis",
-        "kidney diet plan",
-        "high creatinine levels causes",
-        "fluid restriction guidelines"
+        "preventive heart checkup vellore",
+        "angioplasty recovery and care",
+        "heart attack warning signs guide",
+        "echocardiogram screening vellore",
+        "cardiology specialist doctor vellore",
+        "hypertension management plan",
+        "cholesterol control tips",
+        "non-invasive heart tests",
+        "tmt test vellore cost",
+        "heart health diet guide"
       ]
     }
   }
 };
+;
 
 const results = {
   timestamp: new Date().toISOString(),
@@ -365,7 +168,7 @@ function generatePageTemplate(topic, cluster) {
 
   const content = generateUniqueContent(title, cluster);
 
-  const template = `// RockSEO Auto-Generated Page Template
+  const template = `// RockSEO Auto-Generated Elite Page Template
 // Topic: ${title}
 // Cluster: ${cluster}
 // Hub: ${hubPath}
@@ -375,44 +178,44 @@ import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
 
 export const metadata: Metadata = {
-  title: "${title} | Indira Hospital Vellore",
-  description: "Learn about ${title} at Indira Super Speciality Hospital. Expert care by senior doctors with affordable cost, premium facilities, and 0% EMIs available."
+  title: "${title} | Indira Elite Hospital Vellore",
+  description: "Learn about ${title} at Indira Elite Super Speciality Hospital. Experience robotic-assisted clinical mastery with transparent pricing and premium recovery suites."
 };
 
 export default function ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join("")}Page() {
   return (
     <SubServiceTemplate
       title="${title}"
-      eyebrow="${deptName}"
+      eyebrow="Indira Elite ${deptName}"
       description={
         <span>
-          <strong>${title} is a highly specialized treatment provided by our expert medical team.</strong> This advanced procedure offers exceptional success rates with transparent pricing.
+          <strong>${title} is a clinical core competency at Indira Elite Hospital.</strong> Our senior consultants utilize advanced robotic-assisted technology to ensure maximum precision and rapid patient recovery.
         </span>
       }
       departmentName="${deptName}"
       departmentSlug="${cluster}"
       quickFacts={[
-        { label: "Cost Estimate", value: "₹${content.price}", icon: "IndianRupee" },
-        { label: "Procedure Time", value: "${content.procTime}", icon: "Clock" },
-        { label: "Recovery", value: "${content.recTime}", icon: "Activity" },
-        { label: "Success Rate", value: "${content.succRate}%", icon: "Star" }
+        { label: "Elite Pricing", value: "₹${content.price}", icon: "IndianRupee" },
+        { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
+        { label: "Elite Recovery", value: "${content.recTime}", icon: "Bed" },
+        { label: "Clinical Success", value: "${content.succRate}%", icon: "CheckCircle" }
       ]}
       timeline={{
-        title: "Treatment Process",
-        description: "Your structured clinical pathway for ${title}",
+        title: "Your Elite Pathway",
+        description: "The structured journey for ${title} at Indira Elite",
         steps: [
-          { title: "Consultation & Diagnostics", description: "Comprehensive evaluation and digital diagnostics." },
-          { title: "Procedure", description: "Minimally invasive treatment using advanced technology." },
-          { title: "Recovery & Follow-up", description: "Post-operative care and dedicated monitoring." }
+          { title: "Elite Consultation", description: "In-depth clinical evaluation with robotic diagnostic mapping." },
+          { title: "Robotic-Assisted Procedure", description: "Minimally invasive intervention ensuring surgical mastery." },
+          { title: "Premium Recovery", description: "Post-op care in our Elite suites with dedicated clinical monitoring." }
         ]
       }}
       reviews={{
         entityType: "service",
         entityName: "${title}",
-        entitySlug: "${cluster}/${slug}"
+        entitySlug: "seo/${slug}"
       }}
     >
-        {/* Procedural Unique Main Content (Information Gain) */}
+        {/* Procedural Unique Main Content (Elite Information Gain) */}
 ${content.mainContent}
     </SubServiceTemplate>
   );

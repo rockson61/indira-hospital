@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node rockseo/generate-pages-from-gaps.mjs",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
