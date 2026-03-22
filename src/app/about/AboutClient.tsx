@@ -6,7 +6,8 @@ import Link from "next/link"
 import { SectionHeader } from "@/components/ui/section-header";
 import { Testimonials } from "@/components/sections/testimonials";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn, getImageUrl } from "@/lib/utils";
+import { injectInternalLinks } from "@/lib/html-linkify";
 
 export default function AboutClient() {
     return (
@@ -32,10 +33,10 @@ export default function AboutClient() {
                             35 Years of <br className="hidden sm:block" />
                             <span className="elite-gradient-text">Clinical Mastery.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed mb-4">
-                            Indira Super Speciality Hospital is Vellore's premier destination for advanced medical interventions, 
-                            where ethical practice meets world-class surgical precision.
-                        </p>
+                        <p 
+                            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed mb-4"
+                            dangerouslySetInnerHTML={{ __html: injectInternalLinks("Indira Super Speciality Hospital is Vellore's premier destination for advanced medical interventions, where ethical practice meets world-class surgical precision.") }}
+                        />
                     </motion.div>
                 </div>
             </section>
@@ -54,9 +55,10 @@ export default function AboutClient() {
                             <Target className="w-12 h-12 text-fuchsia-600" />
                         </div>
                         <h2 className="elite-section-title mb-8 text-slate-900 dark:text-white er uppercase italic">Our Mission</h2>
-                        <p className="text-2xl text-slate-500 dark:text-slate-400 leading-relaxed font-light italic">
-                            "To engineer a healthcare ecosystem where world-class technology and deep human empathy converge to deliver life-saving clinical outcomes."
-                        </p>
+                        <p 
+                            className="text-2xl text-slate-500 dark:text-slate-400 leading-relaxed font-light italic"
+                            dangerouslySetInnerHTML={{ __html: injectInternalLinks('"To engineer a healthcare ecosystem where world-class technology and deep human empathy converge to deliver life-saving clinical outcomes."') }}
+                        />
                     </motion.div>
 
                     {/* Vision Card - Dark Elite */}
@@ -70,9 +72,10 @@ export default function AboutClient() {
                             <Zap className="w-12 h-12" />
                         </div>
                         <h2 className="elite-section-title mb-8 text-white er uppercase italic">Our Vision</h2>
-                        <p className="text-2xl text-slate-300 leading-relaxed font-extralight italic">
-                            "To be the globally recognized vanguard of medical excellence in South India, setting the gold standard for tertiary healthcare innovation."
-                        </p>
+                        <p 
+                            className="text-2xl text-slate-300 leading-relaxed font-extralight italic"
+                            dangerouslySetInnerHTML={{ __html: injectInternalLinks('"To be the globally recognized vanguard of medical excellence in South India, setting the gold standard for tertiary healthcare innovation."') }}
+                        />
                     </motion.div>
                 </div>
             </section>

@@ -2,6 +2,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { clinicFacilities, clinicEquipment } from "@/lib/data/clinic-config";
 import { Sparkles, CheckCircle2, Building2, Beaker, Zap, Activity, Microscope } from "lucide-react";
 import { Metadata } from "next";
+import { injectInternalLinks } from "@/lib/html-linkify";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
@@ -31,9 +32,10 @@ export default function FacilitiesPage() {
                         Where <br className="hidden sm:block" />
                         <span className="elite-gradient-text">Technology</span> <br className="hidden sm:block"/>Meets Compassion.
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-                        Indira Hospital is equipped with the latest medical technology and premium infrastructure designed to provide superior patient outcomes and absolute safety.
-                    </p>
+                    <p 
+                        className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: injectInternalLinks("Indira Hospital is equipped with the latest medical technology and premium infrastructure designed to provide superior patient outcomes and absolute safety.") }}
+                    />
                 </div>
             </section>
 
@@ -50,7 +52,10 @@ export default function FacilitiesPage() {
                                 {item.id === 'icu' && <Beaker className="w-7 h-7 text-fuchsia-600" />}
                             </div>
                             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4">{item.title}</h3>
-                            <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">{item.description}</p>
+                            <p 
+                                className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed"
+                                dangerouslySetInnerHTML={{ __html: injectInternalLinks(item.description) }}
+                            />
                         </div>
                     ))}
                 </div>
@@ -127,7 +132,7 @@ export default function FacilitiesPage() {
 
             <div className="space-y-12">
                 <InternalLinkGrid type="services" title="Clinical Excellence" subtitle="Our Treatments" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
-                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
+                <InternalLinkGrid type="departments" title="Indira Elite Medical Units" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
             </div>
         </main>
     );

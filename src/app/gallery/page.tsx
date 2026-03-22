@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { Images, Sparkles, Camera, ArrowRight } from "lucide-react";
+import { injectInternalLinks } from "@/lib/html-linkify";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
@@ -45,9 +46,10 @@ export default function GalleryPage() {
                         Experience Our <br className="hidden sm:block" />
                         <span className="elite-gradient-text">World-Class Mastery.</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4">
-                        Step inside our state-of-the-art operation theaters, diagnostic suites, and premium patient environments designed for absolute healing.
-                    </p>
+                    <p 
+                        className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4"
+                        dangerouslySetInnerHTML={{ __html: injectInternalLinks("Step inside our state-of-the-art operation theaters, diagnostic suites, and premium patient environments designed for absolute healing.") }}
+                    />
                 </div>
             </section>
 
@@ -89,7 +91,7 @@ export default function GalleryPage() {
 
             <div className="mt-12">
                 <InternalLinkGrid type="services" title="Clinical Excellence" subtitle="Our Treatments" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
-                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
+                <InternalLinkGrid type="departments" title="Indira Elite Medical Units" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
             </div>
         </main>
     );

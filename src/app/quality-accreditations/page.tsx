@@ -1,6 +1,7 @@
 import { SectionContainer } from "@/components/ui/section-container";
 import { ShieldCheck, Award, CheckCircle2, Star, Sparkles, Building2 } from "lucide-react";
 import { Metadata } from "next";
+import { injectInternalLinks } from "@/lib/html-linkify";
 
 export const metadata: Metadata = {
     title: "NABH Accredited Hospital in Vellore — Quality & Patient Safety | Indira Hospital",
@@ -44,9 +45,10 @@ export default function QualityPage() {
                         Commitment to <br className="hidden sm:block" />
                         <span className="elite-gradient-text">Quality.</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-                        At Indira Hospital, quality is not just a certification—it&apos;s a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.
-                    </p>
+                    <p 
+                        className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: injectInternalLinks("At Indira Hospital, quality is not just a certification—it's a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.") }}
+                    />
                 </div>
             </section>
 
@@ -63,9 +65,10 @@ export default function QualityPage() {
                             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight group-hover:text-emerald-600 transition-colors">
                                 {cert.title}
                             </h3>
-                            <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-                                {cert.description}
-                            </p>
+                            <p 
+                                className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed"
+                                dangerouslySetInnerHTML={{ __html: injectInternalLinks(cert.description) }}
+                            />
                         </div>
                     ))}
                 </div>
