@@ -2,7 +2,7 @@
 // Topic: Tmt Test Vellore Cost
 // Cluster: cardiology
 // Hub: /services/cardiology
-// Generated: 2026-03-22T00:44:00.386Z
+// Generated: 2026-03-22T00:57:42.709Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -25,7 +25,7 @@ export default function TmtTestVelloreCostPage() {
       departmentName="Cardiology"
       departmentSlug="cardiology"
       quickFacts={[
-        { label: "Elite Pricing", value: "₹15000", icon: "IndianRupee" },
+        { label: "Elite Pricing", value: "₹1500", icon: "IndianRupee" },
         { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
         { label: "Elite Recovery", value: "1 week", icon: "Bed" },
         { label: "Clinical Success", value: "98%", icon: "CheckCircle" }
@@ -54,7 +54,7 @@ export default function TmtTestVelloreCostPage() {
         <p>If you are experiencing warning signs such as high blood pressure, conservative therapies may not be sufficient. Tmt Test Vellore Cost is recommended when lifestyle modifications fail to provide relief, and diagnostic imaging confirms the necessity of a world-class intervention. Early consultation can prevent complications and lead to rapid recovery.</p>
         
         <h2>The Procedure at Indira Hospital</h2>
-        <p>The Tmt Test Vellore Cost pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages laser precision for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 1-2 hours, drastically reducing trauma.</p>
+        <p>The Tmt Test Vellore Cost pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages laser precision for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 30-45 mins, drastically reducing trauma.</p>
         
         <h3>Why Choose Us?</h3>
         <ul>

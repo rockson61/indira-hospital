@@ -11,61 +11,85 @@ export function generateUniqueContent(topic, cluster) {
     const outcomes = ['rapid recovery', 'lasting relief', 'improved function', 'enhanced quality of life', 'optimal health outcomes', 'pain-free living'];
     const technology = ['precision diagnostics', 'digital imaging', 'robotic assistance', 'laser precision', 'modern operative suites', 'advanced monitoring'];
 
+    // Specific Procedure Pricing (Overrides cluster defaults for common topics)
+    const specificPrices = {
+        'tmt test': { price: [1500, 2500, 3500], time: '30-45 mins' },
+        'ecg test': { price: [500, 800, 1200], time: '15 mins' },
+        'echo test': { price: [2500, 3500, 5000], time: '30 mins' },
+        'consultation': { price: [500, 1000, 1500], time: '20-30 mins' },
+        'laser piles': { price: [65000, 85000, 110000], time: '45 mins' },
+        'knee replacement': { price: [185000, 250000, 340000], time: '2-3 hours' }
+    };
+
+    const topicLower = topic.toLowerCase();
+    let specificMatch = null;
+    for (const key in specificPrices) {
+        if (topicLower.includes(key)) {
+            specificMatch = specificPrices[key];
+            break;
+        }
+    }
+
     // Cluster specific dictionaries
     const domainData = {
+        'proctology': {
+            symptoms: ['painful bowel movements', 'persistent itching', 'rectal bleeding', 'swollen lumps', 'chronic discomfort'],
+            price: [65000, 90000, 120000], time: ['30-45 mins', '1 hour', '1.5 hours'],
+            recovery: ['2-3 days', '1 week', 'Same day'], success: [99, 98, 97]
+        },
         'dental-implants': {
             symptoms: ['missing teeth', 'difficulty chewing', 'jaw bone loss', 'loose dentures', 'speech issues'],
-            price: [25000, 35000, 45000], time: ['1-2 hours', '3 hours', 'Multiple sessions'],
+            price: [35000, 45000, 55000], time: ['1-2 hours', '3 hours', 'Multiple sessions'],
             recovery: ['1 week', '3-5 days', 'Immediate'], success: [98, 97, 99]
         },
         'orthodontics': {
             symptoms: ['crooked teeth', 'overbite', 'underbite', 'gaps between teeth', 'jaw pain'],
-            price: [30000, 40000, 50000], time: ['1 hour', '30 minutes', '45 minutes'],
+            price: [45000, 60000, 85000], time: ['1 hour', '30 minutes', '45 minutes'],
             recovery: ['Minor soreness for 2 days', '1 day', 'None'], success: [99, 98, 100]
         },
         'gastroenterology': {
             symptoms: ['chronic abdominal pain', 'persistent heartburn', 'unexplained weight loss', 'severe bloating', 'change in bowel habits'],
-            price: [5000, 8000, 12000], time: ['30 mins', '1 hour', '45 mins'],
+            price: [15000, 25000, 45000], time: ['30 mins', '1 hour', '45 mins'],
             recovery: ['Same day', '1 day', '2-3 days'], success: [95, 96, 98]
         },
         'general-surgery': {
             symptoms: ['painful swelling', 'hernia bulge', 'bleeding', 'chronic inflammation', 'recurring blockages'],
-            price: [20000, 40000, 60000], time: ['1-2 hours', '2-3 hours', '1 hour'],
+            price: [55000, 75000, 95000], time: ['1-2 hours', '2-3 hours', '1 hour'],
             recovery: ['3-5 days', '1 week', '2 weeks'], success: [99, 98, 97]
         },
         'urology': {
             symptoms: ['frequent urination', 'painful urination', 'kidney pain', 'urinary retention', 'blood in urine'],
-            price: [15000, 30000, 45000], time: ['1 hour', '2 hours', '1.5 hours'],
+            price: [35000, 55000, 85000], time: ['1 hour', '2 hours', '1.5 hours'],
             recovery: ['1-3 days', '1 week', '3-5 days'], success: [96, 98, 97]
         },
         'obstetrics-gynaecology': {
             symptoms: ['irregular periods', 'pelvic pain', 'heavy bleeding', 'infertility concerns', 'pregnancy complications'],
-            price: [10000, 25000, 50000], time: ['30 mins', '1-2 hours', '2-3 hours'],
+            price: [35000, 65000, 95000], time: ['30 mins', '1-2 hours', '2-3 hours'],
             recovery: ['1-2 days', '1 week', '2-3 weeks'], success: [98, 97, 99]
         },
         'orthopaedics': {
             symptoms: ['joint stiffness', 'severe bone pain', 'restricted mobility', 'sports injuries', 'chronic back pain'],
-            price: [40000, 80000, 150000], time: ['2-3 hours', '1-2 hours', '4 hours'],
+            price: [185000, 250000, 340000], time: ['2-3 hours', '1-2 hours', '4 hours'],
             recovery: ['3-4 weeks', '2-3 months', '1-2 weeks'], success: [95, 96, 98]
         },
         'cardiology': {
             symptoms: ['chest pain', 'shortness of breath', 'irregular heartbeat', 'dizziness', 'high blood pressure'],
-            price: [15000, 50000, 100000], time: ['1-2 hours', '3-4 hours', '30 mins'],
+            price: [250000, 350000, 480000], time: ['1-2 hours', '3-4 hours', '30 mins'],
             recovery: ['1 week', '2-4 weeks', '1-3 days'], success: [98, 97, 96]
         },
         'neurology': {
             symptoms: ['chronic migraines', 'numbness', 'memory issues', 'seizures', 'balance problems'],
-            price: [5000, 20000, 50000], time: ['1 hour', '2-3 hours', 'Diagnostic varies'],
+            price: [25000, 55000, 95000], time: ['1 hour', '2-3 hours', 'Diagnostic varies'],
             recovery: ['Varies', '1-2 weeks', 'Ongoing'], success: [90, 92, 95]
         },
         'oncology': {
             symptoms: ['unexplained lumps', 'chronic fatigue', 'sudden weight loss', 'persistent pain', 'abnormal scans'],
-            price: [30000, 60000, 120000], time: ['Varies greatly', '1-2 hours per session', '3 hours'],
+            price: [75000, 150000, 250000], time: ['Varies greatly', '1-2 hours per session', '3 hours'],
             recovery: ['Ongoing', 'Varies by stage', '1-3 weeks post-treatment'], success: [85, 90, 88]
         },
         'nephrology': {
             symptoms: ['fluid retention', 'kidney stones', 'high creatinine', 'chronic fatigue', 'foamy urine'],
-            price: [2000, 15000, 30000], time: ['4 hours', '1-2 hours', '30 mins'],
+            price: [15000, 45000, 95000], time: ['4 hours', '1-2 hours', '30 mins'],
             recovery: ['Same day', '1-2 days', '1 week'], success: [95, 97, 96]
         }
     };
@@ -83,8 +107,8 @@ export function generateUniqueContent(topic, cluster) {
     const sym1 = getRand(domain.symptoms);
     const sym2 = getRand2(domain.symptoms);
 
-    const price = getRand(domain.price);
-    const procTime = getRand2(domain.time);
+    const price = specificMatch ? getRand(specificMatch.price) : getRand(domain.price);
+    const procTime = specificMatch ? specificMatch.time : getRand2(domain.time);
     const recTime = getRand3(domain.recovery);
     const succRate = getRand(domain.success);
 

@@ -2,7 +2,7 @@
 // Topic: Hypertension Management Plan
 // Cluster: cardiology
 // Hub: /services/cardiology
-// Generated: 2026-03-22T00:44:00.385Z
+// Generated: 2026-03-22T00:57:42.708Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -25,7 +25,7 @@ export default function HypertensionManagementPlanPage() {
       departmentName="Cardiology"
       departmentSlug="cardiology"
       quickFacts={[
-        { label: "Elite Pricing", value: "₹100000", icon: "IndianRupee" },
+        { label: "Elite Pricing", value: "₹480000", icon: "IndianRupee" },
         { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
         { label: "Elite Recovery", value: "1 week", icon: "Bed" },
         { label: "Clinical Success", value: "96%", icon: "CheckCircle" }

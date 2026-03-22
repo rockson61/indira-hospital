@@ -2,7 +2,7 @@
 // Topic: Fissure Laser Treatment Benefits
 // Cluster: proctology
 // Hub: /services/proctology
-// Generated: 2026-03-22T00:44:00.378Z
+// Generated: 2026-03-22T00:57:42.701Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -25,10 +25,10 @@ export default function FissureLaserTreatmentBenefitsPage() {
       departmentName="Proctology"
       departmentSlug="proctology"
       quickFacts={[
-        { label: "Elite Pricing", value: "₹20000", icon: "IndianRupee" },
+        { label: "Elite Pricing", value: "₹90000", icon: "IndianRupee" },
         { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
-        { label: "Elite Recovery", value: "1 week", icon: "Bed" },
-        { label: "Clinical Success", value: "96%", icon: "CheckCircle" }
+        { label: "Elite Recovery", value: "2-3 days", icon: "Bed" },
+        { label: "Clinical Success", value: "98%", icon: "CheckCircle" }
       ]}
       timeline={{
         title: "Your Elite Pathway",
@@ -48,13 +48,13 @@ export default function FissureLaserTreatmentBenefitsPage() {
         {/* Procedural Unique Main Content (Elite Information Gain) */}
 
         <h2>Understanding Fissure Laser Treatment Benefits</h2>
-        <p>Patients suffering from chronic pain or chronic pain often find lasting relief through Fissure Laser Treatment Benefits. This expert intervention is conducted using precision diagnostics, paving the way for improved function. The expert team at Indira Super Speciality Hospital is highly trained in performing this procedure with exceptional precision and care.</p>
+        <p>Patients suffering from painful bowel movements or painful bowel movements often find lasting relief through Fissure Laser Treatment Benefits. This expert intervention is conducted using precision diagnostics, paving the way for improved function. The expert team at Indira Super Speciality Hospital is highly trained in performing this procedure with exceptional precision and care.</p>
         
         <h2>Who Needs This Treatment?</h2>
-        <p>Fissure Laser Treatment Benefits is primarily indicated for patients whose daily routine is severely disrupted by chronic pain. After a comprehensive physical and diagnostic review, our surgeons may advise this expert approach to securely stabilize your condition and deliver improved function.</p>
+        <p>Fissure Laser Treatment Benefits is primarily indicated for patients whose daily routine is severely disrupted by painful bowel movements. After a comprehensive physical and diagnostic review, our surgeons may advise this expert approach to securely stabilize your condition and deliver improved function.</p>
         
         <h2>The Procedure at Indira Hospital</h2>
-        <p>The Fissure Laser Treatment Benefits pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages precision diagnostics for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within Varies, drastically reducing trauma.</p>
+        <p>The Fissure Laser Treatment Benefits pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages precision diagnostics for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 1.5 hours, drastically reducing trauma.</p>
         
         <h3>Why Choose Us?</h3>
         <ul>

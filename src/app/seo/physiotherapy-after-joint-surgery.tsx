@@ -2,7 +2,7 @@
 // Topic: Physiotherapy After Joint Surgery
 // Cluster: orthopaedics
 // Hub: /services/orthopaedics
-// Generated: 2026-03-22T00:44:00.381Z
+// Generated: 2026-03-22T00:57:42.703Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -25,7 +25,7 @@ export default function PhysiotherapyAfterJointSurgeryPage() {
       departmentName="Orthopaedics"
       departmentSlug="orthopaedics"
       quickFacts={[
-        { label: "Elite Pricing", value: "₹40000", icon: "IndianRupee" },
+        { label: "Elite Pricing", value: "₹185000", icon: "IndianRupee" },
         { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
         { label: "Elite Recovery", value: "3-4 weeks", icon: "Bed" },
         { label: "Clinical Success", value: "95%", icon: "CheckCircle" }

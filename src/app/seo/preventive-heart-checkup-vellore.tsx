@@ -2,7 +2,7 @@
 // Topic: Preventive Heart Checkup Vellore
 // Cluster: cardiology
 // Hub: /services/cardiology
-// Generated: 2026-03-22T00:44:00.384Z
+// Generated: 2026-03-22T00:57:42.706Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -25,7 +25,7 @@ export default function PreventiveHeartCheckupVellorePage() {
       departmentName="Cardiology"
       departmentSlug="cardiology"
       quickFacts={[
-        { label: "Elite Pricing", value: "₹15000", icon: "IndianRupee" },
+        { label: "Elite Pricing", value: "₹250000", icon: "IndianRupee" },
         { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
         { label: "Elite Recovery", value: "1 week", icon: "Bed" },
         { label: "Clinical Success", value: "98%", icon: "CheckCircle" }

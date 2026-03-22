@@ -2,7 +2,7 @@
 // Topic: Painless Fistula Surgery Recovery
 // Cluster: proctology
 // Hub: /services/proctology
-// Generated: 2026-03-22T00:44:00.378Z
+// Generated: 2026-03-22T00:57:42.701Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -25,10 +25,10 @@ export default function PainlessFistulaSurgeryRecoveryPage() {
       departmentName="Proctology"
       departmentSlug="proctology"
       quickFacts={[
-        { label: "Elite Pricing", value: "₹10000", icon: "IndianRupee" },
+        { label: "Elite Pricing", value: "₹65000", icon: "IndianRupee" },
         { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
-        { label: "Elite Recovery", value: "1 week", icon: "Bed" },
-        { label: "Clinical Success", value: "95%", icon: "CheckCircle" }
+        { label: "Elite Recovery", value: "2-3 days", icon: "Bed" },
+        { label: "Clinical Success", value: "99%", icon: "CheckCircle" }
       ]}
       timeline={{
         title: "Your Elite Pathway",
@@ -48,13 +48,13 @@ export default function PainlessFistulaSurgeryRecoveryPage() {
         {/* Procedural Unique Main Content (Elite Information Gain) */}
 
         <h2>Understanding Painless Fistula Surgery Recovery</h2>
-        <p>Painless Fistula Surgery Recovery is a world-class medical procedure designed to address chronic pain and chronic pain. At Indira Hospital, our distinguished specialists utilize laser precision to ensure maximum safety and rapid recovery. By choosing our dedicated department, patients benefit from world-class healthcare tailored to their precise clinical needs.</p>
+        <p>Painless Fistula Surgery Recovery is a world-class medical procedure designed to address painful bowel movements and painful bowel movements. At Indira Hospital, our distinguished specialists utilize laser precision to ensure maximum safety and rapid recovery. By choosing our dedicated department, patients benefit from world-class healthcare tailored to their precise clinical needs.</p>
         
         <h2>Who Needs This Treatment?</h2>
-        <p>If you are experiencing warning signs such as chronic pain, conservative therapies may not be sufficient. Painless Fistula Surgery Recovery is recommended when lifestyle modifications fail to provide relief, and diagnostic imaging confirms the necessity of a world-class intervention. Early consultation can prevent complications and lead to rapid recovery.</p>
+        <p>If you are experiencing warning signs such as painful bowel movements, conservative therapies may not be sufficient. Painless Fistula Surgery Recovery is recommended when lifestyle modifications fail to provide relief, and diagnostic imaging confirms the necessity of a world-class intervention. Early consultation can prevent complications and lead to rapid recovery.</p>
         
         <h2>The Procedure at Indira Hospital</h2>
-        <p>The Painless Fistula Surgery Recovery pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages laser precision for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 1 hour, drastically reducing trauma.</p>
+        <p>The Painless Fistula Surgery Recovery pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages laser precision for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 30-45 mins, drastically reducing trauma.</p>
         
         <h3>Why Choose Us?</h3>
         <ul>

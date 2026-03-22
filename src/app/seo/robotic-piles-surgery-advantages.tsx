@@ -2,7 +2,7 @@
 // Topic: Robotic Piles Surgery Advantages
 // Cluster: proctology
 // Hub: /services/proctology
-// Generated: 2026-03-22T00:44:00.380Z
+// Generated: 2026-03-22T00:57:42.702Z
 
 import { Metadata } from "next";
 import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
@@ -25,10 +25,10 @@ export default function RoboticPilesSurgeryAdvantagesPage() {
       departmentName="Proctology"
       departmentSlug="proctology"
       quickFacts={[
-        { label: "Elite Pricing", value: "₹10000", icon: "IndianRupee" },
+        { label: "Elite Pricing", value: "₹65000", icon: "IndianRupee" },
         { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
-        { label: "Elite Recovery", value: "1 week", icon: "Bed" },
-        { label: "Clinical Success", value: "95%", icon: "CheckCircle" }
+        { label: "Elite Recovery", value: "2-3 days", icon: "Bed" },
+        { label: "Clinical Success", value: "99%", icon: "CheckCircle" }
       ]}
       timeline={{
         title: "Your Elite Pathway",
@@ -48,13 +48,13 @@ export default function RoboticPilesSurgeryAdvantagesPage() {
         {/* Procedural Unique Main Content (Elite Information Gain) */}
 
         <h2>Understanding Robotic Piles Surgery Advantages</h2>
-        <p>Robotic Piles Surgery Advantages is a minimally invasive medical procedure designed to address restricted activity and inflammation. At Indira Hospital, our distinguished specialists utilize precision diagnostics to ensure maximum safety and rapid recovery. By choosing our dedicated department, patients benefit from world-class healthcare tailored to their precise clinical needs.</p>
+        <p>Robotic Piles Surgery Advantages is a minimally invasive medical procedure designed to address rectal bleeding and chronic discomfort. At Indira Hospital, our distinguished specialists utilize precision diagnostics to ensure maximum safety and rapid recovery. By choosing our dedicated department, patients benefit from world-class healthcare tailored to their precise clinical needs.</p>
         
         <h2>Who Needs This Treatment?</h2>
-        <p>If you are experiencing warning signs such as restricted activity, conservative therapies may not be sufficient. Robotic Piles Surgery Advantages is recommended when lifestyle modifications fail to provide relief, and diagnostic imaging confirms the necessity of a minimally invasive intervention. Early consultation can prevent complications and lead to rapid recovery.</p>
+        <p>If you are experiencing warning signs such as rectal bleeding, conservative therapies may not be sufficient. Robotic Piles Surgery Advantages is recommended when lifestyle modifications fail to provide relief, and diagnostic imaging confirms the necessity of a minimally invasive intervention. Early consultation can prevent complications and lead to rapid recovery.</p>
         
         <h2>The Procedure at Indira Hospital</h2>
-        <p>The Robotic Piles Surgery Advantages pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages precision diagnostics for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 1 hour, drastically reducing trauma.</p>
+        <p>The Robotic Piles Surgery Advantages pathway begins with comprehensive pre-operative diagnostics to map out the anatomy. In the operating suite, our team leverages precision diagnostics for exact execution. The minimally invasive nature of modern techniques means the procedure generally concludes within 30-45 mins, drastically reducing trauma.</p>
         
         <h3>Why Choose Us?</h3>
         <ul>
