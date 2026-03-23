@@ -59,6 +59,16 @@ const nextConfig: NextConfig = {
         source: '/insurance',
         destination: '/patients/insurance',
         permanent: true,
+      },
+      {
+        source: '/for-doctors',
+        destination: '/professionals',
+        permanent: true,
+      },
+      {
+        source: '/appointment-booking',
+        destination: '/book-appointment',
+        permanent: true,
       }
     ]
   },

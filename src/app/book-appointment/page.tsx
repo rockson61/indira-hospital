@@ -1,40 +1,85 @@
-import AppointmentBookingClient from "./AppointmentBookingClient";
-import { Clock } from "lucide-react";
+import BookingFunnel from "@/components/interactive/BookingFunnel";
+import { Clock, ShieldCheck, Sparkles } from "lucide-react";
 import { Suspense } from "react";
 
 export const metadata = {
-    title: "Book Appointment with Best Specialists in Vellore — Same-Week Surgery | Indira Elite",
-    description: "Schedule your consultation with top specialists at Indira Elite Hospital. Premium robotic-assisted care with cinematic recovery suites.",
+    title: "Elite Booking Hub | Instant Pricing & Priority Consultation",
+    description: "Book your Elite surgical consultation with instant pricing estimates. Direct priority access to senior specialists at Indira Hospital.",
 };
 
 export default function AppointmentPage() {
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
-            {/* Bold Asymmetrical Deep Hero for the booking context */}
-            <section className="relative pt-48 pb-48 lg:pt-60 lg:pb-64 overflow-hidden bg-slate-900 dark:bg-black rounded-b-[3rem] sm:rounded-b-[5rem]">
-                {/* 3D-like glowing spheres and custom grid pattern */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-slate-500/10 hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none" />
-                <div className="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] rounded-full bg-indigo-500/10 hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
+        <main className="min-h-screen bg-slate-950 selection:bg-emerald-500/30 pb-24 overflow-hidden">
+            {/* ELITE CINEMATIC HERO */}
+            <section className="relative pt-48 pb-64 lg:pt-60 lg:pb-80 overflow-hidden bg-black rounded-b-[5rem]">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+                
+                {/* Immersive Orbs */}
+                <div className="absolute -top-[10%] -right-[10%] w-[600px] h-[600px] rounded-full bg-emerald-500/10 blur-[150px] animate-pulse" />
+                <div className="absolute top-[20%] -left-[10%] w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[120px]" />
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-                    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-slate-300 text-xs font-bold tracking-widest uppercase mb-8 shadow-2xl">
-                        <Clock className="w-3.5 h-3.5" /> High-Priority Clinical Access
-                    </span>
-                    <h1 className="elite-hero-title text-white mb-6 max-w-4xl mx-auto">
-                        Secure Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">Clinical Mastery.</span>
+                    <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-emerald-400 text-[10px] font-black tracking-[0.4em] uppercase mb-12 shadow-2xl">
+                        <ShieldCheck className="w-4 h-4" /> Institutional Priority
+                    </div>
+                    
+                    <h1 className="elite-hero-title text-white mb-8">
+                        The <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-white to-emerald-200">Elite Booking</span> <br /> 
+                        Experience.
                     </h1>
-                    <p className="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
-                        Skip the standard queue. Book an exact time slot with our senior "Elite" specialists in under 60 seconds.
+
+                    <p className="text-xl md:text-2xl text-slate-400 max-w-4xl mx-auto font-light leading-relaxed mb-8 italic">
+                        Transparent pricing. Direct specialist mapping. No waitlists. <br className="hidden md:block" />
+                        Experience the gold standard of surgical coordination.
                     </p>
+
+                    <div className="flex justify-center items-center gap-8 opacity-40 grayscale hover:grayscale-0 transition-all cursor-crosshair">
+                       <div className="flex items-center gap-2">
+                           <Clock className="w-5 h-5 text-emerald-400" />
+                           <span className="text-xs font-black uppercase tracking-widest text-white italic">Same-Week Surgery</span>
+                       </div>
+                       <div className="w-px h-6 bg-white/10" />
+                       <div className="flex items-center gap-2">
+                           <Sparkles className="w-5 h-5 text-indigo-400" />
+                           <span className="text-xs font-black uppercase tracking-widest text-white italic">Fixed Cost Estimates</span>
+                       </div>
+                    </div>
+                </div>
+
+                {/* Perspective Backdrop Text */}
+                <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-[15rem] font-black text-white/[0.02] tracking-tighter select-none pointer-events-none uppercase italic">
+                   PRIORITY
                 </div>
             </section>
 
-            {/* Negative margin to pull the form up over the hero */}
-            <section className="relative z-20 -mt-24 sm:-mt-40 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto mb-16">
-                <Suspense fallback={<div className="h-96 w-full animate-pulse bg-slate-100 rounded-[3rem]" />}>
-                    <AppointmentBookingClient />
+            {/* INTEGRATED BOOKING FUNNEL */}
+            <section className="relative z-20 -mt-32 md:-mt-48 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+                <Suspense fallback={<div className="h-[600px] w-full animate-pulse bg-white/5 rounded-[4rem] border border-white/10" />}>
+                    <BookingFunnel />
                 </Suspense>
+            </section>
+
+            {/* LOWER TRUST BANNER */}
+            <section className="mt-24 max-w-5xl mx-auto px-6 text-center">
+                <p className="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-10">Trusted by 15,000+ Annual Surgical Patients</p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 hover:opacity-100 transition-opacity duration-1000">
+                    <div className="flex flex-col items-center gap-3">
+                        <div className="h-0.5 w-12 bg-white/10" />
+                        <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">USFDA Approved <br /> Technology</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-3">
+                        <div className="h-0.5 w-12 bg-white/10" />
+                        <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">NABH Safety <br /> Standards</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-3">
+                        <div className="h-0.5 w-12 bg-white/10" />
+                        <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">NABL Certified <br /> Diagnostics</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-3">
+                        <div className="h-0.5 w-12 bg-white/10" />
+                        <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">World-Class <br /> TPA Support</span>
+                    </div>
+                </div>
             </section>
         </main>
     );
