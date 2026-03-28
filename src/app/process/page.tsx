@@ -17,7 +17,7 @@ const steps = [
         details: "Detailed review of medical history and initial physical examination."
     },
     {
-        title: "Precision Intervention",
+        title: "Advanced Intervention",
         description: "Execution of surgical plans using state-of-the-art modular OTs and minimally invasive techniques.",
         icon: <Activity className="w-8 h-8 text-fuchsia-600" />,
         details: "Emphasis on tissue preservation and minimal blood loss."
@@ -123,10 +123,9 @@ export default function ProcessPage() {
             </SectionContainer>
 
             <div className="space-y-12">
-                <InternalLinkGrid type="services" title="Clinical Excellence" subtitle="Our Treatments" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
-                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
+                <InternalLinkGrid type="diagnostics" title="Advanced Diagnostics" subtitle="Advanced Imaging & Lab" limit={12} className="bg-white dark:bg-slate-900 border-t rounded-[4rem] border" />
+                <InternalLinkGrid type="departments" title="Elite Medical Units" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border mt-12" />
             </div>
         </main>
     );
 }
-

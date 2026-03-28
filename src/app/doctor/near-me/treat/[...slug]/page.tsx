@@ -106,7 +106,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const treatment = getTreatmentBySlug(lastSlug);
     if (treatment) {
         const title = `Best ${treatment.title} Specialists in Vellore — Cost-Effective & Expert Care | Indira Hospital`;
-        const description = `${treatment.shortDescription} NABH accredited ${treatment.title} procedures at Indira Hospital, Vellore. Advanced technology, affordable costs, and same-day discharge in India.`;
+        const description = `${treatment.shortDescription} NABH accredited ${treatment.title} procedures at Indira Hospital, Vellore. Advanced technology, institutional value, and same-day discharge in India.`;
         return {
             title,
             description,
@@ -243,7 +243,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;
     const contactWhatsapp = isDentalPage ? "917010650063" : siteConfig.contact.whatsapp;
 
-    const whatsappUrl = `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent(`Hi, I need information about ${service.title} at Indira Hospital.`)}`;
+    const whatsappUrl = isTreatmentPage 
+        ? `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent(`Interested in ${service.title} at Indira Hospital. Please share cost estimate and clinical availability.`)}`
+        : `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent(`I would like to consult with the ${service.title} specialist at Indira Hospital.`)}`;
+
+    const pricingWhatsappUrl = `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent(`Pricing Enquiry: I need a detailed cost estimate for ${service.title} at Indira Hospital, Vellore.`)}`;
 
     // Comparison Logic
     const isLaserSpecialty = slug.some(s => ['piles', 'fistula', 'fissure', 'proctology', 'varicose', 'laser'].some(k => s.toLowerCase().includes(k)));
@@ -325,7 +329,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
                                     className="elite-button-primary gap-3">
                                     <MessageCircle className="w-6 h-6" />
-                                    Book Expert Consultation
+                                    Elite Consultation
                                 </a>
                                 <a href={`tel:${contactPhone.replace(/\s+/g, '')}`}
                                     className="elite-button-secondary gap-3">
@@ -460,7 +464,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     </div>
 
                                     <div className="mt-8 flex justify-center">
-                                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-black uppercase text-emerald-400 tracking-[0.2em] hover:text-emerald-300 transition-colors">
+                                        <a href={pricingWhatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-black uppercase text-emerald-400 tracking-[0.2em] hover:text-emerald-300 transition-colors">
                                             Request My Free Estimate <ArrowRight className="w-4 h-4" />
                                         </a>
                                     </div>
@@ -594,7 +598,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div>
                         <h6 className="text-[17px] font-semibold text-slate-700 dark:text-slate-300 mb-2">Why Consult Our {service.title} Specialists?</h6>
                         <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Our team consists of the <strong>Best doctors</strong> and the <strong>Best surgeons</strong> across Tamil Nadu, offering personalized diagnostics and <strong>affordable cost</strong> treatment plans. From initial consultation to <strong>same-day discharge</strong> capabilities, your health is our priority.
+                            Our team consists of the <strong>Best doctors</strong> and the <strong>Best surgeons</strong> across Tamil Nadu, offering personalized diagnostics and <strong>institutional value</strong> treatment plans. From initial consultation to <strong>same-day discharge</strong> capabilities, your health is our priority.
                         </p>
                     </div>
                 </div>
@@ -624,7 +628,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
             {/* UNIFIED ENTITY QUERIES */}
             <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
-            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800/50" />
+            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Elite Medical Units" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800/50" />
             <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
 
             <InternalLinkGrid type="diagnostics" title="Diagnostic Support" subtitle="Lab Tests for this Procedure" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b" />

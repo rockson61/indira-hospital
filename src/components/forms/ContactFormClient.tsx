@@ -206,110 +206,68 @@ export function ContactFormClient() {
                         </motion.div>
                     </div>
 
-                    {/* Right Column: Premium Tactical Command Enquiry Form */}
+                    {/* Right Column: Premium Elite WhatsApp Consultation */}
                     <div className="lg:col-span-7">
                         <motion.div
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-slate-900 p-10 sm:p-16 rounded-[4rem] border border-slate-800 shadow-2xl relative overflow-hidden group animate-in fade-in slide-in-from-right-8 duration-1000 ease-out"
+                            className="bg-slate-900 p-10 sm:p-20 rounded-[4rem] border border-slate-800 shadow-2xl relative overflow-hidden group animate-in fade-in slide-in-from-right-8 duration-1000 ease-out flex flex-col items-center text-center"
                         >
                             <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
                             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] pointer-events-none" />
 
                             <div className="relative z-10 mb-12">
                                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-fuchsia-300 text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm dark:shadow-slate-900/30">
-                                    <Shield className="w-4 h-4" /> Safe & Secure
+                                    <Shield className="w-4 h-4" /> Secure Elite Channel
                                 </span>
-                                <h2 className="elite-section-title text-white">Send a Message</h2>
-                                <p className="text-slate-400 mt-4 text-lg font-medium">Have a question about a treatment, cost, or insurance? Fill out the form and our team will reply within 24 hours.</p>
+                                <h2 className="elite-section-title text-white">Elite WhatsApp Consultation</h2>
+                                <p className="text-slate-400 mt-6 text-xl font-medium max-w-2xl leading-relaxed">
+                                    In alignment with our surgical precision standards, we have pivoted to a <span className="text-fuchsia-400 font-black">WhatsApp-First</span> consultation model. This ensures instant, encrypted access to our medical coordinators.
+                                </p>
                             </div>
 
-                            <form onSubmit={handleSubmit} className="space-y-10 relative z-10">
-                                {error && (
-                                    <div className="p-4 bg-rose-500/20 border border-rose-500/50 rounded-2xl text-rose-300 text-sm font-bold">
-                                        {error}
-                                    </div>
-                                )}
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <div className="space-y-3">
-                                        <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">First Name <span className="text-rose-500">*</span></label>
-                                        <Input 
-                                            name="first_name"
-                                            value={formData.first_name}
-                                            onChange={handleChange}
-                                            required
-                                            placeholder="John" 
-                                            className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
-                                        />
-                                    </div>
-                                    <div className="space-y-3">
-                                        <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Last Name <span className="text-rose-500">*</span></label>
-                                        <Input 
-                                            name="last_name"
-                                            value={formData.last_name}
-                                            onChange={handleChange}
-                                            required
-                                            placeholder="Doe" 
-                                            className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="space-y-3">
-                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Secure Email <span className="text-rose-500">*</span></label>
-                                    <Input 
-                                        name="email"
-                                        type="email" 
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="john.doe@expert.com" 
-                                        className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
-                                    />
-                                </div>
-
-                                <div className="space-y-3">
-                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Tactical Number <span className="text-rose-500">*</span></label>
-                                    <Input 
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="+91 98765 00000" 
-                                        className="bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 h-16 rounded-[1.5rem] text-lg px-8 font-bold text-white transition-all outline-none" 
-                                    />
-                                </div>
-
-                                <div className="space-y-3">
-                                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Clinical Query/Message <span className="text-rose-500">*</span></label>
-                                    <Textarea 
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        required
-                                        className="min-h-[200px] bg-white/5 border-slate-700/50 focus:bg-white/10 focus:border-fuchsia-500 focus:ring-4 focus:ring-fuchsia-500/10 rounded-[2rem] text-lg p-8 font-bold text-white transition-all outline-none resize-none" 
-                                        placeholder="Provide specific details about your clinical history or inquiry..." 
-                                    />
-                                </div>
-
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="group/btn relative flex items-center justify-center w-full px-10 py-7 bg-fuchsia-500 text-slate-900 dark:text-white font-black rounded-3xl transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-fuchsia-500/30 overflow-hidden"
+                            <div className="relative z-10 w-full max-w-md space-y-8">
+                                <a
+                                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=I%20have%20a%20clinical%20inquiry%20from%20the%20Indira%20Elite%20website.`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group/btn relative flex items-center justify-center w-full px-10 py-10 bg-green-500 text-white font-black rounded-[2.5rem] transition-all duration-500 hover:scale-[1.05] shadow-[0_20px_50px_rgba(34,197,94,0.3)] overflow-hidden"
                                 >
-                                    {isSubmitting ? (
-                                        <div className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                                    ) : (
-                                        <>
-                                            <span className="relative z-10 text-xl uppercase tracking-[0.2em] pr-6">Send Message</span>
-                                            <Send className="w-6 h-6 relative z-10 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
-                                        </>
-                                    )}
-                                </button>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-600 opacity-100" />
+                                    <span className="relative z-10 text-2xl uppercase tracking-[0.1em] pr-4">Start Elite Chat</span>
+                                    <MessageCircle className="w-8 h-8 relative z-10 group-hover/btn:rotate-12 transition-transform" />
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-1000 ease-out" />
+                                </a>
 
-                                <p className="text-center text-sm text-slate-500 dark:text-slate-400 font-medium">By transmitting this form, you precisely agree to our absolute <a href="/privacy-policy" className="text-fuchsia-400 hover:underline">Privacy Protocols</a> regarding data encryption.</p>
-                            </form>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="p-6 bg-white/5 border border-white/10 rounded-3xl">
+                                        <div className="text-fuchsia-400 font-black text-2xl mb-1">~2 Min</div>
+                                        <div className="text-slate-500 text-xs uppercase tracking-widest">Avg Response</div>
+                                    </div>
+                                    <div className="p-6 bg-white/5 border border-white/10 rounded-3xl">
+                                        <div className="text-fuchsia-400 font-black text-2xl mb-1">Direct</div>
+                                        <div className="text-slate-500 text-xs uppercase tracking-widest">No Forms</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="relative z-10 mt-16 pt-10 border-t border-white/10 w-full flex flex-col items-center">
+                                <p className="text-sm text-slate-500 font-medium mb-6 uppercase tracking-widest">Trusted by 50,000+ Patients</p>
+                                <div className="flex -space-x-3">
+                                    {[1, 2, 3, 4, 5].map((i) => (
+                                        <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center overflow-hidden">
+                                            <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Patient" className="w-full h-full object-cover grayscale" />
+                                        </div>
+                                    ))}
+                                    <div className="w-10 h-10 rounded-full border-2 border-slate-900 bg-fuchsia-500 flex items-center justify-center text-[10px] font-black text-white">
+                                        +50K
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className="relative z-10 text-center text-xs text-slate-500 dark:text-slate-400 font-medium mt-12 max-w-md">
+                                Your data is protected by End-to-End Encryption. By initiating a chat, you agree to our <a href="/privacy-policy" className="text-fuchsia-400 hover:underline">Elite Privacy Protocols</a>.
+                            </p>
                         </motion.div>
                     </div>
                 </div>

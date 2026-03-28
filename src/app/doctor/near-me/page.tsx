@@ -18,7 +18,7 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
-const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`;
+const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Elite WhatsApp Consultation: I'm looking for the best specialist at Indira Super Speciality Hospital, Vellore.")}`;
 
 export const metadata: Metadata = {
     title: "Best Hospital Near You — 79+ Locations Served | Indira Hospital",
@@ -141,7 +141,7 @@ export default async function LocationsPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
-                                <span className="relative z-10">WhatsApp Us Now</span>
+                                <span className="relative z-10">Elite Consultation</span>
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
@@ -207,8 +207,8 @@ export default async function LocationsPage() {
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need information about Laparoscopic Surgery.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 text-slate-900 dark:text-white hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200">
-                            Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Laparoscopic Enquiry: Please share cost and specialist availability for keyhole surgery at Indira Hospital.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-100 dark:hover:bg-fuchsia-950 text-slate-900 dark:text-white hover:text-fuchsia-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200">
+                            Check Availability <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
  
@@ -234,8 +234,8 @@ export default async function LocationsPage() {
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need information about Laser Piles Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-white/10 hover:bg-rose-500 text-white font-black rounded-2xl transition-all border border-white/20 hover:border-transparent relative z-10">
-                            Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Laser Piles Enquiry: I want to book a painless laser procedure at Indira Hospital, Vellore.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-white/10 hover:bg-rose-500 text-white font-black rounded-2xl transition-all border border-white/20 hover:border-transparent relative z-10">
+                            Book Painless Procedure <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
  
@@ -256,8 +256,8 @@ export default async function LocationsPage() {
                                 </li>
                             ))}
                         </ul>
-                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I need information about Fistula Treatment.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-pink-50 dark:bg-pink-950 text-slate-900 dark:text-white hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-pink-200 relative z-10">
-                            Enquire on WhatsApp <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                        <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Fistula/Fissure Enquiry: Seeking permanent laser cure at Indira Super Speciality Hospital.")}`} target="_blank" rel="noopener noreferrer" className="group/link flex items-center justify-center w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 hover:bg-pink-100 dark:hover:bg-pink-950 text-slate-900 dark:text-white hover:text-pink-700 font-black rounded-2xl transition-all border border-slate-200 dark:border-slate-700 hover:border-pink-200 relative z-10">
+                            Consult Proctologist <ArrowRight className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" />
                         </a>
                     </div>
                 </div>
@@ -297,11 +297,15 @@ export default async function LocationsPage() {
                         description="Click on any location for detailed directions, travel info, available departments, and doctors serving your area."
                     />
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {locations.map((loc) => (
-                        <LocationCard key={loc.slug} location={loc} variant="card" />
-                    ))}
-                </div>
+                <nav aria-label="Regional Hospital Locations Matrix" className="w-full">
+                    <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 p-0 list-none m-0">
+                        {locations.map((loc) => (
+                            <li key={loc.slug}>
+                                <LocationCard location={loc} variant="card" />
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
             </SectionContainer>
 
             {/* ASSISTANCE CTA BENTO */}
@@ -324,7 +328,7 @@ export default async function LocationsPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl mx-auto">
                             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
-                                <span className="relative z-10">Chat on WhatsApp</span>
+                                <span className="relative z-10">Elite WhatsApp Consultation</span>
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
@@ -363,7 +367,7 @@ export default async function LocationsPage() {
             {/* ENTITY CARD SECTIONS */}
             <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
             <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
-            <EntityCardSection type="departments" title="Our Departments" subtitle="Centres of Excellence" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <EntityCardSection type="departments" title="Elite Medical Units" subtitle="Elite Medical Units" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
 
             {/* COMPACT SEO LINK STRIPS */}
             <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />

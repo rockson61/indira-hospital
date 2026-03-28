@@ -40,7 +40,7 @@ export function CTASection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                         {/* WhatsApp card */}
                         <a
-                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book an appointment at Indira Super Speciality Hospital.")}`}
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hello Indira Elite Concierge, I would like to book a clinical consultation at the Super Speciality Hospital.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group rounded-2xl bg-green-500 hover:bg-green-600 p-8 text-center transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/30 hover:-translate-y-1"

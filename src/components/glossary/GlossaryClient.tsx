@@ -2,7 +2,8 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, BookOpen, ArrowRight } from "lucide-react";
+import { Search, BookOpen, ArrowRight, MessageCircle, Stethoscope } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { GLOSSARY_DATA, GlossaryTerm } from "@/lib/data/glossary-data";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -145,17 +146,32 @@ export function GlossaryClient() {
                                                             {term.definition}
                                                         </p>
                                                         
-                                                        <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
-                                                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">
-                                                                {term.category}
-                                                            </div>
-                                                            <div className="flex gap-4 items-center">
+                                                        <div className="flex flex-col gap-4 mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
+                                                            <div className="flex items-center justify-between">
+                                                                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                                                                    {term.category}
+                                                                </div>
                                                                 {term.relatedService && (
-                                                                    <span className="text-fuchsia-500 text-sm font-black uppercase tracking-widest flex items-center transition-all">
-                                                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                                                    </span>
+                                                                    <Link 
+                                                                        href={`/departments/${term.relatedService}`}
+                                                                        className="text-fuchsia-600 dark:text-fuchsia-400 text-[10px] font-black uppercase tracking-widest flex items-center hover:translate-x-1 transition-transform"
+                                                                    >
+                                                                        View Dept <ArrowRight className="ml-1 w-3 h-3" />
+                                                                    </Link>
                                                                 )}
                                                             </div>
+                                                            
+                                                            <Button 
+                                                                size="sm" 
+                                                                className="w-full h-11 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold text-xs shadow-lg shadow-fuchsia-500/10"
+                                                                onClick={(e) => {
+                                                                    e.preventDefault();
+                                                                    e.stopPropagation();
+                                                                    window.open(`https://wa.me/919942436814?text=${encodeURIComponent(`Enquiry: I would like to know more about ${term.term} treatment at Indira Hospital.`)}`, '_blank');
+                                                                }}
+                                                            >
+                                                                <MessageCircle className="w-4 h-4 mr-2" /> Consult Specialist
+                                                            </Button>
                                                         </div>
                                                     </div>
                                                 </div>

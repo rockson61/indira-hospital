@@ -92,7 +92,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
     const departments = await getDepartments().catch(() => []);
     const allDoctors = await getDoctors().catch(() => []);
-    const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm from ${location.name} and I want to book an appointment at Indira Super Speciality Hospital.`)}`;
+    const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Elite Outstation Enquiry: I am from ${location.name} and would like to consult the best specialist at Indira Hospital Vellore.`)}`;
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
@@ -270,12 +270,12 @@ export default async function LocationDetailPage({ params }: PageProps) {
                                         <MapPin className="w-5 h-5" /> Open in Google Maps
                                     </a>
                                     <a
-                                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I need driving directions from ${location.name} to Indira Hospital Vellore.`)}`}
+                                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Directions Enquiry: I need the best route from ${location.name} to Indira Super Speciality Hospital, Vellore.`)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-3 px-8 py-4 bg-white/5 text-white border border-white/10 font-black rounded-2xl hover:bg-white/10 transition-colors"
                                     >
-                                        <MessageCircle className="w-5 h-5 text-fuchsia-400" /> Send Directions to Phone
+                                        <MessageCircle className="w-5 h-5 text-fuchsia-400" /> Send Route to Phone
                                     </a>
                                 </div>
                             </div>

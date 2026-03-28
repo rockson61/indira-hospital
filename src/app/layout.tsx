@@ -3,12 +3,13 @@ import { siteConfig } from "@/config/site";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { SpecialtyNav } from "@/components/layout/SpecialtyNav";
-import { StickyCTA } from "@/components/layout/StickyCTA";
 import { ThemeProvider } from "@/components/theme-provider";
 import { defaultSeo } from "@/config/seo";
-import DynamicSEOKeywordBlock from "@/components/DynamicSEOKeywordBlock";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
+const StickyCTA = dynamic(() => import("@/components/layout/StickyCTA").then(mod => mod.StickyCTA));
+const DynamicSEOKeywordBlock = dynamic(() => import("@/components/DynamicSEOKeywordBlock"));
 import { getHospitalSchema, getWebsiteSchema } from "@/lib/schema";
 import { LocalBusinessJsonLd, OrganizationJsonLd } from 'next-seo';
 
@@ -116,7 +117,6 @@ export default function RootLayout({
             ]}
           />
           <Header />
-          <SpecialtyNav />
           <main className="flex-1">
             {children}
           </main>

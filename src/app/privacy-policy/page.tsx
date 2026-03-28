@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
                 <p>If you have any questions about this Privacy Policy, please contact us by email: {siteConfig.contact.email}</p>
             </SectionContainer>
             <SectionContainer className="pb-32">
-                <InternalLinkGrid type="departments" title="Clinical Specialities" subtitle="Centres of Excellence" limit={12} className="bg-white dark:bg-slate-950 border rounded-[4rem]" />
+                <InternalLinkGrid type="departments" title="Clinical Specialities" subtitle="Elite Medical Units" limit={12} className="bg-white dark:bg-slate-950 border rounded-[4rem]" />
                 <InternalLinkGrid type="services" title="A-Z Procedures" subtitle="Surgical Excellence" limit={12} className="mt-12 bg-slate-50 dark:bg-slate-900/50 border rounded-[4rem]" />
             </SectionContainer>
         </main>

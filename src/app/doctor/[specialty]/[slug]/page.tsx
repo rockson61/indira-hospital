@@ -278,8 +278,8 @@ export default async function DoctorProfileRoute({
                                         href={`/book-appointment?doctor=${currDoctor.slug}`}
                                         className="block w-full text-center px-6 py-4 bg-slate-900 dark:bg-fuchsia-600 text-white font-bold rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-500 transition-all shadow-md"
                                     >
-                                        <Calendar className="w-5 h-5 inline-block mr-2 -mt-0.5" />
-                                        Book Appointment
+                                        <MessageCircle className="w-5 h-5 inline-block mr-2 -mt-0.5" />
+                                        Elite Consultation
                                     </Link>
                                     <a
                                         href={`https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent(`Hi, I'd like to book an appointment with ${currDoctor.name}.`)}`}
@@ -559,7 +559,7 @@ export default async function DoctorProfileRoute({
 
             {/* UNIFIED ENTITY QUERIES */}
             <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800" />
-            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Centres of Excellence" featuredLimit={6} linkLimit={12} className="bg-[#FAFAFA] dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/50" />
+            <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Elite Medical Units" featuredLimit={6} linkLimit={12} className="bg-[#FAFAFA] dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/50" />
             <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800" />
 
             <InternalLinkGrid type="diagnostics" title="Related Diagnostics" subtitle="Laboratory Support" limit={12} className="bg-slate-50 dark:bg-slate-950 border-t" />

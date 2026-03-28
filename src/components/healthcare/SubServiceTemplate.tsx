@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ChevronRight, Phone, Calendar, CheckCircle2, MessageCircle, Clock, Star, IndianRupee, Siren, Dna, Wind, Apple, Scale, UserCheck, Ear, Ribbon, Cpu, MapPin, Sparkles, ArrowRight, Shield } from "lucide-react"
+import { ChevronRight, Phone, Calendar, CheckCircle2, MessageCircle, Clock, Star, IndianRupee, Siren, Dna, Wind, Apple, Scale, UserCheck, Ear, Ribbon, Cpu, MapPin, Sparkles, ArrowRight, Shield, Zap, Bed } from "lucide-react"
     ;
 import { Stethoscope, Electricity, HeartCardiogram, Microscope, Heart, Baby0203m, Orthopaedics, Eye, Neurology, Syringe, Happy, BloodDrop } from "healthicons-react/outline";
 import { SectionContainer } from '@/components/ui/section-container'
@@ -14,13 +14,16 @@ import { RelatedServices, RelatedServicesProps } from '@/components/healthcare/s
 import { ModernCard } from '@/components/ui/modern-card'
 import { siteConfig } from "@/config/site";
 import { injectInternalLinks } from '@/lib/html-linkify'
+import { SurgicalVideoBank } from '@/components/marketing/SurgicalVideoBank'
+import { HealthCalculators } from '@/components/marketing/HealthCalculators'
+import { AvailabilityCTA } from '@/components/marketing/AvailabilityTicker'
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
 const iconMap: Record<string, React.ElementType> = {
     IndianRupee, Clock, HeartCardiogram, Star, Electricity, Shield, Microscope,
     Stethoscope, Heart, Siren, Baby0203m, Dna, Orthopaedics, Eye, Wind, Apple,
     Neurology, Scale, Syringe, Happy, UserCheck, Ear, Ribbon, BloodDrop,
-    Cpu, MapPin, CheckCircle2,
+    Cpu, MapPin, CheckCircle2, Zap, Bed, CheckCircle: CheckCircle2,
 }
 
 // ─── Types ──────────────────────────────────────────────────────────────────
@@ -51,6 +54,9 @@ export interface SubServiceTemplateProps {
     departmentName?: string
     /** Department URL slug, e.g. "obstetrics-gynaecology" */
     departmentSlug?: string
+    showVideoBank?: boolean
+    showHealthCalculators?: boolean
+    showAvailabilityCTA?: boolean
     children?: React.ReactNode
 }
 
@@ -66,6 +72,9 @@ export function SubServiceTemplate({
     reviews,
     departmentName,
     departmentSlug,
+    showVideoBank,
+    showHealthCalculators,
+    showAvailabilityCTA,
     children,
 }: SubServiceTemplateProps) {
     const isDental = title.toLowerCase().includes('dental') || title.toLowerCase().includes('dentistry') || eyebrow?.toLowerCase().includes('dental') || departmentName?.toLowerCase().includes('dental');
@@ -74,16 +83,17 @@ export function SubServiceTemplate({
     const bookingUrl = '/book-appointment'
 
     // ── JSON-LD ──────────────────────────────────────────────────────────────
+    const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url : `${siteConfig.url}/`;
     const breadcrumbJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://indira-hospital.vercel.app/' },
-            { '@type': 'ListItem', position: 2, name: 'Treatments', item: 'https://indira-hospital.vercel.app/doctor/near-me/treat' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+            { '@type': 'ListItem', position: 2, name: 'Elite Treatments', item: `${baseUrl}doctor/near-me/treat` },
             ...(departmentName && departmentSlug
-                ? [{ '@type': 'ListItem', position: 3, name: departmentName, item: `https://indira-hospital.vercel.app/doctor/near-me/treat/${departmentSlug}` }]
+                ? [{ '@type': 'ListItem', position: 3, name: `Indira Elite ${departmentName}`, item: `${baseUrl}doctor/near-me/treat/${departmentSlug}` }]
                 : []),
-            { '@type': 'ListItem', position: departmentSlug ? 4 : 3, name: title },
+            { '@type': 'ListItem', position: departmentSlug ? 4 : 3, name: title, item: reviews?.entitySlug ? `${baseUrl}${reviews.entitySlug}` : undefined },
         ],
     }
 
@@ -153,10 +163,10 @@ export function SubServiceTemplate({
                     <div className="flex flex-wrap gap-4 mt-8">
                         <Link
                             href={bookingUrl}
-                            className="inline-flex items-center px-10 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-full transition-all shadow-float hover:-translate-y-1 hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200"
+                            className="inline-flex items-center px-10 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-full transition-all shadow-float hover:-translate-y-1 hover:bg-emerald-600 dark:hover:bg-emerald-200"
                         >
-                            <Calendar className="h-5 w-5 mr-2" />
-                            Book Consultation
+                            <MessageCircle className="h-5 w-5 mr-2" />
+                            Elite Consultation
                         </Link>
                         <a
                             href={whatsappUrl}
@@ -241,16 +251,16 @@ export function SubServiceTemplate({
                             {/* Appointment Card */}
                             <ModernCard className="p-8 bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 border-none">
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                                    <Calendar className="w-5 h-5 text-fuchsia-600" />
-                                    Book an Appointment
+                                    <MessageCircle className="w-5 h-5 text-fuchsia-600" />
+                                    Elite Consultation
                                 </h3>
                                 <div className="space-y-4">
                                     <Link
                                         href={bookingUrl}
-                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-900 dark:bg-white hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 text-white dark:text-slate-900 font-bold rounded-full transition-all shadow-sm text-base"
+                                        className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-900 dark:bg-white hover:bg-emerald-600 dark:hover:bg-emerald-200 text-white dark:text-slate-900 font-bold rounded-full transition-all shadow-sm text-base"
                                     >
-                                        <Calendar className="w-5 h-5 mr-2" />
-                                        Book Consultation
+                                        <MessageCircle className="w-5 h-5 mr-2" />
+                                        Elite Consultation
                                     </Link>
                                     <a
                                         href={whatsappUrl}
@@ -323,6 +333,33 @@ export function SubServiceTemplate({
 
 
 
+            {/* ── Surgical Video Bank ─────────────────────────────────────────── */}
+            {showVideoBank && (
+                <section className="bg-slate-50 dark:bg-slate-950/50 py-20 border-t border-slate-100 dark:border-slate-800">
+                    <SectionContainer>
+                        <SurgicalVideoBank />
+                    </SectionContainer>
+                </section>
+            )}
+
+            {/* ── Clinical Health Tools ─────────────────────────────────────────── */}
+            {showHealthCalculators && (
+                <section className="bg-white dark:bg-slate-900 py-20 border-t border-slate-100 dark:border-slate-800">
+                    <SectionContainer>
+                        <HealthCalculators />
+                    </SectionContainer>
+                </section>
+            )}
+
+            {/* ── Elite Availability ─────────────────────────────────────────── */}
+            {showAvailabilityCTA && (
+                <section className="bg-slate-900 py-16">
+                    <SectionContainer>
+                        <AvailabilityCTA />
+                    </SectionContainer>
+                </section>
+            )}
+
             {/* ── Related Services ──────────────────────────────────────────── */}
             {relatedServices && (
                 <section className="bg-[#FAFAFA] dark:bg-slate-950 py-20 border-b border-slate-100 dark:border-slate-700">
@@ -364,8 +401,8 @@ export function SubServiceTemplate({
                                 href={bookingUrl}
                                 className="px-10 py-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-full transition-all shadow-float hover:-translate-y-1 text-lg inline-flex items-center gap-2"
                             >
-                                <Calendar className="w-5 h-5" />
-                                Book Appointment
+                                <MessageCircle className="w-5 h-5" />
+                                Elite Consultation
                             </Link>
                             <a
                                 href={whatsappUrl}

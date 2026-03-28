@@ -8,7 +8,7 @@ import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate"
 
 export const metadata: Metadata = {
   title: "__TOPIC__ | Indira Super Speciality Hospital Vellore",
-  description: "Advanced __TOPIC__ at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and affordable costs."
+  description: "Advanced __TOPIC__ at Indira Super Speciality Hospital, Vellore. Expert care with high success rates and institutional value."
 };
 
 export default function __CLASSNAME__Page() {

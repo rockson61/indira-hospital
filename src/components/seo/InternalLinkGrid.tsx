@@ -39,7 +39,7 @@ const DEFAULTS = {
     services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/doctor/near-me/treat" },
     treatments: { title: "Specific Procedures", subtitle: "Available Surgeries", href: "/doctor/near-me/treat" },
     doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
-    departments: { title: "Centres of Excellence", subtitle: "Departments", href: "/departments" },
+    departments: { title: "Elite Medical Units", subtitle: "Departments", href: "/departments" },
     locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
     diagnostics: { title: "Accurate Lab Tests", subtitle: "Indira Diagnostics", href: "/diagnostics" },
     "health-packages": { title: "Complete Health Screenings", subtitle: "Wellness Packages", href: "/health-packages" },

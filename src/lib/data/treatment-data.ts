@@ -1127,7 +1127,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         slug: "brain-tumor-surgery-guide",
         parentServiceSlug: "neurology",
         title: "Brain Tumor Microsurgery",
-        shortDescription: "Precision neuro-oncology for benign and malignant brain tumors.",
+        shortDescription: "Advanced neuro-oncology for benign and malignant brain tumors.",
         fullDescription: "Tumors of the brain and spine require unparalleled surgical precision. Our neuro-oncology unit utilizes high-definition microscopes, neuronavigation systems, and intraoperative monitoring to safely excise tumors while preserving critical neurological functions. We provide end-to-end care from biopsy to advanced recovery.",
         features: ["HD Neuronavigation Systems","Intraoperative Monitoring","Micro-Surgical Suites","Neuro-Oncology Specialists"],
         benefits: ["Maximizes Tumor Clearance","Preserves Motor Functions","Minimal Surgical Trauma","Complete Life Support Back-up"]
@@ -2327,7 +2327,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         slug: "targeted-therapy-for-cancer",
         parentServiceSlug: "oncology",
         title: "Targeted Cancer Therapy",
-        shortDescription: "Precision medicine designed to attack specific cancer cell markers.",
+        shortDescription: "Targeted medicine designed to attack specific cancer cell markers.",
         fullDescription: "Targeted therapy is at the forefront of modern oncology. Unlike traditional chemotherapy, these drugs are designed to interfere with specific molecules involved in tumor growth. We use genetic profiling to identify if your cancer has markers that can be effectively targeted, leading to better outcomes with fewer side effects.",
         features: ["Genetic Tumor Profiling","Specific Marker Meds","Molecular Oncology Suite","Side-Effect Shielding"],
         benefits: ["Higher Treatment Efficacy","Fewer Systemic Side Effects","Tailored to Your Cancer","Advanced Clinical Standard"]

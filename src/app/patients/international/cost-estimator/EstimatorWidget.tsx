@@ -3,41 +3,29 @@ import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { MessageCircle, CheckCircle2, Star, TrendingDown } from "lucide-react";
 
+import { elitePricingBank } from "@/data/pricing-elite";
+
 const WA_BASE = `https://wa.me/${siteConfig.contact.whatsapp}?text=`;
 
-const PROCEDURE_LIST = [
-    { procedure: "Knee Replacement (Unilateral)", indira: "₹1,85,000 - ₹3,40,000", usa: "$45,000", uk: "£15,000", uae: "$18,000", savings: "92%+" },
-    { procedure: "Hip Replacement", indira: "₹2,10,000 - ₹3,80,000", usa: "$40,000", uk: "£14,000", uae: "$17,000", savings: "91%+" },
-    { procedure: "Cardiac Bypass (CABG)", indira: "₹2,50,000 - ₹4,80,000", usa: "$1,50,000", uk: "£25,000", uae: "$35,000", savings: "95%+" },
-    { procedure: "Angioplasty (Stent)", indira: "₹1,20,000 - ₹2,50,000", usa: "$35,000", uk: "£10,000", uae: "$12,000", savings: "90%+" },
-    { procedure: "Spinal Surgery (Disc)", indira: "₹1,80,000 - ₹3,50,000", usa: "$38,000", uk: "£12,000", uae: "$15,000", savings: "90%+" },
-    { procedure: "Kidney Transplant", indira: "₹6,50,000 - ₹9,50,000", usa: "$2,50,000", uk: "£85,000", uae: "$95,000", savings: "96%+" },
-    { procedure: "Laser Piles Treatment", indira: "₹65,000 - ₹1,20,000", usa: "$8,500", uk: "£4,500", uae: "$6,500", savings: "88%+" },
-    { procedure: "Oncology (Chemo cycle)", indira: "₹35,000 - ₹1,50,000", usa: "$25,000", uk: "£8,000", uae: "$12,000", savings: "85%+" },
-    { procedure: "IVF / Infertility Cycle", indira: "₹1,50,000 - ₹2,50,000", usa: "$15,000", uk: "£6,000", uae: "$8,000", savings: "85%+" },
-    { procedure: "Cataract Surgery (per eye)", indira: "₹45,000 - ₹95,000", usa: "$6,000", uk: "£3,500", uae: "$5,000", savings: "82%+" },
-    { procedure: "Hernia Repair (Laparoscopic)", indira: "₹55,000 - ₹95,000", usa: "$12,000", uk: "£5,000", uae: "$7,000", savings: "90%+" },
-];
-
 const WHATS_INCLUDED = [
-    "Surgeon's fee and OT charges",
-    "Anaesthesiologist fee",
-    "Hospital room (general / private / deluxe)",
-    "Nursing care and post-op monitoring",
-    "Standard prescribed medicines",
-    "Routine diagnostic tests & imaging",
+    "Elite Surgeon's fee and OT charges",
+    "Anaesthesiologist & Care team fee",
+    "Elite Institutional Room (Private / Deluxe)",
+    "Personalized Nursing Care & Monitoring",
+    "Premium Prescribed Medications",
+    "Advanced Diagnostic Tests & Imaging",
 ];
 const WHATS_EXTRA = [
-    "International airport transfer (complimentary on request)",
-    "Visa invitation letter (free)",
-    "Dietary meals (Halal, vegetarian)",
-    "Attendant accommodation in hospital",
-    "Post-discharge follow-up consultation",
+    "Elite Airport Concierge (Complimentary)",
+    "Priority Visa Invitation Support",
+    "Gourmet Dietary Meals (Customized)",
+    "Attendant Elite Accommodation",
+    "Post-Discharge Specialist Follow-ups",
 ];
 
 export function EstimatorWidget() {
     const [selected, setSelected] = useState<string>("");
-    const procedure = PROCEDURE_LIST.find(p => p.procedure === selected);
+    const procedure = elitePricingBank.find(p => p.procedure === selected);
     const waUrl = WA_BASE + encodeURIComponent(
         selected
             ? `Hi, I am an international patient. I need a cost estimate for: ${selected}. Please help.`
@@ -59,7 +47,7 @@ export function EstimatorWidget() {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white text-sm focus:outline-none focus:border-green-400 cursor-pointer"
                     >
                         <option value="" className="bg-slate-900">— Choose a procedure —</option>
-                        {PROCEDURE_LIST.map(p => (
+                        {elitePricingBank.map(p => (
                             <option key={p.procedure} value={p.procedure} className="bg-slate-900">{p.procedure}</option>
                         ))}
                     </select>
@@ -67,10 +55,10 @@ export function EstimatorWidget() {
                     {procedure && (
                         <div className="mt-6 space-y-3">
                             {[
-                                { label: "🇮🇳 Indira Hospital, Vellore", value: procedure.indira, highlight: true },
-                                { label: "🇺🇸 USA", value: procedure.usa, highlight: false },
-                                { label: "🇬🇧 UK", value: procedure.uk, highlight: false },
-                                { label: "🇦🇪 UAE", value: procedure.uae, highlight: false },
+                                { label: "🇮🇳 Indira Hospital, Vellore", value: procedure.range, highlight: true },
+                                { label: "🇺🇸 USA", value: procedure.usaCost, highlight: false },
+                                { label: "🇬🇧 UK", value: procedure.ukCost || "N/A", highlight: false },
+                                { label: "🇦🇪 UAE", value: procedure.uaeCost || "N/A", highlight: false },
                             ].map(row => (
                                 <div key={row.label} className={`flex justify-between items-center p-4 rounded-xl ${row.highlight ? "bg-green-500/20 border border-green-400/30" : "bg-white/5 border border-white/10"}`}>
                                     <span className="text-sm font-semibold">{row.label}</span>

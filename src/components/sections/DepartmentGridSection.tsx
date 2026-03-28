@@ -20,7 +20,7 @@ export function DepartmentGridSection() {
                             Our Expertise
                         </div>
                         <h2 className="elite-section-title text-slate-900 dark:text-white">
-                            Centers of Excellence
+                            Elite Medical Units
                         </h2>
                         <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
                             Comprehensive care across all major medical disciplines, led by industry veterans.

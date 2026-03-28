@@ -27,7 +27,7 @@ export default async function DepartmentsDirectoryPage() {
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800">
             <JsonLdSchema
                 type="itemList"
-                name="Departments & Centres of Excellence at Indira Hospital"
+                name="Departments & Elite Medical Units at Indira Hospital"
                 items={departments.map((d: any) => ({ name: d.title || d.name, url: `/departments/${d.slug}` }))}
             />
             <JsonLdSchema
@@ -60,7 +60,7 @@ export default async function DepartmentsDirectoryPage() {
  
             <SectionContainer className="pb-24">
                 <div className="bg-gradient-to-br from-fuchsia-600 to-pink-600 rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/images/hospital/Hospital.webp')] opacity-10 mix-blend-overlay" />
+                    <div className="absolute inset-0 bg-[url(/images/hospital/Hospital.webp)] opacity-10 mix-blend-overlay" />
                     <div className="relative z-10 w-full max-w-2xl mx-auto">
                         <MessageCircle className="w-16 h-16 mx-auto mb-6 opacity-80" />
                         <h2 className="elite-section-title mb-4">Don&apos;t See Your Speciality?</h2>

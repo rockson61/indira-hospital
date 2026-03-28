@@ -224,7 +224,7 @@ export default function Home() {
           {/* Ambient Background Lights */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[80px] will-change-transform transform-gpu opacity-40" />
-          <div className="absolute inset-0 bg-[url('/images/hospital/Hospital.webp')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+          <div className="absolute inset-0 bg-[url(/images/hospital/Hospital.webp)] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
           <div className="relative z-10 w-full max-w-4xl">
             <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 mb-10 shadow-[0_0_40px_rgba(20,184,166,0.3)] group-hover/cta:scale-110 transition-transform duration-500">

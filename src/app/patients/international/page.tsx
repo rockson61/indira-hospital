@@ -207,8 +207,8 @@ export default function InternationalPatientsPage() {
                             </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl mx-auto">
-                            <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I am an international patient. Can I get a cost estimate?")}`} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
-                                <span className="relative z-10">WhatsApp Us</span>
+                            <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Global Patient Enquiry: I am an international patient seeking a cost estimate and visa assistance at Indira Super Speciality Hospital, India.")}`} target="_blank" rel="noopener noreferrer" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
+                                <span className="relative z-10">WhatsApp Global Desk</span>
                                 <MessageCircle className="w-5 h-5 ml-3 relative z-10 group-hover/btn:rotate-12 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
                             </a>
@@ -242,7 +242,7 @@ export default function InternationalPatientsPage() {
                 </div>
             </SectionContainer>
 
-            <EntityCardSection type="services" title="Centres of Excellence" subtitle="Our Specialities" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <EntityCardSection type="services" title="Elite Medical Units" subtitle="Our Specialities" limit={6} className="bg-white dark:bg-slate-950 border-t" />
             <InternalLinkGrid type="health-packages" title="Master Health Checkups" subtitle="Wellness Screening" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
             <InternalLinkGrid type="diagnostics" title="NABL Accredited Diagnostics" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-950 border-b" />
         </main>

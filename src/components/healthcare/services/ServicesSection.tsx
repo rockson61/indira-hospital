@@ -19,7 +19,7 @@ export function ServicesSection() {
   return (
     <section className="py-24 bg-[#030712] relative overflow-hidden">
       {/* Cinematic Background Elements */}
-      <div className="absolute inset-0 bg-[url('/images/hospital/Hospital.webp')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+      <div className="absolute inset-0 bg-[url(/images/hospital/Hospital.webp)] opacity-[0.03] mix-blend-overlay pointer-events-none" />
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-fuchsia-600/10 blur-[120px] rounded-full pointer-events-none will-change-transform transform-gpu" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none will-change-transform transform-gpu" />
       
@@ -37,7 +37,7 @@ export function ServicesSection() {
           </motion.div>
           <h2 className="elite-section-title text-white mb-6">
             Advanced Clinical <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Centers of Excellence</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Elite Medical Units</span>
           </h2>
           <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
             Indira Hospital brings world-class medical expertise and state-of-the-art technology under one roof, providing comprehensive healing for every member of your family.

@@ -41,3 +41,9 @@ yarn-error.log*
 next-env.d.ts
 .token
 .env.local
+
+# tools & agents
+.seo
+*.log
+.agent
+.planning

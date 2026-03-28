@@ -134,7 +134,7 @@ async function DoctorView({ doctor, location, city, slug }: any) {
     ).slice(0, 6);
 
     const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
-        `Hi, I want to book an appointment with ${doctor.name} in ${location.name}. Please help.`
+        `Elite Consultation Enquiry: I would like to book an appointment with Dr. ${doctor.name} for a patient from ${location.name}.`
     )}`;
 
     const yearsExperience = doctor.experience_years || doctor.experience || 10;
@@ -219,10 +219,53 @@ async function DoctorView({ doctor, location, city, slug }: any) {
                     </div>
                     <div className="lg:col-span-1 space-y-6">
                          <div className="bg-gradient-to-br from-slate-900 via-fuchsia-950 to-slate-900 rounded-2xl p-6 text-white shadow-xl">
-                            <h3 className="font-bold text-lg mb-4">Available Near {location.name}</h3>
+                            <h3 className="font-bold text-lg mb-4">Consultation for {location.name} Patients</h3>
+                            <p className="text-sm text-slate-300 mb-6">
+                                Priority booking available for outstation patients traveling from {location.district} district.
+                            </p>
                             <a href={whatsappUrl} className="w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all shadow-lg mb-3">
                                 <MessageCircle className="w-4 h-4" /> WhatsApp to Book
                             </a>
+                        </div>
+                        
+                        {/* SEO Enriched Travel Block */}
+                        <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                                <MapPin className="w-4 h-4 text-fuchsia-600" /> Travel from {location.name}
+                            </h3>
+                            <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+                                    <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-gray-400" /> Distance to Hospital</span>
+                                    <span className="font-bold text-gray-900 dark:text-white">{location.distance}</span>
+                                </div>
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+                                    <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-gray-400" /> Estimated Travel Time</span>
+                                    <span className="font-bold text-gray-900 dark:text-white">{location.travelTime}</span>
+                                </div>
+                                <div>
+                                    <span className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4">Available Transport Options</span>
+                                    <div className="flex flex-wrap gap-2">
+                                        {location.transportOptions?.bus && <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-md text-xs font-medium">Bus Route</span>}
+                                        {location.transportOptions?.train && <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-md text-xs font-medium">Direct Train</span>}
+                                        {location.transportOptions?.taxi && <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-md text-xs font-medium">Taxi Service</span>}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* SEO Enriched Outstation Assistance */}
+                        <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-2xl p-6 border border-indigo-100 dark:border-indigo-900/50">
+                            <h3 className="font-bold text-indigo-900 dark:text-indigo-300 mb-3 flex items-center gap-2">
+                                <Shield className="w-4 h-4" /> VIP Patient Assistance
+                            </h3>
+                            <p className="text-sm text-indigo-800 dark:text-indigo-400 leading-relaxed mb-4">
+                                Indira Super Speciality Hospital provides dedicated relationship managers for patients arriving from <strong>{location.name}</strong>. Enjoy cashless treatments with 50+ partnered insurance networks.
+                            </p>
+                            <ul className="space-y-2 text-sm text-indigo-700 dark:text-indigo-300 font-medium">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-500" /> Accommodation arrangements</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-500" /> Express admission desk</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-500" /> Language translation</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -243,7 +286,7 @@ async function ServiceView({ service, location, city, slug }: any) {
     });
 
     const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
-        `Hi, I need ${service.title} treatment in ${location.name}. Please help.`
+        `Clinical Enquiry from ${location.name}: I need details about ${service.title} specialized care at Indira Hospital for an outstation patient.`
     )}`;
 
     return (
@@ -273,7 +316,7 @@ async function ServiceView({ service, location, city, slug }: any) {
 
                     <h1 className="elite-hero-title mb-12">
                         {service.title}<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Precision Specialists in {location.name}.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Specialists in {location.name}.</span>
                     </h1>
                     <div className="flex flex-wrap gap-4 mt-12">
                         <a href={whatsappUrl} className="inline-flex items-center px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white font-black rounded-2xl transition-all shadow-lg shadow-indigo-500/25 uppercase tracking-widest text-sm">
@@ -301,6 +344,54 @@ async function ServiceView({ service, location, city, slug }: any) {
                                 </div>
                             </div>
                         )}
+                    </div>
+                    
+                    {/* ENRICHED RIGHT SIDEBAR */}
+                    <div className="lg:col-span-1 space-y-6">
+                         <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-2xl p-6 text-white shadow-xl">
+                            <h3 className="font-bold text-lg mb-4">{service.title} Care near {location.name}</h3>
+                            <p className="text-sm text-indigo-200 mb-6">
+                                Same-day appointments and clinical consultations available. Secure your slot via WhatsApp today.
+                            </p>
+                            <a href={whatsappUrl} className="w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all shadow-lg mb-3">
+                                <MessageCircle className="w-4 h-4" /> Book Consultation
+                            </a>
+                        </div>
+
+                        {/* SEO Enriched Travel Block */}
+                        <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                                <MapPin className="w-4 h-4 text-fuchsia-600" /> Travel from {location.name}
+                            </h3>
+                            <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+                                    <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-gray-400" /> Distance to Hospital</span>
+                                    <span className="font-bold text-gray-900 dark:text-white">{location.distance}</span>
+                                </div>
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+                                    <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-gray-400" /> Estimated Travel Time</span>
+                                    <span className="font-bold text-gray-900 dark:text-white">{location.travelTime}</span>
+                                </div>
+                                <div>
+                                    <span className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4">Available Transport Options</span>
+                                    <div className="flex flex-wrap gap-2">
+                                        {location.transportOptions?.bus && <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-md text-xs font-medium">Bus Route</span>}
+                                        {location.transportOptions?.train && <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-md text-xs font-medium">Direct Train</span>}
+                                        {location.transportOptions?.taxi && <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-md text-xs font-medium">Taxi Service</span>}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* CMS / Cashless Assistance */}
+                        <div className="bg-fuchsia-50 dark:bg-fuchsia-950/30 rounded-2xl p-6 border border-fuchsia-100 dark:border-fuchsia-900/50">
+                            <h3 className="font-bold text-fuchsia-900 dark:text-fuchsia-300 mb-3 flex items-center gap-2">
+                                <Shield className="w-4 h-4" /> Chief Minister's Scheme
+                            </h3>
+                            <p className="text-sm text-fuchsia-800 dark:text-fuchsia-400 leading-relaxed mb-4">
+                                Our center in Vellore is fully empanelled with the <strong>Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS)</strong> supporting patients across {location.category === 'district_hq' ? location.name : location.district + ' district'} and all of Tamil Nadu.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

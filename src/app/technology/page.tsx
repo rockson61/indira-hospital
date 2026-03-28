@@ -171,7 +171,7 @@ export default function TechnologyHubPage() {
                 </div>
             </SectionContainer>
 
-            <InternalLinkGrid type="diagnostics" title="Precision Diagnostics" subtitle="Advanced Imaging & Lab" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="diagnostics" title="Advanced Diagnostics" subtitle="Advanced Imaging & Lab" limit={12} className="bg-white dark:bg-slate-900 border-t" />
             <InternalLinkGrid type="health-packages" title="Technology-Driven Checkups" subtitle="Wellness Packages" limit={8} className="bg-slate-50 dark:bg-slate-800" />
         </main>
     );

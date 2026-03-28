@@ -2,6 +2,7 @@ export const navigation = {
     mainNav: [
         { title: "Treatments", href: "/doctor/near-me/treat" },
         { title: "Doctors", href: "/doctors" },
+        { title: "For Patients", href: "/patients" },
         { title: "Locations", href: "/doctor/near-me" },
     ],
 
@@ -141,9 +142,9 @@ export const navigation = {
         ],
         company: [
             { title: "About Us", href: "/about" },
-            { title: "Careers", href: "/careers" },
-            { title: "Locations", href: "/doctor/near-me" },
-            { title: "News & Media", href: "/blog" },
+            { title: "For Patients", href: "/patients" },
+            { title: "Medical Professionals", href: "/professionals" },
+            { title: "Clinical Guides", href: "/resources/guides" },
             { title: "Contact", href: "/contact" },
         ],
         legal: [

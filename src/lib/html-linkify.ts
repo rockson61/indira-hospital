@@ -34,7 +34,7 @@ export const injectInternalLinks = (htmlContent: string): string => {
         "expert care",
         "advanced technology",
         "NABH accredited",
-        "affordable cost",
+        "institutional value",
         "same-day discharge",
         "minimally invasive",
         "robotic surgery",

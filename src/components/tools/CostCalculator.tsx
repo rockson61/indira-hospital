@@ -3,139 +3,116 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Plus, Minus, Calculator, RefreshCw } from "lucide-react";
+import { Calculator, RefreshCw, MessageCircle, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
-
-const TREATMENTS = [
-    { id: 'piles', name: 'Piles (Hemorrhoids)', base: 25000, laser_extra: 10000 },
-    { id: 'fistula', name: 'Fistula', base: 30000, laser_extra: 12000 },
-    { id: 'fissure', name: 'Fissure', base: 20000, laser_extra: 8000 },
-    { id: 'hernia', name: 'Hernia', base: 45000, laser_extra: 15000 },
-];
+import { elitePricingBank } from "@/data/pricing-elite";
 
 const ROOM_TYPES = [
     { id: 'general', name: 'General Ward', multiplier: 1.0 },
-    { id: 'semi_private', name: 'Semi-Private', multiplier: 1.2 },
-    { id: 'private', name: 'Private Room', multiplier: 1.5 },
-    { id: 'deluxe', name: 'Deluxe Suite', multiplier: 2.0 },
+    { id: 'private', name: 'Private Room', multiplier: 1.4 },
+    { id: 'deluxe', name: 'Deluxe Suite', multiplier: 1.8 },
 ];
 
 export function CostCalculator() {
-    const [selectedTreatment, setSelectedTreatment] = useState(TREATMENTS[0].id);
-    const [method, setMethod] = useState<'open' | 'laser'>('laser');
+    const [selectedId, setSelectedId] = useState(elitePricingBank[0].id);
     const [roomType, setRoomType] = useState(ROOM_TYPES[0].id);
     const [insurance, setInsurance] = useState(false);
     const [showResult, setShowResult] = useState(false);
 
+    const procedure = elitePricingBank.find(p => p.id === selectedId)!;
+    const room = ROOM_TYPES.find(r => r.id === roomType)!;
+
+    // Elite Value Calculation Logic
     const calculateCost = () => {
-        const treatment = TREATMENTS.find(t => t.id === selectedTreatment)!;
-        const room = ROOM_TYPES.find(r => r.id === roomType)!;
-
-        let baseCost = treatment.base;
-        if (method === 'laser') baseCost += treatment.laser_extra;
-
-        // Apply room multiplier to a portion of the cost (hospital charges)
-        // simplifying assumption: 40% of cost is room-dependent
-        const fixedPart = baseCost * 0.6;
-        const variablePart = baseCost * 0.4 * room.multiplier;
-
+        const base = (procedure.minPrice + procedure.maxPrice) / 2;
+        // 30% of cost is room-dependent in Elite tier
+        const fixedPart = base * 0.7;
+        const variablePart = base * 0.3 * room.multiplier;
         const total = Math.round(fixedPart + variablePart);
-
-        // Round to nearest 500
-        return Math.ceil(total / 500) * 500;
+        // Round to nearest 1000 for elite transparency
+        return Math.ceil(total / 1000) * 1000;
     };
 
-    const cost = calculateCost();
+    const estimatedCost = calculateCost();
+    const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in an Elite Consultation for ${procedure.procedure}. My estimated value range is around ₹${estimatedCost.toLocaleString()}.`)}`;
 
     return (
-        <Card className="p-6 bg-white dark:bg-slate-900 shadow-xl border-t-4 border-primary-600 rounded-xl">
-            <div className="flex items-center gap-2 mb-6 text-primary-700">
-                <Calculator className="w-6 h-6" />
-                <h3 className="text-xl font-bold">Surgery Cost Estimator</h3>
+        <Card className="p-8 bg-slate-950/40 backdrop-blur-3xl border border-white/10 shadow-2xl rounded-[2.5rem] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-[60px] pointer-events-none" />
+            
+            <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 border border-indigo-500/30">
+                    <Calculator className="w-6 h-6" />
+                </div>
+                <div>
+                    <h3 className="text-xl font-black text-white uppercase tracking-tight">Value Estimator</h3>
+                    <p className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest">Elite Institutional Pricing</p>
+                </div>
             </div>
 
             {!showResult ? (
-                <div className="space-y-5">
+                <div className="space-y-6">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Select Treatment</label>
+                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Select Procedure</label>
                         <select
-                            className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
-                            value={selectedTreatment}
-                            onChange={(e) => setSelectedTreatment(e.target.value)}
+                            className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 appearance-none cursor-pointer hover:bg-white/10 transition-all font-semibold"
+                            value={selectedId}
+                            onChange={(e) => setSelectedId(e.target.value)}
                         >
-                            {TREATMENTS.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
+                            {elitePricingBank.map(p => <option key={p.id} value={p.id} className="bg-slate-900">{p.procedure}</option>)}
                         </select>
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Technique</label>
-                        <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        {ROOM_TYPES.map(r => (
                             <button
-                                onClick={() => setMethod('laser')}
-                                className={`p-2 text-sm font-medium rounded-md border ${method === 'laser' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:bg-slate-950'}`}
+                                key={r.id}
+                                onClick={() => setRoomType(r.id)}
+                                className={`p-4 rounded-2xl border text-[10px] font-black uppercase tracking-widest transition-all ${roomType === r.id ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/20' : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10'}`}
                             >
-                                Laser (Painless)
+                                {r.name}
                             </button>
-                            <button
-                                onClick={() => setMethod('open')}
-                                className={`p-2 text-sm font-medium rounded-md border ${method === 'open' ? 'bg-primary-50 border-primary-500 text-primary-700' : 'border-gray-300 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:bg-slate-950'}`}
-                            >
-                                Open Surgery
-                            </button>
+                        ))}
+                    </div>
+
+                    <div className="flex items-center gap-3 p-4 bg-white/5 rounded-2xl border border-white/10 cursor-pointer group" onClick={() => setInsurance(!insurance)}>
+                        <div className={`w-5 h-5 rounded border transition-all flex items-center justify-center ${insurance ? 'bg-indigo-600 border-indigo-500' : 'border-white/20'}`}>
+                            {insurance && <CheckCircle2 className="w-4 h-4 text-white" />}
                         </div>
+                        <span className="text-xs font-bold text-slate-300 group-hover:text-white transition-colors">I have Health Insurance</span>
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Room Preference</label>
-                        <select
-                            className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
-                            value={roomType}
-                            onChange={(e) => setRoomType(e.target.value)}
-                        >
-                            {ROOM_TYPES.map(r => <option key={r.id} value={r.id}>{r.name}</option>)}
-                        </select>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                        <input
-                            type="checkbox"
-                            id="insurance"
-                            checked={insurance}
-                            onChange={(e) => setInsurance(e.target.checked)}
-                            className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
-                        />
-                        <label htmlFor="insurance" className="text-sm text-gray-700 dark:text-gray-300">I have Health Insurance</label>
-                    </div>
-
-                    <Button onClick={() => setShowResult(true)} className="w-full mt-2">
-                        Calculate Estimate
+                    <Button onClick={() => setShowResult(true)} className="w-full py-7 bg-white text-slate-950 hover:bg-indigo-50 font-black rounded-2xl uppercase tracking-widest text-xs">
+                        Generate Estimate
                     </Button>
                 </div>
             ) : (
-                <div className="text-center animate-in fade-in zoom-in duration-300">
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-1 uppercase tracking-wider">Estimated Cost</p>
-                    <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                        Transparent Pricing
+                <div className="text-center animate-in fade-in zoom-in duration-500 py-4">
+                    <p className="text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Transparent Value Quote</p>
+                    <div className="text-5xl font-black text-white mb-4 tracking-tighter">
+                        ₹{(estimatedCost/1000).toLocaleString()}K<span className="text-lg text-slate-500 ml-1 font-medium italic">Estimated</span>
                     </div>
 
-                    {insurance && (
-                        <div className="bg-green-50 text-green-700 p-2 rounded-md text-xs font-medium mb-4">
-                            Cashless facility available for most providers.
-                        </div>
-                    )}
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[10px] font-black uppercase tracking-widest mb-8">
+                        {insurance ? '✅ Cashless Ready' : '✨ Institutional Value Pricing'}
+                    </div>
 
-                    <p className="text-xs text-gray-400 mb-6 font-medium">
-                        *Get a personalized, all-inclusive quote for your specific needs.
+                    <p className="text-xs text-slate-500 mb-10 max-w-[280px] mx-auto font-medium italic leading-relaxed">
+                        This range reflects Elite care standards. Get an all-inclusive surgical quote via our WhatsApp desk.
                     </p>
 
-                    <Button className="w-full mb-3" onClick={() => window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in a cost estimate for ${TREATMENTS.find(t => t.id === selectedTreatment)?.name}.`)}`, '_blank')}>Get Detailed Quote</Button>
+                    <div className="space-y-4">
+                        <Button className="w-full py-7 bg-indigo-600 hover:bg-indigo-500 text-white font-black rounded-2xl uppercase tracking-widest text-xs" onClick={() => window.open(waUrl, '_blank')}>
+                            <MessageCircle className="w-5 h-5 mr-2" /> Elite Consultation
+                        </Button>
 
-                    <button
-                        onClick={() => setShowResult(false)}
-                        className="flex items-center justify-center w-full text-primary-600 text-sm hover:underline"
-                    >
-                        <RefreshCw className="w-3 h-3 mr-1" /> Recalculate
-                    </button>
+                        <button
+                            onClick={() => setShowResult(false)}
+                            className="flex items-center justify-center w-full text-slate-500 hover:text-white transition-colors text-[10px] font-bold uppercase tracking-widest"
+                        >
+                            <RefreshCw className="w-3 h-3 mr-2" /> Adjust Parameters
+                        </button>
+                    </div>
                 </div>
             )}
         </Card>

@@ -11,6 +11,8 @@ module.exports = {
       'https://www.indirasuperspecialityhospital.com/locations-sitemap.xml',
       'https://www.indirasuperspecialityhospital.com/location-profiles-sitemap.xml',
       'https://www.indirasuperspecialityhospital.com/medical-glossary-sitemap.xml',
+      'https://www.indirasuperspecialityhospital.com/seo-sitemap.xml',
+      'https://www.indirasuperspecialityhospital.com/patients/international-sitemap.xml',
     ],
     policies: [
       {

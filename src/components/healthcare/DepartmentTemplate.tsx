@@ -226,7 +226,7 @@ export function DepartmentTemplate({
                     <SectionContainer>
                         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                             <div>
-                                <h2 className="elite-section-title text-slate-900 dark:text-white">Centers of Excellence</h2>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white">Elite Medical Units</h2>
                                 <p className="text-slate-500 dark:text-slate-400 mt-2">Highly specialized sub-departments within our {title} unit.</p>
                             </div>
                         </div>

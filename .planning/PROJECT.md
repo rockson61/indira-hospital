@@ -14,10 +14,10 @@ Establish "Indira Elite" as the premier destination for advanced medical interve
 - ✓ [Doctor Profile Dominance] — Specialty badges and LSI bios across all 40+ doctors.
 - ✓ [Institutional Synchronization] — About/Quality/Facilities/Gallery pages synchronized to Elite standard.
 - ✓ [CMS Fallback Logic] — Resilience against Directus downtime.
+- ✓ [Appointment Optimization] — High-conversion, 3-step interactive booking funnel.
+- ✓ [Pricing Transparency] — Integrated cost estimation for all 18+ major treatments.
 
 ### Active
-- [ ] [Appointment Optimization] — High-conversion, frictionless appointment booking flows.
-- [ ] [Pricing Transparency] — Integrated cost estimation for all 18+ major treatments.
 - [ ] [Integrated rockseo] — Tight integration of custom SEO generators into the Next.js build.
 
 ### Out of Scope

@@ -52,7 +52,8 @@ const WHY_POINTS = [
     { icon: MapPin, title: "Same City — Near CMC", desc: "Located in Vellore, the same medical hub. You don't need to travel to another city.", color: "red" },
 ];
 
-const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was looking at CMC Vellore but the waiting list is too long. Can I get an appointment at Indira Hospital this week?")}`;
+const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Skip the CMC Queue: I saw the long waiting list and would like to book a same-week appointment at Indira Super Speciality Hospital, Vellore.")}`;
+const reportsWaUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Second Opinion Request: I am sharing my medical reports for a free review by Indira Hospital specialists (Alternative to CMC waiting list).")}`;
 
 export default function CMCVelloreAlternativePage() {
     return (
@@ -180,7 +181,7 @@ export default function CMCVelloreAlternativePage() {
                                 </div>
 
                                 <a href={waUrl} className="flex items-center justify-center gap-2 px-8 py-5 bg-white text-slate-900 font-black rounded-2xl hover:bg-fuchsia-50 transition-all uppercase tracking-widest text-xs">
-                                    WhatsApp for Slot <ArrowRight className="w-4 h-4 text-fuchsia-600" />
+                                    Skip the Wait - WhatsApp <ArrowRight className="w-4 h-4 text-fuchsia-600" />
                                 </a>
                             </div>
                         </div>
@@ -268,8 +269,8 @@ export default function CMCVelloreAlternativePage() {
                             <h3 className="elite-section-title text-slate-900 dark:text-white mb-6 uppercase">Get a Second Opinion <br /><span className="text-indigo-600 italic">Free of Cost.</span></h3>
                             <p className="text-slate-500 dark:text-slate-400 font-medium italic mb-10 px-4 leading-relaxed">Send your existing reports and CMC diagnosis. Our senior specialists will review them and provide a complete treatment plan within 24 hours.</p>
                             
-                            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm shadow-2xl">
-                                <MessageCircle className="w-6 h-6 text-green-400" /> WhatsApp Reports
+                            <a href={reportsWaUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm shadow-2xl">
+                                <MessageCircle className="w-6 h-6 text-emerald-400" /> WhatsApp My Reports
                             </a>
                         </div>
                     </div>
@@ -316,7 +317,7 @@ export default function CMCVelloreAlternativePage() {
                 </div>
             </section>
 
-            <EntityCardSection type="doctors" title="Expert Specialists" subtitle="Centres of Excellence" limit={6} className="bg-white dark:bg-slate-950 border-t" />
+            <EntityCardSection type="doctors" title="Expert Specialists" subtitle="Elite Medical Units" limit={6} className="bg-white dark:bg-slate-950 border-t" />
             <InternalLinkGrid type="health-packages" title="Wellness Screening" subtitle="Preventive Health" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
             <InternalLinkGrid type="diagnostics" title="NABL Accredited Lab" subtitle="Accurate Results" limit={12} className="bg-white dark:bg-slate-950 border-b" />
         </main>

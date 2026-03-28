@@ -38,6 +38,13 @@ const itemVariants = {
 export function PatientsHubClient() {
     const categories = [
         { 
+            id: "Concierge", 
+            title: "Elite Concierge", 
+            icon: Sparkles, 
+            gradient: "from-purple-600 to-pink-600",
+            description: "Premium hospital hospitality and personalized relationship management."
+        },
+        { 
             id: "Information", 
             title: "Patient Essentials", 
             icon: ClipboardList, 
@@ -94,7 +101,7 @@ export function PatientsHubClient() {
                                 href="/book-appointment" 
                                 className="group flex items-center justify-center px-10 py-5 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-500 transition-all shadow-xl shadow-fuchsia-500/20 text-lg"
                             >
-                                Book Appointment
+                                Elite Consultation
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <a 

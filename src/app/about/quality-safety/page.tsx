@@ -141,7 +141,7 @@ export default function QualitySafetyPage() {
             </SectionContainer>
             <SectionContainer className="pb-24">
                 <InternalLinkGrid type="services" title="Clinical Specialties" subtitle="Excellence in Care" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
-                <InternalLinkGrid type="departments" title="Centres of Excellence" subtitle="Our Infrastructure" limit={8} className="mt-12 bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border" />
+                <InternalLinkGrid type="departments" title="Elite Medical Units" subtitle="Our Infrastructure" limit={8} className="mt-12 bg-slate-50 dark:bg-slate-900/50 rounded-[4rem] border" />
             </SectionContainer>
         </main>
     );

@@ -41,7 +41,7 @@ const DEFAULTS: Record<string, { title: string; subtitle: string; href: string }
     services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/doctor/near-me/treat" },
     treatments: { title: "Specific Procedures", subtitle: "Available Surgeries", href: "/doctor/near-me/treat" },
     doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
-    departments: { title: "Centres of Excellence", subtitle: "Our Departments", href: "/departments" },
+    departments: { title: "Elite Medical Units", subtitle: "Our Departments", href: "/departments" },
     locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
 };
 

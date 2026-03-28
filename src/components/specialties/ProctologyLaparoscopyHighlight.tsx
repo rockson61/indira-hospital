@@ -138,7 +138,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
                             "Same-day discharge for most proctology cases",
                             "HD Laparoscopy — 4K vision, precise cuts",
                             "Diode laser technology — minimal bleeding",
-                            "60–80% cheaper than metro hospitals",
+                            "60–80% cost-optimized vs metro hospitals",
                         ].map((pt) => (
                             <div key={pt} className="flex items-start gap-3 group/pt">
                                 <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover/pt:bg-fuchsia-500 transition-all">

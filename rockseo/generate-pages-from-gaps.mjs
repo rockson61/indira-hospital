@@ -1,382 +1,163 @@
-#!/usr/bin/env node
-/**
- * RockSEO Script 5 — Topical Gap Detector & Page Generator
- * 
- * Purpose:
- * - Detects missing subtopics for topical authority
- * - Generates RockSEO-ready page templates
- * - Ensures no cannibalization with existing content
- * - Uses entity-first structure
- * 
- * This is how you scale topical authority safely.
- * 
- * Usage: node rockseo/generate-pages-from-gaps.mjs
- */
-
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-import { generateUniqueContent } from "./content-engine.mjs";
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ROOT = path.join(__dirname, "..");const CONFIG = {
-  appDir: path.join(ROOT, "src/app"),
-  outputDir: path.join(ROOT, "src/app/seo"),
-  outputReport: path.join(__dirname, "reports/topical-gaps-report.json"),
 
-  // Complete topic taxonomy for Indira Elite Hospital
-  topicTaxonomy: {
-    "proctology": {
-      hub: "/services/proctology",
-      requiredSubtopics: [
-        "laser piles treatment cost vellore",
-        "painless fistula surgery recovery",
-        "fissure laser treatment benefits",
-        "pilonidal sinus robotic surgery",
-        "advanced proctology diagnostics",
-        "laser piles specialist vellore",
-        "haemorrhoids treatment options",
-        "chronic constipation management",
-        "anal fistula laser closure FILAC",
-        "sphincter sparing surgery",
-        "proctology post-op care guide",
-        "robotic piles surgery advantages"
-      ]
-    },
-    "orthopaedics": {
-      hub: "/services/orthopaedics",
-      requiredSubtopics: [
-        "robotic knee replacement vellore",
-        "total hip replacement recovery",
-        "acl reconstruction rehab guide",
-        "spine surgery for disc prolapse",
-        "robotic joint replacement benefits",
-        "orthopaedic sports medicine vellore",
-        "minimally invasive hip surgery",
-        "knee replacement cost estimate",
-        "physiotherapy after joint surgery",
-        "bone health screening vellore",
-        "arthritis management plan",
-        "pediatric orthopaedics vellore"
-      ]
-    },
-    "ophthalmology": {
-      hub: "/services/ophthalmology",
-      requiredSubtopics: [
-        "robotic cataract surgery vellore",
-        "contoura vision lasik benefits",
-        "mics cataract surgery recovery",
-        "glaucoma screening and treatment",
-        "diabetic retinopathy management",
-        "eye specialist doctor vellore",
-        "pediatric ophthalmology clinic",
-        "lasik eye surgery cost vellore",
-        "dry eye syndrome treatment",
-        "phacoemulsification cataract surgery",
-        "icl eye surgery guide",
-        "keratoconus treatment options"
-      ]
-    },
-    "cardiology": {
-      hub: "/services/cardiology",
-      requiredSubtopics: [
-        "preventive heart checkup vellore",
-        "angioplasty recovery and care",
-        "heart attack warning signs guide",
-        "echocardiogram screening vellore",
-        "cardiology specialist doctor vellore",
-        "hypertension management plan",
-        "cholesterol control tips",
-        "non-invasive heart tests",
-        "tmt test vellore cost",
-        "heart health diet guide"
-      ]
-    }
-  }
-};
-;
+const APP_DIR = path.join(__dirname, '../src/app/doctor/near-me/treat');
 
-const results = {
-  timestamp: new Date().toISOString(),
-  existingPages: [],
-  missingTopics: [],
-  generatedPages: [],
-  recommendations: []
-};
-
-/**
- * Slugify a topic title
- */
-function slugify(text) {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-")
-    .trim();
-}
-
-/**
- * Check if a topic is already covered
- */
-function isTopicCovered(topic, existingPages, existingContent) {
-  const topicLower = topic.toLowerCase();
-  const topicWords = topicLower.split(/\s+/).filter(w => w.length > 2);
-
-  // Check if any existing page covers this topic
-  for (const page of existingPages) {
-    const pageLower = page.toLowerCase();
-
-    // Direct match
-    if (pageLower.includes(slugify(topic))) {
-      return { covered: true, by: page, type: "direct" };
-    }
-
-    // Word overlap check
-    const matchingWords = topicWords.filter(w => pageLower.includes(w));
-    if (matchingWords.length >= Math.ceil(topicWords.length * 0.7)) {
-      return { covered: true, by: page, type: "overlap" };
-    }
-  }
-
-  // Check content for topic coverage
-  const searchTerms = topicWords.join("|");
-  const contentMatches = existingContent.filter(c => {
-    const regex = new RegExp(searchTerms, "gi");
-    return (c.match(regex) || []).length >= 3;
-  });
-
-  if (contentMatches.length > 0) {
-    return { covered: true, by: "content", type: "content" };
-  }
-
-  return { covered: false };
-}
-
-/**
- * Generate RockSEO-ready page template
- */
-function generatePageTemplate(topic, cluster) {
-  const title = topic.split(" ").map(w =>
-    w.charAt(0).toUpperCase() + w.slice(1)
-  ).join(" ");
-
-  const slug = slugify(topic);
-  const hubPath = CONFIG.topicTaxonomy[cluster].hub;
-  const deptName = cluster.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-
-  const content = generateUniqueContent(title, cluster);
-
-  const template = `// RockSEO Auto-Generated Elite Page Template
-// Topic: ${title}
-// Cluster: ${cluster}
-// Hub: ${hubPath}
-// Generated: ${new Date().toISOString()}
-
-import { Metadata } from "next";
-import { SubServiceTemplate } from "@/components/healthcare/SubServiceTemplate";
-
-export const metadata: Metadata = {
-  title: "${title} | Indira Elite Hospital Vellore",
-  description: "Learn about ${title} at Indira Elite Super Speciality Hospital. Experience robotic-assisted clinical mastery with transparent pricing and premium recovery suites."
-};
-
-export default function ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join("")}Page() {
-  return (
-    <SubServiceTemplate
-      title="${title}"
-      eyebrow="Indira Elite ${deptName}"
-      description={
-        <span>
-          <strong>${title} is a clinical core competency at Indira Elite Hospital.</strong> Our senior consultants utilize advanced robotic-assisted technology to ensure maximum precision and rapid patient recovery.
-        </span>
-      }
-      departmentName="${deptName}"
-      departmentSlug="${cluster}"
-      quickFacts={[
-        { label: "Elite Pricing", value: "₹${content.price}", icon: "IndianRupee" },
-        { label: "Robotic Precision", value: "99.8%", icon: "Zap" },
-        { label: "Elite Recovery", value: "${content.recTime}", icon: "Bed" },
-        { label: "Clinical Success", value: "${content.succRate}%", icon: "CheckCircle" }
-      ]}
-      timeline={{
-        title: "Your Elite Pathway",
-        description: "The structured journey for ${title} at Indira Elite",
-        steps: [
-          { title: "Elite Consultation", description: "In-depth clinical evaluation with robotic diagnostic mapping." },
-          { title: "Robotic-Assisted Procedure", description: "Minimally invasive intervention ensuring surgical mastery." },
-          { title: "Premium Recovery", description: "Post-op care in our Elite suites with dedicated clinical monitoring." }
+// Elite Surgical Silos Taxonomy
+const SURGICAL_SILOS = [
+    {
+        category: 'Proctology',
+        slug: 'proctology',
+        treatments: [
+            { name: 'Laser Piles Treatment', slug: 'laser-piles-treatment', icon: 'Zap' },
+            { name: 'Laser Fistula Surgery (FiLaC)', slug: 'laser-fistula-surgery-filac', icon: 'Shield' },
+            { name: 'Laser Fissure Treatment', slug: 'laser-fissure-treatment', icon: 'Sparkles' },
+            { name: 'Laser Pilonidal Sinus Surgery (SiLaC)', slug: 'laser-pilonidal-sinus-surgery', icon: 'Siren' }
         ]
-      }}
-      reviews={{
-        entityType: "service",
-        entityName: "${title}",
-        entitySlug: "seo/${slug}"
-      }}
-    >
-        {/* Procedural Unique Main Content (Elite Information Gain) */}
-${content.mainContent}
-    </SubServiceTemplate>
-  );
+    },
+    {
+        category: 'Orthopaedics',
+        slug: 'orthopaedics',
+        treatments: [
+            { name: 'Robotic Knee Replacement', slug: 'robotic-knee-replacement', icon: 'Activity' },
+            { name: 'Total Hip Replacement', slug: 'total-hip-replacement', icon: 'Shield' },
+            { name: 'ACL Reconstruction Surgery', slug: 'acl-reconstruction-surgery', icon: 'Zap' },
+            { name: 'Advanced Fracture Care', slug: 'advanced-fracture-care', icon: 'Siren' }
+        ]
+    },
+    {
+        category: 'Ophthalmology',
+        slug: 'ophthalmology',
+        treatments: [
+            { name: 'Micro-Incision Cataract Surgery (MICS)', slug: 'cataract-surgery-mics', icon: 'Eye' },
+            { name: 'LASIK Eye Surgery', slug: 'lasik-eye-surgery', icon: 'Zap' },
+            { name: 'Glaucoma Management', slug: 'glaucoma-management', icon: 'Shield' },
+            { name: 'Diabetic Retinopathy Treatment', slug: 'diabetic-retinopathy-treatment', icon: 'Microscope' }
+        ]
+    },
+    {
+        category: 'Cardiology',
+        slug: 'cardiology',
+        treatments: [
+            { name: 'Angioplasty & Stenting', slug: 'angioplasty-stenting', icon: 'Heart' },
+            { name: 'Permanent Pacemaker Implantation', slug: 'pacemaker-implantation', icon: 'Zap' },
+            { name: 'Interventional Cardiology', slug: 'interventional-cardiology', icon: 'Activity' },
+            { name: 'Heart Valve Repair', slug: 'heart-valve-repair', icon: 'Shield' }
+        ]
+    }
+];
+
+function generatePageTemplate(treatment, silo) {
+    const title = `${treatment.name} in Vellore | Best ${silo.category} Surgeon`;
+    const eyebrow = `Elite ${silo.category} Solutions`;
+    const description = `Indira Super Speciality Hospital offers world-class ${treatment.name} in Vellore, Tamil Nadu. Our expert ${silo.category.toLowerCase()} team utilizes advanced minimally invasive technology for faster recovery and superior clinical outcomes.`;
+    
+    return `'use client'
+
+import React from 'react'
+import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
+
+export default function SEOPage() {
+    return (
+        <SubServiceTemplate
+            title="${treatment.name} in Vellore"
+            eyebrow="${eyebrow}"
+            departmentName="${silo.category}"
+            departmentSlug="${silo.slug}"
+            description={
+                <>
+                    <p>
+                        Searching for the <strong>best ${treatment.name.toLowerCase()} in Vellore</strong>? Indira Super Speciality Hospital is a center of excellence for advanced ${silo.category.toLowerCase()} care, providing precision-driven surgical solutions with a focus on patient safety and rapid healing.
+                    </p>
+                    <p className="mt-4">
+                        Our facility is equipped with state-of-the-art diagnostic and surgical infrastructure, including high-definition imaging and modular OTs, ensuring that every patient receives international-standard medical care right here in Tamil Nadu.
+                    </p>
+                </>
+            }
+            quickFacts={[
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Tech Level', value: 'Advanced', icon: '${treatment.icon}' },
+                { label: 'Care Type', value: 'Surgical', icon: 'Shield' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
+            ]}
+            reviews={{
+                entityType: 'service',
+                entityName: '${treatment.name}',
+                entitySlug: '${treatment.slug}'
+            }}
+            showAvailabilityCTA={true}
+            showVideoBank={true}
+        >
+            <div className="space-y-12">
+                <section>
+                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for ${treatment.name}?</h2>
+                    <p className="text-lg text-slate-600 leading-relaxed">
+                        At Indira Hospital, we combine decades of surgical expertise with the latest medical breakthroughs. Our ${silo.category.toLowerCase()} specialists are pioneers in minimally invasive techniques, ensuring:
+                    </p>
+                    <ul className="grid md:grid-cols-2 gap-4 mt-8">
+                        {[
+                            'NABH Accredited Safety Standards',
+                            'Expert Senior Surgeons',
+                            'Modern Diagnostic Imaging',
+                            'Transparent & Affordable Pricing',
+                            'Comprehensive Post-Operative Care',
+                            '24/7 Emergency Support'
+                        ].map((item, i) => (
+                            <li key={i} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                                <div className="w-6 h-6 rounded-full bg-fuchsia-100 flex items-center justify-center text-fuchsia-600 text-xs font-bold">✓</div>
+                                <span className="text-slate-700 font-medium">{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
+                <section className="bg-slate-900 rounded-[3rem] p-12 text-white">
+                    <h2 className="text-3xl font-bold mb-6">Advanced ${silo.category} Infrastructure</h2>
+                    <p className="text-fuchsia-200/80 text-lg mb-8">
+                        Our hospital is equipped with high-end medical technology to support complex ${silo.category.toLowerCase()} procedures, reducing surgical time and enhancing precision.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {[
+                            { title: 'High-Def Imaging', desc: 'Precision diagnosis with 128-Slice CT & 3T MRI.' },
+                            { title: 'Modular OTs', desc: 'Infection-free surgical environments for safety.' },
+                            { title: 'Expert Team', desc: 'Multidisciplinary approach to complex cases.' }
+                        ].map((box, i) => (
+                            <div key={i} className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                                <h3 className="font-bold text-xl mb-2">{box.title}</h3>
+                                <p className="text-sm text-fuchsia-100/60">{box.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </div>
+        </SubServiceTemplate>
+    )
 }
 `;
-
-  return {
-    slug,
-    title,
-    cluster,
-    hubPath,
-    template
-  };
 }
 
-/**
- * Get all existing page slugs
- */
-function getExistingPages(dir, list = []) {
-  if (!fs.existsSync(dir)) return list;
+async function run() {
+    console.log('🚀 RockSEO: Starting hierarchical generation...');
+    let count = 0;
 
-  for (const f of fs.readdirSync(dir)) {
-    const full = path.join(dir, f);
-    const stat = fs.statSync(full);
-
-    // Ignore doctor/near-me to force generation of medical hub pages
-    if (full.includes("doctor/near-me")) continue;
-
-    if (stat.isDirectory() && !f.startsWith(".") && !f.startsWith("[")) {
-      list.push(f);
-      getExistingPages(full, list);
+    for (const silo of SURGICAL_SILOS) {
+        for (const treatment of silo.treatments) {
+            const pageDir = path.join(APP_DIR, silo.slug, treatment.slug);
+            if (!fs.existsSync(pageDir)) {
+                fs.mkdirSync(pageDir, { recursive: true });
+            }
+            
+            const content = generatePageTemplate(treatment, silo);
+            fs.writeFileSync(path.join(pageDir, 'page.tsx'), content);
+            count++;
+        }
     }
-  }
-  return list;
+
+    console.log(`✅ RockSEO: Successfully generated ${count} elite landing pages in ${APP_DIR}`);
 }
 
-/**
- * Get content samples from blog posts
- */
-function getBlogContentSamples(dir) {
-  const samples = [];
-  if (!fs.existsSync(dir)) return samples;
-
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries.filter(e => e.isDirectory()).slice(0, 100)) {
-    const pagePath = path.join(dir, entry.name, "page.tsx");
-    if (fs.existsSync(pagePath)) {
-      try {
-        const content = fs.readFileSync(pagePath, "utf8").slice(0, 1000);
-        samples.push(content);
-      } catch (e) { }
-    }
-  }
-  return samples;
-}
-
-/**
- * Main execution
- */
-async function main() {
-  console.log("🆕 RockSEO Topical Gap Detector & Page Generator");
-  console.log("=".repeat(55));
-  console.log("\nAnalyzing topic coverage and identifying gaps\n");
-
-  // Get existing pages
-  const existingPages = getExistingPages(CONFIG.appDir);
-  const blogContent = getBlogContentSamples(path.join(CONFIG.appDir, "blog"));
-
-  console.log(`📁 Existing pages: ${existingPages.length}`);
-  console.log(`📝 Blog samples analyzed: ${blogContent.length}\n`);
-
-  results.existingPages = existingPages;
-
-  // Analyze each topic cluster
-  const allMissing = [];
-
-  for (const [cluster, data] of Object.entries(CONFIG.topicTaxonomy)) {
-    console.log(`\n📊 Cluster: ${cluster.toUpperCase()}`);
-    console.log(`   Hub: ${data.hub}`);
-
-    const clusterMissing = [];
-    const clusterCovered = [];
-
-    for (const topic of data.requiredSubtopics) {
-      const coverage = isTopicCovered(topic, existingPages, blogContent);
-
-      if (coverage.covered) {
-        clusterCovered.push({ topic, ...coverage });
-      } else {
-        clusterMissing.push({ topic, cluster });
-        allMissing.push({ topic, cluster });
-      }
-    }
-
-    console.log(`   ✅ Covered: ${clusterCovered.length}/${data.requiredSubtopics.length}`);
-    console.log(`   ❌ Missing: ${clusterMissing.length}`);
-
-    if (clusterMissing.length > 0) {
-      for (const m of clusterMissing.slice(0, 3)) {
-        console.log(`      - ${m.topic}`);
-      }
-      if (clusterMissing.length > 3) {
-        console.log(`      ... and ${clusterMissing.length - 3} more`);
-      }
-    }
-  }
-
-  results.missingTopics = allMissing;
-
-  // Generate page templates for missing topics
-  console.log("\n" + "=".repeat(55));
-  console.log("📝 GENERATING PAGE TEMPLATES\n");
-
-  if (!fs.existsSync(CONFIG.outputDir)) {
-    fs.mkdirSync(CONFIG.outputDir, { recursive: true });
-  }
-
-  for (const missing of allMissing.slice(0, 500)) { // Increased for medical coverage
-    const page = generatePageTemplate(missing.topic, missing.cluster);
-
-    const outputPath = path.join(CONFIG.outputDir, `${page.slug}.tsx`);
-    fs.writeFileSync(outputPath, page.template);
-
-    results.generatedPages.push({
-      topic: page.title,
-      slug: page.slug,
-      cluster: page.cluster,
-      path: outputPath
-    });
-
-    console.log(`   🆕 Generated: ${page.slug}.tsx`);
-  }
-
-  if (allMissing.length > 10) {
-    console.log(`\n   ⚠️ ${allMissing.length - 10} more topics identified but not generated.`);
-    console.log("   Run again to generate more, or edit the script limit.");
-  }
-
-  // Save report
-  const reportDir = path.dirname(CONFIG.outputReport);
-  if (!fs.existsSync(reportDir)) {
-    fs.mkdirSync(reportDir, { recursive: true });
-  }
-
-  fs.writeFileSync(CONFIG.outputReport, JSON.stringify(results, null, 2));
-
-  // Summary
-  console.log("\n" + "=".repeat(55));
-  console.log("📈 TOPICAL GAP SUMMARY\n");
-  console.log(`   Total required subtopics: ${Object.values(CONFIG.topicTaxonomy).reduce((s, c) => s + c.requiredSubtopics.length, 0)}`);
-  console.log(`   Topics missing: ${allMissing.length}`);
-  console.log(`   Templates generated: ${results.generatedPages.length}`);
-
-  console.log(`\n💾 Generated pages saved to: ${CONFIG.outputDir}`);
-  console.log(`💾 Report saved: ${CONFIG.outputReport}`);
-
-  console.log("\n⚠️ IMPORTANT:");
-  console.log("   1. Review generated templates before publishing");
-  console.log("   2. Update placeholder texts and prices with specialized content");
-  console.log("   3. Run SERP overlap detector after adding pages");
-  console.log("   4. Move approved pages to app/[locale]/ directory");
-}
-
-main().catch(console.error);
+run().catch(console.error);

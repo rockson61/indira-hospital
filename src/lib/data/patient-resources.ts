@@ -1,4 +1,4 @@
-import { FileBox, Building, Plane, Globe, Compass, Wallet, Bus, ClipboardList, Shield } from "lucide-react";
+import { FileBox, Building, Plane, Globe, Compass, Wallet, Bus, ClipboardList, Shield, Sparkles } from "lucide-react";
 import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 
 export interface PatientResource {
@@ -8,7 +8,7 @@ export interface PatientResource {
     short_description: string;
     full_content: string;
     icon: any; // Lucide icon
-    category: "Information" | "Travel" | "Billing";
+    category: "Information" | "Travel" | "Billing" | "Concierge";
     customHref?: string;
 }
 
@@ -426,6 +426,49 @@ For your convenience, Indira Super Speciality Hospital offers a secure online pa
 5. Upon successful payment, an e-receipt will be instantly generated and emailed/SMS'd to you.
 
 *All transactions are securely encrypted. Do not share your OTPs or passwords with anyone.*
+`
+    },
+
+    // Elite Concierge & Hospitality Category
+    {
+        id: "elite-concierge",
+        slug: "elite-concierge",
+        title: "Elite Concierge Services",
+        short_description: "Experience premium hospitality with a dedicated healthcare relationship manager.",
+        icon: Sparkles,
+        category: "Concierge",
+        customHref: "/patients/concierge",
+        full_content: `
+## Elite Patient Concierge
+At Indira Super Speciality Hospital, we believe that clinical excellence should be matched by world-class hospitality. Our Elite Concierge service ensures that every aspect of your stay is comfortable, dignified, and stress-free.
+
+### Personalized Relationship Management
+Upon choosing our Elite care path, you are assigned a dedicated Relationship Manager who will:
+*   Coordinate all appointments and diagnostic schedules.
+*   Handle insurance and billing documentation.
+*   Arrange for premium room upgrades and specialized dietary requirements.
+*   Provide a single point of contact for your family throughout the treatment journey.
+
+### Premium Amenities
+*   **Luxury Suites**: Artistically designed rooms with companion stay facilities.
+*   **Gourmet Dining**: Nutritious, chef-curated meals tailored to your clinical needs and preferences.
+*   **Fast-Track Services**: Minimal waiting times for all administrative and clinical processes.
+`
+    },
+    {
+        id: "international-concierge",
+        slug: "international-concierge",
+        title: "International Assistance",
+        short_description: "Bespoke support for our global patients, including visa and travel coordination.",
+        icon: Globe,
+        category: "Concierge",
+        customHref: "/patients/international",
+        full_content: `
+## Global Patient Support
+We welcome patients from across the world with specialized services designed to make international travel for healthcare simple and safe.
+*   **Visa Invitation Letters**: Rapid processing of medical visa documents.
+*   **Airport Concierge**: Seamless pick-up and drop-off from Chennai/Bengaluru airports.
+*   **Language Interpreters**: Dedicated translators for Arabic, French, and local dialects.
 `
     }
 ];

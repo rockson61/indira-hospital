@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     keywords: [
         "medical treatment cost India",
         "hospital cost India vs USA",
-        "cheap medical treatment India",
+        "best value medical treatment India",
         "cost of knee replacement India",
         "cost of bypass surgery India",
         "medical tourism cost India",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "Treatment Cost in India vs USA, UK & UAE — Indira Hospital Vellore",
-        description: "80–95% cheaper than the West. Get a free personalised cost estimate within 24 hours. Compare 12 major procedures vs USA, UK and UAE costs.",
+        description: "80–95% cost savings vs the West. Get a free personalised cost estimate within 24 hours. Compare 12 major procedures vs USA, UK and UAE costs.",
     },
 };
 
@@ -82,7 +82,7 @@ export default function CostEstimatorPage() {
                         </h1>
                         
                         <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10 italic">
-                            NABH-accredited quaternary care at 80–95% lower cost than the West. Get your personalised estimate today.
+                            NABH-accredited quaternary care with 80–95% institutional cost savings vs the West. Get your personalised estimate today.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -176,8 +176,8 @@ export default function CostEstimatorPage() {
                 <section>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-8 uppercase">Why is it <br /><span className="text-emerald-600">So Affordable?</span></h2>
-                            <p className="text-slate-500 dark:text-slate-400 font-medium italic text-lg leading-relaxed mb-10">Lower prices in India are driven by operational efficiency and volume, not a compromise on clinical outcomes or technology.</p>
+                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-8 uppercase">The Physics <br /><span className="text-emerald-600">of Value</span></h2>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium italic text-lg leading-relaxed mb-10">Optimized pricing in India is driven by operational efficiency and high patient volumes, ensuring elite clinical outcomes without the Western administrative overhead.</p>
                             
                             <div className="grid sm:grid-cols-2 gap-6">
                                 {WHY_AFFORDABLE.map((item, i) => (
@@ -244,8 +244,8 @@ export default function CostEstimatorPage() {
             <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none" />
                 <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-                    <h2 className="elite-section-title text-white mb-10 uppercase">Your Health <br /><span className="text-emerald-500 italic">Affordable Once Again.</span></h2>
-                    <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">Save up to 90% on world-class quaternary care. Get your free personalized cost estimate within 24 hours.</p>
+                    <h2 className="elite-section-title text-white mb-10 uppercase">Your Health <br /><span className="text-emerald-500 italic">Institutional Excellence.</span></h2>
+                    <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">Achieve up to 90% cost savings on world-class quaternary care. Get your free personalized cost estimate within 24 hours.</p>
                     
                     <div className="flex flex-wrap justify-center gap-6">
                         <a href={waUrl} target="_blank" rel="noopener noreferrer"
