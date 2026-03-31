@@ -10,10 +10,25 @@ import {
     Info, 
     Activity,
     CheckCircle2,
+    Microscope,
+    Target,
+    Navigation,
+    ThermometerSnowflake,
+    PlayCircle,
+    ArrowRightCircle,
+    Eye,
+    Star,
+    Move,
+    UserCheck,
+    MapPin,
     Search,
     History,
-    Microscope,
-    Target
+    Anchor,
+    Scale,
+    Layers,
+    Radiation,
+    Droplets,
+    Wind
 } from 'lucide-react'
 
 export default function ColonoscopyPage() {
@@ -22,144 +37,163 @@ export default function ColonoscopyPage() {
             title="Elite Colonoscopy & Colorectal Screening"
             slug="colonoscopy-screening-cost"
             parentServiceSlug="gastroenterology"
-            departmentName="Gastroenterology"
+            departmentName="Indira Elite Gastro Hub"
             description={
                 <>
                     <p>
-                        Colon cancer is one of the most preventable cancers, yet it remains a leading cause of mortality due to late diagnosis. At Indira Super Speciality Hospital, we offer **Elite Colonoscopy Services**. Using advanced AI-assisted visualization (CADx) and high-definition endoscopes, we don't just 'look' for cancer—we find and remove pre-cancerous polyps during the same session, preventing cancer before it even starts.
+                        Colon cancer is one of the most preventable cancers, yet it remains a leading cause of mortality due to late diagnosis. At Indira Super Speciality Hospital, we offer **Elite Colonoscopy Services**. Using advanced AI-assisted visualization (CADx) and high-definition endoscopes, we don't just 'look' for cancer—we find and remove pre-cancerous polyps during the same session, preventing cancer before it starts.
                     </p>
-                    <p className="mt-4 text-blue-600 dark:text-blue-400 font-semibold italic">
+                    <p className="mt-4 text-emerald-600 dark:text-emerald-400 font-semibold italic">
                         "The gold standard for life-saving colorectal cancer prevention."
                     </p>
                 </>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: '4K HD', icon: 'Zap' },
+                { label: 'Visualization', value: '4K Ultra-HD', icon: 'Zap' },
                 { label: 'Care Type', value: 'Preventive', icon: 'Shield' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
-            duration="20-30 Mins"
+            duration="20-30 Minutes"
             hospitalStay="Daycare"
             recoveryTime="24 Hours"
-            anesthesia="Sedation"
+            anesthesia="Conscious Sedation"
             reviews={{
                 entityType: 'service',
                 entityName: 'Colonoscopy Screening',
                 entitySlug: 'colonoscopy-screening-cost'
             }}
-        >
-            <div className="space-y-16">
-                {/* Visual Section: Why Professional Colonoscopy? */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <div className="p-8 rounded-3xl bg-blue-50 dark:bg-blue-900/50 border border-blue-100 dark:border-blue-800 shadow-lg">
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-blue-800 dark:text-blue-300">The Preventive Edge</h4>
-                        <ul className="space-y-4">
-                            {[
-                                { title: "Painless 'Dream' Sedation", text: "We use controlled intravenous sedation managed by senior anesthesiologists, ensuring you are completely comfortable and have zero memory of the procedure." },
-                                { title: "High-Definition 4K Imaging", text: "Our Olympus 190 series endoscopes provide ultra-clear images, allowing our experts to detect even the smallest flat polyps that other centers might miss." },
-                                { title: "Instant Polypectomy", text: "If a polyp is found, we remove it immediately during the colonoscopy. This 'seek and destroy' approach is the most effective way to prevent colon cancer." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex gap-3 items-start">
-                                    <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-1" />
-                                    <div>
-                                        <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="relative group">
-                        <div className="absolute inset-0 bg-blue-400/20 rounded-[3rem] blur-3xl transition-all" />
-                        <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-blue-100 dark:border-slate-800 shadow-2xl">
-                            <Target className="w-24 h-24 text-blue-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
-                            <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Clear Vision</p>
-                            <p className="text-slate-500 text-sm">Identifying and removing pre-cancerous growths with sub-millimeter precision.</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Deep Dive Content */}
-                <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Comprehensive Colon Evaluation</h3>
-                    <p>
-                        A colonoscopy allows a doctor to examine the inner lining of your large intestine (colon and rectum). A thin, flexible tube equipped with a light and camera is used to look for ulcers, polyps, tumors, and areas of inflammation or bleeding. It is the only screening test that can both find and *prevent* cancer in the same session.
-                    </p>
-                    <p>
-                        At Indira Hospital, our gastroenterology team, led by senior endoscopists, prioritizes **Patient Comfort & Accuracy**. We provide specialized 'Preparation Kits' that are much easier to tolerate than traditional bowel preps, ensuring a clean colon and the highest possible diagnostic yield.
-                    </p>
-
-                    <h4 className="text-[#005f73] dark:text-blue-400 font-primary">Who Should Get a Screened?</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-                        {[
-                            "Everyone aged 45 and above (Average risk)",
-                            "Anyone with a family history of colon cancer or polyps",
-                            "Patients with persistent changes in bowel habits (diarrhea/constipation)",
-                            "Unexplained rectal bleeding or blood in the stool",
-                            "Unexplained abdominal pain or iron-deficiency anemia"
-                        ].map((risk, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                                <CheckCircle2 className="w-5 h-5 text-blue-500" />
-                                <span className="text-sm font-medium">{risk}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-blue-500 pl-4 italic">Post-Procedure Recovery</h3>
-                    <p>
-                        Recovery from a colonoscopy at Indira Hospital is remarkably fast. Because of our gentle sedation techniques, you will wake up feeling refreshed. You'll spend about 30-60 minutes in our comfortable recovery bay while the sedation wears off. We'll provide you with a light snack and a preliminary report of the findings before you leave. Most patients resume their normal diet and activities by the next morning.
-                    </p>
-
-                    <h4 className="font-primary text-[#005f73] dark:text-blue-400 mt-10">The Indira Standard of Care:</h4>
-                    <ul>
-                        <li>**Advanced Polypectomy Tools**: Specialized loops and energy devices for the safe removal of large or complex polyps.</li>
-                        <li>**CO2 Insufflation**: We use Medical-Grade CO2 instead of room air to inflate the colon, which is absorbed 100x faster by the body, eliminating post-procedure bloating.</li>
-                        <li>**Expert Histopathology**: Any tissue removed is analyzed by our senior pathologists for a conclusive clinical diagnosis.</li>
-                    </ul>
-                </div>
-
-                {/* FAQ Section */}
-                <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-950 to-transparent" />
-                    
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
-                        <Info className="text-blue-400" />
-                        Colonoscopy: Essential FAQs
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
-                        {[
-                            {
-                                q: "Is a colonoscopy painful?",
-                                a: "No. At Indira Hospital, we perform almost all colonoscopies under 'Painless Sedation.' You will be in a light sleep and will not feel any pain or discomfort during the procedure."
-                            },
-                            {
-                                q: "How do I prepare for the test?",
-                                a: "You will need to follow a clear liquid diet for one day and take a specialized bowel-cleansing solution (laxative) the evening before. We provide a detailed, easy-to-follow instruction sheet."
-                            },
-                            {
-                                q: "What happens if a polyp is found?",
-                                a: "In most cases, the doctor will remove the polyp right then and there using a specialized wire loop. This is completely painless and is the key to cancer prevention."
-                            },
-                            {
-                                q: "Can I drive myself home after the procedure?",
-                                a: "No. Because of the sedation, you will need a 100% reliable adult to drive you home. You should not drive or operate machinery for the remainder of the day."
-                            }
-                        ].map((faq, idx) => (
-                            <div key={idx} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                                <h4 className="font-bold text-blue-400 mb-4 flex items-start gap-2">
-                                    <Zap className="w-5 h-5 mt-1 shrink-0" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">
-                                    {faq.a}
+            fullDescription={
+                <div className="space-y-16">
+                    {/* Mechanism: AI-Assisted Polypectomy */}
+                    <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary">
+                            Mechanism: AI-Assisted Detection & CO2 Comfort
+                        </h3>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div className="prose prose-slate dark:prose-invert">
+                                <p className="text-lg leading-relaxed">
+                                    Standard colonoscopy relies solely on the human eye. At Indira, we utilize **CADx (Computer-Aided Detection)**. This AI layer highlights "flat" and "hidden" polyps in real-time, drastically reducing the "Miss Rate" that can occur in routine screenings.
                                 </p>
+                                <p className="mt-4 font-medium">
+                                    We prioritize patient comfort by using **CO2 Insufflation** instead of room air. Carbon dioxide is absorbed by the body 100x faster, ensuring zero bloating or "gas pain" after you wake up.
+                                </p>
+                                <div className="mt-8 space-y-4">
+                                    <div className="flex items-center gap-3">
+                                        <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+                                        <span><strong>Instant Polypectomy</strong>: Simultaneous removal of polyps using cold or hot snares.</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+                                        <span><strong>HD 190 Series Scopes</strong>: Near-focus visualization for sub-millimeter pit pattern mapping.</span>
+                                    </div>
+                                </div>
                             </div>
-                        ))}
-                    </div>
+                            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
+                                <Wind className="w-16 h-16 text-emerald-500 mb-6" />
+                                <h4 className="text-xl font-bold mb-2">The "Silent" Prep Protocol</h4>
+                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-primary">
+                                    Traditional bowel preps involve drinking 4 liters of high-volume liquid. We provide a **Low-Volume Split-Dose Prep** that is significantly easier to drink and more effective for a clean colon.
+                                </p>
+                                <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
+                                    <Shield className="w-4 h-4" />
+                                    Diagnostic Clarity Assurance
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Screening Timeline */}
+                    <section>
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter uppercase">Clinical Screening Roadmap</h3>
+                            <p className="text-slate-600 dark:text-slate-400">Regular colonoscopy screening can reduce the risk of colon cancer by up to 90%.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                            {[
+                                { title: "Prep Day", desc: "Low-volume liquid hydration to clear the bowel for maximum visualization." },
+                                { title: "Procedure Day", desc: "20-minute screening under light sedation. No pain, zero memory of the scope." },
+                                { title: "Polyp Removal", desc: "Immediate removal of any pre-cancerous growths during the same session." },
+                                { title: "Result Audit", desc: "Instant report on findings. Histopathology follow-up for removed polyps." }
+                            ].map((item, i) => (
+                                <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center">
+                                    <h4 className="font-bold mb-2 text-emerald-600 font-primary uppercase tracking-tighter italic">{item.title}</h4>
+                                    <p className="text-xs text-slate-500 font-medium italic">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Technology Focus Section */}
+                    <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
+                        <h3 className="text-3xl font-bold mb-4 font-serif italic">Advanced Endoscopy Platform</h3>
+                        <p className="text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+                            A colonoscopy is only as good as the technology and the "Withdrawal Time" of the endoscopist. At Indira, we maintain strict performance metrics for every procedure.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left relative z-10">
+                            {[
+                                { title: "CAD EYE System", icon: Eye, text: "AI-assisted real-time detection of polyps." },
+                                { title: "Near Focus HD", icon: Microscope, text: "Viewing tissue detail at a microscopic level." },
+                                { title: "Water Exchange", icon: Droplets, text: "Pain-minimizing insertion technique for 'difficult' colons." }
+                            ].map((box, i) => (
+                                <div key={i} className="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all border-b-4 border-emerald-500">
+                                    <box.icon className="w-10 h-10 text-emerald-500 mb-4" />
+                                    <h4 className="font-bold mb-2 text-xs uppercase tracking-widest">{box.title}</h4>
+                                    <p className="text-[10px] text-slate-400 font-medium">{box.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Clinical FAQ Hub */}
+                    <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                            <Info className="text-emerald-500" />
+                            Elite Clinical FAQs: Colonoscopy Screening
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            {[
+                                {
+                                    q: "What is the recommended age to start screening?",
+                                    a: "According to the latest global guidelines, colon cancer screening should start at age 45 for individuals at average risk. If you have a family history, screening should start even earlier (usually 10 years before the family member's diagnosis)."
+                                },
+                                {
+                                    q: "Will I be awake during the colonoscopy?",
+                                    a: "We use 'Conscious Sedation' managed by an anesthesiologist. You will be in a dream-like state, feel zero pain, and undergo the procedure with absolute comfort. You will wake up feeling refreshed."
+                                },
+                                {
+                                    q: "Can I drive home after the test?",
+                                    a: "No. Because of the sedation, you must have a reliable adult to accompany you home. You should not drive or make major decisions for the remainder of the day."
+                                },
+                                {
+                                    q: "Is the bowel preparation difficult to drink?",
+                                    a: "We provide high-grade, low-volume PEG-based solutions that are significantly easier to stomach than traditional large-volume preps. A clean colon is essential for a high-quality screening."
+                                },
+                                {
+                                    q: "What is the difference between a Diagnostic vs. Screening Colonoscopy?",
+                                    a: "A 'Screening' is for patients with no symptoms (preventive). A 'Diagnostic' is for patients visiting due to bleeding, pain, or bowel habit changes to find the root cause."
+                                },
+                                {
+                                    q: "How often do I need a colonoscopy?",
+                                    a: "If your screening results are completely normal and you are at average risk, the standard interval is 10 years. If polyps are found, the interval may be shortened to 3 or 5 years."
+                                }
+                            ].map((faq, i) => (
+                                <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group">
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+                                        <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
+                                        {faq.q}
+                                    </h4>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+                                        {faq.a}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
                 </div>
-            </div>
-        </SubServiceTemplate>
-    );
+            }
+        />
+    )
 }

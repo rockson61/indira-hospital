@@ -4,7 +4,32 @@ import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
 import { SEED_DATA } from '@/lib/data/seed-data'
 import { TREATMENT_DATA } from '@/lib/data/treatment-data'
-import { Stethoscope, Shield, Target, Zap, Activity, Heart, Clock, Award, Star, Search } from 'lucide-react'
+import { 
+    Stethoscope, 
+    Shield, 
+    Target, 
+    Zap, 
+    Activity, 
+    Heart, 
+    Clock, 
+    Award, 
+    Star, 
+    Search,
+    ChevronRight,
+    ArrowRightCircle,
+    ShieldCheck,
+    Microscope,
+    Flame,
+    Droplets,
+    Wind,
+    Eye,
+    Info,
+    Move,
+    Radiation,
+    Navigation,
+    ThermometerSnowflake,
+    PlayCircle
+} from 'lucide-react'
 
 export default function GastroenterologyPillarPage() {
     // Filter specialists (Using current specialist Dr. Karan Shankar)
@@ -20,148 +45,151 @@ export default function GastroenterologyPillarPage() {
     const slug = "gastroenterology"
     const shortDescription = "Regional Center of Excellence for Digestive Health. Advanced Therapeutic Endoscopy, Liver Care, and Surgical GI solutions led by Dr. Karan Shankar."
     
-    const fullDescription = `
-        <div class="gastroenterology-pillar-content space-y-12">
-            <section class="intro bg-white rounded-3xl">
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">World-Class Digestive Health & Liver Care</h2>
-                <p class="text-lg leading-relaxed text-slate-700">
-                    The <strong>Department of Gastroenterology & Hepatology</strong> at Indira Super Speciality Hospital is dedicated to the precision diagnosis and non-surgical management of complex gastrointestinal and liver disorders. Led by <strong>Dr. Karan Shankar</strong>, we combine the world's most advanced <strong>Olympus 190 Series HD Endoscopy</strong> with deep clinical expertise.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 mt-8">
-                    <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100">
-                        <h3 class="text-xl font-bold text-blue-900 mb-3">Therapeutic Endoscopy</h3>
-                        <p class="text-slate-700 text-sm">Beyond diagnosis, we perform life-saving interventions like band ligation, APC, and polypectomy during a single session.</p>
-                    </div>
-                    <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100">
-                        <h3 class="text-xl font-bold text-blue-900 mb-3">Advanced Hepatology</h3>
-                        <p class="text-slate-700 text-sm">Specialized reversal protocols for Fatty Liver (NASH) and comprehensive management of Chronic Hepatitis and Cirrhosis.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="specialist-focus bg-slate-900 text-white p-12 rounded-[3rem]">
-                <div class="max-w-3xl">
-                    <span class="inline-block px-4 py-1 bg-blue-500 text-white text-xs font-bold rounded-full mb-4">Clinical Lead Focus</span>
-                    <h2 class="text-4xl font-bold mb-6">Led by Dr. Karan Shankar</h2>
-                    <p class="text-blue-100/80 text-xl leading-relaxed mb-8">
-                        Widely considered among the <strong>best gastroenterologists in Vellore</strong>, Dr. Karan Shankar (FIAGES, FMAS, DMAS, FAGIE) brings unmatched technical expertise in <strong>Surgical Gastroenterology</strong> and <strong>Therapeutic Endoscopy</strong>. His focus is on "Minimal Access" solutions and early detection of GI malignancies.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex items-center gap-2 px-6 py-2 bg-white/10 rounded-full border border-white/20 text-sm">
-                            <Award class="w-4 h-4 text-blue-400" /> FIAGES / FMAS / DMAS
-                        </div>
-                        <div class="flex items-center gap-2 px-6 py-2 bg-white/10 rounded-full border border-white/20 text-sm">
-                            <Shield class="w-4 h-4 text-blue-400" /> FAGIE - Endoscopy Lead
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="clinical-pillars">
-                <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Core Clinical Focus Areas</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
-                            <Zap class="w-7 h-7" />
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">Endoscopy</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Painless diagnostic and therapeutic visualization of the upper and lower GI tract for ulcers, cancers, and polyps.</p>
-                        <ul class="text-xs text-blue-600 font-bold space-y-2">
-                            <li>• HD Gastroscopy (OGD)</li>
-                            <li>• Total Colonoscopy Screening</li>
-                            <li>• Band Ligation & APC</li>
-                        </ul>
-                    </div>
-
-                    <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
-                            <Shield class="w-7 h-7" />
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">Hepatology</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Comprehensive management of liver health, focusing on the reversal of fatty liver and chronic cirrhosis care.</p>
-                        <ul class="text-xs text-blue-600 font-bold space-y-2">
-                            <li>• Fatty Liver (NASH) Center</li>
-                            <li>• Hepatitis B & C Treatment</li>
-                            <li>• Cirrhosis Complication Mgmt.</li>
-                        </ul>
-                    </div>
-
-                    <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
-                            <Star class="w-7 h-7" />
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">IBD & GERD</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Precision management of chronic acid reflux, hiatus hernia, and Inflammatory Bowel Disease (Crohn’s/Colitis).</p>
-                        <ul class="text-xs text-blue-600 font-bold space-y-2">
-                            <li>• Lap. Reflux Surgery</li>
-                            <li>• IBD Biologics Clinic</li>
-                            <li>• Hiatus Hernia Repair</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="diagnostic-excellence space-y-8">
-                <h2 class="text-3xl font-bold text-slate-900">Advanced Diagnostic & Surgical Infrastructure</h2>
-                <p class="text-slate-700 leading-relaxed">
-                    Our center is built on the foundation of the world's best GI technology, ensuring that every diagnosis is conclusive and every surgery is minimally invasive.
-                </p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                        <Activity class="w-10 h-10 text-blue-500 mb-4" />
-                        <h4 class="font-bold text-slate-900">Olympus 190 HD</h4>
-                        <p class="text-xs text-slate-500 mt-2">Crystal-clear visualization for detecting early polyps and cancers.</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                        <Target class="w-10 h-10 text-blue-500 mb-4" />
-                        <h4 class="font-bold text-slate-900">APC Device</h4>
-                        <p class="text-xs text-slate-500 mt-2">Non-contact thermal treatment for delicate GI bleeding control.</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                        <Search class="w-10 h-10 text-blue-500 mb-4" />
-                        <h4 class="font-bold text-slate-900">Narrow Band Imaging</h4>
-                        <p class="text-xs text-slate-500 mt-2">Specialized light spectra for enhanced mucosal assessment.</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                        <Zap class="w-10 h-10 text-blue-500 mb-4" />
-                        <h4 class="font-bold text-slate-900">4K Laparoscopy</h4>
-                        <p class="text-xs text-slate-500 mt-2">Ultra-HD keyhole surgery for complex abdominal resections.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="international-patients bg-blue-50/50 p-12 rounded-[3rem] border border-blue-100">
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">Elite Support for International Patient GI Care</h2>
-                        <p class="text-slate-700 leading-relaxed">
-                            Indira Super Speciality Hospital is a global destination for <strong>advanced Gastroenterology</strong>. Patients from across Africa, the Middle East, and South Asia trust our center for complex liver care and cancer resections due to our high clinical success rates and state-of-the-art facilities.
-                        </p>
-                        <ul class="mt-6 space-y-2">
-                            <li class="flex items-center gap-2 text-blue-800 font-medium">
-                                <Activity class="w-5 h-5" /> Dedicated GI Concierge Service
-                            </li>
-                            <li class="flex items-center gap-2 text-blue-800 font-medium">
-                                <Search class="w-5 h-5" /> Fast-Track Diagnostic & Endoscopy Scheduling
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="w-full md:w-1/3 bg-white p-6 rounded-2xl shadow-xl border border-blue-100 text-center">
-                        <h4 class="text-blue-900 font-bold mb-2">Speak to GI Coordinator</h4>
-                        <p class="text-xs text-slate-500">For international pricing and procedure scheduling.</p>
-                        <button class="w-full mt-4 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors">Start Inquiry</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-    `
-
     return (
         <DepartmentTemplate
             title={title}
             slug={slug}
             shortDescription={shortDescription}
-            fullDescription={fullDescription}
+            fullDescription={
+                <div className="space-y-20 text-left">
+                    {/* ── 1. The Clinical Vision ────────────────── */}
+                    <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight">
+                            Regional Center of Excellence for Digestive Health
+                        </h2>
+                        <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
+                            <p>
+                                The **Department of Gastroenterology & Hepatology** at Indira Super Speciality Hospital is a high-volume clinical hub dedicated to the precision diagnosis and surgical management of complex gastrointestinal, biliary, and liver disorders. Led by **Dr. Karan Shankar**, we utilize the **Olympus 190 Series HD Endoscopy** to detect and treat diseases of the esophagus, stomach, and colon with sub-millimeter clinical accuracy.
+                            </p>
+                            <p className="mt-4">
+                                Our clinical philosophy is "Detection over Intervention." By employing **Narrow Band Imaging (NBI)** and **High-Definition Mucosal Mapping**, we can identify pre-cancerous lesions (polyps) and early-stage ulcers that are often invisible under standard white-light endoscopy. This allows for immediate therapeutic intervention, preventing the need for radical surgery in later stages.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose">
+                            <div className="p-8 bg-blue-50 dark:bg-blue-900/20 rounded-[2.5rem] border border-blue-100 dark:border-blue-800 shadow-sm relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl group-hover:bg-blue-500/20 transition-all"></div>
+                                <h4 className="text-2xl font-bold text-blue-900 dark:text-blue-200 mb-4 flex items-center gap-2 italic uppercase tracking-tighter">
+                                    <Zap className="w-6 h-6" />
+                                    Therapeutic Endoscopy
+                                </h4>
+                                <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
+                                    Beyond simple diagnosis, we specialize in high-complexity interventions: **Band Ligation** for variceal bleeding, **Argon Plasma Coagulation (APC)** for vascular lesions, and **Endoscopic Mucosal Resection (EMR)** for early tumor removal.
+                                </p>
+                                <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 font-primary">Olympus 190 SERIES</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 font-primary">ZERO-DELAY DIAGNOSIS</span>
+                                </div>
+                            </div>
+                            <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
+                                <h4 className="text-2xl font-bold text-blue-300 mb-4 italic uppercase tracking-tighter flex items-center gap-2">
+                                    <Activity className="w-6 h-6" />
+                                    Advanced Hepatology Hub
+                                </h4>
+                                <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
+                                    The liver is the body's primary chemical processing plant. We offer specialized reversal protocols for **Fatty Liver (NASH)** and comprehensive management for **Liver Cirrhosis**, Hepatitis B/C, and Autoimmune Liver Disease.
+                                </p>
+                                <ul className="space-y-2">
+                                    <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> FIBRO-SCAN COMPATIBLE</li>
+                                    <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> CIRRHOSIS REVERSAL MODELS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ── 2. Specialist Leadership ────────────────────────── */}
+                    <section className="specialist-focus bg-blue-600 text-white p-12 md:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center gap-10">
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[150px] -mr-48 -mt-48"></div>
+                        <div className="relative z-10 max-w-4xl space-y-8">
+                            <span className="inline-block px-6 py-2 bg-white text-blue-600 text-xs font-black rounded-full uppercase tracking-widest italic shadow-lg">Clinical Leadership</span>
+                            <h2 className="text-5xl font-black leading-tight italic tracking-tighter">Precision GI Management led by <span className="text-blue-100">Dr. Karan Shankar</span></h2>
+                            <div className="text-blue-50 text-2xl leading-relaxed italic font-medium">
+                                <p>With advanced fellowships in Minimal Access Surgery (FIAGES, FMAS, DMAS), Dr. Karan Shankar specializes in the intersection of medical gastroenterology and high-precision keyhole surgery.</p>
+                            </div>
+                            <p className="text-blue-100/80 text-lg leading-relaxed">
+                                His decade-long experience in **Therapeutic Gastroenterology** ensures that patients in Vellore have access to the most tissue-preserving, infection-safe protocols for gallbladder, liver, and colorectal conditions.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* ── 3. Educational Deep-Dive: Fatty Liver ────────────────── */}
+                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
+                        <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Alert: The "Silent" Epidemic of Fatty Liver</h3>
+                        <p>
+                            Non-Alcoholic Fatty Liver Disease (NAFLD/NASH) is the leading cause of liver failure in modern urban centers. Because the liver has no pain receptors, inflammatory damage (Steatohepatitis) can progress to Cirrhosis without any visible symptoms for years.
+                        </p>
+                        <p className="mt-4">
+                            At Indira Hospital, our **Hepatology Reversal Model** focuses on:
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
+                            {[
+                                { k: "Grade 1-2", v: "Reversible Stage" },
+                                { k: "NASH Audit", v: "Cellular Mapping" },
+                                { k: "Anti-Fibrosis", v: "Scar Mitigation" },
+                                { k: "Diet Hub", v: "Metabolic Fix" }
+                            ].map(item => (
+                                <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-blue-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-blue-600">
+                                    <p className="text-4xl font-black text-blue-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="font-bold text-slate-900 dark:text-slate-100 italic border-l-4 border-blue-500 pl-6">
+                            If you have Type-2 Diabetes or High Cholesterol, your risk of silent liver damage is 60% higher than the general population. Early screening is life-saving.
+                        </p>
+                    </section>
+
+                    {/* ── 4. GI Global FAQs ─────────────── */}
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 blur-[150px] -ml-48 -mb-48"></div>
+                        
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-blue-400 text-left">
+                           Gastrointestinal Hub: Clinical Case FAQs
+                        </h3>
+                        
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 text-left">
+                            {[
+                                {
+                                    q: "Is an Endoscopy painful or traumatic?",
+                                    a: "No. At Indira Hospital, we use 'Conscious Sedation' or 'Painless Endoscopy.' A certified anesthesiologist ensures you are in a state of light sleep. The procedure takes 10 minutes, and you wake up with no memory of the tube insertion."
+                                },
+                                {
+                                    q: "How safe is Laparoscopic Gallbladder surgery?",
+                                    a: "Laparoscopic Cholecystectomy is a gold-standard procedure with 99% success. Most patients are discharged within 24 hours and can return to a normal diet and desk work within 3-4 days."
+                                },
+                                {
+                                    q: "What is the best way to prevent Colon Cancer?",
+                                    a: "A 'screening colonoscopy' after the age of 45 is the only way to find polyps (small growths) before they turn into cancer. Removing a polyp during colonoscopy takes minutes and effectively prevents cancer from ever developing."
+                                },
+                                {
+                                    q: "Can GERD (Acid Reflux) cause esophageal cancer?",
+                                    a: "Yes, chronic untreated acid reflux can lead to 'Barrett's Esophagus,' which is a pre-cancerous condition. If you rely on daily antacids, an Endoscopy is mandatory to check for mucosal erosion."
+                                },
+                                {
+                                    q: "Why do I need an ERCP for jaundice?",
+                                    a: "Jaundice is often caused by a blockage in the bile duct (stone or tumor). ERCP is a specialized endoscopic procedure to remove the stone or place a stent without making any external cuts on your body."
+                                },
+                                {
+                                    q: "What is the specialized care for Crohn's and Colitis (IBD)?",
+                                    a: "IBD requires 'Immunomodulator' and 'Biological' therapies. We provide advanced infusion protocols that can induce deep mucosal healing, preventing the need for radical bowel resection surgery later."
+                                }
+                            ].map((faq, i) => (
+                                <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-blue-400 transition-colors text-lg">
+                                        <span className="text-blue-500 text-2xl font-serif">Q.</span>
+                                        <span>{faq.q}</span>
+                                    </h4>
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                        {faq.a}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </div>
+            }
             procedures={treatments.map(t => ({ name: t.title, link: `/doctor/near-me/treat/gastroenterology/${t.slug}` }))}
             relatedDoctors={specialists}
             relatedServices={treatments.map(t => ({
@@ -171,9 +199,9 @@ export default function GastroenterologyPillarPage() {
                 icon: 'Stethoscope'
             }))}
             technology={[
-                { name: 'Olympus 190 HD', description: 'Advanced mucosal visualization.', icon: 'Activity' },
-                { name: 'APC (Argon Plasma)', description: 'Precision thermal GI bleeding control.', icon: 'Zap' },
-                { name: 'Narrow Band Imaging', description: 'Enhanced early cancer detection.', icon: 'Search' }
+                { name: 'Olympus 190 HD', description: 'World-standard mucosal visualization.', icon: 'Activity' },
+                { name: 'Narrow Band Imaging', description: 'Early cancer/polyp detection.', icon: 'Search' },
+                { name: '4K Laparoscopy Tower', description: 'Bloodless abdominal resections.', icon: 'Shield' }
             ]}
         />
     )

@@ -38,6 +38,26 @@ const conditions = [
     { name: "Prostate Enlargement", link: "/doctor/near-me/treat/urology/enlarged-prostate-bph-treatment" },
 ];
 
+const allSpecialties = [
+    "Ayurvedic Doctors", "Orthopaedic Doctors", "Cardiologists", "Pulmonologists", "Paediatricians", 
+    "Cosmetic Surgeons", "Dentists", "Dermatologists", "Diabetologists", "Dietitians", "ENT Doctors", 
+    "Ophthalmologists", "Gastroenterologists", "General Physicians", "Gynaecologists", "Homeopathic Doctors", 
+    "Neonatologists", "Neurologists", "Neurosurgeons", "Oncologists", "On Call Doctors", "Physiotherapists", 
+    "Piles Doctors", "Psychiatrists", "Psychologists", "Sexologists", "Trichologists", "Speech Therapists", 
+    "Thyroid Doctors", "Unani Doctors", "Urologists", "Acupressure Doctors", "Acupuncture Doctors", 
+    "Andrologists", "Audiologists", "Anesthesiologists", "Radiologists", "Pathologists", "Microbiologists",
+    "Bariatric Surgeons", "Vascular Surgeons", "Plastic Surgeons", "Maxillofacial Surgeons", "Surgical Oncologists",
+    "Medical Oncologists", "Radiation Oncologists", "Critical Care Specialists", "Emergency Medicine",
+    "Infectious Disease Experts", "Rheumatologists", "Pain Management", "Palliative Care", "Sleep Medicine",
+    "Sports Medicine", "Obstetricians", "Fertility Specialists", "IVF Experts", "General Surgeons",
+    "Laparoscopic Surgeons", "Internal Medicine", "Family Physicians", "Primary Care Doctors",
+    "Kidney Specialists", "Bladder Specialists", "Spine Surgeons", "Joint Replacement Experts",
+    "Trauma Surgeons", "Heart Surgeons", "Brain Surgeons", "Pediatric Surgeons", "Neuro-Physiotherapists",
+    "Weight Loss Experts", "Skin Specialists", "Hair Fall Treatment", "Laser Specialists",
+    "Endocrinologists", "Hematologists", "Allergists", "Immunologists", "Geriatric Specialists",
+    "Integrated Medicine", "Alternative Medicine", "Wellness Consultants", "Health Coaches"
+];
+
 export default function HealthLibraryClient() {
     const [services, setServices] = useState<any[]>([]);
 
@@ -216,6 +236,40 @@ export default function HealthLibraryClient() {
                         </div>
                         <div className="relative z-10 hidden lg:flex items-center justify-center p-8 bg-white/10 backdrop-blur-3xl rounded-[2.5rem] border border-white/20">
                             <ShieldPlus className="w-32 h-32 text-white" />
+                        </div>
+                    </div>
+                </section>
+
+                {/* 100+ Specialty Directory for SEO */}
+                <section id="directory" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32 pb-32">
+                    <div className="border-t border-slate-200 dark:border-slate-800 pt-32 text-center lg:text-left">
+                        <SectionHeader
+                            title="Medical Specialty Directory"
+                            subtitle="A-Z Clinical Coverage"
+                            description="Browse our comprehensive directory of 100+ medical specialties and expert clinical categories available at Indira Hospital."
+                            align="left"
+                        />
+                        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-4">
+                            {allSpecialties.map(spec => (
+                                <Link 
+                                    key={spec} 
+                                    href={`/doctor/near-me/treat/${spec.toLowerCase().replace(/\s+/g, '-')}`}
+                                    className="text-xs md:text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-[#0086d6] transition-colors flex items-center gap-2 group whitespace-nowrap overflow-hidden"
+                                >
+                                    <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-[#0086d6] transition-colors shrink-0" />
+                                    <span className="truncate">{spec}</span>
+                                </Link>
+                            ))}
+                        </div>
+                        
+                        <div className="mt-20 p-12 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[3rem] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div className="text-left">
+                                <h4 className="text-2xl font-black text-slate-900 dark:text-white uppercase italic tracking-tighter">Need a Generic Appointment?</h4>
+                                <p className="text-slate-500 dark:text-slate-400 mt-2 font-medium italic">Our general medicine department is available 24/7 for walk-ins and emergency consults.</p>
+                            </div>
+                            <Link href="/contact" className="px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-[#0086d6] dark:hover:bg-[#0086d6] hover:text-white transition-all uppercase tracking-widest text-sm italic">
+                                Book Now
+                            </Link>
                         </div>
                     </div>
                 </section>

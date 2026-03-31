@@ -10,9 +10,22 @@ import {
     Info, 
     Activity,
     CheckCircle2,
-    Search,
     Microscope,
-    History
+    Target,
+    Navigation,
+    ThermometerSnowflake,
+    PlayCircle,
+    ArrowRightCircle,
+    Eye,
+    Star,
+    Move,
+    UserCheck,
+    MapPin,
+    Search,
+    History,
+    Anchor,
+    Scale,
+    Layers
 } from 'lucide-react'
 
 export default function SurgicalGastroPage() {
@@ -21,144 +34,176 @@ export default function SurgicalGastroPage() {
             title="Elite Surgical Gastroenterology & GI Oncology"
             slug="surgical-gi"
             parentServiceSlug="gastroenterology"
-            departmentName="Gastroenterology"
+            departmentName="Indira Elite Gastro Hub"
             description={
                 <>
                     <p>
-                        Complex conditions of the digestive tract—from esophageal cancers to chronic pancreatitis and complex hernias—require a surgeon who combines technical mastery with an innate understanding of GI physiology. At Indira Super Speciality Hospital, our **Surgical GI Department** specializes in advanced laparoscopic and open surgeries, utilizing 4K visualization and precision energy devices to ensure optimal outcomes even in the most challenging cases.
+                        Complex conditions of the digestive tract—from esophageal cancers to chronic pancreatitis and complex hernias—require a surgeon who combines technical mastery with an innate understanding of GI physiology. At Indira Super Speciality Hospital, our **Surgical GI Department** specializes in advanced laparoscopic and open surgeries. We utilize 4K visualization and "Stapler-Logic" to ensure leak-proof, precision outcomes even in the most challenging oncological cases.
                     </p>
                     <p className="mt-4 text-emerald-600 dark:text-emerald-400 font-semibold italic">
-                        "Precision surgical solutions for complex digestive disorders."
+                        "Physiological restoration: Excellence in complex digestive surgery."
                     </p>
                 </>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: '4K Lap', icon: 'Zap' },
-                { label: 'Care Type', value: 'Surgical', icon: 'Shield' },
+                { label: 'Tech Level', value: '4K Laparoscopy', icon: 'Zap' },
+                { label: 'Care Type', value: 'Advanced Surgical', icon: 'Shield' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
-            duration="Varies"
-            hospitalStay="Case-Dependent"
-            recoveryTime="Fast-Track"
-            anesthesia="General"
+            duration="Varies by Case"
+            hospitalStay="3-7 Days (Avg)"
+            recoveryTime="4-6 Weeks"
+            anesthesia="General Anesthesia"
             reviews={{
                 entityType: 'service',
                 entityName: 'Surgical GI',
                 entitySlug: 'surgical-gi'
             }}
-        >
-            <div className="space-y-16">
-                {/* Visual Section: Why Specialized GI Surgery? */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <div className="p-8 rounded-3xl bg-emerald-50 dark:bg-emerald-900/50 border border-emerald-100 dark:border-emerald-800 shadow-lg">
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-emerald-800 dark:text-emerald-300">The Surgical GI Edge</h4>
-                        <ul className="space-y-4">
-                            {[
-                                { title: "4K Laparoscopic Precision", text: "We perform 90% of our GI surgeries laparoscopically, using ultra-HD 4K imaging to navigate the complex anatomy of the abdomen with minimal trauma." },
-                                { title: "Multidisciplinary GI Oncology", text: "Complex GI cancers are treated with a combined approach involving surgical oncologists, medical oncologists, and specialized GI radiotherapists." },
-                                { title: "ERAS Protocols", text: "Enhanced Recovery After Surgery (ERAS) protocols ensure that you are eating and walking sooner, significantly reducing hospital stay and complications." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex gap-3 items-start">
-                                    <Activity className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-1" />
-                                    <div>
-                                        <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="relative group">
-                        <div className="absolute inset-0 bg-emerald-400/20 rounded-[3rem] blur-3xl transition-all" />
-                        <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-2xl">
-                            <Microscope className="w-24 h-24 text-emerald-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
-                            <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Diagnostic Depth</p>
-                            <p className="text-slate-500 text-sm">Combining surgical expertise with advanced endoscopy and imaging for inconclusive cases.</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Deep Dive Content */}
-                <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Comprehensive Digestive Surgery</h3>
-                    <p>
-                        The field of Surgical Gastroenterology covers everything from the esophagus to the rectum. These procedures often involve removing tumors, repairing structural defects like hiatal hernias, or managing chronic inflammatory conditions. Because the GI tract is a non-stop functioning system, the surgery must be performed with extreme care to maintain proper digestion and absorption.
-                    </p>
-                    <p>
-                        At Indira Hospital, our surgical team utilizes a **"Function-Preserving"** approach. Whether we are performing a distal gastrectomy or a complex Whipple's procedure, our goal is to eliminate the disease while ensuring you can return to a normal, high-quality diet and lifestyle as quickly as possible.
-                    </p>
-
-                    <h4 className="text-[#005f73] dark:text-emerald-400 font-primary">Advanced Procedures Performed:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-                        {[
-                            "Laparoscopic Esophagectomy & Gastrectomy",
-                            "Hepato-Pancreatico-Biliary (HPB) Surgeries",
-                            "Colorectal Cancer Resections",
-                            "Complex Abdominal Wall & Ventral Hernia Repair",
-                            "Surgery for Ulcerative Colitis & Crohn's Disease"
-                        ].map((procedure, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                                <span className="text-sm font-medium">{procedure}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-emerald-500 pl-4 italic">Post-Operative GI Rehab</h3>
-                    <p>
-                        Following major GI surgery, the role of our clinical dietitians is as important as the surgery itself. We provide a **Structured Nutritional Roadmap**, guiding you from liquids to solids while ensuring your body gets the specific micro-nutrients it needs during the healing phase. Our surgeons maintain strict follow-up schedules to monitor your progress and ensure long-term clinical success.
-                    </p>
-
-                    <h4 className="font-primary text-[#005f73] dark:text-emerald-400 mt-10">The Surgical GI Standard:</h4>
-                    <ul>
-                        <li>**Stapler Technology**: We use premium internal stapling devices that ensure leak-proof connections (anastomosis) in the digestive tract.</li>
-                        <li>**In-House Pathology**: Rapid results for biopsies and tumor staging to plan the next steps in your recovery journey.</li>
-                        <li>**Advanced ICU**: Dedicated critical care support for elderly or high-risk patients undergoing major abdominal operations.</li>
-                    </ul>
-                </div>
-
-                {/* FAQ Section */}
-                <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-950 to-transparent" />
-                    
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
-                        <Info className="text-emerald-400" />
-                        Surgical GI: Essential FAQs
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
-                        {[
-                            {
-                                q: "What is the benefit of Laparoscopic GI surgery over open surgery?",
-                                a: "Laparoscopic (keyhole) surgery involves smaller incisions, which means significantly less pain, a lower risk of wound infection, and a much faster return to normal activity and work."
-                            },
-                            {
-                                q: "How long is the recovery from a major abdominal surgery?",
-                                a: "For laparoscopic procedures, most patients go home in 3-5 days. For major open surgeries, it may take 7-10 days. Full recovery usually takes 4-6 weeks."
-                            },
-                            {
-                                q: "Will I need a permanent bag (stoma) after colorectal surgery?",
-                                a: "In modern GI surgery, the need for a permanent stoma is rare. We use advanced techniques to preserve natural bowel function whenever oncologically safe."
-                            },
-                            {
-                                q: "Can advanced GI surgery treat severe acid reflux?",
-                                a: "Yes. For patients who don't respond to medications, we perform Laparoscopic Fundoplication, which is a definitive surgical cure for severe GERD and hiatal hernias."
-                            }
-                        ].map((faq, idx) => (
-                            <div key={idx} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                                <h4 className="font-bold text-emerald-400 mb-4 flex items-start gap-2">
-                                    <Zap className="w-5 h-5 mt-1 shrink-0" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">
-                                    {faq.a}
+            fullDescription={
+                <div className="space-y-16">
+                    {/* Mechanism: The ERAS Protocol */}
+                    <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary">
+                            Mechanism: ERAS (Enhanced Recovery After Surgery)
+                        </h3>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div className="prose prose-slate dark:prose-invert">
+                                <p className="text-lg leading-relaxed">
+                                    Traditional major GI surgery involved long fasting periods and slow mobilization. At Indira, we implement the **Elite ERAS Framework**. By using multi-modal pain relief and early liquid nutrition, we prevent "Bowel Paralysis" (Ileus) and ensure you are walking within 12 hours of major abdominal surgery.
                                 </p>
+                                <p className="mt-4">
+                                    Our surgical team utilizes **4K High-Definition Laparoscopy**. Through three or four 5-12mm incisions, we can perform complex organ resections (like distal gastrectomy or sigmoidectomy) with minimal blood loss and zero need for large abdominal "scar-prone" cuts.
+                                </p>
+                                <div className="mt-8 space-y-4">
+                                    <div className="flex items-center gap-3">
+                                        <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+                                        <span><strong>Stapler Technology</strong>: High-grade internal stapling devices for leak-proof bowel connections.</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+                                        <span><strong>Tumor Margin Mapping</strong>: Intra-operative visualization to ensure 100% removal of cancerous tissue.</span>
+                                    </div>
+                                </div>
                             </div>
-                        ))}
-                    </div>
+                            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
+                                <Scale className="w-16 h-16 text-emerald-500 mb-6" />
+                                <h4 className="text-xl font-bold mb-2">Nutritional Hub Integration</h4>
+                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-medium">
+                                    Following major GI resection, the body's absorption mechanics change. We provide a **30-Day Post-Op Nutrition Blueprint** tailored to your new digestive anatomy.
+                                </p>
+                                <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
+                                    <Shield className="w-4 h-4" />
+                                    Metabolic Health Assurance
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Specialized GI Verticals */}
+                    <section>
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter">Advanced Surgical GI Domains</h3>
+                            <p className="text-slate-600 dark:text-slate-400">From oncology to complex hernias, we manage the most challenging abdominal pathology.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                {
+                                    title: "GI Oncology Hub",
+                                    desc: "Surgical management of cancers in the Esophagus, Stomach, Colon, and Pancreas using radical R0 resection protocols.",
+                                    icon: Target
+                                },
+                                {
+                                    title: "HPB Surgery",
+                                    desc: "Hepato-Pancreatico-Biliary specialized unit for Liver tumors, Gallbladder cancer, and Chronic Pancreatitis.",
+                                    icon: Activity
+                                },
+                                {
+                                    title: "Complex Hernia Unit",
+                                    desc: "Abdominal wall reconstruction for large ventral and incisional hernias using advanced component separation techniques.",
+                                    icon: Layers
+                                }
+                            ].map((item, i) => (
+                                <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all border-b-4 border-emerald-500">
+                                    <item.icon className="w-12 h-12 text-emerald-600 mb-6" />
+                                    <h4 className="text-xl font-bold mb-3">{item.title}</h4>
+                                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-primary italic">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Trust Infrastructure Section */}
+                    <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
+                        <h3 className="text-3xl font-bold mb-4 font-serif italic">Why Indira for Surgical GI?</h3>
+                        <p className="text-slate-400 max-w-2xl mx-auto mb-12">
+                            GI surgery is about more than just "removing a mass"—it is about ensuring the long-term metabolic health of the patient.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
+                            {[
+                                { day: "Day 0", title: "4K Mapping", text: "High-definition pre-surgical mapping for sub-millimeter accuracy." },
+                                { day: "Day 2", title: "Early Feeding", text: "Transitioning to oral liquids to ensure the bowel restarts immediately." },
+                                { day: "Day 5", title: "Discharge Ready", text: "Most laparoscopic GI patients are mobile and eating before going home." },
+                                { day: "Long-Term", title: "Quality of Life", text: "Focus on maintaining normal diet and preventing nutritional deficiencies." }
+                            ].map((step, i) => (
+                                <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                                    <p className="text-emerald-400 font-bold mb-2">{step.day}</p>
+                                    <h5 className="font-bold text-sm mb-2">{step.title}</h5>
+                                    <p className="text-xs text-slate-400 leading-relaxed antialiased italic">{step.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Clinical FAQ Hub */}
+                    <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                            <Info className="text-emerald-500" />
+                            Elite Clinical FAQs: Surgical Gastroenterology
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            {[
+                                {
+                                    q: "Can cancer surgery be performed laparoscopically?",
+                                    a: "Yes. For many GI cancers, like Colon and Esophageal cancer, laparoscopic (keyhole) surgery is now the gold standard. It provides similar oncological outcomes with much faster recovery."
+                                },
+                                {
+                                    q: "What is a Whipple's Procedure?",
+                                    a: "It is one of the most complex GI surgeries, involving removal of the pancreas head and parts of the small intestine. This is performed by our senior HPB specialists for pancreatic cancers."
+                                },
+                                {
+                                    q: "What is a 'Stapled' Anastomosis?",
+                                    a: "When we remove a part of the bowel, we must reconnect it. We use high-grade internal stapling devices which are often more precise and leak-proof than traditional hand-suturing."
+                                },
+                                {
+                                    q: "Will I need a 'Bag' after colon surgery?",
+                                    a: "Not necessarily. Modern surgical GI focuses on 'Sphincter Preservation.' We aim to avoid temporary or permanent colostomy (stoma) bags whenever safely possible."
+                                },
+                                {
+                                    q: "How long after GI surgery can I eat normally?",
+                                    a: "Under our ERAS protocol, you'll start sips of liquids within 24 hours. A return to a fully solid diet usually happens over 10-14 days as the bowel recovers."
+                                },
+                                {
+                                    q: "Is Surgical GI different from Medical Gastroenterology?",
+                                    a: "Yes. Medical Gastro handles condition like IBS or Acid Reflux through medicines and endoscopy. Surgical GI (Gastro Surgery) handles conditions that require structural physical intervention or tumor removal."
+                                }
+                            ].map((faq, i) => (
+                                <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group">
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+                                        <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
+                                        {faq.q}
+                                    </h4>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+                                        {faq.a}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
                 </div>
-            </div>
-        </SubServiceTemplate>
-    );
+            }
+        />
+    )
 }

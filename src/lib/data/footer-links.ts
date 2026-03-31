@@ -1,22 +1,22 @@
 export const FOOTER_LINKS = {
     medicalServices: [
-        { name: "Proctology", url: "/doctor/near-me/treat/general-surgery" },
+        { name: "Proctology", url: "/doctor/near-me/treat/proctology" },
         { name: "Laparoscopy", url: "/doctor/near-me/treat/general-surgery" },
         { name: "Gynaecology", url: "/doctor/near-me/treat/obstetrics-gynaecology" },
         { name: "ENT", url: "/doctor/near-me/treat/ent" },
         { name: "Urology", url: "/doctor/near-me/treat/urology" },
-        { name: "Vascular", url: "/doctor/near-me/treat/general-surgery" },
+        { name: "Nephrology", url: "/doctor/near-me/treat/nephrology" },
         { name: "Orthopedics", url: "/doctor/near-me/treat/orthopaedics" },
         { name: "Ophthalmology", url: "/doctor/near-me/treat/ophthalmology" },
-        { name: "Weight Loss", url: "/doctor/near-me/treat/general-surgery" },
+        { name: "Dentistry", url: "/doctor/near-me/treat/dentistry" },
         { name: "Cardiology", url: "/doctor/near-me/treat/cardiology" },
         { name: "Neurology", url: "/doctor/near-me/treat/neurology" },
         { name: "Gastroenterology", url: "/doctor/near-me/treat/gastroenterology" },
-        { name: "Nephrology", url: "/doctor/near-me/treat/nephrology" },
+        { name: "General Surgery", url: "/doctor/near-me/treat/general-surgery" },
         { name: "Oncology", url: "/doctor/near-me/treat/oncology" }
     ],
     procedures: [
-        { name: "Laser Piles Treatment", url: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
+        { name: "Laser Piles Treatment", url: "/doctor/near-me/treat/proctology/laser-piles-treatment" },
         { name: "Hernia Repair", url: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
         { name: "Gallbladder Removal", url: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
         { name: "C-Section Delivery", url: "/doctor/near-me/treat/obstetrics-gynaecology/normal-delivery-vs-c-section" },
@@ -26,10 +26,10 @@ export const FOOTER_LINKS = {
         { name: "Heart Angioplasty", url: "/doctor/near-me/treat/cardiology/heart-angioplasty-procedure" },
         { name: "Endoscopy", url: "/doctor/near-me/treat/gastroenterology/endoscopy-procedure-guide" },
         { name: "Colonoscopy", url: "/doctor/near-me/treat/gastroenterology/colonoscopy-screening-cost" },
-        { name: "Dialysis", url: "/doctor/near-me/treat/nephrology/dialysis-procedure-guide" },
-        { name: "Chemotherapy", url: "/doctor/near-me/treat/oncology/chemotherapy-side-effects" },
-        { name: "Stroke Recovery", url: "/doctor/near-me/treat/neurology/stroke-recovery-exercises" },
-        { name: "Smile Makeover", url: "/doctor/near-me/treat/smile-makeover" }
+        { name: "Dialysis", url: "/doctor/near-me/treat/nephrology/advanced-dialysis-center" },
+        { name: "Chemotherapy", url: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" },
+        { name: "Stroke Recovery", url: "/doctor/near-me/treat/neurology/stroke-unit-rehabilitation" },
+        { name: "Smile Makeover", url: "/doctor/near-me/treat/dentistry/dental-veneers-types" }
     ],
     healthLibrary: [
         { name: "Heart Attack Signs", url: "/doctor/near-me/treat/cardiology/heart-attack-warning-signs" },
@@ -78,6 +78,7 @@ export const FOOTER_LINKS = {
         { name: "Urologists", url: "/doctor/near-me/treat/urology" },
         { name: "Nephrologists", url: "/doctor/near-me/treat/nephrology" },
         { name: "Gynaecologists", url: "/doctor/near-me/treat/obstetrics-gynaecology" },
+        { name: "Dentists", url: "/doctor/near-me/treat/dentistry" },
         { name: "General Surgeons", url: "/doctor/near-me/treat/general-surgery" },
         { name: "General Physicians", url: "/doctors" }
     ],

@@ -9,9 +9,11 @@ export const navigation = {
     // Pristyn Care-style secondary specialty nav with dropdowns
     specialtyNav: [
         {
-            title: "Proctology", href: "/doctor/near-me/treat/general-surgery", subServices: [
-                { title: "Laser Piles Treatment", href: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
-                { title: "Fistula Surgery", href: "/doctor/near-me/treat/general-surgery/fistula-surgery-treatment" },
+            title: "Proctology", href: "/doctor/near-me/treat/proctology", subServices: [
+                { title: "Laser Piles Treatment", href: "/doctor/near-me/treat/proctology/laser-piles-treatment" },
+                { title: "Laser Fistula (FiLaC)", href: "/doctor/near-me/treat/proctology/laser-fistula-surgery-filac" },
+                { title: "Anal Fissure Care", href: "/doctor/near-me/treat/proctology/laser-fissure-treatment" },
+                { title: "Pilonidal Sinus", href: "/doctor/near-me/treat/proctology/laser-pilonidal-sinus-surgery" },
             ]
         },
         {
@@ -112,7 +114,32 @@ export const navigation = {
                 { title: "Breast Cancer Clinic", href: "/doctor/near-me/treat/oncology/breast-cancer-screening-guide" },
                 { title: "Radiation Therapy", href: "/doctor/near-me/treat/oncology/radiation-therapy-overview" },
             ]
-        }
+        },
+        {
+            title: "Dentistry", href: "/doctor/near-me/treat/dentistry", subServices: [
+                { title: "Laser Root Canal", href: "/doctor/near-me/treat/dentistry/root-canal-treatment" },
+                { title: "3D Guided Implants", href: "/doctor/near-me/treat/dentistry/dental-implants" },
+                { title: "Invisalign Aligners", href: "/doctor/near-me/treat/dentistry/invisalign-clear-aligners" },
+                { title: "Smile Makeover", href: "/doctor/near-me/treat/dentistry/dental-veneers-types" },
+            ]
+        },
+        {
+            title: "General Medicine", href: "/doctor/near-me/treat/general-medicine", subServices: [
+                { title: "Diabetology & Sugar", href: "/doctor/near-me/treat/general-medicine/diabetes-management-guide" },
+                { title: "Hypertension Hub", href: "/doctor/near-me/treat/general-medicine/hypertension-care-vellore" },
+                { title: "Full Body Checkup", href: "/doctor/near-me/treat/general-medicine/master-health-checkup" },
+            ]
+        },
+        {
+            title: "Pulmonology", href: "/doctor/near-me/treat/pulmonology", subServices: [
+                { title: "Asthma & Allergy", href: "/doctor/near-me/treat/pulmonology" },
+                { title: "Sleep Apnea / BiPAP", href: "/doctor/near-me/treat/pulmonology" },
+                { title: "COPD Management", href: "/doctor/near-me/treat/pulmonology" },
+            ]
+        },
+        { title: "Physiotherapy", href: "/doctor/near-me/treat/physiotherapy" },
+        { title: "Paediatrics", href: "/doctor/near-me/treat/paediatrics" },
+        { title: "Psychiatry", href: "/doctor/near-me/treat/psychiatry" },
     ],
 
     // Actual Tamil Nadu catchment areas served by Indira Hospital
@@ -138,6 +165,10 @@ export const navigation = {
             { title: "Gastroenterology", href: "/doctor/near-me/treat/gastroenterology" },
             { title: "General Surgery", href: "/doctor/near-me/treat/general-surgery" },
             { title: "Urology", href: "/doctor/near-me/treat/urology" },
+            { title: "Oncology", href: "/doctor/near-me/treat/oncology" },
+            { title: "Paediatrics", href: "/doctor/near-me/treat/paediatrics" },
+            { title: "Physiotherapy", href: "/doctor/near-me/treat/physiotherapy" },
+            { title: "Psychiatry", href: "/doctor/near-me/treat/psychiatry" },
         ],
         company: [
             { title: "About Us", href: "/about" },

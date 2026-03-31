@@ -25,12 +25,15 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
 
     switch (id) {
         case 'doctors':
-            return doctors.map((doc: any) => ({
-                url: `${baseUrl}/doctor/${doc.specialty_slug || 'specialists'}/${doc.slug}`,
-                lastModified: new Date(doc.date_updated || doc.date_created || new Date()),
-                changeFrequency: 'weekly',
-                priority: 0.8,
-            }));
+            return doctors.map((doc: any) => {
+                const specialty = doc.specialty_slug || 'specialists';
+                return {
+                    url: `${baseUrl}/doctor/${specialty}/${doc.slug}`,
+                    lastModified: new Date(doc.date_updated || doc.date_created || new Date()),
+                    changeFrequency: 'weekly',
+                    priority: doc.specialty_slug ? 0.95 : 0.8, // Elite doctors get higher priority
+                };
+            });
 
         case 'departments':
             return departments.map((d: any) => ({

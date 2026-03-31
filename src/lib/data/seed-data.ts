@@ -5,6 +5,7 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. P. Shankar",
             slug: "dr-p-shankar",
+            specialty_slug: "proctology",
             designation: "Chairman & HOD - General Surgery | Top Proctologist in India & Tamil Nadu",
             department: "General Surgery",
             image: "/images/doctors/dr-shankar.jpg",
@@ -50,6 +51,7 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. Karan Shankar",
             slug: "dr-karan-shankar",
+            specialty_slug: "proctology",
             designation: "Clinical/Speciality Lead - Indira Laser & Laparoscopy Centre | Executive Director",
             department: "General Surgery",
             image: "/images/doctors/dr-karan-shankar.png",
@@ -129,6 +131,7 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. Soniya Shankar",
             slug: "dr-soniya-shankar",
+            specialty_slug: "administration",
             designation: "Chief Executive Officer",
             department: "Administration",
             image: "https://www.indirasuperspecialityhospital.com/jb-content/uploads/2021/10/images.jpg",
@@ -149,7 +152,8 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. Gayathri",
             slug: "dr-gayathri",
-            designation: "Consultant – ENT, Head & Neck Surgery",
+            specialty_slug: "ent",
+            designation: "Senior Consultant - ENT & Head/Neck Surgery",
             department: "ENT",
             image: "/images/doctors/dr-gayathri.png",
             bio: "Dr. Gayathri is a trained ENT and Head & Neck surgeon with expertise in the diagnosis and surgical management of a wide spectrum of ear, nose, throat, and thyroid disorders. She completed her MBBS from Saveetha Medical College, Chennai, and her postgraduate training in Otorhinolaryngology at Kovai Medical Center and Hospital, Coimbatore, where she received extensive exposure to advanced ENT and endoscopic procedures. She has significant experience in managing both routine and complex ENT conditions with a focus on modern, minimally invasive surgical techniques.",
@@ -204,7 +208,8 @@ export const SEED_DATA = {
             status: "published",
             name: "Dr. Praharshitha Sagiraju",
             slug: "dr-praharshitha-sagiraju",
-            designation: "Obstetrician & Gynaecologist",
+            specialty_slug: "obstetrics-gynaecology",
+            designation: "Elite Consultant - Obstetrics & Gynaecology | MS (AIIMS), PDCC",
             department: "Obstetrics & Gynaecology",
             image: "/images/doctors/dr-praharshitha.png",
             bio: "Dr. Praharshitha Sagiraju is a highly qualified Obstetrician and Gynaecologist with a specialization in Minimal Access Surgery and Gynaecological Endoscopy. With her background from AIIMS Raipur and Andhra Medical College, she brings expertise in operative laparoscopic and hysteroscopic procedures, Maternal & Fetal Medicine, and Urogynecology. She is dedicated to evidence-based care and has published research on PCOS and laparoscopic techniques.",
@@ -266,25 +271,31 @@ export const SEED_DATA = {
             designation: "Emergency Medicine Specialist",
             department: "Emergency Medicine",
             image: "/images/doctors/dr-srinivasan-karbar.jpg",
-            bio: "Dr. Srinivasan Karbar is an experienced Emergency Medicine specialist with over 10 years of clinical experience. He currently serves as a consultant Emergency physician at Indira Super Speciality Hospital. He is actively involved in leading the emergency team, mentoring junior doctors, and ensuring the delivery of high-quality critical care.",
+            bio: "Dr. Srinivasan Karbar is a distinguished Emergency Medicine specialist with over 10 years of clinical mastery in high-acuity trauma and critical care. Currently serving as a Consultant Emergency Physician at Indira Super Speciality Hospital, he leads the rapid-response trauma team with a focus on evidence-based resuscitation protocols. His international academic background with the Royal College of Emergency Medicine (UK) ensures that Indira's ER operations meet global gold standards for patient stabilization and acute care management.",
             education: [
-                { degree: "MRCEM Part A", institution: "Royal College Of Emergency Medicine, UK", year: "2024" },
-                { degree: "GWU MEM", institution: "Global Hospital Chennai", year: "2017" },
+                { degree: "MRCEM (Member of Royal College of Emergency Medicine)", institution: "RCEM, United Kingdom", year: "2024" },
+                { degree: "GWU MEM (Masters in Emergency Medicine)", institution: "Global Hospital Chennai / GWU", year: "2017" },
                 { degree: "MBBS", institution: "Kempegowda Institute of Medical Sciences", year: "2012" }
             ],
-            specialties: ["Emergency Medicine", "Resuscitation", "Trauma Care"],
+            specialties: ["Emergency Medicine", "Resuscitation & ACLS", "Polytrauma Management", "Critical Care Medicine"],
             procedures: [
-                "Emergency Resuscitation",
-                "Trauma Care",
-                "Acute Pain Management",
-                "Emergency Procedures",
-                "Ultrasonography"
+                "Advanced Airway Management (Intubation)",
+                "Emergency Resuscitation & Life Support",
+                "Advanced Polytrauma Stabilization",
+                "FAST Ultrasound in Trauma",
+                "Acute Cardiac Care Management",
+                "Central & Arterial Line Placements",
+                "Procedural Sedation & Analgesia"
             ],
-            experience_years: 10,
+            experience_years: 12,
             faqs: [
                 {
                     question: "What is Dr. Srinivasan's area of expertise?",
-                    answer: "He specializes in emergency resuscitation, trauma care, and managing high-acuity patients in critical care settings."
+                    answer: "He specializes in emergency resuscitation, polytrauma stabilization, and managing high-acuity patients in critical care settings using international protocols."
+                },
+                {
+                    question: "Is the ER team trained in ACLS?",
+                    answer: "Yes, under Dr. Srinivasan's leadership, the entire ER nursing and clinical staff are trained in Advanced Cardiac Life Support (ACLS) and Pediatric Advanced Life Support (PALS)."
                 }
             ]
         },
@@ -296,23 +307,29 @@ export const SEED_DATA = {
             designation: "Emergency Medicine Specialist",
             department: "Emergency Medicine",
             image: "/images/doctors/dr-jackson-p-john.jpg",
-            bio: "Dr. Jackson P John is an Emergency Medicine Specialist with over 8 years of experience. He is well-versed in emergency procedures like airway management, resuscitation, and surgical & trauma management. He previously served as an Emergency Medicine Specialist in the Oman Ministry of Health.",
+            bio: "Dr. Jackson P John is a premier Emergency Medicine Specialist with over 8 years of intensive clinical experience, including a significant tenure with the Oman Ministry of Health. He is a master of high-stress clinical environments, specializing in advanced airway management, complex trauma stabilization, and critical care transport. His approach combines rapid diagnostic intuition with technical precision in surgical and trauma emergencies, ensuring the highest survival rates for critical arrivals at Indira Hospital.",
             education: [
-                { degree: "MBBS", institution: "D.Y Patil University Navi Mumbai", year: "2017" },
-                { degree: "Master's in Emergency Medicine", institution: "Kokilaben Dhirubhai Ambani Hospital Mumbai", year: "" }
+                { degree: "MBBS", institution: "D.Y Patil University, Navi Mumbai", year: "2017" },
+                { degree: "Masters in Emergency Medicine", institution: "Kokilaben Dhirubhai Ambani Hospital, Mumbai" }
             ],
-            specialties: ["Emergency Medicine", "Airway Management", "Trauma Management"],
+            specialties: ["Emergency Medicine", "Advanced Airway Management", "Trauma & Surgical Emergencies", "Disaster Medicine"],
             procedures: [
-                "Intubation & Resuscitation",
-                "Central Line Access",
-                "Arterial Line Access",
-                "Surgical & Trauma Management"
+                "Oro-tracheal Intubation & RSI",
+                "Advanced Trauma Life Support (ATLS)",
+                "Central Venous Access",
+                "Tube Thoracostomy (Chest Tube)",
+                "Management of Septic & Cardiogenic Shock",
+                "Focused Assessment with Sonography in Trauma (FAST)"
             ],
-            experience_years: 8,
+            experience_years: 9,
             faqs: [
                 {
-                    question: "What registration does Dr. Jackson hold?",
-                    answer: "He is a registered medical practitioner with registration number 2017051750."
+                    question: "What is the average response time for critical trauma?",
+                    answer: "Under Dr. Jackson's protocols, the primary stabilization occurs within the 'Golden Hour'—often within minutes of arrival at our dedicated Triage unit."
+                },
+                {
+                    question: "Does Dr. Jackson handle pediatric emergencies?",
+                    answer: "Yes, he is highly trained in managing acute pediatric respiratory and trauma emergencies."
                 }
             ]
         },
@@ -324,38 +341,32 @@ export const SEED_DATA = {
             designation: "Specialist Dentist",
             department: "Dentistry",
             image: "/images/doctors/dr-dhanushmi.jpg",
-            bio: "Dr. T. S. Dhanushmi is a compassionate and skilled General Dentist with clinical experience in preventive, restorative, and basic surgical dental procedures. She is dedicated to delivering patient-centered dental care, focusing on accurate diagnosis, gentle treatment, and long-term oral health outcomes.\n\nWith professional experience across multiple dental clinics and hospitals in South India, Dr. Dhanushmi has handled a wide range of dental conditions, from routine preventive treatments to complex restorative cases. Her approach combines clinical precision, patient education, and preventive dentistry to help patients maintain healthy and confident smiles. She is known for her excellent communication skills, patience with patients, and commitment to high-quality dental care.\n\nDr. Dhanushmi also has extensive hands-on experience in community dental health programs and has assisted in advanced surgical procedures, strengthening her clinical judgment and interdisciplinary collaboration.",
+            bio: "Dr. T. S. Dhanushmi is a premier restorative and preventive dental specialist at Smile Happy Dental Club, Indira Hospital. With her Fellowship in Advanced Clinical Training, she specializes in aesthetic smile corrections and painless restorative procedures. Her clinical philosophy focuses on 'Preventive Precision'—identifying oral health issues before they require invasive intervention. Known for her gentle chairside manner and patient education, she ensures a stress-free experience for patients with dental anxiety while delivering high-aesthetic composite and ceramic restorations.",
             education: [
-                { degree: "Bachelor of Dental Surgery (BDS)", institution: "Raja Rajeswari Dental College & Hospital, Bengaluru", year: "2019" },
-                { degree: "F.C.E (Advanced Clinical Training)", institution: "Asian Institute of Advanced Dentistry", year: "2021" }
+                { degree: "Bachelor of Dental Surgery (BDS)", institution: "Raja Rajeswari Dental College, Bengaluru", year: "2019" },
+                { degree: "F.C.E (Fellowship in Advanced Clinical Training)", institution: "AIAD", year: "2021" }
             ],
-            specialties: ["Preventive Dentistry", "Restorative Dentistry", "Patient Education", "Routine Dental Surgery"],
+            specialties: ["Aesthetic Dentistry", "Preventive Care", "Micro-Restorations", "Pediatric Dental Wellness"],
             procedures: [
-                "Ultrasonic scaling and polishing",
-                "Routine dental cleaning procedures",
-                "Preventive dental education",
-                "Oral hygiene maintenance",
-                "Class II composite restorations",
-                "Aesthetic corrections of anterior teeth",
-                "Tooth restorations with modern restorative materials",
-                "Surgical extractions",
-                "Extraction of grossly decayed teeth and root stumps",
-                "Alveoloplasty procedures",
-                "Access cavity preparation",
-                "Root canal treatment assistance",
-                "Restoration after endodontic therapy"
+                "Advanced Ultrasonic Scaling",
+                "Aesthetic Composite Bonding",
+                "Painless Tooth Restorations",
+                "Ceramic Veneer Preparations",
+                "Surgical Extractions & Alveoloplasty",
+                "Preventive Pit & Fissure Sealants",
+                "Interdisciplinary Endodontic Assistance"
             ],
-            experience_years: 5,
+            experience_years: 6,
             related_services: ["dentistry"],
             available_locations: ["vellore"],
             faqs: [
                 {
-                    question: "What is Dr. Dhanushmi's specialty?",
-                    answer: "She specializes in preventive and restorative dentistry, ensuring long-term oral health through gentle and precise treatments."
+                    question: "How often should I visit for ultrasonic scaling?",
+                    answer: "Dr. Dhanushmi recommends a professional cleaning every 6 months to prevent periodontal disease and maintain restorative work."
                 },
                 {
-                    question: "Does she treat children?",
-                    answer: "Yes, Dr. Dhanushmi provides compassionate dental care for patients of all ages, including pediatric preventive treatments."
+                    question: "Are your composite fillings tooth-colored?",
+                    answer: "Yes, we use advanced nano-hybrid composites that perfectly match the natural shade and translucency of your teeth."
                 }
             ],
             reviews: []
@@ -410,6 +421,7 @@ export const SEED_DATA = {
             "slug": "bariatrics",
             "short_description": "Transform your life with safe, effective Bariatric & Weight Loss Surgery at Indira Hospital.",
             "icon": "Scale",
+            "specialists": ["dr-karan-shankar"],
             "full_description": "<h2>Complete Bariatric & Weight Loss Solutions at Indira Hospital</h2>\n<p>Struggling with severe obesity and related health conditions? The <strong>Department of Bariatrics</strong> at Indira Super Speciality Hospital offers a highly effective, surgical pathway to sustained weight loss, reversing metabolic issues, and reclaiming your quality of life.</p>\n<h3>Advanced Laparoscopic Bariatric Procedures</h3>\n<p>Our highly skilled surgical team specializes in minimally invasive weight loss procedures that ensure minimal scarring, reduced pain, and rapid recovery:</p>\n<ul>\n<li><strong>Laparoscopic Sleeve Gastrectomy</strong>: A highly effective procedure that reduces stomach volume, limiting food intake and lowering hunger-inducing hormones.</li>\n<li><strong>Gastric Bypass Surgery (Roux-en-Y)</strong>: The gold standard in bariatric surgery, resolving severe obesity and drastically improving conditions like Type 2 Diabetes.</li>\n<li><strong>Mini Gastric Bypass</strong>: A simpler, faster alternative to the traditional bypass with comparable weight-loss results and excellent metabolic outcomes.</li>\n</ul>\n<h3>A Holistic Approach to Your Weight Loss Journey</h3>\n<p>Bariatric surgery is just the beginning. Our dedicated multidisciplinary team—comprising surgeons, endocrinologists, dietitians, and physiotherapists—provides comprehensive pre-operative screening and lifelong post-operative support. We partner with you to ensure sustainable weight management and a profound transformation in your overall health.</p>"
         },
         {
@@ -438,6 +450,7 @@ export const SEED_DATA = {
             "slug": "dentistry",
             "short_description": "Advanced specialized care in Dentistry at Indira Super Speciality Hospital.",
             "icon": "Smile",
+            "specialists": ["dr-rockson-samuel", "dr-dhanushmi"],
             "full_description": "<h2>Advanced Dentistry & Maxillofacial Care</h2>\n<p>A healthy smile is foundational to your overall well-being. The <strong>Department of Dentistry</strong> at Indira Super Speciality Hospital, led by <strong>Dr. Rockson Samuel</strong>, is equipped with state-of-the-art dental chairs, digital imaging, and a highly experienced team of specialists to solve complex dental challenges.</p>\n<h3>Comprehensive Dental Services</h3>\n<p>Our aesthetic and functional dental solutions include:</p>\n<ul>\n<li><strong>Restorative Dentistry</strong>: Painless single-sitting root canals, zirconium crowns, and high-quality dental bridges securely restoring your bite.</li>\n<li><strong>Implantology</strong>: Precision-guided, permanent titanium dental implants replicating the look and feel of natural teeth.</li>\n<li><strong>Maxillofacial Surgery</strong>: Advanced surgical correction for facial trauma, jaw deformities, and complex wisdom tooth extractions.</li>\n<li><strong>Cosmetic Odontology</strong>: Professional teeth whitening, customized veneers, and complete smile makeovers perfectly aligned with your facial structure.</li>\n</ul>\n<p>From routine scaling and polishing to advanced full-mouth rehabilitations, Dr. Rockson Samuel and his team ensure a virtually pain-free experience in a sterile, modern environment.</p>"
         },
         {
@@ -459,6 +472,7 @@ export const SEED_DATA = {
             "slug": "ent",
             "short_description": "Advanced micro-surgery and comprehensive care for Ear, Nose, and Throat disorders.",
             "icon": "Ear",
+            "specialists": ["dr-gayathri"],
             "full_description": "<h2>Specialized Ear, Nose, and Throat (ENT) Care in Vellore</h2>\n<p>Experience clear hearing, easy breathing, and a healthy voice. The <strong>Department of ENT (Otorhinolaryngology)</strong> at Indira Super Speciality Hospital provides advanced diagnostic and surgical solutions for complex disorders of the ear, nose, throat, head, and neck.</p><h3>Advanced Diagnostics & Micro-Surgery</h3>\n<p>Equipped with state-of-the-art diagnostic audiometry, nasal endoscopy, and microscopy, our renowned ENT specialists offer sophisticated treatments with minimal discomfort:</p>\n<ul>\n<li><strong>Otology (Ear Care)</strong>: Micro-ear surgeries for hearing restoration (Tympanoplasty, Mastoidectomy), treatment of chronic ear infections, vertigo, and dizziness management.</li>\n<li><strong>Rhinology (Nose & Sinus)</strong>: Functional Endoscopic Sinus Surgery (FESS) for chronic sinusitis, Septoplasty for deviated septum, and management of nasal polyps and allergies.</li>\n<li><strong>Laryngology (Throat & Voice)</strong>: Micro-laryngeal surgery for vocal cord nodules/polyps, treatment of tonsillitis, adenoids, and swallowing disorders.</li>\n<li><strong>Head & Neck Surgery</strong>: Expert surgical management of thyroid, parathyroid, and salivary gland tumors, ensuring optimal oncological and functional outcomes.</li>\n</ul>\n<p>From pediatric ENT issues like recurrent ear infections to complex adult head and neck pathologies, we provide compassionate, comprehensive care tailored to your needs.</p>"
         },
         {
@@ -501,6 +515,7 @@ export const SEED_DATA = {
             "slug": "general-surgery",
             "short_description": "Precision General and Laparoscopic surgeries designed for minimal pain and faster recovery.",
             "icon": "Scalpel",
+            "specialists": ["dr-shankar", "dr-karan-shankar"],
             "full_description": "<h2>Advanced General & Laparoscopic Surgery in Vellore</h2>\n<p>When medication is not enough, you need surgical expertise you can trust implicitly. The <strong>Department of General & Laparoscopic Surgery</strong> at Indira Super Speciality Hospital blends unmatched surgical skill with modern minimally invasive technology to deliver safe, highly effective outcomes.</p>\n<h3>Minimally Invasive Focus</h3>\n<p>We believe in faster healing with minimal scarring. Our surgical center is equipped with state-of-the-art modular operation theaters and high-definition laparoscopy units:</p>\n<ul>\n<li><strong>Advanced Laser Proctology</strong>: Painless, bloodless, and stitchless laser interventions for Piles (Hemorrhoids), Fissures, and complex Fistulas. Most cases offer same-day discharge.</li>\n<li><strong>Laparoscopic Hernia Repair</strong>: Advanced 3D mesh repair for Inguinal, Umbilical, and Incisional hernias, ensuring very low recurrence rates and rapid return to daily life.</li>\n<li><strong>Endocrine & Breast Surgery</strong>: Specialized surgical management for Thyroid conditions (goiter, nodules, cancers) and comprehensive breast lump excisions using cosmetic preservation techniques.</li>\n<li><strong>Emergency & Trauma Surgery</strong>: 24/7 readiness for acute conditions such as appendicitis, intestinal obstruction, and acute cholecystitis (gallbladder stones).</li>\n</ul>\n<p>Your safety is paramount. Our surgeons utilize advanced Harmonic Scalpels and Diode Laser units to ensure precision, dramatically reducing post-operative pain and accelerating your recovery path.</p>",
             "pricing": [
                 {
@@ -1146,6 +1161,7 @@ export const SEED_DATA = {
             "slug": "obstetrics-gynaecology",
             "short_description": "Elite Women's Healthcare including advanced Laparoscopy and Maternal Fetal medicine.",
             "icon": "Baby",
+            "specialists": ["dr-praharshitha-sagiraju"],
             "full_description": "<h2>Comprehensive Gynaecology & Maternal-Fetal Medicine</h2>\n<p>Empowering women through every stage of life—from adolescence to menopause. The <strong>Department of Obstetrics & Gynaecology</strong> at Indira Super Speciality Hospital, led by <strong>Dr. Praharshitha Sagiraju</strong> (MS AIIMS, PDCC), is a sanctuary of clinical excellence and compassionate care.</p>\n<h3>Advanced Women's Health Interventions</h3>\n<p>We provide a wide spectrum of surgical and medical solutions designed for rapid recovery and optimal outcomes:</p>\n<ul>\n<li><strong>Precision Gynaec Laparoscopy</strong>: Minimally invasive (Keyhole) surgical management for complex Uterine Fibroids, Ovarian Cysts, Endometriosis, and Total Laparoscopic Hysterectomy (TLH).</li>\n<li><strong>High-Risk Maternity Care</strong>: Dedicated 24/7 obstetric support for pregnancies complicated by Gestational Diabetes, Preeclampsia (BP), and Twin pregnancies.</li>\n<li><strong>Elite Fertility Center</strong>: Compassionate diagnostic evaluation and advanced therapeutic protocols for couples navigating conception challenges, led by specialists in Reproductive Medicine.</li>\n<li><strong>Aesthetic & Preventive Gynaecology</strong>: Advanced PAP smear screenings, Colposcopy, and specialized care for Menopausal health including bone density and heart health.</li>\n</ul>\n<p>Supported by a Level II NICU, we ensure that both mother and newborn receive the highest standard of safety and clinical vigilance in Vellore.</p>",
             "pricing": [
                 {

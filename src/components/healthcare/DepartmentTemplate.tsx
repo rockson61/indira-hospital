@@ -10,6 +10,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { WhyChooseUs } from "@/components/trust/WhyChooseUs";
 import { ModernCard } from "@/components/ui/modern-card";
+import { LocalSEOFooter } from "@/components/healthcare/LocalSEOFooter";
 import { siteConfig } from "@/config/site";
 
 interface Procedure {
@@ -33,7 +34,7 @@ interface DepartmentTemplateProps {
     title: string;
     slug: string;
     shortDescription: string;
-    fullDescription: string;
+    fullDescription: string | React.ReactNode;
     icon?: React.ReactNode;
     procedures?: string[] | Procedure[];
     relatedDoctors?: any[];
@@ -148,7 +149,13 @@ export function DepartmentTemplate({
                     <div className="lg:col-span-8 space-y-10">
                         <div className="prose prose-lg max-w-none prose-slate dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-strong:text-[#005f73] dark:prose-strong:text-fuchsia-300">
                             <h2 className="elite-section-title mb-6">Expert Care in {title}</h2>
-                            {fullDescription && <div dangerouslySetInnerHTML={{ __html: fullDescription }} />}
+                            {fullDescription && (
+                                typeof fullDescription === 'string' ? (
+                                    <div dangerouslySetInnerHTML={{ __html: fullDescription }} />
+                                ) : (
+                                    <div>{fullDescription}</div>
+                                )
+                            )}
                             {children}
                         </div>
 
@@ -317,6 +324,7 @@ export function DepartmentTemplate({
                     </div>
                 </SectionContainer>
             </section>
+            <LocalSEOFooter />
         </div>
     );
 }

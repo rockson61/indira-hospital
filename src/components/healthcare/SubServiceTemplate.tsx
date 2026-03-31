@@ -20,6 +20,9 @@ import { ServiceQuickSummary } from '@/components/healthcare/services/ServiceQui
 import { ProcedureComparison } from '@/components/healthcare/services/ProcedureComparison'
 import { TreatmentSecondaryNav } from '@/components/healthcare/services/TreatmentSecondaryNav'
 import { ConversionGrid } from '@/components/healthcare/services/ConversionGrid'
+import { LocalSEOFooter } from '@/components/healthcare/LocalSEOFooter'
+import { DoctorCard } from '@/components/entities/DoctorCard'
+import type { Doctor } from '@/data/doctors'
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
 const iconMap: Record<string, React.ElementType> = {
@@ -73,6 +76,8 @@ export interface SubServiceTemplateProps {
     recoveryTime?: string
     anesthesia?: string
     showComparison?: boolean
+    fullDescription?: React.ReactNode
+    specialists?: Doctor[]
     children?: React.ReactNode
 }
 
@@ -99,11 +104,23 @@ export function SubServiceTemplate({
     recoveryTime,
     anesthesia,
     showComparison = true,
+    fullDescription,
+    specialists = [],
 }: SubServiceTemplateProps) {
     const isDental = title.toLowerCase().includes('dental') || title.toLowerCase().includes('dentistry') || eyebrow?.toLowerCase().includes('dental') || departmentName?.toLowerCase().includes('dental');
     const contactPhone = isDental ? "+91 7010650063" : siteConfig.contact.phone;
-    const whatsappUrl = `https://wa.me/${contactPhone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi, I need information about ${title} at Indira Hospital.`)}`;
-    const bookingUrl = '/book-appointment'
+    const whatsappUrl = `https://wa.me/${contactPhone.replace(/\s+/g, '')}?text=${encodeURIComponent(`Hi, I'm interested in ${title}. Can I get more details?`)}`;
+    const bookingUrl = `/book-appointment?service=${encodeURIComponent(title)}&dept=${encodeURIComponent(departmentName || 'General')}`;
+
+    // Auto-populate specialists from global doctor data if not provided
+    const displaySpecialists = specialists.length > 0 
+        ? specialists 
+        : (departmentSlug 
+            ? (require('@/data/doctors').doctors as Doctor[]).filter(d => 
+                d.departmentId === departmentSlug || 
+                (d.specialties && d.specialties.some(s => s.toLowerCase().includes(departmentSlug.toLowerCase())))
+              ).slice(0, 2)
+            : []);
 
     // ── Data Transformation ──────────────────────────────────────────────────
     // Merge specialized clinical data (features/benefits) into the standard MarketingContent components format
@@ -325,6 +342,38 @@ export function SubServiceTemplate({
                                 </div>
                             ))}
                         </div>
+
+                        {/* Elite Specialists Section */}
+                        {displaySpecialists.length > 0 && (
+                            <div className="mt-20 pt-20 border-t border-slate-100 dark:border-slate-800">
+                                <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+                                    <div>
+                                        <span className="text-fuchsia-600 font-bold text-sm tracking-widest uppercase flex items-center gap-2">
+                                            <Sparkles className="w-4 h-4" /> Leading Clinical Expertise
+                                        </span>
+                                        <h2 className="elite-section-title text-slate-900 dark:text-white mt-2">Consult Our Senior Specialists</h2>
+                                        <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl font-medium">
+                                            Hand-picked senior specialists with international training and a combined experience of over 50,000 successful procedures.
+                                        </p>
+                                    </div>
+                                    <Link href="/doctor" className="group flex items-center gap-2 text-fuchsia-700 font-bold hover:gap-4 transition-all uppercase tracking-widest text-xs">
+                                        View All Specialists <ArrowRight className="w-5 h-5" />
+                                    </Link>
+                                </div>
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    {displaySpecialists.map((doc, idx) => (
+                                        <DoctorCard key={idx} doctor={doc} variant="list" />
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Elite Full Description Section */}
+                        {fullDescription && (
+                            <div id="clinical-deep-dive" className="elite-content-wrapper">
+                                {fullDescription}
+                            </div>
+                        )}
 
                         {/* Children (rich prose content) */}
                         {children && (
@@ -597,6 +646,7 @@ export function SubServiceTemplate({
                     </div>
                 </SectionContainer>
             </section>
+            <LocalSEOFooter />
         </div>
     )
 }

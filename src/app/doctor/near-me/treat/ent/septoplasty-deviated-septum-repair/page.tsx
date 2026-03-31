@@ -11,135 +11,196 @@ import {
     Wind,
     Activity,
     CheckCircle2,
-    Users
+    Microscope,
+    Target,
+    Navigation,
+    ThermometerSnowflake,
+    PlayCircle,
+    ArrowRightCircle,
+    Eye,
+    Search,
+    UserCheck,
+    MapPin
 } from 'lucide-react'
 
 export default function SeptoplastyPage() {
     return (
         <SubServiceTemplate
-            title="Septoplasty: Deviated Septum Repair Guide"
+            title="Elite Septoplasty: Deviated Septum Restoration"
             slug="septoplasty-deviated-septum-repair"
             parentServiceSlug="ent"
-            departmentName="ENT (Otolaryngology)"
+            departmentName="Indira Elite ENT Hub"
             description={
                 <>
                     <p>
-                        A **Deviated Nasal Septum (DNS)** can significantly obstruct your breathing, leading to chronic mouth-breathing, snoring, and recurring sinus infections. **Septoplasty** is the surgical correction of this internal nasal wall to restore a balanced and clear airway. At Indira Super Speciality Hospital, we perform endoscopic-assisted septoplasty for maximum precision and minimal tissue trauma.
+                        A **Deviated Nasal Septum (DNS)** is more than just a crooked nose—it is a mechanical obstruction that can impact your sleep, cardiac health, and quality of life. At Indira Super Speciality Hospital, we utilize **Endoscopic-Assisted Septoplasty** to precisely realign the internal nasal foundation. Our precision-guided approach ensures 100% airway restoration with zero external incisions and a rapid "No-Packing" recovery.
                     </p>
-                    <p className="mt-4 text-blue-600 dark:text-blue-400 font-semibold italic">
-                        "Correcting the foundation of nasal breathing for better health."
+                    <p className="mt-4 text-emerald-600 dark:text-emerald-400 font-semibold italic">
+                        "Physiological foundation: Restoring your natural breath through precision."
                     </p>
                 </>
             }
-        >
-            <div className="space-y-16">
-                {/* Visual Section: Why Septoplasty? */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <div className="p-8 rounded-3xl bg-blue-50 dark:bg-blue-900/50 border border-blue-100 dark:border-blue-800 shadow-lg">
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-blue-800 dark:text-blue-300">Functional Airway Restoration</h4>
-                        <ul className="space-y-4">
-                            {[
-                                { title: "Endoscopic Accuracy", text: "Endoscopes look deep into the nasal cavity to address posterior deviations missed by conventional surgery." },
-                                { title: "Turbinate Reduction", text: "Simultaneous reduction of enlarged turbinates (concha) for extra airway volume." },
-                                { title: "Internal Splinting", text: "Using silicone splints to maintain alignment without the need for traditional painful packing." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex gap-3 items-start">
-                                    <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-1" />
-                                    <div>
-                                        <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="relative group">
-                        <div className="absolute inset-0 bg-[#005f73]/20 rounded-[3rem] blur-3xl" />
-                        <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-2xl">
-                            <Wind className="w-24 h-24 text-blue-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
-                            <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Breathe Free</p>
-                            <p className="text-slate-500 text-sm">Correcting anatomical blocks to restore 100% nasal throughput.</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Deep Dive Content */}
-                <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Understanding the Deviated Septum</h3>
-                    <p>
-                        The nasal septum is the wall of bone and cartilage that divides your nose into two separate nostrils. When this wall is crooked (deviated), it can obstruct one or both sides of the nose. This rarely resolves with medication alone, as it is a structural mechanical block. **Dr. Gayathri**, our lead ENT surgeon, specializes in correcting these deviations using advanced microsurgical tools that preserve the strength of the nasal support while maximizing the internal space.
-                    </p>
-
-                    <h4 className="text-[#005f73] dark:text-fuchsia-400 font-primary">Symptoms That Require Septoplasty:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-                        {[
-                            "Difficulty breathing through one or both nostrils",
-                            "Recurring nosebleeds (Epistaxis)",
-                            "Facial pain or chronic headaches",
-                            "Noisy breathing or loud snoring during sleep",
-                            "Preferential sleeping on one side for better breathing"
-                        ].map((symptom, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                                <CheckCircle2 className="w-5 h-5 text-blue-500" />
-                                <span className="text-sm font-medium">{symptom}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-blue-500 pl-4 italic">The Surgical Process: Precision & Comfort</h3>
-                    <p>
-                        Septoplasty is performed entirely through the nostrils, meaning there are **no external scars**. Our procedure is meticulously planned using pre-operative diagnostic imaging (CT Scans if necessary) to map out every anatomical variation. During the 45-60 minute surgery, only the obstructing parts of the bone and cartilage are straightened or removed, ensuring the tip of the nose remains stable and aesthetically pleasing.
-                    </p>
-
-                    <h4 className="font-primary text-[#005f73] dark:text-fuchsia-400 mt-10">Advanced Surgical Advantages:</h4>
-                    <ul>
-                        <li>**Endoscopic Precision**: Visualizing the 'high' and 'posterior' deviations often missed by conventional head-mirrors.</li>
-                        <li>**Minimal Bleeding**: Use of bipolar cautery to precisely seal blood vessels on-the-fly.</li>
-                        <li>**No Painful Packing**: We use modern 'Internal Septal Splints' that have small built-in tubes, allowing you to breathe through your nose immediately after surgery.</li>
-                    </ul>
-                </div>
-
-                {/* FAQ Section */}
-                <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-transparent" />
-                    
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
-                        <Info className="text-blue-400" />
-                        Septoplasty: Clearing Potential Doubts
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
-                        {[
-                            {
-                                q: "Will a septoplasty change my outer appearance?",
-                                a: "No, septoplasty is a functional internal surgery. It does not change the shape or aesthetics of your nose. If you desire cosmetic changes as well, it can be combined with Rhinoplasty (Septo-rhinoplasty)."
-                            },
-                            {
-                                q: "Is it a day-care procedure?",
-                                a: "Most septoplasties at Indira Hospital are day-care or require a single overnight stay of 24 hours."
-                            },
-                            {
-                                q: "When can I return to heavy exercise or the gym?",
-                                a: "You should avoid strenuous activities and weightlifting for at least 3 weeks to prevent increases in blood pressure that could cause nosebleeds."
-                            },
-                            {
-                                q: "How long until I see the final results?",
-                                a: "You will notice an immediate improvement in airflow once the internal splints are removed (usually 1 week). Breathing continues to improve as internal swelling subsides over the following month."
-                            }
-                        ].map((faq, idx) => (
-                            <div key={idx} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                                <h4 className="font-bold text-blue-400 mb-4 flex items-start gap-2">
-                                    <Zap className="w-5 h-5 mt-1 shrink-0" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">
-                                    {faq.a}
+            quickFacts={[
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Visualization', value: '4K Endoscopic', icon: 'Eye' },
+                { label: 'Care Type', value: 'Functional', icon: 'Shield' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
+            ]}
+            duration="45-60 Minutes"
+            hospitalStay="Daycare / 1 night"
+            recoveryTime="5-7 Days"
+            anesthesia="General Anesthesia"
+            reviews={{
+                entityType: 'service',
+                entityName: 'Septoplasty',
+                entitySlug: 'septoplasty-deviated-septum-repair'
+            }}
+            fullDescription={
+                <div className="space-y-16">
+                    {/* Mechanism: Restoring Nasal Throughput */}
+                    <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary">
+                            Mechanism: Restoring Nasal Throughput
+                        </h3>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div className="prose prose-slate dark:prose-invert">
+                                <p className="text-lg leading-relaxed">
+                                    The nasal septum is the central "pillar" of the nose. When it deviates, it creates a narrow bottleneck that increases airflow resistance. This forces the body into chronic mouth-breathing, which bypasses the nose's natural filtering and humidifying system.
                                 </p>
+                                <p className="mt-4">
+                                    **Elite Septoplasty** at Indira is performed using high-power fiberoptic endoscopes. Unlike traditional surgery, which depends on external lighting, our surgeons can see "around the corner" to address posterior bone spurs and complex deviations that cause persistent blockages.
+                                </p>
+                                <div className="mt-8 space-y-4">
+                                    <div className="flex items-center gap-3">
+                                        <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+                                        <span><strong>Microsurgical Reshaping</strong>: Preservation of healthy cartilage while removing only the obstructed segments.</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+                                        <span><strong>Sub-perichondrial Dissection</strong>: Protecting the mucosal lining to prevent post-op dryness and scarring.</span>
+                                    </div>
+                                </div>
                             </div>
-                        ))}
-                    </div>
+                            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
+                                <Wind className="w-16 h-16 text-emerald-500 mb-6" />
+                                <h4 className="text-xl font-bold mb-2">The "No-Pack" Protocol</h4>
+                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                    We have eliminated the "Dreaded Nasal Packing." We use internal silicone splints with built-in airways, allowing you to breathe through your nose immediately after waking up from surgery.
+                                </p>
+                                <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
+                                    <Shield className="w-4 h-4" />
+                                    Elite Recovery Assurance
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Pre-Op Diagnostic Audit */}
+                    <section>
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Precision Pre-Surgical Audit</h3>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                A successful septoplasty requires precise anatomical mapping. We investigate both the bone structure and the soft tissue (turbinates) to ensure maximum throughput.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                {
+                                    title: "DNE Mapping",
+                                    desc: "Diagnostic Nasal Endoscopy to identify high-deviations and spurs that traditional exams might miss.",
+                                    icon: Search
+                                },
+                                {
+                                    title: "Turbinate Assessment",
+                                    desc: "Evaluating the Inferior Turbinates for 'Compensatory Hypertrophy' which often accompanies a deviated septum.",
+                                    icon: Activity
+                                },
+                                {
+                                    title: "CT-Nasal Analysis",
+                                    desc: "High-resolution imaging to rule out co-existing sinus conditions or Haller cells that impact breathing.",
+                                    icon: Navigation
+                                }
+                            ].map((item, i) => (
+                                <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all">
+                                    <item.icon className="w-12 h-12 text-emerald-600 mb-6" />
+                                    <h4 className="text-xl font-bold mb-3">{item.title}</h4>
+                                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Technical Deep Dive: Turbinate Reduction */}
+                    <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
+                        <h3 className="text-3xl font-bold mb-4">Synergy: Septoplasty + Turbinate Reduction</h3>
+                        <p className="text-slate-400 max-w-2xl mx-auto mb-12">
+                            When the septum is bent to one side, the other side often grows larger (Hypertrophy). At Indira, we automatically address both to ensure total breathing balance.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
+                            {[
+                                { day: "Day 0", title: "Micro-Dissection", text: "Endoscopic alignment of cartilage with zero external cuts." },
+                                { day: "Day 1", title: "Home Free", text: "Most patients discharged within 24 hours with minimal bruising." },
+                                { day: "Day 7", title: "Splint Removal", text: "Removing the silicone splints in the clinic. Immediate surge in airflow." },
+                                { day: "Week 4", title: "Peak Health", text: "Restoration of sense of smell and elimination of mouth-breathing." }
+                            ].map((step, i) => (
+                                <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                                    <p className="text-emerald-400 font-bold mb-2">{step.day}</p>
+                                    <h5 className="font-bold text-sm mb-2">{step.title}</h5>
+                                    <p className="text-xs text-slate-400 leading-relaxed">{step.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Clinical FAQ Hub */}
+                    <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                            <Info className="text-emerald-500" />
+                            Elite Clinical FAQs: Septoplasty
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            {[
+                                {
+                                    q: "Will a Septoplasty change the shape of my nose?",
+                                    a: "No. Septoplasty is a functional surgery performed entirely inside the nasal cavity. It focuses on the internal foundation and does not alter the external cosmetics of the nose unless combined with Rhinoplasty."
+                                },
+                                {
+                                    q: "Is the surgery performed under General Anesthesia?",
+                                    a: "Yes. To ensure absolute surgical precision and patient comfort, especially during endoscopic maneuvers, septoplasty is performed under GA with controlled monitoring."
+                                },
+                                {
+                                    q: "How soon can I stop mouth-breathing?",
+                                    a: "With our 'No-Pack' protocol using silicone splints, many patients can breathe through their nose immediately after surgery. However, total comfort is reached after splint removal on Day 7."
+                                },
+                                {
+                                    q: "Can the deviation return?",
+                                    a: "Cartilage has 'memory.' Our surgical team utilizes specialized 'cross-hatching' and 'scoring' techniques to break this memory and ensure the septum remains straight long-term."
+                                },
+                                {
+                                    q: "What is the difference between Septoplasty and Rhinoplasty?",
+                                    a: "Septoplasty is medical/functional (fixing a breathing block). Rhinoplasty is cosmetic (changing the external look). At Indira, we often perform 'Septo-Rhinoplasty' for patients who want both."
+                                },
+                                {
+                                    q: "What should I avoid during recovery?",
+                                    a: "Avoid lifting heavy weights, blowing your nose forcefully, and hot steam showers for at least 2 weeks to prevent post-op bleeding."
+                                }
+                            ].map((faq, i) => (
+                                <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800">
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+                                        <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
+                                        {faq.q}
+                                    </h4>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6">
+                                        {faq.a}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
                 </div>
-            </div>
-        </SubServiceTemplate>
-    );
+            }
+        />
+    )
 }

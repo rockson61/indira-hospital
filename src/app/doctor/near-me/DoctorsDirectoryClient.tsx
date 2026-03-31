@@ -155,7 +155,9 @@ export default function DoctorsDirectoryClient() {
                                                 <div className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">
                                                     <Star className="w-3 h-3 text-pink-500" /> Qualification
                                                 </div>
-                                                <p className="text-lg font-black text-slate-900 dark:text-white truncate">{doctor.education[0]}</p>
+                                                <p className="text-lg font-black text-slate-900 dark:text-white truncate">
+                                                    {typeof doctor.education[0] === 'string' ? doctor.education[0] : (doctor.education[0] as any).degree}
+                                                </p>
                                             </div>
                                         </div>
 

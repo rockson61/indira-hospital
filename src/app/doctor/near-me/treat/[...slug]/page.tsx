@@ -28,6 +28,7 @@ import { ServiceQuickSummary } from "@/components/healthcare/services/ServiceQui
 import { ProcedureComparison } from "@/components/healthcare/services/ProcedureComparison";
 import { TreatmentSecondaryNav } from "@/components/healthcare/services/TreatmentSecondaryNav";
 import { ConversionGrid } from "@/components/healthcare/services/ConversionGrid";
+import { LocalSEOFooter } from "@/components/healthcare/LocalSEOFooter";
 
 
 
@@ -679,6 +680,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 limit={24}
                 className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50"
             />
+            <LocalSEOFooter />
         </div >
     );
 }

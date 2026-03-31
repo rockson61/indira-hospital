@@ -7,7 +7,7 @@ export interface Doctor {
     specialty: string;
     departmentId: string;
     experience: number;
-    education: string[];
+    education: (string | { degree: string; institution: string; year?: string })[];
     imageUrl: string;
     availability: string[];
     bio: string;
