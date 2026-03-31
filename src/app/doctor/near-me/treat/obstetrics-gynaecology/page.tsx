@@ -25,23 +25,23 @@ export default function GynaecologyPillarPage() {
             title={title}
             slug={slug}
             shortDescription={shortDescription}
-            fullDescription={
+            fullDescription={(
                 <div className="space-y-20 text-left">
                     {/* ── 1. The Clinical Vision ────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-rose-900 dark:text-rose-400 font-primary italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight">
+                        <h2 className="text-4xl font-black text-rose-900 dark:text-rose-400 font-primary italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             The Gynaecology Authority: Precision Women's Care
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
-                                The **Department of Gynaecology & Obstetrics** at Indira Super Speciality Hospital is a regional center of excellence dedicated to the total healthcare lifecycle of women. Led by **Dr. Praharshitha Sagiraju** (MS - AIIMS Raipur, PDCC - Gynae Endoscopy), we merge the highest academic standards of AIIMS with a deeply compassionate, patient-first philosophy.
+                                The <strong>Department of Gynaecology &amp; Obstetrics</strong> at Indira Super Speciality Hospital is a regional center of excellence dedicated to the total healthcare lifecycle of women. Led by <strong>Dr. Praharshitha Sagiraju</strong> (MS - AIIMS Raipur, PDCC - Gynae Endoscopy), we merge the highest academic standards of AIIMS with a deeply compassionate, patient-first philosophy.
                             </p>
                             <p className="mt-4">
-                                Our facility is built on the pillars of **Zero-Compromise Safety** and **Minimal Access Surgery**. From the sub-millimeter precision of 4K Laparoscopic Hysterectomies to the high-vigilance management of High-Risk Pregnancies, we ensure that women in Vellore have access to elite clinical pathways previously only available in major metropolitan centers.
+                                Our facility is built on the pillars of <strong>Zero-Compromise Safety</strong> and <strong>Minimal Access Surgery</strong>. From the sub-millimeter precision of 4K Laparoscopic Hysterectomies to the high-vigilance management of High-Risk Pregnancies, we ensure that women in Vellore have access to elite clinical pathways previously only available in major metropolitan centers.
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose">
+                        <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
                             <div className="p-8 bg-rose-50 dark:bg-rose-900/20 rounded-[2.5rem] border border-rose-100 dark:border-rose-800 shadow-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 blur-3xl group-hover:bg-rose-500/20 transition-all"></div>
                                 <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2 italic uppercase tracking-tighter">
@@ -49,7 +49,7 @@ export default function GynaecologyPillarPage() {
                                     Minimal Access (Keyhole) Hub
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
-                                    Transforming major surgeries into daycare procedures. We specialize in **4K Laparoscopic Hysterectomy** and **Laparoscopic Myomectomy** (Fibroid removal), ensuring near-invisible scarring and a return to home within 24-48 hours.
+                                    Transforming major surgeries into daycare procedures. We specialize in <strong>4K Laparoscopic Hysterectomy</strong> and <strong>Laparoscopic Myomectomy</strong> (Fibroid removal), ensuring near-invisible scarring and a return to home within 24-48 hours.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
                                     <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 font-primary italic">AIIMS PROTOCOLS</span>
@@ -62,8 +62,8 @@ export default function GynaecologyPillarPage() {
                                     <Activity className="w-6 h-6" />
                                     High-Risk Maternal Security
                                 </h4>
-                                <p className="text-rose-100/60 text-sm leading-relaxed mb-6 italic font-medium italic">
-                                    Managing pregnancies complicated by PIH, Diabetes, or twins. Our Maternal-Fetal units are backed by a **Level II Neonatal ICU**, providing a safety net for premature births and obstetric emergencies.
+                                <p className="text-rose-100/60 text-sm leading-relaxed mb-6 italic font-medium">
+                                    Managing pregnancies complicated by PIH, Diabetes, or twins. Our Maternal-Fetal units are backed by a <strong>Level II Neonatal ICU</strong>, providing a safety net for premature births and obstetric emergencies.
                                 </p>
                                 <ul className="space-y-2">
                                     <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> 24/7 OBSTETRIC GUARD</li>
@@ -76,27 +76,27 @@ export default function GynaecologyPillarPage() {
                     {/* ── 2. Specialized OBGYN Centers ────────────────────────── */}
                     <section className="obgyn-centers bg-rose-600 text-white p-12 md:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center gap-10">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[150px] -mr-48 -mt-48"></div>
-                        <div className="relative z-10 max-w-4xl space-y-8">
+                        <div className="relative z-10 max-w-4xl space-y-8 text-left">
                             <span className="inline-block px-6 py-2 bg-white text-rose-600 text-xs font-black rounded-full uppercase tracking-widest italic shadow-lg">Gynae-Endoscopy Authority</span>
-                            <h2 className="text-5xl font-black leading-tight italic tracking-tighter italic">Total Female Lifecycle Management led by <span className="text-rose-100">Dr. Praharshitha Sagiraju</span></h2>
-                            <div className="text-rose-50 text-2xl leading-relaxed italic font-medium italic">
+                            <h2 className="text-5xl font-black leading-tight italic tracking-tighter">Total Female Lifecycle Management led by <span className="text-rose-100">Dr. Praharshitha Sagiraju</span></h2>
+                            <div className="text-rose-50 text-2xl leading-relaxed italic font-medium">
                                 <p>With a PDCC in Gynaecological Endoscopy and MS from AIIMS Raipur, Dr. Praharshitha specialized in organ-preserving surgeries that protect fertility while curing complex diseases.</p>
                             </div>
                             <p className="text-rose-100/80 text-lg leading-relaxed italic">
-                                Her focus on **Minimal Access Surgery** ensures that our patients in Vellore experience significantly less pain, near-zero infection rates, and faster recoveries than traditional open procedures.
+                                Her focus on <strong>Minimal Access Surgery</strong> ensures that our patients in Vellore experience significantly less pain, near-zero infection rates, and faster recoveries than traditional open procedures.
                             </p>
                         </div>
                     </section>
 
                     {/* ── 3. Educational Deep-Dive: PCOS & Metabolic Health ────────────────── */}
-                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical insight: The PCOS & Fertility Reset</h3>
+                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Clinical insight: The PCOS &amp; Fertility Reset</h3>
                         <p>
-                            PCOS (Polycystic Ovary Syndrome) is not just a 'period problem'; it is a systemic metabolic disorder. At Indira Hospital, our **Reproductive Medicine** wing focuses on 'Scientific Reversal' by tackling the underlying insulin resistance and hormonal imbalance before attempting aggressive fertility treatments.
+                            PCOS (Polycystic Ovary Syndrome) is not just a 'period problem'; it is a systemic metabolic disorder. At Indira Hospital, our <strong>Reproductive Medicine</strong> wing focuses on 'Scientific Reversal' by tackling the underlying insulin resistance and hormonal imbalance before attempting aggressive fertility treatments.
                         </p>
                         <p className="mt-4">
-                            Our **Fertility/PCOS Roadmap** focuses on:
+                            Our <strong>Fertility/PCOS Roadmap</strong> focuses on:
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
                             {[
@@ -112,12 +112,12 @@ export default function GynaecologyPillarPage() {
                             ))}
                         </div>
                         <p className="font-bold text-slate-900 dark:text-slate-100 italic border-l-4 border-rose-500 pl-6">
-                            By centering our care around **Organ Preservation** and **Natural Fertility optimization**, we ensure that surgical or clinical intervention is always the most precise and necessary choice.
+                            By centering our care around <strong>Organ Preservation</strong> and <strong>Natural Fertility optimization</strong>, we ensure that surgical or clinical intervention is always the most precise and necessary choice.
                         </p>
                     </section>
 
                     {/* ── 4. Women's Health Hub FAQs ─────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-rose-400 text-left">
@@ -144,7 +144,7 @@ export default function GynaecologyPillarPage() {
                                 },
                                 {
                                     q: "Can fibroids be removed without removing the whole uterus?",
-                                    a: "Absolutely. We specialize in **Laparoscopic Myomectomy**, where we only remove the fibroids with high-precision micro-tools, preserving the uterus for women who wish to conceive in the future."
+                                    a: "Absolutely. We specialize in <strong>Laparoscopic Myomectomy</strong>, where we only remove the fibroids with high-precision micro-tools, preserving the uterus for women who wish to conceive in the future."
                                 },
                                 {
                                     q: "Is Hormone Replacement Therapy (HRT) safe for menopause?",
@@ -152,7 +152,7 @@ export default function GynaecologyPillarPage() {
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-                                    <h4 className="font-black text-rose-100 mb-6 flex items-start gap-4 italic group-hover:text-rose-400 transition-colors text-lg italic">
+                                    <h4 className="font-black text-rose-100 mb-6 flex items-start gap-4 italic group-hover:text-rose-400 transition-colors text-lg text-left">
                                         <span className="text-rose-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
@@ -164,7 +164,7 @@ export default function GynaecologyPillarPage() {
                         </div>
                     </section>
                 </div>
-            }
+            )}
             procedures={treatments.map(t => ({ name: t.title, link: `/doctor/near-me/treat/obstetrics-gynaecology/${t.slug}` }))}
             relatedDoctors={specialists}
             relatedServices={treatments.map(t => ({

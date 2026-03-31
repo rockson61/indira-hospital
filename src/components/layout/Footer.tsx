@@ -81,6 +81,64 @@ export function Footer() {
                     </div>
                 </div>
 
+                {/* Our Locations Maps */}
+                <div className="border-t border-slate-200 dark:border-slate-800 py-12">
+                    <h3 className="elite-section-title !text-sm !leading-tight mb-8 !italic">Visit Our Specialized Units</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Katpadi Unit */}
+                        <div className="group">
+                            <h4 className="flex items-center gap-2 text-[11px] font-black italic uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
+                                <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
+                                Katpadi (Main Hospital)
+                            </h4>
+                            <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:-rotate-1">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33540.67112314793!2d79.07591166690614!3d12.922276485703463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad47185bb9c311%3A0x86287a4d543bf128!2sIndira%20Superspeciality%20Hospital!5e1!3m2!1sen!2sin!4v1774971454932!5m2!1sen!2sin" 
+                                    className="w-full h-full rounded-[1.75rem] border-0"
+                                    allowFullScreen
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Near CMC Unit */}
+                        <div className="group">
+                            <h4 className="flex items-center gap-2 text-[11px] font-black italic uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
+                                <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
+                                Near CMC (Nursing Home)
+                            </h4>
+                            <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:rotate-1">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.547340574835!2d79.1401831!3d12.9244533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3890563e2d3f%3A0xd059cd5df955c459!2sIndira%20Nursing%20Home!5e1!3m2!1sen!2sin!4v1774971373744!5m2!1sen!2sin" 
+                                    className="w-full h-full rounded-[1.75rem] border-0"
+                                    allowFullScreen
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Konavattum Unit */}
+                        <div className="group">
+                            <h4 className="flex items-center gap-2 text-[11px] font-black italic uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
+                                <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
+                                Konavattum (Nursing Home)
+                            </h4>
+                            <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:-rotate-1">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33540.67090632708!2d79.07591167910155!3d12.922278099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3900253ba9c1%3A0x5a6ce10c5c8e5f34!2sIndra%20nursing%20home!5e1!3m2!1sen!2sin!4v1774971424450!5m2!1sen!2sin" 
+                                    className="w-full h-full rounded-[1.75rem] border-0"
+                                    allowFullScreen
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 {/* Bottom Bar */}
                 <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-slate-500 dark:text-slate-300 font-medium">

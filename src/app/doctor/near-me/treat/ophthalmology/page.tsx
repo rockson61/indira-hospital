@@ -45,19 +45,19 @@ export default function OphthalmologyPillarPage() {
             title={title}
             slug={slug}
             shortDescription={shortDescription}
-            fullDescription={`
+            fullDescription={(
                 <div className="ophthalmology-pillar-content space-y-20">
                     {/* ── 1. The Vision of Clinical Excellence ─────────────────────── */}
-                    <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
+                    <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert text-left">
                         <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-teal-600 pl-6 mb-8 uppercase tracking-tight">
                             The Visionary Frontier: Advanced Ophthalmology in Vellore
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
-                                The **Centre for Advanced Ophthalmology & Vision Sciences** at Indira Super Speciality Hospital is a regional benchmark for the sophisticated management of ocular health. We believe that sight is the primary link to a high-quality life, and our mission is to preserve this link through **Stitchless Microsurgery**, **Laser Refractive Correction**, and **High-Definition Retinal Imaging**.
+                                The <strong>Centre for Advanced Ophthalmology & Vision Sciences</strong> at Indira Super Speciality Hospital is a regional benchmark for the sophisticated management of ocular health. We believe that sight is the primary link to a high-quality life, and our mission is to preserve this link through <strong>Stitchless Microsurgery</strong>, <strong>Laser Refractive Correction</strong>, and <strong>High-Definition Retinal Imaging</strong>.
                             </p>
                             <p className="mt-4">
-                                Our facility is equipped with the latest diagnostic and surgical platforms, allowing us to perform complex procedures like **Micro-Incision Cataract Surgery (MICS)** with unmatched precision. From treating age-related vision loss to managing the complex retinal manifestations of long-term diabetes, our clinical team delivers world-class outcomes with a focus on **Rapid Visual Rehabilitation.**
+                                Our facility is equipped with the latest diagnostic and surgical platforms, allowing us to perform complex procedures like <strong>Micro-Incision Cataract Surgery (MICS)</strong> with unmatched precision. From treating age-related vision loss to managing the complex retinal manifestations of long-term diabetes, our clinical team delivers world-class outcomes with a focus on <strong>Rapid Visual Rehabilitation.</strong>
                             </p>
                         </div>
 
@@ -79,7 +79,7 @@ export default function OphthalmologyPillarPage() {
                                 <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
                                 <h4 className="text-2xl font-bold text-blue-300 mb-4 italic">Medical Retina & Anti-VEGF</h4>
                                 <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
-                                    Specialized care for **Diabetic Retinopathy** and Macular Degeneration. We utilize high-dose Anti-VEGF injections to stabilize fluid and prevent irreversible vision loss.
+                                    Specialized care for <strong>Diabetic Retinopathy</strong> and Macular Degeneration. We utilize high-dose Anti-VEGF injections to stabilize fluid and prevent irreversible vision loss.
                                 </p>
                                 <ul className="space-y-2">
                                     <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Precision Retinal Mapping</li>
@@ -96,7 +96,7 @@ export default function OphthalmologyPillarPage() {
                             <div className="h-1 w-24 bg-teal-600 dark:bg-teal-500 mx-auto mt-4 rounded-full"></div>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-3 gap-8 text-left">
                             {/* Vertical 1: Cataract & IOL */}
                             <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
                                 <div className="p-8 flex-1 flex flex-col justify-between">
@@ -125,7 +125,7 @@ export default function OphthalmologyPillarPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Advanced diagnostic and medical management for Diabetic Retinopathy and Hypertensive eye disease.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Anti-VEGF Injections", "Green Laser Therapy", "OCT Retinal Mapping", "Fundus Photography"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-teal-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -145,7 +145,7 @@ export default function OphthalmologyPillarPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Comprehensive glaucoma screening and advanced refractive pathways for permanent vision correction.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Glaucoma Valve Surgery", "LASIK Evaluation", "Automated Perimetry", "Squint Correction"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-teal-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -160,14 +160,14 @@ export default function OphthalmologyPillarPage() {
                     </section>
 
                     {/* ── 3. Advanced Educational Content: MICS vs Traditional ────────── */}
-                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-teal-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-teal-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-teal-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-teal-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] -mr-32 -mt-32"></div>
                         <h3 className="text-teal-900 dark:text-teal-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: The Micro-Incision Edge</h3>
                         <p>
                             In standard cataract surgery, an incision of 3.0 mm to 5.0 mm was common, which often required stitches and led to significant "astigmatism" – requiring the patient to wear heavy glasses even after a successful surgery.
                         </p>
                         <p className="mt-4">
-                            At Indira Hospital, our **Micro-Incision Cataract Surgery (MICS)** utilizes an incision of less than **1.8 mm to 2.2 mm**. This "Ultra-Small" entry point allows for a "Cold Phaco" technique, which minimizes heat-related damage to the cornea. This results in:
+                            At Indira Hospital, our <strong>Micro-Incision Cataract Surgery (MICS)</strong> utilizes an incision of less than <strong>1.8 mm to 2.2 mm</strong>. This "Ultra-Small" entry point allows for a "Cold Phaco" technique, which minimizes heat-related damage to the cornea. This results in:
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
                             {[
@@ -188,7 +188,7 @@ export default function OphthalmologyPillarPage() {
                     </section>
 
                     {/* ── 4. Advanced Ophthalmic FAQs: The Eye Care Deep-Dive ─────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-teal-400 text-left">
@@ -203,7 +203,7 @@ export default function OphthalmologyPillarPage() {
                                 },
                                 {
                                     q: "Is there a permanent cure for Diabetic Retinopathy?",
-                                    a: "Diabetic Retinopathy is a chronic condition. While we cannot 'cure' it permanently (as it depends on blood sugar control), we can successfully **Stabilize** and **Preserve** vision using programmed Anti-VEGF injections and Green Laser Photocoagulation to prevent blindness."
+                                    a: "Diabetic Retinopathy is a chronic condition. While we cannot 'cure' it permanently (as it depends on blood sugar control), we can successfully <strong>Stabilize</strong> and <strong>Preserve</strong> vision using programmed Anti-VEGF injections and Green Laser Photocoagulation to prevent blindness."
                                 },
                                 {
                                     q: "What is the difference between Monofocal and Multifocal Lenses?",
@@ -243,7 +243,7 @@ export default function OphthalmologyPillarPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={ophthaTreatments.map(t => ({ name: t.title, link: `/doctor/near-me/treat/ophthalmology/${t.slug}` }))}
             relatedDoctors={ophthaDoctors}
             quickFacts={[
@@ -252,109 +252,6 @@ export default function OphthalmologyPillarPage() {
                 { label: 'Specialist', value: 'Senior Eye Surgeon', icon: 'Award' },
                 { label: 'Care Type', value: 'Day-Care Focus', icon: 'Clock' }
             ]}
-        >
-            <div className="space-y-16">
-                {/* Intro Section */}
-                <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <p>
-                        Your eyesight is your window to the world. The **Department of Ophthalmology** at Indira Super Speciality Hospital is deeply committed to preserving, correcting, and entirely restoring your vision through state-of-the-art diagnostic imaging and microscopic surgical precision.
-                    </p>
-                    <p>
-                        Under our expert team of eye specialists, we deliver life-changing results using the latest optical technologies, including **Micro-Incision Cataract Surgery (Phacoemulsification)** with premium, high-definition Intraocular Lenses (IOLs) and aggressive management strategies for complex retinal conditions in diabetic patients.
-                    </p>
-                </div>
-
-                {/* Sub-Speciality Grid */}
-                <div>
-                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3 font-primary">
-                        <Eye className="text-teal-600" />
-                        Our Ophthalmic Clinical Pillars
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {[
-                            {
-                                title: "Cataract Mastery",
-                                icon: Zap,
-                                desc: "Stitchless, painless MICS (Micro-Incision Cataract Surgery) with personalized premium IOL selection for crystal-clear vision.",
-                                slug: "cataract-surgery-mics",
-                                color: "teal"
-                            },
-                            {
-                                title: "LASIK & Correction",
-                                icon: Sparkles,
-                                desc: "Freedom from glasses and contact lenses using advanced LASIK evaluation and specialized refractive correction pathways.",
-                                slug: "lasik-eye-surgery",
-                                color: "blue"
-                            },
-                            {
-                                title: "Retina & Glaucoma",
-                                icon: Search,
-                                desc: "High-resolution retinal screening and long-term management to prevent vision loss from diabetes and intraocular pressure.",
-                                slug: "diabetic-retinopathy-treatment",
-                                color: "emerald"
-                            }
-                        ].map((pillar, idx) => (
-                            <Link 
-                                href={`/doctor/near-me/treat/ophthalmology/${pillar.slug}`}
-                                key={idx}
-                                className="group p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-                            >
-                                <div className={`inline-flex p-4 rounded-2xl bg-${pillar.color}-50 dark:bg-${pillar.color}-900/20 text-${pillar.color}-600 dark:text-${pillar.color}-400 mb-6 group-hover:scale-110 transition-transform`}>
-                                    <pillar.icon className="w-8 h-8" />
-                                </div>
-                                <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3 font-primary">{pillar.title}</h4>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                                    {pillar.desc}
-                                </p>
-                                <div className="flex items-center text-sm font-bold text-teal-600 dark:text-teal-400">
-                                    Explore Treatments <Sparkles className="ml-2 w-4 h-4" />
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-
-                {/* FAQ Section */}
-                <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 md:p-16 border border-slate-100 dark:border-slate-800 shadow-2xl overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 blur-[100px] -mr-32 -mt-32" />
-                    
-                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-3 font-primary">
-                        <HelpCircle className="text-teal-600" />
-                        Ophthalmology: Frequently Asked Questions
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
-                        {[
-                            {
-                                q: "Is cataract surgery safe for elderly patients?",
-                                a: "Yes, modern MICS (Micro-Incision Cataract Surgery) is performed under local anesthesia and takes only 15-20 minutes, making it highly safe even for patients over 80 with comorbidities."
-                            },
-                            {
-                                q: "How soon can I return to work after LASIK?",
-                                a: "Most patients experience significantly improved vision within 24 hours and can return to office-based work within 2-3 days, following basic eye protection protocols."
-                            },
-                            {
-                                q: "Why is a retinal scan important for diabetic patients?",
-                                a: "Diabetes can damage the tiny blood vessels in the retina (Diabetic Retinopathy), which may not show symptoms initially but can lead to irreversible blindness if not detected and treated early."
-                            },
-                            {
-                                q: "What is Glaucoma and can it be cured?",
-                                a: "Glaucoma is high pressure inside the eye that damages the optic nerve. While it cannot be 'cured' to reverse existing damage, it can be managed effectively with drops or surgery to prevent further vision loss."
-                            }
-                        ].map((faq, i) => (
-                            <div key={i} className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
-                                <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
-                                    <Info className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed antialiased">
-                                    {faq.a}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </DepartmentTemplate>
+        />
     )
 }

@@ -47,7 +47,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                 <div className="grid md:grid-cols-2 gap-12">
                     <div className="space-y-6">
                         <p className="text-slate-700 dark:text-slate-300 leading-relaxed italic">
-                            "Our approach to general surgery is built on a simple yet rigorous foundation: **Minimize Trauma, Maximize Outcome.** Every surgical plan we design is tailored to the patient's unique anatomy, lifestyle, and recovery goals."
+                            "Our approach to general surgery is built on a simple yet rigorous foundation: <strong>Minimize Trauma, Maximize Outcome.</strong> Every surgical plan we design is tailored to the patient's unique anatomy, lifestyle, and recovery goals."
                         </p>
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
                             <h4 className="font-bold text-[#005f73] dark:text-fuchsia-400 mb-4 flex items-center gap-2">
@@ -136,7 +136,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                                 Advanced Laparoscopic Surgery (Keyhole)
                             </h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Our center specializes in **Advanced Minimally Invasive Surgery (MIS)**. Unlike traditional open surgery, keyhole surgery uses incisions smaller than a centimetre, ensuring minimal pain and rapid recovery.
+                                Our center specializes in <strong>Advanced Minimally Invasive Surgery (MIS)</strong>. Unlike traditional open surgery, keyhole surgery uses incisions smaller than a centimetre, ensuring minimal pain and rapid recovery.
                             </p>
                             <ul className="grid grid-cols-2 gap-4 text-sm font-bold text-slate-700 dark:text-slate-300">
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Lap. Hernia (3D Mesh)</li>
@@ -182,7 +182,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                                 Pioneer Laser Proctology Center
                             </h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                We are globally recognized for **Laser Hemorrhoidopexy (LHP)** and **FiLaC (Fistula Laser Closure)**. Our proctology services are non-invasive, requiring no stitches and zero blood loss.
+                                We are globally recognized for <strong>Laser Hemorrhoidopexy (LHP)</strong> and <strong>FiLaC (Fistula Laser Closure)</strong>. Our proctology services are non-invasive, requiring no stitches and zero blood loss.
                             </p>
                             <ul className="grid grid-cols-2 gap-4 text-sm font-bold text-slate-700 dark:text-slate-300">
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Piles (Laser Hemorrhoid)</li>

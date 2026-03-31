@@ -51,23 +51,23 @@ export default function ENTDepartmentPage() {
             title="Elite ENT, Head & Neck Micro-Surgery Hub"
             slug="ent"
             shortDescription="Advanced Otorhinolaryngology in Vellore. Regional Center for FESS, Micro-Ear Surgery, and Pediatric Coblation procedures led by Dr. Gayathri."
-            fullDescription={
+            fullDescription={(
                 <div className="space-y-20 text-left">
                     {/* ── 1. The Auditory & Respiratory Vision ────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-emerald-600 pl-6 mb-8 uppercase tracking-tight">
-                            The Ear, Nose & Throat Authority: Precision Micro-Surgery
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-emerald-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                            The Ear, Nose &amp; Throat Authority: Precision Micro-Surgery
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
-                                The **Department of ENT (Otorhinolaryngology)** at Indira Super Speciality Hospital is a regional leader in the diagnosis and surgical management of complex head and neck disorders. We combine the latest in **Microsurgical Instrumentation** with advanced **Coblation Technology** to treat everything from chronic sinusitis to profound hearing loss.
+                                The <strong>Department of ENT (Otorhinolaryngology)</strong> at Indira Super Speciality Hospital is a regional leader in the diagnosis and surgical management of complex head and neck disorders. We combine the latest in <strong>Microsurgical Instrumentation</strong> with advanced <strong>Coblation Technology</strong> to treat everything from chronic sinusitis to profound hearing loss.
                             </p>
                             <p className="mt-4">
-                                Led by **Dr. Gayathri**, our facility is equipped with high-definition nasal endoscopes, operative microscopes, and a dedicated audiology-speech therapy wing. Whether you are seeking a permanent solution for snoring or a bloodless tonsillectomy for your child, our clinical pathways are designed for **Functional Restoration** and **Minimal Pain.**
+                                Led by <strong>Dr. Gayathri</strong>, our facility is equipped with high-definition nasal endoscopes, operative microscopes, and a dedicated audiology-speech therapy wing. Whether you are seeking a permanent solution for snoring or a bloodless tonsillectomy for your child, our clinical pathways are designed for <strong>Functional Restoration</strong> and <strong>Minimal Pain.</strong>
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose">
+                        <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
                             <div className="p-8 bg-emerald-50 dark:bg-emerald-900/20 rounded-[2.5rem] border border-emerald-100 dark:border-emerald-800 shadow-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-3xl group-hover:bg-emerald-500/20 transition-all"></div>
                                 <h4 className="text-2xl font-bold text-emerald-900 dark:text-emerald-200 mb-4 flex items-center gap-2 italic uppercase tracking-tighter">
@@ -75,7 +75,7 @@ export default function ENTDepartmentPage() {
                                     Advanced FESS Sinus Surgery
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
-                                    Breathe clearly again. Our **4K FESS** protocols allow for the clearing of chronic sinus blockages with extreme precision, avoiding external cuts and ensuring rapid nasal restoration.
+                                    Breathe clearly again. Our <strong>4K FESS</strong> protocols allow for the clearing of chronic sinus blockages with extreme precision, avoiding external cuts and ensuring rapid nasal restoration.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
                                     <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-emerald-100 dark:border-emerald-700 font-primary">4K IMAGE MAPPING</span>
@@ -102,7 +102,7 @@ export default function ENTDepartmentPage() {
                     {/* ── 2. Specialized ENT Center of Excellence ────────────────────────── */}
                     <section className="ent-specialization bg-emerald-600 text-white p-12 md:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center gap-10">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[150px] -mr-48 -mt-48"></div>
-                        <div className="relative z-10 max-w-4xl space-y-8">
+                        <div className="relative z-10 max-w-4xl space-y-8 text-left">
                             <span className="inline-block px-6 py-2 bg-white text-emerald-600 text-xs font-black rounded-full uppercase tracking-widest italic shadow-lg">Micro-Ear Surgery Hub</span>
                             <h2 className="text-5xl font-black leading-tight italic tracking-tighter">Microscopic Hearing Restoration led by <span className="text-emerald-100">Dr. Gayathri</span></h2>
                             <div className="text-emerald-50 text-2xl leading-relaxed italic font-medium">
@@ -115,14 +115,14 @@ export default function ENTDepartmentPage() {
                     </section>
 
                     {/* ── 3. Educational Deep-Dive: Sinusitis ────────────────── */}
-                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-emerald-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-emerald-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-emerald-900 dark:text-emerald-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: The Endoscopic Sinus Revolution</h3>
+                        <h3 className="text-emerald-900 dark:text-emerald-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Clinical Insight: The Endoscopic Sinus Revolution</h3>
                         <p>
-                            Chronic Sinusitis is more than just a "bad cold." It involves the persistent inflammation of the sinus linings, blocking the natural drainage pathways (ostia). Traditional surgery was invasive, but **FESS** changed the paradigm by allowing surgeons to visualize and clear blockages using 4K cameras inside the nose.
+                            Chronic Sinusitis is more than just a "bad cold." It involves the persistent inflammation of the sinus linings, blocking the natural drainage pathways (ostia). Traditional surgery was invasive, but <strong>FESS</strong> changed the paradigm by allowing surgeons to visualize and clear blockages using 4K cameras inside the nose.
                         </p>
                         <p className="mt-4">
-                            At Indira Hospital, our **Endo-Sinus Protocol** ensures:
+                            At Indira Hospital, our <strong>Endo-Sinus Protocol</strong> ensures:
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
                             {[
@@ -143,7 +143,7 @@ export default function ENTDepartmentPage() {
                     </section>
 
                     {/* ── 4. ENT Hub FAQs ─────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-emerald-400 text-left">
@@ -178,7 +178,7 @@ export default function ENTDepartmentPage() {
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-emerald-400 transition-colors text-lg">
+                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-emerald-400 transition-colors text-lg text-left">
                                         <span className="text-emerald-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
@@ -190,7 +190,7 @@ export default function ENTDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            }
+            )}
             procedures={[
                 { name: "Coblation Tonsillectomy", link: "/doctor/near-me/treat/ent" },
                 { name: "Micro-Ear Surgery (Tympanoplasty)", link: "/doctor/near-me/treat/ent/tympanoplasty-and-mastoidectomy" },
