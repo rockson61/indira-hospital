@@ -9,11 +9,13 @@ interface EntityFAQsProps {
     title?: string;
     description?: string;
     className?: string;
+    items?: { question: string; answer: string }[];
 }
 
 /**
  * EntityFAQs - A universal server component to fetch and display 
  * SEO-optimized FAQs for any entity (Doctor, Service, Department, etc.)
+ * Supports manual 'items' injection to override/supplement CMS data.
  */
 export default async function EntityFAQs({
     entityType,
@@ -21,9 +23,11 @@ export default async function EntityFAQs({
     entitySlug,
     title,
     description,
-    className
+    className,
+    items
 }: EntityFAQsProps) {
-    const faqs = await getFaqsByEntity(entityType, entityName, entitySlug);
+    const fetchedFaqs = !items || items.length === 0 ? await getFaqsByEntity(entityType, entityName, entitySlug) : [];
+    const faqs = items && items.length > 0 ? items : fetchedFaqs;
 
     if (!faqs || faqs.length === 0) {
         return null; // Don't render if no FAQs available

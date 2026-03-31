@@ -1084,168 +1084,118 @@ export const SEED_DATA = {
             ]
         },
         {
-            "title": "Gastroenterology",
+            "title": "Gastroenterology & Hepatology",
             "slug": "gastroenterology",
-            "short_description": "Expert care for digestive system, liver, and pancreatic disorders.",
+            "short_description": "Advanced therapeutic endoscopy and comprehensive liver care led by Dr. Karan Shankar.",
             "icon": "Stethoscope",
-            "full_description": "\n            <p>Our Gastroenterology department provides advanced diagnostic and therapeutic services for all diseases affecting the digestive tract, liver, and pancreas. Led by senior consultants, we handle complex GI emergencies ensuring timely intervention.</p>\n\n            <h3 class=\"text-lg font-bold text-gray-900 dark:text-white mt-6 mb-3\">Conditions Treated</h3>\n            <ul class=\"list-disc pl-5 space-y-2 mb-6\">\n                <li><strong>Acid Peptic Disease:</strong> Management of GERD (Acid Reflux), Gastritis, and Peptic Ulcers.</li>\n                <li><strong>Liver Diseases:</strong> Comprehensive care for Jaundice, Hepatitis B & C, Fatty Liver, and Cirrhosis.</li>\n                <li><strong>Pancreatic Disorders:</strong> Treatment for Acute and Chronic Pancreatitis.</li>\n                <li><strong>IBD & IBS:</strong> Long-term management of Inflammatory Bowel Disease and Irritable Bowel Syndrome.</li>\n                <li><strong>GI Cancers:</strong> Screening and palliative stenting for Esophageal, Stomach, and Colorectal cancers.</li>\n            </ul>\n\n            <h3 class=\"text-lg font-bold text-gray-900 dark:text-white mt-6 mb-3\">Endoscopic Services</h3>\n            <p>We are equipped with high-definition video endoscopes for Upper GI Scopy (OGD) and Colonoscopy. Therapeutic procedures such as Banding for varices, Polypectomy, and Foreign Body Removal are performed routinely.</p>\n        ",
+            "full_description": "<h2>Advanced Gastroenterology & Hepatology Center</h2>\n<p>Your digestive health is fundamental to your systemic well-being. The <strong>Department of Gastroenterology</strong> at Indira Super Speciality Hospital is a center of regional excellence, specializing in the precision diagnosis and non-surgical management of complex gastrointestinal and liver disorders.</p>\n<h3>Elite Endoscopic & Hepatology Services</h3>\n<p>Led by <strong>Dr. Karan Shankar</strong>, our department utilizes high-definition visualization technology to deliver definitive clinical outcomes:</p>\n<ul>\n<li><strong>Precision Lower & Upper GI Scopy</strong>: High-resolution (4K) diagnostic and therapeutic Gastroenteroscopy (OGD) and Colonoscopy for early cancer screening, ulcer detection, and polyp removal.</li>\n<li><strong>Advanced Hepatology Unit</strong>: Comprehensive clinical protocols for the reversal of Fatty Liver (NASH), management of Chronic Hepatitis B & C, and advanced Cirrhosis care focused on preventing liver failure.</li>\n<li><strong>Therapeutic GI Interventions</strong>: Minimally invasive procedures including Band Ligation for varices, Argon Plasma Coagulation (APC) for bleeding, and Esophageal Dilatation for strictures.</li>\n<li><strong>Precision IBD & IBS Care</strong>: Evidence-backed, long-term management strategies for Inflammatory Bowel Disease (Crohn’s, Ulcerative Colitis) and Chronic Constipation.</li>\n</ul>\n<p>By integrating advanced nutrition with the latest in therapeutic endoscopy, we ensure a rapid return to digestive comfort and long-term health maintenance.</p>",
             "pricing": [
                 {
-                    "package_name": "Upper GI Endoscopy (OGD)",
-                    "cost": "Available on Request",
+                    "package_name": "Upper GI Endoscopy (Diagnostic)",
+                    "cost": "₹3,500 - ₹5,500",
                     "features": [
-                        "Diagnostic",
-                        "Sedation Optional",
-                        "Report Immediately"
+                        "HD 4K Visualization",
+                        "Biopsy included",
+                        "Instant Digital Report"
                     ]
                 },
                 {
-                    "package_name": "Colonoscopy",
-                    "cost": "Available on Request",
+                    "package_name": "Full Colonoscopy Screening",
+                    "cost": "₹6,500 - ₹9,500",
                     "features": [
-                        "Full Bowel Exam",
-                        "Biopsy if needed",
-                        "Day Care"
+                        "Painless Sedation",
+                        "Polypectomy Ready",
+                        "Zero-Radiation"
                     ]
                 },
                 {
-                    "package_name": "ERCP",
-                    "cost": "Available on Request",
+                    "package_name": "Liver Health Profile (Advanced)",
+                    "cost": "₹4,500 - ₹7,000",
                     "features": [
-                        "Stone Removal",
-                        "Stenting",
-                        "Anesthesia Support"
+                        "Fatty Liver Grade Analysis",
+                        "Hepatitis Panel",
+                        "Consultation"
                     ]
                 }
             ],
             "faqs": [
                 {
-                    "question": "Is endoscopy painful?",
-                    "answer": "It is generally not painful but can be uncomfortable. We use local anesthetic spray or mild sedation to make it comfortable."
+                    "question": "Is the endoscopy procedure painful?",
+                    "answer": "No. We utilize 'Painless Endoscopy' protocols using mild, safe sedation that ensures you are comfortable and relaxed throughout the procedure."
                 },
                 {
-                    "question": "Do I need to fast before endoscopy?",
-                    "answer": "Yes, you typically need to fast for 6-8 hours before an upper GI endoscopy."
-                },
-                {
-                    "question": "How do you treat fatty liver?",
-                    "answer": "Treatment involves lifestyle changes, diet, exercise, and medication to manage cholesterol and blood sugar levels."
-                },
-                {
-                    "question": "What is the treatment for H. Pylori?",
-                    "answer": "It is treated with a course of antibiotics and acid-suppressing medication for 14 days."
-                }
-            ],
-            "reviews": [
-                {
-                    "patient_name": "Mohan L.",
-                    "review": "Endoscopy was done very gently. Doctor explained the ulcer problem clearly.",
-                    "rating": 5
-                },
-                {
-                    "patient_name": "Anitha K.",
-                    "review": "Good treatment for my chronic acidity problem. Feeling much better now.",
-                    "rating": 4
-                },
-                {
-                    "patient_name": "Suresh B.",
-                    "review": "Affordable charges for colonoscopy. Clean facility.",
-                    "rating": 5
+                    "question": "Do I need to fast before my procedure?",
+                    "answer": "Yes, for Upper GI Endoscopy, you must be 'Nil by Mouth' for 8 hours. For Colonoscopy, a specific bowel preparation kit is required 24 hours prior."
                 }
             ],
             "technology": [
                 {
-                    "name": "Olympus Video Endoscope",
-                    "description": "High-resolution imaging for detecting early cancers and ulcers.",
-                    "icon": "Stethoscope"
+                    "name": "Olympus 190 Series HD",
+                    "description": "The world-standard in high-definition endoscopy for mucosal visualization.",
+                    "icon": "Activity"
                 },
                 {
-                    "name": "Argon Plasma Coagulator",
-                    "description": "For controlling bleeding from GI lesions effectively.",
+                    "name": "Argon Plasma Coagulator (APC)",
+                    "description": "Advanced technology for non-contact thermal coagulation of GI bleeding.",
                     "icon": "Zap"
                 }
             ]
         },
         {
-            "title": "Obstetrics & Gynaecology",
+            "title": "Obstetrics & Gynaecology / Reproductive Medicine",
             "slug": "obstetrics-gynaecology",
-            "short_description": "Comprehensive women's health with 24/7 maternity care.",
+            "short_description": "Elite Women's Healthcare including advanced Laparoscopy and Maternal Fetal medicine.",
             "icon": "Baby",
-            "full_description": "\n            <p>Our Department of Obstetrics & Gynaecology focuses on the holistic health of women from adolescence through pregnancy and menopause. We pride ourselves on our high rate of normal deliveries and compassionate maternity care.</p>\n            \n            <h3 class=\"text-lg font-bold text-gray-900 dark:text-white mt-6 mb-3\">Maternity Services</h3>\n            <ul class=\"list-disc pl-5 space-y-2 mb-6\">\n                <li><strong>High-Risk Pregnancy:</strong> Specialized care for pregnancies complicated by diabetes, hypertension (Preeclampsia), or other medical conditions.</li>\n                <li><strong>Painless Delivery:</strong> Epidural analgesia for a comfortable birthing experience.</li>\n                <li><strong>24/7 Emergency Care:</strong> Round-the-clock availability of obstetricians and anesthetists for emergency C-sections.</li>\n            </ul>\n\n            <h3 class=\"text-lg font-bold text-gray-900 dark:text-white mt-6 mb-3\">Gynaecological Care</h3>\n            <p>We offer treatments for PCOD/PCOS, menstrual disorders, endometriosis, and uterine fibroids. Minimally invasive Hysterectomy (Laparoscopic/Vaginal) is performed routinely for shorter hospital stays.</p>\n        ",
+            "full_description": "<h2>Comprehensive Gynaecology & Maternal-Fetal Medicine</h2>\n<p>Empowering women through every stage of life—from adolescence to menopause. The <strong>Department of Obstetrics & Gynaecology</strong> at Indira Super Speciality Hospital, led by <strong>Dr. Praharshitha Sagiraju</strong> (MS AIIMS, PDCC), is a sanctuary of clinical excellence and compassionate care.</p>\n<h3>Advanced Women's Health Interventions</h3>\n<p>We provide a wide spectrum of surgical and medical solutions designed for rapid recovery and optimal outcomes:</p>\n<ul>\n<li><strong>Precision Gynaec Laparoscopy</strong>: Minimally invasive (Keyhole) surgical management for complex Uterine Fibroids, Ovarian Cysts, Endometriosis, and Total Laparoscopic Hysterectomy (TLH).</li>\n<li><strong>High-Risk Maternity Care</strong>: Dedicated 24/7 obstetric support for pregnancies complicated by Gestational Diabetes, Preeclampsia (BP), and Twin pregnancies.</li>\n<li><strong>Elite Fertility Center</strong>: Compassionate diagnostic evaluation and advanced therapeutic protocols for couples navigating conception challenges, led by specialists in Reproductive Medicine.</li>\n<li><strong>Aesthetic & Preventive Gynaecology</strong>: Advanced PAP smear screenings, Colposcopy, and specialized care for Menopausal health including bone density and heart health.</li>\n</ul>\n<p>Supported by a Level II NICU, we ensure that both mother and newborn receive the highest standard of safety and clinical vigilance in Vellore.</p>",
             "pricing": [
                 {
-                    "package_name": "Normal Delivery",
-                    "cost": "Available on Request",
+                    "package_name": "Normal Delivery (Comfort Package)",
+                    "cost": "₹35,000 - ₹55,000",
                     "features": [
-                        "LDR Suite Available",
-                        "Baby Care",
-                        "3 Days Stay"
-                    ]
-                },
-                {
-                    "package_name": "C-Section Delivery",
-                    "cost": "Available on Request",
-                    "features": [
-                        "Emergency/Elective",
-                        "Pediatrician Support",
-                        "4 Days Stay"
+                        "Painless Delivery Option",
+                        "LDR Suite",
+                        "Neonatal Consultation"
                     ]
                 },
                 {
                     "package_name": "Laparoscopic Hysterectomy",
-                    "cost": "Available on Request",
+                    "cost": "₹85,000 - ₹1,15,000",
                     "features": [
-                        "Uterus Removal",
-                        "Keyhole Surgery",
-                        "Fast Recovery"
+                        "Minimal Invasive (Keyhole)",
+                        "24-Hour Discharge",
+                        "Zero Blood Loss Technology"
+                    ]
+                },
+                {
+                    "package_name": "Fertility Workup (Couple)",
+                    "cost": "₹12,000 - ₹18,000",
+                    "features": [
+                        "Hormone Profile",
+                        "USG Follicular Study",
+                        "Specialist Consultation"
                     ]
                 }
             ],
             "faqs": [
                 {
-                    "question": "Do you encourage normal delivery?",
-                    "answer": "Yes, we always strive for a normal vaginal delivery unless there is a medical indication for C-section."
+                    "question": "What is the advantage of Laparoscopic (Keyhole) surgery?",
+                    "answer": "It involves tiny incisions (5-10mm), resulting in significantly less pain, minimal scarring, and a much faster return to work—usually within 1 week."
                 },
                 {
-                    "question": "Is painless delivery safe for the baby?",
-                    "answer": "Yes, Epidural analgesia is safe for both the mother and the baby when administered by expert anesthetists."
-                },
-                {
-                    "question": "When should I consult for pregnancy?",
-                    "answer": "As soon as you miss your period or get a positive home test, you should schedule a consultation."
-                },
-                {
-                    "question": "Do you have NICU facilities?",
-                    "answer": "Yes, we have a fully equipped NICU to care for premature or sick newborns."
-                }
-            ],
-            "reviews": [
-                {
-                    "patient_name": "Mrs. Divya",
-                    "review": "Delivered my baby boy here. Normal delivery. Dr. Latha is very supportive.",
-                    "rating": 5
-                },
-                {
-                    "patient_name": "Mrs. Geetha",
-                    "review": "Had a hysterectomy laparoscopically. Recovered in 1 week. Excellent care.",
-                    "rating": 5
-                },
-                {
-                    "patient_name": "Mrs. Kavitha",
-                    "review": "Nurses are very caring. Rooms are clean and spacious.",
-                    "rating": 4
+                    "question": "Do you offer painless labor services?",
+                    "answer": "Yes, we have round-the-clock availability of senior anaesthesiologists who provide Epidural Analgesia for a comfortable birthing experience."
                 }
             ],
             "technology": [
                 {
-                    "name": "CTG Monitor",
-                    "description": "Continuous electronic fetal monitoring during labor.",
-                    "icon": "Baby"
+                    "name": "4K Laparoscopic Stack",
+                    "description": "Ultra-HD magnification for precision nerve-sparing pelvic surgery.",
+                    "icon": "Activity"
                 },
                 {
-                    "name": "3D/4D Ultrasound",
-                    "description": "Advanced scanning for detailed fetal assessment.",
-                    "icon": "Activity"
+                    "name": "Level II NICU",
+                    "description": "Specialized neonatal intensive care for high-risk and premature newborns.",
+                    "icon": "Heater"
                 }
             ]
         },
@@ -1756,6 +1706,138 @@ export const SEED_DATA = {
             sample_type: "Urine",
             parameters_count: 15,
             used_to_diagnose: JSON.stringify(["Urinary Tract Infection (UTI)", "Kidney Disease", "Diabetes"])
+        },
+        {
+            "title": "Proctology",
+            "slug": "proctology",
+            "short_description": "Advanced Laser Proctology Center of Excellence for Piles, Fissure, and Fistula.",
+            "icon": "Zap",
+            "full_description": "<h2>Indira Laser Proctology Center: Excellence in Colorectal Care</h2>\n<p>Welcome to the most advanced <strong>Proctology Center in Vellore</strong>. Led by veteran surgeons <strong>Dr. P. Shankar</strong> and <strong>Dr. Karan Shankar</strong>, our department is a pioneer in minimally invasive laser treatments for complex anal and colorectal conditions.</p>\n<p>We understand that proctological issues can be distressing. Our center is designed to provide a discrete, professional, and virtually pain-free treatment environment, ensuring the highest standards of clinical excellence and patient comfort.</p>\n\n<h3>Why Choose Indira Hospital for Proctology?</h3>\n<ul>\n<li><strong>Elite Expertise</strong>: Over 30 years of surgical excellence in treating complex Piles, Fissures, and Fistulas.</li>\n<li><strong>Precision Laser Technology</strong>: We utilize cutting-edge 1470nm Diode Lasers (FiLaC, SiLaC) to ensure zero incisions and rapid recovery.</li>\n<li><strong>Sphincter-Saving Procedures</strong>: Our focus is on preserving natural function and ensuring zero risk of incontinence.</li>\n<li><strong>International Standards</strong>: NABH accredited safety protocols and modular OTs for infection-free outcomes.</li>\n</ul>\n\n<h3>Comprehensive Proctology Solutions</h3>\n<p>Our specialists provide advanced care for a wide spectrum of conditions:</p>\n<ul>\n<li><strong>Laser Hemorrhoidopexy</strong>: Painless shrinkage of piles without surgical excision.</li>\n<li><strong>Lateral Internal Sphincterotomy (Laser)</strong>: Rapid healing for chronic anal fissures.</li>\n<li><strong>FiLaC (Fistula Laser Closure)</strong>: The gold standard for complex anal fistulas.</li>\n<li><strong>SiLaC (Sinus Laser Closure)</strong>: Minimally invasive ablation for pilonidal sinus.</li>\n<li><strong>Bowel Motility Management</strong>: Expert care for IBS, Chronic Constipation, and Incontinence.</li>\n</ul>\n<p>At Indira Super Speciality Hospital, we don't just treat the symptoms; we provide a roadmap to long-term colorectal health through scientific diagnostics, advanced surgery, and personalized post-operative care.</p>",
+            "pricing": [
+                {
+                    "package_name": "Laser Piles Treatment Plan",
+                    "cost": "Elite Package",
+                    "features": [
+                        "Day Care Procedure",
+                        "Zero Incisions / Stitchless",
+                        "Post-Op Kit Included"
+                    ]
+                },
+                {
+                    "package_name": "Complex Fistula Closure (FiLaC)",
+                    "cost": "Precision Care",
+                    "features": [
+                        "Sphincter Saving",
+                        "High success rate",
+                        "Modular OT"
+                    ]
+                }
+            ],
+            "technology": [
+                {
+                    "name": "1470nm Diode Laser",
+                    "description": "High-precision laser for bloodless and painless proctology procedures.",
+                    "icon": "Zap"
+                },
+                {
+                    "name": "High-Def Anoscopy",
+                    "description": "Digital visualization for accurate diagnosis of anal canal issues.",
+                    "icon": "Activity"
+                }
+            ]
+        },
+        {
+            "title": "General Surgery",
+            "slug": "general-surgery",
+            "short_description": "Advanced Surgical Center for Laparoscopic, Breast, Endocrine, and Trauma Care.",
+            "icon": "Stethoscope",
+            "full_description": "<h2>Indira General Surgery: Advanced Precision & Patient-First Care</h2>\n<p>General Surgery at Indira Super Speciality Hospital is more than just standard procedures; it is an elite clinical unit dedicated to <strong>Minimally Invasive (Keyhole)</strong> and <strong>Precision Surgical Oncology</strong>. Led by <strong>Dr. P. Shankar</strong>, our department combines decades of traditional surgical wisdom with the latest technological breakthroughs in laparoscopy and robotic assistance.</p>\n<p>We specialize in the surgical management of the abdomen, digestive tract, endocrine system, and breast conditions. Our goal is to provide safe, effective, and ethically-billed surgical interventions that minimize recovery time and maximize the quality of life.</p>\n\n<h3>Why Choose Indira Hospital for General Surgery?</h3>\n<ul>\n<li><strong>Precision Laparoscopy</strong>: Over 90% of our abdominal procedures are performed via keyhole techniques, ensuring minimal pain and scars.</li>\n<li><strong>24/7 Emergency Readiness</strong>: Our trauma and acute care surgery team is on-call 24 hours a day for appendicitis, perforated ulcers, and accidental injuries.</li>\n<li><strong>Elite Clinical Outcomes</strong>: We maintain a near-zero infection rate through strict adherence to NABH-accredited sterile protocols and high-end modular OTs.</li>\n<li><strong>Comprehensive Endocrine & Breast Care</strong>: Specialized units for Thyroid, Parathyroid, and Breast surgical oncology (Mastectomy/Lumpectomy).</li>\n</ul>\n\n<h3>Our Clinical Spectrum</h3>\n<ul>\n<li><strong>Laparoscopic Hernia Repair</strong>: Advanced 3D mesh reinforcement for all types of hernias.</li>\n<li><strong>Laparoscopic Cholecystectomy</strong>: Safe, HD-guided removal of stones and diseased gallbladders.</li>\n<li><strong>Breast Surgical Oncology</strong>: Accurate diagnosis and surgical management of benign and malignant breast conditions.</li>\n<li><strong>Endocrine Surgery</strong>: Nerve-sparing Thyroid and Parathyroid procedures.</li>\n<li><strong>Minimally Invasive Appendectomy</strong>: Rapid emergency relief for acute appendicitis.</li>\n<li><strong>Vascular Surgery</strong>: Laser (EVLA) and surgical management for Varicose Veins.</li>\n</ul>\n<p>At Indira Super Speciality Hospital, we believe in 'Patient-Centric Surgery.' This means every patient receives a transparent pre-operative assessment, a high-precision surgical execution, and a dedicated post-operative recovery roadmap designed to return them to their active lives as quickly as possible.</p>",
+            "pricing": [
+                {
+                    "package_name": "Laparoscopic Hernia Repair",
+                    "cost": "Value Package",
+                    "features": [
+                        "3D Mesh Included",
+                        "Keyhole Technique",
+                        "24-Hour Discharge"
+                    ]
+                },
+                {
+                    "package_name": "Gallbladder Removal (Chole)",
+                    "cost": "Precision Care",
+                    "features": [
+                        "HD-Laparoscopy",
+                        "Harmonic Scalpel",
+                        "Minimal Scars"
+                    ]
+                }
+            ],
+            "faqs": [
+                {
+                    "question": "What is laparoscopic surgery?",
+                    "answer": "Also known as keyhole surgery, it involves using a camera and specialized instruments through tiny incisions, resulting in less pain and faster healing."
+                },
+                {
+                    "question": "Are general surgeries safe?",
+                    "answer": "Yes, with modern anesthesia and sterile techniques, general surgery has a very high safety profile. Our team conducts thorough pre-op evaluations to minimize risks."
+                }
+            ],
+            "technology": [
+                {
+                    "name": "HD Laparoscopic Stack",
+                    "description": "Ultra-high-definition visualization for precise internal surgery.",
+                    "icon": "Activity"
+                },
+                {
+                    "name": "Harmonic Scalpel",
+                    "description": "Ultrasonic energy to cut and seal vessels simultaneously, reducing blood loss.",
+                    "icon": "Zap"
+                }
+            ]
+        },
+        {
+            "title": "ENT (Otolaryngology)",
+            "slug": "ent",
+            "short_description": "Elite ENT, Head & Neck Surgery Center for Advanced Microsurgery and Endoscopy.",
+            "icon": "Mic",
+            "full_description": "<h2>Indira ENT & Head Neck Centre: Precision in Microsurgery</h2>\n<p>Welcome to the **Center of Excellence for ENT and Head & Neck Surgery** at Indira Super Speciality Hospital. Led by **Dr. Gayathri**, our department is dedicated to the advanced surgical and medical management of ear, nose, throat, and complex neck conditions. We combine high-end microscopic technology with minimally invasive endoscopic techniques to provide world-class clinical outcomes.</p>\n<p>Whether it is restoring hearing through microsurgery, clearing chronic sinus issues via FESS, or performing precision thyroid surgery, our focus remains on tissue preservation, minimal pain, and rapid patient recovery.</p>\n\n<h3>Why Choose Indira Hospital for ENT?</h3>\n<ul>\n<li><strong>Microscopic Precision</strong>: We use high-resolution surgical microscopes for all ear and laryngeal procedures, ensuring sub-millimeter accuracy.</li>\n<li><strong>Advanced Endoscopy</strong>: 4K Ultra-HD endoscopic systems for Sinus (FESS) and Skull Base surgeries, eliminating the need for external incisions.</li>\n<li><strong>Coblation Technology</strong>: State-of-the-art radiofrequency 'cold ablation' for nearly bloodless and painless tonsil and adenoid removals.</li>\n<li><strong>Nerve-Sparing Head & Neck Surgery</strong>: Specialized intra-operative nerve monitoring for safe Thyroid and Parotid surgeries.</li>\n</ul>\n\n<h3>Our Clinical Specialities</h3>\n<ul>\n<li><strong>Otology (Ear)</strong>: Tympanoplasty, Mastoidectomy, and Grommet insertions for hearing restoration.</li>\n<li><strong>Rhinology (Nose)</strong>: FESS for chronic sinusitis, Septoplasty for deviated septums, and CSF leak repairs.</li>\n<li><strong>Laryngology (Throat)</strong>: Micro-laryngeal surgery for voice polyps and nodules (Phonosurgery).</li>\n<li><strong>Head & Neck Oncology</strong>: Comprehensive management of Thyroid, Parotid, and Submandibular gland tumors.</li>\n<li><strong>Pediatric ENT</strong>: Gentle, Coblation-assisted management of tonsils and adenoids in children.</li>\n</ul>\n<p>At Indira Super Speciality Hospital, we believe in a multidisciplinary approach to ENT health, integrating speech therapy, audiology, and radiology to provide a complete circle of care for our patients.</p>",
+            "pricing": [
+                {
+                    "package_name": "FESS (Sinus Surgery)",
+                    "cost": "Value Care",
+                    "features": [
+                        "HD Endoscopy",
+                        "Micro-debrider",
+                        "Same Day Discharge"
+                    ]
+                },
+                {
+                    "package_name": "Coblation Tonsillectomy",
+                    "cost": "Premium Comfort",
+                    "features": [
+                        "Minimal Pain",
+                        "Zero Bleeding",
+                        "Rapid Diet Return"
+                    ]
+                }
+            ],
+            "technology": [
+                {
+                    "name": "Carl Zeiss Microscope",
+                    "description": "Premium surgical microscope for intricate ear and laryngeal microsurgery.",
+                    "icon": "Search"
+                },
+                {
+                    "name": "Coblation II System",
+                    "description": "Radiofrequency plasma technology for low-temperature tissue removal.",
+                    "icon": "Zap"
+                },
+                {
+                    "name": "4K Endoscopy Stack",
+                    "description": "Ultra-HD visualization for advanced sinus and nasal surgeries.",
+                    "icon": "Activity"
+                }
+            ]
         }
     ]
 };

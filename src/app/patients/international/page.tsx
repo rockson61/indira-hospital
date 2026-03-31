@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, Plane, Shield, Clock, MessageCircle, Phone, ArrowRight, CheckCircle2, ChevronRight, Globe, HelpCircle, Globe2, FileText, Sparkles } from "lucide-react";
+import { MapPin, Plane, Shield, Clock, MessageCircle, Phone, ArrowRight, CheckCircle2, ChevronRight, Globe, HelpCircle, Globe2, FileText, Sparkles, Activity } from "lucide-react";
 import { HeartCardiogram, Stethoscope } from "healthicons-react/outline";
 import { siteConfig } from "@/config/site";
 import { SectionContainer } from "@/components/ui/section-container";
@@ -165,24 +165,73 @@ export default function InternationalPatientsPage() {
                 </SectionContainer>
             </section>
 
-            {/* INTERACTIVE COUNTRY HUB PILLS */}
-            <SectionContainer className="py-24 max-w-7xl mx-auto">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="elite-section-title mb-6 text-slate-900 dark:text-white">Find Your Country Hub</h2>
-                    <p className="text-lg text-slate-600 font-light leading-relaxed">Explore specific travel itineraries, visa requirements, and dedicated welcome guides structured for your home nation.</p>
-                </div>
+            {/* RECOMMENDED TREATMENTS FOR GLOBAL PATIENTS */}
+            <SectionContainer className="py-24 bg-slate-900 overflow-hidden relative rounded-[3rem] sm:rounded-[5rem]">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-                <div className="flex flex-wrap justify-center gap-4">
-                    {INTERNATIONAL_COUNTRIES.map((c) => (
-                        <Link
-                            key={c.slug}
-                            href={`/patients/international/${c.slug}`}
-                            className="group flex flex-col items-center justify-center min-w-[160px] p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-fuchsia-400 hover:shadow-[0_10px_30px_rgba(20,184,166,0.15)] hover:-translate-y-1 transition-all duration-300"
-                        >
-                            <span className="text-xl font-black text-slate-800 dark:text-slate-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-600 group-hover:to-pink-500 transition-colors">{c.name}</span>
-                            <span className="text-xs font-bold text-slate-400 tracking-wider uppercase mt-2 group-hover:text-fuchsia-600/60 transition-colors">{c.region}</span>
-                        </Link>
-                    ))}
+                    <div>
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-fuchsia-300 text-xs font-bold uppercase tracking-widest mb-10">
+                            <Activity className="w-4 h-4" /> Specialized Care
+                        </span>
+                        <h2 className="elite-section-title text-white mb-10">
+                            High-Impact Treatments <br />
+                            <span className="text-fuchsia-400">for Global Patients.</span>
+                        </h2>
+                        <p className="text-xl text-slate-400 font-medium leading-relaxed mb-12">
+                            Our hospital is a world-renowned center for minimally invasive surgeries. International patients choose us for precision engineering and rapid recovery protocols.
+                        </p>
+
+                        <div className="grid sm:grid-cols-2 gap-6">
+                            {[
+                                { t: "Cardiology", d: "USFDA Drug-Eluting Stents", url: "/doctor/near-me/treat/cardiology/heart-angioplasty" },
+                                { t: "Orthopaedics", d: "Computer Navigated TKR", url: "/doctor/near-me/treat/orthopaedics/total-knee-replacement" },
+                                { t: "Proctology", d: "German Diode Laser Tech", url: "/doctor/near-me/treat/general-surgery/laser-piles-treatment" },
+                                { t: "Urology", d: "RIRS Incisionless Laser", url: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" }
+                            ].map((item, i) => (
+                                <Link key={i} href={item.url} className="group/item p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-fuchsia-500/50 transition-all duration-300">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="w-10 h-10 rounded-xl bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-400 group-hover/item:scale-110 transition-transform">
+                                            <Shield className="w-5 h-5" />
+                                        </div>
+                                        <ArrowRight className="w-4 h-4 text-slate-600 group-hover/item:text-fuchsia-400 group-hover/item:translate-x-1 transition-all" />
+                                    </div>
+                                    <h3 className="font-bold text-white text-lg mb-1">{item.t}</h3>
+                                    <p className="text-xs text-slate-500 font-medium uppercase tracking-widest">{item.d}</p>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        <div className="absolute -inset-4 bg-fuchsia-500/20 blur-[100px] rounded-full -z-10 animate-pulse" />
+                        <div className="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] p-8 lg:p-12 relative overflow-hidden">
+                            <h3 className="text-2xl font-black text-white mb-8 flex items-center gap-3">
+                                <Globe className="w-6 h-6 text-fuchsia-400" /> Patient Origin
+                            </h3>
+                            <div className="space-y-6">
+                                {[
+                                    { country: "Nigeria", major: "Cardiology & Ortho", traffic: "High" },
+                                    { country: "UAE / Oman", major: "Laser Proctology", traffic: "Steadily Rising" },
+                                    { country: "USA / UK", major: "Dental & General Surgery", traffic: "Surgical Tourism" },
+                                    { country: "Ethiopia", major: "Urology & Oncology", traffic: "Govt. Referred" }
+                                ].map((row, i) => (
+                                    <div key={i} className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/5 hover:border-white/20 transition-all">
+                                        <div>
+                                            <div className="font-black text-white">{row.country}</div>
+                                            <div className="text-[10px] text-fuchsia-400 uppercase font-bold tracking-widest">{row.major}</div>
+                                        </div>
+                                        <div className="px-3 py-1 bg-fuchsia-500/20 text-fuchsia-300 text-[10px] font-black rounded-full uppercase tracking-tighter">
+                                            {row.traffic}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="mt-12 p-6 bg-fuchsia-600 rounded-2xl text-center">
+                                <div className="text-white font-black text-lg mb-1 italic">Save up to 70%</div>
+                                <div className="text-white/70 text-xs font-bold uppercase tracking-widest">Global Medical Standards</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </SectionContainer>
 

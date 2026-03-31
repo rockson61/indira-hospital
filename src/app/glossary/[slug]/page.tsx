@@ -1,8 +1,9 @@
 import { GLOSSARY_DATA } from "@/lib/data/glossary-data";
+import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 import { notFound } from "next/navigation";
 import { SectionContainer } from "@/components/ui/section-container";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Clock, Heart, Sparkles, ArrowRight, Shield } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, Heart, Sparkles, ArrowRight, Shield, Stethoscope, Activity } from "lucide-react";
 import { Metadata } from "next";
 import { motion } from "framer-motion";
 
@@ -110,24 +111,56 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
 
                                 {glossaryItem.relatedService && (
                                     <div>
-                                        <h3 className="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6">Related Excellence</h3>
+                                        <h3 className="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6">Expert Department</h3>
                                         <Link
-                                            href={`/services/${glossaryItem.relatedService}`}
+                                            href={`/doctor/near-me/treat/${glossaryItem.relatedService}`}
                                             className="group/link flex items-center gap-4 hover:scale-[1.02] transition-transform"
                                         >
                                             <div className="w-12 h-12 rounded-full bg-fuchsia-50 dark:bg-fuchsia-900/30 border border-fuchsia-100 dark:border-fuchsia-800 flex items-center justify-center text-fuchsia-600">
-                                                <ArrowRight className="w-6 h-6 group-hover/link:translate-x-1 transition-transform" />
+                                                <Stethoscope className="w-6 h-6 group-hover/link:rotate-12 transition-transform" />
                                             </div>
                                             <div>
                                                 <p className="text-fuchsia-600 dark:text-fuchsia-400 font-black text-lg group-hover/link:underline">
                                                     {glossaryItem.relatedServiceTitle || glossaryItem.relatedService}
                                                 </p>
-                                                <p className="text-slate-500 text-xs font-medium uppercase tracking-widest leading-none">View Service</p>
+                                                <p className="text-slate-500 text-xs font-medium uppercase tracking-widest leading-none">Main Hub</p>
                                             </div>
                                         </Link>
                                     </div>
                                 )}
                             </div>
+
+                            {/* TREATMENT MAPPING (AEO Enhancement) */}
+                            {(() => {
+                                const relatedTreatment = TREATMENT_DATA.find(t => 
+                                    t.title.toLowerCase().includes(glossaryItem.term.toLowerCase()) || 
+                                    glossaryItem.term.toLowerCase().includes(t.title.toLowerCase()) ||
+                                    t.slug.replace(/-/g, ' ').includes(glossaryItem.term.toLowerCase())
+                                );
+
+                                if (relatedTreatment) {
+                                    return (
+                                        <div className="mt-16 p-8 bg-slate-50 dark:bg-slate-950/50 rounded-3xl border border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8 group/treat">
+                                            <div className="flex items-center gap-6">
+                                                <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 shadow-xl flex items-center justify-center text-fuchsia-500 animate-pulse">
+                                                    <Activity className="w-8 h-8" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-xl font-black text-slate-900 dark:text-white mb-2">Recommended Treatment</h3>
+                                                    <p className="text-slate-500 text-sm font-medium">Get world-class {relatedTreatment.title} at Indira Hospital.</p>
+                                                </div>
+                                            </div>
+                                            <Link 
+                                                href={`/doctor/near-me/treat/${relatedTreatment.parentServiceSlug}/${relatedTreatment.slug}`}
+                                                className="px-8 py-4 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-700 shadow-lg shadow-fuchsia-500/20 flex items-center gap-2 group/btn"
+                                            >
+                                                Fix It Now <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                                            </Link>
+                                        </div>
+                                    );
+                                }
+                                return null;
+                            })()}
                         </div>
 
                         {/* Ambient Texture */}

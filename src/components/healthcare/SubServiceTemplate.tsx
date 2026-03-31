@@ -2,12 +2,11 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ChevronRight, Phone, Calendar, CheckCircle2, MessageCircle, Clock, Star, IndianRupee, Siren, Dna, Wind, Apple, Scale, UserCheck, Ear, Ribbon, Cpu, MapPin, Sparkles, ArrowRight, Shield, Zap, Bed } from "lucide-react"
-    ;
+import { ChevronRight, Phone, Calendar, CheckCircle2, MessageCircle, Clock, Star, IndianRupee, Siren, Dna, Wind, Apple, Scale, UserCheck, Ear, Ribbon, Cpu, MapPin, Sparkles, ArrowRight, Shield, Zap, Bed, Target, Globe, AlertCircle, Syringe as SyringeLucide, HandPlatter, Droplets } from "lucide-react"
 import { Stethoscope, Electricity, HeartCardiogram, Microscope, Heart, Baby0203m, Orthopaedics, Eye, Neurology, Syringe, Happy, BloodDrop } from "healthicons-react/outline";
 import { SectionContainer } from '@/components/ui/section-container'
 import { SectionHeader } from '@/components/ui/section-header'
-import { MarketingContent, MarketingContentProps } from '@/components/marketing/MarketingContent'
+import { MarketingContent, MarketingContentProps, MarketingFAQ } from '@/components/marketing/MarketingContent'
 import { ProcedureTimeline } from '@/components/healthcare/services/ProcedureTimeline'
 import EntityReviews from '@/components/trust/EntityReviews'
 import { RelatedServices, RelatedServicesProps } from '@/components/healthcare/services/RelatedServices'
@@ -17,13 +16,19 @@ import { injectInternalLinks } from '@/lib/html-linkify'
 import { SurgicalVideoBank } from '@/components/marketing/SurgicalVideoBank'
 import { HealthCalculators } from '@/components/marketing/HealthCalculators'
 import { AvailabilityCTA } from '@/components/marketing/AvailabilityTicker'
+import { ServiceQuickSummary } from '@/components/healthcare/services/ServiceQuickSummary'
+import { ProcedureComparison } from '@/components/healthcare/services/ProcedureComparison'
+import { TreatmentSecondaryNav } from '@/components/healthcare/services/TreatmentSecondaryNav'
+import { ConversionGrid } from '@/components/healthcare/services/ConversionGrid'
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
 const iconMap: Record<string, React.ElementType> = {
     IndianRupee, Clock, HeartCardiogram, Star, Electricity, Shield, Microscope,
     Stethoscope, Heart, Siren, Baby0203m, Dna, Orthopaedics, Eye, Wind, Apple,
     Neurology, Scale, Syringe, Happy, UserCheck, Ear, Ribbon, BloodDrop,
-    Cpu, MapPin, CheckCircle2, Zap, Bed, CheckCircle: CheckCircle2,
+    Cpu, MapPin, CheckCircle2, Zap, Bed, Target, Globe, AlertCircle, HandPlatter, Droplets,
+    CheckCircle: CheckCircle2,
+    SyringeLucide: SyringeLucide,
 }
 
 // ─── Types ──────────────────────────────────────────────────────────────────
@@ -37,8 +42,14 @@ export interface SubServiceTemplateProps {
     title: string
     eyebrow?: string
     description: React.ReactNode
-    quickFacts: QuickFact[]
-    marketingContent?: MarketingContentProps
+    quickFacts?: QuickFact[]
+    slug?: string
+    parentServiceSlug?: string
+    marketingContent?: MarketingContentProps & {
+        features?: { title: string; description: string; icon?: string }[]
+        benefits?: { title: string; description: string; icon?: string }[]
+        faq?: MarketingFAQ[]
+    }
     timeline?: {
         steps: { title: string; description: string; duration?: string }[]
         title?: string
@@ -57,6 +68,11 @@ export interface SubServiceTemplateProps {
     showVideoBank?: boolean
     showHealthCalculators?: boolean
     showAvailabilityCTA?: boolean
+    duration?: string
+    hospitalStay?: string
+    recoveryTime?: string
+    anesthesia?: string
+    showComparison?: boolean
     children?: React.ReactNode
 }
 
@@ -65,7 +81,7 @@ export function SubServiceTemplate({
     title,
     eyebrow,
     description,
-    quickFacts,
+    quickFacts = [],
     marketingContent,
     timeline,
     relatedServices,
@@ -76,14 +92,43 @@ export function SubServiceTemplate({
     showHealthCalculators,
     showAvailabilityCTA,
     children,
+    slug,
+    parentServiceSlug,
+    duration,
+    hospitalStay,
+    recoveryTime,
+    anesthesia,
+    showComparison = true,
 }: SubServiceTemplateProps) {
     const isDental = title.toLowerCase().includes('dental') || title.toLowerCase().includes('dentistry') || eyebrow?.toLowerCase().includes('dental') || departmentName?.toLowerCase().includes('dental');
     const contactPhone = isDental ? "+91 7010650063" : siteConfig.contact.phone;
     const whatsappUrl = `https://wa.me/${contactPhone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi, I need information about ${title} at Indira Hospital.`)}`;
     const bookingUrl = '/book-appointment'
 
+    // ── Data Transformation ──────────────────────────────────────────────────
+    // Merge specialized clinical data (features/benefits) into the standard MarketingContent components format
+    const processedMarketingContent: MarketingContentProps | undefined = marketingContent ? {
+        ...marketingContent,
+        sections: [
+            ...(marketingContent.sections || []),
+            ...(marketingContent.features ? [{
+                id: 'clinical-features',
+                heading: 'Procedure Excellence & Features',
+                highlights: marketingContent.features.map(f => ({ title: f.title, description: f.description }))
+            }] : []),
+            ...(marketingContent.benefits ? [{
+                id: 'patient-benefits',
+                heading: 'Patient Benefits & Outcomes',
+                highlights: marketingContent.benefits.map(b => ({ title: b.title, description: b.description }))
+            }] : []),
+        ],
+        faqs: marketingContent.faqs || marketingContent.faq
+    } : undefined;
+
     // ── JSON-LD ──────────────────────────────────────────────────────────────
     const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url : `${siteConfig.url}/`;
+    const canonicalUrl = `${baseUrl}${reviews?.entitySlug || slug || ''}`;
+
     const breadcrumbJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
@@ -93,7 +138,7 @@ export function SubServiceTemplate({
             ...(departmentName && departmentSlug
                 ? [{ '@type': 'ListItem', position: 3, name: `Indira Elite ${departmentName}`, item: `${baseUrl}doctor/near-me/treat/${departmentSlug}` }]
                 : []),
-            { '@type': 'ListItem', position: departmentSlug ? 4 : 3, name: title, item: reviews?.entitySlug ? `${baseUrl}${reviews.entitySlug}` : undefined },
+            { '@type': 'ListItem', position: departmentSlug ? 4 : 3, name: title, item: canonicalUrl },
         ],
     }
 
@@ -101,11 +146,14 @@ export function SubServiceTemplate({
         '@context': 'https://schema.org',
         '@type': 'MedicalProcedure',
         name: title,
-        description: `Expert ${title} treatment at Indira Super Speciality Hospital, Vellore.`,
+        url: canonicalUrl,
+        description: `Advanced ${title} surgery and medical care at Indira Super Speciality Hospital, Vellore. Highly successful outcomes with senior surgical experts.`,
         procedureType: { '@type': 'MedicalProcedureType', name: eyebrow || 'Medical Procedure' },
+        relevantSpecialty: { '@type': 'MedicalSpecialty', name: departmentName || 'Surgery' },
         performer: {
             '@type': 'MedicalOrganization',
             name: 'Indira Super Speciality Hospital',
+            logo: `${baseUrl}logo.png`,
             address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Vellore',
@@ -115,11 +163,47 @@ export function SubServiceTemplate({
         },
     }
 
+    // FAQ Schema
+    const faqJsonLd = processedMarketingContent?.faqs ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: processedMarketingContent.faqs.map(f => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: f.answer
+            }
+        }))
+    } : null;
+
+    // HowTo Schema (for Procedure Timeline)
+    const howToJsonLd = timeline ? {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: timeline.title || `Procedure Steps for ${title}`,
+        description: timeline.description || `The patient journey for ${title} at Indira Hospital.`,
+        step: timeline.steps.map((s, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            name: s.title,
+            itemListElement: [{
+                '@type': 'HowToDirection',
+                text: s.description
+            }]
+        }))
+    } : null;
+
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-slate-950">
+            {/* Treatment Secondary Nav (Sticky) */}
+            <TreatmentSecondaryNav treatmentName={title} whatsappUrl={whatsappUrl} />
+
             {/* JSON-LD */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureJsonLd) }} />
+            {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+            {howToJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />}
 
             {/* ── Hero ─────────────────────────────────────────────────────── */}
             <section className="relative pt-44 pb-20 lg:pt-52 lg:pb-28 overflow-hidden bg-[#FAFAFA] dark:bg-slate-950">
@@ -182,7 +266,7 @@ export function SubServiceTemplate({
             </section>
 
             {/* ── Quick Facts Bar ───────────────────────────────────────────── */}
-            <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-10 relative z-10">
+            <section id="pricing" className="max-w-7xl mx-auto px-6 lg:px-8 -mt-10 relative z-10">
                 <div className={`grid gap-4 ${quickFacts.length <= 2 ? 'grid-cols-2' : quickFacts.length === 3 ? 'grid-cols-3' : 'grid-cols-2 sm:grid-cols-4'}`}>
                     {quickFacts.map((fact, index) => {
                         const Icon = fact.icon ? iconMap[fact.icon] : (
@@ -212,9 +296,39 @@ export function SubServiceTemplate({
                     {/* Main column */}
                     <div className="lg:col-span-8 space-y-12">
 
+                        {/* Quick Summary Card */}
+                        <ServiceQuickSummary 
+                            duration={duration} 
+                            hospitalStay={hospitalStay} 
+                            recoveryTime={recoveryTime} 
+                            anesthesia={anesthesia} 
+                        />
+
+                        {/* Conversion Grid (Medfin Inspired) */}
+                        <ConversionGrid whatsappUrl={whatsappUrl} />
+
+                        {/* Benefits Trust Bar */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-slate-100 dark:border-slate-800">
+                            {[
+                                { title: 'Free Pick-up & Drop', desc: 'Complimentary cab for all surgery patients in Vellore.', icon: MapPin },
+                                { title: 'Insurance Concierge', desc: 'Full assistance with TPA & Cashless paperwork.', icon: Shield },
+                                { title: 'Post-Op Care', desc: 'Free follow-up consultations for 30 days.', icon: UserCheck },
+                            ].map((benefit, i) => (
+                                <div key={i} className="flex gap-4">
+                                    <div className="w-10 h-10 rounded-xl bg-fuchsia-100 dark:bg-fuchsia-900/30 flex items-center justify-center text-fuchsia-600 shrink-0">
+                                        <benefit.icon className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-bold text-slate-900 dark:text-white">{benefit.title}</p>
+                                        <p className="text-xs text-slate-500">{benefit.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
                         {/* Children (rich prose content) */}
                         {children && (
-                            <article className="prose prose-lg prose-slate max-w-none
+                            <article id="about" className="prose prose-lg prose-slate max-w-none
                                 prose-headings:font-heading prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900 dark:text-white
                                 prose-h2:text-3xl prose-h2:border-l-4 prose-h2:border-fuchsia-500 prose-h2:pl-4
                                 prose-p:text-slate-600 prose-p:leading-relaxed
@@ -229,9 +343,16 @@ export function SubServiceTemplate({
                             </article>
                         )}
 
+                        {/* Procedure Comparison Table */}
+                        {showComparison && (
+                            <ProcedureComparison />
+                        )}
+
                         {/* Marketing Content Sections */}
-                        {marketingContent && (
-                            <MarketingContent {...marketingContent} className="mt-4" />
+                        {processedMarketingContent && (
+                            <div id="faq">
+                                <MarketingContent {...processedMarketingContent} className="mt-4" />
+                            </div>
                         )}
 
                         {/* Procedure Timeline */}
@@ -360,9 +481,68 @@ export function SubServiceTemplate({
                 </section>
             )}
 
+            {/* ── Location Map ──────────────────────────────────────────────── */}
+            <section className="py-20 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800">
+                <SectionContainer>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6">
+                            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-primary italic">
+                                Visit Our Specialty Center in Vellore
+                            </h2>
+                            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                                Our center is located in the heart of Vellore, providing easy access for patients across Tamil Nadu. Equipped with modern diagnostic and surgical infrastructure, we ensure world-class care in a compassionate environment.
+                            </p>
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-4">
+                                    <MapPin className="w-6 h-6 text-fuchsia-600 shrink-0" />
+                                    <div>
+                                        <p className="font-bold text-slate-900 dark:text-white">Indira Super Speciality Hospital</p>
+                                        <p className="text-slate-500 text-sm">Vellore, Tamil Nadu, India</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-4 text-lg">
+                                    <Phone className="w-6 h-6 text-fuchsia-600 shrink-0" />
+                                    <p className="font-bold text-slate-900 dark:text-white">{contactPhone}</p>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap gap-4 pt-4">
+                                <a
+                                    href="https://maps.app.goo.gl/3bad47c4d07af16f:0xbb5e21b061736da6"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-full font-bold transition-all hover:bg-fuchsia-600 dark:hover:bg-fuchsia-100 shadow-md"
+                                >
+                                    Get Directions <ArrowRight className="w-4 h-4" />
+                                </a>
+                                <a
+                                    href={whatsappUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold transition-all shadow-md"
+                                >
+                                    <MessageCircle className="w-5 h-5" /> WhatsApp Support
+                                </a>
+                            </div>
+                        </div>
+                        <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 h-[450px] relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.060018581216!2d79.1370592!3d12.953442599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad47c4d07af16f%3A0xbb5e21b061736da6!2sDr.%20Karan%20Shankar%20%7C%20Best%20Colorectal%2C%20Laparoscopic%2C%20Gastro%20%26%20General%20Surgeon%20In%20Vellore!5e1!3m2!1sen!2sin!4v1774805669927!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="grayscale hover:grayscale-0 transition-all duration-500"
+                            />
+                        </div>
+                    </div>
+                </SectionContainer>
+            </section>
+
             {/* ── Related Services ──────────────────────────────────────────── */}
             {relatedServices && (
-                <section className="bg-[#FAFAFA] dark:bg-slate-950 py-20 border-b border-slate-100 dark:border-slate-700">
+                <section id="related-treatments" className="bg-[#FAFAFA] dark:bg-slate-950 py-20 border-b border-slate-100 dark:border-slate-700">
                     <SectionContainer>
                         <RelatedServices {...relatedServices} />
                     </SectionContainer>
@@ -371,7 +551,7 @@ export function SubServiceTemplate({
 
             {/* ── Reviews ──────────────────────────────────────────────────── */}
             {reviews && (
-                <section className="py-20 bg-white dark:bg-slate-900">
+                <section id="surgeons" className="py-20 bg-white dark:bg-slate-900">
                     <SectionContainer>
                         <EntityReviews
                             entityType={(reviews.entityType || 'department') as any}

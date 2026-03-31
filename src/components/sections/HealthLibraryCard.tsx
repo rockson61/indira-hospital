@@ -27,7 +27,6 @@ export function HealthLibraryCard() {
 
                 {/* Left Panel: Spotlight Lead */}
                 <div className="relative p-12 lg:p-16 flex flex-col justify-center lg:w-5/12 min-h-[300px] bg-gradient-to-br from-fuchsia-600 to-pink-600 text-white overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.05] mix-blend-overlay pointer-events-none" />
                     <div className="absolute -top-32 -left-32 w-64 h-64 bg-white/20 rounded-full blur-[60px]" />
 
                     <div className="relative z-10">

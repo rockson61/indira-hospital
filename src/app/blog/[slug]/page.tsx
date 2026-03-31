@@ -17,6 +17,8 @@ import { ComparisonCard } from "@/components/marketing/ComparisonCard";
 import { InsuranceCard } from "@/components/marketing/InsuranceCard";
 import { InternationalPatientCard } from "@/components/marketing/InternationalPatientCard";
 
+import { injectInternalLinks } from "@/lib/html-linkify";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const title = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
@@ -100,7 +102,7 @@ export default async function BlogPostPage({
                     {/* Primary Content (8 Cols) */}
                     <div className="lg:col-span-8 space-y-12">
                         <article className="prose prose-lg prose-slate dark:prose-invert max-w-none">
-                            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                            <div dangerouslySetInnerHTML={{ __html: injectInternalLinks(post.content) }} />
                         </article>
 
                         {/* Mid-Article Comparison Card Breakout */}

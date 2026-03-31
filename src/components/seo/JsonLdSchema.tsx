@@ -59,7 +59,13 @@ type JsonLdSchemaProps =
     | PhysicianSchemaProps 
     | BreadcrumbSchemaProps 
     | MedicalProcedureSchemaProps
-    | ArticleSchemaProps;
+    | ArticleSchemaProps
+    | FAQPageSchemaProps;
+
+interface FAQPageSchemaProps {
+    type: "faq";
+    mainEntity: { question: string; answer: string }[];
+}
 
 export function JsonLdSchema(props: JsonLdSchemaProps) {
     let schema: Record<string, any>;
@@ -100,6 +106,15 @@ export function JsonLdSchema(props: JsonLdSchemaProps) {
                 opens: "00:00",
                 closes: "23:59",
             },
+            sameAs: [
+                siteConfig.socials.facebook,
+                siteConfig.socials.instagram,
+                siteConfig.socials.youtube,
+                siteConfig.socials.twitter,
+                siteConfig.socials.linkedin,
+                siteConfig.socials.practo,
+                siteConfig.socials.justdial,
+            ].filter(Boolean),
         };
     } else if (props.type === "medicalClinic") {
         schema = {
@@ -137,6 +152,19 @@ export function JsonLdSchema(props: JsonLdSchemaProps) {
                 position: i + 1,
                 name: item.name,
                 url: `${siteConfig.url}${item.url}`,
+            })),
+        };
+    } else if (props.type === "faq") {
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: props.mainEntity.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.answer,
+                },
             })),
         };
     } else if (props.type === "physician") {

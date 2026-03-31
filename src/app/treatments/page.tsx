@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 
 const treatments = [
     {
@@ -76,30 +77,37 @@ export default function TreatmentsPage() {
 
             <SectionContainer>
                 <div className="grid md:grid-cols-2 gap-8">
-                    {treatments.map((treatment) => (
-                        <div key={treatment.slug} className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col h-full group">
-                            <div className="mb-8">{treatment.icon}</div>
-                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-4">{treatment.title}</h2>
-                            <p className="text-slate-500 font-medium mb-8 flex-grow">{treatment.description}</p>
+                    {treatments.map((treatment) => {
+                        const treatmentData = TREATMENT_DATA.find(t => t.slug === treatment.slug);
+                        const href = treatmentData 
+                            ? `/doctor/near-me/treat/${treatmentData.parentServiceSlug}/${treatment.slug}`
+                            : `/doctor/near-me/treat/${treatment.slug}`;
 
-                            <div className="space-y-4 mb-10">
-                                {treatment.benefits.map((benefit, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-fuchsia-500" />
-                                        <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{benefit}</span>
-                                    </div>
-                                ))}
+                        return (
+                            <div key={treatment.slug} className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col h-full group">
+                                <div className="mb-8">{treatment.icon}</div>
+                                <h2 className="elite-section-title text-slate-900 dark:text-white mb-4">{treatment.title}</h2>
+                                <p className="text-slate-500 font-medium mb-8 flex-grow">{treatment.description}</p>
+
+                                <div className="space-y-4 mb-10">
+                                    {treatment.benefits.map((benefit, i) => (
+                                        <div key={i} className="flex items-center gap-3">
+                                            <div className="w-2 h-2 rounded-full bg-fuchsia-500" />
+                                            <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{benefit}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <Link
+                                    href={href}
+                                    className="inline-flex items-center justify-between w-full p-6 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30 rounded-2xl border border-slate-100 dark:border-slate-700 transition-all font-black text-slate-900 dark:text-white"
+                                >
+                                    View Detailed Procedure
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </Link>
                             </div>
-
-                            <Link
-                                href={`/doctor/near-me/treat/${treatment.slug}`}
-                                className="inline-flex items-center justify-between w-full p-6 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30 rounded-2xl border border-slate-100 dark:border-slate-700 transition-all font-black text-slate-900 dark:text-white"
-                            >
-                                View Detailed Procedure
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </Link>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </SectionContainer>
 

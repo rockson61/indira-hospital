@@ -33,6 +33,11 @@ export default function SEOPage() {
             }}
             showAvailabilityCTA={true}
             showVideoBank={true}
+            duration="45 Mins"
+            hospitalStay="24 Hours"
+            recoveryTime="72 Hours"
+            anesthesia="Spinal"
+            showComparison={true}
         >
             <div className="space-y-12">
                 <section>

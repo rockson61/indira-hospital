@@ -118,6 +118,17 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             offering advanced Laparoscopic, Laser, and Cardiac treatments just {location.distance} away.
                         </p>
 
+                        {/* REGIONAL TRUST BADGE */}
+                        <div className="flex items-center gap-4 mb-12 p-4 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 max-w-sm animate-in fade-in zoom-in duration-1000 delay-300">
+                            <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-400">
+                                <Shield className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <div className="text-white font-bold text-sm">#1 Choice for {location.name}</div>
+                                <div className="text-slate-400 text-xs uppercase tracking-widest font-medium">Outstation Patient Support</div>
+                            </div>
+                        </div>
+
                         <div className="flex flex-col sm:flex-row gap-5">
                             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="elite-button-primary gap-3 hover:scale-[1.02]">
                                 <span className="relative z-10">WhatsApp Appointment</span>
@@ -228,8 +239,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
             {/* DIRECTIONS MODULE (ELITE) */}
             <section className="py-24 bg-slate-900 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] mix-blend-overlay" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu pointer-events-none" />
+
 
                 <SectionContainer className="relative z-10 max-w-7xl mx-auto">
                     <div className="bg-white/5 backdrop-blur-3xl rounded-[4rem] border border-white/10 p-8 lg:p-16">
@@ -446,11 +457,11 @@ export default async function LocationDetailPage({ params }: PageProps) {
                             className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between group"
                         >
                             <div>
-                                <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors">
-                                    <MapPin className="w-5 h-5 text-slate-300 group-hover:text-fuchsia-500" />
+                                <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-fuchsia-50 dark:group-hover:bg-fuchsia-950/40 transition-colors border border-slate-100 dark:border-slate-700">
+                                    <MapPin className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-500" />
                                 </div>
                                 <div className="font-black text-slate-900 dark:text-white text-xl tracking-tight mb-1">{near.name}</div>
-                                <div className="text-xs text-slate-400 font-bold uppercase tracking-widest">{near.distance} Distance</div>
+                                <div className="text-xs text-slate-500 font-bold uppercase tracking-widest">{near.distance} Distance</div>
                             </div>
                             <div className="mt-8 flex items-center gap-2 text-fuchsia-600 font-black text-[11px] uppercase tracking-[0.1em] opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
                                 View Location <ArrowRight className="w-4 h-4" />

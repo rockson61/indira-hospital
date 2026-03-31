@@ -6,7 +6,8 @@ import { Ambulance, Ribbon, ArrowRight, CheckCircle2, ChevronRight, Sparkles, Me
 import { Stethoscope, HeartCardiogram, Heart, Happy, Neurology, BloodDrop, Electricity, Baby0203m, Orthopaedics } from "healthicons-react/outline";
 import { siteConfig } from "@/config/site";
 import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { cn, getImageUrl } from "@/lib/utils";
+import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 
 interface ServiceCardProps {
     service: any;
@@ -33,7 +34,12 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function ServiceCard({ service, variant = "detail", className, cardClassName, theme = "teal" }: ServiceCardProps) {
     const Icon = iconMap[service.icon] || <Stethoscope className="h-full w-full" />;
-    const href = `/doctor/near-me/treat/${service.slug}`;
+    
+    // Determine hierarchical URL
+    const treatmentData = TREATMENT_DATA.find(t => t.slug === service.slug);
+    const href = treatmentData 
+        ? `/doctor/near-me/treat/${treatmentData.parentServiceSlug}/${service.slug}`
+        : `/doctor/near-me/treat/${service.slug}`;
 
     // --- VARIANT: COMPACT ---
     if (variant === "compact") {

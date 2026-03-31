@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Phone, CheckCircle2, ChevronRight, Award, Users, Shield } from "lucide-react";
-;
+import { ArrowLeft, Calendar, Phone, CheckCircle2, ChevronRight, Award, Users, Shield, Zap, Clock, Target, Microscope, Sparkles } from "lucide-react";
 import { Stethoscope, Electricity, HeartCardiogram } from "healthicons-react/outline";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionContainer } from "@/components/ui/section-container";
@@ -41,15 +40,22 @@ interface DepartmentTemplateProps {
     relatedServices?: any[];
     pricing?: PricingPackage[];
     technology?: Technology[];
+    children?: React.ReactNode;
+    quickFacts?: { label: string; value: string; icon: string | any }[];
 }
 
 const iconMap: Record<string, any> = {
-    Electricity: Electricity,
+    Electricity,
     Shield,
-    HeartCardiogram: HeartCardiogram,
+    HeartCardiogram,
     Award,
     Users,
-    Stethoscope
+    Stethoscope,
+    Zap,
+    Clock,
+    Target,
+    Microscope,
+    Sparkles
 };
 
 export function DepartmentTemplate({
@@ -62,7 +68,9 @@ export function DepartmentTemplate({
     relatedDoctors = [],
     relatedServices = [],
     pricing = [],
-    technology = []
+    technology = [],
+    children,
+    quickFacts
 }: DepartmentTemplateProps) {
     const phone = siteConfig.contact.phone;
 
@@ -114,18 +122,21 @@ export function DepartmentTemplate({
 
                         {/* Quick highlights grid */}
                         <div className="grid grid-cols-2 gap-4 w-full lg:w-auto">
-                            {[
-                                { label: 'Specialists', value: `${relatedDoctors.length}+ Doctors`, icon: Users },
-                                { label: 'Procedures', value: `${procedures.length}+ Expert`, icon: HeartCardiogram },
-                                { label: 'Availability', value: '24/7 Care', icon: Shield },
-                                { label: 'Success Rate', value: '99% Positive', icon: Award },
-                            ].map((item, i) => (
-                                <div key={i} className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-center flex flex-col items-center gap-2 group hover:bg-white/10 transition-colors">
-                                    <item.icon className="w-5 h-5 text-[#54CAD3] mb-1" />
-                                    <p className="text-xs text-fuchsia-200/60 uppercase font-semibold">{item.label}</p>
-                                    <p className="text-sm font-bold text-white">{item.value}</p>
-                                </div>
-                            ))}
+                            {(quickFacts || [
+                                { label: 'Specialists', value: `${relatedDoctors.length}+ Doctors`, icon: 'Users' },
+                                { label: 'Procedures', value: `${procedures.length}+ Expert`, icon: 'HeartCardiogram' },
+                                { label: 'Availability', value: '24/7 Care', icon: 'Shield' },
+                                { label: 'Success Rate', value: '99% Positive', icon: 'Award' },
+                            ]).map((item, i) => {
+                                const Icon = typeof item.icon === 'string' ? (iconMap[item.icon] || HeartCardiogram) : item.icon;
+                                return (
+                                    <div key={i} className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-center flex flex-col items-center gap-2 group hover:bg-white/10 transition-colors">
+                                        <Icon className="w-5 h-5 text-[#54CAD3] mb-1" />
+                                        <p className="text-xs text-fuchsia-200/60 uppercase font-semibold">{item.label}</p>
+                                        <p className="text-sm font-bold text-white">{item.value}</p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
@@ -137,7 +148,8 @@ export function DepartmentTemplate({
                     <div className="lg:col-span-8 space-y-10">
                         <div className="prose prose-lg max-w-none prose-slate dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-strong:text-[#005f73] dark:prose-strong:text-fuchsia-300">
                             <h2 className="elite-section-title mb-6">Expert Care in {title}</h2>
-                            <div dangerouslySetInnerHTML={{ __html: fullDescription }} />
+                            {fullDescription && <div dangerouslySetInnerHTML={{ __html: fullDescription }} />}
+                            {children}
                         </div>
 
                         {/* Technology / Infrastructure Highlights */}

@@ -35,11 +35,11 @@ export const navigation = {
         { title: "ENT", href: "/doctor/near-me/treat/ent" },
         {
             title: "Urology", href: "/doctor/near-me/treat/urology", subServices: [
-                { title: "Kidney Stone Laser", href: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
-                { title: "Prostate TURP", href: "/doctor/near-me/treat/urology/prostate-turp-surgery" },
-                { title: "Enlarged Prostate (BPH)", href: "/doctor/near-me/treat/urology/enlarged-prostate-bph-treatment" },
-                { title: "Bladder Cancer", href: "/doctor/near-me/treat/urology/bladder-cancer-diagnosis-treatment" },
-                { title: "UTI Treatment", href: "/doctor/near-me/treat/urology/uti-treatment-guide" },
+                { title: "Kidney Stone Laser (RIRS)", href: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
+                { title: "Elite Laser Prostate (TURP)", href: "/doctor/near-me/treat/urology/laser-prostate-surgery" },
+                { title: "Complex Stone (PCNL)", href: "/doctor/near-me/treat/urology/pcnl-complex-stone-removal" },
+                { title: "Bladder Cancer Unit", href: "/doctor/near-me/treat/urology/bladder-cancer-diagnosis-treatment" },
+                { title: "UTI Treatment Guide", href: "/doctor/near-me/treat/urology/uti-treatment-guide" },
             ]
         },
         {
@@ -79,11 +79,11 @@ export const navigation = {
         },
         {
             title: "Neurology", href: "/doctor/near-me/treat/neurology", subServices: [
+                { title: "Stroke Unit & Rehab", href: "/doctor/near-me/treat/neurology/stroke-unit-rehabilitation" },
+                { title: "Epilepsy & Seizure Care", href: "/doctor/near-me/treat/neurology/epilepsy-and-seizure-care" },
                 { title: "Dementia & Alzheimer's", href: "/doctor/near-me/treat/neurology/dementia-alzheimers-care" },
-                { title: "Stroke Recovery", href: "/doctor/near-me/treat/neurology/stroke-recovery-exercises" },
-                { title: "Epilepsy Treatment", href: "/doctor/near-me/treat/neurology/epilepsy-treatment-options" },
                 { title: "Migraine Relief", href: "/doctor/near-me/treat/neurology/migraine-relief-management" },
-                { title: "Parkinson's Disease", href: "/doctor/near-me/treat/neurology/parkinsons-disease-care" },
+                { title: "Parkinson's Care", href: "/doctor/near-me/treat/neurology/parkinsons-disease-care" },
             ]
         },
         {
@@ -99,19 +99,18 @@ export const navigation = {
         },
         {
             title: "Nephrology", href: "/doctor/near-me/treat/nephrology", subServices: [
-                { title: "Dialysis Guide", href: "/doctor/near-me/treat/nephrology/dialysis-procedure-guide" },
+                { title: "Advanced Dialysis Center", href: "/doctor/near-me/treat/nephrology/advanced-dialysis-center" },
+                { title: "Preventive Kidney Care", href: "/doctor/near-me/treat/nephrology/preventive-kidney-care" },
                 { title: "Kidney Transplant", href: "/doctor/near-me/treat/nephrology/kidney-transplant-guide" },
-                { title: "Diabetic Kidney Disease", href: "/doctor/near-me/treat/nephrology/diabetic-kidney-disease-ckd" },
-                { title: "CKD Stages", href: "/doctor/near-me/treat/nephrology/chronic-kidney-disease-stages" },
+                { title: "Diabetic Kidney (CKD)", href: "/doctor/near-me/treat/nephrology/diabetic-kidney-disease-ckd" },
             ]
         },
         {
             title: "Oncology", href: "/doctor/near-me/treat/oncology", subServices: [
-                { title: "Chemotherapy", href: "/doctor/near-me/treat/oncology/chemotherapy-side-effects" },
+                { title: "Surgical Oncology", href: "/doctor/near-me/treat/oncology/surgical-oncology-center" },
+                { title: "Medical Oncology & Chemo", href: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" },
+                { title: "Breast Cancer Clinic", href: "/doctor/near-me/treat/oncology/breast-cancer-screening-guide" },
                 { title: "Radiation Therapy", href: "/doctor/near-me/treat/oncology/radiation-therapy-overview" },
-                { title: "Surgical Oncology", href: "/doctor/near-me/treat/oncology/surgical-oncology-overview" },
-                { title: "Breast Cancer Screening", href: "/doctor/near-me/treat/oncology/breast-cancer-screening-guide" },
-                { title: "Palliative Care", href: "/doctor/near-me/treat/oncology/palliative-care-services" },
             ]
         }
     ],

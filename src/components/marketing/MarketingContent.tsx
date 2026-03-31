@@ -68,7 +68,7 @@ export interface MarketingCTA {
 }
 
 export interface MarketingContentProps {
-  sections: MarketingSection[]
+  sections?: MarketingSection[]
   tocTitle?: string
   intro?: {
     eyebrow?: string
@@ -83,7 +83,7 @@ export interface MarketingContentProps {
 }
 
 export function MarketingContent({
-  sections,
+  sections = [],
   tocTitle = 'On this page',
   intro,
   stats,
@@ -92,8 +92,8 @@ export function MarketingContent({
   schema,
   className,
 }: MarketingContentProps) {
-  if (!sections.length) {
-    return null
+  if (!sections || !sections.length) {
+    if (!faqs || !faqs.length) return null
   }
 
   return (

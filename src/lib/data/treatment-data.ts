@@ -6,9 +6,14 @@ export interface TreatmentItem {
     title: string;
     shortDescription: string;
     fullDescription: string;
-    features: string[];
-    benefits: string[];
+    features: string[] | { title: string; description: string; icon: string }[];
+    benefits: string[] | { title: string; description: string; icon: string }[];
     faq?: { question: string; answer: string }[];
+    relatedTreatments?: string[];
+    duration?: string;
+    hospitalStay?: string;
+    recoveryTime?: string;
+    anesthesia?: string;
 }
 
 export const TREATMENT_DATA: TreatmentItem[] = [
@@ -38,25 +43,27 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     },
     {
         id: "t-2",
-        slug: "piles-treatment",
-        parentServiceSlug: "general-surgery",
-        title: "Laser Piles Treatment",
-        shortDescription: "Painless, bloodless laser surgery for Hemorrhoids.",
-        fullDescription: "Laser treatment for piles (hemorrhoids) is a minimally invasive procedure that uses laser energy to shrink the hemorrhoidal tissue. It offers significant advantages over traditional surgery.",
+        slug: "laser-piles-treatment",
+        parentServiceSlug: "proctology",
+        title: "Advanced Laser Piles Treatment (Hemorrhoids)",
+        shortDescription: "Painless, bloodless laser surgery for Hemorrhoids with same-day discharge.",
+        fullDescription: "Laser treatment for piles (hemorrhoids) is a minimally invasive procedure that uses laser energy to shrink the hemorrhoidal tissue. At Indira Hospital, we use high-power 1470nm Diode Lasers to achieve precision-driven results, ensuring zero incisions and a rapid return to daily life. This procedure, known as Laser Hemorrhoidopexy (LHP), is the gold standard for Grade 2, 3, and 4 hemorrhoids, offering a virtually pain-free alternative to traditional surgery.",
         features: [
-            "No incisions or stitches",
-            "Minimal bleeding",
-            "advanced diode laser",
-            "Day-care procedure"
+            { title: "1470nm Diode Laser", description: "Precision radial fiber technology for bloodless shrinkage.", icon: "Zap" },
+            { title: "LHP Technique", description: "Laser Hemorrhoidopexy ensures zero surgical incisions.", icon: "Target" },
+            { title: "Day-Care Procedure", description: "Walk-in, walk-out treatment within 4-6 hours.", icon: "Clock" },
+            { title: "Elite Sedation", description: "High-quality conscious sedation for absolute comfort.", icon: "Shield" }
         ],
         benefits: [
-            "Painless recovery",
-            "Discharge within 24 hours",
-            "Early return to work",
-            "Negligible recurrence rate"
+            { title: "Zero Post-Op Pain", description: "Minimal reliance on painkillers compared to traditional methods.", icon: "Star" },
+            { title: "No Recurrence", description: "Technically superior closure reduces recurrence to under 1%.", icon: "CheckCircle" },
+            { title: "Rapid Recovery", description: "Resume light professional work within 24-48 hours.", icon: "Zap" },
+            { title: "International Standard", description: "Treatment matching the highest global surgical benchmarks.", icon: "Globe" }
         ],
         faq: [
-            { question: "Is it permanent?", answer: "Yes, laser treatment has a very high success rate and low recurrence." }
+            { question: "Is laser treatment for piles permanent?", answer: "Yes. Laser Hemorrhoidopexy (LHP) treats the root cause by shrinking the hemorrhoidal mass and sealing the blood supply, resulting in a permanent solution with negligible recurrence rates." },
+            { question: "When can I resume a normal diet and work?", answer: "You can resume a high-fiber diet immediately. Most patients return to desk work within 48 hours and can resume light exercise after 7 days." },
+            { question: "Do you offer support for international patients?", answer: "Yes, we provide a dedicated concierge for patients from UAE, Bangladesh, and Africa, including cost estimates, airport pickup, and local accommodation help." }
         ]
     },
     {
@@ -240,26 +247,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         ]
     },
     {
-        id: "t-12",
-        slug: "gallbladder-removal",
-        parentServiceSlug: "general-surgery",
-        title: "Laparoscopic Gallbladder Surgery",
-        shortDescription: "Safe, minimally invasive keyhole surgery for gallstones with one-day recovery.",
-        fullDescription: "Laparoscopic Cholecystectomy (Gallbladder Removal) is our specialty. Using high-definition laparoscopy, our senior surgeons remove the gallbladder through tiny keyhole incisions. This gold-standard approach ensures minimal blood loss, minimal scarring, and allows most patients to return home within 24 hours.",
-        features: [
-            "Advanced HD Laparoscopic Imaging",
-            "Precision Keyhole Incisions",
-            "Harmonic Scalpel for Bloodless Dissection",
-            "Day-Care Surgery Option Available"
-        ],
-        benefits: [
-            "Virtually Scar-Free Outcome",
-            "Rapid Return to Regular Diet",
-            "Minimal Post-Operative Discomfort",
-            "Avoidance of Gallbladder Complications"
-        ]
-    },
-    {
         id: "t-13",
         slug: "root-canal-treatment",
         parentServiceSlug: "dentistry",
@@ -337,27 +324,8 @@ export const TREATMENT_DATA: TreatmentItem[] = [
             "Freedom from contact lenses",
             "Painless procedure",
             "Permanent results"
-        ]
-    },
-    {
-        id: "t-16",
-        slug: "hernia-repair",
-        parentServiceSlug: "general-surgery",
-        title: "Laparoscopic Hernia Repair",
-        shortDescription: "Advanced mesh repair for all types of hernias.",
-        fullDescription: "We perform laparoscopic repair for Inguinal, Umbilical, and Incisional hernias using 3D mesh, ensuring strong reinforcement and minimal recurrence.",
-        features: [
-            "3D Mesh technolgy",
-            "TAPP / TEP techniques",
-            "Minimal incisions",
-            "Fast recovery"
         ],
-        benefits: [
-            "Reduced post-op pain",
-            "Low recurrence rate",
-            "Early return to activity",
-            "Better cosmetics"
-        ]
+        relatedTreatments: ["t-2", "t-25", "t-26", "t-27"]
     },
     {
         id: "t-17",
@@ -422,76 +390,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     ,
     // Auto-generated from navigation route gap analysis
     {
-        id: "t-100",
-        slug: "laser-piles-treatment-cost",
-        parentServiceSlug: "general-surgery",
-        title: "Laser Piles Treatment",
-        shortDescription: "Painless laser surgery for piles with same-day discharge.",
-        fullDescription: "Experience the most advanced **Laser Piles Treatment** in Vellore. We use precision diode lasers to treat hemorrhoids without cuts or stitches, resulting in a practically bloodless procedure. This modern approach ensures rapid healing compared to traditional open surgery.",
-        features: ["No Cuts or Stitches", "USFDA Approved Laser Tech", "30-Minute Procedure", "Same-Day Discharge"],
-        benefits: ["Virtually Painless Recovery", "Minimal to No Bleeding", "Get Back to Work in 48 Hours", "Very Low Recurrence Rate"]
-    },
-    {
-        id: "t-101",
-        slug: "fistula-surgery-treatment",
-        parentServiceSlug: "general-surgery",
-        title: "Fistula Surgery",
-        shortDescription: "Advanced laser and VAAFT procedures for complex fistulas.",
-        fullDescription: "Our specialized proctologists offer comprehensive **Fistula Surgery Treatment**, including cutting-edge FiLaC (Fistula-tract Laser Closure) and VAAFT techniques. This ensures thorough cleaning and closure of the fistula tract while perfectly preserving sphincter muscle function.",
-        features: ["Anal Sphincter Preservation", "FiLaC Laser Technology", "VAAFT Video Assisted Tech", "High Success Rate"],
-        benefits: ["Minimizes Risk of Incontinence", "Faster Wound Healing", "Shorter Hospital Stay", "Less Post-operative Pain"]
-    },
-    {
-        id: "t-102",
-        slug: "laparoscopic-hernia-repair",
-        parentServiceSlug: "general-surgery",
-        title: "Hernia Repair",
-        shortDescription: "Minimally invasive 3D mesh repair for all hernia types.",
-        fullDescription: "We perform globally accepted **Laparoscopic Hernia Repair** for inguinal, umbilical, and incisional hernias. Utilizing advanced 3D anatomical meshes and keyhole techniques, we deliver strong abdominal wall reinforcement with minimal trauma.",
-        features: ["TEP and TAPP Techniques", "Imported 3D Anatomical Mesh", "Keyhole Incisions", "Minimal Tissue Trauma"],
-        benefits: ["Excellent Abdominal Wall Strength", "Less Post-Op Pain", "Cosmetically Superior Results", "Quick Return to Normal Activity"]
-    },
-    {
-        id: "t-103",
-        slug: "gallbladder-removal-recovery",
-        parentServiceSlug: "general-surgery",
-        title: "Gallbladder Removal",
-        shortDescription: "Safe laparoscopic cholecystectomy for gallstone relief.",
-        fullDescription: "Persistent pain from gallstones? Our **Laparoscopic Gallbladder Removal** (Cholecystectomy) is the gold standard solution. Using high-definition cameras and precision instruments, our surgeons safely extract the diseased gallbladder through tiny punctures.",
-        features: ["HD Laparoscopic Imaging", "Tiny Keyhole Punctures", "Done by Senior Surgeons", "Day-Care Surgery Option"],
-        benefits: ["Immediate Relief from Gallstone Pain", "No Need for Restricted Diets Post-Healing", "Minimal Scarring", "Discharge in 24-48 Hours"]
-    },
-    {
-        id: "t-104",
-        slug: "appendix-surgery-steps",
-        parentServiceSlug: "general-surgery",
-        title: "Appendix Surgery",
-        shortDescription: "Emergency laparoscopic appendectomy available 24/7.",
-        fullDescription: "Appendicitis requires urgent attention to prevent rupture. We offer emergency **Laparoscopic Appendix Surgery** 24 hours a day. The minimally invasive approach ensures successful removal of the inflamed appendix while greatly reducing the risk of wound infections.",
-        features: ["24/7 Emergency Surgery Unit", "Laparoscopic (Keyhole) Approach", "Advanced Infection Control", "Rapid Diagnostic Imaging"],
-        benefits: ["Prevents Life-Threatening Ruptures", "Very Low Risk of Infection", "Almost Invisible Scars", "Fast Recovery Time"]
-    },
-    {
-        id: "t-105",
-        slug: "laparoscopic-hysterectomy-guide",
-        parentServiceSlug: "obstetrics-gynaecology",
-        title: "Laparoscopic Hysterectomy",
-        shortDescription: "Minimally invasive uterus removal by expert gynecologists with rapid recovery.",
-        fullDescription: "When surgical removal of the uterus is medically required, our **Laparoscopic Hysterectomy** (Total Laparoscopic Hysterectomy or TLH) offers a modern alternative to traditional open surgery. Using high-definition cameras and specialized instruments, the uterus is removed through tiny abdominal incisions. This approach treats fibroids, abnormal bleeding, and endometriosis with unparalleled precision while ensuring minimal scarring and a much faster return to daily activities.",
-        features: ["Total Laparoscopic Approach (TLH)", "Vaginal Hysterectomy Options", "Specialized Gynae-Surgeons", "Minimal Blood Loss"],
-        benefits: ["No Large Abdominal Incisions", "Shorter Hospitalization (1-2 days)", "Rapid Return to Daily Life", "Reduced Post-Surgical Adhesions"]
-    },
-    {
-        id: "t-106",
-        slug: "pcod-pcos-treatment-guide",
-        parentServiceSlug: "obstetrics-gynaecology",
-        title: "PCOD / PCOS Treatment",
-        shortDescription: "Holistic management and treatment for PCOS and hormonal imbalances.",
-        fullDescription: "Polycystic Ovarian Syndrome (PCOS) needs a multidisciplinary approach. Our **PCOD / PCOS Treatment** strategy integrates advanced endocrinology, customized dietary counseling, and targeted medications to regulate your cycles and improve fertility chances.",
-        features: ["Hormonal Profiling & Ultrasound", "Personalized Diet & Lifestyle Plans", "Fertility Preservation Focus", "Dermatological Support (if needed)"],
-        benefits: ["Restores Menstrual Regularity", "Effectively Manages Weight", "Improves Conception Chances", "Reduces Acne and Hair Fall"]
-    },
-    {
         id: "t-107",
         slug: "endometriosis-treatment",
         parentServiceSlug: "obstetrics-gynaecology",
@@ -500,16 +398,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         fullDescription: "Endometriosis can cause debilitating pelvic pain. We offer complete **Endometriosis Treatment**, ranging from hormonal therapies to highly intricate laparoscopic excision surgeries to remove the endometrial tissue while preserving your reproductive organs.",
         features: ["Advanced Pelvic MRI Diagnostics", "Medical Therapy Management", "Laparoscopic Excision Procedure", "Pain Management Protocols"],
         benefits: ["Significant Relief from Chronic Pelvic Pain", "Preserves and Enhances Fertility", "Prevents Disease Progression", "Compassionate Care"]
-    },
-    {
-        id: "t-108",
-        slug: "high-risk-pregnancy-care",
-        parentServiceSlug: "obstetrics-gynaecology",
-        title: "High-Risk Pregnancy",
-        shortDescription: "Expert maternal-fetal monitoring for complex pregnancies.",
-        fullDescription: "For mothers facing complications like gestational diabetes, hypertension, or multiple pregnancies, our **High-Risk Pregnancy Care** unit provides vigilant monitoring. Backed by a Level 3 NICU, we ensure the absolute safety of both mother and baby.",
-        features: ["Maternal-Fetal Medicine Experts", "Advanced TIFFA / Anomaly Scans", "Continuous Fetal Monitoring", "Intensive Care Backup (Level 3 NICU)"],
-        benefits: ["Safely Manages Medical Conditions", "Prevents Premature Birth Complications", "Empathetic Emotional Support", "Highest Standard of Emergency Readiness"]
     },
     {
         id: "t-109",
@@ -563,13 +451,23 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     },
     {
         id: "t-113",
-        slug: "prostate-turp-surgery",
+        slug: "laser-prostate-surgery",
         parentServiceSlug: "urology",
-        title: "Prostate TURP",
-        shortDescription: "Gold-standard surgical relief for severe prostate enlargement.",
+        title: "Elite Laser Prostate Surgery (TURP)",
+        shortDescription: "Gold-standard surgical relief for severe prostate enlargement with rapid recovery.",
         fullDescription: "Transurethral Resection of the Prostate (**TURP**) remains the gold standard for treating benign prostatic hyperplasia (BPH). Our expert urologists perform this minimally invasive endoscopic procedure to remove excess prostate tissue, restoring strong and normal urine flow.",
         features: ["Bipolar TURP Technology", "Endoscopic (No Incision) Approach", "Experienced Uro-surgeons", "High-Definition Visualization"],
         benefits: ["Permanent Relief from Urinary Blockage", "Stops Frequent Nighttime Urination", "Reduces Risk of Bladder Damage", "Short Hospitalization"]
+    },
+    {
+        id: "t-113-1",
+        slug: "pcnl-complex-stone-removal",
+        parentServiceSlug: "urology",
+        title: "Complex Kidney Stone Surgery (PCNL)",
+        shortDescription: "Keyhole surgery for large staghorn stones with microscopic precision.",
+        fullDescription: "For large or complex 'Staghorn' stones, our Percutaneous Nephrolithotomy (PCNL) offers the most definitive clearance through a tiny 5mm keyhole access.",
+        features: ["Ultra-Thin Keyhole Access", "Pneumatic & Laser Fragmentation", "Total Clearance Protocol"],
+        benefits: ["Definitive Stone Removal", "Minimal Scarring", "Rapid Return to Normalcy"]
     },
     {
         id: "t-114",
@@ -602,14 +500,27 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Immediate Relief from Burning and Pain", "Prevents Chronic Kidney Infections", "Reduces Risk of Recurrent UTIs", "Safe for Pregnancy (if applicable)"]
     },
     {
-        id: "t-117",
+        id: "t-707",
         slug: "varicose-veins-laser-treatment",
         parentServiceSlug: "general-surgery",
-        title: "Varicose Veins Laser",
-        shortDescription: "Painless Endovenous Laser Ablation (EVLA) for swollen veins.",
-        fullDescription: "Suffering from painful, bulging veins in your legs? Our **Varicose Veins Laser Treatment** (EVLA) provides a permanent solution. This minimally invasive day-care procedure uses precision laser energy to seal off the diseased veins, rerouting blood to healthier ones instantly.",
-        features: ["Endovenous Laser Ablation (EVLA)", "Sclerotherapy for Spider Veins", "Color Doppler Guided Mapping", "Zero Cuts or Stitches"],
-        benefits: ["Alleviates Heavy Legs and Aching", "Excellent Cosmetic Results", "Walk Home the Same Day", "Low Risk of Recurrence"]
+        title: "Advanced Laser Varicose Veins Ablation (EVLA)",
+        shortDescription: "Painless, non-surgical laser closure of diseased veins with immediate walk-home recovery.",
+        fullDescription: "<h2>Modern Vascular Care: Say Goodbye to Painful Veins</h2>\n<p>**Varicose Veins** are not just a cosmetic concern; they are a sign of underlying venous insufficiency that can lead to ulcers, bleeding, and deep vein thrombosis (DVT). At Indira Super Speciality Hospital, we have replaced traditional 'stripping' surgery with the international gold-standard: **Endovenous Laser Ablation (EVLA)**.</p>\n<p>This minimally invasive procedure uses a tiny laser fiber inserted into the diseased vein under ultrasound guidance. The laser energy gently collapses the vein wall, causing it to seal shut. Your body naturally reroutes blood flow to healthy veins, providing immediate relief from the heavy, aching sensation in your legs.</p>\n\n<h3>The Indira Laser Advantage</h3>\n<ul>\n<li><strong>Precision Mapping</strong>: We use high-resolution Color Doppler to map every valve, ensuring we only treat the source of the problem.</li>\n<li><strong>Zero Incisions</strong>: The entire procedure is performed through a tiny needle puncture, meaning no stitches and no visible scars.</li>\n<li><strong>Local Anesthesia</strong>: Performed under 'Tumescent' local anesthesia, making the procedure safer and allowing you to remain fully awake and comfortable.</li>\n<li><strong>Permanent Results</strong>: EVLA has a success rate of over 98%, significantly higher than traditional surgery or injections alone.</li>\n</ul>",
+        features: [
+            { title: "Diode Laser Tech", description: "Use of 1470nm radial fibers for uniform vein closure.", icon: "Zap" },
+            { title: "Doppler Guided", description: "Real-time ultrasound monitoring for sub-millimeter accuracy.", icon: "Activity" },
+            { title: "Walk-Home Recovery", description: "Patients are encouraged to walk immediately post-procedure.", icon: "Clock" }
+        ],
+        benefits: [
+            { title: "Instant Relief", description: "Disappearance of 'heavy leg' syndrome within 24 hours.", icon: "CheckCircle" },
+            { title: "Aesthetic Excellence", description: "Bulging veins flatten and fade without surgical scars.", icon: "Sparkles" },
+            { title: "Low DVT Risk", description: "Active mobilization prevents post-operative clot formation.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "Is the procedure painful?", answer: "Most patients describe a sensation of mild pressure during the local anesthesia injection, but the laser treatment itself is virtually painless." },
+            { question: "When can I return to work?", answer: "Most patients return to desk work the very next day. We only advise avoiding heavy gym workouts for about 1 week." },
+            { question: "Are the results permanent?", answer: "Yes. Once a vein is sealed by the laser, it is eventually absorbed by the body and cannot reopen. However, maintaining a healthy weight helps prevent new veins from becoming varicose." }
+        ]
     },
     {
         id: "t-118",
@@ -680,16 +591,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         fullDescription: "Accidents happen, but our trauma team is always ready. We provide immediate, comprehensive **Fracture Care & Rehabilitation** for everything from simple cast treatments to complex, multi-fragment intra-articular fractures requiring advanced titanium plating and interlocking nails.",
         features: ["24/7 Poly-Trauma Readiness", "Minimally Invasive Plate Osteosynthesis (MIPO)", "Titanium Locking Plates", "In-house Physical Therapy"],
         benefits: ["Restores Perfect Bone Alignment", "Immediate Pain Stabilization", "Prevents Improper Healing (Malunion)", "Accelerates Safe Weight-Bearing"]
-    },
-    {
-        id: "t-125",
-        slug: "infertility-evaluation-steps",
-        parentServiceSlug: "obstetrics-gynaecology",
-        title: "Infertility Evaluation",
-        shortDescription: "Comprehensive diagnostic testing for couples struggling to conceive.",
-        fullDescription: "Struggling to start a family? Our **Infertility Evaluation** program provides a compassionate, root-cause approach. We conduct comprehensive hormonal, structural, and genetic assessments for women to pinpoint exactly what is preventing conception and design a tailored fertility plan.",
-        features: ["Transvaginal Ultrasound (Follicular Tracking)", "Hysterosalpingography (HSG) for Tubal Patency", "Complete Ovarian Reserve Testing (AMH)", "Diagnostic Laparoscopy/Hysteroscopy"],
-        benefits: ["Identifies the Exact Problem", "Personalized Conception Strategies", "High Patient Privacy", "Supportive Counseling"]
     },
     {
         id: "t-126",
@@ -763,22 +664,22 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     },
     {
         id: "t-133",
-        slug: "stroke-recovery-exercises",
+        slug: "stroke-unit-rehabilitation",
         parentServiceSlug: "neurology",
-        title: "Stroke Recovery",
-        shortDescription: "Advanced neuro-rehabilitation and physical therapy post-stroke.",
+        title: "Elite Stroke Unit & Rehab",
+        shortDescription: "Rapid 'Golden Hour' response and advanced neuro-rehabilitation post-stroke.",
         fullDescription: "Life after a stroke requires intensive, specialized rehabilitation. Our **Stroke Recovery** center combines expert neurology with dedicated physiotherapy and speech therapy. Using evidence-based neuroplasticity techniques, we help patients regain lost motor skills, speech, and independence in a supportive environment.",
-        features: ["Robotic-Assisted Gait Training", "Speech and Swallow Therapy", "Occupational Therapy for Daily Living", "Spasticity Management (Botox)"],
+        features: ["Golden Hour Thrombolysis", "Robotic-Assisted Gait Training", "Speech and Swallow Therapy", "Occupational Therapy for Daily Living"],
         benefits: ["Accelerates Brain Rewiring", "Restores Lost Muscle Mobility", "Improves Communication Skills", "Drives Independence at Home"]
     },
     {
         id: "t-134",
-        slug: "epilepsy-treatment-options",
+        slug: "epilepsy-and-seizure-care",
         parentServiceSlug: "neurology",
-        title: "Epilepsy Treatment",
-        shortDescription: "Precise seizure diagnosis and targeted management protocols.",
+        title: "Elite Epilepsy & Seizure Care",
+        shortDescription: "Precise seizure diagnosis and targeted management protocols for all ages.",
         fullDescription: "Seizures should not control your life. We offer comprehensive **Epilepsy Treatment** starting with continuous Video EEG monitoring to pinpoint the exact origin of seizures in the brain. We then tailor treatment plans, ranging from Anti-Epileptic Drugs (AEDs) to ketogenic diets and surgical evaluations for drug-resistant cases.",
-        features: ["Long-Term Video EEG Monitoring", "High-Resolution 3T Epilepsy MRI", "Advanced Anti-Epileptic Drug Management", "Epilepsy Surgery Evaluation"],
+        features: ["Long-Term Digital EEG Monitoring", "High-Resolution 3T Epilepsy MRI", "Advanced Anti-Epileptic Drug Management", "Epilepsy Surgery Evaluation"],
         benefits: ["Achieves Long-Term Seizure Freedom", "Prevents Brain Injury from Falls", "Optimizes Medication to Avoid Side Effects", "Restores Driving and Work Capabilities"]
     },
     {
@@ -802,26 +703,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Improves Motor Function & Balance", "Reduces Tremors and Rigidity", "Prolongs Independent Living", "Multidisciplinary Support System"]
     },
     {
-        id: "t-137",
-        slug: "endoscopy-procedure-guide",
-        parentServiceSlug: "gastroenterology",
-        title: "Endoscopy Guide",
-        shortDescription: "Painless Upper GI diagnostic imaging for ulcers and reflux.",
-        fullDescription: "Experiencing persistent heartburn, nausea, or stomach pain? An **Upper Endoscopy (UGIE)** is a painless, day-care procedure allowing our gastroenterologists to visually examine your esophagus, stomach, and duodenum. We use high-definition scopes to precisely diagnose ulcers, gastritis, H. pylori infections, and early-stage cancers.",
-        features: ["High-Definition Endoscopic Imaging", "Painless Procedure under Conscious Sedation", "Instant Biopsy & Rapid Urease Testing", "Day-Care—Go Home in Hours"],
-        benefits: ["Highly Accurate Diagnosis", "Identifies the Root Cause of Pain", "Detects Pre-Cancerous Changes Early", "Completely Pain-Free Experience"]
-    },
-    {
-        id: "t-138",
-        slug: "colonoscopy-screening-cost",
-        parentServiceSlug: "gastroenterology",
-        title: "Colonoscopy",
-        shortDescription: "Life-saving screening for colon cancer and bowel diseases.",
-        fullDescription: "A **Colonoscopy** is the gold standard for investigating bowel issues and preventing colorectal cancer. Our expert specialists use advanced flexible scopes to examine the entire large intestine, allowing for the immediate removal of pre-cancerous polyps during the procedure, all while you rest comfortably under light sedation.",
-        features: ["Complete Lower GI Tract Visualisation", "Simultaneous Polyp Removal (Polypectomy)", "Conducted under Deep Sedation", "Detailed Photo Documentation"],
-        benefits: ["Prevents Colon Cancer", "Diagnoses Causes of Bleeding or Changes in Bowel Habits", "Painless and Swift Procedure", "Clear, Actionable Diagnostic Reports"]
-    },
-    {
         id: "t-139",
         slug: "ercp-bile-duct-stone-removal",
         parentServiceSlug: "gastroenterology",
@@ -842,16 +723,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Delays Progression to End-Stage Liver Failure", "Prevents Fatal Gastrointestinal Bleeding", "Optimizes Nutrition and Fluid Balance", "Improves Overall Survival Rates"]
     },
     {
-        id: "t-141",
-        slug: "fatty-liver-treatment-diet",
-        parentServiceSlug: "gastroenterology",
-        title: "Fatty Liver",
-        shortDescription: "Proactive screening and lifestyle intervention for NAFLD.",
-        fullDescription: "Fatty liver is a silent epidemic that can lead to irreversible liver damage if ignored. Our **Fatty Liver Disease (NAFLD) Clinic** offers proactive FibroScan screening and creates customized, evidence-based lifestyle, nutrition, and medical plans to reverse liver fat accumulation before it progresses to cirrhosis.",
-        features: ["Ultrasonic FibroScan Assessment", "Customized Diet & Nutrition Planning", "Metabolic Syndrome Management", "Regular Liver Function Monitoring"],
-        benefits: ["Reverses Early-Stage Liver Fat", "Prevents Cirrhosis and Liver Cancer", "Reduces Cardiovascular Risk", "Promotes Healthy Weight Loss"]
-    },
-    {
         id: "t-142",
         slug: "ibs-treatment-guide",
         parentServiceSlug: "gastroenterology",
@@ -862,24 +733,24 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Resolves Chronic Bloating and Pain", "Normalizes Bowel Movements", "Identifies Specific Food Triggers", "Significantly Improves Daily Comfort"]
     },
     {
-        id: "t-143",
-        slug: "acid-reflux-gerd-management",
-        parentServiceSlug: "gastroenterology",
-        title: "Acid Reflux / GERD",
-        shortDescription: "Endoscopic diagnostics and surgical solutions for chronic heartburn.",
-        fullDescription: "Tired of relying on antacids? Chronic **Acid Reflux or GERD** can damage your esophagus over time. We provide precise diagnosing via pH monitoring and Endoscopy. For severe, medication-resistant cases, we offer advanced laparoscopic anti-reflux surgeries (Fundoplication) for a permanent cure.",
-        features: ["24-Hour pH Impedance Monitoring", "High-Definition Endoscopy", "Laparoscopic Nissen Fundoplication", "Stretta Radiofrequency Therapy"],
-        benefits: ["Instantly Stops Heartburn & Regurgitation", "Prevents Barrett's Esophagus (Pre-cancer)", "Eliminates Daily Medication Needs", "Restores Normal Eating Without Pain"]
+        id: "t-144",
+        slug: "advanced-dialysis-center",
+        parentServiceSlug: "nephrology",
+        title: "Advanced Dialysis Center",
+        shortDescription: "Elite 24/7 high-flux hemodialysis and CRRT for critical care.",
+        fullDescription: "Our Advanced Dialysis unit provides safe and effective hemodialysis using high-flux filtration technology for patients with renal failure, integrated with 24/7 ICU support.",
+        features: ["24/7 High-Flux Hemodialysis", "CRRT Multi-Filtrate System", "Strict Infection Control Protocols"],
+        benefits: ["Effectively Cleanses Blood Toxins", "Maintains Safe Fluid Balance", "Highly Sterile Infection-Free Environment", "Professional Renal Nursing"]
     },
     {
-        id: "t-144",
-        slug: "dialysis-procedure-guide",
+        id: "t-144-1",
+        slug: "preventive-kidney-care",
         parentServiceSlug: "nephrology",
-        title: "Dialysis Guide",
-        shortDescription: "State-of-the-art Hemodialysis and Peritoneal Dialysis services.",
-        fullDescription: "For kidneys that can no longer filter waste, we offer a world-class **Dialysis Center**. Operating 24/7, our facility provides both advanced Hemodialysis and training for Continuous Ambulatory Peritoneal Dialysis (CAPD), ensuring patients with End-Stage Renal Disease (ESRD) receive safe, sterile, and comfortable life-saving care.",
-        features: ["24/7 Advanced Hemodialysis Unit", "Isolated Machines for Seropositive Patients", "Continuous Renal Replacement (CRRT)", "CAPD Training & Support"],
-        benefits: ["Effectively Cleanses Blood Toxins", "Maintains Safe Fluid Balance", "Highly Sterile Infection-Free Environment", "Comfortable, Patient-Centric Design"]
+        title: "Preventive Kidney Care",
+        shortDescription: "Halting kidney disease progression in diabetic and hypertensive patients.",
+        fullDescription: "Proactive clinical intervention to slow down CKD and diabetic nephropathy, focused on preservation and avoiding dialysis.",
+        features: ["Metabolic Renal Profiling", "Precision BP Management", "Diabetic Nephropathy Control"],
+        benefits: ["Delay Dialysis for Years", "Integrated Renal Nutrition", "Specialized Lab Access"]
     },
     {
         id: "t-145",
@@ -932,14 +803,24 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Painless, Non-Invasive Treatment", "Drastically Reduces Collateral Tissue Damage", "Shrinks Tumors Before Surgery", "Curative for Many Localized Cancers"]
     },
     {
-        id: "t-150",
-        slug: "surgical-oncology-overview",
+        id: "t-150-1",
+        slug: "surgical-oncology-center",
         parentServiceSlug: "oncology",
-        title: "Surgical Oncology",
-        shortDescription: "Minimally invasive and complex tumor removal surgeries.",
-        fullDescription: "Surgical removal remains the cornerstone of curing many solid tumors. Our **Surgical Oncology** team holds extensive experience in performing complex, organ-preserving surgeries for gastrointestinal, gynecological, head/neck, and urological cancers. We utilize robotic and laparoscopic platforms to ensure complete tumor excision with minimal physical trauma.",
-        features: ["Robotic-Assisted Tumor Resection", "Organ-Preserving Cancer Surgery", "Hyperthermic Intraperitoneal Chemotherapy (HIPEC)", "Advanced Reconstructive Surgery"],
-        benefits: ["Maximizes Chance of Complete Cure", "Less Post-Operative Pain and Scarring", "Faster Return to Daily Activities", "Multidisciplinary Pre-Op Planning"]
+        title: "Elite Surgical Oncology Center",
+        shortDescription: "Curative, radical tumor resections using precision techniques.",
+        fullDescription: "Expert execution of complex cancer surgeries including Mastectomy, Colectomy, and Gastrectomy with curative intent.",
+        features: ["Radical Cancer Resections", "Minimally Invasive Onco-Surgery", "HEPA-Filtered Operating Suites"],
+        benefits: ["Tumor Board Governance", "Rapid Staging Diagnostics", "Compassionate Care Ecosystem"]
+    },
+    {
+        id: "t-150-2",
+        slug: "medical-oncology-chemotherapy",
+        parentServiceSlug: "oncology",
+        title: "Elite Medical Oncology & Chemo",
+        shortDescription: "Targeted systemic therapy and immunotherapy in a comfort-first day care center.",
+        fullDescription: "Administration of advanced chemotherapy and targeted drugs focusing on tumor response and patient quality of life.",
+        features: ["Precision Chemotherapy", "Advanced Immunotherapy", "Pain & Palliative Management"],
+        benefits: ["Stress-Free Day Care", "Elite Oncology Nursing", "Nutritional Oncology Support"]
     },
     {
         id: "t-151",
@@ -1133,16 +1014,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Maximizes Tumor Clearance","Preserves Motor Functions","Minimal Surgical Trauma","Complete Life Support Back-up"]
     },
     {
-        id: "t-322",
-        slug: "breast-lump-removal",
-        parentServiceSlug: "general-surgery",
-        title: "Breast Lump Removal",
-        shortDescription: "Surgical excision (Lumpectomy) for benign or suspicious lumps.",
-        fullDescription: "While many breast lumps are non-cancerous (benign), they often need removal for biopsy or comfort. Our general surgeons provide precise lumpectomies using aesthetic incision techniques to minimize visible scarring while ensuring the entire lump is removed for definitive pathological analysis.",
-        features: ["Aesthetic Incision Lab","Precision Lumpectomy","Rapid Pathology Link","Minimally Invasive Entry"],
-        benefits: ["Definitive Diagnosis Path","Instantly Relieves Anxiety","Superior Cosmetic Results","Quick Outpatient Recovery"]
-    },
-    {
         id: "t-323",
         slug: "bypass-surgery-cabg",
         parentServiceSlug: "cardiology",
@@ -1253,16 +1124,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Immediate Improvement","Cost-Effective Cosmetic","Preserves Natural Enamel","Natural Aesthetics"]
     },
     {
-        id: "t-338",
-        slug: "crohns-disease-management",
-        parentServiceSlug: "gastroenterology",
-        title: "Crohn's Disease Management",
-        shortDescription: "Advanced clinical care for chronic inflammatory bowel condition.",
-        fullDescription: "Crohn's disease requires a life-long, multidisciplinary management approach. We focus on achieving clinical remission through advanced biological therapies, nutritional support, and surgical interventions when necessary. Our goal is to minimize flare-ups and prevent long-term intestinal damage.",
-        features: ["Biological Drug Therapy","Mucosal Healing Monitoring","Advanced GI Nutrition Planning","Symptom Control Strategies"],
-        benefits: ["Reduces Intestinal Scars","Achieves Deep Remission","Prevents Future Surgeries","Improves Long-Term GI Health"]
-    },
-    {
         id: "t-339",
         slug: "crossbite-correction",
         parentServiceSlug: "dentistry",
@@ -1343,14 +1204,27 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Personalized Aesthetics","Stain Resistance","Minimal Tooth Prep","Durable Smile Makeover"]
     },
     {
-        id: "t-347",
+        id: "t-708",
         slug: "diabetic-foot-ulcer-care",
         parentServiceSlug: "general-surgery",
-        title: "Diabetic Foot Salvage",
-        shortDescription: "Advanced wound care and offloading for chronic ulcers.",
-        fullDescription: "Diabetic foot ulcers require aggressive and multidisciplinary management to prevent amputation. Our 'Foot Salvage' program includes specialized debridement, vacuum-assisted closure (VAC) therapy, and customized offloading. We focus on improving vascular flow and preventing infection to facilitate rapid healing.",
-        features: ["VAC Therapy Modules","Vascular Flow Doppler","Specialized Debridement","Total Contact Casting"],
-        benefits: ["Prevents Amputation Risk","Heals Non-Closing Wounds","Reduces Infection Spread","Restores Safe Mobility"]
+        title: "Comprehensive Diabetic Foot Salvage & Care",
+        shortDescription: "Multi-disciplinary wound management focusing on limb preservation and rapid ulcer healing.",
+        fullDescription: "<h2>Limb Preservation: The Diabetic Foot Excellence Program</h2>\n<p>For a diabetic patient, a small foot wound can quickly escalate into a life-threatening infection. At Indira Super Speciality Hospital, our **Diabetic Foot Salvage Program** is dedicated to one goal: preventing amputations. We combine vascular surgery, infectious disease control, and advanced podiatric wound care to heal even the most stubborn 'non-healing' ulcers.</p>\n<p>We utilize **VAC (Vacuum-Assisted Closure)** therapy and bio-active dressings to stimulate rapid tissue growth. By addressing both the infection and the underlying blood flow issues (ischemia), we provide a comprehensive safety net for the diabetic foot.</p>\n\n<h3>Our Foot Salvage Protocol</h3>\n<ul>\n<li><strong>Precision Debridement</strong>: Surgical removal of infected tissue to allow healthy skin to granulate.</li>\n<li><strong>Vascular Optimization</strong>: Working with interventionalists to ensure adequate blood supply reaching the toes.</li>\n<li><strong>Off-loading Techniques</strong>: Using specialized footwear and 'Total Contact Casts' to take pressure off the ulcer site.</li>\n<li><strong>Infection Bio-Mapping</strong>: Targeted antibiotic therapy based on deep tissue cultures, not just surface swabs.</li>\n</ul>",
+        features: [
+            { title: "VAC Therapy", description: "Negative pressure wound therapy to accelerate healing.", icon: "Activity" },
+            { title: "Vascular Doppler", description: "Assessment of lower limb circulation for healing potential.", icon: "Zap" },
+            { title: "Bio-Active Dressings", description: "Use of silver and collagen dressings to fight infection.", icon: "Shield" }
+        ],
+        benefits: [
+            { title: "Amputation Prevention", description: "90% success rate in salvaging high-risk diabetic limbs.", icon: "CheckCircle" },
+            { title: "Rapid Wound Closure", description: "Significantly faster healing times than traditional gauze.", icon: "Clock" },
+            { title: "Restored Mobility", description: "Getting you back on your feet with specialized footwear.", icon: "Star" }
+        ],
+        faq: [
+            { question: "Why won't my foot ulcer heal?", answer: "High blood sugar, poor circulation, and nerve damage (neuropathy) all prevent normal healing. Professional 'off-loading' and debridement are usually required to restart the healing process." },
+            { question: "Is amputation the only option for gangrene?", answer: "Not always. If caught early, aggressive debridement and vascular bypass or stenting can often save the limb or at least limit the extent of surgery." },
+            { question: "How can I prevent foot ulcers?", answer: "Daily self-inspection, never walking barefoot, and choosing professionally fitted diabetic footwear are the three most important steps." }
+        ]
     },
     {
         id: "t-348",
@@ -1421,26 +1295,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         fullDescription: "Uterine fibroids can cause heavy bleeding and pain. Our surgical team specializes in both open and minimally invasive (Laparoscopic) myomectomies to remove fibroids while keeping the uterus intact. This is the preferred solution for women who wish to preserve their fertility and resolve chronic symptoms.",
         features: ["Laparoscopic Myomectomy","Precision Uterine Suture","Minimally Invasive Entry","Post-Op Recovery Support"],
         benefits: ["Stops Heavy Bleeding","Preserves Fertility Paths","Reduces Pelvic Pressure","Faster Return to Work"]
-    },
-    {
-        id: "t-359",
-        slug: "fissure-surgery-recovery",
-        parentServiceSlug: "general-surgery",
-        title: "Laser Fissure Treatment",
-        shortDescription: "Painless laser surgery for chronic anal fissures.",
-        fullDescription: "Anal fissures can cause severe pain during bowel movements. We offer advanced Laser Sphincterotomy (LHP) which is a stitch-less, 15-minute procedure. Unlike traditional surgery, there is no cutting of the muscle and no large wounds, ensuring an almost painless recovery and immediate relief from chronic symptoms.",
-        features: ["Advanced LHP Laser","No-Cut Surgical Flow","15-Minute Procedure Time","Painless Post-Op Phase"],
-        benefits: ["Instant Pain Relief","No Stitches Required","Same-Day Work Return","Zero Risk of Incontinence"]
-    },
-    {
-        id: "t-360",
-        slug: "fistula-laser-treatment",
-        parentServiceSlug: "general-surgery",
-        title: "Laser Fistula Surgery (FiLaC)",
-        shortDescription: "Advanced laser closure (FiLaC) for anal fistula, preserving sphincter function.",
-        fullDescription: "Anal fistula is a complex condition that traditionally required extensive surgery. We specialize in **FiLaC (Fistula-tract Laser Closure)**, a minimally invasive technique where laser energy is used to effectively seal the fistula tract without cutting the sphincter muscles. This ensures thorough healing while drastically reducing the risk of incontinence and post-operative pain.",
-        features: ["Anal Sphincter Preservation", "FiLaC Laser Technology", "VAAFT Video Assisted Tech", "High Success Rate"],
-        benefits: ["Minimizes Risk of Incontinence", "Faster Wound Healing", "Shorter Hospital Stay", "Less Post-operative Pain"]
     },
     {
         id: "t-361",
@@ -1843,14 +1697,27 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Superior Disinfection","Less Post-Op Sensitivity","Increased Tooth Longevity","Quiet, Drill-Free Tech"]
     },
     {
-        id: "t-411",
+        id: "t-709",
         slug: "lipoma-excision-surgery",
         parentServiceSlug: "general-surgery",
-        title: "Lipoma Removal",
-        shortDescription: "Surgical removal of benign fatty tumors for comfort and aesthetics.",
-        fullDescription: "Lipomas are slow-growing fatty lumps that are usually harmless but can become painful or aesthetically bothersome. We offer precise surgical excision under local or general anesthesia, ensuring minimal scarring and a complete removal to prevent recurrence. The procedure is quick, safe, and done in a day-care setting.",
-        features: ["Aesthetic Minimal Scarring","Precision Tumor Staging","Local Anesthesia Suite","Rapid Day-Care Discharge"],
-        benefits: ["Resolves Lumps & Bumps","Painless Clinical Flow","Superior Cosmetic Outcome","Eliminates Pressure Pain"]
+        title: "Precision Lipoma & Soft Tissue Excision",
+        shortDescription: "Aesthetic surgical removal of fatty tumors and skin lumps with hidden scarring.",
+        fullDescription: "<h2>Gentle Surgery: Removing Benign Lumps & Bumps</h2>\n<p>**Lipomas** are non-cancerous growths of fatty tissue that develop slowly under the skin. While they are generally harmless, they can become painful if they press on nerves or aesthetically bothersome if they grow large. At Indira Super Speciality Hospital, we provide **Precision Lipoma Excision**, ensuring the entire tumor is removed to prevent it from returning.</p>\n<p>We specialize in 'Minimal-Incision' techniques. By using an incision much smaller than the lump itself, we can gently 'deliver' the lipoma out, leaving you with a significantly smaller surgical mark that fades beautifully over time.</p>\n\n<h3>Why Opt for Surgical Excision?</h3>\n<ul>\n<li><strong>Definitive Cure</strong>: Unlike 'squeezing' or injections, surgery removes the entire capsule, meaning the lump will not return.</li>\n<li><strong>Histopathology Check</strong>: Every tissue we remove is sent to our lab to 100% confirm its benign nature, providing you with total peace of mind.</li>\n<li><strong>Immediate Comfort</strong>: If the lipoma was causing pressure or restricting movement, the relief is instantaneous.</li>\n</ul>",
+        features: [
+            { title: "Minimal Incision", description: "Removing large lumps through tiny, aesthetic openings.", icon: "Sparkles" },
+            { title: "Local Anesthesia", description: "Safe, awake procedure with zero 'hangover' from sedation.", icon: "Shield" },
+            { title: "Hidden Closures", description: "Sub-cuticular stitches that don't need removal.", icon: "CheckCircle" }
+        ],
+        benefits: [
+            { title: "Permanent Result", description: "Complete removal of the fat capsule to prevent recurrence.", icon: "Target" },
+            { title: "Superior Aesthetics", description: "Fine-line scars that are almost invisible once healed.", icon: "Award" },
+            { title: "Day-Care Flow", description: "In and out of the hospital in under 2 hours.", icon: "Clock" }
+        ],
+        faq: [
+            { question: "Will my lipoma grow back?", answer: "If the entire capsule is removed surgically, it is extremely rare for it to return in the same spot." },
+            { question: "Is the surgery done under local anesthesia?", answer: "Yes, most single lipomas are easily removed under local anesthesia while you are awake and comfortable." },
+            { question: "Do I need to stay in the hospital?", answer: "No. This is a classic 'lunch-break' procedure. You can drive yourself home immediately after the dressing is applied." }
+        ]
     },
     {
         id: "t-412",
@@ -1871,16 +1738,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         fullDescription: "Early detection is key to surviving lung cancer. Our diagnostic suite includes Low-Dose CT (LDCT) scans, bronchoscopy with biopsy, and advanced molecular markers to identify tumors at their most treatable stage. We provide immediate staging and a clear roadmap for surgery or systemic therapy.",
         features: ["Low-Dose CT Screening","Bronchoscopy Suite","Molecular Marker Lab","Rapid Staging Protocols"],
         benefits: ["Early Detection Security","Informs Treatment Choice","Minimally Invasive Biopsy","Guided Clinical Support"]
-    },
-    {
-        id: "t-415",
-        slug: "menopause-symptom-relief",
-        parentServiceSlug: "obstetrics-gynaecology",
-        title: "Menopause Wellness",
-        shortDescription: "Clinical management of hot flashes, mood swings, and bone health.",
-        fullDescription: "Menopause marks a significant transition in a woman's life. We provide comprehensive symptom management, including Hormone Replacement Therapy (HRT), nutritional counseling, and bone density monitoring (DEXA) to manage hot flashes, night sweats, and the long-term risk of osteoporosis.",
-        features: ["Custom HRT Protocols","Bone Density Screening","Lifestyle Wellness Lab","Nutritional Menopause Diet"],
-        benefits: ["Reduces Hot Flashes","Protects Bone Density","Improves Sleep Quality","Stabilizes Mood Profiles"]
     },
     {
         id: "t-416",
@@ -2053,16 +1910,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Painless Procedural Flow","Superior Aesthetic Outcome","Immediate Return to Work","Eliminates Infection Risk"]
     },
     {
-        id: "t-440",
-        slug: "pilonidal-sinus-laser-surgery",
-        parentServiceSlug: "general-surgery",
-        title: "Laser Pilonidal (SiLaC)",
-        shortDescription: "Minimally invasive laser ablation for pilonidal disease.",
-        fullDescription: "Pilonidal sinus disease is effectively treated using SiLaC (Sinus Laser Closure). This advanced technique uses a flexible laser fiber to seal the tract without creating large open wounds. This leads to a significantly lower recurrence rate and a much faster, painless recovery compared to traditional 'open' surgery.",
-        features: ["SiLaC Laser Fiber","Painless Wound Sealing","Minimal Downtime Flow","Expert Proctology Lead"],
-        benefits: ["No Daily Dressings","Virtually Zero Recurrence","Quickest Recovery Path","Painless Clinical Outcome"]
-    },
-    {
         id: "t-441",
         slug: "polycystic-kidney-disease-management",
         parentServiceSlug: "nephrology",
@@ -2233,14 +2080,27 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Significant Pain Reduction","Restores Overhead Strength","Faster Return to Activity","Small Cosmetic Incisions"]
     },
     {
-        id: "t-459",
+        id: "t-710",
         slug: "sebaceous-cyst-removal",
         parentServiceSlug: "general-surgery",
-        title: "Skilled Cyst Excision",
-        shortDescription: "Painless removal of sebaceous and skin cysts.",
-        fullDescription: "We provide expert surgical excision for sebaceous cysts under local anesthesia. Our technique focuses on the complete removal of the 'sac' to prevent the cyst from returning. This is a quick outpatient procedure that leaves a barely visible scar and provides immediate relief from pressure or aesthetic concerns.",
-        features: ["Full Capsule Removal","Local Anesthesia Suite","Aesthetic Wound Closure","Rapid Day-Care Discharge"],
-        benefits: ["Prevents Cyst Recurrence","Eliminates Local Pain","Superior Aesthetic Result","Minutes to Complete"]
+        title: "Advanced Sebaceous Cyst & Skin Lesion Removal",
+        shortDescription: "Complete surgical excision of skin cysts to prevent infection and recurrence.",
+        fullDescription: "<h2>Definitive Care for Skin Cysts: Zero Recurrence Focus</h2>\n<p>A **Sebaceous Cyst** (or Epidermoid Cyst) is a closed sac under the skin filled with keratin. Unlike a simple pimple, a cyst has a 'wall' or capsule. If this capsule is not completely removed, the cyst will inevitably regrow or become painfully infected (abscess). At Indira Super Speciality Hospital, our General Surgery team performs **Definitive Cyst Excision**.</p>\n<p>We prioritize removing the cyst 'in-toto'—meaning we take out the entire sac intact. This ensures the highest possible success rate and prevents the need for repeated procedures.</p>\n\n<h3>Managing Infected Cysts</h3>\n<p>If your cyst has already become red, painful, and swollen, it may have turned into an abscess. We provide immediate **Incision and Drainage (I&D)** to relieve the pressure and clear the infection, followed by a planned excision of the wall once the inflammation has settled.</p>\n\n<h3>Our Aesthetic Promise</h3>\n<p>We understand that many cysts appear on the face, neck, or back. Our surgeons use fine, plastic-surgery grade instruments and sutures to ensure that the eventual mark is as discreet as possible.</p>",
+        features: [
+            { title: "Total Capsule Excision", description: "Ensuring the entire cyst wall is removed to stop recurrence.", icon: "Target" },
+            { title: "Infection Management", description: "Immediate relief for abscessed or painful cysts.", icon: "Zap" },
+            { title: "Plastic Grade Sutures", description: "Use of fine materials for a nearly invisible scar.", icon: "Sparkles" }
+        ],
+        benefits: [
+            { title: "Zero Regrowth", description: "Definitive surgical solution that lasts a lifetime.", icon: "CheckCircle" },
+            { title: "Immediate Relief", description: "Stops the pressure and 'tightness' of the cyst.", icon: "Star" },
+            { title: "Cosmetic Integrity", description: "Preserving your skin's appearance with expert closures.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "Can I just 'pop' the cyst myself?", answer: "No! Squeezing a cyst can force the contents deeper into the skin, causing a severe infection or even blood poisoning (cellulitis)." },
+            { question: "How long does the surgery take?", answer: "Most simple cysts are removed in 15 to 20 minutes under local anesthesia." },
+            { question: "What is the recovery time?", answer: "The small wound heals in 5-7 days. You can shower normally after 48 hours once the initial dressing is removed." }
+        ]
     },
     {
         id: "t-460",
@@ -2373,16 +2233,6 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Saves Organ Viability","Rapid Pain Resolution","Prevents Future Episode","Preserves Male Fertility"]
     },
     {
-        id: "t-476",
-        slug: "thyroid-surgery-guide",
-        parentServiceSlug: "general-surgery",
-        title: "Thyroidectomy (Surgical)",
-        shortDescription: "Expert removal of thyroid nodules or cancerous tissue.",
-        fullDescription: "Thyroid surgery (Thyroidectomy) is used to treat thyroid nodules, overactive thyroid, and thyroid cancer. Our surgical team focuses on preserving the parathyroid glands and laryngeal nerves while achieving a complete resection. We provide meticulous pre-op optimization and long-term hormone replacement planning.",
-        features: ["Nerve-Preserving Tech","Parathyroid Monitoring","Minimally Invasive Entry","Thyroid Hormone Planning"],
-        benefits: ["Effective Cancer Clearance","Resolves Large Goitres","Safe Surgical Execution","Expert Endocrine Support"]
-    },
-    {
         id: "t-477",
         slug: "tmt-test-for-heart",
         parentServiceSlug: "cardiology",
@@ -2513,54 +2363,682 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Flawless Aesthetic Result","Superior Integration Success","Long-Term Restoration Health","Tailored Material Choice"]
     },
     {
-        id: "t-501",
-        slug: "laser-piles-treatment",
-        parentServiceSlug: "general-surgery",
-        title: "Laser Piles Treatment",
-        shortDescription: "Advanced, painless laser treatment for Hemorrhoids (Piles) with same-day discharge.",
-        fullDescription: "Experience the most advanced **Laser Piles Treatment** in Vellore. Using precision diode lasers, we treat hemorrhoids without cuts, stitches, or significant bleeding. This minimally invasive approach ensures rapid healing and allows most patients to return to work within 48 hours, with practically no post-operative discomfort.",
-        features: ["No Cuts or Stitches", "USFDA Approved Laser Tech", "30-Minute Procedure", "Same-Day Discharge"],
-        benefits: ["Virtually Painless Recovery", "Minimal to No Bleeding", "Get Back to Work in 48 Hours", "Very Low Recurrence Rate"]
+        id: "t-25",
+        slug: "laser-fissure-treatment",
+        parentServiceSlug: "proctology",
+        title: "Laser Fissure Treatment (L-SFM)",
+        shortDescription: "Quick, effective laser solution for chronic anal fissures with rapid pain relief.",
+        fullDescription: "Anal fissures are small tears in the lining of the anus that cause severe pain and bleeding. Our laser-assisted sphincterotomy (L-SFM) is a highly precise procedure that releases the tension in the anal muscle, allowing the fissure to heal rapidly without the need for large cuts or prolonged recovery.",
+        features: [
+            { title: "L-SFM Dilation", description: "Precision laser dilation of the internal sphincter.", icon: "Target" },
+            { title: "No Stitches", description: "Minimal tissue trauma means no surgical stitches required.", icon: "Shield" },
+            { title: "Rapid Pain Relief", description: "Nerve-ending cauterization provides instant pain reduction.", icon: "Zap" }
+        ],
+        benefits: [
+            { title: "Immediate Comfort", description: "Significant reduction in pain during the first bowel movement.", icon: "Star" },
+            { title: "Early Healing", description: "Complete mucosal healing within 10-14 days.", icon: "CheckCircle" },
+            { title: "Non-Invasive", description: "Zero risk of major surgical scarring or trauma.", icon: "Activity" }
+        ],
+        faq: [
+            { question: "Is laser fissure surgery painful?", answer: "The procedure itself is performed under anesthesia. Post-operatively, most patients report far less pain than they were experiencing from the fissure itself." },
+            { question: "Can fissures recur after laser treatment?", answer: "When combined with a proper high-fiber diet and hydration, the recurrence rate after L-SFM is extremely low." }
+        ]
     },
     {
-        id: "t-502",
-        slug: "anal-fissure-treatment",
-        parentServiceSlug: "general-surgery",
-        title: "Anal Fissure Treatment",
-        shortDescription: "Specialized laser surgery and medical management for chronic anal fissures.",
-        fullDescription: "An **Anal Fissure** can be incredibly painful, but modern treatment offers rapid relief. Our specialists provide comprehensive care ranging from specialized medical management to minimally invasive laser sphincterotomy. Laser treatment provides immediate relief from pain and promotes faster healing of the fissure without the discomfort of traditional surgical methods.",
-        features: ["Laser Lateral Sphincterotomy", "Minimal Tissue Trauma", "Immediate Pain Relief", "Local/Regional Anesthesia"],
-        benefits: ["Faster Healing", "Minimal Post-Op Discomfort", "Early Return to Activity", "High Success Rate"]
+        id: "t-26",
+        slug: "laser-fistula-surgery-filac",
+        parentServiceSlug: "proctology",
+        title: "FiLaC Laser Fistula Closure",
+        shortDescription: "Sphincter-saving laser closure for complex anal fistulas.",
+        fullDescription: "FiLaC (Fistula-tract Laser Closure) is a revolutionary procedure for treating anal fistulas. Unlike traditional surgery (fistulotomy) which may involve cutting the sphincter muscle, FiLaC uses laser energy to close the fistula tract from the inside, preserving the muscle integrity and ensuring complete recovery without the risk of incontinence.",
+        features: [
+            { title: "Sphincter-Saving", description: "Preserves 100% of anal sphincter integrity.", icon: "Shield" },
+            { title: "Radial Fiber Tech", description: "360-degree laser emission for uniform tract closure.", icon: "Zap" },
+            { title: "Zero Cuttings", description: "No surgical incisions or deep tissue trauma.", icon: "Target" }
+        ],
+        benefits: [
+            { title: "Incontinence Prevention", description: "Eliminates the risk of fecal incontinence associated with old surgery.", icon: "CheckCircle" },
+            { title: "Faster Healing", description: "Tissue seals from within, allowing rapid outward healing.", icon: "Star" },
+            { title: "Minimal Dressing", description: "No painful deep wound dressings required post-surgery.", icon: "Clock" }
+        ],
+        faq: [
+            { question: "Can complex fistulas be treated with FiLaC?", answer: "Yes, FiLaC is particularly effective for complex and recurrent fistulas where preserving the sphincter muscle is critical to maintaining bowel control." },
+            { question: "What is the success rate?", answer: "FiLaC has a high success rate, often exceeding 90% when performed by experienced proctologists using the correct laser power settings." }
+        ]
     },
     {
-        id: "t-503",
-        slug: "pilonidal-sinus",
-        parentServiceSlug: "general-surgery",
-        title: "Pilonidal Sinus",
-        shortDescription: "Modern laser treatment (SiLaC) and EPSiT for pilonidal sinus, ensuring minimal recurrence.",
-        fullDescription: "Pilonidal sinus treatment has evolved. We offer **SiLaC (Sinus Laser Closure)** and **EPSiT (Endoscopic Pilonidal Sinus Treatment)**. These advanced techniques allow us to thoroughly clean and close the sinus tract through tiny punctures, avoiding the large, painful, and slow-healing wounds associated with traditional open surgery.",
-        features: ["SiLaC Laser Technology", "EPSiT Endoscopic Access", "No Large Wounds", "Reduced Recurrence Rate"],
-        benefits: ["Painless Recovery", "Faster Wound Closure", "Minimal Scarring", "No Long-Term Dressings"]
+        id: "t-27",
+        slug: "laser-pilonidal-sinus-surgery",
+        parentServiceSlug: "proctology",
+        title: "SiLaC Laser Pilonidal Sinus Surgery",
+        shortDescription: "Advanced laser ablation for pilonidal sinus with minimal scarring.",
+        fullDescription: "SiLaC (Sinus Laser Closure) provides a minimally invasive alternative to wide excision for pilonidal sinus. By using a specialized 360-degree laser probe to ablate the sinus cavity and tract, we ensure a faster healing process with minimal tissue loss and significantly less scarring compared to traditional 'flap' surgery.",
+        features: [
+            { title: "Probe-Based Ablation", description: "Flexible laser fiber reaches the depth of every tract.", icon: "Zap" },
+            { title: "Zero Flaps", description: "No large skin flaps or painful open wounds.", icon: "Shield" },
+            { title: "Day-Care Choice", description: "Quick procedure with same-day return home.", icon: "Clock" }
+        ],
+        benefits: [
+            { title: "Minimal Scarring", description: "Tiny entry points instead of large surgical scars.", icon: "Star" },
+            { title: "Low Recurrence", description: "High-power laser sterilization of the sinus cavity.", icon: "CheckCircle" },
+            { title: "Activity Return", description: "Resume sports and bike riding much faster than old methods.", icon: "Zap" }
+        ],
+        faq: [
+            { question: "Is SiLaC better than traditional surgery?", answer: "Yes, for most cases. It avoids the large 'open wounds' that take months to heal, allowing patients to return to work in days." },
+            { question: "When can I sit normally after SiLaC?", answer: "Most patients can sit comfortably within 2-3 days of the procedure." }
+        ]
     },
     {
-        id: "t-504",
-        slug: "laparoscopic-gallbladder-removal",
-        parentServiceSlug: "general-surgery",
-        title: "Laparoscopic Gallbladder Removal",
-        shortDescription: "Minimally invasive keyhole surgery for gallstones and gallbladder inflammation.",
-        fullDescription: "Laparoscopic Cholecystectomy is the gold standard for **Gallbladder Removal**. Using high-definition laparoscopes and precision instruments, our surgeons remove the gallbladder through 3-4 tiny keyhole incisions. This approach ensures safety, minimal pain, and a rapid recovery, allowing most patients to be discharged within 24 hours.",
-        features: ["HD Laparoscopic Imaging", "Tiny Keyhole Punctures", "Advanced Harmonic Scalpel", "Day-Care Surgery Option"],
-        benefits: ["Minimal Scarring", "Reduced Infection Risk", "Fast Return to Work", "Relief from Gallstone Pain"]
+        id: "t-28",
+        slug: "anal-abscess-treatment",
+        parentServiceSlug: "proctology",
+        title: "Comprehensive Anal Abscess Treatment",
+        shortDescription: "Immediate emergency drainage and management for perianal abscesses.",
+        fullDescription: "Anal abscesses are painful collections of pus near the anus that require immediate medical attention. At Indira Hospital, we provide 24/7 emergency drainage and comprehensive management to prevent the formation of anal fistulas and ensure rapid pain relief.",
+        features: [
+            "24/7 Emergency Drainage Facility",
+            "Precision USG-guided aspiration",
+            "Advanced antibiotic protocols",
+            "Modern surgical drainage in modular OTs"
+        ],
+        benefits: [
+            "Instant relief from throbbing pain",
+            "Prevents complex fistula formation",
+            "Expert critical care support",
+            "Rapid wound healing management"
+        ]
     },
     {
-        id: "t-505",
-        slug: "laparoscopic-appendix-surgery",
+        id: "t-29",
+        slug: "ibs-and-constipation-management",
+        parentServiceSlug: "proctology",
+        title: "IBS & Chronic Constipation Management",
+        shortDescription: "Scientific management of bowel disorders and motility issues.",
+        fullDescription: "Irritable Bowel Syndrome (IBS) and chronic constipation are complex conditions that affect the quality of life. Our proctology team uses a multidisciplinary approach, combining dietary modification, biofeedback, and advanced motility testing to provide long-term relief.",
+        features: [
+            "Comprehensive motility assessments",
+            "Dietary and lifestyle counseling",
+            "Advanced biofeedback therapy",
+            "Stress-management integration"
+        ],
+        benefits: [
+            "Consistent regular bowel movements",
+            "Reduced bloating and abdominal pain",
+            "Improved overall digestive health",
+            "Personalized long-term management care"
+        ]
+    },
+    {
+        id: "t-30",
+        slug: "rectal-prolapse-surgery",
+        parentServiceSlug: "proctology",
+        title: "Advanced Rectal Prolapse Surgery",
+        shortDescription: "Laparoscopic and perineal repairs for rectal prolapse with high success rates.",
+        fullDescription: "Rectal prolapse requires precise surgical correction to restore normal anatomy and function. We offer both laparoscopic (keyhole) rectopexy and perineal repairs (Thiersch/Altemeier's) specialized for the patient's age and health condition, ensuring optimal long-term outcomes.",
+        features: [
+            "Laparoscopic Ventral Mesh Rectopexy",
+            "Perineal (Bottom-up) repair options",
+            "High-definition surgical systems",
+            "Senior colorectal surgical expertise"
+        ],
+        benefits: [
+            "Restores normal bowel control",
+            "Correction of pelvic floor descent",
+            "Low recurrence with mesh integration",
+            "Rapid post-surgical mobilization"
+        ]
+    },
+    {
+        id: "t-601",
+        slug: "functional-endoscopic-sinus-surgery-fess",
+        parentServiceSlug: "ent",
+        title: "Functional Endoscopic Sinus Surgery (FESS)",
+        shortDescription: "Precision 4K endoscopic treatment for chronic sinusitis, nasal polyps, and sinus drainage restoration.",
+        fullDescription: "<h2>Reclaiming Your Airway: Advanced FESS at Indira Elite ENT Units</h2>\n<p>Chronic Rhinosinusitis is not merely a 'stuffed nose'; it is a debilitating clinical condition that affects your productivity, sleep quality, and overall cognitive clarity. When the natural drainage pathways of the paranasal sinuses are obstructed by inflammation, structural narrowing, or nasal polyps, it creates a persistent cycle of infection. **Functional Endoscopic Sinus Surgery (FESS)** is the modern gold standard designed to break this cycle by restoring natural sinus ventilation and drainage physiology.</p>\n<p>At Indira Super Speciality Hospital, under the expert leadership of our senior ENT surgeons, we have moved beyond traditional sinus surgery. We utilize **4K Ultra-High Definition Endoscopy**, which provides our surgical team with sub-millimeter visualization of the complex ethmoid, maxillary, frontal, and sphenoid sinus anatomy. This magnification allows for the precise removal of diseased tissue while meticulously preserving the surrounding healthy mucosa—a principle known as 'Functional' restoration.</p>\n\n<h3>The Technology Behind the Precision</h3>\n<p>Our ENT modular theaters are equipped with the most advanced surgical technology stack available in the region:</p>\n<ul>\n<li><strong>4K UHD Visualization</strong>: Provides 4 times the detail of standard HD, allowing for absolute precision near the delicate skull base and eye orbits.</li>\n<li><strong>Micro-Debrider Systems</strong>: Specialized 'power tools' that simultaneously shave and aspirate diseased polyps and tissue, preventing the tearing and trauma associated with traditional instruments.</li>\n<li><strong>Image-Guided Navigation (if required)</strong>: A 'GPS' for the sinuses that tracks the surgeon's tools in real-time against a pre-operative CT scan, ensuring safety in complex or recurrent cases.</li>\n</ul>\n\n<h3>Clinical Indications for FESS</h3>\n<p>While many sinus conditions respond to medical management (nasal steroids and saline rinses), FESS is definitively indicated when:</p>\n<ul>\n<li><strong>Chronic Sinusitis (CRS)</strong>: Inflammation persists for more than 12 weeks despite aggressive medical therapy.</li>\n<li><strong>Nasal Polyposis</strong>: Multiple or persistent polyps that obstruct the airway and smell receptors.</li>\n<li><strong>Recurrent Acute Sinusitis</strong>: Patients suffering from more than 4-5 severe episodes of acute infection per year.</li>\n<li><strong>Antro-choanal Polyps</strong>: Large polyps originating from the maxillary sinus that block the back of the throat.</li>\n<li><strong>Mucoceles</strong>: Mucus-filled cysts that can expand and put pressure on the brain or optic nerves.</li>\n</ul>\n\n<h3>Recovery and Post-Operative Outcomes</h3>\n<p>One of the most significant benefits of the 'Elite' approach to FESS is the rapid recovery. Because we perform the entire procedure through the natural nostrils (zero external incisions), there is no 'bruising' or 'black eyes' typically associated with older sinus procedures. Our **Precision Recovery Protocol** includes:</p>\n<ul>\n<li><strong>Advanced Dissolvable Packing</strong>: Most patients no longer require painful 'stripping' of nasal packs; we use materials that naturally dissolve or are easily suctioned during post-op visits.</li>\n<li><strong>Return to Work</strong>: Most patients return to light desk work within 3 to 5 days post-procedure.</li>\n<li><strong>Long-term Success</strong>: By restoring the natural 'Mucociliary Clearance' mechanism, we ensure that your sinuses can once again clear themselves of dust, bacteria, and allergens.</li>\n</ul>",
+        features: [
+            { title: "4K Endoscopy", description: "Sub-millimeter visualization of the skull base and orbits.", icon: "Activity" },
+            { title: "Micro-Debrider", description: "Precision tissue removal with zero mucosal tearing.", icon: "Target" },
+            { title: "Dissolvable Packs", description: "Painless recovery with no traditional 'nasal pack' removal.", icon: "Shield" }
+        ],
+        benefits: [
+            { title: "Sinus Clarity", description: "Permanent resolution of chronic facial pain and pressure.", icon: "Star" },
+            { title: "Easy Breathing", description: "Immediate and dramatic improvement in nasal airflow.", icon: "Zap" },
+            { title: "Smell Restoration", description: "Clearing polyps often restores lost sense of smell (anosmia).", icon: "Sparkles" }
+        ],
+        faq: [
+            { question: "Is FESS painful?", answer: "The procedure is done under high-quality general anesthesia. Post-operative pain is typically described as a 'heavy pressure' or 'severe head cold' for 48 hours, which is easily managed with mild pain-relief medications." },
+            { question: "Will my nose shape change?", answer: "No. FESS is an internal procedure. There are no external cuts, and the external cosmetics of your nose remain identical to before surgery." },
+            { question: "Can polyps return after surgery?", answer: "Surgery clears the 'blockage', but the underlying 'allergy' might remain. We provide a post-operative medical maintenance plan to minimize the risk of recurrence to less than 10-15%." }
+        ]
+    },
+    {
+        id: "t-602",
+        slug: "septoplasty-deviated-septum-repair",
+        parentServiceSlug: "ent",
+        title: "Septoplasty: Deviated Septum Repair",
+        shortDescription: "Surgical correction of the nasal septum to restore clear breathing, reduce snoring, and prevent sinus infections.",
+        fullDescription: "<h2>Breathing with Clarity: Why Septoplasty is Essential</h2>\n<p>A **Deviated Nasal Septum (DNS)** is more than a structural asymmetry—it is a functional blockage that forces the body to work harder for every breath. When the thin wall of bone and cartilage between your nostrils is displaced, it can lead to chronic nasal obstruction, severe snoring, obstructive sleep apnea, and recurring sinus infections due to unilateral blockage.</p>\n<p>At Indira Hospital's Center for Rhinology, we approach **Septoplasty** with a commitment to both functional restoration and structural stability. Our senior surgeons perform 'Endoscopic Septoplasty', using small telescopes to visualize the deepest parts of the deviation that are often missed in traditional 'head-mirror' surgery. This ensures that the airway is maximally cleared without weakening the structural bridge of the nose.</p>\n\n<h3>Signs You May Need a Septoplasty</h3>\n<p>Chronic mouth-breathing and dependence on nasal decongestant sprays are major warning signs. Clinical symptoms include:</p>\n<ul>\n<li><strong>Persistent Nasal Blockage</strong>: Constant difficulty breathing through one or both nostrils.</li>\n<li><strong>Chronic Snoring</strong>: Often associated with sleep apnea and morning fatigue.</li>\n<li><strong>Recurring Sinus Infections</strong>: Caused by the 'spur' of the septum pressing against the sinus drainage areas.</li>\n<li><strong>Chronic Headaches</strong>: Specifically 'Contact Point' headaches where the septum touches the sensitive nasal turbines.</li>\n<li><strong>Recurrent Nosebleeds</strong>: Dryness on the side of the deviation causing frequent crusting and bleeding.</li>\n</ul>\n\n<h3>The Endoscopic Septoplasty Advantage</h3>\n<p>Unlike traditional methods that often rely on 'feel' and blind resection, our endoscopic approach offers:</p>\n<ul>\n<li><strong>Targeted Correction</strong>: We only remove or reshape the specific 'spur' or 'curved' portion, preserving maximum healthy cartilage for nose support.</li>\n<li><strong>Turbinate Reduction (Co-procedure)</strong>: We often combine septoplasty with 'Coblation Turbinoplasty' to shrink the swollen soft tissues inside the nose for a 2X improvement in breathing.</li>\n<li><strong>Minimal Bruising</strong>: The precision of the endoscope means far less trauma to the surrounding tissues, resulting in minimal post-operative swelling.</li>\n</ul>\n\n<h3>Recovery: What to Expect</h3>\n<p>Septoplasty is typically a day-care or short-stay procedure. Because the surgery is entirely internal, there are no visible external changes or scars. You may feel like you have a 'blocked nose' for 48-72 hours due to internal swelling, but once this subsides, patients often report the first 'clear breath' of their adult lives. Most patients are back to full professional capacity within 5 to 7 days.</p>",
+        features: [
+            { title: "Endoscopic Precision", description: "Direct visualization of the entire septal anatomy.", icon: "Activity" },
+            { title: "Turbinate Contouring", description: "Simultaneous reduction of airway obstruction.", icon: "Target" },
+            { title: "Cartilage Sparing", description: "Maximum strength preservation for the nasal bridge.", icon: "Shield" }
+        ],
+        benefits: [
+            { title: "Clear Airway", description: "Immediate and permanent improvement in breathing.", icon: "CheckCircle" },
+            { title: "Silence Snoring", description: "Significant reduction in night-time snoring and apnea.", icon: "Zap" },
+            { title: "Stop Spray Dependence", description: "Reduces the need for habit-forming nasal decongestants.", icon: "Clock" }
+        ],
+        faq: [
+            { question: "Will my nose look different?", answer: "No. Septoplasty is a functional surgery performed inside the nose. If you desire a change in the external shape as well, that would be a 'Septo-Rhinoplasty', which we also offer." },
+            { question: "How long is the surgery?", answer: "A typical septoplasty takes approximately 45-60 minutes under general anesthesia." },
+            { question: "Can I go home the same day?", answer: "Yes, the majority of our septoplasty patients are discharged on the same evening once the effects of anesthesia have worn off." }
+        ]
+    },
+    {
+        id: "t-603",
+        slug: "coblation-tonsillectomy-and-adenoidectomy",
+        parentServiceSlug: "ent",
+        title: "Advanced Coblation Tonsillectomy & Adenoidectomy",
+        shortDescription: "Pain-free, bloodless removal of tonsils and adenoids using low-temperature plasma technology. Ideal for pediatric and adult patients.",
+        fullDescription: "<h2>The Evolution of Tonsil Surgery: Advanced Coblation Techniques</h2>\n<p>Chronic tonsillitis and enlarged adenoids are not just 'childhood issues'; they can lead to severe obstructive sleep apnea, recurring high-grade fevers, and permanent hearing issues due to Eustachian tube blockage. Traditional 'cold-steel' or 'cautery-based' tonsillectomy is often associated with significant post-operative pain and the risk of delayed bleeding. At Indira Hospital, we have pioneered the use of **Coblation-assisted Tonsillectomy & Adenoidectomy** in the region.</p>\n<p>**What is Coblation?** Unlike standard cautery which operates at several hundred degrees (literally burning the tissue), Coblation uses low-temperature radiofrequency plasma (typically 40°C to 70°C). This allows the surgeon to gently dissolve the tissue at a molecular level with virtually zero heat damage to the sensitive pillars of the throat. This 'cold-ablation' makes the recovery for children and adults significantly smoother and faster.</p>\n\n<h3>Why Opt for Coblation over Traditional Cautery?</h3>\n<p>The primary reason is the **Integrity of the Throat Pillars**. By avoiding high heat, we ensure:</p>\n<ul>\n<li><strong>Drastically Less Pain</strong>: Patients report up to 50-60% less pain in the first 48 hours compared to laser or electric cautery.</li>\n<li><strong>Bloodless Procedure</strong>: The coblation wand simultaneously clears the tissue and seals the tiny blood vessels, resulting in a cleaner operative field.</li>\n<li><strong>Rapid Return to Diet</strong>: Children are often able to eat soft foods (like ice cream or chilled liquids) within just 2-3 hours of waking up from surgery.</li>\n<li><strong>Decreased Risk of Bleeding</strong>: The minimized thermal damage significantly reduces the risk of 'secondary' bleeding that can occur days after standard surgery.</li>\n</ul>\n\n<h3>Indications for Tonsil and Adenoid Removal</h3>\n<p>Our ENT specialists recommend intervention when the conditions become life-impairing:</p>\n<ul>\n<li><strong>Sleep Apnea</strong>: The child (or adult) stops breathing for seconds during sleep, leading to severe morning fatigue and growth issues in children.</li>\n<li><strong>Recurring Infections</strong>: More than 5-7 episodes of high-grade fever and sore throat per year.</li>\n<li><strong>Mouth Breathing</strong>: Chronic adenoid enlargement leading to 'Adenoid Facies' (changes in facial bone growth).</li>\n<li><strong>Peritonsillar Abscess</strong>: A severe 'collection of pus' in the throat that requires definitive tonsil removal.</li>\n</ul>\n\n<h3>The Pediatric Recovery Experience</h3>\n<p>We believe that a child’s hospital experience should be as trauma-free as possible. Our 'Elite' surgical unit uses pediatric-specific anesthetic protocols and the Coblation technology to ensure that the child is back home on the same day. Most children are back to their normal playful selves and school within 7 to 10 days, with minimal reliance on strong painkillers.</p>",
+        features: [
+            { title: "Plasma Technology", description: "Molecular dissolution of tissue with minimal heat damage.", icon: "Activity" },
+            { title: "Bloodless Field", description: "Simultaneous ablation and coagulation for safety.", icon: "Shield" },
+            { title: "Pediatric Focus", description: "Kid-friendly surgical and recovery protocols.", icon: "Target" }
+        ],
+        benefits: [
+            { title: "Half the Pain", description: "Significantly more comfortable recovery than laser surgery.", icon: "Zap" },
+            { title: "Fast-Track Diet", description: "Return to normal swallowing within hours/days, not weeks.", icon: "Apple" },
+            { title: "Permanent Relief", description: "Eliminates snoring and recurring high-grade fevers.", icon: "CheckCircle" }
+        ],
+        faq: [
+            { question: "Is Coblation better than Laser for tonsils?", answer: "Yes. Lasers operate at very high temperatures which can cause deep thermal burns in the throat. Coblation is a 'cold' technology that preserves the underlying muscle, leading to a much faster and less painful recovery." },
+            { question: "What is the best age for this surgery?", answer: "Surgery can be performed safely on children as young as 3 years old if they suffer from obstructive sleep apnea. For adults, there is no upper age limit as long as they are medically cleared." },
+            { question: "Can tonsils grow back?", answer: "While the main tonsils do not grow back, tiny remnants of lymphoid tissue can sometimes enlarge if severe allergies persist, but this rarely requires a second surgery." }
+        ]
+    },
+    {
+        id: "t-604",
+        slug: "tympanoplasty-and-mastoidectomy",
+        parentServiceSlug: "ent",
+        title: "Tympanoplasty & Mastoidectomy",
+        shortDescription: "Precision microsurgery for eardrum repair, chronic ear discharge, and hearing restoration using high-resolution DH microscopy.",
+        fullDescription: "<h2>Restoring Sound and Safety: Microsurgical Ear Reconstruction</h2>\n<p>Chronic ear infections and a perforated 'hole' in the eardrum (Tympanic Membrane Perforation) are significant clinical issues that can lead to permanent hearing loss and, in severe cases, life-threatening intracranial complications. At Indira Elite ENT Units, we specialize in **Tympanoplasty** (eardrum repair) and **Mastoidectomy** (removal of infected bone), utilizing world-class surgical microscopes to provide high-fidelity reconstruction of the hearing mechanism.</p>\n<p>Under the expertise of our ENT surgical team, we address both the 'safety' of the ear and the 'clarity' of hearing. For patients with chronic foul-smelling discharge or skin-growth in the ear (Cholesteatoma), we perform advanced 'Canal-Wall-Down' or 'Canal-Wall-Up' Mastoidectomies to ensure the ear is completely disease-free before repairing the eardrum.</p>\n\n<h3>Our Microsurgical Innovation: The DH Advantage</h3>\n<p>The middle ear contains the three smallest bones in the human body (Ossicles). Repairing these requires extreme precision:</p>\n<ul>\n<li><strong>High-Resolution Microscopy</strong>: We use advanced surgical microscopes that provide up to 20X magnification, allowing our surgeons to see every detail of the ossicular chain.</li>\n<li><strong>Biocompatible Grafts</strong>: We use the patient's own tissue (Temporalis Fascia or Tragal Cartilage) to create a new, durable eardrum that has a 95% 'take' rate.</li>\n<li><strong>Ossiculoplasty</strong>: If the tiny hearing bones are damaged by infection, we reconstruct them using titanium or ceramic micro-prosthesis to restore natural sound conduction.</li>\n</ul>\n\n<h3>Common Clinical Conditions Treated</h3>\n<p>We provide definitive surgical solutions for:</p>\n<ul>\n<li><strong>CSOM (Chronic Suppurative Otitis Media)</strong>: Long-standing ear discharge and eardrum holes.</li>\n<li><strong>Cholesteatoma</strong>: A non-cancerous skin growth that can erode the ear bones and skull base.</li>\n<li><strong>Otosclerosis</strong>: Fixation of the stapes bone, treated via 'Stapedotomy' to restore hearing.</li>\n<li><strong>Glue Ear</strong>: Persistent fluid in the middle ear, often requiring grommet insertion.</li>\n</ul>\n\n<h3>The Precision Recovery Roadmap</h3>\n<p>Post-operative care is vital for a successful eardrum 'take'. Our patients receive guided care including:</p>\n<ul>\n<li><strong>Water Protection</strong>: The ear must be kept strictly dry for 4-6 weeks post-surgery. We provide specialized plugs and instructions.</li>\n<li><strong>Pressure Management</strong>: Patients are taught the 'open-mouth sneeze' technique to prevent air pressure from dislodging the new graft.</li>\n<li><strong>Hearing Restoration Timeline</strong>: While the ear is 'packed' for the first 2 weeks, hearing typically begins to clear dramatically by the 4th week as the internal dressings dissolve.</li>\n</ul>",
+        features: [
+            { title: "DH Microscopy", description: "Operation under high-magnification surgical microscopes.", icon: "Activity" },
+            { title: "Ossicular Reconstruction", description: "Repair of hearing bones using titanium micro-prosthesis.", icon: "Target" },
+            { title: "Cartilage Grafting", description: "Use of durable, high-success graft materials.", icon: "Shield" }
+        ],
+        benefits: [
+            { title: "Stops Ear Discharge", description: "Permanent resolution of chronic and foul-smelling infections.", icon: "CheckCircle" },
+            { title: "Hearing Gain", description: "Significant improvement in sound clarity and volume.", icon: "Zap" },
+            { title: "Safety from Scars", description: "Minimal post-aural (behind the ear) or internal incisions.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "How long does the ear stay packed?", answer: "We use specialized antibiotic-soaked packing that is typically removed in the clinic 10-14 days after surgery. During this time, the ear will feel 'full' or 'blocked'." },
+            { question: "Can I fly after ear surgery?", answer: "No. Air travel and high-altitude travel should be avoided for at least 6 weeks to allow the new eardrum graft to heal without pressure stress." },
+            { question: "Is the surgery performed under local or general anesthesia?", answer: "For maximum patient comfort and surgical precision, we perform almost all our ear microsurgeries under general anesthesia." }
+        ]
+    },
+    {
+        id: "t-605",
+        slug: "microlaryngeal-surgery-voice-care",
+        parentServiceSlug: "ent",
+        title: "Microlaryngeal Surgery (Phonosurgery)",
+        shortDescription: "Advanced precision surgery for vocal cord polyps, nodules, and hoarseness restoration using endo-laryngeal microscopy.",
+        fullDescription: "<h2>The Art of Voice Restoration: Precision Phonosurgery</h2>\n<p>Your voice is your primary instrument for communication, and even minor lesions on the vocal cords can lead to chronic hoarseness, vocal fatigue, and significant professional impact. **Microlaryngeal Surgery (Phonosurgery)** is a highly specialized field focused on the removal of benign vocal cord lesions (like polyps, nodules, and cysts) while preserving the delicate wave-like movement of the vocal cord mucosa.</p>\n<p>At Indira Super Speciality Hospital, our specialists utilize **Endo-laryngeal Microsurgery**, performed entirely through the mouth with the aid of a surgical microscope. This 'no-scar' approach allows for sub-millimeter precision, ensuring that the underlying 'vibratory layer' of the vocal cord is not damaged, which is essential for restoring a clear, natural-sounding voice.</p>\n\n<h3>Common Conditions Treated with Phonosurgery</h3>\n<p>We provide advanced surgical care for:</p>\n<ul>\n<li><strong>Vocal Cord Polyps</strong>: Often caused by sudden vocal trauma or chronic strain.</li>\n<li><strong>Vocal Nodules</strong>: Small 'calluses' that develop due to chronic voice misuse.</li>\n<li><strong>Reinke's Edema</strong>: Swelling of the vocal cords often associated with chronic smoking.</li>\n<li><strong>Vocal Cord Cysts</strong>: Fluid-filled sacs that disrupt the symmetry of vocal cord vibration.</li>\n<li><strong>Laryngeal Papillomas</strong>: Growths caused by the HPV virus that can affect the airway and voice.</li>\n</ul>\n\n<h3>Technological Mastery in Voice Care</h3>\n<p>Our voice unit integrates surgical precision with diagnostic science:</p>\n<ul>\n<li><strong>4K Fiber-optic Laryngoscopy</strong>: For pre-operative mapping of the vibratory defect.</li>\n<li><strong>Cold Instrument Microsurgery</strong>: Using ultra-fine micro-scissors to prevent heat damage to the vocal cord.</li>\n<li><strong>Laser Phonosurgery (if indicated)</strong>: For precise ablation of vascular lesions or papillomas.</li>\n<li><strong>Integrated Voice Therapy</strong>: Post-operative speech therapy is natively integrated to prevent recurring vocal strain.</li>\n</ul>\n\n<h3>The Road to a Clear Voice</h3>\n<p>Success in voice surgery depends heavily on post-operative 'Voice Rest'. Our patients undergo a structured recovery plan:</p>\n<ul>\n<li><strong>Total Voice Rest</strong>: 7 days of absolute silence (no whispering, no talking) to allow the mucosal lining to heal smoothly.</li>\n<li><strong>Hydration and Reflux Control</strong>: Acid reflux can damage healing vocal cords; we manage this strictly during the recovery phase.</li>\n<li><strong>Voice Rehabilitation</strong>: Graduation to structured vocal exercises once the initial healing phase is complete.</li>\n</ul>",
+        features: [
+            { title: "Micro-Visualization", description: "Sub-millimeter surgery under high-magnification microphones.", icon: "Activity" },
+            { title: "Cold Instrumentation", description: "Preserves the delicate vibratory layer of the vocal cords.", icon: "Shield" },
+            { title: "Integrated Speech Therapy", description: "Professional voice rehabilitation post-procedure.", icon: "Target" }
+        ],
+        benefits: [
+            { title: "Clear Voice Quality", description: "Eliminates chronic hoarseness and vocal breaks.", icon: "Sparkles" },
+            { title: "Increased Vocal Range", description: "Restores pitch and stamina for professional voice users.", icon: "Zap" },
+            { title: "Painless Procedure", description: "Day-care surgery with zero external incisions or scarring.", icon: "CheckCircle" }
+        ],
+        faq: [
+            { question: "Is'whispering' allowed during voice rest?", answer: "No. Whispering actually puts more strain on the vocal cords than normal talking. When we prescribe 'Total Voice Rest', it means zero vocalization for the prescribed period." },
+            { question: "How long is the surgery?", answer: "The procedure usually takes 30-45 minutes under general anesthesia." },
+            { question: "Can vocal polyps come back?", answer: "With correct surgical technique and proper post-operative voice therapy to correct 'speaking habits', the recurrence rate is very low." }
+        ]
+    },
+    {
+        id: "t-606",
+        slug: "thyroid-and-parotid-surgery",
+        parentServiceSlug: "ent",
+        title: "ENT Head & Neck: Thyroid & Parotid Surgery",
+        shortDescription: "Surgical management of thyroid nodules, neck lumps, and salivary gland tumors using nerve-monitoring precision.",
+        fullDescription: "<h2>Precision in the Neck: Advanced Thyroid and Salivary Surgery</h2>\n<p>Lumps and swellings in the neck—whether in the **Thyroid Gland**, **Parotid Gland**, or **Submandibular Gland**—require the highest level of anatomical expertise. Because the neck is a dense corridor of critical nerves (responsible for voice and facial movement), having a specialized ENT Head & Neck surgeon is essential for a safe outcome. At Indira Elite Surgical Units, we combine surgical mastery with advanced **Intra-operative Nerve Monitoring (IONM)** to ensure that every lump is removed with maximum safety for your functional nerves.</p>\n<p>Our approach is 'Aesthetic and Secure'. We understand that a scar on the neck is highly visible, which is why we utilize plastic-surgery closure techniques and place incisions within natural skin-creases whenever possible, ensuring that the mark fades to nearly invisible over time.</p>\n\n<h3>Our Core Surgical Specialities</h3>\n<p>We provide comprehensive management for:</p>\n<ul>\n<li><strong>Thyroidectomy (Total or Hemi)</strong>: For thyroid nodules, goiters, or suspected thyroid cancers.</li>\n<li><strong>Parotidectomy</strong>: Removal of tumors in the main ear-area salivary gland, with focus on Facial Nerve preservation.</li>\n<li><strong>Submandibular Gland Excision</strong>: Typically for recurring salivary stones or chronic infection.</li>\n<li><strong>Thyroglossal Cyst Removal</strong>: Precision 'Sistrunk Procedure' to prevent recurrence of midline neck swellings.</li>\n</ul>\n\n<h3>The 'Safety First' Technology Stack</h3>\n<p>We utilize the latest surgical tools to minimize complications:</p>\n<ul>\n<li><strong>Nerve Monitoring (IONM)</strong>: Real-time electronic tracking of the Recurrent Laryngeal Nerve (voice) and Facial Nerve (expression) to prevent accidental injury.</li>\n<li><strong>Harmonic Scalpels</strong>: Ultrasonic energy that cuts and coagulates without the high heat of traditional cautery, protecting neighboring nerves.</li>\n<li><strong>Frozen Section Biopsy</strong>: On-table diagnostic testing where we can determine if a lump is cancerous during the surgery, allowing for a complete one-stage procedure.</li>\n</ul>\n\n<h3>The Recovery Journey</h3>\n<p>Surgery of the neck typically requires a 48-hour hospital stay. We prioritize 'Drain-Free' surgery where possible, though sometimes a small drain is left for 24 hours to prevent fluid collection. Most patients return to full diet by the same evening and can resume professional activities within 10 to 14 days. We provide comprehensive endocrine follow-up for thyroid patients to ensure their hormone levels are perfectly balanced post-surgery.</p>",
+        features: [
+            { title: "Nerve Monitoring", description: "Real-time protection of vocal and facial nerves.", icon: "Activity" },
+            { title: "Aesthetic Closure", description: "Plastic-style stitching for minimal scarring.", icon: "Sparkles" },
+            { title: "Frozen Section", description: "On-table pathological analysis for precision.", icon: "Search" }
+        ],
+        benefits: [
+            { title: "Voice Preservation", description: "Advanced safe-guards to protect your nerves of speech.", icon: "Shield" },
+            { title: "Complete Lump Removal", description: "Definitive cure for thyroid and salivary gland tumors.", icon: "CheckCircle" },
+            { title: "Rapid Pain Recovery", description: "Minimally invasive approach for fewer post-operative days.", icon: "Zap" }
+        ],
+        faq: [
+            { question: "Will thyroid surgery change my voice?", answer: "We use Intra-operative Nerve Monitoring specifically to prevent this. While temporary 'tiredness' of the voice is possible, permanent voice changes are extremely rare in experienced hands." },
+            { question: "Is the scar very noticeable?", answer: "We place the incision in a natural skin crease of the neck. After 6-12 months, the scar typically looks like a faint natural skin line and is barely noticeable." },
+            { question: "Will I need lifelong medicine after thyroid surgery?", answer: "If the whole thyroid is removed (Total Thyroidectomy), you will need a once-daily hormone pill. If only half is removed, your remaining half often takes over the full function." }
+        ]
+    },
+    {
+        id: "laparoscopic-hysterectomy",
+        slug: "laparoscopic-hysterectomy-guide",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Advanced Laparoscopic Hysterectomy (Keyhole Uterus Removal)",
+        shortDescription: "Minimally invasive uterine removal for fibroids, endometriosis, and adenomyosis with precision and rapid recovery.",
+        fullDescription: "<h2>Total Laparoscopic Hysterectomy (TLH): The Gold Standard in Uterine Surgery</h2>\n<p>At Indira Super Speciality Hospital, we specialize in **Total Laparoscopic Hysterectomy (TLH)**, a minimally invasive alternative to traditional abdominal surgery. Led by <strong>Dr. Praharshitha Sagiraju</strong>, our 'Minimal Access' approach ensures that complex conditions like large uterine fibroids, severe endometriosis, and chronic pelvic pain are resolved through tiny 5-10mm incisions.</p>\n<p>Unlike open surgery, TLH offers superior visualization of the pelvic anatomy using 4K Ultra-HD laparoscopic stacks. This precision allows for meticulous tissue dissection, significantly lower blood loss, and preservation of pelvic floor integrity. We prioritize 'Fast-Track' recovery, aiming for most patients to be mobile the same day and discharged within 24-48 hours.</p>\n\n<h3>Clinical Indications for TLH</h3>\n<ul>\n<li><strong>Symptomatic Uterine Fibroids</strong>: When size or location causes heavy bleeding or pelvic pressure.</li>\n<li><strong>Adenomyosis</strong>: Relief from severe menstrual pain and abnormal uterine bleeding.</li>\n<li><strong>Endometriosis</strong>: Surgical management of complex pelvic adhesions and ovarian endometriomas.</li>\n<li><strong>Uterine Prolapse</strong>: Integral part of pelvic floor reconstructive surgery.</li>\n<li><strong>Pre-cancerous Lesions</strong>: Proactive management for endometrial hyperplasia or cervical dysplasia.</li>\n</ul>\n\n<h3>The Indira 'Precision Care' Pathway</h3>\n<p>Our gynaecological oncology and endoscopy unit follows a strict clinical roadmap:</p>\n<ol>\n<li><strong>Pre-Operative Mapping</strong>: Utilizing high-resolution pelvic ultrasound and MRI to plan the surgical approach.</li>\n<li><strong>Vessel-Saling Technology</strong>: Use of advanced LigaSure or Harmonic technologies for bloodless surgery.</li>\n<li><strong>Zero-Narcotic Recovery</strong>: Multi-modal analgesia protocols to ensure a pain-free recovery without the side effects of heavy sedation.</li>\n</ol>",
+        features: [
+            { title: "4K HD Laparoscopy", description: "Magnified visualization for nerve-sparing and bladder-safe surgery.", icon: "Activity" },
+            { title: "Minimal Scars", description: "Performed through tiny aesthetic incisions that heal invisibly.", icon: "Sparkles" },
+            { title: "Zero Blood Loss", description: "Advanced energy devices (Harmonic/LigaSure) ensure hemostasis.", icon: "Zap" }
+        ],
+        benefits: [
+            { title: "24-Hour Discharge", description: "Return to home comforts significantly faster than open surgery.", icon: "Clock" },
+            { title: "Rapid Diet Return", description: "Bowel function restores quickly, allowing normal eating within 12 hours.", icon: "Apple" },
+            { title: "Minimal Pain", description: "Significantly reduced post-operative pain and infection risk.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "Is a laparoscopic hysterectomy better than open surgery?", answer: "Yes, for most patients. It offers less pain, smaller scars, lower infection risk, and a much faster return to work and normal activities." },
+            { question: "Will my ovaries be removed too?", answer: "This depends on your age and health. In many cases, healthy ovaries are preserved to maintain hormonal balance." },
+            { question: "When can I return to work?", answer: "Most women return to light work within 2 weeks and resume full physical activities in 4-6 weeks." }
+        ]
+    },
+    {
+        id: "infertility-management",
+        slug: "infertility-evaluation-steps",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Comprehensive Infertility Management & Fertility Center",
+        shortDescription: "Evidence-based fertility diagnostics and advanced clinical treatments for couples aspiring for parenthood.",
+        fullDescription: "<h2>Navigating Your Journey to Parenthood: Advanced Fertility Care</h2>\n<p>The **Fertility Center at Indira Super Speciality Hospital**, led by **Dr. Praharshitha Sagiraju**, offers an empathetic and scientifically rigorous approach to conception difficulties. We understand that infertility is a deeply personal journey, which is why we emphasize 'Diagnostic Accuracy' before recommending invasive treatments.</p>\n<p>Our clinical pathway begins with a 'Couple-Centric' evaluation, addressing both maternal and paternal factors simultaneously. From advanced ovulation induction and follicular monitoring to complex tubal reconstruction and IUI preparation, we provide a complete circle of fertility care under one roof.</p>\n\n<h3>Our Diagnostic Spectrum</h3>\n<ul>\n<li><strong>Follicular Tracking</strong>: High-resolution ultrasound monitoring of egg development.</li>\n<li><strong>Hysterosalpingography (HSG)</strong>: Evaluating tubal patency and uterine cavity health.</li>\n<li><strong>Hormonal Profiling</strong>: Analyzing AMH, FSH, Prolactin, and Thyroid levels for ovarian reserve assessment.</li>\n<li><strong>Diagnostic Laparoscopy</strong>: The gold standard for identifying 'silent' endometriosis or pelvic adhesions obstructing conception.</li>\n</ul>\n\n<h3>Advanced Fertility Interventions</h3>\n<p>We provide a range of evidence-based treatments tailored to your specific diagnostic profile:</p>\n<ul>\n<li><strong>Ovulation Induction</strong>: Controlled medical stimulation for irregular cycles or PCOS.</li>\n<li><strong>Intra-Uterine Insemination (IUI)</strong>: Specialized sperm processing and timed insemination for mild male factor or unexplained infertility.</li>\n<li><strong>Surgical Fertility Restoration</strong>: Laparoscopic removal of fibroids (Myomectomy) or clearing of tubal blockages to restore natural fertility.</li>\n</ul>",
+        features: [
+            { title: "AMH Testing", description: "Accurate assessment of ovarian reserve and egg potential.", icon: "Activity" },
+            { title: "Follicular Monitoring", description: "Trans-vaginal ultrasound for precise timing of conception.", icon: "Search" },
+            { title: "Male Factor Analysis", description: "Comprehensive semen analysis and andrology support.", icon: "UserCheck" }
+        ],
+        benefits: [
+            { title: "High Success Rates", description: "Evidence-based protocols designed to maximize conception chances.", icon: "Star" },
+            { title: "Compassionate Counseling", description: "Dedicated emotional support throughout the fertility journey.", icon: "Heart" },
+            { title: "Diagnostic Accuracy", description: "We find the root cause before recommending treatment.", icon: "Target" }
+        ],
+        faq: [
+            { question: "When should we see a fertility specialist?", answer: "If you are under 35 and haven't conceived after 1 year of unprotected intercourse, or if you are over 35 and haven't conceived after 6 months." },
+            { question: "Is IUI painful?", answer: "No, it is a simple office procedure similar to a PAP smear and takes only a few minutes." },
+            { question: "Can PCOS cause infertility?", answer: "Yes, it is a common cause due to irregular ovulation, but it can be highly effectively managed with medication and lifestyle changes." }
+        ]
+    },
+    {
+        id: "pcos-and-menstrual-health",
+        slug: "pcod-pcos-treatment-guide",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "PCOS Center & Menstrual Health Excellence",
+        shortDescription: "Specialized clinical management for PCOS, Endometriosis, and Hormonal imbalances through a holistic medical approach.",
+        fullDescription: "<h2>Expert Management of PCOS and Hormonal Health</h2>\n<p>**Polycystic Ovary Syndrome (PCOS)** is more than just irregular periods; it is a complex metabolic and endocrine condition that requires long-term, specialized care. At Indira Super Speciality Hospital, we moved beyond symptom suppression to 'Metabolic Restoration'.</p>\n<p>Our program, led by AIIMS-trained specialist <strong>Dr. Praharshitha Sagiraju</strong>, integrates clinical endocrinology with gynaecological expertise. We address the root causes—insulin resistance, hyperandrogenism, and hormonal dysregulation—to prevent long-term complications like Diabetes, Infertility, and Obesity.</p>\n\n<h3>Comprehensive Clinical Roadmap</h3>\n<ul>\n<li><strong>Accurate Phenotyping</strong>: Using the Rotterdam Criteria to correctly diagnose PCOS vs. other hormonal mimics.</li>\n<li><strong>Menstrual Regulation</strong>: Tailored medical protocols to ensure endometrial health and cycle regularity.</li>\n<li><strong>Metabolic Support</strong>: Monitoring of blood sugar, lipids, and weight to manage insulin resistance effectively.</li>\n<li><strong>Dermatological Integration</strong>: Managing PCOS-related acne and hirsutism through a collaborative clinical approach.</li>\n</ul>\n\n<h3>Menstrual Disorders We Treat</h3>\n<p>Beyond PCOS, we provide advanced care for a wide spectrum of disorders:</p>\n<ul>\n<li><strong>Dysmenorrhea</strong>: Investigating the root cause of painful periods (Endometriosis/Fibroids).</li>\n<li><strong>Menorrhagia</strong>: Management of heavy menstrual bleeding using both medical and minimally invasive (Mirena/Ablation) techniques.</li>\n<li><strong>Amenorrhea</strong>: Diagnosing and treating the absence of menstruation.</li>\n</ul>",
+        features: [
+            { title: "Hormonal Assays", description: "In-depth analysis of LH/FSH ratios, Testosterone, and Insulin levels.", icon: "Activity" },
+            { title: "Nutritional Therapy", description: "Science-backed PCOS diets to reverse insulin resistance.", icon: "Apple" },
+            { title: "Endometrial Screening", description: "Ultrasound monitoring to ensure safe menstrual health.", icon: "Search" }
+        ],
+        benefits: [
+            { title: "Symptom Reversal", description: "Significant improvement in weight, skin, and cycles.", icon: "Zap" },
+            { title: "Long-term Health", description: "Proactive prevention of future Diabetes and Heart disease.", icon: "Shield" },
+            { title: "Fertility Protection", description: "Ensuring your future ability to conceive through hormone balance.", icon: "Heart" }
+        ],
+        faq: [
+            { question: "Is PCOS curable?", answer: "While not 'cured' in the traditional sense, it can be 100% managed. Many women reverse their symptoms entirely through lifestyle and medical management." },
+            { question: "Why are my periods so painful?", answer: "Painful periods (Dysmenorrhea) can be 'primary' or 'secondary' to conditions like Endometriosis. A clinical evaluation is essential to find the cause." },
+            { question: "Does PCOS always cause weight gain?", answer: "No, 'Lean PCOS' exists, but insulin resistance is common to most types and requires careful management." }
+        ]
+    },
+    {
+        id: "prenatal-care-and-delivery",
+        slug: "high-risk-pregnancy-care",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Elite Prenatal Care & Maternal-Fetal Excellence",
+        shortDescription: "Comprehensive maternity care from preconception to delivery, specializing in High-Risk Pregnancy and Fetal Medicine.",
+        fullDescription: "<h2>Safeguarding Your Pregnancy: From First Breath to Delivery</h2>\n<p>Pregnancy is a miraculous journey that deserves the highest standard of clinical vigilance. The **Maternity Unit at Indira Super Speciality Hospital** is designed to provide a 'Safety-First' environment, integrating advanced **Maternal-Fetal Medicine** with compassionate patient care.</p>\n<p>Led by **Dr. Praharshitha Sagiraju**, our department specializes in 'High-Risk Pregnancy' management. Whether you are navigating Gestational Diabetes, Hypertension (Preeclampsia), or Multiple Gestations (Twins), our team provides a level of monitoring that ensures the best possible outcome for both mother and baby.</p>\n\n<h3>The Indira Maternity Experience</h3>\n<ul>\n<li><strong>Pre-conception Counseling</strong>: Optimization of maternal health before pregnancy begins.</li>\n<li><strong>Precision Prenatal Screening</strong>: Nuchal Translucency (NT) scans and Anomaly scans to monitor fetal development.</li>\n<li><strong>High-Risk Protocols</strong>: Specialized clinics for thyroid disorders, gestational diabetes, and recurrent pregnancy loss.</li>\n<li><strong>Painless Labor</strong>: Epidural Analgesia services provided by senior anaesthesiologists for a comfortable birthing experience.</li>\n</ul>\n\n<h3>State-of-the-Art Infrastructure</h3>\n<p>We provide a complete circle of safety for your newborn:</p>\n<ul>\n<li><strong>Advanced Labor Suites</strong>: Modern, sterile, and monitored environment for Normal and Instrumental deliveries.</li>\n<li><strong>Emergency LSCS</strong>: 24/7 readiness for Caesarean sections with a dedicated neonatal team present at every birth.</li>\n<li><strong>Level II NICU</strong>: Immediate specialized care for premature or unwell newborns.</li>\n</ul>",
+        features: [
+            { title: "High-Res Ultrasonography", description: "Advanced fetal monitoring and anomaly detection.", icon: "Activity" },
+            { title: "Cardiotocography (CTG)", description: "Continuous monitoring of fetal heart rate during labor.", icon: "Heart" },
+            { title: "Neonatal Backup", description: "Specialized pediatricians/neonatologists present at all deliveries.", icon: "UserCheck" }
+        ],
+        benefits: [
+            { title: "Normal Delivery Focus", description: "Evidence-based support for vaginal birth whenever safe.", icon: "Star" },
+            { title: "24/7 Obstetric Care", description: "Immediate access to your specialist in case of emergencies.", icon: "Clock" },
+            { title: "Expert Newborn Care", description: "Seamless transition from delivery to pediatric follow-up.", icon: "Baby" }
+        ],
+        faq: [
+            { question: "What is a 'High-Risk' pregnancy?", answer: "A pregnancy is considered high-risk if there are pre-existing health conditions, age factors, or complications like diabetes/hypertension developed during pregnancy." },
+            { question: "Do you offer painless delivery?", answer: "Yes, we provide epidural analgesia (labor epidural) to significantly reduce labor pain while allowing you to remain active." },
+            { question: "When should I begin prenatal visits?", answer: "Ideally as soon as you miss a period or have a positive home pregnancy test." }
+        ]
+    },
+    {
+        id: "menopause-care",
+        slug: "menopause-symptom-relief",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Advanced Menopause & Hormonal Wellness Clinic",
+        shortDescription: "Specialized medical management for Perimenopause and Postmenopause, focusing on bone health, heart health, and quality of life.",
+        fullDescription: "<h2>Empowering Women Through Menopause and Beyond</h2>\n<p>Menopause is a natural transition, but the hormonal shifts can profoundly impact a woman's physical and emotional well-being. At Indira Super Speciality Hospital, our **Menopause Wellness Clinic** provides a science-based approach to managing this phase, ensuring you remain vibrant, healthy, and active.</p>\n<p>Our program focuses on 'Preventive Longevity'. We don't just treat hot flashes; we proactively manage the increased risks of **Osteoporosis**, **Cardiovascular Disease**, and **Metabolic changes** that occur as estrogen levels decline. Led by **Dr. Praharshitha Sagiraju**, we offer personalized Hormone Replacement Therapy (HRT) and non-hormonal alternatives tailored to your health profile.</p>\n\n<h3>Comprehensive Menopause Screenings</h3>\n<ul>\n<li><strong>Bone Density (DEXA)</strong>: Assessing fractional bone loss to prevent future fractures.</li>\n<li><strong>Cardiovascular Risk Profiling</strong>: Monitoring lipid profiles and blood pressure during the estrogen-depletion phase.</li>\n<li><strong>Breast & Cervical Health</strong>: Continued screening (Mammography/Pap) to ensure safety during the middle years.</li>\n<li><strong>Uro-Gynaecological Care</strong>: Addressing dryness, frequency, and pelvic floor strength.</li>\n</ul>\n\n<h3>Our Treatment Modalities</h3>\n<p>We provide a spectrum of care from lifestyle to advanced therapeutics:</p>\n<ul>\n<li><strong>Customized MHT (Menopausal Hormone Therapy)</strong>: For moderate to severe vasomotor symptoms (when safe and indicated).</li>\n<li><strong>Non-Hormonal Alternatives</strong>: Evidence-backed medications and supplements for symptom relief.</li>\n<li><strong>Nutritional Interventions</strong>: Calcium-D3 optimization and plant-based phytoestrogens.</li>\n<li><strong>Pelvic Floor Rehabilitation</strong>: Strengthening the pelvic muscles to maintain urinary health.</li>\n</ul>",
+        features: [
+            { title: "DEXA Scan Analysis", description: "Precision monitoring of bone strength and fracture risk.", icon: "Scale" },
+            { title: "HRT Optimization", description: "Carefully calibrated and monitored hormonal replacement.", icon: "Activity" },
+            { title: "Uro-Gynae Support", description: "Specialized care for urinary health and pelvic comfort.", icon: "Droplets" }
+        ],
+        benefits: [
+            { title: "Symptom Relief", description: "Elimination of hot flashes, night sweats, and sleep disturbances.", icon: "Zap" },
+            { title: "Fracture Prevention", description: "Aggressive management of bone health to ensure mobility.", icon: "Shield" },
+            { title: "Enhanced Vitality", description: "Improving mood, energy levels, and overall quality of life.", icon: "Star" }
+        ],
+        faq: [
+            { question: "Is HRT safe?", answer: "HRT is highly safe for most women if started within 10 years of menopause. We perform a thorough cardiovascular and breast health screening before recommending it." },
+            { question: "What is Perimenopause?", answer: "The multi-year transition before menopause where cycles become irregular and symptoms like brain fog or mood swings may begin." },
+            { question: "Can lifestyle changes help?", answer: "Absolutely. Diet, weight training, and stress management are foundational to a healthy menopause." }
+        ]
+    },
+    {
+        id: "gynaecological-endoscopy",
+        slug: "hysteroscopy",
+        parentServiceSlug: "obstetrics-gynaecology",
+        title: "Advanced Gynaecological Endoscopy & Hysteroscopy",
+        shortDescription: "Minimally invasive diagnostic and operative procedures for uterine abnormalities and infertility.",
+        fullDescription: "<h2>Precision Inside: Diagnostic and Operative Hysteroscopy</h2>\n<p>Hysteroscopy is the 'Gold Standard' for evaluating the inside of the uterus (endometrial cavity) without any incisions. At Indira Super Speciality Hospital, we utilize ultra-thin fiber-optic telescopes (Hysteroscopes) to visualize and treat uterine issues directly.</p>\n<p>Led by **Dr. Praharshitha Sagiraju** (PDCC Gynae Endoscopy), our endoscopy unit specializes in 'Office Hysteroscopy'—minimal discomfort procedures that provide immediate answers for abnormal bleeding, repeated miscarriages, or failed fertility cycles.</p>\n\n<h3>What We Treat via Hysteroscopy</h3>\n<ul>\n<li><strong>Endometrial Polyps</strong>: Precision removal of growths that cause heavy bleeding.</li>\n<li><strong>Uterine Fibroids (Submucosal)</strong>: Specialized resection (Myomectomy) to restore uterine health.</li>\n<li><strong>Adhesions (Ashermans Syndrome)</strong>: Clearing scar tissue that prevents pregnancy.</li>\n<li><strong>Uterine Septums</strong>: Correcting congenital abnormalities to reduce miscarriage risk.</li>\n<li><strong>Abnormal Uterine Bleeding (AUB)</strong>: Finding the root cause when ultrasound is inconclusive.</li>\n</ul>\n\n<h3>The Indira Advantage</h3>\n<p>We pride ourselves on 'No-Cut' surgical solutions:</p>\n<ul>\n<li><strong>Versapoint Bipolar Technology</strong>: Ensures bloodless resection with maximum safety.</li>\n<li><strong>High-Definition Visualization</strong>: See the minutest details of the endometrial lining.</li>\n<li><strong>Day-Care Procedure</strong>: Most hysteroscopies are completed in 30 minutes with patients returning home within hours.</li>\n</ul>",
+        features: [
+            { title: "HD Hysteroscopic Stack", description: "Crystal clear visualization of the uterine cavity.", icon: "Activity" },
+            { title: "Bipolar Resection", description: "Safe and effective removal of polyps and fibroids.", icon: "Zap" },
+            { title: "Zero Incisions", description: "Performed naturally through the cervix with no scars.", icon: "Sparkles" }
+        ],
+        benefits: [
+            { title: "Immediate Accuracy", description: "Visual confirmation of uterine health in real-time.", icon: "Target" },
+            { title: "Same-Day Recovery", description: "Virtually no downtime; return to activities within 24 hours.", icon: "Clock" },
+            { title: "Fertility Restoration", description: "Immediate correction of uterine factors hindering pregnancy.", icon: "Heart" }
+        ],
+        faq: [
+            { question: "Is hysteroscopy different from laparoscopy?", answer: "Yes. Hysteroscopy looks inside the uterus through the natural opening, whereas laparoscopy looks at the outside of organs through tiny abdominal incisions." },
+            { question: "Is it a major surgery?", answer: "No, it is considered a minimally invasive day-care procedure." },
+            { question: "Will I have pain afterwards?", answer: "Most patients experience only mild cramping, similar to a period, for a few hours." }
+        ]
+    },
+    {
+        id: "diagnostic-and-therapeutic-gastroscopy",
+        slug: "endoscopy-procedure-guide",
+        parentServiceSlug: "gastroenterology",
+        title: "Advanced Upper GI Endoscopy (Gastroscopy / OGD)",
+        shortDescription: "High-definition diagnostic and therapeutic visualization of the esophagus, stomach, and duodenum for ulcers, cancers, and GERD.",
+        fullDescription: "<h2>Upper GI Endoscopy: Precision Diagnostics for Digestive Health</h2>\n<p>An **Upper GI Endoscopy (Esophagogastroduodenoscopy or OGD)** is the gold standard for diagnosing and treating disorders of the upper digestive tract. At Indira Super Speciality Hospital, we utilize the latest **Olympus 190 Series HD Endoscopes** to provide crystal-clear visualization of the mucosal lining, enabling the detection of even the smallest abnormalities.</p>\n<p>Led by **Dr. Karan Shankar**, our endoscopy unit specializes in both diagnostic and therapeutic interventions. Whether it is screening for early-stage esophageal cancer, diagnosing chronic H. Pylori infections, or performing life-saving interventions like band ligation for varices, we prioritize patient comfort through 'No-Gag' sedation protocols.</p>\n\n<h3>When is a Gastroscopy Recommended?</h3>\n<ul>\n<li><strong>Chronic Acid Reflux (GERD)</strong>: To check for Barrett's esophagus or hiatal hernia.</li>\n<li><strong>Persistent Abdominal Pain</strong>: Investigating the cause of localized upper gastric discomfort.</li>\n<li><strong>Unexplained Anemia or Weight Loss</strong>: Screening for occult bleeding or malignancies.</li>\n<li><strong>Difficulty Swallowing (Dysphagia)</strong>: Evaluating for strictures or motility disorders.</li>\n<li><strong>Upper GI Bleeding</strong>: Immediate therapeutic intervention to stop active bleeding.</li>\n</ul>\n\n<h3>Therapeutic Capabilities</h3>\n<p>Beyond diagnosis, we perform several advanced procedures during a single session:</p>\n<ul>\n<li><strong>Endoscopic Biopsy</strong>: Sampling tissue for H. Pylori or malignancy testing.</li>\n<li><strong>Polypectomy</strong>: Safe removal of precancerous growths.</li>\n<li><strong>APC (Argon Plasma Coagulation)</strong>: Precise treatment for bleeding vascular lesions.</li>\n<li><strong>Stricture Dilatation</strong>: Widening narrowed sections of the esophagus for improved swallowing.</li>\n</ul>",
+        features: [
+            { title: "HD Olympus Optics", description: "Narrow Band Imaging (NBI) for enhanced early cancer detection.", icon: "Activity" },
+            { title: "Painless Sedation", description: "Administered by expert anaesthesiologists for a comfortable experience.", icon: "Shield" },
+            { title: "Instant Reporting", description: "Detailed digital photo-reports provided immediately post-procedure.", icon: "Clock" }
+        ],
+        benefits: [
+            { title: "Zero Radiation", description: "A safe, non-invasive alternative to complex X-ray studies.", icon: "Zap" },
+            { title: "High Accuracy", description: "Direct visualization is superior to imaging for mucosal health.", icon: "Target" },
+            { title: "Same-Day Return", description: "Resume normal diet and activities within hours of the procedure.", icon: "Star" }
+        ],
+        faq: [
+            { question: "Is gastroscopy painful?", answer: "With our modern sedation techniques, most patients do not feel any pain and often don't even remember the procedure being performed." },
+            { question: "How long is the fasting period?", answer: "You must remain 'Nil by Mouth' (no food or water) for at least 8 hours prior to the procedure." },
+            { question: "Can I drive home after the sedation?", answer: "No. You must be accompanied by a family member and avoid driving or operating machinery for 12 hours." }
+        ]
+    },
+    {
+        id: "colonoscopy-and-colorectal-screening",
+        slug: "colonoscopy-screening-cost",
+        parentServiceSlug: "gastroenterology",
+        title: "Total Colonoscopy & Colorectal Cancer Screening",
+        shortDescription: "Comprehensive evaluation of the large intestine (colon) and rectum for polyps, IBD, and early cancer detection.",
+        fullDescription: "<h2>Total Colonoscopy: Your Frontline Defense Against Colorectal Cancer</h2>\n<p>A **Colonoscopy** is a vital life-saving procedure designed to examine the entire length of the large intestine and rectum. At Indira Super Speciality Hospital, we emphasize 'Quality Colonoscopy', which involves a meticulous 'Withdrawal Time' and high 'Adenoma Detection Rates' (ADR), ensuring no abnormalities are overlooked.</p>\n<p>Under the clinical lead of **Dr. Karan Shankar**, we utilize high-definition pediatric and adult colonoscopes that are thinner and more flexible, significantly reducing discomfort. Our primary goal is the prevention of colorectal cancer through the 'Search and Destroy' method—identifying and removing precancerous polyps before they ever become malignant.</p>\n\n<h3>Clinical Indications</h3>\n<ul>\n<li><strong>Colorectal Cancer Screening</strong>: Essential for everyone above age 45, or earlier with a family history.</li>\n<li><strong>Chronic Diarrhea or Constipation</strong>: Investigating long-term changes in bowel habits.</li>\n<li><strong>Rectal Bleeding</strong>: Finding the source of bright red or dark blood in stools.</li>\n<li><strong>Inflammatory Bowel Disease (IBD)</strong>: Monitoring the activity of Crohn's or Ulcerative Colitis.</li>\n<li><strong>Unexplained Weight Loss</strong>: Screening for systemic GI issues or malignancies.</li>\n</ul>\n\n<h3>Advanced Procedures During Colonoscopy</h3>\n<ul>\n<li><strong>Cold/Hot Polypectomy</strong>: Immediate removal of polyps using specialized snares.</li>\n<li><strong>Ileoscopy</strong>: Examining the terminal end of the small intestine for Crohn's disease.</li>\n<li><strong>Tattooing</strong>: Marking the site of a lesion for future surgical reference.</li>\n<li><strong>Submucosal Injection</strong>: Assisting in the removal of larger, complex flat polyps.</li>\n</ul>",
+        features: [
+            { title: "Wide-Angle Visualization", description: "170-degree field of view to ensure hidden polyps are found.", icon: "Activity" },
+            { title: "CO2 Insufflation", description: "Using CO2 instead of air to drastically reduce post-op bloating.", icon: "Wind" },
+            { title: "Expert Sedation", description: "Conscious sedation or deep anesthesia options for total comfort.", icon: "Shield" }
+        ],
+        benefits: [
+            { title: "Cancer Prevention", description: "The only screening test that both finds and prevents cancer simultaneously.", icon: "Star" },
+            { title: "Diagnostic Finality", description: "Provides a definitive answer where CT scans or Stool tests fail.", icon: "Target" },
+            { title: "Rapid Recovery", description: "Walk out and eat a normal meal within 2 hours of completion.", icon: "Clock" }
+        ],
+        faq: [
+            { question: "Why is the bowel prep important?", answer: "The colon must be completely clear of stool for the doctor to see the lining clearly and find small polyps. A good prep is the most important part of the procedure." },
+            { question: "Is a colonoscopy embarassing?", answer: "We prioritize patient dignity. You are covered throughout the procedure, and a dedicated team ensures a professional, clinical environment." },
+            { question: "How often do I need a colonoscopy?", answer: "If your first screening is normal and you have no symptoms, once every 10 years is generally recommended. If polyps are found, the interval is shorter." }
+        ]
+    },
+    {
+        id: "gerd-and-acid-reflux-management",
+        slug: "acid-reflux-gerd-management",
+        parentServiceSlug: "gastroenterology",
+        title: "Specialized GERD, Heartburn & Hiatus Hernia Center",
+        shortDescription: "Complete clinical and surgical management for chronic acid reflux, Barrett's Esophagus, and complex Hiatus Hernias.",
+        fullDescription: "<h2>Reclaiming Your Life from Chronic Acid Reflux (GERD)</h2>\n<p>**Gastroesophageal Reflux Disease (GERD)** is more than just occasional heartburn; it is a clinical condition where stomach acid frequently flows back into the esophagus, leading to pain, respiratory issues, and even precancerous changes (Barrett’s Esophagus). At Indira Super Speciality Hospital, we offer a hierarchical approach to GERD—from lifestyle optimization and medical management to advanced keyhole surgery.</p>\n<p>Led by **Dr. Karan Shankar**, our center specializes in 'Physiological GERD Mapping'. We don't just prescribe antacids; we investigate the underlying cause, whether it's a weak sphincter, a **Hiatus Hernia**, or abnormal motility. For patients who are 'PPI-Dependent' or have failed medical therapy, we offer **Laparoscopic Fundoplication**—the gold standard for permanent reflux relief.</p>\n\n<h3>Symptoms We Treat</h3>\n<ul>\n<li><strong>Persistent Heartburn</strong>: Especially after meals or when lying down.</li>\n<li><strong>Regurgitation</strong>: Backflow of sour or bitter liquid into the throat.</li>\n<li><strong>Chest Pain</strong>: Non-cardiac chest pain frequently caused by acid irritation.</li>\n<li><strong>Chronic Cough/Hoarseness</strong>: 'Silent Reflux' (LPR) affecting the vocal cords.</li>\n<li><strong>Dysphagia</strong>: Feeling of food sticking in the throat or chest.</li>\n</ul>\n\n<h3>Surgical Excellence: Laparoscopic Nissen Fundoplication</h3>\n<p>For patients with Hiatus Hernia or chronic GERD, we perform a 30-minute keyhole procedure that:</p>\n<ul>\n<li><strong>Repairs the Hernia</strong>: Bringing the stomach back into the abdomen.</li>\n<li><strong>Strengthens the Valve</strong>: Wrapping the top of the stomach around the esophagus to prevent reflux.</li>\n<li><strong>Rapid Recovery</strong>: Resume normal activities within 3-5 days.</li>\n</ul>",
+        features: [
+            { title: "24-Hr pH Monitoring", description: "The gold standard for quantifying acid reflux severity.", icon: "Activity" },
+            { title: "High-Res Manometry", description: "Analyzing esophageal muscle function and swallowing.", icon: "Target" },
+            { title: "Laparoscopic Repair", description: "Minimally invasive correction of Hiatus Hernia.", icon: "Zap" }
+        ],
+        benefits: [
+            { title: "Stop Daily Medications", description: "Be free from lifelong dependence on PPIs and antacids.", icon: "Apple" },
+            { title: "Permanent Relief", description: "Clinical success rate of over 95% for reflux symptoms.", icon: "Star" },
+            { title: "Prevent Cancer", description: "Stopping acid flow protects against Barrett's Esophagus.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "Is surgery necessary for GERD?", answer: "Only for a small percentage of patients who have broken valves, large hiatus hernias, or those who don't want to take medications for the rest of their lives." },
+            { question: "What is a Hiatus Hernia?", answer: "It is when the upper part of the stomach slides up into the chest through the diaphragm. It is a very common cause of severe reflux." },
+            { question: "Can GERD affect my sleep?", answer: "Yes, nighttime reflux is a major cause of sleep disturbances, chronic cough, and even adult-onset asthma." }
+        ]
+    },
+    {
+        id: "liver-health-and-hepatology-center",
+        slug: "fatty-liver-treatment-diet",
+        parentServiceSlug: "gastroenterology",
+        title: "Center of Excellence for Liver Health & Advanced Hepatology",
+        shortDescription: "Comprehensive medical management for Fatty Liver (NASH), Cirrhosis, Hepatitis B & C, and Liver Failure protocols.",
+        fullDescription: "<h2>Advanced Hepatology: Protecting Your Body's Master Filter</h2>\n<p>The liver is an incredibly resilient organ, often suffering in silence until significant damage has occurred. At Indira Super Speciality Hospital, our **Hepatology Center** is dedicated to the early detection, arrest, and reversal of liver diseases. We specialize in the management of the modern epidemic—**Fatty Liver Disease (NAFLD/NASH)**—which is the leading cause of cirrhosis worldwide.</p>\n<p>Under the guidance of our clinical gastroenterology team, we integrated advanced diagnostics with personalized metabolic programs. Whether you are dealing with chronic viral hepatitis, alcoholic liver disease, or managing the complexities of portal hypertension and cirrhosis, we provide an evidence-based life-raft for your liver health.</p>\n\n<h3>Our Clinical Focus Areas</h3>\n<ul>\n<li><strong>Fatty Liver (NASH) Management</strong>: Reversing hepatic steatosis through metabolic optimization and targeted therapeutics.</li>\n<li><strong>Chronic Hepatitis B & C</strong>: Curative and suppressive antiviral therapies to prevent cancer.</li>\n<li><strong>Cirrhosis Care</strong>: Managing complications like ascites (fluid), jaundice, and encephalopathy.</li>\n<li><strong>Alcoholic Liver Disease</strong>: Holistic medical and nutritional support for liver restoration.</li>\n<li><strong>Liver Function Profiling</strong>: Deep analysis of enzymes, proteins, and bilirubin levels.</li>\n</ul>\n\n<h3>Advanced Liver Diagnostics</h3>\n<ul>\n<li><strong>Liver Fiber-Profiling</strong>: Advanced imaging to assess stiffness (fibrosis) and fat content (steatosis).</li>\n<li><strong>HVPG Measurement</strong>: Assessing pressure in the liver's blood vessels (for advanced cirrhosis).</li>\n<li><strong>Precision Liver Biopsy</strong>: USG-guided tissue sampling for definitive diagnosis.</li>\n</ul>",
+        features: [
+            { title: "Fibrosis Assessment", description: "Non-invasive tracking of liver scarring and fat.", icon: "Activity" },
+            { title: "Antiviral Therapy", description: "Access to the latest curative regimens for Hepatitis C.", icon: "Shield" },
+            { title: "Nutritional Support", description: "Hepatologist-designed diets for liver restoration.", icon: "Apple" }
+        ],
+        benefits: [
+            { title: "Early Detection", description: "Finding liver issues while they are still 100% reversible.", icon: "Target" },
+            { title: "Comprehensive Care", description: "Full metabolic support including diabetes and lipid management.", icon: "Star" },
+            { title: "Cancer Prevention", description: "Strict monitoring of cirrhosis patients for early signs of HCC.", icon: "Heart" }
+        ],
+        faq: [
+            { question: "Can fatty liver be reversed?", answer: "Yes! Grade 1 and 2 fatty liver are highly reversible with targeted weight loss, dietary changes, and metabolic management." },
+            { question: "What are the signs of liver disease?", answer: "Early stages often have NO symptoms. Later signs include yellow eyes (jaundice), swelling in the legs, and extreme fatigue." },
+            { question: "Is Hepatitis C curable?", answer: "Yes. Modern oral medications have a 95-99% cure rate for Hepatitis C with minimal side effects." }
+        ]
+    },
+    {
+        id: "ibd-center-crohns-and-colitis",
+        slug: "crohns-disease-management",
+        parentServiceSlug: "gastroenterology",
+        title: "Advanced IBD Center: Crohn's Disease & Ulcerative Colitis Care",
+        shortDescription: "Specialized multidisciplinary management for Inflammatory Bowel Disease using the latest biologic therapies and precision monitoring.",
+        fullDescription: "<h2>Navigating IBD: Precision Care for Crohn's and Colitis</h2>\n<p>**Inflammatory Bowel Disease (IBD)**, encompassing Ulcerative Colitis and Crohn’s Disease, requires more than just standard pills; it requires a lifelong clinical partnership. The **IBD Center at Indira Super Speciality Hospital** provides a multidisciplinary approach, combining advanced gastroenterology, IBD-specialized nutrition, and expert GI surgery.</p>\n<p>Our focus is on ACHIEVING and MAINTAINING 'Deep Remission'—which means not only staying symptom-free but ensuring the gut lining is completely healed. We utilize 'Treat-to-Target' strategies, using biomarkers and scheduled endoscopy to stay ahead of the disease and prevent flares.</p>\n\n<h3>Our IBD Management Spectrum</h3>\n<ul>\n<li><strong>Precision Diagnostics</strong>: Using Calprotectin, HD-Colonoscopy, and MRI Enterography to map disease activity.</li>\n<li><strong>Step-Up & Top-Down Therapy</strong>: From standard anti-inflammatories to the latest **Biologic Therapies**.</li>\n<li><strong>Nutritional Optimization</strong>: Specialized diets (like the IBD-AID) to support mucosal healing.</li>\n<li><strong>IBD Surgery Unit</strong>: When surgery is necessary, we specialize in 'Bowel-Sparing' procedures and J-Pouch reconstructions.</li>\n</ul>\n\n<h3>Managing IBD Flares</h3>\n<p>We provide rapid-response care for acute symptoms:</p>\n<ul>\n<li><strong>Fast-Track Steroid Protocols</strong>: To bring severe inflammation under control quickly.</li>\n<li><strong>Infusion Center</strong>: A safe environment for intravenous Biologic and therapeutic administrations.</li>\n<li><strong>Long-term Maintenance</strong>: Personalized monitoring plans to prevent relapse.</li>\n</ul>",
+        features: [
+            { title: "Biologic Infusions", description: "Expert administration of advanced IBD medications.", icon: "Activity" },
+            { title: "Fecal Calprotectin", description: "Regular non-invasive monitoring of gut inflammation.", icon: "Target" },
+            { title: "MRI Enterography", description: "Specialized imaging to find hidden Crohn's in the small bowel.", icon: "Search" }
+        ],
+        benefits: [
+            { title: "Deep Remission", description: "Our target is clinical, biochemical, and mucosal healing.", icon: "Star" },
+            { title: "Avoid Surgeries", description: "Aggressive medical management aimed at preserving your natural bowel.", icon: "Shield" },
+            { title: "Quality of Life", description: "Reducing flares so you can live, work, and travel freely.", icon: "Happy" }
+        ],
+        faq: [
+            { question: "Is IBD the same as IBS?", answer: "No. IBS is a functional disorder (disturbed motility), while IBD is an autoimmune disease where the body's immune system attacks and damages the gut lining." },
+            { question: "Can I manage IBD with diet alone?", answer: "Diet is a vital support tool, but medical therapy is essential to prevent permanent bowel damage and cancer risk." },
+            { question: "Is IBD hereditary?", answer: "There is a genetic component, but many people with no family history also develop IBD. Early diagnosis is key." }
+        ]
+    },
+    {
+        id: "surgical-gastroenterology-and-laparoscopy",
+        slug: "surgical-gi",
+        parentServiceSlug: "gastroenterology",
+        title: "Advanced Surgical Gastroenterology & Laparoscopy",
+        shortDescription: "Precision keyhole surgery for complex abdominal conditions, HPB tumors, and colorectal malignancies led by Dr. Karan Shankar.",
+        fullDescription: "<h2>Precision in the Abdomen: Advanced Surgical GI Unit</h2>\n<p>When digestive diseases require surgical intervention, the **Department of Surgical Gastroenterology** at Indira Super Speciality Hospital provides the highest level of technical expertise. Led by **Dr. Karan Shankar**, our department is a pioneer in 'Minimal Access' (Keyhole) GI surgery in the region.</p>\n<p>We believe that complex abdominal surgery doesn't have to mean large scars and long recoveries. By utilizing 4K Ultra-HD laparoscopic stacks and advanced energy devices, we perform intricate resections and reconstructions through tiny incisions, prioritizing tissue preservation and oncological precision.</p>\n\n<h3>Our Surgical Specialities</h3>\n<ul>\n<li><strong>HPB Surgery (Liver & Pancreas)</strong>: Resections for liver tumors and complex surgery for chronic pancreatitis and pseudocysts.</li>\n<li><strong>Upper GI Oncology</strong>: Laparoscopic management of esophageal and stomach cancers.</li>\n<li><strong>Colorectal Surgery</strong>: Minimally invasive removal of colon and rectal cancers (STARR, LAR, APR).</li>\n<li><strong>Bariatric & Metabolic Surgery</strong>: Weight-loss surgeries (Sleeve/Bypass) for clinical obesity.</li>\n<li><strong>Abdominal Wall Reconstruction</strong>: Specialized repair for complex and recurrent hernias.</li>\n</ul>\n\n<h3>The Technology Advantage</h3>\n<p>Our operation theaters are built for excellence:</p>\n<ul>\n<li><strong>4K Laparoscopy</strong>: Providing magnified, sub-millimeter visualization of critical GI structures.</li>\n<li><strong>Harmonic Scalpels</strong>: Ultrasonic precision to minimize blood loss and thermal damage.</li>\n<li><strong>Stapling Technology</strong>: Advanced endoscopic staplers for safe and leak-proof GI reconstructions.</li>\n</ul>",
+        features: [
+            { title: "Laparoscopic Oncology", description: "Tumor surgery via keyhole techniques for faster recovery.", icon: "Target" },
+            { title: "HPB Mastery", description: "Expert management of complex Liver and Pancreatic cases.", icon: "Activity" },
+            { title: "Rapid ERAS Protocols", description: "'Enhanced Recovery After Surgery' for early mobilization.", icon: "Star" }
+        ],
+        benefits: [
+            { title: "Minimal Scars", description: "Aesthetic recovery with significantly lower risk of hernia.", icon: "Sparkles" },
+            { title: "Precision Outcomes", description: "High margin clearance and thorough lymph node dissection.", icon: "Shield" },
+            { title: "Zero-Infection OT", description: "Modular theaters with strict sterile protocols for safety.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "How long is the recovery from GI surgery?", answer: "With our laparoscopic approach, most patients are walking within 24 hours and return home in 3-5 days." },
+            { question: "Can GI cancers be treated laparoscopically?", answer: "Yes. Studies show that laparoscopic oncology offers equal cure rates to open surgery but with much faster recovery." },
+            { question: "What is HPB surgery?", answer: "It stands for Hepato-Pancreato-Biliary, which refers to specialized surgery involving the liver, pancreas, and bile ducts." }
+        ]
+    },
+    {
+        id: "t-701",
+        slug: "laparoscopic-cholecystectomy-gallbladder-removal",
         parentServiceSlug: "general-surgery",
-        title: "Laparoscopic Appendix Surgery",
-        shortDescription: "Emergency and elective keyhole surgery for appendicitis with rapid recovery.",
-        fullDescription: "Appendicitis requires urgent surgical intervention. Our **Laparoscopic Appendix Surgery** (Appendectomy) allows for the safe removal of the appendix through small keyhole incisions. This minimally invasive approach significantly reduces the risk of wound infections, minimizes post-operative pain, and facilitates a much faster return to daily activities compared to traditional open surgery.",
-        features: ["24/7 Emergency Readiness", "Laparoscopic (Keyhole) Approach", "Advanced Infection Control", "Rapid Recovery Protocol"],
-        benefits: ["Small Cosmetic Scars", "Lower Infection Risk", "Reduced Post-Op Pain", "Short Hospital Stay"]
+        title: "Advanced Laparoscopic Cholecystectomy: Gallbladder Removal",
+        shortDescription: "Gold-standard minimally invasive removal of the gallbladder for gallstones and cholecystitis using 4K imaging.",
+        fullDescription: "<h2>Precision in Laparoscopy: The Elite Gallbladder Program</h2>\n<p>**Gallstones (Cholelithiasis)** and chronic gallbladder inflammation are among the most common causes of intense upper abdominal pain and digestive dysfunction. While medications can temporarily mask the symptoms, the only definitive cure is the surgical removal of the gallbladder, known as **Cholecystectomy**. At Indira Super Speciality Hospital, we have perfected the 'Minimal Access' approach to gallbladder surgery, offering the safest and most aesthetic outcomes in the region.</p>\n<p>Under the guidance of our senior surgical team, we perform **Laparoscopic Cholecystectomy** using a state-of-the-art 4K Ultra-HD imaging stack. This technology allows us to visualize the critical structures of the 'Calot's Triangle'—the cystic duct and cystic artery—with extreme clarity, virtually eliminating the risk of accidental injury and ensuring a bloodless procedure.</p>\n\n<h3>Why Choose Laparoscopy over Open Surgery?</h3>\n<p>The advantages of the 'Keyhole' approach are profound and life-changing for the patient:</p>\n<ul>\n<li><strong>Minimal Incisions</strong>: We use four tiny incisions (ranging from 5mm to 10mm), which are closed with aesthetic precision, leaving almost no visible scars over time.</li>\n<li><strong>Reduced Pain</strong>: By avoiding the large muscle-cutting incisions of traditional surgery, patients experience significantly less post-operative pain and require fewer medications.</li>\n<li><strong>Rapid Recovery</strong>: Most patients are discharged within 24 hours (Day-Care Surgery) and return to regular desk work within 3 to 5 days.</li>\n<li><strong>Lower Infection Risk</strong>: Small incisions significantly reduce the surface area exposed to bacteria, leading to near-zero wound infection rates.</li>\n</ul>\n\n<h3>Common Clinical Indications</h3>\n<p>Our surgeons recommend gallbladder removal in the following cases:</p>\n<ul>\n<li><strong>Symptomatic Gallstones</strong>: Recurrent 'Biliary Colic' or pain after fatty meals.</li>\n<li><strong>Cholecystitis</strong>: Acute or chronic inflammation of the gallbladder wall.</li>\n<li><strong>Choledocholithiasis</strong>: Stones that have slipped into the common bile duct, often requiring a combined approach with ERCP.</li>\n<li><strong>Gallbladder Polyps</strong>: Especially those larger than 10mm, which carry a risk of malignancy.</li>\n<li><strong>Biliary Pancreatitis</strong>: Inflammation of the pancreas caused by migrating gallstones.</li>\n</ul>\n\n<h3>The Precision Recovery Roadmap</h3>\n<p>Post-operative care is designed for speed and comfort:</p>\n<ul>\n<li><strong>Early Mobilization</strong>: Most patients are walking and taking light oral fluids within 4 hours of waking up from anesthesia.</li>\n<li><strong>Dietary Graduation</strong>: We provide a guided low-fat diet for the first week to allow the digestive system to adapt to the absence of the gallbladder.</li>\n<li><strong>Long-term Success</strong>: Once the gallbladder is removed, the liver continues to produce bile, which flows directly into the intestine, allowing for a 100% normal life with no long-term dietary restrictions.</li>\n</ul>",
+        features: [
+            { title: "4K UHD Visualization", description: "Sub-millimeter clarity for safe dissection of Calot's Triangle.", icon: "Activity" },
+            { title: "Ultrasonic Energy", description: "Use of Harmonic Scalpels for bloodless, heat-free cutting.", icon: "Zap" },
+            { title: "Indocyanine Green (ICG)", description: "Fluorescence imaging to map the bile ducts in real-time.", icon: "Search" }
+        ],
+        benefits: [
+            { title: "99% Success Rate", description: "Extremely high safety profile with minimal complication risk.", icon: "CheckCircle" },
+            { title: "Aesthetic Outcomes", description: "Tiny 'Keyhole' scars that fade to nearly invisible marks.", icon: "Sparkles" },
+            { title: "Rapid Return", description: "Back to home in 24 hours and work in under a week.", icon: "Clock" }
+        ],
+        faq: [
+            { question: "How can I digest food without a gallbladder?", answer: "The gallbladder is only a storage pouch. Your liver continues to produce bile normally, which now flows directly into the intestine. After a short adjustment period of 2-3 weeks, most patients can eat a completely normal diet." },
+            { question: "What happens if I don't have surgery?", answer: "Gallstones can lead to severe complications like gallbladder rupture, jaundice, or life-threatening pancreatitis. If they are causing pain, surgery is strongly recommended." },
+            { question: "Is this a daytime surgery?", answer: "Yes, many of our fit patients undergo surgery in the morning and are comfortable enough to head home by the same evening." }
+        ]
+    },
+    {
+        id: "t-702",
+        slug: "laparoscopic-hernia-repair-surgery",
+        parentServiceSlug: "general-surgery",
+        title: "Advanced Laparoscopic Hernia Repair",
+        shortDescription: "State-of-the-art mesh reinforcement for Inguinal, Umbilical, and Incisional hernias using TAPP and TEP techniques.",
+        fullDescription: "<h2>Strengthening the Abdominal Wall: Modern Hernia Solutions</h2>\n<p>A **Hernia** occurs when an internal organ or fat tissue pushes through a weak point in the surrounding muscle wall. This is a mechanical defect that cannot be fixed with medicine; it requires a structural reinforcement. At Indira Super Speciality Hospital, we have moved beyond simple 'stitches' to provide the most advanced **Laparoscopic Hernia Repair** using 'tension-free' mesh technology.</p>\n<p>Our surgical team specializes in **TAPP (Transabdominal Preperitoneal)** and **TEP (Totally Extraperitoneal)** procedures. By placing a high-quality, lightweight 3D mesh *behind* the defect (inside the abdominal wall), we utilize the body's natural internal pressure to hold the repair in place, drastically reducing the risk of the hernia returning compared to traditional open surgery.</p>\n\n<h3>Our Comprehensive Hernia Spectrum</h3>\n<p>We provide definitive surgical solutions for all types of abdominal wall defects:</p>\n<ul>\n<li><strong>Inguinal Hernias</strong>: The most common type, occurring in the groin area.</li>\n<li><strong>Umbilical & Para-umbilical Hernias</strong>: Occurring at or near the navel.</li>\n<li><strong>Incisional Hernias</strong>: Occurring at the site of a previous surgical scar.</li>\n<li><strong>Femoral Hernias</strong>: More common in women, occurring just below the groin crease.</li>\n<li><strong>Hiatus Hernias</strong>: Occurring where the stomach pushes through the diaphragm into the chest.</li>\n</ul>\n\n<h3>The Laparoscopic 'Internal Mesh' Advantage</h3>\n<p>Laparoscopic repair is superior for several technical reasons:</p>\n<ul>\n<li><strong>Tension-Free Repair</strong>: Because the mesh is placed via keyhole, there is no 'pulling' on the muscles, leading to significantly less chronic pain.</li>\n<li><strong>Bilateral Repair</strong>: We can fix hernias on both the left and right sides through the same three tiny incisions.</li>\n<li><strong>Lower Recurrence</strong>: The use of 3D anatomical meshes provides a larger area of coverage and stronger integration with the body's tissues.</li>\n<li><strong>Minimal Scars</strong>: Avoids the large, painful groin incisions of traditional 'Lichtenstein' surgery.</li>\n</ul>\n\n<h3>Recovery and Long-term Strength</h3>\n<p>Most hernia patients are back on their feet and walking the same evening. Our **Precision Recovery Protocol** ensures you return to your active lifestyle safely:</p>\n<ul>\n<li><strong>Activity Graduation</strong>: Light walking begins immediately. Sitting and desk work can resume in 3-5 days.</li>\n<li><strong>Structural Integration</strong>: The high-tech mesh we use becomes integrated with your own tissue over 4-6 weeks, creating a durable 'new wall'.</li>\n<li><strong>When to Resume Exercise?</strong> Heavy lifting and core-intensive gym workouts are usually restricted for 6-8 weeks to ensure the repair is fully mature.</li>\n</ul>",
+        features: [
+            { title: "3D Anatomical Mesh", description: "Use of high-tech meshes that conform to the body's shape.", icon: "Activity" },
+            { title: "Bilateral Coverage", description: "Ability to fix dual-sided hernias in one single session.", icon: "Target" },
+            { title: "Tension-Free Technique", description: "Minimizes chronic groin pain and stiffness post-surgery.", icon: "Shield" }
+        ],
+        benefits: [
+            { title: "Minimal Recurrence", description: "Less than 1-2% risk of the hernia returning in expert hands.", icon: "Star" },
+            { title: "Zero Large Scars", description: "Only three tiny points that become virtually invisible.", icon: "Sparkles" },
+            { title: "Rapid Mobility", description: "Walking within 4 hours; return to light work in days.", icon: "Zap" }
+        ],
+        faq: [
+            { question: "Is the mesh safe inside my body?", answer: "Yes. We use USFDA-approved, biocompatible, lightweight meshes that have been used globally for decades with an excellent safety record." },
+            { question: "Should I wait for the hernia to get bigger?", answer: "No. Hernias never get smaller; they only get larger and more complex. Early repair is safer and allows for a much faster recovery." },
+            { question: "Can I drive after hernia surgery?", answer: "Most patients can safely drive within 5-7 days, once they are no longer taking strong pain medications and have full range of movement." }
+        ]
+    },
+    {
+        id: "t-703",
+        slug: "emergency-laparoscopic-appendectomy",
+        parentServiceSlug: "general-surgery",
+        title: "Emergency Laparoscopic Appendectomy",
+        shortDescription: "Rapid-response 24/7 keyhole removal of the appendix for acute appendicitis to prevent rupture and peritonitis.",
+        fullDescription: "<h2>Emergency Care: The 24/7 Appendicitis Response</h2>\n<p>**Acute Appendicitis** is one of the most common surgical emergencies, characterized by sudden-onset pain that typically starts around the navel and shifts to the lower right abdomen. If left untreated, the appendix can rupture, leading to life-threatening **Peritonitis** (infection of the entire abdominal cavity). At Indira Super Speciality Hospital, we maintain 24/7 surgical readiness to provide immediate **Laparoscopic Appendectomy**.</p>\n<p>Our emergency protocol ensures that patients with suspected appendicitis receive rapid diagnostics (USG/CT) and are shifted to the operating theater within the shortest possible time. By choosing the laparoscopic approach even in emergency situations, we ensure that the internal abdominal cavity can be thoroughly 'washed' and inspected for any signs of pus or infection spreads.</p>\n\n<h3>The Advantage of Emergency Laparoscopy</h3>\n<p>Even in an emergency, the 'Keyhole' approach provides critical benefits:</p>\n<ul>\n<li><strong>Total Cavity Inspection</strong>: The laparoscope allows the surgeon to see the entire abdomen, which is vital if the appendix has already leaked or if the diagnosis is uncertain (e.g., in women, to rule out ovarian issues).</li>\n<li><strong>Less Wound Infection</strong>: In cases of 'pus' or 'perforation', traditional large incisions have very high infection rates. Small keyholes are much easier to keep sterile.</li>\n<li><strong>Less Adhesion Risk</strong>: Minimizing internal trauma reduces the risk of 'bowel obstructions' years down the line.</li>\n<li><strong>Rapid Pain Relief</strong>: Once the infected organ is removed, the source of systemic inflammation is gone, leading to an immediate drop in fever and pain.</li>\n</ul>\n\n<h3>Signs of a Surgical Emergency</h3>\n<p>Do not ignore these symptoms—early intervention is vital:</p>\n<ul>\n<li><strong>Migrating Pain</strong>: Pain that moves from the upper abdomen to the lower right side.</li>\n<li><strong>Rebound Tenderness</strong>: Sharp pain when the abdomen is pressed and then released.</li>\n<li><strong>Fever and Vomiting</strong>: Signs that the infection is becoming systemic.</li>\n<li><strong>Loss of Appetite</strong>: A very classic sign of acute appendicitis.</li>\n</ul>\n\n<h3>Post-Operative Recovery</h3>\n<p>For most non-ruptured cases, the hospital stay is only 24 to 48 hours. If the appendix was perforated, a longer stay with intravenous antibiotics may be necessary. Because we use minimally invasive techniques, the patient is back to a normal liquid diet by the next morning and usually resumes full activities within 10 to 14 days.</p>",
+        features: [
+            { title: "24/7 ER Readiness", description: "Surgical and anesthetic teams on-site 24/7 for acute cases.", icon: "Clock" },
+            { title: "Advanced Suction/Irrigation", description: "Thorough cleaning of the abdomen for ruptured cases.", icon: "Activity" },
+            { title: "Stapled Appendectomy", description: "Use of precision endo-staplers for a secure, leak-proof seal.", icon: "Shield" }
+        ],
+        benefits: [
+            { title: "Zero Wound Sepsis", description: "Significantly lower infection risk than open surgery.", icon: "CheckCircle" },
+            { title: "Rapid Pain Exit", description: "Removal of the infection source leads to immediate relief.", icon: "Zap" },
+            { title: "Minimal Downtime", description: "Return to school or work much faster than traditional surgery.", icon: "Star" }
+        ],
+        faq: [
+            { question: "Is the appendix necessary for the body?", answer: "The appendix is considered a vestigial organ with no essential function in adults. Its removal leads to no long-term health or digestive issues." },
+            { question: "What if it has already ruptured?", answer: "We can still perform a laparoscopic cleanup. It requires more time and careful irrigation, but it is still far superior to a large open incision for preventing wound complications." },
+            { question: "Can I manage appendicitis with antibiotics alone?", answer: "While some mild cases might settle temporarily, surgery remains the only definitive cure. Over 25% of patients treated with antibiotics alone will have a recurrent, often more severe, attack within a year." }
+        ]
+    },
+    {
+        id: "t-704",
+        slug: "thyroid-and-endocrine-surgery",
+        parentServiceSlug: "general-surgery",
+        title: "Advanced Thyroid & Endocrine Surgery",
+        shortDescription: "Precision nerve-sparing surgery for Thyroid nodules, Goiter, and Parathyroid disorders using Harmonic technology.",
+        fullDescription: "<h2>Endocrine Excellence: Safeguarding Your Glands</h2>\n<p>The endocrine system, particularly the thyroid and parotid glands, requires a surgeon with extreme precision and a deep understanding of the delicate nerves and vessels of the neck. At Indira Super Speciality Hospital, our **General & Endocrine Surgery** unit specializes in the management of thyroid nodules, multi-nodular goiters, and parathyroid adenomas. We prioritize functional preservation—ensuring your voice and calcium levels are protected while definitively treating the underlying pathology.</p>\n<p>We utilize the latest **Harmonic Scalpel (Ultrasonic)** technology, which seals blood vessels as it cuts. This ensures a virtually bloodless surgical field, drastically reducing the risk of post-operative hematomas and shortening the operative time. For cases involving suspected malignancy, we collaborate with our oncology and pathology teams for immediate 'Frozen Section' analysis.</p>\n\n<h3>Our Endocrine Surgical Spectrum</h3>\n<ul>\n<li><strong>Total Thyroidectomy</strong>: Complete removal of the thyroid gland for cancer or large goiters.</li>\n<li><strong>Hemi-Thyroidectomy</strong>: Removal of one lobe of the thyroid to treat suspicious nodules while preserving natural hormone production in the other lobe.</li>\n<li><strong>Parathyroidectomy</strong>: Precision removal of overactive parathyroid glands to treat hypercalcemia.</li>\n<li><strong>Neck Dissections</strong>: Advanced removal of lymph nodes in cases of thyroid cancer spread.</li>\n</ul>\n\n<h3>The 'Voice-First' Approach: Nerve Preservation</h3>\n<p>The greatest concern for many patients undergoing thyroid surgery is the potential for voice change. The **Recurrent Laryngeal Nerve**, which controls the vocal cords, runs directly behind the thyroid gland. Our surgical team uses a meticulous 'Nerve-Sparing' dissection technique. By identifying the nerve at the start of the procedure and using ultrasonic energy (which produces minimal heat spread), we ensure the highest levels of safety for your voice.</p>\n\n<h3>Aesthetic Neck Closures</h3>\n<p>We understand that a scar on the neck is highly visible. Our surgeons use an **Aesthetic Skin-Crease Incision**, hiding the surgical mark within the natural folds of your neck. We use sub-cuticular (hidden) sutures and medical-grade skin glue to provide a 'stitch-less' appearance that fades dramatically over the first few months.</p>",
+        features: [
+            { title: "Nerve-Sparing Dissection", description: "Meticulous isolation of the recurrent laryngeal nerve.", icon: "Shield" },
+            { title: "Harmonic Scalpel", description: "Cold-cutting ultrasonic energy for zero blood loss.", icon: "Zap" },
+            { title: "Cosmetic Closure", description: "Hidden 'stitch-less' closures for minimal scarring.", icon: "Sparkles" }
+        ],
+        benefits: [
+            { title: "Voice Protection", description: "99% success rate in preserving vocal cord function.", icon: "CheckCircle" },
+            { title: "Rapid Recovery", description: "Most patients are discharged within 48 hours.", icon: "Clock" },
+            { title: "Cancer Clearance", description: "Oncologically sound resections for suspicious nodules.", icon: "Target" }
+        ],
+        faq: [
+            { question: "Will I have a visible scar?", answer: "We place the incision in a natural neck crease. Once healed, it usually looks like a fine line that is very difficult to notice from a distance." },
+            { question: "Do I need to take calcium after surgery?", answer: "In some total thyroidectomy cases, calcium levels may drop temporarily. we monitor this closely and provide supplements only if needed until your parathyroid glands resume full function." },
+            { question: "How long until I can talk normally?", answer: "You will be able to talk immediately after waking up from anesthesia. While some patients have a slight sore throat for 2-3 days, their voice remains clear." }
+        ]
+    },
+    {
+        id: "t-705",
+        slug: "breast-surgery-and-oncology",
+        parentServiceSlug: "general-surgery",
+        title: "Advanced Breast Surgery & Surgical Oncology",
+        shortDescription: "Comprehensive management of breast lumps, cysts, and cancers with a focus on oncoplastic preservation.",
+        fullDescription: "<h2>Empowering Breast Health: Precision Oncology</h2>\n<p>Breast health requires a sensitive and multidisciplinary approach. At Indira Super Speciality Hospital, we provide a 'One-Stop' breast clinic for the diagnosis and treatment of all breast conditions, ranging from benign lumps (fibroadenomas) to advanced surgical oncology for breast cancer. Our goal is **Curative Excellence with Cosmetic Integrity**.</p>\n<p>Whether you require a simple cyst aspiration, a lumpectomy (breast-conserving surgery), or a mastectomy, our surgical team utilizes **Oncoplastic Techniques**. This means we don't just remove the tumor; we reconstruct the breast tissue to maintain a natural shape and symmetry, minimizing the psychological impact of surgery.</p>\n\n<h3>Our Breast Surgical Services</h3>\n<ul>\n<li><strong>Lumpectomy (BCS)</strong>: Removing the tumor with a safe margin while preserving the rest of the breast—the gold standard for early-stage cancer.</li>\n<li><strong>Modified Radical Mastectomy (MRM)</strong>: Comprehensive removal for advanced cases, performed with skin-sparing techniques.</li>\n<li><strong>Sentinel Lymph Node Biopsy</strong>: Precision mapping to see if cancer has spread, avoiding unnecessary large-scale node removals.</li>\n<li><strong>Fibroadenoma Excision</strong>: Aesthetic removal of benign 'breast mice' through hidden incisions.</li>\n<li><strong>Abscess Drainage</strong>: Immediate relief for painful, infected breast tissues (mastitis).</li>\n</ul>\n\n<h3>The Diagnostic Advantage</h3>\n<p>Early detection saves lives. We utilize high-resolution Ultrasound and **True-Cut (Core) Biopsies** to provide an accurate tissue diagnosis within 48-72 hours. Our multidisciplinary tumor board, consisting of surgeons, oncologists, and radiologists, reviews each case to ensure that every patient receives a personalized treatment plan based on the latest international protocols.</p>\n\n<h3>Recovery and Continuity of Care</h3>\n<p>Post-surgical recovery is focused on pain management and early shoulder mobility. We provide specialized physiotherapy sessions to prevent 'Lymphedema' and ensure you return to your daily routine with confidence. For our oncology patients, we offer seamless coordination for chemotherapy and radiation if required.</p>",
+        features: [
+            { title: "Oncoplastic Reconstruction", description: "Preserving breast shape during cancer surgery.", icon: "Sparkles" },
+            { title: "Sentinel Mapping", description: "Minimizing lymph node trauma with precision dyes.", icon: "Target" },
+            { title: "USG-Guided Biopsy", description: "Accurate tissue sampling for definitive diagnosis.", icon: "Search" }
+        ],
+        benefits: [
+            { title: "Triple Assessment", description: "Comprehensive clinical, imaging, and biopsy review.", icon: "CheckCircle" },
+            { title: "Minimal Scarring", description: "Periareolar or hidden incisions for benign cases.", icon: "Shield" },
+            { title: "Personalized Care", description: "Tailored plans based on molecular tumor profiling.", icon: "Heart" }
+        ],
+        faq: [
+            { question: "Are most breast lumps cancerous?", answer: "No. Approximately 80% of breast lumps are benign (cysts, fibroadenomas). However, every new lump must be professionally evaluated with an ultrasound and biopsy if necessary." },
+            { question: "What is Breast Conserving Surgery?", answer: "It is a specialized surgery where only the tumor and a surrounding edge of healthy tissue are removed. This offers the same survival rate as a full mastectomy for many early-stage cancers." },
+            { question: "When can I go home?", answer: "Most benign lump removals are day-care. Major oncology surgeries typically require a 2-3 day stay for observation." }
+        ]
+    },
+    {
+        id: "t-706",
+        slug: "trauma-and-emergency-care",
+        parentServiceSlug: "general-surgery",
+        title: "24/7 Trauma & Emergency Surgical Care",
+        shortDescription: "Life-saving surgical interventions for acute abdominal emergencies, septic conditions, and accidental injuries.",
+        fullDescription: "<h2>The Golden Hour: Elite Emergency Surgical Response</h2>\n<p>In life-threatening emergencies, the speed and skill of the surgical team are the primary determinants of survival. Indira Super Speciality Hospital is a dedicated **Trauma & Emergency Center**, providing 24/7 surgical coverage for acute abdominal catastrophes and polytrauma. Our General Surgery team is trained in **Damage Control Surgery**, focusing on stabilizing the most critical injuries first to ensure the best possible patient outcomes.</p>\n<p>From gunshot and stab wounds to severe road traffic accidents (RTA) and burst internal organs (e.g., perforated ulcers), our surgeons work alongside a dedicated team of intensivists and anesthesiologists. We utilize a 'Red-Code' protocol to ensure patients are in the operating theater within minutes of arrival if surgery is needed to save a life.</p>\n\n<h3>Acute Abdominal Emergencies We Treat</h3>\n<ul>\n<li><strong>Perforated Peptic Ulcer</strong>: Immediate closure of a hole in the stomach or intestine to stop life-threatening peritonitis.</li>\n<li><strong>Intestinal Obstruction</strong>: Relieving blocks in the bowel to prevent tissue death (gangrene).</li>\n<li><strong>Obstructed Hernia</strong>: Emergency repair of a hernia that has trapped and 'strangled' a segment of the bowel.</li>\n<li><strong>Abdominal Trauma</strong>: Managing internal bleeding from the liver, spleen, or kidneys following an accident.</li>\n<li><strong>Diabetic Foot Emergencies</strong>: Rapid debridement and limb-salvaging surgery for severe infections.</li>\n</ul>\n\n<h3>Advanced Emergency Infrastructure</h3>\n<p>Our emergency surgical service is backed by:</p>\n<ul>\n<li><strong>High-End Level 3 ICU</strong>: For post-operative stabilization of critical patients.</li>\n<li><strong>Round-the-clock Diagnostics</strong>: 64-slice CT Scans and Ultrasound available 24/7 for 'FAST' scans during trauma.</li>\n<li><strong>Fully Equipped ER Theaters</strong>: Dedicated operating rooms located directly within the emergency department for ultra-fast access.</li>\n</ul>\n\n<h3>The Recovery Path</h3>\n<p>Stabilization is only the first step. Our team provides comprehensive post-emergency care, including infection management, nutritional support, and physical rehabilitation, to help trauma survivors return to their normal lives as completely as possible.</p>",
+        features: [
+            { title: "24/7 Trauma Team", description: "Surgeons and Anesthetists available on-site at all hours.", icon: "Clock" },
+            { title: "Damage Control Surgery", description: "Focused life-saving interventions for polytrauma.", icon: "Zap" },
+            { title: "Level 3 ICU Integrated", description: "Seamless transition from ER to critical care unit.", icon: "Activity" }
+        ],
+        benefits: [
+            { title: "Survival Optimization", description: "Rapid intervention during the critical 'Golden Hour'.", icon: "CheckCircle" },
+            { title: "Multi-Disciplinary Expertise", description: "Collaboration with Orthopedic and Neuro teams.", icon: "Target" },
+            { title: "Limb-Salvaging Focus", description: "Aggressive infection control to avoid amputations.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "What is an 'Emergency Laparotomy'?", answer: "It is a major surgery where the abdomen is opened to investigate and repair internal injuries or find the source of a severe infection." },
+            { question: "Is your blood bank open 24/7?", answer: "Yes. Our hospital-affiliated blood bank ensures that blood and plasma are available at all times for emergency transfusions." },
+            { question: "How do you handle multiple injuries?", answer: "We use a 'Trauma Triage' system where a team leader coordinates between different specialists (General Surgeon, Orthopedist, Neurosurgeon) to prioritize the most life-threatening injuries first." }
+        ]
     }
 ];
 

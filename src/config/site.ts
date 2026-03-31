@@ -15,6 +15,9 @@ export const siteConfig = {
         instagram: "https://www.instagram.com/indirasuperspecialityhospitals/?hl=en",
         youtube: "https://www.youtube.com/@IndiraHospital",
         twitter: "https://twitter.com/indirahospital",
+        linkedin: "https://www.linkedin.com/company/indira-super-speciality-hospital/",
+        practo: "https://www.practo.com/vellore/hospital/indira-super-speciality-hospital-gandhi-nagar",
+        justdial: "https://www.justdial.com/Vellore/Indira-Super-Speciality-Hospital-Opposite-New-Bus-Stand-Gandhi-Nagar/0416PX416-X416-180120150247-C1K4_BZDET",
     },
     hours: {
         monday_saturday: "9:00 AM - 9:00 PM",

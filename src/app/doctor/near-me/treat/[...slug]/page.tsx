@@ -24,6 +24,10 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 import { EliteComparisonBank } from "@/components/seo/EliteComparisonBank";
+import { ServiceQuickSummary } from "@/components/healthcare/services/ServiceQuickSummary";
+import { ProcedureComparison } from "@/components/healthcare/services/ProcedureComparison";
+import { TreatmentSecondaryNav } from "@/components/healthcare/services/TreatmentSecondaryNav";
+import { ConversionGrid } from "@/components/healthcare/services/ConversionGrid";
 
 
 
@@ -107,9 +111,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (treatment) {
         const title = `Best ${treatment.title} Specialists in Vellore — Cost-Effective & Expert Care | Indira Hospital`;
         const description = `${treatment.shortDescription} NABH accredited ${treatment.title} procedures at Indira Hospital, Vellore. Advanced technology, institutional value, and same-day discharge in India.`;
+        const canonical = `/doctor/near-me/treat/${treatment.parentServiceSlug}/${treatment.slug}`;
+        
         return {
             title,
             description,
+            alternates: { canonical },
             keywords: [
                 treatment.title,
                 `${treatment.title} cost in Vellore`,
@@ -120,11 +127,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
                 "Indira Hospital Vellore",
                 "laser surgery India",
                 "laparoscopy Tamil Nadu",
-                ...treatment.features
+                ...treatment.features.map(f => typeof f === 'string' ? f : f.title)
             ],
             openGraph: {
                 title,
                 description,
+                url: canonical,
                 type: "article",
             }
         };
@@ -137,10 +145,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const specialistTitle = getSpecialistTitle(service.title);
     const title = service.seo_title || `Best ${specialistTitle} in Vellore — Top-Rated Specialist Clinic | Indira Hospital`;
     const description = service.seo_description || `Searching for top ${specialistTitle.toLowerCase()} in Vellore? Indira Super Speciality Hospital offers world-class ${service.title.toLowerCase()} care, same-day appointments, and expert surgeons. Visit us today.`;
+    const canonical = `/doctor/near-me/treat/${lastSlug}`;
+
     return {
         title,
         description,
+        alternates: { canonical },
         keywords: [service.title, "best doctor in Vellore", "same day surgery", "Tamil Nadu", "India", "Indira Hospital", "treatment cost", "surgery Vellore"],
+        openGraph: {
+            title,
+            description,
+            url: canonical,
+            type: "website"
+        }
     };
 }
 
@@ -151,7 +168,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     // --- 1. Check if it's a SITE-SPECIFIC TREATMENT (Hierarchy) ---
     const treatment = getTreatmentBySlug(lastSlug);
     let service: any | null = null;
-    let procedures: string[] = [];
+    let procedures: any[] = [];
     let isTreatmentPage = false;
 
     if (treatment) {
@@ -268,6 +285,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
+            <TreatmentSecondaryNav treatmentName={service.title} whatsappUrl={whatsappUrl} />
             <JsonLdSchema
                 type="medicalProcedure"
                 name={service.title}
@@ -354,8 +372,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
                 <div className="grid lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-2 space-y-8">
+                        {/* Quick Summary Card */}
+                        {isTreatmentPage && (
+                            <ServiceQuickSummary 
+                                duration={treatment?.faq?.[0]?.question?.toLowerCase()?.includes('time') ? treatment.faq[0].answer : undefined}
+                            />
+                        )}
+
+                        {/* Conversion Grid (Medfin Inspired) */}
+                        <ConversionGrid whatsappUrl={whatsappUrl} />
+
                         {/* About */}
-                        <Card className="p-8 border-none shadow-sm rounded-2xl">
+                        <Card id="about" className="p-8 border-none shadow-sm rounded-2xl">
                             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
                                 <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                     <Stethoscope className="w-5 h-5" />
@@ -412,9 +440,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             <EliteComparisonBank type={comparisonType} />
                         )}
 
+                        {/* Procedure Comparison Table */}
+                        {isTreatmentPage && (
+                            <ProcedureComparison />
+                        )}
+
                         {/* PRICING TRANSPARENCY BLOCK */}
                         {isHighValueSurgical && (
-                            <Card className="p-8 border-none shadow-sm rounded-[2rem] bg-slate-900 text-white relative overflow-hidden group">
+                            <Card id="pricing" className="p-8 border-none shadow-sm rounded-[2rem] bg-slate-900 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -mr-32 -mt-32" />
                                 <div className="relative z-10">
                                     <div className="flex items-center gap-4 mb-6">
@@ -473,15 +506,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         )}
 
                         {/* FAQs Section */}
-                        <EntityFAQs
-                            entityType={isTreatmentPage ? "treatment" : "service"}
-                            entityName={service.title}
-                            entitySlug={lastSlug}
-                        />
+                        <div id="faq">
+                            <EntityFAQs
+                                entityType={isTreatmentPage ? "treatment" : "service"}
+                                entityName={service.title}
+                                entitySlug={lastSlug}
+                                items={treatment?.faq}
+                            />
+                        </div>
 
                         {/* Doctors in this Service */}
                         {relatedDoctors.length > 0 && (
-                            <div>
+                            <div id="surgeons">
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                                     <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
                                         <GraduationCap className="w-5 h-5" />

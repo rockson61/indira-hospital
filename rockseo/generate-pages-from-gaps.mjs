@@ -13,10 +13,10 @@ const SURGICAL_SILOS = [
         category: 'Proctology',
         slug: 'proctology',
         treatments: [
-            { name: 'Laser Piles Treatment', slug: 'laser-piles-treatment', icon: 'Zap' },
-            { name: 'Laser Fistula Surgery (FiLaC)', slug: 'laser-fistula-surgery-filac', icon: 'Shield' },
-            { name: 'Laser Fissure Treatment', slug: 'laser-fissure-treatment', icon: 'Sparkles' },
-            { name: 'Laser Pilonidal Sinus Surgery (SiLaC)', slug: 'laser-pilonidal-sinus-surgery', icon: 'Siren' }
+            { name: 'Laser Piles Treatment', slug: 'laser-piles-treatment', icon: 'Zap', duration: '30 Mins', hospitalStay: 'Daycare (6 hrs)', recoveryTime: '48 Hours', anesthesia: 'Local/Spinal' },
+            { name: 'Laser Fistula Surgery (FiLaC)', slug: 'laser-fistula-surgery-filac', icon: 'Shield', duration: '45 Mins', hospitalStay: '24 Hours', recoveryTime: '72 Hours', anesthesia: 'Spinal' },
+            { name: 'Laser Fissure Treatment', slug: 'laser-fissure-treatment', icon: 'Sparkles', duration: '20 Mins', hospitalStay: 'Daycare (4 hrs)', recoveryTime: '24 Hours', anesthesia: 'Local/Spinal' },
+            { name: 'Laser Pilonidal Sinus Surgery (SiLaC)', slug: 'laser-pilonidal-sinus-surgery', icon: 'Siren', duration: '30 Mins', hospitalStay: 'Daycare (6 hrs)', recoveryTime: '48 Hours', anesthesia: 'Local/Spinal' }
         ]
     },
     {
@@ -47,6 +47,22 @@ const SURGICAL_SILOS = [
             { name: 'Permanent Pacemaker Implantation', slug: 'pacemaker-implantation', icon: 'Zap' },
             { name: 'Interventional Cardiology', slug: 'interventional-cardiology', icon: 'Activity' },
             { name: 'Heart Valve Repair', slug: 'heart-valve-repair', icon: 'Shield' }
+        ]
+    },
+    {
+        category: 'General Surgery',
+        slug: 'general-surgery',
+        treatments: [
+            { name: 'Laparoscopic Cholecystectomy', slug: 'laparoscopic-cholecystectomy-gallbladder-removal', icon: 'Zap', duration: '45-60 Mins', hospitalStay: '24 Hours', recoveryTime: '3-5 Days', anesthesia: 'General' },
+            { name: 'Laparoscopic Hernia Repair', slug: 'laparoscopic-hernia-repair-surgery', icon: 'Shield', duration: '30-45 Mins', hospitalStay: '24 Hours', recoveryTime: '2-3 Days', anesthesia: 'Spinal/General' },
+            { name: 'Emergency Appendectomy', slug: 'emergency-laparoscopic-appendectomy', icon: 'Clock', duration: '45 Mins', hospitalStay: '24-48 Hours', recoveryTime: '1 Week', anesthesia: 'General' },
+            { name: 'Laser Varicose Veins', slug: 'varicose-veins-laser-treatment', icon: 'Zap', duration: '30 Mins', hospitalStay: 'Daycare (6 hrs)', recoveryTime: '48 Hours', anesthesia: 'Local/Spinal' },
+            { name: 'Diabetic Foot Care', slug: 'diabetic-foot-ulcer-care', icon: 'Activity', duration: 'Varies', hospitalStay: 'As needed', recoveryTime: 'Varies', anesthesia: 'Local' },
+            { name: 'Lipoma Removal', slug: 'lipoma-excision-surgery', icon: 'Sparkles', duration: '15-20 Mins', hospitalStay: 'Daycare (2 hrs)', recoveryTime: '24 Hours', anesthesia: 'Local' },
+            { name: 'Cyst Excision', slug: 'sebaceous-cyst-removal', icon: 'Target', duration: '15 Mins', hospitalStay: 'Daycare (1 hr)', recoveryTime: '12 Hours', anesthesia: 'Local' },
+            { name: 'Thyroid Surgery', slug: 'thyroid-and-endocrine-surgery', icon: 'Microscope', duration: '90 Mins', hospitalStay: '48 Hours', recoveryTime: '1-2 Weeks', anesthesia: 'General' },
+            { name: 'Breast Surgery', slug: 'breast-surgery-and-oncology', icon: 'Shield', duration: '60 Mins', hospitalStay: '24-48 Hours', recoveryTime: '1-2 Weeks', anesthesia: 'General' },
+            { name: 'Trauma & Emergency', slug: 'trauma-and-emergency-care', icon: 'Siren', duration: 'Emergency', hospitalStay: 'Varies', recoveryTime: 'Varies', anesthesia: 'General' }
         ]
     }
 ];
@@ -91,6 +107,11 @@ export default function SEOPage() {
             }}
             showAvailabilityCTA={true}
             showVideoBank={true}
+            duration="${treatment.duration || '30-45 Mins'}"
+            hospitalStay="${treatment.hospitalStay || 'Daycare (6 hrs)'}"
+            recoveryTime="${treatment.recoveryTime || '48 Hours'}"
+            anesthesia="${treatment.anesthesia || 'Local/Spinal'}"
+            showComparison={true}
         >
             <div className="space-y-12">
                 <section>

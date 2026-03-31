@@ -477,18 +477,21 @@ export default async function DoctorProfileRoute({
                                     <h3 className="font-bold text-slate-900 dark:text-white">Specialized Services</h3>
                                 </div>
                                 <div className="space-y-2">
-                                    {currDoctor.related_services.map((service: any, i: number) => (
-                                        <Link
-                                            key={i}
-                                            href={`/service/${typeof service === 'string' ? service : service.slug}`}
-                                            className="flex items-center gap-2 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-fuchsia-600"
-                                        >
-                                            <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" />
-                                            {typeof service === 'string'
-                                                ? (service.charAt(0).toUpperCase() + service.slice(1)).replace(/-/g, ' ')
-                                                : service.title}
-                                        </Link>
-                                    ))}
+                                    {currDoctor.related_services.map((service: any, i: number) => {
+                                        const deptSlug = dept ? dept.slug : (currDoctor.departmentId || specialty);
+                                        return (
+                                            <Link
+                                                key={i}
+                                                href={`/doctor/near-me/treat/${deptSlug}/${service.slug}`}
+                                                className="flex items-center gap-2 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-fuchsia-600"
+                                            >
+                                                <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" />
+                                                {typeof service === 'string'
+                                                    ? (service.charAt(0).toUpperCase() + service.slice(1)).replace(/-/g, ' ')
+                                                    : service.title}
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )}

@@ -30,6 +30,8 @@ import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import React from "react";
 import HospitalSEOBlock from "@/components/HospitalSEOBlock";
+import AioKnowledgeBlock from "@/components/seo/AioKnowledgeBlock";
+import { ShieldCheck, Award, Users, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Best Hospital in Vellore | Indira Super Speciality Hospital Tamil Nadu",
@@ -67,31 +69,31 @@ const SemanticLinkBlock = () => (
         <div>
           <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Top Specialties</h3>
           <ul className="space-y-2">
-            <li><Link href="/departments/cardiology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cardiology at Best Hospital in Vellore</Link></li>
-            <li><Link href="/departments/orthopaedics" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Orthopaedics in Vellore</Link></li>
-            <li><Link href="/departments/general-surgery" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">General Surgery Specialists</Link></li>
-            <li><Link href="/departments/obstetrics-gynecology-reproductive-medicine" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Maternity & Gynaecology</Link></li>
-            <li><Link href="/departments/neurology" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Neurology Care</Link></li>
+            <li><Link href="/departments/cardiology" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cardiology at Best Hospital in Vellore</Link></li>
+            <li><Link href="/departments/orthopaedics" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Orthopaedics in Vellore</Link></li>
+            <li><Link href="/departments/general-surgery" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">General Surgery Specialists</Link></li>
+            <li><Link href="/departments/obstetrics-gynecology-reproductive-medicine" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Maternity & Gynaecology</Link></li>
+            <li><Link href="/departments/neurology" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Neurology Care</Link></li>
           </ul>
         </div>
         <div>
           <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Featured Treatments</h3>
           <ul className="space-y-2">
-            <li><Link href="/doctor/near-me/treat/orthopaedics/knee-replacement" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Knee Replacement</Link></li>
-            <li><Link href="/doctor/near-me/treat/cardiology/angioplasty" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Heart Angioplasty</Link></li>
-            <li><Link href="/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Piles Surgery</Link></li>
-            <li><Link href="/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laparoscopic Hernia</Link></li>
-            <li><Link href="/doctor/near-me/treat/urology/kidney-stone-laser-surgery" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Kidney Stone</Link></li>
+            <li><Link href="/doctor/near-me/treat/orthopaedics/knee-replacement" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Knee Replacement</Link></li>
+            <li><Link href="/doctor/near-me/treat/cardiology/angioplasty" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Heart Angioplasty</Link></li>
+            <li><Link href="/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Piles Surgery</Link></li>
+            <li><Link href="/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laparoscopic Hernia</Link></li>
+            <li><Link href="/doctor/near-me/treat/urology/kidney-stone-laser-surgery" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Kidney Stone</Link></li>
           </ul>
         </div>
         <div>
           <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Patient Hubs</h3>
           <ul className="space-y-2">
-            <li><Link href="/doctor/near-me" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Find Doctors Near You</Link></li>
-            <li><Link href="/patients/international" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">International Patients</Link></li>
-            <li><Link href="/patients/insurance" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cashless Insurance</Link></li>
-            <li><Link href="/patients/visiting-our-main-campus" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Visiting Campus</Link></li>
-            <li><Link href="/health-packages" className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Health Checkup Packages</Link></li>
+            <li><Link href="/doctor/near-me" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Find Doctors Near You</Link></li>
+            <li><Link href="/patients/international" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">International Patients</Link></li>
+            <li><Link href="/patients/insurance" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Cashless Insurance</Link></li>
+            <li><Link href="/patients/visiting-our-main-campus" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Visiting Campus</Link></li>
+            <li><Link href="/health-packages" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Health Checkup Packages</Link></li>
           </ul>
         </div>
         <div>
@@ -194,7 +196,7 @@ export default function Home() {
         <div className="relative">
           <HealthLibraryCard />
           <div className="max-w-7xl mx-auto px-6 -mt-8 mb-12 flex justify-end">
-            <Link href="/health-library" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
+            <Link href="/health-library" prefetch={false} className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase tracking-widest text-xs hover:text-fuchsia-700 transition-colors">
               Access Full Health Library
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -284,7 +286,20 @@ export default function Home() {
           </div>
         </div>
       </SectionContainer>
-      <HospitalSEOBlock />
+      
+      <SectionContainer className="pb-24">
+        <AioKnowledgeBlock 
+          title="Best Hospital in Vellore: Clinical Trust & Facts"
+          items={[
+            { label: "NABH Accreditation", value: "Fully Verified Patient Safety Protocols", icon: ShieldCheck },
+            { label: "Surgical Success", value: "15,000+ Laparoscopic & Laser Procedures", icon: Award },
+            { label: "Patient Care", value: "Specialized Same-Day Discharge Options", icon: Users },
+            { label: "Global Reach", value: "Dedicated International Medical Tourism Hub", icon: Globe },
+          ]}
+        />
+      </SectionContainer>
+
+      {/* <HospitalSEOBlock /> */}
     </main>
   );
 }
