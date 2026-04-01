@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
 import { Bone, Shield, Zap, Award, Clock, Users, Microscope, Heart, Activity, CheckCircle2 } from "lucide-react"
@@ -22,7 +20,7 @@ export default function OrthopaedicsDepartmentPage() {
             title="Elite Orthopaedics & Joint Replacement Hub"
             slug="orthopaedics"
             shortDescription="Advanced Bone & Joint Sciences in Vellore. We specialize in Robotic Knee Replacement, HD Sports Arthroscopy, and Complex Spinal Trauma reconstruction."
-            fullDescription={`
+            fullDescription={(
                 <div className="orthopaedics-pillar-content space-y-20 text-left">
                     {/* ── 1. The Mobility Revolution ───────────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
@@ -31,10 +29,10 @@ export default function OrthopaedicsDepartmentPage() {
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
-                                Mobility is the hallmark of independence. The **Department of Orthopaedics & Joint Sciences** at Indira Super Speciality Hospital is a regional center of excellence dedicated to the science of movement. We blend **Robotic Precision** with **Minimal Traumatic Access** to treat everything from age-related joint degeneration to catastrophic sports injuries.
+                                Mobility is the hallmark of independence. The <strong>Department of Orthopaedics & Joint Sciences</strong> at Indira Super Speciality Hospital is a regional center of excellence dedicated to the science of movement. We blend <strong>Robotic Precision</strong> with <strong>Minimal Traumatic Access</strong> to treat everything from age-related joint degeneration to catastrophic sports injuries.
                             </p>
                             <p className="mt-4">
-                                Our facility is a "High-Volume Joint Replacement Center," utilizing advanced computer-assisted navigation and 3D preoperative planning. Whether you are seeking a **Robotic Knee Replacement** or complex **Spinal Decompression**, our clinical pathways are designed for **Anatomic Restoration** and **Rapid Milestone Recovery.**
+                                Our facility is a "High-Volume Joint Replacement Center," utilizing advanced computer-assisted navigation and 3D preoperative planning. Whether you are seeking a <strong>Robotic Knee Replacement</strong> or complex <strong>Spinal Decompression</strong>, our clinical pathways are designed for <strong>Anatomic Restoration</strong> and <strong>Rapid Milestone Recovery.</strong>
                             </p>
                         </div>
 
@@ -56,7 +54,7 @@ export default function OrthopaedicsDepartmentPage() {
                                 <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
                                 <h4 className="text-2xl font-bold text-blue-300 mb-4 italic uppercase tracking-tighter">Sports Arthroscopy Unit</h4>
                                 <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
-                                    Reclaiming the field. We perform **HD Arthroscopic (Keyhole)** ligament repairs (ACL/PCL/Meniscus) that minimize scarring and accelerate your return to high-performance sports.
+                                    Reclaiming the field. We perform <strong>HD Arthroscopic (Keyhole)</strong> ligament repairs (ACL/PCL/Meniscus) that minimize scarring and accelerate your return to high-performance sports.
                                 </p>
                                 <ul className="space-y-2">
                                     <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Rapid Recovery Lab</li>
@@ -99,7 +97,7 @@ export default function OrthopaedicsDepartmentPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">High-precision management of spinal fractures, slip discs, and multi-fracture trauma emergencies.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Microdiscectomy", "Spinal Fusion", "Scoliotic Repair", "Pelvic Acetabular Trauma"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -116,7 +114,7 @@ export default function OrthopaedicsDepartmentPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Micro-surgical restoration of hand tendons, peripheral nerves, and complex diabetic foot reconstructions.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Tendon Repair", "Nerve Grafting", "Diabetic Offloading", "Flat-Foot Correction"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -132,10 +130,10 @@ export default function OrthopaedicsDepartmentPage() {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
                         <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: The Robotic Advantage</h3>
                         <p>
-                            Orthopaedic surgery is transitioning from "subjective art" to "objective science." In manual knee replacement, the surgeon rely on visual cues and traditional mechanical jigs. In **Robotic-Assisted Surgery**, a 3D digital map of your unique knee is created before the first cut.
+                            Orthopaedic surgery is transitioning from "subjective art" to "objective science." In manual knee replacement, the surgeon rely on visual cues and traditional mechanical jigs. In <strong>Robotic-Assisted Surgery</strong>, a 3D digital map of your unique knee is created before the first cut.
                         </p>
                         <p className="mt-4">
-                            At Indira Hospital, our **Accuracy Hub** ensuring:
+                            At Indira Hospital, our <strong>Accuracy Hub</strong> ensuring:
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
                             {[
@@ -211,7 +209,7 @@ export default function OrthopaedicsDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={[
                 { name: "Robotic Knee Replacement", link: "/doctor/near-me/treat/orthopaedics" },
                 { name: "Arthroscopic ACL Repair", link: "/doctor/near-me/treat/orthopaedics" },

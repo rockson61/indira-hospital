@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { ChevronRight, Phone, Calendar, CheckCircle2, MessageCircle, Clock, Star, IndianRupee, Siren, Dna, Wind, Apple, Scale, UserCheck, Ear, Ribbon, Cpu, MapPin, Sparkles, ArrowRight, Shield, Zap, Bed, Target, Globe, AlertCircle, Syringe as SyringeLucide, HandPlatter, Droplets } from "lucide-react"

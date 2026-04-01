@@ -1,4 +1,4 @@
-'use client'
+
 
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
@@ -26,41 +26,41 @@ export default function PulmonologyDepartmentPage() {
             title="Elite Pulmonology & Sleep Sciences Hub"
             slug="pulmonology"
             shortDescription="Advanced Chest Medicine & Interventional Pulmonology in Vellore. We specialize in Chronic Asthma management, Sleep Apnea screening, and precision Bronchoscopy."
-            fullDescription={`
+            fullDescription={(
                 <div className="pulmonology-pillar-content space-y-20 text-left">
                     {/* ── 1. The Respiratory Health Vision ────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-sky-600 pl-6 mb-8 uppercase tracking-tight">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-sky-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             Breathe Free: Excellence in Chest & Sleep Medicine
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
-                                The **Department of Pulmonology & Sleep Sciences** at Indira Super Speciality Hospital is a centre of regional excellence dedicated to the science of respiration. We provide a Tertiary-Level clinical pathway for patients suffering from persistent cough, shortness of breath, and chronic lung conditions like **Asthma, COPD, and Interstitial Lung Disease.**
+                                The <strong>Department of Pulmonology & Sleep Sciences</strong> at Indira Super Speciality Hospital is a centre of regional excellence dedicated to the science of respiration. We provide a Tertiary-Level clinical pathway for patients suffering from persistent cough, shortness of breath, and chronic lung conditions like <strong>Asthma, COPD, and Interstitial Lung Disease.</strong>
                             </p>
                             <p className="mt-4">
-                                Our facility integrates high-precision **Pulmonary Function Testing (PFT)** with a state-of-the-art **Sleep Study Lab.** Whether you are a smoker looking for a lung health screening or a patient with severe allergic asthma, we deliver **Precision Pulmonary Care** that prioritizes lung capacity restoration.
+                                Our facility integrates high-precision <strong>Pulmonary Function Testing (PFT)</strong> with a state-of-the-art <strong>Sleep Study Lab.</strong> Whether you are a smoker looking for a lung health screening or a patient with severe allergic asthma, we deliver <strong>Precision Pulmonary Care</strong> that prioritizes lung capacity restoration.
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose">
+                        <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
                             <div className="p-8 bg-sky-50 dark:bg-sky-900/20 rounded-[2.5rem] border border-sky-100 dark:border-sky-800 shadow-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 blur-3xl group-hover:bg-sky-500/20 transition-all"></div>
                                 <h4 className="text-2xl font-bold text-sky-900 dark:text-sky-200 mb-4 flex items-center gap-2 italic">
                                     Sleep Medicine Hub
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
-                                    Don't ignore snoring. We offer **Full Night Polysomnography (Sleep Study)** to detect Obstructive Sleep Apnea (OSA)—a critical risk factor for heart attacks and strokes.
+                                    Don't ignore snoring. We offer <strong>Full Night Polysomnography (Sleep Study)</strong> to detect Obstructive Sleep Apnea (OSA)—a critical risk factor for heart attacks and strokes.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-sky-100 dark:border-sky-700">CPAP Titration</span>
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-sky-100 dark:border-sky-700">Level 1 Sleep Lab</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-sky-100 dark:border-sky-700 shadow-sm">CPAP Titration</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-sky-100 dark:border-sky-700 shadow-sm">Level 1 Sleep Lab</span>
                                 </div>
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
-                                <h4 className="text-2xl font-bold text-blue-300 mb-4 italic uppercase tracking-tighter">Asthma & Allergy Clinic</h4>
+                                <h4 className="text-2xl font-bold text-blue-300 mb-4 italic uppercase tracking-tighter text-left">Asthma & Allergy Clinic</h4>
                                 <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
-                                    Moving beyond basic inhalers. We specialize in **Phenotyped Asthma Management**, utilizing biological therapies and precise indoor allergy mapping.
+                                    Moving beyond basic inhalers. We specialize in <strong>Phenotyped Asthma Management</strong>, utilizing biological therapies and precise indoor allergy mapping.
                                 </p>
                                 <ul className="space-y-2">
                                     <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Rapid Spirometry Hub</li>
@@ -77,7 +77,7 @@ export default function PulmonologyDepartmentPage() {
                             <div className="h-1 w-24 bg-sky-600 dark:bg-sky-500 mx-auto mt-4 rounded-full"></div>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-3 gap-8 text-left">
                             {/* Vertical 1: Obstructive Airway */}
                             <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
                                 <div className="p-8 flex-1 flex flex-col justify-between">
@@ -103,7 +103,7 @@ export default function PulmonologyDepartmentPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Precision diagnosis of sleep-related breathing issues that cause daytime sleepiness and fatigue.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Full Night Polysomnography", "CPAP Compliance Lab", "Obesity Hypoventilation", "Narcolepsy Screening"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-sky-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -120,7 +120,7 @@ export default function PulmonologyDepartmentPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">High-precision internal lung visualization for biopsies and foreign body removal.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Flexible Bronchoscopy", "Endobronchial Biopsy", "Pleural Fluid Drainage", "Lung Cancer Workup"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-sky-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -132,14 +132,14 @@ export default function PulmonologyDepartmentPage() {
                     </section>
 
                     {/* ── 3. Educational Deep-Dive: Asthma vs COPD ─────────────────── */}
-                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-sky-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-sky-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 blur-[100px] -mr-32 -mt-32"></div>
                         <h3 className="text-sky-900 dark:text-sky-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: Understanding Obstructive Lung Disease</h3>
                         <p>
-                            Many patients confuse **Asthma** and **COPD.** While both cause wheezing and breathing difficulty, their underlying biology is different. Asthma is usually an inflammatory reaction to allergens and is often **reversible.** COPD is a structural damage to the lung sacs (alveoli), usually permanent but **manageable.**
+                            Many patients confuse <strong>Asthma</strong> and <strong>COPD.</strong> While both cause wheezing and breathing difficulty, their underlying biology is different. Asthma is usually an inflammatory reaction to allergens and is often <strong>reversible.</strong> COPD is a structural damage to the lung sacs (alveoli), usually permanent but <strong>manageable.</strong>
                         </p>
                         <p className="mt-4">
-                            At Indira Hospital, our **Accuracy Protocol** includes:
+                            At Indira Hospital, our <strong>Accuracy Protocol</strong> includes:
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
                             {[
@@ -160,7 +160,7 @@ export default function PulmonologyDepartmentPage() {
                     </section>
 
                     {/* ── 4. Pulmonology FAQs: The Clinical Deep-Dive ─────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-sky-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-sky-400 text-left">
@@ -175,7 +175,7 @@ export default function PulmonologyDepartmentPage() {
                                 },
                                 {
                                     q: "How do I know if my snoring is dangerous?",
-                                    a: "Snoring paired with daytime sleepiness, morning headaches, or waking up gasping for air is a sign of **Obstructive Sleep Apnea (OSA).** If untreated, OSA significantly increases the risk of heart failure, strokes, and car accidents."
+                                    a: "Snoring paired with daytime sleepiness, morning headaches, or waking up gasping for air is a sign of <strong>Obstructive Sleep Apnea (OSA).</strong> If untreated, OSA significantly increases the risk of heart failure, strokes, and car accidents."
                                 },
                                 {
                                     q: "What is a Bronchoscopy, and is it painful?",
@@ -183,7 +183,7 @@ export default function PulmonologyDepartmentPage() {
                                 },
                                 {
                                     q: "Can smoker's lung (COPD) be cured?",
-                                    a: "Structural damage to lungs in COPD is permanent. However, with **Pulmonary Rehabilitation**, long-acting bronchodilators, and consistent smoking cessation, we can significantly improve lung function and return you to a productive life."
+                                    a: "Structural damage to lungs in COPD is permanent. However, with <strong>Pulmonary Rehabilitation</strong>, long-acting bronchodilators, and consistent smoking cessation, we can significantly improve lung function and return you to a productive life."
                                 },
                                 {
                                     q: "What is the PFT (Pulmonary Function Test) for?",
@@ -195,7 +195,7 @@ export default function PulmonologyDepartmentPage() {
                                 },
                                 {
                                     q: "Does COVID-19 cause long-term lung damage?",
-                                    a: "Some patients experience **Post-COVID Pulmonary Fibrosis** (lung scarring). With early steroid therapy and specialized lung-strengthening exercises, many of these scars can be managed, restoring breathing capacity."
+                                    a: "Some patients experience <strong>Post-COVID Pulmonary Fibrosis</strong> (lung scarring). With early steroid therapy and specialized lung-strengthening exercises, many of these scars can be managed, restoring breathing capacity."
                                 },
                                 {
                                     q: "What is a Sleep Study (Polysomnography)?",
@@ -203,7 +203,7 @@ export default function PulmonologyDepartmentPage() {
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-sky-400 transition-colors text-lg">
+                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-sky-400 transition-colors text-lg text-left">
                                         <span className="text-sky-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
@@ -215,7 +215,7 @@ export default function PulmonologyDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={[
                 { name: "Pulmonary Function Test (PFT)", link: "/doctor/near-me/treat/pulmonology" },
                 { name: "Full Night Sleep Study", link: "/doctor/near-me/treat/pulmonology" },

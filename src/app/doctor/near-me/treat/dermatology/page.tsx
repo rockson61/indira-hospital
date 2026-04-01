@@ -1,4 +1,4 @@
-'use client'
+
 
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
@@ -26,7 +26,7 @@ export default function DermatologyDepartmentPage() {
             title="Elite Dermatology, Laser & Trichology Hub"
             slug="dermatology"
             shortDescription="Experience world-class skin and hair care in Vellore. From chronic psoriasis management to advanced laser scar revision and non-surgical aesthetic enhancements."
-            fullDescription={`
+            fullDescription={(
                 <div className="dermatology-pillar-content space-y-20 text-left">
                     {/* ── 1. The Science of Radiant Skin ───────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
@@ -35,21 +35,21 @@ export default function DermatologyDepartmentPage() {
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
-                                Your skin is the narrative of your health. The **Department of Dermatology & Cosmetology** at Indira Super Speciality Hospital is dedicated to the precise diagnosis and treatment of complex skin, hair, and nail disorders. We merge **Evidence-Based Medical Dermatology** with the latest breakthroughs in **Laser Aesthetics.**
+                                Your skin is the narrative of your health. The <strong>Department of Dermatology & Cosmetology</strong> at Indira Super Speciality Hospital is dedicated to the precise diagnosis and treatment of complex skin, hair, and nail disorders. We merge <strong>Evidence-Based Medical Dermatology</strong> with the latest breakthroughs in <strong>Laser Aesthetics.</strong>
                             </p>
                             <p className="mt-4">
-                                Our facility is a "Laser Destination," featuring USFDA-approved platforms for permanent hair reduction, pigmentation removal, and fractional skin resurfacing. Whether you are battling chronic **Vitiligo** or seeking "Glass Skin" through precision chemical peels, our clinical pathways are designed for **Visible Results** and **Safety.**
+                                Our facility is a "Laser Destination," featuring USFDA-approved platforms for permanent hair reduction, pigmentation removal, and fractional skin resurfacing. Whether you are battling chronic <strong>Vitiligo</strong> or seeking "Glass Skin" through precision chemical peels, our clinical pathways are designed for <strong>Visible Results</strong> and <strong>Safety.</strong>
                             </p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose">
                             <div className="p-8 bg-rose-50 dark:bg-rose-900/20 rounded-[2.5rem] border border-rose-100 dark:border-rose-800 shadow-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 blur-3xl group-hover:bg-rose-500/20 transition-all"></div>
-                                <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2 italic">
+                                <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2 italic text-left">
                                     Micro-Laser Resurfacing
                                 </h4>
-                                <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
-                                    Regenerate your skin from within. Our **Fractional CO2 Laser** creates microscopic thermal zones, triggering massive collagen production to erase deep acne scars and fine lines.
+                                <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4 text-left">
+                                    Regenerate your skin from within. Our <strong>Fractional CO2 Laser</strong> creates microscopic thermal zones, triggering massive collagen production to erase deep acne scars and fine lines.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
                                     <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700">Scar Eraser</span>
@@ -58,11 +58,11 @@ export default function DermatologyDepartmentPage() {
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-rose-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
-                                <h4 className="text-2xl font-bold text-rose-300 mb-4 italic uppercase tracking-tighter">Clinical Trichology Hub</h4>
-                                <p className="text-rose-100/60 text-sm leading-relaxed mb-6 italic font-medium">
-                                    Stop hair loss at the root. We utilize **Platelet-Rich Plasma (PRP)** and medical-grade mesotherapy to revive dormant follicles and restore hair density.
+                                <h4 className="text-2xl font-bold text-rose-300 mb-4 italic uppercase tracking-tighter text-left">Clinical Trichology Hub</h4>
+                                <p className="text-rose-100/60 text-sm leading-relaxed mb-6 italic font-medium text-left">
+                                    Stop hair loss at the root. We utilize <strong>Platelet-Rich Plasma (PRP)</strong> and medical-grade mesotherapy to revive dormant follicles and restore hair density.
                                 </p>
-                                <ul className="space-y-2">
+                                <ul className="space-y-2 text-left">
                                     <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Growth Factor Therapy</li>
                                     <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Scalp Bio-Analysis</li>
                                 </ul>
@@ -77,7 +77,7 @@ export default function DermatologyDepartmentPage() {
                             <div className="h-1 w-24 bg-rose-600 dark:bg-rose-500 mx-auto mt-4 rounded-full"></div>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-3 gap-8 text-left">
                             {/* Vertical 1: Medical Derm */}
                             <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
                                 <div className="p-8 flex-1 flex flex-col justify-between">
@@ -103,7 +103,7 @@ export default function DermatologyDepartmentPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Non-surgical transformations utilizing light energy and advanced chemical formulations for flawed skin.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Laser Hair Reduction", "Q-Switch for Pigment", "Carbon Hollywood Peel", "Botox & Dermal Fillers"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -120,7 +120,7 @@ export default function DermatologyDepartmentPage() {
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Empathetic care for infants and children with atopic dermatitis, hemangiomas, and birthmarks.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Atopic Eczema Unit", "Neonatal Rash Care", "Wart & Molluscum", "Birthmark Monitoring"].map(i => (
-                                                <li key={i} className="flex items-start gap-2 text-[10px) font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+                                                <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
                                                 </li>
                                             ))}
@@ -132,14 +132,14 @@ export default function DermatologyDepartmentPage() {
                     </section>
 
                     {/* ── 3. Educational Deep-Dive: The Laser Journey ─────────────────── */}
-                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
                         <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: The Fractional Evolution</h3>
                         <p>
-                            Historically, "skin resurfacing" involved long recovery times and high risk of pigmentation. Modern **Fractional Laser Technology** has revolutionized this. By treating only a fraction of the skin surface (10-20%) at a time, the surrounding healthy tissue accelerates the healing process of the micro-wounds.
+                            Historically, "skin resurfacing" involved long recovery times and high risk of pigmentation. Modern <strong>Fractional Laser Technology</strong> has revolutionized this. By treating only a fraction of the skin surface (10-20%) at a time, the surrounding healthy tissue accelerates the healing process of the micro-wounds.
                         </p>
                         <p className="mt-4">
-                            At Indira Hospital, our **Safe-Laser Protocol** ensuring:
+                            At Indira Hospital, our <strong>Safe-Laser Protocol</strong> ensuring:
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
                             {[
@@ -155,12 +155,12 @@ export default function DermatologyDepartmentPage() {
                             ))}
                         </div>
                         <p className="font-bold text-slate-900 dark:text-slate-100 italic">
-                            Whether you're treating pitted acne scars or age-related loose skin, our fractional approach delivers dramatic texture improvement with **Zero Lifestyle Interruption.**
+                            Whether you're treating pitted acne scars or age-related loose skin, our fractional approach delivers dramatic texture improvement with <strong>Zero Lifestyle Interruption.</strong>
                         </p>
                     </section>
 
                     {/* ── 4. Dermatology FAQs: The Clinical Deep-Dive ─────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-rose-400 text-left">
@@ -179,7 +179,7 @@ export default function DermatologyDepartmentPage() {
                                 },
                                 {
                                     q: "Can deep acne scars really be removed?",
-                                    a: "Deep scars (ice-pick or boxcar) cannot be removed 100%, but they can be dramatically improved (60-80%) using a combination of **Fractional CO2 Laser**, **Subcision**, and **Microneedling RF.**"
+                                    a: "Deep scars (ice-pick or boxcar) cannot be removed 100%, but they can be dramatically improved (60-80%) using a combination of <strong>Fractional CO2 Laser</strong>, <strong>Subcision</strong>, and <strong>Microneedling RF.</strong>"
                                 },
                                 {
                                     q: "What is PRP therapy for hair loss?",
@@ -195,7 +195,7 @@ export default function DermatologyDepartmentPage() {
                                 },
                                 {
                                     q: "Can Vitiligo be cured?",
-                                    a: "While there is no 'universal cure,' Vitiligo can be effectively managed. Modern therapies include **Targeted Phototherapy**, biologics to stop the spread, and **Melanocyte Transfer** surgery for stable patches to restore natural color."
+                                    a: "While there is no 'universal cure,' Vitiligo can be effectively managed. Modern therapies include <strong>Targeted Phototherapy</strong>, biologics to stop the spread, and <strong>Melanocyte Transfer</strong> surgery for stable patches to restore natural color."
                                 },
                                 {
                                     q: "Does Diet affect Acne?",
@@ -215,7 +215,7 @@ export default function DermatologyDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={[
                 { name: "Laser Hair Reduction", link: "/doctor/near-me/treat/dermatology" },
                 { name: "Acne Scar Revision (CO2)", link: "/doctor/near-me/treat/dermatology" },

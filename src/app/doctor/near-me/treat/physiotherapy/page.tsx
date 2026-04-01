@@ -1,4 +1,4 @@
-'use client'
+
 
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
@@ -10,8 +10,8 @@ export default function PhysiotherapyDepartmentPage() {
             title="Elite Physiotherapy & Rehabilitation Center"
             slug="physiotherapy"
             shortDescription="Advanced Neuro-Muscular Rehabilitation, Sports Injury Management, and Pain Restoration led by senior physical therapists."
-            fullDescription={`
-                <div className="physiotherapy-pillar-content space-y-20">
+            fullDescription={(
+                <div className="physiotherapy-pillar-content space-y-20 text-left">
                     {/* ── 1. The Clinical Rehab Mission ─────────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
                         <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight text-left">
@@ -29,7 +29,7 @@ export default function PhysiotherapyDepartmentPage() {
                         <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
                             <div className="p-8 bg-blue-50 dark:bg-blue-900/20 rounded-[2.5rem] border border-blue-100 dark:border-blue-800 shadow-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl group-hover:bg-blue-500/20 transition-all"></div>
-                                <h4 className="text-2xl font-bold text-blue-900 dark:text-blue-200 mb-4 flex items-center gap-2">
+                                <h4 className="text-2xl font-bold text-blue-900 dark:text-blue-200 mb-4 flex items-center gap-2 italic">
                                     Neuro-Rehab Hub
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
@@ -42,8 +42,8 @@ export default function PhysiotherapyDepartmentPage() {
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
-                                <h4 className="text-2xl font-bold text-blue-300 mb-4 italic">Sports Injury Unit</h4>
-                                <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium italic">
+                                <h4 className="text-2xl font-bold text-blue-300 mb-4 italic uppercase tracking-tighter text-left">Sports Injury Unit</h4>
+                                <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
                                     Trusted by local athletes. From ACL reconstruction rehab to Rotator Cuff management, we use <strong>Laser Therapy</strong> and <strong>Proprioceptive Drills</strong> to get you back on the field faster.
                                 </p>
                                 <ul className="space-y-2">
@@ -135,13 +135,13 @@ export default function PhysiotherapyDepartmentPage() {
                                 </div>
                             ))}
                         </div>
-                        <p className="font-bold text-slate-900 dark:text-slate-100 italic italic">
+                        <p className="font-bold text-slate-900 dark:text-slate-100 italic">
                             Recovery is 30% clinical therapy and 70% what you do at home. Our therapists provide personalized <strong>Home Exercise Programs (HEP)</strong> via digital video links for seamless integration into your daily life.
                         </p>
                     </section>
 
                     {/* ── 4. Advanced Physiotherapy FAQs ─────────────────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-blue-400 text-left">
@@ -176,7 +176,7 @@ export default function PhysiotherapyDepartmentPage() {
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-blue-400 transition-colors text-lg">
+                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-blue-400 transition-colors text-lg text-left">
                                         <span className="text-blue-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
@@ -188,14 +188,14 @@ export default function PhysiotherapyDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={[
-                { name: "Neuro-Rehabilitation", link: "/doctor/near-me/treat/physioterapy" },
-                { name: "Sports Injury Clinic", link: "/doctor/near-me/treat/physioterapy" },
-                { name: "Post-Op Ortho Rehab", link: "/doctor/near-me/treat/physioterapy" },
-                { name: "Pediatric Physio", link: "/doctor/near-me/treat/physioterapy" },
-                { name: "Geriatric Wellness", link: "/doctor/near-me/treat/physioterapy" },
-                { name: "Laser Pain Therapy", link: "/doctor/near-me/treat/physioterapy" }
+                { name: "Neuro-Rehabilitation", link: "/doctor/near-me/treat/physiotherapy" },
+                { name: "Sports Injury Clinic", link: "/doctor/near-me/treat/physiotherapy" },
+                { name: "Post-Op Ortho Rehab", link: "/doctor/near-me/treat/physiotherapy" },
+                { name: "Pediatric Physio", link: "/doctor/near-me/treat/physiotherapy" },
+                { name: "Geriatric Wellness", link: "/doctor/near-me/treat/physiotherapy" },
+                { name: "Laser Pain Therapy", link: "/doctor/near-me/treat/physiotherapy" }
             ]}
             technology={[
                 {

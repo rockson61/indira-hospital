@@ -1,8 +1,8 @@
-'use client'
+
 
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
-import { Baby, Shield, Heart, Zap, Award, Clock, Users, Flame, Microscope } from "lucide-react"
+import { Baby, Shield, Heart, Zap, Award, Clock, Users, Flame, Microscope, Target } from "lucide-react"
 
 export default function PaediatricsDepartmentPage() {
     return (
@@ -10,8 +10,8 @@ export default function PaediatricsDepartmentPage() {
             title="Elite Paediatrics & Neonatology Hub"
             slug="paediatrics"
             shortDescription="World-class child healthcare combining Level 3 NICU precision with compassionate pediatric surgical excellence."
-            fullDescription={`
-                <div className="paediatrics-pillar-content space-y-20">
+            fullDescription={(
+                <div className="paediatrics-pillar-content space-y-20 text-left">
                     {/* ── 1. The Clinical Promise for the Next Generation ───────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
                         <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
@@ -29,21 +29,21 @@ export default function PaediatricsDepartmentPage() {
                         <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
                             <div className="p-8 bg-rose-50 dark:bg-rose-900/20 rounded-[2.5rem] border border-rose-100 dark:border-rose-800 shadow-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 blur-3xl group-hover:bg-rose-500/20 transition-all"></div>
-                                <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2">
+                                <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2 italic">
                                     Level 3 Neonatal ICU
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
-                                    "Saving the Smallest of Global Citizens." Our NICU specialized care for preterm babies as small as 800 grams, with 24/7 neonatologist monitoring and advanced TPN (Total Parenteral Nutrition).
+                                    "Saving the Smallest of Global Citizens." Our NICU provides specialized care for preterm babies as small as 800 grams, with 24/7 neonatologist monitoring and advanced TPN (Total Parenteral Nutrition).
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700">Surfactant Therapy</span>
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700">HF-Oscillation Ventilator</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 shadow-sm">Surfactant Therapy</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 shadow-sm">HF-Oscillation Ventilator</span>
                                 </div>
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-rose-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
-                                <h4 className="text-2xl font-bold text-rose-300 mb-4 italic">Pediatric Surgical Excellence</h4>
-                                <p className="text-rose-100/60 text-sm leading-relaxed mb-6 italic font-medium italic">
+                                <h4 className="text-2xl font-bold text-rose-300 mb-4 italic uppercase tracking-tighter text-left">Pediatric Surgical Excellence</h4>
+                                <p className="text-rose-100/60 text-sm leading-relaxed mb-6 italic font-medium">
                                     Specialized operative care for children, from hernia and hydrocele to complex neonatal bowel surgeries and hypospadias correction.
                                 </p>
                                 <ul className="space-y-2">
@@ -135,7 +135,7 @@ export default function PaediatricsDepartmentPage() {
                                 </div>
                             ))}
                         </div>
-                        <p className="font-bold text-slate-900 dark:text-slate-100 italic italic">
+                        <p className="font-bold text-slate-900 dark:text-slate-100 italic">
                             Parenting doesn't come with a manual, but it does come with a clinical partner. Our <strong>Child Health Passport</strong> helps you track every milestone and vaccination with scientific precision.
                         </p>
                     </section>
@@ -163,7 +163,7 @@ export default function PaediatricsDepartmentPage() {
                     </section>
 
                     {/* ── 6. Advanced Paediatric FAQs ────────────────────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-rose-400 text-left">
@@ -202,11 +202,11 @@ export default function PaediatricsDepartmentPage() {
                                 },
                                 {
                                     q: "Can congenital heart disease be detected before birth?",
-                                    a: "Yes. Through **Fetal Echocardiogram**, our specialists can detect structural heart defects as early as the 18th week of pregnancy, allowing our team to be prepared for immediate neonatal cardiac intervention upon birth."
+                                    a: "Yes. Through <strong>Fetal Echocardiogram</strong>, our specialists can detect structural heart defects as early as the 18th week of pregnancy, allowing our team to be prepared for immediate neonatal cardiac intervention upon birth."
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-rose-400 transition-colors text-lg">
+                                    <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-rose-400 transition-colors text-lg text-left">
                                         <span className="text-rose-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
@@ -218,7 +218,7 @@ export default function PaediatricsDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={[
                 { name: "Neonatal Intensive Care", link: "/doctor/near-me/treat/paediatrics" },
                 { name: "Childhood Vaccination Hub", link: "/doctor/near-me/treat/paediatrics" },

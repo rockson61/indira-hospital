@@ -79,10 +79,10 @@ const SemanticLinkBlock = () => (
         <div>
           <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Featured Treatments</h3>
           <ul className="space-y-2">
-            <li><Link href="/doctor/near-me/treat/orthopaedics/knee-replacement" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Knee Replacement</Link></li>
+            <li><Link href="/doctor/near-me/treat/orthopaedics/robotic-knee-replacement" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Knee Replacement</Link></li>
             <li><Link href="/doctor/near-me/treat/cardiology/angioplasty" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Heart Angioplasty</Link></li>
-            <li><Link href="/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Piles Surgery</Link></li>
-            <li><Link href="/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laparoscopic Hernia</Link></li>
+            <li><Link href="/doctor/near-me/treat/proctology/laser-piles-treatment" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Piles Surgery</Link></li>
+            <li><Link href="/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair-surgery" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laparoscopic Hernia</Link></li>
             <li><Link href="/doctor/near-me/treat/urology/kidney-stone-laser-surgery" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Kidney Stone</Link></li>
           </ul>
         </div>

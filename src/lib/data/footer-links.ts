@@ -17,11 +17,11 @@ export const FOOTER_LINKS = {
     ],
     procedures: [
         { name: "Laser Piles Treatment", url: "/doctor/near-me/treat/proctology/laser-piles-treatment" },
-        { name: "Hernia Repair", url: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
+        { name: "Hernia Repair", url: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair-surgery" },
         { name: "Gallbladder Removal", url: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
         { name: "C-Section Delivery", url: "/doctor/near-me/treat/obstetrics-gynaecology/normal-delivery-vs-c-section" },
         { name: "Kidney Stone Laser", url: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
-        { name: "Knee Replacement", url: "/doctor/near-me/treat/orthopaedics/total-knee-replacement-cost" },
+        { name: "Knee Replacement", url: "/doctor/near-me/treat/orthopaedics/robotic-knee-replacement" },
         { name: "Hip Replacement", url: "/doctor/near-me/treat/orthopaedics/hip-replacement-surgery-guide" },
         { name: "Heart Angioplasty", url: "/doctor/near-me/treat/cardiology/heart-angioplasty-procedure" },
         { name: "Endoscopy", url: "/doctor/near-me/treat/gastroenterology/endoscopy-procedure-guide" },

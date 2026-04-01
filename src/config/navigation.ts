@@ -18,7 +18,7 @@ export const navigation = {
         },
         {
             title: "Laparoscopy", href: "/doctor/near-me/treat/general-surgery", subServices: [
-                { title: "Hernia Repair", href: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
+                { title: "Hernia Repair", href: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair-surgery" },
                 { title: "Gallbladder Removal", href: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
                 { title: "Appendix Surgery", href: "/doctor/near-me/treat/general-surgery/appendix-surgery-steps" },
             ]
@@ -53,7 +53,7 @@ export const navigation = {
         { title: "Aesthetics", href: "/doctor/near-me/treat/dermatology" },
         {
             title: "Orthopedics", href: "/doctor/near-me/treat/orthopaedics", subServices: [
-                { title: "Knee Replacement", href: "/doctor/near-me/treat/orthopaedics/total-knee-replacement-cost" },
+                { title: "Knee Replacement", href: "/doctor/near-me/treat/orthopaedics/robotic-knee-replacement" },
                 { title: "Hip Replacement", href: "/doctor/near-me/treat/orthopaedics/hip-replacement-surgery-guide" },
                 { title: "Arthroscopy", href: "/doctor/near-me/treat/orthopaedics/arthroscopy-joint-surgery" },
                 { title: "ACL Reconstruction", href: "/doctor/near-me/treat/orthopaedics/acl-reconstruction-recovery" },

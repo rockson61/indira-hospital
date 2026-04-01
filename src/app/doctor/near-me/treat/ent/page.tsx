@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
 import { 

@@ -9,13 +9,13 @@ import { siteConfig } from "@/config/site";
 import Image from "next/image";
 
 const popularTreatments = [
-    { label: "Piles", icon: GeneralSurgery, href: "/doctor/near-me/treat/general-surgery/laser-piles-treatment-cost" },
-    { label: "Fistula", icon: GeneralSurgery, href: "/doctor/near-me/treat/general-surgery/fistula-surgery-treatment" },
-    { label: "Kidney Stones", icon: Kidneys, href: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
-    { label: "Hernia", icon: GeneralSurgery, href: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair" },
+    { label: "Piles", icon: GeneralSurgery, href: "/doctor/near-me/treat/proctology/laser-piles-treatment" },
+    { label: "Fistula", icon: GeneralSurgery, href: "/doctor/near-me/treat/proctology/fistula-surgery-treatment" },
+    { label: "Kidney Stones", icon: Kidneys, href: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
+    { label: "Hernia", icon: GeneralSurgery, href: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair-surgery" },
     { label: "Gallstone", icon: GeneralSurgery, href: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
-    { label: "Knee Replace", icon: Orthopaedics, href: "/doctor/near-me/treat/orthopaedics/total-knee-replacement-cost" },
-    { label: "Cataract", icon: Eye, href: "/doctor/near-me/treat/ophthalmology" },
+    { label: "Knee Replace", icon: Orthopaedics, href: "/doctor/near-me/treat/orthopaedics/robotic-knee-replacement" },
+    { label: "Cataract", icon: Eye, href: "/doctor/near-me/treat/ophthalmology/advanced-cataract-surgery" },
     { label: "Gynaecology", icon: Gynecology, href: "/doctor/near-me/treat/obstetrics-gynaecology" },
 ];
 

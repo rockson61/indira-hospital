@@ -1,4 +1,4 @@
-'use client'
+
 
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
@@ -10,7 +10,7 @@ export default function PsychiatryDepartmentPage() {
             title="Elite Psychiatry & Mental Wellness Center"
             slug="psychiatry"
             shortDescription="Comprehensive Clinical Psychiatry, Psychotherapy, and De-addiction services led by senior mental health consultants."
-            fullDescription={`
+            fullDescription={(
                 <div className="psychiatry-pillar-content space-y-20">
                     {/* ── 1. The Clinical Mental Health Vision ──────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
@@ -43,7 +43,7 @@ export default function PsychiatryDepartmentPage() {
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
                                 <h4 className="text-2xl font-bold text-blue-300 mb-4 italic">De-addiction & Rehab</h4>
-                                <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium italic">
+                                <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
                                     Trusted, confidential paths to recovery. From <strong>Alcohol Withdrawal Management</strong> to <strong>Substance Abuse Counseling</strong>, we focus on long-term sobriety and social reintegration.
                                 </p>
                                 <ul className="space-y-2">
@@ -135,7 +135,7 @@ export default function PsychiatryDepartmentPage() {
                                 </div>
                             ))}
                         </div>
-                        <p className="font-bold text-slate-900 dark:text-slate-100 italic italic">
+                        <p className="font-bold text-slate-900 dark:text-slate-100 italic">
                             Absolute mental wellness is 30% pharmacotherapy and 70% psychological resilience building. Our psychologists provide <strong>CBT-Based Toolkits</strong> for managing stress and anxiety in real-world scenarios.
                         </p>
                     </section>
@@ -188,7 +188,7 @@ export default function PsychiatryDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={[
                 { name: "Clinical Psychiatry", link: "/doctor/near-me/treat/psychiatry" },
                 { name: "CBT/DBT Psychotherapy", link: "/doctor/near-me/treat/psychiatry" },

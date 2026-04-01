@@ -1,7 +1,8 @@
-'use client'
+
 
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
+import Link from 'next/link'
 import { Ribbon, Shield, Target, Microscope } from "lucide-react"
 
 export default function OncologyDepartmentPage() {
@@ -10,11 +11,11 @@ export default function OncologyDepartmentPage() {
             title="Elite Oncology & Cancer Center"
             slug="oncology"
             shortDescription="Multidisciplinary cancer care combining radical surgical precision with the latest targeted medical therapies."
-            fullDescription={`
-                <div className="oncology-pillar-content space-y-20">
+            fullDescription={(
+                <div className="oncology-pillar-content space-y-20 text-left">
                     {/* ── 1. The Oncology Mission: A Multidisciplinary Approach ───── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             Radical Precision: Excellence in Comprehensive Cancer Care
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -29,7 +30,7 @@ export default function OncologyDepartmentPage() {
                         <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
                             <div className="p-8 bg-rose-50 dark:bg-rose-900/20 rounded-[2.5rem] border border-rose-100 dark:border-rose-800 shadow-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 blur-3xl group-hover:bg-rose-500/20 transition-all"></div>
-                                <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2">
+                                <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2 italic">
                                     The Tumor Board Synergy
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
@@ -42,7 +43,7 @@ export default function OncologyDepartmentPage() {
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-rose-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
-                                <h4 className="text-2xl font-bold text-rose-300 mb-4 italic">Radical Surgical Oncology</h4>
+                                <h4 className="text-2xl font-bold text-rose-300 mb-4 italic uppercase tracking-tighter">Radical Surgical Oncology</h4>
                                 <p className="text-rose-100/60 text-sm leading-relaxed mb-6 italic font-medium">
                                     Leading the region in curative resections for Breast, Oral, and GI cancers. We focus on <strong>R0 Resection</strong>—achieving microscopic negative margins to ensure total tumor clearance.
                                 </p>
@@ -61,7 +62,7 @@ export default function OncologyDepartmentPage() {
                             <div className="h-1 w-24 bg-rose-600 dark:bg-rose-500 mx-auto mt-4 rounded-full"></div>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-3 gap-8 text-left">
                             {/* Vertical 1: Surgical Oncology */}
                             <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
                                 <div className="p-8 flex-1 flex flex-col justify-between">
@@ -76,7 +77,7 @@ export default function OncologyDepartmentPage() {
                                             ))}
                                         </ul>
                                     </div>
-                                    <Link href="/doctor/near-me/treat/oncology/surgical-oncology-center" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
+                                    <Link href="/doctor/near-me/treat/oncology/surgical-oncology-center" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest italic">
                                         View Surgical Unit
                                     </Link>
                                 </div>
@@ -96,7 +97,7 @@ export default function OncologyDepartmentPage() {
                                             ))}
                                         </ul>
                                     </div>
-                                    <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
+                                    <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest italic">
                                         View Systemic Unit
                                     </Link>
                                 </div>
@@ -116,7 +117,7 @@ export default function OncologyDepartmentPage() {
                                             ))}
                                         </ul>
                                     </div>
-                                    <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
+                                    <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest italic">
                                         View Support Unit
                                     </Link>
                                 </div>
@@ -125,7 +126,7 @@ export default function OncologyDepartmentPage() {
                     </section>
 
                     {/* ── 3. Educational Deep-Dive: Recognizing & Screening ────────── */}
-                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-rose-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+                    <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-rose-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
                         <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Early Detection: The Silent Shield</h3>
                         <p>
@@ -150,7 +151,7 @@ export default function OncologyDepartmentPage() {
                     </section>
 
                     {/* ── 4. Advanced Oncology FAQs ───────────────────────────────── */}
-                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
+                    <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
                         <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-rose-400 text-left">
@@ -169,7 +170,7 @@ export default function OncologyDepartmentPage() {
                                 },
                                 {
                                     q: "What are the common side effects of modern targeted chemotherapy?",
-                                    a: "Unlike traditional chemotherapy which impacts all fast-growing cells, modern 'Targeted Therapy' specific molecules in the cancer cells. Sid-effects are often more manageable, though they require careful monitoring of cardiac, liver, and skin health by our onco-medical team."
+                                    a: "Unlike traditional chemotherapy which impacts all fast-growing cells, modern 'Targeted Therapy' specific molecules in the cancer cells. Side-effects are often more manageable, though they require careful monitoring of cardiac, liver, and skin health by our onco-medical team."
                                 },
                                 {
                                     q: "Are cancer biopsies safe? Do they 'spread' the cancer?",
@@ -181,7 +182,7 @@ export default function OncologyDepartmentPage() {
                                 },
                                 {
                                     q: "Does Indira Hospital treat pediatric (childhood) cancers?",
-                                    a: "We provide diagnostic screening and supportive care for pediatric oncology. curative systemic treatment for complex childhood cancers is usually coordinated with our academic partner institutions for the highest level of specialized pediatric care."
+                                    a: "We provide diagnostic screening and supportive care for pediatric oncology. Curative systemic treatment for complex childhood cancers is usually coordinated with our academic partner institutions for the highest level of specialized pediatric care."
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
@@ -197,7 +198,7 @@ export default function OncologyDepartmentPage() {
                         </div>
                     </section>
                 </div>
-            `}
+            )}
             procedures={[
                 { name: "Surgical Resection", link: "/doctor/near-me/treat/oncology/surgical-oncology-center" },
                 { name: "Targeted Chemotherapy", link: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" },
