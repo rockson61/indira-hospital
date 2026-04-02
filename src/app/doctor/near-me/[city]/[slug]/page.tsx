@@ -375,15 +375,6 @@ async function ServiceView({ service, location, city, slug }: any) {
                 name={`${service.title} in ${location.name}`} 
                 description={`Indira Super Speciality Hospital provides elite ${service.title} care for patients in ${location.name}, ${location.district} district. We are NABH accredited and support CMCHIS Govt Scheme.`} 
                 url={`/${city}/${slug}`} 
-                data={{
-                    hospital: "Indira Super Speciality Hospital",
-                    location: location.name,
-                    district: location.district,
-                    scheme: "CMCHIS Friendly",
-                    rating: 4.9,
-                    reviewCount: 1250,
-                    serviceArea: location.name
-                }}
             />
             <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
                 <div className="absolute inset-0 opacity-20"
