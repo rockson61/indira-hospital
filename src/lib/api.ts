@@ -107,7 +107,9 @@ export const getServiceBySlug = unstable_cache(
             console.warn('[FALLBACK] CMS API Warning:', `Directus fallback: getServiceBySlug ${slug}`, error);
         }
 
-        const service = SEED_DATA.services.find((s: any) => s.slug === slug);
+        const service = SEED_DATA.services.find((s: any) => 
+            s.slug === slug || (s.aliases && s.aliases.includes(slug))
+        );
         if (!service) return null;
         return {
             ...service,
@@ -119,6 +121,23 @@ export const getServiceBySlug = unstable_cache(
         } as any;
     },
     ['directus-service-by-slug'],
+    { revalidate: 3600 }
+);
+
+import { TREATMENT_DATA } from './data/treatment-data';
+
+export const getTreatmentBySlug = unstable_cache(
+    async (slug: string) => {
+        const lowerSlug = slug.toLowerCase();
+        // First check standard TREATMENT_DATA
+        const treatment = TREATMENT_DATA.find(t => 
+            t.slug.toLowerCase() === lowerSlug || (t.aliases && t.aliases.some(a => a.toLowerCase() === lowerSlug))
+        );
+        if (treatment) return treatment;
+
+        return null;
+    },
+    ['treatment-by-slug'],
     { revalidate: 3600 }
 );
 
@@ -485,8 +504,60 @@ export const getSEOKeywords = unstable_cache(
 
 export const getSEOKeywordBySlug = unstable_cache(
     async (slug: string) => {
-        return SEO_KEYWORDS.find(k => k.slug === slug) || null;
+        const lowerSlug = slug.toLowerCase();
+        return SEO_KEYWORDS.find(k => k.slug.toLowerCase() === lowerSlug) || null;
     },
     ['seo-keyword-by-slug'],
     { revalidate: 36000 }
 );
+
+/**
+ * Generates rich, high-authority fallback content for SEO keywords that don't map to a specific treatment.
+ */
+export function getRichSEOContent(keyword: any, location: any) {
+    const title = keyword.title;
+    const dept = keyword.department || "Specialist Care";
+    
+    return `
+        <div class="space-y-6">
+            <p class="text-lg leading-relaxed">
+                Looking for the <strong>${title.toLowerCase()} in ${location.name}</strong>? At Indira Super Speciality Hospital, we bring world-class healthcare closer to home. Our facility is a recognized center of excellence in Tamil Nadu, combining decades of clinical expertise with the latest medical advancements in ${dept.toLowerCase()}.
+            </p>
+            
+            <div class="grid sm:grid-cols-2 gap-6 my-8">
+                <div class="p-5 rounded-2xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/50">
+                    <h4 class="font-bold text-indigo-900 dark:text-indigo-300 mb-2">Advanced Infrastructure</h4>
+                    <p class="text-sm text-indigo-800 dark:text-indigo-400">Equipped with 4+ ultra-modern operation theatres and state-of-the-art diagnostic wing for precision care.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950/30 border border-fuchsia-100 dark:border-fuchsia-900/50">
+                    <h4 class="font-bold text-fuchsia-900 dark:text-fuchsia-300 mb-2">Patient Safety First</h4>
+                    <p class="text-sm text-fuchsia-800 dark:text-fuchsia-400">NABH accredited protocols ensuring the highest standards of sterilization and post-operative safety for ${location.name} patients.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-8 mb-4 underline decoration-indigo-500 underline-offset-4">Why Choose Indira Hospital for ${dept}?</h3>
+            <ul class="space-y-3 list-none">
+                <li class="flex items-start gap-3">
+                    <span class="text-indigo-500 font-bold">✓</span>
+                    <span><strong>Experienced Surgeons</strong>: A dedicated team of 20+ specialized consultants available Round-the-Clock.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-indigo-500 font-bold">✓</span>
+                    <span><strong>Cashless Facilities</strong>: Empanelled with CMCHIS Govt Scheme and 50+ private health insurance networks.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-indigo-500 font-bold">✓</span>
+                    <span><strong>Modern Technology</strong>: Lead-Free high-definition laparoscopy and diode laser systems for minimally invasive surgery.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-indigo-500 font-bold">✓</span>
+                    <span><strong>Regional Accessibility</strong>: Direct transport and VIP assistance desk for patients arriving from ${location.name}.</span>
+                </li>
+            </ul>
+
+            <p class="mt-8 italic text-slate-500 text-sm border-l-4 border-slate-200 pl-4">
+                "Our mission at Indira Hospital is to provide international-standard healthcare to every resident of Tamil Nadu, ensuring that every patient from ${location.name} feels cared for at every step of their journey."
+            </p>
+        </div>
+    `;
+}

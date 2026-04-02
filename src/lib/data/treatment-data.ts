@@ -10,6 +10,7 @@ export interface TreatmentItem {
     benefits: string[] | { title: string; description: string; icon: string }[];
     faq?: { question: string; answer: string }[];
     relatedTreatments?: string[];
+    aliases?: string[];
     duration?: string;
     hospitalStay?: string;
     recoveryTime?: string;
@@ -44,6 +45,13 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-2",
         slug: "laser-piles-treatment",
+        aliases: [
+            "piles", "piles-treatment", "hemorrhoids", "fissure", "fistula", "proctology", "laser-piles",
+            "best-piles-hospital", "best-treatment-for-piles", "best-treatment-for-fissure", "piles-surgery-treatment",
+            "laser-treatment-for-piles", "piles-laser-surgery", "piles-specialist-doctor", "fistula-surgery-in-vellore",
+            "best-doctor-for-fistula-surgery", "laser-fistula-surgery-in-vellore", "best-hospital-for-piles-treatment",
+            "piles-doctor-in-vellore", "fissure-specialist-doctor", "medicine-for-piles-treatment"
+        ],
         parentServiceSlug: "proctology",
         title: "Laser Piles Treatment in Vellore, Tamil Nadu (Hemorrhoids)",
         shortDescription: "Painless, bloodless laser surgery for Hemorrhoids with same-day discharge.",
@@ -209,6 +217,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-10",
         slug: "prostate-surgery",
+        aliases: ["turp", "bph", "enlarged-prostate"],
         parentServiceSlug: "urology",
         title: "Laser Prostate Surgery (TURP/HoLEP)",
         shortDescription: "Advanced laser treatment for enlarged prostate (BPH).",
@@ -249,6 +258,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-13",
         slug: "root-canal-treatment",
+        aliases: ["rct", "tooth-pain", "dental-nerve"],
         parentServiceSlug: "dentistry",
         title: "Single-Sitting Laser Root Canal",
         shortDescription: "Painless, expert root canal therapy to save your natural teeth.",
@@ -432,6 +442,12 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-112",
         slug: "laser-kidney-stone-surgery",
+        aliases: [
+            "kidney-stone", "rirs", "pcnl", "stone-removal", 
+            "gall-bladder-surgery", "best-treatment-for-gall-bladder-stone", "gallstones-treatment",
+            "best-doctor-for-gallstones", "best-hospital-for-gallstones-treatment", "laser-surgery-for-gall-stones",
+            "gallstones-treatment-in-tn"
+        ],
         parentServiceSlug: "urology",
         title: "Laser Kidney Stone Surgery in Vellore, Tamil Nadu (RIRS/PCNL)",
         shortDescription: "Incision-less laser treatment (RIRS) and Mini-PCNL for complete stone clearance.",
@@ -500,8 +516,35 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         benefits: ["Immediate Relief from Burning and Pain", "Prevents Chronic Kidney Infections", "Reduces Risk of Recurrent UTIs", "Safe for Pregnancy (if applicable)"]
     },
     {
+        id: "t-117",
+        slug: "stapler-sunnath-surgery",
+        aliases: ["stapler-circumcision", "sunnath-surgery", "circumcision-treatment", "painless-circumcision"],
+        parentServiceSlug: "urology",
+        title: "Painless Stapler Sunnath (Circumcision) in Vellore, Tamil Nadu",
+        shortDescription: "Advanced ZSR/Stapler circumcision for infants and adults with zero stitches.",
+        fullDescription: "Experience the most advanced, bloodless <strong>Stapler Circumcision</strong> (ZSR/Stapler technique) at Indira Super Speciality Hospital. This revolutionary procedure ensures a stitch-less result, minimal downtime, and a perfectly aesthetic healing process. Our expert urologists perform this daily for both medical reasons (Balanitis/Phimosis) and religious Sunnath requirements, ensuring maximum comfort for patients of all ages.",
+        features: [
+            { title: "ZSR Stapler Tech", description: "World-class device for simultaneous cutting and stapling.", icon: "Zap" },
+            { title: "Stitch-less Result", description: "Silicone ring technology avoids messy traditional sutures.", icon: "Star" },
+            { title: "Day-Care Surgery", description: "Procedure takes only 15 minutes; discharge in 2 hours.", icon: "Clock" }
+        ],
+        benefits: [
+            { title: "No Blood Loss", description: "Clean surgical environment with rapid healing.", icon: "Shield" },
+            { title: "Immediate Recovery", description: "Return to work or school in just 24-48 hours.", icon: "Activity" },
+            { title: "Superior Aesthetics", description: "Uniform, clean results compared to manual clipping.", icon: "Sparkles" }
+        ],
+        faq: [
+            { question: "Is it suitable for infants?", answer: "Yes, we specialize in pediatric stapler circumcision with extra care for safety and comfort." },
+            { question: "Will it hurt afterwards?", answer: "Patients experience significantly less discomfort than traditional methods. Most don't require heavy pain medication." }
+        ]
+    },
+    {
         id: "t-707",
         slug: "varicose-veins-laser-treatment",
+        aliases: [
+            "laser-surgery-for-varicose-vein", "best-hospital-for-varicose-vein", "varicose-vein-treatment-in-vellore",
+            "surgeon-for-varicose-vein-treatment"
+        ],
         parentServiceSlug: "general-surgery",
         title: "Laser Varicose Veins Ablation (EVLA) in Vellore, Tamil Nadu",
         shortDescription: "Painless, non-surgical laser closure of diseased veins with immediate walk-home recovery.",
@@ -705,6 +748,19 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-139",
         slug: "ercp-bile-duct-stone-removal",
+        aliases: [
+            "ercp", "bile-duct-stone", "jaundice-treatment", "pancreatitis-management",
+            "best-hospital-in-vellore-for-gastro-problem", "best-hospital-for-gastrointestinal-issues",
+            "gastro-doctor-in-vellore", "endoscopy-in-vellore", "endoscopy-specialist-in-vellore",
+            "endoscopy-surgery-in-vellore", "ulcer-problem-treatment-in-vellore", "gastric-problem-treatment-in-vellore",
+            "gastric-problem-specialist-doctor-in-vellore", "blood-vomitting-treatment-in-vellore",
+            "blood-while-passing-motion-treatment-in-vellore", "blood-while-passing-stool-treatment-in-vellore",
+            "ibs-treatment-in-vellore", "rectal-prolapse-treatment-in-vellore", "laparoscopic-rectal-prolapse-surgery-treatment-in-vellore-tn",
+            "pain-while-passing-motion-treatment-specialist-in-vellore", "constipation-treatment-in-vellore",
+            "chronic-diarrhoea-treatment-in-vellore", "difficulty-in-swallowing-problem", "hiatus-hernia-problem-treatment-in-vellore",
+            "hiatus-hernia-problem-surgery-in-vellore", "hiatus-hernia-surgeon-in-vellore", "best-hospital-for-hiatus-hernia-treatment-in-vellore",
+            "best-surgeon-for-hiatus-hernia-problem-treatment-in-vellore-tn"
+        ],
         parentServiceSlug: "gastroenterology",
         title: "ERCP Bile Duct",
         shortDescription: "Advanced endoscopic removal of bile duct stones and stents.",
@@ -2905,6 +2961,13 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-701",
         slug: "laparoscopic-cholecystectomy-gallbladder-removal",
+        aliases: [
+            "gallbladder-surgery", "gall-stone-surgery", "best-treatment-for-gall-stones", 
+            "cholecystitis-treatment", "gallbladder-removal", "laparoscopic-gallbladder-surgery",
+            "best-doctor-for-gallbladder", "gall-bladder-surgery", "best-treatment-for-gall-bladder-stone",
+            "gallstones-treatment", "best-doctor-for-gallstones", "laser-surgery-for-gall-stones",
+            "best-hospital-for-gallstones-treatment", "gallstones-treatment-in-tn"
+        ],
         parentServiceSlug: "general-surgery",
         title: "Advanced Laparoscopic Cholecystectomy: Gallbladder Removal",
         shortDescription: "Gold-standard minimally invasive removal of the gallbladder for gallstones and cholecystitis using 4K imaging.",
@@ -2928,6 +2991,17 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-702",
         slug: "laparoscopic-hernia-repair-surgery",
+        aliases: [
+            "hernia-surgery", "mesh-repair-hernia", "inguinal-hernia", "umbilical-hernia", 
+            "incisional-hernia", "best-treatment-in-vellore-for-hernia", "hernia-specialist-doctor-in-vellore",
+            "best-hospital-for-hernia-surgery-in-vellore", "laser-hernia-surgery-in-vellore-tn", 
+            "best-hospital-for-hernia-treatment-in-vellore-tn", "hernia-surgery-in-vellore", 
+            "hernia-surgeon-in-vellore", "umbilical-hernia-treatment-in-vellore", "umbilical-hernia-surgery-in-vellore",
+            "laparoscopic-umbilical-hernia-surgery-in-vellore", "best-hospital-for-umbilical-hernia-surgery-in-vellore",
+            "best-hospital-for-umbilical-hernia-treatment-in-vellore", "best-hospital-for-laparoscopic-umbilical-hernia-surgery-in-vellore",
+            "best-doctor-for-umbilical-hernia-surgery-in-vellore", "best-hospital-for-inguinal-hernia-surgery-in-vellore",
+            "hernia-surgery-specialist-in-vellore", "laparoscopy-hernia-surgeon-in-vellore", "medicine-for-hernia-treatment"
+        ],
         parentServiceSlug: "general-surgery",
         title: "Advanced Laparoscopic Hernia Repair",
         shortDescription: "State-of-the-art mesh reinforcement for Inguinal, Umbilical, and Incisional hernias using TAPP and TEP techniques.",
@@ -2951,6 +3025,11 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     {
         id: "t-703",
         slug: "emergency-laparoscopic-appendectomy",
+        aliases: [
+            "appendix-surgery", "appendix-removal", "acute-appendicitis-treatment", 
+            "appendix-treatment-in-vellore", "appendix-surgery-in-vellore", "appendix-treatment-in-vellore-tn",
+            "laparoscopic-appendix-surgery-in-vellore", "best-hospital-in-vellore-for-appendix-surgery-treatment"
+        ],
         parentServiceSlug: "general-surgery",
         title: "Emergency Laparoscopic Appendectomy",
         shortDescription: "Rapid-response 24/7 keyhole removal of the appendix for acute appendicitis to prevent rupture and peritonitis.",

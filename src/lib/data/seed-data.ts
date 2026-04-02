@@ -412,6 +412,7 @@ export const SEED_DATA = {
         {
             "title": "Anaesthesiology",
             "slug": "anaesthesiology",
+            "aliases": ["anaesthesia", "anesthesiology", "pain-clinic"],
             "short_description": "Advanced Anaesthesiology care ensuring a safe, painless surgical experience at Indira Hospital.",
             "icon": "Syringe",
             "full_description": "<h2>Advanced Anaesthesiology & Pain Management at Indira Hospital</h2>\n<p>At Indira Super Speciality Hospital, your safety, comfort, and swift recovery are our absolute priorities. Whether you are undergoing a minor day-care procedure or complex surgery, our <strong>Department of Anaesthesiology</strong> utilizes state-of-the-art monitoring systems and advanced anesthetic protocols to ensure a smooth, pain-free experience.</p>\n<h3>Why Trust Indira Hospital for Your Procedure?</h3>\n<ul>\n<li><strong>Pre-Anaesthetic Checkup (PAC)</strong>: Thorough pre-surgical evaluation to determine the safest anesthetic strategy tailored to your specific health profile.</li>\n<li><strong>Comprehensive Techniques</strong>: Expertise in General Anaesthesia, Regional Anesthesia (Spinal/Epidural), and targeted Nerve Blocks for enhanced post-operative comfort.</li>\n<li><strong>Advanced Monitoring</strong>: Continuous, real-time tracking of vital parameters by our dedicated ICU and anaesthesia specialists throughout the procedure.</li>\n<li><strong>Post-Surgical Pain Management</strong>: Specialized acute pain management protocols designed to accelerate recovery and reduce reliance on strong medications.</li>\n</ul>\n<p>Our highly experienced anaesthesiologists work in tandem with the surgical teams to mitigate risks and deliver the highest standard of perioperative care in Vellore.</p>"
@@ -419,6 +420,7 @@ export const SEED_DATA = {
         {
             "title": "Bariatrics",
             "slug": "bariatrics",
+            "aliases": ["obesity-surgery", "weight-loss-surgery", "sleeve-gastrectomy"],
             "short_description": "Transform your life with safe, effective Bariatric & Weight Loss Surgery at Indira Hospital.",
             "icon": "Scale",
             "specialists": ["dr-karan-shankar"],
@@ -427,6 +429,7 @@ export const SEED_DATA = {
         {
             "title": "Cardiac Sciences",
             "slug": "cardiac-sciences",
+            "aliases": ["cardiology", "heart-specialist", "heart-surgery", "cardiac-surgeon"],
             "short_description": "Premier Cardiac Sciences offering advanced interventional and surgical heart care in Vellore.",
             "icon": "Heart",
             "full_description": "<h2>World-Class Cardiac Care at Indira Super Speciality Hospital</h2>\n<p>Your heart deserves nothing but the best. The <strong>Department of Cardiac Sciences</strong> at Indira Hospital is a Center of Excellence equipped with cutting-edge technology and renowned cardiologists dedicated to the prevention, diagnosis, and treatment of complex heart conditions.</p>\n<h3>Comprehensive Cardiology & Cardiovascular Surgery</h3>\n<ul>\n<li><strong>Interventional Cardiology</strong>: 24/7 Primary Angioplasty for heart attacks (STEMI), complex coronary stenting, and pacemaker implantations performed in our advanced Cath Lab.</li>\n<li><strong>Non-Invasive Cardiology</strong>: Pinpoint accurate diagnostics including 2D Echocardiography, TMT (Treadmill Test), Holter monitoring, and comprehensive cardiac health check-ups.</li>\n<li><strong>Cardiothoracic & Vascular Surgery (CTVS)</strong>: Expertise in Coronary Artery Bypass Grafting (CABG), heart valve repair/replacement, and thoracic vascular surgeries.</li>\n<li><strong>Heart Failure & Arrhythmia Management</strong>: Specialized clinics offering targeted therapies and advanced device implantations (ICDs, CRT) for optimal heart rhythm and function.</li>\n</ul>\n<p>With a state-of-the-art Cardiac ICU (CCU) and a team of dedicated cardiac intensivists, we ensure rapid triage and critical care when every second counts. Experience compassionate, evidence-based heart care at Indira Hospital.</p>"
@@ -434,6 +437,7 @@ export const SEED_DATA = {
         {
             "title": "Cosmetology & Plastic Surgery",
             "slug": "cosmetology-plastic-surgery",
+            "aliases": ["plastic-surgery", "cosmetology", "cosmetic-surgeon", "rhinoplasty", "liposuction"],
             "short_description": "Expert Cosmetology and Plastic Surgery for aesthetic enhancement and reconstructive restoration.",
             "icon": "Sparkles",
             "full_description": "<h2>Expert Cosmetology & Reconstructive Plastic Surgery in Vellore</h2>\n<p>Enhance your natural beauty and restore function with the <strong>Department of Cosmetology & Plastic Surgery</strong> at Indira Super Speciality Hospital. Our board-certified plastic surgeons combine surgical precision with an artistic eye, utilizing state-of-the-art techniques to deliver safe, natural-looking results.</p>\n<h3>Aesthetic & Reconstructive Excellence</h3>\n<ul>\n<li><strong>Cosmetic Surgery</strong>: Transformative procedures including Rhinoplasty (nose reshaping), Liposuction, Tummy Tucks (Abdominoplasty), Breast Augmentation/Reduction, and Facelifts designed to boost your confidence.</li>\n<li><strong>Non-Surgical Aesthetics</strong>: Advanced, minimally invasive treatments such as Botox, dermal fillers, chemical peels, and laser skin rejuvenation for a youthful, radiant glow without the downtime.</li>\n<li><strong>Reconstructive Surgery</strong>: Critical restorative procedures following trauma, burn injuries, tumor excisions, or for congenital anomalies. We focus on restoring both aesthetics and essential function.</li>\n<li><strong>Scar Revision & Burn Care</strong>: Specialized treatments to minimize scarring and manage acute burns with advanced wound care techniques.</li>\n</ul>\n<p>We prioritize your privacy, comfort, and safety. Every procedure begins with a detailed, personalized consultation to align our surgical plan perfectly with your aesthetic goals and medical needs.</p>"
@@ -448,6 +452,7 @@ export const SEED_DATA = {
         {
             "title": "Dentistry",
             "slug": "dentistry",
+            "aliases": ["dental", "dentist", "tooth-doctor", "smile-correction", "root-canal"],
             "short_description": "Advanced specialized care in Dentistry at Indira Super Speciality Hospital.",
             "icon": "Smile",
             "specialists": ["dr-rockson-samuel", "dr-dhanushmi"],
@@ -470,6 +475,7 @@ export const SEED_DATA = {
         {
             "title": "ENT",
             "slug": "ent",
+            "aliases": ["ear-nose-throat", "otorhinolaryngology", "sinus-specialist", "tonsil-surgery"],
             "short_description": "Advanced micro-surgery and comprehensive care for Ear, Nose, and Throat disorders.",
             "icon": "Ear",
             "specialists": ["dr-gayathri"],
@@ -485,6 +491,7 @@ export const SEED_DATA = {
         {
             "title": "Endocrinology & Diabetes Care",
             "slug": "endocrinology-diabetes-care",
+            "aliases": ["diabetology", "diabetes-specialist", "thyroid-specialist", "hormone-doctor"],
             "short_description": "Expert Endocrinology & Diabetes management for optimal hormonal and metabolic health.",
             "icon": "Activity",
             "full_description": "<h2>Premier Endocrinology & Complete Diabetes Care in Vellore</h2>\n<p>Hormonal imbalances can disrupt your entire life. The <strong>Department of Endocrinology & Diabetes Care</strong> at Indira Super Speciality Hospital specializes in the precise diagnosis and comprehensive management of complex endocrine, metabolic, and hormonal disorders.</p>\n<h3>Comprehensive Management & Reversal Strategies</h3>\n<ul>\n<li><strong>Advanced Diabetes Care</strong>: Holistic management of Type 1, Type 2, and Gestational Diabetes. We focus on achieving tight glycemic control, preventing complications (like diabetic foot and neuropathy), and exploring diabetes reversal strategies through lifestyle integration.</li>\n<li><strong>Thyroid Disorders</strong>: Expert evaluation and treatment of Hypothyroidism, Hyperthyroidism, Hashimotos disease, Thyroid nodules, and Thyroid cancers.</li>\n<li><strong>Reproductive Endocrinology</strong>: Targeted therapies for Polycystic Ovary Syndrome (PCOS), menstrual irregularities, and hormonal causes of infertility.</li>\n<li><strong>Bone & Mineral Disorders</strong>: Effective management of Osteoporosis, Vitamin D deficiency, and hyperparathyroidism to prevent fractures and maintain bone density.</li>\n</ul>\n<p>Partnering closely with dietitians and diabetic educators, our endocrinologists provide a multidisciplinary approach that empowers you to take control of your metabolic health and enjoy a vibrant life.</p>"
@@ -499,6 +506,7 @@ export const SEED_DATA = {
         {
             "title": "Gastroenterology & Hepatology",
             "slug": "gastroenterology-hepatology",
+            "aliases": ["gastroenterology", "gastrology", "liver-specialist", "digestive-health"],
             "short_description": "Advanced Gastrointestinal, Liver, and Pancreatic care by top specialists.",
             "icon": "Stethoscope",
             "full_description": "<h2>Advanced Digestive Health & Liver Care at Indira Hospital</h2>\n<p>Your digestive health is central to your overall well-being. The <strong>Department of Gastroenterology & Hepatology</strong> at Indira Super Speciality Hospital offers comprehensive, state-of-the-art diagnostic and therapeutic care for diseases of the digestive tract, liver, gallbladder, and pancreas.</p>\n<h3>State-of-the-Art Endoscopy & Hepatology</h3>\n<ul>\n<li><strong>Diagnostic & Therapeutic Endoscopy</strong>: Advanced Upper GI Endoscopy and Colonoscopy for the painless detection and removal of polyps, ulcers, and early-stage GI cancers.</li>\n<li><strong>ERCP (Endoscopic Retrograde Cholangiopancreatography)</strong>: Expert minimally invasive management of bile duct stones, strictures, and pancreatic disorders without the need for open surgery.</li>\n<li><strong>Comprehensive Liver Care</strong>: Specialized treatment for Hepatitis B & C, Fatty Liver Disease (NASH), Cirrhosis, and Liver Failure management by renowned hepatologists.</li>\n<li><strong>Functional GI Disorders</strong>: Targeted therapies for Irritable Bowel Syndrome (IBS), severe Acid Reflux (GERD), and Chronic Constipation.</li>\n</ul>\n<p>Equipped with ultra-modern endoscopic suites and working alongside our GI surgeons, we provide a seamless, multidisciplinary approach to resolving complex digestive issues quickly and safely.</p>"
@@ -513,6 +521,7 @@ export const SEED_DATA = {
         {
             "title": "General Surgery",
             "slug": "general-surgery",
+            "aliases": ["laparoscopic-surgery", "laser-surgery", "piles-specialist", "hernia-specialist", "fistula-specialist"],
             "short_description": "Precision General and Laparoscopic surgeries designed for minimal pain and faster recovery.",
             "icon": "Scalpel",
             "specialists": ["dr-shankar", "dr-karan-shankar"],
@@ -732,6 +741,7 @@ export const SEED_DATA = {
         {
             "title": "Neuro and Spine surgeon",
             "slug": "neuro-and-spine-surgeon",
+            "aliases": ["neurosurgery", "spine-surgery", "brain-surgeon", "neurosurgeon"],
             "short_description": "High-precision expert microsurgery for complex disorders of the brain and spine.",
             "icon": "Brain",
             "full_description": "<h2>Expert Neurosurgery & Advanced Spinal Interventions</h2>\n<p>When it comes to the brain and spine, absolute precision is non-negotiable. The <strong>Department of Neurosurgery</strong> at Indira Super Speciality Hospital utilizes the most advanced operative microscopes, neuro-navigation systems, and minimally invasive techniques to treat complex central nervous system disorders.</p>\n<h3>Advanced Surgical Interventions</h3>\n<p>Our renowned neurosurgical team handles the most challenging cases with a focus on maximizing neurological function and post-operative recovery:</p>\n<ul>\n<li><strong>Minimally Invasive Spine Surgery (MISS)</strong>: Advanced microscopic solutions for severe slip discs, herniations, spinal canal stenosis, and sophisticated spinal fixations for trauma, resulting in significantly less pain and faster mobilization.</li>\n<li><strong>Complex Brain Tumor Surgery</strong>: High-precision excision of benign and malignant intracranial tumors using state-of-the-art intraoperative monitoring to protect critical brain areas.</li>\n<li><strong>Emergency Neuro-Trauma Care</strong>: Specialized, rapid-response surgical management for life-threatening traumatic brain injuries (TBI) and devastating spinal cord traumas available 24 hours a day, 365 days a year.</li>\n<li><strong>Pediatric Neurosurgery</strong>: Compassionate, highly specialized operative care for congenital anomalies of the pediatric brain and spine, including hydrocephalus and spina bifida.</li>\n</ul>\n<p>Supported by a dedicated Neuro-ICU, we provide comprehensive peri-operative monitoring to ensure the highest standards of safety and the best possible outcomes in Vellore.</p>"
@@ -739,6 +749,7 @@ export const SEED_DATA = {
         {
             "title": "Neurosciences",
             "slug": "neurosciences",
+            "aliases": ["neurology", "neurologist", "stroke-specialist", "epilepsy-care"],
             "short_description": "Comprehensive medical management and targeted therapies for complex neurological disorders.",
             "icon": "Brain",
             "full_description": "<h2>Comprehensive Medical Neurology & Stroke Care</h2>\n<p>The human nervous system is incredibly complex. The <strong>Department of Neurosciences (Neurology)</strong> at Indira Super Speciality Hospital offers an integrated, multidisciplinary approach to the precise diagnosis and comprehensive management of disorders affecting the brain, spinal cord, nerves, and muscles.</p>\n<h3>Advanced Clinical Neurology Services</h3>\n<p>Our expert neurologists utilize sophisticated diagnostics to develop highly effective, long-term therapeutic plans:</p>\n<ul>\n<li><strong>Acute Stroke Unit</strong>: A rapid-response team dedicated to the immediate management of acute ischemic and hemorrhagic strokes. We offer time-critical therapies (thrombolysis) and intense, structured stroke rehabilitation.</li>\n<li><strong>Comprehensive Epilepsy Clinic</strong>: Advanced EEG-guided diagnostics and meticulously managed medical therapies aimed at controlling complex seizure disorders and restoring independence.</li>\n<li><strong>Movement Disorders & Parkinson’s Care</strong>: Targeted medical management and deeply personalized therapy plans for Parkinson's disease, essential tremors, dystonia, and spasticity.</li>\n<li><strong>Advanced Neuro-Diagnostics</strong>: Pinpoint accurate evaluations utilizing high-resolution MRI, continuous EEG, Electromyography (EMG), and Nerve Conduction Studies (NCS) to uncover the root cause of neurological symptoms.</li>\n</ul>\n<p>We are dedicated to combating progressive neurological illnesses, partnering with highly skilled physiotherapists and occupational therapists to dramatically improve your quality of life.</p>"
@@ -753,6 +764,7 @@ export const SEED_DATA = {
         {
             "title": "Obstetrics & Gynecology & Reproductive Medicine",
             "slug": "obstetrics-gynecology-reproductive-medicine",
+            "aliases": ["gynecology", "obstetrics", "maternity", "fertility", "pregnancy-care", "gynaecology", "obstetrics-gynaecology"],
             "short_description": "Elite Women's Healthcare extending from comprehensive maternity to advanced minimally invasive gynecology.",
             "icon": "Baby",
             "full_description": "<h2>Comprehensive Obstetrics, Gynecology & Reproductive Medicine</h2>\n<p>Empowering women through exceptional healthcare at every life stage. The <strong>Department of Obstetrics & Gynecology</strong> at Indira Super Speciality Hospital is a sanctuary of complete, compassionate care, ensuring safety, privacy, and clinical excellence for women from adolescence to post-menopause.</p>\n<h3>Complete Maternity & Gynecological Solutions</h3>\n<p>Whether you’re expecting a child or navigating complex gynecological health issues, our renowned specialists provide unmatched support:</p>\n<ul>\n<li><strong>High-Risk Maternity Care</strong>: Dedicated 24/7 obstetric support, world-class labor suites, painless delivery options (epidurals), and meticulous management of complex, high-risk pregnancies.</li>\n<li><strong>Advanced Laparoscopic Gynecology</strong>: Minimally invasive, rapid-recovery surgical interventions for complex uterine fibroids, persistent ovarian cysts, severe endometriosis, and total laparoscopic hysterectomies.</li>\n<li><strong>Reproductive Medicine & Fertility</strong>: Deep-dive diagnostic evaluation and highly advanced, compassionate therapeutic protocols for couples facing conception difficulties.</li>\n<li><strong>Preventive Gynecological Screenings</strong>: Comprehensive, proactive well-woman health checks, including advanced Pap smears, high-resolution mammograms, and vital bone-density evaluations for menopausal health.</li>\n</ul>\n<p>Supported continuously by our state-of-the-art Neonatal ICU (NICU), we guarantee the safest, most supportive environment for both mother and baby.</p>"
@@ -928,6 +940,7 @@ export const SEED_DATA = {
         {
             "title": "Urology",
             "slug": "urology",
+            "aliases": ["urologist", "kidney-stone", "prostate-specialist", "urinary-problems"],
             "short_description": "Advanced care for kidney stones, prostate, and urinary tract issues.",
             "icon": "Activity",
             "full_description": "\n            <p>The Urology Department offers world-class care for diseases of the urinary tract in men and women, and the male reproductive system. We are renowned for our expertise in Endourology and Laser treatments for kidney stones.</p>\n            \n            <h3 class=\"text-lg font-bold text-gray-900 dark:text-white mt-6 mb-3\">Services Offered</h3>\n            <ul class=\"list-disc pl-5 space-y-2 mb-6\">\n                <li><strong>Kidney Stone Management:</strong> PCNL (Keyhole surgery for large stones), URSL (Ureteroscopy), and RIRS (Flexible ureteroscopy with Laser) for complete stone clearance without cuts.</li>\n                <li><strong>Prostate Health:</strong> TURP (Transurethral Resection of the Prostate) and Laser Prostatectomy for enlarged prostate (BPH).</li>\n                <li><strong>Male Infertility & Sexual Health:</strong> Evaluation and treatment including microscopic surgeries.</li>\n                <li><strong>Uro-Oncology:</strong> Diagnosis and treatment of Bladder, Kidney, and Prostate cancers.</li>\n                <li><strong>UTI Management:</strong> Comprehensive car for recurrent Urinary Tract Infections.</li>\n            </ul>\n        ",
@@ -1218,6 +1231,7 @@ export const SEED_DATA = {
         {
             "title": "Orthopaedics",
             "slug": "orthopaedics",
+            "aliases": ["orthopedic", "orthopaedics-surgeon", "joint-replacement", "knee-replacement"],
             "short_description": "Joint replacements, spine surgery, and complex trauma care.",
             "icon": "Bone",
             "full_description": "\n            <p>The Department of Orthopaedics & Trauma Surgery is a center of excellence dealing with bone and joint disorders. We are equipped with a C-Arm facility and dedicated orthopaedic OT for precision surgeries.</p>\n            \n            <h3 class=\"text-lg font-bold text-gray-900 dark:text-white mt-6 mb-3\">Specialized Treatments</h3>\n            <ul class=\"list-disc pl-5 space-y-2 mb-6\">\n                <li><strong>Joint Replacement:</strong> Total Knee Replacement (TKR) and Total Hip Replacement (THR) using high-quality implants for long-lasting mobility.</li>\n                <li><strong>Trauma & Fractures:</strong> 24/7 management of complex fractures, multiple trauma, and polytrauma cases.</li>\n                <li><strong>Spine Surgery:</strong> Treatment for Disc Prolapse (Sciatica), Spondylosis, and spinal fractures.</li>\n                <li><strong>Arthroscopy:</strong> Keyhole surgery for ACL reconstruction, meniscus tears, and sports injuries.</li>\n                <li><strong>Geriatric Orthopaedics:</strong> Specialized care for osteoporosis and fractures in the elderly.</li>\n            </ul>\n        ",

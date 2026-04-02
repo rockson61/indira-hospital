@@ -2,7 +2,10 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getDoctors, getDoctorBySlug, getServices, getServiceBySlug, getSEOKeywords, getSEOKeywordBySlug } from "@/lib/api";
+import { 
+    getDoctors, getDoctorBySlug, getServices, getServiceBySlug, 
+    getSEOKeywords, getSEOKeywordBySlug, getTreatmentBySlug, getRichSEOContent 
+} from "@/lib/api";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import {
     ChevronRight, MapPin, Phone, MessageCircle, Star, Award,
@@ -46,9 +49,8 @@ export async function generateStaticParams() {
         }
     }
 
-    // 2. High-Intent SEO Keywords for Top 12 Hub Locations (~1100+ pages)
-    // Vellore, Katpadi, Ranipet, Gudiyatham, Ambur, Arcot (implied), Walajapet, etc.
-    const hubSlugs = ['vellore', 'katpadi', 'ranipet', 'gudiyatham', 'ambur', 'vaniyambadi', 'kanchipuram', 'tiruvannamalai', 'arcot', 'walajapet', 'chennai', 'hosur'];
+    // Vellore, Katpadi, Ranipet, Gudiyatham, Ambur, Arcot, Walajapet, Tamil Nadu, etc.
+    const hubSlugs = ['vellore', 'katpadi', 'ranipet', 'gudiyatham', 'ambur', 'vaniyambadi', 'kanchipuram', 'tiruvannamalai', 'arcot', 'walajapet', 'chennai', 'hosur', 'tamil-nadu'];
     const hubLocations = locations.filter(l => hubSlugs.includes(l.slug));
 
     for (const loc of hubLocations) {
@@ -94,8 +96,8 @@ export async function generateMetadata({
     if (doctor) {
         const dept = typeof doctor.department === "string" ? doctor.department : (doctor.department as any)?.name || "";
         const specialistTitle = dept ? getSpecialistTitle(dept) : "Specialist";
-        const title = `Best ${specialistTitle} in ${location.name} — Dr. ${doctor.name} | Indira Hospital`;
-        const description = `Looking for the best ${specialistTitle.toLowerCase()} in ${location.name}? Consult with Dr. ${doctor.name}, an expert serving patients from ${location.name} at Indira Super Speciality Hospital. ${doctor.experience || 15}+ years experience. Book an appointment today.`;
+        const title = `Best ${specialistTitle} in ${location.name} — Dr. ${doctor.name} | Ranked #1 In ${location.district}`;
+        const description = `Looking for the best ${specialistTitle.toLowerCase()} in ${location.name}? Consult Dr. ${doctor.name}, an elite specialist serving patients from ${location.name} at Indira Super Speciality Hospital. Expert clinical care, NABH Accredited. Book today.`;
         return {
             title,
             description,
@@ -107,8 +109,8 @@ export async function generateMetadata({
     const service = await getServiceBySlug(slug).catch(() => null) as any;
     if (service) {
         const specialistTitle = getSpecialistTitle(service.title);
-        const title = `Best ${specialistTitle} in ${location.name} — Top-Rated Specialist Clinic | Indira Hospital`;
-        const description = `Searching for top ${specialistTitle.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital offers world-class ${service.title.toLowerCase()} care near you. Same-day appointments, NABH accredited, and expert surgeons. Visit us today.`;
+        const title = `Best ${specialistTitle} in ${location.name} | Ranked #1 Center for ${service.title}`;
+        const description = `Searching for top-rated ${specialistTitle.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital provides elite ${service.title.toLowerCase()} care. Advanced laser & robotic surgery available for patients across ${location.name}. NABH Accredited facility.`;
         return {
             title,
             description,
@@ -119,8 +121,20 @@ export async function generateMetadata({
     // Check for SEO Keyword
     const seoKeyword = await getSEOKeywordBySlug(slug).catch(() => null);
     if (seoKeyword) {
-        const title = `Best ${seoKeyword.title} in ${location.name}, Tamil Nadu | Indira Hospital`;
-        const description = `Looking for the ${seoKeyword.title.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital provides elite medical care and advanced surgical solutions for patients in ${location.name} and surrounding Tamil Nadu regions.`;
+        const title = `Best ${seoKeyword.title} in ${location.name}, Tamil Nadu | Ranked #1 Hospital for ${seoKeyword.title}`;
+        const description = `Looking for the ${seoKeyword.title.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital provides elite medical care and advanced surgical solutions for patients in ${location.name} and across Tamil Nadu.`;
+        return {
+            title,
+            description,
+            openGraph: { title, description },
+        };
+    }
+
+    // Check for treatment
+    const treatment = await getTreatmentBySlug(slug).catch(() => null);
+    if (treatment) {
+        const title = `Best ${treatment.title} in ${location.name} | Indira Super Speciality Hospital`;
+        const description = `Advanced ${treatment.title} in ${location.name} at Indira Super Speciality Hospital. Expert clinical care and minimally invasive surgical solutions. Serving patients in ${location.district} district.`;
         return {
             title,
             description,
@@ -151,14 +165,31 @@ export default async function UnifiedLocationSlugPage({
         return <ServiceView service={service} location={location} city={city} slug={slug} />;
     }
 
+    const treatment = await getTreatmentBySlug(slug).catch(() => null);
+    if (treatment) {
+        // Map Treatment to a Service-like object for ServiceView
+        const mappedService = {
+            title: treatment.title,
+            slug: treatment.slug,
+            department: treatment.parentServiceSlug,
+            full_description: treatment.fullDescription,
+            features: treatment.features,
+            benefits: treatment.benefits,
+            faq: treatment.faq
+        };
+        return <ServiceView service={mappedService} location={location} city={city} slug={slug} isTreatment={true} />;
+    }
+
     const seoKeyword = await getSEOKeywordBySlug(slug).catch(() => null);
     if (seoKeyword) {
-        // Map SEO Keyword to a Service-like object for ServiceView
+        // Use the high-authority fallback content engine
+        const richDescription = getRichSEOContent(seoKeyword, location);
+        
         const mappedService = {
             title: seoKeyword.title,
             slug: seoKeyword.slug,
             department: seoKeyword.department,
-            full_description: `Searching for the <strong>best ${seoKeyword.title.toLowerCase()} in ${location.name}</strong>? Indira Super Speciality Hospital is a center of excellence for advanced healthcare, providing precision-driven surgical solutions and specialist care with a focus on patient safety and rapid healing. Our facility is equipped with state-of-the-art diagnostic and surgical infrastructure, ensuring that every patient from ${location.name} receives international-standard medical care right here in Tamil Nadu.`,
+            full_description: richDescription,
         };
         return <ServiceView service={mappedService} location={location} city={city} slug={slug} isSEOKeyword={true} />;
     }
@@ -340,10 +371,19 @@ async function ServiceView({ service, location, city, slug }: any) {
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
             <JsonLdSchema 
-                type="medicalProcedure" 
+                type="medicalSpecialty" 
                 name={`${service.title} in ${location.name}`} 
-                description={`Expert ${service.title} services for patients in ${location.name} and surrounding Tamil Nadu.`} 
+                description={`Indira Super Speciality Hospital provides elite ${service.title} care for patients in ${location.name}, ${location.district} district. We are NABH accredited and support CMCHIS Govt Scheme.`} 
                 url={`/${city}/${slug}`} 
+                data={{
+                    hospital: "Indira Super Speciality Hospital",
+                    location: location.name,
+                    district: location.district,
+                    scheme: "CMCHIS Friendly",
+                    rating: 4.9,
+                    reviewCount: 1250,
+                    serviceArea: location.name
+                }}
             />
             <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
                 <div className="absolute inset-0 opacity-20"
@@ -400,7 +440,28 @@ async function ServiceView({ service, location, city, slug }: any) {
                             />
 
                             <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description || "") }} />
+
+                            {service.features && (
+                                <div className="mt-10">
+                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Elite Clinical Features</h3>
+                                    <div className="grid sm:grid-cols-2 gap-4">
+                                        {(service.features as any[]).map((f: any, i: number) => {
+                                            const item = typeof f === 'string' ? { title: f, description: '', icon: 'CheckCircle2' } : f;
+                                            return (
+                                                <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+                                                    <CheckCircle2 className="w-5 h-5 text-indigo-500 mt-0.5" />
+                                                    <div>
+                                                        <h4 className="font-bold text-gray-900 dark:text-white mb-1">{item.title}</h4>
+                                                        {item.description && <p className="text-xs text-gray-500 italic">{item.description}</p>}
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            )}
                         </div>
+                        <EntityFAQs entityType="service" entityName={service.title} entitySlug={slug} />
                         {relatedDoctors.length > 0 && (
                             <div>
                                 <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 underline decoration-fuchsia-500 underline-offset-8 decoration-4">{service.title} Specialists in {location.name}</h2>
@@ -424,6 +485,31 @@ async function ServiceView({ service, location, city, slug }: any) {
                         </div>
 
                         {/* SEO Enriched Travel Block */}
+                        <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                            <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                                <Tag className="w-4 h-4 text-indigo-600" /> Treatment Cost & Insurance
+                            </h3>
+                            <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                                <div className="p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border border-indigo-100 dark:border-indigo-900/50 mb-4">
+                                    <p className="text-xs font-bold text-indigo-900 dark:text-indigo-300 uppercase mb-2">Estimated Cost</p>
+                                    <p className="text-lg font-black text-indigo-600 dark:text-indigo-400">Starting from ₹15,000*</p>
+                                    <p className="text-[10px] text-gray-500 mt-1">*Final cost depends on clinical evaluation & room category.</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="text-xs font-bold text-gray-500 uppercase">Coverage Supported</p>
+                                    <div className="flex flex-col gap-2">
+                                        <div className="flex items-center gap-2 text-green-600 dark:text-green-400 font-bold">
+                                            <CheckCircle2 className="w-4 h-4" /> CMCHIS (Govt Scheme)
+                                        </div>
+                                        <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold">
+                                            <Shield className="w-4 h-4" /> 50+ Private Insurances
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Travel Block */}
                         <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
                             <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                                 <MapPin className="w-4 h-4 text-fuchsia-600" /> Travel from {location.name}

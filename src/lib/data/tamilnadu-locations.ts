@@ -21,6 +21,18 @@ export interface TamilNaduLocation {
 }
 
 export const tamilNaduLocations: TamilNaduLocation[] = [
+    {
+        name: 'Tamil Nadu',
+        slug: 'tamil-nadu',
+        district: 'Tamil Nadu',
+        distance: 'Regional Support',
+        travelTime: 'Varies',
+        description: 'Indira Super Speciality Hospital is the premier medical destination for patients across Tamil Nadu, offering advanced surgical care and super-speciality treatments.',
+        category: 'city',
+        pincode: '600001',
+        transportOptions: { bus: true, train: true, auto: true, taxi: true },
+        specialFeatures: ['State-wide Coverage', 'Regional Referral Center'],
+    },
     // ========================================
     // VELLORE DISTRICT & NEARBY
     // ========================================

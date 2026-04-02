@@ -21,14 +21,15 @@ import EntityReviews from "@/components/trust/EntityReviews";
 const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Elite WhatsApp Consultation: I'm looking for the best specialist at Indira Super Speciality Hospital, Vellore.")}`;
 
 export const metadata: Metadata = {
-    title: "Best Hospital Near You — 79+ Locations Served | Indira Hospital",
-    description: "Indira Hospital serves 79+ locations across Tamil Nadu. Laser piles, laparoscopic surgery, 24/7 emergency. Find the nearest location — your surgery shouldn't mean a long journey.",
+    title: "Best Hospital in Vellore — Ranked #1 for Specialized Care | Indira Hospital",
+    description: "Searching for the best hospital in Vellore? Indira Super Speciality Hospital is your #1 choice for laser piles, laparoscopic surgery, and 24/7 emergency care across 79+ Tamil Nadu locations. NABH Accredited.",
     keywords: [
+        "best hospital in vellore",
         "hospital near me",
         "best hospital in Tamil Nadu",
         "best hospital in India",
-        "laparoscopic surgery Tamil Nadu",
-        "laser piles treatment near me",
+        "laparoscopic surgery vellore",
+        "laser piles treatment vellore",
         "super speciality hospital Tamil Nadu",
     ],
 };

@@ -222,21 +222,25 @@ export function DepartmentTemplate({
                             <p className="text-sm text-indigo-800/70 dark:text-indigo-400 mb-6 leading-relaxed">
                                 Our elite {title.toLowerCase()} department serves patients across major Tamil Nadu districts. Find specialist care in your nearest location:
                             </p>
-                            <div className="grid grid-cols-2 gap-3 text-xs font-bold text-indigo-700 dark:text-indigo-300">
+                            <div className="grid grid-cols-2 gap-3 text-[10px] font-black uppercase tracking-widest text-indigo-700 dark:text-indigo-300">
                                 {[
                                     { name: 'Vellore', slug: 'vellore' },
                                     { name: 'Chennai', slug: 'chennai' },
+                                    { name: 'Sivaganga', slug: 'sivaganga' },
+                                    { name: 'Tenkasi', slug: 'tenkasi' },
                                     { name: 'Hosur', slug: 'hosur' },
                                     { name: 'Kanchipuram', slug: 'kanchipuram' },
+                                    { name: 'Tirunelveli', slug: 'tirunelveli' },
+                                    { name: 'Dharmapuri', slug: 'dharmapuri' },
                                     { name: 'Tiruvannamalai', slug: 'tiruvannamalai' },
                                     { name: 'Ranipet', slug: 'ranipet' }
-                                ].map((hub) => (
+                                ].map((loc) => (
                                     <Link 
-                                        key={hub.slug} 
-                                        href={`/doctor/near-me/${hub.slug}/${slug}`}
-                                        className="flex items-center gap-2 p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition-all text-center justify-center uppercase tracking-wider"
+                                        key={loc.slug} 
+                                        href={`/doctor/near-me/${loc.slug}/${slug}`}
+                                        className="px-3 py-2 bg-white dark:bg-slate-800 rounded-lg border border-indigo-100 dark:border-slate-800 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all shadow-sm"
                                     >
-                                        {hub.name}
+                                        {loc.name} {title.split(' ')[0]}
                                     </Link>
                                 ))}
                             </div>

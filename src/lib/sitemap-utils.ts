@@ -88,11 +88,11 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
 
         case 'location-treatments':
             return tamilNaduLocations.flatMap((loc) =>
-                (services as any[]).map((serv: any) => ({
-                    url: `${baseUrl}/doctor/near-me/${loc.slug}/${serv.slug || serv.id}`,
+                TREATMENT_DATA.map((treat) => ({
+                    url: `${baseUrl}/doctor/near-me/${loc.slug}/${treat.slug}`,
                     lastModified: new Date(),
                     changeFrequency: 'weekly' as const,
-                    priority: 0.75,
+                    priority: 0.8,
                 }))
             );
 
