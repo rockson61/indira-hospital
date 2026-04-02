@@ -23,14 +23,14 @@ export default function PulmonologyDepartmentPage() {
 
     return (
         <DepartmentTemplate
-            title="Elite Pulmonology & Sleep Sciences Hub"
+            title="Pulmonology & Sleep Sciences Hub in Vellore, Tamil Nadu"
             slug="pulmonology"
             shortDescription="Advanced Chest Medicine & Interventional Pulmonology in Vellore. We specialize in Chronic Asthma management, Sleep Apnea screening, and precision Bronchoscopy."
             fullDescription={(
                 <div className="pulmonology-pillar-content space-y-20 text-left">
                     {/* ── 1. The Respiratory Health Vision ────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-sky-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-sky-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             Breathe Free: Excellence in Chest & Sleep Medicine
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -134,7 +134,7 @@ export default function PulmonologyDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: Asthma vs COPD ─────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-sky-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-sky-900 dark:text-sky-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: Understanding Obstructive Lung Disease</h3>
+                        <h3 className="text-sky-900 dark:text-sky-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: Understanding Obstructive Lung Disease</h3>
                         <p>
                             Many patients confuse <strong>Asthma</strong> and <strong>COPD.</strong> While both cause wheezing and breathing difficulty, their underlying biology is different. Asthma is usually an inflammatory reaction to allergens and is often <strong>reversible.</strong> COPD is a structural damage to the lung sacs (alveoli), usually permanent but <strong>manageable.</strong>
                         </p>
@@ -149,7 +149,7 @@ export default function PulmonologyDepartmentPage() {
                                 { k: "OSAS", v: "Sleep Apnea Index" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-sky-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-sky-600">
-                                    <p className="text-4xl font-black text-sky-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-sky-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -163,7 +163,7 @@ export default function PulmonologyDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-sky-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-sky-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-sky-400 text-left">
                            Pulmonary & Sleep: Specialist Clinical FAQs
                         </h3>
                         
@@ -207,7 +207,7 @@ export default function PulmonologyDepartmentPage() {
                                         <span className="text-sky-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

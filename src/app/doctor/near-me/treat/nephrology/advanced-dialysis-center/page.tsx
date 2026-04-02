@@ -6,7 +6,7 @@ import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 export default function DialysisPage() {
     return (
         <SubServiceTemplate
-            title="Elite Dialysis & Renal Support Center"
+            title="Dialysis & Renal Support Center in Vellore, Tamil Nadu"
             eyebrow="24/7 Advanced Kidney Care"
             description={
                 <>
@@ -110,7 +110,7 @@ export default function DialysisPage() {
         >
             <div className="space-y-8">
                 <section>
-                    <h2 className="text-3xl font-bold mb-4">India's Elite Destination for Comprehensive Renal Health</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-4">India's Elite Destination for Comprehensive Renal Health</h2>
                     <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         At the <strong>Indira Renal Center</strong>, we believe that dialysis should not just sustain life, but enhance its quality. By combining world-class Fresenius technology with a compassionate, patient-first approach, we ensure that our patients lead active, fulfilling lives despite their renal challenges.
                     </p>

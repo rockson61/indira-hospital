@@ -23,14 +23,14 @@ export default function NephrologyDepartmentPage() {
 
     return (
         <DepartmentTemplate
-            title="Elite Renal Sciences & Nephrology Hub"
+            title="Renal Sciences & Nephrology Hub in Vellore, Tamil Nadu"
             slug="nephrology"
             shortDescription="Advanced Kidney Care and 24/7 Dialysis in Vellore. We specialize in Chronic Kidney Disease (CKD) preservation, Hypertension management, and ICU-based Renal Replacement."
             fullDescription={(
                 <div className="nephrology-pillar-content space-y-20 text-left">
                     {/* ── 1. The Renal Health Vision ─────────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-indigo-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-indigo-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             The Kidney Authority: Advanced Renal Sciences & Dialysis
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -134,7 +134,7 @@ export default function NephrologyDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: Dialysis Quality ─────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-indigo-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-indigo-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Clinical Insight: The Dialysis Purity Paradox</h3>
+                        <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Clinical Insight: The Dialysis Purity Paradox</h3>
                         <p>
                             Not all dialysis is created equal. The standard version clears small molecules like Urea and Creatinine. However, <strong>High-Flux Hemodialysis</strong> is required to clear "Middle Molecules" (like Beta-2 Microglobulin) that cause chronic itching, bone pain, and heart damage in long-term patients.
                         </p>
@@ -149,7 +149,7 @@ export default function NephrologyDepartmentPage() {
                                 { k: "UFR", v: "Gentle Fluid Pull" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-indigo-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-indigo-600">
-                                    <p className="text-4xl font-black text-indigo-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-indigo-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -163,7 +163,7 @@ export default function NephrologyDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-indigo-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-indigo-400 text-left">
                            Renal Sciences: Specialist Clinical FAQs
                         </h3>
                         
@@ -207,7 +207,7 @@ export default function NephrologyDepartmentPage() {
                                         <span className="text-indigo-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

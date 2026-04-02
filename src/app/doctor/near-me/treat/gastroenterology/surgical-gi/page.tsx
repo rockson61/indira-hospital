@@ -65,7 +65,7 @@ export default function SurgicalGastroPage() {
                     {/* Mechanism: The ERAS Protocol */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading">
                             Mechanism: ERAS (Enhanced Recovery After Surgery)
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -104,7 +104,7 @@ export default function SurgicalGastroPage() {
                     {/* Specialized GI Verticals */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter">Advanced Surgical GI Domains</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter">Advanced Surgical GI Domains</h3>
                             <p className="text-slate-600 dark:text-slate-400">From oncology to complex hernias, we manage the most challenging abdominal pathology.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -128,7 +128,7 @@ export default function SurgicalGastroPage() {
                                 <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all border-b-4 border-emerald-500">
                                     <item.icon className="w-12 h-12 text-emerald-600 mb-6" />
                                     <h4 className="text-xl font-bold mb-3">{item.title}</h4>
-                                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-primary italic">{item.desc}</p>
+                                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-heading italic">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -137,7 +137,7 @@ export default function SurgicalGastroPage() {
                     {/* Trust Infrastructure Section */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-4 font-serif italic">Why Indira for Surgical GI?</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-4 font-serif italic">Why Indira for Surgical GI?</h3>
                         <p className="text-slate-400 max-w-2xl mx-auto mb-12">
                             GI surgery is about more than just "removing a mass"—it is about ensuring the long-term metabolic health of the patient.
                         </p>
@@ -159,7 +159,7 @@ export default function SurgicalGastroPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-emerald-500" />
                             Elite Clinical FAQs: Surgical Gastroenterology
                         </h3>

@@ -110,7 +110,7 @@ export default function StrokeUnitPage() {
         >
             <div className="space-y-8">
                 <section>
-                    <h2 className="text-3xl font-bold mb-4">India's Premier Rapid-Response Center for Brain Attacks</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-4">India's Premier Rapid-Response Center for Brain Attacks</h2>
                     <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         At the <strong>Indira Stroke Unit</strong>, we understand that time is brain. Our precision-guided protocols are designed for speed and reliability, ensuring that every patient receives the best possible chance of a full recovery. Backed by an advanced 24/7 Imaging Center and ICU, we are the regional leader in managing complex neurological emergencies.
                     </p>

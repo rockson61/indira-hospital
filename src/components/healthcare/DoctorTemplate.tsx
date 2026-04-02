@@ -221,7 +221,7 @@ export function DoctorTemplate({
                         {/* Expertise & Procedures Grid */}
                         <div id="expertise" className="space-y-8 bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl border border-white/10 text-white relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-600/10 blur-[100px] pointer-events-none group-hover:bg-fuchsia-600/20 transition-all duration-500" />
-                            <h2 className="text-2xl font-black flex items-center gap-3 uppercase tracking-widest italic font-primary text-fuchsia-300">
+                            <h2 className="text-2xl font-black flex items-center gap-3 uppercase tracking-widest italic font-heading text-fuchsia-300">
                                 <Target className="w-8 h-8 text-fuchsia-400" />
                                 Clinical Mastery & Procedures
                             </h2>
@@ -240,7 +240,7 @@ export function DoctorTemplate({
                         {/* Education Grid */}
                         {doctor.education && (doctor.education as any[]).length > 0 && (
                             <div id="qualifications" className="space-y-8 bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-soft border border-slate-100 dark:border-slate-800">
-                                <h2 className="text-2xl font-black text-slate-900 dark:text-white flex items-center gap-3 uppercase tracking-widest italic font-primary border-l-4 border-fuchsia-600 pl-4">
+                                <h2 className="text-2xl font-black text-slate-900 dark:text-white flex items-center gap-3 uppercase tracking-widest italic font-heading border-l-4 border-fuchsia-600 pl-4">
                                     <GraduationCap className="w-8 h-8 text-fuchsia-600" />
                                     Academic Provenance
                                 </h2>

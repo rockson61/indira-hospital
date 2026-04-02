@@ -73,7 +73,7 @@ export default function ProstateSurgeryPage() {
                     {/* Mechanism: HoLEP Enucleation vs Resection */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: HoLEP (Holmium Laser Enucleation)
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
@@ -119,7 +119,7 @@ export default function ProstateSurgeryPage() {
                     {/* Surgical Precision Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-blue-300 uppercase tracking-widest leading-none">Clinical Men's Health Matrix</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-blue-300 uppercase tracking-widest leading-none">Clinical Men's Health Matrix</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "BPH Hub", desc: "For benign enlargements of any size (even >100 grams) where HoLEP is superior.", icon: Star },
@@ -139,7 +139,7 @@ export default function ProstateSurgeryPage() {
                     {/* Trust Infrastructure Section */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter uppercase uppercase">Why Choose Indira for Prostate Care?</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase uppercase">Why Choose Indira for Prostate Care?</h3>
                             <p className="text-slate-600 dark:text-slate-400">Restoring dignity and urinary flow with precision laser science.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -149,7 +149,7 @@ export default function ProstateSurgeryPage() {
                                 { title: "Zero Incontinence Tech", desc: "Sphincter-protective visualization for guaranteed post-op control." }
                             ].map((item, i) => (
                                 <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-blue-500">
-                                    <h4 className="font-primary text-xl font-bold mb-3">{item.title}</h4>
+                                    <h4 className="font-heading text-xl font-bold mb-3">{item.title}</h4>
                                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic antialiased">{item.desc}</p>
                                 </div>
                             ))}
@@ -158,7 +158,7 @@ export default function ProstateSurgeryPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 text-left">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-blue-500" />
                             Elite Clinical FAQs: Laser Prostate Surgery
                         </h3>

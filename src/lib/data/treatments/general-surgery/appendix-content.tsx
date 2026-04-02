@@ -27,7 +27,7 @@ export const AppendixLongForm = () => {
         <div className="appendix-longform-content space-y-16 py-8">
             {/* 1. Executive Summary */}
             <section className="executive-summary">
-                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-primary italic underline decoration-rose-600/20 underline-offset-8">
+                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-heading italic underline decoration-rose-600/20 underline-offset-8">
                     The Critical Guide to Emergency Laparoscopic Appendectomy in Vellore
                 </h2>
                 <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -43,7 +43,7 @@ export const AppendixLongForm = () => {
             {/* 2. Spotting the Signs */}
             <section className="bg-slate-50 dark:bg-slate-900/50 p-12 rounded-[3.5rem] border border-slate-100 dark:border-slate-800 shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-rose-600/5 blur-[100px] -mr-32 -mt-32" />
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-primary">
+                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-heading">
                     <Info className="text-rose-600 w-10 h-10" />
                     Recognizing Appendicitis: The "Pain Shift"
                 </h3>
@@ -52,7 +52,7 @@ export const AppendixLongForm = () => {
                         <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                             Appendicitis is the inflammation of the vermiform appendix—a small vestigial pouch attached to the large intestine. The classic indicator isn't just pain, but the <strong>way the pain moves</strong>.
                         </p>
-                        <h4 className="font-bold text-rose-900 dark:text-rose-300 mt-6 font-primary text-xl uppercase italic">The Clinical Progression:</h4>
+                        <h4 className="font-bold text-rose-900 dark:text-rose-300 mt-6 font-heading text-xl uppercase italic">The Clinical Progression:</h4>
                         <div className="space-y-4">
                             {[
                                 { t: 'Early Phase', d: 'Dull pain around the belly button (umbilicus) often mistaken for gas or indigestion.' },
@@ -74,7 +74,7 @@ export const AppendixLongForm = () => {
                         <div className="absolute top-0 right-0 p-8 opacity-10">
                             <AlertOctagon className="w-24 h-24 text-rose-400" />
                         </div>
-                        <h4 className="font-black text-rose-400 mb-6 font-primary uppercase tracking-tighter">Emergency: The Buried Danger</h4>
+                        <h4 className="font-black text-rose-400 mb-6 font-heading uppercase tracking-tighter">Emergency: The Buried Danger</h4>
                         <p className="text-sm text-slate-400 leading-relaxed italic mb-8">
                             If the pain suddenly disappears for a short period, it might <strong>not</strong> mean you are cured. It often means the appendix has <strong>ruptured</strong>, releasing pressure. Within hours, this leads to <strong>Peritonitis</strong>—a massive infection.
                         </p>
@@ -98,10 +98,10 @@ export const AppendixLongForm = () => {
             <section className="tech-advantage bg-slate-900 rounded-[4rem] p-16 text-white relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-rose-500/10 rounded-full blur-[100px] pointer-events-none" />
                 <div className="max-w-4xl relative z-10 mx-auto text-center">
-                    <h2 className="text-4xl font-black mb-10 text-rose-400 font-primary italic uppercase tracking-tighter shrink-0">Emergency Keyhole Appendectomy</h2>
+                    <h2 className="text-4xl font-black mb-10 text-rose-400 font-heading italic uppercase tracking-tighter shrink-0">Emergency Keyhole Appendectomy</h2>
                     <div className="grid md:grid-cols-2 gap-12 text-left">
                         <div className="space-y-6">
-                            <h4 className="text-2xl font-bold font-primary italic text-rose-100 uppercase italic">Why Laparoscopy for Emergencies?</h4>
+                            <h4 className="text-2xl font-bold font-heading italic text-rose-100 uppercase italic">Why Laparoscopy for Emergencies?</h4>
                             <p className="text-slate-400 leading-relaxed italic text-sm">
                                 Traditionally, surgeons used a 3-inch "McBurney's" incision. Today, we use <strong>three 5mm ports</strong>. In an emergency, laparoscopy allows the surgeon to visualize the <strong>entire abdominal cavity</strong>, ensuring that if there is any pus or fluid from a leak, it can be thoroughly washed out (Laparoscopic Lavage), something impossible with a small open incision.
                             </p>
@@ -116,7 +116,7 @@ export const AppendixLongForm = () => {
                             </div>
                         </div>
                         <div className="bg-white/5 p-12 rounded-[4rem] border border-white/10 flex flex-col justify-center group/card">
-                             <h4 className="text-rose-400 font-bold mb-4 font-primary text-xl">The Precision Advantage</h4>
+                             <h4 className="text-rose-400 font-bold mb-4 font-heading text-xl">The Precision Advantage</h4>
                              <p className="text-slate-400 text-xs leading-relaxed mb-8 italic">
                                 At Indira Hospital, we use <strong>High-Definition (HD) camera stacks</strong> and the <strong>Harmonic Scalpel</strong>. This allows us to seal the blood supply to the appendix instantly with ultrasound energy, ensuring a bloodless and safe removal.
                              </p>
@@ -133,7 +133,7 @@ export const AppendixLongForm = () => {
             <section className="diagnostic-excellence py-12">
                 <div className="flex flex-col md:flex-row gap-16 items-center">
                     <div className="md:w-1/2 space-y-8">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic m-0 tracking-tighter uppercase italic">Precision Triage & Diagnostics</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic m-0 tracking-tighter uppercase italic">Precision Triage & Diagnostics</h2>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic text-lg opacity-80 font-light">
                             In an emergency, speed and accuracy must go hand-in-hand. We follow the <strong>Alvarado Scoring System</strong> combined with modern imaging to confirm appendicitis within 30 minutes of arrival.
                         </p>
@@ -157,7 +157,7 @@ export const AppendixLongForm = () => {
                     </div>
                     <div className="md:w-1/2 bg-rose-50 dark:bg-rose-950/30 p-12 rounded-[5rem] border border-rose-100 dark:border-rose-900/30 shadow-2xl relative overflow-hidden group">
                          <div className="absolute top-0 right-0 w-64 h-64 bg-rose-600/5 rounded-full blur-[80px]" />
-                         <h4 className="text-2xl font-black text-rose-900 dark:text-rose-400 mb-6 font-primary italic uppercase italic underline decoration-rose-600/10 underline-offset-8">Clinical Importance of Timing</h4>
+                         <h4 className="text-2xl font-black text-rose-900 dark:text-rose-400 mb-6 font-heading italic uppercase italic underline decoration-rose-600/10 underline-offset-8">Clinical Importance of Timing</h4>
                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic mb-8">
                             "Appendicitis never stays the same. It is either getting better (rare without surgery) or getting much worse. A ruptured appendix requires an open surgery, larger scars, and a 5-7 day hospital stay. Early laparoscopy is always the safer, cleaner path."
                          </p>
@@ -173,7 +173,7 @@ export const AppendixLongForm = () => {
 
             {/* 5. Accelerated Recovery Protocol */}
             <section className="bg-white dark:bg-slate-900 rounded-[4rem] p-10 md:p-16 border border-slate-100 dark:border-slate-800 shadow-xl">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-primary italic uppercase tracking-widest text-center">Post-Op Recovery Roadmap</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-heading italic uppercase tracking-widest text-center">Post-Op Recovery Roadmap</h2>
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
                         { day: '6 Hours', title: 'Ambulation', desc: 'You will be sit up and walk with support to prevent clots.' },
@@ -183,7 +183,7 @@ export const AppendixLongForm = () => {
                     ].map((step, i) => (
                         <div key={i} className="p-8 bg-slate-50 dark:bg-slate-950 rounded-[3rem] border border-slate-100 dark:border-slate-800 text-center group hover:shadow-2xl transition-all">
                             <div className="text-xs font-black text-rose-600 uppercase tracking-widest mb-4 italic">{step.day}</div>
-                            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 font-primary">{step.title}</h4>
+                            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 font-heading">{step.title}</h4>
                             <p className="text-[10px] text-slate-500 leading-relaxed italic">{step.desc}</p>
                         </div>
                     ))}
@@ -196,12 +196,12 @@ export const AppendixLongForm = () => {
                     <div className="absolute bottom-0 right-0 w-96 h-96 bg-rose-600/10 rounded-full blur-[100px] pointer-events-none" />
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
-                            <h2 className="text-4xl font-black text-rose-400 font-primary italic uppercase tracking-tighter m-0">Economic Transparency</h2>
+                            <h2 className="text-4xl font-black text-rose-400 font-heading italic uppercase tracking-tighter m-0">Economic Transparency</h2>
                             <p className="text-slate-400 leading-relaxed italic">
                                 We provide transparent, all-inclusive emergency surgical packages. Our goal is to ensure you focus on recovery while our billing team handles the insurance procedures.
                             </p>
                             <div className="p-8 bg-white/5 border border-white/10 rounded-[3rem]">
-                                <h4 className="text-rose-400 font-bold mb-4 font-primary text-lg flex items-center gap-3">
+                                <h4 className="text-rose-400 font-bold mb-4 font-heading text-lg flex items-center gap-3">
                                     <Shield className="w-5 h-5" /> Insurance & TPA
                                 </h4>
                                 <p className="text-xs text-slate-400 italic mb-4">Partnered with 100% of major providers, including Government Schemes:</p>
@@ -217,7 +217,7 @@ export const AppendixLongForm = () => {
                                 <div className="absolute top-0 right-0 p-8 opacity-20">
                                     <Flame className="w-16 h-16" />
                                 </div>
-                                <h4 className="text-2xl font-black mb-2 font-primary italic text-white">Estimated Package:</h4>
+                                <h4 className="text-2xl font-black mb-2 font-heading italic text-white">Estimated Package:</h4>
                                 <p className="text-5xl font-black tracking-tighter mb-4 italic text-white flex justify-center items-center gap-2">
                                     ₹40k - ₹75k
                                 </p>
@@ -232,7 +232,7 @@ export const AppendixLongForm = () => {
 
             {/* 7. Comprehensive FAQ */}
             <section className="pt-20 border-t border-slate-100 dark:border-slate-800">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-primary italic uppercase tracking-widest text-center underline underline-offset-8 decoration-rose-600/20">Appendix Care FAQ</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-heading italic uppercase tracking-widest text-center underline underline-offset-8 decoration-rose-600/20">Appendix Care FAQ</h2>
                 <div className="grid md:grid-cols-2 gap-10">
                     {[
                         { q: "Can antibiotics cure appendicitis without surgery?", a: "While 'antibiotic-first' therapy is a rising clinical topic, it has a high failure rate (over 30% recur within a year). For a permanent, safe cure, laparoscopic surgery remains the gold standard." },
@@ -256,7 +256,7 @@ export const AppendixLongForm = () => {
             {/* 8. Final Silo Transition CTA */}
             <section className="bg-rose-950 rounded-[4rem] p-20 text-center text-white relative overflow-hidden group/cta">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-500/10 rounded-full blur-[100px] animate-pulse" />
-                <h2 className="text-5xl font-black mb-6 font-primary italic uppercase tracking-tighter">Emergency Care That Cannot Wait</h2>
+                <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Emergency Care That Cannot Wait</h2>
                 <p className="text-rose-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
                     Don't ignore abdominal pain. Trust Vellore's emergency surgical leaders for immediate, precise, and life-saving care.
                 </p>

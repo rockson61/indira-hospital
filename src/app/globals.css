@@ -241,11 +241,11 @@
 /* Elite Design System Utility Classes */
 @layer utilities {
   .elite-hero-title {
-    @apply text-5xl sm:text-7xl lg:text-[var(--elite-hero-size)] font-black tracking-tighter leading-[0.9] uppercase italic text-slate-950 dark:text-white;
+    @apply font-heading text-5xl sm:text-7xl lg:text-[var(--elite-hero-size)] font-black tracking-tighter leading-[0.9] uppercase italic text-slate-950 dark:text-white;
   }
 
   .elite-section-title {
-    @apply text-3xl sm:text-4xl lg:text-[var(--elite-section-size)] font-black tracking-tight leading-tight uppercase italic;
+    @apply font-heading text-3xl sm:text-4xl lg:text-[var(--elite-section-size)] font-black tracking-tight leading-tight uppercase italic;
   }
 
   .elite-gradient-text {

@@ -83,7 +83,7 @@ const SemanticLinkBlock = () => (
             <li><Link href="/doctor/near-me/treat/cardiology/angioplasty" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Heart Angioplasty</Link></li>
             <li><Link href="/doctor/near-me/treat/proctology/laser-piles-treatment" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Piles Surgery</Link></li>
             <li><Link href="/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair-surgery" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laparoscopic Hernia</Link></li>
-            <li><Link href="/doctor/near-me/treat/urology/kidney-stone-laser-surgery" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Kidney Stone</Link></li>
+            <li><Link href="/doctor/near-me/treat/urology/laser-kidney-stone-surgery" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Laser Kidney Stone</Link></li>
           </ul>
         </div>
         <div>

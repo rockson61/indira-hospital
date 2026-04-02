@@ -53,7 +53,7 @@ export default function FattyLiverPage() {
                 {/* Visual Section: Why Early Intervention? */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-emerald-50 dark:bg-emerald-900/50 border border-emerald-100 dark:border-emerald-800 shadow-lg">
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-emerald-800 dark:text-emerald-300">The Liver Reversal Edge</h4>
+                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-emerald-800 dark:text-emerald-300">The Liver Reversal Edge</h4>
                         <ul className="space-y-4">
                             {[
                                 { title: "FibroScan Technology", text: "We use non-invasive vibration-controlled transient elastography (FibroScan) to measure liver stiffness and fat content without the need for a painful biopsy." },
@@ -82,7 +82,7 @@ export default function FattyLiverPage() {
 
                 {/* Deep Dive Content */}
                 <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Understanding Fatty Liver Disease</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Fatty Liver Disease</h3>
                     <p>
                         Fatty liver, or Non-Alcoholic Fatty Liver Disease (NAFLD), occurs when more than 5-10% of your liver's weight is fat. While it starts as "simple fatty liver," it can progress to Non-Alcoholic Steatohepatitis (NASH), where the liver becomes inflamed and develops scar tissue (Fibrosis).
                     </p>
@@ -90,7 +90,7 @@ export default function FattyLiverPage() {
                         At Indira Hospital, our hepatology unit focuses on **Active Reversal**. The liver is the only organ capable of regenerating and healing itself entirely, provided the toxic cycle of insulin resistance and poor nutrition is broken. We provide the clinical tools and the constant monitoring needed to turn back the clock on liver damage.
                     </p>
 
-                    <h4 className="text-[#005f73] dark:text-emerald-400 font-primary">Who Needs a Liver Screening?</h4>
+                    <h4 className="text-[#005f73] dark:text-emerald-400 font-heading">Who Needs a Liver Screening?</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                         {[
                             "Individuals with Diabetes or Pre-diabetes",
@@ -106,12 +106,12 @@ export default function FattyLiverPage() {
                         ))}
                     </div>
 
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-emerald-500 pl-4 italic">The Path to Liver Regeneration</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-emerald-500 pl-4 italic">The Path to Liver Regeneration</h3>
                     <p>
                         Our treatment roadmap doesn't rely solely on medications. We utilize a **Three-Phase Recovery Protocol**: 1. Detoxification & Inflammation Control, 2. Metabolic Re-balancing, and 3. Long-term Maintenance. By tracking your progress through serial FibroScans and Liver Function Tests (LFT), we provide objective proof of your liver's journey back to health.
                     </p>
 
-                    <h4 className="font-primary text-[#005f73] dark:text-emerald-400 mt-10">Why Choose Indira for Liver Care?</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-emerald-400 mt-10">Why Choose Indira for Liver Care?</h4>
                     <ul>
                         <li>**Advanced FibroScan**: Painless, 10-minute scan that replaces the need for liver biopsy in most cases.</li>
                         <li>**Integrated Endocrine Hub**: Coordinating with endocrinologists to manage the underlying diabetes that often drives fatty liver.</li>
@@ -123,7 +123,7 @@ export default function FattyLiverPage() {
                 <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-emerald-950 to-transparent" />
                     
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
+                    <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
                         <Info className="text-emerald-400" />
                         Liver Health: Essential FAQs
                     </h3>

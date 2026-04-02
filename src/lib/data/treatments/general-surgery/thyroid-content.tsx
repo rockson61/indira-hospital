@@ -30,7 +30,7 @@ export const ThyroidLongForm = () => {
         <div className="thyroid-longform-content space-y-16 py-8">
             {/* 1. Executive Summary */}
             <section className="executive-summary">
-                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-primary italic underline decoration-teal-600/20 underline-offset-8">
+                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-heading italic underline decoration-teal-600/20 underline-offset-8">
                     The Ultimate Guide to Thyroid & Endocrine Surgery in Vellore
                 </h2>
                 <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -46,7 +46,7 @@ export const ThyroidLongForm = () => {
             {/* 2. When Surgery is Necessary */}
             <section className="bg-slate-50 dark:bg-slate-900/50 p-12 rounded-[3.5rem] border border-slate-100 dark:border-slate-800 shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-teal-600/5 blur-[100px] -mr-32 -mt-32" />
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-primary">
+                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-heading">
                     <Info className="text-teal-600 w-10 h-10" />
                     Clinical Indicators for Thyroid Surgery
                 </h3>
@@ -76,7 +76,7 @@ export const ThyroidLongForm = () => {
                         <div className="absolute top-0 right-0 p-8 opacity-10">
                             <Microscope className="w-24 h-24 text-teal-400" />
                         </div>
-                        <h4 className="font-black text-teal-400 mb-6 font-primary uppercase tracking-tighter">The FNAC Protocol</h4>
+                        <h4 className="font-black text-teal-400 mb-6 font-heading uppercase tracking-tighter">The FNAC Protocol</h4>
                         <p className="text-sm text-slate-400 leading-relaxed italic mb-8">
                             Before surgery, we perform a <strong>Fine Needle Aspiration Cytology (FNAC)</strong>. Using a tiny needle, we extract cells to determine if a nodule is benign or malignant. This allows us to plan whether you need a Hemithyroidectomy (half removal) or a Total Thyroidectomy.
                         </p>
@@ -100,10 +100,10 @@ export const ThyroidLongForm = () => {
             <section className="tech-advantage bg-slate-900 rounded-[4rem] p-16 text-white relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
                 <div className="max-w-4xl relative z-10 mx-auto text-center">
-                    <h2 className="text-4xl font-black mb-10 text-teal-400 font-primary italic uppercase tracking-tighter shrink-0">Microsurgical Thyroidectomy</h2>
+                    <h2 className="text-4xl font-black mb-10 text-teal-400 font-heading italic uppercase tracking-tighter shrink-0">Microsurgical Thyroidectomy</h2>
                     <div className="grid md:grid-cols-2 gap-12 text-left">
                         <div className="space-y-6">
-                            <h4 className="text-2xl font-bold font-primary italic text-teal-100 uppercase italic">Preserving Your Voice & Calcium</h4>
+                            <h4 className="text-2xl font-bold font-heading italic text-teal-100 uppercase italic">Preserving Your Voice & Calcium</h4>
                             <p className="text-slate-400 leading-relaxed italic text-sm">
                                 Thyroid surgery is a game of millimeters. Our primary goal is to identify and preserve the <strong>Recurrent Laryngeal Nerve</strong>, which controls your vocal cords. We also carefully relocate the <strong>Parathyroid Glands</strong> (the size of a grain of rice) which regulate calcium levels.
                             </p>
@@ -118,7 +118,7 @@ export const ThyroidLongForm = () => {
                             </div>
                         </div>
                         <div className="bg-white/5 p-12 rounded-[4rem] border border-white/10 flex flex-col justify-center group/card">
-                             <h4 className="text-teal-400 font-bold mb-4 font-primary text-xl uppercase italic underline decoration-white/10 underline-offset-8 text-center shrink-0">Aesthetic Scar Management</h4>
+                             <h4 className="text-teal-400 font-bold mb-4 font-heading text-xl uppercase italic underline decoration-white/10 underline-offset-8 text-center shrink-0">Aesthetic Scar Management</h4>
                              <p className="text-slate-400 text-xs leading-relaxed mb-8 italic text-center">
                                 We utilize <strong>Collar Incisions</strong> placed within natural skin creases. By using sub-cuticular dissolvable stitches and advanced wound glues, we ensure the final scar is practically invisible after 6 months.
                              </p>
@@ -135,7 +135,7 @@ export const ThyroidLongForm = () => {
             <section className="recovery-roadmap py-12">
                 <div className="flex flex-col md:flex-row gap-16 items-center">
                     <div className="md:w-1/2 space-y-8">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic m-0 tracking-tighter uppercase italic">The Road to Recovery</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic m-0 tracking-tighter uppercase italic">The Road to Recovery</h2>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic text-lg opacity-80 font-light italic">
                             Most thyroid surgeries allow for a quick return to normal life. Our protocols minimize the typical "heavy throat" feeling and ensure metabolic stability.
                         </p>
@@ -159,7 +159,7 @@ export const ThyroidLongForm = () => {
                     </div>
                     <div className="md:w-1/2 bg-teal-50 dark:bg-teal-950/30 p-12 rounded-[5rem] border border-teal-100 dark:border-teal-900/30 shadow-2xl relative overflow-hidden group">
                          <div className="absolute top-0 right-0 w-64 h-64 bg-teal-600/5 rounded-full blur-[80px]" />
-                         <h4 className="text-2xl font-black text-teal-900 dark:text-teal-400 mb-6 font-primary italic uppercase italic underline decoration-teal-600/10 underline-offset-8">A Surgeon's Commitment</h4>
+                         <h4 className="text-2xl font-black text-teal-900 dark:text-teal-400 mb-6 font-heading italic uppercase italic underline decoration-teal-600/10 underline-offset-8">A Surgeon's Commitment</h4>
                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic mb-8">
                             "Thyroidectomy is as much an art as it is a science. Our goal isn't just to remove the tumor, but to preserve the patient's identity—their voice and their metabolic balance—for the rest of their lives."
                          </p>
@@ -179,12 +179,12 @@ export const ThyroidLongForm = () => {
                     <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-600/10 rounded-full blur-[100px] pointer-events-none" />
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
-                            <h2 className="text-4xl font-black text-teal-400 font-primary italic uppercase tracking-tighter m-0">Economic Transparency</h2>
+                            <h2 className="text-4xl font-black text-teal-400 font-heading italic uppercase tracking-tighter m-0">Economic Transparency</h2>
                             <p className="text-slate-400 leading-relaxed italic">
                                 We believe in fixed-package pricing for thyroid and endocrine procedures in Vellore, ensuring zero bill shocks.
                             </p>
                             <div className="p-8 bg-white/5 border border-white/10 rounded-[3rem]">
-                                <h4 className="text-teal-400 font-bold mb-4 font-primary text-lg flex items-center gap-3">
+                                <h4 className="text-teal-400 font-bold mb-4 font-heading text-lg flex items-center gap-3">
                                     <Shield className="w-5 h-5" /> Insurance & TPA Support
                                 </h4>
                                 <p className="text-xs text-slate-400 italic mb-4">Empanelled with all major national providers:</p>
@@ -200,7 +200,7 @@ export const ThyroidLongForm = () => {
                                 <div className="absolute top-0 right-0 p-8 opacity-20">
                                     <Flame className="w-16 h-16" />
                                 </div>
-                                <h4 className="text-2xl font-black mb-2 font-primary italic">Thyroidectomy Package:</h4>
+                                <h4 className="text-2xl font-black mb-2 font-heading italic">Thyroidectomy Package:</h4>
                                 <p className="text-5xl font-black tracking-tighter mb-4 italic">₹45k - ₹85k</p>
                                 <p className="text-xs font-medium text-white/70 leading-relaxed italic">
                                     *Price includes OT charges, surgeon fee, anesthesia, and shared/semi-private ward stay for 2 days.
@@ -213,7 +213,7 @@ export const ThyroidLongForm = () => {
 
             {/* 6. Comprehensive FAQ */}
             <section className="pt-20 border-t border-slate-100 dark:border-slate-800">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-primary italic uppercase tracking-widest text-center underline underline-offset-8 decoration-teal-600/20">Thyroid Care FAQ</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-heading italic uppercase tracking-widest text-center underline underline-offset-8 decoration-teal-600/20">Thyroid Care FAQ</h2>
                 <div className="grid md:grid-cols-2 gap-10">
                     {[
                         { q: "Will my voice change after thyroid surgery?", a: "With modern nerve-sparing techniques, permanent voice changes occur in less than 1% of cases. Temporary hoarseness for 2-3 weeks is common as the vocal cord nerves recover from surgical handling." },
@@ -237,7 +237,7 @@ export const ThyroidLongForm = () => {
             {/* 7. Final CTA */}
             <section className="bg-teal-950 rounded-[4rem] p-20 text-center text-white relative overflow-hidden group/cta">
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-[100px] animate-pulse" />
-                <h2 className="text-5xl font-black mb-6 font-primary italic uppercase tracking-tighter shrink-0 italic underline decoration-teal-600/10">Metabolic Health Restored</h2>
+                <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter shrink-0 italic underline decoration-teal-600/10">Metabolic Health Restored</h2>
                 <p className="text-teal-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
                     Don't let thyroid nodules wait. Experience the precision of Vellore's leading endocrine surgical team.
                 </p>

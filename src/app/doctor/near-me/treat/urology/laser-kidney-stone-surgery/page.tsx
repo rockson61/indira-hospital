@@ -29,8 +29,8 @@ export default function RIRSPage() {
 
     return (
         <SubServiceTemplate
-            title="Elite Laser Kidney Stone Hub (RIRS & URSL)"
-            slug="kidney-stone-laser-surgery"
+            title="Laser Kidney Stone Surgery in Vellore, Tamil Nadu (RIRS & URSL)"
+            slug="laser-kidney-stone-surgery"
             parentServiceSlug="urology"
             departmentName="Indira Elite Urology Center"
             description={
@@ -56,14 +56,14 @@ export default function RIRSPage() {
             reviews={{
                 entityType: 'service',
                 entityName: 'Kidney Stone Laser Surgery',
-                entitySlug: 'kidney-stone-laser-surgery'
+                entitySlug: 'laser-kidney-stone-surgery'
             }}
             fullDescription={
                 <div className="space-y-16">
                     {/* The Laser Physics Section */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading">
                             The Science of 100W Holmium Laser Lithotripsy
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -117,7 +117,7 @@ export default function RIRSPage() {
                     {/* Procedure Comparison Table */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Urinary Stone Modality Comparison</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4">Urinary Stone Modality Comparison</h3>
                             <p className="text-slate-600 dark:text-slate-400">Choosing the right path for your specific stone size and location.</p>
                         </div>
                         <div className="overflow-x-auto">
@@ -153,7 +153,7 @@ export default function RIRSPage() {
                     {/* Advanced Recovery & Stent Management */}
                     <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white">JJ Stent: The Internal Safety Conduit</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white">JJ Stent: The Internal Safety Conduit</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 After a successful laser procedure, we typically place a small, soft tube called a **Double-J (JJ) Stent**. This ensures that the kidney continues to drain perfectly while any residual 'dust' or small fragments pass through the ureter.
                             </p>
@@ -197,7 +197,7 @@ export default function RIRSPage() {
                                 </ul>
                                 <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center">
                                     <p className="text-xs font-bold uppercase tracking-widest text-emerald-400">Target Success Rate</p>
-                                    <p className="text-3xl font-bold mt-1">99.2%</p>
+                                    <p className="font-heading text-3xl font-bold mt-1">99.2%</p>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +206,7 @@ export default function RIRSPage() {
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative">
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 relative z-10 font-primary">
+                        <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 relative z-10 font-heading">
                             <Info className="text-emerald-400" />
                             Elite Clinical FAQs: Kidney Stones
                         </h3>
@@ -238,7 +238,7 @@ export default function RIRSPage() {
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
-                                    <h4 className="font-bold text-emerald-400 mb-3 flex items-start gap-2 italic font-primary tracking-tight">
+                                    <h4 className="font-bold text-emerald-400 mb-3 flex items-start gap-2 italic font-heading tracking-tight">
                                         <Zap className="w-4 h-4 mt-1 shrink-0" />
                                         {faq.q}
                                     </h4>

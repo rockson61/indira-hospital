@@ -23,14 +23,14 @@ export default function DermatologyDepartmentPage() {
 
     return (
         <DepartmentTemplate
-            title="Elite Dermatology, Laser & Trichology Hub"
+            title="Dermatology, Laser & Trichology Hub in Vellore, Tamil Nadu"
             slug="dermatology"
             shortDescription="Experience world-class skin and hair care in Vellore. From chronic psoriasis management to advanced laser scar revision and non-surgical aesthetic enhancements."
             fullDescription={(
                 <div className="dermatology-pillar-content space-y-20 text-left">
                     {/* ── 1. The Science of Radiant Skin ───────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-rose-500 pl-6 mb-8 uppercase tracking-tight">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-rose-500 pl-6 mb-8 uppercase tracking-tight">
                             The Skin Authority: Advanced Clinical & Aesthetic Dermatology
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -134,7 +134,7 @@ export default function DermatologyDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: The Laser Journey ─────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: The Fractional Evolution</h3>
+                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: The Fractional Evolution</h3>
                         <p>
                             Historically, "skin resurfacing" involved long recovery times and high risk of pigmentation. Modern <strong>Fractional Laser Technology</strong> has revolutionized this. By treating only a fraction of the skin surface (10-20%) at a time, the surrounding healthy tissue accelerates the healing process of the micro-wounds.
                         </p>
@@ -149,7 +149,7 @@ export default function DermatologyDepartmentPage() {
                                 { k: "DEEP", v: "Collagen Induction" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
-                                    <p className="text-4xl font-black text-rose-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-rose-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -163,7 +163,7 @@ export default function DermatologyDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-rose-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-rose-400 text-left">
                            Skin & Hair: Specialist Clinical FAQs
                         </h3>
                         
@@ -207,7 +207,7 @@ export default function DermatologyDepartmentPage() {
                                         <span className="text-rose-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

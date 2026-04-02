@@ -63,7 +63,7 @@ export default function LaparoscopicHysterectomyPage() {
                     {/* The Surgical Edge Section */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-primary">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading">
                             Mechanism: 4K Visualization & Vessel-Sealing
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -118,7 +118,7 @@ export default function LaparoscopicHysterectomyPage() {
                     {/* Conditions and Indications */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">When is an Elite Hysterectomy Indicated?</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4">When is an Elite Hysterectomy Indicated?</h3>
                             <p className="text-slate-600 dark:text-slate-400">While we prioritize organ-sparing treatments, a hysterectomy is the definitive solution for several chronic conditions.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -141,7 +141,7 @@ export default function LaparoscopicHysterectomyPage() {
                         <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
                         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
                             <div className="space-y-6">
-                                <h3 className="text-3xl font-bold italic font-primary">The "Home-in-24h" Recovery Framework</h3>
+                                <h3 className="font-heading text-3xl font-bold italic font-heading">The "Home-in-24h" Recovery Framework</h3>
                                 <p className="text-slate-400 leading-relaxed">
                                     Our recovery protocol is built around **Early Mobilization**. Because we avoid large abdominal cuts, our patients experience significantly less pain and are often walking within hours of surgery.
                                 </p>
@@ -158,12 +158,12 @@ export default function LaparoscopicHysterectomyPage() {
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center">
-                                    <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-primary italic">Pain Level</p>
-                                    <p className="text-3xl font-bold text-white">LOW</p>
+                                    <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading italic">Pain Level</p>
+                                    <p className="font-heading text-3xl font-bold text-white">LOW</p>
                                 </div>
                                 <div className="p-6 bg-white/5 border border-white/10 rounded-2xl text-center">
-                                    <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-primary italic">Incision Size</p>
-                                    <p className="text-3xl font-bold text-white">5MM</p>
+                                    <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading italic">Incision Size</p>
+                                    <p className="font-heading text-3xl font-bold text-white">5MM</p>
                                 </div>
                             </div>
                         </div>
@@ -171,7 +171,7 @@ export default function LaparoscopicHysterectomyPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-rose-500" />
                             Elite Clinical FAQs: Laparoscopic Hysterectomy
                         </h3>

@@ -7,14 +7,14 @@ import { Baby, Shield, Heart, Zap, Award, Clock, Users, Flame, Microscope, Targe
 export default function PaediatricsDepartmentPage() {
     return (
         <DepartmentTemplate
-            title="Elite Paediatrics & Neonatology Hub"
+            title="Paediatrics & Neonatology Hub in Vellore, Tamil Nadu"
             slug="paediatrics"
             shortDescription="World-class child healthcare combining Level 3 NICU precision with compassionate pediatric surgical excellence."
             fullDescription={(
                 <div className="paediatrics-pillar-content space-y-20 text-left">
                     {/* ── 1. The Clinical Promise for the Next Generation ───────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             Small Lives, Big Care: Excellence in Paediatrics
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300 text-left">
@@ -118,7 +118,7 @@ export default function PaediatricsDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: Vaccination ─────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-rose-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Immunisation: The Invisible Shield of Childhood</h3>
+                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Immunisation: The Invisible Shield of Childhood</h3>
                         <p>
                             Vaccines are the single most effective clinical intervention in human history. They prepare a child's immune system to fight life-threatening diseases before they even occur. At Indira Hospital, we follow a rigorous <strong>Painless Vaccination Protocol</strong> combined with multi-channel reminders to ensure no child misses their vital shield.
                         </p>
@@ -130,7 +130,7 @@ export default function PaediatricsDepartmentPage() {
                                 { k: "MMR", v: "Measles/Mumps/Rubella" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
-                                    <p className="text-4xl font-black text-rose-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-rose-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -166,7 +166,7 @@ export default function PaediatricsDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-rose-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-rose-400 text-left">
                            Paediatrics: Comprehensive Clinical FAQs
                         </h3>
                         
@@ -210,7 +210,7 @@ export default function PaediatricsDepartmentPage() {
                                         <span className="text-rose-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

@@ -62,7 +62,7 @@ export const LaserPilesLongForm = () => {
 
             {/* Section 3: Symptoms & Early Warning Signs */}
             <section id="symptoms">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-primary italic">Common Symptoms: Recognizing the Signs Early</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic">Common Symptoms: Recognizing the Signs Early</h2>
                 <p className="text-lg text-slate-600 mb-6">
                     Symptoms can vary depending on whether you have internal or external piles. In Vellore, many patients ignore these signs until they reach Grade 3 or 4. Early detection can often lead to simpler, non-surgical management.
                 </p>
@@ -120,7 +120,7 @@ export const LaserPilesLongForm = () => {
 
             {/* Section 5: Why Laser? Comparison Section */}
             <section id="laser-vs-traditional" className="bg-slate-900 rounded-[3rem] p-12 text-white">
-                <h2 className="text-3xl font-bold mb-8 text-center italic font-primary">Laser vs. Traditional Surgery: The Scientific Choice</h2>
+                <h2 className="text-3xl font-bold mb-8 text-center italic font-heading">Laser vs. Traditional Surgery: The Scientific Choice</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-6">
                         <h3 className="text-xl font-bold border-b border-white/20 pb-4 text-fuchsia-300">Traditional Open Surgery</h3>

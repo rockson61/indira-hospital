@@ -70,7 +70,7 @@ export default function DrSoniyaShankarProfile() {
                     {/* Section: Visionary Leadership */}
                     <section id="philosophy" className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-100 dark:border-indigo-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-indigo-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-indigo-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Leadership Philosophy: The Patient-First Mandate
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -96,7 +96,7 @@ export default function DrSoniyaShankarProfile() {
                                 </div>
                             </div>
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-indigo-100 dark:border-indigo-800 shadow-xl flex flex-col justify-center">
-                                <Building2 className="w-16 h-16 text-indigo-500 mb-6 font-primary uppercase tracking-widest italic" />
+                                <Building2 className="w-16 h-16 text-indigo-500 mb-6 font-heading uppercase tracking-widest italic" />
                                 <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">Institutional Excellence Markers</h4>
                                 <ul className="space-y-4 mb-6">
                                     <li className="flex gap-3">
@@ -123,7 +123,7 @@ export default function DrSoniyaShankarProfile() {
                     {/* Operational Modalities row */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-indigo-300 uppercase tracking-widest leading-none">Global Operational Mandates</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-indigo-300 uppercase tracking-widest leading-none">Global Operational Mandates</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "NABH Compliance", desc: "100% adherence to national accreditation benchmarks.", icon: Shield },

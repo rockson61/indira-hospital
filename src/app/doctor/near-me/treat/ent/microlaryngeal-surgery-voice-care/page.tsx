@@ -67,7 +67,7 @@ export default function VoiceSurgeryPage() {
                     {/* Mechanism: The Anatomy of Vibration */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-fuchsia-50/50 dark:bg-fuchsia-950/20 border border-fuchsia-100 dark:border-fuchsia-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: Micro-Dissection vs Tissue Trauma
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -106,7 +106,7 @@ export default function VoiceSurgeryPage() {
                     {/* Specialized Phonosurgery Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-fuchsia-300 uppercase tracking-widest leading-none">Clinical Voice Care Spectrum</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-fuchsia-300 uppercase tracking-widest leading-none">Clinical Voice Care Spectrum</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "Vocal Nodules", desc: "Callus-like growths caused by chronic vocal strain or professional speaking.", icon: Mic },
@@ -126,7 +126,7 @@ export default function VoiceSurgeryPage() {
                     {/* Integrated Voice Hub Section */}
                     <section className="text-left">
                         <div className="mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter italic border-b-2 border-fuchsia-100 inline-block">Professional Voice Diagnostics</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter italic border-b-2 border-fuchsia-100 inline-block">Professional Voice Diagnostics</h3>
                             <p className="text-slate-600 dark:text-slate-400 mt-2">Stroboscopy: The diagnostic gold standard for fine-vibration flaws.</p>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -141,11 +141,11 @@ export default function VoiceSurgeryPage() {
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm text-center border-b-4 border-fuchsia-500">
-                                    <p className="text-3xl font-bold text-fuchsia-600 mb-1">95%+</p>
+                                    <p className="font-heading text-3xl font-bold text-fuchsia-600 mb-1">95%+</p>
                                     <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Recurrent Clear Rate</p>
                                 </div>
                                 <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm text-center border-b-4 border-fuchsia-500">
-                                    <p className="text-3xl font-bold text-fuchsia-600 mb-1">20X</p>
+                                    <p className="font-heading text-3xl font-bold text-fuchsia-600 mb-1">20X</p>
                                     <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Zeiss Zoom</p>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@ export default function VoiceSurgeryPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 text-left">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-fuchsia-500" />
                             Elite Clinical FAQs: Microlaryngeal Surgery (MLS)
                         </h3>

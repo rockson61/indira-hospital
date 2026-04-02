@@ -73,7 +73,7 @@ export default function IBSConstipationPage() {
                     {/* Mechanism: The Gut-Brain Axis */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary uppercase tracking-tighter">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading uppercase tracking-tighter">
                             Mechanism: The Gut-Brain Axis & Motility
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
@@ -98,7 +98,7 @@ export default function IBSConstipationPage() {
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
                                 <Brain className="w-16 h-16 text-emerald-500 mb-6" />
                                 <h4 className="text-xl font-bold mb-2">The "Indira" Microbiome Audit</h4>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-primary italic border-l-2 border-emerald-100 pl-4">
+                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading italic border-l-2 border-emerald-100 pl-4">
                                     We don't just prescribe laxatives. We audit your diet, stress levels, and bacterial balance to eliminate SIBO (Small Intestinal Bacterial Overgrowth) and restore your "Gut Rhythms."
                                 </p>
                                 <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
@@ -112,7 +112,7 @@ export default function IBSConstipationPage() {
                     {/* Regional Factors - Vellore Residents */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
-                        <h2 className="text-3xl font-bold mb-8 text-center italic font-primary text-emerald-300">Why Digestive Disorders are Prevalent in Vellore</h2>
+                        <h2 className="font-heading text-3xl font-bold mb-8 text-center italic font-heading text-emerald-300">Why Digestive Disorders are Prevalent in Vellore</h2>
                         <div className="grid md:grid-cols-3 gap-10 text-left relative z-10">
                             {[
                                 { title: "South Indian Diet", desc: "Highly refined rice and spicy condiments can irritate the bowel lining, triggering IBS in sensitive individuals.", icon: Utensils },
@@ -131,7 +131,7 @@ export default function IBSConstipationPage() {
                     {/* Management Roadmap */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter italic">Motility Restoration Timeline</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter italic">Motility Restoration Timeline</h3>
                             <p className="text-slate-600 dark:text-slate-400">Reclaiming your digestive health is a structured journey, not a quick fix.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
@@ -152,7 +152,7 @@ export default function IBSConstipationPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-emerald-500" />
                             Elite Clinical FAQs: IBS & Chronic Constipation
                         </h3>

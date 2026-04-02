@@ -53,7 +53,7 @@ export default function CrohnsManagementPage() {
                 {/* Visual Section: Why Specialized IBD Care? */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-sky-50 dark:bg-sky-900/50 border border-sky-100 dark:border-sky-800 shadow-lg">
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-sky-800 dark:text-sky-300">The IBD Remission Edge</h4>
+                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-sky-800 dark:text-sky-300">The IBD Remission Edge</h4>
                         <ul className="space-y-4">
                             {[
                                 { title: "Target-to-Treat Strategy", text: "We don't just treat symptoms. We use objective markers like Calprotectin and ileocolonoscopy to ensure the lining of the bowel is completely healed." },
@@ -82,7 +82,7 @@ export default function CrohnsManagementPage() {
 
                 {/* Deep Dive Content */}
                 <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Understanding Crohn's & IBD</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Crohn's & IBD</h3>
                     <p>
                         Crohn's Disease is a chronic inflammatory condition of the gastrointestinal tract. Unlike ulcerative colitis, which only affects the colon, Crohn's can affect any part of the GI tract from mouth to anus. The inflammation can be "transmural," meaning it can penetrate the entire thickness of the bowel wall, leading to complications like fistulas and abscesses.
                     </p>
@@ -90,7 +90,7 @@ export default function CrohnsManagementPage() {
                         At Indira Hospital, our approach, led by senior gastroenterologists, is focused on **Early Intervention**. By starting the right therapy early—especially biological drugs when indicated—we can often halt the disease's progression and avoid the need for permanent surgical removal of bowel segments.
                     </p>
 
-                    <h4 className="text-[#005f73] dark:text-sky-400 font-primary">Common Warning Signs of an IBD Flare:</h4>
+                    <h4 className="text-[#005f73] dark:text-sky-400 font-heading">Common Warning Signs of an IBD Flare:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                         {[
                             "Persistent diarrhea (often bloody in colitis)",
@@ -106,12 +106,12 @@ export default function CrohnsManagementPage() {
                         ))}
                     </div>
 
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-sky-500 pl-4 italic">The Journey to Remission</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-sky-500 pl-4 italic">The Journey to Remission</h3>
                     <p>
                         Achieving remission in Crohn's Disease is a marathon, not a sprint. We use a **"Tight Control"** monitoring approach, tracking your fecal calprotectin and serum drug levels every 3-6 months. This allow us to 'tweak' your medication dosage based on real-time data, ensuring you get the maximally effective dose with minimal side effects.
                     </p>
 
-                    <h4 className="font-primary text-[#005f73] dark:text-sky-400 mt-10">Why Indira Hospital for IBD?</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-sky-400 mt-10">Why Indira Hospital for IBD?</h4>
                     <ul>
                         <li>**Integrated IBD Unit**: Dedicated access to gastroenterologists, infusion nurses, and GI surgeons who specialized in IBD complications.</li>
                         <li>**Precision Endoscopy**: High-resolution colonoscopy to monitor 'mucosal healing'—the only reliable indicator of long-term success.</li>
@@ -123,7 +123,7 @@ export default function CrohnsManagementPage() {
                 <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-sky-950 to-transparent" />
                     
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
+                    <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
                         <Info className="text-sky-400" />
                         Crohn's & IBD: Essential FAQs
                     </h3>

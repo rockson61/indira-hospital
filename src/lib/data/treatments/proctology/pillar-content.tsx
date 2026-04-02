@@ -9,7 +9,7 @@ export const ProctologyPillarLongForm = () => {
             <section className="relative p-12 bg-slate-900 rounded-[3rem] text-white overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10">
-                    <h2 className="text-4xl font-bold mb-6 text-fuchsia-100 font-primary">The Ultimate Guide to Advanced Proctology in Vellore</h2>
+                    <h2 className="text-4xl font-bold mb-6 text-fuchsia-100 font-heading">The Ultimate Guide to Advanced Proctology in Vellore</h2>
                     <p className="text-xl text-fuchsia-100/70 leading-relaxed mb-8">
                         Welcome to the most comprehensive resource on modern colorectal health. At <strong>Indira Super Speciality Hospital</strong>, we don't just treat conditions; we restore quality of life. As India's premier center for <strong>Laser Proctology</strong>, we have redefined the patient experience from painful surgery to precision, bloodless healing.
                     </p>
@@ -23,7 +23,7 @@ export const ProctologyPillarLongForm = () => {
             <section>
                 <div className="grid md:grid-cols-2 gap-12 items-start">
                     <div>
-                        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3 font-primary uppercase tracking-tight">
+                        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3 font-heading uppercase tracking-tight">
                             <Shield className="text-fuchsia-600 w-8 h-8" />
                             Clinical Science of Proctology
                         </h2>
@@ -31,7 +31,7 @@ export const ProctologyPillarLongForm = () => {
                             Proctology, professionally known as <strong>Colorectal Surgery</strong>, is the surgical sub-specialty focused on the anatomy, physiology, and pathology of the colon, rectum, and anus. It involves a delicate balance of maintaining digestive motility, structural integrity, and the highly complex mechanisms of the anal sphincter—the muscles responsible for bowel control.
                         </p>
                         <div className="mt-8 space-y-4">
-                            <h4 className="font-bold text-slate-900 font-primary">Our Core Clinical Focus:</h4>
+                            <h4 className="font-bold text-slate-900 font-heading">Our Core Clinical Focus:</h4>
                             <ul className="space-y-3">
                                 {[
                                     "Functional Anorectal Disorders (Constipation, Incontinence)",
@@ -60,7 +60,7 @@ export const ProctologyPillarLongForm = () => {
 
             {/* 3. The 7 Pillars of Proctology at Indira Hospital */}
             <section className="bg-slate-50 py-16 px-8 rounded-[4rem]">
-                <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center font-primary">The 7 Pillars of Expertise</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center font-heading">The 7 Pillars of Expertise</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[
                         { 
@@ -71,7 +71,7 @@ export const ProctologyPillarLongForm = () => {
                         { 
                             title: "Fistula closure (FiLaC)", 
                             desc: "Advanced laser fiber closure (FiLaC) that preserves the sphincter and prevents recurrence.",
-                            link: "/doctor/near-me/treat/proctology/laser-fistula-surgery-filac"
+                            link: "/doctor/near-me/treat/proctology/fistula-surgery-treatment"
                         },
                         { 
                             title: "Anal Fissure Management", 
@@ -147,7 +147,7 @@ export const ProctologyPillarLongForm = () => {
                     <div className="relative">
                         <div className="absolute inset-0 bg-fuchsia-500/20 blur-[100px] rounded-full -z-10" />
                         <div className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] border border-slate-200 dark:border-slate-800 shadow-2xl relative">
-                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 font-primary italic border-b pb-4 border-slate-100 dark:border-slate-800">Clinical Impact Comparison</h3>
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 font-heading italic border-b pb-4 border-slate-100 dark:border-slate-800">Clinical Impact Comparison</h3>
                             <div className="space-y-10">
                                 <div className="space-y-4">
                                     <div className="flex justify-between text-xs font-black uppercase tracking-widest text-slate-400">
@@ -189,7 +189,7 @@ export const ProctologyPillarLongForm = () => {
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     <div className="w-full lg:w-1/2 space-y-6">
                         <span className="px-4 py-1 bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-600 dark:text-fuchsia-400 text-[10px] font-black rounded-full uppercase tracking-widest italic border border-fuchsia-200 dark:border-fuchsia-800">Advanced Complex Care</span>
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic leading-tight">Complex Fistula Management: Beyond the Simple Tract</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic leading-tight">Complex Fistula Management: Beyond the Simple Tract</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed italic">
                             A complex fistula (multi-branched or high transcystic) is one of the most challenging conditions in colorectal surgery. Traditional "cutting" often leads to fecal incontinence—the inability to control bowel movements.
                         </p>
@@ -216,7 +216,7 @@ export const ProctologyPillarLongForm = () => {
                             "The internal opening is the 'factory' of the fistula. If you don't find the internal opening, the fistula will return. VAAFT allows us to find and close that factory with precision laser closure (FiLaC) without damaging a single fiber of the sphincter muscle."
                         </p>
                         <hr className="border-white/10" />
-                        <div className="flex items-center gap-4 not-italic font-primary">
+                        <div className="flex items-center gap-4 not-italic font-heading">
                             <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-black">KS</div>
                             <div>
                                 <p className="font-bold text-sm">Dr. Karan Shankar</p>
@@ -229,7 +229,7 @@ export const ProctologyPillarLongForm = () => {
 
             {/* 5. Diagnostic Precision: The Foundation of Success */}
             <section className="bg-slate-900 rounded-[4rem] p-16 text-white text-center group transition-colors hover:bg-slate-800">
-                <h2 className="text-4xl font-black mb-6 font-primary italic uppercase tracking-tighter">Precision Diagnostics Hub</h2>
+                <h2 className="text-4xl font-black mb-6 font-heading italic uppercase tracking-tighter">Precision Diagnostics Hub</h2>
                 <p className="text-fuchsia-100/60 text-xl mb-16 max-w-3xl mx-auto italic font-medium leading-relaxed">
                     A proctology procedure is only as good as the diagnostic roadmap. At Indira, we utilize the world's most advanced imaging to map your digestive tract before we ever initiate treatment.
                 </p>
@@ -265,7 +265,7 @@ export const ProctologyPillarLongForm = () => {
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     <div className="w-full lg:w-1/3">
                         <div className="relative p-8 bg-white dark:bg-slate-900 rounded-[3rem] shadow-2xl border-4 border-emerald-100 dark:border-emerald-800 rotate-2">
-                             <h4 className="text-2xl font-black text-emerald-700 dark:text-emerald-400 mb-4 font-primary italic">The Indira Nutri-Rehab™</h4>
+                             <h4 className="text-2xl font-black text-emerald-700 dark:text-emerald-400 mb-4 font-heading italic">The Indira Nutri-Rehab™</h4>
                              <p className="text-sm text-slate-500 leading-relaxed mb-6 italic">"Surgery is only 50% of the solution. The remaining 50% is how you fuel your digestive recovery."</p>
                              <ul className="space-y-4">
                                 {["Liquid Gold Phase (Day 1)", "Soft-Fiber Transition (Day 3-7)", "Probiotic Bulk Protocol", "Hydration Mapping"].map((item, i) => (
@@ -277,7 +277,7 @@ export const ProctologyPillarLongForm = () => {
                         </div>
                     </div>
                     <div className="flex-1 space-y-8">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic leading-tight">Advanced Post-Surgical Rehabilitation</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic leading-tight">Advanced Post-Surgical Rehabilitation</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                             Our Procto-Rehab protocols are designed to ensure that you never have to visit a proctologist again. It's not just about healing the wound; it's about changing the <strong>Digestive Mechanics</strong> that caused the Piles or Fissure in the first place.
                         </p>
@@ -299,7 +299,7 @@ export const ProctologyPillarLongForm = () => {
             <section>
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     <div className="flex-1">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-8 font-primary uppercase tracking-tighter italic border-l-8 border-fuchsia-600 pl-8">Vellore: India's Colorectal Destination</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-8 font-heading uppercase tracking-tighter italic border-l-8 border-fuchsia-600 pl-8">Vellore: India's Colorectal Destination</h2>
                         <div className="prose prose-lg prose-slate dark:prose-invert">
                             <p>
                                 Patients from across <strong>Tamil Nadu, Andhra Pradesh, and Karnataka</strong> travel to Indira Hospital in Vellore for laser treatment. Why Vellore? It is the intersection of clinical excellence, specialized laser infrastructure, and affordable, high-tech healthcare. 
@@ -346,7 +346,7 @@ export const ProctologyPillarLongForm = () => {
             {/* 7. FAQ Cluster */}
             <section className="pt-20 border-t border-slate-100 dark:border-slate-800">
                 <div className="text-center mb-20 max-w-2xl mx-auto">
-                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6 font-primary uppercase tracking-tighter italic">Expert Answers: Clinical FAQ</h2>
+                    <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6 font-heading uppercase tracking-tighter italic">Expert Answers: Clinical FAQ</h2>
                     <p className="text-slate-500 italic">Clarifying your doubts with clinical precision and medical authority.</p>
                 </div>
                 
@@ -375,7 +375,7 @@ export const ProctologyPillarLongForm = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/30 to-blue-600/10 opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-fuchsia-500/10 blur-[150px] -mt-[300px]"></div>
                 
-                <h2 className="text-5xl font-black mb-8 font-primary italic tracking-tighter">Start Your Pain-Free Journey Today</h2>
+                <h2 className="text-5xl font-black mb-8 font-heading italic tracking-tighter">Start Your Pain-Free Journey Today</h2>
                 <p className="text-fuchsia-100/60 mb-12 max-w-2xl mx-auto text-xl leading-relaxed italic font-medium">
                     Don't let embarrassment or fear of pain hold you back from a high-quality life. Join 10,000+ patients who have found permanent relief at India's leading Laser Proctology Center.
                 </p>

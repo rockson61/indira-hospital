@@ -54,7 +54,7 @@ export default function GastroenterologyPillarPage() {
                 <div className="space-y-20 text-left">
                     {/* ── 1. The Clinical Vision ────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             Regional Center of Excellence for Digestive Health
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -77,8 +77,8 @@ export default function GastroenterologyPillarPage() {
                                     Beyond simple diagnosis, we specialize in high-complexity interventions: <strong>Band Ligation</strong> for variceal bleeding, <strong>Argon Plasma Coagulation (APC)</strong> for vascular lesions, and <strong>Endoscopic Mucosal Resection (EMR)</strong> for early tumor removal.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 font-primary">Olympus 190 SERIES</span>
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 font-primary">ZERO-DELAY DIAGNOSIS</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 font-heading">Olympus 190 SERIES</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 font-heading">ZERO-DELAY DIAGNOSIS</span>
                                 </div>
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
@@ -116,7 +116,7 @@ export default function GastroenterologyPillarPage() {
                     {/* ── 3. Educational Deep-Dive: Fatty Liver ────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Clinical Alert: The "Silent" Epidemic of Fatty Liver</h3>
+                        <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Clinical Alert: The "Silent" Epidemic of Fatty Liver</h3>
                         <p>
                             Non-Alcoholic Fatty Liver Disease (NAFLD/NASH) is the leading cause of liver failure in modern urban centers. Because the liver has no pain receptors, inflammatory damage (Steatohepatitis) can progress to Cirrhosis without any visible symptoms for years.
                         </p>
@@ -131,7 +131,7 @@ export default function GastroenterologyPillarPage() {
                                 { k: "Diet Hub", v: "Metabolic Fix" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-blue-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-blue-600">
-                                    <p className="text-4xl font-black text-blue-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-blue-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -145,7 +145,7 @@ export default function GastroenterologyPillarPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-blue-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-blue-400 text-left">
                            Gastrointestinal Hub: Clinical Case FAQs
                         </h3>
                         
@@ -181,7 +181,7 @@ export default function GastroenterologyPillarPage() {
                                         <span className="text-blue-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

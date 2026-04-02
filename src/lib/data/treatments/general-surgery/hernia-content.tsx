@@ -25,7 +25,7 @@ export const HerniaLongForm = () => {
         <div className="hernia-longform-content space-y-16 py-8">
             {/* 1. Executive Summary */}
             <section className="executive-summary">
-                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-primary italic underline decoration-indigo-600/20 underline-offset-8">
+                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-heading italic underline decoration-indigo-600/20 underline-offset-8">
                     Comprehensive Guide to Laparoscopic Hernia Repair in Vellore
                 </h2>
                 <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -41,7 +41,7 @@ export const HerniaLongForm = () => {
             {/* 2. Understanding the Pathology */}
             <section className="bg-slate-50 dark:bg-slate-900/50 p-12 rounded-[3.5rem] border border-slate-100 dark:border-slate-800 shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/5 blur-[100px] -mr-32 -mt-32" />
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-primary">
+                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-heading">
                     <Info className="text-indigo-600 w-10 h-10" />
                     What is a Hernia? Types & Symptoms
                 </h3>
@@ -50,7 +50,7 @@ export const HerniaLongForm = () => {
                         <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                             An abdominal wall hernia occurs when internal organs (most commonly the intestine) or fatty tissue push through a weak spot or opening in the muscle wall. Think of it as a "hole in a tire" where the inner tube bulges out through the outer casing.
                         </p>
-                        <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mt-6 font-primary text-xl uppercase italic">Common Types of Hernia:</h4>
+                        <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mt-6 font-heading text-xl uppercase italic">Common Types of Hernia:</h4>
                         <div className="space-y-4">
                             {[
                                 { t: 'Inguinal Hernia', d: 'The most common type, occurring in the groin canal. Predominantly affects men.' },
@@ -71,7 +71,7 @@ export const HerniaLongForm = () => {
                     <div className="bg-red-50 dark:bg-red-950/20 p-10 rounded-[4rem] border border-red-100 dark:border-red-900/30 flex flex-col justify-center">
                         <div className="flex items-center gap-4 mb-6">
                             <AlertOctagon className="text-red-600 w-12 h-12 animate-pulse" />
-                            <h4 className="font-black text-red-900 dark:text-red-400 font-primary uppercase tracking-tighter">Emergency Warning: Strangulation</h4>
+                            <h4 className="font-black text-red-900 dark:text-red-400 font-heading uppercase tracking-tighter">Emergency Warning: Strangulation</h4>
                         </div>
                         <p className="text-sm text-red-800 dark:text-red-300 leading-relaxed italic mb-8 font-medium">
                             If your hernia bulge becomes hard, red, or excruciatingly painful, it may be <strong>strangulated</strong>. This means the blood supply to the intestine is cut off. Seek immediate surgical intervention if you experience:
@@ -90,10 +90,10 @@ export const HerniaLongForm = () => {
             <section className="tech-advantage bg-slate-900 rounded-[4rem] p-16 text-white relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
                 <div className="max-w-4xl relative z-10 mx-auto text-center">
-                    <h2 className="text-4xl font-black mb-10 text-indigo-400 font-primary italic uppercase tracking-tighter shrink-0">Laparoscopic vs. Open Surgery</h2>
+                    <h2 className="text-4xl font-black mb-10 text-indigo-400 font-heading italic uppercase tracking-tighter shrink-0">Laparoscopic vs. Open Surgery</h2>
                     <div className="grid md:grid-cols-2 gap-12 text-left">
                         <div className="space-y-6">
-                            <h4 className="text-2xl font-bold font-primary italic text-indigo-100 uppercase italic">Keyhole Precision (TAPP / TEP)</h4>
+                            <h4 className="text-2xl font-bold font-heading italic text-indigo-100 uppercase italic">Keyhole Precision (TAPP / TEP)</h4>
                             <p className="text-slate-400 leading-relaxed italic text-sm">
                                 At Indira Hospital, we specialize in the **Transabdominal Preperitoneal (TAPP)** and **Totally Extraperitoneal (TEP)** laparoscopic techniques. Instead of a 4-inch incision, we use three 5mm ports. This allows the surgeon to place the mesh <strong>behind</strong> the defect, using the natural internal pressure of the abdomen to keep the mesh secured.
                             </p>
@@ -108,7 +108,7 @@ export const HerniaLongForm = () => {
                             </div>
                         </div>
                         <div className="bg-white/5 p-12 rounded-[4rem] border border-white/10 flex flex-col justify-center group/card">
-                             <h3 className="text-fuchsia-400 text-6xl font-black mb-4 font-primary tracking-tighter transition-transform group-hover/card:scale-110">0.5%</h3>
+                             <h3 className="text-fuchsia-400 text-6xl font-black mb-4 font-heading tracking-tighter transition-transform group-hover/card:scale-110">0.5%</h3>
                              <p className="text-indigo-200 font-black uppercase tracking-widest text-xs mb-6">Recurrence Rate at Indira</p>
                              <p className="text-slate-400 text-xs leading-relaxed italic mb-8 opacity-80">
                                 Our mastery of 3D-Mesh positioning has reduced the recurrence rate to the lowest in the region. Traditional open surgery often carries a 5-10% recurrence depending on the technique.
@@ -125,7 +125,7 @@ export const HerniaLongForm = () => {
             <section className="mesh-tech py-12">
                 <div className="flex flex-col md:flex-row gap-16 items-center">
                     <div className="md:w-1/2 space-y-8">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic m-0 tracking-tighter uppercase italic">The 3D Anatomical Mesh</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic m-0 tracking-tighter uppercase italic">The 3D Anatomical Mesh</h2>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic text-lg opacity-80 font-light">
                             Traditional meshes are flat, requiring extensive suturing or stapling to stay in place. We use <strong>anatomically contoured 3D meshes</strong> that match the direct curvature of the abdominal wall.
                         </p>
@@ -149,7 +149,7 @@ export const HerniaLongForm = () => {
                     </div>
                     <div className="md:w-1/2 bg-indigo-50 dark:bg-indigo-950/30 p-12 rounded-[5rem] border border-indigo-100 dark:border-indigo-900/30 shadow-2xl relative overflow-hidden group">
                          <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-600/5 rounded-full blur-[80px]" />
-                         <h4 className="text-2xl font-black text-indigo-900 dark:text-indigo-400 mb-6 font-primary italic uppercase italic underline decoration-indigo-600/10 underline-offset-8">Consultations & Diagnosis</h4>
+                         <h4 className="text-2xl font-black text-indigo-900 dark:text-indigo-400 mb-6 font-heading italic uppercase italic underline decoration-indigo-600/10 underline-offset-8">Consultations & Diagnosis</h4>
                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic mb-8">
                             A hernia diagnosis starts with a physical exam, but at Indira, we use <strong>Dynamic Ultrasound</strong> (viewing the hernia whilst the patient coughs) to map the exact size of the defect. This ensures we order the perfect mesh size before you even enter the OT.
                          </p>
@@ -165,7 +165,7 @@ export const HerniaLongForm = () => {
 
             {/* 5. Custom Recovery Path */}
             <section className="bg-slate-50 dark:bg-slate-900/50 p-10 md:p-16 rounded-[4rem] border border-slate-100 dark:border-slate-800">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-primary italic uppercase tracking-widest text-center">Accelerated Recovery Protocol</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-heading italic uppercase tracking-widest text-center">Accelerated Recovery Protocol</h2>
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
                         { day: 'Day 0', title: 'Ambulation', desc: 'You will be encouraged to walk within 4-6 hours of waking from surgery.' },
@@ -175,7 +175,7 @@ export const HerniaLongForm = () => {
                     ].map((step, i) => (
                         <div key={i} className="p-8 bg-white dark:bg-slate-950 rounded-[3rem] border border-slate-100 dark:border-slate-800 text-center group hover:shadow-2xl transition-all">
                             <div className="text-xs font-black text-indigo-600 uppercase tracking-widest mb-4 italic">{step.day}</div>
-                            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 font-primary">{step.title}</h4>
+                            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 font-heading">{step.title}</h4>
                             <p className="text-xs text-slate-500 leading-relaxed italic">{step.desc}</p>
                         </div>
                     ))}
@@ -188,12 +188,12 @@ export const HerniaLongForm = () => {
                     <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
-                            <h2 className="text-4xl font-black text-indigo-400 font-primary italic uppercase tracking-tighter m-0">Economic Transparency</h2>
+                            <h2 className="text-4xl font-black text-indigo-400 font-heading italic uppercase tracking-tighter m-0">Economic Transparency</h2>
                             <p className="text-slate-400 leading-relaxed italic">
                                 We believe in <strong>No Hidden Costs</strong>. Our surgical packages in Vellore are comprehensive, covering everything from the 3D-Mesh cost to the anaesthesia and hospital stay.
                             </p>
                             <div className="p-8 bg-white/5 border border-white/10 rounded-[3rem]">
-                                <h4 className="text-fuchsia-400 font-bold mb-4 font-primary text-lg flex items-center gap-3">
+                                <h4 className="text-fuchsia-400 font-bold mb-4 font-heading text-lg flex items-center gap-3">
                                     <Shield className="w-5 h-5" /> Insurance Empanelment
                                 </h4>
                                 <p className="text-xs text-slate-400 italic mb-4">We are partnered with all leading providers:</p>
@@ -209,7 +209,7 @@ export const HerniaLongForm = () => {
                                 <div className="absolute top-0 right-0 p-8 opacity-20">
                                     <Zap className="w-16 h-16" />
                                 </div>
-                                <h4 className="text-2xl font-black mb-2 font-primary italic">Estimated Cost in Vellore:</h4>
+                                <h4 className="text-2xl font-black mb-2 font-heading italic">Estimated Cost in Vellore:</h4>
                                 <p className="text-5xl font-black tracking-tighter mb-4 italic">₹45k - ₹85k</p>
                                 <p className="text-xs font-medium text-white/70 leading-relaxed italic">
                                     *Price varies based on hernia type (Inguinal vs Incisional) and choice of mesh (Flat vs 3D). Contact us for a precise quote.
@@ -222,7 +222,7 @@ export const HerniaLongForm = () => {
 
             {/* 7. Comprehensive FAQ */}
             <section className="pt-20 border-t border-slate-100 dark:border-slate-800">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-primary italic uppercase tracking-widest text-center underline underline-offset-8 decoration-indigo-600/20">Hernia Care FAQ</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-heading italic uppercase tracking-widest text-center underline underline-offset-8 decoration-indigo-600/20">Hernia Care FAQ</h2>
                 <div className="grid md:grid-cols-2 gap-10">
                     {[
                         { q: "Can a hernia heal on its own without surgery?", a: "No. A hernia is a structural defect (a hole) in the muscle wall. It will never heal on its own and will typically get larger and more difficult to repair over time." },
@@ -246,7 +246,7 @@ export const HerniaLongForm = () => {
             {/* 8. Final Silo Transition CTA */}
             <section className="bg-indigo-950 rounded-[4rem] p-20 text-center text-white relative overflow-hidden group/cta">
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse" />
-                <h2 className="text-5xl font-black mb-6 font-primary italic uppercase tracking-tighter">Don't Wait for an Emergency</h2>
+                <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Don't Wait for an Emergency</h2>
                 <p className="text-indigo-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
                     Fix the gap permanently with 4K Laparoscopy and 3D-Mesh technology. Consult Vellore's leading surgical team today.
                 </p>

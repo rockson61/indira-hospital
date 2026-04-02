@@ -23,14 +23,14 @@ export default function NeurologyDepartmentPage() {
 
     return (
         <DepartmentTemplate
-            title="Elite Neurosciences & Stroke Hub"
+            title="Neurosciences & Stroke Hub in Vellore, Tamil Nadu"
             slug="neurology"
             shortDescription="Advanced Brain & Nervous System care in Vellore. We specialize in Hyper-Acute Stroke Thrombolysis, Epilepsy control, and complex Neuro-Critical care."
             fullDescription={(
                 <div className="neurology-pillar-content space-y-20 text-left">
                     {/* ── 1. The Command Center of the Body ─────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-indigo-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-indigo-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             The Neuro Authority: Excellence in Brain & Spine Sciences
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -134,7 +134,7 @@ export default function NeurologyDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: Recognizing Stroke ────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-indigo-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-indigo-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Clinical Insight: The B.E. F.A.S.T. Protocol</h3>
+                        <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Clinical Insight: The B.E. F.A.S.T. Protocol</h3>
                         <p>
                             A stroke is a "Brain Attack." It occurs when blood flow to the brain is blocked or a blood vessel ruptures. Recognizing the signs early is the only way to save a life and ensure neurological recovery.
                         </p>
@@ -147,7 +147,7 @@ export default function NeurologyDepartmentPage() {
                                 { k: "A", v: "Arm Weakness" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-indigo-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-indigo-600">
-                                    <p className="text-4xl font-black text-indigo-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-indigo-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -161,7 +161,7 @@ export default function NeurologyDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-indigo-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-indigo-400 text-left">
                            Neurosciences: Specialist Clinical FAQs
                         </h3>
                         
@@ -205,7 +205,7 @@ export default function NeurologyDepartmentPage() {
                                         <span className="text-indigo-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

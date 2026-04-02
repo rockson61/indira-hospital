@@ -22,7 +22,7 @@ export const LaserFissureLongForm = () => {
 
             {/* Section 2: What is Anal Fissure? Anatomy of the Tear */}
             <section id="what-are-fissure">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-primary italic">Anal Fissure (Aasanavaai Vedippu): Why it Hurts So Much</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic">Anal Fissure (Aasanavaai Vedippu): Why it Hurts So Much</h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                     <p>
                         The anal canal is lined with extremely sensitive skin. When a tear occurs, it exposes the underlying internal anal sphincter muscle, which immediately goes into a spasm. This spasm is what causes the intense, prolonged pain after a bowel movement and also prevents blood flow to the area, keeping the fissure from healing naturally.
@@ -80,7 +80,7 @@ export const LaserFissureLongForm = () => {
             {/* Section 4: Laser Sphincterotomy at Indira Hospital */}
             <section id="laser-technique" className="bg-slate-900 rounded-[3rem] p-12 text-white overflow-hidden relative">
                 <div className="absolute top-0 left-0 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl -ml-32 -mt-32" />
-                <h2 className="text-3xl font-bold mb-8 text-center italic font-primary">The Elite Laser Solution (Laser-LIS)</h2>
+                <h2 className="text-3xl font-bold mb-8 text-center italic font-heading">The Elite Laser Solution (Laser-LIS)</h2>
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
                         <p className="text-lg text-fuchsia-100 font-medium">

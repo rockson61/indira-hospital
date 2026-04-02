@@ -86,7 +86,7 @@ export const IBSConstipationLongForm = () => {
             {/* Section 4: Causes & Environmental Factors localized for Tamil Nadu */}
             <section id="causes" className="bg-slate-900 rounded-[3rem] p-12 text-white overflow-hidden relative">
                  <div className="absolute top-0 left-0 w-64 h-64 bg-fuchsia-100/5 rounded-full blur-3xl -ml-32 -mt-32" />
-                 <h2 className="text-3xl font-bold mb-8 text-center italic font-primary text-fuchsia-300">Why It's Prevalent in Vellore Residents</h2>
+                 <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Why It's Prevalent in Vellore Residents</h2>
                  <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-6">
                         <div className="flex gap-4 items-start">
@@ -118,7 +118,7 @@ export const IBSConstipationLongForm = () => {
 
             {/* Section 5: Motility Diagnostics at Indira Hospital */}
             <section id="diagnostics">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-primary italic underline decoration-fuchsia-200">Advanced Motility Testing: Precision Diagnosis</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic underline decoration-fuchsia-200">Advanced Motility Testing: Precision Diagnosis</h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                     <p>
                         Unlike traditional clinics, we don't rely only on guesswork. At Indira Hospital, we use advanced technology to map your gut's performance:

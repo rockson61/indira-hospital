@@ -110,7 +110,7 @@ export default function EpilepsyCarePage() {
         >
             <div className="space-y-8">
                 <section>
-                    <h2 className="text-3xl font-bold mb-4">India's Premier Center for Advanced Epilepsy Management</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-4">India's Premier Center for Advanced Epilepsy Management</h2>
                     <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         At the <strong>Indira Neurology Center</strong>, we believe that no one should live with the constant fear of a seizure. Our epilepsy specialists provide the most advanced diagnostic and therapeutic care, ensuring that you can lead a full, productive life. Whether it's childhood absence seizures or adult refractory epilepsy, we have the expertise to restore your stability.
                     </p>

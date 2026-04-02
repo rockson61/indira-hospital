@@ -71,7 +71,7 @@ export const LaserFistulaLongForm = () => {
             <section id="filac-technique" className="bg-slate-900 rounded-[3rem] p-12 text-white">
                 <div className="max-w-4xl mx-auto space-y-8">
                     <div className="text-center">
-                         <h2 className="text-3xl font-bold mb-4 italic font-primary text-fuchsia-300">FiLaC: The Sphincter-Preserving Laser Protocol</h2>
+                         <h2 className="text-3xl font-bold mb-4 italic font-heading text-fuchsia-300">FiLaC: The Sphincter-Preserving Laser Protocol</h2>
                          <p className="text-lg text-white/70">Fistula-tract Laser Closure is the future of proctology.</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-10">

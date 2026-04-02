@@ -73,7 +73,7 @@ export default function LipidProfilePage() {
                     {/* Mechanism: Automated Spectrophotometry & Calculations */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-amber-50/50 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-amber-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-amber-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: The Lipid Fractionation Advantage
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -123,7 +123,7 @@ export default function LipidProfilePage() {
                     {/* Metabolic Insights Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-amber-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-amber-300 uppercase tracking-widest leading-none italic leading-none">The Lipid Spectrum</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-amber-300 uppercase tracking-widest leading-none italic leading-none">The Lipid Spectrum</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "Triglycerides", desc: "Measuring the fats used for energy; high levels indicate sugar/alcohol metabolic stress.", icon: Activity },
@@ -143,7 +143,7 @@ export default function LipidProfilePage() {
                     {/* Preparing for Your Test Section */}
                     <section className="text-left">
                         <div className="mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter uppercase uppercase">Preparing for Your Lipid Profile</h3>
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase uppercase">Preparing for Your Lipid Profile</h3>
                             <p className="text-slate-600 dark:text-slate-400">Strict adherence to fasting is critical for accurate results.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -153,7 +153,7 @@ export default function LipidProfilePage() {
                                 { title: "Medication Audit", desc: "Inform our phlebotomist if you are on statins (Cholesterol medication) or blood thinners before sample collection." }
                             ].map((item, i) => (
                                 <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-amber-500">
-                                    <h4 className="font-primary text-xl font-bold mb-3">{item.title}</h4>
+                                    <h4 className="font-heading text-xl font-bold mb-3">{item.title}</h4>
                                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic italic leading-relaxed antialiased">{item.desc}</p>
                                 </div>
                             ))}

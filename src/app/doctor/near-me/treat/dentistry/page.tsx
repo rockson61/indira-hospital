@@ -27,14 +27,14 @@ export default function DentistryDepartmentPage() {
 
     return (
         <DepartmentTemplate
-            title="Elite Dentistry & Smile Design Hub"
+            title="Dentistry & Smile Design Hub in Vellore, Tamil Nadu"
             slug="dentistry"
             shortDescription="Transforming smiles through advanced Implantology, precision Root Canal treatments, and high-definition Cosmetic Veneers."
             fullDescription={(
                 <div className="dentistry-pillar-content space-y-20 text-left">
                     {/* ── 1. The Art & Science of a Perfect Smile ───────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-cyan-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-cyan-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             The Smile Revolution: Advanced Dental Sciences
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -138,7 +138,7 @@ export default function DentistryDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: The RCT Evolution ─────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-cyan-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-cyan-900 dark:text-cyan-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: RCT Without the Pain</h3>
+                        <h3 className="text-cyan-900 dark:text-cyan-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: RCT Without the Pain</h3>
                         <p>
                             Historically, a Root Canal Treatment (RCT) was a multiple-visit process feared by patients. Modern <strong>Endodontic Evolution</strong> has changed this. By using high-torque rotary motors and electronic apex locators, we can clean, shape, and fill the root canals in just one hour.
                         </p>
@@ -153,7 +153,7 @@ export default function DentistryDepartmentPage() {
                                 { k: "Durability", v: "Fiber Posts" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-cyan-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-cyan-600">
-                                    <p className="text-4xl font-black text-cyan-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-cyan-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -167,7 +167,7 @@ export default function DentistryDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-cyan-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-cyan-400 text-left">
                            Dentistry Excellence: Clinical FAQ Hub
                         </h3>
                         
@@ -211,7 +211,7 @@ export default function DentistryDepartmentPage() {
                                         <span className="text-cyan-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

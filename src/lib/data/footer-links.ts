@@ -20,7 +20,7 @@ export const FOOTER_LINKS = {
         { name: "Hernia Repair", url: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair-surgery" },
         { name: "Gallbladder Removal", url: "/doctor/near-me/treat/general-surgery/gallbladder-removal-recovery" },
         { name: "C-Section Delivery", url: "/doctor/near-me/treat/obstetrics-gynaecology/normal-delivery-vs-c-section" },
-        { name: "Kidney Stone Laser", url: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
+        { name: "Kidney Stone Laser", url: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
         { name: "Knee Replacement", url: "/doctor/near-me/treat/orthopaedics/robotic-knee-replacement" },
         { name: "Hip Replacement", url: "/doctor/near-me/treat/orthopaedics/hip-replacement-surgery-guide" },
         { name: "Heart Angioplasty", url: "/doctor/near-me/treat/cardiology/heart-angioplasty-procedure" },

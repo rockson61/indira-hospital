@@ -24,7 +24,7 @@ export const GeneralSurgeryPillarLongForm = () => {
         <div className="general-surgery-pillar-content space-y-16 py-8">
             {/* 1. Deep Dive Intro */}
             <section className="intro-deep-dive">
-                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-primary italic underline decoration-[#005f73]/20 underline-offset-8">
+                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-heading italic underline decoration-[#005f73]/20 underline-offset-8">
                     The Ultimate Guide to General & Laparoscopic Surgery in Vellore
                 </h2>
                 <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -40,7 +40,7 @@ export const GeneralSurgeryPillarLongForm = () => {
             {/* 2. Clinical Philosophy Section */}
             <section className="bg-slate-50 dark:bg-slate-900/50 p-12 rounded-[3.5rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#005f73]/5 blur-[100px] -mr-32 -mt-32" />
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-primary">
+                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-heading">
                     <Award className="text-[#005f73] w-10 h-10" />
                     Clinical Blueprint: The Indira Surgical Standard
                 </h3>
@@ -82,7 +82,7 @@ export const GeneralSurgeryPillarLongForm = () => {
             {/* 3. Technology & Infrastructure Section */}
             <section className="tech-infrastructure space-y-10">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6 font-primary uppercase tracking-tighter italic">
+                    <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading uppercase tracking-tighter italic">
                         The Infrastructure of Precision
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 italic">
@@ -94,7 +94,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-125 transition-transform duration-700">
                             <Microscope className="w-24 h-24 text-fuchsia-500" />
                         </div>
-                        <h4 className="text-xl font-black mb-4 font-primary tracking-tight italic text-fuchsia-400">4K UHD Laparoscopy</h4>
+                        <h4 className="text-xl font-black mb-4 font-heading tracking-tight italic text-fuchsia-400">4K UHD Laparoscopy</h4>
                         <p className="text-xs text-slate-400 leading-relaxed italic opacity-80">
                             Our 4K imaging stacks provide ultra-high definition visualization of the surgical field, allowing for safer dissection around vital blood vessels and nerves.
                         </p>
@@ -103,7 +103,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-125 transition-transform duration-700">
                             <Zap className="w-24 h-24 text-fuchsia-500" />
                         </div>
-                        <h4 className="text-xl font-black mb-4 font-primary tracking-tight italic text-fuchsia-400">Harmonic Scalpel (Ultrasonic)</h4>
+                        <h4 className="text-xl font-black mb-4 font-heading tracking-tight italic text-fuchsia-400">Harmonic Scalpel (Ultrasonic)</h4>
                         <p className="text-xs text-slate-400 leading-relaxed italic opacity-80">
                             Using ultrasonic vibration to cut and seal vessels simultaneously, reducing surgical time and eliminating the need for cautery-based thermal tissue damage.
                         </p>
@@ -112,7 +112,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-125 transition-transform duration-700">
                             <Layers className="w-24 h-24 text-fuchsia-500" />
                         </div>
-                        <h4 className="text-xl font-black mb-4 font-primary tracking-tight italic text-fuchsia-400">German Laser Platform</h4>
+                        <h4 className="text-xl font-black mb-4 font-heading tracking-tight italic text-fuchsia-400">German Laser Platform</h4>
                         <p className="text-xs text-slate-400 leading-relaxed italic opacity-80">
                             Dedicated 1470nm diode lasers for proctology and varicose vein treatments, providing the most painless surgical experience in South India.
                         </p>
@@ -122,7 +122,7 @@ export const GeneralSurgeryPillarLongForm = () => {
 
             {/* 4. Core Procedure Clusters */}
             <section className="procedure-clusters">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-primary italic underline decoration-[#005f73]/20 underline-offset-8 uppercase tracking-widest text-center">
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-heading italic underline decoration-[#005f73]/20 underline-offset-8 uppercase tracking-widest text-center">
                     Clinical Specialization Silos
                 </h2>
                 <div className="space-y-12">
@@ -199,7 +199,7 @@ export const GeneralSurgeryPillarLongForm = () => {
             <section className="bg-slate-900 p-16 rounded-[4rem] text-white relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/5 rounded-full blur-[100px] pointer-events-none" />
                 <div className="max-w-4xl relative z-10">
-                    <h2 className="text-4xl font-black mb-8 text-red-500 font-primary italic uppercase tracking-tighter">24/7 Surgical Emergency Readiness</h2>
+                    <h2 className="text-4xl font-black mb-8 text-red-500 font-heading italic uppercase tracking-tighter">24/7 Surgical Emergency Readiness</h2>
                     <div className="grid md:grid-cols-2 gap-12">
                         <div className="space-y-6">
                             <p className="text-slate-400 leading-relaxed italic text-sm">
@@ -220,7 +220,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                                 <div className="absolute top-0 right-0 p-4 opacity-20">
                                     <Clock className="w-16 h-16" />
                                 </div>
-                                <h4 className="text-xl font-black mb-2 font-primary italic">Emergency Hotline:</h4>
+                                <h4 className="text-xl font-black mb-2 font-heading italic">Emergency Hotline:</h4>
                                 <p className="text-3xl font-black tracking-tighter mb-4">+91 416 2261644</p>
                                 <p className="text-xs font-medium text-white/80 leading-relaxed italic">
                                     Connected directly to our ER Triage. Immediate ambulance dispatch and surgical team mobilization.
@@ -236,7 +236,7 @@ export const GeneralSurgeryPillarLongForm = () => {
             <section className="leadership-section">
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     <div className="space-y-8">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic m-0 tracking-tighter uppercase italic">The Surgical Architects</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic m-0 tracking-tighter uppercase italic">The Surgical Architects</h2>
                         <div className="prose prose-lg dark:prose-invert">
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 The reputation of our General Surgery department is built on the expertise of <strong>Dr. P. Shankar (M.S., FIAGES)</strong> and <strong>Dr. Karan Shankar (M.S.)</strong>. With certificates from world-renowned institutes and decades of combined experience, they are widely recognized as the best surgeons in Vellore and Tamil Nadu.
@@ -256,7 +256,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                     <div className="bg-slate-900 p-12 rounded-[5rem] relative overflow-hidden text-white group">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#005f73]/10 rounded-full blur-[80px]" />
                         <div className="relative z-10">
-                            <h4 className="text-2xl font-black text-[#005f73] mb-6 font-primary italic uppercase italic underline decoration-white/5 underline-offset-8">A Trusted Legacy</h4>
+                            <h4 className="text-2xl font-black text-[#005f73] mb-6 font-heading italic uppercase italic underline decoration-white/5 underline-offset-8">A Trusted Legacy</h4>
                             <p className="text-sm text-slate-400 leading-relaxed mb-8 italic">
                                 "Our mission was never just about performing surgery; it was about defining the right surgery. We ensure that our patients understand their options—from medication to laser—guaranteeing they walk out with health and confidence."
                             </p>
@@ -277,7 +277,7 @@ export const GeneralSurgeryPillarLongForm = () => {
             {/* 7. Comprehensive FAQ (Pillar Level) */}
             <section className="bg-white dark:bg-slate-900 rounded-[4rem] p-12 md:p-20 border border-slate-100 dark:border-slate-800 shadow-2xl relative overflow-hidden">
                 <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#005f73]/5 rounded-full blur-[120px]" />
-                <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-12 font-primary italic uppercase tracking-widest text-center underline underline-offset-8 decoration-[#005f73]/20">
+                <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-12 font-heading italic uppercase tracking-widest text-center underline underline-offset-8 decoration-[#005f73]/20">
                     Surgical FAQ
                 </h2>
                 <div className="grid md:grid-cols-2 gap-10">
@@ -303,7 +303,7 @@ export const GeneralSurgeryPillarLongForm = () => {
             {/* 8. Final Silo Transition CTA */}
             <section className="bg-gradient-to-br from-[#005f73] to-slate-900 rounded-[4rem] p-20 text-center text-white relative overflow-hidden group/cta">
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-fuchsia-600/10 rounded-full blur-[100px] animate-pulse" />
-                <h2 className="text-5xl font-black mb-6 font-primary italic uppercase tracking-tighter">Your Health is Our Legacy</h2>
+                <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Your Health is Our Legacy</h2>
                 <p className="text-white/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
                     Whether it's a routine gallbladder removal or a complex emergency, trust the region's surgical architects for world-class precision.
                 </p>

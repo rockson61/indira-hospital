@@ -28,7 +28,7 @@ export const GallbladderLongForm = () => {
         <div className="gallbladder-longform-content space-y-16 py-8">
             {/* 1. Executive Summary */}
             <section className="executive-summary">
-                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-primary italic underline decoration-indigo-600/20 underline-offset-8">
+                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-heading italic underline decoration-indigo-600/20 underline-offset-8">
                     The Ultimate Guide to Laparoscopic Gallbladder Surgery in Vellore
                 </h2>
                 <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -44,7 +44,7 @@ export const GallbladderLongForm = () => {
             {/* 2. Understanding Gallstones */}
             <section className="bg-slate-50 dark:bg-slate-900/50 p-12 rounded-[3.5rem] border border-slate-100 dark:border-slate-800 shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/5 blur-[100px] -mr-32 -mt-32" />
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-primary">
+                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-4 font-heading">
                     <Info className="text-indigo-600 w-10 h-10" />
                     What are Gallstones? Causes & Clinical Indicators
                 </h3>
@@ -53,7 +53,7 @@ export const GallbladderLongForm = () => {
                         <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                             The gallbladder is a small, pear-shaped organ that stores bile—a fluid used by the body to digest fats. Gallstones (Cholelithiasis) form when there is a chemical imbalance in the bile, leading to the formation of hard, stone-like deposits.
                         </p>
-                        <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mt-6 font-primary text-xl uppercase italic">Common Symptoms of Gallstones:</h4>
+                        <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mt-6 font-heading text-xl uppercase italic">Common Symptoms of Gallstones:</h4>
                         <div className="space-y-4">
                             {[
                                 { t: 'Biliary Colic', d: 'Sharp, sudden pain in the upper right abdomen, often after a fatty meal.' },
@@ -75,7 +75,7 @@ export const GallbladderLongForm = () => {
                         <div className="absolute top-0 right-0 p-8 opacity-10">
                             <AlertOctagon className="w-24 h-24 text-indigo-400" />
                         </div>
-                        <h4 className="font-black text-indigo-400 mb-6 font-primary uppercase tracking-tighter">The "Silent Stone" Myth</h4>
+                        <h4 className="font-black text-indigo-400 mb-6 font-heading uppercase tracking-tighter">The "Silent Stone" Myth</h4>
                         <p className="text-sm text-slate-400 leading-relaxed italic mb-8">
                             Many patients are told they have "incidental" stones and don't need surgery. However, studies show that once stones are present, the risk of a major biliary event (inflammation or infection) increases by 2-3% every year. Early elective surgery prevents the need for complex emergency interventions.
                         </p>
@@ -99,10 +99,10 @@ export const GallbladderLongForm = () => {
             <section className="tech-advantage bg-slate-900 rounded-[4rem] p-16 text-white relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
                 <div className="max-w-4xl relative z-10 mx-auto text-center">
-                    <h2 className="text-4xl font-black mb-10 text-indigo-400 font-primary italic uppercase tracking-tighter shrink-0">4K Laparoscopic Gallbladder Removal</h2>
+                    <h2 className="text-4xl font-black mb-10 text-indigo-400 font-heading italic uppercase tracking-tighter shrink-0">4K Laparoscopic Gallbladder Removal</h2>
                     <div className="grid md:grid-cols-2 gap-12 text-left">
                         <div className="space-y-6">
-                            <h4 className="text-2xl font-bold font-primary italic text-indigo-100 uppercase italic">Minimal Access, Maximum Clarity</h4>
+                            <h4 className="text-2xl font-bold font-heading italic text-indigo-100 uppercase italic">Minimal Access, Maximum Clarity</h4>
                             <p className="text-slate-400 leading-relaxed italic text-sm">
                                 We utilize the standard **four-port laparoscopic approach**, providing the highest safety margin. Through four tiny marks (5mm to 10mm), we insert high-definition 4K cameras that provide 20x magnification of the <strong>Calot's Triangle</strong>—the critical area where the gallbladder connects to the liver and bile ducts.
                             </p>
@@ -117,7 +117,7 @@ export const GallbladderLongForm = () => {
                             </div>
                         </div>
                         <div className="bg-white/5 p-12 rounded-[4rem] border border-white/10 flex flex-col justify-center group/card">
-                             <h3 className="text-indigo-400 text-6xl font-black mb-4 font-primary tracking-tighter transition-transform group-hover/card:scale-110">99.8%</h3>
+                             <h3 className="text-indigo-400 text-6xl font-black mb-4 font-heading tracking-tighter transition-transform group-hover/card:scale-110">99.8%</h3>
                              <p className="text-indigo-200 font-black uppercase tracking-widest text-xs mb-6">Success Rate for Elective Cases</p>
                              <p className="text-slate-400 text-xs leading-relaxed italic mb-8 opacity-80">
                                 Our commitment to high-end infrastructure and senior oversight has resulted in near-zero complication rates for elective gallbladder removal. Most patients walk within 6 hours of surgery.
@@ -134,7 +134,7 @@ export const GallbladderLongForm = () => {
             <section className="diet-recovery py-12">
                 <div className="flex flex-col md:flex-row gap-16 items-center">
                     <div className="md:w-1/2 space-y-8">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic m-0 tracking-tighter uppercase italic">Digestion Post-Surgery</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic m-0 tracking-tighter uppercase italic">Digestion Post-Surgery</h2>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic text-lg opacity-80 font-light">
                             A common misconception is that you cannot digest fat without a gallbladder. In reality, the liver continues to produce bile; it simply flows directly into the small intestine rather than being stored.
                         </p>
@@ -158,7 +158,7 @@ export const GallbladderLongForm = () => {
                     </div>
                     <div className="md:w-1/2 bg-indigo-50 dark:bg-indigo-950/30 p-12 rounded-[5rem] border border-indigo-100 dark:border-indigo-900/30 shadow-2xl relative overflow-hidden group">
                          <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-600/5 rounded-full blur-[80px]" />
-                         <h4 className="text-2xl font-black text-indigo-900 dark:text-indigo-400 mb-6 font-primary italic uppercase italic underline decoration-indigo-600/10 underline-offset-8">Clinical Importance of Early Surgery</h4>
+                         <h4 className="text-2xl font-black text-indigo-900 dark:text-indigo-400 mb-6 font-heading italic uppercase italic underline decoration-indigo-600/10 underline-offset-8">Clinical Importance of Early Surgery</h4>
                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic mb-8">
                             "When a stones slips from the gallbladder into the Common Bile Duct (CBD), it turns a simple surgery into a critical emergency requiring **ERCP** and two separate procedures. We strongly recommend elective removal once symptoms begin."
                          </p>
@@ -174,7 +174,7 @@ export const GallbladderLongForm = () => {
 
             {/* 5. Diagnosis & Pre-Op Mapping */}
             <section className="bg-white dark:bg-slate-900 rounded-[4rem] p-10 md:p-16 border border-slate-100 dark:border-slate-800 shadow-xl">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-primary italic uppercase tracking-widest text-center">Scientific Diagnosis Protocol</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-heading italic uppercase tracking-widest text-center">Scientific Diagnosis Protocol</h2>
                 <div className="grid md:grid-cols-3 gap-8 text-center px-4">
                     <div className="space-y-4">
                         <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-950/30 rounded-3xl flex items-center justify-center text-indigo-600 mx-auto">
@@ -206,12 +206,12 @@ export const GallbladderLongForm = () => {
                     <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
-                            <h2 className="text-4xl font-black text-indigo-400 font-primary italic uppercase tracking-tighter m-0">Economic Transparency</h2>
+                            <h2 className="text-4xl font-black text-indigo-400 font-heading italic uppercase tracking-tighter m-0">Economic Transparency</h2>
                             <p className="text-slate-400 leading-relaxed italic">
                                 We provide all-inclusive surgical packages for Gallbladder removal in Vellore. Our goal is to ensure world-class care is accessible and predictable.
                             </p>
                             <div className="p-8 bg-white/5 border border-white/10 rounded-[3rem]">
-                                <h4 className="text-fuchsia-400 font-bold mb-4 font-primary text-lg flex items-center gap-3">
+                                <h4 className="text-fuchsia-400 font-bold mb-4 font-heading text-lg flex items-center gap-3">
                                     <Shield className="w-5 h-5" /> Insurance Support
                                 </h4>
                                 <p className="text-xs text-slate-400 italic mb-4">Partnered with 100% of major providers:</p>
@@ -227,7 +227,7 @@ export const GallbladderLongForm = () => {
                                 <div className="absolute top-0 right-0 p-8 opacity-20">
                                     <Flame className="w-16 h-16" />
                                 </div>
-                                <h4 className="text-2xl font-black mb-2 font-primary italic">Estimated Surgical Package:</h4>
+                                <h4 className="text-2xl font-black mb-2 font-heading italic">Estimated Surgical Package:</h4>
                                 <p className="text-5xl font-black tracking-tighter mb-4 italic">₹55k - ₹95k</p>
                                 <p className="text-xs font-medium text-white/70 leading-relaxed italic">
                                     *Price includes 4K Laparoscopy tower usage, Harmonic Scalpel, Titanium clips, and 24Hr ward stay.
@@ -240,7 +240,7 @@ export const GallbladderLongForm = () => {
 
             {/* 7. Comprehensive FAQ */}
             <section className="pt-20 border-t border-slate-100 dark:border-slate-800">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-primary italic uppercase tracking-widest text-center underline underline-offset-8 decoration-indigo-600/20">Gallbladder Care FAQ</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-heading italic uppercase tracking-widest text-center underline underline-offset-8 decoration-indigo-600/20">Gallbladder Care FAQ</h2>
                 <div className="grid md:grid-cols-2 gap-10">
                     {[
                         { q: "Can gallstones be dissolved with medicine?", a: "While there are medications that claim to dissolve stones, they only work for very specific cholesterol-only stones, take years to show effect, and have a 100% recurrence rate once medicine is stopped. Surgery remains the only definitive cure." },
@@ -264,7 +264,7 @@ export const GallbladderLongForm = () => {
             {/* 8. Final CTA */}
             <section className="bg-indigo-950 rounded-[4rem] p-20 text-center text-white relative overflow-hidden group/cta">
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse" />
-                <h2 className="text-5xl font-black mb-6 font-primary italic uppercase tracking-tighter">Relief from Digestive Pain</h2>
+                <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Relief from Digestive Pain</h2>
                 <p className="text-indigo-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
                     Don't let gallstones dictate your life. Trust the region's 4K Laparoscopic experts for a safe, virtually painless transformation.
                 </p>

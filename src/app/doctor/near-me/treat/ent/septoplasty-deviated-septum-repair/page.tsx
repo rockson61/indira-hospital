@@ -60,7 +60,7 @@ export default function SeptoplastyPage() {
                     {/* Mechanism: Restoring Nasal Throughput */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading">
                             Mechanism: Restoring Nasal Throughput
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -99,7 +99,7 @@ export default function SeptoplastyPage() {
                     {/* Pre-Op Diagnostic Audit */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Precision Pre-Surgical Audit</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4">Precision Pre-Surgical Audit</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 A successful septoplasty requires precise anatomical mapping. We investigate both the bone structure and the soft tissue (turbinates) to ensure maximum throughput.
                             </p>
@@ -134,7 +134,7 @@ export default function SeptoplastyPage() {
                     {/* Technical Deep Dive: Turbinate Reduction */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-4">Synergy: Septoplasty + Turbinate Reduction</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-4">Synergy: Septoplasty + Turbinate Reduction</h3>
                         <p className="text-slate-400 max-w-2xl mx-auto mb-12">
                             When the septum is bent to one side, the other side often grows larger (Hypertrophy). At Indira, we automatically address both to ensure total breathing balance.
                         </p>
@@ -156,7 +156,7 @@ export default function SeptoplastyPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-emerald-500" />
                             Elite Clinical FAQs: Septoplasty
                         </h3>

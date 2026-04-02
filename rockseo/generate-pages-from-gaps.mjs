@@ -72,7 +72,7 @@ function generatePageTemplate(treatment, silo) {
     const eyebrow = `Elite ${silo.category} Solutions`;
     const description = `Indira Super Speciality Hospital offers world-class ${treatment.name} in Vellore, Tamil Nadu. Our expert ${silo.category.toLowerCase()} team utilizes advanced minimally invasive technology for faster recovery and superior clinical outcomes.`;
     
-    return `'use client'
+    return `
 
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'

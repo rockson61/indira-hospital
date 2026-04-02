@@ -11,7 +11,7 @@ export function LocalSEOFooter() {
                 <div className="max-w-7xl mx-auto">
                     {/* Header: Semantic H2 for Local SEO */}
                     <div className="mb-16">
-                        <h2 className="text-3xl font-black text-slate-900 dark:text-white font-primary italic border-l-4 border-fuchsia-600 pl-6 mb-6">
+                        <h2 className="text-3xl font-black text-slate-900 dark:text-white font-heading italic border-l-4 border-fuchsia-600 pl-6 mb-6">
                             List of Top Doctors in Vellore
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">

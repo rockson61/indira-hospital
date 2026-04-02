@@ -533,7 +533,7 @@ export function SubServiceTemplate({
                 <SectionContainer>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
-                            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-primary italic">
+                            <h2 className="text-3xl font-bold text-slate-900 dark:text-white font-heading italic">
                                 Visit Our Specialty Center in Vellore
                             </h2>
                             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-medium">

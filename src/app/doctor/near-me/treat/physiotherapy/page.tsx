@@ -7,14 +7,14 @@ import { Activity, Shield, Zap, Target, Heart, Award, Clock, Users, Accessibilit
 export default function PhysiotherapyDepartmentPage() {
     return (
         <DepartmentTemplate
-            title="Elite Physiotherapy & Rehabilitation Center"
+            title="Physiotherapy & Rehabilitation Center in Vellore, Tamil Nadu"
             slug="physiotherapy"
             shortDescription="Advanced Neuro-Muscular Rehabilitation, Sports Injury Management, and Pain Restoration led by senior physical therapists."
             fullDescription={(
                 <div className="physiotherapy-pillar-content space-y-20 text-left">
                     {/* ── 1. The Clinical Rehab Mission ─────────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             Restoring Movement, Enhancing Life: Elite Rehab in Vellore
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300 text-left">
@@ -118,7 +118,7 @@ export default function PhysiotherapyDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: Ergonomics ───────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-blue-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">The Ergonomic Edge: Preventing the Tech-Neck Epidemic</h3>
+                        <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">The Ergonomic Edge: Preventing the Tech-Neck Epidemic</h3>
                         <p>
                             In an age of constant screen-time, musculoskeletal pain is the #1 cause of productivity loss. "Tech-Neck" and Lumbar strain are not just discomforts; they are anatomical adaptations to poor postural habits. At Indira Hospital, our ergonomics program teaches you how to design your work environment to match your physiology.
                         </p>
@@ -130,7 +130,7 @@ export default function PhysiotherapyDepartmentPage() {
                                 { k: "Micro-Breaks", v: "20-20-20 Rule" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-blue-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-blue-600">
-                                    <p className="text-4xl font-black text-blue-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-blue-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -144,7 +144,7 @@ export default function PhysiotherapyDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-blue-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-blue-400 text-left">
                            Physiotherapy: Clinical FAQ Guide
                         </h3>
                         
@@ -180,7 +180,7 @@ export default function PhysiotherapyDepartmentPage() {
                                         <span className="text-blue-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

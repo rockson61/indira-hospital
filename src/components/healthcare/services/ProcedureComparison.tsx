@@ -33,7 +33,7 @@ export const ProcedureComparison = () => {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 blur-[100px] pointer-events-none" />
                 
                 <div className="max-w-3xl mb-12">
-                    <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary underline decoration-fuchsia-500/30 underline-offset-8">
+                    <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading underline decoration-fuchsia-500/30 underline-offset-8">
                         The Advantage: Elite Laser vs. Traditional Surgery
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400">

@@ -55,7 +55,7 @@ export default function InfertilityManagementPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50" />
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-rose-800 dark:text-rose-300">The Diagnostic Edge</h4>
+                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-rose-800 dark:text-rose-300">The Diagnostic Edge</h4>
                         <ul className="space-y-4">
                             {[
                                 { title: "48-Hour Rapid Evaluation", text: "We coordinate all essential tests—hormonal, anatomical, and male-factor—within a 48-hour window to give you clarity without the long wait." },
@@ -84,7 +84,7 @@ export default function InfertilityManagementPage() {
 
                 {/* Deep Dive Content */}
                 <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Understanding Infertility Evaluation</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Infertility Evaluation</h3>
                     <p>
                         Infertility is defined as the inability to conceive after one year of regular, unprotected intercourse (or six months for women over 35). It is important to remember that infertility is not a 'disease' but a clinical state that can often be corrected once the underlying factor—whether hormonal, tubal, or male-factor—is identified.
                     </p>
@@ -92,7 +92,7 @@ export default function InfertilityManagementPage() {
                         At Indira Hospital, our approach is built on **Evidence and Empathy**. We begin with a 'Level 1' hormonal and anatomical audit for both partners. By using high-resolution ultrasound and specialized tests like HSG (Hysterosalpingography) to check tubal patency, we build a customized 'Fertility Roadmap' that prioritizes the least invasive options first.
                     </p>
 
-                    <h4 className="text-[#005f73] dark:text-rose-400 font-primary">Standard Evaluation Checklist:</h4>
+                    <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Standard Evaluation Checklist:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                         {[
                             "Ovulation Tracking (Follicular Study)",
@@ -109,12 +109,12 @@ export default function InfertilityManagementPage() {
                         ))}
                     </div>
 
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Personalized Care, Not One-Size-Fits-All</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Personalized Care, Not One-Size-Fits-All</h3>
                     <p>
                         Every couple's journey is unique. Some may simply need 'Timed Intercourse' with minor ovulation support, while others may require specialized hysteroscopic procedures to correct uterine factors. Our **Fertility Wellness Team** includes dietitians and counselors who provide the nutritional and psychological support needed during this emotionally demanding phase.
                     </p>
 
-                    <h4 className="font-primary text-[#005f73] dark:text-rose-400 mt-10">Why Choose Indira for Fertility?</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">Why Choose Indira for Fertility?</h4>
                     <ul>
                         <li>**Integrated In-House Lab**: Comprehensive hormonal assays with same-day results for critical fertility biomarkers.</li>
                         <li>**Advanced Hysteroscopy Unit**: Correcting polyps or septums that may prevent embryo implantation.</li>
@@ -126,7 +126,7 @@ export default function InfertilityManagementPage() {
                 <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
                     <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl" />
                     
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
+                    <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
                         <Info className="text-rose-400" />
                         Infertility: Essential FAQs
                     </h3>

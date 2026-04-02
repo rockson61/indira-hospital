@@ -186,7 +186,7 @@ export default function InternationalPatientsPage() {
                                 { t: "Cardiology", d: "USFDA Drug-Eluting Stents", url: "/doctor/near-me/treat/cardiology/heart-angioplasty" },
                                 { t: "Orthopaedics", d: "Computer Navigated TKR", url: "/doctor/near-me/treat/orthopaedics/total-knee-replacement" },
                                 { t: "Proctology", d: "German Diode Laser Tech", url: "/doctor/near-me/treat/general-surgery/laser-piles-treatment" },
-                                { t: "Urology", d: "RIRS Incisionless Laser", url: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" }
+                                { t: "Urology", d: "RIRS Incisionless Laser", url: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" }
                             ].map((item, i) => (
                                 <Link key={i} href={item.url} className="group/item p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-fuchsia-500/50 transition-all duration-300">
                                     <div className="flex items-center justify-between mb-4">

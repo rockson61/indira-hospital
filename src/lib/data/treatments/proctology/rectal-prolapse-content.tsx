@@ -22,7 +22,7 @@ export const RectalProlapseLongForm = () => {
 
             {/* Section 2: What is Rectal Prolapse? Pathophysiology */}
             <section id="what-is-prolapse">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-primary italic underline decoration-fuchsia-200">Understanding Rectal Prolapse: Anatomy of the Descent</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic underline decoration-fuchsia-200">Understanding Rectal Prolapse: Anatomy of the Descent</h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                     <p>
                         The rectum is normally held in place by strong ligaments and muscles. When these supports weaken due to age, chronic straining, or multiple childbirths, the rectum can slide out of place. Rectal prolapse is categorized into three stages at Indira Hospital:
@@ -79,7 +79,7 @@ export const RectalProlapseLongForm = () => {
 
              {/* Section 4: Why Prolapse is Not Piles: The Difference */}
             <section id="prolapse-vs-piles" className="bg-slate-900 rounded-[3rem] p-12 text-white">
-                <h2 className="text-3xl font-bold mb-8 text-center italic font-primary text-fuchsia-300">Prolapse vs. Hemorrhoids: Don't Confuse the Two</h2>
+                <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Prolapse vs. Hemorrhoids: Don't Confuse the Two</h2>
                 <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-4">
                         <h4 className="font-bold text-xl text-red-400">Piles (Hemorrhoids)</h4>
@@ -97,7 +97,7 @@ export const RectalProlapseLongForm = () => {
 
             {/* Section 5: Robotic-Assisted & Laparoscopic Rectopexy */}
             <section id="the-fix">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-primary italic underline decoration-fuchsia-200">The Modern Solution: Laparoscopic Ventral Mesh Rectopexy</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic underline decoration-fuchsia-200">The Modern Solution: Laparoscopic Ventral Mesh Rectopexy</h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                     <p>
                         At our Vellore center, we avoid traditional perineal cuts which have high recurrence rates. Instead, we perform <strong>Laparoscopic Rectopexy</strong>. Through tiny 5-10mm incisions in the abdomen, we use a specialize biological or synthetic mesh to anchor the rectum back to its natural position.
@@ -217,7 +217,7 @@ export const RectalProlapseLongForm = () => {
                     <div className="inline-flex p-4 rounded-full bg-white shadow-soft">
                         <Target className="w-10 h-10 text-fuchsia-600" />
                     </div>
-                    <h2 className="text-3xl font-bold text-slate-900 italic font-primary">Restore Your Pelvic Foundation</h2>
+                    <h2 className="text-3xl font-bold text-slate-900 italic font-heading">Restore Your Pelvic Foundation</h2>
                     <p className="text-lg text-slate-600 leading-relaxed font-medium italic">
                         Don't let prolapse limit your world. Discover the precision of laparoscopic restoration at Vellore's most advanced proctological center.
                     </p>

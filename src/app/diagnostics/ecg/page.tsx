@@ -73,7 +73,7 @@ export default function ECGPage() {
                     {/* Mechanism: The 12-Lead Electrical Vector */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: The Cardiac Electrical Map
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -96,7 +96,7 @@ export default function ECGPage() {
                                 </div>
                             </div>
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-rose-100 dark:border-rose-800 shadow-xl flex flex-col justify-center">
-                                <HeartPulse className="w-16 h-16 text-rose-500 mb-6 font-primary uppercase tracking-widest italic" />
+                                <HeartPulse className="w-16 h-16 text-rose-500 mb-6 font-heading uppercase tracking-widest italic" />
                                 <h4 className="text-xl font-bold mb-2">Electrophysiology Benchmarks</h4>
                                 <ul className="space-y-4 mb-6">
                                     <li className="flex gap-3">
@@ -119,7 +119,7 @@ export default function ECGPage() {
                     {/* Diagnostic Spectrum Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-rose-300 uppercase tracking-widest leading-none">Specialized Cardiac Rhythms</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-rose-300 uppercase tracking-widest leading-none">Specialized Cardiac Rhythms</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "Atrial Fibrillation", desc: "Expert detection of irregular 'fluttering' associated with stroke risk.", icon: Zap },
@@ -139,7 +139,7 @@ export default function ECGPage() {
                     {/* ECG Comfort & Accuracy Section */}
                     <section className="text-left">
                         <div className="mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter uppercase uppercase uppercase">ECG Preparation & Procedure</h3>
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase uppercase uppercase">ECG Preparation & Procedure</h3>
                             <p className="text-slate-600 dark:text-slate-400 italic font-medium antialiased text-sm uppercase italic">Ensuring a clean, noise-free electrical signal.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -149,7 +149,7 @@ export default function ECGPage() {
                                 { title: "Medication Audit", desc: "Inform the technician if you are on Beta-Blockers or Digoxin, which naturally slow the heart's electrical rhythm." }
                             ].map((item: any, i: number) => (
                                 <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-rose-500">
-                                    <h4 className="font-primary text-xl font-bold mb-3 italic">{item.title}</h4>
+                                    <h4 className="font-heading text-xl font-bold mb-3 italic">{item.title}</h4>
                                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic antialiased">{item.desc}</p>
                                 </div>
                             ))}

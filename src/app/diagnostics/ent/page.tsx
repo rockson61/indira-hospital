@@ -79,7 +79,7 @@ export default function ENTDiagnosticsPage() {
                     {/* Mechanism: 4K Endoscopic Visualization */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-sky-50/50 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-sky-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-sky-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-sky-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: The 'Optical Biopsy' Protocol
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -105,7 +105,7 @@ export default function ENTDiagnosticsPage() {
                                 </div>
                             </div>
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-sky-100 dark:border-sky-800 shadow-xl flex flex-col justify-center">
-                                <Volume2 className="w-16 h-16 text-sky-500 mb-6 font-primary uppercase tracking-widest italic" />
+                                <Volume2 className="w-16 h-16 text-sky-500 mb-6 font-heading uppercase tracking-widest italic" />
                                 <h4 className="text-xl font-bold mb-2">ENT Diagnostic Benchmarks</h4>
                                 <ul className="space-y-4 mb-6">
                                     <li className="flex gap-3">
@@ -128,7 +128,7 @@ export default function ENTDiagnosticsPage() {
                     {/* Diagnostic Spectrum Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-sky-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-sky-300 uppercase tracking-widest leading-none">The ENT Diagnostic Spectrum</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-sky-300 uppercase tracking-widest leading-none">The ENT Diagnostic Spectrum</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "4K Nasal Endoscopy", desc: "Detailed mapping for Sinusitis, Nasal Polyps, and Septal defects.", icon: Camera },
@@ -147,7 +147,7 @@ export default function ENTDiagnosticsPage() {
 
                     {/* Transition to Treatment */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 text-left">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-6 uppercase font-primary italic">From Diagnosis to Sensory Recovery</h3>
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-6 uppercase font-heading italic">From Diagnosis to Sensory Recovery</h3>
                         <p className="mb-10 text-slate-600 dark:text-slate-400 italic">Our diagnostics pave the way for precise, life-changing ENT procedures:</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[

@@ -41,7 +41,7 @@ export function SectionHeader({
                 </span>
             )}
             <h2 className={cn(
-                "text-2xl md:text-3xl font-bold tracking-tight",
+                "font-heading text-2xl md:text-3xl font-bold tracking-tight",
                 isDark ? "text-white" : "text-gray-900 dark:text-white"
             )}>
                 {title}

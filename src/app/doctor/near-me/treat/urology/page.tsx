@@ -42,7 +42,7 @@ import {
 export default function UrologyPillarPage() {
     return (
         <DepartmentTemplate
-            title="Elite Urology & Laser Stone Center"
+            title="Urology & Laser Stone Center in Vellore, Tamil Nadu"
             slug="urology"
             shortDescription="India's leading center for 100W Holmium Laser enucleation, retrograde intrarenal surgery (RIRS), and comprehensive male fertility excellence."
             fullDescription={(
@@ -50,7 +50,7 @@ export default function UrologyPillarPage() {
                     {/* Mechanism: The Laser Revolution in Urology */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-primary uppercase tracking-tighter italic text-left">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-heading uppercase tracking-tighter italic text-left">
                             The Laser Frontier: Precision Excellence in Urology
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
@@ -89,7 +89,7 @@ export default function UrologyPillarPage() {
                     {/* Specialist Urology Verticals */}
                     <section className="text-left">
                         <div className="mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter italic border-b-2 border-blue-100 inline-block text-left">Clinical Specialization Hubs</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter italic border-b-2 border-blue-100 inline-block text-left">Clinical Specialization Hubs</h3>
                             <p className="text-slate-600 dark:text-slate-400 mt-2">From oncological resections to male reconstructive science.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -138,7 +138,7 @@ export default function UrologyPillarPage() {
                     {/* Trust Infrastructure Section */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden text-left">
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-4 italic font-primary text-blue-300 text-left">Beyond Surgery: The Stone Prevention Meta-Game</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-4 italic font-heading text-blue-300 text-left">Beyond Surgery: The Stone Prevention Meta-Game</h3>
                         <p className="text-slate-400 max-w-2xl text-left mb-12">
                             Treating a stone is a technical event; preventing its recurrence is a lifestyle mission. Recurrence rates can be as high as 50% within 5 years without metabolic management.
                         </p>
@@ -165,7 +165,7 @@ export default function UrologyPillarPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 text-left">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3 text-left">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3 text-left">
                             <Info className="text-blue-500" />
                             Elite Clinical FAQs: Comprehensive Urology
                         </h3>
@@ -211,11 +211,11 @@ export default function UrologyPillarPage() {
                 </div>
             )}
             procedures={[
-                { name: "Laser Stone Removal (RIRS)", link: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
+                { name: "Laser Stone Removal (RIRS)", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
                 { name: "Prostate Surgery (HoLEP)", link: "/doctor/near-me/treat/urology/laser-prostate-surgery" },
-                { name: "Keyhole Stone Surgery (PCNL)", link: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
+                { name: "Keyhole Stone Surgery (PCNL)", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
                 { name: "Male Fertility Surgery", link: "/doctor/near-me/treat/urology/laser-prostate-surgery" },
-                { name: "Bladder Tumor Removal", link: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
+                { name: "Bladder Tumor Removal", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
                 { name: "Reconstructive Urology", link: "/doctor/near-me/treat/urology/laser-prostate-surgery" }
             ]}
             technology={[

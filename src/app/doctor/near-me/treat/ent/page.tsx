@@ -46,14 +46,14 @@ export default function ENTDepartmentPage() {
 
     return (
         <DepartmentTemplate
-            title="Elite ENT, Head & Neck Micro-Surgery Hub"
+            title="ENT, Head & Neck Micro-Surgery Hub in Vellore, Tamil Nadu"
             slug="ent"
             shortDescription="Advanced Otorhinolaryngology in Vellore. Regional Center for FESS, Micro-Ear Surgery, and Pediatric Coblation procedures led by Dr. Gayathri."
             fullDescription={(
                 <div className="space-y-20 text-left">
                     {/* ── 1. The Auditory & Respiratory Vision ────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-emerald-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-emerald-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             The Ear, Nose &amp; Throat Authority: Precision Micro-Surgery
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -76,8 +76,8 @@ export default function ENTDepartmentPage() {
                                     Breathe clearly again. Our <strong>4K FESS</strong> protocols allow for the clearing of chronic sinus blockages with extreme precision, avoiding external cuts and ensuring rapid nasal restoration.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-emerald-100 dark:border-emerald-700 font-primary">4K IMAGE MAPPING</span>
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-emerald-100 dark:border-emerald-700 font-primary">ZERO-SCAR RECOVERY</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-emerald-100 dark:border-emerald-700 font-heading">4K IMAGE MAPPING</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-emerald-100 dark:border-emerald-700 font-heading">ZERO-SCAR RECOVERY</span>
                                 </div>
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
@@ -115,7 +115,7 @@ export default function ENTDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: Sinusitis ────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-emerald-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-emerald-900 dark:text-emerald-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Clinical Insight: The Endoscopic Sinus Revolution</h3>
+                        <h3 className="text-emerald-900 dark:text-emerald-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Clinical Insight: The Endoscopic Sinus Revolution</h3>
                         <p>
                             Chronic Sinusitis is more than just a "bad cold." It involves the persistent inflammation of the sinus linings, blocking the natural drainage pathways (ostia). Traditional surgery was invasive, but <strong>FESS</strong> changed the paradigm by allowing surgeons to visualize and clear blockages using 4K cameras inside the nose.
                         </p>
@@ -130,7 +130,7 @@ export default function ENTDepartmentPage() {
                                 { k: "Precision", v: "Nerve-Safe Paths" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-emerald-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-emerald-600">
-                                    <p className="text-4xl font-black text-emerald-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-emerald-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -144,7 +144,7 @@ export default function ENTDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-emerald-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-emerald-400 text-left">
                            ENT Specialist: Clinical Hub FAQs
                         </h3>
                         
@@ -180,7 +180,7 @@ export default function ENTDepartmentPage() {
                                         <span className="text-emerald-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

@@ -17,14 +17,14 @@ export default function OrthopaedicsDepartmentPage() {
 
     return (
         <DepartmentTemplate
-            title="Elite Orthopaedics & Joint Replacement Hub"
+            title="Orthopaedics & Joint Replacement Hub in Vellore, Tamil Nadu"
             slug="orthopaedics"
             shortDescription="Advanced Bone & Joint Sciences in Vellore. We specialize in Robotic Knee Replacement, HD Sports Arthroscopy, and Complex Spinal Trauma reconstruction."
             fullDescription={(
                 <div className="orthopaedics-pillar-content space-y-20 text-left">
                     {/* ── 1. The Mobility Revolution ───────────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight">
                             Regain Your Reach: The Golden Standard in Orthopaedic Surgery
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -128,7 +128,7 @@ export default function OrthopaedicsDepartmentPage() {
                     {/* ── 3. Educational Deep-Dive: Robotic vs. Manual ─────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: The Robotic Advantage</h3>
+                        <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: The Robotic Advantage</h3>
                         <p>
                             Orthopaedic surgery is transitioning from "subjective art" to "objective science." In manual knee replacement, the surgeon rely on visual cues and traditional mechanical jigs. In <strong>Robotic-Assisted Surgery</strong>, a 3D digital map of your unique knee is created before the first cut.
                         </p>
@@ -143,7 +143,7 @@ export default function OrthopaedicsDepartmentPage() {
                                 { k: "FAST", v: "Walk in 24 Hours" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-blue-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-blue-600">
-                                    <p className="text-4xl font-black text-blue-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-blue-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -157,7 +157,7 @@ export default function OrthopaedicsDepartmentPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-blue-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-blue-400 text-left">
                            Orthopaedics: Specialist Clinical FAQs
                         </h3>
                         
@@ -201,7 +201,7 @@ export default function OrthopaedicsDepartmentPage() {
                                         <span className="text-blue-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

@@ -62,7 +62,7 @@ export default function GERDManagementPage() {
                     {/* Mechanism: The LES Failure */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-cyan-50/50 dark:bg-cyan-950/20 border border-cyan-100 dark:border-cyan-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-cyan-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-cyan-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: Lower Esophageal Sphincter (LES) Dysfunction
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
@@ -87,7 +87,7 @@ export default function GERDManagementPage() {
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-cyan-100 dark:border-cyan-800 shadow-xl flex flex-col justify-center">
                                 <Flame className="w-16 h-16 text-cyan-500 mb-6" />
                                 <h4 className="text-xl font-bold mb-2">The "Indira" Reflux Audit</h4>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-primary italic border-l-2 border-cyan-100 pl-4">
+                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading italic border-l-2 border-cyan-100 pl-4">
                                     Why do antacids only work temporarily? Because they neutralize acid without fixing the 'leaky valve.' Our audits identify 'Non-Acid Reflux' and 'Hypersensitive Esophagus' which traditional meds often miss.
                                 </p>
                                 <div className="inline-flex items-center gap-2 text-cyan-600 font-bold text-xs uppercase tracking-widest">
@@ -101,7 +101,7 @@ export default function GERDManagementPage() {
                     {/* Surgical Precision: Nissen Fundoplication */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-cyan-300 uppercase tracking-widest leading-none">The Golden Standard Surgical Cure</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-cyan-300 uppercase tracking-widest leading-none">The Golden Standard Surgical Cure</h3>
                         <div className="grid md:grid-cols-2 gap-10 text-left relative z-10">
                             <div className="p-8 rounded-[2.5rem] bg-white/5 border border-white/10">
                                 <h4 className="font-bold text-2xl mb-4 text-cyan-400">Laparoscopic Nissen Fundoplication</h4>
@@ -137,7 +137,7 @@ export default function GERDManagementPage() {
                     {/* Diagnostic Grid */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter italic">Precision Physiological Diagnostics</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter italic">Precision Physiological Diagnostics</h3>
                             <p className="text-slate-600 dark:text-slate-400">Objective data, not guesswork. We measure exactly what your esophagus is doing over 24 hours.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
@@ -157,7 +157,7 @@ export default function GERDManagementPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-cyan-500" />
                             Elite Clinical FAQs: Acid Reflux & GERD Management
                         </h3>

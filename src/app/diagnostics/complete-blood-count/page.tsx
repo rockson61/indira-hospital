@@ -70,7 +70,7 @@ export default function CBCPage() {
                     {/* Mechanism: Automated 6-Part Differential */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: 6-Part Differential Hematology
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -116,7 +116,7 @@ export default function CBCPage() {
                     {/* Cellular Insights Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-emerald-300 uppercase tracking-widest leading-none">The 24-Parameter CBC Spectrum</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-emerald-300 uppercase tracking-widest leading-none">The 24-Parameter CBC Spectrum</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "RBC Indices (MCV/MCH)", desc: "Differentiating between Iron Deficiency, Vitamin B12 deficiency, and Thalassemia.", icon: Dna },
@@ -136,7 +136,7 @@ export default function CBCPage() {
                     {/* Home Collection & Safety Section */}
                     <section className="text-left">
                         <div className="mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter uppercase">Home Collection Benchmarks</h3>
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase">Home Collection Benchmarks</h3>
                             <p className="text-slate-600 dark:text-slate-400">Ensuring sample integrity from your doorstep to our laboratory.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -146,7 +146,7 @@ export default function CBCPage() {
                                 { title: "Same-Day Reporting", desc: "Automated analysis ensures verified results are uploaded to your patient portal within 6 hours." }
                             ].map((item: any, i: number) => (
                                 <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-emerald-500">
-                                    <h4 className="font-primary text-xl font-bold mb-3">{item.title}</h4>
+                                    <h4 className="font-heading text-xl font-bold mb-3">{item.title}</h4>
                                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic">{item.desc}</p>
                                 </div>
                             ))}

@@ -11,7 +11,7 @@ export const navigation = {
         {
             title: "Proctology", href: "/doctor/near-me/treat/proctology", subServices: [
                 { title: "Laser Piles Treatment", href: "/doctor/near-me/treat/proctology/laser-piles-treatment" },
-                { title: "Laser Fistula (FiLaC)", href: "/doctor/near-me/treat/proctology/laser-fistula-surgery-filac" },
+                { title: "Laser Fistula (FiLaC)", href: "/doctor/near-me/treat/proctology/fistula-surgery-treatment" },
                 { title: "Anal Fissure Care", href: "/doctor/near-me/treat/proctology/laser-fissure-treatment" },
                 { title: "Pilonidal Sinus", href: "/doctor/near-me/treat/proctology/laser-pilonidal-sinus-surgery" },
             ]
@@ -37,7 +37,7 @@ export const navigation = {
         { title: "ENT", href: "/doctor/near-me/treat/ent" },
         {
             title: "Urology", href: "/doctor/near-me/treat/urology", subServices: [
-                { title: "Kidney Stone Laser (RIRS)", href: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
+                { title: "Kidney Stone Laser (RIRS)", href: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
                 { title: "Elite Laser Prostate (TURP)", href: "/doctor/near-me/treat/urology/laser-prostate-surgery" },
                 { title: "Complex Stone (PCNL)", href: "/doctor/near-me/treat/urology/pcnl-complex-stone-removal" },
                 { title: "Bladder Cancer Unit", href: "/doctor/near-me/treat/urology/bladder-cancer-diagnosis-treatment" },

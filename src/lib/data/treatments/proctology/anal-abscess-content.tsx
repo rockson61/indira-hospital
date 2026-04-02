@@ -22,7 +22,7 @@ export const AnalAbscessLongForm = () => {
 
             {/* Section 2: What is an Anal Abscess? Pathophysiology */}
             <section id="what-is-abscess">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-primary italic underline decoration-fuchsia-200">Understanding Anal Abscesses: Why They Form</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic underline decoration-fuchsia-200">Understanding Anal Abscesses: Why They Form</h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                     <p>
                         Anal abscesses are typically caused by an infection of the small anal glands. These glands, located just inside the anus, produce mucus but can become blocked and infected, leading to an abscess.
@@ -84,7 +84,7 @@ export const AnalAbscessLongForm = () => {
             <section id="emergency-drainage" className="bg-slate-900 rounded-[3rem] p-12 text-white">
                 <div className="max-w-4xl mx-auto space-y-8">
                     <div className="text-center">
-                         <h2 className="text-3xl font-bold mb-4 italic font-primary text-fuchsia-300">Why You Must Not Wait: The Risk of Sepsis</h2>
+                         <h2 className="text-3xl font-bold mb-4 italic font-heading text-fuchsia-300">Why You Must Not Wait: The Risk of Sepsis</h2>
                          <p className="text-lg text-white/70">An anal abscess is an active infection that needs immediate relief.</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-10">

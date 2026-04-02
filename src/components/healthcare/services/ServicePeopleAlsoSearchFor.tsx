@@ -15,9 +15,9 @@ interface SearchQuery {
 
 const CATEGORY_QUERIES: Record<string, SearchQuery[]> = {
   Urology: [
-    { text: 'Kidney Stone Treatment', link: '/services/urology/kidney-stone-laser-surgery', category: 'Laser Surgery' },
+    { text: 'Kidney Stone Treatment', link: '/services/urology/laser-kidney-stone-surgery', category: 'Laser Surgery' },
     { text: 'Best Urologist in Vellore', link: '/doctors', category: 'Expert' },
-    { text: 'Laser Lithotripsy Cost', link: '/services/urology/kidney-stone-laser-surgery', category: 'Pricing' },
+    { text: 'Laser Lithotripsy Cost', link: '/services/urology/laser-kidney-stone-surgery', category: 'Pricing' },
     { text: 'Prostate Surgery', link: '/services/urology/prostate-surgery', category: 'Surgery' },
     { text: 'Dialysis Services near me', link: '/services/nephrology/dialysis', category: 'Nephrology' },
     { text: 'UTI Treatment Specialist', link: '/services/urology', category: 'General' },

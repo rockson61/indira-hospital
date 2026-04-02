@@ -85,7 +85,7 @@ export function DiagnosticTemplate({
                                         {category}
                                     </span>
                                 </div>
-                                <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-[1.1] tracking-tight font-primary uppercase italic">
+                                <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-[1.1] tracking-tight font-heading uppercase italic">
                                     {title} <br />
                                     <span className="text-fuchsia-600">Diagnostics in Vellore</span>
                                 </h1>
@@ -169,7 +169,7 @@ export function DiagnosticTemplate({
             <SectionContainer className="py-20">
                 <div className="grid lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-8">
-                        <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-primary prose-headings:uppercase prose-headings:italic prose-headings:tracking-tighter prose-p:leading-[1.8] prose-p:text-slate-600 dark:prose-p:text-slate-400">
+                        <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-heading prose-headings:uppercase prose-headings:italic prose-headings:tracking-tighter prose-p:leading-[1.8] prose-p:text-slate-600 dark:prose-p:text-slate-400">
                             {fullDescription}
                         </div>
 
@@ -190,7 +190,7 @@ export function DiagnosticTemplate({
                         {/* Quality Grid */}
                         <div className="p-8 rounded-[2rem] bg-slate-900 text-white relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/20 to-transparent -z-10" />
-                            <h3 className="text-xl font-bold mb-6 italic font-primary uppercase tracking-widest text-fuchsia-300">Indira Quality Audit</h3>
+                            <h3 className="text-xl font-bold mb-6 italic font-heading uppercase tracking-widest text-fuchsia-300">Indira Quality Audit</h3>
                             <div className="space-y-6">
                                 {[
                                     { title: "NABL Accredited", desc: "Highest diagnostic standard in India.", icon: Award },

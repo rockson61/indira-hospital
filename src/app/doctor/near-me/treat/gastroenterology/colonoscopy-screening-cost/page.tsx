@@ -68,7 +68,7 @@ export default function ColonoscopyPage() {
                     {/* Mechanism: AI-Assisted Polypectomy */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-primary">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading">
                             Mechanism: AI-Assisted Detection & CO2 Comfort
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -93,7 +93,7 @@ export default function ColonoscopyPage() {
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
                                 <Wind className="w-16 h-16 text-emerald-500 mb-6" />
                                 <h4 className="text-xl font-bold mb-2">The "Silent" Prep Protocol</h4>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-primary">
+                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading">
                                     Traditional bowel preps involve drinking 4 liters of high-volume liquid. We provide a **Low-Volume Split-Dose Prep** that is significantly easier to drink and more effective for a clean colon.
                                 </p>
                                 <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
@@ -107,7 +107,7 @@ export default function ColonoscopyPage() {
                     {/* Screening Timeline */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter uppercase">Clinical Screening Roadmap</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase">Clinical Screening Roadmap</h3>
                             <p className="text-slate-600 dark:text-slate-400">Regular colonoscopy screening can reduce the risk of colon cancer by up to 90%.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -118,7 +118,7 @@ export default function ColonoscopyPage() {
                                 { title: "Result Audit", desc: "Instant report on findings. Histopathology follow-up for removed polyps." }
                             ].map((item, i) => (
                                 <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center">
-                                    <h4 className="font-bold mb-2 text-emerald-600 font-primary uppercase tracking-tighter italic">{item.title}</h4>
+                                    <h4 className="font-bold mb-2 text-emerald-600 font-heading uppercase tracking-tighter italic">{item.title}</h4>
                                     <p className="text-xs text-slate-500 font-medium italic">{item.desc}</p>
                                 </div>
                             ))}
@@ -128,7 +128,7 @@ export default function ColonoscopyPage() {
                     {/* Technology Focus Section */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-4 font-serif italic">Advanced Endoscopy Platform</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-4 font-serif italic">Advanced Endoscopy Platform</h3>
                         <p className="text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
                             A colonoscopy is only as good as the technology and the "Withdrawal Time" of the endoscopist. At Indira, we maintain strict performance metrics for every procedure.
                         </p>
@@ -149,7 +149,7 @@ export default function ColonoscopyPage() {
 
                     {/* Clinical FAQ Hub */}
                     <section className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
+                        <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
                             <Info className="text-emerald-500" />
                             Elite Clinical FAQs: Colonoscopy Screening
                         </h3>

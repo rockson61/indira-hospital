@@ -37,7 +37,7 @@ export default function GastroscopyPage() {
             <div className="space-y-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-blue-50 dark:bg-slate-900/50 border border-blue-100 dark:border-slate-800">
-                        <h4 className="text-2xl font-bold text-blue-900 dark:text-white mb-6 font-primary">Advanced Mucosal Imaging</h4>
+                        <h4 className="text-2xl font-bold text-blue-900 dark:text-white mb-6 font-heading">Advanced Mucosal Imaging</h4>
                         <ul className="space-y-4">
                             {[
                                 { title: "Olympus 190 Series", text: "The highest global standard in endoscopic visualization for early cancer detection." },
@@ -69,7 +69,7 @@ export default function GastroscopyPage() {
                 </div>
 
                 <div className="bg-blue-50/50 dark:bg-white/5 rounded-[2.5rem] p-10 md:p-16 border border-blue-100">
-                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-3 font-primary">
+                    <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-10 flex items-center gap-3 font-heading">
                         <Search className="text-blue-500" />
                         Clinical FAQs
                     </h3>

@@ -55,7 +55,7 @@ export default function HysteroscopyPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50" />
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-rose-800 dark:text-rose-300">The Endoscopic Edge</h4>
+                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-rose-800 dark:text-rose-300">The Endoscopic Edge</h4>
                         <ul className="space-y-4">
                             {[
                                 { title: "See & Treat Approach", text: "We specialized in diagnostic-to-operative transitions. If we find a polyp or small fibroid during the diagnostic check, we can remove it immediately without a second procedure." },
@@ -84,7 +84,7 @@ export default function HysteroscopyPage() {
 
                 {/* Deep Dive Content */}
                 <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Comprehensive Uterine Evaluation</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Comprehensive Uterine Evaluation</h3>
                     <p>
                         A hysteroscopy involves inserting a thin, lighted telescope (hysterscope) through the natural opening of the cervix into the uterus. Unlike an ultrasound, which sees 'through' the tissue, a hysteroscopy allows the doctor to see the actual lining of the uterus and identify any growths, adhesions, or inflammatory changes that could be causing symptoms.
                     </p>
@@ -92,7 +92,7 @@ export default function HysteroscopyPage() {
                         At Indira Hospital, our gynaecological endoscopy team, led by senior specialists, focuses on **Function-Preserving Surgery**. Whether we are removing a polyp or correcting a uterine septum, our goal is to maintain the integrity of the uterine lining, which is critical for future fertility and normal menstrual health.
                     </p>
 
-                    <h4 className="text-[#005f73] dark:text-rose-400 font-primary">Conditions Treated via Hysteroscopy:</h4>
+                    <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Conditions Treated via Hysteroscopy:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                         {[
                             "Abnormal or heavy menstrual bleeding",
@@ -109,12 +109,12 @@ export default function HysteroscopyPage() {
                         ))}
                     </div>
 
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Painless Procedure & Rapid Recovery</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Painless Procedure & Rapid Recovery</h3>
                     <p>
                         At Indira Hospital, we prioritize **"Pain-Free Daycare"**. Most operative hysteroscopies are performed under light intravenous sedation, ensuring you are in a comfortable 'dream-state' during the 15-30 minute procedure. Because there are no external incisions, recovery is nearly immediate. Most patients relax in our daycare suite for a few hours and are back home for dinner, resuming light activities by the next morning.
                     </p>
 
-                    <h4 className="font-primary text-[#005f73] dark:text-rose-400 mt-10">The Indira Standard of Care:</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">The Indira Standard of Care:</h4>
                     <ul>
                         <li>**Advanced Resectoscopes**: Specialized energy devices that allow for precise removal of fibroids without damaging the surrounding tissue.</li>
                         <li>**Fluid Management Systems**: Precision automated pumps that ensure the uterus is safely and comfortably distended for clear visualization.</li>
@@ -126,7 +126,7 @@ export default function HysteroscopyPage() {
                 <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
                     <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl" />
                     
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
+                    <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
                         <Info className="text-rose-400" />
                         Hysteroscopy: Essential FAQs
                     </h3>

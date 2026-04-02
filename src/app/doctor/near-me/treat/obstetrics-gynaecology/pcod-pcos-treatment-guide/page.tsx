@@ -20,7 +20,7 @@ import {
 export default function PCODManagementPage() {
     return (
         <SubServiceTemplate
-            title="Elite PCOD & PCOS Treatment in Vellore"
+            title="Elite PCOD & PCOS Treatment in Vellore, Tamil Nadu"
             slug="pcod-pcos-treatment-guide"
             parentServiceSlug="obstetrics-gynaecology"
             departmentName="Indira Elite Women's Care"
@@ -55,7 +55,7 @@ export default function PCODManagementPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50" />
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-primary text-rose-800 dark:text-rose-300">The PCOS Edge</h4>
+                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-rose-800 dark:text-rose-300">The PCOS Edge</h4>
                         <ul className="space-y-4">
                             {[
                                 { title: "Hormonal Deep-Dive", text: "We perform comprehensive blood panels to check androstenedione, insulin resistance, and thyroid function, not just a simple ultrasound." },
@@ -84,7 +84,7 @@ export default function PCODManagementPage() {
 
                 {/* Deep Dive Content */}
                 <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold">Understanding PCOD & PCOS</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding PCOD & PCOS</h3>
                     <p>
                         While often used interchangeably, PCOD (Polycystic Ovary Disease) and PCOS (Polycystic Ovary Syndrome) are different levels of the same endocrine spectrum. PCOS is a more severe metabolic condition involving high levels of male hormones (androgens) and insulin resistance, which can lead to long-term risks like Type 2 Diabetes and cardiovascular issues.
                     </p>
@@ -92,7 +92,7 @@ export default function PCODManagementPage() {
                         At Indira Hospital, our Gynaecology and Endocrine teams work together to provide a **"360-Degree Management"** plan. We move beyond just 'prescribing birth control' to address the underlying metabolic dysregulation that drives the condition.
                     </p>
 
-                    <h4 className="text-[#005f73] dark:text-rose-400 font-primary">Common PCOS Symptoms:</h4>
+                    <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Common PCOS Symptoms:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                         {[
                             "Irregular or prolonged menstrual cycles",
@@ -109,12 +109,12 @@ export default function PCODManagementPage() {
                         ))}
                     </div>
 
-                    <h3 className="text-slate-900 dark:text-white font-primary font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">A Personalized Roadmap to Reversal</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">A Personalized Roadmap to Reversal</h3>
                     <p>
                         The "Indira PCOS Protocol" is built on four pillars: **Metabolic Audit, Clinical Nutrition, Stress Resilience, and Targeted Medical Therapy**. We track your progress through objective data—not just how you feel, but through monthly monitoring of insulin levels, BMI, and hormonal ratios. This scientific approach ensures that we are making real progress toward reversing the condition and preventing its long-term complications.
                     </p>
 
-                    <h4 className="font-primary text-[#005f73] dark:text-rose-400 mt-10">Why Choose Indira for Women's Care?</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">Why Choose Indira for Women's Care?</h4>
                     <ul>
                         <li>**Advanced Pelvic Ultrasound**: Identifying 'string of pearls' follicles and monitoring endometrial thickness with high clarity.</li>
                         <li>**In-house Metabolic Lab**: Rapid testing for oral glucose tolerance and fasting insulin levels.</li>
@@ -126,7 +126,7 @@ export default function PCODManagementPage() {
                 <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
                     <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl" />
                     
-                    <h3 className="text-3xl font-bold mb-12 flex items-center gap-3 font-primary relative z-10">
+                    <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
                         <Info className="text-rose-400" />
                         PCOD & PCOS: Essential FAQs
                     </h3>

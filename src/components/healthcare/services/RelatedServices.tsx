@@ -32,7 +32,7 @@ const DEFAULT_ALTERNATIVES: SimpleServiceItem[] = [
 const FALLBACK_MAP: Record<string, { related: SimpleServiceItem[]; alternatives: SimpleServiceItem[] }> = {
   'kidney-stone': {
     related: [
-      { title: 'RIRS Surgery', href: '/services/urology/kidney-stone-laser-surgery' },
+      { title: 'RIRS Surgery', href: '/services/urology/laser-kidney-stone-surgery' },
       { title: 'PCNL Surgery', href: '/services/urology' },
       { title: 'Dialysis Center', href: '/services/nephrology/dialysis' },
     ],

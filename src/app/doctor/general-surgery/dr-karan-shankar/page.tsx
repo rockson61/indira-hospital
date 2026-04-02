@@ -78,7 +78,7 @@ export default function DrKaranShankarProfile() {
                     {/* Section: Minimal Access Precision */}
                     <section id="philosophy" className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-fuchsia-50/50 dark:bg-fuchsia-950/20 border border-fuchsia-100 dark:border-fuchsia-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Surgical Precision: The Minimal Access Revolution
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -104,7 +104,7 @@ export default function DrKaranShankarProfile() {
                                 </div>
                             </div>
                             <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-fuchsia-100 dark:border-fuchsia-800 shadow-xl flex flex-col justify-center">
-                                <Activity className="w-16 h-16 text-fuchsia-500 mb-6 font-primary uppercase tracking-widest italic" />
+                                <Activity className="w-16 h-16 text-fuchsia-500 mb-6 font-heading uppercase tracking-widest italic" />
                                 <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">Clinical Excellence Benchmarks</h4>
                                 <ul className="space-y-4 mb-6">
                                     <li className="flex gap-3">
@@ -131,7 +131,7 @@ export default function DrKaranShankarProfile() {
                     {/* Elite Surgical Modalities */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-fuchsia-300 uppercase tracking-widest leading-none">Advanced Modality Spectrum</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-fuchsia-300 uppercase tracking-widest leading-none">Advanced Modality Spectrum</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "4K UHD Lap-Stack", desc: "Digital mapping for complex hernia and gallbladder surgery.", icon: Monitor },

@@ -49,7 +49,7 @@ export default function OphthalmologyPillarPage() {
                 <div className="ophthalmology-pillar-content space-y-20">
                     {/* ── 1. The Vision of Clinical Excellence ─────────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert text-left">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-primary italic border-l-8 border-teal-600 pl-6 mb-8 uppercase tracking-tight">
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-teal-600 pl-6 mb-8 uppercase tracking-tight">
                             The Visionary Frontier: Advanced Ophthalmology in Vellore
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -111,7 +111,7 @@ export default function OphthalmologyPillarPage() {
                                             ))}
                                         </ul>
                                     </div>
-                                    <Link href="/doctor/near-me/treat/ophthalmology/cataract-surgery-mics" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
+                                    <Link href="/doctor/near-me/treat/ophthalmology/advanced-cataract-surgery" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
                                         View Cataract Unit
                                     </Link>
                                 </div>
@@ -162,7 +162,7 @@ export default function OphthalmologyPillarPage() {
                     {/* ── 3. Advanced Educational Content: MICS vs Traditional ────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-teal-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-teal-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-teal-900 dark:text-teal-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic">Clinical Insight: The Micro-Incision Edge</h3>
+                        <h3 className="text-teal-900 dark:text-teal-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: The Micro-Incision Edge</h3>
                         <p>
                             In standard cataract surgery, an incision of 3.0 mm to 5.0 mm was common, which often required stitches and led to significant "astigmatism" – requiring the patient to wear heavy glasses even after a successful surgery.
                         </p>
@@ -177,7 +177,7 @@ export default function OphthalmologyPillarPage() {
                                 { k: "Clarity", v: "HD Lens Placement" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-teal-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-teal-600">
-                                    <p className="text-4xl font-black text-teal-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-teal-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -191,7 +191,7 @@ export default function OphthalmologyPillarPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-teal-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-teal-400 text-left">
                            Ophthalmology Excellence: Clinical FAQ Hub
                         </h3>
                         
@@ -235,7 +235,7 @@ export default function OphthalmologyPillarPage() {
                                         <span className="text-teal-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

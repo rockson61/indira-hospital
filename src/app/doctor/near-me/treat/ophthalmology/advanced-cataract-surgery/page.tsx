@@ -6,14 +6,14 @@ import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 export default function SEOPage() {
     return (
         <SubServiceTemplate
-            title="Laser Fistula Surgery (FiLaC) in Vellore"
-            eyebrow="Elite Proctology Solutions"
-            departmentName="Proctology"
-            departmentSlug="proctology"
+            title="Advanced Cataract Surgery (MICS) in Vellore, Tamil Nadu"
+            eyebrow="Elite Ophthalmology Solutions"
+            departmentName="Ophthalmology"
+            departmentSlug="ophthalmology"
             description={
                 <>
                     <p>
-                        Searching for the <strong>best laser fistula surgery (filac) in Vellore</strong>? Indira Super Speciality Hospital is a center of excellence for advanced proctology care, providing precision-driven surgical solutions with a focus on patient safety and rapid healing.
+                        Searching for the <strong>best micro-incision cataract surgery (mics) in Vellore</strong>? Indira Super Speciality Hospital is a center of excellence for advanced ophthalmology care, providing precision-driven surgical solutions with a focus on patient safety and rapid healing.
                     </p>
                     <p className="mt-4">
                         Our facility is equipped with state-of-the-art diagnostic and surgical infrastructure, including high-definition imaging and modular OTs, ensuring that every patient receives international-standard medical care right here in Tamil Nadu.
@@ -22,28 +22,28 @@ export default function SEOPage() {
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: 'Advanced', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Eye' },
                 { label: 'Care Type', value: 'Surgical', icon: 'Shield' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             reviews={{
                 entityType: 'service',
-                entityName: 'Laser Fistula Surgery (FiLaC)',
-                entitySlug: 'laser-fistula-surgery-filac'
+                entityName: 'Micro-Incision Cataract Surgery (MICS)',
+                entitySlug: 'advanced-cataract-surgery'
             }}
             showAvailabilityCTA={true}
             showVideoBank={true}
-            duration="45 Mins"
-            hospitalStay="24 Hours"
-            recoveryTime="72 Hours"
-            anesthesia="Spinal"
+            duration="30-45 Mins"
+            hospitalStay="Daycare (6 hrs)"
+            recoveryTime="48 Hours"
+            anesthesia="Local/Spinal"
             showComparison={true}
         >
             <div className="space-y-12">
                 <section>
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for Laser Fistula Surgery (FiLaC)?</h2>
+                    <h2 className="font-heading text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for Micro-Incision Cataract Surgery (MICS)?</h2>
                     <p className="text-lg text-slate-600 leading-relaxed">
-                        At Indira Hospital, we combine decades of surgical expertise with the latest medical breakthroughs. Our proctology specialists are pioneers in minimally invasive techniques, ensuring:
+                        At Indira Hospital, we combine decades of surgical expertise with the latest medical breakthroughs. Our ophthalmology specialists are pioneers in minimally invasive techniques, ensuring:
                     </p>
                     <ul className="grid md:grid-cols-2 gap-4 mt-8">
                         {[
@@ -63,9 +63,9 @@ export default function SEOPage() {
                 </section>
 
                 <section className="bg-slate-900 rounded-[3rem] p-12 text-white">
-                    <h2 className="text-3xl font-bold mb-6">Advanced Proctology Infrastructure</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-6">Advanced Ophthalmology Infrastructure</h2>
                     <p className="text-fuchsia-200/80 text-lg mb-8">
-                        Our hospital is equipped with high-end medical technology to support complex proctology procedures, reducing surgical time and enhancing precision.
+                        Our hospital is equipped with high-end medical technology to support complex ophthalmology procedures, reducing surgical time and enhancing precision.
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
                         {[

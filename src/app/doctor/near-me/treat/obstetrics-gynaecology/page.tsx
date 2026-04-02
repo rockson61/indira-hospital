@@ -29,7 +29,7 @@ export default function GynaecologyPillarPage() {
                 <div className="space-y-20 text-left">
                     {/* ── 1. The Clinical Vision ────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
-                        <h2 className="text-4xl font-black text-rose-900 dark:text-rose-400 font-primary italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
+                        <h2 className="text-4xl font-black text-rose-900 dark:text-rose-400 font-heading italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
                             The Gynaecology Authority: Precision Women's Care
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -52,8 +52,8 @@ export default function GynaecologyPillarPage() {
                                     Transforming major surgeries into daycare procedures. We specialize in <strong>4K Laparoscopic Hysterectomy</strong> and <strong>Laparoscopic Myomectomy</strong> (Fibroid removal), ensuring near-invisible scarring and a return to home within 24-48 hours.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 font-primary italic">AIIMS PROTOCOLS</span>
-                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 font-primary italic">4K IMAGE PRECISION</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 font-heading italic">AIIMS PROTOCOLS</span>
+                                    <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 font-heading italic">4K IMAGE PRECISION</span>
                                 </div>
                             </div>
                             <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
@@ -91,7 +91,7 @@ export default function GynaecologyPillarPage() {
                     {/* ── 3. Educational Deep-Dive: PCOS & Metabolic Health ────────────────── */}
                     <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
-                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-primary italic text-left">Clinical insight: The PCOS &amp; Fertility Reset</h3>
+                        <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Clinical insight: The PCOS &amp; Fertility Reset</h3>
                         <p>
                             PCOS (Polycystic Ovary Syndrome) is not just a 'period problem'; it is a systemic metabolic disorder. At Indira Hospital, our <strong>Reproductive Medicine</strong> wing focuses on 'Scientific Reversal' by tackling the underlying insulin resistance and hormonal imbalance before attempting aggressive fertility treatments.
                         </p>
@@ -106,7 +106,7 @@ export default function GynaecologyPillarPage() {
                                 { k: "Diet Hub", v: "Metabolic Restoration" }
                             ].map(item => (
                                 <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
-                                    <p className="text-4xl font-black text-rose-600 mb-2 font-primary italic uppercase tracking-tighter">{item.k}</p>
+                                    <p className="text-4xl font-black text-rose-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
                                     <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
                                 </div>
                             ))}
@@ -120,7 +120,7 @@ export default function GynaecologyPillarPage() {
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
-                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-primary uppercase tracking-tighter text-rose-400 text-left">
+                        <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-rose-400 text-left">
                            OBGYN Hub: Clinical Lifecycle FAQs
                         </h3>
                         
@@ -156,7 +156,7 @@ export default function GynaecologyPillarPage() {
                                         <span className="text-rose-500 text-2xl font-serif">Q.</span>
                                         <span>{faq.q}</span>
                                     </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-primary">
+                                    <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
                                         {faq.a}
                                     </p>
                                 </div>

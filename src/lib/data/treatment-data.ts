@@ -45,7 +45,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-2",
         slug: "laser-piles-treatment",
         parentServiceSlug: "proctology",
-        title: "Advanced Laser Piles Treatment (Hemorrhoids)",
+        title: "Laser Piles Treatment in Vellore, Tamil Nadu (Hemorrhoids)",
         shortDescription: "Painless, bloodless laser surgery for Hemorrhoids with same-day discharge.",
         fullDescription: "Laser treatment for piles (hemorrhoids) is a minimally invasive procedure that uses laser energy to shrink the hemorrhoidal tissue. At Indira Hospital, we use high-power 1470nm Diode Lasers to achieve precision-driven results, ensuring zero incisions and a rapid return to daily life. This procedure, known as Laser Hemorrhoidopexy (LHP), is the gold standard for Grade 2, 3, and 4 hemorrhoids, offering a virtually pain-free alternative to traditional surgery.",
         features: [
@@ -130,7 +130,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-6",
         slug: "knee-replacement",
         parentServiceSlug: "orthopaedics",
-        title: "Advanced Total Knee Replacement (TKR)",
+        title: "Total Knee Replacement (TKR) in Vellore, Tamil Nadu",
         shortDescription: "Pain-free mobility with high-precision joint replacement and rapid recovery.",
         fullDescription: "Regain your mobility with the most advanced <strong>Total Knee Replacement</strong> surgery in Vellore. At Indira Hospital, we utilize high-precision computer navigation and minimally invasive 'Sub-vastus' approaches that preserve muscle integrity. This ensures accurate implant alignment, reduced post-operative pain, and a significantly longer lifespan for your new joint, allowing you to return to an active, pain-free lifestyle.",
         features: [
@@ -431,9 +431,9 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     },
     {
         id: "t-112",
-        slug: "kidney-stone-laser-surgery",
+        slug: "laser-kidney-stone-surgery",
         parentServiceSlug: "urology",
-        title: "Laser Surgery for Kidney Stones (RIRS/PCNL)",
+        title: "Laser Kidney Stone Surgery in Vellore, Tamil Nadu (RIRS/PCNL)",
         shortDescription: "Incision-less laser treatment (RIRS) and Mini-PCNL for complete stone clearance.",
         fullDescription: "Say goodbye to the pain of kidney stones with our advanced <strong>Laser Lithotripsy</strong> solutions. We specialize in RIRS (Retrograde Intrarenal Surgery) and Mini-PCNL, using high-power Holmium lasers to dust stones into fine particles without major incisions. These precise procedures ensure maximum stone clearance with minimal risk and rapid recovery.",
         features: [
@@ -453,7 +453,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-113",
         slug: "laser-prostate-surgery",
         parentServiceSlug: "urology",
-        title: "Elite Laser Prostate Surgery (TURP)",
+        title: "Laser Prostate Surgery in Vellore, Tamil Nadu (TURP)",
         shortDescription: "Gold-standard surgical relief for severe prostate enlargement with rapid recovery.",
         fullDescription: "Transurethral Resection of the Prostate (<strong>TURP</strong>) remains the gold standard for treating benign prostatic hyperplasia (BPH). Our expert urologists perform this minimally invasive endoscopic procedure to remove excess prostate tissue, restoring strong and normal urine flow.",
         features: ["Bipolar TURP Technology", "Endoscopic (No Incision) Approach", "Experienced Uro-surgeons", "High-Definition Visualization"],
@@ -503,7 +503,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
         id: "t-707",
         slug: "varicose-veins-laser-treatment",
         parentServiceSlug: "general-surgery",
-        title: "Advanced Laser Varicose Veins Ablation (EVLA)",
+        title: "Laser Varicose Veins Ablation (EVLA) in Vellore, Tamil Nadu",
         shortDescription: "Painless, non-surgical laser closure of diseased veins with immediate walk-home recovery.",
         fullDescription: "<h2>Modern Vascular Care: Say Goodbye to Painful Veins</h2>\n<p><strong>Varicose Veins</strong> are not just a cosmetic concern; they are a sign of underlying venous insufficiency that can lead to ulcers, bleeding, and deep vein thrombosis (DVT). At Indira Super Speciality Hospital, we have replaced traditional 'stripping' surgery with the international gold-standard: <strong>Endovenous Laser Ablation (EVLA)</strong>.</p>\n<p>This minimally invasive procedure uses a tiny laser fiber inserted into the diseased vein under ultrasound guidance. The laser energy gently collapses the vein wall, causing it to seal shut. Your body naturally reroutes blood flow to healthy veins, providing immediate relief from the heavy, aching sensation in your legs.</p>\n\n<h3>The Indira Laser Advantage</h3>\n<ul>\n<li><strong>Precision Mapping</strong>: We use high-resolution Color Doppler to map every valve, ensuring we only treat the source of the problem.</li>\n<li><strong>Zero Incisions</strong>: The entire procedure is performed through a tiny needle puncture, meaning no stitches and no visible scars.</li>\n<li><strong>Local Anesthesia</strong>: Performed under 'Tumescent' local anesthesia, making the procedure safer and allowing you to remain fully awake and comfortable.</li>\n<li><strong>Permanent Results</strong>: EVLA has a success rate of over 98%, significantly higher than traditional surgery or injections alone.</li>\n</ul>",
         features: [
@@ -2386,7 +2386,7 @@ export const TREATMENT_DATA: TreatmentItem[] = [
     },
     {
         id: "t-26",
-        slug: "laser-fistula-surgery-filac",
+        slug: "fistula-surgery-treatment",
         parentServiceSlug: "proctology",
         title: "FiLaC Laser Fistula Closure",
         shortDescription: "Sphincter-saving laser closure for complex anal fistulas.",

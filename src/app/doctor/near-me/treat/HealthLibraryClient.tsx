@@ -26,7 +26,7 @@ const bodySystems = [
 const conditions = [
     { name: "Heart Attack", link: "/doctor/near-me/treat/cardiology/heart-attack-warning-signs" },
     { name: "Stroke", link: "/doctor/near-me/treat/neurology/stroke-recovery-exercises" },
-    { name: "Kidney Stones", link: "/doctor/near-me/treat/urology/kidney-stone-laser-surgery" },
+    { name: "Kidney Stones", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
     { name: "Hernia", link: "/doctor/near-me/treat/general-surgery/laparoscopic-hernia-repair-surgery" },
     { name: "Piles (Hemorrhoids)", link: "/doctor/near-me/treat/proctology/laser-piles-treatment" },
     { name: "Cataract", link: "/doctor/near-me/treat/ophthalmology" },

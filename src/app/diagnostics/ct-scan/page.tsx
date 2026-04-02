@@ -69,7 +69,7 @@ export default function CTScanPage() {
                     {/* Mechanism: 128-Slice Rapid Multi-Detector */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 blur-3xl -z-10" />
-                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-primary uppercase tracking-tighter italic">
+                        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-heading uppercase tracking-tighter italic">
                             Mechanism: 128-Slice Volumetric Imaging
                         </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -115,7 +115,7 @@ export default function CTScanPage() {
                     {/* Diagnostic Spectrum Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-primary text-blue-300 uppercase tracking-widest leading-none">Specialized CT Protocols</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-blue-300 uppercase tracking-widest leading-none">Specialized CT Protocols</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "CT Coronary Angio", desc: "Non-invasive assessment of heart blockages without hospitalization.", icon: HeartPulse },
@@ -135,7 +135,7 @@ export default function CTScanPage() {
                     {/* Preparing for Your CT Section */}
                     <section className="text-left">
                         <div className="mb-12">
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-primary tracking-tighter uppercase uppercase uppercase">Preparing for Your Elite CT Scan</h3>
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase uppercase uppercase">Preparing for Your Elite CT Scan</h3>
                             <p className="text-slate-600 dark:text-slate-400">Ensuring safety and crystal-clear diagnostic quality.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -145,7 +145,7 @@ export default function CTScanPage() {
                                 { title: "Allergy Audit", desc: "Please inform our radiographers if you have a known allergy to iodine or shellfish, or if you have asthma." }
                             ].map((item: any, i: number) => (
                                 <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-blue-500">
-                                    <h4 className="font-primary text-xl font-bold mb-3">{item.title}</h4>
+                                    <h4 className="font-heading text-xl font-bold mb-3">{item.title}</h4>
                                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic antialiased">{item.desc}</p>
                                 </div>
                             ))}

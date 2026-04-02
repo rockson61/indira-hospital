@@ -110,7 +110,7 @@ export default function MedicalOncologyPage() {
         >
             <div className="space-y-8">
                 <section>
-                    <h2 className="text-3xl font-bold mb-4">India's Premier Sanctuary for Medical Cancer Care</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-4">India's Premier Sanctuary for Medical Cancer Care</h2>
                     <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         At the <strong>Indira Medical Oncology Center</strong>, we provide more than just medication; we provide a complete support system. Our oncology specialists utilize the latest therapeutic blueprints to fight cancer while ensuring that you live life with as much strength and normalcy as possible. Our unit is equipped with specialized Bio-Safety Cabinets for safe, accurate drug preparation by master pharmacists.
                     </p>
