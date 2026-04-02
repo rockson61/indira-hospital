@@ -371,7 +371,7 @@ async function ServiceView({ service, location, city, slug }: any) {
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
             <JsonLdSchema 
-                type="medicalSpecialty" 
+                type="medicalProcedure" 
                 name={`${service.title} in ${location.name}`} 
                 description={`Indira Super Speciality Hospital provides elite ${service.title} care for patients in ${location.name}, ${location.district} district. We are NABH accredited and support CMCHIS Govt Scheme.`} 
                 url={`/${city}/${slug}`} 
