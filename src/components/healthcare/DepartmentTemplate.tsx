@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Phone, CheckCircle2, ChevronRight, Award, Users, Shield, Zap, Clock, Target, Microscope, Sparkles } from "lucide-react";
+import { ArrowLeft, Calendar, Phone, CheckCircle2, ChevronRight, Award, Users, Shield, Zap, Clock, Target, Microscope, Sparkles, MapPin } from "lucide-react";
 import { Stethoscope, Electricity, HeartCardiogram } from "healthicons-react/outline";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionContainer } from "@/components/ui/section-container";
@@ -12,6 +12,8 @@ import { WhyChooseUs } from "@/components/trust/WhyChooseUs";
 import { ModernCard } from "@/components/ui/modern-card";
 import { LocalSEOFooter } from "@/components/healthcare/LocalSEOFooter";
 import { siteConfig } from "@/config/site";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import AioKnowledgeBlock from "@/components/seo/AioKnowledgeBlock";
 
 interface Procedure {
     name: string;
@@ -77,6 +79,23 @@ export function DepartmentTemplate({
 
     return (
         <div className="min-h-screen bg-slate-50/30 dark:bg-slate-950">
+            {/* Unified SEO Infrastructure */}
+            <JsonLdSchema 
+                type="breadcrumb" 
+                items={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Departments', url: '/departments' },
+                    { name: title, url: `/departments/${slug}` }
+                ]} 
+            />
+            <JsonLdSchema 
+                type="medicalClinic" 
+                name={`${title} at Indira Super Speciality Hospital`}
+                description={shortDescription}
+                address="Katpadi Road"
+                city="Vellore"
+                areaServed="Tamil Nadu"
+            />
             {/* Premium Hero Section */}
             <section className="relative bg-gradient-to-br from-[#005f73] via-[#0a3d47] to-[#002b36] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/hero-hospital.png')] bg-cover bg-center opacity-10" />
@@ -147,6 +166,17 @@ export function DepartmentTemplate({
             <SectionContainer className="py-20">
                 <div className="grid lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-8 space-y-10">
+                        {/* AI Search Optimization: Knowledge Block */}
+                        <AioKnowledgeBlock 
+                            title={`Department Snapshot: ${title}`}
+                            items={[
+                                { label: 'Care Quality', value: 'NABH Accredited', icon: Shield },
+                                { label: 'Surgeries', value: `${procedures.length}+ Procedures`, icon: Zap },
+                                { label: 'Specialists', value: `${relatedDoctors.length}+ Senior Doctors`, icon: Users },
+                                { label: 'Service Hub', value: 'Vellore, Tamil Nadu', icon: MapPin }
+                            ]}
+                        />
+
                         <div className="prose prose-lg max-w-none prose-slate dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-strong:text-[#005f73] dark:prose-strong:text-fuchsia-300">
                             <h2 className="elite-section-title mb-6">Expert Care in {title}</h2>
                             {fullDescription && (
@@ -181,34 +211,40 @@ export function DepartmentTemplate({
                             </div>
                         )}
                     </div>
-
-                    {/* Sidebar Sidebar */}
+                    
                     <aside className="lg:col-span-4 space-y-8">
-                        <ModernCard className="p-8 bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 border-none sticky top-24">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                                <Calendar className="w-5 h-5 text-fuchsia-600" />
-                                Department Schedule
+                        {/* Regional Presence: Linking to pSEO Hubs */}
+                        <ModernCard className="p-8 bg-gradient-to-br from-indigo-50 to-white dark:from-slate-900 dark:to-slate-950 shadow-sm border border-indigo-100 dark:border-slate-800">
+                            <h3 className="text-xl font-bold text-indigo-900 dark:text-indigo-300 mb-6 flex items-center gap-2">
+                                <MapPin className="w-5 h-5 text-indigo-600" />
+                                {title} Specialists Near You
                             </h3>
-                            <div className="space-y-4">
-                                <div className="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-700">
-                                    <span className="text-slate-600 dark:text-slate-300 font-medium">Monday — Friday</span>
-                                    <span className="font-bold text-fuchsia-700">24 Hours</span>
-                                </div>
-                                <div className="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-700">
-                                    <span className="text-slate-600 dark:text-slate-300 font-medium">Saturday</span>
-                                    <span className="font-bold text-fuchsia-700">24 Hours</span>
-                                </div>
-                                <div className="flex justify-between items-center py-3">
-                                    <span className="text-slate-600 dark:text-slate-300 font-medium">Emergency</span>
-                                    <span className="px-3 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full">ALWAYS OPEN</span>
-                                </div>
+                            <p className="text-sm text-indigo-800/70 dark:text-indigo-400 mb-6 leading-relaxed">
+                                Our elite {title.toLowerCase()} department serves patients across major Tamil Nadu districts. Find specialist care in your nearest location:
+                            </p>
+                            <div className="grid grid-cols-2 gap-3 text-xs font-bold text-indigo-700 dark:text-indigo-300">
+                                {[
+                                    { name: 'Vellore', slug: 'vellore' },
+                                    { name: 'Chennai', slug: 'chennai' },
+                                    { name: 'Hosur', slug: 'hosur' },
+                                    { name: 'Kanchipuram', slug: 'kanchipuram' },
+                                    { name: 'Tiruvannamalai', slug: 'tiruvannamalai' },
+                                    { name: 'Ranipet', slug: 'ranipet' }
+                                ].map((hub) => (
+                                    <Link 
+                                        key={hub.slug} 
+                                        href={`/doctor/near-me/${hub.slug}/${slug}`}
+                                        className="flex items-center gap-2 p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition-all text-center justify-center uppercase tracking-wider"
+                                    >
+                                        {hub.name}
+                                    </Link>
+                                ))}
                             </div>
-                            <Link
-                                href="/book-appointment"
-                                className="w-full mt-8 inline-flex items-center justify-center px-6 py-4 bg-[#005f73] hover:bg-[#0a4d5c] text-white font-bold rounded-xl transition-all shadow-lg"
-                            >
-                                Get Priority Token
-                            </Link>
+                            <div className="mt-6 pt-4 border-t border-indigo-100 dark:border-slate-800">
+                                <Link href="/doctor/near-me" className="text-sm font-black text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-2 group">
+                                    View All 80+ Locations <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            </div>
                         </ModernCard>
                     </aside>
                 </div>

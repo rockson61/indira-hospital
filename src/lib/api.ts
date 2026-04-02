@@ -5,6 +5,7 @@ import { SEED_DATA } from './data/seed-data';
 import { comprehensiveFaqs } from './data/faq-data';
 import { testimonials as localTestimonials } from './data/testimonials-data';
 import { tamilNaduLocations } from './data/tamilnadu-locations';
+import { SEO_KEYWORDS } from './data/seo-keywords';
 import { unstable_cache } from 'next/cache';
 
 export const getDoctors = unstable_cache(
@@ -472,4 +473,20 @@ export const getGlobalSiteSettings = unstable_cache(
     },
     ['directus-global-settings'],
     { revalidate: 3600 }
+);
+
+export const getSEOKeywords = unstable_cache(
+    async () => {
+        return SEO_KEYWORDS;
+    },
+    ['seo-keywords'],
+    { revalidate: 36000 }
+);
+
+export const getSEOKeywordBySlug = unstable_cache(
+    async (slug: string) => {
+        return SEO_KEYWORDS.find(k => k.slug === slug) || null;
+    },
+    ['seo-keyword-by-slug'],
+    { revalidate: 36000 }
 );

@@ -22,8 +22,13 @@ const glossaryRoutes = GLOSSARY_DATA.length;
 const cityDeptRoutes = locations * departments;
 const cityDoctorRoutes = locations * doctors;
 
-const total = staticRoutes + departments + services + locations + doctors + healthPackages + diagnostics + technologies + patientResources + treatments + internationalCountryRoutes + glossaryRoutes + cityDeptRoutes + cityDoctorRoutes;
+// New SEO Keyword Routes
+const hubSlugs = ['vellore', 'katpadi', 'ranipet', 'gudiyatham', 'ambur', 'vaniyambadi', 'kanchipuram', 'tiruvannamalai', 'arcot', 'walajapet', 'chennai', 'hosur'];
+const seoKeywords = 94; // from seo-keywords.ts
+const seoRoutes = hubSlugs.length * seoKeywords;
+
+const total = staticRoutes + departments + services + locations + doctors + healthPackages + diagnostics + technologies + patientResources + treatments + internationalCountryRoutes + glossaryRoutes + cityDeptRoutes + cityDoctorRoutes + seoRoutes;
 
 console.log(JSON.stringify({
-    staticRoutes, departments, services, doctors, locations, healthPackages, diagnostics, technologies, patientResources, treatments, internationalCountryRoutes, glossaryRoutes, cityDeptRoutes, cityDoctorRoutes, total
+    staticRoutes, departments, services, doctors, locations, healthPackages, diagnostics, technologies, patientResources, treatments, internationalCountryRoutes, glossaryRoutes, cityDeptRoutes, cityDoctorRoutes, seoRoutes, total
 }, null, 2));

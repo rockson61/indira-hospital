@@ -3039,6 +3039,94 @@ export const TREATMENT_DATA: TreatmentItem[] = [
             { question: "Is your blood bank open 24/7?", answer: "Yes. Our hospital-affiliated blood bank ensures that blood and plasma are available at all times for emergency transfusions." },
             { question: "How do you handle multiple injuries?", answer: "We use a 'Trauma Triage' system where a team leader coordinates between different specialists (General Surgeon, Orthopedist, Neurosurgeon) to prioritize the most life-threatening injuries first." }
         ]
+    },
+    {
+        id: "t-801",
+        slug: "hair-transplant-surgery",
+        parentServiceSlug: "dermatology",
+        title: "Advanced Hair Transplant Surgery",
+        shortDescription: "Permanent, natural hair restoration using FUE and DHT techniques with high graft survival.",
+        fullDescription: "Regain your youthful appearance and confidence with our <strong>Advanced Hair Transplant Surgery</strong>. At Indira Super Speciality Hospital, we specialize in <strong>Follicular Unit Extraction (FUE)</strong> and <strong>Direct Hair Transplantation (DHT)</strong>. Our expert dermatosurgeons use the 'no-touch' technique to ensure maximum graft survival and a natural-looking hairline, tailored to your facial structure.",
+        features: [
+            { title: "FUE & DHT Techniques", description: "Minimally invasive extraction with no linear scars.", icon: "Target" },
+            { title: "High Graft Survival", description: "Meticulous handling ensuring 95%+ hair growth.", icon: "CheckCircle" },
+            { title: "Natural Hairline Design", description: "Artistic planning for a realistic, dense look.", icon: "Sparkles" }
+        ],
+        benefits: [
+            { title: "Permanent Results", description: "Transplanted hair grows naturally for a lifetime.", icon: "Shield" },
+            { title: "Pain-Free Procedure", description: "Performed under advanced local anesthesia.", icon: "Activity" },
+            { title: "Rapid Recovery", description: "Return to social life within 5-7 days.", icon: "Clock" }
+        ],
+        faq: [
+            { question: "Is the procedure painful?", answer: "We use specialized local anesthesia, so you won't feel pain during the surgery. Most patients watch a movie or listen to music during the procedure." },
+            { question: "When will I see the final results?", answer: "Transplanted hair starts growing after 3 months, with full density and natural results visible between 9 to 12 months." }
+        ]
+    },
+    {
+        id: "t-802",
+        slug: "ivf-treatment-hospital",
+        parentServiceSlug: "infertility",
+        title: "Elite IVF & Fertility Care",
+        shortDescription: "High-success IVF and IUI treatments with advanced embryology laboratory support.",
+        fullDescription: "Take your first step towards parenthood with our <strong>Elite IVF & Fertility Care</strong>. Our center combines compassionate care with the latest reproductive technologies, including <strong>IVF (In-Vitro Fertilization)</strong>, <strong>ICSI</strong>, and <strong>IUI</strong>. Our advanced embryology lab and senior fertility specialists have helped thousands of couples in Vellore and Tamil Nadu overcome complex infertility challenges.",
+        features: [
+            { title: "Advanced Embryology Lab", description: "Clean-room environment for optimal embryo growth.", icon: "Microscope" },
+            { title: "ICSI & Laser Hatching", description: "Advanced techniques for male factor infertility.", icon: "Zap" },
+            { title: "Personalized Protocols", description: "Customized hormonal stimulation for better success.", icon: "Target" }
+        ],
+        benefits: [
+            { title: "High Success Rates", description: "Optimized clinical pathways for maximum results.", icon: "CheckCircle" },
+            { title: "Compassionate Support", description: "Dedicated counseling throughout the journey.", icon: "Heart" },
+            { title: "Affordable Transparency", description: "No hidden costs with fixed-package pricing.", icon: "Shield" }
+        ],
+        faq: [
+            { question: "What is the success rate of IVF?", answer: "Success rates depend on age and clinical factors, but our evidence-based protocols consistently deliver results matching international standards." },
+            { question: "Is IVF treatment painful?", answer: "Egg retrieval is done under short general anesthesia, so it is painless. Other steps are relatively simple and involve minimal discomfort." }
+        ]
+    },
+    {
+        id: "t-803",
+        slug: "bariatric-surgery-hospital",
+        parentServiceSlug: "bariatric",
+        title: "Bariatric (Weight Loss) Surgery",
+        shortDescription: "Precision laparoscopic surgery for effective, long-term weight loss and metabolic control.",
+        fullDescription: "Overcome morbid obesity and metabolic diseases like Type 2 Diabetes with <strong>Laparoscopic Bariatric Surgery</strong>. We offer safe, minimally invasive procedures like <strong>Gastric Sleeve</strong> and <strong>Gastric Bypass</strong>. These surgeries not only help you lose significant weight but also reset your hormones, leading to the remission of diabetes and hypertension.",
+        features: [
+            { title: "Laparoscopic Gastric Sleeve", description: "Reducing stomach size for controlled portioning.", icon: "Target" },
+            { title: "Metabolic Remission", description: "Proven results in reversing Type 2 Diabetes.", icon: "Zap" },
+            { title: "Multi-Disciplinary Team", description: "Support from nutritionists and endocrinologists.", icon: "Users" }
+        ],
+        benefits: [
+            { title: "Significant Weight Loss", description: "Lose 60-80% of excess weight within a year.", icon: "CheckCircle" },
+            { title: "Improved Quality of Life", description: "Resolution of joint pain and sleep apnea.", icon: "Sparkles" },
+            { title: "Precision Recovery", description: "Keyhole surgery means walking on Day 1.", icon: "Clock" }
+        ],
+        faq: [
+            { question: "Who is a candidate for bariatric surgery?", answer: "Usually individuals with a BMI over 35 with co-morbidities like diabetes, or a BMI over 40." },
+            { question: "Is the weight loss permanent?", answer: "Yes, when combined with healthy lifestyle changes, bariatric surgery provides the most durable long-term weight loss solution." }
+        ]
+    },
+    {
+        id: "t-804",
+        slug: "pilonidal-sinus-laser-surgery",
+        parentServiceSlug: "proctology",
+        title: "Laser Pilonidal Sinus Surgery (SiLaC)",
+        shortDescription: "Advanced laser treatment for Pilonidal Sinus with no large incisions or painful dressings.",
+        fullDescription: "Stop suffering from painful recurrent pilonidal abscesses. Our <strong>Laser Pilonidal Sinus Treatment (SiLaC)</strong> is a revolutionary non-excisional procedure. Instead of large cuts and months of dressing, we use a specialized laser fiber to seal the sinus tract from the inside, ensuring minimal pain and an immediate return to work.",
+        features: [
+            { title: "SiLaC Laser Tech", description: "Closure of sinus tracts without major surgery.", icon: "Zap" },
+            { title: "No Large Wound", description: "Eliminates the need for painful daily dressings.", icon: "Shield" },
+            { title: "Day-Care Procedure", description: "Complete the treatment and return home on the same day.", icon: "Clock" }
+        ],
+        benefits: [
+            { title: "Minimal Recurrence", description: "Technically superior closure of the sinus pits.", icon: "CheckCircle" },
+            { title: "Back to Work in 48h", description: "Rapid recovery compared to traditional surgery.", icon: "Zap" },
+            { title: "Aesthetic Healing", description: "No large surgical scars in the natal cleft.", icon: "Sparkles" }
+        ],
+        faq: [
+            { question: "How is laser different from open surgery?", answer: "Traditional surgery leaves a large open wound that takes weeks to heal. Laser surgery seals the sinus from within, leaving almost no wound." },
+            { question: "When can I resume sitting normally?", answer: "Most patients can sit comfortably and resume normal activities within 2-3 days." }
+        ]
     }
 ];
 

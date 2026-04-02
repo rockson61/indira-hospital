@@ -6,14 +6,14 @@ import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 export default function SEOPage() {
     return (
         <SubServiceTemplate
-            title="Laparoscopic Cholecystectomy in Vellore"
-            eyebrow="Elite General Surgery Solutions"
-            departmentName="General Surgery"
-            departmentSlug="general-surgery"
+            title="Laser Fistula Surgery (FiLaC) in Vellore"
+            eyebrow="Elite Proctology Solutions"
+            departmentName="Proctology"
+            departmentSlug="proctology"
             description={
                 <>
                     <p>
-                        Searching for the <strong>best laparoscopic cholecystectomy in Vellore</strong>? Indira Super Speciality Hospital is a center of excellence for advanced general surgery care, providing precision-driven surgical solutions with a focus on patient safety and rapid healing.
+                        Searching for the <strong>best laser fistula surgery (filac) in Vellore</strong>? Indira Super Speciality Hospital is a center of excellence for advanced proctology care, providing precision-driven surgical solutions with a focus on patient safety and rapid healing.
                     </p>
                     <p className="mt-4">
                         Our facility is equipped with state-of-the-art diagnostic and surgical infrastructure, including high-definition imaging and modular OTs, ensuring that every patient receives international-standard medical care right here in Tamil Nadu.
@@ -22,28 +22,28 @@ export default function SEOPage() {
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Shield' },
                 { label: 'Care Type', value: 'Surgical', icon: 'Shield' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             reviews={{
                 entityType: 'service',
-                entityName: 'Laparoscopic Cholecystectomy',
-                entitySlug: 'laparoscopic-cholecystectomy-gallbladder-removal'
+                entityName: 'Laser Fistula Surgery (FiLaC)',
+                entitySlug: 'laser-fistula-surgery-filac'
             }}
             showAvailabilityCTA={true}
             showVideoBank={true}
-            duration="45-60 Mins"
+            duration="45 Mins"
             hospitalStay="24 Hours"
-            recoveryTime="3-5 Days"
-            anesthesia="General"
+            recoveryTime="72 Hours"
+            anesthesia="Spinal"
             showComparison={true}
         >
             <div className="space-y-12">
                 <section>
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for Laparoscopic Cholecystectomy?</h2>
+                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for Laser Fistula Surgery (FiLaC)?</h2>
                     <p className="text-lg text-slate-600 leading-relaxed">
-                        At Indira Hospital, we combine decades of surgical expertise with the latest medical breakthroughs. Our general surgery specialists are pioneers in minimally invasive techniques, ensuring:
+                        At Indira Hospital, we combine decades of surgical expertise with the latest medical breakthroughs. Our proctology specialists are pioneers in minimally invasive techniques, ensuring:
                     </p>
                     <ul className="grid md:grid-cols-2 gap-4 mt-8">
                         {[
@@ -63,9 +63,9 @@ export default function SEOPage() {
                 </section>
 
                 <section className="bg-slate-900 rounded-[3rem] p-12 text-white">
-                    <h2 className="text-3xl font-bold mb-6">Advanced General Surgery Infrastructure</h2>
+                    <h2 className="text-3xl font-bold mb-6">Advanced Proctology Infrastructure</h2>
                     <p className="text-fuchsia-200/80 text-lg mb-8">
-                        Our hospital is equipped with high-end medical technology to support complex general surgery procedures, reducing surgical time and enhancing precision.
+                        Our hospital is equipped with high-end medical technology to support complex proctology procedures, reducing surgical time and enhancing precision.
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
                         {[

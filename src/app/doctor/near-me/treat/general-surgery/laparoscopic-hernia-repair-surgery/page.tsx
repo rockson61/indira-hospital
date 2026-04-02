@@ -6,7 +6,7 @@ import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 export default function SEOPage() {
     return (
         <SubServiceTemplate
-            title="Laparoscopic Hernia Repair in Vellore, Tamil Nadu"
+            title="Laparoscopic Hernia Repair in Vellore"
             eyebrow="Elite General Surgery Solutions"
             departmentName="General Surgery"
             departmentSlug="general-surgery"
@@ -41,7 +41,7 @@ export default function SEOPage() {
         >
             <div className="space-y-12">
                 <section>
-                    <h2 className="font-heading text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for Laparoscopic Hernia Repair?</h2>
+                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for Laparoscopic Hernia Repair?</h2>
                     <p className="text-lg text-slate-600 leading-relaxed">
                         At Indira Hospital, we combine decades of surgical expertise with the latest medical breakthroughs. Our general surgery specialists are pioneers in minimally invasive techniques, ensuring:
                     </p>
@@ -63,7 +63,7 @@ export default function SEOPage() {
                 </section>
 
                 <section className="bg-slate-900 rounded-[3rem] p-12 text-white">
-                    <h2 className="font-heading text-3xl font-bold mb-6">Advanced General Surgery Infrastructure</h2>
+                    <h2 className="text-3xl font-bold mb-6">Advanced General Surgery Infrastructure</h2>
                     <p className="text-fuchsia-200/80 text-lg mb-8">
                         Our hospital is equipped with high-end medical technology to support complex general surgery procedures, reducing surgical time and enhancing precision.
                     </p>

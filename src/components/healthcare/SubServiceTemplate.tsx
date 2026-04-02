@@ -19,8 +19,10 @@ import { ProcedureComparison } from '@/components/healthcare/services/ProcedureC
 import { TreatmentSecondaryNav } from '@/components/healthcare/services/TreatmentSecondaryNav'
 import { ConversionGrid } from '@/components/healthcare/services/ConversionGrid'
 import { LocalSEOFooter } from '@/components/healthcare/LocalSEOFooter'
-import { DoctorCard } from '@/components/entities/DoctorCard'
 import type { Doctor } from '@/data/doctors'
+import { JsonLdSchema } from '@/components/seo/JsonLdSchema'
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { DoctorCard } from "@/components/entities/DoctorCard";
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
 const iconMap: Record<string, React.ElementType> = {
@@ -214,11 +216,36 @@ export function SubServiceTemplate({
             {/* Treatment Secondary Nav (Sticky) */}
             <TreatmentSecondaryNav treatmentName={title} whatsappUrl={whatsappUrl} />
 
-            {/* JSON-LD */}
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureJsonLd) }} />
-            {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-            {howToJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />}
+            {/* Unified SEO Infrastructure */}
+            <JsonLdSchema 
+                type="breadcrumb" 
+                items={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Treatments', url: '/doctor/near-me/treat' },
+                    ...(departmentName && departmentSlug ? [{ name: departmentName, url: `/doctor/near-me/treat/${departmentSlug}` }] : []),
+                    { name: title, url: `/${slug}` }
+                ]} 
+            />
+            <JsonLdSchema 
+                type="medicalProcedure" 
+                name={title} 
+                description={`Advanced ${title} surgery and medical care at Indira Super Speciality Hospital, Vellore. Highly successful outcomes with senior surgical experts.`}
+                url={`/${slug}`} 
+            />
+            {processedMarketingContent?.faqs && (
+                <JsonLdSchema 
+                    type="faq" 
+                    mainEntity={processedMarketingContent.faqs.map(f => ({ question: f.question, answer: f.answer }))} 
+                />
+            )}
+            {timeline && (
+                <JsonLdSchema 
+                    type="howTo" 
+                    name={timeline.title || `Procedure Steps for ${title}`}
+                    description={timeline.description || `The patient journey for ${title} at Indira Hospital.`}
+                    steps={timeline.steps.map(s => ({ name: s.title, description: s.description }))}
+                />
+            )}
 
             {/* ── Hero ─────────────────────────────────────────────────────── */}
             <section className="relative pt-44 pb-20 lg:pt-52 lg:pb-28 overflow-hidden bg-[#FAFAFA] dark:bg-slate-950">
@@ -310,6 +337,17 @@ export function SubServiceTemplate({
 
                     {/* Main column */}
                     <div className="lg:col-span-8 space-y-12">
+
+                        {/* AI Search Optimization: Knowledge Block */}
+                        <AioKnowledgeBlock 
+                            title={`Expert Summary: ${title}`}
+                            items={[
+                                { label: 'Specialist Hub', value: departmentName || 'Surgery', icon: Stethoscope },
+                                { label: 'Care Model', value: 'NABH Accredited', icon: Shield },
+                                { label: 'Regional Focus', value: 'Vellore & Tamil Nadu', icon: MapPin },
+                                { label: 'Availability', value: '24/7 Experts', icon: Clock }
+                            ]}
+                        />
 
                         {/* Quick Summary Card */}
                         <ServiceQuickSummary 

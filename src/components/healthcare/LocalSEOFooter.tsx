@@ -87,20 +87,64 @@ export function LocalSEOFooter() {
                         </div>
                     </div>
 
+                    {/* Regional Healthcare Hubs */}
+                    <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                            <MapPin className="text-fuchsia-600 w-5 h-5" />
+                            Our Regional Healthcare Hubs in Tamil Nadu
+                        </h3>
+                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 max-w-3xl">
+                            Indira Super Speciality Hospital provides advanced clinical care and surgical expertise to patients across major districts. Explore our specialized services in your nearest location:
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            {[
+                                { name: 'Vellore', slug: 'vellore' },
+                                { name: 'Katpadi', slug: 'katpadi' },
+                                { name: 'Ranipet', slug: 'ranipet' },
+                                { name: 'Gudiyatham', slug: 'gudiyatham' },
+                                { name: 'Ambur', slug: 'ambur' },
+                                { name: 'Vaniyambadi', slug: 'vaniyambadi' },
+                                { name: 'Kanchipuram', slug: 'kanchipuram' },
+                                { name: 'Tiruvannamalai', slug: 'tiruvannamalai' },
+                                { name: 'Arcot', slug: 'arcot' },
+                                { name: 'Walajapet', slug: 'walajapet' },
+                                { name: 'Chennai', slug: 'chennai' },
+                                { name: 'Hosur', slug: 'hosur' }
+                            ].map((hub) => (
+                                <a 
+                                    key={hub.slug} 
+                                    href={`/doctor/near-me/${hub.slug}`}
+                                    className="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-fuchsia-500 hover:text-fuchsia-600 transition-all shadow-sm"
+                                >
+                                    Best Doctors in {hub.name}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
                     {/* Bottom Link Sheet: Semantic Tags */}
                     <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
                         <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-8">Specialist Medical Categories You Can Explore</h3>
                         <div className="flex flex-wrap gap-x-6 gap-y-4 text-sm font-medium text-slate-500 dark:text-slate-400">
                             {[
-                                "Neurologists in Vellore", "ENT Surgeon Doctors", "Paediatric Neurologists",
-                                "Gastroenterologists", "Endocrinologists", "Speech Therapists",
-                                "Psychologists", "Clinical Psychologists", "Clinical Nutritionists",
-                                "Cardiac Surgeons", "Dermatosurgeons", "Hepatologists", "Nephrologists",
-                                "Rheumatologists", "Somnologists", "Vascular Surgeons"
-                            ].map((category, i) => (
-                                <span key={i} className="hover:text-fuchsia-600 transition-colors cursor-default whitespace-nowrap">
-                                    {category}
-                                </span>
+                                { name: "Neurologists in Vellore", slug: "neurology" },
+                                { name: "ENT Surgeon Doctors", slug: "ent" },
+                                { name: "Paediatric Specialists", slug: "paediatrics" },
+                                { name: "Gastroenterologists", slug: "gastroenterology" },
+                                { name: "Specialist Surgeons", slug: "general-surgery" },
+                                { name: "Urologists", slug: "urology" },
+                                { name: "Orthopaedics", slug: "orthopaedics" },
+                                { name: "Gynaecologists", slug: "obstetrics-gynaecology" },
+                                { name: "Eye Specialists", slug: "ophthalmology" },
+                                { name: "Piles Specialists", slug: "proctology" }
+                            ].map((cat, i) => (
+                                <a 
+                                    key={i} 
+                                    href={`/doctor/near-me/vellore/${cat.slug}`}
+                                    className="hover:text-fuchsia-600 transition-colors whitespace-nowrap"
+                                >
+                                    {cat.name}
+                                </a>
                             ))}
                         </div>
                     </div>

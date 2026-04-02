@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getDoctors, getDoctorBySlug, getServices, getServiceBySlug } from "@/lib/api";
+import { getDoctors, getDoctorBySlug, getServices, getServiceBySlug, getSEOKeywords, getSEOKeywordBySlug } from "@/lib/api";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import {
     ChevronRight, MapPin, Phone, MessageCircle, Star, Award,
@@ -19,19 +19,24 @@ import { getImageUrl } from "@/lib/utils";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { injectInternalLinks } from "@/lib/html-linkify";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import AioKnowledgeBlock from "@/components/seo/AioKnowledgeBlock";
 
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
     if (process.env.VERCEL) return [];
 
-    const [allDoctors, services, locations] = await Promise.all([
+    const [allDoctors, services, seoKeywords, locations] = await Promise.all([
         getDoctors().catch(() => []),
         getServices().catch(() => []),
+        getSEOKeywords().catch(() => []),
         Promise.resolve(tamilNaduLocations),
     ]);
     
     const params: { city: string; slug: string }[] = [];
+    
+    // 1. Regular Doctors & Services for ALL locations
     for (const loc of locations) {
         for (const doc of allDoctors as any[]) {
             if (doc.slug) params.push({ city: loc.slug, slug: doc.slug });
@@ -40,6 +45,18 @@ export async function generateStaticParams() {
             if (svc.slug) params.push({ city: loc.slug, slug: svc.slug });
         }
     }
+
+    // 2. High-Intent SEO Keywords for Top 12 Hub Locations (~1100+ pages)
+    // Vellore, Katpadi, Ranipet, Gudiyatham, Ambur, Arcot (implied), Walajapet, etc.
+    const hubSlugs = ['vellore', 'katpadi', 'ranipet', 'gudiyatham', 'ambur', 'vaniyambadi', 'kanchipuram', 'tiruvannamalai', 'arcot', 'walajapet', 'chennai', 'hosur'];
+    const hubLocations = locations.filter(l => hubSlugs.includes(l.slug));
+
+    for (const loc of hubLocations) {
+        for (const keyword of seoKeywords) {
+            params.push({ city: loc.slug, slug: keyword.slug });
+        }
+    }
+
     return params;
 }
 
@@ -99,6 +116,18 @@ export async function generateMetadata({
         };
     }
 
+    // Check for SEO Keyword
+    const seoKeyword = await getSEOKeywordBySlug(slug).catch(() => null);
+    if (seoKeyword) {
+        const title = `Best ${seoKeyword.title} in ${location.name}, Tamil Nadu | Indira Hospital`;
+        const description = `Looking for the ${seoKeyword.title.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital provides elite medical care and advanced surgical solutions for patients in ${location.name} and surrounding Tamil Nadu regions.`;
+        return {
+            title,
+            description,
+            openGraph: { title, description },
+        };
+    }
+
     return { title: "Not Found" };
 }
 
@@ -122,6 +151,18 @@ export default async function UnifiedLocationSlugPage({
         return <ServiceView service={service} location={location} city={city} slug={slug} />;
     }
 
+    const seoKeyword = await getSEOKeywordBySlug(slug).catch(() => null);
+    if (seoKeyword) {
+        // Map SEO Keyword to a Service-like object for ServiceView
+        const mappedService = {
+            title: seoKeyword.title,
+            slug: seoKeyword.slug,
+            department: seoKeyword.department,
+            full_description: `Searching for the <strong>best ${seoKeyword.title.toLowerCase()} in ${location.name}</strong>? Indira Super Speciality Hospital is a center of excellence for advanced healthcare, providing precision-driven surgical solutions and specialist care with a focus on patient safety and rapid healing. Our facility is equipped with state-of-the-art diagnostic and surgical infrastructure, ensuring that every patient from ${location.name} receives international-standard medical care right here in Tamil Nadu.`,
+        };
+        return <ServiceView service={mappedService} location={location} city={city} slug={slug} isSEOKeyword={true} />;
+    }
+
     notFound();
 }
 
@@ -141,6 +182,13 @@ async function DoctorView({ doctor, location, city, slug }: any) {
 
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
+            <JsonLdSchema 
+                type="physician" 
+                name={doctor.name} 
+                specialty={dept} 
+                description={doctor.bio || `${doctor.name} is a leading specialist at Indira Super Speciality Hospital.`} 
+                url={`/${city}/${slug}`} 
+            />
             <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
                 <div className="absolute inset-0 opacity-20"
                     style={{ backgroundImage: "radial-gradient(circle at 30% 30%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
@@ -291,6 +339,12 @@ async function ServiceView({ service, location, city, slug }: any) {
 
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
+            <JsonLdSchema 
+                type="medicalProcedure" 
+                name={`${service.title} in ${location.name}`} 
+                description={`Expert ${service.title} services for patients in ${location.name} and surrounding Tamil Nadu.`} 
+                url={`/${city}/${slug}`} 
+            />
             <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
                 <div className="absolute inset-0 opacity-20"
                     style={{ backgroundImage: "radial-gradient(circle at 30% 30%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
@@ -315,8 +369,8 @@ async function ServiceView({ service, location, city, slug }: any) {
                     </div>
 
                     <h1 className="elite-hero-title mb-12">
-                        {service.title}<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Specialists in {location.name}.</span>
+                        {service.title} in {location.name},<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Tamil Nadu.</span>
                     </h1>
                     <div className="flex flex-wrap gap-4 mt-12">
                         <a href={whatsappUrl} className="inline-flex items-center px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white font-black rounded-2xl transition-all shadow-lg shadow-indigo-500/25 uppercase tracking-widest text-sm">
@@ -334,6 +388,17 @@ async function ServiceView({ service, location, city, slug }: any) {
                                 <span className="bg-fuchsia-100 dark:bg-fuchsia-950 p-2 rounded-lg text-fuchsia-600"><Stethoscope className="w-5 h-5" /></span>
                                 About {service.title} in {location.name}
                             </h2>
+
+                            <AioKnowledgeBlock 
+                                title={`Clinical Expert Hub: ${service.title}`}
+                                items={[
+                                    { label: 'Specialist Focus', value: service.department || 'Surgery', icon: Stethoscope },
+                                    { label: 'Patient Reach', value: `Serving ${location.name} Area`, icon: MapPin },
+                                    { label: 'Service Level', value: 'Elite Hospital Care', icon: Shield },
+                                    { label: 'Clinical Availability', value: '24/7 Support', icon: Clock }
+                                ]}
+                            />
+
                             <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description || "") }} />
                         </div>
                         {relatedDoctors.length > 0 && (

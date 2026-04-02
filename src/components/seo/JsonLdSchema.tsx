@@ -60,7 +60,15 @@ type JsonLdSchemaProps =
     | BreadcrumbSchemaProps 
     | MedicalProcedureSchemaProps
     | ArticleSchemaProps
-    | FAQPageSchemaProps;
+    | FAQPageSchemaProps
+    | HowToSchemaProps;
+
+interface HowToSchemaProps {
+    type: "howTo";
+    name: string;
+    description: string;
+    steps: { name: string; description: string; duration?: string }[];
+}
 
 interface FAQPageSchemaProps {
     type: "faq";
@@ -216,6 +224,22 @@ export function JsonLdSchema(props: JsonLdSchemaProps) {
                 url: siteConfig.url,
             },
             ...(props.preparation && { bodyLocation: props.preparation }),
+        };
+    } else if (props.type === "howTo") {
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: props.name,
+            description: props.description,
+            step: props.steps.map((s, i) => ({
+                "@type": "HowToStep",
+                position: i + 1,
+                name: s.name,
+                itemListElement: [{
+                    "@type": "HowToDirection",
+                    text: s.description
+                }]
+            }))
         };
     } else {
         schema = {
