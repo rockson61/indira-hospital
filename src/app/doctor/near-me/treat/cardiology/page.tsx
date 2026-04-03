@@ -1,10 +1,8 @@
-
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
-import { Heart, Shield, Zap, Award, Clock, Users, Microscope, Timer, Activity, CheckCircle2 } from "lucide-react"
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { SEED_DATA } from '@/lib/data/seed-data'
-
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function CardiologyDepartmentPage() {
     const cardioDoctors = SEED_DATA.doctors.filter(dr => 
         dr.specialties?.includes('Cardiology') || dr.department === 'Cardiology' || dr.specialties?.includes('Interventional Cardiology')

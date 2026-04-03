@@ -20,7 +20,7 @@ export const getDoctors = unstable_cache(
         return SEED_DATA.doctors as any;
     },
     ['directus-doctors'],
-    { revalidate: 3600 }
+    { revalidate: 60 }
 );
 
 export const getDoctorBySlug = unstable_cache(
@@ -121,7 +121,7 @@ export const getServiceBySlug = unstable_cache(
         } as any;
     },
     ['directus-service-by-slug'],
-    { revalidate: 3600 }
+    { revalidate: 60 }
 );
 
 import { TREATMENT_DATA } from './data/treatment-data';
@@ -138,7 +138,7 @@ export const getTreatmentBySlug = unstable_cache(
         return null;
     },
     ['treatment-by-slug'],
-    { revalidate: 3600 }
+    { revalidate: 60 }
 );
 
 export const getLocationBySlug = unstable_cache(
@@ -499,7 +499,7 @@ export const getSEOKeywords = unstable_cache(
         return SEO_KEYWORDS;
     },
     ['seo-keywords'],
-    { revalidate: 36000 }
+    { revalidate: 60 }
 );
 
 export const getSEOKeywordBySlug = unstable_cache(
@@ -508,7 +508,7 @@ export const getSEOKeywordBySlug = unstable_cache(
         return SEO_KEYWORDS.find(k => k.slug.toLowerCase() === lowerSlug) || null;
     },
     ['seo-keyword-by-slug'],
-    { revalidate: 36000 }
+    { revalidate: 60 }
 );
 
 /**

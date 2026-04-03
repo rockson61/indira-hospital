@@ -1,8 +1,10 @@
 import React from 'react'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { getTreatmentBySlug, getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data'
 import { SEED_DATA } from '@/lib/data/seed-data'
-import { TREATMENT_DATA } from '@/lib/data/treatment-data'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 import { GeneralSurgeryPillarLongForm } from '@/lib/data/treatments/general-surgery/pillar-content'
 
 export const metadata: Metadata = {
@@ -32,10 +34,10 @@ export default function GeneralSurgeryPillarPage() {
             procedures={gsTreatments.map(t => ({ name: t.title, link: `/doctor/near-me/treat/general-surgery/${t.slug}` }))}
             relatedDoctors={gsDoctors}
             quickFacts={[
-                { label: 'Technique', value: '4K Laparoscopy', icon: 'Zap' },
-                { label: 'Technology', value: 'Harmonic Scalpel', icon: 'Shield' },
-                { label: 'Experience', value: '30+ Years Senior HOD', icon: 'Award' },
-                { label: 'Availability', value: '24/7 Emergency OT', icon: 'Clock' }
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
         >
             <GeneralSurgeryPillarLongForm />

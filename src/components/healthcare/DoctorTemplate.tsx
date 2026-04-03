@@ -32,6 +32,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { getImageUrl } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { 
     DOCTOR_PROFILE, 
     DOCTOR_EXPERTISE_FALLBACK_1, 
@@ -76,6 +77,17 @@ export function DoctorTemplate({
 
     return (
         <div className="min-h-screen bg-slate-50/50">
+            {/* Unified Semantic Knowledge & AEO Infrastructure */}
+            <JsonLdSchema 
+                type="physician" 
+                doctor={doctor}
+                url={`${DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX}/${doctor.slug}`}
+                items={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Doctors', url: DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX },
+                    { name: doctor.name, url: `${DOCTORS_DIRECTORY.PROFILE_HREF_PREFIX}/${doctor.slug}` }
+                ]}
+            />
             {/* Premium Doctor Hero */}
             <section className="relative bg-gradient-to-br from-[#005f73] via-[#0a3d47] to-[#002b36] text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_25%_25%,white_1px,transparent_1px)] bg-[length:40px_40px]" />

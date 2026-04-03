@@ -1,0 +1,10 @@
+/* TEAM */
+  Hospital Management: Indira Super Speciality Hospital, Vellore
+  Medical Director: Dr. Karan Shankar, MS, FISCP
+  SEO Strategist: AI Agent (Antigravity)
+
+/* SITE */
+  Last update: 2026-04-03
+  Language: English
+  Tools: Next.js, TypeScript, Tailwind CSS
+  Location: Vellore, Tamil Nadu, India

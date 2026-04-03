@@ -5,7 +5,6 @@ import { Metadata } from "next";
 import { injectInternalLinks } from "@/lib/html-linkify";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 export default function FacilitiesPage() {
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
-            <JsonLdSchema type="hospital" />
             
             {/* Cinematic Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">

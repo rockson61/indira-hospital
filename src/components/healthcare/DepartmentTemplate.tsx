@@ -79,22 +79,22 @@ export function DepartmentTemplate({
 
     return (
         <div className="min-h-screen bg-slate-50/30 dark:bg-slate-950">
-            {/* Unified SEO Infrastructure */}
+            {/* Unified Semantic Knowledge & AEO Infrastructure */}
             <JsonLdSchema 
-                type="breadcrumb" 
+                type="location" 
+                name={`${title} at Indira Super Speciality Hospital`}
+                description={shortDescription}
+                location={{
+                    name: `${title} - Indira Super Speciality Hospital`,
+                    address: "54, Katpadi Main Rd, Gandhi Nagar",
+                    city: "Vellore",
+                    areaServed: "Tamil Nadu"
+                }}
                 items={[
                     { name: 'Home', url: '/' },
                     { name: 'Departments', url: '/departments' },
                     { name: title, url: `/departments/${slug}` }
-                ]} 
-            />
-            <JsonLdSchema 
-                type="medicalClinic" 
-                name={`${title} at Indira Super Speciality Hospital`}
-                description={shortDescription}
-                address="Katpadi Road"
-                city="Vellore"
-                areaServed="Tamil Nadu"
+                ]}
             />
             {/* Premium Hero Section */}
             <section className="relative bg-gradient-to-br from-[#005f73] via-[#0a3d47] to-[#002b36] text-white overflow-hidden">

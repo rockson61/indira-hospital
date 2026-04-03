@@ -1,19 +1,8 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { getTreatmentBySlug } from '@/lib/data/treatment-data'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Search,
-    Activity,
-    CheckCircle2,
-    Target
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { getTreatmentBySlug, getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function GastroscopyPage() {
     const data = getTreatmentBySlug('endoscopy-procedure-guide');
     if (!data) return null;
@@ -26,15 +15,32 @@ export default function GastroscopyPage() {
             departmentName="Gastroenterology & Hepatology"
             departmentSlug="gastroenterology"
             description={
-                <div dangerouslySetInnerHTML={{ __html: data.shortDescription }} />
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Procedure</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                    </p>
+                </article>
             }
             quickFacts={[
-                { label: 'Procedure Time', value: '10-15 Mins', icon: 'Clock' },
-                { label: 'Visualization', value: '4K Ultra-HD', icon: 'Activity' },
-                { label: 'Painless', value: 'Sedation Ready', icon: 'Shield' }
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
         >
             <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Procedure in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-blue-50 dark:bg-slate-900/50 border border-blue-100 dark:border-slate-800">
                         <h4 className="text-2xl font-bold text-blue-900 dark:text-white mb-6 font-heading">Advanced Mucosal Imaging</h4>
@@ -87,6 +93,7 @@ export default function GastroscopyPage() {
                         ))}
                     </div>
                 </div>
+            </article>
             </div>
         </SubServiceTemplate>
     );

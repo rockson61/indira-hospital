@@ -12,7 +12,7 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { PageHero } from "@/components/ui/page-hero";
 
 export const metadata: Metadata = {
     title: 'Best Diagnostics & Lab Tests in Vellore — Same-Day Reports | Indira Hospital',
@@ -51,237 +51,67 @@ export default async function DiagnosticsPage() {
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
-            <JsonLdSchema
-                type="breadcrumb"
-                items={[
-                    { name: "Home", url: "/" },
-                    { name: "Diagnostics", url: "/diagnostics" }
-                ]}
+            <PageHero
+                title="Best Diagnostics & NABL Lab Tests in Vellore"
+                subtitle="Same-Day Digital Reports"
+                description="Book 500+ diagnostic tests at Indira Hospital, Vellore. NABL accredited labs, home sample collection, and reports under 12 hours. Advanced MRI, CT, and Blood Pathology in Tamil Nadu."
+                descriptionClassName="clinical-insight direct-answer"
+                backgroundImage="/images/hospital/Consultation.webp"
             />
-            {/* Bold Asymmetrical Deep Hero */}
-            <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
 
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
-                    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                        <UltrasoundScanner className="w-4 h-4" /> Reports in Under 12 Hours
-                    </span>
-                    <h1 className="elite-hero-title text-white mb-8 max-w-5xl mx-auto">
-                        NABL Accredited <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-300">Diagnostics in Vellore.</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
-                        Stop guessing. NABL accredited labs, home collection, and reports you can trust — all in under 12 hours.
-                    </p>
+            <div className="space-y-24 py-24">
+                {categoryOrder.map(catKey => {
+                    const tests = grouped[catKey] || [];
+                    if (tests.length === 0) return null;
+                    const config = categoryConfig[catKey] || categoryConfig.other;
+                    const Icon = config.icon;
 
-                    {/* Integrated Glassmorphic Hero Stats */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto relative z-20">
-                        <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group">
-                            <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-fuchsia-500 transition-colors">
-                                <HeartCardiogram className="w-6 h-6 text-fuchsia-400 group-hover:text-white" />
-                            </div>
-                            <p className="text-4xl font-black text-white mb-1 tabular-nums">{diagnostics.length}</p>
-                            <p className="text-xs font-black text-fuchsia-300 uppercase tracking-widest">Tests Listed</p>
-                        </div>
-                        <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group">
-                            <div className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-pink-500 transition-colors">
-                                <Shield className="w-6 h-6 text-pink-400 group-hover:text-white" />
-                            </div>
-                            <p className="text-4xl font-black text-white mb-1">NABL</p>
-                            <p className="text-xs font-black text-pink-300 uppercase tracking-widest">Accredited</p>
-                        </div>
-                        <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group">
-                            <div className="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-indigo-500 transition-colors">
-                                <Clock className="w-6 h-6 text-indigo-400 group-hover:text-white" />
-                            </div>
-                            <p className="text-4xl font-black text-white mb-1">&lt; 12h</p>
-                            <p className="text-xs font-black text-indigo-300 uppercase tracking-widest">Report TAT</p>
-                        </div>
-                        <div className="bg-white/10 backdrop-blur-3xl border border-white/20 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group col-span-2 lg:col-span-1">
-                            <div className="w-12 h-12 rounded-xl bg-rose-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-rose-500 transition-colors">
-                                <CheckCircle2 className="w-6 h-6 text-rose-400 group-hover:text-white" />
-                            </div>
-                            <p className="text-4xl font-black text-white mb-1">100%</p>
-                            <p className="text-xs font-black text-rose-300 uppercase tracking-widest">Precision</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Test Categories (Premium UI Loops) */}
-            <div className="relative z-30 -mt-24 max-w-7xl mx-auto px-6 lg:px-8 mb-32">
-                <div className="space-y-32">
-                    {categoryOrder.map((cat, idx) => {
-                        const tests = grouped[cat];
-                        if (!tests?.length) return null;
-                        const config = categoryConfig[cat] || categoryConfig.other;
-                        const Icon = config.icon;
-
-                        return (
-                            <div key={cat} className="relative">
-                                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 px-4">
-                                    <div className="flex flex-col sm:flex-row sm:items-center gap-8 group">
-                                        <div className={`w-24 h-24 rounded-[2rem] flex items-center justify-center border-2 transition-all duration-500 shadow-xl ${config.bgColor} border-white/50 group-hover:scale-110`}>
-                                            <Icon className={`w-12 h-12 ${config.color}`} />
-                                        </div>
-                                        <div>
-                                            <h2 className="elite-section-title text-slate-900 dark:text-white mb-2">{config.label}</h2>
-                                            <div className="flex items-center gap-3">
-                                                <span className="h-1 w-8 bg-fuchsia-500 rounded-full" />
-                                                <p className="text-sm font-black text-slate-400 tracking-[0.2em] uppercase">
-                                                    {tests.length} Specialized Tests
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <Link
-                                        href="/contact"
-                                        className="inline-flex items-center gap-3 text-sm font-black text-fuchsia-600 uppercase tracking-widest hover:text-fuchsia-700 transition-colors group/link"
-                                    >
-                                        Bulk Enquiry <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                                    </Link>
+                    return (
+                        <SectionContainer key={catKey}>
+                            <div className="flex items-center gap-4 mb-12">
+                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${config.bgColor}`}>
+                                    <Icon className={`w-7 h-7 ${config.color}`} />
                                 </div>
-
-                                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                    {tests.map((test: Diagnostic) => (
-                                        <DiagnosticCard key={test.slug} test={test} />
-                                    ))}
+                                <div>
+                                    <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">
+                                        {config.label}
+                                    </h2>
+                                    <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">{tests.length} Verified Tests Available</p>
                                 </div>
                             </div>
-                        );
-                    })}
-                </div>
+
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                                {tests.map((test) => (
+                                    <DiagnosticCard key={test.slug} test={test} />
+                                ))}
+                            </div>
+                        </SectionContainer>
+                    );
+                })}
             </div>
 
-            {/* Fallback if no data */}
-            {diagnostics.length === 0 && (
-                <SectionContainer className="py-32 text-center bg-white dark:bg-slate-900 rounded-[3rem] mx-8 border border-slate-100 dark:border-slate-700 shadow-2xl">
-                    <div className="w-32 h-32 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-inner">
-                        <Beaker className="h-14 w-14 text-slate-300" />
-                    </div>
-                    <h3 className="elite-section-title text-slate-900 dark:text-white mb-4">Inventory Syncing</h3>
-                    <p className="text-slate-500 dark:text-slate-400 font-medium text-lg max-w-md mx-auto">Diagnostic database is being updated with real-time pricing. Please call us for immediate assistance.</p>
-                </SectionContainer>
-            )}
-
-            {/* ELITE SIGNATURE CTA: Home Collection */}
-            <SectionContainer className="my-32 px-4">
-                <div className="relative bg-gradient-to-br from-slate-900 via-pink-950 to-fuchsia-950 rounded-[4rem] p-12 sm:p-24 overflow-hidden shadow-2xl shadow-fuchsia-900/40 group/cta flex flex-col items-center text-center">
-                    {/* Ambient Background Lights */}
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu group-hover/cta:bg-fuchsia-500/20 transition-colors duration-1000 opacity-50" />
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-40" />
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
-
-                    <div className="relative z-10 w-full max-w-4xl">
-                        <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 mb-12 shadow-[0_0_40px_rgba(20,184,166,0.3)] group-hover/cta:scale-110 transition-transform duration-500">
-                            <Sparkles className="w-12 h-12 text-fuchsia-300" />
-                        </div>
-
-                        <h2 className="elite-section-title lg:text-white mb-10">
-                            Lab Tests At <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">
-                                Your Doorstep.
-                            </span>
-                        </h2>
-
-                        <p className="text-xl sm:text-2xl text-slate-300 font-light mb-16 max-w-2xl mx-auto leading-relaxed">
-                            Experience ultimate clinical convenience. Get tested directly from the comfort of your home. Safe, sterile, and impeccably accurate.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row gap-8 justify-center w-full max-w-3xl mx-auto mb-16">
-                            <a
-                                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I want to book home sample collection.")}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-fuchsia-500 hover:bg-fuchsia-600 text-slate-900 dark:text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-fuchsia-500/25 overflow-hidden text-xl"
-                            >
-                                <MessageCircle className="w-6 h-6 mr-3" />
-                                <span className="relative z-10 uppercase tracking-wider">Book Home Visit</span>
-                                <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
-                            </a>
-
-                            <Link
-                                href="/health-packages"
-                                className="flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all text-xl"
-                            >
-                                View Health Packages
-                            </Link>
-                        </div>
-
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 opacity-40 grayscale group-hover/cta:grayscale-0 group-hover/cta:opacity-70 transition-all duration-700">
-                            <div className="flex flex-col items-center gap-2">
-                                <CheckCircle2 className="w-8 h-8 text-fuchsia-400" />
-                                <span className="text-[10px] font-black tracking-widest uppercase text-white">Sterile Kits</span>
-                            </div>
-                            <div className="flex flex-col items-center gap-2">
-                                <CheckCircle2 className="w-8 h-8 text-fuchsia-400" />
-                                <span className="text-[10px] font-black tracking-widest uppercase text-white">NABL Labs</span>
-                            </div>
-                            <div className="flex flex-col items-center gap-2">
-                                <CheckCircle2 className="w-8 h-8 text-fuchsia-400" />
-                                <span className="text-[10px] font-black tracking-widest uppercase text-white">Digital Reports</span>
-                            </div>
-                            <div className="flex flex-col items-center gap-2">
-                                <CheckCircle2 className="w-8 h-8 text-fuchsia-400" />
-                                <span className="text-[10px] font-black tracking-widest uppercase text-white">Fast TAT</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </SectionContainer>
-
-            {/* TRUST SIGNALS */}
-            <SectionContainer className="max-w-7xl mx-auto px-6 lg:px-8 py-24 border-t border-slate-100 dark:border-slate-800">
+            <SectionContainer className="py-24 border-t border-slate-100 dark:border-slate-800">
                 <div className="grid lg:grid-cols-2 gap-16">
-                    <EntityFAQs
-                        entityType="hospital"
-                        entityName="Indira Hospital"
-                        entitySlug="scans"
-                        title="Diagnostic & Safety FAQs"
-                        description="Common questions about imaging safety, prep, and report turnaround at Indira Hospital."
+                    <EntityFAQs 
+                        entityType="hospital" 
+                        entityName="Indira Diagnostics" 
+                        entitySlug="diagnostics" 
+                        className="bg-transparent"
                     />
-                    <EntityReviews
-                        entityType="hospital"
-                        entityName="Indira Hospital"
-                        entitySlug="diagnostics"
-                        title="What Patients Say about Our Diagnostics"
-                        description="Real patient experiences from our pathology and imaging centers."
+                    <EntityReviews 
+                        entityType="hospital" 
+                        entityName="Indira Diagnostics" 
+                        entitySlug="indira-hospital"
+                        title="Patient Lab Stories"
+                        description="Verified experiences from our diagnostic center."
                     />
                 </div>
             </SectionContainer>
 
-            {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-
-            {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="health-packages" title="Wellness & Checkup Packages" subtitle="Health Screening" limit={8} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
-
-            {/* JSON-LD for MedicalTest listing */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "MedicalClinic",
-                        "name": `${siteConfig.name} — Diagnostics`,
-                        "url": `${siteConfig.url}/diagnostics`,
-                        "medicalSpecialty": "Diagnostic",
-                        "availableService": diagnostics.map((t: Diagnostic) => ({
-                            "@type": "MedicalTest",
-                            "name": t.name,
-                            "url": `${siteConfig.url}/diagnostics/${t.slug}`,
-                            "description": t.seo_description || t.short_description,
-                        })),
-                    })
-                }}
-            />
+            {/* RELATED SECTIONS */}
+            <EntityCardSection type="doctors" title="Consult the Experts" subtitle="Specialist Panel" limit={6} className="bg-white dark:bg-slate-900 border-t" />
+            <InternalLinkGrid type="health-packages" title="Comprehensive Wellness" subtitle="Checkup Packages" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-t" />
+            <InternalLinkGrid type="services" title="A-Z Treatment Directory" subtitle="Clinical Services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
         </main>
     )
 }

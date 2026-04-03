@@ -1,34 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Ear,
-    Activity,
-    CheckCircle2,
-    Users,
-    Search,
-    Volume2,
-    Target,
-    Microscope,
-    UserCheck,
-    MapPin,
-    ArrowRightCircle,
-    Eye,
-    Star,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    Move,
-    Radiation,
-    Droplets
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function TympanoplastyPage() {
     return (
         <SubServiceTemplate
@@ -37,19 +10,16 @@ export default function TympanoplastyPage() {
             parentServiceSlug="ent"
             departmentName="Indira Elite ENT Hub"
             description={
-                <>
-                    <p>
-                        Chronic ear discharge or a perforated eardrum can lead to progressive hearing loss and deep-seated infections. **Tympanoplasty** at Indira Super Speciality Hospital is a dedicated microscopic microsurgery used to repair the eardrum and reconstruct the tiny bones of hearing (ossicles). We utilize Carl Zeiss high-precision surgical microscopes and biocompatible graft materials to ensure superior hearing restoration and life-long protection against deep ear infections.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Tympanoplasty & Mastoidectomy</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-emerald-600 dark:text-emerald-400 font-semibold italic">
-                        "Micro-Ear surgery: Restoring sound through sub-millimeter precision."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Visualization', value: 'Zeiss Microscope', icon: 'Eye' },
-                { label: 'Care Type', value: 'Reconstructive', icon: 'Shield' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="60-90 Minutes"
@@ -63,6 +33,18 @@ export default function TympanoplastyPage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Tympanoplasty & Mastoidectomy in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* Mechanism: Microsurgical Ear Restoration */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
@@ -191,6 +173,7 @@ export default function TympanoplastyPage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

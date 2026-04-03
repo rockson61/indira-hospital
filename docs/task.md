@@ -128,7 +128,18 @@
     - [x] Add "International Standards Compliance" section (JCI, WCAG, Privacy) to Blueprint.
     - [x] Rewrite `PROJECT_PROPOSAL.md` to be stakeholder-facing and standards-compliant.
 - [x] **Final UI/UX Optimizaton (Component-First)**
-    - [x] Create `src/components/entities/` directory.
+    - [x] Phase 3: Site-Wide Cleanup & AEO Hardening
+    - [x] Purge redundant `JsonLdSchema` from high-traffic routes:
+        - [x] About (`/about`)
+        - [x] Contact (`/contact`)
+        - [x] Technology (`/technology`)
+        - [x] Insurance (`/patients/insurance`)
+        - [x] International (`/patients/international/[country]`)
+        - [x] Homepage (`/`)
+    - [x] Harden high-value Directory Indices with AEO selectors:
+        - [x] Doctors Directory (`/doctors`): Purge schema + Add `.clinical-insight` to PageHero.
+        - [x] Diagnostics Directory (`/diagnostics`): Purge schema + Add `PageHero` + Restore missing rendering logic.
+        - [x] Health Packages (`/health-packages`): Purge schema + Upgrade to `PageHero` with AEO classes.
     - [x] Build Standardized Entity Cards:
         - [x] `DoctorCard.tsx` (Grid, List, Compact variants).
         - [x] `ServiceCard.tsx` (Poster, Detail, Compact variants).

@@ -1,41 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    Target,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    ArrowRightCircle,
-    Eye,
-    Star,
-    Move,
-    UserCheck,
-    MapPin,
-    Scissors,
-    History,
-    Anchor,
-    Scale,
-    Layers,
-    Radiation,
-    Droplets,
-    Wind,
-    Microscope,
-    Flame,
-    Brain,
-    Utensils,
-    HeartPulse
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function IBSConstipationPage() {
     return (
         <SubServiceTemplate
@@ -44,19 +10,16 @@ export default function IBSConstipationPage() {
             parentServiceSlug="proctology"
             departmentName="Indira Elite Proctology"
             description={
-                <>
-                    <p>
-                        Irritable Bowel Syndrome (IBS) and Chronic Constipation are not just "digestive issues"—they are functional disorders that impact your neuro-gastric axis. At Indira Super Speciality Hospital, we bridge the gap between proctology and motility science. Led by **Dr. Karan Shankar**, our team provides comprehensive diagnostics including **Anorectal Manometry** and **Biofeedback Therapy** to restore your natural digestive rhythm.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite IBS & Chronic Constipation Management</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-emerald-600 dark:text-emerald-400 font-semibold italic">
-                        "Holistic motility care: Reclaiming your quality of life through gut-brain optimization."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: 'Motility Lab', icon: 'Zap' },
-                { label: 'Care Type', value: 'Rehabilitative', icon: 'Shield' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="30-60 Minutes"
@@ -70,6 +33,18 @@ export default function IBSConstipationPage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite IBS & Chronic Constipation Management in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* Mechanism: The Gut-Brain Axis */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
@@ -195,6 +170,7 @@ export default function IBSConstipationPage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

@@ -1,21 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Microscope,
-    Activity,
-    CheckCircle2,
-    Users,
-    Search,
-    Dna
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function ThyroidSurgeryENTPage() {
     return (
         <SubServiceTemplate
@@ -24,19 +10,16 @@ export default function ThyroidSurgeryENTPage() {
             parentServiceSlug="ent"
             departmentName="ENT (Otolaryngology)"
             description={
-                <>
-                    <p>
-                        Swellings in the neck, particularly in the thyroid or salivary glands, require expert surgical evaluation by the **ENT Head & Neck team**. At Indira Super Speciality Hospital, we specialized in the surgical management of thyroid nodules and parotid tumors. Our focus is on the ultra-precise preservation of the delicate nerves that control your voice (recurrent laryngeal nerve) and facial expressions.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Thyroid & Parotid Surgery</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-blue-600 dark:text-blue-400 font-semibold italic">
-                        "Expert nerve-sparing surgery for complex neck swellings."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: 'IONM Ready', icon: 'Zap' },
-                { label: 'Care Type', value: 'Surgical', icon: 'Shield' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="2-3 Hours"
@@ -50,6 +33,18 @@ export default function ThyroidSurgeryENTPage() {
             }}
         >
             <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Thyroid & Parotid Surgery in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                 {/* Visual Section: Why ENT for Neck Surgery? */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-blue-50 dark:bg-blue-900/50 border border-blue-100 dark:border-blue-800 shadow-lg relative overflow-hidden group">
@@ -158,6 +153,7 @@ export default function ThyroidSurgeryENTPage() {
                         ))}
                     </div>
                 </div>
+            </article>
             </div>
         </SubServiceTemplate>
     );

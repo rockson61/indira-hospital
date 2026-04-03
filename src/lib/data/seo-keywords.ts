@@ -82,21 +82,21 @@ export const SEO_KEYWORDS: SEOKeyword[] = [
     { slug: "sports-injury-specialist", title: "Sports injury specialist", department: "Orthopaedics", category: "Specialist" },
 
     // === GYNAECOLOGY & OBSTETRICS ===
-    { slug: "best-maternity-hospital", title: "Best maternity hospital", department: "Obstetrics-Gynaecology", category: "Hospital" },
-    { slug: "best-gynaecologist", title: "Best Gynaecologist", department: "Obstetrics-Gynaecology", category: "Specialist" },
-    { slug: "painless-delivery-hospital", title: "Painless delivery hospital", department: "Obstetrics-Gynaecology", category: "Hospital" },
-    { slug: "c-section-surgery-specialist", title: "C-section surgery specialist", department: "Obstetrics-Gynaecology", category: "Specialist" },
-    { slug: "high-risk-pregnancy-treatment", title: "High risk pregnancy treatment", department: "Obstetrics-Gynaecology", category: "Treatment" },
-    { slug: "hysterectomy-surgery-hospital", title: "Hysterectomy surgery hospital", department: "Obstetrics-Gynaecology", category: "Surgery" },
-    { slug: "laparoscopic-gynaecology-surgery", title: "Laparoscopic gynaecology surgery", department: "Obstetrics-Gynaecology", category: "Surgery" },
-    { slug: "best-fertility-hospital", title: "Best fertility hospital", department: "Obstetrics-Gynaecology", category: "Hospital" },
-    { slug: "pcos-treatment-specialist", title: "PCOS treatment specialist", department: "Obstetrics-Gynaecology", category: "Specialist" },
-    { slug: "uterus-removal-surgery", title: "Uterus removal surgery", department: "Obstetrics-Gynaecology", category: "Surgery" },
+    { slug: "best-maternity-hospital", title: "Best maternity hospital", department: "Obstetrics & Gynaecology", category: "Hospital" },
+    { slug: "best-gynaecologist", title: "Best Gynaecologist", department: "Obstetrics & Gynaecology", category: "Specialist" },
+    { slug: "painless-delivery-hospital", title: "Painless delivery hospital", department: "Obstetrics & Gynaecology", category: "Hospital" },
+    { slug: "c-section-surgery-specialist", title: "C-section surgery specialist", department: "Obstetrics & Gynaecology", category: "Specialist" },
+    { slug: "high-risk-pregnancy-treatment", title: "High risk pregnancy treatment", department: "Obstetrics & Gynaecology", category: "Treatment" },
+    { slug: "hysterectomy-surgery-hospital", title: "Hysterectomy surgery hospital", department: "Obstetrics & Gynaecology", category: "Surgery" },
+    { slug: "laparoscopic-gynaecology-surgery", title: "Laparoscopic gynaecology surgery", department: "Obstetrics & Gynaecology", category: "Surgery" },
+    { slug: "best-fertility-hospital", title: "Best fertility hospital", department: "Obstetrics & Gynaecology", category: "Hospital" },
+    { slug: "pcos-treatment-specialist", title: "PCOS treatment specialist", department: "Obstetrics & Gynaecology", category: "Specialist" },
+    { slug: "uterus-removal-surgery", title: "Uterus removal surgery", department: "Obstetrics & Gynaecology", category: "Surgery" },
     { slug: "ivf-treatment-hospital", title: "IVF Treatment Hospital", department: "Infertility", category: "Hospital" },
     { slug: "iui-treatment-center", title: "IUI treatment center", department: "Infertility", category: "Clinic" },
     { slug: "best-infertility-doctor", title: "Best infertility doctor", department: "Infertility", category: "Specialist" },
-    { slug: "fibroid-removal-surgery", title: "Fibroid removal surgery", department: "Obstetrics-Gynaecology", category: "Surgery" },
-    { slug: "endometriosis-specialist", title: "Endometriosis specialist", department: "Obstetrics-Gynaecology", category: "Specialist" },
+    { slug: "fibroid-removal-surgery", title: "Fibroid removal surgery", department: "Obstetrics & Gynaecology", category: "Surgery" },
+    { slug: "endometriosis-specialist", title: "Endometriosis specialist", department: "Obstetrics & Gynaecology", category: "Specialist" },
 
     // === VARICOSE VEINS & VASCULAR ===
     { slug: "varicose-vein-laser-treatment", title: "Varicose vein laser treatment", department: "General Surgery", category: "Laser Surgery" },
@@ -224,4 +224,44 @@ export const SEO_KEYWORDS: SEOKeyword[] = [
     { slug: "medicine-for-hernia-treatment", title: "Medicine for hernia treatment", department: "General Surgery", category: "Medicine" },
     { slug: "medicine-for-piles-treatment", title: "Medicine for piles treatment", department: "Proctology", category: "Medicine" },
     { slug: "robotic-surgery-in-vellore", title: "Robotic surgery in vellore", department: "General Surgery", category: "Surgery" },
+
+    // === UROLOGY EXPANSION ===
+    { slug: "urology-specialist", title: "Urology specialist", department: "Urology", category: "Specialist" },
+    { slug: "urology-doctor", title: "Urology doctor", department: "Urology", category: "Specialist" },
+    { slug: "laser-treatment-kidney-stones", title: "Laser treatment for kidney stones", department: "Urology", category: "Treatment" },
+    { slug: "kidney-stones-treatment", title: "Kidney stones treatment", department: "Urology", category: "Treatment" },
+    { slug: "prostate-problem-treatment", title: "Prostate problem treatment", department: "Urology", category: "Treatment" },
+    { slug: "laser-surgery-prostate", title: "Laser surgery for prostate problem", department: "Urology", category: "Surgery" },
+    { slug: "thullium-laser-surgery", title: "Thullium Laser surgery", department: "Urology", category: "Surgery" },
+    { slug: "holmium-laser-surgery", title: "Holmium laser surgery for kidney stones", department: "Urology", category: "Surgery" },
+    { slug: "best-hospital-urinary-problems", title: "Best hospital in vellore for urinary problems", department: "Urology", category: "Hospital" },
+    { slug: "best-hospital-kidney-stones", title: "Best hospital in vellore for kidney stones treatment", department: "Urology", category: "Hospital" },
+    { slug: "difficulty-in-passing-urine", title: "Difficulty in passing urine treatment", department: "Urology", category: "Treatment" },
+    { slug: "hydrocele-treatment", title: "Hydrocele treatment", department: "Urology", category: "Treatment" },
+
+    // === THYROID & BREAST SURGERY ===
+    { slug: "thyroid-problem-treatment", title: "Thyroid problem treatment", department: "General Surgery", category: "Treatment" },
+    { slug: "breast-problem-treatment", title: "Breast problem treatment", department: "General Surgery", category: "Treatment" },
+    { slug: "breast-cancer-treatment", title: "Breast cancer treatment", department: "Oncology", category: "Treatment" },
+    { slug: "best-hospital-for-thyroid-treatment", title: "Best hospital for thyroid problem treatment", department: "General Surgery", category: "Hospital" },
+    { slug: "thyroid-surgery", title: "Thyroid Surgery", department: "General Surgery", category: "Surgery" },
+    { slug: "thyroid-surgery-specialist", title: "Thyroid surgery specialist", department: "General Surgery", category: "Specialist" },
+    { slug: "laparoscopic-thyroid-surgery", title: "Laparoscopic Thyroid Surgery Specialist", department: "General Surgery", category: "Specialist" },
+
+    // === DIABETIC FOOT & VASCULAR ===
+    { slug: "diabetic-foot-treatment", title: "Diabetic foot treatment", department: "General Surgery", category: "Treatment" },
+    { slug: "gangrene-surgery", title: "Gangrene surgery", department: "General Surgery", category: "Surgery" },
+    { slug: "prp-therapy-diabetic-foot", title: "PRP therapy for diabetic foot disease", department: "General Surgery", category: "Treatment" },
+
+    // === GYNAECOLOGY HUB ===
+    { slug: "best-gynaecology-doctor", title: "Best doctor for Gynaecology problems", department: "Obstetrics & Gynaecology", category: "Specialist" },
+    { slug: "best-hospital-uterus-laparoscopy", title: "Best hospital for uterus surgery in Laparoscopic", department: "Obstetrics & Gynaecology", category: "Hospital" },
+    { slug: "ovarian-cyst-treatment", title: "Ovarian cyst treatment", department: "Obstetrics & Gynaecology", category: "Treatment" },
+    { slug: "best-gynaecology-doctor-vellore", title: "Best doctor for Gynaecology in vellore", department: "Obstetrics & Gynaecology", category: "Specialist" },
+    { slug: "best-gynaecology-hospital", title: "Best hospital for gynaecology problems", department: "Obstetrics & Gynaecology", category: "Hospital" },
+
+    // === GASTROENTEROLOGY HUB ===
+    { slug: "stomach-pain-specialist", title: "Stomach pain specialist doctor", department: "Gastroenterology", category: "Specialist" },
+    { slug: "gastrointestinal-surgery-specialist", title: "Gastrointestinal Surgery specialist", department: "Gastroenterology", category: "Specialist" },
+    { slug: "gastro-problem-treatment", title: "Gastro problem treatment", department: "Gastroenterology", category: "Treatment" },
 ];

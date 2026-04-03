@@ -1,22 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Dna,
-    Apple,
-    Leaf
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function PCODManagementPage() {
     return (
         <SubServiceTemplate
@@ -25,19 +10,16 @@ export default function PCODManagementPage() {
             parentServiceSlug="obstetrics-gynaecology"
             departmentName="Indira Elite Women's Care"
             description={
-                <>
-                    <p>
-                        Polycystic Ovary Syndrome (PCOS) is more than just an irregular period—it's a complex metabolic and endocrine disorder that affects 1 in 5 women. At Indira Super Speciality Hospital, we offer **Elite PCOS Protocols**. By combining advanced hormonal mapping with clinical nutrition, metabolic optimization, and weight management, we help women reverse symptoms, restore fertility, and reclaim their hormonal health.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite PCOD & PCOS Treatment</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-rose-600 dark:text-rose-400 font-semibold italic">
-                        "Empowering women through endocrine-balancing medical care."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Evaluation', value: 'Metabolic', icon: 'Activity' },
-                { label: 'Care Type', value: 'Comprehensive', icon: 'Shield' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="Ongoing"
@@ -51,6 +33,18 @@ export default function PCODManagementPage() {
             }}
         >
             <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite PCOD & PCOS Treatment in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                 {/* Visual Section: Why Specialized PCOS Care? */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
@@ -114,7 +108,7 @@ export default function PCODManagementPage() {
                         The "Indira PCOS Protocol" is built on four pillars: **Metabolic Audit, Clinical Nutrition, Stress Resilience, and Targeted Medical Therapy**. We track your progress through objective data—not just how you feel, but through monthly monitoring of insulin levels, BMI, and hormonal ratios. This scientific approach ensures that we are making real progress toward reversing the condition and preventing its long-term complications.
                     </p>
 
-                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">Why Choose Indira for Women's Care?</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">What are the Benefits of Women's Care Surgery?</h4>
                     <ul>
                         <li>**Advanced Pelvic Ultrasound**: Identifying 'string of pearls' follicles and monitoring endometrial thickness with high clarity.</li>
                         <li>**In-house Metabolic Lab**: Rapid testing for oral glucose tolerance and fasting insulin levels.</li>
@@ -162,6 +156,7 @@ export default function PCODManagementPage() {
                         ))}
                     </div>
                 </div>
+            </article>
             </div>
         </SubServiceTemplate>
     );

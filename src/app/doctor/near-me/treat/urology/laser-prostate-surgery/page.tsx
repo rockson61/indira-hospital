@@ -1,41 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Flame,
-    Target,
-    ArrowRightCircle,
-    Utensils,
-    Microscope,
-    Radiation,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    Eye,
-    MapPin,
-    UserCheck,
-    Dna,
-    Layers,
-    Waves,
-    Users,
-    Users2,
-    Stethoscope,
-    HeartPulse,
-    Sparkles,
-    Wind,
-    Star
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function ProstateSurgeryPage() {
     return (
         <SubServiceTemplate
@@ -44,19 +10,16 @@ export default function ProstateSurgeryPage() {
             parentServiceSlug="urology"
             departmentName="Indira Elite Urology Center"
             description={
-                <>
-                    <p>
-                        Benign Prostatic Hyperplasia (BPH) is not a condition that has to be lived with—it is a fixable barrier to urinary freedom. At Indira Super Speciality Hospital, we offer **Elite Laser Prostate Surgery (HoLEP)** and advanced Bipolar TURP. Using precision laser enucleation, we selectively remove the obstructive core of the prostate while preserving the delicate outer capsule and urinary sphincter—ensuring a rapid return to normal flow, zero blood loss, and the highest standard of safety for cardiac and elderly patients.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Laser Prostate Surgery (HoLEP & TURP)</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-blue-600 dark:text-blue-400 font-semibold italic border-l-4 border-blue-500 pl-4 uppercase tracking-tighter">
-                        "Holmium Power: The gold standard for prostate health."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
-                { label: 'Consultation', value: 'Senior Urologist', icon: 'UserCheck' },
-                { label: 'Tech Level', value: '100W Holmium Laser', icon: 'Zap' },
-                { label: 'Care Type', value: 'Bloodless Enucleation', icon: 'Shield' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="60-90 Minutes"
@@ -70,6 +33,18 @@ export default function ProstateSurgeryPage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Laser Prostate Surgery (HoLEP & TURP) in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* Mechanism: HoLEP Enucleation vs Resection */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 blur-3xl -z-10" />
@@ -139,7 +114,7 @@ export default function ProstateSurgeryPage() {
                     {/* Trust Infrastructure Section */}
                     <section>
                         <div className="text-center max-w-3xl mx-auto mb-12">
-                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase uppercase">Why Choose Indira for Prostate Care?</h3>
+                            <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase uppercase">What are the Benefits of Prostate Care Surgery?</h3>
                             <p className="text-slate-600 dark:text-slate-400">Restoring dignity and urinary flow with precision laser science.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -201,6 +176,7 @@ export default function ProstateSurgeryPage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

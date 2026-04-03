@@ -1,9 +1,7 @@
-
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
-import { Microscope, Shield, Target, Award, Clock, Users, Flame, Brain, Heart, Activity } from "lucide-react"
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function PsychiatryDepartmentPage() {
     return (
         <DepartmentTemplate
@@ -222,10 +220,10 @@ export default function PsychiatryDepartmentPage() {
                 }
             ]}
             quickFacts={[
-                { label: 'Care Level', value: 'Clinical & Wellness', icon: 'Heart' },
-                { label: 'Specialists', value: 'Senior Psychiatrists', icon: 'Brain' },
-                { label: 'Facility', value: 'Confidential Units', icon: 'Shield' },
-                { label: 'Approach', value: 'Bio-Psycho-Social', icon: 'Target' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
         />
     )

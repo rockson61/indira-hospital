@@ -64,11 +64,18 @@ Embed these cards across the site to increase "Link Density" and user engagement
 
 ## 5. Implementation Steps
 1.  **Setup**: Create `src/components/entities` directory.
-2.  **Build Cards**: Implement `DoctorCard`, `ServiceCard`, `DepartmentCard`, `LocationCard`.
-3.  **Refactor Doctor Page**: Update `src/app/doctors/[slug]/page.tsx` to use new cards.
-4.  **Refactor Service Page**: Update `src/app/services/[...slug]/page.tsx` to use new cards.
-5.  **Refactor Listings**: Update `/doctors`, `/services`, `/locations`, and `/diagnostics` main pages to use the `grid` variants.
-6.  **Refactor Location Detail**: Update `src/app/locations/[slug]/page.tsx` with doctor/service cards.
+2.  **Build Cards**: Implement `DoctorC### Phase 3: Site-Wide Cleanup & AEO Hardening
+- [x] Purge redundant `JsonLdSchema` from high-traffic routes:
+  - [x] About (`/about`)
+  - [x] Contact (`/contact`)
+  - [x] Technology (`/technology`)
+  - [x] Insurance (`/patients/insurance`)
+  - [x] International (`/patients/international/[country]`)
+  - [x] Homepage (`/`)
+- [/] Harden high-value Directory Indices with AEO selectors:
+  - [x] Doctors Directory (`/doctors`): Purge schema + Add `.clinical-insight` to PageHero.
+  - [ ] Diagnostics Directory (`/diagnostics`): Purge schema + Add `PageHero` + Restore missing rendering logic.
+  - [ ] Health Packages (`/health-packages`): Purge schema + Upgrade to `PageHero` with AEO classes.
 7.  **Final Polish**: 
     - Standardize `src/app/about/page.tsx` and `src/app/contact/page.tsx` with the core design system.
     - Inject `framer-motion` micro-interactions into all Entity Cards for a premium feel.

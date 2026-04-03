@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Metadata } from "next";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { siteConfig } from "@/config/site";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
@@ -26,8 +25,7 @@ const benefits = [
 export default function InsurancePage() {
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
-            <JsonLdSchema type="hospital" />
-
+            
             {/* Cinematic Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />

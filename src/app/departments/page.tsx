@@ -25,16 +25,15 @@ export default async function DepartmentsDirectoryPage() {
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800">
-            <JsonLdSchema
-                type="itemList"
-                name="Departments & Elite Medical Units at Indira Hospital"
-                items={departments.map((d: any) => ({ name: d.title || d.name, url: `/departments/${d.slug}` }))}
-            />
-            <JsonLdSchema
-                type="breadcrumb"
+            {/* Unified Semantic Knowledge & AEO Infrastructure */}
+            <JsonLdSchema 
+                type="itemList" 
+                name="Medical Departments & Specialities - Indira Hospital Vellore"
+                description="Explore our advanced medical units including Cardiology, Orthopaedics, Proctology, and General Surgery at the best hospital in Vellore."
                 items={[
                     { name: "Home", url: "/" },
-                    { name: "Departments", url: "/departments" }
+                    { name: "Departments", url: "/departments" },
+                    ...departments.map((d: any) => ({ name: d.title || d.name, url: `/departments/${d.slug}` }))
                 ]}
             />
             <PageHero

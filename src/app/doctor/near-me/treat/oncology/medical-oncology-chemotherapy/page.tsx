@@ -1,23 +1,24 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function MedicalOncologyPage() {
     return (
         <SubServiceTemplate
             title="Elite Medical Oncology & Chemotherapy"
             eyebrow="Targeted & Systemic Cancer Therapies"
             description={
-                <>
-                    Our <strong>Medical Oncology Unit</strong> is a sanctuary of clinical expertise and compassionate care. We offer the latest in targeted chemotherapy, immunotherapy, and hormonal treatments, designed to achieve maximum tumor response while absolutely minimizing side effects.
-                </>
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Medical Oncology & Chemotherapy</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                    </p>
+                </article>
             }
             quickFacts={[
-                { label: 'Facility', value: 'Chemo Day Care', icon: 'Clock' },
-                { label: 'Technology', value: 'Chemo Port', icon: 'Zap' },
-                { label: 'Care Level', value: 'Onco-Nursing', icon: 'UserCheck' },
-                { label: 'Treatment', value: 'Targeted/Immuno', icon: 'Target' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             marketingContent={{
                 features: [

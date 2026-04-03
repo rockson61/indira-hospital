@@ -1,31 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Dna,
-    Target,
-    Layers,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    ArrowRightCircle,
-    Eye,
-    Star,
-    Move,
-    UserCheck,
-    MapPin
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function LaparoscopicHysterectomyPage() {
     return (
         <SubServiceTemplate
@@ -34,19 +10,16 @@ export default function LaparoscopicHysterectomyPage() {
             parentServiceSlug="obstetrics-gynaecology"
             departmentName="Indira Elite Women's Care"
             description={
-                <>
-                    <p>
-                        A hysterectomy (removal of the uterus) no longer requires large abdominal incisions and weeks of painful recovery. At Indira Super Speciality Hospital, we specialized in **Total Laparoscopic Hysterectomy (TLH)**. Using 4K high-definition cameras and precision surgical energy, we perform the entire procedure through three tiny 5mm incisions. This "AIIMS-Standard" approach ensures minimal blood loss, almost no visible scarring, and a return to home within 24 hours.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Laparoscopic Hysterectomy (TLH)</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-rose-600 dark:text-rose-400 font-semibold italic">
-                        "Precision-guided gynaecology for a faster, safer return to your life."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Visualization', value: '4K Ultra-HD', icon: 'Eye' },
-                { label: 'Care Type', value: 'Keyhole', icon: 'Shield' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="60-90 Minutes"
@@ -60,6 +33,18 @@ export default function LaparoscopicHysterectomyPage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Laparoscopic Hysterectomy (TLH) in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* The Surgical Edge Section */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
@@ -214,6 +199,7 @@ export default function LaparoscopicHysterectomyPage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

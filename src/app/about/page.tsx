@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import AboutClient from "./AboutClient";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { SectionContainer } from "@/components/ui/section-container"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import EntityFAQs from "@/components/trust/EntityFAQs";
@@ -23,14 +22,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
-            <JsonLdSchema type="hospital" />
-            <JsonLdSchema 
-                type="breadcrumb" 
-                items={[
-                    { name: "Home", url: "/" },
-                    { name: "About Us", url: "/about" }
-                ]} 
-            />
             <AboutClient />
             
             {/* TRUST SIGNALS */}

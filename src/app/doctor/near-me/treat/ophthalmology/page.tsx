@@ -1,25 +1,10 @@
-
-
 import React from 'react'
-import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
-import { 
-    Activity, 
-    Shield, 
-    Zap, 
-    Clock, 
-    Award, 
-    Eye,
-    Microscope,
-    HelpCircle,
-    Info,
-    Sparkles,
-    Search,
-    Stethoscope
-} from 'lucide-react'
-import { SEED_DATA } from '@/lib/data/seed-data'
-import { TREATMENT_DATA } from '@/lib/data/treatment-data'
 import Link from 'next/link'
-
+import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { getTreatmentBySlug, getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data'
+import { SEED_DATA } from '@/lib/data/seed-data'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function OphthalmologyPillarPage() {
     // Filter Ophthalmology specialists
     const ophthaDoctors = SEED_DATA.doctors.filter(dr => 
@@ -247,10 +232,10 @@ export default function OphthalmologyPillarPage() {
             procedures={ophthaTreatments.map(t => ({ name: t.title, link: `/doctor/near-me/treat/ophthalmology/${t.slug}` }))}
             relatedDoctors={ophthaDoctors}
             quickFacts={[
-                { label: 'Technique', value: 'MICS & Phaco', icon: 'Zap' },
-                { label: 'Diagnostics', value: 'High-Res OCT', icon: 'Shield' },
-                { label: 'Specialist', value: 'Senior Eye Surgeon', icon: 'Award' },
-                { label: 'Care Type', value: 'Day-Care Focus', icon: 'Clock' }
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
         />
     )

@@ -1,23 +1,24 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function SurgicalOncologyPage() {
     return (
         <SubServiceTemplate
             title="Surgical Oncology Center in Vellore, Tamil Nadu"
             eyebrow="Curative Precision Cancer Resections"
             description={
-                <>
-                    Our <strong>Surgical Oncology Center</strong> specializes in the definitive, curative removal of solid tumors. We combine radical surgical mastery with minimally invasive techniques to achieve optimal cancer clearance while preserving function and quality of life.
-                </>
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Surgical Oncology Center</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                    </p>
+                </article>
             }
             quickFacts={[
-                { label: 'Approach', value: 'Multidisciplinary', icon: 'UserCheck' },
-                { label: 'Specialty', value: 'Solid Tumors', icon: 'Target' },
-                { label: 'Facility', value: 'HEPA-Filtered OT', icon: 'Shield' },
-                { label: 'Outcome', value: 'Curative Intent', icon: 'Star' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             marketingContent={{
                 features: [

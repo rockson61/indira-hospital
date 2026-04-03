@@ -1,23 +1,24 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function DialysisPage() {
     return (
         <SubServiceTemplate
             title="Dialysis & Renal Support Center in Vellore, Tamil Nadu"
             eyebrow="24/7 Advanced Kidney Care"
             description={
-                <>
-                    Our <strong>Advanced Dialysis Unit</strong> is a center of excellence for patients with chronic and acute kidney failure. We provide ultra-safe, high-flux hemodialysis in a premium, infection-controlled environment, ensuring the highest standards of blood purification and patient comfort.
-                </>
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Dialysis & Renal Support Center</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                    </p>
+                </article>
             }
             quickFacts={[
-                { label: 'Availability', value: '24/7 Cycle', icon: 'Clock' },
-                { label: 'Technology', value: 'High-Flux', icon: 'Zap' },
-                { label: 'Safety', value: 'Zero-Infection', icon: 'Shield' },
-                { label: 'Care Level', value: 'Expert Renal', icon: 'Droplets' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             marketingContent={{
                 features: [

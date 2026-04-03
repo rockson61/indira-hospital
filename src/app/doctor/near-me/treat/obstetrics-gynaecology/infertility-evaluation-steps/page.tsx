@@ -1,22 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Baby,
-    Heart,
-    HandHeart
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function InfertilityManagementPage() {
     return (
         <SubServiceTemplate
@@ -25,19 +10,16 @@ export default function InfertilityManagementPage() {
             parentServiceSlug="obstetrics-gynaecology"
             departmentName="Indira Elite Women's Care"
             description={
-                <>
-                    <p>
-                        The journey to parenthood can sometimes be filled with unexpected hurdles. At Indira Super Speciality Hospital, we offer **Elite Infertility Evaluation Protocols**. We move beyond generic advice to provide a precision-driven diagnostic roadmap for both partners. By combining advanced follicular tracking, hormonal mapping, and specialized male-factor analysis, we identify the root cause of the delay and provide a science-backed path toward a successful pregnancy.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Infertility Evaluation & Path to Parenthood</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-rose-600 dark:text-rose-400 font-semibold italic">
-                        "Clarity and compassion on your journey to bringing life into the world."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
-                { label: 'Evaluation', value: '48-Hour Plan', icon: 'Search' },
-                { label: 'Diagnostic', value: 'Level 3', icon: 'Activity' },
-                { label: 'Care Type', value: 'Reproductive', icon: 'Baby' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="Ongoing"
@@ -51,6 +33,18 @@ export default function InfertilityManagementPage() {
             }}
         >
             <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Infertility Evaluation & Path to Parenthood in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                 {/* Visual Section: Why Specialized Infertility Care? */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
@@ -114,7 +108,7 @@ export default function InfertilityManagementPage() {
                         Every couple's journey is unique. Some may simply need 'Timed Intercourse' with minor ovulation support, while others may require specialized hysteroscopic procedures to correct uterine factors. Our **Fertility Wellness Team** includes dietitians and counselors who provide the nutritional and psychological support needed during this emotionally demanding phase.
                     </p>
 
-                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">Why Choose Indira for Fertility?</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">What are the Benefits of Fertility Surgery?</h4>
                     <ul>
                         <li>**Integrated In-House Lab**: Comprehensive hormonal assays with same-day results for critical fertility biomarkers.</li>
                         <li>**Advanced Hysteroscopy Unit**: Correcting polyps or septums that may prevent embryo implantation.</li>
@@ -162,6 +156,7 @@ export default function InfertilityManagementPage() {
                         ))}
                     </div>
                 </div>
+            </article>
             </div>
         </SubServiceTemplate>
     );

@@ -1,23 +1,24 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function PreventiveKidneyPage() {
     return (
         <SubServiceTemplate
             title="Elite Preventive Kidney Care"
             eyebrow="Halting Kidney Disease Progression"
             description={
-                <>
-                    Our <strong>Preventive Nephrology Program</strong> is dedicated to protecting your renal health before irreparable damage occurs. We specialize in the aggressive clinical management of Diabetic Nephropathy, Hypertensive Kidney Disease, and Chronic Glomerulonephritis to preserve function and avoid dialysis.
-                </>
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Preventive Kidney Care</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                    </p>
+                </article>
             }
             quickFacts={[
-                { label: 'Primary Goal', value: 'Function Loss %', icon: 'Target' },
-                { label: 'Management', value: 'Evidence-Based', icon: 'CheckCircle' },
-                { label: 'Monitoring', value: 'Lab-Intensive', icon: 'Microscope' },
-                { label: 'Outcome', value: 'Dialysis Delay', icon: 'Shield' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             marketingContent={{
                 features: [

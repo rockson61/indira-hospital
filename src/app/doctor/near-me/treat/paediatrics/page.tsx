@@ -1,9 +1,7 @@
-
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
-import { Baby, Shield, Heart, Zap, Award, Clock, Users, Flame, Microscope, Target } from "lucide-react"
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function PaediatricsDepartmentPage() {
     return (
         <DepartmentTemplate
@@ -252,10 +250,10 @@ export default function PaediatricsDepartmentPage() {
                 }
             ]}
             quickFacts={[
-                { label: 'Care Level', value: 'Level 3 NICU', icon: 'Shield' },
-                { label: 'Specialists', value: 'Neonatologists', icon: 'Baby' },
-                { label: 'Facility', value: 'Automated Hub', icon: 'Microscope' },
-                { label: 'Success', value: 'High Survival Rate', icon: 'Target' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
         />
     )

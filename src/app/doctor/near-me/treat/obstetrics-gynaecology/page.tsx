@@ -1,11 +1,9 @@
-
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { getTreatmentBySlug, getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data'
 import { SEED_DATA } from '@/lib/data/seed-data'
-import { TREATMENT_DATA } from '@/lib/data/treatment-data'
-import { Baby, Shield, Target, Zap, Activity, Heart, Clock, Award, Star, Search, ChevronRight, ArrowRightCircle, ShieldCheck, Microscope, Flame, Droplets, Wind, Eye, Info, Move, Radiation, Navigation, ThermometerSnowflake, PlayCircle, Stethoscope, Users2, HeartPulse, Sparkles, MapPin, UserCheck } from 'lucide-react'
-
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function GynaecologyPillarPage() {
     // Filter specialists (Using current specialist Dr. Praharshitha Sagiraju)
     const specialists = SEED_DATA.doctors.filter(dr => 

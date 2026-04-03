@@ -1,34 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Dna,
-    Thermometer,
-    Heart,
-    Flame,
-    Scale,
-    ArrowRightCircle,
-    Apple,
-    Stethoscope,
-    Microscope,
-    Radiation,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    MapPin,
-    UserCheck
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function MenopauseCarePage() {
     return (
         <SubServiceTemplate
@@ -37,19 +10,16 @@ export default function MenopauseCarePage() {
             parentServiceSlug="obstetrics-gynaecology"
             departmentName="Indira Elite Women's Care"
             description={
-                <>
-                    <p>
-                        The transition into menopause marks a major biological shift that impacts the heart, brain, and skeletal integrity. At Indira Super Speciality Hospital, we offer **Elite Menopause Wellness Protocols**. Under the leadership of **Dr. Praharshitha Sagiraju**, we provide safe, high-precision **Bio-Identical Hormone Replacement Therapy (BHRT)** audits, bone density restoration (DEXA), and metabolic cardio-protection to ensure your transition is one of vitality and continued wellness.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Menopause & Bio-Identical Hormone Care</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-rose-600 dark:text-rose-400 font-semibold italic">
-                        "Reclaiming your rhythm: Science-led wellness for the golden years."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Audit Type', value: 'Hormonal/Bone', icon: 'Zap' },
-                { label: 'Focus', value: 'Total Wellness', icon: 'Heart' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="Lifecycle Management"
@@ -63,6 +33,18 @@ export default function MenopauseCarePage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Menopause & Bio-Identical Hormone Care in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* Mechanism: The Estrogen Axis */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
@@ -166,6 +148,7 @@ export default function MenopauseCarePage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

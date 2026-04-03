@@ -6,6 +6,7 @@ import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 type CareLevel = 'teleconsult' | 'opd' | 'daycare' | 'emergency';
 
@@ -82,6 +83,21 @@ export function SymptomGuide() {
 
     return (
         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+            {/* Unified Semantic Knowledge & AEO Infrastructure */}
+            <JsonLdSchema 
+                type="symptom" 
+                title="Indira Hospital Symptom Checker & Care Guide"
+                description="Interactive guidance for choosing between Emergency, OPD, and Teleconsultation based on your clinical symptoms."
+                faq={SYMPTOMS.slice(0, 10).map(s => ({
+                    question: `What should I do if I have ${s.name}?`,
+                    answer: `For ${s.name}, we recommend: ${s.recommended.join(', ').toUpperCase()}. ${s.departmentName ? `Please consult our ${s.departmentName} department.` : ''}`
+                }))}
+                steps={[
+                    { name: "Observe Symptoms", description: "Monitor severity and check if it's life-threatening (Snake bite, breathing difficulty)." },
+                    { name: "Categorize Care", description: "Determine if it's an Emergency, OPD, or Teleconsultation case." },
+                    { name: "Consult Specialist", description: "Book an appointment with the recommended department at Indira Hospital." }
+                ]}
+            />
 
             {/* Table Header Area */}
             <div className="p-6 md:p-8 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">

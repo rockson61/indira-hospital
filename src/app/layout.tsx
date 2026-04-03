@@ -10,8 +10,8 @@ import dynamic from "next/dynamic";
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 const StickyCTA = dynamic(() => import("@/components/layout/StickyCTA").then(mod => mod.StickyCTA));
 const DynamicSEOKeywordBlock = dynamic(() => import("@/components/DynamicSEOKeywordBlock"));
-import { getHospitalSchema, getWebsiteSchema } from "@/lib/schema";
-import { LocalBusinessJsonLd, OrganizationJsonLd } from 'next-seo';
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -60,62 +60,8 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
-        {/* Hospital / MedicalOrganization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(getHospitalSchema()) }}
-        />
-        {/* Website Schema with Sitelinks Searchbox */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebsiteSchema()) }}
-        />
+        <JsonLdSchema auto />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <LocalBusinessJsonLd
-            type="Hospital"
-            name={siteConfig.name}
-            description={siteConfig.description}
-            url={siteConfig.url}
-            telephone={siteConfig.contact.phone}
-            address={{
-              streetAddress: '54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar',
-              addressLocality: 'Vellore',
-              addressRegion: 'Tamil Nadu',
-              postalCode: '632006',
-              addressCountry: 'IN',
-            }}
-            geo={{
-              latitude: 12.9344,
-              longitude: 79.1293,
-            }}
-            image={`${siteConfig.url}${siteConfig.ogImage}`}
-            openingHoursSpecification={[
-              {
-                opens: '09:00',
-                closes: '21:00',
-                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-              },
-              {
-                opens: '10:00',
-                closes: '14:00',
-                dayOfWeek: 'Sunday',
-              },
-            ]}
-          />
-          <OrganizationJsonLd
-            url={siteConfig.url}
-            logo={`${siteConfig.url}/logo.png`}
-            contactPoint={[
-              {
-                telephone: siteConfig.contact.phone,
-                contactType: 'customer service',
-              },
-              {
-                telephone: siteConfig.contact.emergencyPhone,
-                contactType: 'emergency',
-              },
-            ]}
-          />
           <Header />
           <main className="flex-1">
             {children}

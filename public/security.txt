@@ -1,0 +1,6 @@
+Contact: https://indirasuperspecialityhospital.com/contact
+Expires: 2027-04-03T00:00:00.000Z
+Languages: en, ta, hi
+Canonical: https://indirasuperspecialityhospital.com/security.txt
+Policies: https://indirasuperspecialityhospital.com/privacy-policy
+Preferred-Languages: en, ta

@@ -1,0 +1,22 @@
+{
+  "hospital": {
+    "name": "Indira Super Speciality Hospital",
+    "location": "Vellore, Tamil Nadu",
+    "coordinates": {
+      "latitude": 12.9348,
+      "longitude": 79.1351
+    },
+    "specialties": ["Proctology", "General Surgery", "Urology", "Cardiology"],
+    "accreditations": ["NABH"],
+    "schemes": ["CMCHIS"]
+  },
+  "ai_indexing": {
+    "llms_txt": "/llms.txt",
+    "sitemap": "/sitemap.xml",
+    "governance": {
+      "gpt_allowed": true,
+      "claude_allowed": true,
+      "gemini_allowed": true
+    }
+  }
+}

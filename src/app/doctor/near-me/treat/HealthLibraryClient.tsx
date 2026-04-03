@@ -3,14 +3,13 @@
 import { SectionHeader } from "@/components/ui/section-header";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 import { getDepartments } from "@/lib/api";
-import { Clock, ShieldPlus, ArrowRight, PhoneCall, Sparkles, Star, LayoutGrid, Shield } from "lucide-react";
+import { Clock, ShieldPlus, ArrowRight, PhoneCall, Sparkles, Star, LayoutGrid, Shield, Zap, Target, Activity, Droplets } from "lucide-react";
 import { HeartCardiogram, Stethoscope, Heart, Neurology, Orthopaedics, Baby0203m, Eye } from "healthicons-react/outline";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { SymptomGuide } from "@/components/healthcare/SymptomGuide";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { TreatmentGuides } from "@/components/sections/treatment-guides";
+import { SymptomGuide } from "@/components/healthcare/SymptomGuide";
 
 const bodySystems = [
     { name: "Heart & Circulation", icon: Heart, link: "/doctor/near-me/treat/cardiology" },
@@ -21,6 +20,41 @@ const bodySystems = [
     { name: "Eyes & Vision", icon: Eye, link: "/doctor/near-me/treat/ophthalmology" },
     { name: "Kidneys & Urinary Tract", icon: Shield, link: "/doctor/near-me/treat/urology" },
     { name: "Lungs & Breathing", icon: LayoutGrid, link: "/doctor/near-me/treat/general-medicine" },
+];
+
+const signatureTreatments = [
+    {
+        title: "Laser Proctology",
+        slug: "laser-piles-treatment",
+        parentServiceSlug: "proctology",
+        description: "Advanced laser treatment for Piles, Fistula, and Fissure with minimal pain and rapid recovery.",
+        icon: <Zap className="w-8 h-8 text-fuchsia-600" />,
+        benefits: ["Single day discharge", "No cuts/stitches", "Bloodless procedure"]
+    },
+    {
+        title: "Keyhole Surgeries",
+        slug: "laparoscopic-hernia-repair-surgery",
+        parentServiceSlug: "general-surgery",
+        description: "Minimally invasive laparoscopic procedures for Gallbladder, Appendix, and Hernia.",
+        icon: <Target className="w-8 h-8 text-fuchsia-600" />,
+        benefits: ["Minimal scarring", "Reduced infection risk", "Fast return to work"]
+    },
+    {
+        title: "Advanced Cardiology",
+        slug: "heart-angioplasty-procedure",
+        parentServiceSlug: "cardiology",
+        description: "State-of-the-art interventional cardiology including Angioplasty and Heart Failure management.",
+        icon: <Activity className="w-8 h-8 text-fuchsia-600" />,
+        benefits: ["Expert cardiologists", "Modern Cath Lab", "24/7 cardiac emergency"]
+    },
+    {
+        title: "Orthopaedic Excellence",
+        slug: "total-knee-replacement-cost",
+        parentServiceSlug: "orthopaedics",
+        description: "Joint replacements and complex trauma surgeries using advanced navigation and implants.",
+        icon: <Droplets className="w-8 h-8 text-fuchsia-600" />,
+        benefits: ["Physiotherapy support", "High precision implants", "Same-day mobilization"]
+    }
 ];
 
 const conditions = [
@@ -74,8 +108,7 @@ export default function HealthLibraryClient() {
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
-            <JsonLdSchema type="hospital" />
-
+            
             {/* Health Library Deep Hero */}
             <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
@@ -125,11 +158,13 @@ export default function HealthLibraryClient() {
             <div className="sticky top-20 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 hidden md:block">
                 <div className="max-w-7xl mx-auto px-6 overflow-x-auto">
                     <div className="flex items-center gap-8 py-4 min-w-max">
+                        <a href="#signature" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Signature Treatments</a>
                         <a href="#symptoms" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Symptoms Guide</a>
                         <a href="#body-systems" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Body Systems</a>
                         <a href="#treatments" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Treatments</a>
                         <a href="#conditions" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Diseases & Conditions</a>
                         <a href="#guides" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Treatment Guides</a>
+                        <a href="#whylaser" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Why Laser Core?</a>
                         <a href="#pharmacy" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-[#0086d6] dark:hover:text-[#0086d6] transition-colors">Pharmacy</a>
                     </div>
                 </div>
@@ -137,6 +172,42 @@ export default function HealthLibraryClient() {
 
             {/* Content Sections */}
             <div className="space-y-32 pt-20">
+
+                {/* Signature Treatments Block */}
+                <section id="signature" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
+                    <SectionHeader
+                        title="Signature Surgical Excellence"
+                        subtitle="Our Most Advanced Options"
+                        description="Experience high-precision medical interventions led by our most senior clinical specialists using state-of-the-art international technology."
+                        align="left"
+                    />
+                    <div className="grid md:grid-cols-2 gap-8 mt-12">
+                        {signatureTreatments.map((treatment) => (
+                            <div key={treatment.slug} className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col h-full group transition-all hover:shadow-xl hover:border-fuchsia-200">
+                                <div className="mb-8">{treatment.icon}</div>
+                                <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic tracking-tighter">{treatment.title}</h2>
+                                <p className="text-slate-500 dark:text-slate-400 font-medium mb-8 flex-grow leading-relaxed">{treatment.description}</p>
+
+                                <div className="space-y-4 mb-10">
+                                    {treatment.benefits.map((benefit, i) => (
+                                        <div key={i} className="flex items-center gap-3">
+                                            <div className="w-2 h-2 rounded-full bg-fuchsia-500" />
+                                            <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{benefit}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <Link
+                                    href={`/doctor/near-me/treat/${treatment.parentServiceSlug}/${treatment.slug}`}
+                                    className="inline-flex items-center justify-between w-full p-6 bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30 rounded-2xl border border-slate-100 dark:border-slate-700 transition-all font-black text-slate-900 dark:text-white group/btn"
+                                >
+                                    View Patient Guide
+                                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </section>
 
                 {/* Integrating Care Guide / Symptoms Guide */}
                 <section id="symptoms" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
@@ -217,6 +288,31 @@ export default function HealthLibraryClient() {
 
                 {/* Treatment Guides */}
                 <TreatmentGuides />
+
+                {/* Why Laser? Hero Block */}
+                <section id="whylaser" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">
+                    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-fuchsia-950 rounded-[4rem] p-12 lg:p-24 text-center relative overflow-hidden border border-white/5 shadow-2xl">
+                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full blur-[100px] will-change-transform transform-gpu animate-pulse" />
+                        <div className="relative z-10 w-full max-w-3xl mx-auto">
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-fuchsia-400 text-[10px] font-black uppercase tracking-widest mb-8">
+                                <Shield className="w-3 h-3" /> Precision Core Technology
+                            </span>
+                            <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter mb-10 leading-tight">
+                                Why choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Laser & Keyhole Excellence?</span>
+                            </h2>
+                            <p className="text-slate-300 text-lg md:text-xl font-light mb-12 leading-relaxed opacity-90 italic">
+                                &ldquo;Modern surgery represents the pinnacle of patient safety. By using concentrated energy and microscopic access, we achieve surgical precision unreachable by traditional scalpels&mdash;leading to less pain, zero scarring, and same-day recovery.&rdquo;
+                            </p>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {["Fast Recovery", "Zero Stitches", "Day-Care Discharge", "No General Anesthesia"].map((tag, i) => (
+                                    <div key={i} className="px-6 py-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-white text-xs font-black uppercase tracking-widest hover:border-fuchsia-400/50 hover:bg-fuchsia-500/10 transition-all duration-300">
+                                        {tag}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Pharmacy / Supplements */}
                 <section id="pharmacy" className="max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-32">

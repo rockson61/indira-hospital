@@ -509,11 +509,9 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
             {/* UNIFIED ENTITY QUERIES */}
             <JsonLdSchema
-                type="medicalClinic"
+                type="location"
+                doctor={{ location }}
                 name={`Indira Hospital - ${location.name}`}
-                city={location.name}
-                address={location.district}
-                areaServed={location.name}
                 description={`Indira Super Speciality Hospital provides advanced clinical care for patients from ${location.name}, ${location.district}. Nearest high-end center for Laparoscopic and Laser surgeries.`}
             />
             <JsonLdSchema

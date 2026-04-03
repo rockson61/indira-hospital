@@ -264,6 +264,57 @@ export const SEED_DATA = {
             ]
         },
         {
+            id: "dr-somashekar",
+            status: "published",
+            name: "Dr. Somashekar",
+            slug: "dr-somashekar",
+            specialty_slug: "urology",
+            designation: "Senior Consultant Urologist",
+            department: "Urology",
+            image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1000&auto=format&fit=crop",
+            bio: "Dr. Somashekar is a highly experienced Urologist with over 18 years of clinical mastery in treating complex kidney stones and prostrate problems using advanced laser technology and minimally invasive techniques.",
+            education: [{ degree: "MBBS", institution: "MMC", year: "" }, { degree: "MS (General Surgery)", institution: "JIPMER", year: "" }, { degree: "MCh (Urology)", institution: "CMC Vellore", year: "" }],
+            specialties: [
+                "Laser Kidney Stone Surgery (RIRS)",
+                "Prostate Surgery (TURP/Laser)",
+                "Endourology",
+                "Advanced Laparoscopic Urology"
+            ],
+            experience_years: 18,
+            procedures: [
+                "RIRS (Laser Stone Removal)",
+                "TURP (Prostate)",
+                "Mini-PCNL",
+                "Ureteroscopy (URSL)",
+                "VIU for Stricture Urethra",
+                "Laparoscopic Nephrectomy"
+            ],
+            faqs: [
+                {
+                    question: "What is the best treatment for kidney stones?",
+                    answer: "Laser surgery (RIRS) is the modern gold standard for removing kidney stones without any external cuts/stitches."
+                },
+                {
+                    question: "Is prostate surgery safe in elderly patients?",
+                    answer: "Yes, with advanced laser technology and spinal anesthesia, prostate surgery is extremely safe even for elderly patients."
+                }
+            ],
+            reviews: [
+                {
+                    patient_name: "Kumar V.",
+                    content: "Best urologist in vellore. My 15mm kidney stone was removed in 1 day without any pain.",
+                    rating: 5,
+                    date: "2024-03-10"
+                },
+                {
+                    patient_name: "Rajesh M.",
+                    content: "Very professional and explained the laser procedure clearly. Recovery was very fast.",
+                    rating: 5,
+                    date: "2024-02-28"
+                }
+            ]
+        },
+        {
             id: "dr-srinivasan-karbar",
             status: "published",
             name: "Dr. Srinivasan Karbar",
@@ -1647,95 +1698,6 @@ export const SEED_DATA = {
                     "icon": "Activity"
                 }
             ]
-        }
-    ],
-    diagnostics: [
-        {
-            id: "d-1",
-            slug: "mri-scan",
-            name: "3T MRI Scan",
-            category: "radiology",
-            short_description: "High-resolution magnetic resonance imaging for detailed body structures.",
-            description: "<p>Our advanced 3T MRI provides exceptional image quality and faster scan times compared to standard MRI machines.</p>",
-            price: 7500,
-            report_time: "12 Hours",
-            home_collection: false,
-            fasting_required: false,
-            sample_type: "N/A - Imaging",
-            used_to_diagnose: JSON.stringify(["Tumors", "Stroke", "Spinal Cord Injuries", "Joint Abnormalities"])
-        },
-        {
-            id: "d-2",
-            slug: "ct-scan",
-            name: "128-Slice CT Scan",
-            category: "radiology",
-            short_description: "Rapid, highly detailed cross-sectional imaging.",
-            description: "<p>The 128-slice CT scanner delivers ultra-fast scans with minimal radiation exposure, ideal for cardiac, neuro, and trauma imaging.</p>",
-            price: 4500,
-            report_time: "6 Hours",
-            home_collection: false,
-            fasting_required: false,
-            sample_type: "N/A - Imaging",
-            used_to_diagnose: JSON.stringify(["Internal Bleeding", "Bone Fractures", "Lung Nodules", "Cancers"])
-        },
-        {
-            id: "d-3",
-            slug: "complete-blood-count",
-            name: "Complete Blood Count (CBC)",
-            category: "pathology",
-            short_description: "Comprehensive panel measuring white & red blood cells and platelets.",
-            description: "<p>A Complete Blood Count (CBC) test evaluates your overall health and helps detect a wide range of disorders, including anemia, infection, and leukemia.</p>",
-            price: 450,
-            report_time: "Same Day",
-            home_collection: true,
-            fasting_required: false,
-            sample_type: "Blood",
-            parameters_count: 24,
-            used_to_diagnose: JSON.stringify(["Anemia", "Infections", "Blood Disorders"])
-        },
-        {
-            id: "d-4",
-            slug: "lipid-profile",
-            name: "Lipid Profile Basic",
-            category: "pathology",
-            short_description: "Measures cholesterol and triglyceride levels to assess heart disease risk.",
-            description: "<p>This blood test measures the amount of cholesterol and triglycerides in your blood, helping to determine your risk of plaque buildup in your arteries.</p>",
-            price: 600,
-            report_time: "Same Day",
-            home_collection: true,
-            fasting_required: true,
-            sample_type: "Blood",
-            parameters_count: 8,
-            used_to_diagnose: JSON.stringify(["High Cholesterol", "Heart Disease Risk", "Atherosclerosis"])
-        },
-        {
-            id: "d-5",
-            slug: "ecg",
-            name: "Electrocardiogram (ECG)",
-            category: "cardiology",
-            short_description: "Records the electrical signals in your heart.",
-            description: "<p>An ECG is a common and painless test used to quickly detect heart problems and monitor your heart's health.</p>",
-            price: 500,
-            report_time: "Instant",
-            home_collection: false,
-            fasting_required: false,
-            sample_type: "N/A - Procedure",
-            used_to_diagnose: JSON.stringify(["Arrhythmias", "Heart Attacks", "Coronary Artery Disease"])
-        },
-        {
-            id: "d-6",
-            slug: "urinalysis",
-            name: "Complete Urinalysis",
-            category: "other",
-            short_description: "Detailed analysis of urine for kidney and metabolic diseases.",
-            description: "<p>A urinalysis is a test of your urine. It's used to detect and manage a wide range of disorders, such as urinary tract infections, kidney disease and diabetes.</p>",
-            price: 250,
-            report_time: "Same Day",
-            home_collection: true,
-            fasting_required: false,
-            sample_type: "Urine",
-            parameters_count: 15,
-            used_to_diagnose: JSON.stringify(["Urinary Tract Infection (UTI)", "Kidney Disease", "Diabetes"])
         },
         {
             "title": "Proctology",
@@ -1868,6 +1830,93 @@ export const SEED_DATA = {
                     "icon": "Activity"
                 }
             ]
+        }
+    ],
+    diagnostics: [
+        {
+            id: "d-1",
+            slug: "mri-scan",
+            name: "3T MRI Scan",
+            category: "radiology",
+            short_description: "High-resolution magnetic resonance imaging for detailed body structures.",
+            description: "<p>Our advanced 3T MRI provides exceptional image quality and faster scan times compared to standard MRI machines.</p>",
+            price: 7500,
+            report_time: "12 Hours",
+            home_collection: false,
+            fasting_required: false,
+            sample_type: "N/A - Imaging",
+            used_to_diagnose: JSON.stringify(["Tumors", "Stroke", "Spinal Cord Injuries", "Joint Abnormalities"])
+        },
+        {
+            id: "d-2",
+            slug: "ct-scan",
+            name: "128-Slice CT Scan",
+            category: "radiology",
+            short_description: "Rapid, highly detailed cross-sectional imaging.",
+            description: "<p>The 128-slice CT scanner delivers ultra-fast scans with minimal radiation exposure, ideal for cardiac, neuro, and trauma imaging.</p>",
+            price: 4500,
+            report_time: "6 Hours",
+            home_collection: false,
+            fasting_required: false,
+            sample_type: "N/A - Imaging",
+            used_to_diagnose: JSON.stringify(["Internal Bleeding", "Bone Fractures", "Lung Nodules", "Cancers"])
+        },
+        {
+            id: "d-3",
+            slug: "complete-blood-count",
+            name: "Complete Blood Count (CBC)",
+            category: "pathology",
+            short_description: "Comprehensive panel measuring white & red blood cells and platelets.",
+            description: "<p>A Complete Blood Count (CBC) test evaluates your overall health and helps detect a wide range of disorders, including anemia, infection, and leukemia.</p>",
+            price: 450,
+            report_time: "Same Day",
+            home_collection: true,
+            fasting_required: false,
+            sample_type: "Blood",
+            parameters_count: 24,
+            used_to_diagnose: JSON.stringify(["Anemia", "Infections", "Blood Disorders"])
+        },
+        {
+            id: "d-4",
+            slug: "lipid-profile",
+            name: "Lipid Profile Basic",
+            category: "pathology",
+            short_description: "Measures cholesterol and triglyceride levels to assess heart disease risk.",
+            description: "<p>This blood test measures the amount of cholesterol and triglycerides in your blood, helping to determine your risk of plaque buildup in your arteries.</p>",
+            price: 600,
+            report_time: "Same Day",
+            home_collection: true,
+            fasting_required: true,
+            sample_type: "Blood",
+            parameters_count: 8,
+            used_to_diagnose: JSON.stringify(["High Cholesterol", "Heart Disease Risk", "Atherosclerosis"])
+        },
+        {
+            id: "d-5",
+            slug: "ecg",
+            name: "Electrocardiogram (ECG)",
+            category: "cardiology",
+            short_description: "Records the electrical signals in your heart.",
+            description: "<p>An ECG is a common and painless test used to quickly detect heart problems and monitor your heart's health.</p>",
+            price: 500,
+            report_time: "Instant",
+            home_collection: false,
+            fasting_required: false,
+            sample_type: "N/A - Procedure",
+            used_to_diagnose: JSON.stringify(["Arrhythmias", "Heart Attacks", "Coronary Artery Disease"])
+        },
+        {
+            id: "d-6",
+            slug: "urinalysis",
+            name: "Complete Urinalysis",
+            category: "other",
+            short_description: "Detailed analysis of urine for kidney and metabolic diseases.",
+            description: "<p>A urinalysis is a test of your urine. It's used to detect and manage a wide range of disorders, such as urinary tract infections, kidney disease and diabetes.</p>",
+            price: 250,
+            report_time: "Same Day",
+            home_collection: true,
+            fasting_required: false,
+            sample_type: "Urine"
         }
     ]
 };

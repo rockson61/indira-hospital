@@ -1,44 +1,7 @@
-
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
-import { SEED_DATA } from '@/lib/data/seed-data'
-import { TREATMENT_DATA } from '@/lib/data/treatment-data'
-import { 
-    Baby, 
-    Shield, 
-    Target, 
-    Zap, 
-    Activity, 
-    Heart, 
-    Clock, 
-    Award, 
-    Star, 
-    Search, 
-    ChevronRight, 
-    ArrowRightCircle, 
-    ShieldCheck, 
-    Microscope, 
-    Flame, 
-    Droplets, 
-    Wind, 
-    Eye, 
-    Info, 
-    Move, 
-    Radiation, 
-    Navigation, 
-    ThermometerSnowflake, 
-    PlayCircle, 
-    Stethoscope, 
-    Users2, 
-    HeartPulse, 
-    Sparkles, 
-    MapPin, 
-    UserCheck,
-    Waves,
-    Scale
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function UrologyPillarPage() {
     return (
         <DepartmentTemplate
@@ -243,10 +206,10 @@ export default function UrologyPillarPage() {
                 }
             ]}
             quickFacts={[
-                { label: 'Specialists', value: 'Senior Urologists', icon: 'Users2' },
-                { label: 'Stone Unit', value: 'Laser Excellence', icon: 'Target' },
-                { label: 'Patient Safety', value: 'NABH Accredited', icon: 'ShieldCheck' },
-                { label: 'Beds', value: '100+ Suites', icon: 'MapPin' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             relatedDoctors={[]}
         />

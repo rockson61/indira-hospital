@@ -1,10 +1,8 @@
-
-
 import React from 'react'
-import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
 import Link from 'next/link'
-import { Ribbon, Shield, Target, Microscope } from "lucide-react"
-
+import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function OncologyDepartmentPage() {
     return (
         <DepartmentTemplate
@@ -232,10 +230,10 @@ export default function OncologyDepartmentPage() {
                 }
             ]}
             quickFacts={[
-                { label: 'Approach', value: 'Tumor Board Governance', icon: 'Target' },
-                { label: 'Care Level', value: 'Multidisciplinary', icon: 'Users' },
-                { label: 'Facility', value: '24/7 Onco-Nursing', icon: 'Clock' },
-                { label: 'Integrity', value: 'NABH Accredited', icon: 'Award' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             relatedDoctors={[]} // Auto-population from template
         />

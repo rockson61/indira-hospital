@@ -1,35 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Mic,
-    Activity,
-    CheckCircle2,
-    Microscope,
-    Target,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    ArrowRightCircle,
-    Eye,
-    Star,
-    Music,
-    Users,
-    MessageSquare,
-    Search,
-    UserCheck,
-    MapPin,
-    Radio,
-    Flame,
-    Droplets
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function VoiceSurgeryPage() {
     return (
         <SubServiceTemplate
@@ -38,19 +10,16 @@ export default function VoiceSurgeryPage() {
             parentServiceSlug="ent"
             departmentName="Indira Elite ENT Hub"
             description={
-                <>
-                    <p>
-                        Hoarseness, vocal nodules, and polyps are not just medical issues—they are barriers to communication. At Indira Super Speciality Hospital, we specialized in **Microlaryngeal Surgery (Phonosurgery)**. Using Zeiss-magnified high-precision microscopy and "Cold Instrumentation," we meticulously remove vocal cord lesions while preserving the delicate mucosal layers essential for natural resonance.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Microlaryngeal Surgery & Voice Care</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-fuchsia-600 dark:text-fuchsia-400 font-semibold italic border-l-4 border-fuchsia-500 pl-4 uppercase tracking-tighter">
-                        "Precision phonosurgery: The clinical art of restoring the human voice."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
-                { label: 'Consultation', value: 'Elite ENT Service', icon: 'UserCheck' },
-                { label: 'Visualization', value: '20X Zeiss Micro', icon: 'Eye' },
-                { label: 'Care Type', value: 'Mucosal Sparing', icon: 'Shield' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="30-45 Minutes"
@@ -64,6 +33,18 @@ export default function VoiceSurgeryPage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Microlaryngeal Surgery & Voice Care in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* Mechanism: The Anatomy of Vibration */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-fuchsia-50/50 dark:bg-fuchsia-950/20 border border-fuchsia-100 dark:border-fuchsia-900/50 text-left">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-400/10 blur-3xl -z-10" />
@@ -197,6 +178,7 @@ export default function VoiceSurgeryPage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

@@ -1,9 +1,7 @@
-
-
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
-import { Activity, Shield, Zap, Target, Heart, Award, Clock, Users, Accessibility } from "lucide-react"
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function PhysiotherapyDepartmentPage() {
     return (
         <DepartmentTemplate
@@ -222,10 +220,10 @@ export default function PhysiotherapyDepartmentPage() {
                 }
             ]}
             quickFacts={[
-                { label: 'Therapists', value: 'Senior Specialists', icon: 'Users' },
-                { label: 'Gym', value: 'Dedicated Rehab Area', icon: 'Accessibility' },
-                { label: 'Modalities', value: 'Advanced Laser/SWT', icon: 'Zap' },
-                { label: 'Goal', value: 'Functional Independence', icon: 'Target' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
         />
     )

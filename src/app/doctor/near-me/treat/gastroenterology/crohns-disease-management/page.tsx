@@ -1,21 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Microscope,
-    Heart
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function CrohnsManagementPage() {
     return (
         <SubServiceTemplate
@@ -24,19 +10,16 @@ export default function CrohnsManagementPage() {
             parentServiceSlug="gastroenterology"
             departmentName="Gastroenterology"
             description={
-                <>
-                    <p>
-                        Inflammatory Bowel Disease (IBD), including Crohn's Disease and Ulcerative Colitis, is a complex, life-long journey that requires more than just symptom relief—it requires deep clinical remission. At Indira Super Speciality Hospital, we offer **Elite IBD Specialist Care**. By integrating advanced biologics, nutritional optimization, and precision endoscopy, we help patients achieve long-term steroid-free remission and a significantly improved quality of life.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Crohn's & IBD Management</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-sky-600 dark:text-sky-400 font-semibold italic">
-                        "Advanced biological protocols for deep mucosal healing."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: 'Biologics Ready', icon: 'Zap' },
-                { label: 'Care Type', value: 'Chronic Mgmt', icon: 'Heart' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="Ongoing"
@@ -50,6 +33,18 @@ export default function CrohnsManagementPage() {
             }}
         >
             <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Crohn's & IBD Management in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                 {/* Visual Section: Why Specialized IBD Care? */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-sky-50 dark:bg-sky-900/50 border border-sky-100 dark:border-sky-800 shadow-lg">
@@ -159,6 +154,7 @@ export default function CrohnsManagementPage() {
                         ))}
                     </div>
                 </div>
+            </article>
             </div>
         </SubServiceTemplate>
     );

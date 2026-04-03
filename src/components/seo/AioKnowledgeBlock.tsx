@@ -18,7 +18,7 @@ export default function AioKnowledgeBlock({
     items 
 }: AioKnowledgeBlockProps) {
     return (
-        <section className="my-16 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 p-8 md:p-12 shadow-sm relative overflow-hidden group/aio">
+        <section className="my-16 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 p-8 md:p-12 shadow-sm relative overflow-hidden group/aio clinical-insight">
             {/* Semantic AI Background Signal */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover/aio:bg-fuchsia-500/10 transition-colors duration-700" />
             

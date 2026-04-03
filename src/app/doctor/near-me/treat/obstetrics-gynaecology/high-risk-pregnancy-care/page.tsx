@@ -1,33 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    Baby,
-    Heart,
-    HandHeart,
-    Microscope,
-    Stethoscope,
-    Users2,
-    ArrowRightCircle,
-    Flame,
-    Droplets,
-    Wind,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    MapPin,
-    UserCheck
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function HighRiskPregnancyPage() {
     return (
         <SubServiceTemplate
@@ -36,19 +10,16 @@ export default function HighRiskPregnancyPage() {
             parentServiceSlug="obstetrics-gynaecology"
             departmentName="Indira Elite Women's Care"
             description={
-                <>
-                    <p>
-                        A High-Risk Pregnancy—whether due to twins, advanced maternal age, Gestational Diabetes, or Pregnancy-Induced Hypertension (PIH)—requires 360-degree clinical security. At Indira Super Speciality Hospital, we offer **Elite Obstetric Monitoring**. Led by **Dr. Praharshitha Sagiraju**, our **Maternal-Fetal Medicine (MFM)** wing provides advanced 4D fetal mapping and is directly integrated with our **Level II Neonatal ICU**, ensuring the ultimate safety for both mother and child.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>High-Risk Pregnancy & Maternal-Fetal Hub</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-rose-600 dark:text-rose-400 font-semibold italic">
-                        "Uncompromising safety: Bridging maternal vigilance with neonatal excellence."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Care Level', value: 'MFM Specialist', icon: 'Shield' },
-                { label: 'Backup', value: 'Level II NICU', icon: 'Baby' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="Gestation Support"
@@ -62,6 +33,18 @@ export default function HighRiskPregnancyPage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: High-Risk Pregnancy & Maternal-Fetal Hub in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* Mechanism: The High-Risk Security Protocol */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
@@ -186,6 +169,7 @@ export default function HighRiskPregnancyPage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

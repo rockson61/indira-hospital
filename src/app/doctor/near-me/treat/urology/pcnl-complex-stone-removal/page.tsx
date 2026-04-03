@@ -1,23 +1,24 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function PCNLPage() {
     return (
         <SubServiceTemplate
             title="Complex Kidney Stone Surgery (PCNL)"
             eyebrow="Centre of Excellence in Endourology"
             description={
-                <>
-                    For large or complex "Staghorn" stones, our <strong>Percutaneous Nephrolithotomy (PCNL)</strong> offers the most definitive clearance. We utilize ultra-thin keyhole access and advanced fragmentation to safely remove even the largest stones with microscopic precision and rapid recovery.
-                </>
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Complex Kidney Stone Surgery (PCNL)</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                    </p>
+                </article>
             }
             quickFacts={[
-                { label: 'Stone Size', value: '> 2.0 cm', icon: 'Target' },
-                { label: 'Access Path', value: '0.5cm Keyhole', icon: 'Microscope' },
-                { label: 'Hospital Stay', value: '2-3 Days', icon: 'Shield' },
-                { label: 'Treatment Type', value: 'Day Care/IPD', icon: 'Clock' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             marketingContent={{
                 features: [

@@ -1,10 +1,20 @@
+import React from 'react'
+import { Metadata } from "next"
 import HealthLibraryClient from "./HealthLibraryClient";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
+export const metadata: Metadata = {
+    title: "Signature Treatments & Health Library | Indira Hospital Vellore",
+    description: "Explore advanced surgical excellence in Vellore. From Laser Proctology and Keyhole Surgeries to Cardiology and Orthopaedics. Complete medical guide to treatments in India.",
+    alternates: {
+        canonical: "/doctor/near-me/treat"
+    }
+}
+
 export default function HealthLibraryPage() {
     return (
-        <>
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-950">
             <HealthLibraryClient />
             
             {/* TRUST SIGNALS */}
@@ -26,6 +36,6 @@ export default function HealthLibraryPage() {
                     />
                 </div>
             </section>
-        </>
+        </main>
     );
 }

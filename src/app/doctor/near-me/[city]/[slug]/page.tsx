@@ -358,11 +358,28 @@ async function ServiceView({ service, location, city, slug }: any) {
     const allDoctors: any[] = await getDoctors().catch(() => []);
     const relatedDoctors = allDoctors.filter((d) => {
         const dept = typeof d.department === "string" ? d.department : (d.department as any)?.name || "";
-        return (
-            dept.toLowerCase().includes(service.title.toLowerCase()) ||
-            service.title.toLowerCase().includes(dept.toLowerCase())
+        const serviceTitle = service.title.toLowerCase();
+        const serviceDept = (service.department || "").toLowerCase();
+        const drDept = dept.toLowerCase();
+        const drSpecialties = (d.specialties || []).map((s: string) => s.toLowerCase());
+        
+        // Multi-layered matching logic:
+        // 1. Department match (bidirectional)
+        const isDeptMatch = (serviceDept && drDept.includes(serviceDept)) || (serviceDept && serviceDept.includes(drDept));
+        
+        // 2. Title match in specialties
+        const isSpecialtyMatch = drSpecialties.some((s: string) => 
+            s.includes(serviceTitle) || serviceTitle.includes(s) || 
+            (serviceDept && s.includes(serviceDept))
         );
+
+        // 3. Title match in department string
+        const isTitleDeptMatch = drDept.includes(serviceTitle) || serviceTitle.includes(drDept);
+
+        return isDeptMatch || isSpecialtyMatch || isTitleDeptMatch;
     });
+
+    console.log(`[SEO-DIAGNOSTIC] ${slug}: Found ${relatedDoctors.length} specialists for department "${service.department}"`);
 
     const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
         `Clinical Enquiry from ${location.name}: I need details about ${service.title} specialized care at Indira Hospital for an outstation patient.`
@@ -371,7 +388,7 @@ async function ServiceView({ service, location, city, slug }: any) {
     return (
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
             <JsonLdSchema 
-                type="medicalProcedure" 
+                type="procedure" 
                 name={`${service.title} in ${location.name}`} 
                 description={`Indira Super Speciality Hospital provides elite ${service.title} care for patients in ${location.name}, ${location.district} district. We are NABH accredited and support CMCHIS Govt Scheme.`} 
                 url={`/${city}/${slug}`} 

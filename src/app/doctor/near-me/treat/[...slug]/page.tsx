@@ -288,7 +288,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
             <TreatmentSecondaryNav treatmentName={service.title} whatsappUrl={whatsappUrl} />
             <JsonLdSchema
-                type="medicalProcedure"
+                type="procedure"
                 name={service.title}
                 description={service.seo_description || service.full_description?.replace(/<[^>]*>?/gm, '').slice(0, 300) || service.short_description}
                 url={`/doctor/near-me/treat/${slug.join('/')}`}

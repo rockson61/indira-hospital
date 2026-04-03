@@ -1,8 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function SEOPage() {
     return (
         <SubServiceTemplate
@@ -11,19 +10,16 @@ export default function SEOPage() {
             departmentName="Proctology"
             departmentSlug="proctology"
             description={
-                <>
-                    <p>
-                        Searching for the <strong>best laser fistula surgery (filac) in Vellore</strong>? Indira Super Speciality Hospital is a center of excellence for advanced proctology care, providing precision-driven surgical solutions with a focus on patient safety and rapid healing.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Laser Fistula Surgery (FiLaC)</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4">
-                        Our facility is equipped with state-of-the-art diagnostic and surgical infrastructure, including high-definition imaging and modular OTs, ensuring that every patient receives international-standard medical care right here in Tamil Nadu.
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Tech Level', value: 'Advanced', icon: 'Shield' },
-                { label: 'Care Type', value: 'Surgical', icon: 'Shield' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             reviews={{
@@ -40,8 +36,20 @@ export default function SEOPage() {
             showComparison={true}
         >
             <div className="space-y-12">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Laser Fistula Surgery (FiLaC) in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                 <section>
-                    <h2 className="font-heading text-3xl font-bold text-slate-900 mb-6">Why Choose Indira for Laser Fistula Surgery (FiLaC)?</h2>
+                    <h2 className="font-heading text-3xl font-bold text-slate-900 mb-6">What are the Benefits of Laser Fistula Surgery (FiLaC) Surgery?</h2>
                     <p className="text-lg text-slate-600 leading-relaxed">
                         At Indira Hospital, we combine decades of surgical expertise with the latest medical breakthroughs. Our proctology specialists are pioneers in minimally invasive techniques, ensuring:
                     </p>
@@ -63,7 +71,7 @@ export default function SEOPage() {
                 </section>
 
                 <section className="bg-slate-900 rounded-[3rem] p-12 text-white">
-                    <h2 className="font-heading text-3xl font-bold mb-6">Advanced Proctology Infrastructure</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-6">How Does Proctology Treatment Work?</h2>
                     <p className="text-fuchsia-200/80 text-lg mb-8">
                         Our hospital is equipped with high-end medical technology to support complex proctology procedures, reducing surgical time and enhancing precision.
                     </p>
@@ -80,6 +88,7 @@ export default function SEOPage() {
                         ))}
                     </div>
                 </section>
+            </article>
             </div>
         </SubServiceTemplate>
     )

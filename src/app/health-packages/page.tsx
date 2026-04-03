@@ -10,7 +10,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { PageHero } from "@/components/ui/page-hero";
 
 export const metadata: Metadata = {
     title: 'Best Master Health Checkup Packages in Vellore — Same Day Reports | Indira Hospital',
@@ -31,43 +31,14 @@ export default async function HealthPackagesPage() {
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
-            <JsonLdSchema
-                type="breadcrumb"
-                items={[
-                    { name: "Home", url: "/" },
-                    { name: "Health Packages", url: "/health-packages" }
-                ]}
+            <PageHero
+                title="Master Health Checkups in Vellore"
+                subtitle="Preventive Care"
+                description="Early detection is the best protection. Choose from our specially curated health screening packages at Indira Hospital, Vellore. NABL accredited labs with same-day digital reports produced by elite radiologists."
+                descriptionClassName="clinical-insight direct-answer"
+                backgroundImage="/images/hospital/Consultation.webp"
             />
-            {/* ELITE HEALTHCARE HERO */}
-            <section className="bg-slate-900 pt-48 pb-48 lg:pt-60 lg:pb-64 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
 
-                <SectionContainer className="relative z-10 text-center">
-                    <div className="max-w-4xl mx-auto">
-                        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
-                            <HeartCardiogram className="w-4 h-4" /> Preventive Care
-                        </span>
-                        <h1 className="elite-hero-title mb-6">
-                            Master Health <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Checkups in Vellore.</span>
-                        </h1>
-                        <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
-                            Early detection is the best protection. Choose from our specially curated health screening packages for you and your family.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <div className="flex items-center gap-2 bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/10 text-slate-200">
-                                <Shield className="w-5 h-5 text-fuchsia-400" />
-                                <span className="text-sm font-bold tracking-wide">NABL Accredited Lab</span>
-                            </div>
-                            <div className="flex items-center gap-2 bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/10 text-slate-200">
-                                < Electricity className="w-5 h-5 text-indigo-400" />
-                                <span className="text-sm font-bold tracking-wide">Same Day Reports</span>
-                            </div>
-                        </div>
-                    </div>
-                </SectionContainer>
-            </section>
 
             {/* PREMIUM PRICING GRID */}
             <SectionContainer className="relative z-20 -mt-24 sm:-mt-32 max-w-7xl mx-auto px-4 mb-24">

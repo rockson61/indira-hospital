@@ -1,10 +1,9 @@
-import { SectionContainer } from "@/components/ui/section-container"
+import { Metadata } from "next";
+import { SectionContainer } from "@/components/ui/section-container";
 import React from "react";
 import EntityReviews from "@/components/trust/EntityReviews";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { ContactFormClient } from "@/components/forms/ContactFormClient";
-import { Metadata } from "next";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 export const metadata: Metadata = {
     title: "Contact Best Hospital in Vellore — 24/7 Emergency & Appointments | Indira Hospital",
@@ -17,13 +16,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
-            <JsonLdSchema
-                type="breadcrumb"
-                items={[
-                    { name: "Home", url: "/" },
-                    { name: "Contact", url: "/contact" }
-                ]}
-            />
             <ContactFormClient />
 
             {/* TRUST SIGNALS */}

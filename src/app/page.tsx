@@ -21,7 +21,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Electricity } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { PatientResources } from "@/components/sections/patient-resources";

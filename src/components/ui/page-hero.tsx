@@ -8,6 +8,7 @@ interface PageHeroProps {
     description?: string;
     backgroundImage?: string;
     className?: string;
+    descriptionClassName?: string;
 }
 
 export function PageHero({
@@ -16,6 +17,7 @@ export function PageHero({
     description,
     backgroundImage,
     className,
+    descriptionClassName,
 }: PageHeroProps) {
     return (
         <section className={cn("relative pt-48 pb-24 lg:pt-60 lg:pb-40 overflow-hidden bg-slate-900", className)}>
@@ -54,7 +56,10 @@ export function PageHero({
                 </h1>
 
                 {description && (
-                    <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 opacity-80 italic">
+                    <p className={cn(
+                        "text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 opacity-80 italic",
+                        descriptionClassName
+                    )}>
                         {description}
                     </p>
                 )}

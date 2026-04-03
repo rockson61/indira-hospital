@@ -1,23 +1,24 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function EpilepsyCarePage() {
     return (
         <SubServiceTemplate
             title="Elite Epilepsy & Seizure Care"
             eyebrow="Precision Neurological Control"
             description={
-                <>
-                    Our <strong>Epilepsy Management Center</strong> is dedicated to restoring control and confidence to patients living with seizures. We utilize high-resolution digital EEG diagnostics and the latest anti-epileptic treatment protocols to achieve seizure-free life for patients of all ages.
-                </>
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Epilepsy & Seizure Care</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                    </p>
+                </article>
             }
             quickFacts={[
-                { label: 'Technology', value: 'Digital EEG', icon: 'Microscope' },
-                { label: 'Care Focus', value: 'Seizure-Free', icon: 'CheckCircle' },
-                { label: 'Age Group', value: 'Adult & Pediatric', icon: 'Baby0203m' },
-                { label: 'Specialist', value: 'Senior Neuro', icon: 'UserCheck' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             marketingContent={{
                 features: [

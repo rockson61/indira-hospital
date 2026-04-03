@@ -59,8 +59,14 @@ export function DiagnosticTemplate({
 
     return (
         <main className="min-h-screen pb-20 selection:bg-fuchsia-100 selection:text-fuchsia-900">
-            <JsonLdSchema
-                type="breadcrumb"
+            {/* Unified Semantic Knowledge & AEO Infrastructure */}
+            <JsonLdSchema 
+                type="diagnostic" 
+                name={`${title} in Vellore`}
+                description={String(description).slice(0, 300)}
+                category={category}
+                preparation={`Report in: ${reportTime}. ${homeCollection ? 'Home collection available.' : ''} ${fastingRequired ? 'Fasting required.' : ''}`}
+                isNabl={true} // All diagnostics in this template are NABL accredited per UI
                 items={[
                     { name: "Home", url: "/" },
                     { name: "Diagnostics", url: "/diagnostics" },

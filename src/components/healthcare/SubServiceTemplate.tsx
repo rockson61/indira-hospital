@@ -142,110 +142,31 @@ export function SubServiceTemplate({
         faqs: marketingContent.faqs || marketingContent.faq
     } : undefined;
 
-    // ── JSON-LD ──────────────────────────────────────────────────────────────
+    // ── SEO Constants ────────────────────────────────────────────────────────
     const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url : `${siteConfig.url}/`;
-    const canonicalUrl = `${baseUrl}${reviews?.entitySlug || slug || ''}`;
-
-    const breadcrumbJsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-            { '@type': 'ListItem', position: 2, name: 'Elite Treatments', item: `${baseUrl}doctor/near-me/treat` },
-            ...(departmentName && departmentSlug
-                ? [{ '@type': 'ListItem', position: 3, name: `Indira Elite ${departmentName}`, item: `${baseUrl}doctor/near-me/treat/${departmentSlug}` }]
-                : []),
-            { '@type': 'ListItem', position: departmentSlug ? 4 : 3, name: title, item: canonicalUrl },
-        ],
-    }
-
-    const procedureJsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'MedicalProcedure',
-        name: title,
-        url: canonicalUrl,
-        description: `Advanced ${title} surgery and medical care at Indira Super Speciality Hospital, Vellore. Highly successful outcomes with senior surgical experts.`,
-        procedureType: { '@type': 'MedicalProcedureType', name: eyebrow || 'Medical Procedure' },
-        relevantSpecialty: { '@type': 'MedicalSpecialty', name: departmentName || 'Surgery' },
-        performer: {
-            '@type': 'MedicalOrganization',
-            name: 'Indira Super Speciality Hospital',
-            logo: `${baseUrl}logo.png`,
-            address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Vellore',
-                addressRegion: 'Tamil Nadu',
-                addressCountry: 'IN',
-            },
-        },
-    }
-
-    // FAQ Schema
-    const faqJsonLd = processedMarketingContent?.faqs ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: processedMarketingContent.faqs.map(f => ({
-            '@type': 'Question',
-            name: f.question,
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: f.answer
-            }
-        }))
-    } : null;
-
-    // HowTo Schema (for Procedure Timeline)
-    const howToJsonLd = timeline ? {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: timeline.title || `Procedure Steps for ${title}`,
-        description: timeline.description || `The patient journey for ${title} at Indira Hospital.`,
-        step: timeline.steps.map((s, i) => ({
-            '@type': 'HowToStep',
-            position: i + 1,
-            name: s.title,
-            itemListElement: [{
-                '@type': 'HowToDirection',
-                text: s.description
-            }]
-        }))
-    } : null;
+    const procedureUrl = `${baseUrl}doctor/near-me/treat/${departmentSlug}/${slug}`;
 
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-slate-950">
             {/* Treatment Secondary Nav (Sticky) */}
             <TreatmentSecondaryNav treatmentName={title} whatsappUrl={whatsappUrl} />
 
-            {/* Unified SEO Infrastructure */}
+            {/* Unified Semantic Knowledge & AEO Infrastructure */}
             <JsonLdSchema 
-                type="breadcrumb" 
+                type="procedure" 
+                name={title}
+                description={fullDescription ? String(fullDescription).slice(0, 300) : `Advanced ${title} surgery and medical care at Indira Super Speciality Hospital, Vellore.`}
+                url={procedureUrl}
+                preparation={anesthesia ? `Anesthesia: ${anesthesia}. Recovery: ${recoveryTime}.` : undefined}
                 items={[
                     { name: 'Home', url: '/' },
                     { name: 'Treatments', url: '/doctor/near-me/treat' },
                     ...(departmentName && departmentSlug ? [{ name: departmentName, url: `/doctor/near-me/treat/${departmentSlug}` }] : []),
-                    { name: title, url: `/${slug}` }
-                ]} 
+                    { name: title, url: procedureUrl }
+                ]}
+                mainEntity={(processedMarketingContent?.faqs || marketingContent?.faq || []).map(f => ({ question: f.question, answer: f.answer }))}
+                steps={timeline?.steps.map(s => ({ name: s.title, description: s.description }))}
             />
-            <JsonLdSchema 
-                type="medicalProcedure" 
-                name={title} 
-                description={`Advanced ${title} surgery and medical care at Indira Super Speciality Hospital, Vellore. Highly successful outcomes with senior surgical experts.`}
-                url={`/${slug}`} 
-            />
-            {processedMarketingContent?.faqs && (
-                <JsonLdSchema 
-                    type="faq" 
-                    mainEntity={processedMarketingContent.faqs.map(f => ({ question: f.question, answer: f.answer }))} 
-                />
-            )}
-            {timeline && (
-                <JsonLdSchema 
-                    type="howTo" 
-                    name={timeline.title || `Procedure Steps for ${title}`}
-                    description={timeline.description || `The patient journey for ${title} at Indira Hospital.`}
-                    steps={timeline.steps.map(s => ({ name: s.title, description: s.description }))}
-                />
-            )}
 
             {/* ── Hero ─────────────────────────────────────────────────────── */}
             <section className="relative pt-44 pb-20 lg:pt-52 lg:pb-28 overflow-hidden bg-[#FAFAFA] dark:bg-slate-950">

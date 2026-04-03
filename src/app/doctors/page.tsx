@@ -6,7 +6,6 @@ import { DoctorCard } from "@/components/entities/DoctorCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { Testimonials } from "@/components/sections/testimonials";
-import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
@@ -25,28 +24,14 @@ export default async function DoctorsDirectoryPage() {
 
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-800">
-            <JsonLdSchema
-                type="itemList"
-                name="Expert Doctors at Indira Hospital"
-                items={doctors.map((d: any) => {
-                    const dept = typeof d.department === 'string' ? d.department : d.department?.name || d.specialty || 'specialist';
-                    const specialtySlug = dept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                    return { name: d.name, url: `/doctor/${specialtySlug}/${d.slug}` };
-                })}
-            />
-            <JsonLdSchema
-                type="breadcrumb"
-                items={[
-                    { name: "Home", url: "/" },
-                    { name: "Doctors", url: "/doctors" }
-                ]}
-            />
             <PageHero
                 title="Best Doctors & Specialist Surgeons in Vellore"
                 subtitle="Expert Care You Can Trust"
                 description="Don't leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
+                descriptionClassName="clinical-insight direct-answer"
                 backgroundImage="/images/hospital/Consultation.webp"
             />
+
 
             <SectionContainer className="py-24 -mt-16 relative z-10 min-h-[50vh]">
                 {doctors.length > 0 ? (

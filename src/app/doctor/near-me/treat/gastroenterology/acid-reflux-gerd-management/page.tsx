@@ -1,30 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Flame,
-    Target,
-    ArrowRightCircle,
-    Utensils,
-    Microscope,
-    Radiation,
-    Navigation,
-    ThermometerSnowflake,
-    PlayCircle,
-    MapPin,
-    UserCheck
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function GERDManagementPage() {
     return (
         <SubServiceTemplate
@@ -33,19 +10,16 @@ export default function GERDManagementPage() {
             parentServiceSlug="gastroenterology"
             departmentName="Indira Elite Gastroenterology"
             description={
-                <>
-                    <p>
-                        Acid reflux is more than just "heartburn"—it is a chronic failure of the gastro-esophageal junction (LES). At Indira Super Speciality Hospital, we offer **Elite GERD Management**. By combining advanced 24-hour pH monitoring with clinical "Metabolic-Motility" protocols and the gold-standard **Laparoscopic Fundoplication** surgical cure, we ensure your relief is permanent and your esophagus is protected from long-term malignancy risks.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Acid Reflux & GERD Management</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-[#005f73] dark:text-cyan-400 font-semibold italic">
-                        "Precision motility care: Restoring the gateway to your digestive health."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
                 { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Diagnostic', value: '24hr pH-Metry', icon: 'Activity' },
-                { label: 'Care Type', value: 'Comprehensive', icon: 'Shield' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="Permanent Cure focus"
@@ -59,6 +33,18 @@ export default function GERDManagementPage() {
             }}
             fullDescription={
                 <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Acid Reflux & GERD Management in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                     {/* Mechanism: The LES Failure */}
                     <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-cyan-50/50 dark:bg-cyan-950/20 border border-cyan-100 dark:border-cyan-900/50">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/10 blur-3xl -z-10" />
@@ -200,6 +186,7 @@ export default function GERDManagementPage() {
                             ))}
                         </div>
                     </section>
+                </article>
                 </div>
             }
         />

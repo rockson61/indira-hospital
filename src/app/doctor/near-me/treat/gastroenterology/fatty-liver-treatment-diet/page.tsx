@@ -1,21 +1,7 @@
-
-
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
-import { 
-    Zap, 
-    Shield, 
-    Clock, 
-    Award, 
-    Info, 
-    Activity,
-    CheckCircle2,
-    Search,
-    History,
-    Beef,
-    Salad
-} from 'lucide-react'
-
+import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
+import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 export default function FattyLiverPage() {
     return (
         <SubServiceTemplate
@@ -24,19 +10,16 @@ export default function FattyLiverPage() {
             parentServiceSlug="gastroenterology"
             departmentName="Gastroenterology"
             description={
-                <>
-                    <p>
-                        Fatty liver disease (NAFLD) is a silent epidemic that can progress to irreversible cirrhosis if left untreated. At Indira Super Speciality Hospital, we offer **Advanced Hepatology Protocols** focused on early detection and complete reversal. By combining high-resolution FibroScan technology with clinical nutritional therapy and metabolic monitoring, we help you shed liver fat, reduce inflammation, and restore your liver's vital functions.
+                <article>
+                    <p className="text-lg leading-relaxed">
+                        <strong>Elite Fatty Liver Treatment & Reversal</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
-                    <p className="mt-4 text-emerald-600 dark:text-emerald-400 font-semibold italic">
-                        "Holistic liver restoration through metabolic science and nutrition."
-                    </p>
-                </>
+                </article>
             }
             quickFacts={[
-                { label: 'Evaluation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Scans', value: 'FibroScan', icon: 'Activity' },
-                { label: 'Focus', value: 'Reversal', icon: 'Zap' },
+                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
                 { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
             ]}
             duration="Ongoing"
@@ -50,6 +33,18 @@ export default function FattyLiverPage() {
             }}
         >
             <div className="space-y-16">
+                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+                <AioKnowledgeBlock 
+                    title="Quick Facts: Elite Fatty Liver Treatment & Reversal in Vellore"
+                    items={[
+                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                    ]}
+                />
+
+                <article className="space-y-12">
                 {/* Visual Section: Why Early Intervention? */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="p-8 rounded-3xl bg-emerald-50 dark:bg-emerald-900/50 border border-emerald-100 dark:border-emerald-800 shadow-lg">
@@ -111,7 +106,7 @@ export default function FattyLiverPage() {
                         Our treatment roadmap doesn't rely solely on medications. We utilize a **Three-Phase Recovery Protocol**: 1. Detoxification & Inflammation Control, 2. Metabolic Re-balancing, and 3. Long-term Maintenance. By tracking your progress through serial FibroScans and Liver Function Tests (LFT), we provide objective proof of your liver's journey back to health.
                     </p>
 
-                    <h4 className="font-heading text-[#005f73] dark:text-emerald-400 mt-10">Why Choose Indira for Liver Care?</h4>
+                    <h4 className="font-heading text-[#005f73] dark:text-emerald-400 mt-10">What are the Benefits of Liver Care Surgery?</h4>
                     <ul>
                         <li>**Advanced FibroScan**: Painless, 10-minute scan that replaces the need for liver biopsy in most cases.</li>
                         <li>**Integrated Endocrine Hub**: Coordinating with endocrinologists to manage the underlying diabetes that often drives fatty liver.</li>
@@ -159,6 +154,7 @@ export default function FattyLiverPage() {
                         ))}
                     </div>
                 </div>
+            </article>
             </div>
         </SubServiceTemplate>
     );
