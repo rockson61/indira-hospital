@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { constructMetadata } from "@/lib/seo-utils";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, Sparkles, Monitor, Shield } from "lucide-react";
 import { Electricity, HeartCardiogram } from "healthicons-react/outline";
