@@ -19,12 +19,6 @@ import {
 import { Metadata } from 'next';
 import { constructMetadata } from '@/lib/seo-utils';
 
-export const metadata: Metadata = {
-    title: 'Sitemap | Indira Super Speciality Hospital Vellore',
-    description: 'A comprehensive directory of all medical services, specialist doctors, and regional locations served by Indira Super Speciality Hospital in Tamil Nadu.',
-};
-
-
 export const metadata: Metadata = constructMetadata({
     title: "Sitemap | Indira Super Speciality Hospital",
     description: "Learn more about sitemap at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
