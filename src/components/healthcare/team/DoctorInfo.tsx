@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { EliteImage } from "@/components/ui/elite-image"
 import { siteConfig } from "@/config/site"
 
 export function DoctorInfo() {
@@ -7,7 +7,7 @@ export function DoctorInfo() {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-1/3">
           <div className="aspect-square relative rounded-[2rem] overflow-hidden border-4 border-slate-50">
-            <Image src="/dental-clinic-vellore.jpg" alt="Dr. Rockson Samuel" fill className="object-cover" />
+            <EliteImage src="/images/doctors/dr-rockson-samuel.jpg" alt="Dr. Rockson Samuel" fill className="object-cover" />
           </div>
         </div>
 

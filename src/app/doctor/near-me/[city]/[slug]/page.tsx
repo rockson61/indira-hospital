@@ -62,6 +62,8 @@ export async function generateStaticParams() {
     return params;
 }
 
+import { constructMetadata } from "@/lib/seo-utils";
+
 export async function generateMetadata({
     params,
 }: {
@@ -69,7 +71,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { city, slug } = await params;
     const location = tamilNaduLocations.find((l) => l.slug === city);
-    if (!location) return { title: "Location Not Found" };
+    if (!location) {
+        return constructMetadata({
+            title: "Location Not Found",
+            description: "The requested medical service location could not be found.",
+            path: `/doctor/near-me/${city}/${slug}`
+        });
+    }
 
     const getSpecialistTitle = (title: string) => {
         const lower = title.toLowerCase();
@@ -98,11 +106,12 @@ export async function generateMetadata({
         const specialistTitle = dept ? getSpecialistTitle(dept) : "Specialist";
         const title = `Best ${specialistTitle} in ${location.name} — Dr. ${doctor.name} | Ranked #1 In ${location.district}`;
         const description = `Looking for the best ${specialistTitle.toLowerCase()} in ${location.name}? Consult Dr. ${doctor.name}, an elite specialist serving patients from ${location.name} at Indira Super Speciality Hospital. Expert clinical care, NABH Accredited. Book today.`;
-        return {
+        return constructMetadata({
             title,
             description,
-            openGraph: { title, description, type: "profile", images: [getImageUrl(doctor.image)] },
-        };
+            path: `/doctor/near-me/${city}/${slug}`,
+            image: getImageUrl(doctor.image)
+        });
     }
 
     // Check for service/department
@@ -111,11 +120,11 @@ export async function generateMetadata({
         const specialistTitle = getSpecialistTitle(service.title);
         const title = `Best ${specialistTitle} in ${location.name} | Ranked #1 Center for ${service.title}`;
         const description = `Searching for top-rated ${specialistTitle.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital provides elite ${service.title.toLowerCase()} care. Advanced laser & robotic surgery available for patients across ${location.name}. NABH Accredited facility.`;
-        return {
+        return constructMetadata({
             title,
             description,
-            openGraph: { title, description },
-        };
+            path: `/doctor/near-me/${city}/${slug}`
+        });
     }
 
     // Check for SEO Keyword
@@ -123,11 +132,11 @@ export async function generateMetadata({
     if (seoKeyword) {
         const title = `Best ${seoKeyword.title} in ${location.name}, Tamil Nadu | Ranked #1 Hospital for ${seoKeyword.title}`;
         const description = `Looking for the ${seoKeyword.title.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital provides elite medical care and advanced surgical solutions for patients in ${location.name} and across Tamil Nadu.`;
-        return {
+        return constructMetadata({
             title,
             description,
-            openGraph: { title, description },
-        };
+            path: `/doctor/near-me/${city}/${slug}`
+        });
     }
 
     // Check for treatment
@@ -135,15 +144,20 @@ export async function generateMetadata({
     if (treatment) {
         const title = `Best ${treatment.title} in ${location.name} | Indira Super Speciality Hospital`;
         const description = `Advanced ${treatment.title} in ${location.name} at Indira Super Speciality Hospital. Expert clinical care and minimally invasive surgical solutions. Serving patients in ${location.district} district.`;
-        return {
+        return constructMetadata({
             title,
             description,
-            openGraph: { title, description },
-        };
+            path: `/doctor/near-me/${city}/${slug}`
+        });
     }
 
-    return { title: "Not Found" };
+    return constructMetadata({
+        title: "Not Found",
+        description: "The requested medical page could not be found.",
+        path: `/doctor/near-me/${city}/${slug}`
+    });
 }
+
 
 export default async function UnifiedLocationSlugPage({
     params,

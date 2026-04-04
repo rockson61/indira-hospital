@@ -4,8 +4,8 @@ import { GlossaryClient } from "@/components/glossary/GlossaryClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Medical Glossary | Clinical Terms & Definitions | Indira Hospital",
-    description: "Navigate our comprehensive clinical glossary. Decode complex medical terminology, from cardiology to advanced surgical procedures, at Indira Super Speciality Hospital.",
+    title: "Medical Glossary | Clinical Terms & Definitions | Indira ...",
+    description: "Navigate our comprehensive clinical glossary. Decode complex medical terminology, from cardiology to advanced surgical procedures, at Indira Super Speci...",
 };
 
 export default function GlossaryPage() {

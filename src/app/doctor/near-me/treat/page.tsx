@@ -5,8 +5,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "Signature Treatments & Health Library | Indira Hospital Vellore",
-    description: "Explore advanced surgical excellence in Vellore. From Laser Proctology and Keyhole Surgeries to Cardiology and Orthopaedics. Complete medical guide to treatments in India.",
+    title: "Signature Treatments & Health Library | Indira Hospital V...",
+    description: "Explore advanced surgical excellence in Vellore. From Laser Proctology and Keyhole Surgeries to Cardiology and Orthopaedics. Complete medical guide to t...",
     alternates: {
         canonical: "/doctor/near-me/treat"
     }

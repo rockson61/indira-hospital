@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
+import { EliteImage } from "@/components/ui/elite-image"
 import Link from 'next/link'
 import { servicesData } from "@/lib/data/services-data"
 
@@ -25,7 +25,7 @@ export function ServicesWithImages() {
           <Link href="/doctor/near-me/treat/dentistry" className="group">
             <div className="bg-card rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
               <div className="relative h-48">
-                <Image
+                <EliteImage
                   src="https://images.pexels.com/photos/3845757/pexels-photo-3845757.jpeg"
                   alt="Invisalign Clear Aligners in Vellore"
                   fill
@@ -63,8 +63,8 @@ export function ServicesWithImages() {
             <Link href={service.href} key={index} className="group">
               <Card className="overflow-hidden transition-transform duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
                 <div className="aspect-video relative">
-                  <Image
-                    src={service.image || "/dental-clinic-vellore.jpg"}
+                  <EliteImage
+                    src={service.image || "/images/hospital/Hospital.webp"}
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"

@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 "use client";
 
 import React, { useState } from "react";
@@ -72,6 +74,13 @@ const MOCK_APPOINTMENTS = [
         priority: "Consultation"
     }
 ];
+
+
+export const metadata: Metadata = constructMetadata({
+    title: "Admin | Indira Super Speciality Hospital",
+    description: "Learn more about admin at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    path: "/Admin/appointments"
+});
 
 export default function AppointmentDashboard() {
     const [searchTerm, setSearchTerm] = useState("");

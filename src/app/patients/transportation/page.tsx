@@ -13,8 +13,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "How to Reach Indira Hospital Vellore | Transport Guide | Directions",
-    description: "Complete guide to reach Indira Super Speciality Hospital, Vellore by taxi, auto, bus, train (Katpadi), and Chennai Airport (MAA). International patient airport pickup included.",
+    title: "How to Reach Indira Hospital Vellore | Transport Guide | ...",
+    description: "Complete guide to reach Indira Super Speciality Hospital, Vellore by taxi, auto, bus, train (Katpadi), and Chennai Airport (MAA). International patient ...",
     keywords: [
         "how to reach Indira Hospital Vellore",
         "Katpadi railway station to hospital",

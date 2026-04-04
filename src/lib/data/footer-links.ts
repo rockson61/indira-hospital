@@ -93,6 +93,7 @@ export const FOOTER_LINKS = {
         { name: "Patient Portal", url: "/patient-portal" }
     ],
     quickLinks: [
+        { name: "Home", url: "/" },
         { name: "About Us", url: "/about" },
         { name: "Quality & Safety", url: "/about/quality-safety" },
         { name: "Latest News (Blog)", url: "/blog" },

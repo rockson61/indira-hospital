@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import { EliteImage } from '@/components/ui/elite-image';
 import { X, ZoomIn, Sparkles } from 'lucide-react';
 
 interface Photo {
@@ -62,7 +62,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
                                 index === 0 && filter === "All" ? 'sm:col-span-2 sm:row-span-2' : ''
                             }`}
                         >
-                            <Image
+                            <EliteImage
                                 src={photo.src}
                                 alt={photo.alt}
                                 fill
@@ -122,7 +122,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
                             className="relative w-full h-full max-w-7xl rounded-[4rem] overflow-hidden shadow-[0_0_150px_-30px_rgba(99,102,241,0.4)] border border-white/10"
                             onClick={e => e.stopPropagation()}
                         >
-                            <Image
+                            <EliteImage
                                 src={selectedImage.src}
                                 alt={selectedImage.alt}
                                 fill

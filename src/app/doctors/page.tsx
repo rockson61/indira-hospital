@@ -12,8 +12,8 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = {
-    title: "Best Doctors in Vellore — Elite Specialist Surgeons | Indira Hospital",
-    description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, India. Initiate your Elite Consultation today.",
+    title: "Best Doctors in Vellore — Elite Specialist Surgeons | Ind...",
+    description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, In...",
     alternates: {
         canonical: "/doctors"
     }

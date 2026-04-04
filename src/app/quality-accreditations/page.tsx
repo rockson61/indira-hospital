@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import { injectInternalLinks } from "@/lib/html-linkify";
 
 export const metadata: Metadata = {
-    title: "NABH Accredited Hospital in Vellore — Quality & Patient Safety | Indira Hospital",
-    description: "Indira Super Speciality Hospital is committed to high standards of patient safety and clinical excellence. Learn about our NABH accreditation and quality benchmarks.",
+    title: "NABH Accredited Hospital in Vellore — Quality & Patient S...",
+    description: "Indira Super Speciality Hospital is committed to high standards of patient safety and clinical excellence. Learn about our NABH accreditation and qualit...",
 };
 
 const certifications = [

@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { getDoctors, getDepartments } from "@/lib/api";
+import { constructMetadata } from "@/lib/seo-utils";
 import { Phone, Calendar, Clock, Award, MapPin, ChevronRight, Star, GraduationCap, Settings, MessageCircle, Quote, Activity, Tag, Sparkles } from "lucide-react";
 import { Stethoscope } from "healthicons-react/outline";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
@@ -66,28 +67,15 @@ export async function generateMetadata({ params }: { params: Promise<{ specialty
     const deptName = typeof doc.department === 'string' ? doc.department : doc.department?.name || 'Specialist';
     const title = doc.seo_title || `Best ${deptName} in Vellore — Dr. ${doc.name} | Same-Day Discharge | Indira Hospital`;
     const desc = doc.seo_description || doc.bio?.substring(0, 155) || `Consult with Dr. ${doc.name}, a leading ${deptName} at Indira Super Speciality Hospital, Vellore. NABH accredited care with advanced 24/7 laser and laparoscopic treatment.`;
-    return {
+    
+    return constructMetadata({
         title,
         description: desc,
-        keywords: [doc.name, deptName, `Best ${deptName} in Vellore`, 'Tamil Nadu', 'Indira Hospital'],
-        alternates: {
-            canonical: `/doctor/${specialty}/${slug}`,
-        },
-        openGraph: {
-            title,
-            description: desc,
-            url: `/doctor/${specialty}/${slug}`,
-            type: 'profile',
-            images: doc.image ? [{ url: doc.image, alt: doc.name }] : [],
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title,
-            description: desc,
-            images: doc.image ? [doc.image] : [],
-        },
-    };
+        path: `/doctor/${specialty}/${slug}`,
+        image: doc.image || siteConfig.ogImage
+    });
 }
+
 
 export default async function DoctorProfileRoute({
     params,

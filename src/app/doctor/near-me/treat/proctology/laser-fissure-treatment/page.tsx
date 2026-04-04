@@ -1,7 +1,16 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+
+export const metadata: Metadata = constructMetadata({
+    title: "Laser Fissure Treatment in Vellore | Indira Hospital",
+    description: "Advanced Laser Fissure Treatment in Vellore surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and same-day...",
+    path: "/doctor/near-me/treat/proctology/laser-fissure-treatment"
+});
 
 export default function SEOPage() {
     return (

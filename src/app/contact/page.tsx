@@ -5,13 +5,14 @@ import EntityReviews from "@/components/trust/EntityReviews";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { ContactFormClient } from "@/components/forms/ContactFormClient";
 
-export const metadata: Metadata = {
-    title: "Contact Best Hospital in Vellore — 24/7 Emergency & Appointments | Indira Hospital",
-    description: "Get in touch with Indira Super Speciality Hospital, Vellore. Available 24/7 for appointments, emergency trauma care, and healthcare inquiries. Contact our expert team today.",
-    alternates: {
-        canonical: "/contact"
-    }
-};
+import { constructMetadata } from "@/lib/seo-utils";
+
+export const metadata: Metadata = constructMetadata({
+    title: "Contact Best Hospital in Vellore | 24/7 Emergency & Appointments",
+    description: "Get in touch with Indira Super Speciality Hospital, Vellore. Available 24/7 for appointments, emergency trauma care, and healthcare inquiries.",
+    path: "/contact"
+});
+
 
 export default function ContactPage() {
     return (

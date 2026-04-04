@@ -12,8 +12,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "Visiting Indira Hospital Vellore | Campus Guide, Hours & Amenities",
-    description: "Plan your visit to Indira Super Speciality Hospital, Vellore. Visiting hours, campus map, cafeteria, pharmacy, ATM, prayer room, WiFi, and parking — all in one guide.",
+    title: "Visiting Indira Hospital Vellore | Campus Guide, Hours & ...",
+    description: "Plan your visit to Indira Super Speciality Hospital, Vellore. Visiting hours, campus map, cafeteria, pharmacy, ATM, prayer room, WiFi, and parking — all...",
     keywords: ["Indira Hospital visiting hours", "patient visitor guide Vellore hospital", "hospital campus amenities Vellore"],
 };
 

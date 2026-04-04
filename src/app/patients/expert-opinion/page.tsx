@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 "use client";
 
 import React, { useState } from "react";
@@ -32,6 +34,13 @@ const mdtMembers = [
     { name: "Radiology Head", focus: "Diagnostic Imaging (3T MRI)" },
     { name: "Anesthesia Chief", focus: "Pain Management & Recovery" }
 ];
+
+
+export const metadata: Metadata = constructMetadata({
+    title: "Patients | Indira Super Speciality Hospital",
+    description: "Learn more about patients at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    path: "/patients/expert-opinion"
+});
 
 export default function ExpertOpinionPage() {
     const [isUploading, setIsUploading] = useState(false);

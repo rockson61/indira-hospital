@@ -3,7 +3,7 @@ import { Users, FileText, PhoneCall, Share2, ClipboardCheck, Building2, Sparkles
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Provider Resources | Partner with Indira Super Speciality Hospital",
+    title: "Provider Resources | Partner with Indira Super Speciality...",
     description: "Dedicated resources for referring physicians, healthcare partners, and medical professionals. Explore our referral process and collaborative care models.",
 };
 

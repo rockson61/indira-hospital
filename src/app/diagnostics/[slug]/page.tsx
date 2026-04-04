@@ -14,24 +14,23 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema"
 import { siteConfig } from "@/config/site"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
+import { constructMetadata } from "@/lib/seo-utils";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const test = await getDiagnosticBySlug(slug) as any;
-    if (!test) return {};
-    return {
-        title: test.seo_title || `${test.name} Test Cost & Booking in Vellore, Tamil Nadu | Indira Hospital`,
-        description: test.seo_description || `Book ${test.name} at Indira Hospital, Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} Trusted diagnostic services in Tamil Nadu, India with home collection.`,
-        alternates: {
-            canonical: `/diagnostics/${slug}`,
-        },
-        openGraph: {
-            title: test.seo_title || `${test.name} Test | Indira Hospital`,
-            description: test.seo_description || `Accurate ${test.name} test in Vellore.`,
-            url: `/diagnostics/${slug}`,
-            type: 'website',
-        },
-    };
+    if (!test) return { title: "Test Not Found" };
+    
+    const title = test.seo_title || `${test.name} Test Cost & Booking in Vellore | Indira Hospital`;
+    const description = test.seo_description || `Book ${test.name} at Indira Hospital, Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} Trusted diagnostic services with home collection.`;
+
+    return constructMetadata({
+        title,
+        description,
+        path: `/diagnostics/${slug}`
+    });
 }
+
 
 export default async function DiagnosticTestPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;

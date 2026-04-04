@@ -10,10 +10,14 @@ import { siteConfig } from "@/config/site";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
-export const metadata: Metadata = {
+import { constructMetadata } from "@/lib/seo-utils";
+
+export const metadata: Metadata = constructMetadata({
     title: "Insurance & TPA Partners | Cashless Treatment at Indira Hospital",
-    description: "Indira Super Speciality Hospital is empanelled with major TPAs, private insurance providers, and government health schemes like TN CMCHIS. Explore our cashless treatment options.",
-};
+    description: "Indira Super Speciality Hospital is empanelled with major TPAs, private insurance providers, and government health schemes like TN CMCHIS. Explore our cashless treatment options in Vellore.",
+    path: "/patients/insurance"
+});
+
 
 const benefits = [
     { title: "Cashless Treatment", description: "Get treated without upfront payment at our hospital.", icon: Shield },

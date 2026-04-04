@@ -1,7 +1,16 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+
+export const metadata: Metadata = constructMetadata({
+    title: "Laser Varicose Veins in Vellore | Indira Hospital",
+    description: "Advanced Laser Varicose Veins in Vellore surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and same-day di...",
+    path: "/doctor/near-me/treat/general-surgery/varicose-veins-laser-treatment"
+});
 
 export default function SEOPage() {
     return (

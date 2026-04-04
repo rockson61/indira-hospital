@@ -107,7 +107,7 @@ export function SurgicalVideoBank() {
                             }`}
                         >
                             <div className="relative w-24 h-16 rounded-xl overflow-hidden flex-shrink-0">
-                                <img src={video.thumbnail} className="w-full h-full object-cover" alt="" />
+                                <img src={video.thumbnail} className="w-full h-full object-cover" alt={video.title} />
                                 <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
                                     <Play className="w-4 h-4 text-white fill-current opacity-60" />
                                 </div>

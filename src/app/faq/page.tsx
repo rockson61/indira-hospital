@@ -8,6 +8,13 @@ import { hospitalFaqs } from "@/lib/data/hospital-faq-data";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
+
+export const metadata: Metadata = constructMetadata({
+    title: "Faq | Indira Super Speciality Hospital",
+    description: "Learn more about faq at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    path: "/faq"
+});
+
 export default function FAQPage() {
     const [searchTerm, setSearchTerm] = useState("");
     const categories = Array.from(new Set(hospitalFaqs.map(f => f.category)));

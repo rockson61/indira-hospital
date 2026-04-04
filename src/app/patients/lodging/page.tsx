@@ -12,8 +12,8 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
-    title: "Accommodation Near Indira Hospital Vellore | Patient Lodging Guide",
-    description: "Complete accommodation guide for international patients visiting Indira Hospital, Vellore. Hotels, lodges, and hospital suites within 500m. Halal food, attendant rooms, budget to premium options.",
+    title: "Accommodation Near Indira Hospital Vellore | Patient Lodg...",
+    description: "Complete accommodation guide for international patients visiting Indira Hospital, Vellore. Hotels, lodges, and hospital suites within 500m. Halal food, ...",
     keywords: ["hotels near Indira Hospital Vellore", "lodging Vellore hospital", "patient accommodation Vellore", "international patient stay Vellore", "rooms near CMC Vellore"],
 };
 

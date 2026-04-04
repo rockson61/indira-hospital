@@ -13,8 +13,8 @@ import { MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-    title: "Best Hospital Departments in Vellore — Same-Day Discharge | Indira Hospital",
-    description: "Explore 15+ advanced medical departments at Indira Hospital, Vellore. From cardiology to proctology, get expert care with same-day discharge options in Tamil Nadu, India.",
+    title: "Best Hospital Departments in Vellore — Same-Day Discharge...",
+    description: "Explore 15+ advanced medical departments at Indira Hospital, Vellore. From cardiology to proctology, get expert care with same-day discharge options in ...",
     alternates: {
         canonical: "/departments"
     }

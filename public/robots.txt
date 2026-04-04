@@ -1,22 +1,11 @@
-# *
+# User-agent configuration
 User-agent: *
 Allow: /
-
-# *
-User-agent: *
 Disallow: /admin
 Disallow: /api
 
 # Host
 Host: https://www.indirasuperspecialityhospital.com
 
-# Sitemaps
+# Sitemaps (Index only)
 Sitemap: https://www.indirasuperspecialityhospital.com/sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/doctors-sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/departments-sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/treatments-sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/locations-sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/location-profiles-sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/medical-glossary-sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/seo-sitemap.xml
-Sitemap: https://www.indirasuperspecialityhospital.com/patients/international-sitemap.xml

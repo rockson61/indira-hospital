@@ -1,4 +1,13 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import { SectionContainer } from "@/components/ui/section-container"
+
+
+export const metadata: Metadata = constructMetadata({
+    title: "Terms | Indira Super Speciality Hospital",
+    description: "Learn more about terms at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    path: "/terms"
+});
 
 export default function TermsPage() {
     return (

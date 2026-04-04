@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     return {
         title: `Best Hospital in ${location.name} | Top Speciality Doctors Near Me | Indira Hospital`,
-        description: `Indira Super Speciality Hospital is the #1 medical facility for patients from ${location.name}. Specialized in Laparoscopic, Laser, and Cardiac care with 24/7 emergency support. Distance: ${location.distance}.`,
+        description: "Indira Super Speciality Hospital is the #1 medical facility for patients from ${location.name}. Specialized in Laparoscopic, Laser, and Cardiac care wit...",
         keywords: [
             `hospital in ${location.name}`,
             `best hospital near ${location.name}`,

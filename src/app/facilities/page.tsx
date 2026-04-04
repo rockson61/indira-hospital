@@ -10,7 +10,7 @@ import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = {
     title: "World-Class Infrastructure | Facilities at Indira Hospital",
-    description: "Explore the advanced medical facilities at Indira Super Speciality Hospital, featuring modular OTs, 24/7 ICU, advanced diagnostics, and state-of-the-art laboratory services.",
+    description: "Explore the advanced medical facilities at Indira Super Speciality Hospital, featuring modular OTs, 24/7 ICU, advanced diagnostics, and state-of-the-art...",
 };
 
 export default function FacilitiesPage() {

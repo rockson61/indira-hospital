@@ -8,7 +8,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 
 export const metadata: Metadata = {
     title: "Why Choose Indira Hospital | Our Values & Mission",
-    description: "Discover why Indira Super Speciality Hospital is the preferred choice for healthcare in Vellore. Explore our patient-centric values, mission, and commitment to clinical excellence.",
+    description: "Discover why Indira Super Speciality Hospital is the preferred choice for healthcare in Vellore. Explore our patient-centric values, mission, and commit...",
 };
 
 const values = [

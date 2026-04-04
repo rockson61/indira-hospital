@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     return {
         title: `${resource.title} | Patient Guide | Indira Hospital`,
-        description: `${resource.short_description} Learn about ${resource.title.toLowerCase()} at Indira Super Speciality Hospital, Vellore. Find details on ${resource.category.toLowerCase()} and more.`,
+        description: "${resource.short_description} Learn about ${resource.title.toLowerCase()} at Indira Super Speciality Hospital, Vellore. Find details on ${resource.categ...",
         keywords: [resource.title, resource.category, "Patient Resources", "Indira Hospital", "Vellore", "India"],
         openGraph: {
             title: `${resource.title} | Indira Hospital`,

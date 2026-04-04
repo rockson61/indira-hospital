@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import Link from 'next/link'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
@@ -5,6 +7,13 @@ import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { getTreatmentBySlug, getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data'
 import { SEED_DATA } from '@/lib/data/seed-data'
 import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
+
+export const metadata: Metadata = constructMetadata({
+    title: "Doctor | Indira Super Speciality Hospital",
+    description: "Learn more about doctor at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    path: "/doctor/near-me/treat/ophthalmology"
+});
+
 export default function OphthalmologyPillarPage() {
     // Filter Ophthalmology specialists
     const ophthaDoctors = SEED_DATA.doctors.filter(dr => 

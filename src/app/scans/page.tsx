@@ -5,8 +5,8 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: 'Best 3T MRI & CT Scan in Vellore — Same-Day Reports | Indira Hospital',
-    description: 'High-precision scans with 3T MRI, 128-Slice CT, and Digital X-Rays. Ultra-fast <12 hour turnaround time for critical reports.',
+    title: "Best 3T MRI & CT Scan in Vellore — Same-Da | Indira Hospital",
+    description: "High-precision scans with 3T MRI, 128-Slice CT, and Digital X-Rays. Ultra-fast <12 hour turnaround time for critical reports.",
 }
 
 import { siteConfig } from "@/config/site";

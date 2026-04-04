@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from "react"
 import { getHealthPackages } from "@/lib/api"
 import { HealthPackage } from "@/lib/schema"
@@ -12,13 +14,12 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { PageHero } from "@/components/ui/page-hero";
 
-export const metadata: Metadata = {
-    title: 'Best Master Health Checkup Packages in Vellore — Same Day Reports | Indira Hospital',
-    description: 'Affordable health screening packages in Vellore, India. Master health checkups, Cardiac, Diabetic, and Executive packages at Indira Super Speciality Hospital, Tamil Nadu.',
-    alternates: {
-        canonical: "/health-packages"
-    }
-}
+export const metadata: Metadata = constructMetadata({
+    title: "Best Master Health Checkup Packages in Vellore | Indira Hospital",
+    description: "Affordable health screening packages in Vellore, India. Master health checkups, Cardiac, Diabetic, and Executive packages at Indira Super Speciality Hospital.",
+    path: "/health-packages"
+});
+
 
 export default async function HealthPackagesPage() {
     let packages: HealthPackage[] = [];

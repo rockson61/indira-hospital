@@ -8,8 +8,8 @@ import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, Chec
 import { ProctologyPillarLongForm } from '@/lib/data/treatments/proctology/pillar-content'
 
 export const metadata: Metadata = {
-    title: "Best Proctologist in Vellore | Laser Piles & Fistula Treatment | Indira Hospital",
-    description: "Indira Laser Proctology Center, Vellore. Expert painless treatment for Piles, Fissure, Fistula, and Pilonidal Sinus by internationally trained surgeons Dr. P. Shankar & Dr. Karan Shankar. 2000+ word expert guide.",
+    title: "Best Proctologist in Vellore | Laser Piles & Fistula Trea...",
+    description: "Indira Laser Proctology Center, Vellore. Expert painless treatment for Piles, Fissure, Fistula, and Pilonidal Sinus by internationally trained surgeons ...",
     keywords: "best proctologist vellore, laser piles treatment vellore, fistula surgery cost vellore, anal fissure specialist vellore, pilonidal sinus laser surgery vellore, colorectal surgeon vellore, indira hospital vellore proctology",
     alternates: {
         canonical: "https://www.indirasuperspecialityhospital.com/doctor/near-me/treat/proctology"

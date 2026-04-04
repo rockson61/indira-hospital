@@ -11,8 +11,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "Treatment Cost in India vs USA, UK & UAE | Free Estimate | Indira Hospital",
-    description: "Get a free personalised medical treatment cost estimate from Indira Super Speciality Hospital, Vellore. Compare costs for knee replacement, bypass surgery, kidney transplant, laparoscopy and more — save 80–95% vs Western countries.",
+    title: "Treatment Cost in India vs USA, UK & UAE | Free Estimate ...",
+    description: "Get a free personalised medical treatment cost estimate from Indira Super Speciality Hospital, Vellore. Compare costs for knee replacement, bypass surge...",
     keywords: [
         "medical treatment cost India",
         "hospital cost India vs USA",

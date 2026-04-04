@@ -1,7 +1,16 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+
+export const metadata: Metadata = constructMetadata({
+    title: "Micro-Incision Cataract Surgery (MICS) in Vellore | Indir...",
+    description: "Advanced Micro-Incision Cataract Surgery (MICS) in Vellore surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited car...",
+    path: "/doctor/near-me/treat/ophthalmology/cataract-surgery-mics"
+});
 
 export default function SEOPage() {
     return (

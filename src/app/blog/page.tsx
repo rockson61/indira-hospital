@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import { getDirectusClient } from "@/lib/directus"
 import { getImageUrl } from "@/lib/utils"
 import { readItems } from "@directus/sdk"
@@ -16,8 +18,8 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 import { FALLBACK_BLOG_POSTS } from "@/lib/data/fallback-blog-data"
 
 export const metadata: Metadata = {
-    title: 'Medical Blog & Surgical Insights in Vellore, Tamil Nadu | Indira Hospital',
-    description: 'Expert medical articles, surgical insights, and health tips from the specialists at Indira Hospital, Vellore. Leading healthcare blog in Tamil Nadu, India.',
+    title: "Medical Blog & Surgical Insights in Vellor | Indira Hospital",
+    description: "Expert medical articles, surgical insights, and health tips from the specialists at Indira Hospital, Vellore. Leading healthcare blog in Tamil Nadu, India.",
 }
 
 export const revalidate = 3600; // Revalidate every hour

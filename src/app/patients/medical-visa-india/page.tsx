@@ -15,8 +15,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "Medical Visa for India — Complete Guide for International Patients | Indira Hospital Vellore",
-    description: "Complete guide to getting an Indian Medical Visa (M-Visa) for treatment in Vellore. Indira Hospital issues official invitation letters within 24 hours. Visa help for Bangladesh, UAE, Nigeria, Kenya, UK & 45+ countries.",
+    title: "Medical Visa for India — Complete Guide for International...",
+    description: "Complete guide to getting an Indian Medical Visa (M-Visa) for treatment in Vellore. Indira Hospital issues official invitation letters within 24 hours. ...",
     keywords: [
         "medical visa India", "M-Visa India", "Indian medical visa", "visa for treatment India",
         "hospital invitation letter India", "medical visa Vellore", "international patients India visa",

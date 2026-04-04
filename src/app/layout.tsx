@@ -26,6 +26,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   ...defaultSeo,
   robots: {
     index: true,
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: siteConfig.url,
+    canonical: '/',
   },
 };
 

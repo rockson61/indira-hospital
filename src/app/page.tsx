@@ -32,9 +32,12 @@ import HospitalSEOBlock from "@/components/HospitalSEOBlock";
 import AioKnowledgeBlock from "@/components/seo/AioKnowledgeBlock";
 import { ShieldCheck, Award, Users, Globe } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Best Hospital in Vellore | Indira Super Speciality Hospital Tamil Nadu",
-  description: "Experience world-class healthcare at the Best Hospital in Vellore. Indira Super Speciality Hospital offers advanced laser & laparoscopic surgeries, cardiology, and orthopaedics with 15,000+ successful outcomes. NABH Accredited.",
+import { constructMetadata } from "@/lib/seo-utils";
+
+export const metadata: Metadata = constructMetadata({
+  title: "Best Hospital in Vellore | Indira Super Speciality Hospital",
+  description: "Advanced laser & laparoscopic surgeries in Vellore. 15,000+ successful cases. NABH Accredited super speciality care with same-day discharge.",
+  path: "/",
   keywords: [
     "best hospital in Vellore",
     "super speciality hospital Tamil Nadu",
@@ -46,13 +49,9 @@ export const metadata: Metadata = {
     "medical tourism India",
     "affordable surgery India",
     "same-day discharge surgery Vellore"
-  ],
-  openGraph: {
-    title: "Best Hospital in Vellore | Indira Super Speciality Hospital",
-    description: "The Best Hospital in Vellore for advanced laser surgeries and quaternary care. 150+ beds, NABH accredited, and affordable international care.",
-    type: "website",
-  },
-};
+  ]
+});
+
 
 const SemanticLinkBlock = () => (
   <section className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">

@@ -14,8 +14,8 @@ const WA = "https://wa.me/" + siteConfig.contact.phone.replace(/\+/g, '').replac
 const EMAIL = "secondopinion@" + siteConfig.url.replace(/^https?:\/\/(www\.)?/, "");
 
 export const metadata: Metadata = {
-    title: "Free Second Opinion from India | Specialist Review in 24 Hours | Indira Hospital",
-    description: "Concerned about your diagnosis? Get a free second medical opinion from Indira Hospital, Vellore's top specialists. Send your reports via WhatsApp. Response within 24 hours. Trusted by patients from 50+ countries.",
+    title: "Free Second Opinion from India | Specialist Review in 24 ...",
+    description: "Concerned about your diagnosis? Get a free second medical opinion from Indira Hospital, Vellore's top specialists. Send your reports via WhatsApp. Respo...",
     keywords: [
         "free second opinion India",
         "second medical opinion online India",

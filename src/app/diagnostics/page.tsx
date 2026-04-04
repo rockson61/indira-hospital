@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from "react";
 import { getDiagnostics } from "@/lib/api"
 import { siteConfig } from "@/config/site"
@@ -14,13 +16,12 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 import { PageHero } from "@/components/ui/page-hero";
 
-export const metadata: Metadata = {
-    title: 'Best Diagnostics & Lab Tests in Vellore — Same-Day Reports | Indira Hospital',
-    description: 'Book 500+ diagnostic tests at Indira Hospital, Vellore. NABL accredited labs, home sample collection, and reports under 12 hours. MRI, CT, Blood Tests in Tamil Nadu, India.',
-    alternates: {
-        canonical: "/diagnostics"
-    }
-}
+export const metadata: Metadata = constructMetadata({
+    title: "Best Diagnostics & Lab Tests in Vellore | Indira Hospital",
+    description: "Book 500+ diagnostic tests at Indira Hospital, Vellore. NABL accredited labs, home sample collection, and reports under 12 hours. Advanced MRI, CT, and Blood Pathology.",
+    path: "/diagnostics"
+});
+
 
 // Category icons and colors with Elite UI mappings
 const categoryConfig: Record<string, { icon: React.ElementType; color: string; bgColor: string; label: string; glow: string }> = {

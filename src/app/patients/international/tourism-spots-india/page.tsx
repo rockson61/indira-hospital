@@ -7,7 +7,7 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "Best Tourism Spots in India | Medical Tourism | Indira Hospital",
+    title: "Best Tourism Spots in India | Medical Tourism | Indira Ho...",
     description: "Explore the best tourism spots in India during your medical recovery. Discover breathtaking destinations in Tamil Nadu, Kerala, Delhi, and Rajasthan.",
     keywords: ["medical tourism India", "tourism spots in India", "places to visit in India", "Tamil Nadu tourism", "Indira Hospital Vellore"]
 };

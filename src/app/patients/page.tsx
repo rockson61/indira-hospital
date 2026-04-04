@@ -8,8 +8,8 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { CTASection } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
-    title: "Patient Resources & Support | Indira Super Speciality Hospital, Vellore",
-    description: "Your complete guide to care at Indira Hospital. Access travel assistance, international patient support, insurance billing, and campus amenities in one place.",
+    title: "Patient Resources & Support | Indira Super Speciality Hos...",
+    description: "Your complete guide to care at Indira Hospital. Access travel assistance, international patient support, insurance billing, and campus amenities in one ...",
 };
 
 export default function PatientsHubPage() {

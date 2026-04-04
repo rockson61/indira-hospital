@@ -12,24 +12,23 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema"
 import { siteConfig } from "@/config/site"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 
+import { constructMetadata } from "@/lib/seo-utils";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const pkg = await getHealthPackageBySlug(slug) as HealthPackage | null;
-    if (!pkg) return {};
-    return {
-        title: pkg.seo_title || `${pkg.title} Master Health Checkup in Vellore, Tamil Nadu | Indira Hospital`,
-        description: pkg.seo_description || `Book the ${pkg.title} package at Indira Hospital, Vellore. Comprehensive screening in Tamil Nadu, India with ${pkg.tests_included?.slice(0, 80)}... and expert consultation.`,
-        alternates: {
-            canonical: `/health-packages/${slug}`,
-        },
-        openGraph: {
-            title: pkg.seo_title || `${pkg.title} | Indira Hospital`,
-            description: pkg.seo_description || `Health screening package in Vellore.`,
-            url: `/health-packages/${slug}`,
-            type: 'website',
-        },
-    };
+    if (!pkg) return { title: "Package Not Found" };
+    
+    const title = pkg.seo_title || `${pkg.title} Master Health Checkup in Vellore | Indira Hospital`;
+    const description = pkg.seo_description || `Book the ${pkg.title} package at Indira Hospital, Vellore. Comprehensive screening with ${pkg.tests_included?.slice(0, 100)}... and expert clinical consultation.`;
+
+    return constructMetadata({
+        title,
+        description,
+        path: `/health-packages/${slug}`
+    });
 }
+
 
 export default async function HealthPackageDetailPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;

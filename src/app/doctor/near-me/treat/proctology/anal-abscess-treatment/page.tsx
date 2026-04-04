@@ -7,8 +7,8 @@ import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, Chec
 import { AnalAbscessLongForm } from '@/lib/data/treatments/proctology/anal-abscess-content'
 
 export const metadata: Metadata = {
-    title: 'Anal Abscess Treatment in Vellore | 24/7 Emergency Drainage',
-    description: "Emergency Anal Abscess Treatment in Vellore. Dr. Karan Shankar offers 24/7 incision and drainage (I&D) for perianal abscesses. Instant pain relief, sepsis prevention, and expert fistula risk management. 2000+ word clinical guide inside.",
+    title: "Anal Abscess Treatment in Vellore | 24/7 Emergency Drainage",
+    description: "Emergency Anal Abscess Treatment in Vellore. Dr. Karan Shankar offers 24/7 incision and drainage (I&D) for perianal abscesses. Instant pain relief, seps...",
     keywords: 'anal abscess treatment vellore, emergency drainage vellore, best proctologist vellore, moolam katti treatment vellore, anal abscess surgery cost vellore, indira hospital emergency',
     alternates: {
         canonical: 'https://www.indirasuperspecialityhospital.com/doctor/near-me/treat/proctology/anal-abscess-treatment'

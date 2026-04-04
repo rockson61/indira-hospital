@@ -6,8 +6,8 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
-    title: "Health Library & Medical Resource Hub in Vellore, India | Indira Hospital",
-    description: "Explore the Indira Health Library for expert-backed medical blogs, patient education guides, and the latest health updates from our super-speciality doctors in Vellore, Tamil Nadu.",
+    title: "Health Library & Medical Resource Hub in Vellore, India |...",
+    description: "Explore the Indira Health Library for expert-backed medical blogs, patient education guides, and the latest health updates from our super-speciality doc...",
 };
 
 const categories = [

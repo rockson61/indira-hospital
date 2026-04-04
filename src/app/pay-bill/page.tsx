@@ -4,7 +4,7 @@ import { PayBillClient } from "@/components/forms/PayBillClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Pay Your Bill Online | Secure Payment Portal | Indira Hospital",
+    title: "Pay Your Bill Online | Secure Payment Portal | Indira Hos...",
     description: "Securely pay your medical bills online at Indira Super Speciality Hospital, Vellore. Quick and easy payment via UPI, credit card, or net banking.",
 };
 

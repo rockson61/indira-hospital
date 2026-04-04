@@ -11,8 +11,8 @@ import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
 export const metadata: Metadata = {
-    title: "Patient Testimonials — International Patients | Indira Hospital Vellore",
-    description: "Real stories from international patients from Bangladesh, UAE, Nigeria, Kenya, Oman, and 50+ countries who chose Indira Super Speciality Hospital, Vellore for treatment in India.",
+    title: "Patient Testimonials — International Patients | Indira Ho...",
+    description: "Real stories from international patients from Bangladesh, UAE, Nigeria, Kenya, Oman, and 50+ countries who chose Indira Super Speciality Hospital, Vello...",
     keywords: [
         "Indira Hospital testimonials international patients",
         "patient reviews Vellore hospital",

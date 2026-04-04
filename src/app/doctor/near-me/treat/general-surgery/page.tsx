@@ -8,8 +8,8 @@ import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, Chec
 import { GeneralSurgeryPillarLongForm } from '@/lib/data/treatments/general-surgery/pillar-content'
 
 export const metadata: Metadata = {
-    title: "Best General & Laparoscopic Surgeon in Vellore | Dr. P. Shankar | Indira Hospital",
-    description: "Indira Super Speciality Hospital, Vellore. Advanced 4K Laparoscopic surgery, Laser Proctology, and 24/7 Emergency trauma care. 30+ years of surgical excellence by Dr. P. Shankar & Dr. Karan Shankar.",
+    title: "Best General & Laparoscopic Surgeon in Vellore | Dr. P. S...",
+    description: "Indira Super Speciality Hospital, Vellore. Advanced 4K Laparoscopic surgery, Laser Proctology, and 24/7 Emergency trauma care. 30+ years of surgical exc...",
     keywords: "best general surgeon vellore, laparoscopic surgery vellore, gallbladder surgery cost vellore, hernia surgery vellore, appendix surgery vellore, thyroid surgery vellore, dr p shankar vellore, indira hospital vellore general surgery",
     alternates: {
         canonical: "https://www.indirasuperspecialityhospital.com/doctor/near-me/treat/general-surgery"

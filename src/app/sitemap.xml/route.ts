@@ -2,7 +2,9 @@ import { siteConfig } from '@/config/site';
 import { generateSitemapIndexXml } from '@/lib/sitemap-utils';
 
 export async function GET() {
-    const baseUrl = siteConfig.url;
+    const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url.slice(0, -1) : siteConfig.url;
+    
+    // Comprehensive list of all individual sitemaps
     const sitemaps = [
         `${baseUrl}/pages-sitemap.xml`,
         `${baseUrl}/doctors-sitemap.xml`,
@@ -19,7 +21,8 @@ export async function GET() {
         `${baseUrl}/location-doctors-sitemap.xml`,
         `${baseUrl}/blog-posts-sitemap.xml`,
         `${baseUrl}/events-sitemap.xml`,
-        `${baseUrl}/faqs-sitemap.xml`
+        `${baseUrl}/faqs-sitemap.xml`,
+        `${baseUrl}/patients/international-sitemap.xml` // Added missing international sitemap
     ];
 
     const xml = generateSitemapIndexXml(sitemaps);

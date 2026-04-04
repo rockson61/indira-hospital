@@ -1,8 +1,17 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import Link from 'next/link'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
+
+export const metadata: Metadata = constructMetadata({
+    title: "Oncology & Cancer Center in Vellore, Tamil in Vellore | I...",
+    description: "Advanced Oncology & Cancer Center in Vellore, Tamil Nadu surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care,...",
+    path: "/doctor/near-me/treat/oncology"
+});
+
 export default function OncologyDepartmentPage() {
     return (
         <DepartmentTemplate

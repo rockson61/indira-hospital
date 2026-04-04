@@ -1,7 +1,16 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
+
+export const metadata: Metadata = constructMetadata({
+    title: "Elite Medical Oncology & Chemotherapy in V in Vellore | I...",
+    description: "Advanced Elite Medical Oncology & Chemotherapy surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and same-...",
+    path: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy"
+});
+
 export default function MedicalOncologyPage() {
     return (
         <SubServiceTemplate

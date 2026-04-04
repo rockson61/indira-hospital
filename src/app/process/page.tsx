@@ -6,7 +6,7 @@ import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = {
     title: "Patient Care Process | Your Journey at Indira Hospital",
-    description: "Learn about our seamless patient care process, from initial consultation and pre-auth to advanced surgical intervention and our signature HomeCareFlow recovery.",
+    description: "Learn about our seamless patient care process, from initial consultation and pre-auth to advanced surgical intervention and our signature HomeCareFlow r...",
 };
 
 const steps = [

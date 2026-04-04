@@ -5,19 +5,14 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
-export const metadata: Metadata = {
-    title: "Best Multi-Speciality Hospital in Vellore — 35 Years of Trust | Indira Hospital",
-    description: "Established in 1988, Indira Super Speciality Hospital is the most trusted healthcare destination in Vellore, Tamil Nadu. Delivering advanced, ethical, and compassionate quaternary care.",
-    keywords: ["best hospital in Vellore", "Indira Hospital history", "top multi-speciality hospital Tamil Nadu", "NABH accredited hospital Vellore"],
-    openGraph: {
-        title: "About Us | Indira Super Speciality Hospital",
-        description: "35 Years of Trust and Clinical Mastery in Vellore.",
-        type: "website",
-    },
-    alternates: {
-        canonical: "/about"
-    }
-};
+import { constructMetadata } from "@/lib/seo-utils";
+
+export const metadata: Metadata = constructMetadata({
+    title: "Best Multi-Speciality Hospital in Vellore | 35 Years of Trust",
+    description: "Established in 1988, Indira Super Speciality Hospital is the most trusted healthcare destination in Vellore, Tamil Nadu. Delivering advanced, ethical, and affordable surgical care.",
+    path: "/about"
+});
+
 
 export default function AboutPage() {
     return (

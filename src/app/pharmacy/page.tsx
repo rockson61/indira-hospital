@@ -5,8 +5,8 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: '24/7 Pharmacy in Vellore | Home Delivery — Indira Hospital',
-    description: '100% genuine medicines available 24/7. Fast home delivery in Vellore, temperature-controlled storage, and expert pharmacist consultations.',
+    title: "24/7 Pharmacy in Vellore | Home Delivery — Indira Hospital",
+    description: "100% genuine medicines available 24/7. Fast home delivery in Vellore, temperature-controlled storage, and expert pharmacist consultations.",
 }
 
 import { siteConfig } from "@/config/site";

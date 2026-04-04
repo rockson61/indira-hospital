@@ -10,6 +10,11 @@ import { tamilNaduLocations } from '@/lib/data/tamilnadu-locations';
 
 const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
 
+function getDoctorSpecialtySlug(doc: any): string {
+    const rawDept = typeof doc.department === 'string' ? doc.department : doc.department?.name || doc.specialty || 'specialist';
+    return rawDept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
 export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap> {
     const baseUrl = siteConfig.url;
 
@@ -26,7 +31,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
     switch (id) {
         case 'doctors':
             return doctors.map((doc: any) => {
-                const specialty = doc.specialty_slug || 'specialists';
+                const specialty = getDoctorSpecialtySlug(doc);
                 return {
                     url: `${baseUrl}/doctor/${specialty}/${doc.slug}`,
                     lastModified: new Date(doc.date_updated || doc.date_created || new Date()),
@@ -59,6 +64,13 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                 priority: 0.85,
             }));
 
+            const directoryRoute = {
+                url: `${baseUrl}/doctor/near-me/treat/directory`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.9,
+            };
+
             const techRoutes = getAllTechnologies().map((tech: any) => ({
                 url: `${baseUrl}/technology/${tech.slug}`,
                 lastModified: new Date(),
@@ -66,7 +78,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                 priority: 0.7,
             }));
 
-            return [...servRoutes, ...subTreatRoutes, ...techRoutes];
+            return [...servRoutes, ...subTreatRoutes, directoryRoute, ...techRoutes];
 
         case 'locations':
             return tamilNaduLocations.map((loc) => ({
@@ -193,7 +205,8 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                 '/patients', '/pay-bill', '/pharmacy', '/pricing', '/privacy-policy', 
                 '/scans', '/terms', '/virtual-tour', '/book-appointment', '/patient-portal',
                 '/patients/insurance', '/technology'
-            ].map((route) => ({
+            ].filter(route => !['/admin', '/private'].some(dis => route.startsWith(dis)))
+            .map((route) => ({
                 url: `${baseUrl}${route}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly',

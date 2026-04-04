@@ -1,8 +1,17 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { getTreatmentBySlug, getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data'
 import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
+
+export const metadata: Metadata = constructMetadata({
+    title: "Quick Facts: Procedure in Vellore | Indira Hospital",
+    description: "Advanced Quick Facts: Procedure in Vellore surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and same-day ...",
+    path: "/doctor/near-me/treat/gastroenterology/endoscopy-procedure-guide"
+});
+
 export default function GastroscopyPage() {
     const data = getTreatmentBySlug('endoscopy-procedure-guide');
     if (!data) return null;

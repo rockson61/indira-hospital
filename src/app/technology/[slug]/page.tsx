@@ -13,6 +13,8 @@ interface PageProps {
     params: Promise<{ slug: string }>;
 }
 
+import { constructMetadata } from "@/lib/seo-utils";
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params;
     const tech = getTechnologyBySlug(slug);
@@ -23,11 +25,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
-    return {
-        title: `${tech.title} in Vellore, Tamil Nadu | Advanced Infrastructure at Indira Hospital`,
-        description: tech.shortDescription + " Experience the best medical technology in India.",
-    };
+    return constructMetadata({
+        title: `${tech.title} in Vellore | Advanced Medical Technology | Indira Hospital`,
+        description: `${tech.shortDescription} Experience the best medical technology in India at Indira Super Speciality Hospital, Vellore.`,
+        path: `/technology/${slug}`
+    });
 }
+
 
 export const dynamicParams = true;
 

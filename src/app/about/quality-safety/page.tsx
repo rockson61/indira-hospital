@@ -7,7 +7,7 @@ import Image from "next/image";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = {
-    title: "Quality & Patient Safety | Clinical Protocols | Indira Hospital",
+    title: "Quality & Patient Safety | Clinical Protocols | Indira Ho...",
     description: "Learn about our rigorous patient safety protocols, infection control measures, and international quality standards at Indira Super Speciality Hospital.",
 };
 

@@ -1,5 +1,5 @@
 import { DataTable, Th, Td } from "@/components/ui/data-table"
-import Image from "next/image"
+import { EliteImage } from "@/components/ui/elite-image"
 
 // Use centralized data
 import { doctors } from "@/lib/data/team-data"
@@ -32,8 +32,8 @@ export function StaffDirectory() {
               <tr key={index} className="border-b border-white/5 last:border-0">
                 <Td>
                   <div className="flex items-center gap-3">
-                    <Image
-                      src={member.image || "/dental-clinic-vellore.jpg"}
+                    <EliteImage
+                      src={member.image || "/images/hospital/Founder.webp"}
                       alt={member.name}
                       width={40}
                       height={40}

@@ -25,7 +25,7 @@ import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { Card } from "@/components/ui/card";
 import { ModernCard } from "@/components/ui/modern-card";
-import Image from "next/image";
+import { EliteImage } from "@/components/ui/elite-image";
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { ServiceCard } from "@/components/entities/ServiceCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
@@ -108,7 +108,7 @@ export function DoctorTemplate({
                                 <div className="absolute -inset-2 bg-gradient-to-tr from-[#54CAD3] to-white/20 rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
                                 <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl bg-white/5 backdrop-blur-sm">
                                     {doctor.image ? (
-                                        <Image
+                                        <EliteImage
                                             src={getImageUrl(doctor.image)!}
                                             alt={doctor.name}
                                             fill

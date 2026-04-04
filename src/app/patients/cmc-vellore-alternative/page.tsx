@@ -14,8 +14,8 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { SectionContainer } from "@/components/ui/section-container";
 
 export const metadata: Metadata = {
-    title: "CMC Vellore Alternative | No Waiting List — Get Treatment This Week | Indira Hospital",
-    description: "CMC Vellore waiting list too long? Indira Super Speciality Hospital, Vellore offers same-quality NABH quaternary care with same-week appointments, no waiting lists, and dedicated international patient support. Book now.",
+    title: "CMC Vellore Alternative | No Waiting List — Get Treatment...",
+    description: "CMC Vellore waiting list too long? Indira Super Speciality Hospital, Vellore offers same-quality NABH quaternary care with same-week appointments, no wa...",
     keywords: [
         "CMC Vellore alternative",
         "CMC Vellore long waiting list",

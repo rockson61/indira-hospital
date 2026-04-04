@@ -1,8 +1,17 @@
+import { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { DepartmentTemplate } from '@/components/healthcare/DepartmentTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { SEED_DATA } from '@/lib/data/seed-data'
 import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
+
+export const metadata: Metadata = constructMetadata({
+    title: "Orthopaedics & Joint Replacement Hub in Ve in Vellore | I...",
+    description: "Advanced Orthopaedics & Joint Replacement Hub in Vellore, Tamil Nadu surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accr...",
+    path: "/doctor/near-me/treat/orthopaedics"
+});
+
 export default function OrthopaedicsDepartmentPage() {
     const orthoDoctors = SEED_DATA.doctors.filter(dr => 
         dr.specialties?.includes('Orthopaedics') || dr.department === 'Orthopaedics' || dr.specialties?.includes('Orthopaedic Surgery')

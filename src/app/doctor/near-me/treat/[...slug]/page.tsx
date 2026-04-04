@@ -83,6 +83,8 @@ export async function generateStaticParams() {
     return [...serviceParams, ...treatmentParams];
 }
 
+import { constructMetadata } from "@/lib/seo-utils";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
     const { slug } = await params;
     const lastSlug = slug[slug.length - 1];
@@ -110,33 +112,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Check for Treatment
     const treatment = getTreatmentBySlug(lastSlug);
     if (treatment) {
-        const title = `Best ${treatment.title} Specialists in Vellore — Cost-Effective & Expert Care | Indira Hospital`;
-        const description = `${treatment.shortDescription} NABH accredited ${treatment.title} procedures at Indira Hospital, Vellore. Advanced technology, institutional value, and same-day discharge in India.`;
-        const canonical = `/doctor/near-me/treat/${treatment.parentServiceSlug}/${treatment.slug}`;
+        const title = `${treatment.title} in Vellore | Best Specialists | Indira Hospital`;
+        const description = `${treatment.shortDescription} NABH accredited ${treatment.title} procedures at Indira Hospital, Vellore. Advanced technology and same-day discharge.`;
+        const path = `/doctor/near-me/treat/${treatment.parentServiceSlug}/${treatment.slug}`;
         
-        return {
+        return constructMetadata({
             title,
             description,
-            alternates: { canonical },
-            keywords: [
-                treatment.title,
-                `${treatment.title} cost in Vellore`,
-                `${treatment.title} recovery time`,
-                "Tamil Nadu",
-                "India",
-                `best surgeon for ${treatment.title}`,
-                "Indira Hospital Vellore",
-                "laser surgery India",
-                "laparoscopy Tamil Nadu",
-                ...treatment.features.map(f => typeof f === 'string' ? f : f.title)
-            ],
-            openGraph: {
-                title,
-                description,
-                url: canonical,
-                type: "article",
-            }
-        };
+            path,
+            type: "article"
+        });
     }
 
     // Check for Service
@@ -144,22 +129,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!service) return { title: "Page Not Found" };
 
     const specialistTitle = getSpecialistTitle(service.title);
-    const title = service.seo_title || `Best ${specialistTitle} in Vellore — Top-Rated Specialist Clinic | Indira Hospital`;
-    const description = service.seo_description || `Searching for top ${specialistTitle.toLowerCase()} in Vellore? Indira Super Speciality Hospital offers world-class ${service.title.toLowerCase()} care, same-day appointments, and expert surgeons. Visit us today.`;
-    const canonical = `/doctor/near-me/treat/${lastSlug}`;
+    const title = service.seo_title || `Best ${specialistTitle} in Vellore | Indira Super Speciality Hospital`;
+    const description = service.seo_description || `Searching for top ${specialistTitle.toLowerCase()} in Vellore? Indira Hospital offers world-class ${service.title.toLowerCase()} care and expert surgeons.`;
+    const path = `/doctor/near-me/treat/${lastSlug}`;
 
-    return {
+    return constructMetadata({
         title,
         description,
-        alternates: { canonical },
-        keywords: [service.title, "best doctor in Vellore", "same day surgery", "Tamil Nadu", "India", "Indira Hospital", "treatment cost", "surgery Vellore"],
-        openGraph: {
-            title,
-            description,
-            url: canonical,
-            type: "website"
-        }
-    };
+        path,
+        type: "website"
+    });
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string[] }> }) {
