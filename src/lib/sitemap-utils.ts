@@ -7,6 +7,8 @@ import { getAllTreatments, TREATMENT_DATA } from '@/lib/data/treatment-data';
 import { INTERNATIONAL_COUNTRIES } from '@/lib/data/international-data';
 import { GLOSSARY_DATA } from '@/lib/data/glossary-data';
 import { tamilNaduLocations } from '@/lib/data/tamilnadu-locations';
+import { SEO_KEYWORDS } from './data/seo-keywords';
+import { SEED_DATA } from './data/seed-data';
 
 const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
 
@@ -16,7 +18,7 @@ function getDoctorSpecialtySlug(doc: any): string {
 }
 
 export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = siteConfig.url;
+    const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url.slice(0, -1) : siteConfig.url;
 
     // Fetch CMS Data
     const [services, departments, doctors, locations, healthPackages, diagnostics] = await Promise.all([
@@ -51,7 +53,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
         case 'treatments':
             // Main treatments/services routes
             const servRoutes = services.map((s: any) => ({
-                url: `${baseUrl}/doctor/near-me/treat/${s.slug || s.id}`,
+                url: `${baseUrl}/doctor/near-me/treat/${s.slug ? s.slug.toLowerCase() : s.id}`,
                 lastModified: new Date(s.date_updated || s.date_created || new Date()),
                 changeFrequency: 'weekly',
                 priority: 0.9,
@@ -198,13 +200,46 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                 { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 }
             ];
 
+            }));
+
+        case 'keyword-pages': {
+            // Generate sitemap entries for programmatic SEO keyword pages
+            // Focus on primary hubs (Vellore, Tamil Nadu) to capture the "124" prioritized pages
+            const hubSlugs = ['vellore', 'tamil-nadu', 'chennai', 'kanchipuram', 'hosur'];
+            const hubs = tamilNaduLocations.filter(loc => hubSlugs.includes(loc.slug));
+            
+            return hubs.flatMap((loc) => 
+                SEO_KEYWORDS.map((keyword) => ({
+                    url: `${baseUrl}/doctor/near-me/${loc.slug}/${keyword.slug}`,
+                    lastModified: new Date(),
+                    changeFrequency: 'weekly' as const,
+                    priority: loc.slug === 'vellore' ? 0.85 : 0.75, // Prioritize Vellore hub
+                }))
+            );
+        }
+
         case 'pages':
         default:
             return [
-                '', '/about', '/about/quality-safety', '/careers', '/contact', '/gallery', 
-                '/patients', '/pay-bill', '/pharmacy', '/pricing', '/privacy-policy', 
-                '/scans', '/terms', '/virtual-tour', '/book-appointment', '/patient-portal',
-                '/patients/insurance', '/technology'
+                '', 
+                '/about', 
+                '/about/quality-safety', 
+                '/careers', 
+                '/contact', 
+                '/gallery', 
+                '/patients', 
+                '/pay-bill', 
+                '/pharmacy', 
+                '/pricing', 
+                '/privacy-policy', 
+                '/terms', 
+                '/virtual-tour', 
+                '/book-appointment', 
+                '/patient-portal',
+                '/patients/insurance', 
+                '/technology',
+                '/diagnostics',
+                '/professionals'
             ].filter(route => !['/admin', '/private'].some(dis => route.startsWith(dis)))
             .map((route) => ({
                 url: `${baseUrl}${route}`,

@@ -3,6 +3,8 @@ import { Metadata } from "next"
 import HealthLibraryClient from "./HealthLibraryClient";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { EntityCardSection } from "@/components/seo/EntityCardSection";
 
 export const metadata: Metadata = {
     title: "Signature Treatments & Health Library | Indira Hospital V...",
@@ -36,6 +38,11 @@ export default function HealthLibraryPage() {
                     />
                 </div>
             </section>
+            
+            {/* SEO INTEGRITY ENFORCEMENT */}
+            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+            <InternalLinkGrid type="locations" title="Visit our Elite Centers" subtitle="Nearest to You" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="diagnostics" title="NABL Accredited Diagnostics" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-950 border-b" />
         </main>
     );
 }

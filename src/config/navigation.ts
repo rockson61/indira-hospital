@@ -2,8 +2,9 @@ export const navigation = {
     mainNav: [
         { title: "Treatments", href: "/doctor/near-me/treat" },
         { title: "Doctors", href: "/doctors" },
-        { title: "For Patients", href: "/patients" },
+        { title: "Diagnostics", href: "/diagnostics" },
         { title: "Locations", href: "/doctor/near-me" },
+        { title: "International", href: "/patients/international" },
     ],
 
     // Pristyn Care-style secondary specialty nav with dropdowns

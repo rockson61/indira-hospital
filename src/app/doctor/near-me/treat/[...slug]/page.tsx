@@ -596,8 +596,27 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
             <HealthLibraryCard />
 
+            {/* ========== SEMANTIC INTERNAL LINKING GRID ========== */}
+            <div className="bg-slate-50 dark:bg-slate-900/50 pt-20 border-t border-slate-100 dark:border-slate-800">
+                <InternalLinkGrid 
+                    type="treatments" 
+                    parentSlug={treatment?.parentServiceSlug || service.slug}
+                    excludeSlug={service.slug}
+                    title={`Other Elite ${treatment?.parentServiceSlug ? treatment.parentServiceSlug.replace(/-/g, ' ') : 'Medical'} Procedures`}
+                    subtitle="Related Treatments"
+                    limit={10}
+                />
+                
+                <InternalLinkGrid 
+                    type="locations" 
+                    title="Available at These Prime Locations"
+                    subtitle="Indira Hospital Elite Network"
+                    limit={8}
+                />
+            </div>
+
             {/* ========== DEEP SEO HIERARCHY (H4, H5, H6) ========== */}
-            <SectionContainer className="py-12 max-w-4xl mx-auto text-center border-t border-slate-100 dark:border-slate-800/50">
+            <SectionContainer className="py-12 max-w-4xl mx-auto text-center">
                 <div className="space-y-10">
                     <div>
                         <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-3">Comprehensive {service.title} Care in Vellore, Tamil Nadu</h4>

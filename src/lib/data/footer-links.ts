@@ -8,7 +8,7 @@ export const FOOTER_LINKS = {
         { name: "Nephrology", url: "/doctor/near-me/treat/nephrology" },
         { name: "Orthopedics", url: "/doctor/near-me/treat/orthopaedics" },
         { name: "Ophthalmology", url: "/doctor/near-me/treat/ophthalmology" },
-        { name: "Dentistry", url: "/doctor/near-me/treat/dentistry" },
+        { name: "Dentistry", url: "/doctor/near-me/treat/dentistry/dentistry" },
         { name: "Cardiology", url: "/doctor/near-me/treat/cardiology" },
         { name: "Neurology", url: "/doctor/near-me/treat/neurology" },
         { name: "Gastroenterology", url: "/doctor/near-me/treat/gastroenterology" },
@@ -40,7 +40,7 @@ export const FOOTER_LINKS = {
         { name: "Diabetes Prevention", url: "/doctor/near-me/treat/nephrology/diabetic-nephropathy-prevention" },
         { name: "Breast Cancer Screening", url: "/doctor/near-me/treat/oncology/breast-cancer-screening-guide" },
         { name: "Thyroid Surgery Info", url: "/doctor/near-me/treat/general-surgery/thyroid-surgery-guide" },
-        { name: "Gingivitis Help", url: "/doctor/near-me/treat/gum-treatment/gingivitis-treatment-guide" },
+        { name: "Gingivitis Help", url: "/doctor/near-me/treat/dentistry/gum-treatment" },
         { name: "Colonoscopy Guide", url: "/doctor/near-me/treat/gastroenterology/colonoscopy-screening-cost" }
     ],
     technology: [
@@ -84,7 +84,7 @@ export const FOOTER_LINKS = {
     ],
     patientCare: [
         { name: "24/7 Pharmacy", url: "/pharmacy" },
-        { name: "Scans & Imaging", url: "/scans" },
+        { name: "Scans & Imaging", url: "/diagnostics" },
         { name: "International Patients", url: "/patients/international" },
         { name: "Health Packages", url: "/health-packages" },
         { name: "Insurance Partners", url: "/patients/insurance" },

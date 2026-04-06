@@ -22,7 +22,6 @@
     "date-fns": "^4.1.0",
     "framer-motion": "^12.34.2",
     "google-auth-library": "^10.6.2",
-    "googleapis": "^171.4.0",
     "healthicons-react": "^3.5.0",
     "lucide-react": "^0.576.0",
     "next": "16.1.6",
@@ -37,10 +36,11 @@
     "sharp": "^0.34.5",
     "tailwind-merge": "^3.5.0",
     "tailwindcss-animate": "^1.0.7",
-    "xlsx": "^0.18.5",
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "googleapis": "^171.4.0",
+    "xlsx": "^0.18.5",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

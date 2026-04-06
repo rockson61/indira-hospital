@@ -44,15 +44,16 @@ export function Footer() {
 
                     {/* Quick Links + Legal */}
                     <div>
-                        <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Quick Links</h3>
+                        <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Elite Network</h3>
                         <ul className="space-y-2.5">
-                            {FOOTER_LINKS.quickLinks.map((item) => (
-                                <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
-                                </li>
-                            ))}
+                            <li><Link href="/" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Homepage</Link></li>
+                            <li><Link href="/doctor/near-me/treat" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">All Treatments</Link></li>
+                            <li><Link href="/doctors" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Find Doctors</Link></li>
+                            <li><Link href="/doctor/near-me" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Our Locations</Link></li>
+                            <li><Link href="/diagnostics" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Diagnostics & Scans</Link></li>
+                            <li><Link href="/patients/international" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">International Patients</Link></li>
                         </ul>
-                        <h3 className="elite-section-title !text-sm !leading-tight mb-4 mt-8 !italic">Patient Care</h3>
+                        <h3 className="elite-section-title !text-sm !leading-tight mb-4 mt-8 !italic">Patient Resources</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.patientCare.map((item) => (
                                 <li key={item.name}>

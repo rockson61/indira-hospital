@@ -22,7 +22,8 @@ export async function GET() {
         `${baseUrl}/blog-posts-sitemap.xml`,
         `${baseUrl}/events-sitemap.xml`,
         `${baseUrl}/faqs-sitemap.xml`,
-        `${baseUrl}/patients/international-sitemap.xml` // Added missing international sitemap
+        `${baseUrl}/patients/international-sitemap.xml`,
+        `${baseUrl}/keywords-sitemap.xml`
     ];
 
     const xml = generateSitemapIndexXml(sitemaps);

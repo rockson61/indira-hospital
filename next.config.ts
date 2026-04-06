@@ -142,6 +142,24 @@ const nextConfig: NextConfig = {
       { source: '/hospital-gallary', destination: '/gallery', permanent: true },
       { source: '/doctor/near-me/treat/general-surgery/laser-piles-treatment', destination: '/doctor/near-me/treat/proctology/laser-piles-treatment', permanent: true },
       { source: '/doctor/near-me/treat/general-surgery/laparoscopic-hysterectomy-guide', destination: '/doctor/near-me/treat/obstetrics-gynaecology/laparoscopic-hysterectomy-guide', permanent: true },
+      
+      // Additional departments & legacy mappings
+      { source: '/departments/advanced-airway-management', destination: '/doctor/near-me/treat/critical-care-emergency-medicine', permanent: true },
+      { source: '/departments/advanced-laparoscopic-urology', destination: '/doctor/near-me/treat/urology/kidney-stones', permanent: true },
+      { source: '/departments/critical-care-medicine', destination: '/doctor/near-me/treat/critical-care-emergency-medicine', permanent: true },
+      { source: '/departments/disaster-medicine', destination: '/doctor/near-me/treat/critical-care-emergency-medicine', permanent: true },
+      { source: '/departments/endourology', destination: '/doctor/near-me/treat/urology/kidney-stones', permanent: true },
+      { source: '/departments/laser-kidney-stone-surgery-rirs', destination: '/doctor/near-me/treat/urology/laser-kidney-stone-surgery-rirs', permanent: true },
+      { source: '/departments/polytrauma-management', destination: '/doctor/near-me/treat/critical-care-emergency-medicine', permanent: true },
+      { source: '/departments/prostate-surgery-turp-laser', destination: '/doctor/near-me/treat/urology/prostate-surgery', permanent: true },
+      { source: '/departments/resuscitation-acls', destination: '/doctor/near-me/treat/critical-care-emergency-medicine', permanent: true },
+      { source: '/departments/trauma-surgical-emergencies', destination: '/doctor/near-me/treat/critical-care-emergency-medicine', permanent: true },
+      { source: '/doctor/near-me/nephrology', destination: '/doctors', permanent: true },
+      { source: '/doctor/near-me/oncology', destination: '/doctors', permanent: true },
+      { source: '/services', destination: '/doctors', permanent: true },
+      { source: '/scans', destination: '/diagnostics', permanent: true },
+      { source: '/doctor/near-me/treat/gum-treatment/:path*', destination: '/doctor/near-me/treat/dentistry/gum-treatment', permanent: true },
+      { source: '/doctor/near-me/treat/dentistry', destination: '/doctor/near-me/treat/dentistry/dentistry', permanent: true },
       // --- END AUDIT RECOVERY REDIRECTS ---
     ]
   },
@@ -150,6 +168,17 @@ const nextConfig: NextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'healthicons-react',
+      'framer-motion',
+      '@heroui/react'
+    ],
   },
 };
 

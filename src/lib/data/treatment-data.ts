@@ -1,4 +1,6 @@
 
+import { AUTO_TREATMENTS } from './treatment-data-auto';
+
 export interface TreatmentItem {
     id: string;
     slug: string; // matches the last segment of url, e.g. 'angioplasty'
@@ -18,6 +20,7 @@ export interface TreatmentItem {
 }
 
 export const TREATMENT_DATA: TreatmentItem[] = [
+    ...AUTO_TREATMENTS,
     {
         id: "t-1",
         slug: "angioplasty",

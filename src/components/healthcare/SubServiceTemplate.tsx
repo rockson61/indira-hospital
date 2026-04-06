@@ -6,14 +6,17 @@ import { SectionContainer } from '@/components/ui/section-container'
 import { SectionHeader } from '@/components/ui/section-header'
 import { MarketingContent, MarketingContentProps, MarketingFAQ } from '@/components/marketing/MarketingContent'
 import { ProcedureTimeline } from '@/components/healthcare/services/ProcedureTimeline'
-import EntityReviews from '@/components/trust/EntityReviews'
-import { RelatedServices, RelatedServicesProps } from '@/components/healthcare/services/RelatedServices'
 import { ModernCard } from '@/components/ui/modern-card'
 import { siteConfig } from "@/config/site";
 import { injectInternalLinks } from '@/lib/html-linkify'
-import { SurgicalVideoBank } from '@/components/marketing/SurgicalVideoBank'
-import { HealthCalculators } from '@/components/marketing/HealthCalculators'
-import { AvailabilityCTA } from '@/components/marketing/AvailabilityTicker'
+import dynamic from 'next/dynamic'
+
+const EntityReviews = dynamic(() => import('@/components/trust/EntityReviews'))
+const SurgicalVideoBank = dynamic(() => import('@/components/marketing/SurgicalVideoBank').then(mod => mod.SurgicalVideoBank))
+const HealthCalculators = dynamic(() => import('@/components/marketing/HealthCalculators').then(mod => mod.HealthCalculators))
+const AvailabilityCTA = dynamic(() => import('@/components/marketing/AvailabilityTicker').then(mod => mod.AvailabilityCTA))
+const AioKnowledgeBlock = dynamic(() => import('@/components/seo/AioKnowledgeBlock'))
+import { RelatedServices, RelatedServicesProps } from '@/components/healthcare/services/RelatedServices'
 import { ServiceQuickSummary } from '@/components/healthcare/services/ServiceQuickSummary'
 import { ProcedureComparison } from '@/components/healthcare/services/ProcedureComparison'
 import { TreatmentSecondaryNav } from '@/components/healthcare/services/TreatmentSecondaryNav'
@@ -21,8 +24,8 @@ import { ConversionGrid } from '@/components/healthcare/services/ConversionGrid'
 import { LocalSEOFooter } from '@/components/healthcare/LocalSEOFooter'
 import type { Doctor } from '@/data/doctors'
 import { JsonLdSchema } from '@/components/seo/JsonLdSchema'
-import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { DoctorCard } from "@/components/entities/DoctorCard";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
 const iconMap: Record<string, React.ElementType> = {
@@ -603,6 +606,8 @@ export function SubServiceTemplate({
                     </div>
                 </SectionContainer>
             </section>
+            <InternalLinkGrid type="treatments" title="More Heroic Procedures" subtitle="Clinical Excellence" limit={8} className="bg-white dark:bg-slate-950 border-y" />
+            <InternalLinkGrid type="locations" title="Elite Surgical Centers" subtitle="Regional Presence" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b" />
             <LocalSEOFooter />
         </div>
     )

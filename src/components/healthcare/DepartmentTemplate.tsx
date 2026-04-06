@@ -14,6 +14,7 @@ import { LocalSEOFooter } from "@/components/healthcare/LocalSEOFooter";
 import { siteConfig } from "@/config/site";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import AioKnowledgeBlock from "@/components/seo/AioKnowledgeBlock";
+import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 interface Procedure {
     name: string;
@@ -364,6 +365,8 @@ export function DepartmentTemplate({
                     </div>
                 </SectionContainer>
             </section>
+            <InternalLinkGrid type="treatments" title="Related Specialties" subtitle="Our Expertise" limit={8} className="bg-white dark:bg-slate-950 border-y" />
+            <InternalLinkGrid type="locations" title="Visit our Elite Centers" subtitle="Nearest to You" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-b" />
             <LocalSEOFooter />
         </div>
     );

@@ -239,6 +239,81 @@ export default function InternationalPatientsPage() {
                 </div>
             </SectionContainer>
 
+            {/* GLOBAL OUTREACH HUB: COUNTRY-SPECIFIC PATHWAYS */}
+            <SectionContainer id="global-locations" className="py-24 max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950 border border-indigo-100 text-indigo-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+                        <Globe className="w-4 h-4" /> Global Presence
+                    </span>
+                    <h2 className="elite-section-title text-slate-900 dark:text-white">
+                        Specialized Care for <br />
+                        <span className="text-indigo-600">Your Home Country.</span>
+                    </h2>
+                    <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto font-medium text-lg lg:text-xl font-light">
+                        Explore dedicated resources, cost estimates, and visa assistance tailored to your specific region and the common clinical needs of your community.
+                    </p>
+                </div>
+
+                {/* Primary Flagship Countries (Top 8) */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    {INTERNATIONAL_COUNTRIES.slice(0, 8).map((country) => (
+                        <Link 
+                            key={country.slug}
+                            href={`/patients/international/${country.slug}`}
+                            className="group relative bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-800 hover:border-indigo-200 dark:hover:border-indigo-800 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-2 flex flex-col"
+                        >
+                            <div className="absolute top-0 right-0 p-8 text-5xl opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 grayscale group-hover:grayscale-0 pointer-events-none">
+                                {country.flag}
+                            </div>
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-2 pr-12">{country.name}</h3>
+                            <p className="text-[10px] text-indigo-600 font-black uppercase tracking-[0.2em] mb-6">{country.region}</p>
+                            
+                            <div className="space-y-3 mb-8 flex-grow">
+                                {country.common_treatments.slice(0, 3).map((t, index) => (
+                                    <div key={index} className="flex items-center gap-3 text-sm font-bold text-slate-600 dark:text-slate-400">
+                                        <div className="w-5 h-5 rounded-full bg-indigo-50 dark:bg-indigo-950 flex items-center justify-center text-indigo-600">
+                                            <CheckCircle2 className="w-3.5 h-3.5" />
+                                        </div>
+                                        {t}
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="pt-6 border-t border-slate-50 dark:border-slate-800">
+                                <div className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Clinical Access</div>
+                                <div className="text-sm font-bold text-slate-700 dark:text-slate-200 flex items-center gap-2">
+                                    <Plane className="w-4 h-4 text-indigo-400" /> {country.flight_duration.split('(')[0]}
+                                </div>
+                            </div>
+
+                            <div className="mt-8 flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-black text-xs uppercase tracking-widest group-hover:gap-4 transition-all">
+                                Country Guide <ArrowRight className="w-4 h-4" />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* Secondary Discovery Grid (Remaining Countries) */}
+                <div className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 lg:p-16 border border-slate-100 dark:border-slate-800 shadow-sm relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl -z-10" />
+                    <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-10 flex items-center gap-3">
+                        <Globe2 className="w-6 h-6 text-indigo-600" /> All Countries We Serve
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        {INTERNATIONAL_COUNTRIES.slice(8).map((country) => (
+                            <Link 
+                                key={country.slug}
+                                href={`/patients/international/${country.slug}`}
+                                className="flex items-center gap-3 p-4 bg-slate-50/50 dark:bg-slate-950 rounded-2xl border border-transparent hover:border-indigo-400/50 hover:bg-white dark:hover:bg-slate-900 hover:shadow-xl hover:shadow-indigo-500/5 transition-all group"
+                            >
+                                <span className="text-2xl grayscale group-hover:grayscale-0 transition-all">{country.flag}</span>
+                                <span className="text-xs font-bold text-slate-600 dark:text-slate-300 group-hover:text-indigo-700 dark:group-hover:text-indigo-400 truncate tracking-tight">{country.name}</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </SectionContainer>
+
             {/* ASSISTANCE CTA BENTO */}
             <SectionContainer className="pb-24 max-w-7xl mx-auto px-4">
                 <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-fuchsia-950 rounded-[4rem] border border-white/10 overflow-hidden shadow-2xl relative group/cta flex flex-col items-center text-center p-12 sm:p-20">
@@ -296,7 +371,9 @@ export default function InternationalPatientsPage() {
             </SectionContainer>
 
             <EntityCardSection type="services" title="Elite Medical Units" subtitle="Our Specialities" limit={6} className="bg-white dark:bg-slate-950 border-t" />
-            <InternalLinkGrid type="health-packages" title="Master Health Checkups" subtitle="Wellness Screening" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="treatments" title="Heroic Procedures in India" subtitle="Clinical Excellence" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-y" />
+            <InternalLinkGrid type="locations" title="Our Network Across Tamil Nadu" subtitle="Regional Presence" limit={12} className="bg-white dark:bg-slate-950 border-b" />
+            <InternalLinkGrid type="health-packages" title="Master Health Checkups" subtitle="Wellness Screening" limit={8} className="bg-slate-50 dark:bg-slate-900/50 border-b" />
             <InternalLinkGrid type="diagnostics" title="NABL Accredited Diagnostics" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-950 border-b" />
         </main>
     );

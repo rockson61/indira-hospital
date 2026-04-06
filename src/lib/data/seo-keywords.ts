@@ -264,4 +264,11 @@ export const SEO_KEYWORDS: SEOKeyword[] = [
     { slug: "stomach-pain-specialist", title: "Stomach pain specialist doctor", department: "Gastroenterology", category: "Specialist" },
     { slug: "gastrointestinal-surgery-specialist", title: "Gastrointestinal Surgery specialist", department: "Gastroenterology", category: "Specialist" },
     { slug: "gastro-problem-treatment", title: "Gastro problem treatment", department: "Gastroenterology", category: "Treatment" },
+    
+    // === MISSING SPECIALTIES (404 REMEDIATION) ===
+    { slug: "paediatrics", title: "Best Paediatric Care in Vellore", department: "Paediatrics", category: "Specialist" },
+    { slug: "physiotherapy", title: "Advanced Physiotherapy in Vellore", department: "Orthopaedics", category: "Treatment" },
+    { slug: "psychiatry", title: "Expert Psychiatry & Mental Health in Vellore", department: "General Medicine", category: "Specialist" },
+    { slug: "dentistry", title: "Elite Dental Care & Oral Surgery in Vellore", department: "Dentistry", category: "Specialist" },
+    { slug: "gum-treatment", title: "Advanced Gum Treatment & Periodontics", department: "Dentistry", category: "Treatment" },
 ];

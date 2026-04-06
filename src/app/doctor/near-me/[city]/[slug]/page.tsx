@@ -568,6 +568,24 @@ async function ServiceView({ service, location, city, slug }: any) {
                     </div>
                 </div>
             </div>
+            {/* ========== SEMANTIC INTERNAL LINKING GRID ========== */}
+            <div className="bg-slate-50 dark:bg-slate-900/50 pt-20 border-t border-slate-100 dark:border-slate-800">
+                <InternalLinkGrid 
+                    type="services" 
+                    title={`Elite Treatments for Patients from ${location.name}`}
+                    subtitle="Medical Procedures"
+                    limit={10}
+                />
+                
+                <InternalLinkGrid 
+                    type="locations" 
+                    excludeSlug={location.slug}
+                    title="Our Catchment Network"
+                    subtitle="Neighboring Cities & Districts"
+                    limit={10}
+                />
+            </div>
+
             <EntityReviews entityType="service" entityName={service.title} entitySlug={slug} />
         </div>
     );

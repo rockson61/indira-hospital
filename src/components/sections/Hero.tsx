@@ -139,6 +139,7 @@ export function Hero() {
                                 alt="Indira Super Speciality Hospital"
                                 fill
                                 priority
+                                fetchPriority="high"
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover transition-transform duration-[3s] group-hover:scale-110 group-hover:rotate-1"
                             />
