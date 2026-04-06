@@ -7,6 +7,7 @@ interface SeoProps {
     path: string;
     image?: string;
     type?: 'website' | 'article';
+    keywords?: string | string[];
 }
 
 /**
@@ -17,7 +18,8 @@ export function constructMetadata({
     description,
     path,
     image = siteConfig.ogImage,
-    type = 'website'
+    type = 'website',
+    keywords
 }: SeoProps): Metadata {
     const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url.slice(0, -1) : siteConfig.url;
     const url = `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
@@ -32,6 +34,7 @@ export function constructMetadata({
     return {
         title: safeTitle,
         description: safeDesc,
+        keywords: keywords,
         alternates: {
             canonical: url,
         },
