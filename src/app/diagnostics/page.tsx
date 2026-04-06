@@ -9,7 +9,6 @@ import { Clock, ArrowRight, FileText, CheckCircle2, Sparkles, Beaker, Shield, Me
 import { TestTubes, UltrasoundScanner, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import { DiagnosticCard } from "@/components/entities/DiagnosticCard"
 import Link from "next/link"
-import type { Metadata } from "next"
 import { EntityCardSection } from "@/components/seo/EntityCardSection"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid"
 import EntityFAQs from "@/components/trust/EntityFAQs";

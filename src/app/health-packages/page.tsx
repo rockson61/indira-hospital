@@ -9,7 +9,6 @@ import EntityReviews from "@/components/trust/EntityReviews";
 import { User, Phone, Check, ArrowRight, Shield, MessageCircle } from "lucide-react"
 import { Heart, HeartCardiogram, Electricity } from "healthicons-react/outline";
 import Link from "next/link"
-import type { Metadata } from "next"
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { PageHero } from "@/components/ui/page-hero";
