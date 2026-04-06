@@ -163,12 +163,6 @@ const nextConfig: NextConfig = {
       // --- END AUDIT RECOVERY REDIRECTS ---
     ]
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
