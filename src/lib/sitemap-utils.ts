@@ -200,8 +200,6 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                 { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 }
             ];
 
-            }));
-
         case 'keyword-pages': {
             // Generate sitemap entries for programmatic SEO keyword pages
             // Focus on primary hubs (Vellore, Tamil Nadu) to capture the "124" prioritized pages
