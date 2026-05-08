@@ -25,6 +25,7 @@ export function PeopleAlsoSearchCard({ keywords }: PeopleAlsoSearchCardProps) {
                     <Link
                         key={idx}
                         href={keyword.href}
+                        prefetch={false}
                         className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-900/30 text-slate-700 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 text-xs font-bold rounded-full border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-colors"
                     >
                         {keyword.text}

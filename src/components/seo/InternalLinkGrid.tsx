@@ -133,6 +133,7 @@ export async function InternalLinkGrid({
                             <li key={item.slug}>
                                 <Link
                                     href={item.url}
+                                    prefetch={false}
                                     className={`group flex items-center justify-between px-4 py-3 rounded-2xl border text-[13px] font-bold transition-all duration-300 hover:shadow-lg dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1 ${colors} bg-white/80 dark:bg-slate-900/50 backdrop-blur-md relative overflow-hidden`}
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent -translate-x-[150%] skew-x-[-25deg] group-hover:translate-x-[150%] transition-transform duration-1000" />
@@ -153,6 +154,7 @@ export async function InternalLinkGrid({
                 <div className="mt-8 text-center">
                     <Link
                         href={defaults.href}
+                        prefetch={false}
                         className="inline-flex items-center gap-2 text-sm font-black text-fuchsia-600 hover:text-fuchsia-700 uppercase tracking-widest transition-colors"
                     >
                         View All {displaySubtitle}

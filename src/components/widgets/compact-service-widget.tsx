@@ -53,6 +53,7 @@ export function CompactServiceWidget({
               <div className="flex-1">
                 <Link
                   href={`/doctor/near-me/treat/${service.slug}`}
+                  prefetch={false}
                   className="text-sm font-semibold text-foreground hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors"
                 >
                   {service.name}

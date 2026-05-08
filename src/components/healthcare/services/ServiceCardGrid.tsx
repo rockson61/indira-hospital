@@ -143,7 +143,7 @@ export function ModernServicesSection({ locationName = 'Vellore' }: ModernServic
                     className={`w-full ${colors.button} text-white`}
                     asChild
                   >
-                    <Link href={service.href}>
+                    <Link href={service.href} prefetch={false}>
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
@@ -171,7 +171,7 @@ export function ModernServicesSection({ locationName = 'Vellore' }: ModernServic
                 </a>
               </ModernButton>
               <ModernButton size="lg" variant="outline" asChild>
-                <Link href="/contact">
+                <Link href="/contact" prefetch={false}>
                   📅 Book Appointment
                 </Link>
               </ModernButton>

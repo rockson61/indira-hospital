@@ -24,7 +24,7 @@ export function Footer() {
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.medicalServices.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
+                                    <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -36,7 +36,7 @@ export function Footer() {
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.procedures.slice(0, 10).map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
+                                    <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -46,18 +46,18 @@ export function Footer() {
                     <div>
                         <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Elite Network</h3>
                         <ul className="space-y-2.5">
-                            <li><Link href="/" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Homepage</Link></li>
-                            <li><Link href="/doctor/near-me/treat" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">All Treatments</Link></li>
-                            <li><Link href="/doctors" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Find Doctors</Link></li>
-                            <li><Link href="/doctor/near-me" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Our Locations</Link></li>
-                            <li><Link href="/diagnostics" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Diagnostics & Scans</Link></li>
-                            <li><Link href="/patients/international" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">International Patients</Link></li>
+                            <li><Link prefetch={false} href="/" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Homepage</Link></li>
+                            <li><Link prefetch={false} href="/doctor/near-me/treat" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">All Treatments</Link></li>
+                            <li><Link prefetch={false} href="/doctors" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Find Doctors</Link></li>
+                            <li><Link prefetch={false} href="/doctor/near-me" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Our Locations</Link></li>
+                            <li><Link prefetch={false} href="/diagnostics" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Diagnostics & Scans</Link></li>
+                            <li><Link prefetch={false} href="/patients/international" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">International Patients</Link></li>
                         </ul>
                         <h3 className="elite-section-title !text-sm !leading-tight mb-4 mt-8 !italic">Patient Resources</h3>
                         <ul className="space-y-2.5">
                             {FOOTER_LINKS.patientCare.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
+                                    <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -72,7 +72,7 @@ export function Footer() {
                                 <h4 className="text-[11px] font-bold text-fuchsia-600 dark:text-fuchsia-500 uppercase tracking-widest mb-4">{group.region}</h4>
                                 <div className="flex flex-col gap-2.5">
                                     {group.locations.map((loc) => (
-                                        <Link key={loc.name} href={loc.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">
+                                        <Link key={loc.name} prefetch={false} href={loc.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-medium">
                                             {loc.name}
                                         </Link>
                                     ))}
@@ -146,21 +146,21 @@ export function Footer() {
                         &copy; {currentYear} {siteConfig.name}. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
-                        <Link href="/privacy-policy" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Privacy</Link>
-                        <Link href="/terms" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Terms</Link>
-                        <Link href="/sitemap" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Sitemap</Link>
-                        <Link href="/sitemap.xml" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">XML</Link>
+                        <Link prefetch={false} href="/privacy-policy" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Privacy</Link>
+                        <Link prefetch={false} href="/terms" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Terms</Link>
+                        <Link prefetch={false} href="/sitemap" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">Sitemap</Link>
+                        <Link prefetch={false} href="/sitemap.xml" className="text-sm text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-300 transition-colors font-medium">XML</Link>
                     </div>
                 </div>
 
                 {/* Bottom SEO & Legal Text */}
                 <div className="mt-8 pt-6 border-t border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-4 text-xs text-slate-500 dark:text-slate-400 text-center md:text-left">
                     <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 font-bold text-slate-600 dark:text-slate-300">
-                        <Link href="/" className="hover:text-fuchsia-600 transition-colors">Best Hospital in Vellore</Link>
+                        <Link prefetch={false} href="/" className="hover:text-fuchsia-600 transition-colors">Best Hospital in Vellore</Link>
                         <span className="hidden md:inline text-slate-300 dark:text-slate-700">•</span>
-                        <Link href="/doctor/near-me" className="hover:text-fuchsia-600 transition-colors">Hospital near me</Link>
+                        <Link prefetch={false} href="/doctor/near-me" className="hover:text-fuchsia-600 transition-colors">Hospital near me</Link>
                         <span className="hidden md:inline text-slate-300 dark:text-slate-700">•</span>
-                        <Link href="/doctors" className="hover:text-fuchsia-600 transition-colors">Find best Doctors in Vellore</Link>
+                        <Link prefetch={false} href="/doctors" className="hover:text-fuchsia-600 transition-colors">Find best Doctors in Vellore</Link>
                     </div>
                     <div className="space-y-2 max-w-5xl md:mx-0 mx-auto leading-relaxed">
                         <p>

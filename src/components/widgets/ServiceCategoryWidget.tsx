@@ -41,6 +41,7 @@ export default function ServiceCategoryWidget() {
               <Link
                 key={category.name}
                 href={category.url}
+                prefetch={false}
                 className="flex-shrink-0 w-32 group"
               >
                 <div className="clay-button p-4 h-full flex flex-col items-center justify-center text-center space-y-2 group-hover:scale-105 transition-transform duration-300">
