@@ -53,12 +53,44 @@ export default function DrGayathriProfile() {
         languages: ["English", "Tamil"]
     };
 
+    const faqItems = [
+        {
+            question: "What is Coblation technology in ENT surgery?",
+            answer: "Dr. Gayathri uses Coblation, a low-temperature radiofrequency technique, for tonsil and adenoid removal. This results in significantly less pain and faster recovery compared to traditional heat-based methods."
+        },
+        {
+            question: "Does Dr. Gayathri treat chronic sinus issues?",
+            answer: "Yes, she specializes in FESS (Functional Endoscopic Sinus Surgery) using 4K endoscopy to treat chronic sinusitis and nasal polyps with high precision."
+        }
+    ];
+
+    const reviewItems = [
+        {
+            id: "rev-gay-1",
+            patient_name: "Arjun Murugan",
+            treatment_received: "FESS / Sinus Surgery",
+            rating: 5,
+            content: "Dr. Gayathri performed my sinus surgery with precision. The ENT department has state-of-the-art equipment and the post-operative recovery was smooth. Very satisfied with the results.",
+            date_of_visit: "2024-03-20"
+        },
+        {
+            id: "rev-gay-2",
+            patient_name: "Suresh M.",
+            treatment_received: "Coblation Tonsillectomy",
+            rating: 5,
+            content: "My son had his tonsils removed by Dr. Gayathri using the laser/coblation method. He was eating normally by the second day! Very grateful for the advanced care.",
+            date_of_visit: "2024-04-05"
+        }
+    ];
+
     return (
         <DoctorTemplate
             doctor={doctor}
             deptName="Ear, Nose & Throat (ENT)"
             deptSlug="ent"
             WHATSAPP_NUMBER="919443224213"
+            faqItems={faqItems}
+            reviewItems={reviewItems}
             fullDescription={
                 <div className="space-y-16">
                     {/* Section: Micro-Surgical Precision */}

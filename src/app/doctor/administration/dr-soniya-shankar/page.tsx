@@ -59,12 +59,44 @@ export default function DrSoniyaShankarProfile() {
         languages: ["English", "Tamil", "Hindi"]
     };
 
+    const faqItems = [
+        {
+            question: "What is Dr. Soniya Shankar's role in hospital quality?",
+            answer: "As the Director of Patient Advocacy & Quality, Dr. Soniya oversees the hospital's NABH and NABL compliance, ensuring that all clinical and surgical procedures meet international safety standards."
+        },
+        {
+            question: "How does she ensure a positive patient experience?",
+            answer: "Dr. Soniya designs patient-centric workflows that minimize wait times and maximize comfort, while also spearheading the international patient desk for medical tourism."
+        }
+    ];
+
+    const reviewItems = [
+        {
+            id: "rev-son-1",
+            patient_name: "Vijayalakshmi S.",
+            treatment_received: "Patient Coordination",
+            rating: 5,
+            content: "The level of organization at Indira Hospital is impressive. Dr. Soniya's leadership in patient advocacy ensures that every concern is addressed promptly. A truly premium hospital experience.",
+            date_of_visit: "2024-03-25"
+        },
+        {
+            id: "rev-son-2",
+            patient_name: "Ravi Shankar",
+            treatment_received: "Insurance Assistance",
+            rating: 5,
+            content: "The CMCHIS desk at Indira Hospital is very efficient. They handled all the paperwork for my father's surgery, and the cashless process was completely smooth. Kudos to the management team.",
+            date_of_visit: "2024-04-15"
+        }
+    ];
+
     return (
         <DoctorTemplate
             doctor={doctor}
             deptName="Executive Leadership"
             deptSlug="administration"
             WHATSAPP_NUMBER="919443224213"
+            faqItems={faqItems}
+            reviewItems={reviewItems}
             fullDescription={
                 <div className="space-y-16">
                     {/* Section: Visionary Leadership */}

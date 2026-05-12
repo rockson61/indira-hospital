@@ -61,12 +61,44 @@ export default function DrRocksonSamuelProfile() {
         languages: ["English", "Tamil", "Hindi"]
     };
 
+    const faqItems = [
+        {
+            question: "What is Digital Smile Design (DSD)?",
+            answer: "DSD is a cutting-edge technology that allows us to digitally plan and visualize your new smile before we start any procedure. This ensures anatomical perfection and allows you to 'test-drive' your smile."
+        },
+        {
+            question: "Do you offer single-day dental implants?",
+            answer: "Yes, Dr. Rockson specializes in 'Immediate Loading' implants, where we can often replace a missing tooth in a single day using digital intraoral scanning and CAD/CAM technology."
+        }
+    ];
+
+    const reviewItems = [
+        {
+            id: "rev-rock-1",
+            patient_name: "Suresh Mani",
+            treatment_received: "Dental Implants",
+            rating: 5,
+            content: "I was hesitant about implants, but Dr. Rockson Samuel made it easy. The digital scanning was so much better than traditional molds. The result looks completely natural.",
+            date_of_visit: "2024-03-28"
+        },
+        {
+            id: "rev-rock-2",
+            patient_name: "Divya Bhaskar",
+            treatment_received: "Smile Makeover / Veneers",
+            rating: 5,
+            content: "Got my veneers done at the Ultimate Smile Design center. The 3D preview allowed me to see the result beforehand. Dr. Rockson's attention to detail is amazing.",
+            date_of_visit: "2024-04-10"
+        }
+    ];
+
     return (
         <DoctorTemplate
             doctor={doctor}
             deptName="Advanced Dentistry & Implantology"
             deptSlug="dentistry"
             WHATSAPP_NUMBER="917010650063"
+            faqItems={faqItems}
+            reviewItems={reviewItems}
             fullDescription={
                 <div className="space-y-16">
                     {/* Section: Digital Smile Design Philosophy */}

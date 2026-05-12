@@ -55,12 +55,44 @@ export default function DrPraharshithaProfile() {
         languages: ["English", "Telugu", "Hindi", "Tamil"]
     };
 
+    const faqItems = [
+        {
+            question: "What is Dr. Praharshitha's approach to high-risk pregnancy?",
+            answer: "Dr. Praharshitha utilizes her AIIMS-standard training to provide advanced fetal monitoring and evidence-based clinical protocols for complex pregnancies, ensuring the highest safety standards for both mother and child."
+        },
+        {
+            question: "Does she perform laparoscopic gynecology surgery?",
+            answer: "Yes, she specializes in minimally invasive gynae-endoscopy, including laparoscopic cystectomies and hysteroscopic procedures to treat fibroids and PCOS while preserving fertility."
+        }
+    ];
+
+    const reviewItems = [
+        {
+            id: "rev-pra-1",
+            patient_name: "Priya Krishnan",
+            treatment_received: "Maternity / Delivery",
+            rating: 5,
+            content: "Had my delivery at Indira Hospital. Dr. Praharshitha was wonderful and the fetal monitoring gave us great peace of mind. Her AIIMS background clearly shows in her professional approach.",
+            date_of_visit: "2024-03-12"
+        },
+        {
+            id: "rev-pra-2",
+            patient_name: "Meenakshi R.",
+            treatment_received: "High-Risk Pregnancy Care",
+            rating: 5,
+            content: "I had a high-risk pregnancy and Dr. Praharshitha monitored me closely. Her expertise in fetal medicine is unmatched in Vellore. Healthy baby and a very positive experience.",
+            date_of_visit: "2024-04-02"
+        }
+    ];
+
     return (
         <DoctorTemplate
             doctor={doctor}
             deptName="Obstetrics & Gynaecology"
             deptSlug="obstetrics-gynaecology"
             WHATSAPP_NUMBER="919443224213"
+            faqItems={faqItems}
+            reviewItems={reviewItems}
             fullDescription={
                 <div className="space-y-16">
                     {/* Section: Academic Excellence from AIIMS */}

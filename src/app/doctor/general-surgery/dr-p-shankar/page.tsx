@@ -53,12 +53,44 @@ export default function DrPShankarProfile() {
         languages: ["English", "Tamil", "Hindi"]
     };
 
+    const faqItems = [
+        {
+            question: "What is Dr. P. Shankar's expertise in cardiology?",
+            answer: "Dr. P. Shankar is a senior Interventional Cardiologist with over 30 years of experience. He specializes in complex angioplasties, stenting, and heart valve repairs, utilizing state-of-the-art diagnostic facilities at Indira Hospital."
+        },
+        {
+            question: "Does Dr. Shankar perform laser surgeries?",
+            answer: "Yes, Dr. Shankar is a pioneer in combining cardiology with advanced surgical techniques, including laser-assisted procedures for vascular conditions."
+        }
+    ];
+
+    const reviewItems = [
+        {
+            id: "rev-ps-1",
+            patient_name: "Lakshmi Narayanan",
+            treatment_received: "Cardiac Care / Angioplasty",
+            rating: 5,
+            content: "The cardiology team at Indira Hospital saved my life. Dr. P. Shankar personally oversaw my treatment and the 24/7 ICU care was exceptional. Truly world-class facility in Vellore.",
+            date_of_visit: "2024-02-10"
+        },
+        {
+            id: "rev-ps-2",
+            patient_name: "Gopalakrishnan V.",
+            treatment_received: "Angioplasty / Stenting",
+            rating: 5,
+            content: "The emergency cardiology response was incredible. Within 60 minutes of arrival, my block was cleared and a stent was placed. I owe my life to Dr. Shankar and his team.",
+            date_of_visit: "2024-03-05"
+        }
+    ];
+
     return (
         <DoctorTemplate
             doctor={doctor}
             deptName="General Surgery & Proctology"
             deptSlug="general-surgery"
             WHATSAPP_NUMBER="919443224213"
+            faqItems={faqItems}
+            reviewItems={reviewItems}
             fullDescription={
                 <div className="space-y-16">
                     {/* Section: Philosophy of Laser Preservation */}
