@@ -12,6 +12,8 @@ interface EntityReviewsProps {
     title?: string;
     description?: string;
     className?: string;
+    id?: string;
+    items?: any[];
 }
 
 export default async function EntityReviews({
@@ -20,20 +22,25 @@ export default async function EntityReviews({
     entitySlug,
     title = "Patient Reviews & Experiences",
     description = "Read what our patients have to say about their experience.",
-    className
+    className,
+    id,
+    items
 }: EntityReviewsProps) {
-    let reviews = [];
-    try {
-        reviews = await getReviewsByEntity(entityType, entityName, entitySlug);
-    } catch (error: any) {
-        // Only log real errors, not just "not found"
-        if (error.response?.status !== 404) {
-            console.error(`[EntityReviews] Error fetching reviews for ${entityType} "${entityName}":`, {
-                message: error.message,
-                status: error.response?.status
-            });
+    let reviews = items && items.length > 0 ? items : [];
+    
+    if (!items || items.length === 0) {
+        try {
+            reviews = await getReviewsByEntity(entityType, entityName, entitySlug);
+        } catch (error: any) {
+            // Only log real errors, not just "not found"
+            if (error.response?.status !== 404) {
+                console.error(`[EntityReviews] Error fetching reviews for ${entityType} "${entityName}":`, {
+                    message: error.message,
+                    status: error.response?.status
+                });
+            }
+            return null;
         }
-        return null;
     }
 
     if (!reviews || reviews.length === 0) {
@@ -82,7 +89,7 @@ export default async function EntityReviews({
     };
 
     return (
-        <section className={cn("py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700 dark:border-slate-800", className)}>
+        <section id={id} className={cn("py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700 dark:border-slate-800", className)}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -9,6 +9,7 @@ interface EntityFAQsProps {
     title?: string;
     description?: string;
     className?: string;
+    id?: string;
     items?: { question: string; answer: string }[];
 }
 
@@ -24,6 +25,7 @@ export default async function EntityFAQs({
     title,
     description,
     className,
+    id,
     items
 }: EntityFAQsProps) {
     const fetchedFaqs = !items || items.length === 0 ? await getFaqsByEntity(entityType, entityName, entitySlug) : [];
@@ -53,7 +55,7 @@ export default async function EntityFAQs({
                     })
                 }}
             />
-            <section className={cn("bg-[#FAFAFA] dark:bg-slate-950 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-700", className)}>
+            <section id={id} className={cn("bg-[#FAFAFA] dark:bg-slate-950 py-16 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-700", className)}>
                 <div className="max-w-7xl mx-auto">
                     <FAQSection
                         title={title || `Frequently Asked Questions about ${entityName}`}

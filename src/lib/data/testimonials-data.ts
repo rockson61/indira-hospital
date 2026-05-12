@@ -95,8 +95,8 @@ export const testimonials: Testimonial[] = [
         location: "Arakkonam",
         image: '',
         rating: 5,
-        treatment: "ENT Surgery",
-        text: "Dr. Karan Shankar performed my sinus surgery with precision. The ENT department has state-of-the-art equipment and the post-operative recovery was smooth. Very satisfied with the results.",
+        treatment: "Laparoscopic Surgery",
+        text: "Dr. Karan Shankar performed my laparoscopic hernia surgery with extreme precision. The surgical department has state-of-the-art 4K equipment and the recovery was much faster than I expected. Very satisfied.",
         date: "2 weeks ago",
         verified: true
     },

@@ -34,29 +34,33 @@ export default function DrKaranShankarProfile() {
         department: "General Surgery",
         image: "/images/doctors/dr-karan-shankar.png",
         experience_years: 12,
+        bio: "As the Executive Director of Indira Super Speciality Hospital and Clinical Lead of the Indira Laser & Laparoscopy Centre, Dr. Karan Shankar has pioneered advanced surgical protocols in the Vellore region. A Fellow of the World Association of Laparoscopic Surgeons (WALS) and IAGES, he specializes in high-precision minimal access surgery using 4K UHD imaging. His commitment to 'Elite' patient care is reflected in his expertise in complex abdominal wall reconstructions and sphincter-preserving laser proctology.",
         education: [
             { degree: "MBBS", institution: "Meenakshi Medical College", year: "2017" },
             { degree: "MS (General Surgery)", institution: "Dr M.G.R Medical University", year: "2022" },
             { degree: "FIAGES", institution: "Fellowship of Indian Association of Gastrointestinal Endosurgeons", year: "2022" },
-            { degree: "FMAS", institution: "Fellowship in Minimal Access Surgery" },
-            { degree: "DMAS (WALS)", institution: "Diploma in Minimal Access Surgery – World Association of Laparoscopic Surgeons" }
+            { degree: "FMAS", institution: "Fellowship in Minimal Access Surgery", year: "2022" },
+            { degree: "DMAS (WALS)", institution: "Diploma in Minimal Access Surgery – World Association of Laparoscopic Surgeons", year: "2022" }
         ],
         specialties: [
-            "General Surgery",
             "Advanced Laparoscopic Surgery",
-            "Colorectal Surgery",
+            "Laser Proctology (Piles/Fistula/Fissure)",
+            "Gastrointestinal Surgery",
+            "Abdominal Wall Reconstruction",
             "Minimal Access Surgery",
-            "Abdominal Wall Reconstructive Surgery",
-            "Proctology"
+            "Colorectal Surgery"
         ],
         procedures: [
-            "Laparoscopic Hernia Repair (IPOM/TEP)",
-            "Gallbladder Surgery (Cholecystectomy)",
-            "Laser Proctology (FiLaC/LHP/SiLaC)",
+            "Laparoscopic Hernia Repair (IPOM/TEP/TAPP)",
+            "Laser Piles Treatment (LHP)",
+            "Laser Fistula Closure (FiLaC)",
+            "Gallbladder Surgery (Laparoscopic Cholecystectomy)",
+            "Abdominal Wall Reconstruction (AWR)",
+            "Laser Pilonidal Sinus (SiLaC)",
+            "Laparoscopic Appendectomy",
             "Stapler Hemorrhoidopexy",
-            "Abdominal Wall Reconstruction",
-            "Gastrointestinal Malignancy Surgery",
-            "Appendix Keyhole Surgery"
+            "Thyroidectomy",
+            "Gastrointestinal Malignancy Resection"
         ],
         memberships: [
             "Association of Surgeons of India (ASI)",
@@ -67,12 +71,60 @@ export default function DrKaranShankarProfile() {
         languages: ["English", "Tamil", "Hindi", "Malayalam", "Telugu"]
     };
 
+    const faqItems = [
+        {
+            question: "What is Dr. Karan Shankar's surgical philosophy?",
+            answer: "Dr. Karan focuses on the 'Minimal Access Revolution,' utilizing advanced technology like 4K UHD visualization and medical lasers to ensure maximum surgical precision with minimal recovery time for his patients."
+        },
+        {
+            question: "Does Dr. Karan Shankar treat complex fistulas?",
+            answer: "Yes, he specializes in advanced Laser Proctology using the 1470nm FiLaC laser, which allows for the closure of complex fistula tracts while preserving sphincter function and ensuring rapid healing."
+        },
+        {
+            question: "Is keyhole surgery available for all abdominal procedures?",
+            answer: "Dr. Karan performs a wide range of abdominal procedures laparoscopically, including hernia repairs, gallbladder removal, and appendix surgery, ensuring smaller incisions and less post-operative pain."
+        },
+        {
+            question: "How can I book an elite consultation with Dr. Karan?",
+            answer: "You can schedule a consultation directly through WhatsApp or by calling the Indira Hospital admission desk. We offer both physical and premium digital consultation options."
+        }
+    ];
+
+    const reviewItems = [
+        {
+            id: "rev-karan-1",
+            patient_name: "Rajesh Kumar",
+            treatment_received: "Laparoscopic Hernia Surgery",
+            rating: 5,
+            content: "Dr. Karan Shankar is an exceptional surgeon. I had a complex hernia and his laparoscopic approach was brilliant. I was back at work in 3 days. The 4K imaging technology he uses is truly state-of-the-art.",
+            date_of_visit: "2024-03-15"
+        },
+        {
+            id: "rev-karan-2",
+            patient_name: "Anjali Rao",
+            treatment_received: "Laser Proctology",
+            rating: 5,
+            content: "Highly recommend Dr. Karan for laser piles treatment. The procedure was painless and the recovery was very fast. He explained everything so clearly and put me at ease.",
+            date_of_visit: "2024-04-10"
+        },
+        {
+            id: "rev-karan-3",
+            patient_name: "Vikram S.",
+            treatment_received: "Gallbladder Surgery",
+            rating: 5,
+            content: "Excellent surgical care at Indira Hospital. Dr. Karan's expertise in minimal access surgery is evident. Very minimal scarring and great post-op support.",
+            date_of_visit: "2024-02-20"
+        }
+    ];
+
     return (
         <DoctorTemplate
             doctor={doctor}
             deptName="Laparoscopy & Colorectal Surgery"
             deptSlug="general-surgery"
             WHATSAPP_NUMBER="919443224213"
+            faqItems={faqItems}
+            reviewItems={reviewItems}
             fullDescription={
                 <div className="space-y-16">
                     {/* Section: Minimal Access Precision */}

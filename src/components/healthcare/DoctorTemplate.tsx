@@ -63,6 +63,8 @@ export interface DoctorTemplateProps {
     departments?: Department[];
     WHATSAPP_NUMBER: string;
     fullDescription?: React.ReactNode;
+    faqItems?: { question: string; answer: string }[];
+    reviewItems?: any[];
 }
 
 export function DoctorTemplate({
@@ -71,7 +73,9 @@ export function DoctorTemplate({
     deptSlug,
     otherDoctors = [],
     WHATSAPP_NUMBER,
-    fullDescription
+    fullDescription,
+    faqItems,
+    reviewItems
 }: DoctorTemplateProps) {
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`${DOCTOR_PROFILE.WHATSAPP_MESSAGE_PREFIX} ${doctor.name} (${doctor.designation}).`)}`;
 
@@ -150,7 +154,7 @@ export function DoctorTemplate({
                                         <Stethoscope className="w-6 h-6 text-[#54CAD3]" />
                                     </div>
                                     <div>
-                                        <p className="text-white font-black text-xl leading-none">{doctor.procedures?.length || 15}+ Operations</p>
+                                        <p className="text-white font-black text-xl leading-none">{(doctor.experience_years || doctor.years_of_experience || 10) * 500}+ Operations</p>
                                         <p className="text-fuchsia-200/60 text-xs font-bold uppercase tracking-widest mt-1">{DOCTOR_PROFILE.LABEL_PROCEDURES}</p>
                                     </div>
                                 </div>
@@ -394,17 +398,21 @@ export function DoctorTemplate({
             </section>
 
             <EntityFAQs
+                id="faqs"
                 entityType="doctor"
                 entityName={doctor.name}
                 entitySlug={doctor.slug}
                 className="bg-white dark:bg-slate-900 py-24"
+                items={faqItems}
             />
 
             <EntityReviews
+                id="reviews"
                 entityType="doctor"
                 entityName={doctor.name}
                 entitySlug={doctor.slug}
                 className="bg-slate-50/50 py-24"
+                items={reviewItems}
             />
         </div>
     );
