@@ -1,16 +1,7 @@
-import { Metadata } from 'next';
-import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
-
-
-export const metadata: Metadata = constructMetadata({
-    title: "Laparoscopic Cholecystectomy in Vellore | Indira Hospital",
-    description: "Advanced Laparoscopic Cholecystectomy in Vellore surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and sam...",
-    path: "/doctor/near-me/treat/general-surgery/laparoscopic-cholecystectomy-gallbladder-removal"
-});
 
 export default function SEOPage() {
     return (

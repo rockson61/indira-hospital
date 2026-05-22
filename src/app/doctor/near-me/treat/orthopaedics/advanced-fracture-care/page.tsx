@@ -1,16 +1,7 @@
-import { Metadata } from 'next';
-import { constructMetadata } from '@/lib/seo-utils';
 import React from 'react'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
-
-
-export const metadata: Metadata = constructMetadata({
-    title: "Advanced Fracture Care in Vellore | Indira Hospital",
-    description: "Advanced Advanced Fracture Care in Vellore surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and same-day ...",
-    path: "/doctor/near-me/treat/orthopaedics/advanced-fracture-care"
-});
 
 export default function SEOPage() {
     return (
