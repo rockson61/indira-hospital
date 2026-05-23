@@ -20,18 +20,9 @@ function getDoctorSpecialtySlug(doc: any): string {
 export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap> {
     const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url.slice(0, -1) : siteConfig.url;
 
-    // Fetch CMS Data
-    const [services, departments, doctors, locations, healthPackages, diagnostics] = await Promise.all([
-        getServices().catch(() => []),
-        getDepartments().catch(() => []),
-        getDoctors().catch(() => []),
-        getLocations().catch(() => []),
-        getHealthPackages().catch(() => []),
-        getDiagnostics().catch(() => [])
-    ]);
-
     switch (id) {
-        case 'doctors':
+        case 'doctors': {
+            const doctors = await getDoctors().catch(() => []);
             return doctors.map((doc: any) => {
                 const specialty = getDoctorSpecialtySlug(doc);
                 return {
@@ -41,16 +32,20 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                     priority: doc.specialty_slug ? 0.95 : 0.8, // Elite doctors get higher priority
                 };
             });
+        }
 
-        case 'departments':
+        case 'departments': {
+            const departments = await getDepartments().catch(() => []);
             return departments.map((d: any) => ({
                 url: `${baseUrl}/departments/${d.slug || d.id}`,
                 lastModified: new Date(d.date_updated || d.date_created || new Date()),
                 changeFrequency: 'weekly',
                 priority: 0.9,
             }));
+        }
 
-        case 'treatments':
+        case 'treatments': {
+            const services = await getServices().catch(() => []);
             // Main treatments/services routes
             const servRoutes = services.map((s: any) => ({
                 url: `${baseUrl}/doctor/near-me/treat/${s.slug ? s.slug.toLowerCase() : s.id}`,
@@ -81,6 +76,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
             }));
 
             return [...servRoutes, ...subTreatRoutes, directoryRoute, ...techRoutes];
+        }
 
         case 'locations':
             return tamilNaduLocations.map((loc) => ({
@@ -90,7 +86,8 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                 priority: 0.9,
             }));
 
-        case 'location-departments':
+        case 'location-departments': {
+            const departments = await getDepartments().catch(() => []);
             return tamilNaduLocations.flatMap((loc) =>
                 (departments as any[]).map((dept: any) => ({
                     url: `${baseUrl}/doctor/near-me/${loc.slug}/${dept.slug}`,
@@ -99,6 +96,7 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                     priority: 0.75,
                 }))
             );
+        }
 
         case 'location-treatments':
             return tamilNaduLocations.flatMap((loc) =>
@@ -110,7 +108,8 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                 }))
             );
 
-        case 'location-doctors':
+        case 'location-doctors': {
+            const doctors = await getDoctors().catch(() => []);
             return tamilNaduLocations.flatMap((loc) =>
                 (doctors as any[]).map((doc: any) => ({
                     url: `${baseUrl}/doctor/near-me/${loc.slug}/${doc.slug}`,
@@ -119,16 +118,20 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
                     priority: 0.75,
                 }))
             );
+        }
 
-        case 'diagnostics':
+        case 'diagnostics': {
+            const diagnostics = await getDiagnostics().catch(() => []);
             return diagnostics.map((dg: any) => ({
                 url: `${baseUrl}/diagnostics/${dg.slug || dg.id}`,
                 lastModified: new Date(dg.date_updated || dg.date_created || new Date()),
                 changeFrequency: 'weekly',
                 priority: 0.8,
             }));
+        }
 
         case 'health-packages': {
+            const healthPackages = await getHealthPackages().catch(() => []);
             // Static fallback packages drawn from seed data
             const FALLBACK_PACKAGES = [
                 'master-health-checkup',

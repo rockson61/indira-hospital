@@ -1,6 +1,61 @@
 import { GLOSSARY_DATA } from './data/glossary-data';
 import { TREATMENT_DATA } from './data/treatment-data';
 
+const slugify = (text: string) => text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
+
+// Part 1: Glossary Linking
+const glossaryTerms = GLOSSARY_DATA
+    .map(t => ({
+        term: t.term,
+        url: `/glossary/${slugify(t.term)}`,
+        definition: t.definition
+    }))
+    .sort((a, b) => b.term.length - a.term.length);
+
+// Part 1.5: Treatment Linking (High Priority)
+const treatmentTerms = TREATMENT_DATA
+    .map(t => ({
+        term: t.title,
+        url: `/doctor/near-me/treat/${t.parentServiceSlug}/${t.slug}`,
+        keywords: [t.title, t.title.toLowerCase(), t.slug.replace(/-/g, ' ')]
+    }))
+    .sort((a, b) => b.term.length - a.term.length);
+
+// Part 2: LSI Keywords to Bold
+const lsiKeywords = [
+    "Best Hospital in Vellore",
+    "Top Hospital",
+    "Top specialists",
+    "Best doctor",
+    "Best surgeon",
+    "expert care",
+    "advanced technology",
+    "NABH accredited",
+    "institutional value",
+    "same-day discharge",
+    "minimally invasive",
+    "robotic surgery",
+    "laser surgery",
+    "patient safety"
+].sort((a, b) => b.length - a.length);
+
+const escapedGlossaryTerms = glossaryTerms
+    .map(t => t.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .filter(k => k.length > 1); // Minimum 2 chars for linking
+const glossaryPattern = glossaryTerms.length > 0 ? new RegExp(`\\b(${escapedGlossaryTerms.join('|')})\\b`, 'gi') : null;
+
+const escapedLsiTerms = lsiKeywords
+    .map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .filter(k => k.length > 0);
+const lsiPattern = lsiKeywords.length > 0 ? new RegExp(`\\b(${escapedLsiTerms.join('|')})\\b`, 'gi') : null;
+
+const escapedTreatments = treatmentTerms
+    .flatMap(t => t.keywords)
+    .filter(Boolean)
+    .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .filter(k => k.length > 2); // Minimum 3 chars for treatments
+const treatmentPattern = escapedTreatments.length > 0 ? new RegExp(`\\b(${escapedTreatments.join('|')})\\b`, 'gi') : null;
+
 /**
  * Safely injects internal links into an HTML string by replacing known medical terms 
  * with anchor tags pointing to the glossary or relevant pages.
@@ -13,64 +68,9 @@ import { TREATMENT_DATA } from './data/treatment-data';
 export const injectInternalLinks = (htmlContent: string): string => {
     if (!htmlContent) return "";
 
-    const slugify = (text: string) => text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
-
-    // Part 1: Glossary Linking
-    const glossaryTerms = GLOSSARY_DATA
-        .map(t => ({
-            term: t.term,
-            url: `/glossary/${slugify(t.term)}`,
-            definition: t.definition
-        }))
-        .sort((a, b) => b.term.length - a.term.length);
-
-    // Part 1.5: Treatment Linking (High Priority)
-    const treatmentTerms = TREATMENT_DATA
-        .map(t => ({
-            term: t.title,
-            url: `/doctor/near-me/treat/${t.parentServiceSlug}/${t.slug}`,
-            keywords: [t.title, t.title.toLowerCase(), t.slug.replace(/-/g, ' ')]
-        }))
-        .sort((a, b) => b.term.length - a.term.length);
-
-    // Part 2: LSI Keywords to Bold
-    const lsiKeywords = [
-        "Best Hospital in Vellore",
-        "Top Hospital",
-        "Top specialists",
-        "Best doctor",
-        "Best surgeon",
-        "expert care",
-        "advanced technology",
-        "NABH accredited",
-        "institutional value",
-        "same-day discharge",
-        "minimally invasive",
-        "robotic surgery",
-        "laser surgery",
-        "patient safety"
-    ].sort((a, b) => b.length - a.length);
-
     // We act on text nodes only. A simple robust way without a DOM parser in Node env
     // is to split by tags.
     const parts = htmlContent.split(/(<[^>]+>)/g);
-
-    const escapedGlossaryTerms = glossaryTerms
-        .map(t => t.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-        .filter(k => k.length > 1); // Minimum 2 chars for linking
-    const glossaryPattern = glossaryTerms.length > 0 ? new RegExp(`\\b(${escapedGlossaryTerms.join('|')})\\b`, 'gi') : null;
-
-    const escapedLsiTerms = lsiKeywords
-        .map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-        .filter(k => k.length > 0);
-    const lsiPattern = lsiKeywords.length > 0 ? new RegExp(`\\b(${escapedLsiTerms.join('|')})\\b`, 'gi') : null;
-
-    const escapedTreatments = treatmentTerms
-        .flatMap(t => t.keywords)
-        .filter(Boolean)
-        .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-        .filter(k => k.length > 2); // Minimum 3 chars for treatments
-    const treatmentPattern = escapedTreatments.length > 0 ? new RegExp(`\\b(${escapedTreatments.join('|')})\\b`, 'gi') : null;
 
     for (let i = 0; i < parts.length; i++) {
         // If it's a tag, skip it
