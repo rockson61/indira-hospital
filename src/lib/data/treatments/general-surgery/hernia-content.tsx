@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from 'react'
 import { 
     Zap, 
@@ -155,7 +156,7 @@ export const HerniaLongForm = () => {
                          </p>
                          <div className="flex items-center gap-4 border-t border-indigo-200 dark:border-indigo-900/40 pt-8">
                              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-indigo-600 p-0.5 group-hover:scale-110 transition-transform">
-                                <img src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
+                                <Image width={48} height={48} src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
                              </div>
                              <div className="text-[10px] font-black uppercase text-indigo-900 dark:text-indigo-400 tracking-widest italic leading-tight">Expert Surgical Mapping <br/> <span className="text-slate-400 font-normal">Indira Super Speciality Hospital</span></div>
                          </div>
@@ -246,9 +247,9 @@ export const HerniaLongForm = () => {
             {/* 8. Final Silo Transition CTA */}
             <section className="bg-indigo-950 rounded-[4rem] p-20 text-center text-white relative overflow-hidden group/cta">
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse" />
-                <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Don't Wait for an Emergency</h2>
+                <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Don&apos;t Wait for an Emergency</h2>
                 <p className="text-indigo-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
-                    Fix the gap permanently with 4K Laparoscopy and 3D-Mesh technology. Consult Vellore's leading surgical team today.
+                    Fix the gap permanently with 4K Laparoscopy and 3D-Mesh technology. Consult Vellore&apos;s leading surgical team today.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 relative z-10">
                     <button className="px-14 py-6 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-indigo-600/30 uppercase tracking-widest italic group-hover/cta:scale-110 active:scale-95">Book Priority Consult</button>

@@ -65,7 +65,7 @@ export function generateSchema(type: PageType, data: SchemaData, currentUrl: str
         "cssSelector": ["h1", ".direct-answer", ".faq-answer", ".clinical-insight", ".symptom-check-result"]
     };
 
-    let graph: any[] = [];
+    const graph: any[] = [];
 
     // 1. Root Hospital Entity (Unified ID)
     graph.push({

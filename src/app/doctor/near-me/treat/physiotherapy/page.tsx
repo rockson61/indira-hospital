@@ -40,7 +40,7 @@ export default function PhysiotherapyDepartmentPage() {
                                     Neuro-Rehab Hub
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
-                                    "Neural Plasticity is Real." We specialize in rehabilitating patients post-stroke, spinal cord injury, and Parkinson's disease, using intensive task-oriented training to re-map brain-muscle connections.
+                                    "Neural Plasticity is Real." We specialize in rehabilitating patients post-stroke, spinal cord injury, and Parkinson&apos;s disease, using intensive task-oriented training to re-map brain-muscle connections.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
                                     <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 uppercase tracking-tighter shadow-sm">Stroke Rehab Protocol</span>
@@ -103,11 +103,11 @@ export default function PhysiotherapyDepartmentPage() {
                                 </div>
                             </div>
 
-                            {/* Vertical 3: Women's Wellness */}
+                            {/* Vertical 3: Women&apos;s Wellness */}
                             <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
                                 <div className="p-8 flex-1 flex flex-col justify-between">
                                     <div>
-                                        <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Women's Health</h4>
+                                        <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Women&apos;s Health</h4>
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Dedicated protocols for Pelvic Floor rehab, Antenatal/Postnatal exercises, and Osteoporosis management.</p>
                                         <ul className="space-y-3 mb-8">
                                             {["Pelvic Floor Training", "Diastasis Recti Correction", "Prenatal Core Prep", "Post-Menopausal Bone Health"].map(i => (
@@ -174,7 +174,7 @@ export default function PhysiotherapyDepartmentPage() {
                                     a: "Photobiomodulation (Laser Therapy) uses specific wavelengths of light to penetrate deep into tissues, stimulating cellular repair and ATP production. It is painless and highly effective for chronic tendonitis and joint pain."
                                 },
                                 {
-                                    q: "Do I need a doctor's referral for Physiotherapy?",
+                                    q: "Do I need a doctor&apos;s referral for Physiotherapy?",
                                     a: "While we work closely with Orthopedic and Neuro surgeons, you can directly consult our senior physical therapists for pain management, postural correction, and ergonomic assessments."
                                 },
                                 {

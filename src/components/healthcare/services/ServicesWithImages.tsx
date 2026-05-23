@@ -6,14 +6,14 @@ import Link from 'next/link'
 import { servicesData } from "@/lib/data/services-data"
 
 // Services are now loaded from lib/data/services-data.tsx
-const services = servicesData.filter(s => s.id !== 'orthodontics'); // Filter out Orthodontics if it's featured separately (Invisalign is Ortho related)
+const services = servicesData.filter(s => s.id !== 'orthodontics'); // Filter out Orthodontics if it&apos;s featured separately (Invisalign is Ortho related)
 // Actually, the original file had Orthodontics in the grid AND Invisalign separate. 
-// I'll just map all of them or filter based on original list? 
+// I&apos;ll just map all of them or filter based on original list? 
 // Original list had: General, Cosmetic, Orthodontics, Implants, RCT.
 // servicesData has these plus Pediatric and Periodontics.
-// I'll strip to the ones that were there, or show all? 
-// Showing all is better for "Standardization". I'll show all (except maybe limiting count if needed).
-// The grid handles multiple rows. I'll show all.
+// I&apos;ll strip to the ones that were there, or show all? 
+// Showing all is better for "Standardization". I&apos;ll show all (except maybe limiting count if needed).
+// The grid handles multiple rows. I&apos;ll show all.
 
 export function ServicesWithImages() {
   return (

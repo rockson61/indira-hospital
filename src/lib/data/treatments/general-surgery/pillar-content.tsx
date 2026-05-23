@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from 'react'
 import { 
     Zap, 
@@ -47,7 +48,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                 <div className="grid md:grid-cols-2 gap-12">
                     <div className="space-y-6">
                         <p className="text-slate-700 dark:text-slate-300 leading-relaxed italic">
-                            "Our approach to general surgery is built on a simple yet rigorous foundation: <strong>Minimize Trauma, Maximize Outcome.</strong> Every surgical plan we design is tailored to the patient's unique anatomy, lifestyle, and recovery goals."
+                            "Our approach to general surgery is built on a simple yet rigorous foundation: <strong>Minimize Trauma, Maximize Outcome.</strong> Every surgical plan we design is tailored to the patient&apos;s unique anatomy, lifestyle, and recovery goals."
                         </p>
                         <div className="p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
                             <h4 className="font-bold text-[#005f73] dark:text-fuchsia-400 mb-4 flex items-center gap-2">
@@ -86,7 +87,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                         The Infrastructure of Precision
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 italic">
-                        General surgery at Indira Hospital is powered by the world's most advanced surgical platforms, ensuring that our surgeons have 20x magnification and 4K clarity for every move.
+                        General surgery at Indira Hospital is powered by the world&apos;s most advanced surgical platforms, ensuring that our surgeons have 20x magnification and 4K clarity for every move.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8">
@@ -165,7 +166,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                         <div className="bg-fuchsia-50 dark:bg-fuchsia-950/20 p-8 rounded-[3rem] border border-fuchsia-100 dark:border-fuchsia-900/30 md:order-2">
                             <h4 className="font-bold text-fuchsia-900 dark:text-fuchsia-400 mb-4">Laser Innovation:</h4>
                             <p className="text-sm text-fuchsia-900/70 dark:text-fuchsia-400/70 italic leading-relaxed">
-                                "Our Laser Proctology unit is one of India's highest-volume centers. By removing the need for scalpels, we have eliminated the fear of surgery for conditions like Piles and Fistula."
+                                "Our Laser Proctology unit is one of India&apos;s highest-volume centers. By removing the need for scalpels, we have eliminated the fear of surgery for conditions like Piles and Fistula."
                             </p>
                             <div className="mt-8 pt-8 border-t border-fuchsia-200 dark:border-fuchsia-900/30 flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-fuchsia-100 dark:bg-fuchsia-900/50 flex items-center justify-center text-fuchsia-600">
@@ -203,7 +204,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                     <div className="grid md:grid-cols-2 gap-12">
                         <div className="space-y-6">
                             <p className="text-slate-400 leading-relaxed italic text-sm">
-                                Surgical emergencies like acute appendicitis, bowel obstruction, or polytrauma don't happen by appointment. Our hospital maintains 3 fully equipped emergency operation theaters (OT) and a dedicated anaesthesia team on-site 24/7.
+                                Surgical emergencies like acute appendicitis, bowel obstruction, or polytrauma don&apos;t happen by appointment. Our hospital maintains 3 fully equipped emergency operation theaters (OT) and a dedicated anaesthesia team on-site 24/7.
                             </p>
                             <div className="p-6 bg-white/5 border border-white/10 rounded-3xl">
                                 <h5 className="text-red-400 font-black text-xs uppercase tracking-[0.2em] mb-4">Emergency Specializations:</h5>
@@ -262,7 +263,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                             </p>
                             <div className="flex items-center gap-4 border-t border-white/5 pt-8">
                                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#005f73] p-0.5 group-hover:scale-110 transition-transform">
-                                    <img src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
+                                    <Image width={48} height={48} src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
                                 </div>
                                 <div>
                                     <div className="text-[10px] font-black uppercase text-[#005f73] tracking-widest italic leading-tight">Dr. P. Shankar</div>
@@ -285,7 +286,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                         { q: "What is the difference between open and laparoscopic surgery?", a: "Open surgery uses a single large incision (5-10 inches) to access organs, while laparoscopic surgery uses 3 or 4 tiny incisions (5-10 mm) and a camera. This leads to 90% less scarring and much faster recovery." },
                         { q: "Is general surgery always safe?", a: "While every procedure carries risks, our hospital maintains international safety standards. With pre-surgical optimization (PAC), 4K precision, and senior clinical oversight, our complication rate is under 0.1% for elective cases." },
                         { q: "When should I consider laser for Piles over traditional surgery?", a: "Laser is recommended for grade 2, 3, and 4 hemorrhoids where the patient wants zero blood loss, minimal post-op pain, and a return to work within 48 hours. Traditional surgery is now reserved only for exceptionally complex cases." },
-                        { q: "Does the hospital accept insurance for surgeries?", a: "Yes, we are empanelled with all major government and private insurance providers, including Star Health, HDFC Ergo, Oriental Insurance, and the TN Chief Minister's Health Insurance Scheme (CMCHIS)." },
+                        { q: "Does the hospital accept insurance for surgeries?", a: "Yes, we are empanelled with all major government and private insurance providers, including Star Health, HDFC Ergo, Oriental Insurance, and the TN Chief Minister&apos;s Health Insurance Scheme (CMCHIS)." },
                         { q: "How long is the recovery for a Laparoscopic Hernia repair?", a: "Most patients are discharged within 24 hours. You can resume desk work in 3-5 days and return to full physical exercise/gym in 3 weeks, compared to 6 weeks for open surgery." },
                         { q: "Why is Dr. Shankar considered the best surgeon in Vellore?", a: "With over 30 years of clinical mastery, a specialization in advanced laparoscopy and laser proctology, and a track record of handling high-risk cases that other centers refer out, his expertise is at the top 1% level in the state." }
                     ].map((faq, i) => (
@@ -305,7 +306,7 @@ export const GeneralSurgeryPillarLongForm = () => {
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-fuchsia-600/10 rounded-full blur-[100px] animate-pulse" />
                 <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Your Health is Our Legacy</h2>
                 <p className="text-white/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
-                    Whether it's a routine gallbladder removal or a complex emergency, trust the region's surgical architects for world-class precision.
+                    Whether it&apos;s a routine gallbladder removal or a complex emergency, trust the region&apos;s surgical architects for world-class precision.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 relative z-10">
                     <button className="px-14 py-6 bg-white text-[#005f73] font-black rounded-3xl transition-all shadow-2xl uppercase tracking-widest italic hover:scale-110 active:scale-95">Book Operation Consult</button>

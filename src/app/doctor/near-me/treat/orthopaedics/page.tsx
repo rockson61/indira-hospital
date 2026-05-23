@@ -174,7 +174,7 @@ export default function OrthopaedicsDepartmentPage() {
                             {[
                                 {
                                     q: "What is robotic-assisted knee replacement vs. manual?",
-                                    a: "Manual surgery uses standard tools and visual alignment. Robotic surgery uses a 3D digital model of your knee to guide the surgeon's hands, ensuring the bone cuts are accurate to within 0.5mm. This results in better balance, less pain, and a more natural feel to the new joint."
+                                    a: "Manual surgery uses standard tools and visual alignment. Robotic surgery uses a 3D digital model of your knee to guide the surgeon&apos;s hands, ensuring the bone cuts are accurate to within 0.5mm. This results in better balance, less pain, and a more natural feel to the new joint."
                                 },
                                 {
                                     q: "How soon can I walk after a Total Knee Replacement (TKR)?",

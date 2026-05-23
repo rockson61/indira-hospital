@@ -16,7 +16,7 @@ export default function UrologyPillarPage() {
         <DepartmentTemplate
             title="Urology & Laser Stone Center in Vellore, Tamil Nadu"
             slug="urology"
-            shortDescription="India's leading center for 100W Holmium Laser enucleation, retrograde intrarenal surgery (RIRS), and comprehensive male fertility excellence."
+            shortDescription="India&apos;s leading center for 100W Holmium Laser enucleation, retrograde intrarenal surgery (RIRS), and comprehensive male fertility excellence."
             fullDescription={(
                 <div className="space-y-16 text-left">
                     {/* Mechanism: The Laser Revolution in Urology */}
@@ -131,7 +131,7 @@ export default function UrologyPillarPage() {
                             ))}
                         </div>
                         <div className="mt-12 p-6 rounded-3xl bg-blue-600/10 border border-blue-500/30 text-blue-300 italic text-sm text-left">
-                            At Indira Hospital, every stone patient receives a <strong>Stone Analysis &amp; Metabolic Workup</strong> to identify their stone's chemical signature.
+                            At Indira Hospital, every stone patient receives a <strong>Stone Analysis &amp; Metabolic Workup</strong> to identify their stone&apos;s chemical signature.
                         </div>
                     </section>
 

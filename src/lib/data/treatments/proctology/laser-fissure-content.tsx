@@ -135,7 +135,7 @@ export const LaserFissureLongForm = () => {
                         </li>
                         <li className="flex items-start gap-4">
                             <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-1" />
-                            <span><strong>Underlying Disease:</strong> Occasional cases may be linked to Crohn's disease or other inflammatory bowel conditions.</span>
+                            <span><strong>Underlying Disease:</strong> Occasional cases may be linked to Crohn&apos;s disease or other inflammatory bowel conditions.</span>
                         </li>
                     </ul>
                 </div>
@@ -223,7 +223,7 @@ export const LaserFissureLongForm = () => {
                     </div>
                     <h2 className="text-3xl font-bold text-slate-900">Break the Spasm-Pain Cycle Today</h2>
                     <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                        You don't have to suffer in silence or fear every bowel movement. Our Vellore center offers the precision and care needed to heal your fissure once and for all.
+                        You don&apos;t have to suffer in silence or fear every bowel movement. Our Vellore center offers the precision and care needed to heal your fissure once and for all.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 pt-4">
                         <span className="flex items-center gap-2 text-sm text-slate-400"><MapPin className="w-4 h-4" /> Near Katpadi, Vellore</span>

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
     Plane, Globe2, Clock, MapPin, CheckCircle2, Languages, MessageCircle,
     Shield, Phone, Star, Award, ArrowRight, ChevronRight, TrendingDown,
@@ -274,7 +275,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
                                         <Link href={`/doctor/${doc.department?.slug || "specialist"}/${doc.slug}`} key={doc.slug}
                                             className="flex items-center gap-4 group">
                                             {doc.image && (
-                                                <img src={getImageUrl(doc.image)} alt={doc.name}
+                                                <Image src={getImageUrl(doc.image)} alt={doc.name} width={48} height={48}
                                                     className="w-12 h-12 rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all border border-slate-100 dark:border-slate-800" />
                                             )}
                                             <div className="min-w-0">

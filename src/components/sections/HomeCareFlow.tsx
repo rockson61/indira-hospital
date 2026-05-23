@@ -25,7 +25,7 @@ const flowData = [
     },
     {
         title: "Locations Near You",
-        description: "Indira Hospital offers many locations across Tamil Nadu to provide convenient care for you and your family. We're nearby when you need us.",
+        description: "Indira Hospital offers many locations across Tamil Nadu to provide convenient care for you and your family. We&apos;re nearby when you need us.",
         ctaText: "View Our Locations",
         ctaHref: "/doctor/near-me",
         imageSrc: "/images/hospital/Hospital.webp",
@@ -34,7 +34,7 @@ const flowData = [
     },
     {
         title: "Services We Offer",
-        description: "We're proud to offer comprehensive healthcare services for our community, including heart care, cancer care, primary care and pediatrics. We provide healthcare for life.",
+        description: "We&apos;re proud to offer comprehensive healthcare services for our community, including heart care, cancer care, primary care and pediatrics. We provide healthcare for life.",
         ctaText: "View Our Services",
         ctaHref: "/doctor/near-me/treat",
         imageSrc: "/images/hospital/OT.webp",

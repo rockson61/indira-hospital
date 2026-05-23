@@ -34,7 +34,7 @@ export function CostCalculator() {
     };
 
     const estimatedCost = calculateCost();
-    const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in an Elite Consultation for ${procedure.procedure}. My estimated value range is around ₹${estimatedCost.toLocaleString()}.`)}`;
+    const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;m interested in an Elite Consultation for ${procedure.procedure}. My estimated value range is around ₹${estimatedCost.toLocaleString()}.`)}`;
 
     return (
         <Card className="p-8 bg-slate-950/40 backdrop-blur-3xl border border-white/10 shadow-2xl rounded-[2.5rem] relative overflow-hidden">

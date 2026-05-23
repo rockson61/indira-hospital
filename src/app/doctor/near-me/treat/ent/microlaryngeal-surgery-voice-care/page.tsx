@@ -66,7 +66,7 @@ export default function VoiceSurgeryPage() {
                                     The vocal folds are composed of multiple delicate layers. The outermost layer—the epithelium—must remain supple to vibrate at high frequencies. Traditional surgery often leaves scars that stiffen these layers, resulting in a permanent breathy or rough voice.
                                 </p>
                                 <p className="mt-4">
-                                    **Elite Phonosurgery** at Indira is performed using a "Cold Steel" technique. We avoid lasers that generate heat, which can cause thermal damage to the deep Reinke's space. By using delicate microscopic shears, we preserve the healthy tissue, ensuring your voice returns with its natural tone and range.
+                                    **Elite Phonosurgery** at Indira is performed using a "Cold Steel" technique. We avoid lasers that generate heat, which can cause thermal damage to the deep Reinke&apos;s space. By using delicate microscopic shears, we preserve the healthy tissue, ensuring your voice returns with its natural tone and range.
                                 </p>
                                 <div className="mt-8 space-y-4 text-sm font-medium">
                                     <div className="flex items-center gap-3">
@@ -101,7 +101,7 @@ export default function VoiceSurgeryPage() {
                             {[
                                 { title: "Vocal Nodules", desc: "Callus-like growths caused by chronic vocal strain or professional speaking.", icon: Mic },
                                 { title: "Vocal Polyps", desc: "Fluid-filled bumps appearing after severe acute vocal trauma.", icon: Activity },
-                                { title: "Reinke's Edema", desc: "Swelling caused by smoking, leading to a permanent low-pitched voice.", icon: Droplets },
+                                { title: "Reinke&apos;s Edema", desc: "Swelling caused by smoking, leading to a permanent low-pitched voice.", icon: Droplets },
                                 { title: "Laryngeal Papillomas", desc: "Structural growths that can obstruct breathing if left untreated.", icon: Flame }
                             ].map((item, i) => (
                                 <div key={i} className="p-6 rounded-[2.5rem] bg-white/5 border border-white/10 group hover:border-fuchsia-500/50 transition-all">
@@ -159,12 +159,12 @@ export default function VoiceSurgeryPage() {
                                     a: "No. Microlaryngeal surgery is performed entirely through the mouth using specialized laryngoscopes. There are no external incisions or visible scars."
                                 },
                                 {
-                                    q: "Why can't I whisper during voice rest?",
+                                    q: "Why can&apos;t I whisper during voice rest?",
                                     a: "Whispering actually puts *more* strain on the vocal cords than normal talking. It forces the muscles to tighten in an unnatural way, which can disrupt the delicate mucosal healing process."
                                 },
                                 {
                                     q: "Will my voice sound different forever?",
-                                    a: "In most cases where polyps or nodules are removed, the voice returns to its natural, clear state once healing is complete. In fact, many patients report a'clearer' voice than they had for years."
+                                    a: "In most cases where polyps or nodules are removed, the voice returns to its natural, clear state once healing is complete. In fact, many patients report a&apos;clearer' voice than they had for years."
                                 },
                                 {
                                     q: "How soon can I return to professional singing?",
@@ -172,7 +172,7 @@ export default function VoiceSurgeryPage() {
                                 },
                                 {
                                     q: "What role does Acid Reflux (GERD) play in voice loss?",
-                                    a: "Reflux can cause 'Laryngopharyngeal Reflux' (LPR), where stomach acid burns the vocal cords. We often manage reflux aggressively alongside surgery to ensure growths don't return."
+                                    a: "Reflux can cause 'Laryngopharyngeal Reflux' (LPR), where stomach acid burns the vocal cords. We often manage reflux aggressively alongside surgery to ensure growths don&apos;t return."
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group">

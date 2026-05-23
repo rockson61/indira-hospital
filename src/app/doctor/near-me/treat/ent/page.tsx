@@ -144,10 +144,10 @@ export default function ENTDepartmentPage() {
                                 },
                                 {
                                     q: "Is Tinnitus (ringing in the ears) curable?",
-                                    a: "While Tinnitus doesn't always have a single 'cure,' it is often a symptom of underlying hearing loss or wax. We use high-resolution audiometry to find the cause and offer masking therapies to reclaim your peace of mind."
+                                    a: "While Tinnitus doesn&apos;t always have a single 'cure,' it is often a symptom of underlying hearing loss or wax. We use high-resolution audiometry to find the cause and offer masking therapies to reclaim your peace of mind."
                                 },
                                 {
-                                    q: "How safe are grommet tubes for a child's ear?",
+                                    q: "How safe are grommet tubes for a child&apos;s ear?",
                                     a: "Extremely safe. For children with persistent 'Glue Ear' (fluid buildup), grommets are a 15-minute daycare procedure that prevents recurrent infections and ensures hearing development stays on track."
                                 },
                                 {

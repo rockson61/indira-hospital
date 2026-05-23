@@ -61,8 +61,8 @@ export default function DrSoniyaShankarProfile() {
 
     const faqItems = [
         {
-            question: "What is Dr. Soniya Shankar's role in hospital quality?",
-            answer: "As the Director of Patient Advocacy & Quality, Dr. Soniya oversees the hospital's NABH and NABL compliance, ensuring that all clinical and surgical procedures meet international safety standards."
+            question: "What is Dr. Soniya Shankar&apos;s role in hospital quality?",
+            answer: "As the Director of Patient Advocacy & Quality, Dr. Soniya oversees the hospital&apos;s NABH and NABL compliance, ensuring that all clinical and surgical procedures meet international safety standards."
         },
         {
             question: "How does she ensure a positive patient experience?",
@@ -76,7 +76,7 @@ export default function DrSoniyaShankarProfile() {
             patient_name: "Vijayalakshmi S.",
             treatment_received: "Patient Coordination",
             rating: 5,
-            content: "The level of organization at Indira Hospital is impressive. Dr. Soniya's leadership in patient advocacy ensures that every concern is addressed promptly. A truly premium hospital experience.",
+            content: "The level of organization at Indira Hospital is impressive. Dr. Soniya&apos;s leadership in patient advocacy ensures that every concern is addressed promptly. A truly premium hospital experience.",
             date_of_visit: "2024-03-25"
         },
         {
@@ -84,7 +84,7 @@ export default function DrSoniyaShankarProfile() {
             patient_name: "Ravi Shankar",
             treatment_received: "Insurance Assistance",
             rating: 5,
-            content: "The CMCHIS desk at Indira Hospital is very efficient. They handled all the paperwork for my father's surgery, and the cashless process was completely smooth. Kudos to the management team.",
+            content: "The CMCHIS desk at Indira Hospital is very efficient. They handled all the paperwork for my father&apos;s surgery, and the cashless process was completely smooth. Kudos to the management team.",
             date_of_visit: "2024-04-15"
         }
     ];
@@ -111,10 +111,10 @@ export default function DrSoniyaShankarProfile() {
                                     "Quality is not an act, it is a habit. In healthcare, it is the fundamental promise we make to every patient who walks through our doors."
                                 </p>
                                 <p className="mt-4">
-                                    As the **Chief Executive Officer (CEO)** of Indira Super Speciality Hospital, Dr. Soniya Shankar is the architect of the platform's clinical quality and patient-experience frameworks. Her specialized background in healthcare administration ensures that the hospital operates at international standards, balancing high-end medical technology with human-centric care.
+                                    As the **Chief Executive Officer (CEO)** of Indira Super Speciality Hospital, Dr. Soniya Shankar is the architect of the platform&apos;s clinical quality and patient-experience frameworks. Her specialized background in healthcare administration ensures that the hospital operates at international standards, balancing high-end medical technology with human-centric care.
                                 </p>
                                 <p className="mt-4">
-                                    She has been instrumental in securing and maintaining **NABH and NABL accreditations**, ensuring that every surgical and diagnostic department adheres to the world's most stringent safety and quality protocols. Her vision is to make Indira Hospital the premier destination for regional and international patients seeking clinical excellence in Tamil Nadu.
+                                    She has been instrumental in securing and maintaining **NABH and NABL accreditations**, ensuring that every surgical and diagnostic department adheres to the world&apos;s most stringent safety and quality protocols. Her vision is to make Indira Hospital the premier destination for regional and international patients seeking clinical excellence in Tamil Nadu.
                                 </p>
                                 <div className="mt-8 space-y-4">
                                     <div className="flex items-center gap-3">

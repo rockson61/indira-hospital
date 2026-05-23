@@ -63,7 +63,7 @@ export default function IBSConstipationPage() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
                             <div className="prose prose-slate dark:prose-invert">
                                 <p className="text-lg leading-relaxed">
-                                    IBS is a functional gastrointestinal disorder. This means that while your gut may look normal during a colonoscopy, it isn't "functioning" correctly. It's often caused by communication issues between the brain and the enteric nervous system, leading to abnormal muscle contractions.
+                                    IBS is a functional gastrointestinal disorder. This means that while your gut may look normal during a colonoscopy, it isn&apos;t "functioning" correctly. It&apos;s often caused by communication issues between the brain and the enteric nervous system, leading to abnormal muscle contractions.
                                 </p>
                                 <p className="mt-4">
                                     In **Chronic Constipation**, the issue is often structural or behavioral. "Slow Transit" occurs when the colon muscles move too slowly, while "Dyssynergic Defecation" happens when the pelvic floor muscles fail to relax during a bowel movement. Our **Elite Motility Lab** identifies these specific failures to build a targeted recovery plan.
@@ -83,7 +83,7 @@ export default function IBSConstipationPage() {
                                 <Brain className="w-16 h-16 text-emerald-500 mb-6" />
                                 <h4 className="text-xl font-bold mb-2">The "Indira" Microbiome Audit</h4>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading italic border-l-2 border-emerald-100 pl-4">
-                                    We don't just prescribe laxatives. We audit your diet, stress levels, and bacterial balance to eliminate SIBO (Small Intestinal Bacterial Overgrowth) and restore your "Gut Rhythms."
+                                    We don&apos;t just prescribe laxatives. We audit your diet, stress levels, and bacterial balance to eliminate SIBO (Small Intestinal Bacterial Overgrowth) and restore your "Gut Rhythms."
                                 </p>
                                 <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
                                     <Shield className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function IBSConstipationPage() {
                         <div className="grid md:grid-cols-3 gap-10 text-left relative z-10">
                             {[
                                 { title: "South Indian Diet", desc: "Highly refined rice and spicy condiments can irritate the bowel lining, triggering IBS in sensitive individuals.", icon: Utensils },
-                                { title: "Dehydration (Heat)", desc: "Vellore's intense heat causes rapid moisture loss, leading to harder stools and chronic constipation.", icon: Droplets },
+                                { title: "Dehydration (Heat)", desc: "Vellore&apos;s intense heat causes rapid moisture loss, leading to harder stools and chronic constipation.", icon: Droplets },
                                 { title: "Workplace Stress", desc: "Long sedentary hours and high-pressure roles impact the enteric nervous system, leading to motility failures.", icon: Activity }
                             ].map((item, i) => (
                                 <div key={i} className="p-8 rounded-[2.5rem] bg-white/5 border border-white/10 group hover:border-emerald-500/50 transition-all">

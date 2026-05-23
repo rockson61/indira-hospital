@@ -88,7 +88,7 @@ export default function FattyLiverPage() {
                 <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
                     <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Fatty Liver Disease</h3>
                     <p>
-                        Fatty liver, or Non-Alcoholic Fatty Liver Disease (NAFLD), occurs when more than 5-10% of your liver's weight is fat. While it starts as "simple fatty liver," it can progress to Non-Alcoholic Steatohepatitis (NASH), where the liver becomes inflamed and develops scar tissue (Fibrosis).
+                        Fatty liver, or Non-Alcoholic Fatty Liver Disease (NAFLD), occurs when more than 5-10% of your liver&apos;s weight is fat. While it starts as "simple fatty liver," it can progress to Non-Alcoholic Steatohepatitis (NASH), where the liver becomes inflamed and develops scar tissue (Fibrosis).
                     </p>
                     <p>
                         At Indira Hospital, our hepatology unit focuses on **Active Reversal**. The liver is the only organ capable of regenerating and healing itself entirely, provided the toxic cycle of insulin resistance and poor nutrition is broken. We provide the clinical tools and the constant monitoring needed to turn back the clock on liver damage.
@@ -112,7 +112,7 @@ export default function FattyLiverPage() {
 
                     <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-emerald-500 pl-4 italic">The Path to Liver Regeneration</h3>
                     <p>
-                        Our treatment roadmap doesn't rely solely on medications. We utilize a **Three-Phase Recovery Protocol**: 1. Detoxification & Inflammation Control, 2. Metabolic Re-balancing, and 3. Long-term Maintenance. By tracking your progress through serial FibroScans and Liver Function Tests (LFT), we provide objective proof of your liver's journey back to health.
+                        Our treatment roadmap doesn&apos;t rely solely on medications. We utilize a **Three-Phase Recovery Protocol**: 1. Detoxification & Inflammation Control, 2. Metabolic Re-balancing, and 3. Long-term Maintenance. By tracking your progress through serial FibroScans and Liver Function Tests (LFT), we provide objective proof of your liver&apos;s journey back to health.
                     </p>
 
                     <h4 className="font-heading text-[#005f73] dark:text-emerald-400 mt-10">What are the Benefits of Liver Care Surgery?</h4>

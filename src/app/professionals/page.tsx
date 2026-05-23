@@ -124,7 +124,7 @@ export default function ProfessionalsHub() {
                                 <Button 
                                     variant="link" 
                                     className="p-0 text-blue-400 hover:text-blue-300 font-black uppercase text-xs tracking-widest group-hover:translate-x-1 transition-transform"
-                                    onClick={() => window.open(`https://wa.me/919942436814?text=${encodeURIComponent(`Elite Professional Enquiry: I'm interested in the ${portal.title} at Indira Super Speciality Hospital.`)}`, '_blank')}
+                                    onClick={() => window.open(`https://wa.me/919942436814?text=${encodeURIComponent(`Elite Professional Enquiry: I&apos;m interested in the ${portal.title} at Indira Super Speciality Hospital.`)}`, '_blank')}
                                 >
                                     {portal.cta} <ArrowRight className="ml-1 w-3.5 h-3.5" />
                                 </Button>

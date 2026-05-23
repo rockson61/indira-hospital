@@ -27,7 +27,7 @@ export default async function DoctorsDirectoryPage() {
             <PageHero
                 title="Best Doctors & Specialist Surgeons in Vellore"
                 subtitle="Expert Care You Can Trust"
-                description="Don't leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
+                description="Don&apos;t leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
                 descriptionClassName="clinical-insight direct-answer"
                 backgroundImage="/images/hospital/Consultation.webp"
             />

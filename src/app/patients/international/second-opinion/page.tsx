@@ -15,7 +15,7 @@ const EMAIL = "secondopinion@" + siteConfig.url.replace(/^https?:\/\/(www\.)?/, 
 
 export const metadata: Metadata = {
     title: "Free Second Opinion from India | Specialist Review in 24 ...",
-    description: "Concerned about your diagnosis? Get a free second medical opinion from Indira Hospital, Vellore's top specialists. Send your reports via WhatsApp. Respo...",
+    description: "Concerned about your diagnosis? Get a free second medical opinion from Indira Hospital, Vellore&apos;s top specialists. Send your reports via WhatsApp. Respo...",
     keywords: [
         "free second opinion India",
         "second medical opinion online India",

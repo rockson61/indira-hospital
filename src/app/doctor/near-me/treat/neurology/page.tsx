@@ -42,7 +42,7 @@ export default function NeurologyDepartmentPage() {
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
-                                The brain is the body's most complex organ, and in neurology, every second counts. The <strong>Department of Neurosciences</strong> at Indira Super Speciality Hospital is a regional center of excellence for the diagnosis and management of brain, spine, and peripheral nerve disorders. We operate on a clinical principle of <strong>"Neural Preservation"</strong>—utilizing hyper-fast response protocols to save brain tissue during acute events.
+                                The brain is the body&apos;s most complex organ, and in neurology, every second counts. The <strong>Department of Neurosciences</strong> at Indira Super Speciality Hospital is a regional center of excellence for the diagnosis and management of brain, spine, and peripheral nerve disorders. We operate on a clinical principle of <strong>"Neural Preservation"</strong>—utilizing hyper-fast response protocols to save brain tissue during acute events.
                             </p>
                             <p className="mt-4">
                                 Our facility features a dedicated <strong>24/7 Stroke Unit</strong> capable of performing IV Thrombolysis (clot-busting) during the critical "Golden Hour." Backed by advanced <strong>Digital EEG and EMG</strong> diagnostics, we deliver a multi-disciplinary approach to complex conditions like Refractory Epilepsy, Parkinson’s Disease, and Chronic Migraine.
@@ -196,15 +196,15 @@ export default function NeurologyDepartmentPage() {
                                 },
                                 {
                                     q: "Is Parkinson’s disease hereditary?",
-                                    a: "The majority of Parkinson's cases (approx. 85-90%) are 'Sporadic' and not directly inherited. However, early-onset Parkinson's may have a genetic link. Management focuses on optimizing Dopamine levels to restore movement fluidity."
+                                    a: "The majority of Parkinson&apos;s cases (approx. 85-90%) are 'Sporadic' and not directly inherited. However, early-onset Parkinson&apos;s may have a genetic link. Management focuses on optimizing Dopamine levels to restore movement fluidity."
                                 },
                                 {
                                     q: "Can dementia be prevented?",
                                     a: "While age and genetics are factors, managing 'Vascular Risks' (Blood Pressure, Diabetes, Cholesterol) significantly reduces the risk of Vascular Dementia. Cognitive engagement and a heart-healthy diet also play protective roles."
                                 },
                                 {
-                                    q: "What is Bell's Palsy, and is it a stroke?",
-                                    a: "Bell's Palsy is a sudden weakness in the facial muscles caused by inflammation of the 7th cranial nerve. It is NOT a stroke. While it looks scary (facial droop), most patients recover fully within weeks with steroid therapy."
+                                    q: "What is Bell&apos;s Palsy, and is it a stroke?",
+                                    a: "Bell&apos;s Palsy is a sudden weakness in the facial muscles caused by inflammation of the 7th cranial nerve. It is NOT a stroke. While it looks scary (facial droop), most patients recover fully within weeks with steroid therapy."
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">

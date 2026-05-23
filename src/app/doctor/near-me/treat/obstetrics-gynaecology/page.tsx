@@ -9,7 +9,7 @@ import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, Chec
 
 export const metadata: Metadata = constructMetadata({
     title: "Doctor | Indira Super Speciality Hospital",
-    description: "Learn more about doctor at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    description: "Learn more about doctor at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
     path: "/doctor/near-me/treat/obstetrics-gynaecology"
 });
 
@@ -25,7 +25,7 @@ export default function GynaecologyPillarPage() {
 
     const title = "Gynaecology & Obstetrics"
     const slug = "obstetrics-gynaecology"
-    const shortDescription = "Comprehensive Women's Healthcare led by AIIMS experts. Specializing in Minimal Access (Keyhole) Surgery, High-Risk Maternity, and Advanced Fertility solutions."
+    const shortDescription = "Comprehensive Women&apos;s Healthcare led by AIIMS experts. Specializing in Minimal Access (Keyhole) Surgery, High-Risk Maternity, and Advanced Fertility solutions."
     
     return (
         <DepartmentTemplate
@@ -37,7 +37,7 @@ export default function GynaecologyPillarPage() {
                     {/* ── 1. The Clinical Vision ────────────────── */}
                     <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
                         <h2 className="text-4xl font-black text-rose-900 dark:text-rose-400 font-heading italic border-l-8 border-rose-600 pl-6 mb-8 uppercase tracking-tight text-left">
-                            The Gynaecology Authority: Precision Women's Care
+                            The Gynaecology Authority: Precision Women&apos;s Care
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
                             <p>
@@ -123,7 +123,7 @@ export default function GynaecologyPillarPage() {
                         </p>
                     </section>
 
-                    {/* ── 4. Women's Health Hub FAQs ─────────────── */}
+                    {/* ── 4. Women&apos;s Health Hub FAQs ─────────────── */}
                     <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/10 blur-[150px] -ml-48 -mb-48"></div>
                         
@@ -142,8 +142,8 @@ export default function GynaecologyPillarPage() {
                                     a: "Traditional Hysterectomy requires a 6-inch incision and 6 weeks of rest. Our Laparoscopic method uses 5mm micro-incisions. Patients walk within 6 hours, are discharged within 24 hours, and return to work in 10 days."
                                 },
                                 {
-                                    q: "Does an Epidural (Painless Labor) affect the baby's brain?",
-                                    a: "No. Epidural analgesia is the gold standard for labor pain relief. It stays in the spinal space and has zero negative impact on the baby's brain development or Apgar scores. In fact, it often helps in a calmer birthing process."
+                                    q: "Does an Epidural (Painless Labor) affect the baby&apos;s brain?",
+                                    a: "No. Epidural analgesia is the gold standard for labor pain relief. It stays in the spinal space and has zero negative impact on the baby&apos;s brain development or Apgar scores. In fact, it often helps in a calmer birthing process."
                                 },
                                 {
                                     q: "At what age should women start Cervical Cancer screening?",

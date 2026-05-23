@@ -15,7 +15,7 @@ export const LaserPilonidalSinusLongForm = () => {
                         Under the surgical expertise of <strong>Dr. Karan Shankar</strong>, a leading proctologist in Vellore, we use specialized laser fibers to destroy infected sinus tracts from within. This allows for a daycare procedure that involves minimal pain, no major incisions, and a significantly faster healing time compared to traditional methods.
                     </p>
                     <p>
-                        In this comprehensive guide, we'll dive deep into the pathophysiology of pilonidal sinus, the limitations of traditional surgery, and why laser-based intervention is the definitive choice for long-term health and minimal recurrence.
+                        In this comprehensive guide, we&apos;ll dive deep into the pathophysiology of pilonidal sinus, the limitations of traditional surgery, and why laser-based intervention is the definitive choice for long-term health and minimal recurrence.
                     </p>
                 </div>
             </section>
@@ -106,7 +106,7 @@ export const LaserPilonidalSinusLongForm = () => {
 
             {/* Section 5: The SiLaC Technique Experience at Indira Hospital */}
             <section id="the-procedure">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">The Laser Procedure: A Patient's Journey</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6">The Laser Procedure: A Patient&apos;s Journey</h2>
                 <div className="space-y-8">
                     <div className="flex gap-6 items-start">
                         <div className="w-12 h-12 bg-fuchsia-600 rounded-full flex items-center justify-center shrink-0 text-white font-black">1</div>
@@ -209,7 +209,7 @@ export const LaserPilonidalSinusLongForm = () => {
                     </div>
                     <h2 className="text-3xl font-bold text-slate-900">End the Loop of Sinus Recurrence</h2>
                     <p className="text-lg text-slate-600 leading-relaxed font-medium italic">
-                        The "cut it out and wait months" approach is outdated. Discover the precision of specialist laser intervention at Vellore's most advanced proctology center.
+                        The "cut it out and wait months" approach is outdated. Discover the precision of specialist laser intervention at Vellore&apos;s most advanced proctology center.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 pt-4">
                         <span className="flex items-center gap-2 text-sm text-slate-400 font-bold"><Shield className="w-4 h-4 text-emerald-500" /> Top-Tier Laser Protocol</span>

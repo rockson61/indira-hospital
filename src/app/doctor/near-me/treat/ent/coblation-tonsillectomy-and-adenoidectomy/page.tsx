@@ -163,7 +163,7 @@ export default function TonsillectomyPage() {
                                 },
                                 {
                                     q: "Why do we remove both tonsils and adenoids?",
-                                    a: "They are part of the same lymphoid ring (Waldeyer's ring). If both are chronically infected or enlarged, removing both ensures the child's obstructive sleep apnea and recurrent infections are permanently cured."
+                                    a: "They are part of the same lymphoid ring (Waldeyer&apos;s ring). If both are chronically infected or enlarged, removing both ensures the child&apos;s obstructive sleep apnea and recurrent infections are permanently cured."
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group text-left">

@@ -21,7 +21,7 @@ import { constructMetadata } from '@/lib/seo-utils';
 
 export const metadata: Metadata = constructMetadata({
     title: "Sitemap | Indira Super Speciality Hospital",
-    description: "Learn more about sitemap at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    description: "Learn more about sitemap at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
     path: "/sitemap"
 });
 

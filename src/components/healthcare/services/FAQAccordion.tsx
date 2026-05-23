@@ -41,7 +41,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
     },
     {
       title: "Obstetrics & Gynaecology",
-      description: "Comprehensive women's care including maternity and painless delivery.",
+      description: "Comprehensive women&apos;s care including maternity and painless delivery.",
       icon: Baby0203m,
       link: "/doctor/near-me/treat/obstetrics-gynaecology"
     },

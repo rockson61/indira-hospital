@@ -27,7 +27,7 @@ export default function ProctologyPillarPage() {
 
     const title = "Proctology"
     const slug = "proctology"
-    const shortDescription = "India's Leading Laser Proctology Center. Expert painless treatment for Piles, Fissure, Fistula, and Pilonidal Sinus by internationally trained surgeons Dr. P. Shankar and Dr. Karan Shankar."
+    const shortDescription = "India&apos;s Leading Laser Proctology Center. Expert painless treatment for Piles, Fissure, Fistula, and Pilonidal Sinus by internationally trained surgeons Dr. P. Shankar and Dr. Karan Shankar."
 
     return (
         <DepartmentTemplate

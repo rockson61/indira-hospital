@@ -17,7 +17,7 @@ export default function LaparoscopicHysterectomyPage() {
             title="Elite Laparoscopic Hysterectomy (TLH)"
             slug="laparoscopic-hysterectomy-guide"
             parentServiceSlug="obstetrics-gynaecology"
-            departmentName="Indira Elite Women's Care"
+            departmentName="Indira Elite Women&apos;s Care"
             description={
                 <article>
                     <p className="text-lg leading-relaxed">

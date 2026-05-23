@@ -63,7 +63,7 @@ export default function SeptoplastyPage() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                             <div className="prose prose-slate dark:prose-invert">
                                 <p className="text-lg leading-relaxed">
-                                    The nasal septum is the central "pillar" of the nose. When it deviates, it creates a narrow bottleneck that increases airflow resistance. This forces the body into chronic mouth-breathing, which bypasses the nose's natural filtering and humidifying system.
+                                    The nasal septum is the central "pillar" of the nose. When it deviates, it creates a narrow bottleneck that increases airflow resistance. This forces the body into chronic mouth-breathing, which bypasses the nose&apos;s natural filtering and humidifying system.
                                 </p>
                                 <p className="mt-4">
                                     **Elite Septoplasty** at Indira is performed using high-power fiberoptic endoscopes. Unlike traditional surgery, which depends on external lighting, our surgeons can see "around the corner" to address posterior bone spurs and complex deviations that cause persistent blockages.

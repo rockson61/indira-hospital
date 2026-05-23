@@ -30,7 +30,7 @@ export const RectalProlapseLongForm = () => {
                     <div className="grid md:grid-cols-3 gap-6 pt-4">
                         <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-3">
                             <h4 className="font-bold text-slate-900 text-lg">Internal Prolapse</h4>
-                            <p className="text-sm text-slate-500 italic font-medium">Internal Intussusception: The rectum starts to slide but doesn't yet protrude through the anus.</p>
+                            <p className="text-sm text-slate-500 italic font-medium">Internal Intussusception: The rectum starts to slide but doesn&apos;t yet protrude through the anus.</p>
                         </div>
                         <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-3">
                             <h4 className="font-bold text-slate-900 text-lg">Mucosal Prolapse</h4>
@@ -79,7 +79,7 @@ export const RectalProlapseLongForm = () => {
 
              {/* Section 4: Why Prolapse is Not Piles: The Difference */}
             <section id="prolapse-vs-piles" className="bg-slate-900 rounded-[3rem] p-12 text-white">
-                <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Prolapse vs. Hemorrhoids: Don't Confuse the Two</h2>
+                <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Prolapse vs. Hemorrhoids: Don&apos;t Confuse the Two</h2>
                 <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-4">
                         <h4 className="font-bold text-xl text-red-400">Piles (Hemorrhoids)</h4>
@@ -129,7 +129,7 @@ export const RectalProlapseLongForm = () => {
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-3">
                             <h4 className="font-bold text-slate-900 border-b border-fuchsia-200 pb-2">Hospital Stay</h4>
-                            <p className="text-sm text-slate-500 italic">Duration: 2-3 Days. You'll be walking and on a liquid-to-soft diet within 24 hours of laparoscopic surgery.</p>
+                            <p className="text-sm text-slate-500 italic">Duration: 2-3 Days. You&apos;ll be walking and on a liquid-to-soft diet within 24 hours of laparoscopic surgery.</p>
                         </div>
                         <div className="space-y-3">
                              <h4 className="font-bold text-slate-900 border-b border-fuchsia-200 pb-2">Pelvic Floor Rehab</h4>
@@ -199,7 +199,7 @@ export const RectalProlapseLongForm = () => {
                         { q: "What is the Tamil name for Rectal Prolapse?", a: "It is often referred to as 'ஆசனவாய் வெளியே தள்ளுதல்' (Aasanavaai veliye thalluthal) in common Tamil parlance." },
                         { q: "Is laparoscopic rectopexy better than perineal surgery?", a: "Yes. Laparoscopic surgery has a much lower recurrence rate (under 5%) compared to perineal procedures (which can have up to 20% recurrence)." },
                         { q: "How long after surgery can I lift weights?", a: "We recommend avoiding heavy lifting (more than 5kg) for at least 6-8 weeks to allow the mesh and internal sutures to heal correctly." },
-                        { q: "Will my bowel movements return to normal?", a: "Yes, most patients see a significant improvement in both constipation and incontinence within 3 months of surgery as the rectum's structural anatomy is restored." }
+                        { q: "Will my bowel movements return to normal?", a: "Yes, most patients see a significant improvement in both constipation and incontinence within 3 months of surgery as the rectum&apos;s structural anatomy is restored." }
                     ].map((faq, index) => (
                         <div key={index} className="bg-slate-50 p-6 rounded-2xl space-y-2">
                            <h4 className="text-lg font-bold text-slate-900 flex gap-2">
@@ -219,7 +219,7 @@ export const RectalProlapseLongForm = () => {
                     </div>
                     <h2 className="text-3xl font-bold text-slate-900 italic font-heading">Restore Your Pelvic Foundation</h2>
                     <p className="text-lg text-slate-600 leading-relaxed font-medium italic">
-                        Don't let prolapse limit your world. Discover the precision of laparoscopic restoration at Vellore's most advanced proctological center.
+                        Don&apos;t let prolapse limit your world. Discover the precision of laparoscopic restoration at Vellore&apos;s most advanced proctological center.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 pt-4">
                         <span className="flex items-center gap-2 text-sm text-slate-400 font-bold"><ShieldCheck className="w-4 h-4 text-emerald-500 font-bold" /> NABH Standards</span>

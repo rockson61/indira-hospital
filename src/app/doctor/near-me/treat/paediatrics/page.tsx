@@ -26,7 +26,7 @@ export default function PaediatricsDepartmentPage() {
                         </h2>
                         <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300 text-left">
                             <p>
-                                The <strong>Department of Paediatrics & Neonatology</strong> at Indira Super Speciality Hospital is a dedicated sanctuary for children's health, from the first breath of a neonate to the complex healthcare needs of adolescents. Our clinical philosophy is simple: <strong>Children are not small adults.</strong> They require specialized, age-appropriate medical and surgical care provided in a nurturing, child-friendly environment.
+                                The <strong>Department of Paediatrics & Neonatology</strong> at Indira Super Speciality Hospital is a dedicated sanctuary for children&apos;s health, from the first breath of a neonate to the complex healthcare needs of adolescents. Our clinical philosophy is simple: <strong>Children are not small adults.</strong> They require specialized, age-appropriate medical and surgical care provided in a nurturing, child-friendly environment.
                             </p>
                             <p className="mt-4">
                                 Our facility features a state-of-the-art <strong>Level 3 Neonatal Intensive Care Unit (NICU)</strong>, an automated <strong>Vaccination Hub</strong>, and specialized <strong>Pediatric Surgery</strong> units for congenital and acquired conditions.
@@ -127,7 +127,7 @@ export default function PaediatricsDepartmentPage() {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
                         <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Immunisation: The Invisible Shield of Childhood</h3>
                         <p>
-                            Vaccines are the single most effective clinical intervention in human history. They prepare a child's immune system to fight life-threatening diseases before they even occur. At Indira Hospital, we follow a rigorous <strong>Painless Vaccination Protocol</strong> combined with multi-channel reminders to ensure no child misses their vital shield.
+                            Vaccines are the single most effective clinical intervention in human history. They prepare a child&apos;s immune system to fight life-threatening diseases before they even occur. At Indira Hospital, we follow a rigorous <strong>Painless Vaccination Protocol</strong> combined with multi-channel reminders to ensure no child misses their vital shield.
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
                             {[
@@ -143,7 +143,7 @@ export default function PaediatricsDepartmentPage() {
                             ))}
                         </div>
                         <p className="font-bold text-slate-900 dark:text-slate-100 italic">
-                            Parenting doesn't come with a manual, but it does come with a clinical partner. Our <strong>Child Health Passport</strong> helps you track every milestone and vaccination with scientific precision.
+                            Parenting doesn&apos;t come with a manual, but it does come with a clinical partner. Our <strong>Child Health Passport</strong> helps you track every milestone and vaccination with scientific precision.
                         </p>
                     </section>
 
@@ -184,7 +184,7 @@ export default function PaediatricsDepartmentPage() {
                                     a: "A Level 3 NICU has the clinical mandatory specialist (Neonatologists) and machines (High-Frequency ventilators, Nitric Oxide, CPAP) to treat the most critical babies, including those requiring surgical intervention or those born extremely premature."
                                 },
                                 {
-                                    q: "When should I start my child's vaccination schedule?",
+                                    q: "When should I start my child&apos;s vaccination schedule?",
                                     a: "Vaccination begins at birth with BCG, Polio(OPV-0), and Hepatitis B-0. We provide a comprehensive childhood vaccination card that aligns with both Indian Academy of Paediatrics (IAP) and WHO guidelines."
                                 },
                                 {
@@ -193,7 +193,7 @@ export default function PaediatricsDepartmentPage() {
                                 },
                                 {
                                     q: "What are 'Delayed Milestones'?",
-                                    a: "If a child isn't sitting, walking, or speaking by the expected age window, it is called a delayed milestone. Early screening by our pediatricians and physiotherapists allows for intervention while the child's brain is still highly adaptable."
+                                    a: "If a child isn&apos;t sitting, walking, or speaking by the expected age window, it is called a delayed milestone. Early screening by our pediatricians and physiotherapists allows for intervention while the child&apos;s brain is still highly adaptable."
                                 },
                                 {
                                     q: "Is surgery safe for newborns?",
@@ -205,7 +205,7 @@ export default function PaediatricsDepartmentPage() {
                                 },
                                 {
                                     q: "What is Kangaroo Mother Care (KMC)?",
-                                    a: "KMC involves skin-to-skin contact between the parent and the preterm neonate. This clinical intervention stabilizes the baby's heart rate, breathing, and temperature, while significantly improving weight gain and maternal bonding."
+                                    a: "KMC involves skin-to-skin contact between the parent and the preterm neonate. This clinical intervention stabilizes the baby&apos;s heart rate, breathing, and temperature, while significantly improving weight gain and maternal bonding."
                                 },
                                 {
                                     q: "Can congenital heart disease be detected before birth?",

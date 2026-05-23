@@ -55,7 +55,7 @@ export default function DrPShankarProfile() {
 
     const faqItems = [
         {
-            question: "What is Dr. P. Shankar's expertise in cardiology?",
+            question: "What is Dr. P. Shankar&apos;s expertise in cardiology?",
             answer: "Dr. P. Shankar is a senior Interventional Cardiologist with over 30 years of experience. He specializes in complex angioplasties, stenting, and heart valve repairs, utilizing state-of-the-art diagnostic facilities at Indira Hospital."
         },
         {
@@ -140,7 +140,7 @@ export default function DrPShankarProfile() {
                                 </ul>
                                 <div className="inline-flex items-center gap-2 text-indigo-600 font-bold text-xs uppercase tracking-widest italic">
                                     <Award className="w-4 h-4" />
-                                    Chairman's Quality Guarantee
+                                    Chairman&apos;s Quality Guarantee
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ export default function DrPShankarProfile() {
                     {/* Technical Toolkit Row */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/30 to-transparent" />
-                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-indigo-300 uppercase tracking-widest leading-none">The Chairman's Surgical Toolkit</h3>
+                        <h3 className="text-3xl font-bold mb-8 italic font-heading text-indigo-300 uppercase tracking-widest leading-none">The Chairman&apos;s Surgical Toolkit</h3>
                         <div className="grid md:grid-cols-3 gap-6 text-left relative z-10">
                             {[
                                 { title: "1470nm Diode Laser", desc: "Gold-standard for bloodless proctological procedures.", icon: Zap },

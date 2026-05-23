@@ -59,7 +59,7 @@ const serviceProcedures: Record<string, string[]> = {
     cardiology: ["Angiography", "Angioplasty & Stenting", "Pacemaker Implantation", "Echocardiography", "TMT / Stress Test", "Heart Failure Management", "Cardiac Rehabilitation", "Holter Monitoring"],
     "icu-emergency": ["24/7 Emergency Care", "Ventilator Support", "Trauma Management", "Post-Surgical ICU Care", "Cardiac Monitoring", "Sepsis Management", "Stroke Care", "Poison Management"],
     dentistry: ["Maxillofacial Surgery", "Orthognathic Procedures", "Dental Implants", "Orthodontics", "Root Canal Treatment", "Happy Makeover", "Full Mouth Rehabilitation", "Pediatric Dentistry"],
-    neurology: ["Stroke Management", "Epilepsy Treatment", "Migraine & Headache Clinic", "Parkinson's Disease Care", "EEG & EMG Studies", "Peripheral Neuropathy", "Multiple Sclerosis Treatment", "Nerve Conduction Studies"],
+    neurology: ["Stroke Management", "Epilepsy Treatment", "Migraine & Headache Clinic", "Parkinson&apos;s Disease Care", "EEG & EMG Studies", "Peripheral Neuropathy", "Multiple Sclerosis Treatment", "Nerve Conduction Studies"],
     oncology: ["Cancer Screening", "Chemotherapy", "Targeted Therapy", "Immunotherapy", "Surgical Oncology", "Palliative Care", "Biopsy & Diagnosis", "Cancer Rehabilitation"],
     nephrology: ["Dialysis Services", "Chronic Kidney Disease", "Kidney Stone Management", "Hypertension Treatment", "Electrolyte Disorders", "Pre-Transplant Evaluation", "Glomerulonephritis Care", "Diabetic Nephropathy"],
 };
@@ -145,7 +145,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     const { slug } = await params;
     const lastSlug = slug[slug.length - 1];
 
-    // --- 1. Check if it's a SITE-SPECIFIC TREATMENT (Hierarchy) ---
+    // --- 1. Check if it&apos;s a SITE-SPECIFIC TREATMENT (Hierarchy) ---
     const treatment = getTreatmentBySlug(lastSlug);
     let service: any | null = null;
     let procedures: any[] = [];
@@ -187,7 +187,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         }
 
     } else {
-        // --- 2. Check if it's a STANDARD SERVICE ---
+        // --- 2. Check if it&apos;s a STANDARD SERVICE ---
         // Use API with fallback
         service = await getServiceBySlug(lastSlug).catch(() => null);
 
@@ -234,7 +234,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     // Use usePathname for client-side context detection
     // This component is a Server Component, so usePathname cannot be called directly here.
     // The instruction implies this logic is for a client-side component like FloatingActionBar.
-    // For the current server component, we'll keep the slug-based detection for initial render.
+    // For the current server component, we&apos;ll keep the slug-based detection for initial render.
     // If a client component needs this, it would call usePathname itself.
     const isDentalPage = slug.some(s => s.toLowerCase().includes('dental') || s.toLowerCase().includes('dentistry'));
     const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;

@@ -63,7 +63,7 @@ export default function ProstateSurgeryPage() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
                             <div className="prose prose-slate dark:prose-invert">
                                 <p className="text-lg leading-relaxed">
-                                    Traditional prostate surgery (TURP) uses an electric loop to 'chip away' at the prostate tissue. While effective for small glands, it carries a 10% risk of recurrence because it doesn't remove the entire enlargement.
+                                    Traditional prostate surgery (TURP) uses an electric loop to 'chip away' at the prostate tissue. While effective for small glands, it carries a 10% risk of recurrence because it doesn&apos;t remove the entire enlargement.
                                 </p>
                                 <p className="mt-4">
                                     Our **Elite Urology Unit** utilizes **Holmium Laser Enucleation (HoLEP)**. Instead of chipping, the laser fiber is used to "peel" the entire obstructive part of the prostate away from its shell, much like removing the fruit from an orange peel. This ensures that the entire channel is wide open, recurrence is near-zero (less than 1%), and the laser instantly cauterizes micro-vessels, making the procedure virtually bloodless and safe for patients on blood thinners.
@@ -103,11 +103,11 @@ export default function ProstateSurgeryPage() {
                     {/* Surgical Precision Grid */}
                     <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 to-transparent" />
-                        <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-blue-300 uppercase tracking-widest leading-none">Clinical Men's Health Matrix</h3>
+                        <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-blue-300 uppercase tracking-widest leading-none">Clinical Men&apos;s Health Matrix</h3>
                         <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
                             {[
                                 { title: "BPH Hub", desc: "For benign enlargements of any size (even >100 grams) where HoLEP is superior.", icon: Star },
-                                { title: "Cardiac Men's Care", desc: "Specialized urological protocols for patients on anticoagulants or with pacemakers.", icon: HeartPulse },
+                                { title: "Cardiac Men&apos;s Care", desc: "Specialized urological protocols for patients on anticoagulants or with pacemakers.", icon: HeartPulse },
                                 { title: "Bladder Calculus", desc: "Laser fragmentation for stones formed due to chronic prostate obstruction.", icon: Zap },
                                 { title: "Uro-Oncology", desc: "Screening and biopsy for prostate cancer using MRI-TRUS fusion protocols.", icon: Microscope }
                             ].map((item, i) => (
@@ -150,7 +150,7 @@ export default function ProstateSurgeryPage() {
                             {[
                                 {
                                     q: "What are the common symptoms of an enlarged prostate?",
-                                    a: "The most common symptoms include frequent urges to urinate (especially at night), a weak urinary stream, difficulty starting or stopping urination, and the feeling that the bladder hasn't fully emptied. If untreated, this can lead to UTIs, bladder stones, and kidney damage."
+                                    a: "The most common symptoms include frequent urges to urinate (especially at night), a weak urinary stream, difficulty starting or stopping urination, and the feeling that the bladder hasn&apos;t fully emptied. If untreated, this can lead to UTIs, bladder stones, and kidney damage."
                                 },
                                 {
                                     q: "Is HoLEP better than traditional 'Open' surgery or TURP?",

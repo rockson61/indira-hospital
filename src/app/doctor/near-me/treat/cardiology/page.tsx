@@ -182,7 +182,7 @@ export default function CardiologyDepartmentPage() {
                                 },
                                 {
                                     q: "What is the difference between an ICD and a Pacemaker?",
-                                    a: "A Pacemaker 'kicks in' when the heart beats too slowly. An ICD (Defibrillator) is more complex—it monitors for deadly 'fast' rhythms and delivers a life-saving 'internal shock' to restart the heart's rhythm if it stops."
+                                    a: "A Pacemaker 'kicks in' when the heart beats too slowly. An ICD (Defibrillator) is more complex—it monitors for deadly 'fast' rhythms and delivers a life-saving 'internal shock' to restart the heart&apos;s rhythm if it stops."
                                 },
                                 {
                                     q: "How long does a modern drug-eluting stent last?",

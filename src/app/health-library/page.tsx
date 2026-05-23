@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const categories = [
     { title: "Surgical Insights", count: "24 Articles", icon: <Microscope className="w-5 h-5 text-fuchsia-600" /> },
     { title: "Heart Health", count: "18 Articles", icon: <Activity className="w-5 h-5 text-fuchsia-600" /> },
-    { title: "Women's Wellness", count: "32 Articles", icon: <Brain className="w-5 h-5 text-fuchsia-600" /> },
+    { title: "Women&apos;s Wellness", count: "32 Articles", icon: <Brain className="w-5 h-5 text-fuchsia-600" /> },
     { title: "Patient Guides", count: "12 Manuals", icon: <FileText className="w-5 h-5 text-fuchsia-600" /> }
 ];
 
@@ -61,7 +61,7 @@ export default function HealthLibraryPage() {
                         <h2 className="elite-section-title text-slate-900 dark:text-white mb-8">Latest Insights</h2>
                         {[
                             { title: "Understanding Laser Proctology: Benefits and Recovery", date: "Jan 12, 2024", cat: "Surgery", slug: "laser-proctology-benefits" },
-                            { title: "How to Manage PCOS through Lifestyle Integration", date: "Feb 05, 2024", cat: "Women's Health", slug: "pcos-lifestyle-management" },
+                            { title: "How to Manage PCOS through Lifestyle Integration", date: "Feb 05, 2024", cat: "Women&apos;s Health", slug: "pcos-lifestyle-management" },
                             { title: "The Future of Cardiology: Minimally Invasive Stenting", date: "Dec 20, 2023", cat: "Cardiac", slug: "future-of-cardiology" }
                         ].map((post, i) => (
                             <Link key={i} href={`/blog/${post.slug}`} className="block group">

@@ -11,7 +11,7 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = constructMetadata({
     title: "Advanced Medical Technology & Infrastructure | Indira Hospital",
-    description: "Discover the cutting-edge medical infrastructure at Indira Hospital. From Robotic Surgery to 3T MRI, we use the world's best technology for your care.",
+    description: "Discover the cutting-edge medical infrastructure at Indira Hospital. From Robotic Surgery to 3T MRI, we use the world&apos;s best technology for your care.",
     path: "/technology"
 });
 

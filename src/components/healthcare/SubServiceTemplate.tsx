@@ -112,7 +112,7 @@ export function SubServiceTemplate({
 }: SubServiceTemplateProps) {
     const isDental = title.toLowerCase().includes('dental') || title.toLowerCase().includes('dentistry') || eyebrow?.toLowerCase().includes('dental') || departmentName?.toLowerCase().includes('dental');
     const contactPhone = isDental ? "+91 7010650063" : siteConfig.contact.phone;
-    const whatsappUrl = `https://wa.me/${contactPhone.replace(/\s+/g, '')}?text=${encodeURIComponent(`Hi, I'm interested in ${title}. Can I get more details?`)}`;
+    const whatsappUrl = `https://wa.me/${contactPhone.replace(/\s+/g, '')}?text=${encodeURIComponent(`Hi, I&apos;m interested in ${title}. Can I get more details?`)}`;
     const bookingUrl = `/book-appointment?service=${encodeURIComponent(title)}&dept=${encodeURIComponent(departmentName || 'General')}`;
 
     // Auto-populate specialists from global doctor data if not provided

@@ -57,7 +57,7 @@ export default function DrPraharshithaProfile() {
 
     const faqItems = [
         {
-            question: "What is Dr. Praharshitha's approach to high-risk pregnancy?",
+            question: "What is Dr. Praharshitha&apos;s approach to high-risk pregnancy?",
             answer: "Dr. Praharshitha utilizes her AIIMS-standard training to provide advanced fetal monitoring and evidence-based clinical protocols for complex pregnancies, ensuring the highest safety standards for both mother and child."
         },
         {
@@ -107,7 +107,7 @@ export default function DrPraharshithaProfile() {
                                     "Excellence in maternity care today is about combining clinical intuition with advanced fetal diagnostics and minimally invasive gynae-solutions."
                                 </p>
                                 <p className="mt-4">
-                                    With a residency from **AIIMS, New Delhi**, India's premier medical institution, Dr. Praharshitha Sagiraju brings a level of academic rigour and clinical excellence to Indira Hospital that is unmatched in the region. She specializes in **High-Risk Obstetrics** and **Advanced Fetal Monitoring**, ensuring both mother and baby receive tertiary-level care. 
+                                    With a residency from **AIIMS, New Delhi**, India&apos;s premier medical institution, Dr. Praharshitha Sagiraju brings a level of academic rigour and clinical excellence to Indira Hospital that is unmatched in the region. She specializes in **High-Risk Obstetrics** and **Advanced Fetal Monitoring**, ensuring both mother and baby receive tertiary-level care. 
                                 </p>
                                 <p className="mt-4">
                                     Beyond maternity, she is a master of **Gynae-Endoscopy (Laparoscopy & Hysteroscopy)**. Her surgical philosophy focuses on preserving fertility and minimizing recovery times for procedures like ovarian cystectomies and fibroid removals through precise keyhole techniques.
@@ -129,7 +129,7 @@ export default function DrPraharshithaProfile() {
                                 <ul className="space-y-4 mb-6">
                                     <li className="flex gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
-                                        <span className="text-sm"><strong>AIIMS Academic Lineage</strong>: Adhering to the world's most rigorous medical protocols.</span>
+                                        <span className="text-sm"><strong>AIIMS Academic Lineage</strong>: Adhering to the world&apos;s most rigorous medical protocols.</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />

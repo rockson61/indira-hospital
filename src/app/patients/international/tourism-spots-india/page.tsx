@@ -27,7 +27,7 @@ const TOURISM_STATES = [
     },
     {
         name: "Kerala",
-        description: "God's Own Country, globally acclaimed for its backwaters and serenity.",
+        description: "God&apos;s Own Country, globally acclaimed for its backwaters and serenity.",
         spots: [
             { name: "Munnar", desc: "Endless rolling tea gardens and fresh mountain air." },
             { name: "Alleppey Backwaters", desc: "Relaxing houseboat cruises on tranquil, palm-fringed canals." },
@@ -46,7 +46,7 @@ const TOURISM_STATES = [
     },
     {
         name: "Delhi & Agra",
-        description: "The Golden Triangle route showcasing India's spectacular history.",
+        description: "The Golden Triangle route showcasing India&apos;s spectacular history.",
         spots: [
             { name: "Taj Mahal, Agra", desc: "The iconic ivory-white marble mausoleum, a Wonder of the World." },
             { name: "Red Fort, Delhi", desc: "A massive historic fort representing the pinnacle of Mughal creativity." }

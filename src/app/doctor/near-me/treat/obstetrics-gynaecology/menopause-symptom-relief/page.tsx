@@ -17,7 +17,7 @@ export default function MenopauseCarePage() {
             title="Elite Menopause & Bio-Identical Hormone Care"
             slug="menopause-symptom-relief"
             parentServiceSlug="obstetrics-gynaecology"
-            departmentName="Indira Elite Women's Care"
+            departmentName="Indira Elite Women&apos;s Care"
             description={
                 <article>
                     <p className="text-lg leading-relaxed">
@@ -75,7 +75,7 @@ export default function MenopauseCarePage() {
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <Heart className="w-5 h-5 text-rose-600" />
-                                        <span><strong>Cardio-Protection Audit</strong>: Monitoring lipid profiles as estrogen's heart-protective effect diminishes.</span>
+                                        <span><strong>Cardio-Protection Audit</strong>: Monitoring lipid profiles as estrogen&apos;s heart-protective effect diminishes.</span>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ export default function MenopauseCarePage() {
                                 },
                                 {
                                     q: "Why do I feel 'Brain Fog' since my periods stopped?",
-                                    a: "Estrogen receptors are located throughout the brain. A drop in levels can slow down neural signaling. While it feels like memory loss, it's often reversible once hormonal and metabolic balance is restored."
+                                    a: "Estrogen receptors are located throughout the brain. A drop in levels can slow down neural signaling. While it feels like memory loss, it&apos;s often reversible once hormonal and metabolic balance is restored."
                                 },
                                 {
                                     q: "Can natural herbs like Soy replacement HRT?",
@@ -138,7 +138,7 @@ export default function MenopauseCarePage() {
                                 },
                                 {
                                     q: "Is menopause related to increased heart risk?",
-                                    a: "Yes. Estrogen keeps blood vessels flexible and manages 'good' cholesterol. Once levels drop, women's risk of heart disease increases to match men's. This is why we include a 'Cardiac Lipid Audit' in all menopause consultations."
+                                    a: "Yes. Estrogen keeps blood vessels flexible and manages 'good' cholesterol. Once levels drop, women&apos;s risk of heart disease increases to match men&apos;s. This is why we include a 'Cardiac Lipid Audit' in all menopause consultations."
                                 },
                                 {
                                     q: "How do I manage menopause-related weight gain?",

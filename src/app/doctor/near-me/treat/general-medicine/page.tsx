@@ -162,7 +162,7 @@ export default function GeneralMedicineDepartmentPage() {
                             ))}
                         </div>
                         <p className="font-bold text-slate-900 dark:text-slate-100 italic">
-                            By monitoring these four pillars, we ensure that being a diabetic doesn't lead to long-term health complications. We empower you to live a life with <strong>Zero Clinical Limitations.</strong>
+                            By monitoring these four pillars, we ensure that being a diabetic doesn&apos;t lead to long-term health complications. We empower you to live a life with <strong>Zero Clinical Limitations.</strong>
                         </p>
                     </section>
 

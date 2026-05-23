@@ -77,7 +77,7 @@ export default function OncologyDepartmentPage() {
                                         <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Surgical Onco</h4>
                                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">High-precision radical resections using advanced energy devices and magnified visualization for complex tumors.</p>
                                         <ul className="space-y-3 mb-8">
-                                            {["Modified Radical Mastectomy", "Whipple's Procedure (GI)", "Commando Surgery (Oral Cancers)", "Colorectal Rectopexy & Resection"].map(i => (
+                                            {["Modified Radical Mastectomy", "Whipple&apos;s Procedure (GI)", "Commando Surgery (Oral Cancers)", "Colorectal Rectopexy & Resection"].map(i => (
                                                 <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
                                                     <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
                                                 </li>
@@ -169,7 +169,7 @@ export default function OncologyDepartmentPage() {
                             {[
                                 {
                                     q: "What is the benefit of a 'Day-Care' Chemotherapy Unit?",
-                                    a: "Chemotherapy doesn't always require long hospitalizations. Our 24/7 Day-Care Unit allows patients to receive their infusible targeted therapy or immunotherapy in a comfortable environment and return home the same day, maintaining their family support structure."
+                                    a: "Chemotherapy doesn&apos;t always require long hospitalizations. Our 24/7 Day-Care Unit allows patients to receive their infusible targeted therapy or immunotherapy in a comfortable environment and return home the same day, maintaining their family support structure."
                                 },
                                 {
                                     q: "Is surgery always the first step in cancer treatment?",
@@ -185,7 +185,7 @@ export default function OncologyDepartmentPage() {
                                 },
                                 {
                                     q: "What is Palliative Oncology?",
-                                    a: "Palliative care isn't just for 'end-of-life.' It's about optimizing quality of life from day one of diagnosis. We focus on controlling pain, managing fatigue, and providing nutritional and psychological support alongside curative treatments."
+                                    a: "Palliative care isn&apos;t just for 'end-of-life.' It&apos;s about optimizing quality of life from day one of diagnosis. We focus on controlling pain, managing fatigue, and providing nutritional and psychological support alongside curative treatments."
                                 },
                                 {
                                     q: "Does Indira Hospital treat pediatric (childhood) cancers?",

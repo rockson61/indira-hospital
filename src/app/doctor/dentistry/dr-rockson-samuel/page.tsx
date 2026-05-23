@@ -86,7 +86,7 @@ export default function DrRocksonSamuelProfile() {
             patient_name: "Divya Bhaskar",
             treatment_received: "Smile Makeover / Veneers",
             rating: 5,
-            content: "Got my veneers done at the Ultimate Smile Design center. The 3D preview allowed me to see the result beforehand. Dr. Rockson's attention to detail is amazing.",
+            content: "Got my veneers done at the Ultimate Smile Design center. The 3D preview allowed me to see the result beforehand. Dr. Rockson&apos;s attention to detail is amazing.",
             date_of_visit: "2024-04-10"
         }
     ];
@@ -110,10 +110,10 @@ export default function DrRocksonSamuelProfile() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                             <div className="prose prose-slate dark:prose-invert">
                                 <p className="text-lg leading-relaxed antialiased font-medium uppercase italic text-slate-700 dark:text-slate-200 tracking-tight">
-                                    "A perfect smile is a blend of facial harmony, structural strength, and digital precision. We don't just treat teeth; we design confidence."
+                                    "A perfect smile is a blend of facial harmony, structural strength, and digital precision. We don&apos;t just treat teeth; we design confidence."
                                 </p>
                                 <p className="mt-4">
-                                    As the **Chief Dentist and Implantologist** at Indira Hospital's Ultimate Smile Design center, Dr. Rockson Samuel has pioneered **Digital Smile Design (DSD)** in Vellore. This technology allows patients to "test-drive" their new smile before a single procedure begins, ensuring predictable and aesthetically superior outcomes.
+                                    As the **Chief Dentist and Implantologist** at Indira Hospital&apos;s Ultimate Smile Design center, Dr. Rockson Samuel has pioneered **Digital Smile Design (DSD)** in Vellore. This technology allows patients to "test-drive" their new smile before a single procedure begins, ensuring predictable and aesthetically superior outcomes.
                                 </p>
                                 <p className="mt-4">
                                     His expertise in **Implantology** focuses on "Immediate Loading" techniques, allowing for single-day tooth replacements. By utilizing **Intraoral Scanners** and 3D imaging, he eliminates the need for messy traditional impressions, making the dental journey entirely digital and frictionless.

@@ -83,7 +83,7 @@ export default function SurgicalGastroPage() {
                                 <Scale className="w-16 h-16 text-emerald-500 mb-6" />
                                 <h4 className="text-xl font-bold mb-2">Nutritional Hub Integration</h4>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-medium">
-                                    Following major GI resection, the body's absorption mechanics change. We provide a **30-Day Post-Op Nutrition Blueprint** tailored to your new digestive anatomy.
+                                    Following major GI resection, the body&apos;s absorption mechanics change. We provide a **30-Day Post-Op Nutrition Blueprint** tailored to your new digestive anatomy.
                                 </p>
                                 <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
                                     <Shield className="w-4 h-4" />
@@ -162,7 +162,7 @@ export default function SurgicalGastroPage() {
                                     a: "Yes. For many GI cancers, like Colon and Esophageal cancer, laparoscopic (keyhole) surgery is now the gold standard. It provides similar oncological outcomes with much faster recovery."
                                 },
                                 {
-                                    q: "What is a Whipple's Procedure?",
+                                    q: "What is a Whipple&apos;s Procedure?",
                                     a: "It is one of the most complex GI surgeries, involving removal of the pancreas head and parts of the small intestine. This is performed by our senior HPB specialists for pancreatic cancers."
                                 },
                                 {
@@ -175,7 +175,7 @@ export default function SurgicalGastroPage() {
                                 },
                                 {
                                     q: "How long after GI surgery can I eat normally?",
-                                    a: "Under our ERAS protocol, you'll start sips of liquids within 24 hours. A return to a fully solid diet usually happens over 10-14 days as the bowel recovers."
+                                    a: "Under our ERAS protocol, you&apos;ll start sips of liquids within 24 hours. A return to a fully solid diet usually happens over 10-14 days as the bowel recovers."
                                 },
                                 {
                                     q: "Is Surgical GI different from Medical Gastroenterology?",

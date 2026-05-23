@@ -67,7 +67,7 @@ export default async function DepartmentsDirectoryPage() {
                             Our hospital houses 30+ medical departments. Chat with our clinical assistance team to find the right specialist for your condition.
                         </p>
                         <a 
-                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I'm looking for a specialist at Indira Hospital.")}`}
+                            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I&apos;m looking for a specialist at Indira Hospital.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-3 px-10 py-5 bg-white text-fuchsia-700 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-xl"

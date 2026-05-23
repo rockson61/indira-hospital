@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { Play, Shield, Users, Award, ChevronRight, PlayCircle } from "lucide-react";
+import { Play, Shield, Users, Award, ChevronRight, PlayCircle, Clock } from "lucide-react";
 import { ModernCard } from "@/components/ui/modern-card";
+import Image from "next/image";
 
 interface VideoItem {
     id: string;
@@ -64,10 +65,11 @@ export function SurgicalVideoBank() {
                 {/* Main Player Area */}
                 <div className="lg:col-span-8">
                     <div className="relative aspect-video rounded-[2.5rem] overflow-hidden bg-slate-900 border border-white/10 group shadow-2xl">
-                        <img 
+                        <Image 
                             src={selectedVideo.thumbnail} 
                             alt={selectedVideo.title}
-                            className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700"
+                            fill
+                            className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700"
                         />
                         <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
                             <div className="flex items-center gap-2 mb-4">
@@ -107,7 +109,7 @@ export function SurgicalVideoBank() {
                             }`}
                         >
                             <div className="relative w-24 h-16 rounded-xl overflow-hidden flex-shrink-0">
-                                <img src={video.thumbnail} className="w-full h-full object-cover" alt={video.title} />
+                                <Image src={video.thumbnail} fill className="object-cover" alt={video.title} />
                                 <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
                                     <Play className="w-4 h-4 text-white fill-current opacity-60" />
                                 </div>
@@ -136,22 +138,3 @@ export function SurgicalVideoBank() {
     );
 }
 
-function Clock(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-        </svg>
-    );
-}

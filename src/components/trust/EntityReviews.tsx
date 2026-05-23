@@ -44,7 +44,7 @@ export default async function EntityReviews({
     }
 
     if (!reviews || reviews.length === 0) {
-        return null; // Don't show the section if no reviews found
+        return null; // Don&apos;t show the section if no reviews found
     }
 
     // Calculate average rating

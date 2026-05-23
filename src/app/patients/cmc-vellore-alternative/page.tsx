@@ -49,7 +49,7 @@ const WHY_POINTS = [
     { icon: Users, title: "Dedicated International Desk", desc: "24/7 coordinator for visa letters, airport pickup, accommodation, and translation.", color: "blue" },
     { icon: TrendingDown, title: "Lower Costs", desc: "NABH-accredited care at 10–30% lower cost than CMC Vellore for most procedures.", color: "amber" },
     { icon: Shield, title: "Private Rooms Available", desc: "No scrambling for accommodation. International suites and attendant facilities always available.", color: "indigo" },
-    { icon: MapPin, title: "Same City — Near CMC", desc: "Located in Vellore, the same medical hub. You don't need to travel to another city.", color: "red" },
+    { icon: MapPin, title: "Same City — Near CMC", desc: "Located in Vellore, the same medical hub. You don&apos;t need to travel to another city.", color: "red" },
 ];
 
 const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Skip the CMC Queue: I saw the long waiting list and would like to book a same-week appointment at Indira Super Speciality Hospital, Vellore.")}`;

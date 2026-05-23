@@ -17,7 +17,7 @@ export default function HighRiskPregnancyPage() {
             title="High-Risk Pregnancy & Maternal-Fetal Hub in Vellore, Tamil Nadu"
             slug="high-risk-pregnancy-care"
             parentServiceSlug="obstetrics-gynaecology"
-            departmentName="Indira Elite Women's Care"
+            departmentName="Indira Elite Women&apos;s Care"
             description={
                 <article>
                     <p className="text-lg leading-relaxed">
@@ -66,7 +66,7 @@ export default function HighRiskPregnancyPage() {
                                     High-risk pregnancies are medical scenarios that require constant physiological monitoring of two patients simultaneously. Our **Maternal-Fetal Medicine (MFM)** unit operates on a 'Zero-Compromise' framework that integrates real-time clinical vigilance with technological superiority.
                                 </p>
                                 <p className="mt-4">
-                                    Whether managing **Preeclampsia** (high blood pressure) or **Preterm Labor**, our protocols focus on 'extending gestation' safely to allow the baby's lungs and organs to mature. We utilize **Doppler Flow Studies** and **High-Resolution 4D Ultrasonography** to track fetal health in sub-millimeter detail, identifying issues like 'Intrauterine Growth Restriction (IUGR)' before they become critical.
+                                    Whether managing **Preeclampsia** (high blood pressure) or **Preterm Labor**, our protocols focus on 'extending gestation' safely to allow the baby&apos;s lungs and organs to mature. We utilize **Doppler Flow Studies** and **High-Resolution 4D Ultrasonography** to track fetal health in sub-millimeter detail, identifying issues like 'Intrauterine Growth Restriction (IUGR)' before they become critical.
                                 </p>
                                 <div className="mt-8 space-y-4">
                                     <div className="flex items-center gap-3">
@@ -143,7 +143,7 @@ export default function HighRiskPregnancyPage() {
                             {[
                                 {
                                     q: "Does a high-risk pregnancy mean I should have a C-section?",
-                                    a: "Not necessarily. We prioritize Normal Vaginal Birth (VBAC and routine) whenever clinically safe. However, in high-risk cases, we are prepared to perform an emergency C-section within minutes if the baby's heart tracking shows distress."
+                                    a: "Not necessarily. We prioritize Normal Vaginal Birth (VBAC and routine) whenever clinically safe. However, in high-risk cases, we are prepared to perform an emergency C-section within minutes if the baby&apos;s heart tracking shows distress."
                                 },
                                 {
                                     q: "Why is maternal age over 35 considered 'High-Risk'?",
@@ -155,7 +155,7 @@ export default function HighRiskPregnancyPage() {
                                 },
                                 {
                                     q: "Can I manage Gestational Diabetes with just diet?",
-                                    a: "In many cases, yes. Our clinical nutritionist provides a GDM-specific meal plan. However, if your fasting sugars remain high, we titrate insulin to ensure the baby doesn't grow too large (macrosomia)."
+                                    a: "In many cases, yes. Our clinical nutritionist provides a GDM-specific meal plan. However, if your fasting sugars remain high, we titrate insulin to ensure the baby doesn&apos;t grow too large (macrosomia)."
                                 },
                                 {
                                     q: "When should I call the emergency line immediately?",

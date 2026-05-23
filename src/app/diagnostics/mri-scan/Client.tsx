@@ -86,7 +86,7 @@ export function MRIScanClient() {
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <ArrowRightCircle className="w-5 h-5 text-fuchsia-600" />
-                                        <span><strong>Diffusion Tensor Imaging (DTI)</strong>: Mapping the brain's white matter pathways for advanced neuro-diagnostics.</span>
+                                        <span><strong>Diffusion Tensor Imaging (DTI)</strong>: Mapping the brain&apos;s white matter pathways for advanced neuro-diagnostics.</span>
                                     </div>
                                 </div>
                             </div>

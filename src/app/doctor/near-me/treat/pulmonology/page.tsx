@@ -56,7 +56,7 @@ export default function PulmonologyDepartmentPage() {
                                     Sleep Medicine Hub
                                 </h4>
                                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
-                                    Don't ignore snoring. We offer <strong>Full Night Polysomnography (Sleep Study)</strong> to detect Obstructive Sleep Apnea (OSA)—a critical risk factor for heart attacks and strokes.
+                                    Don&apos;t ignore snoring. We offer <strong>Full Night Polysomnography (Sleep Study)</strong> to detect Obstructive Sleep Apnea (OSA)—a critical risk factor for heart attacks and strokes.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
                                     <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-sky-100 dark:border-sky-700 shadow-sm">CPAP Titration</span>
@@ -189,7 +189,7 @@ export default function PulmonologyDepartmentPage() {
                                     a: "A Bronchoscopy involves passing a thin, flexible tube into the airways to see the lungs internally. It is done under local anesthesia and mild sedation, making it a very safe and comfortable procedure for obtaining biopsies or removing blockages."
                                 },
                                 {
-                                    q: "Can smoker's lung (COPD) be cured?",
+                                    q: "Can smoker&apos;s lung (COPD) be cured?",
                                     a: "Structural damage to lungs in COPD is permanent. However, with <strong>Pulmonary Rehabilitation</strong>, long-acting bronchodilators, and consistent smoking cessation, we can significantly improve lung function and return you to a productive life."
                                 },
                                 {

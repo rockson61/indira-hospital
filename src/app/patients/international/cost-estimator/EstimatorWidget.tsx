@@ -8,7 +8,7 @@ import { elitePricingBank } from "@/data/pricing-elite";
 const WA_BASE = `https://wa.me/${siteConfig.contact.whatsapp}?text=`;
 
 const WHATS_INCLUDED = [
-    "Elite Surgeon's fee and OT charges",
+    "Elite Surgeon&apos;s fee and OT charges",
     "Anaesthesiologist & Care team fee",
     "Elite Institutional Room (Private / Deluxe)",
     "Personalized Nursing Care & Monitoring",

@@ -73,7 +73,7 @@ export default function DrKaranShankarProfile() {
 
     const faqItems = [
         {
-            question: "What is Dr. Karan Shankar's surgical philosophy?",
+            question: "What is Dr. Karan Shankar&apos;s surgical philosophy?",
             answer: "Dr. Karan focuses on the 'Minimal Access Revolution,' utilizing advanced technology like 4K UHD visualization and medical lasers to ensure maximum surgical precision with minimal recovery time for his patients."
         },
         {
@@ -112,7 +112,7 @@ export default function DrKaranShankarProfile() {
             patient_name: "Vikram S.",
             treatment_received: "Gallbladder Surgery",
             rating: 5,
-            content: "Excellent surgical care at Indira Hospital. Dr. Karan's expertise in minimal access surgery is evident. Very minimal scarring and great post-op support.",
+            content: "Excellent surgical care at Indira Hospital. Dr. Karan&apos;s expertise in minimal access surgery is evident. Very minimal scarring and great post-op support.",
             date_of_visit: "2024-02-20"
         }
     ];
@@ -174,7 +174,7 @@ export default function DrKaranShankarProfile() {
                                 </ul>
                                 <div className="inline-flex items-center gap-2 text-fuchsia-600 font-bold text-xs uppercase tracking-widest italic">
                                     <Award className="w-4 h-4" />
-                                    Director's Quality Benchmark
+                                    Director&apos;s Quality Benchmark
                                 </div>
                             </div>
                         </div>

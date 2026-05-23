@@ -171,7 +171,7 @@ export default function PsychiatryDepartmentPage() {
                                 },
                                 {
                                     q: "How do I recognize early signs of ADHD in my child?",
-                                    a: "ADHD isn't just about 'being hyper.' Signs include persistent difficulty in following instructions, frequent losing of items, and an inability to maintain focus even on tasks they enjoy. Early diagnosis prevents secondary academic and self-esteem issues."
+                                    a: "ADHD isn&apos;t just about 'being hyper.' Signs include persistent difficulty in following instructions, frequent losing of items, and an inability to maintain focus even on tasks they enjoy. Early diagnosis prevents secondary academic and self-esteem issues."
                                 },
                                 {
                                     q: "Is de-addiction possible at home?",

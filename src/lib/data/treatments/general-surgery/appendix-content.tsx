@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from 'react'
 import { 
     Zap, 
@@ -50,7 +51,7 @@ export const AppendixLongForm = () => {
                 <div className="grid md:grid-cols-2 gap-12">
                     <div className="space-y-6">
                         <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                            Appendicitis is the inflammation of the vermiform appendix—a small vestigial pouch attached to the large intestine. The classic indicator isn't just pain, but the <strong>way the pain moves</strong>.
+                            Appendicitis is the inflammation of the vermiform appendix—a small vestigial pouch attached to the large intestine. The classic indicator isn&apos;t just pain, but the <strong>way the pain moves</strong>.
                         </p>
                         <h4 className="font-bold text-rose-900 dark:text-rose-300 mt-6 font-heading text-xl uppercase italic">The Clinical Progression:</h4>
                         <div className="space-y-4">
@@ -103,7 +104,7 @@ export const AppendixLongForm = () => {
                         <div className="space-y-6">
                             <h4 className="text-2xl font-bold font-heading italic text-rose-100 uppercase italic">Why Laparoscopy for Emergencies?</h4>
                             <p className="text-slate-400 leading-relaxed italic text-sm">
-                                Traditionally, surgeons used a 3-inch "McBurney's" incision. Today, we use <strong>three 5mm ports</strong>. In an emergency, laparoscopy allows the surgeon to visualize the <strong>entire abdominal cavity</strong>, ensuring that if there is any pus or fluid from a leak, it can be thoroughly washed out (Laparoscopic Lavage), something impossible with a small open incision.
+                                Traditionally, surgeons used a 3-inch "McBurney&apos;s" incision. Today, we use <strong>three 5mm ports</strong>. In an emergency, laparoscopy allows the surgeon to visualize the <strong>entire abdominal cavity</strong>, ensuring that if there is any pus or fluid from a leak, it can be thoroughly washed out (Laparoscopic Lavage), something impossible with a small open incision.
                             </p>
                             <div className="p-8 bg-white/5 border border-white/10 rounded-[3rem] shadow-inner">
                                 <h5 className="text-rose-400 font-black text-xs uppercase tracking-[0.2em] mb-4">Clinical Benefits:</h5>
@@ -163,7 +164,7 @@ export const AppendixLongForm = () => {
                          </p>
                          <div className="flex items-center gap-4 border-t border-rose-200 dark:border-rose-900/40 pt-8">
                              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-rose-600 p-0.5 group-hover:scale-110 transition-transform">
-                                <img src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
+                                <Image width={48} height={48} src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
                              </div>
                              <div className="text-[10px] font-black uppercase text-rose-900 dark:text-rose-400 tracking-widest italic leading-tight">Dr. P. Shankar <br/> <span className="text-slate-400 font-normal">Chairman & Lead Surgeon</span></div>
                          </div>
@@ -258,7 +259,7 @@ export const AppendixLongForm = () => {
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-500/10 rounded-full blur-[100px] animate-pulse" />
                 <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Emergency Care That Cannot Wait</h2>
                 <p className="text-rose-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
-                    Don't ignore abdominal pain. Trust Vellore's emergency surgical leaders for immediate, precise, and life-saving care.
+                    Don&apos;t ignore abdominal pain. Trust Vellore&apos;s emergency surgical leaders for immediate, precise, and life-saving care.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 relative z-10">
                     <button className="px-14 py-6 bg-rose-600 hover:bg-rose-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-rose-600/30 uppercase tracking-widest italic group-hover/cta:scale-110 active:scale-95">24/7 Emergency Line</button>

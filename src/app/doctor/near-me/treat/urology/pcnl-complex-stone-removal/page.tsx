@@ -120,7 +120,7 @@ export default function PCNLPage() {
         >
             <div className="space-y-8">
                 <section>
-                    <h2 className="font-heading text-3xl font-bold mb-4">India's Leading Center for Complex Staghorn Stones</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-4">India&apos;s Leading Center for Complex Staghorn Stones</h2>
                     <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         At Indira Super Speciality Hospital, we thrive on complexity. Our <strong>Advanced PCNL Program</strong> is specifically designed for patients with massive stone loads or large staghorn stones that have been deemed "untreatable" elsewhere. By utilizing Mini-PCNL techniques and state-of-the-artimaging, we ensure world-class clearance rates with minimal morbidity.
                     </p>

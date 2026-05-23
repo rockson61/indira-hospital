@@ -10,7 +10,7 @@ import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, Chec
 
 export const metadata: Metadata = constructMetadata({
     title: "Doctor | Indira Super Speciality Hospital",
-    description: "Learn more about doctor at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    description: "Learn more about doctor at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
     path: "/doctor/near-me/treat/ophthalmology"
 });
 
@@ -177,7 +177,7 @@ export default function OphthalmologyPillarPage() {
                             ))}
                         </div>
                         <p className="font-bold text-slate-900 dark:text-slate-100 italic">
-                            By utilizing the smallest possible incision, we ensure that the eye's natural structural integrity is maintained, resulting in faster visual recovery – often within just a few hours after the procedure.
+                            By utilizing the smallest possible incision, we ensure that the eye&apos;s natural structural integrity is maintained, resulting in faster visual recovery – often within just a few hours after the procedure.
                         </p>
                     </section>
 

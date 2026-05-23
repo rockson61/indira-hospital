@@ -6,22 +6,22 @@ import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 
 export const metadata: Metadata = constructMetadata({
-    title: "Elite Crohn's & IBD Management in Vellore | Indira Hospital",
-    description: "Advanced Elite Crohn's & IBD Management surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and same-day dis...",
+    title: "Elite Crohn&apos;s & IBD Management in Vellore | Indira Hospital",
+    description: "Advanced Elite Crohn&apos;s & IBD Management surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited care, and same-day dis...",
     path: "/doctor/near-me/treat/gastroenterology/crohns-disease-management"
 });
 
 export default function CrohnsManagementPage() {
     return (
         <SubServiceTemplate
-            title="Elite Crohn's & IBD Management"
+            title="Elite Crohn&apos;s & IBD Management"
             slug="crohns-disease-management"
             parentServiceSlug="gastroenterology"
             departmentName="Gastroenterology"
             description={
                 <article>
                     <p className="text-lg leading-relaxed">
-                        <strong>Elite Crohn's & IBD Management</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+                        <strong>Elite Crohn&apos;s & IBD Management</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
                     </p>
                 </article>
             }
@@ -37,14 +37,14 @@ export default function CrohnsManagementPage() {
             anesthesia="N/A"
             reviews={{
                 entityType: 'service',
-                entityName: "Crohn's Disease Management",
+                entityName: "Crohn&apos;s Disease Management",
                 entitySlug: 'crohns-disease-management'
             }}
         >
             <div className="space-y-16">
                 {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
                 <AioKnowledgeBlock 
-                    title="Quick Facts: Elite Crohn's & IBD Management in Vellore"
+                    title="Quick Facts: Elite Crohn&apos;s & IBD Management in Vellore"
                     items={[
                         { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
                         { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
@@ -60,7 +60,7 @@ export default function CrohnsManagementPage() {
                         <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-sky-800 dark:text-sky-300">The IBD Remission Edge</h4>
                         <ul className="space-y-4">
                             {[
-                                { title: "Target-to-Treat Strategy", text: "We don't just treat symptoms. We use objective markers like Calprotectin and ileocolonoscopy to ensure the lining of the bowel is completely healed." },
+                                { title: "Target-to-Treat Strategy", text: "We don&apos;t just treat symptoms. We use objective markers like Calprotectin and ileocolonoscopy to ensure the lining of the bowel is completely healed." },
                                 { title: "Advanced Biologics Unit", text: "Direct access to the latest biological therapies and small molecules, managed by specialists who ensure safety and maximum efficacy." },
                                 { title: "Nutritional Support", text: "IBD often leads to severe malabsorption. Our clinical dietitians build 'low-residue' and anti-inflammatory meal plans tailored to your flare status." }
                             ].map((item, i) => (
@@ -86,12 +86,12 @@ export default function CrohnsManagementPage() {
 
                 {/* Deep Dive Content */}
                 <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Crohn's & IBD</h3>
+                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Crohn&apos;s & IBD</h3>
                     <p>
-                        Crohn's Disease is a chronic inflammatory condition of the gastrointestinal tract. Unlike ulcerative colitis, which only affects the colon, Crohn's can affect any part of the GI tract from mouth to anus. The inflammation can be "transmural," meaning it can penetrate the entire thickness of the bowel wall, leading to complications like fistulas and abscesses.
+                        Crohn&apos;s Disease is a chronic inflammatory condition of the gastrointestinal tract. Unlike ulcerative colitis, which only affects the colon, Crohn&apos;s can affect any part of the GI tract from mouth to anus. The inflammation can be "transmural," meaning it can penetrate the entire thickness of the bowel wall, leading to complications like fistulas and abscesses.
                     </p>
                     <p>
-                        At Indira Hospital, our approach, led by senior gastroenterologists, is focused on **Early Intervention**. By starting the right therapy early—especially biological drugs when indicated—we can often halt the disease's progression and avoid the need for permanent surgical removal of bowel segments.
+                        At Indira Hospital, our approach, led by senior gastroenterologists, is focused on **Early Intervention**. By starting the right therapy early—especially biological drugs when indicated—we can often halt the disease&apos;s progression and avoid the need for permanent surgical removal of bowel segments.
                     </p>
 
                     <h4 className="text-[#005f73] dark:text-sky-400 font-heading">Common Warning Signs of an IBD Flare:</h4>
@@ -112,7 +112,7 @@ export default function CrohnsManagementPage() {
 
                     <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-sky-500 pl-4 italic">The Journey to Remission</h3>
                     <p>
-                        Achieving remission in Crohn's Disease is a marathon, not a sprint. We use a **"Tight Control"** monitoring approach, tracking your fecal calprotectin and serum drug levels every 3-6 months. This allow us to 'tweak' your medication dosage based on real-time data, ensuring you get the maximally effective dose with minimal side effects.
+                        Achieving remission in Crohn&apos;s Disease is a marathon, not a sprint. We use a **"Tight Control"** monitoring approach, tracking your fecal calprotectin and serum drug levels every 3-6 months. This allow us to 'tweak' your medication dosage based on real-time data, ensuring you get the maximally effective dose with minimal side effects.
                     </p>
 
                     <h4 className="font-heading text-[#005f73] dark:text-sky-400 mt-10">Why Indira Hospital for IBD?</h4>
@@ -129,26 +129,26 @@ export default function CrohnsManagementPage() {
                     
                     <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
                         <Info className="text-sky-400" />
-                        Crohn's & IBD: Essential FAQs
+                        Crohn&apos;s & IBD: Essential FAQs
                     </h3>
                     
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
                         {[
                             {
-                                q: "Can Crohn's disease be permanently cured?",
-                                a: "While there is currently no permanent cure for Crohn's, deep clinical and mucosal remission is achievable for most patients. In remission, you can live a completely normal, healthy, and symptom-free life."
+                                q: "Can Crohn&apos;s disease be permanently cured?",
+                                a: "While there is currently no permanent cure for Crohn&apos;s, deep clinical and mucosal remission is achievable for most patients. In remission, you can live a completely normal, healthy, and symptom-free life."
                             },
                             {
                                 q: "Are biological drugs dangerous?",
                                 a: "Like all potent medications, biologics have side effects, but for moderate-to-severe IBD, the risk of untreated disease (surgery, colon cancer, fistulas) is far higher than the risk of the medication. We monitor you closely for safety."
                             },
                             {
-                                q: "Does diet affect the inflammation in Crohn's?",
-                                a: "Diet doesn't cause IBD, but specific trigger foods can definitely make symptoms worse during a flare. Conversely, an anti-inflammatory diet can support the healing process initiated by medications."
+                                q: "Does diet affect the inflammation in Crohn&apos;s?",
+                                a: "Diet doesn&apos;t cause IBD, but specific trigger foods can definitely make symptoms worse during a flare. Conversely, an anti-inflammatory diet can support the healing process initiated by medications."
                             },
                             {
-                                q: "Will I definitely need surgery if I have Crohn's?",
-                                a: "No. With modern 'top-down' biological therapy, we are significantly reducing the number of patients who require surgery. Surgery is reserved for complications like obstructions or fistulas that don't respond to medicine."
+                                q: "Will I definitely need surgery if I have Crohn&apos;s?",
+                                a: "No. With modern 'top-down' biological therapy, we are significantly reducing the number of patients who require surgery. Surgery is reserved for complications like obstructions or fistulas that don&apos;t respond to medicine."
                             }
                         ].map((faq, idx) => (
                             <div key={idx} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">

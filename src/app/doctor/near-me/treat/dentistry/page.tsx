@@ -208,11 +208,11 @@ export default function DentistryDepartmentPage() {
                                 },
                                 {
                                     q: "What is a Zirconia Crown?",
-                                    a: "Zirconia is a metal-free ceramic that is incredibly strong and translucent, mimicking natural tooth enamel. It is biocompatible, meaning it won't cause gray lines near the gums, unlike traditional metal-based crowns."
+                                    a: "Zirconia is a metal-free ceramic that is incredibly strong and translucent, mimicking natural tooth enamel. It is biocompatible, meaning it won&apos;t cause gray lines near the gums, unlike traditional metal-based crowns."
                                 },
                                 {
                                     q: "Why do wisdom teeth need extraction?",
-                                    a: "Most jaws don't have enough space for wisdom teeth, causing them to become 'impacted' (stuck). This leads to severe pain, facial swelling, and damage to the adjacent 17th molar. Early extraction is a safe, painless day-care procedure."
+                                    a: "Most jaws don&apos;t have enough space for wisdom teeth, causing them to become 'impacted' (stuck). This leads to severe pain, facial swelling, and damage to the adjacent 17th molar. Early extraction is a safe, painless day-care procedure."
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">

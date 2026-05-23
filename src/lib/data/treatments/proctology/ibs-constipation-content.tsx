@@ -12,7 +12,7 @@ export const IBSConstipationLongForm = () => {
                         Are you constantly feeling bloated, experiencing abdominal cramps, or struggling with irregular bowel movements? You might be part of the millions worldwide suffering from <strong>Irritable Bowel Syndrome (IBS)</strong> or <strong>Chronic Constipation</strong>. In the hot and humid climate of Vellore, Tamil Nadu, these conditions are particularly prevalent due to dietary habits, dehydration, and high-stress levels.
                     </p>
                     <p>
-                        At <strong>Indira Super Speciality Hospital, Vellore</strong>, we don't just treat the symptoms—we address the root cause of your digestive distress. Led by <strong>Dr. Karan Shankar</strong>, our proctology and gastroenterology team specializes in advanced <strong>Gut Motility Diagnostics</strong> and personalized management plans.
+                        At <strong>Indira Super Speciality Hospital, Vellore</strong>, we don&apos;t just treat the symptoms—we address the root cause of your digestive distress. Led by <strong>Dr. Karan Shankar</strong>, our proctology and gastroenterology team specializes in advanced <strong>Gut Motility Diagnostics</strong> and personalized management plans.
                     </p>
                     <p>
                         This guide is designed to help you understand the complex relationship between your gut and brain, the diagnosis of motility disorders, and why our holistic approach is the gold standard for long-term IBS and constipation relief in the region.
@@ -28,7 +28,7 @@ export const IBSConstipationLongForm = () => {
                          <Brain className="w-12 h-12 text-fuchsia-600 shrink-0 mt-2" />
                          <div>
                             <p>
-                                IBS is a functional gastrointestinal disorder. This means that while your gut may look normal during a colonoscopy, it isn't "functioning" correctly. It's often caused by communication issues between the brain and the gut, leading to abnormal muscle contractions in the intestines.
+                                IBS is a functional gastrointestinal disorder. This means that while your gut may look normal during a colonoscopy, it isn&apos;t "functioning" correctly. It&apos;s often caused by communication issues between the brain and the gut, leading to abnormal muscle contractions in the intestines.
                             </p>
                          </div>
                     </div>
@@ -86,7 +86,7 @@ export const IBSConstipationLongForm = () => {
             {/* Section 4: Causes & Environmental Factors localized for Tamil Nadu */}
             <section id="causes" className="bg-slate-900 rounded-[3rem] p-12 text-white overflow-hidden relative">
                  <div className="absolute top-0 left-0 w-64 h-64 bg-fuchsia-100/5 rounded-full blur-3xl -ml-32 -mt-32" />
-                 <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Why It's Prevalent in Vellore Residents</h2>
+                 <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Why It&apos;s Prevalent in Vellore Residents</h2>
                  <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-6">
                         <div className="flex gap-4 items-start">
@@ -100,7 +100,7 @@ export const IBSConstipationLongForm = () => {
                              <Activity className="w-8 h-8 text-fuchsia-500 shrink-0" />
                              <div>
                                 <h4 className="font-bold text-xl text-emerald-400">Dehydration in Hot Climate</h4>
-                                <p className="text-sm text-white/70 leading-relaxed mt-2">Vellore's intense heat leads to rapid moisture loss. Inadequate water intake makes stools harder, leading to chronic constipation.</p>
+                                <p className="text-sm text-white/70 leading-relaxed mt-2">Vellore&apos;s intense heat leads to rapid moisture loss. Inadequate water intake makes stools harder, leading to chronic constipation.</p>
                              </div>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ export const IBSConstipationLongForm = () => {
                 <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic underline decoration-fuchsia-200">Advanced Motility Testing: Precision Diagnosis</h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                     <p>
-                        Unlike traditional clinics, we don't rely only on guesswork. At Indira Hospital, we use advanced technology to map your gut's performance:
+                        Unlike traditional clinics, we don&apos;t rely only on guesswork. At Indira Hospital, we use advanced technology to map your gut&apos;s performance:
                     </p>
                     <ul className="space-y-3">
                         <li className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-soft">
@@ -151,7 +151,7 @@ export const IBSConstipationLongForm = () => {
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Multidisciplinary Management Strategy</h2>
                 <div className="p-8 bg-fuchsia-50 rounded-[3rem] border border-fuchsia-100 space-y-6">
                     <p className="text-lg text-slate-700 leading-relaxed font-medium">
-                        IBS management is not just a pill; it's a lifestyle shift. At Indira Super Speciality Hospital, we provide an integrated care model:
+                        IBS management is not just a pill; it&apos;s a lifestyle shift. At Indira Super Speciality Hospital, we provide an integrated care model:
                     </p>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-4">
@@ -207,9 +207,9 @@ export const IBSConstipationLongForm = () => {
                     {[
                         { q: "Can IBS be cured permanently?", a: "IBS is a chronic condition, but it can be managed so effectively that you can live a symptom-free life. Our goal at Indira Hospital is to identify triggers and teach your gut to function normally again." },
                         { q: "Is constipation the same as IBS-C?", a: "Not exactly. IBS-C involves significant abdominal pain and discomfort along with constipation, whereas simple constipation may present just as difficulty passing stool without severe pain." },
-                        { q: "What role does water intake play in Vellore?", a: "Water is the essential lubricant for your gut. In Vellore's heat, we recommend at least 3.5 to 4 liters of water daily to prevent hard stools and motility issues." },
+                        { q: "What role does water intake play in Vellore?", a: "Water is the essential lubricant for your gut. In Vellore&apos;s heat, we recommend at least 3.5 to 4 liters of water daily to prevent hard stools and motility issues." },
                         { q: "Are laxatives safe for long-term use?", a: "Many over-the-counter laxatives can lead to a 'lazy bowel' if used for years. We focus on natural motility restoration and pelvic floor therapy instead of chronic laxative dependence." },
-                        { q: "What is Biofeedback Therapy?", a: "It's a non-invasive treatment where sensors help you learn to coordinate your pelvic floor and anal muscles during bowel movements. It's highly effective for chronic constipation." },
+                        { q: "What is Biofeedback Therapy?", a: "It&apos;s a non-invasive treatment where sensors help you learn to coordinate your pelvic floor and anal muscles during bowel movements. It&apos;s highly effective for chronic constipation." },
                         { q: "When should I consult a doctor for bloating?", a: "If bloating persists for more than two weeks, is accompanied by weight loss, or occurs after every meal, it might indicate SIBO or IBS and needs a specialist evaluation." }
                     ].map((faq, index) => (
                         <div key={index} className="bg-slate-50 p-6 rounded-2xl space-y-2">
@@ -230,7 +230,7 @@ export const IBSConstipationLongForm = () => {
                     </div>
                     <h2 className="text-3xl font-bold text-slate-900">Restore Your Digestive Rhythm</h2>
                     <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                        Don't let gut issues dictate what you eat or how you live. Our specialist gastroenterology center in Vellore is ready to help you rediscover comfort and confidence.
+                        Don&apos;t let gut issues dictate what you eat or how you live. Our specialist gastroenterology center in Vellore is ready to help you rediscover comfort and confidence.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 pt-4">
                         <span className="flex items-center gap-2 text-sm text-slate-400 font-bold"><ShieldCheck className="w-4 h-4 text-emerald-500" /> Evidence-Based Care</span>

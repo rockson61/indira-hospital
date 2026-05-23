@@ -51,10 +51,10 @@ export function ECGClient() {
             description={
                 <>
                     <p>
-                        An Electrocardiogram (ECG) is the primary diagnostic tool for assessing the heart's electrical rhythm. At Indira Super Speciality Hospital, we provide **Elite 12-Lead Digital ECG Diagnostics**. Using high-fidelity **GE MAC-2000 Acquisition Systems**, we capture the heart's electrical vectors from multiple perspectives, allowing for the instantaneous detection of arrhythmias, ischemic changes (ST-elevation), and structural heart strain.
+                        An Electrocardiogram (ECG) is the primary diagnostic tool for assessing the heart&apos;s electrical rhythm. At Indira Super Speciality Hospital, we provide **Elite 12-Lead Digital ECG Diagnostics**. Using high-fidelity **GE MAC-2000 Acquisition Systems**, we capture the heart&apos;s electrical vectors from multiple perspectives, allowing for the instantaneous detection of arrhythmias, ischemic changes (ST-elevation), and structural heart strain.
                     </p>
                     <p className="mt-4 text-rose-600 dark:text-rose-400 font-semibold italic border-l-4 border-rose-500 pl-4 uppercase tracking-tighter">
-                        "12-Lead Precision: Capturing the heart's electrical signature in real-time."
+                        "12-Lead Precision: Capturing the heart&apos;s electrical signature in real-time."
                     </p>
                 </>
             }
@@ -146,7 +146,7 @@ export function ECGClient() {
                             {[
                                 { title: "Skin Contact Hub", desc: "To ensure maximum electrical conductivity, some body hair on the chest may need to be trimmed before electrode placement." },
                                 { title: "The 'Still' Constraint", desc: "You must remain completely motionless for 30 seconds. Even a deep breath or a muscle twitch can create 'noise' in the tracing." },
-                                { title: "Medication Audit", desc: "Inform the technician if you are on Beta-Blockers or Digoxin, which naturally slow the heart's electrical rhythm." }
+                                { title: "Medication Audit", desc: "Inform the technician if you are on Beta-Blockers or Digoxin, which naturally slow the heart&apos;s electrical rhythm." }
                             ].map((item: any, i: number) => (
                                 <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-rose-500">
                                     <h4 className="font-heading text-xl font-bold mb-3 italic">{item.title}</h4>
@@ -178,7 +178,7 @@ export function ECGClient() {
                                 },
                                 {
                                     q: "Is an ECG the same as an Echo?",
-                                    a: "No. An ECG looks at the heart's 'electricity' (rhythm). An Echocardiogram (Echo) is an ultrasound that looks at the heart's 'plumbing' (valves, chambers, and blood flow)."
+                                    a: "No. An ECG looks at the heart&apos;s 'electricity' (rhythm). An Echocardiogram (Echo) is an ultrasound that looks at the heart&apos;s 'plumbing' (valves, chambers, and blood flow)."
                                 },
                                 {
                                     q: "What does 'ST-Segment Elevation' mean on a report?",

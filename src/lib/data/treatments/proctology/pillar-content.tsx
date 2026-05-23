@@ -11,7 +11,7 @@ export const ProctologyPillarLongForm = () => {
                 <div className="relative z-10">
                     <h2 className="text-4xl font-bold mb-6 text-fuchsia-100 font-heading">The Ultimate Guide to Advanced Proctology in Vellore</h2>
                     <p className="text-xl text-fuchsia-100/70 leading-relaxed mb-8">
-                        Welcome to the most comprehensive resource on modern colorectal health. At <strong>Indira Super Speciality Hospital</strong>, we don't just treat conditions; we restore quality of life. As India's premier center for <strong>Laser Proctology</strong>, we have redefined the patient experience from painful surgery to precision, bloodless healing.
+                        Welcome to the most comprehensive resource on modern colorectal health. At <strong>Indira Super Speciality Hospital</strong>, we don&apos;t just treat conditions; we restore quality of life. As India&apos;s premier center for <strong>Laser Proctology</strong>, we have redefined the patient experience from painful surgery to precision, bloodless healing.
                     </p>
                     <p className="text-lg text-fuchsia-100/60 leading-relaxed">
                         Whether you are suffering from Piles (Hemorrhoids), Anal Fissures, Complex Fistulas, or Rectal Prolapse, this guide will provide you with the clinical clarity, technological insights, and localized context needed to make an informed decision about your health.
@@ -131,7 +131,7 @@ export const ProctologyPillarLongForm = () => {
                                 The Physics of 1470nm Wavelength
                             </h4>
                             <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-                                Unlike older lasers, the 1470nm wavelength targets <strong>Water Absorption</strong> specifically. Since human tissue is 70% water, this allows the laser to ablate tissue with zero "thermal spread"—meaning the heat doesn't leak into the sensitive anal sphincter muscles. This is why our patients report 90% less post-op pain.
+                                Unlike older lasers, the 1470nm wavelength targets <strong>Water Absorption</strong> specifically. Since human tissue is 70% water, this allows the laser to ablate tissue with zero "thermal spread"—meaning the heat doesn&apos;t leak into the sensitive anal sphincter muscles. This is why our patients report 90% less post-op pain.
                             </p>
                             <div className="flex gap-2">
                                 <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full text-[10px] font-black border border-blue-100 dark:border-blue-700 uppercase">Zero Bleeding</span>
@@ -213,7 +213,7 @@ export const ProctologyPillarLongForm = () => {
                     </div>
                     <div className="flex-1 bg-slate-900 rounded-3xl p-8 text-white space-y-6 shadow-2xl border border-slate-800 italic font-serif">
                         <p className="text-xl leading-relaxed text-blue-100">
-                            "The internal opening is the 'factory' of the fistula. If you don't find the internal opening, the fistula will return. VAAFT allows us to find and close that factory with precision laser closure (FiLaC) without damaging a single fiber of the sphincter muscle."
+                            "The internal opening is the 'factory' of the fistula. If you don&apos;t find the internal opening, the fistula will return. VAAFT allows us to find and close that factory with precision laser closure (FiLaC) without damaging a single fiber of the sphincter muscle."
                         </p>
                         <hr className="border-white/10" />
                         <div className="flex items-center gap-4 not-italic font-heading">
@@ -231,7 +231,7 @@ export const ProctologyPillarLongForm = () => {
             <section className="bg-slate-900 rounded-[4rem] p-16 text-white text-center group transition-colors hover:bg-slate-800">
                 <h2 className="text-4xl font-black mb-6 font-heading italic uppercase tracking-tighter">Precision Diagnostics Hub</h2>
                 <p className="text-fuchsia-100/60 text-xl mb-16 max-w-3xl mx-auto italic font-medium leading-relaxed">
-                    A proctology procedure is only as good as the diagnostic roadmap. At Indira, we utilize the world's most advanced imaging to map your digestive tract before we ever initiate treatment.
+                    A proctology procedure is only as good as the diagnostic roadmap. At Indira, we utilize the world&apos;s most advanced imaging to map your digestive tract before we ever initiate treatment.
                 </p>
                 <div className="grid md:grid-cols-3 gap-8">
                     <div className="p-10 bg-white/5 rounded-[3rem] border border-white/10 group-hover:border-fuchsia-500/30 transition-all">
@@ -279,7 +279,7 @@ export const ProctologyPillarLongForm = () => {
                     <div className="flex-1 space-y-8">
                         <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic leading-tight">Advanced Post-Surgical Rehabilitation</h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Our Procto-Rehab protocols are designed to ensure that you never have to visit a proctologist again. It's not just about healing the wound; it's about changing the <strong>Digestive Mechanics</strong> that caused the Piles or Fissure in the first place.
+                            Our Procto-Rehab protocols are designed to ensure that you never have to visit a proctologist again. It&apos;s not just about healing the wound; it&apos;s about changing the <strong>Digestive Mechanics</strong> that caused the Piles or Fissure in the first place.
                         </p>
                         <div className="grid grid-cols-2 gap-8">
                             <div className="space-y-2">
@@ -299,7 +299,7 @@ export const ProctologyPillarLongForm = () => {
             <section>
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     <div className="flex-1">
-                        <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-8 font-heading uppercase tracking-tighter italic border-l-8 border-fuchsia-600 pl-8">Vellore: India's Colorectal Destination</h2>
+                        <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-8 font-heading uppercase tracking-tighter italic border-l-8 border-fuchsia-600 pl-8">Vellore: India&apos;s Colorectal Destination</h2>
                         <div className="prose prose-lg prose-slate dark:prose-invert">
                             <p>
                                 Patients from across <strong>Tamil Nadu, Andhra Pradesh, and Karnataka</strong> travel to Indira Hospital in Vellore for laser treatment. Why Vellore? It is the intersection of clinical excellence, specialized laser infrastructure, and affordable, high-tech healthcare. 
@@ -352,7 +352,7 @@ export const ProctologyPillarLongForm = () => {
                 
                 <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
                     {[
-                        { q: "Is piles treatment possible without any form of surgery?", a: "In early grades (1 & 2), yes. We use a combination of lifestyle medicine and bulk-forming agents. However, for persistent symptoms, Laser LHP isn't traditional 'surgery'—it's a 15-minute non-invasive intervention that solves the problem permanently." },
+                        { q: "Is piles treatment possible without any form of surgery?", a: "In early grades (1 & 2), yes. We use a combination of lifestyle medicine and bulk-forming agents. However, for persistent symptoms, Laser LHP isn&apos;t traditional 'surgery'—it&apos;s a 15-minute non-invasive intervention that solves the problem permanently." },
                         { q: "What is the cost of laser piles surgery in Vellore vs Metro cities?", a: "Laser procedures are highly cost-effective at Indira Hospital. We offer all-inclusive transparent packages that are typically 40% more affordable than Chennai or Bangalore, despite using superior 1470nm Dual Ring technology." },
                         { q: "How long is the actual hospital stay for laser proctology?", a: "Virtually all our laser procedures are 'Day-Care.' Patients are admitted at 8:00 AM, the procedure takes 20 minutes, and they are typically back at home for lunch by 1:30 PM." },
                         { q: "Can severe complex fistulas return even after laser treatment?", a: "Fistula recurrence is the biggest challenge in proctology. While 'simple' tracts have near-zero recurrence with FiLaC, complex tracts require VAAFT (Video-Assisted) mapping. Our success rate for complex cases is among the highest in North Tamil Nadu (approx 92%)." },
@@ -377,7 +377,7 @@ export const ProctologyPillarLongForm = () => {
                 
                 <h2 className="text-5xl font-black mb-8 font-heading italic tracking-tighter">Start Your Pain-Free Journey Today</h2>
                 <p className="text-fuchsia-100/60 mb-12 max-w-2xl mx-auto text-xl leading-relaxed italic font-medium">
-                    Don't let embarrassment or fear of pain hold you back from a high-quality life. Join 10,000+ patients who have found permanent relief at India's leading Laser Proctology Center.
+                    Don&apos;t let embarrassment or fear of pain hold you back from a high-quality life. Join 10,000+ patients who have found permanent relief at India&apos;s leading Laser Proctology Center.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 relative z-10">
                     <button className="px-14 py-6 bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-fuchsia-600/40 text-lg uppercase tracking-widest italic hover:scale-105 active:scale-95">Book Painless Consultation</button>

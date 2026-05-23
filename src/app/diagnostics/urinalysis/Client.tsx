@@ -110,7 +110,7 @@ export function UrinalysisClient() {
                                     </li>
                                     <li className="flex gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0" />
-                                        <span className="text-sm"><strong>Specific Gravity Audit</strong>: Assessing the kidney's ability to concentrate urine to detect dehydration or diabetes insipidus.</span>
+                                        <span className="text-sm"><strong>Specific Gravity Audit</strong>: Assessing the kidney&apos;s ability to concentrate urine to detect dehydration or diabetes insipidus.</span>
                                     </li>
                                 </ul>
                                 <div className="inline-flex items-center gap-2 text-indigo-600 font-bold text-xs uppercase tracking-widest">
@@ -149,7 +149,7 @@ export function UrinalysisClient() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
-                                { title: "The 'Mid-Stream' Rule", desc: "Collect the middle portion of the urine stream. Discard the first few drops to ensure bacteria from the skin doesn't contaminate the sample." },
+                                { title: "The 'Mid-Stream' Rule", desc: "Collect the middle portion of the urine stream. Discard the first few drops to ensure bacteria from the skin doesn&apos;t contaminate the sample." },
                                 { title: "Freshness Benchmark", desc: "Urine samples degrade quickly. Deliver to the lab within 1 hour, or keep refrigerated (2-8°C) if collecting at home." },
                                 { title: "Medication Audit", desc: "Some compounds like Vitamin C or certain antibiotics can cause 'False Negative' glucose or blood results. Inform us of any current meds." }
                             ].map((item: any, i: number) => (
@@ -171,11 +171,11 @@ export function UrinalysisClient() {
                             {[
                                 {
                                     q: "What is 'Protein' doing in my urine report?",
-                                    a: "Healthy kidneys do not leak protein. If protein (Albumin) appears in your urine, it suggests that the kidney's filtering units (glomeruli) are damaged, often due to high blood pressure or diabetes."
+                                    a: "Healthy kidneys do not leak protein. If protein (Albumin) appears in your urine, it suggests that the kidney&apos;s filtering units (glomeruli) are damaged, often due to high blood pressure or diabetes."
                                 },
                                 {
                                     q: "Can urinalysis detect a UTI?",
-                                    a: "Yes. The presence of Leukocytes (WBCs), Nitrites (from bacteria), and Bacteria themselves in the sediment is highly suggestive of a Urinary Tract Infection, even if you don't feel burning or pain yet."
+                                    a: "Yes. The presence of Leukocytes (WBCs), Nitrites (from bacteria), and Bacteria themselves in the sediment is highly suggestive of a Urinary Tract Infection, even if you don&apos;t feel burning or pain yet."
                                 },
                                 {
                                     q: "What are 'Crystals' in the urine?",

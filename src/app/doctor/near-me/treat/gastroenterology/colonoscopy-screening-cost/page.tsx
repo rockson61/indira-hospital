@@ -146,7 +146,7 @@ export default function ColonoscopyPage() {
                             {[
                                 {
                                     q: "What is the recommended age to start screening?",
-                                    a: "According to the latest global guidelines, colon cancer screening should start at age 45 for individuals at average risk. If you have a family history, screening should start even earlier (usually 10 years before the family member's diagnosis)."
+                                    a: "According to the latest global guidelines, colon cancer screening should start at age 45 for individuals at average risk. If you have a family history, screening should start even earlier (usually 10 years before the family member&apos;s diagnosis)."
                                 },
                                 {
                                     q: "Will I be awake during the colonoscopy?",

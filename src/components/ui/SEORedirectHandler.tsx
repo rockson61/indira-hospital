@@ -41,7 +41,7 @@ export default function SEORedirectHandler() {
       '/WisdomTeethRemoval': createServicePageUrl('WisdomTeethRemoval'),
     };
 
-    // Only handle specific known old URLs, don't interfere with existing pages
+    // Only handle specific known old URLs, don&apos;t interfere with existing pages
     const specificRedirects: Record<string, string> = {
       '/root-canals-in-dubai-science-park': createServicePageUrl('RootCanal'),
       '/dental-implants-dubai-science-park': createServicePageUrl('DentalImplants'),
@@ -53,7 +53,7 @@ export default function SEORedirectHandler() {
       ...cleanToServiceRedirects,
     };
 
-    // Only redirect if it's an exact match for known old URLs
+    // Only redirect if it&apos;s an exact match for known old URLs
     if (specificRedirects[currentPath]) {
       router.replace(specificRedirects[currentPath]);
     }

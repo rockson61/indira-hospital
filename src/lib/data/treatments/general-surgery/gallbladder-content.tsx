@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from 'react'
 import { 
     Zap, 
@@ -33,7 +34,7 @@ export const GallbladderLongForm = () => {
                 </h2>
                 <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
                     <p>
-                        Gallstones are one of the most common causes of intense abdominal pain and digestive distress in India. While many try to "manage" the condition through diet, scientific consensus is clear: symptomatic gallstones require surgical resolution to prevent life-threatening complications. At <strong>Indira Super Speciality Hospital, Vellore</strong>, we provide the region's most advanced <strong>Laparoscopic Cholecystectomy</strong> solutions.
+                        Gallstones are one of the most common causes of intense abdominal pain and digestive distress in India. While many try to "manage" the condition through diet, scientific consensus is clear: symptomatic gallstones require surgical resolution to prevent life-threatening complications. At <strong>Indira Super Speciality Hospital, Vellore</strong>, we provide the region&apos;s most advanced <strong>Laparoscopic Cholecystectomy</strong> solutions.
                     </p>
                     <p className="mt-6">
                         Using high-definition 4K laparoscopic imaging and ultrasonic energy (Harmonic Scalpel), our senior surgical team, led by <strong>Dr. P. Shankar</strong>, ensures that gallbladder removal is a safe, precise, and practically painless experience. This 2000+ word guide is designed to answer every question you have about gallstones, the surgical process, and living a healthy life after gallbladder removal.
@@ -77,7 +78,7 @@ export const GallbladderLongForm = () => {
                         </div>
                         <h4 className="font-black text-indigo-400 mb-6 font-heading uppercase tracking-tighter">The "Silent Stone" Myth</h4>
                         <p className="text-sm text-slate-400 leading-relaxed italic mb-8">
-                            Many patients are told they have "incidental" stones and don't need surgery. However, studies show that once stones are present, the risk of a major biliary event (inflammation or infection) increases by 2-3% every year. Early elective surgery prevents the need for complex emergency interventions.
+                            Many patients are told they have "incidental" stones and don&apos;t need surgery. However, studies show that once stones are present, the risk of a major biliary event (inflammation or infection) increases by 2-3% every year. Early elective surgery prevents the need for complex emergency interventions.
                         </p>
                         <div className="space-y-4 relative z-10">
                             {[
@@ -104,7 +105,7 @@ export const GallbladderLongForm = () => {
                         <div className="space-y-6">
                             <h4 className="text-2xl font-bold font-heading italic text-indigo-100 uppercase italic">Minimal Access, Maximum Clarity</h4>
                             <p className="text-slate-400 leading-relaxed italic text-sm">
-                                We utilize the standard **four-port laparoscopic approach**, providing the highest safety margin. Through four tiny marks (5mm to 10mm), we insert high-definition 4K cameras that provide 20x magnification of the <strong>Calot's Triangle</strong>—the critical area where the gallbladder connects to the liver and bile ducts.
+                                We utilize the standard **four-port laparoscopic approach**, providing the highest safety margin. Through four tiny marks (5mm to 10mm), we insert high-definition 4K cameras that provide 20x magnification of the <strong>Calot&apos;s Triangle</strong>—the critical area where the gallbladder connects to the liver and bile ducts.
                             </p>
                             <div className="p-8 bg-white/5 border border-white/10 rounded-[3rem] shadow-inner">
                                 <h5 className="text-indigo-400 font-black text-xs uppercase tracking-[0.2em] mb-4">Surgical Precision Tools:</h5>
@@ -164,7 +165,7 @@ export const GallbladderLongForm = () => {
                          </p>
                          <div className="flex items-center gap-4 border-t border-indigo-200 dark:border-indigo-900/40 pt-8">
                              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-indigo-600 p-0.5 group-hover:scale-110 transition-transform">
-                                <img src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
+                                <Image width={48} height={48} src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
                              </div>
                              <div className="text-[10px] font-black uppercase text-indigo-900 dark:text-indigo-400 tracking-widest italic leading-tight">Dr. P. Shankar <br/> <span className="text-slate-400 font-normal">Chairman & Lead Surgeon</span></div>
                          </div>
@@ -245,7 +246,7 @@ export const GallbladderLongForm = () => {
                     {[
                         { q: "Can gallstones be dissolved with medicine?", a: "While there are medications that claim to dissolve stones, they only work for very specific cholesterol-only stones, take years to show effect, and have a 100% recurrence rate once medicine is stopped. Surgery remains the only definitive cure." },
                         { q: "Is the entire gallbladder removed, or just the stones?", a: "The entire gallbladder is removed (Cholecystectomy). Removing just the stones is medically ineffective because the diseased gallbladder will simply form new stones within months." },
-                        { q: "What happens if I don't get surgery for my gallstones?", a: "Untreated stones can lead to gallbladder rupture, jaundice, or life-threatening biliary pancreatitis. Over time, chronic inflammation can also increase the risk of gallbladder cancer." },
+                        { q: "What happens if I don&apos;t get surgery for my gallstones?", a: "Untreated stones can lead to gallbladder rupture, jaundice, or life-threatening biliary pancreatitis. Over time, chronic inflammation can also increase the risk of gallbladder cancer." },
                         { q: "How long is the surgery?", a: "A standard laparoscopic cholecystectomy takes between 25 to 45 minutes of surgical time, followed by 30 minutes of recovery from anesthesia." },
                         { q: "Will I have a large scar on my abdomen?", a: "No. Keyhole surgery uses 4 tiny marks between 5mm and 10mm. After 6 months, these marks typically become practically invisible." },
                         { q: "When can I return to heavy exercise?", a: "You can resume brisk walking after 7 days. We recommend waiting for 3 to 4 weeks before resuming heavy gym workouts or competitive sports." }
@@ -266,7 +267,7 @@ export const GallbladderLongForm = () => {
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse" />
                 <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Relief from Digestive Pain</h2>
                 <p className="text-indigo-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
-                    Don't let gallstones dictate your life. Trust the region's 4K Laparoscopic experts for a safe, virtually painless transformation.
+                    Don&apos;t let gallstones dictate your life. Trust the region&apos;s 4K Laparoscopic experts for a safe, virtually painless transformation.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 relative z-10">
                     <button className="px-14 py-6 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-indigo-600/30 uppercase tracking-widest italic group-hover/cta:scale-110 active:scale-95">Book Operation Consult</button>

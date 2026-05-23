@@ -169,7 +169,7 @@ export function ServicesSection() {
           
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             <div>
-              <h4 className="text-3xl md:text-4xl font-black text-white mb-2">Can't find what you're looking for?</h4>
+              <h4 className="text-3xl md:text-4xl font-black text-white mb-2">Can&apos;t find what you&apos;re looking for?</h4>
               <p className="text-white/80 font-medium text-lg">Browse our full clinical directory of over 200+ specialized treatments.</p>
             </div>
             <Link

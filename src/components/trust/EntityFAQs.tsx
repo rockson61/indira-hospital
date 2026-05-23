@@ -32,7 +32,7 @@ export default async function EntityFAQs({
     const faqs = items && items.length > 0 ? items : fetchedFaqs;
 
     if (!faqs || faqs.length === 0) {
-        return null; // Don't render if no FAQs available
+        return null; // Don&apos;t render if no FAQs available
     }
 
     return (

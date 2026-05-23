@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from 'react'
 import { 
     Zap, 
@@ -159,13 +160,13 @@ export const ThyroidLongForm = () => {
                     </div>
                     <div className="md:w-1/2 bg-teal-50 dark:bg-teal-950/30 p-12 rounded-[5rem] border border-teal-100 dark:border-teal-900/30 shadow-2xl relative overflow-hidden group">
                          <div className="absolute top-0 right-0 w-64 h-64 bg-teal-600/5 rounded-full blur-[80px]" />
-                         <h4 className="text-2xl font-black text-teal-900 dark:text-teal-400 mb-6 font-heading italic uppercase italic underline decoration-teal-600/10 underline-offset-8">A Surgeon's Commitment</h4>
+                         <h4 className="text-2xl font-black text-teal-900 dark:text-teal-400 mb-6 font-heading italic uppercase italic underline decoration-teal-600/10 underline-offset-8">A Surgeon&apos;s Commitment</h4>
                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic mb-8">
-                            "Thyroidectomy is as much an art as it is a science. Our goal isn't just to remove the tumor, but to preserve the patient's identity—their voice and their metabolic balance—for the rest of their lives."
+                            "Thyroidectomy is as much an art as it is a science. Our goal isn&apos;t just to remove the tumor, but to preserve the patient&apos;s identity—their voice and their metabolic balance—for the rest of their lives."
                          </p>
                          <div className="flex items-center gap-4 border-t border-teal-200 dark:border-teal-900/40 pt-8">
                              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-teal-600 p-0.5 group-hover:scale-110 transition-transform">
-                                <img src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
+                                <Image width={48} height={48} src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
                              </div>
                              <div className="text-[10px] font-black uppercase text-teal-900 dark:text-teal-400 tracking-widest italic leading-tight">Dr. P. Shankar <br/> <span className="text-slate-400 font-normal">Chairman & Lead Surgeon</span></div>
                          </div>
@@ -239,7 +240,7 @@ export const ThyroidLongForm = () => {
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-[100px] animate-pulse" />
                 <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter shrink-0 italic underline decoration-teal-600/10">Metabolic Health Restored</h2>
                 <p className="text-teal-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
-                    Don't let thyroid nodules wait. Experience the precision of Vellore's leading endocrine surgical team.
+                    Don&apos;t let thyroid nodules wait. Experience the precision of Vellore&apos;s leading endocrine surgical team.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 relative z-10">
                     <button className="px-14 py-6 bg-teal-600 hover:bg-teal-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-teal-600/30 uppercase tracking-widest italic group-hover/cta:scale-110 active:scale-95">Book Endocrine Consult</button>

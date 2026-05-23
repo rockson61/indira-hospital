@@ -162,7 +162,7 @@ export default function DermatologyDepartmentPage() {
                             ))}
                         </div>
                         <p className="font-bold text-slate-900 dark:text-slate-100 italic">
-                            Whether you're treating pitted acne scars or age-related loose skin, our fractional approach delivers dramatic texture improvement with <strong>Zero Lifestyle Interruption.</strong>
+                            Whether you&apos;re treating pitted acne scars or age-related loose skin, our fractional approach delivers dramatic texture improvement with <strong>Zero Lifestyle Interruption.</strong>
                         </p>
                     </section>
 
@@ -190,7 +190,7 @@ export default function DermatologyDepartmentPage() {
                                 },
                                 {
                                     q: "What is PRP therapy for hair loss?",
-                                    a: "Platelet-Rich Plasma (PRP) involves using your own blood's growth factors. We concentrate the platelets and inject them into the scalp to stimulate dormant follicles, prolong the growth phase of hair, and increase shaft thickness."
+                                    a: "Platelet-Rich Plasma (PRP) involves using your own blood&apos;s growth factors. We concentrate the platelets and inject them into the scalp to stimulate dormant follicles, prolong the growth phase of hair, and increase shaft thickness."
                                 },
                                 {
                                     q: "Is it safe to get Botox in my 20s?",

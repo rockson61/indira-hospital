@@ -25,7 +25,7 @@ export const LaserFistulaLongForm = () => {
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">Understanding Anal Fistula: More Than Just a Tunnel</h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                     <p>
-                        An anal fistula is almost always the result of a previous anal abscess. When the abscess (a collection of pus) drains but the path it took from the anal gland to the skin doesn't close, a fistula tract forms.
+                        An anal fistula is almost always the result of a previous anal abscess. When the abscess (a collection of pus) drains but the path it took from the anal gland to the skin doesn&apos;t close, a fistula tract forms.
                     </p>
                     <h3 className="text-xl font-bold text-slate-800 mt-6 italic underline decoration-fuchsia-200">Types of Anal Fistula</h3>
                     <p>
@@ -56,7 +56,7 @@ export const LaserFistulaLongForm = () => {
                     </div>
                     <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm space-y-3">
                         <AlertCircle className="w-8 h-8 text-fuchsia-600" />
-                        <h4 className="font-bold text-slate-900 text-xl underline decoration-fuchsia-100">When it's Urgent</h4>
+                        <h4 className="font-bold text-slate-900 text-xl underline decoration-fuchsia-100">When it&apos;s Urgent</h4>
                         <ul className="text-slate-600 space-y-2">
                             <li>• High fever with chills</li>
                             <li>• Severe, throbbing pain</li>
@@ -206,7 +206,7 @@ export const LaserFistulaLongForm = () => {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32" />
                 <h2 className="text-3xl font-bold">Heal Your Fistula Once and For All</h2>
                 <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
-                    Don't let a recurrent fistula dictate your life. At Indira Hospital, Vellore, we offer the precision, technology, and care needed to close the tract permanently. 
+                    Don&apos;t let a recurrent fistula dictate your life. At Indira Hospital, Vellore, we offer the precision, technology, and care needed to close the tract permanently. 
                 </p>
                 <div className="flex flex-wrap gap-4">
                     <div className="flex items-center gap-3 px-6 py-4 bg-white/10 rounded-full border border-white/20">

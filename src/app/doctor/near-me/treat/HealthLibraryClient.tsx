@@ -16,7 +16,7 @@ const bodySystems = [
     { name: "Bones & Joints", icon: Orthopaedics, link: "/doctor/near-me/treat/orthopaedics" },
     { name: "Neurology & Nerves", icon: Neurology, link: "/doctor/near-me/treat/neurology" },
     { name: "Digestive System", icon: HeartCardiogram, link: "/doctor/near-me/treat/gastroenterology" },
-    { name: "Women's Health", icon: Baby0203m, link: "/doctor/near-me/treat/obstetrics-gynaecology" },
+    { name: "Women&apos;s Health", icon: Baby0203m, link: "/doctor/near-me/treat/obstetrics-gynaecology" },
     { name: "Eyes & Vision", icon: Eye, link: "/doctor/near-me/treat/ophthalmology" },
     { name: "Kidneys & Urinary Tract", icon: Shield, link: "/doctor/near-me/treat/urology" },
     { name: "Lungs & Breathing", icon: LayoutGrid, link: "/doctor/near-me/treat/general-medicine" },

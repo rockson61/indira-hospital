@@ -99,7 +99,7 @@ export async function Testimonials() {
                         Our experts are ready to provide you with the same world-class care these patients received. Chat with us now for a free consultation estimate.
                     </p>
                     <a
-                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was inspired by the testimonials. I'd like to book a consultation.")}`}
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was inspired by the testimonials. I&apos;d like to book a consultation.")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="elite-button-primary text-base mt-2"

@@ -256,8 +256,8 @@ async function DoctorView({ doctor, location, city, slug }: any) {
                     <div className="flex flex-col sm:flex-row items-start gap-10">
                         {doctor.image && (
                             <div className="flex-shrink-0">
-                                <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-2xl backdrop-blur-3xl bg-white/5 group hover:scale-105 transition-transform duration-500">
-                                    <img src={getImageUrl(doctor.image)} alt={doctor.name} className="w-full h-full object-cover grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-700" />
+                                <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-2xl backdrop-blur-3xl bg-white/5 group hover:scale-105 transition-transform duration-500 relative">
+                                    <Image src={getImageUrl(doctor.image)} alt={doctor.name} fill className="object-cover grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-700" />
                                 </div>
                             </div>
                         )}
@@ -559,10 +559,10 @@ async function ServiceView({ service, location, city, slug }: any) {
                         {/* CMS / Cashless Assistance */}
                         <div className="bg-fuchsia-50 dark:bg-fuchsia-950/30 rounded-2xl p-6 border border-fuchsia-100 dark:border-fuchsia-900/50">
                             <h3 className="font-bold text-fuchsia-900 dark:text-fuchsia-300 mb-3 flex items-center gap-2">
-                                <Shield className="w-4 h-4" /> Chief Minister's Scheme
+                                <Shield className="w-4 h-4" /> Chief Minister&apos;s Scheme
                             </h3>
                             <p className="text-sm text-fuchsia-800 dark:text-fuchsia-400 leading-relaxed mb-4">
-                                Our center in Vellore is fully empanelled with the <strong>Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS)</strong> supporting patients across {location.category === 'district_hq' ? location.name : location.district + ' district'} and all of Tamil Nadu.
+                                Our center in Vellore is fully empanelled with the <strong>Chief Minister&apos;s Comprehensive Health Insurance Scheme (CMCHIS)</strong> supporting patients across {location.category === 'district_hq' ? location.name : location.district + ' district'} and all of Tamil Nadu.
                             </p>
                         </div>
                     </div>

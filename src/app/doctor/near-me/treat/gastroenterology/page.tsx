@@ -9,7 +9,7 @@ import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, Chec
 
 export const metadata: Metadata = constructMetadata({
     title: "Doctor | Indira Super Speciality Hospital",
-    description: "Learn more about doctor at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
+    description: "Learn more about doctor at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
     path: "/doctor/near-me/treat/gastroenterology"
 });
 
@@ -70,7 +70,7 @@ export default function GastroenterologyPillarPage() {
                                     Advanced Hepatology Hub
                                 </h4>
                                 <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
-                                    The liver is the body's primary chemical processing plant. We offer specialized reversal protocols for <strong>Fatty Liver (NASH)</strong> and comprehensive management for <strong>Liver Cirrhosis</strong>, Hepatitis B/C, and Autoimmune Liver Disease.
+                                    The liver is the body&apos;s primary chemical processing plant. We offer specialized reversal protocols for <strong>Fatty Liver (NASH)</strong> and comprehensive management for <strong>Liver Cirrhosis</strong>, Hepatitis B/C, and Autoimmune Liver Disease.
                                 </p>
                                 <ul className="space-y-2">
                                     <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> FIBRO-SCAN COMPATIBLE</li>
@@ -147,14 +147,14 @@ export default function GastroenterologyPillarPage() {
                                 },
                                 {
                                     q: "Can GERD (Acid Reflux) cause esophageal cancer?",
-                                    a: "Yes, chronic untreated acid reflux can lead to 'Barrett's Esophagus,' which is a pre-cancerous condition. If you rely on daily antacids, an Endoscopy is mandatory to check for mucosal erosion."
+                                    a: "Yes, chronic untreated acid reflux can lead to 'Barrett&apos;s Esophagus,' which is a pre-cancerous condition. If you rely on daily antacids, an Endoscopy is mandatory to check for mucosal erosion."
                                 },
                                 {
                                     q: "Why do I need an ERCP for jaundice?",
                                     a: "Jaundice is often caused by a blockage in the bile duct (stone or tumor). ERCP is a specialized endoscopic procedure to remove the stone or place a stent without making any external cuts on your body."
                                 },
                                 {
-                                    q: "What is the specialized care for Crohn's and Colitis (IBD)?",
+                                    q: "What is the specialized care for Crohn&apos;s and Colitis (IBD)?",
                                     a: "IBD requires 'Immunomodulator' and 'Biological' therapies. We provide advanced infusion protocols that can induce deep mucosal healing, preventing the need for radical bowel resection surgery later."
                                 }
                             ].map((faq, i) => (

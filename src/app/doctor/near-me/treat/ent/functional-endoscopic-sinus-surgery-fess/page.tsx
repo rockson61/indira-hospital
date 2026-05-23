@@ -165,7 +165,7 @@ export default function FESSSurgicalPage() {
                                 },
                                 {
                                     q: "Can polyps return after FESS?",
-                                    a: "FESS has a very high success rate (90%+). However, for patients with severe allergies or asthma (Samter's Triad), we provide a long-term 'Indira Maintenance Plan' using nasal sprays and rinses to keep the sinuses healthy and prevent regrowth."
+                                    a: "FESS has a very high success rate (90%+). However, for patients with severe allergies or asthma (Samter&apos;s Triad), we provide a long-term 'Indira Maintenance Plan' using nasal sprays and rinses to keep the sinuses healthy and prevent regrowth."
                                 },
                                 {
                                     q: "How long until my sense of smell returns?",

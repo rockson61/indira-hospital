@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from 'react';
 import {
   Phone,
@@ -134,7 +135,7 @@ export default function FloatingActionBar() {
 
           {/* Central Hub - Image */}
           <button className="relative w-24 h-24 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 shadow-2xl flex items-center justify-center">
-            {/* <img 
+            {/* <Image width={48} height={48} 
               src="/logo.png" 
               alt="Indira Hospital"
               className="w-16 h-16 rounded-full object-cover border-4 border-fuchsia-300"

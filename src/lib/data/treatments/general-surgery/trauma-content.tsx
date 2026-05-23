@@ -155,7 +155,7 @@ export const TraumaLongForm = () => {
                         <div className="space-y-8">
                             <h2 className="text-4xl font-black text-red-400 font-heading italic uppercase tracking-tighter m-0">Medicolegal Transparency</h2>
                             <p className="text-slate-400 leading-relaxed italic">
-                                In severe RTAs or assaults, police reporting (MLC) is mandatory. We handle the <strong>Medicolegal Case (MLC) documentation</strong> smoothly, ensuring doctors focus purely on saving the patient's life while our rapid-response admin handles legalities and insurance.
+                                In severe RTAs or assaults, police reporting (MLC) is mandatory. We handle the <strong>Medicolegal Case (MLC) documentation</strong> smoothly, ensuring doctors focus purely on saving the patient&apos;s life while our rapid-response admin handles legalities and insurance.
                             </p>
                             <div className="p-8 bg-white/5 border border-white/10 rounded-[3rem]">
                                 <h4 className="text-red-400 font-bold mb-4 font-heading text-lg flex items-center gap-3">
@@ -193,7 +193,7 @@ export const TraumaLongForm = () => {
                         { q: "What should bystanders do before the ambulance arrives?", a: "Do not move the patient unless they are in immediate danger of fire or drowning. If they are bleeding heavily, apply firm, continuous pressure to the wound with a clean cloth. Do not give them water to drink." },
                         { q: "Does the hospital have a Blood Bank?", a: "Yes. Our facility is tied up with immediate 24/7 blood bank services, capable of initiating Massive Transfusion Protocols (MTP) within minutes for severe hemorrhagic shock." },
                         { q: "Do you handle pediatric (child) trauma?", a: "Yes. We have specialized pediatric surgeons and pediatric ICU ventilators to handle traumatic injuries specific to children." },
-                        { q: "What is an MLC?", a: "Medicolegal Case. For road accidents, burns, or assaults, it is a legal requirement to inform the police. Our team files the MLC within the hospital premises so the family doesn't have to run to the station initially." },
+                        { q: "What is an MLC?", a: "Medicolegal Case. For road accidents, burns, or assaults, it is a legal requirement to inform the police. Our team files the MLC within the hospital premises so the family doesn&apos;t have to run to the station initially." },
                         { q: "Is a surgeon always available at night?", a: "Standard hospitals rely on 'on-call' doctors who travel from home. Indira Hospital maintains an on-site 'in-house' senior surgical team 24/7/365." },
                         { q: "What if the patient has a severe head injury?", a: "Our General Surgeons immediately secure the airway and blood pressure, while our on-site Neurosurgeon takes over for emergency craniotomies (brain surgery) after an immediate CT scan." }
                     ].map((faq, i) => (
@@ -213,7 +213,7 @@ export const TraumaLongForm = () => {
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-[100px] animate-pulse" />
                 <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter shrink-0 italic">Every Second Counts</h2>
                 <p className="text-red-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
-                    If you or a loved one has suffered a severe injury, bypass standard clinics. Head straight to Vellore's elite Level-1 capable Trauma Hub.
+                    If you or a loved one has suffered a severe injury, bypass standard clinics. Head straight to Vellore&apos;s elite Level-1 capable Trauma Hub.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 relative z-10">
                     <button className="px-14 py-6 bg-red-600 hover:bg-red-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-red-600/30 uppercase tracking-widest italic group-hover/cta:scale-110 active:scale-95 animate-pulse">Call 24/7 Red Hotline</button>

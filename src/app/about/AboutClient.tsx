@@ -35,7 +35,7 @@ export default function AboutClient() {
                         </h1>
                         <p 
                             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed mb-4"
-                            dangerouslySetInnerHTML={{ __html: injectInternalLinks("Indira Super Speciality Hospital is Vellore's premier destination for advanced medical interventions, where ethical practice meets world-class surgical precision.") }}
+                            dangerouslySetInnerHTML={{ __html: injectInternalLinks("Indira Super Speciality Hospital is Vellore&apos;s premier destination for advanced medical interventions, where ethical practice meets world-class surgical precision.") }}
                         />
                     </motion.div>
                 </div>
@@ -126,7 +126,7 @@ export default function AboutClient() {
                     {[
                         { name: "Dr. C. Paskal", role: "Chairman & Managing Director", desc: "Orchestrating the evolution of Indira Hospital into a regional powerhouse of clinical excellence since inception.", icon: "CP" },
                         { name: "Dr. P. Indira", role: "Medical Director", desc: "Setting the stringent quality benchmarks that define our reputation for surgical precision and patient safety.", icon: "PI" },
-                        { name: "Mr. Jackson P John", role: "Chief Operating Officer", desc: "Leading the hospital's digital frontier and operational modernization with a focus on seamless patient journeys.", icon: "JJ" }
+                        { name: "Mr. Jackson P John", role: "Chief Operating Officer", desc: "Leading the hospital&apos;s digital frontier and operational modernization with a focus on seamless patient journeys.", icon: "JJ" }
                     ].map((member, idx) => (
                         <motion.div
                             key={member.name}

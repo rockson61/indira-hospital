@@ -18,7 +18,7 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
-const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Elite WhatsApp Consultation: I'm looking for the best specialist at Indira Super Speciality Hospital, Vellore.")}`;
+const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Elite WhatsApp Consultation: I&apos;m looking for the best specialist at Indira Super Speciality Hospital, Vellore.")}`;
 
 export const metadata: Metadata = {
     title: "Best Hospital in Vellore — Ranked #1 for Specialized Care...",

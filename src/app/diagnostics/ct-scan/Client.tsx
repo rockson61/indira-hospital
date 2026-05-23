@@ -78,7 +78,7 @@ export function CTScanClient() {
                                     Traditional single-slice or 16-slice CT scanners capture images slowly, which can lead to blurring from breathing or heart movement. This often requires patients to hold their breath for extended periods, which is difficult for elderly or trauma patients.
                                 </p>
                                 <p className="mt-4">
-                                    Our **Elite 128-Slice CT** captures a massive volume of data in a single rotation. A full chest scan, for example, takes fewer than 5 seconds. This speed allows us to freeze the motion of the heart for **CT Coronary Angiographies** and capture crystal-clear images of small lung nodules. Most importantly, our system uses **AIDR (Adaptive Iterative Dose Reduction)**, which automatically analyzes the patient's body habitus to deliver the absolute minimum radiation dose required for a diagnostic-grade image.
+                                    Our **Elite 128-Slice CT** captures a massive volume of data in a single rotation. A full chest scan, for example, takes fewer than 5 seconds. This speed allows us to freeze the motion of the heart for **CT Coronary Angiographies** and capture crystal-clear images of small lung nodules. Most importantly, our system uses **AIDR (Adaptive Iterative Dose Reduction)**, which automatically analyzes the patient&apos;s body habitus to deliver the absolute minimum radiation dose required for a diagnostic-grade image.
                                 </p>
                                 <div className="mt-8 space-y-4">
                                     <div className="flex items-center gap-3">
@@ -173,7 +173,7 @@ export function CTScanClient() {
                                     a: "During the injection, it is common to feel a brief warm sensation or a metallic taste in the mouth. This is completely normal and fades within minutes. We suggest drinking plenty of water after the scan to help your kidneys flush the dye."
                                 },
                                 {
-                                    q: "Can I have a CT scan if I'm pregnant?",
+                                    q: "Can I have a CT scan if I&apos;m pregnant?",
                                     a: "Generally, no, as radiation can affect fetal development. We suggest alternatives like MRI or Ultrasound for pregnant women. However, in life-threatening emergencies, we use specialized 'Lead Shields' to protect the abdomen if a CT is absolutely necessary."
                                 },
                                 {

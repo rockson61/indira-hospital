@@ -270,7 +270,7 @@ export default async function DoctorProfileRoute({
                                         Elite Consultation
                                     </Link>
                                     <a
-                                        href={`https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent(`Hi, I'd like to book an appointment with ${currDoctor.name}.`)}`}
+                                        href={`https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent(`Hi, I&apos;d like to book an appointment with ${currDoctor.name}.`)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="block w-full text-center px-6 py-3 mt-3 bg-green-500 text-white font-bold rounded-2xl hover:bg-green-600 transition-all shadow-md"

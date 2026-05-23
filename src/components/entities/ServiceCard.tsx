@@ -156,7 +156,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
 
                 <div className="mt-auto relative z-20 flex gap-2 pt-4 border-t border-slate-100 dark:border-slate-800/60">
                     <a
-                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in learning more about ${service.title}.`)}`}
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;m interested in learning more about ${service.title}.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group/wa relative flex-[1.5] inline-flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all duration-300 shadow-md hover:shadow-lg dark:shadow-none hover:bg-fuchsia-500 uppercase tracking-wider"

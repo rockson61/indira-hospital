@@ -113,7 +113,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
 
                             <div className="space-y-3">
                                 <a
-                                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'd like to book the ${pkg.title} health package.`)}`}
+                                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;d like to book the ${pkg.title} health package.`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="elite-button-primary w-full text-base"

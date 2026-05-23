@@ -113,7 +113,7 @@ export default function GERDManagementPage() {
                                 <ul className="space-y-4">
                                     {[
                                         { title: "No Medication Dependency", text: "End the need for daily PPIs and antacids for life." },
-                                        { title: "Malignancy Prevention", text: "Stopping reflux is the only way to halt the progression of Barrett's into cancer." },
+                                        { title: "Malignancy Prevention", text: "Stopping reflux is the only way to halt the progression of Barrett&apos;s into cancer." },
                                         { title: "Night-time Relief", text: "Zero sleep disruption after the very first recovery night." }
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-3">
@@ -164,7 +164,7 @@ export default function GERDManagementPage() {
                                 },
                                 {
                                     q: "What is a 'Hiatal Hernia' and does it cause Reflux?",
-                                    a: "Yes. A hiatal hernia occurs when the upper part of the stomach pushes into the chest. This completely destroys the LES valve's ability to stay closed. In these cases, reflux can only be cured by surgically repairing the hernia."
+                                    a: "Yes. A hiatal hernia occurs when the upper part of the stomach pushes into the chest. This completely destroys the LES valve&apos;s ability to stay closed. In these cases, reflux can only be cured by surgically repairing the hernia."
                                 },
                                 {
                                     q: "Is surgery for Reflux dangerous for the elderly?",
@@ -175,8 +175,8 @@ export default function GERDManagementPage() {
                                     a: "If your cough occurs after a heavy meal or while lying down, and if specialized asthma or lung treatments have failed, it is likely 'Silent Reflux.' We confirm this using a 24-hour pH impedance study."
                                 },
                                 {
-                                    q: "Can Barrett's Esophagus be reversed?",
-                                    a: "The tissue changes in Barrett's are often permanent, but stopping the acid reflux through surgery or high-dose therapy prevents further cell changes and drastically lowers the risk of esophageal cancer."
+                                    q: "Can Barrett&apos;s Esophagus be reversed?",
+                                    a: "The tissue changes in Barrett&apos;s are often permanent, but stopping the acid reflux through surgery or high-dose therapy prevents further cell changes and drastically lowers the risk of esophageal cancer."
                                 },
                                 {
                                     q: "Does stress trigger acid reflux?",

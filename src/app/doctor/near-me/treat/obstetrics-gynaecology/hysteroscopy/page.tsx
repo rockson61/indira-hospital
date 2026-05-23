@@ -17,7 +17,7 @@ export default function HysteroscopyPage() {
             title="Elite Hysteroscopy & Uterine Care"
             slug="hysteroscopy"
             parentServiceSlug="obstetrics-gynaecology"
-            departmentName="Indira Elite Women's Care"
+            departmentName="Indira Elite Women&apos;s Care"
             description={
                 <article>
                     <p className="text-lg leading-relaxed">

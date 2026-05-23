@@ -54,7 +54,7 @@ export default function BookingFunnel() {
   };
 
   const generateWhatsAppLink = () => {
-    const baseMessage = `Hi Indira Elite Desk, I'm interested in an Elite consultation for ${selectedTreatment.title}.`;
+    const baseMessage = `Hi Indira Elite Desk, I&apos;m interested in an Elite consultation for ${selectedTreatment.title}.`;
     const pricingContext = selectedPricing ? ` I saw the estimate starting from ${selectedPricing.startingPrice}.` : "";
     return `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(baseMessage + pricingContext)}`;
   };

@@ -100,7 +100,7 @@ export default function ExpertOpinionClient() {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Board Approach.</span>
                         </h2>
                         <p className="text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
-                            Complex medical decisions shouldn't be made in isolation. Our Expert Opinion portal triggers an MDT review where surgeons, radiologists, and recovery specialists collaborate on your specific case.
+                            Complex medical decisions shouldn&apos;t be made in isolation. Our Expert Opinion portal triggers an MDT review where surgeons, radiologists, and recovery specialists collaborate on your specific case.
                         </p>
                         
                         <div className="grid sm:grid-cols-2 gap-4">

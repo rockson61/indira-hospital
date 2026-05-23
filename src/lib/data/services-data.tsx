@@ -38,7 +38,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "cardiology",
         title: "Interventional Cardiology",
-        description: "Chest pain? Don't wait. 24/7 Cath Lab with < 30 min door-to-balloon time. Angioplasty, stenting & pacemakers by India's best.",
+        description: "Chest pain? Don&apos;t wait. 24/7 Cath Lab with < 30 min door-to-balloon time. Angioplasty, stenting & pacemakers by India&apos;s best.",
         icon: Heart,
         image: "/hero-hospital.png",
         href: "/departments/cardiology",
@@ -57,7 +57,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "nephrology",
         title: "Nephrology & Dialysis",
-        description: "24/7 dialysis. Kidney stones removed in 45 minutes. CKD managed before it's too late. Don't delay — your kidneys can't wait.",
+        description: "24/7 dialysis. Kidney stones removed in 45 minutes. CKD managed before it&apos;s too late. Don&apos;t delay — your kidneys can&apos;t wait.",
         icon: Shield,
         image: "/hero-hospital.png",
         href: "/departments/nephrology",
@@ -75,7 +75,7 @@ export const servicesData: ServiceData[] = [
     {
         id: "oncology",
         title: "Medical & Surgical Oncology",
-        description: "Cancer doesn't wait, and neither should you. Chemotherapy, targeted therapy & tumour removal under one NABH-accredited roof.",
+        description: "Cancer doesn&apos;t wait, and neither should you. Chemotherapy, targeted therapy & tumour removal under one NABH-accredited roof.",
         icon: Sparkles,
         image: "/hero-hospital.png",
         href: "/departments/oncology",

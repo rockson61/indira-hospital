@@ -12,7 +12,7 @@ export const LaserPilesLongForm = () => {
                         Are you struggling with persistent discomfort, rectal bleeding, or painful lumps? If so, you are not alone. Hemorrhoids, commonly known as <strong>Piles</strong> (or <em>Moolam</em> in Tamil), affect nearly 50% of the population at some point in their lives. In Vellore, Tamil Nadu, we have seen a significant rise in these cases due to changing lifestyles, sedentary work cultures, and dietary shifts.
                     </p>
                     <p>
-                        At <strong>Indira Super Speciality Hospital, Vellore</strong>, we understand the physical and emotional toll that chronic piles can take. Under the leadership of <strong>Dr. Karan Shankar</strong>, a pioneer in minimally invasive proctology, we offer the region's most advanced <strong>Laser Piles Treatment</strong>. This modern approach is designed to provide long-term relief with minimal pain, zero blood loss, and a rapid return to your daily routine.
+                        At <strong>Indira Super Speciality Hospital, Vellore</strong>, we understand the physical and emotional toll that chronic piles can take. Under the leadership of <strong>Dr. Karan Shankar</strong>, a pioneer in minimally invasive proctology, we offer the region&apos;s most advanced <strong>Laser Piles Treatment</strong>. This modern approach is designed to provide long-term relief with minimal pain, zero blood loss, and a rapid return to your daily routine.
                     </p>
                     <p>
                         This ultimate guide is crafted to help you understand your condition, evaluate your options, and discover why laser surgery is the global gold standard for treating Grade 2, 3, and 4 hemorrhoids.
@@ -35,7 +35,7 @@ export const LaserPilesLongForm = () => {
                         <li className="flex gap-3">
                             <span className="h-6 w-6 rounded-full bg-fuchsia-100 flex items-center justify-center text-fuchsia-600 font-bold shrink-0 text-sm">1</span>
                             <div>
-                                <strong>Grade 1 (Mild):</strong> These are small inflammations inside the anus. They are not visible and usually don't cause significant pain, though occasional bleeding may occur.
+                                <strong>Grade 1 (Mild):</strong> These are small inflammations inside the anus. They are not visible and usually don&apos;t cause significant pain, though occasional bleeding may occur.
                             </div>
                         </li>
                         <li className="flex gap-3">
@@ -104,7 +104,7 @@ export const LaserPilesLongForm = () => {
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-1" />
-                            <span><strong>Sedentary Lifestyle:</strong> Long hours of sitting, common among Vellore's IT and office professionals, reduces pelvic blood flow.</span>
+                            <span><strong>Sedentary Lifestyle:</strong> Long hours of sitting, common among Vellore&apos;s IT and office professionals, reduces pelvic blood flow.</span>
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-1" />
@@ -224,7 +224,7 @@ export const LaserPilesLongForm = () => {
                         <h3 className="text-2xl font-bold text-slate-900">Dr. Karan Shankar, MS, FISCP</h3>
                         <p className="text-lg text-fuchsia-600 font-semibold italic">Senior Consultant Proctologist & General Surgeon</p>
                         <p className="text-slate-600 leading-relaxed">
-                            With over 15 years of surgical excellence and thousands of successful laser proctology procedures, Dr. Karan Shankar is recognized as Vellore's leading specialist in colorectal health. His patient-first approach and mastery of the 1470nm laser protocol ensure the highest success rates and zero patient trauma.
+                            With over 15 years of surgical excellence and thousands of successful laser proctology procedures, Dr. Karan Shankar is recognized as Vellore&apos;s leading specialist in colorectal health. His patient-first approach and mastery of the 1470nm laser protocol ensure the highest success rates and zero patient trauma.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                             <span className="px-4 py-2 bg-slate-50 text-slate-600 text-sm font-bold rounded-full border border-slate-200 flex items-center gap-2">
@@ -272,7 +272,7 @@ export const LaserPilesLongForm = () => {
                    Health Disclaimer
                 </h3>
                 <p className="text-sm text-slate-500 leading-relaxed italic">
-                    The content on this page is for informational purposes only and should not replace professional medical advice from a qualified proctologist. Every patient's case is unique; please consult with Dr. Karan Shankar at Indira Super Speciality Hospital, Vellore, for a personalized diagnosis and treatment plan tailored to your condition. 
+                    The content on this page is for informational purposes only and should not replace professional medical advice from a qualified proctologist. Every patient&apos;s case is unique; please consult with Dr. Karan Shankar at Indira Super Speciality Hospital, Vellore, for a personalized diagnosis and treatment plan tailored to your condition. 
                 </p>
                 <div className="mt-8 flex justify-center">
                    <p className="text-xs text-slate-400">Copyright © 2026 Indira Super Speciality Hospital, Vellore. All Rights Reserved.</p>

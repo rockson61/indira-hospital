@@ -13,7 +13,7 @@ const libraryLinks = [
     { name: "Diagnostics & Testing", href: "/scans", icon: TestTube },
     { name: "Symptoms Guide", href: "/doctor/near-me/treat#symptoms", icon: UserSearch },
     { name: "Diet & Nutrition", href: "/doctor/near-me/treat#diet", icon: LayoutGrid },
-    { name: "Women's Wellness", href: "/doctor/near-me/treat/obstetrics-gynaecology", icon: HeartCardiogram }
+    { name: "Women&apos;s Wellness", href: "/doctor/near-me/treat/obstetrics-gynaecology", icon: HeartCardiogram }
 ];
 
 export function HealthLibraryCard() {

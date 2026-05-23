@@ -71,7 +71,7 @@ export default function MedicalOncologyPage() {
                     },
                     {
                         question: "What is a Chemo Port and do I need one?",
-                        answer: "A Chemo Port is a tiny device placed under the skin to provide safe, painless access for multiple infusions. It's often recommended for long-term treatments to avoid multiple needle pricks."
+                        answer: "A Chemo Port is a tiny device placed under the skin to provide safe, painless access for multiple infusions. It&apos;s often recommended for long-term treatments to avoid multiple needle pricks."
                     },
                     {
                         question: "Will I lose my hair during treatment?",
@@ -120,7 +120,7 @@ export default function MedicalOncologyPage() {
         >
             <div className="space-y-8">
                 <section>
-                    <h2 className="font-heading text-3xl font-bold mb-4">India's Premier Sanctuary for Medical Cancer Care</h2>
+                    <h2 className="font-heading text-3xl font-bold mb-4">India&apos;s Premier Sanctuary for Medical Cancer Care</h2>
                     <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         At the <strong>Indira Medical Oncology Center</strong>, we provide more than just medication; we provide a complete support system. Our oncology specialists utilize the latest therapeutic blueprints to fight cancer while ensuring that you live life with as much strength and normalcy as possible. Our unit is equipped with specialized Bio-Safety Cabinets for safe, accurate drug preparation by master pharmacists.
                     </p>

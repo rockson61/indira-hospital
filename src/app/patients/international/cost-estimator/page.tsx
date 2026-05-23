@@ -45,7 +45,7 @@ const PROCEDURE_TABLE = [
 
 const WHY_AFFORDABLE = [
     { t: "Lower operational costs", d: "Real estate, labour, and admin costs in India are a fraction of Western countries — not a reflection of lower quality." },
-    { t: "No insurance overhead", d: "India's healthcare system doesn't carry the massive insurance administration overhead that inflates US hospital bills." },
+    { t: "No insurance overhead", d: "India&apos;s healthcare system doesn&apos;t carry the massive insurance administration overhead that inflates US hospital bills." },
     { t: "Government subsidies", d: "Government policies actively promote medical tourism — keeping taxes and import duties on medical equipment lower." },
     { t: "Same international equipment", d: "We use Siemens, GE, Stryker, J&J implants and instruments — identical to what US and UK hospitals use." },
 ];

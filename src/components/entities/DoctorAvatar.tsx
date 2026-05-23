@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { getImageUrl } from "@/lib/utils";
+import Image from 'next/image';
 
 interface DoctorAvatarProps {
     src?: string;
@@ -17,10 +18,11 @@ export function DoctorAvatar({ src, name, initials, className = "" }: DoctorAvat
     if (finalSrc && !error) {
         return (
             <div className={`relative overflow-hidden ${className}`}>
-                <img
+                <Image
                     src={finalSrc}
                     alt={name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                     onError={() => setError(true)}
                 />
             </div>

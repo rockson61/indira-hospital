@@ -15,7 +15,7 @@ export function LocalSEOFooter() {
                             List of Top Doctors in Vellore
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">
-                            Looking for trusted healthcare professionals in Vellore? <strong>Indira Super Speciality Hospital</strong> brings you a verified list of doctors in Vellore from various specialties to help you find the best care possible. Whether you're searching for General Physician Doctors in Vellore or Specialist Surgeons in Vellore, we’ve got you covered.
+                            Looking for trusted healthcare professionals in Vellore? <strong>Indira Super Speciality Hospital</strong> brings you a verified list of doctors in Vellore from various specialties to help you find the best care possible. Whether you&apos;re searching for General Physician Doctors in Vellore or Specialist Surgeons in Vellore, we’ve got you covered.
                         </p>
                     </div>
 

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 import { submitContactForm } from "@/app/actions/contact-actions";
 
 export function ContactFormClient() {
@@ -255,8 +256,8 @@ export function ContactFormClient() {
                                 <p className="text-sm text-slate-500 font-medium mb-6 uppercase tracking-widest">Trusted by 50,000+ Patients</p>
                                 <div className="flex -space-x-3">
                                     {[1, 2, 3, 4, 5].map((i) => (
-                                        <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center overflow-hidden">
-                                            <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Patient" className="w-full h-full object-cover grayscale" />
+                                        <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center overflow-hidden relative">
+                                            <Image src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Patient" fill className="object-cover grayscale" />
                                         </div>
                                     ))}
                                     <div className="w-10 h-10 rounded-full border-2 border-slate-900 bg-fuchsia-500 flex items-center justify-center text-[10px] font-black text-white">

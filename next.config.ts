@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // @ts-expect-error - NextConfig types occasionally miss eslint in some minor versions
   eslint: {
     ignoreDuringBuilds: true,
   },

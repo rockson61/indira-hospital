@@ -55,7 +55,7 @@ export const AnalAbscessLongForm = () => {
                         <li className="flex gap-4">
                             <Zap className="w-6 h-6 text-fuchsia-600 shrink-0 mt-1" />
                             <div>
-                                <strong>Severe, Throbbing Pain:</strong> Constant pain that gets worse with sitting or moving. Unlike a fissure, the pain doesn't stop after a bowel movement.
+                                <strong>Severe, Throbbing Pain:</strong> Constant pain that gets worse with sitting or moving. Unlike a fissure, the pain doesn&apos;t stop after a bowel movement.
                             </div>
                         </li>
                         <li className="flex gap-4">
@@ -195,7 +195,7 @@ export const AnalAbscessLongForm = () => {
                         { q: "Can an anal abscess be treated with antibiotics alone?", a: "No. While antibiotics are used AFTER drainage, they cannot penetrate a large pocket of pus. Surgery is mandatory to drain the source of infection." },
                         { q: "Will I need to stay in the hospital overnight?", a: "In most cases, it is a daycare procedure or requiring a 24-hour observation stay if the infection is deep or systemic." },
                         { q: "Is the procedure painful?", a: "The procedure itself is done under anesthesia, so you feel nothing. The pain from the abscess itself usually vanishes as soon as the pressure is relieved through the incision." },
-                        { q: "Why is Dr. Karan Shankar's expertise important for a simple abscess?", a: "Dr. Shankar's specialty in proctology ensures that the muscle sphincters are not damaged and that potential future fistulas are identified and managed early." },
+                        { q: "Why is Dr. Karan Shankar&apos;s expertise important for a simple abscess?", a: "Dr. Shankar&apos;s specialty in proctology ensures that the muscle sphincters are not damaged and that potential future fistulas are identified and managed early." },
                         { q: "What should I do if my abscess bursts at home?", a: "Go to the emergency room immediately. Spontaneous rupture often drains only partially, leading to recurring abscesses or deeper tracking of the infection." },
                         { q: "What is the Tamil terminology for Anal Abscess?", a: "In common Tamil medical terms, it is referred to as 'மூலம் தொடர்பான சீழ் கட்டி' (Moolam thodarbana seézh katti)." }
                     ].map((faq, index) => (
@@ -213,9 +213,9 @@ export const AnalAbscessLongForm = () => {
             <section className="bg-red-950 p-12 rounded-[4rem] text-center border-2 border-dashed border-red-900 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32" />
                  <div className="max-w-3xl mx-auto space-y-6">
-                    <h2 className="text-3xl font-bold italic">Don't Wait Until It's a Secondary Compliation</h2>
+                    <h2 className="text-3xl font-bold italic">Don&apos;t Wait Until It&apos;s a Secondary Compliation</h2>
                     <p className="text-lg text-white/70 leading-relaxed font-medium italic">
-                        The throbbing pain of an abscess is your body's emergency signal. Our 24/7 OT and proctologists are ready to provide immediate relief and long-term protection.
+                        The throbbing pain of an abscess is your body&apos;s emergency signal. Our 24/7 OT and proctologists are ready to provide immediate relief and long-term protection.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 pt-4">
                         <span className="flex items-center gap-2 text-sm text-fuchsia-300"><MapPin className="w-4 h-4" /> Available 24/7 in Vellore</span>

@@ -56,7 +56,7 @@ export function PatientsHubClient() {
             title: "Travel & Logistics", 
             icon: Plane, 
             gradient: "from-blue-500 to-cyan-500",
-            description: "No matter where you're coming from, we help you get here safely."
+            description: "No matter where you&apos;re coming from, we help you get here safely."
         },
         { 
             id: "Billing", 

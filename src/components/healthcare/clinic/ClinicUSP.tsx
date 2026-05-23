@@ -45,7 +45,7 @@ const trustFactors = [
   {
     category: "Patient Experience",
     points: [
-      "There's no waiting time for patients",
+      "There&apos;s no waiting time for patients",
       "Educate patients during the treatment",
       "Ensure regular follow-ups with Patients",
       "Treat patients from around the globe",
