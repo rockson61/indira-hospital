@@ -1,0 +1,14 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+.cursor
+.planning
+.agent
+.seo
+build.log
+lint-results.txt
+tsc-results.txt
