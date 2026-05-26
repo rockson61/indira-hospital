@@ -3,7 +3,6 @@ export const navigation = {
         { title: "Treatments", href: "/doctor/near-me/treat" },
         { title: "Doctors", href: "/doctors" },
         { title: "Diagnostics", href: "/diagnostics" },
-        { title: "Locations", href: "/doctor/near-me" },
         { title: "International", href: "/patients/international" },
     ],
 

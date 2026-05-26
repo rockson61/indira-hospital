@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 const StickyCTA = dynamic(() => import("@/components/layout/StickyCTA").then(mod => mod.StickyCTA));
+const FloatingWhatsApp = dynamic(() => import("@/components/layout/FloatingWhatsApp").then(mod => mod.FloatingWhatsApp));
 const DynamicSEOKeywordBlock = dynamic(() => import("@/components/DynamicSEOKeywordBlock"));
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
@@ -50,6 +51,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+import Script from "next/script";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,8 +61,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans`}
+        className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans relative`}
       >
+        <div id="google_translate_element" style={{ display: "none" }} />
+        <Script id="google-translate-config" strategy="beforeInteractive">
+          {`
+            function googleTranslateElementInit() {
+              new window.google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ta,hi,te',
+                autoDisplay: false
+              }, 'google_translate_element');
+            }
+          `}
+        </Script>
+        <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
         <JsonLdSchema auto />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Header />
@@ -68,6 +87,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <StickyCTA />
+          <FloatingWhatsApp />
           <DynamicSEOKeywordBlock />
         </ThemeProvider>
       </body>

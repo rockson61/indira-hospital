@@ -19,8 +19,11 @@ export function AvailabilityTicker() {
     const [currentTime, setCurrentTime] = useState(new Date());
     const [availability, setAvailability] = useState<AvailabilityState[]>(INITIAL_AVAILABILITY);
 
+    const [mounted, setMounted] = useState(false);
+
     // Live Clock
     useEffect(() => {
+        setMounted(true);
         const timer = setInterval(() => setCurrentTime(new Date()), 1000);
         return () => clearInterval(timer);
     }, []);
@@ -55,7 +58,7 @@ export function AvailabilityTicker() {
                     </div>
                     <div className="flex items-center gap-2">
                         <Calendar className="w-3 h-3 text-slate-500" />
-                        <span className="text-[10px] font-bold text-white uppercase tracking-widest">{dateString} | {timeString}</span>
+                        <span className="text-[10px] font-bold text-white uppercase tracking-widest">{mounted ? `${dateString} | ${timeString}` : "..."}</span>
                     </div>
                 </div>
 

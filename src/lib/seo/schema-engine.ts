@@ -29,8 +29,10 @@ export interface SchemaData {
     faq?: { question: string; answer: string }[];
     steps?: { name: string; description: string; duration?: string }[];
     items?: { name: string; url: string }[]; // For Breadcrumbs
+    reviews?: { author: string; datePublished: string; reviewBody: string; ratingValue: number; bestRating?: number }[];
+    video?: { name: string; description: string; thumbnailUrl: string; uploadDate: string; contentUrl?: string; embedUrl?: string };
     doctor?: any;
-    location?: { name: string; address: string; city: string; areaServed: string };
+    location?: { name: string; address: string; city: string; areaServed: string; telephone?: string };
     preparation?: string;
     // Diagnostic / Symptom specific
     category?: string;
@@ -199,11 +201,12 @@ export function generateSchema(type: PageType, data: SchemaData, currentUrl: str
             if (data.location) {
                 mainSchema = {
                     ...mainSchema,
-                    "@type": ["MedicalClinic", "Hospital"],
+                    "@type": ["MedicalClinic", "LocalBusiness"],
                     "@id": `${fullUrl}/#location`,
                     "name": data.location.name,
                     "description": data.description,
                     "url": fullUrl,
+                    "telephone": data.location.telephone || siteConfig.contact.phone,
                     "address": {
                         "@type": "PostalAddress",
                         "streetAddress": data.location.address,
@@ -211,6 +214,7 @@ export function generateSchema(type: PageType, data: SchemaData, currentUrl: str
                         "addressRegion": "Tamil Nadu",
                         "addressCountry": "IN"
                     },
+                    "areaServed": data.location.areaServed,
                     "parentOrganization": { "@id": GLOBAL_ENTITY_ID }
                 };
             }
@@ -325,6 +329,47 @@ export function generateSchema(type: PageType, data: SchemaData, currentUrl: str
                     "text": s.description
                 }]
             })),
+            "publisher": { "@id": GLOBAL_ENTITY_ID }
+        });
+    }
+
+    // 5. Automated Related Schemas (Reviews & Videos)
+    if (data.reviews && data.reviews.length > 0) {
+        // Append aggregate rating and reviews directly to the main entity (Physician/Hospital/Clinic)
+        if (mainSchema["@type"]) {
+            const sum = data.reviews.reduce((acc, r) => acc + r.ratingValue, 0);
+            const avg = (sum / data.reviews.length).toFixed(1);
+            mainSchema["aggregateRating"] = {
+                "@type": "AggregateRating",
+                "ratingValue": avg,
+                "reviewCount": data.reviews.length,
+                "bestRating": data.reviews[0].bestRating || 5
+            };
+            mainSchema["review"] = data.reviews.map(r => ({
+                "@type": "Review",
+                "author": { "@type": "Person", "name": r.author },
+                "datePublished": r.datePublished,
+                "reviewBody": r.reviewBody,
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": r.ratingValue,
+                    "bestRating": r.bestRating || 5
+                }
+            }));
+        }
+    }
+
+    if (data.video) {
+        graph.push({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "@id": `${fullUrl}/#video`,
+            "name": data.video.name,
+            "description": data.video.description,
+            "thumbnailUrl": data.video.thumbnailUrl,
+            "uploadDate": data.video.uploadDate,
+            "contentUrl": data.video.contentUrl,
+            "embedUrl": data.video.embedUrl,
             "publisher": { "@id": GLOBAL_ENTITY_ID }
         });
     }
