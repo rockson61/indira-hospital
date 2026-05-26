@@ -87,7 +87,7 @@ export function LeadershipMessage() {
  >
  <Quote className="absolute -top-12 -left-8 w-24 h-24 text-slate-100 dark:text-slate-800/50 -rotate-12" />
  
- <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-8 relative z-10">
+ <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-8 relative z-10">
  Chairman&apos;s Message
  </div>
 

@@ -148,7 +148,7 @@ export default function VirtualTourClient() {
  <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
  <span className="text-sm uppercase tracking-widest italic">Enquire via WhatsApp</span>
  </a>
- <Link href="/contact" className="flex items-center justify-center gap-4 px-10 py-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-white font-bold rounded-3xl hover:bg-white dark:bg-slate-900 transition-colors uppercase tracking-widest text-[11px]">
+ <Link href="/contact" className="flex items-center justify-center gap-4 px-10 py-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold rounded-3xl hover:bg-white dark:bg-slate-900 transition-colors uppercase tracking-widest text-[11px]">
  Arrange Site Visit
  </Link>
  </div>

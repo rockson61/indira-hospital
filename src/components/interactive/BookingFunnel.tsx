@@ -104,7 +104,7 @@ export default function BookingFunnel() {
  value={search}
  onChange={(e) => setSearch(e.target.value)}
  placeholder="e.g. Knee Replacement, Cardiology, Laser Piles..."
- className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 pl-16 pr-6 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:bg-white dark:bg-slate-900 transition-all font-medium italic"
+ className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 pl-16 pr-6 text-slate-900 dark:text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:bg-white dark:bg-slate-900 transition-all font-medium italic"
  />
  </div>
 
@@ -261,7 +261,7 @@ export default function BookingFunnel() {
  </a>
  <button
  onClick={() => setStep("valuation")}
- className="px-8 py-7 bg-white dark:bg-slate-900 text-white font-bold rounded-3xl hover:bg-white dark:bg-slate-900 transition-colors uppercase tracking-widest text-[9px]"
+ className="px-8 py-7 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-3xl hover:bg-white dark:bg-slate-900 transition-colors uppercase tracking-widest text-[9px]"
  >
  Review Details
  </button>

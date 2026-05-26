@@ -78,7 +78,7 @@ export function GlossaryClient() {
  <input
  type="text"
  placeholder="Search specific terms (e.g., Angioplasty, MRI)..."
- className="block w-full pl-18 pr-6 py-5 sm:py-6 bg-white dark:bg-slate-900 text-white placeholder-slate-400 rounded-3xl focus:ring-4 focus:ring-fuchsia-500/20 focus:bg-white dark:bg-slate-900 transition-all outline-none font-bold border border-transparent focus:border-slate-200 dark:border-slate-800 text-xl"
+ className="block w-full pl-18 pr-6 py-5 sm:py-6 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 rounded-3xl focus:ring-4 focus:ring-fuchsia-500/20 focus:bg-white dark:bg-slate-900 transition-all outline-none font-bold border border-transparent focus:border-slate-200 dark:border-slate-800 text-xl"
  value={searchQuery}
  onChange={(e) => setSearchQuery(e.target.value)}
  />

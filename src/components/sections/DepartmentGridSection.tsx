@@ -16,7 +16,7 @@ export function DepartmentGridSection() {
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
  <div className="max-w-2xl">
- <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-6">
+ <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-6">
  Our Expertise
  </div>
  <h2 className="elite-section-title text-slate-900 dark:text-white">

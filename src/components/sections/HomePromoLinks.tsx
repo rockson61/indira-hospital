@@ -36,14 +36,14 @@ export function HomePromoLinks() {
  {/* Promo 2: Home Visit */}
  <div className="lg:col-span-1 relative rounded-[2rem] overflow-hidden group border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none flex flex-col h-full bg-white dark:bg-slate-900">
  <div className="p-8 md:p-10 flex flex-col flex-grow relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900 dark:to-indigo-900 text-slate-900 dark:text-white h-full">
- <div className="w-16 h-16 bg-white dark:bg-slate-900 dark:bg-white dark:bg-slate-900 rounded-2xl flex items-center justify-center mb-8 border border-slate-200 dark:border-slate-800 dark:border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
+ <div className="w-16 h-16 bg-white dark:bg-slate-900 rounded-2xl flex items-center justify-center mb-8 border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
  <HomeIcon className="w-8 h-8 text-blue-600 dark:text-blue-300" />
  </div>
  <h3 className="text-2xl font-black mb-4">DispatchHealth & Indira Hospital</h3>
  <p className="text-slate-600 dark:text-blue-100/80 mb-8 flex-grow">
  Teaming up to bring world-class healthcare services directly to your home. Expert care, zero travel.
  </p>
- <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-slate-50 dark:bg-white dark:bg-slate-900 dark:hover:bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 rounded-xl transition-colors font-bold group/link mt-auto text-blue-700 dark:text-white shadow-sm dark:shadow-none">
+ <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl transition-colors font-bold group/link mt-auto text-blue-700 dark:text-white shadow-sm dark:shadow-none">
  Request a Home Visit
  <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
  </Link>

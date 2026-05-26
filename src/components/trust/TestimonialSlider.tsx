@@ -133,7 +133,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
  </a>
  <Link
  href="/book-appointment"
- className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white dark:bg-slate-900 text-white font-black rounded-2xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all text-lg"
+ className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-black rounded-2xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all text-lg"
  >
  Book Appointment
  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

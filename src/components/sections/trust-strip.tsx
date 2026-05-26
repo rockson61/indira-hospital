@@ -51,7 +51,7 @@ export function TrustStrip() {
  {badges.map((badge) => (
  <div
  key={badge.text}
- className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-50 dark:bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-sm"
+ className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-sm"
  >
  <badge.icon className="w-4 h-4 text-fuchsia-600 animate-pulse" />
  <span className="text-xs font-black text-slate-900 dark:text-slate-200 uppercase tracking-widest">{badge.text}</span>

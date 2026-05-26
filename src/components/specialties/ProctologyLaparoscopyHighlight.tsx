@@ -44,7 +44,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  {/* Header */}
  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
  <div>
- <div className="inline-flex items-center gap-3 px-5 py-2 bg-fuchsia-50 dark:bg-white dark:bg-slate-900 rounded-full border border-fuchsia-100 dark:border-slate-200 dark:border-slate-800 text-fuchsia-600 dark:text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.3em] mb-4 shadow-sm animate-pulse">
+ <div className="inline-flex items-center gap-3 px-5 py-2 bg-fuchsia-50 dark:bg-slate-900 rounded-full border border-fuchsia-100 dark:border-slate-200 dark:border-slate-800 text-fuchsia-600 dark:text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.3em] mb-4 shadow-sm animate-pulse">
  ⭐ Most Requested Elite Surgeries
  </div>
  <h2 className="elite-section-title text-slate-900 dark:text-white uppercase italic er">
@@ -63,7 +63,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
 
  <div className="grid lg:grid-cols-2 gap-8">
  {/* PROCTOLOGY CARD */}
- <div className="bg-white dark:bg-slate-900 dark:bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden group/procto">
+ <div className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden group/procto">
  <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-[40px]" />
  <div className="flex items-center gap-5 mb-8 relative z-10">
  <div className="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-950/30 border border-red-100 dark:border-red-900/40 flex items-center justify-center text-red-500 shadow-inner group-hover/procto:scale-110 transition-transform">
@@ -82,7 +82,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-transparent dark:from-red-950/10 opacity-0 group-hover/item:opacity-100 transition-opacity" />
  <div className="relative z-10">
  <div className="flex items-center justify-between mb-4">
- <div className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-white dark:bg-slate-900 flex items-center justify-center text-xl shadow-inner group-hover/item:bg-red-500 group-hover/item:text-white transition-all">
+ <div className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-xl shadow-inner group-hover/item:bg-red-500 group-hover/item:text-slate-900 dark:text-white transition-all">
  {t.icon}
  </div>
  <span className="text-[8px] font-black px-3 py-1 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400 rounded-full uppercase tracking-tighter">{t.tag}</span>
@@ -96,7 +96,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  </div>
 
  {/* LAPAROSCOPY CARD */}
- <div className="bg-white dark:bg-slate-900 dark:bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden group/laparo">
+ <div className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden group/laparo">
  <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/5 rounded-full blur-[40px]" />
  <div className="flex items-center gap-5 mb-8 relative z-10">
  <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 flex items-center justify-center text-blue-500 shadow-inner group-hover/laparo:scale-110 transition-transform">
@@ -115,7 +115,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-950/10 opacity-0 group-hover/item:opacity-100 transition-opacity" />
  <div className="relative z-10">
  <div className="flex items-center justify-between mb-4">
- <div className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-white dark:bg-slate-900 flex items-center justify-center text-xl shadow-inner group-hover/item:bg-blue-500 group-hover/item:text-white transition-all">
+ <div className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-xl shadow-inner group-hover/item:bg-blue-500 group-hover/item:text-slate-900 dark:text-white transition-all">
  {t.icon}
  </div>
  <span className="text-[8px] font-black px-3 py-1 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 rounded-full uppercase tracking-tighter">{t.tag}</span>

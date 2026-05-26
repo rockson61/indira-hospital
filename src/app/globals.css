@@ -260,7 +260,7 @@
  }
 
  .elite-tag {
- @apply inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-xl;
+ @apply inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-xl;
  }
 
  .elite-card {

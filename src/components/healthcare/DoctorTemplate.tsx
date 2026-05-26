@@ -180,7 +180,7 @@ export function DoctorTemplate({
  </a>
  <Link
  href="/book-appointment"
- className="px-8 py-4 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 transition-all "
+ className="px-8 py-4 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 transition-all "
  >
  {DOCTOR_PROFILE.BTN_SCHEDULE}
  </Link>
@@ -329,7 +329,7 @@ export function DoctorTemplate({
  </a>
  <a
  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
- className="w-full inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 transition-all text-sm uppercase tracking-widest"
+ className="w-full inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 transition-all text-sm uppercase tracking-widest"
  >
  <Phone className="w-5 h-5 mr-3" />
  {DOCTOR_PROFILE.BTN_CALL_TOKEN}

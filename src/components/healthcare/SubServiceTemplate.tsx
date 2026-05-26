@@ -597,7 +597,7 @@ export function SubServiceTemplate({
  href={whatsappUrl}
  target="_blank"
  rel="noopener noreferrer"
- className="px-10 py-5 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-bold rounded-full transition-all border border-slate-200 dark:border-slate-800 hover:-translate-y-1 text-lg inline-flex items-center gap-2"
+ className="px-10 py-5 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-full transition-all border border-slate-200 dark:border-slate-800 hover:-translate-y-1 text-lg inline-flex items-center gap-2"
  >
  <MessageCircle className="w-5 h-5" />
  WhatsApp Chat

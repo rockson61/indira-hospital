@@ -55,7 +55,7 @@ export function CostCalculator() {
  <div>
  <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Select Procedure</label>
  <select
- className="w-full px-5 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 appearance-none cursor-pointer hover:bg-white dark:bg-slate-900 transition-all font-semibold"
+ className="w-full px-5 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 appearance-none cursor-pointer hover:bg-white dark:bg-slate-900 transition-all font-semibold"
  value={selectedId}
  onChange={(e) => setSelectedId(e.target.value)}
  >

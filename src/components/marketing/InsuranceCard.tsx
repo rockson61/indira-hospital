@@ -17,7 +17,7 @@ export function InsuranceCard() {
  <div className="absolute top-0 right-0 w-64 h-64 bg-white dark:bg-slate-900 rounded-full blur-[60px] pointer-events-none" />
  
  <div className="relative z-10">
- <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-white text-[10px] font-black tracking-widest uppercase mb-6 shadow-sm">
+ <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-[10px] font-black tracking-widest uppercase mb-6 shadow-sm">
  <Wallet className="w-3.5 h-3.5" /> Cashless Facility
  </div>
 
@@ -30,7 +30,7 @@ export function InsuranceCard() {
 
  <div className="grid grid-cols-2 gap-3 mb-8">
  {popularInsurances.map((ins, idx) => (
- <div key={idx} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-white text-center flex items-center justify-center shadow-inner">
+ <div key={idx} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white text-center flex items-center justify-center shadow-inner">
  {ins}
  </div>
  ))}

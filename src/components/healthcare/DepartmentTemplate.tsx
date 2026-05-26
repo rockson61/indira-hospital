@@ -133,7 +133,7 @@ export function DepartmentTemplate({
  </Link>
  <a
  href={`tel:${phone.replace(/\s+/g, '')}`}
- className="inline-flex items-center px-8 py-4 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-bold rounded-xl transition-all border border-slate-200 dark:border-slate-800 hover:scale-105"
+ className="inline-flex items-center px-8 py-4 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-xl transition-all border border-slate-200 dark:border-slate-800 hover:scale-105"
  >
  <Phone className="h-5 w-5 mr-2" />
  Call Experts
@@ -357,7 +357,7 @@ export function DepartmentTemplate({
  </Link>
  <a
  href={`tel:${phone.replace(/\s+/g, '')}`}
- className="px-10 py-5 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-bold rounded-2xl transition-all border border-slate-200 dark:border-slate-800 hover:scale-105 text-lg"
+ className="px-10 py-5 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-2xl transition-all border border-slate-200 dark:border-slate-800 hover:scale-105 text-lg"
  >
  WhatsApp Chat Support
  </a>

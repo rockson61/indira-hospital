@@ -69,7 +69,7 @@ export function ServicesSection() {
  />
  )}
  <div className={`p-3 rounded-xl transition-colors shrink-0 relative z-10 ${
- isActive ? "bg-fuchsia-500 text-white" : "bg-white dark:bg-slate-900 text-gray-500 group-hover:text-white"
+ isActive ? "bg-fuchsia-500 text-white" : "bg-white dark:bg-slate-900 text-gray-500 group-hover:text-slate-900 dark:text-white"
  }`}>
  <IconComponent className="w-6 h-6" />
  </div>
@@ -146,7 +146,7 @@ export function ServicesSection() {
  </Link>
  <Link
  href="/book-appointment"
- className="inline-flex items-center h-12 px-8 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-white font-bold hover:bg-white dark:bg-slate-900 transition-all duration-300"
+ className="inline-flex items-center h-12 px-8 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold hover:bg-white dark:bg-slate-900 transition-all duration-300"
  >
  Book Appointment
  </Link>
