@@ -60,6 +60,18 @@ export async function generateMetadata({ params }: { params: Promise<{ treatment
  description: `Looking for ${treatmentInfo.title} in ${locationName}? Indira Super Speciality Hospital offers advanced, NABH-accredited treatment with same-day discharge options.`,
  alternates: {
  canonical: `${siteConfig.url}/treatments/${treatmentSlug}/${locationSlug}`,
+ },
+ openGraph: {
+ title: `${prefix} ${treatmentInfo.title} in ${locationName} | Indira Hospital`,
+ description: `Looking for ${treatmentInfo.title} in ${locationName}?`,
+ images: [
+ {
+ url: `/api/og?title=${encodeURIComponent(`${treatmentInfo.title} in ${locationName}`)}&subtitle=${encodeURIComponent('Advanced Treatment Options')}&type=${encodeURIComponent('Medical Treatment')}`,
+ width: 1200,
+ height: 630,
+ alt: `${treatmentInfo.title} in ${locationName}`,
+ }
+ ]
  }
  };
 }

@@ -120,7 +120,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
  title,
  description,
  path,
- type: "article"
+ type: "article",
+ image: `/api/og?title=${encodeURIComponent(treatment.title)}&subtitle=${encodeURIComponent('Advanced Treatment')}&type=Medical%20Procedure`
  });
  }
 
@@ -137,7 +138,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
  title,
  description,
  path,
- type: "website"
+ type: "website",
+ image: `/api/og?title=${encodeURIComponent(service.title)}&subtitle=${encodeURIComponent('Medical Department')}&type=Service`
  });
 }
 

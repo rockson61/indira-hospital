@@ -16,6 +16,7 @@ import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 import { ComparisonCard } from "@/components/marketing/ComparisonCard";
 import { InsuranceCard } from "@/components/marketing/InsuranceCard";
 import { InternationalPatientCard } from "@/components/marketing/InternationalPatientCard";
+import { TableOfContents } from "@/components/ui/table-of-contents";
 
 import { injectInternalLinks } from "@/lib/html-linkify";
 
@@ -31,6 +32,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
  alternates: {
  canonical: `/blog/${slug}`,
  },
+ openGraph: {
+ title: seoTitle,
+ description,
+ images: [
+ {
+ url: `/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent('Clinical Guide')}&type=${encodeURIComponent('Blog')}`,
+ width: 1200,
+ height: 630,
+ alt: title,
+ }
+ ]
+ }
  };
 }
 
@@ -135,6 +148,8 @@ export default async function BlogPostPage({
  {/* Sticky Container */}
  <div className="sticky top-32 space-y-8">
  
+ <TableOfContents className="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-clay-sm" />
+
  {/* Author Review Trust Widget */}
  <AuthorCard 
  author={{

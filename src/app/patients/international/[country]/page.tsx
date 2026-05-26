@@ -46,7 +46,19 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
  `surgery cost in India for ${country.name}`,
  "Indira Hospital Vellore",
  "Medical Visa India"
+ ],
+ openGraph: {
+ title: country.seoTitle || `Best Medical Treatment in India for Patients from ${country.name} | Indira Hospital`,
+ description: country.seoDescription || `Indira Super Speciality Hospital is the #1 choice for patients from ${country.name}.`,
+ images: [
+ {
+ url: `/api/og?title=${encodeURIComponent(`Medical Care for ${country.name} Patients`)}&subtitle=${encodeURIComponent('International Patient Centre')}&type=${encodeURIComponent('Global Healthcare')}`,
+ width: 1200,
+ height: 630,
+ alt: `Medical Care for ${country.name} Patients`,
+ }
  ]
+ }
  };
 }
 

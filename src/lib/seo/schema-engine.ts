@@ -112,6 +112,12 @@ export function generateSchema(type: PageType, data: SchemaData, currentUrl: str
  { "@type": "AdministrativeArea", "name": "Vellore" },
  { "@type": "AdministrativeArea", "name": "Tamil Nadu" }
  ],
+ "knowsAbout": [
+ "Advanced Laser & Laparoscopic Surgeries",
+ "Comprehensive Medical Care",
+ "Medical Tourism",
+ "Diagnostics & Imaging"
+ ],
  "specialty": [
  "General Surgery", "Proctology", "Laparoscopy", "Urology", "Orthopaedics", "Gastroenterology"
  ]
@@ -146,6 +152,10 @@ export function generateSchema(type: PageType, data: SchemaData, currentUrl: str
  "url": fullUrl,
  "provider": { "@id": GLOBAL_ENTITY_ID },
  "preparation": data.preparation,
+ "subjectOf": {
+   "@type": "MedicalWebPage",
+   "name": data.title || `${extractTitleFromPath(currentUrl)} Information`
+ },
  "speakable": speakable
  };
  break;

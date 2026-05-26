@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ specialty
  title,
  description: desc,
  path: `/doctor/${specialty}/${slug}`,
- image: doc.image || siteConfig.ogImage
+ image: doc.image || `/api/og?title=${encodeURIComponent(`Dr. ${doc.name}`)}&subtitle=${encodeURIComponent(deptName)}&type=Specialist`
  });
 }
 
