@@ -5,27 +5,27 @@ import { generateSchema, PageType, SchemaData } from '@/lib/seo/schema-engine';
 import { usePathname } from 'next/navigation';
 
 export interface JsonLdSchemaProps {
-    type?: PageType; // Now optional if auto is used
-    auto?: boolean;  // Enables URL-based inference
-    name?: string;
-    description?: string;
-    url?: string;
-    items?: { name: string; url: string }[];
-    mainEntity?: { question: string; answer: string }[];
-    specialty?: string;
-    author?: string;
-    datePublished?: string;
-    image?: string;
-    doctor?: any;
-    location?: any;
-    preparation?: string;
-    steps?: { name: string; description: string; duration?: string }[];
-    category?: string;
-    isNabl?: boolean;
-    testParameters?: number;
-    sampleType?: string;
-    title?: string; // Alias for name
-    faq?: { question: string; answer: string }[]; // Alias for mainEntity
+ type?: PageType; // Now optional if auto is used
+ auto?: boolean; // Enables URL-based inference
+ name?: string;
+ description?: string;
+ url?: string;
+ items?: { name: string; url: string }[];
+ mainEntity?: { question: string; answer: string }[];
+ specialty?: string;
+ author?: string;
+ datePublished?: string;
+ image?: string;
+ doctor?: any;
+ location?: any;
+ preparation?: string;
+ steps?: { name: string; description: string; duration?: string }[];
+ category?: string;
+ isNabl?: boolean;
+ testParameters?: number;
+ sampleType?: string;
+ title?: string; // Alias for name
+ faq?: { question: string; answer: string }[]; // Alias for mainEntity
 }
 
 /**
@@ -34,64 +34,64 @@ export interface JsonLdSchemaProps {
  * Unified with "Zero-Config" Auto-Detection mode.
  */
 export function JsonLdSchema(props: JsonLdSchemaProps) {
-    const pathname = usePathname();
-    
-    // Inference Logic: Map URL segments to elite medical types
-    const inferType = (path: string): PageType => {
-        if (path === '/') return "healthcareGraph";
-        
-        // Directory & Mesh Detection (High-Value Indices)
-        if (path === '/doctors' || path === '/doctor/near-me' || path === '/doctor/near-me/treat') return "collectionPage";
-        if (path.includes('/near-me/treat') && path.split('/').length <= 5) return "itemList";
-        
-        // Specific Profile / Page Detection
-        if (path.includes('/doctor/')) return "physician";
-        if (path.includes('/treat/') || path.includes('/services/')) return "procedure";
-        if (path.includes('/diagnostics/')) return "diagnostic";
-        if (path.includes('/health-library/')) return "symptom";
-        if (path.includes('/blog/')) return "article";
-        if (path.includes('/locations/') || path.includes('/near-me/')) return "location";
-        if (path.includes('/health-packages/')) return "healthPackage";
-        if (path.includes('/international')) return "internationalPage";
-        if (path.includes('/departments/')) return "itemList";
-        
-        // Default fallback for informational pages
-        return props.type || "hospital";
-    };
+ const pathname = usePathname();
+ 
+ // Inference Logic: Map URL segments to elite medical types
+ const inferType = (path: string): PageType => {
+ if (path === '/') return "healthcareGraph";
+ 
+ // Directory & Mesh Detection (High-Value Indices)
+ if (path === '/doctors' || path === '/doctor/near-me' || path === '/doctor/near-me/treat') return "collectionPage";
+ if (path.includes('/near-me/treat') && path.split('/').length <= 5) return "itemList";
+ 
+ // Specific Profile / Page Detection
+ if (path.includes('/doctor/')) return "physician";
+ if (path.includes('/treat/') || path.includes('/services/')) return "procedure";
+ if (path.includes('/diagnostics/')) return "diagnostic";
+ if (path.includes('/health-library/')) return "symptom";
+ if (path.includes('/blog/')) return "article";
+ if (path.includes('/locations/') || path.includes('/near-me/')) return "location";
+ if (path.includes('/health-packages/')) return "healthPackage";
+ if (path.includes('/international')) return "internationalPage";
+ if (path.includes('/departments/')) return "itemList";
+ 
+ // Default fallback for informational pages
+ return props.type || "hospital";
+ };
 
-    const effectiveType = props.auto ? inferType(pathname) : (props.type || "hospital");
+ const effectiveType = props.auto ? inferType(pathname) : (props.type || "hospital");
 
-    // Map props to SchemaData
-    const schemaData: SchemaData = {
-        title: props.title || props.name,
-        description: props.description,
-        url: props.url || pathname,
-        items: props.items,
-        faq: props.faq || props.mainEntity,
-        doctor: props.doctor,
-        location: props.location,
-        preparation: props.preparation,
-        steps: props.steps,
-        author: props.author,
-        datePublished: props.datePublished,
-        image: props.image,
-        category: props.category,
-        isNabl: props.isNabl,
-        testParameters: props.testParameters,
-        sampleType: props.sampleType
-    };
+ // Map props to SchemaData
+ const schemaData: SchemaData = {
+ title: props.title || props.name,
+ description: props.description,
+ url: props.url || pathname,
+ items: props.items,
+ faq: props.faq || props.mainEntity,
+ doctor: props.doctor,
+ location: props.location,
+ preparation: props.preparation,
+ steps: props.steps,
+ author: props.author,
+ datePublished: props.datePublished,
+ image: props.image,
+ category: props.category,
+ isNabl: props.isNabl,
+ testParameters: props.testParameters,
+ sampleType: props.sampleType
+ };
 
-    const schemas = generateSchema(effectiveType, schemaData, pathname);
+ const schemas = generateSchema(effectiveType, schemaData, pathname);
 
-    return (
-        <>
-            {schemas.map((schema, index) => (
-                <script
-                    key={`${effectiveType}-${index}`}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-                />
-            ))}
-        </>
-    );
+ return (
+ <>
+ {schemas.map((schema, index) => (
+ <script
+ key={`${effectiveType}-${index}`}
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+ />
+ ))}
+ </>
+ );
 }

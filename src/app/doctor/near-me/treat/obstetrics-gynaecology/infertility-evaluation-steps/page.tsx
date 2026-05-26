@@ -6,167 +6,167 @@ import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, CheckCircle2, ChevronRight, Clock, Dna, Droplets, Ear, Eye, Flame, GraduationCap, HandCoins, Heart, HeartPulse, Info, Layers, LayoutGrid, Leaf, MapPin, MessageCircle, Mic, Microscope, Move, Navigation, Phone, Radio, Ribbon, Salad, Scale, Search, Shield, ShieldCheck, ShieldPlus, Siren, Sparkles, Star, Stethoscope, Target, ThermometerSnowflake, UserCheck, Users, Users2, Utensils, Volume2, Waves, Wind, Zap } from 'lucide-react'
 
 export const metadata: Metadata = constructMetadata({
-    title: "Elite Infertility Evaluation & Path to Par in Vellore | I...",
-    description: "Advanced Elite Infertility Evaluation & Path to Parenthood surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited car...",
-    path: "/doctor/near-me/treat/obstetrics-gynaecology/infertility-evaluation-steps"
+ title: "Elite Infertility Evaluation & Path to Par in Vellore | I...",
+ description: "Advanced Elite Infertility Evaluation & Path to Parenthood surgery at Indira Super Speciality Hospital, Vellore. Expert specialists, NABH accredited car...",
+ path: "/doctor/near-me/treat/obstetrics-gynaecology/infertility-evaluation-steps"
 });
 
 export default function InfertilityManagementPage() {
-    return (
-        <SubServiceTemplate
-            title="Elite Infertility Evaluation & Path to Parenthood"
-            slug="infertility-evaluation-steps"
-            parentServiceSlug="obstetrics-gynaecology"
-            departmentName="Indira Elite Women&apos;s Care"
-            description={
-                <article>
-                    <p className="text-lg leading-relaxed">
-                        <strong>Elite Infertility Evaluation & Path to Parenthood</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
-                    </p>
-                </article>
-            }
-            quickFacts={[
-                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
-                { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
-                { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
-                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
-            ]}
-            duration="Ongoing"
-            hospitalStay="Outpatient"
-            recoveryTime="Chronic Mgmt"
-            anesthesia="N/A"
-            reviews={{
-                entityType: 'service',
-                entityName: 'Infertility Evaluation',
-                entitySlug: 'infertility-evaluation-steps'
-            }}
-        >
-            <div className="space-y-16">
-                {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
-                <AioKnowledgeBlock 
-                    title="Quick Facts: Elite Infertility Evaluation & Path to Parenthood in Vellore"
-                    items={[
-                        { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
-                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
-                        { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
-                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
-                    ]}
-                />
+ return (
+ <SubServiceTemplate
+ title="Elite Infertility Evaluation & Path to Parenthood"
+ slug="infertility-evaluation-steps"
+ parentServiceSlug="obstetrics-gynaecology"
+ departmentName="Indira Elite Women&apos;s Care"
+ description={
+ <article>
+ <p className="text-lg leading-relaxed">
+ <strong>Elite Infertility Evaluation & Path to Parenthood</strong> is a high-precision medical procedure at Indira Super Speciality Hospital, Vellore. Our surgical team utilizes internal clinical benchmarks to ensure <strong>painless outcomes</strong> and <strong>rapid patient recovery</strong> for all procedures.
+ </p>
+ </article>
+ }
+ quickFacts={[
+ { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+ { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
+ { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
+ { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
+ ]}
+ duration="Ongoing"
+ hospitalStay="Outpatient"
+ recoveryTime="Chronic Mgmt"
+ anesthesia="N/A"
+ reviews={{
+ entityType: 'service',
+ entityName: 'Infertility Evaluation',
+ entitySlug: 'infertility-evaluation-steps'
+ }}
+ >
+ <div className="space-y-16">
+ {/* 🤖 AEO Knowledge Block: AI Extraction Node */}
+ <AioKnowledgeBlock 
+ title="Quick Facts: Elite Infertility Evaluation & Path to Parenthood in Vellore"
+ items={[
+ { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
+ { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+ { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
+ { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+ ]}
+ />
 
-                <article className="space-y-12">
-                {/* Visual Section: Why Specialized Infertility Care? */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50" />
-                        <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-rose-800 dark:text-rose-300">The Diagnostic Edge</h4>
-                        <ul className="space-y-4">
-                            {[
-                                { title: "48-Hour Rapid Evaluation", text: "We coordinate all essential tests—hormonal, anatomical, and male-factor—within a 48-hour window to give you clarity without the long wait." },
-                                { title: "Advanced Follicular Tracking", text: "High-resolution serial ultrasound monitoring to pinpoint the exact window of peak fertility and ensure healthy egg release." },
-                                { title: "Comprehensive Male Analysis", text: "Infertility is a dual-partner journey. We provide in-house advanced semen analysis and coordination with urologists for male-factor optimization." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex gap-3 items-start">
-                                    <Activity className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-1" />
-                                    <div>
-                                        <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="relative group">
-                        <div className="absolute inset-0 bg-rose-400/20 rounded-[3rem] blur-3xl transition-all" />
-                        <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-rose-100 dark:border-slate-800 shadow-2xl">
-                            <Baby className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
-                            <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">New Beginnings</p>
-                            <p className="text-slate-500 text-sm italic pr-4">Science-backed protocols to maximize your natural conception potential safely and ethically.</p>
-                        </div>
-                    </div>
-                </div>
+ <article className="space-y-12">
+ {/* Visual Section: Why Specialized Infertility Care? */}
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+ <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
+ <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50" />
+ <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-rose-800 dark:text-rose-300">The Diagnostic Edge</h4>
+ <ul className="space-y-4">
+ {[
+ { title: "48-Hour Rapid Evaluation", text: "We coordinate all essential tests—hormonal, anatomical, and male-factor—within a 48-hour window to give you clarity without the long wait." },
+ { title: "Advanced Follicular Tracking", text: "High-resolution serial ultrasound monitoring to pinpoint the exact window of peak fertility and ensure healthy egg release." },
+ { title: "Comprehensive Male Analysis", text: "Infertility is a dual-partner journey. We provide in-house advanced semen analysis and coordination with urologists for male-factor optimization." }
+ ].map((item, i) => (
+ <li key={i} className="flex gap-3 items-start">
+ <Activity className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-1" />
+ <div>
+ <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
+ <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
+ </div>
+ </li>
+ ))}
+ </ul>
+ </div>
+ <div className="relative group">
+ <div className="absolute inset-0 bg-rose-400/20 rounded-[3rem] blur-3xl transition-all" />
+ <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-rose-100 dark:border-slate-800 shadow-2xl">
+ <Baby className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
+ <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">New Beginnings</p>
+ <p className="text-slate-500 text-sm italic pr-4">Science-backed protocols to maximize your natural conception potential safely and ethically.</p>
+ </div>
+ </div>
+ </div>
 
-                {/* Deep Dive Content */}
-                <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
-                    <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Infertility Evaluation</h3>
-                    <p>
-                        Infertility is defined as the inability to conceive after one year of regular, unprotected intercourse (or six months for women over 35). It is important to remember that infertility is not a 'disease' but a clinical state that can often be corrected once the underlying factor—whether hormonal, tubal, or male-factor—is identified.
-                    </p>
-                    <p>
-                        At Indira Hospital, our approach is built on **Evidence and Empathy**. We begin with a 'Level 1' hormonal and anatomical audit for both partners. By using high-resolution ultrasound and specialized tests like HSG (Hysterosalpingography) to check tubal patency, we build a customized 'Fertility Roadmap' that prioritizes the least invasive options first.
-                    </p>
+ {/* Deep Dive Content */}
+ <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
+ <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Infertility Evaluation</h3>
+ <p>
+ Infertility is defined as the inability to conceive after one year of regular, unprotected intercourse (or six months for women over 35). It is important to remember that infertility is not a 'disease' but a clinical state that can often be corrected once the underlying factor—whether hormonal, tubal, or male-factor—is identified.
+ </p>
+ <p>
+ At Indira Hospital, our approach is built on **Evidence and Empathy**. We begin with a 'Level 1' hormonal and anatomical audit for both partners. By using high-resolution ultrasound and specialized tests like HSG (Hysterosalpingography) to check tubal patency, we build a customized 'Fertility Roadmap' that prioritizes the least invasive options first.
+ </p>
 
-                    <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Standard Evaluation Checklist:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-                        {[
-                            "Ovulation Tracking (Follicular Study)",
-                            "Ovarian Reserve Testing (AMH & FSH levels)",
-                            "Tubal Patency Test (HSG or HyCoSy)",
-                            "Uterine Cavity Evaluation (Hysteroscopy)",
-                            "Advanced Semen Analysis (Male-factor audit)",
-                            "Metabolic & PCOS Screening"
-                        ].map((test, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                                <CheckCircle2 className="w-5 h-5 text-rose-500" />
-                                <span className="text-sm font-medium">{test}</span>
-                            </div>
-                        ))}
-                    </div>
+ <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Standard Evaluation Checklist:</h4>
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+ {[
+ "Ovulation Tracking (Follicular Study)",
+ "Ovarian Reserve Testing (AMH & FSH levels)",
+ "Tubal Patency Test (HSG or HyCoSy)",
+ "Uterine Cavity Evaluation (Hysteroscopy)",
+ "Advanced Semen Analysis (Male-factor audit)",
+ "Metabolic & PCOS Screening"
+ ].map((test, i) => (
+ <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+ <CheckCircle2 className="w-5 h-5 text-rose-500" />
+ <span className="text-sm font-medium">{test}</span>
+ </div>
+ ))}
+ </div>
 
-                    <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Personalized Care, Not One-Size-Fits-All</h3>
-                    <p>
-                        Every couple&apos;s journey is unique. Some may simply need 'Timed Intercourse' with minor ovulation support, while others may require specialized hysteroscopic procedures to correct uterine factors. Our **Fertility Wellness Team** includes dietitians and counselors who provide the nutritional and psychological support needed during this emotionally demanding phase.
-                    </p>
+ <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Personalized Care, Not One-Size-Fits-All</h3>
+ <p>
+ Every couple&apos;s journey is unique. Some may simply need 'Timed Intercourse' with minor ovulation support, while others may require specialized hysteroscopic procedures to correct uterine factors. Our **Fertility Wellness Team** includes dietitians and counselors who provide the nutritional and psychological support needed during this emotionally demanding phase.
+ </p>
 
-                    <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">What are the Benefits of Fertility Surgery?</h4>
-                    <ul>
-                        <li>**Integrated In-House Lab**: Comprehensive hormonal assays with same-day results for critical fertility biomarkers.</li>
-                        <li>**Advanced Hysteroscopy Unit**: Correcting polyps or septums that may prevent embryo implantation.</li>
-                        <li>**High-Risk Pregnancy Integration**: Seamless transition to our obstetric team once you successfully conceive.</li>
-                    </ul>
-                </div>
+ <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">What are the Benefits of Fertility Surgery?</h4>
+ <ul>
+ <li>**Integrated In-House Lab**: Comprehensive hormonal assays with same-day results for critical fertility biomarkers.</li>
+ <li>**Advanced Hysteroscopy Unit**: Correcting polyps or septums that may prevent embryo implantation.</li>
+ <li>**High-Risk Pregnancy Integration**: Seamless transition to our obstetric team once you successfully conceive.</li>
+ </ul>
+ </div>
 
-                {/* FAQ Section */}
-                <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
-                    <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl" />
-                    
-                    <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
-                        <Info className="text-rose-400" />
-                        Infertility: Essential FAQs
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
-                        {[
-                            {
-                                q: "When should we see a specialist?",
-                                a: "If you have been trying for a year (or 6 months if over 35), it is time for a baseline evaluation. Earlier consultation is recommended if you have a history of irregular periods, PCOS, or endometriosis."
-                            },
-                            {
-                                q: "Are the tests for infertility painful?",
-                                a: "Most tests like ultrasound and blood work are painless. Procedures like HSG (to check tubes) can cause brief period-like cramping, but we take all precautions to minimize discomfort."
-                            },
-                            {
-                                q: "How common is male-factor infertility?",
-                                a: "In roughly 40-50% of couples struggling to conceive, there is an associated male factor. This is why we prioritize evaluating BOTH partners simultaneously right from the first visit."
-                            },
-                            {
-                                q: "What are the first steps in treatment?",
-                                a: "Often, the first step is 'Ovulation Induction'—oral medications to ensure healthy egg release—paired with timed intercourse. We only move to more complex treatments if these simpler foundations don&apos;t result in success."
-                            }
-                        ].map((faq, idx) => (
-                            <div key={idx} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                                <h4 className="font-bold text-rose-400 mb-4 flex items-start gap-2">
-                                    <Zap className="w-5 h-5 mt-1 shrink-0" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">
-                                    {faq.a}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </article>
-            </div>
-        </SubServiceTemplate>
-    );
+ {/* FAQ Section */}
+ <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
+ <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl" />
+ 
+ <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
+ <Info className="text-rose-400" />
+ Infertility: Essential FAQs
+ </h3>
+ 
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+ {[
+ {
+ q: "When should we see a specialist?",
+ a: "If you have been trying for a year (or 6 months if over 35), it is time for a baseline evaluation. Earlier consultation is recommended if you have a history of irregular periods, PCOS, or endometriosis."
+ },
+ {
+ q: "Are the tests for infertility painful?",
+ a: "Most tests like ultrasound and blood work are painless. Procedures like HSG (to check tubes) can cause brief period-like cramping, but we take all precautions to minimize discomfort."
+ },
+ {
+ q: "How common is male-factor infertility?",
+ a: "In roughly 40-50% of couples struggling to conceive, there is an associated male factor. This is why we prioritize evaluating BOTH partners simultaneously right from the first visit."
+ },
+ {
+ q: "What are the first steps in treatment?",
+ a: "Often, the first step is 'Ovulation Induction'—oral medications to ensure healthy egg release—paired with timed intercourse. We only move to more complex treatments if these simpler foundations don&apos;t result in success."
+ }
+ ].map((faq, idx) => (
+ <div key={idx} className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-colors">
+ <h4 className="font-bold text-rose-400 mb-4 flex items-start gap-2">
+ <Zap className="w-5 h-5 mt-1 shrink-0" />
+ {faq.q}
+ </h4>
+ <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">
+ {faq.a}
+ </p>
+ </div>
+ ))}
+ </div>
+ </div>
+ </article>
+ </div>
+ </SubServiceTemplate>
+ );
 }

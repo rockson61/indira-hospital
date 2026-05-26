@@ -12,81 +12,81 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = {
-    title: "Best Doctors in Vellore — Elite Specialist Surgeons | Ind...",
-    description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, In...",
-    alternates: {
-        canonical: "/doctors"
-    }
+ title: "Best Doctors in Vellore — Elite Specialist Surgeons | Ind...",
+ description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, In...",
+ alternates: {
+ canonical: "/doctors"
+ }
 };
 
 export default async function DoctorsDirectoryPage() {
-    const doctors = await getDoctors().catch(() => []);
+ const doctors = await getDoctors().catch(() => []);
 
-    return (
-        <main className="min-h-screen bg-slate-50 dark:bg-slate-800">
-            <PageHero
-                title="Best Doctors & Specialist Surgeons in Vellore"
-                subtitle="Expert Care You Can Trust"
-                description="Don&apos;t leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
-                descriptionClassName="clinical-insight direct-answer"
-                backgroundImage="/images/hospital/Consultation.webp"
-            />
+ return (
+ <main className="min-h-screen bg-slate-50 dark:bg-slate-800">
+ <PageHero
+ title="Best Doctors & Specialist Surgeons in Vellore"
+ subtitle="Expert Care You Can Trust"
+ description="Don&apos;t leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
+ descriptionClassName="clinical-insight direct-answer"
+ backgroundImage="/images/hospital/Consultation.webp"
+ />
 
 
-            <SectionContainer className="py-24 -mt-16 relative z-10 min-h-[50vh]">
-                {doctors.length > 0 ? (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {doctors.map((doctor: any) => (
-                            <DoctorCard key={doctor.slug || doctor.name} doctor={doctor} variant="grid" />
-                        ))}
-                    </div>
-                ) : (
-                    <div className="text-center text-slate-500 dark:text-slate-400 py-12">
-                        <p className="text-xl">Loading doctor profiles...</p>
-                    </div>
-                )}
-            </SectionContainer>
+ <SectionContainer className="py-24 -mt-16 relative z-10 min-h-[50vh]">
+ {doctors.length > 0 ? (
+ <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+ {doctors.map((doctor: any) => (
+ <DoctorCard key={doctor.slug || doctor.name} doctor={doctor} variant="grid" />
+ ))}
+ </div>
+ ) : (
+ <div className="text-center text-slate-500 dark:text-slate-400 py-12">
+ <p className="text-xl">Loading doctor profiles...</p>
+ </div>
+ )}
+ </SectionContainer>
 
-            <HealthLibraryCard />
+ <HealthLibraryCard />
 
-            <SectionContainer className="py-24 max-w-7xl mx-auto">
-                <PeopleAlsoSearchCard
-                    keywords={[
-                        { text: "Best surgeons in Vellore", href: "/doctors" },
-                        { text: "Top specialists in Tamil Nadu", href: "/doctors" },
-                        { text: "Indira Hospital doctors list", href: "/doctors" },
-                        { text: "Doctor consultation in Vellore", href: "/doctors" },
-                        { text: "Same-day surgery specialists", href: "/doctors" },
-                        { text: "Laparoscopic surgery experts", href: "/doctors" },
-                    ]}
-                />
-            </SectionContainer>
+ <SectionContainer className="py-24 max-w-7xl mx-auto">
+ <PeopleAlsoSearchCard
+ keywords={[
+ { text: "Best surgeons in Vellore", href: "/doctors" },
+ { text: "Top specialists in Tamil Nadu", href: "/doctors" },
+ { text: "Indira Hospital doctors list", href: "/doctors" },
+ { text: "Doctor consultation in Vellore", href: "/doctors" },
+ { text: "Same-day surgery specialists", href: "/doctors" },
+ { text: "Laparoscopic surgery experts", href: "/doctors" },
+ ]}
+ />
+ </SectionContainer>
 
-            <EntityFAQs
-                entityType="hospital"
-                entityName="Indira Hospital"
-                entitySlug="indira-hospital"
-                className="bg-white dark:bg-slate-900 py-24 border-t border-slate-100 dark:border-slate-700"
-            />
+ <EntityFAQs
+ entityType="hospital"
+ entityName="Indira Hospital"
+ entitySlug="indira-hospital"
+ className="bg-white dark:bg-slate-900 py-24 border-t border-slate-100 dark:border-slate-700"
+ />
 
-            <EntityReviews
-                entityType="hospital"
-                entityName="Indira Hospital"
-                entitySlug="indira-hospital"
-                title="Verified Patient Experiences"
-                description="Real stories from patients treated by our expert medical team."
-                className="bg-slate-50 dark:bg-slate-900/50 py-24 border-t border-slate-100 dark:border-slate-700"
-            />
+ <EntityReviews
+ entityType="hospital"
+ entityName="Indira Hospital"
+ entitySlug="indira-hospital"
+ title="Verified Patient Experiences"
+ description="Real stories from patients treated by our expert medical team."
+ className="bg-slate-50 dark:bg-slate-900 py-24 border-t border-slate-100 dark:border-slate-700"
+ />
 
-            {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <EntityCardSection type="departments" title="Browse by Department" subtitle="Elite Medical Units" limit={6} className="bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800/50" />
-            <EntityCardSection type="locations" title="Find Us Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+ {/* ENTITY CARD SECTIONS */}
+ <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+ <EntityCardSection type="departments" title="Browse by Department" subtitle="Elite Medical Units" limit={6} className="bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
+ <EntityCardSection type="locations" title="Find Us Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
 
-            {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
-            <InternalLinkGrid type="departments" title="All Departments" subtitle="Department Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
-            <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50" />
-        </main>
-    );
+ {/* COMPACT SEO LINK STRIPS */}
+ <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50" />
+ <InternalLinkGrid type="departments" title="All Departments" subtitle="Department Directory" limit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
+ <InternalLinkGrid type="locations" title="All Locations" subtitle="Location Directory" limit={16} className="bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50" />
+ </main>
+ );
 }

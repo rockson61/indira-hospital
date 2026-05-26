@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Image, { ImageProps } from 'next/image'
 
 interface EliteImageProps extends ImageProps {
-    fallbackSrc?: string
+ fallbackSrc?: string
 }
 
 /**
@@ -12,24 +12,24 @@ interface EliteImageProps extends ImageProps {
  * This directly addresses the "277 Broken Images" identified in the SEO Audit.
  */
 export const EliteImage = ({ 
-    src, 
-    alt, 
-    fallbackSrc = '/hero-hospital.png', 
-    ...props 
+ src, 
+ alt, 
+ fallbackSrc = '/hero-hospital.png', 
+ ...props 
 }: EliteImageProps) => {
-    const [imgSrc, setImgSrc] = useState(src)
-    const [hasError, setHasError] = useState(false)
+ const [imgSrc, setImgSrc] = useState(src)
+ const [hasError, setHasError] = useState(false)
 
-    return (
-        <Image
-            {...props}
-            src={hasError ? fallbackSrc : imgSrc}
-            alt={alt}
-            onError={() => {
-                if (!hasError) {
-                    setHasError(true)
-                }
-            }}
-        />
-    )
+ return (
+ <Image
+ {...props}
+ src={hasError ? fallbackSrc : imgSrc}
+ alt={alt}
+ onError={() => {
+ if (!hasError) {
+ setHasError(true)
+ }
+ }}
+ />
+ )
 }

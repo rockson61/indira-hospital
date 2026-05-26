@@ -1,8 +1,8 @@
 export default function HospitalSEOBlock() {
-  return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `
+ return (
+ <div
+ dangerouslySetInnerHTML={{
+ __html: `
 <div id="seo-keyword-support-indira-hospital-vellore" style="display:none;" aria-hidden="true">
 
 <div class="seo-h1">
@@ -34,8 +34,8 @@ Vellore is a major healthcare destination, and Indira Super Speciality Hospital 
 </p>
 
 </div>
-        `,
-      }}
-    />
-  );
+ `,
+ }}
+ />
+ );
 }

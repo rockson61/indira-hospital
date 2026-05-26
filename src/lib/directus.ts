@@ -5,59 +5,59 @@ import { cache } from 'react';
 type ClientType = DirectusClient<Schema> & RestClient<Schema> & AuthenticationClient<Schema>;
 
 const globalForDirectus = globalThis as unknown as {
-    directusPromise: Promise<ClientType> | undefined;
+ directusPromise: Promise<ClientType> | undefined;
 };
 
 const createDirectusConfig = () => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    if (!apiUrl || apiUrl === 'undefined') {
-        throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
-    }
-    const directus = createDirectus<Schema>(apiUrl)
-        .with(authentication('json', { autoRefresh: true }))
-        .with(rest());
+ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+ if (!apiUrl || apiUrl === 'undefined') {
+ throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
+ }
+ const directus = createDirectus<Schema>(apiUrl)
+ .with(authentication('json', { autoRefresh: true }))
+ .with(rest());
 
-    return directus as ClientType;
+ return directus as ClientType;
 }
 
 const createStaticClient = (token: string) => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    if (!apiUrl || apiUrl === 'undefined') {
-        throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
-    }
-    return createDirectus<Schema>(apiUrl)
-        .with(staticToken(token))
-        .with(rest()) as ClientType;
+ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+ if (!apiUrl || apiUrl === 'undefined') {
+ throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
+ }
+ return createDirectus<Schema>(apiUrl)
+ .with(staticToken(token))
+ .with(rest()) as ClientType;
 }
 
 // Global promise singleton
 let clientPromise: Promise<ClientType> | null = globalForDirectus.directusPromise || null;
 
 export const getDirectusClient = cache(async function getDirectusClient() {
-    if (clientPromise) return clientPromise;
+ if (clientPromise) return clientPromise;
 
-    // PREFER STATIC TOKEN FROM ENV (Fixed for Build Process)
-    if (process.env.DIRECTUS_TOKEN) {
-        clientPromise = Promise.resolve(createStaticClient(process.env.DIRECTUS_TOKEN));
-    } else {
-        // Fallback to dynamic login (Dev mode)
-        clientPromise = (async () => {
-            const client = createDirectusConfig();
-            try {
-                await client.login({ email: process.env.ADMIN_EMAIL as string, password: process.env.ADMIN_PASSWORD as string });
-            } catch (e) {
-                console.error("Login failed", e);
-            }
-            return client;
-        })();
-    }
+ // PREFER STATIC TOKEN FROM ENV (Fixed for Build Process)
+ if (process.env.DIRECTUS_TOKEN) {
+ clientPromise = Promise.resolve(createStaticClient(process.env.DIRECTUS_TOKEN));
+ } else {
+ // Fallback to dynamic login (Dev mode)
+ clientPromise = (async () => {
+ const client = createDirectusConfig();
+ try {
+ await client.login({ email: process.env.ADMIN_EMAIL as string, password: process.env.ADMIN_PASSWORD as string });
+ } catch (e) {
+ console.error("Login failed", e);
+ }
+ return client;
+ })();
+ }
 
-    if (process.env.NODE_ENV !== 'production') {
-        globalForDirectus.directusPromise = clientPromise;
-    }
-    return clientPromise;
+ if (process.env.NODE_ENV !== 'production') {
+ globalForDirectus.directusPromise = clientPromise;
+ }
+ return clientPromise;
 });
 
 export async function getAdminClient() {
-    return await getDirectusClient();
+ return await getDirectusClient();
 }

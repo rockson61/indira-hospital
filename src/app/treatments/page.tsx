@@ -4,11 +4,11 @@ import { redirect } from "next/navigation"
 
 
 export const metadata: Metadata = constructMetadata({
-    title: "Treatments | Indira Super Speciality Hospital",
-    description: "Learn more about treatments at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
-    path: "/treatments"
+ title: "Treatments | Indira Super Speciality Hospital",
+ description: "Learn more about treatments at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
+ path: "/treatments"
 });
 
 export default function TreatmentsRedirect() {
-    redirect("/doctor/near-me/treat")
+ redirect("/doctor/near-me/treat")
 }

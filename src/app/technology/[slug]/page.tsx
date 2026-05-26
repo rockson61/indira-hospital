@@ -10,160 +10,160 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 interface PageProps {
-    params: Promise<{ slug: string }>;
+ params: Promise<{ slug: string }>;
 }
 
 import { constructMetadata } from "@/lib/seo-utils";
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { slug } = await params;
-    const tech = getTechnologyBySlug(slug);
+ const { slug } = await params;
+ const tech = getTechnologyBySlug(slug);
 
-    if (!tech) {
-        return {
-            title: "Technology Not Found",
-        };
-    }
+ if (!tech) {
+ return {
+ title: "Technology Not Found",
+ };
+ }
 
-    return constructMetadata({
-        title: `${tech.title} in Vellore | Advanced Medical Technology | Indira Hospital`,
-        description: `${tech.shortDescription} Experience the best medical technology in India at Indira Super Speciality Hospital, Vellore.`,
-        path: `/technology/${slug}`
-    });
+ return constructMetadata({
+ title: `${tech.title} in Vellore | Advanced Medical Technology | Indira Hospital`,
+ description: `${tech.shortDescription} Experience the best medical technology in India at Indira Super Speciality Hospital, Vellore.`,
+ path: `/technology/${slug}`
+ });
 }
 
 
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-    const techs = getAllTechnologies();
-    return techs.map((tech) => ({
-        slug: tech.slug,
-    }));
+ const techs = getAllTechnologies();
+ return techs.map((tech) => ({
+ slug: tech.slug,
+ }));
 }
 
 export default async function TechnologyDetailPage({ params }: PageProps) {
-    const { slug } = await params;
-    const tech = getTechnologyBySlug(slug);
+ const { slug } = await params;
+ const tech = getTechnologyBySlug(slug);
 
-    if (!tech) {
-        notFound();
-    }
+ if (!tech) {
+ notFound();
+ }
 
-    return (
-        <main className="min-h-screen bg-gray-50 dark:bg-slate-950 pb-12">
-            {/* Hero Section */}
-            <section className="bg-fuchsia-900 text-white py-16 md:py-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="max-w-3xl">
-                        <Link href="/technology" className="inline-flex items-center text-fuchsia-200 hover:text-white mb-6 transition-colors text-sm">
-                            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Technology
-                        </Link>
-                        <h1 className="elite-hero-title font-bold mb-4">{tech.title}</h1>
-                        <p className="text-xl text-fuchsia-100">{tech.shortDescription}</p>
-                    </div>
-                </div>
-            </section>
+ return (
+ <main className="min-h-screen bg-gray-50 dark:bg-slate-950 pb-12">
+ {/* Hero Section */}
+ <section className="bg-fuchsia-900 text-white py-16 md:py-24 relative overflow-hidden">
+ <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+ <div className="max-w-3xl">
+ <Link href="/technology" className="inline-flex items-center text-fuchsia-200 hover:text-white mb-6 transition-colors text-sm">
+ <ArrowLeft className="w-4 h-4 mr-2" /> Back to Technology
+ </Link>
+ <h1 className="elite-hero-title font-bold mb-4">{tech.title}</h1>
+ <p className="text-xl text-fuchsia-100">{tech.shortDescription}</p>
+ </div>
+ </div>
+ </section>
 
-            {/* Content Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
-                <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 dark:border-slate-700">
-                    <div className="grid lg:grid-cols-3 gap-10">
-                        {/* Main Description */}
-                        <div className="lg:col-span-2 space-y-8">
-                            <div>
-                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Overview</h2>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                                    {tech.fullDescription}
-                                </p>
-                            </div>
+ {/* Content Section */}
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+ <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 dark:border-slate-700">
+ <div className="grid lg:grid-cols-3 gap-10">
+ {/* Main Description */}
+ <div className="lg:col-span-2 space-y-8">
+ <div>
+ <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Overview</h2>
+ <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+ {tech.fullDescription}
+ </p>
+ </div>
 
-                            <div>
-                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Key Features</h2>
-                                <div className="grid sm:grid-cols-2 gap-4">
-                                    {tech.features.map((feature, idx) => (
-                                        <div key={idx} className="flex items-start gap-3 bg-fuchsia-50 dark:bg-fuchsia-950 p-4 rounded-xl">
-                                            <div className="w-6 h-6 rounded-full bg-fuchsia-200 flex items-center justify-center shrink-0 mt-0.5">
-                                                <div className="w-2 h-2 rounded-full bg-fuchsia-700"></div>
-                                            </div>
-                                            <span className="text-gray-800 dark:text-gray-100 font-medium">{feature}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+ <div>
+ <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Key Features</h2>
+ <div className="grid sm:grid-cols-2 gap-4">
+ {tech.features.map((feature, idx) => (
+ <div key={idx} className="flex items-start gap-3 bg-fuchsia-50 dark:bg-fuchsia-950 p-4 rounded-xl">
+ <div className="w-6 h-6 rounded-full bg-fuchsia-200 flex items-center justify-center shrink-0 mt-0.5">
+ <div className="w-2 h-2 rounded-full bg-fuchsia-700"></div>
+ </div>
+ <span className="text-gray-800 dark:text-gray-100 font-medium">{feature}</span>
+ </div>
+ ))}
+ </div>
+ </div>
+ </div>
 
-                        {/* Sidebar: Benefits & CTA */}
-                        <div className="lg:col-span-1 space-y-6">
-                            <div className="bg-gray-50 dark:bg-slate-950 rounded-xl p-6 border border-gray-200 dark:border-slate-700">
-                                <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                                    <CheckCircle2 className="w-5 h-5 text-green-600" />
-                                    Benefits
-                                </h3>
-                                <ul className="space-y-3">
-                                    {tech.benefits.map((benefit, idx) => (
-                                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
-                                            <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                                            {benefit}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+ {/* Sidebar: Benefits & CTA */}
+ <div className="lg:col-span-1 space-y-6">
+ <div className="bg-gray-50 dark:bg-slate-950 rounded-xl p-6 border border-gray-200 dark:border-slate-700">
+ <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+ <CheckCircle2 className="w-5 h-5 text-green-600" />
+ Benefits
+ </h3>
+ <ul className="space-y-3">
+ {tech.benefits.map((benefit, idx) => (
+ <li key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
+ <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+ {benefit}
+ </li>
+ ))}
+ </ul>
+ </div>
 
-                            <div className="bg-gradient-to-br from-fuchsia-600 to-fuchsia-700 rounded-xl p-6 text-white text-center">
-                                <h3 className="font-bold text-lg mb-2">Need More Info?</h3>
-                                <p className="text-fuchsia-100 text-sm mb-4">Contact our enquiry desk to learn more about this facility.</p>
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center justify-center w-full px-4 py-3 bg-white dark:bg-slate-900 text-fuchsia-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
-                                >
-                                    Contact Us <ChevronRight className="w-4 h-4 ml-1" />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ <div className="bg-gradient-to-br from-fuchsia-600 to-fuchsia-700 rounded-xl p-6 text-white text-center">
+ <h3 className="font-bold text-lg mb-2">Need More Info?</h3>
+ <p className="text-fuchsia-100 text-sm mb-4">Contact our enquiry desk to learn more about this facility.</p>
+ <Link
+ href="/contact"
+ className="inline-flex items-center justify-center w-full px-4 py-3 bg-white dark:bg-slate-900 text-fuchsia-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+ >
+ Contact Us <ChevronRight className="w-4 h-4 ml-1" />
+ </Link>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
 
-            {/* Other Technologies */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Other Advanced Facilities</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {getAllTechnologies().filter(t => t.slug !== tech.slug).slice(0, 4).map((t) => (
-                        <Link
-                            key={t.slug}
-                            href={`/technology/${t.slug}`}
-                            className="block p-5 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-md transition-all bg-white dark:bg-slate-900 group"
-                        >
-                            <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-fuchsia-700 transition-colors">
-                                {t.title}
-                            </h3>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">{t.shortDescription}</p>
-                        </Link>
-                    ))}
-                </div>
-            </section>
+ {/* Other Technologies */}
+ <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+ <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Other Advanced Facilities</h2>
+ <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+ {getAllTechnologies().filter(t => t.slug !== tech.slug).slice(0, 4).map((t) => (
+ <Link
+ key={t.slug}
+ href={`/technology/${t.slug}`}
+ className="block p-5 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-fuchsia-300 hover:shadow-md transition-all bg-white dark:bg-slate-900 group"
+ >
+ <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-fuchsia-700 transition-colors">
+ {t.title}
+ </h3>
+ <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">{t.shortDescription}</p>
+ </Link>
+ ))}
+ </div>
+ </section>
 
-            {/* ========== REVIEWS SECTION ========== */}
-            <EntityReviews
-                entityType="technology"
-                entityName={tech.title}
-                entitySlug={slug}
-                title={`Patient Experiences with ${tech.title}`}
-                description={`See how our advanced medical technology has improved outcomes and comfort for our patients.`}
-            />
+ {/* ========== REVIEWS SECTION ========== */}
+ <EntityReviews
+ entityType="technology"
+ entityName={tech.title}
+ entitySlug={slug}
+ title={`Patient Experiences with ${tech.title}`}
+ description={`See how our advanced medical technology has improved outcomes and comfort for our patients.`}
+ />
 
-            {/* ENTITY CARD SECTIONS */}
-            <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />
-            <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-gray-50 dark:bg-slate-950" />
-            <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
+ {/* ENTITY CARD SECTIONS */}
+ <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />
+ <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-gray-50 dark:bg-slate-950" />
+ <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
 
-            {/* COMPACT SEO LINK STRIPS */}
-            <InternalLinkGrid type="diagnostics" title="Related Diagnostics" subtitle="Infrastructure Support" limit={12} className="bg-white dark:bg-slate-900 border-t" />
-            <InternalLinkGrid type="health-packages" title="Related Wellness" subtitle="Care Packages" limit={8} className="bg-slate-50 dark:bg-slate-950 border-t" />
-            <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900" />
-            <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
-        </main>
-    );
+ {/* COMPACT SEO LINK STRIPS */}
+ <InternalLinkGrid type="diagnostics" title="Related Diagnostics" subtitle="Infrastructure Support" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+ <InternalLinkGrid type="health-packages" title="Related Wellness" subtitle="Care Packages" limit={8} className="bg-slate-50 dark:bg-slate-950 border-t" />
+ <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900" />
+ <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
+ </main>
+ );
 }

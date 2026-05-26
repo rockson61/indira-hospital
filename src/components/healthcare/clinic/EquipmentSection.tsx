@@ -8,40 +8,40 @@ import { clinicEquipment } from "@/lib/data/clinic-config";
 import type { LucideIcon } from "lucide-react";
 
 export function EquipmentSection() {
-    const iconMap: Record<string, any> = {
-        cbct: Xray,
-        microscope: Microscope,
-        laser: Electricity,
-        scanner: MonitorPlay,
-        autoclave: Shield,
-    };
+ const iconMap: Record<string, any> = {
+ cbct: Xray,
+ microscope: Microscope,
+ laser: Electricity,
+ scanner: MonitorPlay,
+ autoclave: Shield,
+ };
 
-    const equipment = clinicEquipment.map(item => ({
-        ...item,
-        icon: iconMap[item.id] || Electricity
-    }));
+ const equipment = clinicEquipment.map(item => ({
+ ...item,
+ icon: iconMap[item.id] || Electricity
+ }));
 
-    return (
-        <SectionContainer className="bg-card">
-            <div className="text-center mb-16">
-                <h2 className="elite-section-title mb-4">World-Class Infrastructure</h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                    We invest in the latest dental technology to provide you with safer, faster, and more comfortable treatments.
-                </p>
-            </div>
+ return (
+ <SectionContainer className="bg-card">
+ <div className="text-center mb-16">
+ <h2 className="elite-section-title mb-4">World-Class Infrastructure</h2>
+ <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+ We invest in the latest dental technology to provide you with safer, faster, and more comfortable treatments.
+ </p>
+ </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {equipment.map((item, index) => (
-                    <IconBox
-                        key={index}
-                        icon={item.icon}
-                        title={item.title}
-                        description={item.description}
-                        variant="card"
-                        className="h-full hover:shadow-md transition-shadow"
-                    />
-                ))}
-            </div>
-        </SectionContainer>
-    );
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ {equipment.map((item, index) => (
+ <IconBox
+ key={index}
+ icon={item.icon}
+ title={item.title}
+ description={item.description}
+ variant="card"
+ className="h-full hover:shadow-md transition-shadow"
+ />
+ ))}
+ </div>
+ </SectionContainer>
+ );
 }

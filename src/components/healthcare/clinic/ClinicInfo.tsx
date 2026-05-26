@@ -5,69 +5,69 @@ import { clinicTimings } from "@/lib/data/clinic-config"
 import { siteConfig } from "@/config/site"
 
 interface ClinicInfoProps {
-  variant?: "full" | "compact"
-  showHours?: boolean
-  showEmail?: boolean
-  className?: string
+ variant?: "full" | "compact"
+ showHours?: boolean
+ showEmail?: boolean
+ className?: string
 }
 
 
 
 export function ClinicInfo({ variant = "full", showHours = true, showEmail = true, className = "" }: ClinicInfoProps) {
-  const hours = clinicTimings;
+ const hours = clinicTimings;
 
-  return (
-    <div className={`clinic-info ${className}`}>
-      {variant === "full" && <h3 className="text-xl font-bold mb-3">Indira Super Speciality Hospital</h3>}
+ return (
+ <div className={`clinic-info ${className}`}>
+ {variant === "full" && <h3 className="text-xl font-bold mb-3">Indira Super Speciality Hospital</h3>}
 
-      <div className="flex items-start gap-2 mb-2">
-        <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
-        <address className="not-italic">
-          Vellore, Tamil Nadu
-        </address>
-      </div>
+ <div className="flex items-start gap-2 mb-2">
+ <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
+ <address className="not-italic">
+ Vellore, Tamil Nadu
+ </address>
+ </div>
 
-      <div className="flex items-center gap-2 mb-2">
-        <Phone className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
-        <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="hover:underline">
-          {siteConfig.contact.phone}
-        </a>
-      </div>
+ <div className="flex items-center gap-2 mb-2">
+ <Phone className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
+ <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="hover:underline">
+ {siteConfig.contact.phone}
+ </a>
+ </div>
 
-      {showEmail && (
-        <div className="flex items-center gap-2 mb-2">
-          <Mail className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
-          <a href={`mailto:${siteConfig.contact.email}`} className="hover:underline">
-            {siteConfig.contact.email}
-          </a>
-        </div>
-      )}
+ {showEmail && (
+ <div className="flex items-center gap-2 mb-2">
+ <Mail className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
+ <a href={`mailto:${siteConfig.contact.email}`} className="hover:underline">
+ {siteConfig.contact.email}
+ </a>
+ </div>
+ )}
 
-      {showHours && (
-        <div className="mt-4">
-          <div className="flex items-center gap-2 mb-2">
-            <Clock className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
-            <span className="font-medium">Opening Hours</span>
-          </div>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 ml-7">
-            {hours.map((item) => (
-              <li key={item.day} className="flex justify-between">
-                <span>{item.day}</span>
-                <span>{item.hours}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+ {showHours && (
+ <div className="mt-4">
+ <div className="flex items-center gap-2 mb-2">
+ <Clock className="h-5 w-5 flex-shrink-0 text-fuchsia-600" />
+ <span className="font-medium">Opening Hours</span>
+ </div>
+ <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 ml-7">
+ {hours.map((item) => (
+ <li key={item.day} className="flex justify-between">
+ <span>{item.day}</span>
+ <span>{item.hours}</span>
+ </li>
+ ))}
+ </ul>
+ </div>
+ )}
 
-      {variant === "full" && (
-        <div className="mt-4 ml-7">
-          <p className="font-medium">Specialist Doctors</p>
-          <p className="text-sm text-muted-foreground mt-1">
-            Advanced Care, Compassionate Touch
-          </p>
-        </div>
-      )}
-    </div>
-  )
+ {variant === "full" && (
+ <div className="mt-4 ml-7">
+ <p className="font-medium">Specialist Doctors</p>
+ <p className="text-sm text-muted-foreground mt-1">
+ Advanced Care, Compassionate Touch
+ </p>
+ </div>
+ )}
+ </div>
+ )
 }

@@ -15,82 +15,82 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
+ variable: "--font-inter",
+ subsets: ["latin"],
+ display: "swap",
 });
 
 const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  display: "swap",
+ variable: "--font-outfit",
+ subsets: ["latin"],
+ display: "swap",
 });
 
 export const metadata: Metadata = {
-  ...defaultSeo,
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: '/',
-  },
+ ...defaultSeo,
+ robots: {
+ index: true,
+ follow: true,
+ googleBot: {
+ index: true,
+ follow: true,
+ 'max-video-preview': -1,
+ 'max-image-preview': 'large',
+ 'max-snippet': -1,
+ },
+ },
+ alternates: {
+ canonical: '/',
+ },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#841F74",
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
+ themeColor: "#841F74",
+ width: "device-width",
+ initialScale: 1,
+ maximumScale: 5,
 };
 
 import Script from "next/script";
 
 export default function RootLayout({
-  children,
+ children,
 }: Readonly<{
-  children: React.ReactNode;
+ children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans relative`}
-      >
-        <div id="google_translate_element" style={{ display: "none" }} />
-        <Script id="google-translate-config" strategy="beforeInteractive">
-          {`
-            function googleTranslateElementInit() {
-              new window.google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,ta,hi,te',
-                autoDisplay: false
-              }, 'google_translate_element');
-            }
-          `}
-        </Script>
-        <Script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="afterInteractive"
-        />
-        <JsonLdSchema auto />
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-          <StickyCTA />
-          <FloatingWhatsApp />
-          <DynamicSEOKeywordBlock />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+ return (
+ <html lang="en" suppressHydrationWarning>
+ <body
+ className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans relative`}
+ >
+ <div id="google_translate_element" style={{ display: "none" }} />
+ <Script id="google-translate-config" strategy="beforeInteractive">
+ {`
+ function googleTranslateElementInit() {
+ new window.google.translate.TranslateElement({
+ pageLanguage: 'en',
+ includedLanguages: 'en,ta,hi,te',
+ autoDisplay: false
+ }, 'google_translate_element');
+ }
+ `}
+ </Script>
+ <Script
+ src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+ strategy="afterInteractive"
+ />
+ <JsonLdSchema auto />
+ <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+ <Header />
+ <main className="flex-1">
+ {children}
+ </main>
+ <Footer />
+ <StickyCTA />
+ <FloatingWhatsApp />
+ <DynamicSEOKeywordBlock />
+ </ThemeProvider>
+ </body>
+ </html>
+ );
 }

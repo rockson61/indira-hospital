@@ -2,46 +2,46 @@ import { EliteImage } from "@/components/ui/elite-image"
 import { siteConfig } from "@/config/site"
 
 export function DoctorInfo() {
-  return (
-    <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] shadow-soft border border-slate-100 dark:border-slate-700">
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="md:w-1/3">
-          <div className="aspect-square relative rounded-[2rem] overflow-hidden border-4 border-slate-50">
-            <EliteImage src="/images/doctors/dr-rockson-samuel.jpg" alt="Dr. Rockson Samuel" fill className="object-cover" />
-          </div>
-        </div>
+ return (
+ <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] shadow-soft border border-slate-100 dark:border-slate-700">
+ <div className="flex flex-col md:flex-row gap-8">
+ <div className="md:w-1/3">
+ <div className="aspect-square relative rounded-[2rem] overflow-hidden border-4 border-slate-50">
+ <EliteImage src="/images/doctors/dr-rockson-samuel.jpg" alt="Dr. Rockson Samuel" fill className="object-cover" />
+ </div>
+ </div>
 
-        <div className="md:w-2/3">
-          <h2 className="text-2xl font-heading font-black text-slate-900 dark:text-white mb-2">Dr. Rockson Samuel</h2>
-          <p className="text-fuchsia-600 font-bold mb-4">General Dentist</p>
+ <div className="md:w-2/3">
+ <h2 className="text-2xl font-heading font-black text-slate-900 dark:text-white mb-2">Dr. Rockson Samuel</h2>
+ <p className="text-fuchsia-600 font-bold mb-4">General Dentist</p>
 
-          <p className="text-slate-600 dark:text-slate-300 mb-6 font-medium leading-relaxed">
-            Dr. Rockson Samuel is a highly skilled general dentist with extensive experience in providing comprehensive
-            dental care. He specializes in Root Canal Treatments, Dental Implants, Braces, and Dental Fillings.
-          </p>
+ <p className="text-slate-600 dark:text-slate-300 mb-6 font-medium leading-relaxed">
+ Dr. Rockson Samuel is a highly skilled general dentist with extensive experience in providing comprehensive
+ dental care. He specializes in Root Canal Treatments, Dental Implants, Braces, and Dental Fillings.
+ </p>
 
-          <div className="mb-6">
-            <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-3">Specializations:</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Root Canal Treatment (RCT)", "Dental Implants", "Orthodontics (Braces)", "Dental Fillings", "General Dentistry"].map((s) => (
-                <span key={s} className="px-4 py-1.5 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm font-bold rounded-full border border-fuchsia-100">{s}</span>
-              ))}
-            </div>
-          </div>
+ <div className="mb-6">
+ <h3 className="font-heading font-bold text-slate-900 dark:text-white mb-3">Specializations:</h3>
+ <div className="flex flex-wrap gap-2">
+ {["Root Canal Treatment (RCT)", "Dental Implants", "Orthodontics (Braces)", "Dental Fillings", "General Dentistry"].map((s) => (
+ <span key={s} className="px-4 py-1.5 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm font-bold rounded-full border border-fuchsia-100">{s}</span>
+ ))}
+ </div>
+ </div>
 
-          <div className="mb-6 text-sm text-slate-600 dark:text-slate-300 font-medium space-y-1">
-            <p>Email: {siteConfig.contact.email}</p>
-            <p>Phone: {siteConfig.contact.phone}</p>
-          </div>
+ <div className="mb-6 text-sm text-slate-600 dark:text-slate-300 font-medium space-y-1">
+ <p>Email: {siteConfig.contact.email}</p>
+ <p>Phone: {siteConfig.contact.phone}</p>
+ </div>
 
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm dark:shadow-slate-900/30"
-          >
-            Book an Appointment
-          </a>
-        </div>
-      </div>
-    </div>
-  )
+ <a
+ href="/contact"
+ className="inline-flex items-center px-8 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 transition-all shadow-sm dark:shadow-slate-900/30"
+ >
+ Book an Appointment
+ </a>
+ </div>
+ </div>
+ </div>
+ )
 }
