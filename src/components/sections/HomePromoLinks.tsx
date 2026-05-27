@@ -58,35 +58,35 @@ export function HomePromoLinks() {
  </h3>
  <div className="space-y-4 flex-grow flex flex-col justify-between">
  <Link href="/doctors" className="flex items-center gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-slate-800 transition-colors group">
- <div className="p-2 bg-fuchsia-100 dark:bg-fuchsia-900/30 rounded-lg text-fuchsia-600 group-hover:scale-110 transition-transform">
+ <div className="p-2 bg-fuchsia-100 dark:bg-fuchsia-900/30 rounded-2xl text-fuchsia-600 group-hover:scale-110 transition-transform">
  <Stethoscope className="w-5 h-5" />
  </div>
  <span className="font-bold text-slate-700 dark:text-slate-300 group-hover:text-fuchsia-600 transition-colors">Find a Doctor</span>
  </Link>
 
  <Link href="/doctor/near-me" className="flex items-center gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-slate-800 transition-colors group">
- <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 group-hover:scale-110 transition-transform">
+ <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-2xl text-blue-600 group-hover:scale-110 transition-transform">
  <MapPin className="w-5 h-5" />
  </div>
  <span className="font-bold text-slate-700 dark:text-slate-300 group-hover:text-fuchsia-600 transition-colors">Find a Location</span>
  </Link>
 
  <Link href="/health-packages" className="flex items-center gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-slate-800 transition-colors group">
- <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg text-emerald-600 group-hover:scale-110 transition-transform">
+ <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl text-emerald-600 group-hover:scale-110 transition-transform">
  <Calculator className="w-5 h-5" />
  </div>
  <span className="font-bold text-slate-700 dark:text-slate-300 group-hover:text-fuchsia-600 transition-colors">Estimate Your Cost</span>
  </Link>
 
  <Link href="/pay-bill" className="flex items-center gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-slate-800 transition-colors group">
- <div className="p-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg text-amber-600 group-hover:scale-110 transition-transform">
+ <div className="p-2 bg-amber-100 dark:bg-amber-900/30 rounded-2xl text-amber-600 group-hover:scale-110 transition-transform">
  <CreditCard className="w-5 h-5" />
  </div>
  <span className="font-bold text-slate-700 dark:text-slate-300 group-hover:text-fuchsia-600 transition-colors">Pay a bill</span>
  </Link>
 
  <Link href="/blog" className="flex items-center gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-slate-800 transition-colors group">
- <div className="p-2 bg-violet-100 dark:bg-violet-900/30 rounded-lg text-violet-600 group-hover:scale-110 transition-transform">
+ <div className="p-2 bg-violet-100 dark:bg-violet-900/30 rounded-2xl text-violet-600 group-hover:scale-110 transition-transform">
  <Video className="w-5 h-5" />
  </div>
  <span className="font-bold text-slate-700 dark:text-slate-300 group-hover:text-fuchsia-600 transition-colors">Watch Videos</span>

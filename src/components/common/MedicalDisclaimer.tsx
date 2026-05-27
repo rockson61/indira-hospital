@@ -10,7 +10,7 @@ export function MedicalDisclaimer() {
  return (
  <section className="bg-transparent py-10 relative z-10">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-[2rem] p-6 sm:p-8 shadow-sm hover:shadow-xl transition-shadow duration-500 overflow-hidden relative">
+ <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-[2rem] p-6 sm:p-8 shadow-sm hover:shadow-float transition-shadow-soft duration-500 overflow-hidden relative">
  {/* Subtle Glow */}
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-100 dark:bg-fuchsia-900/20 rounded-full blur-3xl opacity-50 pointer-events-none -mr-32 -mt-32" />
 

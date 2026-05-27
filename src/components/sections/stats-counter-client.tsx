@@ -47,11 +47,11 @@ function StatItem({ value, meta, inView, delay }: { value: number; meta: typeof 
  initial={{ opacity: 0, scale: 0.9, y: 30 }}
  animate={inView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 30 }}
  transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
- className={`group relative flex flex-col items-center gap-6 bg-white dark:bg-slate-900 dark: rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-200 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-slate-200 dark:border-slate-800 hover:bg-fuchsia-50/50 dark:hover:bg-white dark:bg-slate-900 transition-all duration-500 shadow-xl dark:shadow-2xl ${meta.glow} overflow-hidden`}
+ className={`group relative flex flex-col items-center gap-6 bg-white dark:bg-slate-900 dark: rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-200 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-slate-200 dark:border-slate-800 hover:bg-fuchsia-50/50 dark:hover:bg-white dark:bg-slate-900 transition-all duration-500 shadow-float dark:shadow-clay-dark ${meta.glow} overflow-hidden`}
  >
  <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 dark:from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
- <div className={`w-20 h-20 rounded-2xl bg-slate-50 dark:bg-slate-900 ${meta.color} flex items-center justify-center group-hover:bg-fuchsia-500 group-hover:text-slate-900 dark:text-white transition-all duration-500 shadow-lg dark:shadow-xl group-hover:scale-110 z-10`}>
+ <div className={`w-20 h-20 rounded-2xl bg-slate-50 dark:bg-slate-900 ${meta.color} flex items-center justify-center group-hover:bg-fuchsia-500 group-hover:text-slate-900 dark:text-white transition-all duration-500 shadow-clay dark:shadow-float group-hover:scale-110 z-10`}>
  <Icon className="w-10 h-10" />
  </div>
 

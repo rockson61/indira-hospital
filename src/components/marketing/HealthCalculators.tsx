@@ -62,7 +62,7 @@ export function HealthCalculators() {
  <div className="grid lg:grid-cols-12 gap-12 items-start">
  {/* Calculator Form Area */}
  <div className="lg:col-span-7">
- <ModernCard className="p-10 bg-white dark:bg-slate-900 border-none shadow-2xl rounded-[3rem] relative overflow-hidden">
+ <ModernCard className="p-10 bg-white dark:bg-slate-900 border-none shadow-clay-dark rounded-[3rem] relative overflow-hidden">
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 rounded-full blur-3xl pointer-events-none" />
  
  {activeTab === 'bmi' ? (
@@ -89,7 +89,7 @@ export function HealthCalculators() {
  </div>
  <button 
  onClick={calculateBMI}
- className="w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-50 transition-all flex items-center justify-center gap-3 shadow-lg"
+ className="w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-50 transition-all flex items-center justify-center gap-3 shadow-clay"
  >
  <Activity className="w-5 h-5" />
  CALCULATE CLINICAL BMI
@@ -122,13 +122,13 @@ export function HealthCalculators() {
  type="checkbox" 
  checked={isSmoker} 
  onChange={(e) => setIsSmoker(e.target.checked)}
- className="w-6 h-6 rounded-lg text-fuchsia-600 focus:ring-fuchsia-500"
+ className="w-6 h-6 rounded-2xl text-fuchsia-600 focus:ring-fuchsia-500"
  />
  <span className="font-bold text-slate-700 dark:text-slate-200">Current or Former Smoker?</span>
  </div>
  <button 
  onClick={calculateCardiac}
- className="w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-50 transition-all flex items-center justify-center gap-3 shadow-lg"
+ className="w-full py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-fuchsia-700 dark:hover:bg-fuchsia-50 transition-all flex items-center justify-center gap-3 shadow-clay"
  >
  <Heart className="w-5 h-5" />
  ANALYZE CARDIAC RISK
@@ -140,7 +140,7 @@ export function HealthCalculators() {
 
  {/* Results Area */}
  <div className="lg:col-span-5 h-full">
- <div className="h-full p-10 bg-gradient-to-br from-fuchsia-600 to-pink-700 rounded-[3rem] text-white shadow-2xl relative overflow-hidden flex flex-col justify-center items-center text-center">
+ <div className="h-full p-10 bg-gradient-to-br from-fuchsia-600 to-pink-700 rounded-[3rem] text-white shadow-clay-dark relative overflow-hidden flex flex-col justify-center items-center text-center">
  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
  
  {(activeTab === 'bmi' ? bmiResult : cardiacRisk) ? (

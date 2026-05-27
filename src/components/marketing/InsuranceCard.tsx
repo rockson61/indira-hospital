@@ -12,7 +12,7 @@ export function InsuranceCard() {
  ];
 
  return (
- <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-3xl p-8 relative overflow-hidden shadow-2xl group border border-emerald-400/50">
+ <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-3xl p-8 relative overflow-hidden shadow-clay-dark group border border-emerald-400/50">
  {/* Background elements */}
  <div className="absolute top-0 right-0 w-64 h-64 bg-white dark:bg-slate-900 rounded-full blur-[60px] pointer-events-none" />
  

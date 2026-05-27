@@ -49,7 +49,7 @@ export function SectionHeader({
  {description && (
  <p className={cn(
  "mt-4 text-lg max-w-2xl leading-relaxed",
- isDark ? "text-slate-300" : "text-gray-600 dark:text-gray-400"
+ isDark ? "text-slate-300" : "text-slate-600 dark:text-slate-400 dark:text-gray-400"
  )}>
  {description}
  </p>

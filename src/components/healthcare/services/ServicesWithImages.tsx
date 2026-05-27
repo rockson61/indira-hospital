@@ -23,7 +23,7 @@ export function ServicesWithImages() {
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
  {/* Invisalign Featured Card */}
  <Link href="/doctor/near-me/treat/dentistry" className="group">
- <div className="bg-card rounded-lg shadow-lg overflow-hidden transition-transform duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+ <div className="bg-card rounded-2xl shadow-clay overflow-hidden transition-transform duration-300 group-hover:shadow-float group-hover:-translate-y-1">
  <div className="relative h-48">
  <EliteImage
  src="https://images.pexels.com/photos/3845757/pexels-photo-3845757.jpeg"
@@ -61,7 +61,7 @@ export function ServicesWithImages() {
  {/* Regular Service Cards */}
  {servicesData.map((service, index) => (
  <Link href={service.href} key={index} className="group">
- <Card className="overflow-hidden transition-transform duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+ <Card className="overflow-hidden transition-transform duration-300 group-hover:shadow-float group-hover:-translate-y-1">
  <div className="aspect-video relative">
  <EliteImage
  src={service.image || "/images/hospital/Hospital.webp"}

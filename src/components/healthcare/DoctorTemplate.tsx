@@ -110,7 +110,7 @@ export function DoctorTemplate({
  <div className="lg:col-span-4 lg:pr-8">
  <div className="relative group">
  <div className="absolute -inset-2 bg-gradient-to-tr from-[#54CAD3] to-white/20 rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
- <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden border-4 border-slate-200 dark:border-slate-800 shadow-2xl bg-white dark:bg-slate-900 ">
+ <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden border-4 border-slate-200 dark:border-slate-800 shadow-clay-dark bg-white dark:bg-slate-900 ">
  {doctor.image ? (
  <EliteImage
  src={getImageUrl(doctor.image)!}
@@ -173,7 +173,7 @@ export function DoctorTemplate({
  <a
  href={whatsappUrl}
  target="_blank" rel="noopener noreferrer"
- className="px-8 py-4 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-xl shadow-[#54CAD3]/20 flex items-center gap-3"
+ className="px-8 py-4 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-float shadow-[#54CAD3]/20 flex items-center gap-3"
  >
  <MessageCircle className="w-5 h-5" />
  {DOCTOR_PROFILE.BTN_CONSULTATION}
@@ -235,7 +235,7 @@ export function DoctorTemplate({
  )}
 
  {/* Expertise & Procedures Grid */}
- <div id="expertise" className="space-y-8 bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl border border-slate-200 dark:border-slate-800 text-white relative overflow-hidden group">
+ <div id="expertise" className="space-y-8 bg-slate-900 p-10 rounded-[2.5rem] shadow-clay-dark border border-slate-200 dark:border-slate-800 text-white relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-600/10 blur-[100px] pointer-events-none group-hover:bg-fuchsia-600/20 transition-all duration-500" />
  <h2 className="text-2xl font-black flex items-center gap-3 uppercase tracking-widest italic font-heading text-fuchsia-300">
  <Target className="w-8 h-8 text-fuchsia-400" />
@@ -244,7 +244,7 @@ export function DoctorTemplate({
  <div className="grid sm:grid-cols-2 gap-4">
  {(doctor.procedures || []).map((proc: string, i: number) => (
  <div key={i} className="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-fuchsia-500/50 hover:bg-white dark:bg-slate-900 transition-all group/item">
- <div className="w-8 h-8 rounded-lg bg-fuchsia-600/20 flex items-center justify-center text-fuchsia-400 group-hover/item:bg-fuchsia-600 group-hover/item:text-white transition-all">
+ <div className="w-8 h-8 rounded-2xl bg-fuchsia-600/20 flex items-center justify-center text-fuchsia-400 group-hover/item:bg-fuchsia-600 group-hover/item:text-white transition-all">
  <Search className="w-4 h-4" />
  </div>
  <span className="text-sm font-bold tracking-tight text-slate-200 group-hover/item:text-white">{proc}</span>
@@ -286,14 +286,14 @@ export function DoctorTemplate({
  ))
  ) : (
  <>
- <ModernCard className="bg-gradient-to-br from-fuchsia-50/50 to-white border-fuchsia-100 p-8 hover:shadow-xl transition-all group">
+ <ModernCard className="bg-gradient-to-br from-fuchsia-50/50 to-white border-fuchsia-100 p-8 hover:shadow-float transition-all group">
  <div className="p-4 bg-fuchsia-600 inline-block rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform">
  <HeartCardiogram className="w-8 h-8" />
  </div>
  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{DOCTOR_EXPERTISE_FALLBACK_1.TITLE}</h3>
  <p className="text-slate-600 leading-relaxed font-light">{DOCTOR_EXPERTISE_FALLBACK_1.DESC}</p>
  </ModernCard>
- <ModernCard className="bg-gradient-to-br from-slate-50/50 to-white border-slate-100 dark:border-slate-700 p-8 hover:shadow-xl transition-all group">
+ <ModernCard className="bg-gradient-to-br from-slate-50/50 to-white border-slate-100 dark:border-slate-700 p-8 hover:shadow-float transition-all group">
  <div className="p-4 bg-slate-800 inline-block rounded-2xl text-white mb-6 group-hover:scale-110 transition-transform">
  <Shield className="w-8 h-8" />
  </div>
@@ -308,7 +308,7 @@ export function DoctorTemplate({
  {/* Profiles Sidebar */}
  <aside className="lg:col-span-4 space-y-8">
  {/* Instant Booking Sidebar */}
- <Card className="p-8 border-none shadow-2xl shadow-fuchsia-900/10 rounded-[2rem] bg-[#002b36] text-white sticky top-24 overflow-hidden">
+ <Card className="p-8 border-none shadow-clay-dark shadow-fuchsia-900/10 rounded-[2rem] bg-[#002b36] text-white sticky top-24 overflow-hidden">
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 rounded-full blur-3xl" />
  <div className="relative z-10 text-center space-y-6">
  <div className="w-20 h-20 bg-fuchsia-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-fuchsia-500/30">
@@ -322,7 +322,7 @@ export function DoctorTemplate({
  <a
  href={whatsappUrl}
  target="_blank" rel="noopener noreferrer"
- className="w-full inline-flex items-center justify-center px-8 py-5 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-xl shadow-fuchsia-500/20 text-lg hover:scale-[1.03]"
+ className="w-full inline-flex items-center justify-center px-8 py-5 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-float shadow-fuchsia-500/20 text-lg hover:scale-[1.03]"
  >
  <MessageCircle className="w-6 h-6 mr-3" />
  {DOCTOR_PROFILE.BTN_WHATSAPP_CHAT}

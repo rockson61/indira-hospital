@@ -19,7 +19,7 @@ const libraryLinks = [
 export function HealthLibraryCard() {
  return (
  <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="relative rounded-[3rem] overflow-hidden group/library border border-slate-200/60 dark:border-slate-800 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-all duration-500 bg-white dark:bg-slate-900 flex flex-col lg:flex-row">
+ <div className="relative rounded-[3rem] overflow-hidden group/library border border-slate-200/60 dark:border-slate-800 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none hover:shadow-clay-dark hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-all duration-500 bg-white dark:bg-slate-900 flex flex-col lg:flex-row">
 
  {/* Background Glow Elements */}
  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu pointer-events-none group-hover/library:bg-fuchsia-500/10 transition-colors duration-700" />
@@ -50,7 +50,7 @@ export function HealthLibraryCard() {
  <Link
  key={idx}
  href={link.href}
- className="group flex items-center p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800/80 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-lg hover:shadow-fuchsia-500/10 transition-all duration-300 transform hover:-translate-y-1"
+ className="group flex items-center p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800/80 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30 hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-clay hover:shadow-fuchsia-500/10 transition-all duration-300 transform hover:-translate-y-1"
  >
  <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-800 group-hover:bg-fuchsia-500 group-hover:border-fuchsia-500 transition-colors shrink-0 mr-4">
  <link.icon className="w-5 h-5 text-slate-500 dark:text-slate-400 group-hover:text-white transition-colors" />

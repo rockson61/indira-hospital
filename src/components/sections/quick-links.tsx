@@ -39,7 +39,7 @@ export function QuickLinks() {
  <Link
  key={link.title}
  href={link.href}
- className={`flex items-center gap-4 p-6 rounded-2xl border border-transparent bg-slate-50 dark:bg-slate-800 transition-all duration-300 ${link.hover} hover:shadow-lg group`}
+ className={`flex items-center gap-4 p-6 rounded-2xl border border-transparent bg-slate-50 dark:bg-slate-800 transition-all duration-300 ${link.hover} hover:shadow-clay group`}
  >
  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${link.color} group-hover:scale-110 transition-transform`}>
  <link.icon className="w-6 h-6" />

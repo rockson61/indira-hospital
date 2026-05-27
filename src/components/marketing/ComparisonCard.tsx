@@ -14,7 +14,7 @@ interface ComparisonCardProps {
 
 export function ComparisonCard({ title, targetTreatment, alternativeTreatment }: ComparisonCardProps) {
  return (
- <div className="bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden p-6 relative">
+ <div className="bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-float overflow-hidden p-6 relative">
  {/* VS Badge */}
  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center font-black text-xs text-slate-400 border-4 border-slate-50 dark:border-slate-900/80 shadow-sm shadow-slate-200/50 dark:shadow-none">
  VS

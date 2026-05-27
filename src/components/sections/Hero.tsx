@@ -103,7 +103,7 @@ export function Hero() {
  <motion.div
  animate={{ opacity: 1, y: 0 }}
  transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
- className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-4 rounded-[3rem] border border-fuchsia-500/10 dark:border-slate-200 dark:border-slate-800 flex items-center max-w-2xl relative z-20 group focus-within:border-fuchsia-500/30 transition-all shadow-2xl dark:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] active:scale-[0.99]"
+ className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-4 rounded-[3rem] border border-fuchsia-500/10 dark:border-slate-200 dark:border-slate-800 flex items-center max-w-2xl relative z-20 group focus-within:border-fuchsia-500/30 transition-all shadow-clay-dark dark:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] active:scale-[0.99]"
  >
  <div className="w-16 h-16 rounded-[1.5rem] bg-fuchsia-50 dark:bg-slate-900 flex items-center justify-center ml-1 flex-shrink-0 group-focus-within:bg-fuchsia-600 transition-all duration-500 group-focus-within:scale-110">
  <Search className="w-7 h-7 text-fuchsia-600 dark:text-fuchsia-400 group-focus-within:text-white transition-colors" />
@@ -118,7 +118,7 @@ export function Hero() {
  {searchTerm && (
  <Link
  href={`/doctors?q=${searchTerm}`}
- className="bg-fuchsia-600 dark:bg-fuchsia-500 text-white px-8 py-4 rounded-2xl font-black shadow-lg hover:bg-fuchsia-500 dark:hover:bg-fuchsia-400 transition-all ml-2 flex-shrink-0"
+ className="bg-fuchsia-600 dark:elite-button-primary px-8 py-4 rounded-2xl font-black shadow-clay hover:bg-fuchsia-500 dark:hover:bg-fuchsia-400 transition-all ml-2 flex-shrink-0"
  >
  Find Now
  </Link>
@@ -156,10 +156,10 @@ export function Hero() {
  initial={{ opacity: 0, y: 40 }}
  animate={{ opacity: 1, y: 0 }}
  transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
- className="absolute -bottom-10 left-0 bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-200 dark:border-slate-200 dark:border-slate-800 z-20 max-w-[320px] shadow-xl dark:shadow-2xl dark:shadow-black/20"
+ className="absolute -bottom-10 left-0 bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-200 dark:border-slate-200 dark:border-slate-800 z-20 max-w-[320px] shadow-float dark:shadow-clay-dark dark:shadow-black/20"
  >
  <div className="flex items-center gap-5 mb-2">
- <div className="w-14 h-14 bg-fuchsia-500 rounded-2xl flex items-center justify-center shadow-lg shadow-fuchsia-500/20">
+ <div className="w-14 h-14 bg-fuchsia-500 rounded-2xl flex items-center justify-center shadow-clay shadow-fuchsia-500/20">
  <Star className="w-7 h-7 text-white fill-white" />
  </div>
  <div>
@@ -173,9 +173,9 @@ export function Hero() {
  initial={{ opacity: 0, x: -40 }}
  animate={{ opacity: 1, x: 0 }}
  transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
- className="absolute top-24 -left-12 bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-200 dark:border-slate-200 dark:border-slate-800 z-20 flex items-center gap-4 shadow-xl dark:shadow-2xl"
+ className="absolute top-24 -left-12 bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-200 dark:border-slate-200 dark:border-slate-800 z-20 flex items-center gap-4 shadow-float dark:shadow-clay-dark"
  >
- <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center shadow-lg shadow-rose-500/20">
+ <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center shadow-clay shadow-rose-500/20">
  <HeartCardiogram className="w-6 h-6 text-white" />
  </div>
  <div>
@@ -204,10 +204,10 @@ export function Hero() {
  <Link
  key={t.label}
  href={t.href}
- className="group relative flex flex-col items-center gap-4 p-6 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 hover:bg-fuchsia-50 dark:hover:bg-white dark:bg-slate-900 hover:border-fuchsia-200 dark:hover:border-fuchsia-500/50 hover:shadow-xl dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-500 overflow-hidden"
+ className="group relative flex flex-col items-center gap-4 p-6 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 hover:bg-fuchsia-50 dark:hover:bg-white dark:bg-slate-900 hover:border-fuchsia-200 dark:hover:border-fuchsia-500/50 hover:shadow-float dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-500 overflow-hidden"
  >
  <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
- <div className="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-900 group-hover:bg-fuchsia-500 flex items-center justify-center transition-all duration-500 shadow-lg dark:shadow-xl group-hover:shadow-fuchsia-500/20">
+ <div className="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-900 group-hover:bg-fuchsia-500 flex items-center justify-center transition-all duration-500 shadow-clay dark:shadow-float group-hover:shadow-fuchsia-500/20">
  <t.icon className="w-7 h-7 text-fuchsia-500 dark:text-fuchsia-400 group-hover:text-white transition-colors" />
  </div>
  <span className="text-sm font-bold text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors text-center">

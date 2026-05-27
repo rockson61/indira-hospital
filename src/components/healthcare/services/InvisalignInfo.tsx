@@ -22,7 +22,7 @@ export default function InvisalignInfo({ location = "Vellore" }: InvisalignInfoP
  </div>
 
  <div className="grid md:grid-cols-2 gap-8 mb-12">
- <div className="relative aspect-video rounded-lg overflow-hidden">
+ <div className="relative aspect-video rounded-2xl overflow-hidden">
  <Image
  src="/dental-clinic-vellore.jpg"
  alt={`Invisalign clear aligners treatment in ${location}`}
@@ -269,7 +269,7 @@ export default function InvisalignInfo({ location = "Vellore" }: InvisalignInfoP
  </Card>
  </div>
 
- <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 flex flex-col md:flex-row items-center justify-between">
+ <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between">
  <div>
  <h3 className="text-2xl font-bold mb-2">Ready to Transform Your Happy?</h3>
  <p className="text-foreground/80 dark:text-muted-foreground/50 mb-4 md:mb-0">
@@ -296,7 +296,7 @@ export function WhyInvisalignExpensive() {
  </p>
 
  <div className="grid md:grid-cols-2 gap-6 my-6">
- <div className="bg-muted dark:bg-gray-800 p-5 rounded-lg">
+ <div className="bg-muted dark:bg-gray-800 p-5 rounded-2xl">
  <h3 className="text-lg font-semibold mb-2 flex items-center">
  <Award className="h-5 w-5 mr-2 text-primary" />
  Advanced Technology
@@ -308,7 +308,7 @@ export function WhyInvisalignExpensive() {
  </p>
  </div>
 
- <div className="bg-muted dark:bg-gray-800 p-5 rounded-lg">
+ <div className="bg-muted dark:bg-gray-800 p-5 rounded-2xl">
  <h3 className="text-lg font-semibold mb-2 flex items-center">
  <Award className="h-5 w-5 mr-2 text-primary" />
  Customized Treatment
@@ -320,7 +320,7 @@ export function WhyInvisalignExpensive() {
  </p>
  </div>
 
- <div className="bg-muted dark:bg-gray-800 p-5 rounded-lg">
+ <div className="bg-muted dark:bg-gray-800 p-5 rounded-2xl">
  <h3 className="text-lg font-semibold mb-2 flex items-center">
  <Award className="h-5 w-5 mr-2 text-primary" />
  Professional Expertise
@@ -332,7 +332,7 @@ export function WhyInvisalignExpensive() {
  </p>
  </div>
 
- <div className="bg-muted dark:bg-gray-800 p-5 rounded-lg">
+ <div className="bg-muted dark:bg-gray-800 p-5 rounded-2xl">
  <h3 className="text-lg font-semibold mb-2 flex items-center">
  <Award className="h-5 w-5 mr-2 text-primary" />
  Ongoing Support

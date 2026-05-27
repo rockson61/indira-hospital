@@ -30,7 +30,7 @@ export default function ServiceCategoryWidget() {
  scrollbar-width: none; /* Firefox */
  }
  `}</style>
- <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">
+ <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200 dark:text-gray-100 mb-4 text-center">
  Explore <span className="gradient-text">Our Specialities</span>
  </h3>
  <div className="relative">
@@ -52,7 +52,7 @@ export default function ServiceCategoryWidget() {
  <Icon className="w-5 h-5 text-fuchsia-700" />
  )}
  </div>
- <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">{category.name}</span>
+ <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 dark:text-gray-300">{category.name}</span>
  </div>
  </Link>
  );

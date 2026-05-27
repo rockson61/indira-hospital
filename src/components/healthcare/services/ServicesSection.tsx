@@ -58,7 +58,7 @@ export function ServicesSection() {
  onClick={() => setActiveService(index)}
  className={`w-full flex items-center gap-4 p-5 rounded-2xl transition-all duration-500 group relative overflow-hidden ${
  isActive 
- ? "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-2xl" 
+ ? "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-clay-dark" 
  : "bg-transparent border-transparent hover:bg-white dark:bg-slate-900"
  } border`}
  >
@@ -69,12 +69,12 @@ export function ServicesSection() {
  />
  )}
  <div className={`p-3 rounded-xl transition-colors shrink-0 relative z-10 ${
- isActive ? "bg-fuchsia-500 text-white" : "bg-white dark:bg-slate-900 text-gray-500 group-hover:text-slate-900 dark:text-white"
+ isActive ? "elite-button-primary" : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:text-white"
  }`}>
  <IconComponent className="w-6 h-6" />
  </div>
  <div className="text-left relative z-10">
- <h3 className={`font-bold transition-colors ${isActive ? "text-white" : "text-gray-500 group-hover:text-gray-300"}`}>
+ <h3 className={`font-bold transition-colors ${isActive ? "text-white" : "text-slate-600 dark:text-slate-400 group-hover:text-gray-300"}`}>
  {service.title}
  </h3>
  </div>
@@ -163,7 +163,7 @@ export function ServicesSection() {
  initial={{ opacity: 0, y: 40 }}
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
- className="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-r from-fuchsia-600 to-indigo-600 relative overflow-hidden group shadow-2xl shadow-fuchsia-500/20"
+ className="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-r from-fuchsia-600 to-indigo-600 relative overflow-hidden group shadow-clay-dark shadow-fuchsia-500/20"
  >
  <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-white dark:bg-slate-900 blur-[100px] rounded-full group-hover:scale-110 transition-transform duration-1000" />
  
@@ -174,7 +174,7 @@ export function ServicesSection() {
  </div>
  <Link
  href="/doctor/near-me/treat"
- className="inline-flex items-center px-10 py-5 bg-white text-fuchsia-600 rounded-2xl font-black text-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 active:scale-95"
+ className="inline-flex items-center px-10 py-5 bg-white text-fuchsia-600 rounded-2xl font-black text-lg hover:shadow-clay-dark transition-all duration-300 hover:-translate-y-1 active:scale-95"
  >
  View Full Directory
  <ArrowRight className="ml-3 w-6 h-6" />

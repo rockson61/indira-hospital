@@ -69,7 +69,7 @@ export function ConditionWidget({
  {conditions.slice(0, 3).map((condition, index) => {
  const SeverityIcon = getSeverityIcon(condition.severity)
  return (
- <div key={index} className="flex items-center justify-between p-3 bg-card rounded-lg border border-border">
+ <div key={index} className="flex items-center justify-between p-3 bg-card rounded-2xl border border-border">
  <div className="flex items-center space-x-3">
  <div className={`p-2 rounded-full ${getSeverityColor(condition.severity)}`}>
  <SeverityIcon className="w-4 h-4" />
@@ -114,7 +114,7 @@ export function ConditionWidget({
  </div>
 
  {showEmergency && (
- <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+ <div className="p-3 bg-red-50 border border-red-200 rounded-2xl">
  <div className="flex items-center text-red-800">
  <AlertTriangle className="w-4 h-4 mr-2" />
  <span className="text-sm font-semibold">Emergency Dental Care</span>

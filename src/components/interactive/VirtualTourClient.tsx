@@ -97,7 +97,7 @@ export default function VirtualTourClient() {
  <div className="relative z-10 flex flex-col min-h-screen">
  {/* Top Header */}
  <header className="p-8 flex items-center justify-between">
- <Link href="/gallery" className="group flex items-center gap-3 px-6 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all shadow-2xl">
+ <Link href="/gallery" className="group flex items-center gap-3 px-6 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all shadow-clay-dark">
  <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
  <span className="text-[10px] font-black uppercase tracking-[0.3em] italic">Gallery</span>
  </Link>
@@ -144,7 +144,7 @@ export default function VirtualTourClient() {
  </div>
 
  <div className="flex flex-col sm:flex-row gap-6">
- <a href={waUrl} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-4 px-10 py-6 bg-green-600 text-white font-black rounded-3xl hover:bg-green-500 shadow-2xl transition-all">
+ <a href={waUrl} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-4 px-10 py-6 bg-green-600 text-white font-black rounded-3xl hover:bg-green-500 shadow-clay-dark transition-all">
  <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
  <span className="text-sm uppercase tracking-widest italic">Enquire via WhatsApp</span>
  </a>

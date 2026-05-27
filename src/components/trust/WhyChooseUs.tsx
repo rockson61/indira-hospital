@@ -97,7 +97,7 @@ export function WhyChooseUs() {
  <GlassCard className="p-8 text-center hover:scale-105 transition-all duration-300 group h-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
  <div className="space-y-4">
  <div
- className={`inline-flex p-4 rounded-full bg-white dark:bg-slate-900 shadow-lg group-hover:scale-110 transition-transform`}
+ className={`inline-flex p-4 rounded-full bg-white dark:bg-slate-900 shadow-clay group-hover:scale-110 transition-transform`}
  >
  <IconComponent className={`h-8 w-8 ${feature.color}`} />
  </div>
@@ -153,7 +153,7 @@ export function WhyChooseUs() {
 
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
  {GUARANTEES.map((guarantee, index) => (
- <div key={index} className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+ <div key={index} className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
  <CheckCircle className="h-6 w-6 text-[#54CAD3] flex-shrink-0" />
  <span className="font-medium text-white/90">{guarantee}</span>
  </div>

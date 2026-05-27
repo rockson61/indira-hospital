@@ -63,7 +63,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
 
  <div className="grid lg:grid-cols-2 gap-8">
  {/* PROCTOLOGY CARD */}
- <div className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden group/procto">
+ <div className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-clay-dark relative overflow-hidden group/procto">
  <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-[40px]" />
  <div className="flex items-center gap-5 mb-8 relative z-10">
  <div className="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-950/30 border border-red-100 dark:border-red-900/40 flex items-center justify-center text-red-500 shadow-inner group-hover/procto:scale-110 transition-transform">
@@ -78,7 +78,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  {PROCTOLOGY_TREATMENTS.map((t) => (
  <Link key={t.slug}
  href={`/doctor/near-me/treat/${PARENT_SLUG}/${t.slug}`}
- className="group/item relative flex flex-col gap-3 p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:shadow-xl hover:border-red-200 dark:hover:border-red-900/50 transition-all overflow-hidden h-full">
+ className="group/item relative flex flex-col gap-3 p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:shadow-float hover:border-red-200 dark:hover:border-red-900/50 transition-all overflow-hidden h-full">
  <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-transparent dark:from-red-950/10 opacity-0 group-hover/item:opacity-100 transition-opacity" />
  <div className="relative z-10">
  <div className="flex items-center justify-between mb-4">
@@ -96,7 +96,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  </div>
 
  {/* LAPAROSCOPY CARD */}
- <div className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden group/laparo">
+ <div className="bg-white dark:bg-slate-900 dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-200 dark:border-slate-800 shadow-clay-dark relative overflow-hidden group/laparo">
  <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/5 rounded-full blur-[40px]" />
  <div className="flex items-center gap-5 mb-8 relative z-10">
  <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 flex items-center justify-center text-blue-500 shadow-inner group-hover/laparo:scale-110 transition-transform">
@@ -111,7 +111,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  {LAPAROSCOPY_TREATMENTS.map((t) => (
  <Link key={t.slug}
  href={`/doctor/near-me/treat/${PARENT_SLUG}/${t.slug}`}
- className="group/item relative flex flex-col gap-3 p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-900/50 transition-all overflow-hidden h-full">
+ className="group/item relative flex flex-col gap-3 p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:shadow-float hover:border-blue-200 dark:hover:border-blue-900/50 transition-all overflow-hidden h-full">
  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-950/10 opacity-0 group-hover/item:opacity-100 transition-opacity" />
  <div className="relative z-10">
  <div className="flex items-center justify-between mb-4">
@@ -130,7 +130,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  </div>
 
  {/* USP Strip */}
- <div className="mt-12 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-[2.5rem] p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden group/usp">
+ <div className="mt-12 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-[2.5rem] p-8 border border-slate-200 dark:border-slate-800 shadow-clay-dark relative overflow-hidden group/usp">
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 rounded-full blur-[60px]" />
  <div className="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-1">
@@ -141,7 +141,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  "60–80% cost-optimized vs metro hospitals",
  ].map((pt) => (
  <div key={pt} className="flex items-start gap-3 group/pt">
- <div className="w-6 h-6 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center group-hover/pt:bg-fuchsia-500 transition-all">
+ <div className="w-6 h-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center group-hover/pt:bg-fuchsia-500 transition-all">
  <CheckCircle2 className="w-3.5 h-3.5 text-fuchsia-400 group-hover:text-white transition-colors" />
  </div>
  <p className="text-xs text-indigo-100 font-bold uppercase tracking-tight leading-relaxed italic opacity-80">{pt}</p>
@@ -149,7 +149,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  ))}
  </div>
  <a href={waLink} target="_blank" rel="noopener noreferrer"
- className="group/wa flex-shrink-0 inline-flex items-center gap-3 px-10 py-5 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-xl shadow-green-500/25 text-sm uppercase tracking-widest group-hover/wa:scale-105 active:scale-95">
+ className="group/wa flex-shrink-0 inline-flex items-center gap-3 px-10 py-5 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-float shadow-green-500/25 text-sm uppercase tracking-widest group-hover/wa:scale-105 active:scale-95">
  <MessageCircle className="w-6 h-6 group-hover/wa:rotate-12 transition-transform" /> 
  Claim Free Consultation
  </a>

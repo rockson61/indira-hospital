@@ -53,7 +53,7 @@ export function WhyChooseUs() {
  {features.map((feature) => (
  <div
  key={feature.name}
- className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-100 dark:border-slate-700/50 bg-white dark:bg-slate-800/50 p-8 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+ className="group relative flex flex-col items-center text-center rounded-2xl border border-gray-100 dark:border-slate-700/50 bg-white dark:bg-slate-800/50 p-8 hover:shadow-clay-dark hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
  >
  {/* Top gradient accent */}
  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
@@ -64,14 +64,14 @@ export function WhyChooseUs() {
  </div>
 
  {/* Icon */}
- <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.color} text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+ <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.color} text-white shadow-clay group-hover:scale-110 transition-transform duration-300`}>
  <feature.icon className="h-8 w-8" aria-hidden="true" />
  </div>
 
  <h3 className="text-xl font-bold leading-7 text-gray-900 dark:text-white">
  {feature.name}
  </h3>
- <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
+ <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600 dark:text-slate-400 dark:text-gray-400">
  <p className="flex-auto">{feature.description}</p>
  </dd>
  </div>

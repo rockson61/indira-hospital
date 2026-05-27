@@ -28,7 +28,7 @@ export function FloatingCTA() {
  exit={{ y: 100, opacity: 0 }}
  className="fixed bottom-4 left-4 right-4 z-50 md:hidden pb-safe"
  >
- <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 dark:border-slate-800 p-3 rounded-2xl shadow-2xl flex gap-3">
+ <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 dark:border-slate-800 p-3 rounded-2xl shadow-clay-dark flex gap-3">
  <Button
  asChild
  variant="outline"
@@ -45,7 +45,7 @@ export function FloatingCTA() {
  </Button>
  <Button
  asChild
- className="flex-1 rounded-xl bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 text-white shadow-lg"
+ className="flex-1 rounded-xl bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 text-white shadow-clay"
  >
  <a href="/contact">
  <Calendar className="w-4 h-4 mr-2" />

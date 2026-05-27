@@ -38,7 +38,7 @@ export function EquipmentSection() {
  title={item.title}
  description={item.description}
  variant="card"
- className="h-full hover:shadow-md transition-shadow"
+ className="h-full hover:shadow-clay-sm transition-shadow-soft"
  />
  ))}
  </div>

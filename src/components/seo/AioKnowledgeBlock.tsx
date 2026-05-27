@@ -24,7 +24,7 @@ export default function AioKnowledgeBlock({
  
  <div className="relative z-10">
  <div className="flex items-center gap-3 mb-8">
- <div className="p-2 bg-fuchsia-50 dark:bg-fuchsia-900/30 rounded-lg">
+ <div className="p-2 bg-fuchsia-50 dark:bg-fuchsia-900/30 rounded-2xl">
  <Sparkles className="w-5 h-5 text-fuchsia-600" />
  </div>
  <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">

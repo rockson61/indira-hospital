@@ -43,7 +43,7 @@ export function InsuranceCheckerModal({
  exit={{ opacity: 0, scale: 0.95, y: 20 }}
  className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-full max-w-lg overflow-hidden"
  >
- <div className="bg-white dark:bg-slate-900 rounded-[3rem] shadow-2xl border border-slate-200 dark:border-slate-800 relative mx-4">
+ <div className="bg-white dark:bg-slate-900 rounded-[3rem] shadow-clay-dark border border-slate-200 dark:border-slate-800 relative mx-4">
  {/* Close Button */}
  <button 
  onClick={onClose}
@@ -82,7 +82,7 @@ export function InsuranceCheckerModal({
  <div className="grid grid-cols-1 gap-4">
  <Button 
  asChild
- className="h-16 rounded-[2rem] bg-slate-900 dark:bg-white text-white dark:text-slate-900 transition-colors font-black text-lg uppercase tracking-widest italic group overflow-hidden relative shadow-xl shadow-black/10 hover:shadow-black/20 transition-all hover:scale-[1.02]"
+ className="h-16 rounded-[2rem] bg-slate-900 dark:bg-white text-white dark:text-slate-900 transition-colors font-black text-lg uppercase tracking-widest italic group overflow-hidden relative shadow-float shadow-black/10 hover:shadow-black/20 transition-all hover:scale-[1.02]"
  >
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
  <MessageCircle className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />

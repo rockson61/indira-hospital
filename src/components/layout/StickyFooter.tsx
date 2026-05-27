@@ -31,7 +31,7 @@ export function StickyFooter() {
  isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
  )}
  >
- <div className="bg-white dark:bg-slate-900 border border-white dark:border-slate-800 p-2 rounded-[2rem] shadow-2xl shadow-indigo-500/10 max-w-sm mx-auto flex items-center gap-2">
+ <div className="bg-white dark:bg-slate-900 border border-white dark:border-slate-800 p-2 rounded-[2rem] shadow-clay-dark shadow-indigo-500/10 max-w-sm mx-auto flex items-center gap-2">
  <a 
  href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`}
  className="flex-1 flex items-center justify-center gap-2 py-3 rounded-[1.5rem] bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-sm tracking-wide hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
@@ -41,7 +41,7 @@ export function StickyFooter() {
  </a>
  <Link 
  href="/book-appointment"
- className="flex-1 flex items-center justify-center gap-2 py-3 rounded-[1.5rem] bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-bold text-sm tracking-wide shadow-lg shadow-fuchsia-500/25 hover:shadow-fuchsia-500/40 hover:scale-[1.02] transition-all"
+ className="flex-1 flex items-center justify-center gap-2 py-3 rounded-[1.5rem] bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-bold text-sm tracking-wide shadow-clay shadow-fuchsia-500/25 hover:shadow-fuchsia-500/40 hover:scale-[1.02] transition-all"
  >
  <CalendarCheck className="h-4 w-4" />
  Book Now

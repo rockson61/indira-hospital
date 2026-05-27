@@ -75,7 +75,7 @@ export function RelevantQAWidget({
  <div className="space-y-4 mb-6">
  {/* Static Generic FAQs */}
  {staticFaqs.map((faq, index) => (
- <details key={`static-${index}`} className="group bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-md transition-all hover:shadow-lg">
+ <details key={`static-${index}`} className="group bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-clay-sm transition-all hover:shadow-clay">
  <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-fuchsia-600 dark:group-open:text-fuchsia-300 flex items-center gap-3">
  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm dark:shadow-slate-900/30">?</span>
  {faq.question}
@@ -90,7 +90,7 @@ export function RelevantQAWidget({
 
  {/* Dynamic User Questions */}
  {questions.slice(0, 3).map((question) => (
- <details key={question.id} className="group bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-md transition-all hover:shadow-lg">
+ <details key={question.id} className="group bg-gradient-to-r from-white/80 to-fuchsia-50/50 dark:from-slate-800/60 dark:to-fuchsia-900/40 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-700/40 p-5 shadow-clay-sm transition-all hover:shadow-clay">
  <summary className="cursor-pointer text-sm font-semibold text-foreground dark:text-slate-200 outline-none transition-colors group-open:text-fuchsia-600 dark:group-open:text-fuchsia-300 flex items-center gap-3">
  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 text-white text-xs shadow-sm dark:shadow-slate-900/30">?</span>
  {question.title}
@@ -130,7 +130,7 @@ export function RelevantQAWidget({
  <div className="text-center">
  <Link
  href="/ask-the-dentist"
- className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white dark:bg-slate-900 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/30 hover:shadow-md"
+ className="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-fuchsia-500 bg-white dark:bg-slate-900 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400 transition-all hover:bg-fuchsia-50 dark:bg-fuchsia-950 dark:hover:bg-fuchsia-900/30 hover:shadow-clay-sm"
  >
  View All Questions & Answers
  <ArrowRight className="w-4 h-4 ml-2" />
@@ -145,7 +145,7 @@ export function RelevantQAWidget({
  </p>
  <Link
  href="/ask-the-dentist/submit"
- className="inline-flex items-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+ className="inline-flex items-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 text-sm font-semibold text-white shadow-clay transition-all hover:shadow-float hover:scale-105"
  >
  <MessageCircle className="w-4 h-4 mr-2" />
  Ask Dr. Rockson Samuel

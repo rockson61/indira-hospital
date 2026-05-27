@@ -71,7 +71,7 @@ export function ContactFormClient() {
  </p>
  <Button 
  onClick={() => setIsSuccess(false)}
- className="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-10 py-6 rounded-2xl font-bold text-lg"
+ className="elite-button-primary w-full"
  >
  Send Another Message
  </Button>
@@ -118,7 +118,7 @@ export function ContactFormClient() {
  <motion.div
  whileInView={{ opacity: 1, x: 0 }}
  viewport={{ once: true }}
- className="bg-white dark:bg-slate-900 p-10 lg:p-14 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-2xl space-y-10 relative overflow-hidden group animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
+ className="bg-white dark:bg-slate-900 p-10 lg:p-14 rounded-[4rem] border border-slate-200 dark:border-slate-700/50 shadow-clay-dark space-y-10 relative overflow-hidden group animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
  >
  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
  <h2 className="elite-section-title text-slate-900 dark:text-white lg:mb-12 relative z-10">Get in Touch</h2>
@@ -191,7 +191,7 @@ export function ContactFormClient() {
  initial={{ opacity: 0, y: 20 }}
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
- className="h-[400px] bg-white dark:bg-slate-900 rounded-[4rem] overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-2xl group relative"
+ className="h-[400px] bg-white dark:bg-slate-900 rounded-[4rem] overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-clay-dark group relative"
  >
  <div className="absolute inset-0 border-[12px] border-slate-200 dark:border-slate-800 rounded-[4rem] pointer-events-none z-10" />
  <iframe
@@ -212,7 +212,7 @@ export function ContactFormClient() {
  <motion.div
  whileInView={{ opacity: 1, x: 0 }}
  viewport={{ once: true }}
- className="bg-slate-900 p-10 sm:p-20 rounded-[4rem] border border-slate-800 shadow-2xl relative overflow-hidden group animate-in fade-in slide-in-from-right-8 duration-1000 ease-out flex flex-col items-center text-center"
+ className="bg-slate-900 p-10 sm:p-20 rounded-[4rem] border border-slate-800 shadow-clay-dark relative overflow-hidden group animate-in fade-in slide-in-from-right-8 duration-1000 ease-out flex flex-col items-center text-center"
  >
  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] pointer-events-none" />

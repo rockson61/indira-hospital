@@ -83,7 +83,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
  {/* Light Streak Animation */}
  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
- <div className="w-20 h-20 rounded-[2rem] bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 group-hover:bg-fuchsia-600 flex items-center justify-center text-fuchsia-600 group-hover:text-white transition-all duration-700 mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 relative z-10">
+ <div className="w-20 h-20 rounded-[2rem] bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 group-hover:bg-fuchsia-600 flex items-center justify-center text-fuchsia-600 group-hover:text-white transition-all duration-700 mb-8 shadow-clay-sm group-hover:shadow-float group-hover:scale-110 relative z-10">
  <div className="w-10 h-10">{Icon}</div>
  </div>
 
@@ -119,11 +119,11 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
  <div className="flex items-start justify-between mb-6 relative z-10">
- <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600 flex items-center justify-center group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-lg group-hover:scale-110">
+ <div className="w-16 h-16 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-600 flex items-center justify-center group-hover:bg-fuchsia-600 group-hover:text-white transition-all duration-700 shadow-sm group-hover:shadow-clay group-hover:scale-110">
  <div className="w-8 h-8">{Icon}</div>
  </div>
  {service.procedure_type && (
- <span className="px-4 py-1.5 rounded-full bg-slate-900 dark:bg-slate-700 text-white text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-black/10">
+ <span className="px-4 py-1.5 rounded-full bg-slate-900 dark:bg-slate-700 text-white text-[10px] font-black uppercase tracking-[0.2em] shadow-clay shadow-black/10">
  {service.procedure_type}
  </span>
  )}
@@ -159,7 +159,7 @@ export function ServiceCard({ service, variant = "detail", className, cardClassN
  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;m interested in learning more about ${service.title}.`)}`}
  target="_blank"
  rel="noopener noreferrer"
- className="group/wa relative flex-[1.5] inline-flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all duration-300 shadow-md hover:shadow-lg dark:shadow-none hover:bg-fuchsia-500 uppercase tracking-wider"
+ className="group/wa relative flex-[1.5] inline-flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all duration-300 shadow-clay-sm hover:shadow-clay dark:shadow-none hover:bg-fuchsia-500 uppercase tracking-wider"
  aria-label={`Inquire about ${service.title} on WhatsApp`}
  >
  <MessageCircle className="w-3.5 h-3.5 mr-1.5" />

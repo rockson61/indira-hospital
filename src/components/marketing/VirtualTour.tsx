@@ -20,7 +20,7 @@ export function VirtualTour() {
  const [activePoint, setActivePoint] = useState<TourPoint | null>(null);
 
  return (
- <section className="relative w-full aspect-video rounded-[3rem] overflow-hidden bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl group">
+ <section className="relative w-full aspect-video rounded-[3rem] overflow-hidden bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-clay-dark group">
  {/* Background "Tour" Placeholder - In real world, this would be a 360 renderer like Three.js or Pannellum */}
  <div className="absolute inset-0 bg-[url('/images/hospital/Hospital%20view%202.webp')] bg-cover bg-center grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100">
  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/40" />
@@ -47,7 +47,7 @@ export function VirtualTour() {
  </div>
 
  <div className="flex justify-center pointer-events-auto">
- <button className="group/btn flex items-center gap-4 px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-black rounded-full transition-all shadow-float -translate-y-4">
+ <button className="group/btn flex items-center gap-4 px-8 py-4 elite-button-primary font-black rounded-full transition-all shadow-float -translate-y-4">
  <Play className="w-5 h-5 fill-current" />
  START CINEMATIC TOUR
  </button>
@@ -65,7 +65,7 @@ export function VirtualTour() {
  >
  <div className="relative">
  <div className="absolute inset-0 w-8 h-8 bg-fuchsia-500 rounded-full animate-ping opacity-20" />
- <div className="relative w-8 h-8 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center border-2 border-fuchsia-500 shadow-lg group/point hover:scale-110 transition-all">
+ <div className="relative w-8 h-8 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center border-2 border-fuchsia-500 shadow-clay group/point hover:scale-110 transition-all">
  <Info className="w-4 h-4 text-fuchsia-600" />
  </div>
  </div>

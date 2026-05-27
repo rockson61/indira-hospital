@@ -36,7 +36,7 @@ import React, { forwardRef } from 'react';
 interface ModernCardProps extends React.HTMLAttributes<HTMLDivElement> {
  /** Visual variant: 'default' | 'elevated' | 'outlined' | 'glass' */
  variant?: 'default' | 'elevated' | 'outlined' | 'glass';
- /** Enable hover animation (lift + shadow) */
+ /** Enable hover animation (lift + shadow-soft) */
  hover?: boolean;
 }
 
@@ -44,9 +44,9 @@ const ModernCard = forwardRef<HTMLDivElement, ModernCardProps>(
  ({ className, variant = 'default', hover = false, ...props }, ref) => {
  const variants = {
  default: 'bg-card text-card-foreground border border-border/50 shadow-sm',
- elevated: 'bg-card text-card-foreground border border-border/50 shadow-lg',
+ elevated: 'bg-card text-card-foreground border border-border/50 shadow-clay',
  outlined: 'bg-transparent text-card-foreground border border-border/50',
- glass: 'bg-card/80 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 dark:border-slate-200 dark:border-slate-800 shadow-lg text-foreground',
+ glass: 'bg-card/80 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 dark:border-slate-200 dark:border-slate-800 shadow-clay text-foreground',
  };
 
  return (
@@ -55,7 +55,7 @@ const ModernCard = forwardRef<HTMLDivElement, ModernCardProps>(
  className={cn(
  'rounded-3xl transition-all duration-300',
  variants[variant],
- hover && 'hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1',
+ hover && 'hover:shadow-float hover:shadow-primary/5 hover:-translate-y-1',
  className
  )}
  {...props}

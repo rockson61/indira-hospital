@@ -79,7 +79,7 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
  <p className="font-bold text-[15px] text-slate-900 dark:text-white mb-1.5">{service.name}</p>
  <div className="flex flex-wrap gap-1.5">
  {service.features.map((feature, i) => (
- <span key={i} className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md flex items-center gap-1 border border-slate-200 dark:border-slate-700">
+ <span key={i} className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-xl flex items-center gap-1 border border-slate-200 dark:border-slate-700">
  <CheckCircle className="w-3 h-3 text-fuchsia-500" />
  {feature}
  </span>
@@ -97,7 +97,7 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
  <span className="text-[13px] font-black text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/30 px-2.5 py-1 rounded-full border border-green-100 dark:border-green-900/50">{service.savings}</span>
  </td>
  <td className="py-4 px-5 text-right">
- <button className="inline-flex items-center justify-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white dark:bg-fuchsia-600 dark:hover:bg-fuchsia-500 text-[12px] font-bold rounded-xl transition-all shadow-sm hover:shadow-md active:scale-95 uppercase tracking-wider whitespace-nowrap">
+ <button className="inline-flex items-center justify-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white dark:bg-fuchsia-600 dark:hover:bg-fuchsia-500 text-[12px] font-bold rounded-xl transition-all shadow-sm hover:shadow-clay-sm active:scale-95 uppercase tracking-wider whitespace-nowrap">
  Book Now
  </button>
  </td>
@@ -108,7 +108,7 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
  </div>
 
  {/* Savings Highlight */}
- <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-fuchsia-50 dark:from-green-900/20 dark:to-fuchsia-900/20 rounded-lg border border-green-200 dark:border-green-800">
+ <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-fuchsia-50 dark:from-green-900/20 dark:to-fuchsia-900/20 rounded-2xl border border-green-200 dark:border-green-800">
  <div className="flex items-center gap-3">
  <div className="p-2 bg-green-500 rounded-full">
  <IndianRupee className="w-6 h-6 text-white" />

@@ -37,7 +37,7 @@ export function DiagnosticCard({ test, className }: DiagnosticCardProps) {
  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
  <div className="flex justify-between items-start mb-6 relative z-10">
- <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 shadow-lg group-hover:shadow-fuchsia-500/20", config.bgColor)}>
+ <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 shadow-clay group-hover:shadow-fuchsia-500/20", config.bgColor)}>
  <config.icon className={cn("w-7 h-7", config.color)} />
  </div>
  <div className="text-right">

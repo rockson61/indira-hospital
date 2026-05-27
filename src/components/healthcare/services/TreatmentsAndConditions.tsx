@@ -43,7 +43,7 @@ export function TreatmentsAndConditions() {
  <ModernCard key={index} className="overflow-hidden border-default-200 dark:border-default-100/10">
  <ModernCardHeader className="bg-default-50 dark:bg-default-50/5 border-b border-default-100 dark:border-default-100/10 pb-4">
  <div className="flex items-center gap-3">
- <div className="p-2 rounded-lg bg-primary/10 text-primary">
+ <div className="p-2 rounded-2xl bg-primary/10 text-primary">
  <category.icon className="w-5 h-5" />
  </div>
  <h3 className="text-xl font-bold font-heading text-foreground">{category.category}</h3>

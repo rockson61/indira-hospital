@@ -20,7 +20,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
  <Link
  href={href}
  className={cn(
- "group flex items-center p-4 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-xl hover:shadow-fuchsia-100 dark:hover:shadow-fuchsia-900/20 hover:-translate-y-1 transition-all duration-300",
+ "group flex items-center p-4 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-float hover:shadow-fuchsia-100 dark:hover:shadow-fuchsia-900/20 hover:-translate-y-1 transition-all duration-300",
  className
  )}
  >
@@ -39,7 +39,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
  }
 
  return (
- <article className={cn("overflow-hidden rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 shadow-sm hover:shadow-2xl dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 group bg-white dark:bg-slate-900 flex flex-col h-full", cardClassName || className)}>
+ <article className={cn("overflow-hidden rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 shadow-sm hover:shadow-clay-dark dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 group bg-white dark:bg-slate-900 flex flex-col h-full", cardClassName || className)}>
  {/* Map Thumbnail */}
  <div className="h-28 bg-slate-50 dark:bg-slate-800 relative overflow-hidden shrink-0">
  <iframe
@@ -49,7 +49,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
  loading="lazy"
  />
  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex items-end">
- <h3 className="text-white font-heading font-black text-base tracking-tight drop-shadow-md">{location.name}</h3>
+ <h3 className="text-white font-heading font-black text-base tracking-tight drop-shadow-clay-sm">{location.name}</h3>
  </div>
  </div>
 
@@ -90,7 +90,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
  href={location.map_url || "#"}
  target="_blank"
  rel="noopener noreferrer"
- className="inline-flex items-center justify-center w-11 h-11 bg-fuchsia-600 text-white rounded-xl hover:bg-fuchsia-500 transition-all shadow-md hover:shadow-lg dark:shadow-none shrink-0"
+ className="inline-flex items-center justify-center w-11 h-11 bg-fuchsia-600 text-white rounded-xl hover:bg-fuchsia-500 transition-all shadow-clay-sm hover:shadow-clay dark:shadow-none shrink-0"
  aria-label={`Get directions to ${location.name}`}
  >
  <Navigation className="w-4 h-4" />

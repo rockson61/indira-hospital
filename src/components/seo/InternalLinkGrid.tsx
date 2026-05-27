@@ -134,12 +134,12 @@ export async function InternalLinkGrid({
  <Link
  href={item.url}
  prefetch={false}
- className={`group flex items-center justify-between px-4 py-3 rounded-2xl border text-[13px] font-bold transition-all duration-300 hover:shadow-lg dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1 ${colors} bg-white dark:bg-slate-900 relative overflow-hidden`}
+ className={`group flex items-center justify-between px-4 py-3 rounded-2xl border text-[13px] font-bold transition-all duration-300 hover:shadow-clay dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1 ${colors} bg-white dark:bg-slate-900 relative overflow-hidden`}
  >
  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent -translate-x-[150%] skew-x-[-25deg] group-hover:translate-x-[150%] transition-transform duration-1000" />
  
  <div className="flex items-center gap-3 w-[85%] relative z-10">
- <div className="p-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-700/50 shadow-sm shrink-0">
+ <div className="p-1.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-700/50 shadow-sm shrink-0">
  <Icon className="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
  </div>
  <span className="truncate text-slate-700 dark:text-slate-300 group-hover:text-fuchsia-700 dark:group-hover:text-fuchsia-400 leading-tight block w-full">{item.name}</span>

@@ -311,7 +311,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
  <strong>GPS Coordinates:</strong> 12.9540278°N, 79.1369615°E
  </p>
  </div>
- <div className="mt-4 p-4 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-lg">
+ <div className="mt-4 p-4 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl">
  <p className="font-medium text-blue-900 mb-2">How to Find Us:</p>
  <ul className="list-disc list-inside space-y-1 text-blue-800 text-sm">
  <li>Look for the Shell Petrol Pump on Katpadi Main Road</li>
@@ -351,7 +351,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
  </ul>
  </div>
  </div>
- <div className="mt-4 p-4 bg-green-50 rounded-lg">
+ <div className="mt-4 p-4 bg-green-50 rounded-2xl">
  <p className="font-medium text-green-900 mb-2">Area Highlights:</p>
  <p className="text-green-800 text-sm">
  Gandhi Nagar is a well-connected residential and commercial area in Vellore. The location offers
@@ -374,7 +374,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
  <CardDescription>Navigate easily to our clinic location</CardDescription>
  </CardHeader>
  <CardContent>
- <div className="relative w-full h-[450px] rounded-lg overflow-hidden">
+ <div className="relative w-full h-[450px] rounded-2xl overflow-hidden">
  <iframe
  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2784186240674!2d79.1369615!3d12.9540278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad394e9843620f%3A0xc7a4b2fb0991e086!2sIndira%20Dental%20Clinic%20%7C%20Dr%20Rockson%20Samuel%20%7C%20Top%20Dentist%20in%20Vellore%20for%20RCT%2C%20Braces%2C%20Implants%2C%20%26%20Dental%20Fillings!5e0!3m2!1sen!2sin!4v1760065009950!5m2!1sen!2sin"
  width="100%"

@@ -29,7 +29,7 @@ const ComparisonRow = ({ label, traditional, elite, isEliteBetter = true }: Comp
 export const ProcedureComparison = () => {
  return (
  <section className="my-16">
- <div className="bg-white dark:bg-slate-900 rounded-[3rem] p-8 md:p-12 shadow-xl border border-slate-100 dark:border-slate-800 overflow-hidden relative">
+ <div className="bg-white dark:bg-slate-900 rounded-[3rem] p-8 md:p-12 shadow-float border border-slate-100 dark:border-slate-800 overflow-hidden relative">
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 blur-[100px] pointer-events-none" />
  
  <div className="max-w-3xl mb-12">

@@ -80,7 +80,7 @@ export function SeverityQuiz() {
  const resultData = getResult();
 
  return (
- <Card className="max-w-md mx-auto overflow-hidden bg-white dark:bg-slate-900 shadow-lg border-2 border-primary-100">
+ <Card className="max-w-md mx-auto overflow-hidden bg-white dark:bg-slate-900 shadow-clay border-2 border-primary-100">
  <div className="bg-primary-600 p-4 text-white text-center">
  <h3 className="font-bold text-lg">Piles Severity Check</h3>
  <p className="text-primary-100 text-xs">Answer 3 simple questions to know your stage.</p>
@@ -106,7 +106,7 @@ export function SeverityQuiz() {
  onClick={() => handleAnswer(opt.score)}
  className="w-full text-left p-4 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-primary-500 hover:bg-primary-50 transition-all flex justify-between group"
  >
- <span className="text-gray-700 dark:text-gray-300 font-medium group-hover:text-primary-700">{opt.label}</span>
+ <span className="text-slate-700 dark:text-slate-300 dark:text-gray-300 font-medium group-hover:text-primary-700">{opt.label}</span>
  <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity" />
  </button>
  ))}
@@ -118,9 +118,9 @@ export function SeverityQuiz() {
  <AlertTriangle className="w-8 h-8" />
  </div>
 
- <p className="text-gray-500 dark:text-gray-400 uppercase tracking-widest text-xs font-bold mb-2">Your Result</p>
+ <p className="text-slate-600 dark:text-slate-400 dark:text-gray-400 uppercase tracking-widest text-xs font-bold mb-2">Your Result</p>
  <h2 className={cn("text-2xl font-bold mb-2", resultData.color)}>{resultData.grade}</h2>
- <p className="text-gray-600 dark:text-gray-400 mb-8">{resultData.advice}</p>
+ <p className="text-slate-600 dark:text-slate-400 dark:text-gray-400 mb-8">{resultData.advice}</p>
 
  <Button size="lg" className="w-full animate-bounce">
  Consult a Doctor Now

@@ -25,7 +25,7 @@ export function ServiceTestimonials({ testimonials, title = "What Our Patients S
  {testimonials.map((testimonial, index) => (
  <div
  key={index}
- className="group relative bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+ className="group relative bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-clay-dark hover:-translate-y-2 transition-all duration-500 overflow-hidden"
  >
  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
  

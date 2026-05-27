@@ -172,7 +172,7 @@ export default function DynamicSEOKeywordBlock() {
  </li>
  ))}
  <li>
- <Link href="/sitemap" className="inline-flex items-center gap-2 text-[13px] text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg hover:bg-fuchsia-600 hover:text-white transition-all mt-4">
+ <Link href="/sitemap" className="inline-flex items-center gap-2 text-[13px] text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-2xl hover:bg-fuchsia-600 hover:text-white transition-all mt-4">
  <Globe className="w-3 h-3" /> View All Services
  </Link>
  </li>

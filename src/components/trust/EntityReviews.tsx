@@ -119,7 +119,7 @@ export default async function EntityReviews({
 
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
  {reviews.map((review: any) => (
- <article key={review.id} className="group relative flex flex-col h-full bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-[2rem] p-6 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 overflow-hidden">
+ <article key={review.id} className="group relative flex flex-col h-full bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-[2rem] p-6 shadow-sm hover:shadow-clay-dark hover:-translate-y-1.5 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 overflow-hidden">
  {/* Decorative Background Blur */}
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-100 dark:bg-fuchsia-900/20 rounded-full blur-3xl opacity-0 group-hover:opacity-60 transition-opacity duration-700 pointer-events-none -mr-10 -mt-10" />
 
@@ -146,7 +146,7 @@ export default async function EntityReviews({
  <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wider font-semibold">
  {review.treatment_received && (
  <>
- <span className="bg-slate-50 dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-100 dark:border-slate-700 truncate max-w-[120px]">
+ <span className="bg-slate-50 dark:bg-slate-800 px-2 py-0.5 rounded-xl border border-slate-100 dark:border-slate-700 truncate max-w-[120px]">
  {review.treatment_received}
  </span>
  <span className="text-slate-300 dark:text-slate-600">•</span>

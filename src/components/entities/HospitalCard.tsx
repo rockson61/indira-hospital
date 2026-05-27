@@ -4,11 +4,11 @@ import { MessageCircle, Star, MapPin, Clock, ExternalLink } from "lucide-react";
 
 export function HospitalCard() {
  return (
- <article className="group bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 dark:hover:shadow-fuchsia-500/10 transition-all duration-500">
+ <article className="group bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-clay-dark hover:-translate-y-1 dark:hover:shadow-fuchsia-500/10 transition-all duration-500">
  <div className="relative h-32 w-full bg-slate-100 dark:bg-slate-800 shrink-0">
  {/* Simulated Glass Glow */}
  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10 p-4 flex flex-col justify-end">
- <h3 className="font-heading font-black text-white text-lg leading-tight drop-shadow-md">
+ <h3 className="font-heading font-black text-white text-lg leading-tight drop-shadow-clay-sm">
  Indira Superspeciality Hospital
  </h3>
  </div>
@@ -99,7 +99,7 @@ export function HospitalCard() {
  href={`https://wa.me/${siteConfig.contact.whatsapp}`}
  target="_blank"
  rel="noopener noreferrer"
- className="group/wa relative flex-[1.5] inline-flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all duration-300 shadow-md hover:shadow-lg dark:shadow-none hover:bg-fuchsia-500 uppercase tracking-wider"
+ className="group/wa relative flex-[1.5] inline-flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all duration-300 shadow-clay-sm hover:shadow-clay dark:shadow-none hover:bg-fuchsia-500 uppercase tracking-wider"
  >
  <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
  Chat Now

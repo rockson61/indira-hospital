@@ -343,7 +343,7 @@ export function SubServiceTemplate({
  prose-p:text-slate-600 prose-p:leading-relaxed
  prose-strong:text-slate-800 dark:text-slate-100
  prose-a:text-fuchsia-600 prose-a:no-underline hover:prose-a:underline
- prose-img:rounded-[2rem] prose-img:shadow-xl">
+ prose-img:rounded-[2rem] prose-img:shadow-float">
  {typeof children === 'string' ? (
  <div dangerouslySetInnerHTML={{ __html: injectInternalLinks(children) }} />
  ) : (
@@ -379,7 +379,7 @@ export function SubServiceTemplate({
  <div className="sticky top-24 space-y-6">
 
  {/* Appointment Card */}
- <ModernCard className="p-8 bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 border-none">
+ <ModernCard className="p-8 bg-white dark:bg-slate-900 shadow-float shadow-slate-200/50 border-none">
  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
  <MessageCircle className="w-5 h-5 text-fuchsia-600" />
  Elite Consultation
@@ -412,7 +412,7 @@ export function SubServiceTemplate({
  </ModernCard>
 
  {/* Department Schedule Card */}
- <ModernCard className="p-8 bg-white dark:bg-slate-900 border-none shadow-md">
+ <ModernCard className="p-8 bg-white dark:bg-slate-900 border-none shadow-clay-sm">
  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
  <Clock className="w-5 h-5 text-fuchsia-600" />
  OPD Schedule
@@ -424,7 +424,7 @@ export function SubServiceTemplate({
  { day: 'Emergency', time: 'Always Open', emergency: true },
  ].map((row) => (
  <div key={row.day} className="flex justify-between items-center py-3">
- <span className="text-gray-600 dark:text-gray-400 font-medium text-sm">{row.day}</span>
+ <span className="text-slate-600 dark:text-slate-400 dark:text-gray-400 font-medium text-sm">{row.day}</span>
  {row.emergency ? (
  <span className="px-2.5 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full">ALWAYS OPEN</span>
  ) : (
@@ -436,7 +436,7 @@ export function SubServiceTemplate({
  </ModernCard>
 
  {/* Why Indira card */}
- <ModernCard className="p-8 bg-slate-900 border-none shadow-xl text-white rounded-[2rem]">
+ <ModernCard className="p-8 bg-slate-900 border-none shadow-float text-white rounded-[2rem]">
  <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
  <Shield className="w-5 h-5 text-pink-400" />
  Why Indira Hospital?
@@ -519,7 +519,7 @@ export function SubServiceTemplate({
  href="https://maps.app.goo.gl/3bad47c4d07af16f:0xbb5e21b061736da6"
  target="_blank"
  rel="noopener noreferrer"
- className="inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-full font-bold transition-all hover:bg-fuchsia-600 dark:hover:bg-fuchsia-100 shadow-md"
+ className="inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-full font-bold transition-all hover:bg-fuchsia-600 dark:hover:bg-fuchsia-100 shadow-clay-sm"
  >
  Get Directions <ArrowRight className="w-4 h-4" />
  </a>
@@ -527,13 +527,13 @@ export function SubServiceTemplate({
  href={whatsappUrl}
  target="_blank"
  rel="noopener noreferrer"
- className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold transition-all shadow-md"
+ className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold transition-all shadow-clay-sm"
  >
  <MessageCircle className="w-5 h-5" /> WhatsApp Support
  </a>
  </div>
  </div>
- <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 h-[450px] relative">
+ <div className="rounded-[3rem] overflow-hidden shadow-clay-dark border-8 border-white dark:border-slate-800 h-[450px] relative">
  <iframe
  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.060018581216!2d79.1370592!3d12.953442599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad47c4d07af16f%3A0xbb5e21b061736da6!2sDr.%20Karan%20Shankar%20%7C%20Best%20Colorectal%2C%20Laparoscopic%2C%20Gastro%20%26%20General%20Surgeon%20In%20Vellore!5e1!3m2!1sen!2sin!4v1774805669927!5m2!1sen!2sin"
  width="100%"

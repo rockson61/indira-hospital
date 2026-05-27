@@ -17,7 +17,7 @@ interface AuthorCardProps {
 
 export function AuthorCard({ author, category = "Medical Review", dateUpdated }: AuthorCardProps) {
  return (
- <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden group">
+ <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-float overflow-hidden group">
  {/* Header Banner */}
  <div className="h-20 bg-gradient-to-r from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-800/50 relative">
  <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 flex items-center gap-1.5 shadow-sm">
@@ -39,7 +39,7 @@ export function AuthorCard({ author, category = "Medical Review", dateUpdated }:
  {/* Avatar Overlapping Header */}
  <div className="flex justify-start -mt-10 mb-4 relative z-20">
  <div className="relative">
- <div className="w-20 h-20 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-900 shadow-lg bg-slate-100 dark:bg-slate-800">
+ <div className="w-20 h-20 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-900 shadow-clay bg-slate-100 dark:bg-slate-800">
  <Image
  src={author.image}
  alt={author.name}
@@ -75,7 +75,7 @@ export function AuthorCard({ author, category = "Medical Review", dateUpdated }:
  {author.credentials && author.credentials.length > 0 && (
  <div className="flex flex-wrap gap-2 mb-6">
  {author.credentials.map((cred, idx) => (
- <span key={idx} className="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-md text-xs font-bold text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+ <span key={idx} className="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
  {cred}
  </span>
  ))}

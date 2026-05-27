@@ -40,14 +40,14 @@ export function DepartmentGridSection() {
  <Link
  key={dept.id}
  href={`/doctor/near-me/treat/${dept.slug}`}
- className="group block rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-100 transition-all duration-300"
+ className="group block rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-float hover:-translate-y-1 hover:border-blue-100 transition-all duration-300"
  >
  <div className="h-16 w-16 rounded-2xl bg-gray-50 dark:bg-slate-950 flex items-center justify-center mb-6 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:scale-110 transition-all">
- {iconMap[dept.icon] || <HeartCardiogram className="h-8 w-8 text-gray-500 dark:text-gray-400" />}
+ {iconMap[dept.icon] || <HeartCardiogram className="h-8 w-8 text-slate-600 dark:text-slate-400 dark:text-gray-400" />}
  </div>
 
  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{dept.name}</h4>
- <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-2">
+ <p className="text-slate-600 dark:text-slate-400 dark:text-gray-400 mb-6 line-clamp-2">
  {dept.description}
  </p>
 

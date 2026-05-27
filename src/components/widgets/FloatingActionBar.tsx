@@ -101,8 +101,8 @@ export default function FloatingActionBar() {
  50% { transform: translateY(-10px); }
  }
  @keyframes pulse {
- 0%, 100% { box-shadow: 0 4px 20px rgba(13, 148, 136, 0.4); } 
- 50% { box-shadow: 0 8px 40px rgba(13, 148, 136, 0.8); }
+ 0%, 100% { box-shadow-soft: 0 4px 20px rgba(13, 148, 136, 0.4); } 
+ 50% { box-shadow-soft: 0 8px 40px rgba(13, 148, 136, 0.8); }
  }
  .action-hub {
  animation: float 3s ease-in-out infinite;
@@ -125,16 +125,16 @@ export default function FloatingActionBar() {
  .action-hub:hover .petal-3 { transform: translateX(100px) scale(1); opacity: 1; transition-delay: 0.1s; }
  .led-panel {
  background: linear-gradient(135deg, #0d9488 0%, #115e59 100%); /* Teal */
- box-shadow: 0 0 15px rgba(13, 148, 136, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+ box-shadow-soft: 0 0 15px rgba(13, 148, 136, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
  }
- .led-text { color: #fff; text-shadow: 0 0 5px rgba(0,0,0,0.5); }
+ .led-text { color: #fff; text-shadow-soft: 0 0 5px rgba(0,0,0,0.5); }
  `}</style>
 
  <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
  <div className="action-hub group relative flex items-center justify-center">
 
  {/* Central Hub - Image */}
- <button className="relative w-24 h-24 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 shadow-2xl flex items-center justify-center">
+ <button className="relative w-24 h-24 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 shadow-clay-dark flex items-center justify-center">
  {/* <Image width={48} height={48} 
  src="/logo.png" 
  alt="Indira Hospital"
@@ -144,7 +144,7 @@ export default function FloatingActionBar() {
  </button>
 
  {/* Petal 1: Info Panel (Top) */}
- <div className="petal petal-1 absolute led-panel p-2 rounded-lg shadow-lg w-64 text-center">
+ <div className="petal petal-1 absolute led-panel p-2 rounded-2xl shadow-clay w-64 text-center">
  <div className="led-text text-sm font-bold">WELCOME TO INDIRA HOSPITAL</div>
  <div className="led-text text-xs opacity-90">Vellore, Tamil Nadu</div>
  <div className="mt-1 flex items-center justify-center gap-2 led-text text-xs">
@@ -164,12 +164,12 @@ export default function FloatingActionBar() {
  {/* Petal 2: Left Buttons (Call & WhatsApp) */}
  <div className="petal petal-2 absolute flex gap-2">
  <a href={`tel:${phone}`} title="Call Now">
- <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-lg transition-all hover:scale-110">
+ <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-clay transition-all hover:scale-110">
  <Phone className="w-5 h-5" />
  </Button>
  </a>
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" title="WhatsApp">
- <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 text-white shadow-lg transition-all hover:scale-110">
+ <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 text-white shadow-clay transition-all hover:scale-110">
  <MessageCircle className="w-5 h-5" />
  </Button>
  </a>
@@ -178,11 +178,11 @@ export default function FloatingActionBar() {
  {/* Petal 3: Right Buttons (Directions & Scroll Up) */}
  <div className="petal petal-3 absolute flex gap-2">
  <a href={directionsUrl} target="_blank" rel="noopener noreferrer" title="Get Directions">
- <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-lg transition-all hover:scale-110">
+ <Button size="icon" className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 text-white shadow-clay transition-all hover:scale-110">
  <MapPin className="w-5 h-5" />
  </Button>
  </a>
- <Button size="icon" onClick={scrollToTop} title="Back to Top" className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-500 to-gray-600 text-white shadow-lg transition-all hover:scale-110">
+ <Button size="icon" onClick={scrollToTop} title="Back to Top" className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-500 to-gray-600 text-white shadow-clay transition-all hover:scale-110">
  <ArrowUp className="w-5 h-5" />
  </Button>
  </div>

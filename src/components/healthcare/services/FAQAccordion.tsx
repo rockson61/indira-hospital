@@ -126,7 +126,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
  {serviceCategories.map((service, index) => (
  <ModernCard key={index} hover className="h-full text-center">
  <ModernCardHeader>
- <div className="w-12 h-12 bg-fuchsia-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+ <div className="w-12 h-12 bg-fuchsia-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
  <service.icon className="w-6 h-6 text-fuchsia-600" />
  </div>
  <ModernCardTitle className="text-lg">{service.title}</ModernCardTitle>
@@ -150,7 +150,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
  <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Frequently Asked Questions</h3>
  <Accordion type="single" collapsible className="space-y-4">
  {faqs.map((faq, index) => (
- <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-lg">
+ <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-2xl">
  <AccordionTrigger className="px-6 py-4 text-left font-semibold text-foreground hover:text-fuchsia-600">
  {faq.question}
  </AccordionTrigger>
@@ -179,7 +179,7 @@ export function ComprehensiveFAQSection({ locationName = "Vellore" }: Comprehens
  <Link
  key={index}
  href={location.href}
- className="inline-flex items-center justify-center px-3 py-2 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 rounded-lg text-sm font-medium hover:bg-fuchsia-100 transition-colors"
+ className="inline-flex items-center justify-center px-3 py-2 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 rounded-2xl text-sm font-medium hover:bg-fuchsia-100 transition-colors"
  >
  {location.name}
  </Link>

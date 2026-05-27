@@ -49,7 +49,7 @@ export function DepartmentCard({ department, className, variant = "grid", city }
  </Link>
  ) : (
  <Link href={href} className={cn("block group h-full", className)}>
- <article className="h-full p-6 sm:p-7 rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 shadow-sm hover:shadow-2xl dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 bg-white dark:bg-slate-900 flex flex-col relative overflow-hidden">
+ <article className="h-full p-6 sm:p-7 rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 shadow-sm hover:shadow-clay-dark dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 bg-white dark:bg-slate-900 flex flex-col relative overflow-hidden">
  <div className="absolute -top-10 -right-10 w-40 h-40 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full blur-3xl opacity-50 group-hover:bg-fuchsia-100 transition-colors duration-500 pointer-events-none" />
 
  <div className="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500 transform origin-bottom-right pointer-events-none">
@@ -73,7 +73,7 @@ export function DepartmentCard({ department, className, variant = "grid", city }
  Explore
  <ArrowRight className="w-3 h-3 ml-1 group-hover/btn:translate-x-0.5 transition-transform" />
  </div>
- <div className="group/wa relative flex-[1.5] flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all border border-transparent hover:bg-fuchsia-500 shadow-md hover:shadow-lg dark:shadow-none uppercase tracking-wider">
+ <div className="group/wa relative flex-[1.5] flex items-center justify-center py-2.5 bg-fuchsia-600 text-white font-black rounded-xl text-[12px] transition-all border border-transparent hover:bg-fuchsia-500 shadow-clay-sm hover:shadow-clay dark:shadow-none uppercase tracking-wider">
  <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
  Chat
  </div>

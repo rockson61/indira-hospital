@@ -30,7 +30,7 @@ export function DoctorAvatar({ src, name, initials, className = "" }: DoctorAvat
  }
 
  return (
- <div className={`flex items-center justify-center text-white font-black shadow-xl bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 ${className}`}>
+ <div className={`flex items-center justify-center text-white font-black shadow-float bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 ${className}`}>
  <span className="relative z-10">
  {initials}
  </span>

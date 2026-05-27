@@ -10,7 +10,7 @@ interface LogoProps {
 export function Logo({ className, variant = 'auto' }: LogoProps) {
  return (
  <Link href="/" className={cn("flex items-center space-x-3 group", className)}>
- <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-all">
+ <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 rounded-full flex items-center justify-center shadow-clay-sm group-hover:shadow-clay transition-all">
  <span className="text-white font-bold text-lg md:text-xl">IDC</span>
  </div>
  <div>

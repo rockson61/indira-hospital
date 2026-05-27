@@ -45,7 +45,7 @@ function Counter({ value, suffix = "" }: CounterProps) {
 }
 
 const statsCardVariants = cva(
- "h-full transition-all duration-300 hover:shadow-lg border-slate-100 dark:border-slate-700 dark:border-slate-800",
+ "h-full transition-all duration-300 hover:shadow-clay border-slate-100 dark:border-slate-700 dark:border-slate-800",
  {
  variants: {
  variant: {

@@ -12,13 +12,13 @@ import { DoctorHighlightSection } from "@/components/sections/DoctorHighlightSec
 const AppointmentCTASection = ({ block }: { block: any }) => (
  <div className="py-20 text-center bg-fuchsia-50 dark:bg-fuchsia-950 border-y border-fuchsia-100">
  <h2 className="elite-section-title mb-4">{block.title || "Book Appointment"}</h2>
- <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">{block.description}</p>
+ <p className="text-slate-600 dark:text-slate-400 dark:text-gray-400 mb-8 max-w-2xl mx-auto">{block.description}</p>
  <a href="/book-appointment" className="px-8 py-4 bg-fuchsia-600 text-white rounded-xl font-bold">{block.buttonText || "Book Now"}</a>
  </div>
 );
 
 const TestimonialSection = ({ block }: { block: any }) => (
- <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Patient Testimonials"}</h2><p className="text-gray-500 dark:text-gray-400 mt-2">[{block.testimonials?.length || 0} Testimonials loaded from CMS]</p></div>
+ <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Patient Testimonials"}</h2><p className="text-slate-600 dark:text-slate-400 dark:text-gray-400 mt-2">[{block.testimonials?.length || 0} Testimonials loaded from CMS]</p></div>
 );
 
 const InsuranceSection = ({ block }: { block: any }) => (
@@ -26,7 +26,7 @@ const InsuranceSection = ({ block }: { block: any }) => (
 );
 
 const BlogPreviewSection = ({ block }: { block: any }) => (
- <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Latest Insights"}</h2><p className="text-gray-500 dark:text-gray-400 mt-2">Displaying top {block.numberOfPosts || 3} posts from {block.categoryFilter || "all categories"}</p></div>
+ <div className="py-20 text-center"><h2 className="text-2xl font-bold">{block.title || "Latest Insights"}</h2><p className="text-slate-600 dark:text-slate-400 dark:text-gray-400 mt-2">Displaying top {block.numberOfPosts || 3} posts from {block.categoryFilter || "all categories"}</p></div>
 );
 
 interface BlockRendererProps {

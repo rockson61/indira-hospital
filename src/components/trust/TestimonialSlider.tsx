@@ -47,7 +47,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
  {TESTIMONIALS.map((testimonial, index) => (
  <div
  key={index}
- className="group relative bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col"
+ className="group relative bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-clay-sm hover:shadow-clay-dark hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col"
  >
  <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-fuchsia-500/5 to-transparent skew-x-[-30deg] group-hover:left-[100%] transition-all duration-1000 ease-in-out" />
 
@@ -126,7 +126,7 @@ export function ModernTestimonialsSection({ locationName = 'Vellore' }: ModernTe
  <div className="flex flex-col sm:flex-row gap-5 justify-center">
  <a
  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
- className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-fuchsia-700 font-black rounded-2xl hover:bg-slate-50 transition-colors shadow-2xl text-lg"
+ className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-fuchsia-700 font-black rounded-2xl hover:bg-slate-50 transition-colors shadow-clay-dark text-lg"
  >
  <Phone className="w-5 h-5" />
  {siteConfig.contact.phone}

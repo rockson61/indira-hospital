@@ -19,7 +19,7 @@ export function AwardsBadge({ title, year, issuer, variant = "gold", className }
  };
 
  return (
- <div className={cn("flex items-center gap-3 p-3 rounded-lg border", colorMap[variant], className)}>
+ <div className={cn("flex items-center gap-3 p-3 rounded-2xl border", colorMap[variant], className)}>
  <div className="shrink-0">
  <Trophy className="w-8 h-8 opacity-80" />
  </div>

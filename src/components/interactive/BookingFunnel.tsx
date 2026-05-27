@@ -60,7 +60,7 @@ export default function BookingFunnel() {
  };
 
  return (
- <div className="w-full bg-slate-900 dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden min-h-[500px] flex flex-col">
+ <div className="w-full bg-slate-900 dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 shadow-clay-dark relative overflow-hidden min-h-[500px] flex flex-col">
  {/* Background Accents */}
  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
  <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
@@ -173,7 +173,7 @@ export default function BookingFunnel() {
 
  <div className="w-full md:w-[340px] space-y-6">
  {selectedPricing ? (
- <div className="p-8 rounded-[2rem] bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10 border border-slate-200 dark:border-slate-800 shadow-2xl relative group overflow-hidden">
+ <div className="p-8 rounded-[2rem] bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10 border border-slate-200 dark:border-slate-800 shadow-clay-dark relative group overflow-hidden">
  <div className="absolute inset-0 bg-white dark:bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity" />
  <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-6">Elite Cost Estimation</p>
  <div className="space-y-1 mb-8">
@@ -201,7 +201,7 @@ export default function BookingFunnel() {
  )}
  <button
  onClick={() => setStep("handoff")}
- className="w-full py-6 bg-white text-slate-950 font-black rounded-2xl hover:bg-emerald-400 transition-all uppercase tracking-[0.2em] text-[11px] shadow-2xl shadow-emerald-500/10"
+ className="w-full py-6 bg-white text-slate-950 font-black rounded-2xl hover:bg-emerald-400 transition-all uppercase tracking-[0.2em] text-[11px] shadow-clay-dark shadow-emerald-500/10"
  >
  Proceed to Priority Booking
  </button>
@@ -255,7 +255,7 @@ export default function BookingFunnel() {
  href={generateWhatsAppLink()}
  target="_blank"
  rel="noopener noreferrer"
- className="px-12 py-7 bg-emerald-500 text-slate-950 font-black rounded-3xl hover:bg-emerald-400 transition-all uppercase tracking-[0.2em] text-[11px] shadow-2xl flex items-center justify-center gap-3"
+ className="px-12 py-7 bg-emerald-500 text-slate-950 font-black rounded-3xl hover:bg-emerald-400 transition-all uppercase tracking-[0.2em] text-[11px] shadow-clay-dark flex items-center justify-center gap-3"
  >
  Confirm on WhatsApp <ChevronRight className="w-5 h-5" />
  </a>

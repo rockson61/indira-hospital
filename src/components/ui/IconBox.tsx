@@ -21,7 +21,7 @@ export function IconBox({
  if (variant === "card") {
  return (
  <div className={cn("bg-background dark:bg-default-50/5 p-6 rounded-xl shadow-sm border border-default-100 dark:border-default-50/10 transition-colors", className)}>
- <div className={cn("w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 text-primary", iconClassName)}>
+ <div className={cn("w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 text-primary", iconClassName)}>
  <Icon className="w-6 h-6" />
  </div>
  {title && <h3 className="font-bold text-lg mb-2 text-foreground font-heading">{title}</h3>}
@@ -44,7 +44,7 @@ export function IconBox({
 
  return (
  <div className={cn("flex gap-4", className)}>
- <div className={cn("shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary", iconClassName)}>
+ <div className={cn("shrink-0 w-10 h-10 bg-primary/10 rounded-2xl flex items-center justify-center text-primary", iconClassName)}>
  <Icon className="w-5 h-5" />
  </div>
  <div>

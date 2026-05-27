@@ -46,7 +46,7 @@ export function InsuranceChecker() {
  </div>
  <div>
  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Health Insurance Check</h3>
- <p className="text-sm text-gray-500 dark:text-gray-400">Verify if your TPA/Insurance is accepted.</p>
+ <p className="text-sm text-slate-600 dark:text-slate-400 dark:text-gray-400">Verify if your TPA/Insurance is accepted.</p>
  </div>
  </div>
 
@@ -67,7 +67,7 @@ export function InsuranceChecker() {
  </div>
 
  {result === 'found' && (
- <div className="mt-4 p-3 bg-green-50 border border-green-100 rounded-lg flex items-center gap-2 text-green-700 animate-in slide-in-from-top-2">
+ <div className="mt-4 p-3 bg-green-50 border border-green-100 rounded-2xl flex items-center gap-2 text-green-700 animate-in slide-in-from-top-2">
  <Shield className="w-5 h-5 flex-shrink-0" />
  <div className="text-sm">
  <strong>Yes!</strong> We accept cashless claims for <strong>{query}</strong> (and associated TPAs).
@@ -76,7 +76,7 @@ export function InsuranceChecker() {
  )}
 
  {result === 'not_found' && (
- <div className="mt-4 p-3 bg-yellow-50 border border-yellow-100 rounded-lg flex items-center gap-2 text-yellow-700 animate-in slide-in-from-top-2">
+ <div className="mt-4 p-3 bg-yellow-50 border border-yellow-100 rounded-2xl flex items-center gap-2 text-yellow-700 animate-in slide-in-from-top-2">
  <div className="text-sm">
  <strong>Results unclear.</strong> Please call our insurance desk to confirm specifically for <strong>{query}</strong>.
  </div>

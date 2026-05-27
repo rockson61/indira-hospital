@@ -4,7 +4,7 @@ import { Stethoscope } from "healthicons-react/outline";
 
 export function HospitalCard() {
  return (
- <div className="bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden relative group">
+ <div className="bg-slate-900 rounded-3xl border border-slate-800 shadow-clay-dark overflow-hidden relative group">
  {/* Background Glow */}
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-600/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
  <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />

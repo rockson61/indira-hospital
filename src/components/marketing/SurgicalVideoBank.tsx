@@ -64,7 +64,7 @@ export function SurgicalVideoBank() {
  <div className="grid lg:grid-cols-12 gap-8">
  {/* Main Player Area */}
  <div className="lg:col-span-8">
- <div className="relative aspect-video rounded-[2.5rem] overflow-hidden bg-slate-900 border border-slate-200 dark:border-slate-800 group shadow-2xl">
+ <div className="relative aspect-video rounded-[2.5rem] overflow-hidden bg-slate-900 border border-slate-200 dark:border-slate-800 group shadow-clay-dark">
  <Image 
  src={selectedVideo.thumbnail} 
  alt={selectedVideo.title}
@@ -104,7 +104,7 @@ export function SurgicalVideoBank() {
  onClick={() => setSelectedVideo(video)}
  className={`w-full flex gap-4 p-4 rounded-3xl transition-all border text-left ${
  selectedVideo.id === video.id 
- ? "bg-white dark:bg-slate-900 border-fuchsia-500/50 shadow-lg ring-1 ring-fuchsia-500/20" 
+ ? "bg-white dark:bg-slate-900 border-fuchsia-500/50 shadow-clay ring-1 ring-fuchsia-500/20" 
  : "bg-transparent border-transparent hover:bg-white dark:bg-slate-900 dark:hover:bg-slate-900 dark:bg-slate-900"
  }`}
  >

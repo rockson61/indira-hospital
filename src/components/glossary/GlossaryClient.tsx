@@ -86,7 +86,7 @@ export function GlossaryClient() {
  <div className="flex items-center gap-2 overflow-x-auto w-full pb-2 no-scrollbar px-2">
  <button
  onClick={() => setSelectedLetter(null)}
- className={`px-6 py-3 rounded-2xl font-black text-sm uppercase tracking-widest transition-all ${selectedLetter === null ? "bg-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/30" : "bg-white dark:bg-slate-900 text-slate-300 hover:bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-200 dark:border-slate-800"}`}
+ className={`px-6 py-3 rounded-2xl font-black text-sm uppercase tracking-widest transition-all ${selectedLetter === null ? "elite-button-primary shadow-clay shadow-fuchsia-500/30" : "bg-white dark:bg-slate-900 text-slate-300 hover:bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-200 dark:border-slate-800"}`}
  >
  All
  </button>
@@ -94,7 +94,7 @@ export function GlossaryClient() {
  <button
  key={letter}
  onClick={() => setSelectedLetter(letter === selectedLetter ? null : letter)}
- className={`w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-2xl font-black text-sm transition-all ${selectedLetter === letter ? "bg-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/30 scale-110" : "bg-white dark:bg-slate-900 text-slate-300 hover:bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-200 dark:border-slate-800"}`}
+ className={`w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-2xl font-black text-sm transition-all ${selectedLetter === letter ? "elite-button-primary shadow-clay shadow-fuchsia-500/30 scale-110" : "bg-white dark:bg-slate-900 text-slate-300 hover:bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-200 dark:border-slate-800"}`}
  >
  {letter}
  </button>
@@ -121,7 +121,7 @@ export function GlossaryClient() {
  transition={{ delay: idx * 0.1 }}
  >
  <div className="flex items-center gap-6 mb-12">
- <div className="w-20 h-20 rounded-[2rem] bg-slate-900 border border-slate-700/50 flex items-center justify-center shadow-xl shadow-slate-900/10">
+ <div className="w-20 h-20 rounded-[2rem] bg-slate-900 border border-slate-700/50 flex items-center justify-center shadow-float shadow-slate-900/10">
  <h2 className="elite-section-title text-white">{letter}</h2>
  </div>
  <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1"></div>
@@ -163,7 +163,7 @@ export function GlossaryClient() {
  
  <Button 
  size="sm" 
- className="w-full h-11 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold text-xs shadow-lg shadow-fuchsia-500/10"
+ className="w-full h-11 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold text-xs shadow-clay shadow-fuchsia-500/10"
  onClick={(e) => {
  e.preventDefault();
  e.stopPropagation();
@@ -186,7 +186,7 @@ export function GlossaryClient() {
  initial={{ opacity: 0, scale: 0.9 }}
  animate={{ opacity: 1, scale: 1 }}
  exit={{ opacity: 0, scale: 0.9 }}
- className="text-center py-20 bg-white dark:bg-slate-900 rounded-[4rem] border border-slate-200 dark:border-slate-800 shadow-2xl max-w-2xl mx-auto"
+ className="text-center py-20 bg-white dark:bg-slate-900 rounded-[4rem] border border-slate-200 dark:border-slate-800 shadow-clay-dark max-w-2xl mx-auto"
  >
  <div className="w-24 h-24 bg-slate-100 dark:bg-slate-800 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-inner">
  <BookOpen className="w-10 h-10 text-slate-400" />

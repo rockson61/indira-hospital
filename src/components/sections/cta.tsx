@@ -43,7 +43,7 @@ export function CTASection() {
  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hello Indira Elite Concierge, I would like to book a clinical consultation at the Super Speciality Hospital.")}`}
  target="_blank"
  rel="noopener noreferrer"
- className="group rounded-2xl bg-green-500 hover:bg-green-600 p-8 text-center transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/30 hover:-translate-y-1"
+ className="group rounded-2xl bg-green-500 hover:bg-green-600 p-8 text-center transition-all duration-300 hover:shadow-clay-dark hover:shadow-green-500/30 hover:-translate-y-1"
  >
  <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
  <MessageCircle className="w-8 h-8 text-white" />
@@ -58,7 +58,7 @@ export function CTASection() {
  {/* Phone card */}
  <a
  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
- className="group rounded-2xl bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 ring-1 ring-white/20 p-8 text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+ className="group rounded-2xl bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 ring-1 ring-white/20 p-8 text-center transition-all duration-300 hover:shadow-clay-dark hover:-translate-y-1"
  >
  <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
  <Phone className="w-8 h-8 text-white" />

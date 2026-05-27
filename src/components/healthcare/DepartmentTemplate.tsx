@@ -114,7 +114,7 @@ export function DepartmentTemplate({
 
  <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
  <div className="flex-1 space-y-6">
- <div className="inline-flex p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-[#54CAD3] shadow-xl">
+ <div className="inline-flex p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-[#54CAD3] shadow-float">
  {icon || <Stethoscope className="h-10 w-10 text-[#54CAD3]" />}
  </div>
  <h1 className="elite-hero-title bg-clip-text text-transparent bg-gradient-to-r from-white via-fuchsia-100 to-white/80">
@@ -126,7 +126,7 @@ export function DepartmentTemplate({
  <div className="flex flex-wrap gap-4 pt-4">
  <Link
  href="/book-appointment"
- className="inline-flex items-center px-8 py-4 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-xl transition-all shadow-lg shadow-[#54CAD3]/20 hover:scale-105 active:scale-95"
+ className="inline-flex items-center px-8 py-4 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-xl transition-all shadow-clay shadow-[#54CAD3]/20 hover:scale-105 active:scale-95"
  >
  <Calendar className="h-5 w-5 mr-2" />
  Book Consultation
@@ -198,7 +198,7 @@ export function DepartmentTemplate({
  return (
  <ModernCard key={idx} className="p-6 border-fuchsia-100 bg-fuchsia-50/30">
  <div className="flex gap-4">
- <div className="p-3 rounded-lg bg-fuchsia-600 text-white h-fit">
+ <div className="p-3 rounded-2xl bg-fuchsia-600 text-white h-fit">
  <Icon className="w-6 h-6" />
  </div>
  <div>
@@ -239,7 +239,7 @@ export function DepartmentTemplate({
  <Link 
  key={loc.slug} 
  href={`/doctor/near-me/${loc.slug}/${slug}`}
- className="px-3 py-2 bg-white dark:bg-slate-800 rounded-lg border border-indigo-100 dark:border-slate-800 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all shadow-sm"
+ className="px-3 py-2 bg-white dark:bg-slate-800 rounded-2xl border border-indigo-100 dark:border-slate-800 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all shadow-sm"
  >
  {loc.name} {title.split(' ')[0]}
  </Link>
@@ -268,7 +268,7 @@ export function DepartmentTemplate({
  const name = typeof proc === 'string' ? proc : proc.name;
  return (
  <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-fuchsia-50 dark:bg-fuchsia-950 hover:scale-[1.02] transition-all group border border-transparent hover:border-fuchsia-100">
- <div className="bg-fuchsia-100 p-2 rounded-lg text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors">
+ <div className="bg-fuchsia-100 p-2 rounded-2xl text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors">
  <CheckCircle2 className="w-5 h-5" />
  </div>
  <span className="font-bold text-slate-800 dark:text-slate-100 text-lg leading-tight uppercase text-xs tracking-wide">{name}</span>
@@ -351,7 +351,7 @@ export function DepartmentTemplate({
  <div className="flex flex-wrap justify-center gap-6 pt-6">
  <Link
  href="/book-appointment"
- className="px-10 py-5 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-xl hover:scale-105 active:scale-95 text-lg"
+ className="px-10 py-5 bg-[#54CAD3] hover:bg-[#45b5bd] text-[#002b36] font-bold rounded-2xl transition-all shadow-float hover:scale-105 active:scale-95 text-lg"
  >
  Secure Your Priority Appointment
  </Link>

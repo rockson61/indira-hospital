@@ -69,7 +69,7 @@ export function ConversionGrid({ whatsappUrl }: { whatsappUrl: string }) {
  className={cn(
  "group cursor-pointer rounded-3xl p-6 border transition-all duration-300",
  card.color,
- "hover:shadow-xl hover:shadow-black/5"
+ "hover:shadow-float hover:shadow-black/5"
  )}
  onClick={() => {
  if (card.isModal) {

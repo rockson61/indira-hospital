@@ -82,7 +82,7 @@ export function SymptomGuide() {
  );
 
  return (
- <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+ <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-float border border-slate-200 dark:border-slate-800 overflow-hidden">
  {/* Unified Semantic Knowledge & AEO Infrastructure */}
  <JsonLdSchema 
  type="symptom" 
@@ -127,7 +127,7 @@ export function SymptomGuide() {
  {COLUMNS.map(col => (
  <th key={col.id} className="p-4 align-bottom text-center min-w-[120px]">
  <div className="flex flex-col items-center gap-2 group cursor-default">
- <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-md transition-transform group-hover:-translate-y-1", col.color, col.hover)}>
+ <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-clay-sm transition-transform group-hover:-translate-y-1", col.color, col.hover)}>
  <col.icon className="w-6 h-6" />
  </div>
  <div className="font-bold text-slate-900 dark:text-white text-sm mt-2 leading-tight">
@@ -213,7 +213,7 @@ export function SymptomGuide() {
  <Link href="/book-appointment" className="flex-1 md:flex-none text-center px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">
  Book OPD
  </Link>
- <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`} className="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-rose-600/20">
+ <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`} className="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl transition-colors shadow-clay shadow-rose-600/20">
  <PhoneCall className="w-4 h-4" /> Call Emergency
  </a>
  </div>

@@ -48,7 +48,7 @@ export function PayBillClient() {
  if (isSuccess) {
  return (
  <main className="min-h-screen bg-slate-50 dark:bg-slate-950 flex items-center justify-center px-6">
- <div className="bg-white dark:bg-slate-900 p-12 rounded-[3rem] border border-slate-200 dark:border-slate-800 text-center max-w-2xl shadow-xl">
+ <div className="bg-white dark:bg-slate-900 p-12 rounded-[3rem] border border-slate-200 dark:border-slate-800 text-center max-w-2xl shadow-float">
  <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_40px_rgba(16,185,129,0.3)]">
  <CheckCircle2 className="w-10 h-10 text-white" />
  </div>
@@ -57,7 +57,7 @@ export function PayBillClient() {
  Thank you. Your payment of <span className="font-bold text-slate-900 dark:text-white">{formData.amount}</span> has been processed. A confirmation has been sent to your registered mobile/email.
  </p>
  <Link href="/">
- <button className="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all flex items-center gap-3 mx-auto">
+ <button className="elite-button-primary px-10 py-5 rounded-2xl font-bold text-lg transition-all flex items-center gap-3 mx-auto">
  Go to Homepage <ArrowRight className="w-5 h-5" />
  </button>
  </Link>
@@ -152,7 +152,7 @@ export function PayBillClient() {
  <button 
  type="submit" 
  disabled={isSubmitting}
- className="w-full py-5 mt-4 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-700 transition-all shadow-lg shadow-fuchsia-500/25 flex items-center justify-center gap-2 disabled:bg-slate-300"
+ className="w-full py-5 mt-4 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-700 transition-all shadow-clay shadow-fuchsia-500/25 flex items-center justify-center gap-2 disabled:bg-slate-300"
  >
  {isSubmitting ? (
  <div className="w-6 h-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>

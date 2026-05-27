@@ -47,7 +47,7 @@ export function InsuranceMarquee() {
  key={index}
  className="inline-flex items-center gap-4 px-8 py-4 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 group-hover:bg-fuchsia-50 dark:group-hover:bg-fuchsia-950/30 group-hover:border-fuchsia-200 dark:group-hover:border-fuchsia-800 transition-all duration-300"
  >
- <div className="w-8 h-8 rounded-lg bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm">
+ <div className="w-8 h-8 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm">
  <ShieldCheck className="w-4 h-4 text-fuchsia-500" />
  </div>
  <span className="text-sm font-bold text-slate-700 dark:text-slate-200 uppercase tracking-wide">

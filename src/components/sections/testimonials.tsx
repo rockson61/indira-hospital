@@ -41,13 +41,13 @@ export async function Testimonials() {
  {testimonials.map((testimonial: any, i: number) => (
  <div
  key={testimonial.id}
- className="group relative bg-slate-50 dark:bg-slate-800/40 -none dark: rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-200 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-500/30 transition-all duration-700 hover:-translate-y-3 shadow-lg dark:shadow-2xl overflow-hidden"
+ className="group relative bg-slate-50 dark:bg-slate-800/40 -none dark: rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-200 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-500/30 transition-all duration-700 hover:-translate-y-3 shadow-clay dark:shadow-clay-dark overflow-hidden"
  >
  {/* Decorative Background Pattern */}
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/5 dark:bg-fuchsia-500/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-fuchsia-500/10 transition-colors" />
 
  {/* VIDEO PLAY OVERLAY (Premium) */}
- <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-fuchsia-600 to-fuchsia-600 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-fuchsia-900/20 dark:shadow-fuchsia-900/40 border border-fuchsia-500/30 dark:border-slate-200 dark:border-slate-800 cursor-pointer overflow-hidden">
+ <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-fuchsia-600 to-fuchsia-600 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-float shadow-fuchsia-900/20 dark:shadow-fuchsia-900/40 border border-fuchsia-500/30 dark:border-slate-200 dark:border-slate-800 cursor-pointer overflow-hidden">
  <span className="absolute inset-0 bg-white dark:bg-slate-900 animate-pulse group-hover:hidden" />
  <Play className="w-5 h-5 fill-current relative z-10" />
  </div>
@@ -71,7 +71,7 @@ export async function Testimonials() {
  className="h-14 w-14 rounded-2xl bg-slate-100 dark:bg-gray-800 object-cover ring-2 ring-slate-200 dark:ring-white/10"
  />
  ) : (
- <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-fuchsia-500/20">
+ <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 flex items-center justify-center text-white font-black text-xl shadow-clay shadow-fuchsia-500/20">
  {testimonial.patient_name.charAt(0)}
  </div>
  )}

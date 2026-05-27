@@ -51,7 +51,7 @@ export function MedicineSection({
  </ModernCardHeader>
  <ModernCardContent className="p-6">
  {/* Important Notice */}
- <div className="bg-yellow-50 border-2 border-yellow-300 rounded-lg p-4 mb-6 flex items-start gap-3">
+ <div className="bg-yellow-50 border-2 border-yellow-300 rounded-2xl p-4 mb-6 flex items-start gap-3">
  <Shield className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
  <div>
  <h3 className="font-bold text-yellow-900 mb-1">⚠️ Important Medical Disclaimer</h3>
@@ -66,7 +66,7 @@ export function MedicineSection({
  {/* Medicines Grid */}
  <div className="grid md:grid-cols-2 gap-6">
  {medicines.map((medicine, index) => (
- <div key={index} className={`border-2 rounded-lg p-5 ${typeColors[medicine.type]} bg-opacity-50`}>
+ <div key={index} className={`border-2 rounded-2xl p-5 ${typeColors[medicine.type]} bg-opacity-50`}>
  <div className="flex items-start justify-between mb-3">
  <div className="flex-1">
  <h3 className="font-bold text-lg text-foreground mb-1">{medicine.name}</h3>
@@ -121,7 +121,7 @@ export function MedicineSection({
  </div>
 
  {/* Additional Information */}
- <div className="mt-6 bg-fuchsia-50 dark:bg-fuchsia-950 border-2 border-blue-200 rounded-lg p-4">
+ <div className="mt-6 bg-fuchsia-50 dark:bg-fuchsia-950 border-2 border-blue-200 rounded-2xl p-4">
  <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
  <Info className="w-5 h-5" />
  When to Take Medication
@@ -151,7 +151,7 @@ export function MedicineSection({
  </div>
 
  {/* Prescription Notice */}
- <div className="mt-6 bg-gradient-to-r from-fuchsia-50 to-blue-50 border-2 border-fuchsia-200 rounded-lg p-5 text-center">
+ <div className="mt-6 bg-gradient-to-r from-fuchsia-50 to-blue-50 border-2 border-fuchsia-200 rounded-2xl p-5 text-center">
  <h3 className="font-bold text-foreground mb-2">🏥 Get Proper Prescription</h3>
  <p className="text-sm text-foreground/80 mb-4">
  Visit Indira Dental Clinic for a professional diagnosis and personalized treatment plan. 
@@ -160,13 +160,13 @@ export function MedicineSection({
  <div className="flex flex-col sm:flex-row gap-3 justify-center">
  <a
  href="/contact"
- className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-fuchsia-600 text-white rounded-lg font-semibold hover:bg-fuchsia-700 transition-colors"
+ className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-fuchsia-600 text-white rounded-2xl font-semibold hover:bg-fuchsia-700 transition-colors"
  >
  Book Consultation
  </a>
  <a
  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
- className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-fuchsia-600 text-white rounded-lg font-semibold hover:bg-fuchsia-700 transition-colors"
+ className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-fuchsia-600 text-white rounded-2xl font-semibold hover:bg-fuchsia-700 transition-colors"
  >
  Call: {siteConfig.contact.phone}
  </a>

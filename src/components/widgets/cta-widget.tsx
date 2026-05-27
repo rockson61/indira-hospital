@@ -56,8 +56,8 @@ export function CTAWidget({
  viewport={{ once: true }}
  className={`relative overflow-hidden rounded-[2.5rem] border p-8 md:p-12 transition-all duration-500 ${
  urgency 
- ? 'bg-gradient-to-br from-red-600/20 to-orange-600/20 border-red-500/30 shadow-2xl shadow-red-500/10' 
- : 'bg-[#0a0a0a]/80 border-slate-200 dark:border-slate-800 hover:border-slate-200 dark:border-slate-800 shadow-2xl'
+ ? 'bg-gradient-to-br from-red-600/20 to-orange-600/20 border-red-500/30 shadow-clay-dark shadow-red-500/10' 
+ : 'bg-[#0a0a0a]/80 border-slate-200 dark:border-slate-800 hover:border-slate-200 dark:border-slate-800 shadow-clay-dark'
  }`}
  >
  {/* Background Cinematic Glows */}
@@ -116,7 +116,7 @@ export function CTAWidget({
  <Button
  as={Link}
  href={primaryAction.href}
- className={`h-16 px-10 rounded-2xl font-black text-lg transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-2xl ${
+ className={`h-16 px-10 rounded-2xl font-black text-lg transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-clay-dark ${
  urgency 
  ? 'bg-white text-red-600 hover:bg-red-50 shadow-red-500/20' 
  : 'bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white hover:shadow-fuchsia-500/30'

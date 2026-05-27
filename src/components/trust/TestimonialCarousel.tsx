@@ -43,7 +43,7 @@ export function TestimonialCarousel({ testimonials = [], autoPlay = true, interv
  return (
  <div className="relative">
  {testimonials && testimonials.length > 0 ? (
- <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-none shadow-md">
+ <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-none shadow-clay-sm">
  <CardContent className="p-8">
  <div className="flex justify-center mb-6">
  <Quote className="h-12 w-12 text-primary/30" />

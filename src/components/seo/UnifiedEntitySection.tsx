@@ -186,7 +186,7 @@ export async function UnifiedEntitySection({
  <Link
  key={item.slug}
  href={item.url}
- className={`group flex items-center gap-3 px-4 py-3.5 rounded-xl border text-sm font-bold transition-all hover:-translate-y-0.5 hover:shadow-md ${colors}`}
+ className={`group flex items-center gap-3 px-4 py-3.5 rounded-xl border text-sm font-bold transition-all hover:-translate-y-0.5 hover:shadow-clay-sm ${colors}`}
  >
  <Icon className="w-4 h-4 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
  <span className="truncate text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white">{item.name}</span>

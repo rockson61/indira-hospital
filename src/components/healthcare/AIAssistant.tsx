@@ -163,7 +163,7 @@ export const AIAssistant = () => {
  <button
  key={i}
  onClick={() => handleSend(query.text)}
- className="whitespace-nowrap flex items-center gap-2 px-3 py-1.5 bg-slate-50 hover:bg-fuchsia-50 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors"
+ className="whitespace-nowrap flex items-center gap-2 px-3 py-1.5 bg-slate-50 hover:bg-fuchsia-50 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors"
  >
  {query.icon} {query.text}
  </button>

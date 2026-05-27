@@ -58,8 +58,8 @@ export function Alert({ variant = "default", children, className }: AlertProps) 
  return (
  <div
  className={cn(
- "relative overflow-hidden rounded-lg border p-4",
- " shadow-lg",
+ "relative overflow-hidden rounded-2xl border p-4",
+ " shadow-clay",
  style.bg,
  style.border,
  className,

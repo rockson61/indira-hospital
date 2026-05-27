@@ -50,7 +50,7 @@ export function TreatmentSecondaryNav({
  initial={{ y: -100, opacity: 0 }}
  animate={{ y: 0, opacity: 1 }}
  exit={{ y: -100, opacity: 0 }}
- className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-lg shadow-black/5"
+ className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-clay shadow-black/5"
  >
  <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
  {/* Left: Breadcrumb/Title */}
@@ -89,7 +89,7 @@ export function TreatmentSecondaryNav({
  </Button>
  <Button 
  size="sm" 
- className="rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs uppercase tracking-widest px-6 h-9 shadow-lg shadow-black/10 transition-transform hover:scale-105"
+ className="rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs uppercase tracking-widest px-6 h-9 shadow-clay shadow-black/10 transition-transform hover:scale-105"
  onClick={() => window.open(whatsappUrl, '_blank')}
  >
  Book Now

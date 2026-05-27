@@ -32,7 +32,7 @@ export function ServicesOverview({ locationName }: ServicesOverviewProps) {
  <Link key={index} href={service.href} className="block group h-full">
  <ModernCard className="h-full hover:border-primary/50 transition-colors duration-300">
  <ModernCardContent className="p-6 flex flex-col h-full">
- <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+ <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
  <service.icon className="w-6 h-6" />
  </div>
 

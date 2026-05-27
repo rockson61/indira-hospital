@@ -113,7 +113,7 @@ export function MarketingContent({
  </h2>
  <ol className="grid gap-3 sm:grid-cols-2">
  {sections.map((section, index) => (
- <li key={section.id} className="rounded-xl bg-primary/10 px-4 py-3 text-sm font-medium text-primary transition hover:bg-primary/20 hover:shadow-md">
+ <li key={section.id} className="rounded-xl bg-primary/10 px-4 py-3 text-sm font-medium text-primary transition hover:bg-primary/20 hover:shadow-clay-sm">
  <Link href={`#${section.id}`} className="flex items-center justify-between gap-2">
  <span className="flex items-center gap-2">
  <ListChecks className="h-4 w-4" />

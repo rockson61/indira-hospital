@@ -95,7 +95,7 @@ export function ServicePeopleAlsoSearchFor({
  <Link
  key={`${query.link}-${index}`}
  href={query.link}
- className="flex items-center gap-2 p-3 bg-muted rounded-lg hover:bg-fuchsia-50 dark:bg-fuchsia-950 hover:text-fuchsia-700 transition-colors group"
+ className="flex items-center gap-2 p-3 bg-muted rounded-2xl hover:bg-fuchsia-50 dark:bg-fuchsia-950 hover:text-fuchsia-700 transition-colors group"
  >
  <ArrowRight className="w-4 h-4 text-fuchsia-500 group-hover:text-fuchsia-700 flex-shrink-0" />
  <span className="text-sm font-medium text-foreground/90 group-hover:text-fuchsia-700 flex-1">

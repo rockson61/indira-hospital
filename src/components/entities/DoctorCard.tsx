@@ -100,7 +100,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
  </div>
  {showBookButton && (
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
- className="hidden sm:inline-flex items-center px-6 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold rounded-full hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 hover:shadow-md transition-all">
+ className="hidden sm:inline-flex items-center px-6 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold rounded-full hover:bg-fuchsia-700 dark:hover:bg-fuchsia-200 hover:shadow-clay-sm transition-all">
  <MessageCircle className="w-4 h-4 mr-2" />
  Book
  </a>
@@ -157,7 +157,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
  transition={{ duration: 0.4 }}
  className="h-full"
  >
- <article className="group relative overflow-hidden rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 shadow-sm hover:shadow-2xl dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col bg-white dark:bg-slate-900">
+ <article className="group relative overflow-hidden rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 shadow-sm hover:shadow-clay-dark dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col bg-white dark:bg-slate-900">
  <div className="relative aspect-[4/3] bg-fuchsia-50 dark:bg-fuchsia-950 overflow-hidden m-2 rounded-[1.5rem] shadow-inner">
  {doctor.image && getImageUrl(doctor.image) ? (
  <Image
@@ -174,12 +174,12 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
 
  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
- <h3 className="text-lg font-black font-heading leading-tight tracking-tight drop-shadow-md">
+ <h3 className="text-lg font-black font-heading leading-tight tracking-tight drop-shadow-clay-sm">
  <Link href={doctorUrl} className="before:absolute before:inset-0" aria-label={`View profile of ${doctor.name}`}>
  {doctor.name}
  </Link>
  </h3>
- <p className="text-fuchsia-300 text-[10px] uppercase tracking-widest font-bold mt-0.5 max-w-full truncate drop-shadow">{deptName}</p>
+ <p className="text-fuchsia-300 text-[10px] uppercase tracking-widest font-bold mt-0.5 max-w-full truncate drop-shadow-soft">{deptName}</p>
  </div>
 
  {doctor.experience_years && (
@@ -192,7 +192,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
 
  <div className="px-5 py-4 flex-1 flex flex-col relative z-10">
  <div className="flex items-center gap-2 mb-3">
- <p className="text-xs font-bold text-slate-700 dark:text-slate-200 truncate bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700">
+ <p className="text-xs font-bold text-slate-700 dark:text-slate-200 truncate bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-xl border border-slate-200 dark:border-slate-700">
  {doctor.designation}
  </p>
  </div>
@@ -206,7 +206,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
  <div className="mt-auto flex gap-2 pt-4 border-t border-slate-100 dark:border-slate-800/60">
  {showBookButton && (
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
- className="relative z-20 flex-[1.5] flex items-center justify-center gap-1.5 bg-fuchsia-600 hover:bg-fuchsia-500 text-white text-[12px] uppercase tracking-wider font-black py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg dark:shadow-none"
+ className="relative z-20 flex-[1.5] flex items-center justify-center gap-1.5 elite-button-primary text-[12px] uppercase tracking-wider font-black py-2.5 rounded-xl transition-all shadow-clay-sm hover:shadow-clay dark:shadow-none"
  aria-label={`Book an appointment with ${doctor.name} via WhatsApp`}
  >
  <MessageCircle className="w-3.5 h-3.5" /> Book

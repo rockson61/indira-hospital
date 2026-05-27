@@ -37,7 +37,7 @@ export function CostCalculator() {
  const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;m interested in an Elite Consultation for ${procedure.procedure}. My estimated value range is around ₹${estimatedCost.toLocaleString()}.`)}`;
 
  return (
- <Card className="p-8 bg-slate-950/40 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-[2.5rem] relative overflow-hidden">
+ <Card className="p-8 bg-slate-950/40 border border-slate-200 dark:border-slate-800 shadow-clay-dark rounded-[2.5rem] relative overflow-hidden">
  <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-[60px] pointer-events-none" />
  
  <div className="flex items-center gap-3 mb-8">
@@ -68,7 +68,7 @@ export function CostCalculator() {
  <button
  key={r.id}
  onClick={() => setRoomType(r.id)}
- className={`p-4 rounded-2xl border text-[10px] font-black uppercase tracking-widest transition-all ${roomType === r.id ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/20' : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 hover:bg-white dark:bg-slate-900'}`}
+ className={`p-4 rounded-2xl border text-[10px] font-black uppercase tracking-widest transition-all ${roomType === r.id ? 'bg-indigo-600 border-indigo-500 text-white shadow-clay shadow-indigo-600/20' : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 hover:bg-white dark:bg-slate-900'}`}
  >
  {r.name}
  </button>

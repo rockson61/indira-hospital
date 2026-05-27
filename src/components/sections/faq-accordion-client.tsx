@@ -10,7 +10,7 @@ interface FAQAccordionClientProps {
 
 function FAQItem({ faq, isOpen, onToggle }: { faq: { question: string; answer: string }; isOpen: boolean; onToggle: () => void }) {
  return (
- <div className={`border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? "shadow-lg shadow-primary-100/50 border-primary-200" : "hover:border-gray-300"}`}>
+ <div className={`border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? "shadow-clay shadow-primary-100/50 border-primary-200" : "hover:border-gray-300"}`}>
  <button
  onClick={onToggle}
  className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"
@@ -23,7 +23,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { question: string; answer: s
  </button>
  <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
  <div className="overflow-hidden">
- <p className="px-5 sm:px-6 pb-5 sm:pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+ <p className="px-5 sm:px-6 pb-5 sm:pb-6 text-slate-600 dark:text-slate-400 dark:text-gray-400 leading-relaxed">
  {faq.answer}
  </p>
  </div>
@@ -46,7 +46,7 @@ export function FAQAccordionClient({ faqs }: FAQAccordionClientProps) {
  <h2 className="elite-section-title text-gray-900 dark:text-white">
  Have Questions? We Have Answers
  </h2>
- <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+ <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 dark:text-gray-400">
  Get quick answers about our services, treatments, and hospital facilities.
  </p>
  </div>
@@ -63,7 +63,7 @@ export function FAQAccordionClient({ faqs }: FAQAccordionClientProps) {
  </div>
 
  <div className="mt-10 text-center">
- <p className="text-sm text-gray-500 dark:text-gray-400">
+ <p className="text-sm text-slate-600 dark:text-slate-400 dark:text-gray-400">
  Still have questions?{" "}
  <a
  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I have a question about Indira Hospital.")}`}

@@ -12,7 +12,7 @@ export function InsuranceCoverage() {
  {insurancePlans.map((plan, index) => (
  <article 
  key={index} 
- className="group relative flex flex-col h-full bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-3xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 overflow-hidden"
+ className="group relative flex flex-col h-full bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/50 rounded-3xl p-6 shadow-sm hover:shadow-clay-dark hover:-translate-y-1.5 dark:hover:shadow-fuchsia-500/10 transition-all duration-500 overflow-hidden"
  >
  {/* Decorative Subtle Glow */}
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-100 dark:bg-fuchsia-900/20 rounded-full blur-3xl opacity-0 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none -mr-10 -mt-10" />
@@ -30,7 +30,7 @@ export function InsuranceCoverage() {
  {plan.treatments.map((treatment, idx) => (
  <span
  key={idx}
- className="inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60 group-hover:border-slate-300 dark:group-hover:border-slate-600 transition-colors"
+ className="inline-flex items-center px-2.5 py-1 rounded-2xl text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60 group-hover:border-slate-300 dark:group-hover:border-slate-600 transition-colors"
  >
  {treatment}
  </span>

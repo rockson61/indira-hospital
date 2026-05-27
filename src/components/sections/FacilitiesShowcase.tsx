@@ -25,7 +25,7 @@ export function FacilitiesShowcase() {
  {clinicFacilities.map((facility, index) => (
  <div
  key={index}
- className="group bg-white dark:bg-slate-800/50 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-200 dark:hover:border-fuchsia-900 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4"
+ className="group bg-white dark:bg-slate-800/50 p-6 rounded-3xl border border-slate-100 dark:border-slate-700 hover:border-fuchsia-200 dark:hover:border-fuchsia-900 shadow-sm hover:shadow-clay-sm transition-all duration-300 flex items-center gap-4"
  >
  <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center group-hover:scale-110 transition-transform">
  {index === 0 && <Microscope className="w-6 h-6 text-fuchsia-600" />}
@@ -51,7 +51,7 @@ export function FacilitiesShowcase() {
 
  <div className="mt-16 flex flex-col md:flex-row gap-8 max-w-7xl mx-auto px-4">
  {/* 24/7 Pharmacy Card (Keep as Highlight) */}
- <div className="flex-1 group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 border border-emerald-100 dark:border-emerald-900/30 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+ <div className="flex-1 group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 border border-emerald-100 dark:border-emerald-900/30 overflow-hidden shadow-sm hover:shadow-float transition-all duration-500">
  <div className="relative z-10">
  <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center mb-6 border border-emerald-100 dark:border-emerald-900">
  <Pills2 className="w-8 h-8 text-emerald-500" />
@@ -67,7 +67,7 @@ export function FacilitiesShowcase() {
  </div>
 
  {/* Scans & Imaging Card (Keep as Highlight) */}
- <div className="flex-1 group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 border border-blue-100 dark:border-blue-900/30 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+ <div className="flex-1 group relative bg-white dark:bg-slate-800/50 rounded-[3rem] p-10 border border-blue-100 dark:border-blue-900/30 overflow-hidden shadow-sm hover:shadow-float transition-all duration-500">
  <div className="relative z-10">
  <div className="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-950 flex items-center justify-center mb-6 border border-blue-100 dark:border-blue-900">
  <Scan className="w-8 h-8 text-blue-500" />

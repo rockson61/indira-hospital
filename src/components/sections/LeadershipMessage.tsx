@@ -26,7 +26,7 @@ export function LeadershipMessage() {
  className="flex justify-center -space-x-12 sm:-space-x-16"
  >
  {/* Dr. P. Shankar */}
- <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-[6px] border-white dark:border-slate-900 shadow-2xl overflow-hidden z-20">
+ <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-[6px] border-white dark:border-slate-900 shadow-clay-dark overflow-hidden z-20">
  <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 animate-pulse" />
  <Image 
  src="/images/doctors/dr-shankar.jpg" 
@@ -38,7 +38,7 @@ export function LeadershipMessage() {
  />
  </div>
  {/* Dr. Karan Shankar */}
- <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-[6px] border-white dark:border-slate-900 shadow-2xl overflow-hidden z-10 translate-y-12 sm:translate-y-16">
+ <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-[6px] border-white dark:border-slate-900 shadow-clay-dark overflow-hidden z-10 translate-y-12 sm:translate-y-16">
  <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 animate-pulse" />
  <Image 
  src="/images/doctors/dr-karan-shankar.png" 
@@ -57,10 +57,10 @@ export function LeadershipMessage() {
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
  transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
- className="absolute -bottom-16 sm:-bottom-20 -right-4 sm:-right-8 z-30 elite-card p-5 sm:p-6 rounded-3xl max-w-[280px] sm:max-w-[320px] shadow-2xl"
+ className="absolute -bottom-16 sm:-bottom-20 -right-4 sm:-right-8 z-30 elite-card p-5 sm:p-6 rounded-3xl max-w-[280px] sm:max-w-[320px] shadow-clay-dark"
  >
  <div className="flex items-center gap-4 mb-3">
- <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/30">
+ <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-clay shadow-amber-500/30">
  <Award className="w-6 h-6 text-white" />
  </div>
  <p className="font-black text-slate-900 dark:text-white leading-tight text-sm sm:text-base">
@@ -107,7 +107,7 @@ export function LeadershipMessage() {
  
  <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-8">
  <div className="flex items-center gap-4">
- <div className="w-12 h-12 rounded-full overflow-hidden relative shadow-md">
+ <div className="w-12 h-12 rounded-full overflow-hidden relative shadow-clay-sm">
  <Image src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" fill className="object-cover" sizes="48px" />
  </div>
  <div>
@@ -116,7 +116,7 @@ export function LeadershipMessage() {
  </div>
  </div>
  <div className="flex items-center gap-4">
- <div className="w-12 h-12 rounded-full overflow-hidden relative shadow-md bg-slate-100">
+ <div className="w-12 h-12 rounded-full overflow-hidden relative shadow-clay-sm bg-slate-100">
  <Image src="/images/doctors/dr-karan-shankar.png" alt="Dr Karan Shankar" fill className="object-cover object-top" sizes="48px" />
  </div>
  <div>

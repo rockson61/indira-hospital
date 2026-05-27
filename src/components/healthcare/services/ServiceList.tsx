@@ -33,7 +33,7 @@ export function ServicesOverview() {
  {services.map((service, index) => {
  const IconComponent = service.icon
  return (
- <div key={index} className="card-modern group hover:scale-[1.02] hover:shadow-2xl transition-all duration-500 overflow-hidden">
+ <div key={index} className="card-modern group hover:scale-[1.02] hover:shadow-clay-dark transition-all duration-500 overflow-hidden">
  {service.popular && (
  <div className="gradient-bg text-white text-sm font-bold px-4 py-2 text-center">
  Most Popular
@@ -42,7 +42,7 @@ export function ServicesOverview() {
 
  <div className="p-6 space-y-4">
  {/* Service Image */}
- <div className="relative h-48 rounded-lg overflow-hidden">
+ <div className="relative h-48 rounded-2xl overflow-hidden">
  <Image
  src={service.image || "/dental-clinic-vellore.jpg"}
  alt={service.title}

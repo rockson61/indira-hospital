@@ -92,7 +92,7 @@ export function Footer() {
  <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
  Katpadi (Main Hospital)
  </h4>
- <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:-rotate-1">
+ <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-clay-dark shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:-rotate-1">
  <iframe 
  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33540.67112314793!2d79.07591166690614!3d12.922276485703463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad47185bb9c311%3A0x86287a4d543bf128!2sIndira%20Superspeciality%20Hospital!5e1!3m2!1sen!2sin!4v1774971454932!5m2!1sen!2sin" 
  className="w-full h-full rounded-[1.75rem] border-0"
@@ -109,7 +109,7 @@ export function Footer() {
  <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
  Near CMC (Nursing Home)
  </h4>
- <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:rotate-1">
+ <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-clay-dark shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:rotate-1">
  <iframe 
  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.547340574835!2d79.1401831!3d12.9244533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3890563e2d3f%3A0xd059cd5df955c459!2sIndira%20Nursing%20Home!5e1!3m2!1sen!2sin!4v1774971373744!5m2!1sen!2sin" 
  className="w-full h-full rounded-[1.75rem] border-0"
@@ -126,7 +126,7 @@ export function Footer() {
  <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
  Konavattum (Nursing Home)
  </h4>
- <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:-rotate-1">
+ <div className="aspect-video rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-clay-dark shadow-slate-200/50 dark:shadow-none bg-white dark:bg-slate-950 p-1.5 transition-all duration-500 group-hover:scale-[1.02] group-hover:-rotate-1">
  <iframe 
  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33540.67090632708!2d79.07591167910155!3d12.922278099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3900253ba9c1%3A0x5a6ce10c5c8e5f34!2sIndra%20nursing%20home!5e1!3m2!1sen!2sin!4v1774971424450!5m2!1sen!2sin" 
  className="w-full h-full rounded-[1.75rem] border-0"

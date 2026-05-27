@@ -116,7 +116,7 @@ export function DiagnosticTemplate({
 
  {/* Booking Card */}
  <div className="lg:col-span-4 sticky top-24">
- <div className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] border shadow-2xl shadow-fuchsia-500/10 relative overflow-hidden">
+ <div className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] border shadow-clay-dark shadow-fuchsia-500/10 relative overflow-hidden">
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 blur-3xl -z-10" />
  <div className="flex justify-between items-start mb-6">
  <div>
@@ -148,7 +148,7 @@ export function DiagnosticTemplate({
  </div>
 
  <div className="space-y-3">
- <Button className="w-full h-14 rounded-2xl bg-fuchsia-600 hover:bg-fuchsia-700 text-white shadow-lg shadow-fuchsia-500/20 text-md font-bold uppercase tracking-wider" asChild>
+ <Button className="w-full h-14 rounded-2xl bg-fuchsia-600 hover:bg-fuchsia-700 text-white shadow-clay shadow-fuchsia-500/20 text-md font-bold uppercase tracking-wider" asChild>
  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
  <MessageCircle className="w-5 h-5 mr-2" />
  Book via WhatsApp

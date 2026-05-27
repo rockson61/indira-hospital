@@ -26,13 +26,13 @@ const ComparisonRow = ({ feature, traditional, elite, isPositive = true }: Compa
 export const EliteComparisonBank = ({ type = 'laser' }: { type?: 'laser' | 'laparoscopy' | 'orthopedics' | 'ophthalmology' | 'general' }) => {
  return (
  <div className="my-16">
- <div className="bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 p-8 md:p-12 shadow-2xl relative overflow-hidden">
+ <div className="bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 p-8 md:p-12 shadow-clay-dark relative overflow-hidden">
  {/* Decorative Elements */}
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-100 dark:bg-fuchsia-900/20 blur-[100px] rounded-full -mr-32 -mt-32" />
  
  <div className="relative z-10">
  <div className="flex items-center gap-3 mb-8">
- <div className="w-12 h-12 rounded-2xl bg-fuchsia-600 flex items-center justify-center text-white shadow-lg shadow-fuchsia-500/30">
+ <div className="w-12 h-12 rounded-2xl bg-fuchsia-600 flex items-center justify-center text-white shadow-clay shadow-fuchsia-500/30">
  <Zap className="w-6 h-6" />
  </div>
  <div>

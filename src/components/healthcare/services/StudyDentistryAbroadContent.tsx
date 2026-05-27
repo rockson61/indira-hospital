@@ -18,7 +18,7 @@ export function StudyDentistryAbroadContent() {
  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
  </div>
  <div className="container relative z-10 px-4 text-center">
- <div className="inline-flex items-center px-4 py-2 rounded-full bg-background/20 border border-slate-200 dark:border-slate-800 mb-8 shadow-xl animate-fade-in-up">
+ <div className="inline-flex items-center px-4 py-2 rounded-full bg-background/20 border border-slate-200 dark:border-slate-800 mb-8 shadow-float animate-fade-in-up">
  <GraduationCap className="w-5 h-5 mr-2 text-warning" />
  <span className="text-sm font-bold tracking-wide">Future Dentists Program</span>
  </div>
@@ -34,7 +34,7 @@ export function StudyDentistryAbroadContent() {
  href="/contact"
  size="lg"
  color="warning"
- variant="shadow"
+ variant="shadow-soft"
  className="font-bold text-black dark:text-white"
  endContent={<ArrowRight className="w-4 h-4" />}
  >
@@ -63,7 +63,7 @@ export function StudyDentistryAbroadContent() {
  { icon: BookOpen, title: "Affordable Education", desc: "Tuition fees significantly lower than private colleges in India." },
  { icon: CheckCircle, title: "No Capitation Fees", desc: "Merit-based admission with zero donation or hidden charges." }
  ].map((item, idx) => (
- <ModernCard key={idx} className="group hover:-translate-y-2 transition-all duration-300 border-none shadow-lg bg-background dark:bg-default-50/5">
+ <ModernCard key={idx} className="group hover:-translate-y-2 transition-all duration-300 border-none shadow-clay bg-background dark:bg-default-50/5">
  <ModernCardContent className="p-8">
  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
  <item.icon className="w-7 h-7" />
@@ -92,7 +92,7 @@ export function StudyDentistryAbroadContent() {
  as={Link}
  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
  size="lg"
- className="bg-card text-primary font-bold shadow-xl hover:bg-muted dark:bg-primary dark:text-white"
+ className="bg-card text-primary font-bold shadow-float hover:bg-muted dark:bg-primary dark:text-white"
  startContent={<Phone className="w-5 h-5" />}
  >
  Call: {siteConfig.contact.phone}

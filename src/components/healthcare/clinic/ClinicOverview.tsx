@@ -118,7 +118,7 @@ export function ClinicsOverview() {
  <h3 className="text-xl font-bold text-foreground mb-4">Nearby Areas We Serve</h3>
  <div className="grid grid-cols-2 gap-3">
  {nearbyLocations.map((location, index) => (
- <div key={index} className="flex items-center justify-between p-3 bg-card/30 rounded-lg">
+ <div key={index} className="flex items-center justify-between p-3 bg-card/30 rounded-2xl">
  <div>
  <p className="font-medium text-foreground">{location.name}</p>
  <p className="text-xs text-muted-foreground">{location.distance}</p>
@@ -155,7 +155,7 @@ export function ClinicsOverview() {
  {clinicFeatures.map((feature, index) => (
  <ModernCard
  key={index}
- className="text-center group hover:scale-[1.02] hover:shadow-2xl transition-all duration-500 p-6 bg-card dark:bg-card/50 border-border"
+ className="text-center group hover:scale-[1.02] hover:shadow-clay-dark transition-all duration-500 p-6 bg-card dark:bg-card/50 border-border"
  >
  <div className="inline-flex items-center justify-center w-12 h-12 gradient-bg rounded-xl mb-4">
  <feature.icon className="h-6 w-6 text-white" />

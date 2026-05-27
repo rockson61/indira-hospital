@@ -3,7 +3,7 @@ import { Plane, ArrowRight, HeartPulse, Globe2 } from "lucide-react";
 
 export function InternationalPatientCard() {
  return (
- <div className="bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden relative group">
+ <div className="bg-slate-900 rounded-3xl border border-slate-800 shadow-clay-dark overflow-hidden relative group">
  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-900 to-slate-900" />
  
  {/* World Map Overlay Graphic (Abstract) */}

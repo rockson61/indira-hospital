@@ -108,7 +108,7 @@ export function AvailabilityTicker() {
 
 export function AvailabilityCTA() {
  return (
- <div className="p-6 bg-gradient-to-r from-slate-900 to-slate-950 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-fuchsia-500/30 transition-all">
+ <div className="p-6 bg-gradient-to-r from-slate-900 to-slate-950 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-clay-dark flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-fuchsia-500/30 transition-all">
  <div className="flex items-center gap-6">
  <div className="w-16 h-16 bg-fuchsia-600/10 rounded-2xl flex items-center justify-center border border-fuchsia-500/20">
  <Zap className="w-8 h-8 text-fuchsia-500 animate-pulse" />
