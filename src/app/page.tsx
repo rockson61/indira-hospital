@@ -35,8 +35,8 @@ import { ShieldCheck, Award, Users, Globe } from "lucide-react";
 import { constructMetadata } from "@/lib/seo-utils";
 
 export const metadata: Metadata = constructMetadata({
- title: "Best Hospital in Vellore | Indira Super Speciality Hospital",
- description: "Advanced laser & laparoscopic surgeries in Vellore. 15,000+ successful cases. NABH Accredited super speciality care with same-day discharge.",
+ title: "Best Hospital in Vellore | Top Specialists & Same-Day Recovery",
+ description: "Experience world-class surgical care at Indira Super Speciality Hospital in Vellore. 15,000+ successful procedures by board-certified doctors. Book your consultation today!",
  path: "/",
  keywords: [
  "best hospital in Vellore",
@@ -290,7 +290,7 @@ export default function Home() {
  title="Best Hospital in Vellore: Clinical Trust & Facts"
  items={[
  { label: "NABH Accreditation", value: "Fully Verified Patient Safety Protocols", icon: ShieldCheck },
- { label: "Surgical Success", value: "15,000+ Laparoscopic & Laser Procedures", icon: Award },
+ { label: "Surgical Success", value: "15,000+ Procedures by Board-Certified Surgeons", icon: Award },
  { label: "Patient Care", value: "Specialized Same-Day Discharge Options", icon: Users },
  { label: "Global Reach", value: "Dedicated International Medical Tourism Hub", icon: Globe },
  ]}

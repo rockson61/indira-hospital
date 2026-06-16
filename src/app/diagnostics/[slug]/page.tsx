@@ -62,13 +62,13 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  <span className="inline-block px-3 py-1 bg-fuchsia-100 text-fuchsia-700 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
  {test.category}
  </span>
- <h1 className="elite-hero-title text-slate-900 dark:text-white mb-2">
- {test.name} <br className="hidden sm:block" />
- <span className="text-fuchsia-600 dark:text-fuchsia-400">in Vellore, Tamil Nadu</span>
- </h1>
- <p className="text-muted-foreground max-w-2xl">
- {test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 150) || `Comprehensive ${test.name} with accurate reporting and quick turnaround time.`}
- </p>
+  <h1 className="elite-hero-title text-slate-900 dark:text-white mb-10 text-left">
+  {test.name} <br />
+  <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, Tamil Nadu</span>
+  </h1>
+  <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8 italic">
+  {test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 150) || `Comprehensive ${test.name} with accurate reporting and quick turnaround time.`}
+  </p>
  </div>
  <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border shadow-sm min-w-[300px]">
  <div className="flex items-baseline gap-1 mb-1">

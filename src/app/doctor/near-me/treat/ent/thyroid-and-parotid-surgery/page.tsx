@@ -92,7 +92,7 @@ export default function ThyroidSurgeryENTPage() {
  The Head and Neck region contains some of the most intricate anatomy in the human body. ENT surgeons spend years training specifically on these structures, giving them a unique advantage in managing pathologies of the thyroid and salivary glands. At Indira Hospital, our Head & Neck service specialized in providing surgical solutions for both benign nodules and malignant tumors.
  </p>
 
- <h4 className="text-[#005f73] dark:text-blue-400 font-heading italic border-b border-blue-100 pb-2">ENT Head & Neck Procedures:</h4>
+ <h4 className="text-fuchsia-700 dark:text-blue-400 font-heading border-b border-blue-100 pb-2">ENT Head & Neck Procedures:</h4>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 relative z-10">
  {[
  "Total & Hemi-Thyroidectomy (for nodules/cancer)",
@@ -114,7 +114,7 @@ export default function ThyroidSurgeryENTPage() {
  One of the most concerning risks of thyroid surgery is a potential change in voice due to injury of the **recurrent laryngeal nerve**. In parotid surgery, the primary risk is injury to the **facial nerve**, which could lead to facial paralysis. We use **Intra-operative Nerve Monitoring (IONM)** at Indira Hospital to mitigate these risks. This technology provides the surgeon with real-time electrical feedback, allowing them to identify and protect these microscopic nerves with absolute certainty.
  </p>
 
- <h4 className="font-heading text-[#005f73] dark:text-blue-400 mt-10">Diagnostic Precision:</h4>
+ <h4 className="font-heading text-fuchsia-700 dark:text-blue-400 mt-10">Diagnostic Precision:</h4>
  <ul>
  <li>**FNAC (Fine Needle Aspiration)**: Safe, early diagnostic step to determine if a swelling is benign or suspicious.</li>
  <li>**High-Resolution Ultrasonography (USG)**: Real-time mapping of the tumor’s vascularity and relationship to major vessels.</li>

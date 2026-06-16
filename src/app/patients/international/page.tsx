@@ -57,10 +57,10 @@ export default function InternationalPatientsPage() {
  <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
  <Globe2 className="w-4 h-4" /> Global Tourism Hub
  </span>
- <h1 className="elite-hero-title mb-6">
- Leading Medical Tourism <br className="hidden sm:block" />
- <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Hospital in India.</span>
- </h1>
+  <h1 className="elite-hero-title text-white mb-10 text-center">
+  Leading Medical Tourism <br />
+  <span className="elite-gradient-text text-3xl sm:text-4xl">Hospital in India.</span>
+  </h1>
  <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
  Indira Super Speciality Hospital provides advanced medical treatments to patients from over 50 countries with dedicated 1-on-1 support for travel, accommodation, and translation.
  </p>

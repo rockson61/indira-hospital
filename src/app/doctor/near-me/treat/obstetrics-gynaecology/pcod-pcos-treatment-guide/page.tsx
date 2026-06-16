@@ -95,7 +95,7 @@ export default function PCODManagementPage() {
  At Indira Hospital, our Gynaecology and Endocrine teams work together to provide a **"360-Degree Management"** plan. We move beyond just 'prescribing birth control' to address the underlying metabolic dysregulation that drives the condition.
  </p>
 
- <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Common PCOS Symptoms:</h4>
+ <h4 className="text-fuchsia-700 dark:text-rose-400 font-heading">Common PCOS Symptoms:</h4>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
  {[
  "Irregular or prolonged menstrual cycles",
@@ -117,7 +117,7 @@ export default function PCODManagementPage() {
  The "Indira PCOS Protocol" is built on four pillars: **Metabolic Audit, Clinical Nutrition, Stress Resilience, and Targeted Medical Therapy**. We track your progress through objective data—not just how you feel, but through monthly monitoring of insulin levels, BMI, and hormonal ratios. This scientific approach ensures that we are making real progress toward reversing the condition and preventing its long-term complications.
  </p>
 
- <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">What are the Benefits of Women&apos;s Care Surgery?</h4>
+ <h4 className="font-heading text-fuchsia-700 dark:text-rose-400 mt-10">What are the Benefits of Women&apos;s Care Surgery?</h4>
  <ul>
  <li>**Advanced Pelvic Ultrasound**: Identifying 'string of pearls' follicles and monitoring endometrial thickness with high clarity.</li>
  <li>**In-house Metabolic Lab**: Rapid testing for oral glucose tolerance and fasting insulin levels.</li>

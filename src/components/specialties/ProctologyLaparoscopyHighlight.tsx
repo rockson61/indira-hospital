@@ -47,11 +47,11 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  <div className="inline-flex items-center gap-3 px-5 py-2 bg-fuchsia-50 dark:bg-slate-900 rounded-full border border-fuchsia-100 dark:border-slate-200 dark:border-slate-800 text-fuchsia-600 dark:text-fuchsia-300 text-[10px] font-black uppercase tracking-[0.3em] mb-4 shadow-sm animate-pulse">
  ⭐ Most Requested Elite Surgeries
  </div>
- <h2 className="elite-section-title text-slate-900 dark:text-white uppercase italic er">
+ <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">
  Proctology & Laparoscopic<br />
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-600 dark:from-fuchsia-400 dark:to-indigo-300">{locationLabel}</span>
  </h2>
- <p className="text-slate-500 dark:text-slate-400 text-base mt-4 max-w-2xl font-light italic">
+ <p className="text-slate-500 dark:text-slate-400 text-base mt-4 max-w-2xl font-light">
  Indira Hospital is a pioneer in laser proctology and minimally invasive laparoscopic surgery — offering same-day discharge, stitchless procedures, and world-class care at half the metro cost.
  </p>
  </div>
@@ -70,7 +70,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  <span className="text-2xl font-black">✚</span>
  </div>
  <div>
- <h3 className="font-black text-slate-900 dark:text-white text-xl uppercase italic tracking-tight mb-1">Laser Proctology</h3>
+ <h3 className="font-black text-slate-900 dark:text-white text-xl uppercase tracking-tight mb-1">Laser Proctology</h3>
  <p className="text-xs text-red-600 dark:text-red-400 font-bold tracking-widest uppercase">Piles • Fistula • Fissure • Sinus</p>
  </div>
  </div>
@@ -87,8 +87,8 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  </div>
  <span className="text-[8px] font-black px-3 py-1 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400 rounded-full uppercase tracking-tighter">{t.tag}</span>
  </div>
- <p className="font-black text-slate-900 dark:text-white text-sm leading-tight mb-2 group-hover/item:text-red-700 dark:group-hover/item:text-red-400 transition-colors uppercase italic tracking-tight">{t.name}</p>
- <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium italic opacity-80">{t.benefit}</p>
+ <p className="font-black text-slate-900 dark:text-white text-sm leading-tight mb-2 group-hover/item:text-red-700 dark:group-hover/item:text-red-400 transition-colors uppercase tracking-tight">{t.name}</p>
+ <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium opacity-80">{t.benefit}</p>
  </div>
  </Link>
  ))}
@@ -103,7 +103,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  <span className="text-2xl font-black">🔬</span>
  </div>
  <div>
- <h3 className="font-black text-slate-900 dark:text-white text-xl uppercase italic tracking-tight mb-1">Laparoscopic Surgery</h3>
+ <h3 className="font-black text-slate-900 dark:text-white text-xl uppercase tracking-tight mb-1">Laparoscopic Surgery</h3>
  <p className="text-xs text-blue-600 dark:text-blue-400 font-bold tracking-widest uppercase">Keyhole • Scarless • Rapid Recovery</p>
  </div>
  </div>
@@ -120,8 +120,8 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  </div>
  <span className="text-[8px] font-black px-3 py-1 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 rounded-full uppercase tracking-tighter">{t.tag}</span>
  </div>
- <p className="font-black text-slate-900 dark:text-white text-sm leading-tight mb-2 group-hover/item:text-blue-700 dark:group-hover/item:text-blue-400 transition-colors uppercase italic tracking-tight">{t.name}</p>
- <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium italic opacity-80">{t.benefit}</p>
+ <p className="font-black text-slate-900 dark:text-white text-sm leading-tight mb-2 group-hover/item:text-blue-700 dark:group-hover/item:text-blue-400 transition-colors uppercase tracking-tight">{t.name}</p>
+ <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium opacity-80">{t.benefit}</p>
  </div>
  </Link>
  ))}
@@ -144,7 +144,7 @@ export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, c
  <div className="w-6 h-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center group-hover/pt:bg-fuchsia-500 transition-all">
  <CheckCircle2 className="w-3.5 h-3.5 text-fuchsia-400 group-hover:text-white transition-colors" />
  </div>
- <p className="text-xs text-indigo-100 font-bold uppercase tracking-tight leading-relaxed italic opacity-80">{pt}</p>
+ <p className="text-xs text-indigo-100 font-bold uppercase tracking-tight leading-relaxed opacity-80">{pt}</p>
  </div>
  ))}
  </div>

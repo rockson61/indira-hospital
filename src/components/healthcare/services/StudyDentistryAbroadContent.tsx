@@ -34,7 +34,7 @@ export function StudyDentistryAbroadContent() {
  href="/contact"
  size="lg"
  color="warning"
- variant="shadow-soft"
+ variant="shadow"
  className="font-bold text-black dark:text-white"
  endContent={<ArrowRight className="w-4 h-4" />}
  >

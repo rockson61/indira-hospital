@@ -132,10 +132,10 @@ export default async function LocationsPage() {
  <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-8 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-fuchsia-500/30">
  <MapPin className="w-4 h-4" /> Serving All of Tamil Nadu
  </span>
- <h1 className="elite-hero-title mb-6">
- Best Hospital in Vellore: <br className="hidden sm:block" />
- <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">Serving {locations.length}+ Cities.</span>
- </h1>
+  <h1 className="elite-hero-title text-white mb-10 text-center">
+  Best Hospital in Vellore: <br />
+  <span className="elite-gradient-text text-3xl sm:text-4xl">Serving {locations.length}+ Cities.</span>
+  </h1>
  <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
  Elite healthcare shouldn&apos;t require a long journey. Indira Super Speciality Hospital brings advanced laparoscopic, laser, and emergency treatments directly to {districtsServed} districts across Tamil Nadu.
  </p>

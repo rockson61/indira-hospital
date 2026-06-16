@@ -109,10 +109,10 @@ export default async function LocationDetailPage({ params }: PageProps) {
  <div className="elite-tag animate-in fade-in slide-in-from-bottom-4 duration-700">
  <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Serving Patients from {location.name}
  </div>
- <h1 className="elite-hero-title mb-12 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
- Best Hospital<br />
- <span className="elite-gradient-text drop-shadow-sm">Near {location.name}.</span>
- </h1>
+ <h1 className="elite-hero-title text-white mb-10 text-left animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+  Best Hospital <br />
+  <span className="elite-gradient-text text-3xl sm:text-4xl drop-shadow-sm">Near {location.name}.</span>
+  </h1>
  <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-12 opacity-80 italic">
  Indira Super Speciality Hospital is the preferred healthcare provider for residents of {location.name},
  offering advanced Laparoscopic, Laser, and Cardiac treatments just {location.distance} away.

@@ -94,7 +94,7 @@ export default function CrohnsManagementPage() {
  At Indira Hospital, our approach, led by senior gastroenterologists, is focused on **Early Intervention**. By starting the right therapy early—especially biological drugs when indicated—we can often halt the disease&apos;s progression and avoid the need for permanent surgical removal of bowel segments.
  </p>
 
- <h4 className="text-[#005f73] dark:text-sky-400 font-heading">Common Warning Signs of an IBD Flare:</h4>
+ <h4 className="text-fuchsia-700 dark:text-sky-400 font-heading">Common Warning Signs of an IBD Flare:</h4>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
  {[
  "Persistent diarrhea (often bloody in colitis)",
@@ -115,7 +115,7 @@ export default function CrohnsManagementPage() {
  Achieving remission in Crohn&apos;s Disease is a marathon, not a sprint. We use a **"Tight Control"** monitoring approach, tracking your fecal calprotectin and serum drug levels every 3-6 months. This allow us to 'tweak' your medication dosage based on real-time data, ensuring you get the maximally effective dose with minimal side effects.
  </p>
 
- <h4 className="font-heading text-[#005f73] dark:text-sky-400 mt-10">Why Indira Hospital for IBD?</h4>
+ <h4 className="font-heading text-fuchsia-700 dark:text-sky-400 mt-10">Why Indira Hospital for IBD?</h4>
  <ul>
  <li>**Integrated IBD Unit**: Dedicated access to gastroenterologists, infusion nurses, and GI surgeons who specialized in IBD complications.</li>
  <li>**Precision Endoscopy**: High-resolution colonoscopy to monitor 'mucosal healing'—the only reliable indicator of long-term success.</li>

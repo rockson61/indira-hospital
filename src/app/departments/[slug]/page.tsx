@@ -47,8 +47,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
  const department = await getDepartmentBySlug(slug).catch(() => null);
 
  if (!department) return { title: "Department Not Found" };
- const title = department.seo_title || `Best ${department.title} Clinic in Vellore — Same-Day Discharge Doctors | Indira Hospital`;
- const desc = department.seo_description || `Leading ${department.title} specialists at Indira Hospital, Vellore. Advanced clinical care, 24/7 emergency support, and same-day discharge surgeries in Tamil Nadu.`;
+ const title = department.seo_title || `Top ${department.title} Specialists in Vellore | Same-Day Recovery | Indira Hospital`;
+ const desc = department.seo_description || `Looking for the best ${department.title} doctors in Vellore? Indira Hospital offers world-class care, advanced treatments, and same-day recovery. Book your consultation today!`;
 
  return {
  title,
@@ -149,11 +149,13 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  <div className="elite-tag mb-10">
  <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> NABH Accredited Hospital
  </div>
- <h1 className="elite-hero-title mb-10 text-left">
- {department.title}<br />
- <span className="elite-gradient-text !text-4xl md:!text-5xl !block !mt-6 !not-italic !tracking-widest !opacity-90">Precision Specialists in Vellore.</span>
+ <h1 className="elite-hero-title text-white mb-10 text-left">
+ {department.title} <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">Precision Specialists in Vellore.</span>
  </h1>
- <p className="mt-8 text-xl sm:text-2xl text-indigo-100 max-w-3xl leading-relaxed font-light opacity-70 italic">{department.short_description}</p>
+  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90 italic">
+  {department.short_description}
+  </p>
 
  <div className="flex flex-wrap gap-5 mt-10">
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
@@ -177,13 +179,16 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  <div className="grid lg:grid-cols-3 gap-8">
  <div className="lg:col-span-2 space-y-8">
  {/* About */}
- <Card className="p-8 border-none shadow-sm rounded-2xl">
- <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
- <span className="bg-indigo-100 p-2 rounded-lg mr-3 text-indigo-600">
- <Stethoscope className="w-5 h-5" />
- </span>
- About the {department.title} Department
- </h2>
+  <Card className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+  <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white flex items-center">
+  <span className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-lg mr-3 text-indigo-600 dark:text-indigo-400">
+  <Stethoscope className="w-5 h-5" />
+  </span>
+  About the {department.title} Department
+  </h2>
+ <span className="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-slate-800 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Last Updated: June 2026</span>
+ </div>
  <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(department.full_description) }} />
  </Card>
 
@@ -205,15 +210,15 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  {/* Doctors in this Department */}
  {relatedDoctors.length > 0 && (
  <div>
- <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
- <span className="bg-indigo-100 p-2 rounded-lg mr-3 text-indigo-600">
- <GraduationCap className="w-5 h-5" />
- </span>
- Meet the Experts in {department.title}
- </h2>
+  <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
+  <span className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-lg mr-3 text-indigo-600 dark:text-indigo-400">
+  <GraduationCap className="w-5 h-5" />
+  </span>
+  Meet the Experts in {department.title}
+  </h2>
  <div className="grid sm:grid-cols-2 gap-5">
  {relatedDoctors.map((doc) => (
- <DoctorCard key={doc.slug} doctor={doc} variant="compact" />
+ <DoctorCard key={doc.slug} doctor={doc} variant="grid" />
  ))}
  </div>
  </div>
@@ -225,8 +230,8 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  <div className="lg:sticky lg:top-24 space-y-6">
 
  {/* Other Departments Quick Links */}
- <Card className="p-6 border-none shadow-sm rounded-2xl">
- <h3 className="font-bold text-gray-900 dark:text-white mb-4">Other Departments</h3>
+  <Card className="p-6 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+  <h3 className="font-bold font-heading text-slate-900 dark:text-white mb-4">Other Departments</h3>
  <div className="flex flex-wrap gap-2">
  {otherDepartments.slice(0, 10).map((d: any) => (
  <ServiceCard key={d.slug} service={d} variant="compact" />

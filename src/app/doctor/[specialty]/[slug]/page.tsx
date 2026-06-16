@@ -114,7 +114,7 @@ export default async function DoctorProfileRoute({
  const deptName = typeof currDoctor.department === 'string' ? currDoctor.department : currDoctor.department?.name || currDoctor.specialty || 'Specialist';
 
  return (
- <div className="bg-[#FAFAFA] dark:bg-slate-950 min-h-screen">
+ <div className="bg-slate-50 dark:bg-slate-950 min-h-screen">
  <JsonLdSchema
  type="physician"
  name={currDoctor.name}
@@ -166,12 +166,10 @@ export default async function DoctorProfileRoute({
  <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
  Best {deptName} Doctor in Vellore
  </div>
- <h1 className="elite-hero-title mb-10 text-left">
- {currDoctor.name}
+ <h1 className="elite-hero-title text-white mb-10 text-left">
+ {currDoctor.name} <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">{currDoctor.designation || currDoctor.specialty || deptName}</span>
  </h1>
- <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">
- {currDoctor.designation || currDoctor.specialty || deptName}
- </p>
  </div>
 
  {/* Keyword Tags */}
@@ -310,7 +308,7 @@ export default async function DoctorProfileRoute({
  <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
  <Award className="w-5 h-5 text-fuchsia-600" />
  </div>
- <h2 className="text-xl font-black text-slate-900 dark:text-white">Expertise & Procedures</h2>
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white">Expertise & Procedures</h2>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
  {allItems.map((item: string, i: number) => {
@@ -345,7 +343,7 @@ export default async function DoctorProfileRoute({
  <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
  <GraduationCap className="w-5 h-5 text-fuchsia-600" />
  </div>
- <h2 className="text-xl font-black text-slate-900 dark:text-white">Education & Qualifications</h2>
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white">Education & Qualifications</h2>
  </div>
  <div className="flex flex-wrap gap-3">
  {(Array.isArray(currDoctor.qualifications || currDoctor.education)
@@ -387,7 +385,7 @@ export default async function DoctorProfileRoute({
  <div className="w-10 h-10 rounded-xl bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center">
  <Calendar className="w-5 h-5 text-fuchsia-600" />
  </div>
- <h2 className="text-xl font-black text-slate-900 dark:text-white">Availability Schedule</h2>
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white">Availability Schedule</h2>
  </div>
  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
  {(Array.isArray(currDoctor.availability) ? currDoctor.availability : ['Mon - Sat']).map((day: string, i: number) => (
@@ -550,7 +548,7 @@ export default async function DoctorProfileRoute({
 
  {/* UNIFIED ENTITY QUERIES */}
  <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800" />
- <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Elite Medical Units" featuredLimit={6} linkLimit={12} className="bg-[#FAFAFA] dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/50" />
+ <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Elite Medical Units" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/50" />
  <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800" />
 
  <InternalLinkGrid type="diagnostics" title="Related Diagnostics" subtitle="Laboratory Support" limit={12} className="bg-slate-50 dark:bg-slate-950 border-t" />

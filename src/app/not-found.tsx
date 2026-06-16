@@ -3,7 +3,7 @@ import { Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
  return (
- <div className="min-h-[70vh] flex items-center justify-center px-6 bg-[#FAFAFA] dark:bg-slate-950">
+ <div className="min-h-[70vh] flex items-center justify-center px-6 bg-slate-50 dark:bg-slate-950">
  <div className="text-center max-w-lg">
  <div className="mb-8">
  <span className="elite-hero-title elite-gradient-text">

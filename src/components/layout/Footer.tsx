@@ -20,11 +20,11 @@ export function Footer() {
 
  {/* Services Column */}
  <div>
- <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Services</h3>
+ <h3 className="elite-section-title !text-sm !leading-tight mb-5 ">Services</h3>
  <ul className="space-y-2.5">
  {FOOTER_LINKS.medicalServices.slice(0, 10).map((item) => (
  <li key={item.name}>
- <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
+ <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">{item.name}</Link>
  </li>
  ))}
  </ul>
@@ -32,11 +32,11 @@ export function Footer() {
 
  {/* Procedures Column */}
  <div>
- <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Key Procedures</h3>
+ <h3 className="elite-section-title !text-sm !leading-tight mb-5 ">Key Procedures</h3>
  <ul className="space-y-2.5">
  {FOOTER_LINKS.procedures.slice(0, 10).map((item) => (
  <li key={item.name}>
- <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
+ <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">{item.name}</Link>
  </li>
  ))}
  </ul>
@@ -44,20 +44,20 @@ export function Footer() {
 
  {/* Quick Links + Legal */}
  <div>
- <h3 className="elite-section-title !text-sm !leading-tight mb-5 !italic">Elite Network</h3>
+ <h3 className="elite-section-title !text-sm !leading-tight mb-5 ">Elite Network</h3>
  <ul className="space-y-2.5">
- <li><Link prefetch={false} href="/" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Homepage</Link></li>
- <li><Link prefetch={false} href="/doctor/near-me/treat" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">All Treatments</Link></li>
- <li><Link prefetch={false} href="/doctors" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Find Doctors</Link></li>
- <li><Link prefetch={false} href="/doctor/near-me" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Our Locations</Link></li>
- <li><Link prefetch={false} href="/diagnostics" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">Diagnostics & Scans</Link></li>
- <li><Link prefetch={false} href="/patients/international" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">International Patients</Link></li>
+ <li><Link prefetch={false} href="/" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">Homepage</Link></li>
+ <li><Link prefetch={false} href="/doctor/near-me/treat" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">All Treatments</Link></li>
+ <li><Link prefetch={false} href="/doctors" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">Find Doctors</Link></li>
+ <li><Link prefetch={false} href="/doctor/near-me" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">Our Locations</Link></li>
+ <li><Link prefetch={false} href="/diagnostics" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">Diagnostics & Scans</Link></li>
+ <li><Link prefetch={false} href="/patients/international" className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">International Patients</Link></li>
  </ul>
- <h3 className="elite-section-title !text-sm !leading-tight mb-4 mt-8 !italic">Patient Resources</h3>
+ <h3 className="elite-section-title !text-sm !leading-tight mb-4 mt-8 ">Patient Resources</h3>
  <ul className="space-y-2.5">
  {FOOTER_LINKS.patientCare.map((item) => (
  <li key={item.name}>
- <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight italic">{item.name}</Link>
+ <Link prefetch={false} href={item.url} className="text-sm text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors font-bold uppercase tracking-tight">{item.name}</Link>
  </li>
  ))}
  </ul>
@@ -84,11 +84,11 @@ export function Footer() {
 
  {/* Our Locations Maps */}
  <div className="border-t border-slate-200 dark:border-slate-800 py-12">
- <h3 className="elite-section-title !text-sm !leading-tight mb-8 !italic">Visit Our Specialized Units</h3>
+ <h3 className="elite-section-title !text-sm !leading-tight mb-8 ">Visit Our Specialized Units</h3>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
  {/* Katpadi Unit */}
  <div className="group">
- <h4 className="flex items-center gap-2 text-[11px] font-black italic uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
+ <h4 className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
  <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
  Katpadi (Main Hospital)
  </h4>
@@ -105,7 +105,7 @@ export function Footer() {
 
  {/* Near CMC Unit */}
  <div className="group">
- <h4 className="flex items-center gap-2 text-[11px] font-black italic uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
+ <h4 className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
  <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
  Near CMC (Nursing Home)
  </h4>
@@ -122,7 +122,7 @@ export function Footer() {
 
  {/* Konavattum Unit */}
  <div className="group">
- <h4 className="flex items-center gap-2 text-[11px] font-black italic uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
+ <h4 className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400 mb-4 group-hover:translate-x-1 transition-transform">
  <MapPin className="w-3.5 h-3.5" strokeWidth={3} />
  Konavattum (Nursing Home)
  </h4>

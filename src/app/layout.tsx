@@ -12,6 +12,7 @@ const StickyCTA = dynamic(() => import("@/components/layout/StickyCTA").then(mod
 const FloatingWhatsApp = dynamic(() => import("@/components/layout/FloatingWhatsApp").then(mod => mod.FloatingWhatsApp));
 const DynamicSEOKeywordBlock = dynamic(() => import("@/components/DynamicSEOKeywordBlock"));
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
+import { SeorceScriptRouteHandler } from "@/components/SeorceScriptRouteHandler";
 
 
 const inter = Inter({
@@ -89,6 +90,7 @@ export default function RootLayout({
  <StickyCTA />
  <FloatingWhatsApp />
  <DynamicSEOKeywordBlock />
+ <SeorceScriptRouteHandler />
  </ThemeProvider>
  </body>
  </html>

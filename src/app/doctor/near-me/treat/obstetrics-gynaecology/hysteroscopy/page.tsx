@@ -95,7 +95,7 @@ export default function HysteroscopyPage() {
  At Indira Hospital, our gynaecological endoscopy team, led by senior specialists, focuses on **Function-Preserving Surgery**. Whether we are removing a polyp or correcting a uterine septum, our goal is to maintain the integrity of the uterine lining, which is critical for future fertility and normal menstrual health.
  </p>
 
- <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Conditions Treated via Hysteroscopy:</h4>
+ <h4 className="text-fuchsia-700 dark:text-rose-400 font-heading">Conditions Treated via Hysteroscopy:</h4>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
  {[
  "Abnormal or heavy menstrual bleeding",
@@ -117,7 +117,7 @@ export default function HysteroscopyPage() {
  At Indira Hospital, we prioritize **"Pain-Free Daycare"**. Most operative hysteroscopies are performed under light intravenous sedation, ensuring you are in a comfortable 'dream-state' during the 15-30 minute procedure. Because there are no external incisions, recovery is nearly immediate. Most patients relax in our daycare suite for a few hours and are back home for dinner, resuming light activities by the next morning.
  </p>
 
- <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">The Indira Standard of Care:</h4>
+ <h4 className="font-heading text-fuchsia-700 dark:text-rose-400 mt-10">The Indira Standard of Care:</h4>
  <ul>
  <li>**Advanced Resectoscopes**: Specialized energy devices that allow for precise removal of fibroids without damaging the surrounding tissue.</li>
  <li>**Fluid Management Systems**: Precision automated pumps that ensure the uterus is safely and comfortably distended for clear visualization.</li>

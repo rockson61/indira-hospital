@@ -98,9 +98,9 @@ export default async function InternationalCountryPage({ params }: { params: Pro
  </span>
  </div>
  
- <h1 className="elite-hero-title mb-8">
+ <h1 className="elite-hero-title text-white mb-10 text-center lg:text-left">
  The Best Care in India <br />
- <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">for {country.name}.</span>
+ <span className="elite-gradient-text text-3xl sm:text-4xl">for {country.name}.</span>
  </h1>
  
  <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10 italic">

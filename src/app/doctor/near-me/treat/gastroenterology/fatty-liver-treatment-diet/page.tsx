@@ -94,7 +94,7 @@ export default function FattyLiverPage() {
  At Indira Hospital, our hepatology unit focuses on **Active Reversal**. The liver is the only organ capable of regenerating and healing itself entirely, provided the toxic cycle of insulin resistance and poor nutrition is broken. We provide the clinical tools and the constant monitoring needed to turn back the clock on liver damage.
  </p>
 
- <h4 className="text-[#005f73] dark:text-emerald-400 font-heading">Who Needs a Liver Screening?</h4>
+ <h4 className="text-fuchsia-700 dark:text-emerald-400 font-heading">Who Needs a Liver Screening?</h4>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
  {[
  "Individuals with Diabetes or Pre-diabetes",
@@ -115,7 +115,7 @@ export default function FattyLiverPage() {
  Our treatment roadmap doesn&apos;t rely solely on medications. We utilize a **Three-Phase Recovery Protocol**: 1. Detoxification & Inflammation Control, 2. Metabolic Re-balancing, and 3. Long-term Maintenance. By tracking your progress through serial FibroScans and Liver Function Tests (LFT), we provide objective proof of your liver&apos;s journey back to health.
  </p>
 
- <h4 className="font-heading text-[#005f73] dark:text-emerald-400 mt-10">What are the Benefits of Liver Care Surgery?</h4>
+ <h4 className="font-heading text-fuchsia-700 dark:text-emerald-400 mt-10">What are the Benefits of Liver Care Surgery?</h4>
  <ul>
  <li>**Advanced FibroScan**: Painless, 10-minute scan that replaces the need for liver biopsy in most cases.</li>
  <li>**Integrated Endocrine Hub**: Coordinating with endocrinologists to manage the underlying diabetes that often drives fatty liver.</li>

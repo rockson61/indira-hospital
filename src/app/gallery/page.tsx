@@ -42,9 +42,9 @@ export default function GalleryPage() {
  <div className="elite-tag mb-10">
  <Camera className="w-4 h-4" /> Visual Hospital Tour
  </div>
- <h1 className="elite-hero-title mb-10">
- Experience Our <br className="hidden sm:block" />
- <span className="elite-gradient-text">World-Class Mastery.</span>
+ <h1 className="elite-hero-title text-white mb-10">
+ Experience Our <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">World-Class Mastery.</span>
  </h1>
  <p 
  className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-4"

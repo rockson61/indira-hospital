@@ -51,9 +51,9 @@ export function Hero() {
  transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
  className="elite-hero-title text-slate-950 dark:text-white mb-10 animate-in fade-in slide-in-from-bottom-6 fill-mode-both"
  >
- Best Hospital <br />
+ World-Class Surgical Care. <br />
  <span className="elite-gradient-text drop-shadow-sm">
- in Vellore.
+ Closer to Home.
  </span>
  </motion.h1>
 
@@ -63,7 +63,7 @@ export function Hero() {
  className="mb-14 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
  >
  <h2 className="elite-section-title text-slate-800 dark:text-slate-100 mb-6 opacity-90">
- Advanced Multispeciality & Laparoscopic Care.
+ Advanced Laparoscopic & Multispeciality Treatments.
  </h2>
  <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-light italic">
  Top-tier surgical expertise at half the metro cost. Walk in with pain. Walk out the same day. That&apos;s the <span className="text-fuchsia-600 dark:text-fuchsia-400 font-bold">Indira promise.</span>
@@ -79,7 +79,7 @@ export function Hero() {
  href="/book-appointment"
  className="elite-button-primary hover:scale-[1.02] gap-3"
  >
- <span className="relative z-10">Get Free Cost Estimate</span>
+ <span className="relative z-10">Meet Our Specialists</span>
  <ArrowRight className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
  </Link>
@@ -89,7 +89,7 @@ export function Hero() {
  rel="noopener noreferrer"
  className="elite-button-secondary bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 border-pink-200 dark:border-pink-900/50 hover:bg-pink-100 dark:hover:bg-pink-900/30 gap-3"
  >
- <MessageCircle className="w-5 h-5 group-hover/whatsapp:scale-110 transition-transform" /> WhatsApp
+ <MessageCircle className="w-5 h-5 group-hover/whatsapp:scale-110 transition-transform" /> Chat with a Care Coordinator
  </a>
  <a
  href={`tel:${siteConfig.contact.emergencyPhone}`}
@@ -110,7 +110,7 @@ export function Hero() {
  </div>
  <input
  type="text"
- placeholder="Search by speciality or doctor name..."
+ placeholder="What are you looking for? (e.g., Knee Pain, Dr. Sharma, Cardiology)"
  className="w-full bg-transparent border-none outline-none px-6 text-slate-950 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 font-medium text-xl italic"
  value={searchTerm}
  onChange={(e) => setSearchTerm(e.target.value)}

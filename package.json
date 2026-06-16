@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.28",
+    "@astrojs/node": "^10.1.4",
     "@directus/sdk": "^21.1.0",
     "@heroui/react": "^2.8.8",
     "@heroui/theme": "^2.4.26",

@@ -284,7 +284,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-32 relative z-10">
- <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap italic">
+ <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap">
  <Link href="/" className="hover:text-white transition-colors">Home</Link>
  <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
  <Link href="/doctor/near-me/treat" className="hover:text-white transition-colors">Treatments</Link>
@@ -305,10 +305,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div className="elite-tag mb-10">
  <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Advanced Treatment Centre • Vellore
  </div>
- <h1 className="elite-hero-title mb-10 text-left">
- Best {service.title} in India<br />
- </h1>
- <p className="mt-4 text-xl sm:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light mb-12 opacity-80 italic">{service.short_description}</p>
+  <h1 className="elite-hero-title text-white mb-10 text-left">
+  Best {service.title} <br />
+  <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, India</span>
+  </h1>
+  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90 italic">
+  {service.short_description}
+  </p>
 
  <div className="flex flex-wrap gap-4 mt-12 mb-12">
  {procedures.length > 0 && (
@@ -365,22 +368,21 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <ConversionGrid whatsappUrl={whatsappUrl} />
 
  {/* About */}
- <Card id="about" className="p-8 border-none shadow-sm rounded-2xl">
- <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
- <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
+ <Card id="about" className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
+ <span className="bg-fuchsia-100 dark:bg-fuchsia-900/30 p-2 rounded-lg mr-3 text-fuchsia-600 dark:text-fuchsia-400">
  <Stethoscope className="w-5 h-5" />
  </span>
  Best Hospital for {service.title} in Vellore, Tamil Nadu
  </h2>
- <h3 className="text-lg font-semibold text-slate-600 dark:text-slate-400 mb-6 italic">Best {service.title} in Vellore, Tamil Nadu</h3>
  <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
  </Card>
 
  {/* Procedures / Features Grid */}
  {procedures.length > 0 && (
- <Card className="p-8 border-none shadow-sm rounded-2xl">
- <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
- <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
+ <Card className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
+ <span className="bg-fuchsia-100 dark:bg-fuchsia-900/30 p-2 rounded-lg mr-3 text-fuchsia-600 dark:text-fuchsia-400">
  <CheckCircle2 className="w-5 h-5" />
  </span>
  {isTreatmentPage ? 'Treatment Benefits & Features' : 'Treatments & Procedures'}
@@ -500,15 +502,15 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  {/* Doctors in this Service */}
  {relatedDoctors.length > 0 && (
  <div id="surgeons">
- <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
- <span className="bg-fuchsia-100 p-2 rounded-lg mr-3 text-fuchsia-600">
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
+ <span className="bg-fuchsia-100 dark:bg-fuchsia-900/30 p-2 rounded-lg mr-3 text-fuchsia-600 dark:text-fuchsia-400">
  <GraduationCap className="w-5 h-5" />
  </span>
  Best Doctors for {service.title} in Vellore, Tamil Nadu
- </h3>
+ </h2>
  <div className="grid sm:grid-cols-2 gap-5">
  {relatedDoctors.map((doc) => (
- <DoctorCard key={doc.slug} doctor={doc} variant="compact" />
+ <DoctorCard key={doc.slug} doctor={doc} variant="grid" />
  ))}
  </div>
  </div>
@@ -516,10 +518,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* If Treatment Page, Link to Parent Service */}
  {isTreatmentPage && treatment && (
- <Card className="p-6 border-none shadow-sm rounded-2xl bg-gradient-to-r from-fuchsia-50 to-fuchsia-50">
+ <Card className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-gradient-to-r from-fuchsia-50 to-fuchsia-50/50 dark:from-slate-900 dark:to-fuchsia-950/20">
  <div className="flex items-center justify-between">
  <div>
- <h3 className="font-bold text-gray-900 dark:text-white">Explore Department</h3>
+ <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-white mb-1">Explore Department</h3>
  <p className="text-sm text-gray-600 dark:text-gray-400">View all services in {treatment.parentServiceSlug}</p>
  </div>
  <Link href={`/doctor/near-me/treat/${treatment.parentServiceSlug}`} className="px-4 py-2 bg-white dark:bg-slate-900 text-fuchsia-700 font-semibold rounded-lg shadow-sm hover:shadow-md transition-all">
@@ -561,10 +563,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div className="w-20 h-20 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover/side:scale-110 transition-transform">
  <MessageCircle className="w-10 h-10 text-green-400" />
  </div>
- <h4 className="font-black text-white text-2xl tracking-tight mb-2 uppercase italic">Free Cost Estimate</h4>
- <p className="text-slate-400 text-sm mt-1 mb-8 italic">No hidden charges. Get exact pricing, insurance coverage, and schedules in under 2 mins.</p>
+ <h4 className="font-black font-heading text-white text-2xl tracking-tight mb-2 uppercase">Free Cost Estimate</h4>
+ <p className="text-slate-400 text-sm mt-1 mb-8">No hidden charges. Get exact pricing, insurance coverage, and schedules in under 2 mins.</p>
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
- className="w-full inline-flex items-center justify-center px-8 py-5 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-xl shadow-green-500/20 text-lg uppercase tracking-widest italic group-hover/side:scale-105">
+ className="w-full inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-xl shadow-green-500/20 text-lg uppercase tracking-widest group-hover/side:scale-105">
  WhatsApp Now
  </a>
  </div>
@@ -572,8 +574,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* M2M: AVAILABLE LOCATIONS */}
  {(service.available_locations as any[])?.length > 0 && (
- <Card className="p-6 border-none shadow-sm rounded-2xl">
- <h3 className="font-bold text-gray-900 dark:text-white mb-4">Available Near You</h3>
+ <Card className="p-6 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+ <h3 className="font-bold font-heading text-slate-900 dark:text-white mb-4">Available Near You</h3>
  <div className="flex flex-col gap-3">
  {(service.available_locations as any[]).map((loc: any) => (
  <LocationCard key={loc.slug} location={loc} variant="compact" />
@@ -583,8 +585,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  )}
 
  {/* Other Services Quick Links */}
- <Card className="p-6 border-none shadow-sm rounded-2xl">
- <h3 className="font-bold text-gray-900 dark:text-white mb-4">Other Treatments You May Need</h3>
+ <Card className="p-6 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+ <h3 className="font-bold font-heading text-slate-900 dark:text-white mb-4">Other Treatments You May Need</h3>
  <div className="flex flex-wrap gap-2">
  {otherServices.slice(0, 10).map((svc: any) => (
  <ServiceCard key={svc.slug} service={svc} variant="compact" />

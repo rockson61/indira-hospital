@@ -41,7 +41,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
  const testList = pkg.tests_included?.split(',').map(t => t.trim()).filter(Boolean) || [];
 
  return (
- <main className="min-h-screen pb-20 bg-[#FAFAFA] dark:bg-slate-950">
+ <main className="min-h-screen pb-20 bg-slate-50 dark:bg-slate-950">
  <JsonLdSchema
  type="breadcrumb"
  items={[
@@ -63,11 +63,11 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
  <Shield className="w-4 h-4" />
  Wellness & Prevention
  </div>
- <h1 className="elite-hero-title text-slate-900 dark:text-white mb-6">
- {pkg.title} <br className="hidden sm:block" />
- <span className="text-fuchsia-600">in Vellore, India</span>
+ <h1 className="elite-hero-title text-slate-900 dark:text-white mb-10 text-left">
+ {pkg.title} <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, India</span>
  </h1>
- <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed font-medium">
+ <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8 italic">
  {pkg.short_description || `Our ${pkg.title} is designed to provide a thorough evaluation of your health status, helping you detect potential issues early.`}
  </p>
 

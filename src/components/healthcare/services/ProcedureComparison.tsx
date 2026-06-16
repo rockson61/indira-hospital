@@ -33,7 +33,7 @@ export const ProcedureComparison = () => {
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 blur-[100px] pointer-events-none" />
  
  <div className="max-w-3xl mb-12">
- <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading underline decoration-fuchsia-500/30 underline-offset-8">
+ <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6 font-heading">
  The Advantage: Elite Laser vs. Traditional Surgery
  </h2>
  <p className="text-slate-600 dark:text-slate-400">
@@ -92,7 +92,7 @@ export const ProcedureComparison = () => {
  <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-2xl flex items-center justify-center text-emerald-500 shadow-sm">
  <Smile className="w-6 h-6" />
  </div>
- <p className="text-sm font-medium text-slate-600 dark:text-slate-400 italic">
+ <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
  100% Sphincter-Preserving & Tissue-Saving Protocols.
  </p>
  </div>
@@ -100,7 +100,7 @@ export const ProcedureComparison = () => {
  <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-2xl flex items-center justify-center text-fuchsia-600 shadow-sm">
  <Activity className="w-6 h-6" />
  </div>
- <p className="text-sm font-medium text-slate-600 dark:text-slate-400 italic">
+ <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
  Advanced USFDA Approved Laser/Laparoscopic Tech.
  </p>
  </div>

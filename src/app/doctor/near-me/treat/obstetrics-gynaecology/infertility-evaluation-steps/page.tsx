@@ -95,7 +95,7 @@ export default function InfertilityManagementPage() {
  At Indira Hospital, our approach is built on **Evidence and Empathy**. We begin with a 'Level 1' hormonal and anatomical audit for both partners. By using high-resolution ultrasound and specialized tests like HSG (Hysterosalpingography) to check tubal patency, we build a customized 'Fertility Roadmap' that prioritizes the least invasive options first.
  </p>
 
- <h4 className="text-[#005f73] dark:text-rose-400 font-heading">Standard Evaluation Checklist:</h4>
+ <h4 className="text-fuchsia-700 dark:text-rose-400 font-heading">Standard Evaluation Checklist:</h4>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
  {[
  "Ovulation Tracking (Follicular Study)",
@@ -117,7 +117,7 @@ export default function InfertilityManagementPage() {
  Every couple&apos;s journey is unique. Some may simply need 'Timed Intercourse' with minor ovulation support, while others may require specialized hysteroscopic procedures to correct uterine factors. Our **Fertility Wellness Team** includes dietitians and counselors who provide the nutritional and psychological support needed during this emotionally demanding phase.
  </p>
 
- <h4 className="font-heading text-[#005f73] dark:text-rose-400 mt-10">What are the Benefits of Fertility Surgery?</h4>
+ <h4 className="font-heading text-fuchsia-700 dark:text-rose-400 mt-10">What are the Benefits of Fertility Surgery?</h4>
  <ul>
  <li>**Integrated In-House Lab**: Comprehensive hormonal assays with same-day results for critical fertility biomarkers.</li>
  <li>**Advanced Hysteroscopy Unit**: Correcting polyps or septums that may prevent embryo implantation.</li>

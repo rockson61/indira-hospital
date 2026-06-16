@@ -262,16 +262,16 @@ async function DoctorView({ doctor, location, city, slug }: any) {
  </div>
  )}
  <div className="flex-1">
- <div className="mb-8">
- <div className="elite-tag mb-10">
- <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
- Elite {dept} Specialist in {location.name}
- </div>
- <h1 className="elite-hero-title mb-10 text-left">
- {doctor.name}
- </h1>
- </div>
- <p className="text-2xl sm:text-3xl text-indigo-200 font-black mb-2 uppercase italic opacity-90">{doctor.designation || `${dept} Specialist`}</p>
+  <div className="mb-8">
+  <div className="elite-tag mb-10">
+  <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
+  Elite {dept} Specialist in {location.name}
+  </div>
+  <h1 className="elite-hero-title text-white mb-10 text-left">
+  {doctor.name} <br />
+  <span className="elite-gradient-text text-3xl sm:text-4xl">{doctor.designation || `${dept} Specialist`}</span>
+  </h1>
+  </div>
  <p className="text-slate-400 text-lg mb-8 font-medium">Indira Super Speciality Hospital, Vellore</p>
  
  <div className="flex flex-wrap gap-4 mb-10">
@@ -430,9 +430,9 @@ async function ServiceView({ service, location, city, slug }: any) {
  <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Providing Specialised Care for {location.name}
  </div>
 
- <h1 className="elite-hero-title mb-12">
- {service.title} in {location.name},<br />
- <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-indigo-300 text-2xl sm:text-4xl lg:text-5xl block mt-6 not-italic font-black tracking-widest opacity-90 uppercase italic">Tamil Nadu.</span>
+ <h1 className="elite-hero-title text-white mb-10 text-left">
+ {service.title} in {location.name}, <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">Tamil Nadu.</span>
  </h1>
  <div className="flex flex-wrap gap-4 mt-12">
  <a href={whatsappUrl} className="inline-flex items-center px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white font-black rounded-2xl transition-all shadow-lg shadow-indigo-500/25 uppercase tracking-widest text-sm">

@@ -48,9 +48,9 @@ export default function ProcessPage() {
  <div className="elite-tag mb-10">
  <Layout className="w-4 h-4" /> Seamless Patient Journey
  </div>
- <h1 className="elite-hero-title mb-10">
- Our Patient <br className="hidden sm:block" />
- <span className="elite-gradient-text">Care Process.</span>
+ <h1 className="elite-hero-title text-white mb-10">
+ Our Patient <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">Care Process.</span>
  </h1>
  <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
  From the moment you walk through our doors to your final recovery at home, every step is optimized for precision, comfort, and clinical excellence.
