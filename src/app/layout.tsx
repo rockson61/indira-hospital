@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { defaultSeo } from "@/config/seo";
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 const StickyCTA = dynamic(() => import("@/components/layout/StickyCTA").then(mod => mod.StickyCTA));
@@ -90,7 +91,9 @@ export default function RootLayout({
  <StickyCTA />
  <FloatingWhatsApp />
  <DynamicSEOKeywordBlock />
+ <Suspense fallback={null}>
  <SeorceScriptRouteHandler />
+ </Suspense>
  </ThemeProvider>
  </body>
  </html>
