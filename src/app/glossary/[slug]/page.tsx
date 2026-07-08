@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').trim();
 
 export const dynamicParams = true;
-export const revalidate = 86400; // Re-validate once per day
+export const revalidate = false; // Re-validate once per day
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
  const { slug } = await params;

@@ -22,7 +22,7 @@ export const metadata: Metadata = constructMetadata({
  path: "/blog",
 })
 
-export const revalidate = 604800; // Revalidate every hour
+export const revalidate = false; // Revalidate every hour
 
 export default async function BlogListingPage() {
  const client = await getDirectusClient();
