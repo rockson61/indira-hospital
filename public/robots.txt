@@ -7,6 +7,15 @@ User-agent: *
 Disallow: /admin
 Disallow: /api
 
+# Block Aggressive Scrapers and Chinese Bots
+User-agent: Bytespider
+User-agent: Baiduspider
+User-agent: YisouSpider
+User-agent: Sogou
+User-agent: TencentTraveler
+User-agent: Alibaba
+Disallow: /
+
 # Host
 Host: https://www.indirasuperspecialityhospital.com
 

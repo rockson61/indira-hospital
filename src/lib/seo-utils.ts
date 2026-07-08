@@ -24,12 +24,20 @@ export function constructMetadata({
  const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url.slice(0, -1) : siteConfig.url;
  const url = `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
  
- // Clean and trim titles/descriptions to safe SEO limits
- const cleanTitle = title.trim();
- const safeTitle = cleanTitle.length > 60 ? `${cleanTitle.slice(0, 57)}...` : cleanTitle;
- 
- const cleanDesc = description.trim();
- const safeDesc = cleanDesc.length > 155 ? `${cleanDesc.slice(0, 152)}...` : cleanDesc;
+  // Clean and trim titles/descriptions to safe SEO limits, avoiding mid-word truncation
+  const cleanTitle = title.trim();
+  let safeTitle = cleanTitle;
+  if (cleanTitle.length > 65) {
+    const truncated = cleanTitle.slice(0, 62);
+    safeTitle = `${truncated.slice(0, Math.max(truncated.lastIndexOf(' '), 40))}...`;
+  }
+  
+  const cleanDesc = description.trim();
+  let safeDesc = cleanDesc;
+  if (cleanDesc.length > 160) {
+    const truncated = cleanDesc.slice(0, 157);
+    safeDesc = `${truncated.slice(0, Math.max(truncated.lastIndexOf(' '), 100))}...`;
+  }
 
  return {
  title: safeTitle,

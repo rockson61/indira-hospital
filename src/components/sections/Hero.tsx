@@ -37,30 +37,24 @@ export function Hero() {
 
  {/* Left Typography Content */}
  <div className="lg:col-span-7">
- <motion.div
- animate={{ opacity: 1, y: 0 }}
- transition={{ duration: 0.8, ease: "easeOut" }}
- className="elite-tag mb-8 animate-in fade-in slide-in-from-bottom-4 fill-mode-both"
+ <div
+ className="elite-tag mb-8"
  >
  <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
  #1 Rated Super Speciality Hospital in Vellore
- </motion.div>
+ </div>
 
- <motion.h1
- animate={{ opacity: 1, y: 0 }}
- transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
- className="elite-hero-title text-slate-950 dark:text-white mb-10 animate-in fade-in slide-in-from-bottom-6 fill-mode-both"
+ <h1
+ className="elite-hero-title text-slate-950 dark:text-white mb-10"
  >
- World-Class Surgical Care. <br />
+ Best Hospital in Vellore. <br />
  <span className="elite-gradient-text drop-shadow-sm">
- Closer to Home.
+ World-Class Care.
  </span>
- </motion.h1>
+ </h1>
 
- <motion.div
- animate={{ opacity: 1, y: 0 }}
- transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
- className="mb-14 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
+ <div
+ className="mb-14"
  >
  <h2 className="elite-section-title text-slate-800 dark:text-slate-100 mb-6 opacity-90">
  Advanced Laparoscopic & Multispeciality Treatments.
@@ -68,7 +62,7 @@ export function Hero() {
  <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl font-light italic">
  Top-tier surgical expertise at half the metro cost. Walk in with pain. Walk out the same day. That&apos;s the <span className="text-fuchsia-600 dark:text-fuchsia-400 font-bold">Indira promise.</span>
  </p>
- </motion.div>
+ </div>
 
  <motion.div
  animate={{ opacity: 1, y: 0 }}

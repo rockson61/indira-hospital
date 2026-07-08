@@ -297,7 +297,7 @@ export default function Home() {
  />
  </SectionContainer>
 
- {/* <HospitalSEOBlock /> */}
+ <HospitalSEOBlock />
  </main>
  );
 }

@@ -1,5 +1,7 @@
 import { Metadata } from "next";
+import { constructMetadata } from "@/lib/seo-utils";
 import { getDoctors } from "@/lib/api";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionContainer } from "@/components/ui/section-container";
 import { DoctorCard } from "@/components/entities/DoctorCard";
@@ -11,13 +13,11 @@ import { EntityCardSection } from "@/components/seo/EntityCardSection";
 import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
-export const metadata: Metadata = {
- title: "Best Doctors in Vellore — Elite Specialist Surgeons | Ind...",
- description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu, In...",
- alternates: {
- canonical: "/doctors"
- }
-};
+export const metadata: Metadata = constructMetadata({
+  title: "Best Doctors in Vellore — Elite Specialist Surgeons",
+  description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu.",
+  path: "/doctors"
+});
 
 export default async function DoctorsDirectoryPage() {
  const doctors = await getDoctors().catch(() => []);
@@ -32,6 +32,19 @@ export default async function DoctorsDirectoryPage() {
  backgroundImage="/images/hospital/Consultation.webp"
  />
 
+ <JsonLdSchema 
+  type="breadcrumb"
+  items={[
+    { name: "Home", url: "/" },
+    { name: "Doctors", url: "/doctors" }
+  ]}
+ />
+
+ <JsonLdSchema 
+  type="collectionPage"
+  title="Best Doctors & Specialist Surgeons in Vellore"
+  description="Expert team of board-certified specialists and surgeons at Indira Hospital."
+ />
 
  <SectionContainer className="py-24 -mt-16 relative z-10 min-h-[50vh]">
  {doctors.length > 0 ? (

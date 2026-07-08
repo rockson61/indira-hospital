@@ -4,6 +4,7 @@ import React from "react";
 import EntityReviews from "@/components/trust/EntityReviews";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import { ContactFormClient } from "@/components/forms/ContactFormClient";
+import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 
 import { constructMetadata } from "@/lib/seo-utils";
 
@@ -17,6 +18,7 @@ export const metadata: Metadata = constructMetadata({
 export default function ContactPage() {
  return (
  <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
+ <JsonLdSchema type="hospital" />
  <ContactFormClient />
 
  {/* TRUST SIGNALS */}
