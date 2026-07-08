@@ -40,7 +40,7 @@ export function Hero() {
  </div>
 
  <h1
- className="font-heading text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-[1.1] uppercase text-foreground mb-8"
+ className="font-heading text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter leading-[1.1] uppercase text-foreground mb-8"
  >
  Best Hospital in Vellore. <br />
  <span className="text-primary">

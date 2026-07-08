@@ -64,8 +64,8 @@
  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
  
   /* Elite Branding Tokens */
-  --elite-hero-size: clamp(3.5rem, 8vw, 6.5rem);
-  --elite-section-size: clamp(2.5rem, 5vw, 4rem);
+  --elite-hero-size: clamp(3rem, 6vw, 5rem);
+  --elite-section-size: clamp(2rem, 4vw, 3.5rem);
   --elite-accent: #f0abfc;
   --elite-gradient: linear-gradient(to right, #e879f9, #ffffff, #f472b6);
 
@@ -83,19 +83,19 @@
 
 :root {
 
-  /* Logo Deep Purple #841f75 */
-  --primary: 308 61% 31%;
+  /* Logo Deep Purple #841f75 - Darker for light mode */
+  --primary: 308 61% 30%;
   --primary-foreground: 0 0% 100%;
 
-  /* Logo Vibrant Teal #24b6c0 */
-  --secondary: 183 68% 44%;
+  /* Logo Vibrant Teal #24b6c0 - Darker for light mode */
+  --secondary: 183 68% 35%;
   --secondary-foreground: 0 0% 100%;
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
-  /* Logo Pinkish Red #e7286f */
-  --accent: 337 79% 53%;
+  /* Logo Pinkish Red #e7286f - Darker for light mode */
+  --accent: 337 79% 45%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84.2% 60.2%;
@@ -107,13 +107,13 @@
 
  --radius: 0.625rem;
 
- --background: #fafafa;
+ --background: 0 0% 100%;
 
- --foreground: oklch(0.145 0 0);
+ --foreground: 0 0% 0%;
 
- --card: #ffffff;
+ --card: 0 0% 100%;
 
- --card-foreground: oklch(0.145 0 0);
+ --card-foreground: 0 0% 0%;
 
  --popover: oklch(1 0 0);
 
@@ -199,19 +199,19 @@
 
 .dark {
   --background: 222.2 84% 4.9%; /* Deep Navy equivalent in standard Tailwind HSL */
-  --foreground: 210 40% 98%;
+  --foreground: 0 0% 100%;
   --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+  --card-foreground: 0 0% 100%;
   --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 308 61% 50%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 183 68% 44%;
-  --secondary-foreground: 210 40% 98%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 308 61% 60%; /* Bright Purple */
+  --primary-foreground: 0 0% 0%;
+  --secondary: 183 68% 60%; /* Bright Teal */
+  --secondary-foreground: 0 0% 0%;
   --muted: 217.2 32.6% 17.5%;
   --muted-foreground: 215 20.2% 65.1%;
-  --accent: 337 79% 53%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 337 79% 65%; /* Bright Pink */
+  --accent-foreground: 0 0% 0%;
   --destructive: 0 62.8% 30.6%;
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
@@ -253,11 +253,11 @@
 /* Elite Design System Utility Classes */
 @layer utilities {
   .elite-hero-title {
-    @apply font-heading text-5xl sm:text-7xl lg:text-[var(--elite-hero-size)] font-black tracking-tighter leading-[0.9] uppercase not-italic text-slate-950 dark:text-white;
+    @apply font-heading text-4xl sm:text-6xl lg:text-[var(--elite-hero-size)] font-black tracking-tighter leading-[0.9] uppercase not-italic text-foreground;
   }
 
   .elite-section-title {
-    @apply font-heading text-3xl sm:text-4xl lg:text-[var(--elite-section-size)] font-black tracking-tight leading-tight uppercase not-italic;
+    @apply font-heading text-2xl sm:text-3xl lg:text-[var(--elite-section-size)] font-black tracking-tight leading-tight uppercase not-italic text-foreground;
   }
 
  .elite-gradient-text {
