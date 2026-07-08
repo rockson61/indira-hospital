@@ -69,12 +69,7 @@
   --elite-accent: #f0abfc;
   --elite-gradient: linear-gradient(to right, #e879f9, #ffffff, #f472b6);
 
-  /* ── Brand Color Tokens ── */
-  --brand-teal: #54CAD3;
-  --brand-teal-hover: #45b5bd;
-  --brand-dark: #002b36;
-  --brand-forest: #005f73;
-  --brand-forest-mid: #0a3d47;
+
 
   /* ── Shadow System (single source of truth) ── */
   --shadow-clay: 8px 8px 16px rgba(0, 0, 0, 0.06), -8px -8px 16px rgba(255, 255, 255, 0.8), inset 2px 2px 4px rgba(255, 255, 255, 0.5), inset -2px -2px 4px rgba(0, 0, 0, 0.03);
@@ -88,21 +83,22 @@
 
 :root {
 
- /* Brand Purple #841F74 */
- --primary: hsl(310 62% 32%);
- --primary-foreground: hsl(0 0% 100%);
+  /* Logo Deep Purple #841f75 */
+  --primary: 308 61% 31%;
+  --primary-foreground: 0 0% 100%;
 
- /* Brand Dark Blue #2C4167 */
- --secondary: hsl(219 40% 29%);
- --secondary-foreground: hsl(0 0% 100%);
+  /* Logo Vibrant Teal #24b6c0 */
+  --secondary: 183 68% 44%;
+  --secondary-foreground: 0 0% 100%;
 
- --muted: oklch(0.97 0 0);
- --muted-foreground: oklch(0.556 0 0);
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
 
- --accent: oklch(0.97 0 0);
- --accent-foreground: oklch(0.205 0 0);
+  /* Logo Pinkish Red #e7286f */
+  --accent: 337 79% 53%;
+  --accent-foreground: 0 0% 100%;
 
- --destructive: oklch(0.577 0.245 27.325);
+  --destructive: 0 84.2% 60.2%;
  --destructive-foreground: #ffffff;
 
  --border: oklch(0.922 0 0);
@@ -202,23 +198,23 @@
 }
 
 .dark {
- --background: #0B1120;
- --foreground: #f1f5f9;
- --card: #111827;
- --card-foreground: #f1f5f9;
- --popover: #111827;
- --popover-foreground: #f1f5f9;
- --primary: hsl(310 62% 50%);
- --primary-foreground: hsl(0 0% 100%);
- --secondary: #1e293b;
- --secondary-foreground: #f1f5f9;
- --muted: #1e293b;
- --muted-foreground: #94a3b8;
- --accent: #1e293b;
- --accent-foreground: #f1f5f9;
- --destructive: oklch(0.704 0.191 22.216);
- --border: rgba(148, 163, 184, 0.12);
- --input: rgba(148, 163, 184, 0.15);
+  --background: 222.2 84% 4.9%; /* Deep Navy equivalent in standard Tailwind HSL */
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 308 61% 50%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 183 68% 44%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 337 79% 53%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
  --ring: #475569;
  --chart-1: oklch(0.488 0.243 264.376);
  --chart-2: oklch(0.696 0.17 162.48);
@@ -265,57 +261,56 @@
   }
 
  .elite-gradient-text {
- @apply text-transparent bg-clip-text bg-[var(--elite-gradient)];
- background-image: var(--elite-gradient);
+ @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
  }
 
  .elite-tag {
- @apply inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-xl;
+ @apply inline-flex items-center gap-2 px-5 py-2 rounded-full bg-background border border-border text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm;
  }
 
  .elite-card {
- @apply bg-slate-50 dark:bg-slate-900 rounded-[2rem] border-none shadow-clay dark:shadow-clay-dark transition-all duration-500 hover:shadow-clay-active dark:hover:shadow-clay-active-dark;
+ @apply bg-card rounded-[2rem] border border-border shadow-sm transition-all duration-300 hover:shadow-md;
  }
 
   .elite-button-primary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-black rounded-full transition-all shadow-lg overflow-hidden text-sm uppercase tracking-widest active:scale-95 border border-fuchsia-500 hover:-translate-y-0.5;
+    @apply relative inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full transition-all shadow-sm overflow-hidden text-sm uppercase tracking-widest active:scale-95 border border-transparent;
   }
 
   .elite-button-secondary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold rounded-full transition-all shadow-md hover:shadow-lg active:scale-95 text-sm uppercase tracking-widest border border-slate-200 dark:border-slate-700 hover:-translate-y-0.5;
+    @apply relative inline-flex items-center justify-center px-8 py-4 bg-background text-foreground font-bold rounded-full transition-all shadow-sm hover:shadow-md active:scale-95 text-sm uppercase tracking-widest border border-border;
   }
 
   /* ── Centralized Hero Section ── */
   .elite-hero-section {
-    @apply relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden;
+    @apply relative bg-background text-foreground overflow-hidden;
   }
 
   /* ── Centralized CTA Section ── */
   .elite-cta-section {
-    @apply bg-slate-900 py-20 relative overflow-hidden;
+    @apply bg-secondary/5 py-20 relative overflow-hidden;
   }
 
   /* ── Centralized Page Background ── */
   .elite-page-bg {
-    @apply min-h-screen bg-slate-50 dark:bg-slate-950;
+    @apply min-h-screen bg-background;
   }
 
   /* ── Section Containers ── */
   .elite-section-light {
-    @apply bg-white dark:bg-slate-900 py-20 border-t border-slate-100 dark:border-slate-800;
+    @apply bg-background py-20 border-t border-border;
   }
 
   .elite-section-muted {
-    @apply bg-slate-50 dark:bg-slate-950 py-20 border-t border-slate-100 dark:border-slate-800;
+    @apply bg-muted/30 py-20 border-t border-border;
   }
 
   /* ── Card Variants ── */
   .elite-card-light {
-    @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2rem] p-8;
+    @apply bg-card border border-border rounded-[2rem] p-8;
   }
 
   .elite-card-dark {
-    @apply bg-gradient-to-br from-slate-900 to-indigo-950 border-none rounded-[2rem] p-8 text-white;
+    @apply bg-card border border-border rounded-[2rem] p-8 text-foreground;
   }
 }
 

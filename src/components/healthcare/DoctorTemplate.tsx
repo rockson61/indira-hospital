@@ -131,7 +131,7 @@ export function DoctorTemplate({
  {/* Doctor Content */}
  <div className="lg:col-span-8 flex flex-col justify-center">
  <div className="space-y-4 mb-8">
- <span className="inline-block px-4 py-1.5 bg-[var(--brand-teal)]/20 border border-cyan-300/30 rounded-full text-[var(--brand-teal)] text-sm font-bold tracking-widest uppercase">
+ <span className="inline-block px-4 py-1.5 bg-secondary/20 border border-secondary/30 rounded-full text-secondary text-sm font-bold tracking-widest uppercase">
  {doctor.designation}
  </span>
  <h1 className="elite-hero-title text-white">
@@ -142,7 +142,7 @@ export function DoctorTemplate({
  <div className="flex flex-wrap gap-8 mb-10">
  <div className="flex items-center gap-3">
  <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800">
- <Award className="w-6 h-6 text-[var(--brand-teal)]" />
+ <Award className="w-6 h-6 text-secondary" />
  </div>
  <div>
  <p className="text-white font-black text-xl leading-none">{doctor.experience_years || doctor.years_of_experience || 10}+ Years</p>
@@ -151,7 +151,7 @@ export function DoctorTemplate({
  </div>
  <div className="flex items-center gap-3">
  <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800">
- <Stethoscope className="w-6 h-6 text-[var(--brand-teal)]" />
+ <Stethoscope className="w-6 h-6 text-secondary" />
  </div>
  <div>
  <p className="text-white font-black text-xl leading-none">{(doctor.experience_years || doctor.years_of_experience || 10) * 500}+ Operations</p>
@@ -173,7 +173,7 @@ export function DoctorTemplate({
  <a
  href={whatsappUrl}
  target="_blank" rel="noopener noreferrer"
- className="px-8 py-4 bg-[var(--brand-teal)] hover:bg-[var(--brand-teal-hover)] text-[var(--brand-dark)] font-bold rounded-2xl transition-all shadow-float shadow-cyan-300/20 flex items-center gap-3"
+ className="px-8 py-4 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-2xl transition-all shadow-sm flex items-center gap-3"
  >
  <MessageCircle className="w-5 h-5" />
  {DOCTOR_PROFILE.BTN_CONSULTATION}
@@ -312,7 +312,7 @@ export function DoctorTemplate({
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 rounded-full blur-3xl" />
  <div className="relative z-10 text-center space-y-6">
  <div className="w-20 h-20 bg-fuchsia-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-fuchsia-500/30">
- <MessageCircle className="w-10 h-10 text-[var(--brand-teal)]" />
+ <MessageCircle className="w-10 h-10 text-secondary" />
  </div>
  <div>
  <h3 className="text-2xl font-bold">{DOCTOR_PROFILE.SECTION_QUICK_BOOKING}</h3>
@@ -322,7 +322,7 @@ export function DoctorTemplate({
  <a
  href={whatsappUrl}
  target="_blank" rel="noopener noreferrer"
- className="w-full inline-flex items-center justify-center px-8 py-5 bg-[var(--brand-teal)] hover:bg-[var(--brand-teal-hover)] text-[var(--brand-dark)] font-bold rounded-2xl transition-all shadow-float shadow-fuchsia-500/20 text-lg hover:scale-[1.03]"
+ className="w-full inline-flex items-center justify-center px-8 py-5 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-2xl transition-all shadow-sm text-lg hover:scale-[1.03]"
  >
  <MessageCircle className="w-6 h-6 mr-3" />
  {DOCTOR_PROFILE.BTN_WHATSAPP_CHAT}
