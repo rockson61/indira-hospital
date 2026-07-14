@@ -16,8 +16,8 @@ export interface JsonLdSchemaProps {
  author?: string;
  datePublished?: string;
  image?: string;
- doctor?: any;
- location?: any;
+ doctor?: SchemaData["doctor"];
+ location?: SchemaData["location"];
  preparation?: string;
  steps?: { name: string; description: string; duration?: string }[];
  category?: string;

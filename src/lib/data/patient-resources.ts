@@ -1,3 +1,4 @@
+import type { ComponentType, SVGProps } from "react";
 import { FileBox, Building, Plane, Globe, Compass, Wallet, Bus, ClipboardList, Shield, Sparkles } from "lucide-react";
 import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 
@@ -7,7 +8,7 @@ export interface PatientResource {
  title: string;
  short_description: string;
  full_content: string;
- icon: any; // Lucide icon
+ icon: ComponentType<SVGProps<SVGSVGElement>>;
  category: "Information" | "Travel" | "Billing" | "Concierge";
  customHref?: string;
 }

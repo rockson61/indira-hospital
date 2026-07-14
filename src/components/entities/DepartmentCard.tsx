@@ -8,8 +8,16 @@ import { siteConfig } from "@/config/site";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
+interface DepartmentSummary {
+ id: string | number;
+ slug?: string;
+ title?: string;
+ name?: string;
+ description?: string;
+}
+
 interface DepartmentCardProps {
- department: any;
+ department: DepartmentSummary;
  className?: string;
  variant?: "grid" | "compact";
  city?: string;

@@ -1,3 +1,4 @@
+import type { ComponentType, SVGProps } from "react";
 import { Sparkles, ClipboardCheck, Shield } from "lucide-react";
 import { Happy, Electricity, Heart, Baby0203m, Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 
@@ -5,7 +6,7 @@ export interface ServiceData {
  id: string;
  title: string;
  description: string;
- icon: any;
+ icon: ComponentType<SVGProps<SVGSVGElement>>;
  image: string;
  href: string;
  price?: string;

@@ -18,7 +18,17 @@ export const specializations = [
  "Emergency & Trauma Care",
 ]
 
-export const doctors: any[] = [
+export interface TeamMember {
+ name: string;
+ email?: string;
+ role: string;
+ department: string;
+ specialization: string;
+ status: "Active" | "On Call" | "Leave";
+ image?: string;
+}
+
+export const doctors: TeamMember[] = [
  // Add new hospital doctors here if needed for specific widgets
 ];
 

@@ -13,19 +13,27 @@ import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 import { siteConfig } from "@/config/site";
 
 type Step = "selection" | "valuation" | "handoff";
+type BookingOption = {
+ id: string;
+ title: string;
+ type: "treatment" | "service";
+ slug: string;
+ category: string;
+};
+type PricingItem = (typeof PRICING_DATA)[number];
 
 export default function BookingFunnel() {
  const [step, setStep] = useState<Step>("selection");
  const [search, setSearch] = useState("");
- const [selectedTreatment, setSelectedTreatment] = useState<any>(null);
- const [selectedPricing, setSelectedPricing] = useState<any>(null);
+ const [selectedTreatment, setSelectedTreatment] = useState<BookingOption | null>(null);
+ const [selectedPricing, setSelectedPricing] = useState<PricingItem | null>(null);
 
  // Combine services and treatments for selection
- const options = useMemo(() => {
+ const options = useMemo<BookingOption[]>(() => {
  const treatments = TREATMENT_DATA.map(t => ({
  id: t.id,
  title: t.title,
- type: "treatment",
+ type: "treatment" as const,
  slug: t.slug,
  category: t.parentServiceSlug
  }));
@@ -33,7 +41,7 @@ export default function BookingFunnel() {
  const services = servicesData.map(s => ({
  id: s.id,
  title: s.title,
- type: "service",
+ type: "service" as const,
  slug: s.id,
  category: s.id
  }));
@@ -43,7 +51,7 @@ export default function BookingFunnel() {
  );
  }, [search]);
 
- const handleSelection = (option: any) => {
+ const handleSelection = (option: BookingOption) => {
  setSelectedTreatment(option);
  const pricing = PRICING_DATA.find(p => 
  p.id === option.id || 
@@ -54,7 +62,8 @@ export default function BookingFunnel() {
  };
 
  const generateWhatsAppLink = () => {
- const baseMessage = `Hi Indira Elite Desk, I&apos;m interested in an Elite consultation for ${selectedTreatment.title}.`;
+ if (!selectedTreatment) return "#";
+ const baseMessage = `Hi Indira Elite Desk, I'm interested in an Elite consultation for ${selectedTreatment.title}.`;
  const pricingContext = selectedPricing ? ` I saw the estimate starting from ${selectedPricing.startingPrice}.` : "";
  return `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(baseMessage + pricingContext)}`;
  };
@@ -130,7 +139,7 @@ export default function BookingFunnel() {
  </motion.div>
  )}
 
- {step === "valuation" && (
+ {step === "valuation" && selectedTreatment && (
  <motion.div
  key="valuation"
  initial={{ opacity: 0, scale: 0.95 }}
@@ -210,7 +219,7 @@ export default function BookingFunnel() {
  </motion.div>
  )}
 
- {step === "handoff" && (
+ {step === "handoff" && selectedTreatment && (
  <motion.div
  key="handoff"
  initial={{ opacity: 0, x: 20 }}
