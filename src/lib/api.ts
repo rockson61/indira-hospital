@@ -20,7 +20,7 @@ export const getDoctors = unstable_cache(
  return SEED_DATA.doctors as any;
  },
  ['directus-doctors'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getDoctorBySlug = unstable_cache(
@@ -46,7 +46,7 @@ export const getDoctorBySlug = unstable_cache(
  } as any;
  },
  ['directus-doctor-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getDepartments = unstable_cache(
@@ -61,7 +61,7 @@ export const getDepartments = unstable_cache(
  return SEED_DATA.services as any;
  },
  ['directus-departments'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getDepartmentBySlug = unstable_cache(
@@ -90,7 +90,7 @@ export const getDepartmentBySlug = unstable_cache(
  } as any;
  },
  ['directus-department-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getServiceBySlug = unstable_cache(
@@ -121,7 +121,7 @@ export const getServiceBySlug = unstable_cache(
  } as any;
  },
  ['directus-service-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 import { TREATMENT_DATA } from './data/treatment-data';
@@ -138,7 +138,7 @@ export const getTreatmentBySlug = unstable_cache(
  return null;
  },
  ['treatment-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getLocationBySlug = unstable_cache(
@@ -164,7 +164,7 @@ export const getLocationBySlug = unstable_cache(
  } as any;
  },
  ['directus-location-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getPostBySlug = unstable_cache(
@@ -183,7 +183,7 @@ export const getPostBySlug = unstable_cache(
  return null;
  },
  ['directus-post-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getServices = unstable_cache(
@@ -198,7 +198,7 @@ export const getServices = unstable_cache(
  return SEED_DATA.services as any;
  },
  ['directus-services'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getTestimonials = unstable_cache(
@@ -213,7 +213,7 @@ export const getTestimonials = unstable_cache(
  return localTestimonials as any;
  },
  ['directus-testimonials'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getReviewsByEntity = unstable_cache(
@@ -301,7 +301,7 @@ export const getReviewsByEntity = unstable_cache(
  return finalReviews.slice(0, 3) as any;
  },
  ['directus-reviews-by-entity'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getFaqsByEntity = unstable_cache(
@@ -361,7 +361,7 @@ export const getFaqsByEntity = unstable_cache(
  return uniqueFaqs.slice(0, 8) as any;
  },
  ['directus-faqs-by-entity'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getInsurances = unstable_cache(
@@ -376,7 +376,7 @@ export const getInsurances = unstable_cache(
  return [];
  },
  ['directus-insurances'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getLocations = unstable_cache(
@@ -391,7 +391,7 @@ export const getLocations = unstable_cache(
  return tamilNaduLocations as any;
  },
  ['directus-locations'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getDiagnostics = unstable_cache(
@@ -413,7 +413,7 @@ export const getDiagnostics = unstable_cache(
  : SEED_DATA.diagnostics;
  },
  ['directus-diagnostics'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getDiagnosticBySlug = unstable_cache(
@@ -433,7 +433,7 @@ export const getDiagnosticBySlug = unstable_cache(
  return SEED_DATA.diagnostics.find(d => d.slug === slug) || null;
  },
  ['directus-diagnostic-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getHealthPackages = unstable_cache(
@@ -448,7 +448,7 @@ export const getHealthPackages = unstable_cache(
  return [];
  },
  ['directus-health-packages'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getHealthPackageBySlug = unstable_cache(
@@ -467,7 +467,7 @@ export const getHealthPackageBySlug = unstable_cache(
  return null;
  },
  ['directus-health-package-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 import { siteConfig } from '@/config/site';
@@ -491,7 +491,7 @@ export const getGlobalSiteSettings = unstable_cache(
  } as any;
  },
  ['directus-global-settings'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getSEOKeywords = unstable_cache(
@@ -499,7 +499,7 @@ export const getSEOKeywords = unstable_cache(
  return SEO_KEYWORDS;
  },
  ['seo-keywords'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 export const getSEOKeywordBySlug = unstable_cache(
@@ -508,7 +508,7 @@ export const getSEOKeywordBySlug = unstable_cache(
  return SEO_KEYWORDS.find(k => k.slug.toLowerCase() === lowerSlug) || null;
  },
  ['seo-keyword-by-slug'],
- { cache: 'force-cache' }
+ { revalidate: 3600 }
 );
 
 /**

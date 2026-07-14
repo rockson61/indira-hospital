@@ -11,13 +11,11 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^3.0.28",
     "@astrojs/node": "^10.1.4",
     "@directus/sdk": "^21.1.0",
     "@heroui/react": "^2.8.8",
     "@heroui/theme": "^2.4.26",
     "@radix-ui/react-slot": "^1.2.4",
-    "ai": "^6.0.85",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",

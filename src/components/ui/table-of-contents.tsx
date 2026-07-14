@@ -49,7 +49,8 @@ export function TableOfContents({
       };
     });
 
-    setHeadings(parsedHeadings);
+    // Defer the state update to avoid a cascading synchronous render
+    const frame = requestAnimationFrame(() => setHeadings(parsedHeadings));
 
     // 4. Setup Intersection Observer for active state
     const observer = new IntersectionObserver(
@@ -65,7 +66,10 @@ export function TableOfContents({
 
     elements.forEach((elem) => observer.observe(elem));
 
-    return () => observer.disconnect();
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, [selector]);
 
   if (headings.length === 0) {

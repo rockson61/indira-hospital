@@ -1,63 +1,38 @@
-import { createDirectus, rest, authentication, staticToken, DirectusClient, RestClient, AuthenticationClient } from '@directus/sdk';
+import { createDirectus, rest, staticToken, DirectusClient, RestClient } from '@directus/sdk';
 import { Schema } from './schema';
 import { cache } from 'react';
 
-type ClientType = DirectusClient<Schema> & RestClient<Schema> & AuthenticationClient<Schema>;
+type ClientType = DirectusClient<Schema> & RestClient<Schema>;
 
 const globalForDirectus = globalThis as unknown as {
- directusPromise: Promise<ClientType> | undefined;
+  directusClient: ClientType | undefined;
 };
 
-const createDirectusConfig = () => {
- const apiUrl = process.env.NEXT_PUBLIC_API_URL;
- if (!apiUrl || apiUrl === 'undefined') {
- throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
- }
- const directus = createDirectus<Schema>(apiUrl)
- .with(authentication('json', { autoRefresh: true }))
- .with(rest());
+function createClient(): ClientType {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (!apiUrl || apiUrl === 'undefined') {
+    throw new Error('NEXT_PUBLIC_API_URL is not defined. Please set it in your environment.');
+  }
 
- return directus as ClientType;
+  const token = process.env.DIRECTUS_TOKEN;
+  if (!token) {
+    throw new Error('DIRECTUS_TOKEN is not defined. Please set a static access token in your environment.');
+  }
+
+  return createDirectus<Schema>(apiUrl).with(staticToken(token)).with(rest()) as ClientType;
 }
 
-const createStaticClient = (token: string) => {
- const apiUrl = process.env.NEXT_PUBLIC_API_URL;
- if (!apiUrl || apiUrl === 'undefined') {
- throw new Error('NEXT_PUBLIC_API_URL is not defined or is "undefined". Please set it in Vercel settings.');
- }
- return createDirectus<Schema>(apiUrl)
- .with(staticToken(token))
- .with(rest()) as ClientType;
-}
+export const getDirectusClient = cache(async function getDirectusClient(): Promise<ClientType> {
+  if (globalForDirectus.directusClient) return globalForDirectus.directusClient;
 
-// Global promise singleton
-let clientPromise: Promise<ClientType> | null = globalForDirectus.directusPromise || null;
+  const client = createClient();
 
-export const getDirectusClient = cache(async function getDirectusClient() {
- if (clientPromise) return clientPromise;
-
- // PREFER STATIC TOKEN FROM ENV (Fixed for Build Process)
- if (process.env.DIRECTUS_TOKEN) {
- clientPromise = Promise.resolve(createStaticClient(process.env.DIRECTUS_TOKEN));
- } else {
- // Fallback to dynamic login (Dev mode)
- clientPromise = (async () => {
- const client = createDirectusConfig();
- try {
- await client.login({ email: process.env.ADMIN_EMAIL as string, password: process.env.ADMIN_PASSWORD as string });
- } catch (e) {
- console.error("Login failed", e);
- }
- return client;
- })();
- }
-
- if (process.env.NODE_ENV !== 'production') {
- globalForDirectus.directusPromise = clientPromise;
- }
- return clientPromise;
+  if (process.env.NODE_ENV !== 'production') {
+    globalForDirectus.directusClient = client;
+  }
+  return client;
 });
 
 export async function getAdminClient() {
- return await getDirectusClient();
+  return await getDirectusClient();
 }

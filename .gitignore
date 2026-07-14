@@ -49,3 +49,8 @@ next-env.d.ts
 *.log
 .agent
 .planning
+
+# local check outputs
+tsc_output.txt
+tsc-results.txt
+lint-results.json
