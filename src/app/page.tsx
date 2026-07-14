@@ -112,6 +112,7 @@ export default function Home() {
  return (
  <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
  <Hero />
+ <React.Suspense fallback={<div className="min-h-64 bg-background" aria-hidden="true" />}>
  <LeadershipMessage />
  <StatsBanner />
 
@@ -298,6 +299,7 @@ export default function Home() {
  </SectionContainer>
 
  <HospitalSEOBlock />
+ </React.Suspense>
  </main>
  );
 }
