@@ -70,10 +70,29 @@ const SURGICAL_SILOS = [
 function generatePageTemplate(treatment, silo) {
     const eyebrow = `Elite ${silo.category} Solutions`;
     
+    const pagePath = `/doctor/near-me/treat/${silo.slug}/${treatment.slug}`;
+    const metaTitle = `${treatment.name} in Vellore | Indira Super Speciality Hospital`;
+    const metaDescription = `${treatment.name} at Indira Super Speciality Hospital, Vellore. NABH-accredited ${silo.category.toLowerCase()} care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.`;
+
     return `import React from 'react'
+import type { Metadata } from 'next'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+export const metadata: Metadata = {
+    title: ${JSON.stringify(metaTitle)},
+    description: ${JSON.stringify(metaDescription)},
+    alternates: {
+        canonical: ${JSON.stringify(pagePath)},
+    },
+    openGraph: {
+        title: ${JSON.stringify(metaTitle)},
+        description: ${JSON.stringify(metaDescription)},
+        url: ${JSON.stringify(pagePath)},
+        type: 'website',
+    },
+}
 
 export default function SEOPage() {
     return (

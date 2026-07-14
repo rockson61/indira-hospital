@@ -54,3 +54,4 @@ next-env.d.ts
 tsc_output.txt
 tsc-results.txt
 lint-results.json
+lint-results.txt

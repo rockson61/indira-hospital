@@ -1,7 +1,22 @@
 import React from 'react'
+import type { Metadata } from 'next'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+export const metadata: Metadata = {
+    title: "Micro-Incision Cataract Surgery (MICS) in Vellore | Indira Super Speciality Hospital",
+    description: "Micro-Incision Cataract Surgery (MICS) at Indira Super Speciality Hospital, Vellore. NABH-accredited ophthalmology care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+    alternates: {
+        canonical: "/doctor/near-me/treat/ophthalmology/cataract-surgery-mics",
+    },
+    openGraph: {
+        title: "Micro-Incision Cataract Surgery (MICS) in Vellore | Indira Super Speciality Hospital",
+        description: "Micro-Incision Cataract Surgery (MICS) at Indira Super Speciality Hospital, Vellore. NABH-accredited ophthalmology care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+        url: "/doctor/near-me/treat/ophthalmology/cataract-surgery-mics",
+        type: 'website',
+    },
+}
 
 export default function SEOPage() {
     return (

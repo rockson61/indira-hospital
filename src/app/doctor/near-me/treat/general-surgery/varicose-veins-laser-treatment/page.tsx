@@ -1,7 +1,22 @@
 import React from 'react'
+import type { Metadata } from 'next'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+export const metadata: Metadata = {
+    title: "Laser Varicose Veins in Vellore | Indira Super Speciality Hospital",
+    description: "Laser Varicose Veins at Indira Super Speciality Hospital, Vellore. NABH-accredited general surgery care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+    alternates: {
+        canonical: "/doctor/near-me/treat/general-surgery/varicose-veins-laser-treatment",
+    },
+    openGraph: {
+        title: "Laser Varicose Veins in Vellore | Indira Super Speciality Hospital",
+        description: "Laser Varicose Veins at Indira Super Speciality Hospital, Vellore. NABH-accredited general surgery care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+        url: "/doctor/near-me/treat/general-surgery/varicose-veins-laser-treatment",
+        type: 'website',
+    },
+}
 
 export default function SEOPage() {
     return (

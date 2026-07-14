@@ -1,5 +1,3 @@
-const { heroui } = require("@heroui/react");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
@@ -8,7 +6,6 @@ module.exports = {
         './components/**/*.{ts,tsx}',
         './app/**/*.{ts,tsx}',
         './src/**/*.{ts,tsx}',
-        "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
     safelist: [
         // Dark mode backgrounds with opacity
@@ -134,5 +131,5 @@ module.exports = {
             },
         },
     },
-    plugins: [require("tailwindcss-animate"), heroui()],
+    plugins: [require("tailwindcss-animate")],
 }

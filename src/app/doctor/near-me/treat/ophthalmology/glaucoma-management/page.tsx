@@ -1,7 +1,22 @@
 import React from 'react'
+import type { Metadata } from 'next'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+export const metadata: Metadata = {
+    title: "Glaucoma Management in Vellore | Indira Super Speciality Hospital",
+    description: "Glaucoma Management at Indira Super Speciality Hospital, Vellore. NABH-accredited ophthalmology care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+    alternates: {
+        canonical: "/doctor/near-me/treat/ophthalmology/glaucoma-management",
+    },
+    openGraph: {
+        title: "Glaucoma Management in Vellore | Indira Super Speciality Hospital",
+        description: "Glaucoma Management at Indira Super Speciality Hospital, Vellore. NABH-accredited ophthalmology care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+        url: "/doctor/near-me/treat/ophthalmology/glaucoma-management",
+        type: 'website',
+    },
+}
 
 export default function SEOPage() {
     return (

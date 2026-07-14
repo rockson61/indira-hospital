@@ -1,7 +1,22 @@
 import React from 'react'
+import type { Metadata } from 'next'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+export const metadata: Metadata = {
+    title: "Laser Fistula Surgery (FiLaC) in Vellore | Indira Super Speciality Hospital",
+    description: "Laser Fistula Surgery (FiLaC) at Indira Super Speciality Hospital, Vellore. NABH-accredited proctology care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+    alternates: {
+        canonical: "/doctor/near-me/treat/proctology/laser-fistula-surgery-filac",
+    },
+    openGraph: {
+        title: "Laser Fistula Surgery (FiLaC) in Vellore | Indira Super Speciality Hospital",
+        description: "Laser Fistula Surgery (FiLaC) at Indira Super Speciality Hospital, Vellore. NABH-accredited proctology care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.",
+        url: "/doctor/near-me/treat/proctology/laser-fistula-surgery-filac",
+        type: 'website',
+    },
+}
 
 export default function SEOPage() {
     return (
