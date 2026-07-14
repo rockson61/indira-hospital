@@ -172,7 +172,7 @@ const nextConfig: NextConfig = {
       'lucide-react',
       'healthicons-react',
       'framer-motion',
-      '@heroui/react'
+      'radix-ui'
     ],
   },
 };
