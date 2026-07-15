@@ -8,20 +8,13 @@ import { tamilNaduLocations } from './data/tamilnadu-locations';
 import { SEO_KEYWORDS } from './data/seo-keywords';
 import { unstable_cache as next_unstable_cache } from 'next/cache';
 
-// Client-safe wrapper around Next.js unstable_cache to prevent invariant crashes in hydration / browser contexts
 function unstable_cache<T extends (...args: any[]) => any>(
   cb: T,
   keyParts?: string[],
   options?: { revalidate?: number | false; tags?: string[] }
 ): T {
-  if (typeof window !== 'undefined') {
-    return cb;
-  }
-  try {
-    return next_unstable_cache(cb, keyParts, options);
-  } catch (error) {
-    return cb;
-  }
+  // Always bypass unstable_cache on Cloudflare Edge to prevent serialization and environment errors
+  return cb;
 }
 
 

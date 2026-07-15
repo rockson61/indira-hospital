@@ -30,7 +30,7 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
  const { country: slug } = await params;
- const country = INTERNATIONAL_COUNTRIES.find((c) => c.slug === slug);
+ const country = INTERNATIONAL_COUNTRIES.find((c) => c.slug.toLowerCase() === slug.toLowerCase());
  if (!country) return { title: "Country Not Found" };
 
  return {
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 
 export default async function InternationalCountryPage({ params }: { params: Promise<{ country: string }> }) {
  const { country: slug } = await params;
- const country = INTERNATIONAL_COUNTRIES.find((c) => c.slug === slug);
+ const country = INTERNATIONAL_COUNTRIES.find((c) => c.slug.toLowerCase() === slug.toLowerCase());
  if (!country) notFound();
 
  const allDoctors: any[] = await getDoctors().catch(() => []);
