@@ -35,7 +35,7 @@ const iconMap: Record<string, React.ReactNode> = {
  BloodDrop: <BloodDrop className="h-8 w-8" />,
 };
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
  const departments = await getDepartments().catch(() => []);

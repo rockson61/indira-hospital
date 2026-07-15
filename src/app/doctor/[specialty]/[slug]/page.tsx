@@ -44,7 +44,7 @@ function getProcedureHref(procedure: string, doctorDeptSlug?: string): string {
  return `/doctor/near-me/treat/${toSlug(procedure)}`;
 }
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export function getDoctorSpecialtySlug(doc: any): string {
  const rawDept = typeof doc.department === 'string' ? doc.department : doc.department?.name || doc.specialty || 'specialist';

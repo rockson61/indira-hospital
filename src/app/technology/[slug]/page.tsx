@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
  const techs = getAllTechnologies();

@@ -10,6 +10,8 @@ import EntityReviews from "@/components/trust/EntityReviews";
 import { siteConfig } from "@/config/site";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
  return PATIENT_RESOURCES.map((resource) => ({
  slug: resource.slug,

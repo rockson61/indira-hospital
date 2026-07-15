@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -25,11 +26,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 const HOSPITAL_NAME = "Indira Super Speciality Hospital";
 const HOSPITAL_ADDRESS = "54, Katpadi Road, Gandhi Nagar, Vellore — 632006";
 
-export const dynamicParams = true;
-
-export async function generateStaticParams() {
- return INTERNATIONAL_COUNTRIES.map((c) => ({ country: c.slug }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
  const { country: slug } = await params;

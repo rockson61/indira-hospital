@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -25,18 +26,7 @@ import { siteConfig } from "@/config/site";
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
-export const dynamicParams = true;
-
-export async function generateStaticParams() {
- const allLocations = [
- ...enhancedVelloreLocations.map(l => ({ city: l.slug })),
- ...tamilNaduLocations.map(l => ({ city: l.slug }))
- ];
-
- // De-duplicate slugs
- const uniqueSlugs = Array.from(new Set(allLocations.map(l => l.city)));
- return uniqueSlugs.map(slug => ({ city: slug }));
-}
+export const dynamic = 'force-dynamic';
 
 interface PageProps {
  params: Promise<{ city: string }>;
