@@ -1,0 +1,5 @@
+_worker.js
+.vercel
+.git
+node_modules
+.next
