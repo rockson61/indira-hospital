@@ -134,7 +134,7 @@ export default function DialysisPage() {
  ].map((feature, i) => (
  <div key={i} className="bg-white dark:bg-slate-900 p-6 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm">
  <h4 className="font-bold text-slate-900 dark:text-white mb-2">{feature.title}</h4>
- <p className="text-xs text-slate-500 leading-relaxed">{feature.desc}</p>
+ <p className="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
  </div>
  ))}
  </div>

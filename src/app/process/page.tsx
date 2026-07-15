@@ -13,25 +13,25 @@ const steps = [
  {
  title: "Digital Consultation",
  description: "Begin with a specialized consultation where our experts use advanced diagnostics to map your health needs.",
- icon: <UserCheck className="w-8 h-8 text-fuchsia-600" />,
+ icon: <UserCheck className="w-8 h-8 text-fuchsia-600"/>,
  details: "Detailed review of medical history and initial physical examination."
  },
  {
  title: "Advanced Intervention",
  description: "Execution of surgical plans using state-of-the-art modular OTs and minimally invasive techniques.",
- icon: <Activity className="w-8 h-8 text-fuchsia-600" />,
+ icon: <Activity className="w-8 h-8 text-fuchsia-600"/>,
  details: "Emphasis on tissue preservation and minimal blood loss."
  },
  {
  title: "Rapid Recovery",
  description: "Our dedicated post-op care ensures you are mobilized within hours of the procedure.",
- icon: <Zap className="w-8 h-8 text-fuchsia-600" />,
+ icon: <Zap className="w-8 h-8 text-fuchsia-600"/>,
  details: "Constant monitoring by specialized nursing staff."
  },
  {
  title: "HomeCareFlow",
  description: "Exclusive post-discharge digital monitoring to ensure your recovery is smooth and complication-free.",
- icon: <Heart className="w-8 h-8 text-fuchsia-600" />,
+ icon: <Heart className="w-8 h-8 text-fuchsia-600"/>,
  details: "Tele-medicine follow-ups and personalized rehabilitation plans."
  }
 ];
@@ -41,12 +41,12 @@ export default function ProcessPage() {
  <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-20">
  {/* Cinematic Hero */}
  <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
- <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"/>
+ <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse"/>
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
  <div className="elite-tag mb-10">
- <Layout className="w-4 h-4" /> Seamless Patient Journey
+ <Layout className="w-4 h-4"/> Seamless Patient Journey
  </div>
  <h1 className="elite-hero-title text-white mb-10">
  Our Patient <br />
@@ -82,11 +82,11 @@ export default function ProcessPage() {
  {/* Same Day Discharge Highlight */}
  <SectionContainer className="mt-24">
  <div className="bg-slate-900 text-white rounded-[4rem] p-12 lg:p-24 relative overflow-hidden">
- <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full blur-[100px] will-change-transform transform-gpu" />
+ <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/10 rounded-full blur-[100px] will-change-transform transform-gpu"/>
  <div className="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
  <div className="lg:w-1/2">
  <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center mb-8">
- <Clock className="w-8 h-8 text-fuchsia-400" />
+ <Clock className="w-8 h-8 text-fuchsia-400"/>
  </div>
  <h2 className="elite-section-title mb-8">Same-Day Discharge Philosophy</h2>
  <p className="text-slate-300 text-xl font-light leading-relaxed">
@@ -95,10 +95,10 @@ export default function ProcessPage() {
  </div>
  <div className="lg:w-1/2 grid grid-cols-2 gap-6 w-full">
  {[
- { icon: <ShieldCheck className="w-5 h-5" />, label: "Safety First" },
- { icon: <Activity className="w-5 h-5" />, label: "Early Mobility" },
- { icon: <Heart className="w-5 h-5" />, label: "Comfort Care" },
- { icon: <Layout className="w-5 h-5" />, label: "Seamless Ops" }
+ { icon: <ShieldCheck className="w-5 h-5"/>, label: "Safety First"},
+ { icon: <Activity className="w-5 h-5"/>, label: "Early Mobility"},
+ { icon: <Heart className="w-5 h-5"/>, label: "Comfort Care"},
+ { icon: <Layout className="w-5 h-5"/>, label: "Seamless Ops"}
  ].map((item, i) => (
  <div key={i} className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl flex flex-col items-center text-center">
  <div className="text-fuchsia-400 mb-4">{item.icon}</div>
@@ -112,19 +112,19 @@ export default function ProcessPage() {
  <SectionContainer className="mb-32 max-w-7xl mx-auto px-6 lg:px-8 mt-24">
  <PeopleAlsoSearchCard 
  keywords={[
- { text: "Patient care journey Indira Hospital", href: "/process" },
- { text: "HomeCareFlow recovery system", href: "/process" },
- { text: "Same-day discharge surgeries Vellore", href: "/process" },
- { text: "Pre-auth and insurance process", href: "/patients/insurance" },
- { text: "Digital follow-up healthcare", href: "/process" },
- { text: "Clinical excellence standards India", href: "/why-choose-indira" }
+ { text: "Patient care journey Indira Hospital", href: "/process"},
+ { text: "HomeCareFlow recovery system", href: "/process"},
+ { text: "Same-day discharge surgeries Vellore", href: "/process"},
+ { text: "Pre-auth and insurance process", href: "/patients/insurance"},
+ { text: "Digital follow-up healthcare", href: "/process"},
+ { text: "Clinical excellence standards India", href: "/why-choose-indira"}
  ]}
  />
  </SectionContainer>
 
  <div className="space-y-12">
- <InternalLinkGrid type="diagnostics" title="Advanced Diagnostics" subtitle="Advanced Imaging & Lab" limit={12} className="bg-white dark:bg-slate-900 border-t rounded-[4rem] border" />
- <InternalLinkGrid type="departments" title="Elite Medical Units" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900 rounded-[4rem] border mt-12" />
+ <InternalLinkGrid type="diagnostics"title="Advanced Diagnostics"subtitle="Advanced Imaging & Lab"limit={12} className="bg-white dark:bg-slate-900 border-t rounded-[4rem] border"/>
+ <InternalLinkGrid type="departments"title="Elite Medical Units"subtitle="Hospital Infrastructure"limit={8} className="bg-slate-50 dark:bg-slate-900 rounded-[4rem] border mt-12"/>
  </div>
  </main>
  );

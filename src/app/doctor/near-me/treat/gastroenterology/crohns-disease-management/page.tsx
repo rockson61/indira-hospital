@@ -60,24 +60,24 @@ export default function CrohnsManagementPage() {
  <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-sky-800 dark:text-sky-300">The IBD Remission Edge</h4>
  <ul className="space-y-4">
  {[
- { title: "Target-to-Treat Strategy", text: "We don't just treat symptoms. We use objective markers like Calprotectin and ileocolonoscopy to ensure the lining of the bowel is completely healed." },
- { title: "Advanced Biologics Unit", text: "Direct access to the latest biological therapies and small molecules, managed by specialists who ensure safety and maximum efficacy." },
- { title: "Nutritional Support", text: "IBD often leads to severe malabsorption. Our clinical dietitians build 'low-residue' and anti-inflammatory meal plans tailored to your flare status." }
+ { title: "Target-to-Treat Strategy", text: "We don't just treat symptoms. We use objective markers like Calprotectin and ileocolonoscopy to ensure the lining of the bowel is completely healed."},
+ { title: "Advanced Biologics Unit", text: "Direct access to the latest biological therapies and small molecules, managed by specialists who ensure safety and maximum efficacy."},
+ { title: "Nutritional Support", text: "IBD often leads to severe malabsorption. Our clinical dietitians build 'low-residue' and anti-inflammatory meal plans tailored to your flare status."}
  ].map((item, i) => (
  <li key={i} className="flex gap-3 items-start">
- <Activity className="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0 mt-1" />
+ <Activity className="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0 mt-1"/>
  <div>
  <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
- <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm">{item.text}</p>
  </div>
  </li>
  ))}
  </ul>
  </div>
  <div className="relative group">
- <div className="absolute inset-0 bg-sky-400/20 rounded-[3rem] blur-3xl transition-all" />
+ <div className="absolute inset-0 bg-sky-400/20 rounded-[3rem] blur-3xl transition-all"/>
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-2xl">
- <Microscope className="w-24 h-24 text-sky-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
+ <Microscope className="w-24 h-24 text-sky-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500"/>
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Mucosal Healing</p>
  <p className="text-slate-500 text-sm">Aiming for 100% tissue recovery to prevent long-term complications like strictures or surgery.</p>
  </div>
@@ -88,7 +88,7 @@ export default function CrohnsManagementPage() {
  <div className="prose prose-lg max-w-none prose-slate dark:prose-invert">
  <h3 className="text-slate-900 dark:text-white font-heading font-bold">Understanding Crohn's & IBD</h3>
  <p>
- Crohn's Disease is a chronic inflammatory condition of the gastrointestinal tract. Unlike ulcerative colitis, which only affects the colon, Crohn's can affect any part of the GI tract from mouth to anus. The inflammation can be "transmural," meaning it can penetrate the entire thickness of the bowel wall, leading to complications like fistulas and abscesses.
+ Crohn's Disease is a chronic inflammatory condition of the gastrointestinal tract. Unlike ulcerative colitis, which only affects the colon, Crohn's can affect any part of the GI tract from mouth to anus. The inflammation can be "transmural,"meaning it can penetrate the entire thickness of the bowel wall, leading to complications like fistulas and abscesses.
  </p>
  <p>
  At Indira Hospital, our approach, led by senior gastroenterologists, is focused on **Early Intervention**. By starting the right therapy early—especially biological drugs when indicated—we can often halt the disease's progression and avoid the need for permanent surgical removal of bowel segments.
@@ -104,7 +104,7 @@ export default function CrohnsManagementPage() {
  "Extraintestinal symptoms like joint pain or eye inflammation"
  ].map((symptom, i) => (
  <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
- <CheckCircle2 className="w-5 h-5 text-sky-500" />
+ <CheckCircle2 className="w-5 h-5 text-sky-500"/>
  <span className="text-sm font-medium">{symptom}</span>
  </div>
  ))}
@@ -125,10 +125,10 @@ export default function CrohnsManagementPage() {
 
  {/* FAQ Section */}
  <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-sky-950 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-sky-950 to-transparent"/>
  
  <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
- <Info className="text-sky-400" />
+ <Info className="text-sky-400"/>
  Crohn's & IBD: Essential FAQs
  </h3>
  
@@ -153,7 +153,7 @@ export default function CrohnsManagementPage() {
  ].map((faq, idx) => (
  <div key={idx} className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-colors">
  <h4 className="font-bold text-sky-400 mb-4 flex items-start gap-2">
- <Zap className="w-5 h-5 mt-1 shrink-0" />
+ <Zap className="w-5 h-5 mt-1 shrink-0"/>
  {faq.q}
  </h4>
  <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">

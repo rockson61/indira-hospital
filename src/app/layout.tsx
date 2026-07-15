@@ -12,7 +12,7 @@ const StickyCTA = dynamic(() => import("@/components/layout/StickyCTA").then(mod
 const FloatingWhatsApp = dynamic(() => import("@/components/layout/FloatingWhatsApp").then(mod => mod.FloatingWhatsApp));
 const DynamicSEOKeywordBlock = dynamic(() => import("@/components/DynamicSEOKeywordBlock"));
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
-
+import { WebMCPProvider } from "@/components/WebMCPProvider";
 
 const outfit = Outfit({
  variable: "--font-outfit",
@@ -53,12 +53,12 @@ export default function RootLayout({
  children: React.ReactNode;
 }>) {
  return (
- <html lang="en" className="bg-background" suppressHydrationWarning>
+ <html lang="en"className="bg-background"suppressHydrationWarning>
  <body
  className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans relative`}
  >
- <div id="google_translate_element" style={{ display: "none" }} />
- <Script id="google-translate-config" strategy="beforeInteractive">
+ <div id="google_translate_element"style={{ display: "none"}} />
+ <Script id="google-translate-config"strategy="beforeInteractive">
  {`
  function googleTranslateElementInit() {
  new window.google.translate.TranslateElement({
@@ -74,7 +74,7 @@ export default function RootLayout({
  strategy="afterInteractive"
  />
  <JsonLdSchema auto />
- <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+ <ThemeProvider attribute="class"defaultTheme="light"enableSystem={false} disableTransitionOnChange>
  <Header />
  <main className="flex-1 overflow-x-hidden w-full">
  {children}
@@ -89,6 +89,7 @@ export default function RootLayout({
  strategy="lazyOnload"
  data-uuid="6a2e65413f9dac8c30e24143"
  />
+ <WebMCPProvider />
  </ThemeProvider>
  </body>
  </html>

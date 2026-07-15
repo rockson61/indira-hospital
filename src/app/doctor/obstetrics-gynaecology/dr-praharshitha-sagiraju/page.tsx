@@ -35,9 +35,9 @@ export default function DrPraharshithaProfile() {
  image: "/images/doctors/dr-praharshitha.png",
  experience_years: 7,
  education: [
- { degree: "MBBS", institution: "Rangaraya Medical College" },
- { degree: "MD - Obstetrics & Gynaecology", institution: "AIIMS, New Delhi", year: "2020" },
- { degree: "DNB - Obstetrics & Gynaecology", institution: "National Board of Examinations", year: "2021" }
+ { degree: "MBBS", institution: "Rangaraya Medical College"},
+ { degree: "MD - Obstetrics & Gynaecology", institution: "AIIMS, New Delhi", year: "2020"},
+ { degree: "DNB - Obstetrics & Gynaecology", institution: "National Board of Examinations", year: "2021"}
  ],
  procedures: [
  "High-Risk Pregnancy Management",
@@ -96,8 +96,8 @@ export default function DrPraharshithaProfile() {
  fullDescription={
  <div className="space-y-16">
  {/* Section: Academic Excellence from AIIMS */}
- <section id="philosophy" className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50 text-left">
- <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
+ <section id="philosophy"className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50 text-left">
+ <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10"/>
  <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading uppercase tracking-tighter">
  Women’s Health: AIIMS-Standard Fetal Medicine
  </h3>
@@ -114,34 +114,34 @@ export default function DrPraharshithaProfile() {
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
- <Baby className="w-5 h-5 text-rose-600" />
+ <Baby className="w-5 h-5 text-rose-600"/>
  <span><strong>Fetal Medicine Specialist</strong>: Expert in NT/Target scans and management of complex pregnancies.</span>
  </div>
  <div className="flex items-center gap-3">
- <HeartPulse className="w-5 h-5 text-rose-600" />
+ <HeartPulse className="w-5 h-5 text-rose-600"/>
  <span><strong>Gynae-Endoscopy</strong>: Minimally invasive solutions for PCOS, Endometriosis, and Fibroids.</span>
  </div>
  </div>
  </div>
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-rose-100 dark:border-rose-800 shadow-xl flex flex-col justify-center">
- <Activity className="w-16 h-16 text-rose-500 mb-6 font-heading uppercase tracking-widest" />
+ <Activity className="w-16 h-16 text-rose-500 mb-6 font-heading uppercase tracking-widest"/>
  <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">OBGY Clinical Benchmarks</h4>
  <ul className="space-y-4 mb-6">
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0"/>
  <span className="text-sm"><strong>AIIMS Academic Lineage</strong>: Adhering to the world's most rigorous medical protocols.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0"/>
  <span className="text-sm"><strong>Hysteroscopic Specialist</strong>: Resolving uterine issues without abdominal incisions.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0"/>
  <span className="text-sm"><strong>Painless Labour</strong>: Expertise in safe epidural-supported delivery management.</span>
  </li>
  </ul>
- <div className="inline-flex items-center gap-2 text-rose-600 font-bold text-xs uppercase tracking-widest">
- <Award className="w-4 h-4" />
+ <div className="inline-flex items-center gap-2 text-rose-600 font-bold text-sm uppercase tracking-widest">
+ <Award className="w-4 h-4"/>
  Tertiary OBGY Standard Verified
  </div>
  </div>
@@ -150,7 +150,7 @@ export default function DrPraharshithaProfile() {
 
  {/* OBGY Technology row */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent"/>
  <h3 className="text-3xl font-bold mb-8 font-heading text-rose-300 uppercase tracking-widest leading-none">Diagnostic & Surgical modality Spectrum</h3>
  <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
  {[
@@ -160,9 +160,9 @@ export default function DrPraharshithaProfile() {
  { title: "Electronic Fetal Monitoring", desc: "Continuous antepartum and intrapartum fetal heart tracking.", icon: HeartPulse }
  ].map((item: any, i: number) => (
  <div key={i} className="p-6 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-rose-500/50 transition-all">
- <item.icon className="w-8 h-8 text-rose-400 mb-4" />
+ <item.icon className="w-8 h-8 text-rose-400 mb-4"/>
  <h4 className="font-bold text-lg mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-400 leading-relaxed antialiased">{item.desc}</p>
+ <p className="text-xs text-subtle-on-light leading-relaxed antialiased">{item.desc}</p>
  </div>
  ))}
  </div>

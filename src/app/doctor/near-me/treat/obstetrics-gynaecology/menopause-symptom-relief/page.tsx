@@ -56,7 +56,7 @@ export default function MenopauseCarePage() {
  <article className="space-y-12">
  {/* Mechanism: The Estrogen Axis */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
- <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10"/>
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading uppercase tracking-tighter">
  Mechanism: The Neuro-Endocrine Shift
  </h3>
@@ -66,27 +66,27 @@ export default function MenopauseCarePage() {
  The decline in estrogen levels during perimenopause and menopause leads to systemic physiological changes. Receptors for estrogen are found in the brain (impacting mood and 'brain fog'), the blood vessels (impacting hot flashes), and the bone-building cells.
  </p>
  <p className="mt-4">
- Our **Elite Hormone Audit** identifies the exact deficit. We move beyond managing "symptoms" to treating the **Genitourinary Syndrome of Menopause (GSM)** and the "Metabolic Slowdown." By utilizing low-dose, transdermal (skin) hormone replacement, we avoid the side effects of traditional oral pills, providing a much safer profile for heart and liver health.
+ Our **Elite Hormone Audit** identifies the exact deficit. We move beyond managing "symptoms"to treating the **Genitourinary Syndrome of Menopause (GSM)** and the "Metabolic Slowdown."By utilizing low-dose, transdermal (skin) hormone replacement, we avoid the side effects of traditional oral pills, providing a much safer profile for heart and liver health.
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
- <ThermometerSnowflake className="w-5 h-5 text-rose-600" />
+ <ThermometerSnowflake className="w-5 h-5 text-rose-600"/>
  <span><strong>Thermoregulation Fix</strong>: Stabilizing the 'hypothalamic thermostat' to stop night sweats instantly.</span>
  </div>
  <div className="flex items-center gap-3">
- <Heart className="w-5 h-5 text-rose-600" />
+ <Heart className="w-5 h-5 text-rose-600"/>
  <span><strong>Cardio-Protection Audit</strong>: Monitoring lipid profiles as estrogen's heart-protective effect diminishes.</span>
  </div>
  </div>
  </div>
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-rose-100 dark:border-rose-800 shadow-xl flex flex-col justify-center">
- <Activity className="w-16 h-16 text-rose-500 mb-6" />
- <h4 className="text-xl font-bold mb-2">The "Indira" DEXA Bone Security</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading border-l-2 border-rose-100 pl-4">
+ <Activity className="w-16 h-16 text-rose-500 mb-6"/>
+ <h4 className="text-xl font-bold mb-2">The "Indira"DEXA Bone Security</h4>
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed mb-6 font-heading border-l-2 border-rose-100 pl-4">
  Women can lose 20% of their bone density in just 5 years post-menopause. We use high-precision **DEXA Scanning** and Vitamin D/Calcium titration to stop **Osteoporosis** before a fracture ever occurs.
  </p>
- <div className="inline-flex items-center gap-2 text-rose-600 font-bold text-xs uppercase tracking-widest">
- <Shield className="w-4 h-4" />
+ <div className="inline-flex items-center gap-2 text-rose-600 font-bold text-sm uppercase tracking-widest">
+ <Shield className="w-4 h-4"/>
  Osteo-Resilience Assurance
  </div>
  </div>
@@ -95,7 +95,7 @@ export default function MenopauseCarePage() {
 
  {/* Holistic Wellness Grid */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent"/>
  <h3 className="font-heading text-3xl font-bold mb-8 font-heading text-rose-300 uppercase tracking-widest leading-none">The Golden Years Lifestyle Matrix</h3>
  <div className="grid md:grid-cols-3 gap-10 text-left relative z-10">
  {[
@@ -104,9 +104,9 @@ export default function MenopauseCarePage() {
  { title: "Vaginal Restoration", desc: "Non-hormonal and hormonal solutions for dryness and recurrent UTIs (GSM Syndrome).", icon: Shield }
  ].map((item, i) => (
  <div key={i} className="p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-rose-500/50 transition-all">
- <item.icon className="w-10 h-10 text-rose-400 mb-4" />
+ <item.icon className="w-10 h-10 text-rose-400 mb-4"/>
  <h4 className="font-bold text-xl mb-2">{item.title}</h4>
- <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+ <p className="text-sm text-subtle-on-light leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -115,7 +115,7 @@ export default function MenopauseCarePage() {
  {/* Clinical FAQ Hub */}
  <section className="bg-slate-50 dark:bg-slate-900 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
- <Info className="text-rose-500" />
+ <Info className="text-rose-500"/>
  Elite Clinical FAQs: Menopause & Hormone Therapy
  </h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -147,10 +147,10 @@ export default function MenopauseCarePage() {
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group text-left">
  <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
- <Zap className="w-4 h-4 mt-1 text-rose-500 shrink-0" />
+ <Zap className="w-4 h-4 mt-1 text-rose-500 shrink-0"/>
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased text-left">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed pl-6 antialiased text-left">
  {faq.a}
  </p>
  </div>

@@ -52,13 +52,13 @@ export default function GynaecologyPillarPage() {
  <div className="p-8 bg-rose-50 dark:bg-rose-900/20 rounded-[2.5rem] border border-rose-100 dark:border-rose-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 blur-3xl group-hover:bg-rose-500/20 transition-all"></div>
  <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2 uppercase tracking-tighter">
- <Target className="w-6 h-6" />
+ <Target className="w-6 h-6"/>
  Minimal Access (Keyhole) Hub
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
  Transforming major surgeries into daycare procedures. We specialize in <strong>4K Laparoscopic Hysterectomy</strong> and <strong>Laparoscopic Myomectomy</strong> (Fibroid removal), ensuring near-invisible scarring and a return to home within 24-48 hours.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 font-heading">AIIMS PROTOCOLS</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 font-heading">4K IMAGE PRECISION</span>
  </div>
@@ -66,15 +66,15 @@ export default function GynaecologyPillarPage() {
  <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
  <div className="absolute inset-0 bg-rose-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
  <h4 className="text-2xl font-bold text-rose-300 mb-4 uppercase tracking-tighter flex items-center gap-2">
- <Activity className="w-6 h-6" />
+ <Activity className="w-6 h-6"/>
  High-Risk Maternal Security
  </h4>
  <p className="text-rose-100/60 text-sm leading-relaxed mb-6 font-medium">
  Managing pregnancies complicated by PIH, Diabetes, or twins. Our Maternal-Fetal units are backed by a <strong>Level II Neonatal ICU</strong>, providing a safety net for premature births and obstetric emergencies.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> 24/7 OBSTETRIC GUARD</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> PAINLESS LABOR (EPIDURAL)</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> 24/7 OBSTETRIC GUARD</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> PAINLESS LABOR (EPIDURAL)</li>
  </ul>
  </div>
  </div>
@@ -84,7 +84,7 @@ export default function GynaecologyPillarPage() {
  <section className="obgyn-centers bg-rose-600 text-white p-12 md:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center gap-10">
  <div className="absolute top-0 right-0 w-96 h-96 bg-white dark:bg-slate-900 blur-[150px] -mr-48 -mt-48"></div>
  <div className="relative z-10 max-w-4xl space-y-8 text-left">
- <span className="inline-block px-6 py-2 bg-white text-rose-600 text-xs font-black rounded-full uppercase tracking-widest shadow-lg">Gynae-Endoscopy Authority</span>
+ <span className="inline-block px-6 py-2 bg-white text-rose-600 text-sm font-black rounded-full uppercase tracking-widest shadow-lg">Gynae-Endoscopy Authority</span>
  <h2 className="text-5xl font-black leading-tight tracking-tighter">Total Female Lifecycle Management led by <span className="text-rose-100">Dr. Praharshitha Sagiraju</span></h2>
  <div className="text-rose-50 text-2xl leading-relaxed font-medium">
  <p>With a PDCC in Gynaecological Endoscopy and MS from AIIMS Raipur, Dr. Praharshitha specialized in organ-preserving surgeries that protect fertility while curing complex diseases.</p>
@@ -98,7 +98,7 @@ export default function GynaecologyPillarPage() {
  {/* ── 3. Educational Deep-Dive: PCOS & Metabolic Health ────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading text-left">Clinical insight: The PCOS & Fertility Reset</h3>
+ <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not- font-heading text-left">Clinical insight: The PCOS & Fertility Reset</h3>
  <p>
  PCOS (Polycystic Ovary Syndrome) is not just a 'period problem'; it is a systemic metabolic disorder. At Indira Hospital, our <strong>Reproductive Medicine</strong> wing focuses on 'Scientific Reversal' by tackling the underlying insulin resistance and hormonal imbalance before attempting aggressive fertility treatments.
  </p>
@@ -107,14 +107,14 @@ export default function GynaecologyPillarPage() {
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "Follicular", v: "TVS Cycle Tracking" },
- { k: "Hormonal", v: "Endocrine Titration" },
- { k: "IUI Hub", v: "Scientific Insemination" },
- { k: "Diet Hub", v: "Metabolic Restoration" }
+ { k: "Follicular", v: "TVS Cycle Tracking"},
+ { k: "Hormonal", v: "Endocrine Titration"},
+ { k: "IUI Hub", v: "Scientific Insemination"},
+ { k: "Diet Hub", v: "Metabolic Restoration"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
  <p className="text-4xl font-black text-rose-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -163,7 +163,7 @@ export default function GynaecologyPillarPage() {
  <span className="text-rose-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>

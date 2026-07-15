@@ -37,7 +37,7 @@ export default function SitemapPage() {
  <h1 className="elite-hero-title mb-6">
  Website <span className="elite-gradient-text">Directory</span>
  </h1>
- <p className="text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+ <p className="text-xl text-slate-600 dark:text-subtle-on-light font-light leading-relaxed">
  Access our complete network of multi-speciality departments, 
  advanced surgical treatments, and local catchment areas in 
  Tamil Nadu and beyond.
@@ -51,15 +51,15 @@ export default function SitemapPage() {
  <div>
  <div className="flex items-center gap-3 mb-6">
  <div className="w-10 h-10 rounded-xl bg-fuchsia-500/10 flex items-center justify-center border border-fuchsia-500/20">
- <Stethoscope className="w-5 h-5 text-fuchsia-600" />
+ <Stethoscope className="w-5 h-5 text-fuchsia-600"/>
  </div>
  <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Medical Specialties</h2>
  </div>
  <ul className="space-y-3">
  {navigation.specialtyNav.map((dept) => (
  <li key={dept.title} className="group">
- <Link href={dept.href} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600 transition-colors flex items-center gap-2 font-medium">
- <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+ <Link href={dept.href} className="text-slate-600 dark:text-subtle-on-light hover:text-fuchsia-600 transition-colors flex items-center gap-2 font-medium">
+ <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"/>
  {dept.title}
  </Link>
  </li>
@@ -70,7 +70,7 @@ export default function SitemapPage() {
  <div>
  <div className="flex items-center gap-3 mb-6">
  <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
- <Activity className="w-5 h-5 text-blue-600" />
+ <Activity className="w-5 h-5 text-blue-600"/>
  </div>
  <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Key Treatments</h2>
  </div>
@@ -91,22 +91,22 @@ export default function SitemapPage() {
  <div>
  <div className="flex items-center gap-3 mb-6">
  <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
- <MapPin className="w-5 h-5 text-amber-600" />
+ <MapPin className="w-5 h-5 text-amber-600"/>
  </div>
  <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Global & City Hubs</h2>
  </div>
  <ul className="space-y-3">
  {majorCities.map((loc) => (
  <li key={loc.slug} className="group">
- <Link href={`/doctor/near-me/${loc.slug}`} className="text-slate-600 dark:text-slate-400 hover:text-amber-600 transition-colors flex items-center gap-2 font-medium">
- <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+ <Link href={`/doctor/near-me/${loc.slug}`} className="text-slate-600 dark:text-subtle-on-light hover:text-amber-600 transition-colors flex items-center gap-2 font-medium">
+ <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all"/>
  Best Hospital in {loc.name}
  </Link>
  </li>
  ))}
  <li>
- <Link href="/patients/international" className="text-fuchsia-600 font-bold flex items-center gap-2 mt-4 hover:underline">
- <Globe className="w-4 h-4" /> Medical Tourism India
+ <Link href="/patients/international"className="text-fuchsia-600 font-bold flex items-center gap-2 mt-4 hover:underline">
+ <Globe className="w-4 h-4"/> Medical Tourism India
  </Link>
  </li>
  </ul>
@@ -115,14 +115,14 @@ export default function SitemapPage() {
  <div>
  <div className="flex items-center gap-3 mb-6">
  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
- <Building2 className="w-5 h-5 text-emerald-600" />
+ <Building2 className="w-5 h-5 text-emerald-600"/>
  </div>
  <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Regional Coverage</h2>
  </div>
  <ul className="grid grid-cols-2 gap-3">
  {localTowns.slice(0, 20).map((loc) => (
  <li key={loc.slug}>
- <Link href={`/doctor/near-me/${loc.slug}`} className="text-slate-500 dark:text-slate-500 hover:text-emerald-600 transition-colors text-xs uppercase tracking-wider font-bold">
+ <Link href={`/doctor/near-me/${loc.slug}`} className="text-slate-500 dark:text-slate-500 hover:text-emerald-600 transition-colors text-sm uppercase tracking-wider font-bold">
  {loc.name}
  </Link>
  </li>
@@ -136,33 +136,33 @@ export default function SitemapPage() {
  <Card className="p-8 bg-slate-50 dark:bg-slate-900 border-none shadow-sm rounded-[2.5rem]">
  <div className="flex items-center gap-3 mb-6">
  <div className="w-10 h-10 rounded-xl bg-slate-900 dark:bg-white flex items-center justify-center">
- <Users className="w-5 h-5 text-white dark:text-slate-900" />
+ <Users className="w-5 h-5 text-white dark:text-slate-900"/>
  </div>
  <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Patient Hub</h2>
  </div>
  <ul className="space-y-4">
  <li>
- <Link href="/doctors" className="flex items-center justify-between group">
+ <Link href="/doctors"className="flex items-center justify-between group">
  <span className="text-slate-700 dark:text-slate-300 font-bold">Expert Doctors List</span>
- <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all" />
+ <ArrowRight className="w-4 h-4 text-subtle-on-light group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all"/>
  </Link>
  </li>
  <li>
- <Link href="/patients/insurance" className="flex items-center justify-between group">
+ <Link href="/patients/insurance"className="flex items-center justify-between group">
  <span className="text-slate-700 dark:text-slate-300 font-bold">Cashless Insurance</span>
- <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all" />
+ <ArrowRight className="w-4 h-4 text-subtle-on-light group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all"/>
  </Link>
  </li>
  <li>
- <Link href="/health-packages" className="flex items-center justify-between group">
+ <Link href="/health-packages"className="flex items-center justify-between group">
  <span className="text-slate-700 dark:text-slate-300 font-bold">Health Checkup Packages</span>
- <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all" />
+ <ArrowRight className="w-4 h-4 text-subtle-on-light group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all"/>
  </Link>
  </li>
  <li>
- <Link href="/faq" className="flex items-center justify-between group">
+ <Link href="/faq"className="flex items-center justify-between group">
  <span className="text-slate-700 dark:text-slate-300 font-bold">Patient Help & FAQs</span>
- <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all" />
+ <ArrowRight className="w-4 h-4 text-subtle-on-light group-hover:text-fuchsia-600 group-hover:translate-x-1 transition-all"/>
  </Link>
  </li>
  </ul>
@@ -171,17 +171,17 @@ export default function SitemapPage() {
  <div className="pt-4">
  <div className="flex items-center gap-3 mb-6">
  <div className="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
- <FileText className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+ <FileText className="w-5 h-5 text-slate-600 dark:text-subtle-on-light"/>
  </div>
  <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Corporate</h2>
  </div>
  <ul className="space-y-3">
- <li><Link href="/about" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">About Indira Hospital</Link></li>
- <li><Link href="/about/quality-safety" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Quality & NABH Standards</Link></li>
- <li><Link href="/careers" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Join Our Medical Team</Link></li>
- <li><Link href="/contact" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Contact Support</Link></li>
- <li><Link href="/privacy-policy" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Privacy Policy</Link></li>
- <li><Link href="/terms" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Terms of Service</Link></li>
+ <li><Link href="/about"className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">About Indira Hospital</Link></li>
+ <li><Link href="/about/quality-safety"className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Quality & NABH Standards</Link></li>
+ <li><Link href="/careers"className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Join Our Medical Team</Link></li>
+ <li><Link href="/contact"className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Contact Support</Link></li>
+ <li><Link href="/privacy-policy"className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Privacy Policy</Link></li>
+ <li><Link href="/terms"className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Terms of Service</Link></li>
  </ul>
  </div>
  </div>
@@ -196,16 +196,16 @@ export default function SitemapPage() {
  <p className="text-fuchsia-200/70 text-lg">Our 24/7 helpdesk is available for all medical inquiries.</p>
  </div>
  <div className="flex gap-4">
- <Link href="/contact" className="elite-button-primary !bg-white !text-slate-900 border-white hover:!bg-fuchsia-50">
+ <Link href="/contact"className="elite-button-primary !bg-white !text-slate-900 border-white hover:!bg-fuchsia-50">
  Contact Us
  </Link>
- <Link href="/doctors" className="elite-button-secondary !border-slate-200 dark:border-slate-800 !text-white hover:!bg-white dark:bg-slate-900">
- <Phone className="w-4 h-4 mr-2" /> Call Helpdesk
+ <Link href="/doctors"className="elite-button-secondary !border-slate-200 dark:border-slate-800 !text-white hover:!bg-white dark:bg-slate-900">
+ <Phone className="w-4 h-4 mr-2"/> Call Helpdesk
  </Link>
  </div>
  </div>
  {/* Decorative Blur */}
- <div className="absolute -top-24 -right-24 w-64 h-64 bg-fuchsia-500/20 blur-[80px] rounded-full" />
+ <div className="absolute -top-24 -right-24 w-64 h-64 bg-fuchsia-500/20 blur-[80px] rounded-full"/>
  </Card>
  </SectionContainer>
  </main>

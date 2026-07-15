@@ -97,21 +97,21 @@ export default function InternationalTestimonialsPage() {
  <main className="min-h-screen bg-white dark:bg-slate-950">
  {/* ELITE CINEMATIC HERO */}
  <section className="bg-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white relative overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
- <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"/>
+ <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full hidden md:block blur-[120px] opacity-70 pointer-events-none animate-pulse"/>
  
  <SectionContainer className="relative z-10">
  <div className="max-w-4xl mx-auto text-center lg:text-left lg:mx-0">
- <nav className="flex items-center justify-center lg:justify-start text-sm text-slate-400 mb-8 gap-1 flex-wrap">
- <Link href="/" className="hover:text-white transition-colors">Home</Link>
- <ChevronRight className="w-4 h-4" />
- <Link href="/patients/international" className="hover:text-white transition-colors">International</Link>
- <ChevronRight className="w-4 h-4" />
+ <nav className="flex items-center justify-center lg:justify-start text-sm text-subtle-on-light mb-8 gap-1 flex-wrap">
+ <Link href="/"className="hover:text-white transition-colors">Home</Link>
+ <ChevronRight className="w-4 h-4"/>
+ <Link href="/patients/international"className="hover:text-white transition-colors">International</Link>
+ <ChevronRight className="w-4 h-4"/>
  <span className="text-fuchsia-400 font-medium">Patient Stories</span>
  </nav>
 
- <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-xs font-bold tracking-widest uppercase mb-6 shadow-lg shadow-fuchsia-500/20">
- <Heart className="w-4 h-4 text-fuchsia-400" /> Real Stories · Verified Patients
+ <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-sm font-bold tracking-widest uppercase mb-6 shadow-lg shadow-fuchsia-500/20">
+ <Heart className="w-4 h-4 text-fuchsia-400"/> Real Stories · Verified Patients
  </span>
  
  <h1 className="elite-hero-title mb-8">
@@ -124,13 +124,13 @@ export default function InternationalTestimonialsPage() {
  </p>
 
  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
- <a href={WA} target="_blank" rel="noopener noreferrer"
+ <a href={WA} target="_blank"rel="noopener noreferrer"
  className="elite-button-primary">
- <MessageCircle className="w-5 h-5" /> Start Your Journey
+ <MessageCircle className="w-5 h-5"/> Start Your Journey
  </a>
  <Link href="/patients/international/cost-estimator"
  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-white font-bold rounded-2xl hover:bg-white dark:bg-slate-900 transition-all">
- View Cost Guide <ArrowRight className="w-4 h-4 text-fuchsia-400" />
+ View Cost Guide <ArrowRight className="w-4 h-4 text-fuchsia-400"/>
  </Link>
  </div>
  </div>
@@ -141,14 +141,14 @@ export default function InternationalTestimonialsPage() {
  <div className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
  <SectionContainer className="py-8 flex flex-wrap justify-between gap-8 text-center sm:text-left">
  {[
- { v: "4.9★", l: "Average Rating" },
- { v: "50+", l: "Countries Served" },
- { v: "15,000+", l: "Lives Impacted" },
- { v: "100%", l: "Verified Stories" },
+ { v: "4.9★", l: "Average Rating"},
+ { v: "50+", l: "Countries Served"},
+ { v: "15,000+", l: "Lives Impacted"},
+ { v: "100%", l: "Verified Stories"},
  ].map((stat, i) => (
  <div key={i} className="flex-1 min-w-[150px]">
  <div className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">{stat.v}</div>
- <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{stat.l}</div>
+ <div className="text-xs font-bold text-subtle-on-light uppercase tracking-widest">{stat.l}</div>
  </div>
  ))}
  </SectionContainer>
@@ -160,7 +160,7 @@ export default function InternationalTestimonialsPage() {
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
  {TESTIMONIALS.map((t, i) => (
  <div key={i} className="group relative bg-white dark:bg-slate-900 rounded-[3rem] p-8 border border-slate-100 dark:border-slate-800 hover:border-fuchsia-200 hover:shadow-2xl transition-all duration-500 flex flex-col">
- <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-50 dark:bg-fuchsia-900/10 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+ <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-50 dark:bg-fuchsia-900/10 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity -translate-y-1/2 translate-x-1/2 pointer-events-none"/>
  
  <div className="flex items-start justify-between mb-8">
  <div className="flex items-center gap-4">
@@ -169,35 +169,35 @@ export default function InternationalTestimonialsPage() {
  </div>
  <div>
  <h3 className="font-black text-slate-900 dark:text-white text-base leading-tight uppercase tracking-tight">{t.name}</h3>
- <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1 flex items-center gap-1">
- <Globe2 className="w-3 h-3 text-fuchsia-500" /> {t.country}
+ <p className="text-xs font-bold text-subtle-on-light uppercase tracking-widest mt-1 flex items-center gap-1">
+ <Globe2 className="w-3 h-3 text-fuchsia-500"/> {t.country}
  </p>
  </div>
  </div>
  <div className="flex gap-0.5">
  {[...Array(5)].map((_, idx) => (
- <Star key={idx} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+ <Star key={idx} className="w-3.5 h-3.5 fill-amber-400 text-amber-400"/>
  ))}
  </div>
  </div>
 
  <div className="mb-8 relative flex-1">
- <Quote className="w-8 h-8 text-fuchsia-500/10 absolute -top-4 -left-2" />
- <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed text-sm relative z-10 line-clamp-6">
+ <Quote className="w-8 h-8 text-fuchsia-500/10 absolute -top-4 -left-2"/>
+ <p className="text-slate-600 dark:text-subtle-on-light font-medium leading-relaxed text-sm relative z-10 line-clamp-6">
  {t.story}
  </p>
  </div>
 
  <div className="pt-6 border-t border-slate-50 dark:border-slate-800 space-y-3">
- <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-black uppercase tracking-widest border border-slate-100 dark:border-slate-700">
+ <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-black uppercase tracking-widest border border-slate-100 dark:border-slate-700">
  🏥 {t.procedure}
  </div>
  <div className="flex flex-col gap-1.5 pl-1">
- <div className="flex items-center gap-2 text-[10px] font-bold text-green-600 dark:text-green-400 uppercase tracking-widest">
- <CheckCircle2 className="w-3 h-3" /> {t.outcome}
+ <div className="flex items-center gap-2 text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-widest">
+ <CheckCircle2 className="w-3 h-3"/> {t.outcome}
  </div>
- <div className="flex items-center gap-2 text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest">
- <Award className="w-3 h-3" /> {t.savings}
+ <div className="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest">
+ <Award className="w-3 h-3"/> {t.savings}
  </div>
  </div>
  </div>
@@ -207,22 +207,22 @@ export default function InternationalTestimonialsPage() {
 
  {/* COUNTRY HUB LINKS */}
  <div className="bg-slate-900 rounded-[3.5rem] p-12 text-white border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden text-center lg:text-left">
- <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(232,121,249,0.1),transparent_50%)] pointer-events-none" />
+ <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(232,121,249,0.1),transparent_50%)] pointer-events-none"/>
  
  <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
  <div>
  <h2 className="elite-section-title text-white mb-6 uppercase">Find Your <br /><span className="text-fuchsia-400">Country Hub.</span></h2>
- <p className="text-slate-400 font-medium mb-10 leading-relaxed text-lg">Detailed travel guides, visa requirements, and specific success stories tailored for your home nation.</p>
+ <p className="text-subtle-on-light font-medium mb-10 leading-relaxed text-lg">Detailed travel guides, visa requirements, and specific success stories tailored for your home nation.</p>
  </div>
 
  <div className="flex flex-wrap gap-3 justify-center lg:justify-end">
  {INTERNATIONAL_COUNTRIES.slice(0, 16).map((c, i) => (
- <Link key={i} href={`/patients/international/${c.slug}`} className="px-5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold hover:bg-white dark:bg-slate-900 transition-all flex items-center gap-2 group">
+ <Link key={i} href={`/patients/international/${c.slug}`} className="px-5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-bold hover:bg-white dark:bg-slate-900 transition-all flex items-center gap-2 group">
  <span>{c.flag}</span> {c.name}
- <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+ <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"/>
  </Link>
  ))}
- <Link href="/patients/international" className="px-5 py-2.5 bg-fuchsia-500 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:scale-105 transition-all">
+ <Link href="/patients/international"className="px-5 py-2.5 bg-fuchsia-500 text-white rounded-xl text-sm font-black uppercase tracking-widest hover:scale-105 transition-all">
  All 50+ Countries
  </Link>
  </div>
@@ -252,15 +252,15 @@ export default function InternationalTestimonialsPage() {
 
  {/* CTA BAND ELITE */}
  <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
- <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,121,249,0.1),transparent_70%)] pointer-events-none" />
+ <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,121,249,0.1),transparent_70%)] pointer-events-none"/>
  <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
  <h2 className="elite-section-title text-white mb-10 uppercase">Join Our <br /><span className="text-fuchsia-500">Success Stories.</span></h2>
- <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto leading-relaxed">Your journey to world-class health begins with a single conversation. Our international desk is ready to assist you.</p>
+ <p className="text-xl text-subtle-on-light font-light mb-16 max-w-2xl mx-auto leading-relaxed">Your journey to world-class health begins with a single conversation. Our international desk is ready to assist you.</p>
  
  <div className="flex flex-wrap justify-center gap-6">
- <a href={WA} target="_blank" rel="noopener noreferrer"
+ <a href={WA} target="_blank"rel="noopener noreferrer"
  className="elite-button-primary text-base">
- <MessageCircle className="w-6 h-6" /> WhatsApp Us Now
+ <MessageCircle className="w-6 h-6"/> WhatsApp Us Now
  </a>
  <Link href="/patients/international/cost-estimator"
  className="inline-flex items-center gap-4 px-12 py-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-white font-black rounded-[2.5rem] hover:bg-white dark:bg-slate-900 text-xl transition-all">

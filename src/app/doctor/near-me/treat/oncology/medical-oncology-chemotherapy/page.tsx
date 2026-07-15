@@ -131,15 +131,15 @@ export default function MedicalOncologyPage() {
  <div className="grid md:grid-cols-3 gap-6">
  <div className="space-y-2">
  <h4 className="font-bold text-fuchsia-800 dark:text-fuchsia-300">Onco-Dietetics</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400">Personalized nutrition to combat weight loss and cachexia during treatment.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light">Personalized nutrition to combat weight loss and cachexia during treatment.</p>
  </div>
  <div className="space-y-2">
  <h4 className="font-bold text-fuchsia-800 dark:text-fuchsia-300">Pain Management</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400">Specialized palliative interventional protocols for cancer-related chronic pain.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light">Specialized palliative interventional protocols for cancer-related chronic pain.</p>
  </div>
  <div className="space-y-2">
  <h4 className="font-bold text-fuchsia-800 dark:text-fuchsia-300">Psychology</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400">Dedicated mental health support for patients and their families navigations oncology.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light">Dedicated mental health support for patients and their families navigations oncology.</p>
  </div>
  </div>
  </div>

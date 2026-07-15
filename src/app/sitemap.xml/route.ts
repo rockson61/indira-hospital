@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+// Ensure Next.js handles this as a standard Node API route correctly during SSG
 import { siteConfig } from '@/config/site';
 import { generateSitemapIndexXml } from '@/lib/sitemap-utils';
 

@@ -57,28 +57,28 @@ export default function PCODManagementPage() {
  {/* Visual Section: Why Specialized PCOS Care? */}
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
  <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
- <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50" />
+ <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50"/>
  <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-rose-800 dark:text-rose-300">The PCOS Edge</h4>
  <ul className="space-y-4">
  {[
- { title: "Hormonal Deep-Dive", text: "We perform comprehensive blood panels to check androstenedione, insulin resistance, and thyroid function, not just a simple ultrasound." },
- { title: "Insulin Sensitivity Focus", text: "Targeting the root metabolic cause of PCOS to reduce weight gain and improve ovulation naturally." },
- { title: "Dermatological Integration", text: "Coordinated care to manage PCOD-related acne, hair thinning, and hirsutism (excess hair growth)." }
+ { title: "Hormonal Deep-Dive", text: "We perform comprehensive blood panels to check androstenedione, insulin resistance, and thyroid function, not just a simple ultrasound."},
+ { title: "Insulin Sensitivity Focus", text: "Targeting the root metabolic cause of PCOS to reduce weight gain and improve ovulation naturally."},
+ { title: "Dermatological Integration", text: "Coordinated care to manage PCOD-related acne, hair thinning, and hirsutism (excess hair growth)."}
  ].map((item, i) => (
  <li key={i} className="flex gap-3 items-start">
- <Activity className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-1" />
+ <Activity className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-1"/>
  <div>
  <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
- <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm">{item.text}</p>
  </div>
  </li>
  ))}
  </ul>
  </div>
  <div className="relative group">
- <div className="absolute inset-0 bg-rose-400/20 rounded-[3rem] blur-3xl transition-all" />
+ <div className="absolute inset-0 bg-rose-400/20 rounded-[3rem] blur-3xl transition-all"/>
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-rose-100 dark:border-slate-800 shadow-2xl">
- <Leaf className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
+ <Leaf className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500"/>
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Hormonal Balance</p>
  <p className="text-slate-500 text-sm pr-4">Restoring your body's natural cyclical rhythm through evidence-based lifestyle and medical support.</p>
  </div>
@@ -106,7 +106,7 @@ export default function PCODManagementPage() {
  "Darkening of skin in creases (Acanthosis nigricans)"
  ].map((symptom, i) => (
  <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
- <CheckCircle2 className="w-5 h-5 text-rose-500" />
+ <CheckCircle2 className="w-5 h-5 text-rose-500"/>
  <span className="text-sm font-medium">{symptom}</span>
  </div>
  ))}
@@ -114,7 +114,7 @@ export default function PCODManagementPage() {
 
  <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 font-serif">A Personalized Roadmap to Reversal</h3>
  <p>
- The "Indira PCOS Protocol" is built on four pillars: **Metabolic Audit, Clinical Nutrition, Stress Resilience, and Targeted Medical Therapy**. We track your progress through objective data—not just how you feel, but through monthly monitoring of insulin levels, BMI, and hormonal ratios. This scientific approach ensures that we are making real progress toward reversing the condition and preventing its long-term complications.
+ The "Indira PCOS Protocol"is built on four pillars: **Metabolic Audit, Clinical Nutrition, Stress Resilience, and Targeted Medical Therapy**. We track your progress through objective data—not just how you feel, but through monthly monitoring of insulin levels, BMI, and hormonal ratios. This scientific approach ensures that we are making real progress toward reversing the condition and preventing its long-term complications.
  </p>
 
  <h4 className="font-heading text-fuchsia-700 dark:text-rose-400 mt-10">What are the Benefits of Women's Care Surgery?</h4>
@@ -127,10 +127,10 @@ export default function PCODManagementPage() {
 
  {/* FAQ Section */}
  <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
- <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl" />
+ <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl"/>
  
  <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
- <Info className="text-rose-400" />
+ <Info className="text-rose-400"/>
  PCOD & PCOS: Essential FAQs
  </h3>
  
@@ -155,7 +155,7 @@ export default function PCODManagementPage() {
  ].map((faq, idx) => (
  <div key={idx} className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-colors">
  <h4 className="font-bold text-rose-400 mb-4 flex items-start gap-2">
- <Zap className="w-5 h-5 mt-1 shrink-0" />
+ <Zap className="w-5 h-5 mt-1 shrink-0"/>
  {faq.q}
  </h4>
  <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">

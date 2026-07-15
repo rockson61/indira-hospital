@@ -39,10 +39,10 @@ export default function PaediatricsDepartmentPage() {
  <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2">
  Level 3 Neonatal ICU
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- "Saving the Smallest of Global Citizens." Our NICU provides specialized care for preterm babies as small as 800 grams, with 24/7 neonatologist monitoring and advanced TPN (Total Parenteral Nutrition).
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ "Saving the Smallest of Global Citizens."Our NICU provides specialized care for preterm babies as small as 800 grams, with 24/7 neonatologist monitoring and advanced TPN (Total Parenteral Nutrition).
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 shadow-sm">Surfactant Therapy</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 shadow-sm">HF-Oscillation Ventilator</span>
  </div>
@@ -54,8 +54,8 @@ export default function PaediatricsDepartmentPage() {
  Specialized operative care for children, from hernia and hydrocele to complex neonatal bowel surgeries and hypospadias correction.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Child-Safe Anesthesia</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Micro-Incision Surgery</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Child-Safe Anesthesia</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Micro-Incision Surgery</li>
  </ul>
  </div>
  </div>
@@ -74,10 +74,10 @@ export default function PaediatricsDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Clinical Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Management of childhood asthma, recurrent infections, and metabolic growth disorders.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Management of childhood asthma, recurrent infections, and metabolic growth disorders.</p>
  <ul className="space-y-3 mb-8">
  {["Asthma & Allergy Clinic", "Growth & Nutrition", "Vaccination Management", "Developmental Screening"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -91,10 +91,10 @@ export default function PaediatricsDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Neonatal NICU</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Highest-level care for premature, low-birth-weight, and critically ill surgical neonates.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Highest-level care for premature, low-birth-weight, and critically ill surgical neonates.</p>
  <ul className="space-y-3 mb-8">
  {["Total Parenteral Nutrition", "Neuro-Protection", "Phototherapy Units", "Kangaroo Care Rooms"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -108,10 +108,10 @@ export default function PaediatricsDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Surgical Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Precision operative interventions for simple and complex childhood anatomical conditions.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Precision operative interventions for simple and complex childhood anatomical conditions.</p>
  <ul className="space-y-3 mb-8">
  {["Pediatric Hernia", "Hydrocele Management", "Intussusception Surgery", "Hypospadias Correction"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -125,20 +125,20 @@ export default function PaediatricsDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Vaccination ─────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-rose-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading text-left">Immunisation: The Invisible Shield of Childhood</h3>
+ <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not- font-heading text-left">Immunisation: The Invisible Shield of Childhood</h3>
  <p>
  Vaccines are the single most effective clinical intervention in human history. They prepare a child's immune system to fight life-threatening diseases before they even occur. At Indira Hospital, we follow a rigorous <strong>Painless Vaccination Protocol</strong> combined with multi-channel reminders to ensure no child misses their vital shield.
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "Polio", v: "Oral + IV Shield" },
- { k: "Rotavirus", v: "Anti-Diarrheal" },
- { k: "Pentavalent", v: "5-in-1 Protection" },
- { k: "MMR", v: "Measles/Mumps/Rubella" }
+ { k: "Polio", v: "Oral + IV Shield"},
+ { k: "Rotavirus", v: "Anti-Diarrheal"},
+ { k: "Pentavalent", v: "5-in-1 Protection"},
+ { k: "MMR", v: "Measles/Mumps/Rubella"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
  <p className="text-4xl font-black text-rose-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -151,13 +151,13 @@ export default function PaediatricsDepartmentPage() {
  <section className="paeds-pathways space-y-12">
  <div className="flex items-baseline gap-4">
  <h2 className="text-2xl font-black uppercase text-slate-900 dark:text-white">Precision Child-Health Units</h2>
- <div className="flex-1 h-px bg-slate-100 dark:bg-slate-800" />
+ <div className="flex-1 h-px bg-slate-100 dark:bg-slate-800"/>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
  <div className="p-10 rounded-[3rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:border-rose-600">
  <h5 className="text-xl font-bold text-slate-900 dark:text-white mb-4 uppercase">The Asthma & Allergy Hub</h5>
  <p className="text-sm text-slate-500 leading-relaxed font-medium">
- Childhood asthma requires a "detective" approach. We utilize <strong>Pediatric Spirometry</strong> and skin-prick testing to identify environmental triggers. Our management focuses on <strong>Inhalation Therapy</strong> (spacers/nebulizers) to deliver medicine directly to the lungs, avoiding systemic side effects of oral steroids.
+ Childhood asthma requires a "detective"approach. We utilize <strong>Pediatric Spirometry</strong> and skin-prick testing to identify environmental triggers. Our management focuses on <strong>Inhalation Therapy</strong> (spacers/nebulizers) to deliver medicine directly to the lungs, avoiding systemic side effects of oral steroids.
  </p>
  </div>
  <div className="p-10 rounded-[3rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:border-rose-600">
@@ -217,7 +217,7 @@ export default function PaediatricsDepartmentPage() {
  <span className="text-rose-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -227,12 +227,12 @@ export default function PaediatricsDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Neonatal Intensive Care", link: "/doctor/near-me/treat/paediatrics" },
- { name: "Childhood Vaccination Hub", link: "/doctor/near-me/treat/paediatrics" },
- { name: "Pediatric Surgery Center", link: "/doctor/near-me/treat/paediatrics" },
- { name: "Growth & Nutrition Unit", link: "/doctor/near-me/treat/paediatrics" },
- { name: "Pediatric Asthma Clinic", link: "/doctor/near-me/treat/paediatrics" },
- { name: "Neonatal Follow-up", link: "/doctor/near-me/treat/paediatrics" }
+ { name: "Neonatal Intensive Care", link: "/doctor/near-me/treat/paediatrics"},
+ { name: "Childhood Vaccination Hub", link: "/doctor/near-me/treat/paediatrics"},
+ { name: "Pediatric Surgery Center", link: "/doctor/near-me/treat/paediatrics"},
+ { name: "Growth & Nutrition Unit", link: "/doctor/near-me/treat/paediatrics"},
+ { name: "Pediatric Asthma Clinic", link: "/doctor/near-me/treat/paediatrics"},
+ { name: "Neonatal Follow-up", link: "/doctor/near-me/treat/paediatrics"}
  ]}
  technology={[
  {

@@ -56,7 +56,7 @@ export default function GERDManagementPage() {
  <article className="space-y-12">
  {/* Mechanism: The LES Failure */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-cyan-50/50 dark:bg-cyan-950/20 border border-cyan-100 dark:border-cyan-900/50">
- <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/10 blur-3xl -z-10" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/10 blur-3xl -z-10"/>
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-cyan-500 pl-4 font-heading uppercase tracking-tighter">
  Mechanism: Lower Esophageal Sphincter (LES) Dysfunction
  </h3>
@@ -70,23 +70,23 @@ export default function GERDManagementPage() {
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-cyan-600" />
+ <ArrowRightCircle className="w-5 h-5 text-cyan-600"/>
  <span><strong>Barrett’s Tracking</strong>: Monitoring mucosal changes to prevent early-stage esophageal cancer.</span>
  </div>
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-cyan-600" />
+ <ArrowRightCircle className="w-5 h-5 text-cyan-600"/>
  <span><strong>Extra-Esophageal Reflux</strong>: Managing silent symptoms like chronic cough, hoarseness, and dental erosion.</span>
  </div>
  </div>
  </div>
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-cyan-100 dark:border-cyan-800 shadow-xl flex flex-col justify-center">
- <Flame className="w-16 h-16 text-cyan-500 mb-6" />
- <h4 className="text-xl font-bold mb-2">The "Indira" Reflux Audit</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading border-l-2 border-cyan-100 pl-4">
+ <Flame className="w-16 h-16 text-cyan-500 mb-6"/>
+ <h4 className="text-xl font-bold mb-2">The "Indira"Reflux Audit</h4>
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed mb-6 font-heading border-l-2 border-cyan-100 pl-4">
  Why do antacids only work temporarily? Because they neutralize acid without fixing the 'leaky valve.' Our audits identify 'Non-Acid Reflux' and 'Hypersensitive Esophagus' which traditional meds often miss.
  </p>
- <div className="inline-flex items-center gap-2 text-cyan-600 font-bold text-xs uppercase tracking-widest">
- <Shield className="w-4 h-4" />
+ <div className="inline-flex items-center gap-2 text-cyan-600 font-bold text-sm uppercase tracking-widest">
+ <Shield className="w-4 h-4"/>
  Mucosal Protection Security
  </div>
  </div>
@@ -95,15 +95,15 @@ export default function GERDManagementPage() {
 
  {/* Surgical Precision: Nissen Fundoplication */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/30 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/30 to-transparent"/>
  <h3 className="font-heading text-3xl font-bold mb-8 font-heading text-cyan-300 uppercase tracking-widest leading-none">The Golden Standard Surgical Cure</h3>
  <div className="grid md:grid-cols-2 gap-10 text-left relative z-10">
  <div className="p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
  <h4 className="font-bold text-2xl mb-4 text-cyan-400">Laparoscopic Nissen Fundoplication</h4>
- <p className="text-sm text-slate-400 leading-relaxed mb-6">
+ <p className="text-sm text-subtle-on-light leading-relaxed mb-6">
  For patients who are medication-dependent or have large Hiatal Hernias, we perform a 360-degree 'wrap' of the stomach around the weak LES. This surgically recreates the high-pressure valve, permanently stopping acid from entering the esophagus.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-900 rounded-full">48hr Recovery</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-900 rounded-full">Pill-Free Life</span>
  </div>
@@ -112,15 +112,15 @@ export default function GERDManagementPage() {
  <h4 className="text-xl font-bold">Why choose the surgical pathway?</h4>
  <ul className="space-y-4">
  {[
- { title: "No Medication Dependency", text: "End the need for daily PPIs and antacids for life." },
- { title: "Malignancy Prevention", text: "Stopping reflux is the only way to halt the progression of Barrett's into cancer." },
- { title: "Night-time Relief", text: "Zero sleep disruption after the very first recovery night." }
+ { title: "No Medication Dependency", text: "End the need for daily PPIs and antacids for life."},
+ { title: "Malignancy Prevention", text: "Stopping reflux is the only way to halt the progression of Barrett's into cancer."},
+ { title: "Night-time Relief", text: "Zero sleep disruption after the very first recovery night."}
  ].map((item, i) => (
  <li key={i} className="flex items-start gap-3">
- <div className="w-6 h-6 rounded-full bg-cyan-600 flex items-center justify-center text-[10px] shrink-0">✓</div>
+ <div className="w-6 h-6 rounded-full bg-cyan-600 flex items-center justify-center text-xs shrink-0">✓</div>
  <div>
  <p className="font-bold text-sm text-cyan-200">{item.title}</p>
- <p className="text-xs text-slate-500 leading-relaxed">{item.text}</p>
+ <p className="text-sm text-slate-500 leading-relaxed">{item.text}</p>
  </div>
  </li>
  ))}
@@ -132,8 +132,8 @@ export default function GERDManagementPage() {
  {/* Diagnostic Grid */}
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter">Precision Physiological Diagnostics</h3>
- <p className="text-slate-600 dark:text-slate-400">Objective data, not guesswork. We measure exactly what your esophagus is doing over 24 hours.</p>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 font-heading tracking-tighter">Precision Physiological Diagnostics</h3>
+ <p className="text-slate-600 dark:text-subtle-on-light">Objective data, not guesswork. We measure exactly what your esophagus is doing over 24 hours.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
  {[
@@ -142,9 +142,9 @@ export default function GERDManagementPage() {
  { title: "NBI Scoping", desc: "Using Narrow Band Imaging (NBI) to visualize early-stage tissue damage and mucosal erosion with high-definition clarity.", icon: Microscope }
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-xl transition-all border-b-4 border-cyan-600">
- <item.icon className="w-10 h-10 text-cyan-500 mb-4 mx-auto" />
+ <item.icon className="w-10 h-10 text-cyan-500 mb-4 mx-auto"/>
  <h5 className="font-bold text-sm mb-2">{item.title}</h5>
- <p className="text-xs text-slate-400 leading-relaxed font-medium">{item.desc}</p>
+ <p className="text-sm text-subtle-on-light leading-relaxed font-medium">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -153,7 +153,7 @@ export default function GERDManagementPage() {
  {/* Clinical FAQ Hub */}
  <section className="bg-slate-50 dark:bg-slate-900 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
- <Info className="text-cyan-500" />
+ <Info className="text-cyan-500"/>
  Elite Clinical FAQs: Acid Reflux & GERD Management
  </h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -185,10 +185,10 @@ export default function GERDManagementPage() {
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group text-left">
  <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
- <Zap className="w-4 h-4 mt-1 text-cyan-500 shrink-0" />
+ <Zap className="w-4 h-4 mt-1 text-cyan-500 shrink-0"/>
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased text-left">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed pl-6 antialiased text-left">
  {faq.a}
  </p>
  </div>

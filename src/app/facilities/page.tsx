@@ -19,15 +19,15 @@ export default function FacilitiesPage() {
  
  {/* Cinematic Hero */}
  <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
- <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"/>
+ <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse"/>
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
  <div className="elite-tag mb-10">
- <Sparkles className="w-4 h-4" /> Advanced Infrastructure
+ <Sparkles className="w-4 h-4"/> Advanced Infrastructure
  </div>
  <h1 className="elite-hero-title mb-10">
- Where <br className="hidden sm:block" />
+ Where <br className="hidden sm:block"/>
  <span className="elite-gradient-text">Technology</span> <br className="hidden sm:block"/>Meets Compassion.
  </h1>
  <p 
@@ -43,15 +43,15 @@ export default function FacilitiesPage() {
  {clinicEquipment.map((item) => (
  <div key={item.id} className="p-8 bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-900 transition-all group">
  <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
- {item.id === 'xray' && <Microscope className="w-7 h-7 text-fuchsia-600" />}
- {item.id === 'ct-scan' && <Activity className="w-7 h-7 text-fuchsia-600" />}
- {item.id === 'dialysis' && <Zap className="w-7 h-7 text-fuchsia-600" />}
- {item.id === 'ot' && <Building2 className="w-7 h-7 text-fuchsia-600" />}
- {item.id === 'icu' && <Beaker className="w-7 h-7 text-fuchsia-600" />}
+ {item.id === 'xray' && <Microscope className="w-7 h-7 text-fuchsia-600"/>}
+ {item.id === 'ct-scan' && <Activity className="w-7 h-7 text-fuchsia-600"/>}
+ {item.id === 'dialysis' && <Zap className="w-7 h-7 text-fuchsia-600"/>}
+ {item.id === 'ot' && <Building2 className="w-7 h-7 text-fuchsia-600"/>}
+ {item.id === 'icu' && <Beaker className="w-7 h-7 text-fuchsia-600"/>}
  </div>
  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4">{item.title}</h3>
  <p 
- className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed"
+ className="text-slate-600 dark:text-subtle-on-light font-medium leading-relaxed"
  dangerouslySetInnerHTML={{ __html: injectInternalLinks(item.description) }}
  />
  </div>
@@ -62,14 +62,14 @@ export default function FacilitiesPage() {
  {/* Comprehensive Checklist Section */}
  <SectionContainer>
  <div className="bg-slate-900 rounded-[3.5rem] p-12 lg:p-20 relative overflow-hidden">
- <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[120px] will-change-transform transform-gpu" />
+ <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[120px] will-change-transform transform-gpu"/>
  <div className="relative z-10">
  <h2 className="elite-section-title text-white mb-12">Infrastructure Excellence</h2>
  <div className="grid md:grid-cols-2 gap-x-16 gap-y-6">
  {clinicFacilities.map((facility, i) => (
  <div key={i} className="flex items-center gap-4 py-4 border-b border-slate-200 dark:border-slate-800 group">
  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-fuchsia-500/20 flex items-center justify-center">
- <CheckCircle2 className="w-4 h-4 text-fuchsia-400" />
+ <CheckCircle2 className="w-4 h-4 text-fuchsia-400"/>
  </div>
  <span className="text-lg font-bold text-slate-300 group-hover:text-white transition-colors">{facility}</span>
  </div>
@@ -102,14 +102,14 @@ export default function FacilitiesPage() {
  <SectionContainer className="mt-24 mb-32">
  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
  {[
- { label: "Beds Available", value: "150+" },
- { label: "Modular OTs", value: "05" },
- { label: "Laboratory", value: "24/7" },
- { label: "Successful Surgeries", value: "15k+" }
+ { label: "Beds Available", value: "150+"},
+ { label: "Modular OTs", value: "05"},
+ { label: "Laboratory", value: "24/7"},
+ { label: "Successful Surgeries", value: "15k+"}
  ].map((stat, i) => (
  <div key={i} className="text-center">
  <div className="text-4xl font-black text-slate-900 dark:text-white mb-2 uppercase">{stat.value}</div>
- <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{stat.label}</div>
+ <div className="text-xs font-black text-subtle-on-light uppercase tracking-[0.3em]">{stat.label}</div>
  </div>
  ))}
  </div>
@@ -118,19 +118,19 @@ export default function FacilitiesPage() {
  <SectionContainer className="mb-32 max-w-7xl mx-auto px-6 lg:px-8">
  <PeopleAlsoSearchCard 
  keywords={[
- { text: "Best Hospital in Vellore Facilities", href: "/facilities" },
- { text: "Modular OT hospitals near me", href: "/facilities" },
- { text: "24/7 ICU hospital Vellore", href: "/facilities" },
- { text: "Digital X-Ray cost Vellore", href: "/facilities" },
- { text: "128 slice CT scan hospital", href: "/facilities" },
- { text: "NABH accredited care Vellore", href: "/quality-accreditations" }
+ { text: "Best Hospital in Vellore Facilities", href: "/facilities"},
+ { text: "Modular OT hospitals near me", href: "/facilities"},
+ { text: "24/7 ICU hospital Vellore", href: "/facilities"},
+ { text: "Digital X-Ray cost Vellore", href: "/facilities"},
+ { text: "128 slice CT scan hospital", href: "/facilities"},
+ { text: "NABH accredited care Vellore", href: "/quality-accreditations"}
  ]}
  />
  </SectionContainer>
 
  <div className="space-y-12">
- <InternalLinkGrid type="services" title="Clinical Excellence" subtitle="Our Treatments" limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border" />
- <InternalLinkGrid type="departments" title="Indira Elite Medical Units" subtitle="Hospital Infrastructure" limit={8} className="bg-slate-50 dark:bg-slate-900 rounded-[4rem] border mt-12" />
+ <InternalLinkGrid type="services"title="Clinical Excellence"subtitle="Our Treatments"limit={12} className="bg-white dark:bg-slate-950 rounded-[4rem] border"/>
+ <InternalLinkGrid type="departments"title="Indira Elite Medical Units"subtitle="Hospital Infrastructure"limit={8} className="bg-slate-50 dark:bg-slate-900 rounded-[4rem] border mt-12"/>
  </div>
  </main>
  );

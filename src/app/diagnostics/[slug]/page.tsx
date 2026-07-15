@@ -20,7 +20,7 @@ import { constructMetadata } from "@/lib/seo-utils";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
  const { slug } = await params;
  const test = await getDiagnosticBySlug(slug) as any;
- if (!test) return { title: "Test Not Found" };
+ if (!test) return { title: "Test Not Found"};
  
  const title = test.seo_title || `${test.name} Test Cost & Booking in Vellore | Indira Hospital`;
  const description = test.seo_description || `Book ${test.name} at Indira Hospital, Vellore. ${test.report_time ? `Reports in ${test.report_time}.` : ''} Trusted diagnostic services with home collection.`;
@@ -50,8 +50,8 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  <JsonLdSchema
  type="breadcrumb"
  items={[
- { name: "Home", url: "/" },
- { name: "Diagnostics", url: "/diagnostics" },
+ { name: "Home", url: "/"},
+ { name: "Diagnostics", url: "/diagnostics"},
  { name: test.name, url: `/diagnostics/${slug}` }
  ]}
  />
@@ -60,16 +60,16 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  <SectionContainer>
  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
  <div>
- <span className="inline-block px-3 py-1 bg-fuchsia-100 text-fuchsia-700 text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
+ <span className="inline-block px-3 py-1 bg-fuchsia-100 text-fuchsia-700 text-sm font-bold rounded-full mb-3 uppercase tracking-wider">
  {test.category}
  </span>
-  <h1 className="elite-hero-title text-slate-900 dark:text-white mb-10 text-left">
-  {test.name} <br />
-  <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, Tamil Nadu</span>
-  </h1>
-  <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8">
-  {test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 150) || `Comprehensive ${test.name} with accurate reporting and quick turnaround time.`}
-  </p>
+ <h1 className="elite-hero-title text-slate-900 dark:text-white mb-10 text-left">
+ {test.name} <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, Tamil Nadu</span>
+ </h1>
+ <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8">
+ {test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 150) || `Comprehensive ${test.name} with accurate reporting and quick turnaround time.`}
+ </p>
  </div>
  <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border shadow-sm min-w-[300px]">
  <div className="flex items-baseline gap-1 mb-1">
@@ -78,44 +78,44 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  </span>
  </div>
  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
- <Clock className="w-4 h-4" />
+ <Clock className="w-4 h-4"/>
  Report in {test.report_time || '24 Hours'}
  </div>
 
  {/* Quick info badges */}
  <div className="flex flex-wrap gap-2 mb-6">
  {test.home_collection && (
- <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs rounded-full">
- <Home className="w-3 h-3" /> Home Collection
+ <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm rounded-full">
+ <Home className="w-3 h-3"/> Home Collection
  </span>
  )}
  {test.fasting_required && (
- <span className="flex items-center gap-1 px-2 py-1 bg-amber-50 text-amber-700 text-xs rounded-full">
+ <span className="flex items-center gap-1 px-2 py-1 bg-amber-50 text-amber-700 text-sm rounded-full">
  Fasting Required
  </span>
  )}
  {test.sample_type && test.sample_type !== 'N/A - Imaging' && (
- <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs rounded-full">
- <BloodDrop className="w-3 h-3" /> {test.sample_type}
+ <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm rounded-full">
+ <BloodDrop className="w-3 h-3"/> {test.sample_type}
  </span>
  )}
  {test.parameters_count && test.parameters_count > 0 && (
- <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs rounded-full">
- <Beaker className="w-3 h-3" /> {test.parameters_count} parameters
+ <span className="flex items-center gap-1 px-2 py-1 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm rounded-full">
+ <Beaker className="w-3 h-3"/> {test.parameters_count} parameters
  </span>
  )}
  </div>
 
  <div className="space-y-3">
- <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 h-14 rounded-2xl" asChild>
- <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I want to book a ${test.name} diagnostic test.`)}`} target="_blank" rel="noopener noreferrer">
- <MessageCircle className="w-5 h-5 mr-2" />
+ <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 h-14 rounded-2xl"asChild>
+ <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I want to book a ${test.name} diagnostic test.`)}`} target="_blank"rel="noopener noreferrer">
+ <MessageCircle className="w-5 h-5 mr-2"/>
  Book via WhatsApp
  </a>
  </Button>
  {test.home_collection && (
- <Button variant="outline" className="w-full h-14 rounded-2xl" asChild>
- <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I want home sample collection for ${test.name}.`)}`} target="_blank" rel="noopener noreferrer">
+ <Button variant="outline"className="w-full h-14 rounded-2xl"asChild>
+ <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I want home sample collection for ${test.name}.`)}`} target="_blank"rel="noopener noreferrer">
  Home Collection
  </a>
  </Button>
@@ -144,7 +144,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  {/* Preparation */}
  <div className="bg-amber-50 border border-amber-100 p-6 rounded-xl">
  <h2 className="text-xl font-bold text-amber-900 flex items-center gap-2 mb-4">
- <AlertCircle className="w-5 h-5" />
+ <AlertCircle className="w-5 h-5"/>
  Preparation Instructions
  </h2>
  <div
@@ -180,28 +180,28 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  <h2 className="text-2xl font-bold mb-6">Why Choose Indira Diagnostics?</h2>
  <div className="grid sm:grid-cols-2 gap-6">
  <div className="flex gap-4">
- <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+ <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0"/>
  <div>
  <h3 className="font-bold">NABL Accredited Labs</h3>
  <p className="text-sm text-muted-foreground">Highest quality standards and accurate results.</p>
  </div>
  </div>
  <div className="flex gap-4">
- <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+ <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0"/>
  <div>
  <h3 className="font-bold">Latest Technology</h3>
  <p className="text-sm text-muted-foreground">Advanced 1.5T MRI and fully automated analyzers.</p>
  </div>
  </div>
  <div className="flex gap-4">
- <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+ <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0"/>
  <div>
  <h3 className="font-bold">Expert Pathologists</h3>
  <p className="text-sm text-muted-foreground">Reports verified by senior consultants.</p>
  </div>
  </div>
  <div className="flex gap-4">
- <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+ <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0"/>
  <div>
  <h3 className="font-bold">Digital Reports</h3>
  <p className="text-sm text-muted-foreground">Access your reports online or via WhatsApp.</p>
@@ -219,7 +219,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  Not sure which test to book? Our support team is here to guide you.
  </p>
  <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="flex items-center gap-3">
- <Phone className="w-4 h-4" />
+ <Phone className="w-4 h-4"/>
  {siteConfig.contact.phone}
  </a>
  </div>
@@ -279,8 +279,8 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
  excludeSlug={slug}
  className="bg-slate-50 dark:bg-slate-900 border-t"
  />
- <InternalLinkGrid type="health-packages" title={`Checkup Packages for ${test.name} Patients`} subtitle="Wellness Screening" limit={8} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="services" title="Related Treatments" subtitle="Clinical Care" limit={12} className="bg-slate-50 dark:bg-slate-900 border-t" />
+ <InternalLinkGrid type="health-packages"title={`Checkup Packages for ${test.name} Patients`} subtitle="Wellness Screening"limit={8} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="services"title="Related Treatments"subtitle="Clinical Care"limit={12} className="bg-slate-50 dark:bg-slate-900 border-t"/>
  </main>
  )
 }

@@ -22,17 +22,17 @@ import { siteConfig } from "@/config/site";
 
 // Icon map for departments
 const iconMap: Record<string, React.ReactNode> = {
- Scalpel: <Stethoscope className="h-8 w-8" />,
- HeartCardiogram: <HeartCardiogram className="h-8 w-8" />,
- Stethoscope: <Stethoscope className="h-8 w-8" />,
- Baby0203m: <Baby0203m className="h-8 w-8" />,
- Orthopaedics: <HeartCardiogram className="h-8 w-8" />,
- Heart: <Heart className="h-8 w-8" />,
- Siren: <Siren className="h-8 w-8" />,
- Happy: <Happy className="h-8 w-8" />,
- Neurology: <Neurology className="h-8 w-8" />,
- Ribbon: <Ribbon className="h-8 w-8" />,
- BloodDrop: <BloodDrop className="h-8 w-8" />,
+ Scalpel: <Stethoscope className="h-8 w-8"/>,
+ HeartCardiogram: <HeartCardiogram className="h-8 w-8"/>,
+ Stethoscope: <Stethoscope className="h-8 w-8"/>,
+ Baby0203m: <Baby0203m className="h-8 w-8"/>,
+ Orthopaedics: <HeartCardiogram className="h-8 w-8"/>,
+ Heart: <Heart className="h-8 w-8"/>,
+ Siren: <Siren className="h-8 w-8"/>,
+ Happy: <Happy className="h-8 w-8"/>,
+ Neurology: <Neurology className="h-8 w-8"/>,
+ Ribbon: <Ribbon className="h-8 w-8"/>,
+ BloodDrop: <BloodDrop className="h-8 w-8"/>,
 };
 
 export const dynamicParams = false;
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
  const { slug } = await params;
  const department = await getDepartmentBySlug(slug).catch(() => null);
 
- if (!department) return { title: "Department Not Found" };
+ if (!department) return { title: "Department Not Found"};
  const title = department.seo_title || `Top ${department.title} Specialists in Vellore | Same-Day Recovery | Indira Hospital`;
  const desc = department.seo_description || `Looking for the best ${department.title} doctors in Vellore? Indira Hospital offers world-class care, advanced treatments, and same-day recovery. Book your consultation today!`;
 
@@ -111,8 +111,8 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
 
  return (
  <div className="bg-gray-50 dark:bg-slate-950 min-h-screen">
- <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
- <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+ <script type="application/ld+json"dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+ <script type="application/ld+json"dangerouslySetInnerHTML={{ __html: JSON.stringify({
  '@context': 'https://schema.org',
  '@type': 'BreadcrumbList',
  itemListElement: [
@@ -125,47 +125,47 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  {/* ========== HERO ========== */}
  <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden pb-12">
  <div className="absolute inset-0 opacity-20">
- <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+ <div className="absolute inset-0"style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
  </div>
  
  {/* Elite Ambient Glows */}
- <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
- <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+ <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse"/>
+ <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none"/>
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-24 relative z-10">
- <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap">
- <Link href="/" className="hover:text-white transition-colors">Home</Link>
- <ChevronRight className="w-4 h-4 mx-2" />
- <Link href="/departments" className="hover:text-white transition-colors">Departments</Link>
- <ChevronRight className="w-4 h-4 mx-2" />
+ <nav className="flex items-center text-sm breadcrumb-on-dark mb-10 overflow-x-auto whitespace-nowrap">
+ <Link href="/"className="hover:text-white transition-colors">Home</Link>
+ <ChevronRight className="w-4 h-4 mx-2"/>
+ <Link href="/departments"className="hover:text-white transition-colors">Departments</Link>
+ <ChevronRight className="w-4 h-4 mx-2"/>
  <span className="text-white font-black">{department.title}</span>
  </nav>
 
  <div className="flex items-start gap-8">
  <div className="hidden sm:flex h-20 w-20 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center justify-center text-white shadow-2xl">
- {iconMap[department.icon] || <Stethoscope className="h-10 w-10" />}
+ {iconMap[department.icon] || <Stethoscope className="h-10 w-10"/>}
  </div>
  <div>
  <div className="elite-tag mb-10">
- <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> NABH Accredited Hospital
+ <Sparkles className="w-4 h-4 text-amber-400 animate-pulse"/> NABH Accredited Hospital
  </div>
  <h1 className="elite-hero-title text-white mb-10 text-left">
  {department.title} <br />
  <span className="elite-gradient-text text-3xl sm:text-4xl">Precision Specialists in Vellore.</span>
  </h1>
-  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90">
-  {department.short_description}
-  </p>
+ <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90">
+ {department.short_description}
+ </p>
 
  <div className="flex flex-wrap gap-5 mt-10">
- <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+ <a href={whatsappUrl} target="_blank"rel="noopener noreferrer"
  className="elite-button-primary gap-3">
- <MessageCircle className="w-5 h-5" />
+ <MessageCircle className="w-5 h-5"/>
  Contact Department
  </a>
  <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
  className="elite-button-secondary gap-3">
- <Phone className="w-5 h-5 text-fuchsia-400" />
+ <Phone className="w-5 h-5 text-fuchsia-400"/>
  Talk to Specialist
  </a>
  </div>
@@ -179,17 +179,17 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  <div className="grid lg:grid-cols-3 gap-8">
  <div className="lg:col-span-2 space-y-8">
  {/* About */}
-  <Card className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
-  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-  <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white flex items-center">
-  <span className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-lg mr-3 text-indigo-600 dark:text-indigo-400">
-  <Stethoscope className="w-5 h-5" />
-  </span>
-  About the {department.title} Department
-  </h2>
- <span className="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-slate-800 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Last Updated: June 2026</span>
+ <Card className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+ <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white flex items-center">
+ <span className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-lg mr-3 text-indigo-600 dark:text-indigo-400">
+ <Stethoscope className="w-5 h-5"/>
+ </span>
+ About the {department.title} Department
+ </h2>
+ <span className="text-sm font-medium text-gray-400 bg-gray-100 dark:bg-slate-800 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Last Updated: June 2026</span>
  </div>
- <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(department.full_description) }} />
+ <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4"dangerouslySetInnerHTML={{ __html: injectInternalLinks(department.full_description) }} />
  </Card>
 
  <EntityFAQs
@@ -210,15 +210,15 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  {/* Doctors in this Department */}
  {relatedDoctors.length > 0 && (
  <div>
-  <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
-  <span className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-lg mr-3 text-indigo-600 dark:text-indigo-400">
-  <GraduationCap className="w-5 h-5" />
-  </span>
-  Meet the Experts in {department.title}
-  </h2>
+ <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
+ <span className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-lg mr-3 text-indigo-600 dark:text-indigo-400">
+ <GraduationCap className="w-5 h-5"/>
+ </span>
+ Meet the Experts in {department.title}
+ </h2>
  <div className="grid sm:grid-cols-2 gap-5">
  {relatedDoctors.map((doc) => (
- <DoctorCard key={doc.slug} doctor={doc} variant="grid" />
+ <DoctorCard key={doc.slug} doctor={doc} variant="grid"/>
  ))}
  </div>
  </div>
@@ -230,11 +230,11 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  <div className="lg:sticky lg:top-24 space-y-6">
 
  {/* Other Departments Quick Links */}
-  <Card className="p-6 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl bg-white dark:bg-slate-900">
-  <h3 className="font-bold font-heading text-slate-900 dark:text-white mb-4">Other Departments</h3>
+ <Card className="p-6 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+ <h3 className="font-bold font-heading text-slate-900 dark:text-white mb-4">Other Departments</h3>
  <div className="flex flex-wrap gap-2">
  {otherDepartments.slice(0, 10).map((d: any) => (
- <ServiceCard key={d.slug} service={d} variant="compact" />
+ <ServiceCard key={d.slug} service={d} variant="compact"/>
  ))}
  </div>
  </Card>
@@ -258,7 +258,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
 
  <HealthLibraryCard />
 
- <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900" />
+ <EntityCardSection type="doctors"title="Our Expert Doctors"subtitle="Meet Our Specialists"limit={6} className="bg-white dark:bg-slate-900"/>
 
  {/* COMPACT SEO LINK STRIPS */}
  <InternalLinkGrid
@@ -269,11 +269,11 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  limit={12}
  className="bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50"
  />
- <InternalLinkGrid type="diagnostics" title={`Diagnostics for ${department.title}`} subtitle="Clinical Lab Support" limit={12} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="health-packages" title={`Checkups for ${department.title}`} subtitle="Wellness Monitoring" limit={8} className="bg-slate-50 dark:bg-slate-900 border-t" />
+ <InternalLinkGrid type="diagnostics"title={`Diagnostics for ${department.title}`} subtitle="Clinical Lab Support"limit={12} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="health-packages"title={`Checkups for ${department.title}`} subtitle="Wellness Monitoring"limit={8} className="bg-slate-50 dark:bg-slate-900 border-t"/>
 
- <InternalLinkGrid type="departments" title="All Departments A-Z" subtitle="Departments Directory" limit={12} className="bg-white dark:bg-slate-900" />
- <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50" />
+ <InternalLinkGrid type="departments"title="All Departments A-Z"subtitle="Departments Directory"limit={12} className="bg-white dark:bg-slate-900"/>
+ <InternalLinkGrid type="doctors"title="All Doctors A-Z"subtitle="Doctors Directory"limit={12} className="bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50"/>
  </div >
  );
 }

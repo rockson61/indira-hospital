@@ -40,8 +40,8 @@ export default function AboutPage() {
  </section>
 
  <SectionContainer className="pb-32">
- <InternalLinkGrid type="departments" title="Our Specialties" subtitle="Advanced Clinical Care" limit={8} className="bg-white dark:bg-slate-950 border rounded-[4rem]" />
- <InternalLinkGrid type="services" title="A-Z Procedures" subtitle="Surgical Excellence" limit={12} className="mt-12 bg-slate-50 dark:bg-slate-900 border rounded-[4rem]" />
+ <InternalLinkGrid type="departments"title="Our Specialties"subtitle="Advanced Clinical Care"limit={8} className="bg-white dark:bg-slate-950 border rounded-[4rem]"/>
+ <InternalLinkGrid type="services"title="A-Z Procedures"subtitle="Surgical Excellence"limit={12} className="mt-12 bg-slate-50 dark:bg-slate-900 border rounded-[4rem]"/>
  </SectionContainer>
  </>
  );

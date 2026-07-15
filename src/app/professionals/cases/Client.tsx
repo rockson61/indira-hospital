@@ -55,7 +55,7 @@ export function CasesClient() {
  <main className="min-h-screen bg-black text-slate-200">
  {/* TECHNICAL HERO */}
  <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-32 overflow-hidden bg-slate-900 border-b border-slate-200 dark:border-slate-800">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"/>
  
  <SectionContainer className="relative z-10 space-y-12">
  <motion.div
@@ -63,8 +63,8 @@ export function CasesClient() {
  animate={{ opacity: 1, x: 0 }}
  className="max-w-4xl space-y-8"
  >
- <Badge variant="outline" className="px-5 py-2 rounded-full border-blue-500/20 bg-blue-500/10 text-blue-400 text-xs font-black tracking-widest uppercase">
- <Database className="w-4 h-4 mr-2" /> Elite Surgical Repository
+ <Badge variant="outline"className="px-5 py-2 rounded-full border-blue-500/20 bg-blue-500/10 text-blue-400 text-sm font-black tracking-widest uppercase">
+ <Database className="w-4 h-4 mr-2"/> Elite Surgical Repository
  </Badge>
  
  <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none uppercase">
@@ -72,21 +72,21 @@ export function CasesClient() {
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400">Archives.</span>
  </h1>
  
- <p className="text-xl md:text-2xl text-slate-400 font-light leading-relaxed">
- Peer-reviewed surgical case studies and technical data for medical professionals. Explore the clinical outcomes of our "Elite" surgical protocols.
+ <p className="text-xl md:text-2xl text-subtle-on-light font-light leading-relaxed">
+ Peer-reviewed surgical case studies and technical data for medical professionals. Explore the clinical outcomes of our "Elite"surgical protocols.
  </p>
  </motion.div>
 
  <div className="flex flex-col md:flex-row gap-6 items-center max-w-2xl">
  <div className="relative flex-1 group">
- <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 group-focus-within:text-blue-400 transition-colors" />
+ <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 group-focus-within:text-blue-400 transition-colors"/>
  <Input 
- placeholder="Filter by specialty or technique..." 
+ placeholder="Filter by specialty or technique..."
  className="h-16 pl-12 rounded-2xl bg-black border-slate-200 dark:border-slate-800 text-lg focus:border-blue-500/50 transition-all shadow-2xl"
  />
  </div>
- <Button variant="outline" className="h-16 px-8 rounded-2xl border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 font-bold">
- <Filter className="mr-2 w-5 h-5" /> Specialty Filter
+ <Button variant="outline"className="h-16 px-8 rounded-2xl border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 font-bold">
+ <Filter className="mr-2 w-5 h-5"/> Specialty Filter
  </Button>
  </div>
  </SectionContainer>
@@ -107,7 +107,7 @@ export function CasesClient() {
  <CardContent className="p-0 flex flex-col lg:flex-row">
  <div className="lg:w-1/4 p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800 bg-slate-900">
  <div className="space-y-6">
- <Badge className="bg-blue-600 hover:bg-blue-500 text-white font-black uppercase tracking-widest text-[10px] rounded-lg">
+ <Badge className="bg-blue-600 hover:bg-blue-500 text-white font-black uppercase tracking-widest text-xs rounded-lg">
  {caseStudy.specialty}
  </Badge>
  <h3 className="text-2xl font-black text-white leading-tight tracking-tight uppercase">
@@ -116,8 +116,8 @@ export function CasesClient() {
  </div>
  <div className="pt-8">
  <div className="flex items-center gap-2 text-emerald-400 mb-4">
- <Activity className="w-4 h-4" />
- <span className="text-xs font-black uppercase tracking-widest">Outcome Metric</span>
+ <Activity className="w-4 h-4"/>
+ <span className="text-sm font-black uppercase tracking-widest">Outcome Metric</span>
  </div>
  <p className="text-2xl font-black text-white">{caseStudy.metric}</p>
  </div>
@@ -126,7 +126,7 @@ export function CasesClient() {
  <div className="lg:w-3/4 p-12 space-y-10">
  <div className="grid md:grid-cols-2 gap-12">
  <div className="space-y-4">
- <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Clinical Overview</p>
+ <p className="text-xs font-black text-slate-500 uppercase tracking-widest">Clinical Overview</p>
  <p className="text-slate-300 font-medium leading-relaxed">
  {caseStudy.summary}
  </p>
@@ -134,15 +134,15 @@ export function CasesClient() {
  <div className="space-y-6">
  <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
  <div className="flex items-center gap-2 text-blue-400">
- <Microscope className="w-4 h-4" />
- <span className="text-[10px] font-black uppercase tracking-widest">Surgical Technique</span>
+ <Microscope className="w-4 h-4"/>
+ <span className="text-xs font-black uppercase tracking-widest">Surgical Technique</span>
  </div>
  <p className="text-sm font-black text-white uppercase tracking-tighter">{caseStudy.technique}</p>
  </div>
  <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
  <div className="flex items-center gap-2 text-indigo-400">
- <Search className="w-4 h-4" />
- <span className="text-[10px] font-black uppercase tracking-widest">Available Imaging</span>
+ <Search className="w-4 h-4"/>
+ <span className="text-xs font-black uppercase tracking-widest">Available Imaging</span>
  </div>
  <p className="text-sm font-black text-white uppercase tracking-tighter">{caseStudy.imaging}</p>
  </div>
@@ -151,16 +151,16 @@ export function CasesClient() {
 
  <div className="flex flex-wrap gap-4 justify-between items-center pt-8 border-t border-slate-200 dark:border-slate-800">
  <div className="flex gap-4">
- <Button size="sm" variant="outline" className="rounded-full border-slate-200 dark:border-slate-800 text-xs font-bold hover:bg-white dark:bg-slate-900">
- <FileText className="w-3 link-icon mr-2" /> Technical Report
+ <Button size="sm"variant="outline"className="rounded-full border-slate-200 dark:border-slate-800 text-sm font-bold hover:bg-white dark:bg-slate-900">
+ <FileText className="w-3 link-icon mr-2"/> Technical Report
  </Button>
- <Button size="sm" variant="outline" className="rounded-full border-slate-200 dark:border-slate-800 text-xs font-bold hover:bg-white dark:bg-slate-900">
- <TrendingUp className="w-3 link-icon mr-2" /> Outcome Analytics
+ <Button size="sm"variant="outline"className="rounded-full border-slate-200 dark:border-slate-800 text-sm font-bold hover:bg-white dark:bg-slate-900">
+ <TrendingUp className="w-3 link-icon mr-2"/> Outcome Analytics
  </Button>
  </div>
- <Button variant="link" className="p-0 text-blue-400 hover:text-blue-300 font-black uppercase text-[10px] tracking-[0.2em] group/btn">
+ <Button variant="link"className="p-0 text-blue-400 hover:text-blue-300 font-black uppercase text-xs tracking-[0.2em] group/btn">
  Access Full Case PDF
- <ChevronRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-2 transition-transform" />
+ <ChevronRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-2 transition-transform"/>
  </Button>
  </div>
  </div>
@@ -177,12 +177,12 @@ export function CasesClient() {
  {[1,2,3,4].map(i => (
  <div key={i} className="flex gap-16 items-center shrink-0">
  <div className="flex items-center gap-4">
- <Award className="w-10 h-10" />
+ <Award className="w-10 h-10"/>
  <span className="text-3xl font-black tracking-tighter uppercase whitespace-nowrap text-white">Clinical Benchmarked</span>
  </div>
- <Activity className="w-10 h-10" />
+ <Activity className="w-10 h-10"/>
  <div className="flex items-center gap-4">
- <ShieldCheck className="w-10 h-10" />
+ <ShieldCheck className="w-10 h-10"/>
  <span className="text-3xl font-black tracking-tighter uppercase whitespace-nowrap text-white">Peer-Reviewed Excellence</span>
  </div>
  </div>

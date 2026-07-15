@@ -51,10 +51,10 @@ export default function CardiologyDepartmentPage() {
  <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2">
  The Golden Hour Protocol
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- In a heart attack, "Time is Muscle." Our <strong>STEMI (Heart Attack) Team</strong> is on 24/7 standby, performing life-saving <strong>Primary Angioplasty</strong> within 60 minutes of your arrival.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ In a heart attack, "Time is Muscle."Our <strong>STEMI (Heart Attack) Team</strong> is on 24/7 standby, performing life-saving <strong>Primary Angioplasty</strong> within 60 minutes of your arrival.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 shadow-sm">Door-to-Balloon &lt; 60 Min</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700 shadow-sm">Dedicated CCU Hub</span>
  </div>
@@ -66,8 +66,8 @@ export default function CardiologyDepartmentPage() {
  Precision visualization beyond human limits. Our 4K digital lab allows for <strong>Radial Access (Wrist)</strong> procedures, resulting in zero bleeding and faster post-op mobilization.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> IVUS & FFR Ready</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> CTO Recanalization</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> IVUS & FFR Ready</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> CTO Recanalization</li>
  </ul>
  </div>
  </div>
@@ -86,10 +86,10 @@ export default function CardiologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Interventional Unit</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">High-precision artery clearing using drug-eluting stents (DES) and advanced imaging (IVUS/OCT).</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">High-precision artery clearing using drug-eluting stents (DES) and advanced imaging (IVUS/OCT).</p>
  <ul className="space-y-3 mb-8">
  {["Primary PCI Angioplasty", "Complex Stenting", "Bifurcation Lesion Unit", "Peripheral Vascular Rep"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -103,10 +103,10 @@ export default function CardiologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-rose-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Pacing Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Integrated management of heart rhythm disorders and advanced heart failure stabilization.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Integrated management of heart rhythm disorders and advanced heart failure stabilization.</p>
  <ul className="space-y-3 mb-8">
  {["Pacemaker Implantation", "ICD (Defibrillator) Unit", "CRT Resynchronization", "LVEF Recovery Program"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -120,10 +120,10 @@ export default function CardiologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Diagnostic Imaging</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Gold-standard detection of valve issues and plaque accumulation before a crisis occurs.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Gold-standard detection of valve issues and plaque accumulation before a crisis occurs.</p>
  <ul className="space-y-3 mb-8">
  {["Advanced 4D Echo Lab", "Dobutamine Stress Echo", "Holter 48-Hour Rhythm", "CT Coronary Angio Hub"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -137,7 +137,7 @@ export default function CardiologyDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Anatomy of a Heart Attack ───────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading text-left">Clinical Insight: Understanding STEMI</h3>
+ <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not- font-heading text-left">Clinical Insight: Understanding STEMI</h3>
  <p>
  A heart attack occurs when a plaque in the artery wall ruptures, causing a blood clot to form. This clot completely blocks blood flow, and the dependent heart muscle begins to die within minutes. This is why cardiologists say <strong>"Time is Muscle."</strong>
  </p>
@@ -146,14 +146,14 @@ export default function CardiologyDepartmentPage() {
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "DES", v: "High-Grade Stents" },
- { k: "PCI", v: "Percutaneous Fix" },
- { k: "IVUS", v: "Intra-Artery View" },
- { k: "RADIAL", v: "Wrist-Access Hub" }
+ { k: "DES", v: "High-Grade Stents"},
+ { k: "PCI", v: "Percutaneous Fix"},
+ { k: "IVUS", v: "Intra-Artery View"},
+ { k: "RADIAL", v: "Wrist-Access Hub"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
  <p className="text-4xl font-black text-rose-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -210,7 +210,7 @@ export default function CardiologyDepartmentPage() {
  <span className="text-rose-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -220,12 +220,12 @@ export default function CardiologyDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Primary PCI (Angioplasty)", link: "/doctor/near-me/treat/cardiology" },
- { name: "Permanent Pacemaker Hub", link: "/doctor/near-me/treat/cardiology" },
- { name: "2D/4D Echocardiography", link: "/doctor/near-me/treat/cardiology" },
- { name: "TMT & Stress Testing", link: "/doctor/near-me/treat/cardiology" },
- { name: "IVUS-Guided Stenting", link: "/doctor/near-me/treat/cardiology" },
- { name: "Heart Failure Stabilization", link: "/doctor/near-me/treat/cardiology" }
+ { name: "Primary PCI (Angioplasty)", link: "/doctor/near-me/treat/cardiology"},
+ { name: "Permanent Pacemaker Hub", link: "/doctor/near-me/treat/cardiology"},
+ { name: "2D/4D Echocardiography", link: "/doctor/near-me/treat/cardiology"},
+ { name: "TMT & Stress Testing", link: "/doctor/near-me/treat/cardiology"},
+ { name: "IVUS-Guided Stenting", link: "/doctor/near-me/treat/cardiology"},
+ { name: "Heart Failure Stabilization", link: "/doctor/near-me/treat/cardiology"}
  ]}
  relatedDoctors={cardioDoctors}
  quickFacts={quickFacts}

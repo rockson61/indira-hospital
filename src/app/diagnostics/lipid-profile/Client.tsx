@@ -72,48 +72,48 @@ export function LipidProfileClient() {
  <div className="space-y-16">
  {/* Mechanism: Automated Spectrophotometry & Calculations */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-amber-50/50 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/50 text-left">
- <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/10 blur-3xl -z-10" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/10 blur-3xl -z-10"/>
  <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-amber-500 pl-4 font-heading uppercase tracking-tighter">
  Mechanism: The Lipid Fractionation Advantage
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
  <div className="prose prose-slate dark:prose-invert">
  <p className="text-lg leading-relaxed">
- A simple "Total Cholesterol" number is often misleading. Some patients have high total cholesterol but high levels of protective HDL, placing them at low risk. Others show "Normal" total cholesterol but have dangerously high triglycerides and small, dense LDL particles.
+ A simple "Total Cholesterol"number is often misleading. Some patients have high total cholesterol but high levels of protective HDL, placing them at low risk. Others show "Normal"total cholesterol but have dangerously high triglycerides and small, dense LDL particles.
  </p>
  <p className="mt-4 text-emerald-600 font-semibold">
  Our **Elite Lipid Profile** uses **Roche Enzymatic Colorimetry** to fractionate your blood fats into specific diagnostic components:
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-amber-600" />
- <span><strong>LDL Calculation (Friedewald)</strong>: Precise mapping of "bad" cholesterol that deposits in artery walls.</span>
+ <ArrowRightCircle className="w-5 h-5 text-amber-600"/>
+ <span><strong>LDL Calculation (Friedewald)</strong>: Precise mapping of "bad"cholesterol that deposits in artery walls.</span>
  </div>
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-amber-600" />
+ <ArrowRightCircle className="w-5 h-5 text-amber-600"/>
  <span><strong>VLDL Fraction</strong>: Identifying Very Low-Density Lipoproteins that are high in triglycerides and indicate metabolic syndrome.</span>
  </div>
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-amber-600" />
+ <ArrowRightCircle className="w-5 h-5 text-amber-600"/>
  <span><strong>Non-HDL Cholesterol</strong>: A newer, more accurate marker of plaque-building particles compared to LDL alone.</span>
  </div>
  </div>
  </div>
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-amber-100 dark:border-amber-800 shadow-xl flex flex-col justify-center">
- <Scale className="w-16 h-16 text-amber-500 mb-6" />
+ <Scale className="w-16 h-16 text-amber-500 mb-6"/>
  <h4 className="text-xl font-bold mb-2">Cardiovascular Risk Benchmarks</h4>
  <ul className="space-y-4 mb-6">
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0"/>
  <span className="text-sm"><strong>Atherogenic Index</strong>: Automated calculation of the ratio between LDL and HDL.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0"/>
  <span className="text-sm"><strong>TC/HDL Ratio</strong>: The strongest traditional predictor of ischemic heart disease.</span>
  </li>
  </ul>
- <div className="inline-flex items-center gap-2 text-amber-600 font-bold text-xs uppercase tracking-widest">
- <Shield className="w-4 h-4" />
+ <div className="inline-flex items-center gap-2 text-amber-600 font-bold text-sm uppercase tracking-widest">
+ <Shield className="w-4 h-4"/>
  Metabolic Integrity Verified
  </div>
  </div>
@@ -122,8 +122,8 @@ export function LipidProfileClient() {
 
  {/* Metabolic Insights Grid */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-amber-950/30 to-transparent" />
- <h3 className="text-3xl font-bold mb-8 italic font-heading text-amber-300 uppercase tracking-widest leading-none leading-none">The Lipid Spectrum</h3>
+ <div className="absolute inset-0 bg-gradient-to-br from-amber-950/30 to-transparent"/>
+ <h3 className="text-3xl font-bold mb-8 font-heading text-amber-300 uppercase tracking-widest leading-none leading-none">The Lipid Spectrum</h3>
  <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
  {[
  { title: "Triglycerides", desc: "Measuring the fats used for energy; high levels indicate sugar/alcohol metabolic stress.", icon: Activity },
@@ -132,9 +132,9 @@ export function LipidProfileClient() {
  { title: "VLDL Mapping", desc: "Identifying triglycerides carried in the blood for metabolic disease screening.", icon: Search }
  ].map((item: any, i: number) => (
  <div key={i} className="p-6 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-amber-500/50 transition-all">
- <item.icon className="w-8 h-8 text-amber-400 mb-4" />
+ <item.icon className="w-8 h-8 text-amber-400 mb-4"/>
  <h4 className="font-bold text-lg mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-400 leading-relaxed antialiased">{item.desc}</p>
+ <p className="text-xs text-subtle-on-light leading-relaxed antialiased">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -144,17 +144,17 @@ export function LipidProfileClient() {
  <section className="text-left">
  <div className="mb-12">
  <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 font-heading tracking-tighter uppercase uppercase">Preparing for Your Lipid Profile</h3>
- <p className="text-slate-600 dark:text-slate-400">Strict adherence to fasting is critical for accurate results.</p>
+ <p className="text-slate-600 dark:text-subtle-on-light">Strict adherence to fasting is critical for accurate results.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
  {[
- { title: "The 12-Hour Fast", desc: "Finish dinner by 8 PM and provide the sample at 8 AM. Only plain water is allowed during the fast. No tea, coffee, or milk." },
- { title: "Alcohol Restriction", desc: "Do not consume alcohol for at least 24 hours before the test, as it significantly elevates Triglyceride levels temporarily." },
- { title: "Medication Audit", desc: "Inform our phlebotomist if you are on statins (Cholesterol medication) or blood thinners before sample collection." }
+ { title: "The 12-Hour Fast", desc: "Finish dinner by 8 PM and provide the sample at 8 AM. Only plain water is allowed during the fast. No tea, coffee, or milk."},
+ { title: "Alcohol Restriction", desc: "Do not consume alcohol for at least 24 hours before the test, as it significantly elevates Triglyceride levels temporarily."},
+ { title: "Medication Audit", desc: "Inform our phlebotomist if you are on statins (Cholesterol medication) or blood thinners before sample collection."}
  ].map((item, i) => (
  <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-amber-500">
  <h4 className="font-heading text-xl font-bold mb-3">{item.title}</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic leading-relaxed antialiased">{item.desc}</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed leading-relaxed antialiased">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -163,7 +163,7 @@ export function LipidProfileClient() {
  {/* Clinical FAQ Hub */}
  <section className="bg-slate-50 dark:bg-slate-900 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 text-left">
  <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
- <Info className="text-amber-500" />
+ <Info className="text-amber-500"/>
  Elite Clinical FAQs: Lipid Profile
  </h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -195,10 +195,10 @@ export function LipidProfileClient() {
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group">
  <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
- <Zap className="w-4 h-4 mt-1 text-amber-500 shrink-0" />
+ <Zap className="w-4 h-4 mt-1 text-amber-500 shrink-0"/>
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased leading-relaxed">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed pl-6 antialiased leading-relaxed">
  {faq.a}
  </p>
  </div>

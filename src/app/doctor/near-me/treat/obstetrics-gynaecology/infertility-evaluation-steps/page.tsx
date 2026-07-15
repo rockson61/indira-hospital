@@ -57,28 +57,28 @@ export default function InfertilityManagementPage() {
  {/* Visual Section: Why Specialized Infertility Care? */}
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
  <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-900/50 border border-rose-100 dark:border-rose-800 shadow-lg relative overflow-hidden group">
- <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50" />
+ <div className="absolute top-0 right-0 w-32 h-32 bg-rose-200/20 blur-2xl group-hover:bg-rose-300/30 transition-all opacity-50"/>
  <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-rose-800 dark:text-rose-300">The Diagnostic Edge</h4>
  <ul className="space-y-4">
  {[
- { title: "48-Hour Rapid Evaluation", text: "We coordinate all essential tests—hormonal, anatomical, and male-factor—within a 48-hour window to give you clarity without the long wait." },
- { title: "Advanced Follicular Tracking", text: "High-resolution serial ultrasound monitoring to pinpoint the exact window of peak fertility and ensure healthy egg release." },
- { title: "Comprehensive Male Analysis", text: "Infertility is a dual-partner journey. We provide in-house advanced semen analysis and coordination with urologists for male-factor optimization." }
+ { title: "48-Hour Rapid Evaluation", text: "We coordinate all essential tests—hormonal, anatomical, and male-factor—within a 48-hour window to give you clarity without the long wait."},
+ { title: "Advanced Follicular Tracking", text: "High-resolution serial ultrasound monitoring to pinpoint the exact window of peak fertility and ensure healthy egg release."},
+ { title: "Comprehensive Male Analysis", text: "Infertility is a dual-partner journey. We provide in-house advanced semen analysis and coordination with urologists for male-factor optimization."}
  ].map((item, i) => (
  <li key={i} className="flex gap-3 items-start">
- <Activity className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-1" />
+ <Activity className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-1"/>
  <div>
  <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
- <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm">{item.text}</p>
  </div>
  </li>
  ))}
  </ul>
  </div>
  <div className="relative group">
- <div className="absolute inset-0 bg-rose-400/20 rounded-[3rem] blur-3xl transition-all" />
+ <div className="absolute inset-0 bg-rose-400/20 rounded-[3rem] blur-3xl transition-all"/>
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-rose-100 dark:border-slate-800 shadow-2xl">
- <Baby className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
+ <Baby className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500"/>
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">New Beginnings</p>
  <p className="text-slate-500 text-sm pr-4">Science-backed protocols to maximize your natural conception potential safely and ethically.</p>
  </div>
@@ -106,7 +106,7 @@ export default function InfertilityManagementPage() {
  "Metabolic & PCOS Screening"
  ].map((test, i) => (
  <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
- <CheckCircle2 className="w-5 h-5 text-rose-500" />
+ <CheckCircle2 className="w-5 h-5 text-rose-500"/>
  <span className="text-sm font-medium">{test}</span>
  </div>
  ))}
@@ -127,10 +127,10 @@ export default function InfertilityManagementPage() {
 
  {/* FAQ Section */}
  <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
- <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl" />
+ <div className="absolute inset-0 bg-gradient-to-br from-rose-900/20 to-transparent shadow-2xl"/>
  
  <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
- <Info className="text-rose-400" />
+ <Info className="text-rose-400"/>
  Infertility: Essential FAQs
  </h3>
  
@@ -155,7 +155,7 @@ export default function InfertilityManagementPage() {
  ].map((faq, idx) => (
  <div key={idx} className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-colors">
  <h4 className="font-bold text-rose-400 mb-4 flex items-start gap-2">
- <Zap className="w-5 h-5 mt-1 shrink-0" />
+ <Zap className="w-5 h-5 mt-1 shrink-0"/>
  {faq.q}
  </h4>
  <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">

@@ -56,19 +56,19 @@ export default function LaparoscopicHysterectomyPage() {
  <article className="space-y-12">
  {/* The Surgical Edge Section */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
- <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10"/>
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading">
  Mechanism: 4K Visualization & Vessel-Sealing
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
  <div className="prose prose-slate dark:prose-invert">
  <p className="text-lg leading-relaxed">
- Traditional "open" hysterectomies require a large abdominal incision to visualize the uterus. In **Elite TLH**, we use a 4K Endoscope that provides 10x magnification. This allow our surgeons to see sub-millimeter nerves and blood vessels, drastically reducing the risk of bladder or bowel injury.
+ Traditional "open"hysterectomies require a large abdominal incision to visualize the uterus. In **Elite TLH**, we use a 4K Endoscope that provides 10x magnification. This allow our surgeons to see sub-millimeter nerves and blood vessels, drastically reducing the risk of bladder or bowel injury.
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-start gap-4">
  <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center shadow-md shrink-0">
- <Zap className="w-5 h-5 text-rose-500" />
+ <Zap className="w-5 h-5 text-rose-500"/>
  </div>
  <div>
  <p className="font-bold">Ultrasonic Energy Sealing</p>
@@ -77,7 +77,7 @@ export default function LaparoscopicHysterectomyPage() {
  </div>
  <div className="flex items-start gap-4">
  <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center shadow-md shrink-0">
- <Move className="w-5 h-5 text-rose-500" />
+ <Move className="w-5 h-5 text-rose-500"/>
  </div>
  <div>
  <p className="font-bold">Vault Microsurgery</p>
@@ -101,7 +101,7 @@ export default function LaparoscopicHysterectomyPage() {
  <span className="text-sm font-medium">Full Recovery</span>
  <span className="text-sm font-bold text-rose-500">10-14 Days</span>
  </div>
- <div className="flex justify-between items-center text-[10px] text-slate-400">
+ <div className="flex justify-between items-center text-xs text-subtle-on-light">
  *Data based on clinical protocols at our Vellore center.
  </div>
  </div>
@@ -113,18 +113,18 @@ export default function LaparoscopicHysterectomyPage() {
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4">When is an Elite Hysterectomy Indicated?</h3>
- <p className="text-slate-600 dark:text-slate-400">While we prioritize organ-sparing treatments, a hysterectomy is the definitive solution for several chronic conditions.</p>
+ <p className="text-slate-600 dark:text-subtle-on-light">While we prioritize organ-sparing treatments, a hysterectomy is the definitive solution for several chronic conditions.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
  {[
- { title: "Large Fibroids", desc: "Uterine growths that cause heavy bleeding and pelvic pressure." },
- { title: "Endometriosis", desc: "Severe endometrial tissue growth causing debilitating pain." },
- { title: "Adenomyosis", desc: "Uterine wall thickening leading to painful and heavy periods." },
- { title: "Pelvic Prolapse", desc: "When the uterus drops into the vaginal canal due to weak support." }
+ { title: "Large Fibroids", desc: "Uterine growths that cause heavy bleeding and pelvic pressure."},
+ { title: "Endometriosis", desc: "Severe endometrial tissue growth causing debilitating pain."},
+ { title: "Adenomyosis", desc: "Uterine wall thickening leading to painful and heavy periods."},
+ { title: "Pelvic Prolapse", desc: "When the uterus drops into the vaginal canal due to weak support."}
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center">
  <h4 className="font-bold mb-2 text-rose-600">{item.title}</h4>
- <p className="text-xs text-slate-500">{item.desc}</p>
+ <p className="text-sm text-slate-500">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -132,31 +132,31 @@ export default function LaparoscopicHysterectomyPage() {
 
  {/* The Recovery Roadmap */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative">
- <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent"/>
  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
  <div className="space-y-6">
- <h3 className="font-heading text-3xl font-bold font-heading">The "Home-in-24h" Recovery Framework</h3>
- <p className="text-slate-400 leading-relaxed">
+ <h3 className="font-heading text-3xl font-bold font-heading">The "Home-in-24h"Recovery Framework</h3>
+ <p className="text-subtle-on-light leading-relaxed">
  Our recovery protocol is built around **Early Mobilization**. Because we avoid large abdominal cuts, our patients experience significantly less pain and are often walking within hours of surgery.
  </p>
  <ul className="space-y-4">
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0"/>
  <span><strong>ERAS (Enhanced Recovery) Protocols</strong>: Specialized anaesthesia to reduce post-op nausea.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0"/>
  <span><strong>Post-Op Nutrition</strong>: Early transition to light diet to restart bowel motility immediately.</span>
  </li>
  </ul>
  </div>
  <div className="grid grid-cols-2 gap-4">
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading">Pain Level</p>
+ <p className="text-sm text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading">Pain Level</p>
  <p className="font-heading text-3xl font-bold text-white">LOW</p>
  </div>
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading">Incision Size</p>
+ <p className="text-sm text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading">Incision Size</p>
  <p className="font-heading text-3xl font-bold text-white">5MM</p>
  </div>
  </div>
@@ -166,7 +166,7 @@ export default function LaparoscopicHysterectomyPage() {
  {/* Clinical FAQ Hub */}
  <section className="bg-slate-50 dark:bg-slate-900 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
- <Info className="text-rose-500" />
+ <Info className="text-rose-500"/>
  Elite Clinical FAQs: Laparoscopic Hysterectomy
  </h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -198,10 +198,10 @@ export default function LaparoscopicHysterectomyPage() {
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group">
  <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
- <Zap className="w-4 h-4 mt-1 text-rose-500 shrink-0" />
+ <Zap className="w-4 h-4 mt-1 text-rose-500 shrink-0"/>
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed pl-6">
  {faq.a}
  </p>
  </div>

@@ -61,10 +61,10 @@ export default function DentistryDepartmentPage() {
  <h4 className="text-2xl font-bold text-cyan-900 dark:text-cyan-200 mb-4 flex items-center gap-2">
  Precision Implantology
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- "The Permanent Replacement." We utilize high-grade Titanium implants with Osseointegration precision, restoring your bite force and facial structure instantly.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ "The Permanent Replacement."We utilize high-grade Titanium implants with Osseointegration precision, restoring your bite force and facial structure instantly.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-cyan-100 dark:border-cyan-700 shadow-sm">Lifetime Stability</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-cyan-100 dark:border-cyan-700 shadow-sm">Bone Preservation</span>
  </div>
@@ -76,8 +76,8 @@ export default function DentistryDepartmentPage() {
  Say goodbye to pain. Our automated rotary endodontics allows for efficient, painless nerve-root cleaning in a single sitting.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-cyan-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div> Micro-Precision Apex Locators</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-cyan-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div> Digital Canal Mapping</li>
+ <li className="flex items-center gap-2 text-xs font-black text-cyan-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div> Micro-Precision Apex Locators</li>
+ <li className="flex items-center gap-2 text-xs font-black text-cyan-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div> Digital Canal Mapping</li>
  </ul>
  </div>
  </div>
@@ -96,10 +96,10 @@ export default function DentistryDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Aesthetics</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Advanced "Hollywood Smile" designs using E-Max veneers, laser teeth whitening, and gum contouring.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Advanced "Hollywood Smile"designs using E-Max veneers, laser teeth whitening, and gum contouring.</p>
  <ul className="space-y-3 mb-8">
  {["E-Max Veneers", "Gopal Gum Reshaping", "Laser Whitening", "Invisalign/Braces"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-cyan-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -113,10 +113,10 @@ export default function DentistryDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-cyan-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Oral Surgery</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">High-precision management of impacted wisdom teeth, jaw fractures, and cystic lesions.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">High-precision management of impacted wisdom teeth, jaw fractures, and cystic lesions.</p>
  <ul className="space-y-3 mb-8">
  {["Wisdom Tooth Ext.", "Fracture Fixation", "Sinus Lift Support", "Bone Grafting"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-cyan-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -130,10 +130,10 @@ export default function DentistryDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Restoration</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">High-durability Zirconia crowns, bridges, and flexible dentures for restored functional chewing.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">High-durability Zirconia crowns, bridges, and flexible dentures for restored functional chewing.</p>
  <ul className="space-y-3 mb-8">
  {["Zirconia Crowns", "Single-Visit RCT", "Bridge Work", "Pediatric Dentistry"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-cyan-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -147,7 +147,7 @@ export default function DentistryDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: The RCT Evolution ─────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-cyan-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-cyan-900 dark:text-cyan-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: RCT Without the Pain</h3>
+ <h3 className="text-cyan-900 dark:text-cyan-400 font-black uppercase text-3xl tracking-tighter not- font-heading">Clinical Insight: RCT Without the Pain</h3>
  <p>
  Historically, a Root Canal Treatment (RCT) was a multiple-visit process feared by patients. Modern <strong>Endodontic Evolution</strong> has changed this. By using high-torque rotary motors and electronic apex locators, we can clean, shape, and fill the root canals in just one hour.
  </p>
@@ -156,14 +156,14 @@ export default function DentistryDepartmentPage() {
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "Precision", v: "Apex Mapping" },
- { k: "Sterility", v: "Class B Protocol" },
- { k: "Time", v: "Single-Sit Done" },
- { k: "Durability", v: "Fiber Posts" }
+ { k: "Precision", v: "Apex Mapping"},
+ { k: "Sterility", v: "Class B Protocol"},
+ { k: "Time", v: "Single-Sit Done"},
+ { k: "Durability", v: "Fiber Posts"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-cyan-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-cyan-600">
  <p className="text-4xl font-black text-cyan-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -220,7 +220,7 @@ export default function DentistryDepartmentPage() {
  <span className="text-cyan-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -230,12 +230,12 @@ export default function DentistryDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Single-Visit Root Canal", link: "/doctor/near-me/treat/dentistry" },
- { name: "Laser Teeth Whitening", link: "/doctor/near-me/treat/dentistry" },
- { name: "Dental Implant Unit", link: "/doctor/near-me/treat/dentistry" },
- { name: "Invisible Aligners Hub", link: "/doctor/near-me/treat/dentistry" },
- { name: "Pediatric Dental Clinic", link: "/doctor/near-me/treat/dentistry" },
- { name: "Gum Surgery & Laser Hub", link: "/doctor/near-me/treat/dentistry" }
+ { name: "Single-Visit Root Canal", link: "/doctor/near-me/treat/dentistry"},
+ { name: "Laser Teeth Whitening", link: "/doctor/near-me/treat/dentistry"},
+ { name: "Dental Implant Unit", link: "/doctor/near-me/treat/dentistry"},
+ { name: "Invisible Aligners Hub", link: "/doctor/near-me/treat/dentistry"},
+ { name: "Pediatric Dental Clinic", link: "/doctor/near-me/treat/dentistry"},
+ { name: "Gum Surgery & Laser Hub", link: "/doctor/near-me/treat/dentistry"}
  ]}
  relatedDoctors={dentalDoctors}
  quickFacts={quickFacts}

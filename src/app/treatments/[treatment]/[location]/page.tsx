@@ -12,8 +12,8 @@ import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
 import { enhancedVelloreLocations } from "@/lib/data/enhanced-location-data";
 
 const EXTRA_LOCATIONS = [
- { slug: "bangalore", name: "Bangalore" },
- { slug: "chittoor", name: "Chittoor" }
+ { slug: "bangalore", name: "Bangalore"},
+ { slug: "chittoor", name: "Chittoor"}
 ];
 
 const GEO_LOCATIONS = [
@@ -25,34 +25,34 @@ const GEO_LOCATIONS = [
 export const dynamicParams = true;
 
 // export async function generateStaticParams() {
-//  if (process.env.VERCEL) {
-//  return []; // Vercel build bypass
-//  }
-//  
-//  // Top treatments to statically pre-build for all locations
-//  const topTreatments = ["laser-piles-treatment", "laparoscopic-hernia-repair", "total-knee-replacement"];
-//  const params: { treatment: string; location: string }[] = [];
-//  
-//  for (const treatment of topTreatments) {
-//  for (const loc of GEO_LOCATIONS) {
-//  params.push({ treatment, location: loc.slug });
-//  }
-//  }
-//  return params;
+// if (process.env.VERCEL) {
+// return []; // Vercel build bypass
+// }
+// 
+// // Top treatments to statically pre-build for all locations
+// const topTreatments = ["laser-piles-treatment", "laparoscopic-hernia-repair", "total-knee-replacement"];
+// const params: { treatment: string; location: string }[] = [];
+// 
+// for (const treatment of topTreatments) {
+// for (const loc of GEO_LOCATIONS) {
+// params.push({ treatment, location: loc.slug });
+// }
+// }
+// return params;
 // }
 
 export async function generateMetadata({ params }: { params: Promise<{ treatment: string; location: string }> }): Promise<Metadata> {
  const { treatment: treatmentSlug, location: locationSlug } = await params;
  
  const treatmentInfo = getTreatmentBySlug(treatmentSlug);
- if (!treatmentInfo) return { title: "Not Found" };
+ if (!treatmentInfo) return { title: "Not Found"};
  
  const location = GEO_LOCATIONS.find(l => l.slug === locationSlug);
  const locationName = location ? location.name : locationSlug.charAt(0).toUpperCase() + locationSlug.slice(1);
  
  const isLaser = treatmentSlug.includes("laser");
  
- const prefix = isLaser ? "Best" : "Top";
+ const prefix = isLaser ? "Best": "Top";
  
  return {
  title: `${prefix} ${treatmentInfo.title} in ${locationName} | Indira Hospital`,
@@ -101,20 +101,20 @@ export default async function GeoTargetedTreatmentPage({ params }: { params: Pro
  <section className="bg-gradient-to-br from-fuchsia-900 to-indigo-900 text-white pt-32 pb-16 px-6">
  <div className="max-w-4xl mx-auto text-center">
  <nav className="flex items-center justify-center text-sm text-fuchsia-200/60 mb-8 overflow-x-auto whitespace-nowrap">
- <Link href="/" className="hover:text-white transition-colors">Home</Link>
- <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
- <Link href="/doctor/near-me/treat" className="hover:text-white transition-colors">Treatments</Link>
- <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
+ <Link href="/"className="hover:text-white transition-colors">Home</Link>
+ <ChevronRight className="w-4 h-4 mx-2 opacity-40"/>
+ <Link href="/doctor/near-me/treat"className="hover:text-white transition-colors">Treatments</Link>
+ <ChevronRight className="w-4 h-4 mx-2 opacity-40"/>
  <span className="text-white font-bold">{treatmentInfo.title} in {locationName}</span>
  </nav>
  
  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 mb-6">
- <MapPin className="w-4 h-4 text-fuchsia-300" />
+ <MapPin className="w-4 h-4 text-fuchsia-300"/>
  <span className="text-sm font-semibold text-fuchsia-100">Serving Patients from {locationName}</span>
  </div>
  
  <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
- Best {treatmentInfo.title} <br className="hidden md:block" /> 
+ Best {treatmentInfo.title} <br className="hidden md:block"/> 
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 to-indigo-300">
  Near {locationName}
  </span>
@@ -125,11 +125,11 @@ export default async function GeoTargetedTreatmentPage({ params }: { params: Pro
  </p>
  
  <div className="flex flex-wrap justify-center gap-4">
- <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-2xl transition-all shadow-clay-sm flex items-center gap-2">
- <MessageCircle className="w-5 h-5" /> WhatsApp Consultant
+ <a href={whatsappUrl} target="_blank"rel="noopener noreferrer"className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-2xl transition-all shadow-clay-sm flex items-center gap-2">
+ <MessageCircle className="w-5 h-5"/> WhatsApp Consultant
  </a>
  <a href={`tel:${siteConfig.contact.phone}`} className="px-8 py-4 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-bold rounded-2xl transition-all border border-slate-200 dark:border-slate-800 flex items-center gap-2">
- <Phone className="w-5 h-5" /> Call for Guidance
+ <Phone className="w-5 h-5"/> Call for Guidance
  </a>
  </div>
  </div>
@@ -139,7 +139,7 @@ export default async function GeoTargetedTreatmentPage({ params }: { params: Pro
  <div className="max-w-4xl mx-auto px-6 py-16">
  <Card className="p-8 border-none shadow-clay rounded-3xl bg-white dark:bg-slate-900 mb-12">
  <h2 className="text-2xl font-bold mb-4">Why choose Indira Hospital from {locationName}?</h2>
- <div className="space-y-4 text-slate-600 dark:text-slate-400">
+ <div className="space-y-4 text-slate-600 dark:text-subtle-on-light">
  <p>
  Patients from <strong>{locationName}</strong> consistently choose Indira Super Speciality Hospital in Vellore for <strong>{treatmentInfo.title}</strong> due to our ethical clinical protocols, advanced technology, and transparent pricing.
  </p>
@@ -152,7 +152,7 @@ export default async function GeoTargetedTreatmentPage({ params }: { params: Pro
  </div>
  </Card>
  
- <UnifiedEntitySection type="doctors" title="Specialists" subtitle="Meet the Experts" featuredLimit={4} />
+ <UnifiedEntitySection type="doctors"title="Specialists"subtitle="Meet the Experts"featuredLimit={4} />
  </div>
  </div>
  );

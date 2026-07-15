@@ -55,10 +55,10 @@ export default function PulmonologyDepartmentPage() {
  <h4 className="text-2xl font-bold text-sky-900 dark:text-sky-200 mb-4 flex items-center gap-2">
  Sleep Medicine Hub
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
  Don't ignore snoring. We offer <strong>Full Night Polysomnography (Sleep Study)</strong> to detect Obstructive Sleep Apnea (OSA)—a critical risk factor for heart attacks and strokes.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-sky-100 dark:border-sky-700 shadow-sm">CPAP Titration</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-sky-100 dark:border-sky-700 shadow-sm">Level 1 Sleep Lab</span>
  </div>
@@ -70,8 +70,8 @@ export default function PulmonologyDepartmentPage() {
  Moving beyond basic inhalers. We specialize in <strong>Phenotyped Asthma Management</strong>, utilizing biological therapies and precise indoor allergy mapping.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Rapid Spirometry Hub</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Inhalation Therapy Guidance</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Rapid Spirometry Hub</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Inhalation Therapy Guidance</li>
  </ul>
  </div>
  </div>
@@ -90,10 +90,10 @@ export default function PulmonologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">COPD & Smoking</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Comprehensive care for Smokers Lung (COPD) focusing on lung preservation and quality of life.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Comprehensive care for Smokers Lung (COPD) focusing on lung preservation and quality of life.</p>
  <ul className="space-y-3 mb-8">
  {["Smoking Cessation", "Long-term Oxygen", "Pulmonary Rehab", "Bronchodilator Hub"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-sky-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -107,10 +107,10 @@ export default function PulmonologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-sky-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Sleep Disordered Breathing</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Precision diagnosis of sleep-related breathing issues that cause daytime sleepiness and fatigue.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Precision diagnosis of sleep-related breathing issues that cause daytime sleepiness and fatigue.</p>
  <ul className="space-y-3 mb-8">
  {["Full Night Polysomnography", "CPAP Compliance Lab", "Obesity Hypoventilation", "Narcolepsy Screening"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-sky-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -124,10 +124,10 @@ export default function PulmonologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Invasive Diagnostics</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">High-precision internal lung visualization for biopsies and foreign body removal.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">High-precision internal lung visualization for biopsies and foreign body removal.</p>
  <ul className="space-y-3 mb-8">
  {["Flexible Bronchoscopy", "Endobronchial Biopsy", "Pleural Fluid Drainage", "Lung Cancer Workup"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-sky-600 dark:text-sky-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-sky-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -141,7 +141,7 @@ export default function PulmonologyDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Asthma vs COPD ─────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-sky-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-sky-900 dark:text-sky-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: Understanding Obstructive Lung Disease</h3>
+ <h3 className="text-sky-900 dark:text-sky-400 font-black uppercase text-3xl tracking-tighter not- font-heading">Clinical Insight: Understanding Obstructive Lung Disease</h3>
  <p>
  Many patients confuse <strong>Asthma</strong> and <strong>COPD.</strong> While both cause wheezing and breathing difficulty, their underlying biology is different. Asthma is usually an inflammatory reaction to allergens and is often <strong>reversible.</strong> COPD is a structural damage to the lung sacs (alveoli), usually permanent but <strong>manageable.</strong>
  </p>
@@ -150,14 +150,14 @@ export default function PulmonologyDepartmentPage() {
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "SPIRO", v: "Reversibility Test" },
- { k: "FeNO", v: "Inflammation Check" },
- { k: "DLCO", v: "Gas Exchange Map" },
- { k: "OSAS", v: "Sleep Apnea Index" }
+ { k: "SPIRO", v: "Reversibility Test"},
+ { k: "FeNO", v: "Inflammation Check"},
+ { k: "DLCO", v: "Gas Exchange Map"},
+ { k: "OSAS", v: "Sleep Apnea Index"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-sky-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-sky-600">
  <p className="text-4xl font-black text-sky-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -214,7 +214,7 @@ export default function PulmonologyDepartmentPage() {
  <span className="text-sky-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -224,12 +224,12 @@ export default function PulmonologyDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Pulmonary Function Test (PFT)", link: "/doctor/near-me/treat/pulmonology" },
- { name: "Full Night Sleep Study", link: "/doctor/near-me/treat/pulmonology" },
- { name: "Flexible Bronchoscopy", link: "/doctor/near-me/treat/pulmonology" },
- { name: "Asthma Clinic", link: "/doctor/near-me/treat/pulmonology" },
- { name: "Smokers Lung (COPD) Unit", link: "/doctor/near-me/treat/pulmonology" },
- { name: "Post-COVID Lung Rehab", link: "/doctor/near-me/treat/pulmonology" }
+ { name: "Pulmonary Function Test (PFT)", link: "/doctor/near-me/treat/pulmonology"},
+ { name: "Full Night Sleep Study", link: "/doctor/near-me/treat/pulmonology"},
+ { name: "Flexible Bronchoscopy", link: "/doctor/near-me/treat/pulmonology"},
+ { name: "Asthma Clinic", link: "/doctor/near-me/treat/pulmonology"},
+ { name: "Smokers Lung (COPD) Unit", link: "/doctor/near-me/treat/pulmonology"},
+ { name: "Post-COVID Lung Rehab", link: "/doctor/near-me/treat/pulmonology"}
  ]}
  relatedDoctors={pulmonaryDoctors}
  quickFacts={quickFacts}

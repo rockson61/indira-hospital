@@ -41,7 +41,7 @@ export default function OrthopaedicsDepartmentPage() {
  Mobility is the hallmark of independence. The <strong>Department of Orthopaedics & Joint Sciences</strong> at Indira Super Speciality Hospital is a regional center of excellence dedicated to the science of movement. We blend <strong>Robotic Precision</strong> with <strong>Minimal Traumatic Access</strong> to treat everything from age-related joint degeneration to catastrophic sports injuries.
  </p>
  <p className="mt-4">
- Our facility is a "High-Volume Joint Replacement Center," utilizing advanced computer-assisted navigation and 3D preoperative planning. Whether you are seeking a <strong>Robotic Knee Replacement</strong> or complex <strong>Spinal Decompression</strong>, our clinical pathways are designed for <strong>Anatomic Restoration</strong> and <strong>Rapid Milestone Recovery.</strong>
+ Our facility is a "High-Volume Joint Replacement Center,"utilizing advanced computer-assisted navigation and 3D preoperative planning. Whether you are seeking a <strong>Robotic Knee Replacement</strong> or complex <strong>Spinal Decompression</strong>, our clinical pathways are designed for <strong>Anatomic Restoration</strong> and <strong>Rapid Milestone Recovery.</strong>
  </p>
  </div>
 
@@ -51,10 +51,10 @@ export default function OrthopaedicsDepartmentPage() {
  <h4 className="text-2xl font-bold text-blue-900 dark:text-blue-200 mb-4 flex items-center gap-2">
  Robotic Joint Replacement
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- Precision is measured in microns. Our robotic systems ensure perfect implant alignment, virtually eliminating the risk of dislocation and ensuring a "Natural Feel" post-surgery.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ Precision is measured in microns. Our robotic systems ensure perfect implant alignment, virtually eliminating the risk of dislocation and ensuring a "Natural Feel"post-surgery.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700">Digital Alignment</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700">Extended Wear Life</span>
  </div>
@@ -66,8 +66,8 @@ export default function OrthopaedicsDepartmentPage() {
  Reclaiming the field. We perform <strong>HD Arthroscopic (Keyhole)</strong> ligament repairs (ACL/PCL/Meniscus) that minimize scarring and accelerate your return to high-performance sports.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Rapid Recovery Lab</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Nerve-Sparing Technique</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Rapid Recovery Lab</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Nerve-Sparing Technique</li>
  </ul>
  </div>
  </div>
@@ -86,10 +86,10 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Arthroplasty</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Advanced joint replacement for hips, knees, and shoulders using muscle-sparing approaches and gold-standard implants.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Advanced joint replacement for hips, knees, and shoulders using muscle-sparing approaches and gold-standard implants.</p>
  <ul className="space-y-3 mb-8">
  {["Total Knee (TKR)", "Total Hip (THR)", "Shoulder Replacement", "Revision Arthroplasty"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -103,10 +103,10 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-blue-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Spine & Trauma</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">High-precision management of spinal fractures, slip discs, and multi-fracture trauma emergencies.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">High-precision management of spinal fractures, slip discs, and multi-fracture trauma emergencies.</p>
  <ul className="space-y-3 mb-8">
  {["Microdiscectomy", "Spinal Fusion", "Scoliotic Repair", "Pelvic Acetabular Trauma"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -120,10 +120,10 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Hand & Foot</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Micro-surgical restoration of hand tendons, peripheral nerves, and complex diabetic foot reconstructions.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Micro-surgical restoration of hand tendons, peripheral nerves, and complex diabetic foot reconstructions.</p>
  <ul className="space-y-3 mb-8">
  {["Tendon Repair", "Nerve Grafting", "Diabetic Offloading", "Flat-Foot Correction"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -137,23 +137,23 @@ export default function OrthopaedicsDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Robotic vs. Manual ─────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden">
  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: The Robotic Advantage</h3>
+ <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not- font-heading">Clinical Insight: The Robotic Advantage</h3>
  <p>
- Orthopaedic surgery is transitioning from "subjective art" to "objective science." In manual knee replacement, the surgeon rely on visual cues and traditional mechanical jigs. In <strong>Robotic-Assisted Surgery</strong>, a 3D digital map of your unique knee is created before the first cut.
+ Orthopaedic surgery is transitioning from "subjective art"to "objective science."In manual knee replacement, the surgeon rely on visual cues and traditional mechanical jigs. In <strong>Robotic-Assisted Surgery</strong>, a 3D digital map of your unique knee is created before the first cut.
  </p>
  <p className="mt-4">
  At Indira Hospital, our <strong>Accuracy Hub</strong> ensuring:
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "MICRON", v: "Sub-MM Accuracy" },
- { k: "NAV", v: "Real-time Tracking" },
- { k: "SAVE", v: "Bone Preservation" },
- { k: "FAST", v: "Walk in 24 Hours" }
+ { k: "MICRON", v: "Sub-MM Accuracy"},
+ { k: "NAV", v: "Real-time Tracking"},
+ { k: "SAVE", v: "Bone Preservation"},
+ { k: "FAST", v: "Walk in 24 Hours"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-blue-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-blue-600">
  <p className="text-4xl font-black text-blue-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -210,7 +210,7 @@ export default function OrthopaedicsDepartmentPage() {
  <span className="text-blue-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -220,12 +220,12 @@ export default function OrthopaedicsDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Robotic Knee Replacement", link: "/doctor/near-me/treat/orthopaedics" },
- { name: "Arthroscopic ACL Repair", link: "/doctor/near-me/treat/orthopaedics" },
- { name: "Microscopic Spine Surgery", link: "/doctor/near-me/treat/orthopaedics" },
- { name: "Total Hip Reconstruction", link: "/doctor/near-me/treat/orthopaedics" },
- { name: "Complex Trauma Fixation", link: "/doctor/near-me/treat/orthopaedics" },
- { name: "Pediatric Ortho Unit", link: "/doctor/near-me/treat/orthopaedics" }
+ { name: "Robotic Knee Replacement", link: "/doctor/near-me/treat/orthopaedics"},
+ { name: "Arthroscopic ACL Repair", link: "/doctor/near-me/treat/orthopaedics"},
+ { name: "Microscopic Spine Surgery", link: "/doctor/near-me/treat/orthopaedics"},
+ { name: "Total Hip Reconstruction", link: "/doctor/near-me/treat/orthopaedics"},
+ { name: "Complex Trauma Fixation", link: "/doctor/near-me/treat/orthopaedics"},
+ { name: "Pediatric Ortho Unit", link: "/doctor/near-me/treat/orthopaedics"}
  ]}
  relatedDoctors={orthoDoctors}
  quickFacts={quickFacts}

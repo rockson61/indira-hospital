@@ -45,20 +45,20 @@ export default function NeurologyDepartmentPage() {
  The brain is the body's most complex organ, and in neurology, every second counts. The <strong>Department of Neurosciences</strong> at Indira Super Speciality Hospital is a regional center of excellence for the diagnosis and management of brain, spine, and peripheral nerve disorders. We operate on a clinical principle of <strong>"Neural Preservation"</strong>—utilizing hyper-fast response protocols to save brain tissue during acute events.
  </p>
  <p className="mt-4">
- Our facility features a dedicated <strong>24/7 Stroke Unit</strong> capable of performing IV Thrombolysis (clot-busting) during the critical "Golden Hour." Backed by advanced <strong>Digital EEG and EMG</strong> diagnostics, we deliver a multi-disciplinary approach to complex conditions like Refractory Epilepsy, Parkinson’s Disease, and Chronic Migraine.
+ Our facility features a dedicated <strong>24/7 Stroke Unit</strong> capable of performing IV Thrombolysis (clot-busting) during the critical "Golden Hour."Backed by advanced <strong>Digital EEG and EMG</strong> diagnostics, we deliver a multi-disciplinary approach to complex conditions like Refractory Epilepsy, Parkinson’s Disease, and Chronic Migraine.
  </p>
  </div>
 
  <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
  <div className="p-8 bg-indigo-50 dark:bg-indigo-900/20 rounded-[2.5rem] border border-indigo-100 dark:border-indigo-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl group-hover:bg-indigo-500/20 transition-all"></div>
- <h4 className="text-2xl font-bold text-indigo-900 dark:text-indigo-200 mb-4 flex items-center gap-2">
+ <h4 className="text-2xl font-bold text-indigo-900 dark:text-subtle-on-dark mb-4 flex items-center gap-2">
  Stroke: The Golden Hour
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- "Time is Brain." Every minute a stroke goes untreated, 1.9 million neurons die. Our <strong>Rapid-Fire Thrombolysis</strong> protocol ensures that life-saving medication is initiated within minutes of hospital arrival.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ "Time is Brain."Every minute a stroke goes untreated, 1.9 million neurons die. Our <strong>Rapid-Fire Thrombolysis</strong> protocol ensures that life-saving medication is initiated within minutes of hospital arrival.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-indigo-100 dark:border-indigo-700 shadow-sm">IV Thrombolysis</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-indigo-100 dark:border-indigo-700 shadow-sm">24/7 MRI/CT Access</span>
  </div>
@@ -70,8 +70,8 @@ export default function NeurologyDepartmentPage() {
  Achieving Seizure-Freedom. We utilize <strong>Video-EEG Monitoring</strong> to pinpoint seizure foci, allowing for precision pharmacological control and evaluation for epilepsy surgery.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Pediatric Neuropathy</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Refractory Case Management</li>
+ <li className="flex items-center gap-2 text-xs font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Pediatric Neuropathy</li>
+ <li className="flex items-center gap-2 text-xs font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Refractory Case Management</li>
  </ul>
  </div>
  </div>
@@ -90,10 +90,10 @@ export default function NeurologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Vascular Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Hyper-acute management of Ischemic and Hemorrhagic strokes using modern thrombolytic agents.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Hyper-acute management of Ischemic and Hemorrhagic strokes using modern thrombolytic agents.</p>
  <ul className="space-y-3 mb-8">
  {["Stroke Thrombolysis (IVT)", "Carotid Doppler Scans", "Stroke Physical Rehab", "TIA (Mini-Stroke) Clinic"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -107,10 +107,10 @@ export default function NeurologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-indigo-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Movement Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Precision management of tremors, Parkinsonism, and dystonias using pharmacological and botulinum therapies.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Precision management of tremors, Parkinsonism, and dystonias using pharmacological and botulinum therapies.</p>
  <ul className="space-y-3 mb-8">
  {["Parkinson’s Med-Optimize", "Tremor Analysis Lab", "Botox for Dystonia", "Gat & Balance Rehab"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -124,10 +124,10 @@ export default function NeurologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Diagnostic Lab</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Advanced mapping of electrical activity in the brain and peripheral nerves for objective diagnosis.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Advanced mapping of electrical activity in the brain and peripheral nerves for objective diagnosis.</p>
  <ul className="space-y-3 mb-8">
  {["Digital EEG (Brain Waves)", "EMG (Muscle Testing)", "NCS (Nerve Velocity)", "Evoked Potential Study"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -141,21 +141,21 @@ export default function NeurologyDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Recognizing Stroke ────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-indigo-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-indigo-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading text-left">Clinical Insight: The B.E. F.A.S.T. Protocol</h3>
+ <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not- font-heading text-left">Clinical Insight: The B.E. F.A.S.T. Protocol</h3>
  <p>
- A stroke is a "Brain Attack." It occurs when blood flow to the brain is blocked or a blood vessel ruptures. Recognizing the signs early is the only way to save a life and ensure neurological recovery.
+ A stroke is a "Brain Attack."It occurs when blood flow to the brain is blocked or a blood vessel ruptures. Recognizing the signs early is the only way to save a life and ensure neurological recovery.
  </p>
  <p className="mt-4 text-center font-bold text-red-600 dark:text-red-400">If you notice any of these, call 24/7 Emergency immediately:</p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "B", v: "Balance Loss" },
- { k: "E", v: "Eye Blur" },
- { k: "F", v: "Face Droop" },
- { k: "A", v: "Arm Weakness" }
+ { k: "B", v: "Balance Loss"},
+ { k: "E", v: "Eye Blur"},
+ { k: "F", v: "Face Droop"},
+ { k: "A", v: "Arm Weakness"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-indigo-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-indigo-600">
  <p className="text-4xl font-black text-indigo-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -212,7 +212,7 @@ export default function NeurologyDepartmentPage() {
  <span className="text-indigo-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -222,12 +222,12 @@ export default function NeurologyDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Rapid Stroke Thrombolysis", link: "/doctor/near-me/treat/neurology" },
- { name: "Digital EEG Brain Mapping", link: "/doctor/near-me/treat/neurology" },
- { name: "EMG/NCS Nerve Testing", link: "/doctor/near-me/treat/neurology" },
- { name: "Epilepsy Clinic Unit", link: "/doctor/near-me/treat/neurology" },
- { name: "Chronic Migraine Care", link: "/doctor/near-me/treat/neurology" },
- { name: "Movement Disorder Rehab", link: "/doctor/near-me/treat/neurology" }
+ { name: "Rapid Stroke Thrombolysis", link: "/doctor/near-me/treat/neurology"},
+ { name: "Digital EEG Brain Mapping", link: "/doctor/near-me/treat/neurology"},
+ { name: "EMG/NCS Nerve Testing", link: "/doctor/near-me/treat/neurology"},
+ { name: "Epilepsy Clinic Unit", link: "/doctor/near-me/treat/neurology"},
+ { name: "Chronic Migraine Care", link: "/doctor/near-me/treat/neurology"},
+ { name: "Movement Disorder Rehab", link: "/doctor/near-me/treat/neurology"}
  ]}
  relatedDoctors={neuroDoctors}
  quickFacts={quickFacts}

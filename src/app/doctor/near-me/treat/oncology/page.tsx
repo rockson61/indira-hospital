@@ -40,10 +40,10 @@ export default function OncologyDepartmentPage() {
  <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2">
  The Tumor Board Synergy
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- "A second opinion is built into our standard of care." Every major curative plan is reviewed by our cross-specialty board to ensure all therapeutic angles—surgical, systemic, and supportive—are optimized for the best possible outcome.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ "A second opinion is built into our standard of care."Every major curative plan is reviewed by our cross-specialty board to ensure all therapeutic angles—surgical, systemic, and supportive—are optimized for the best possible outcome.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter shadow-sm">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter shadow-sm">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700">MTB Governance</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700">Personalized Protocols</span>
  </div>
@@ -55,8 +55,8 @@ export default function OncologyDepartmentPage() {
  Leading the region in curative resections for Breast, Oral, and GI cancers. We focus on <strong>R0 Resection</strong>—achieving microscopic negative margins to ensure total tumor clearance.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> HEPA-Filtered Radical OTs</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Sentinel Node Mapping</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> HEPA-Filtered Radical OTs</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Sentinel Node Mapping</li>
  </ul>
  </div>
  </div>
@@ -75,16 +75,16 @@ export default function OncologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Surgical Onco</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">High-precision radical resections using advanced energy devices and magnified visualization for complex tumors.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">High-precision radical resections using advanced energy devices and magnified visualization for complex tumors.</p>
  <ul className="space-y-3 mb-8">
  {["Modified Radical Mastectomy", "Whipple's Procedure (GI)", "Commando Surgery (Oral Cancers)", "Colorectal Rectopexy & Resection"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
  </ul>
  </div>
- <Link href="/doctor/near-me/treat/oncology/surgical-oncology-center" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
+ <Link href="/doctor/near-me/treat/oncology/surgical-oncology-center"className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-xs font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
  View Surgical Unit
  </Link>
  </div>
@@ -95,16 +95,16 @@ export default function OncologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Medical Onco</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Systemic management of cancer through targeted molecular therapy and world-class immune-oncology protocols.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Systemic management of cancer through targeted molecular therapy and world-class immune-oncology protocols.</p>
  <ul className="space-y-3 mb-8">
  {["Day-Care Chemotherapy Unit", "Monoclonal Antibody Infusion", "Targeted Oral TKI Therapy", "Biological Response Modifiers"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
  </ul>
  </div>
- <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
+ <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy"className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-xs font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
  View Systemic Unit
  </Link>
  </div>
@@ -115,16 +115,16 @@ export default function OncologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Onco-Rehab</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Dignified pain management, nutritional support, and psychological counseling to enhance quality of life.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Dignified pain management, nutritional support, and psychological counseling to enhance quality of life.</p>
  <ul className="space-y-3 mb-8">
  {["Pain Management Protocols", "Cancer Nutrition Mapping", "Physiotherapy for Lymphedema", "Counseling & Caregiver Support"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
  </ul>
  </div>
- <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
+ <Link href="/doctor/near-me/treat/oncology/medical-oncology-chemotherapy"className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-xs font-black hover:bg-rose-600 transition-colors uppercase tracking-widest">
  View Support Unit
  </Link>
  </div>
@@ -135,20 +135,20 @@ export default function OncologyDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Recognizing & Screening ────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-rose-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Early Detection: The Silent Shield</h3>
+ <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not- font-heading">Early Detection: The Silent Shield</h3>
  <p>
- Cancer is most curable when detected before symptoms even manifest. At Indira Hospital, we empower the community with specialized screening packages. Early diagnosis through mammography, pap smears, and colposcopy turns "Life-Threatening" conditions into "Manageable" clinical events.
+ Cancer is most curable when detected before symptoms even manifest. At Indira Hospital, we empower the community with specialized screening packages. Early diagnosis through mammography, pap smears, and colposcopy turns "Life-Threatening"conditions into "Manageable"clinical events.
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "Breast", v: "Mammography @40" },
- { k: "Cervix", v: "Pap Smear @25" },
- { k: "Oral", v: "Biopsy Screening" },
- { k: "Colon", v: "Colonoscopy @45" }
+ { k: "Breast", v: "Mammography @40"},
+ { k: "Cervix", v: "Pap Smear @25"},
+ { k: "Oral", v: "Biopsy Screening"},
+ { k: "Colon", v: "Colonoscopy @45"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
  <p className="text-4xl font-black text-rose-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -197,7 +197,7 @@ export default function OncologyDepartmentPage() {
  <span className="text-rose-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -207,12 +207,12 @@ export default function OncologyDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Surgical Resection", link: "/doctor/near-me/treat/oncology/surgical-oncology-center" },
- { name: "Targeted Chemotherapy", link: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" },
- { name: "Precision Immunotherapy", link: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" },
- { name: "Breast Cancer Surgery", link: "/doctor/near-me/treat/oncology/surgical-oncology-center" },
- { name: "Colorectal Onco-Surgery", link: "/doctor/near-me/treat/oncology/surgical-oncology-center" },
- { name: "Supportive Cancer Care", link: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy" }
+ { name: "Surgical Resection", link: "/doctor/near-me/treat/oncology/surgical-oncology-center"},
+ { name: "Targeted Chemotherapy", link: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy"},
+ { name: "Precision Immunotherapy", link: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy"},
+ { name: "Breast Cancer Surgery", link: "/doctor/near-me/treat/oncology/surgical-oncology-center"},
+ { name: "Colorectal Onco-Surgery", link: "/doctor/near-me/treat/oncology/surgical-oncology-center"},
+ { name: "Supportive Cancer Care", link: "/doctor/near-me/treat/oncology/medical-oncology-chemotherapy"}
  ]}
  technology={[
  {

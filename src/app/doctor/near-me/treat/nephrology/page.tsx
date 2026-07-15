@@ -52,13 +52,13 @@ export default function NephrologyDepartmentPage() {
  <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
  <div className="p-8 bg-indigo-50 dark:bg-indigo-900/20 rounded-[2.5rem] border border-indigo-100 dark:border-indigo-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl group-hover:bg-indigo-500/20 transition-all"></div>
- <h4 className="text-2xl font-bold text-indigo-900 dark:text-indigo-200 mb-4 flex items-center gap-2">
+ <h4 className="text-2xl font-bold text-indigo-900 dark:text-subtle-on-dark mb-4 flex items-center gap-2">
  High-Flux Dialysis Hub
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- Filtration beyond the basics. Our advanced membranes remove larger uremic toxins, reducing patient fatigue and long-term "Dialysis-Amyloidosis" complications.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ Filtration beyond the basics. Our advanced membranes remove larger uremic toxins, reducing patient fatigue and long-term "Dialysis-Amyloidosis"complications.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-indigo-100 dark:border-indigo-700 shadow-sm">Ultrapure Water (RO)</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-indigo-100 dark:border-indigo-700 shadow-sm">Zero-Hepatitis Risk</span>
  </div>
@@ -70,8 +70,8 @@ export default function NephrologyDepartmentPage() {
  Avoiding the need for dialysis. We utilize the latest in <strong>SGLT2 inhibitors</strong> and precision hypertension control to protect your remaining nephrons.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Diabetic Nephropathy Care</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Nutritional Renal Plan</li>
+ <li className="flex items-center gap-2 text-xs font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Diabetic Nephropathy Care</li>
+ <li className="flex items-center gap-2 text-xs font-black text-indigo-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div> Nutritional Renal Plan</li>
  </ul>
  </div>
  </div>
@@ -90,10 +90,10 @@ export default function NephrologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Dialysis Center</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Tertiary-level blood purification featuring high-flux membranes and expert renal nursing care.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Tertiary-level blood purification featuring high-flux membranes and expert renal nursing care.</p>
  <ul className="space-y-3 mb-8">
  {["24/7 Hemodialysis", "SLED for ICU Patients", "Peritoneal Dialysis Support", "Fistula Rescue Unit"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -107,10 +107,10 @@ export default function NephrologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-indigo-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Kidney Health</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Precision management of protein leakage (nephrotic syndrome) and systemic kidney disorders.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Precision management of protein leakage (nephrotic syndrome) and systemic kidney disorders.</p>
  <ul className="space-y-3 mb-8">
  {["Kidney Biopsy Hub", "Glomerular Disease Clinic", "Resistant Hypertension Lab", "Renal Stones Prevention"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -124,10 +124,10 @@ export default function NephrologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Acute Renal Unit</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Managing multi-organ failure and sepsis-related kidney injuries with advanced CRRT multi-filtrate systems.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Managing multi-organ failure and sepsis-related kidney injuries with advanced CRRT multi-filtrate systems.</p>
  <ul className="space-y-3 mb-8">
  {["CRRT (Continuous Dialysis)", "Plasma Exchange Hub", "Acute Failure Rescue", "Acid-Base Balance Lab"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -141,23 +141,23 @@ export default function NephrologyDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Dialysis Quality ─────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-indigo-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-indigo-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading text-left">Clinical Insight: The Dialysis Purity Paradox</h3>
+ <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not- font-heading text-left">Clinical Insight: The Dialysis Purity Paradox</h3>
  <p>
- Not all dialysis is created equal. The standard version clears small molecules like Urea and Creatinine. However, <strong>High-Flux Hemodialysis</strong> is required to clear "Middle Molecules" (like Beta-2 Microglobulin) that cause chronic itching, bone pain, and heart damage in long-term patients.
+ Not all dialysis is created equal. The standard version clears small molecules like Urea and Creatinine. However, <strong>High-Flux Hemodialysis</strong> is required to clear "Middle Molecules"(like Beta-2 Microglobulin) that cause chronic itching, bone pain, and heart damage in long-term patients.
  </p>
  <p className="mt-4">
  At Indira Hospital, our <strong>Purity Standards</strong> ensuring:
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "FLUX", v: "High-Toxin Clear" },
- { k: "HDF", v: "Hemodiafiltration" },
- { k: "RO-HD", v: "Ultrapure Water" },
- { k: "UFR", v: "Gentle Fluid Pull" }
+ { k: "FLUX", v: "High-Toxin Clear"},
+ { k: "HDF", v: "Hemodiafiltration"},
+ { k: "RO-HD", v: "Ultrapure Water"},
+ { k: "UFR", v: "Gentle Fluid Pull"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-indigo-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-indigo-600">
  <p className="text-4xl font-black text-indigo-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -214,7 +214,7 @@ export default function NephrologyDepartmentPage() {
  <span className="text-indigo-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -224,12 +224,12 @@ export default function NephrologyDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "24/7 High-Flux Dialysis", link: "/doctor/near-me/treat/nephrology" },
- { name: "CRRT (ICU Dialysis Unit)", link: "/doctor/near-me/treat/nephrology" },
- { name: "Percutaneous Kidney Biopsy", link: "/doctor/near-me/treat/nephrology" },
- { name: "AV Fistula Creation Hub", link: "/doctor/near-me/treat/nephrology" },
- { name: "SLED (Slow Dialysis) Unit", link: "/doctor/near-me/treat/nephrology" },
- { name: "Transplant Workup Suite", link: "/doctor/near-me/treat/nephrology" }
+ { name: "24/7 High-Flux Dialysis", link: "/doctor/near-me/treat/nephrology"},
+ { name: "CRRT (ICU Dialysis Unit)", link: "/doctor/near-me/treat/nephrology"},
+ { name: "Percutaneous Kidney Biopsy", link: "/doctor/near-me/treat/nephrology"},
+ { name: "AV Fistula Creation Hub", link: "/doctor/near-me/treat/nephrology"},
+ { name: "SLED (Slow Dialysis) Unit", link: "/doctor/near-me/treat/nephrology"},
+ { name: "Transplant Workup Suite", link: "/doctor/near-me/treat/nephrology"}
  ]}
  relatedDoctors={nephrologyDoctors}
  quickFacts={quickFacts}

@@ -18,7 +18,7 @@ export const metadata: Metadata = constructMetadata({
 export default function ContactPage() {
  return (
  <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
- <JsonLdSchema type="hospital" />
+ <JsonLdSchema type="hospital"/>
  <ContactFormClient />
 
  {/* TRUST SIGNALS */}

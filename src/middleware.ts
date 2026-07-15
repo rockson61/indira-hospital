@@ -22,7 +22,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  
+  // Add Link response headers for Agent Discovery (RFC 8288)
+  if (request.nextUrl.pathname === '/') {
+    response.headers.set('Link', '</.well-known/api-catalog>; rel="api-catalog", </.well-known/agent-skills/index.json>; rel="agent-skills"');
+  }
+
+  return response;
 }
 
 // Optimize middleware execution by excluding static files where it's not needed

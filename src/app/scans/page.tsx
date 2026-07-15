@@ -19,13 +19,13 @@ export default function ScansPage() {
  <main className="min-h-screen bg-slate-50 dark:bg-slate-800 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
  {/* Bold Asymmetrical Deep Hero */}
  <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
- <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
- <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"/>
+ <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse"/>
+ <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu opacity-50 pointer-events-none"/>
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
  <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-blue-300 text-sm font-bold tracking-widest uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-blue-500/30">
- <Scan className="w-4 h-4" /> Next-Gen Imaging Center
+ <Scan className="w-4 h-4"/> Next-Gen Imaging Center
  </span>
  <h1 className="elite-hero-title text-white mb-8 max-w-5xl mx-auto">
  See Clearly. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Diagnose Accurately.</span>
@@ -38,31 +38,31 @@ export default function ScansPage() {
  <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto relative z-20">
  <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white dark:bg-slate-900 hover:-translate-y-2 transition-all duration-300 group">
  <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-500 transition-colors">
- <HeartCardiogram className="w-6 h-6 text-blue-400 group-hover:text-white" />
+ <HeartCardiogram className="w-6 h-6 text-blue-400 group-hover:text-white"/>
  </div>
  <p className="text-4xl font-black text-white mb-1 tabular-nums">3T</p>
- <p className="text-xs font-black text-blue-300 uppercase tracking-widest">MRI System</p>
+ <p className="text-sm font-black text-blue-300 uppercase tracking-widest">MRI System</p>
  </div>
  <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white dark:bg-slate-900 hover:-translate-y-2 transition-all duration-300 group">
  <div className="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-indigo-500 transition-colors">
- <Target className="w-6 h-6 text-indigo-400 group-hover:text-white" />
+ <Target className="w-6 h-6 text-indigo-400 group-hover:text-white"/>
  </div>
  <p className="text-4xl font-black text-white mb-1">128</p>
- <p className="text-xs font-black text-indigo-300 uppercase tracking-widest">Slice CT</p>
+ <p className="text-sm font-black text-indigo-300 uppercase tracking-widest">Slice CT</p>
  </div>
  <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white dark:bg-slate-900 hover:-translate-y-2 transition-all duration-300 group">
  <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-violet-500 transition-colors">
- <Clock className="w-6 h-6 text-violet-400 group-hover:text-white" />
+ <Clock className="w-6 h-6 text-violet-400 group-hover:text-white"/>
  </div>
  <p className="text-4xl font-black text-white mb-1">&lt; 12h</p>
- <p className="text-xs font-black text-violet-300 uppercase tracking-widest">Report TAT</p>
+ <p className="text-sm font-black text-violet-300 uppercase tracking-widest">Report TAT</p>
  </div>
  <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-[2.5rem] shadow-2xl hover:bg-white dark:bg-slate-900 hover:-translate-y-2 transition-all duration-300 group col-span-2 lg:col-span-1">
  <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-fuchsia-500 transition-colors">
- <Shield className="w-6 h-6 text-fuchsia-400 group-hover:text-white" />
+ <Shield className="w-6 h-6 text-fuchsia-400 group-hover:text-white"/>
  </div>
  <p className="text-4xl font-black text-white mb-1">Low</p>
- <p className="text-xs font-black text-fuchsia-300 uppercase tracking-widest">Radiation</p>
+ <p className="text-sm font-black text-fuchsia-300 uppercase tracking-widest">Radiation</p>
  </div>
  </div>
  </div>
@@ -107,7 +107,7 @@ export default function ScansPage() {
  ].map((scan, idx) => (
  <div key={idx} className={`bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 lg:p-12 border ${scan.border} shadow-xl hover:-translate-y-2 transition-transform duration-500 group flex flex-col`}>
  <h3 className="elite-section-title text-slate-900 dark:text-white mb-4">{scan.title}</h3>
- <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed text-lg mb-8 flex-grow">{scan.desc}</p>
+ <p className="text-slate-500 dark:text-subtle-on-light font-medium leading-relaxed text-lg mb-8 flex-grow">{scan.desc}</p>
  <div className="space-y-3">
  {scan.features.map((feature, fIdx) => (
  <div key={fIdx} className="flex items-center gap-3">
@@ -145,12 +145,12 @@ export default function ScansPage() {
  {/* CTA */}
  <SectionContainer className="px-4">
  <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 rounded-[4rem] p-12 sm:p-24 overflow-hidden shadow-2xl group/cta flex flex-col items-center text-center">
- <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu group-hover/cta:bg-blue-500/20 transition-colors duration-1000 opacity-50" />
- <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] will-change-transform transform-gpu opacity-40" />
+ <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu group-hover/cta:bg-blue-500/20 transition-colors duration-1000 opacity-50"/>
+ <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] will-change-transform transform-gpu opacity-40"/>
 
  <div className="relative z-10 w-full max-w-4xl">
  <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 mb-10 shadow-[0_0_40px_rgba(59,130,246,0.3)]">
- <FileText className="w-10 h-10 text-blue-300" />
+ <FileText className="w-10 h-10 text-blue-300"/>
  </div>
  <h2 className="elite-section-title text-white mb-6">
  Book Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Scan Today.</span>
@@ -165,9 +165,9 @@ export default function ScansPage() {
  rel="noopener noreferrer"
  className="group/btn relative flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-blue-500 hover:bg-blue-600 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl shadow-blue-500/25 overflow-hidden text-xl"
  >
- <MessageCircle className="w-6 h-6 mr-3" />
+ <MessageCircle className="w-6 h-6 mr-3"/>
  Book via WhatsApp
- <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+ <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover/btn:translate-x-1 transition-transform"/>
  </a>
  </div>
  </div>

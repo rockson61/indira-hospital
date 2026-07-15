@@ -35,8 +35,8 @@ export default function DrGayathriProfile() {
  image: "/images/doctors/dr-gayathri.png",
  experience_years: 8,
  education: [
- { degree: "MBBS", institution: "Saveetha Medical College" },
- { degree: "MS (Otorhinolaryngology)", institution: "KMCH, Coimbatore" }
+ { degree: "MBBS", institution: "Saveetha Medical College"},
+ { degree: "MS (Otorhinolaryngology)", institution: "KMCH, Coimbatore"}
  ],
  procedures: [
  "Functional Endoscopic Sinus Surgery (FESS)",
@@ -94,8 +94,8 @@ export default function DrGayathriProfile() {
  fullDescription={
  <div className="space-y-16">
  {/* Section: Micro-Surgical Precision */}
- <section id="philosophy" className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-sky-50/50 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/50 text-left">
- <div className="absolute top-0 right-0 w-64 h-64 bg-sky-400/10 blur-3xl -z-10" />
+ <section id="philosophy"className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-sky-50/50 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/50 text-left">
+ <div className="absolute top-0 right-0 w-64 h-64 bg-sky-400/10 blur-3xl -z-10"/>
  <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-sky-500 pl-4 font-heading uppercase tracking-tighter">
  ENT Mastery: The Micro-Surgical Edge
  </h3>
@@ -112,34 +112,34 @@ export default function DrGayathriProfile() {
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
- <Microscope className="w-5 h-5 text-sky-600" />
+ <Microscope className="w-5 h-5 text-sky-600"/>
  <span><strong>Micro-Ear Precision</strong>: Repairing eardrums and middle-ear bones with 20x magnification.</span>
  </div>
  <div className="flex items-center gap-3">
- <Wind className="w-5 h-5 text-sky-600" />
+ <Wind className="w-5 h-5 text-sky-600"/>
  <span><strong>Endoscopic Sinus Mastery</strong>: Clearing polyps and resolving chronic sinusitis via FESS.</span>
  </div>
  </div>
  </div>
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-sky-100 dark:border-sky-800 shadow-xl flex flex-col justify-center">
- <Activity className="w-16 h-16 text-sky-500 mb-6 font-heading uppercase tracking-widest" />
+ <Activity className="w-16 h-16 text-sky-500 mb-6 font-heading uppercase tracking-widest"/>
  <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">ENT Clinical Benchmarks</h4>
  <ul className="space-y-4 mb-6">
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0"/>
  <span className="text-sm"><strong>Coblation Excellence</strong>: Minimizing thermal damage for Pediatric ENT surgery.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0"/>
  <span className="text-sm"><strong>Sinus Navigation</strong>: Safely managing difficult CSF leaks and sinus tumors.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-sky-500 shrink-0"/>
  <span className="text-sm"><strong>Vocal Cord Microsurgery</strong>: Restoring voice quality for professionals.</span>
  </li>
  </ul>
- <div className="inline-flex items-center gap-2 text-sky-600 font-bold text-xs uppercase tracking-widest">
- <Award className="w-4 h-4" />
+ <div className="inline-flex items-center gap-2 text-sky-600 font-bold text-sm uppercase tracking-widest">
+ <Award className="w-4 h-4"/>
  Elite ENT Standards Verified
  </div>
  </div>
@@ -148,7 +148,7 @@ export default function DrGayathriProfile() {
 
  {/* ENT Modality row */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-sky-950/30 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-sky-950/30 to-transparent"/>
  <h3 className="text-3xl font-bold mb-8 font-heading text-sky-300 uppercase tracking-widest leading-none">Diagnostic & Surgical Modality Range</h3>
  <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
  {[
@@ -158,9 +158,9 @@ export default function DrGayathriProfile() {
  { title: "Audiometric Lab", desc: "High-precision hearing and balance assessment.", icon: Volume2 }
  ].map((item: any, i: number) => (
  <div key={i} className="p-6 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-sky-500/50 transition-all">
- <item.icon className="w-8 h-8 text-sky-400 mb-4" />
+ <item.icon className="w-8 h-8 text-sky-400 mb-4"/>
  <h4 className="font-bold text-lg mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-400 leading-relaxed antialiased">{item.desc}</p>
+ <p className="text-xs text-subtle-on-light leading-relaxed antialiased">{item.desc}</p>
  </div>
  ))}
  </div>

@@ -90,14 +90,14 @@ export default async function BlogPostPage({
  />
  {/* ELITE CINEMATIC HEADER */}
  <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-40 overflow-hidden bg-slate-900 rounded-b-[4rem] sm:rounded-b-[6rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"/>
  
  {/* Ambient Glows */}
- <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] will-change-transform transform-gpu opacity-60" />
- <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] will-change-transform transform-gpu opacity-40" />
+ <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-fuchsia-500/20 rounded-full blur-[120px] will-change-transform transform-gpu opacity-60"/>
+ <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] will-change-transform transform-gpu opacity-40"/>
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
- <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-500/10 border border-fuchsia-500/20 text-fuchsia-300 text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
+ <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-fuchsia-500/10 border border-fuchsia-500/20 text-fuchsia-300 text-xs font-black tracking-[0.3em] uppercase mb-8 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
  {post.category || 'Clinical Guide'}
  </div>
  
@@ -149,7 +149,7 @@ export default async function BlogPostPage({
  {/* Sticky Container */}
  <div className="sticky top-32 space-y-8">
  
- <TableOfContents className="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-clay-sm" />
+ <TableOfContents className="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-clay-sm"/>
 
  {/* Author Review Trust Widget */}
  <AuthorCard 
@@ -167,11 +167,11 @@ export default async function BlogPostPage({
  {/* SEO Keyword Cluster Widget */}
  <PeopleAlsoSearchCard 
  keywords={[
- { text: "Recovery Time", href: "#recovery" },
- { text: "Cost in India", href: "#cost" },
- { text: "Best Surgeries Near Me", href: "/doctor/near-me" },
- { text: "Side Effects", href: "#risks" },
- { text: "Alternative Therapies", href: "/departments" }
+ { text: "Recovery Time", href: "#recovery"},
+ { text: "Cost in India", href: "#cost"},
+ { text: "Best Surgeries Near Me", href: "/doctor/near-me"},
+ { text: "Side Effects", href: "#risks"},
+ { text: "Alternative Therapies", href: "/departments"}
  ]}
  />
 
@@ -190,8 +190,8 @@ export default async function BlogPostPage({
  </div>
 
  <div className="mt-24 pt-16 border-t border-slate-200 dark:border-slate-800 space-y-10">
- <InternalLinkGrid type="services" title="Related Treatments" subtitle="Clinical Services" limit={8} className="bg-white dark:bg-slate-900 rounded-[3rem]" />
- <InternalLinkGrid type="diagnostics" title="Recommended Screenings" subtitle="NABL Accredited" limit={8} className="bg-slate-100 dark:bg-slate-900 rounded-[3rem]" />
+ <InternalLinkGrid type="services"title="Related Treatments"subtitle="Clinical Services"limit={8} className="bg-white dark:bg-slate-900 rounded-[3rem]"/>
+ <InternalLinkGrid type="diagnostics"title="Recommended Screenings"subtitle="NABL Accredited"limit={8} className="bg-slate-100 dark:bg-slate-900 rounded-[3rem]"/>
  </div>
  </div>
  </div>

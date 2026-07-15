@@ -46,7 +46,7 @@ export function EstimatorWidget() {
  onChange={e => setSelected(e.target.value)}
  className="w-full px-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-green-400 cursor-pointer"
  >
- <option value="" className="bg-slate-900">— Choose a procedure —</option>
+ <option value=""className="bg-slate-900">— Choose a procedure —</option>
  {elitePricingBank.map(p => (
  <option key={p.procedure} value={p.procedure} className="bg-slate-900">{p.procedure}</option>
  ))}
@@ -60,13 +60,13 @@ export function EstimatorWidget() {
  { label: "🇬🇧 UK", value: procedure.ukCost || "N/A", highlight: false },
  { label: "🇦🇪 UAE", value: procedure.uaeCost || "N/A", highlight: false },
  ].map(row => (
- <div key={row.label} className={`flex justify-between items-center p-4 rounded-xl ${row.highlight ? "bg-green-500/20 border border-green-400/30" : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"}`}>
+ <div key={row.label} className={`flex justify-between items-center p-4 rounded-xl ${row.highlight ? "bg-green-500/20 border border-green-400/30": "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"}`}>
  <span className="text-sm font-semibold">{row.label}</span>
- <span className={`font-black text-sm ${row.highlight ? "text-green-300" : "text-slate-300"}`}>{row.value}</span>
+ <span className={`font-black text-sm ${row.highlight ? "text-green-300": "text-slate-300"}`}>{row.value}</span>
  </div>
  ))}
  <div className="text-center mt-4 p-3 bg-amber-500/20 border border-amber-400/30 rounded-xl flex items-center justify-center gap-2">
- <TrendingDown className="w-4 h-4 text-amber-400" />
+ <TrendingDown className="w-4 h-4 text-amber-400"/>
  <span className="text-amber-300 font-black">Save up to {procedure.savings} vs Western countries</span>
  </div>
  </div>
@@ -76,26 +76,26 @@ export function EstimatorWidget() {
  <div className="space-y-4">
  <div className="p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
  <p className="text-sm text-slate-300 mb-4">Want a <strong className="text-white">personalised quote</strong> for your specific case? Send us your reports and we'll reply within 24 hours.</p>
- <a href={waUrl} target="_blank" rel="noopener noreferrer"
+ <a href={waUrl} target="_blank"rel="noopener noreferrer"
  className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all text-sm">
- <MessageCircle className="w-4 h-4" />
- {selected ? `Get Quote for ${selected.split(" ").slice(0, 3).join(" ")}...` : "WhatsApp for Free Quote"}
+ <MessageCircle className="w-4 h-4"/>
+ {selected ? `Get Quote for ${selected.split("").slice(0, 3).join("")}...` : "WhatsApp for Free Quote"}
  </a>
  </div>
  <div className="p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2">
- <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Estimate includes</p>
+ <p className="text-sm font-bold text-subtle-on-light uppercase tracking-wider mb-3">Estimate includes</p>
  {WHATS_INCLUDED.map(item => (
  <div key={item} className="flex items-start gap-2 text-sm text-slate-300">
- <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+ <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"/>
  {item}
  </div>
  ))}
  </div>
  <div className="p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2">
- <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">We also arrange (on request)</p>
+ <p className="text-sm font-bold text-subtle-on-light uppercase tracking-wider mb-3">We also arrange (on request)</p>
  {WHATS_EXTRA.map(item => (
  <div key={item} className="flex items-start gap-2 text-sm text-slate-300">
- <Star className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+ <Star className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"/>
  {item}
  </div>
  ))}

@@ -56,37 +56,37 @@ export default function TympanoplastyPage() {
  <article className="space-y-12">
  {/* Mechanism: Microsurgical Ear Restoration */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
- <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10"/>
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading">
  Mechanism: Tympanic Membrane & Ossicular Grafting
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
  <div className="prose prose-slate dark:prose-invert text-left">
  <p className="text-lg leading-relaxed">
- A perforation in the eardrum disrupts the "Impedance Matching" mechanism of the middle ear, causing conductive hearing loss. **Tympanoplasty** involves meticulously cleaning the ear canal and using your own tissue—usually temporal fascia or tragal cartilage—as a natural graft to close the opening.
+ A perforation in the eardrum disrupts the "Impedance Matching"mechanism of the middle ear, causing conductive hearing loss. **Tympanoplasty** involves meticulously cleaning the ear canal and using your own tissue—usually temporal fascia or tragal cartilage—as a natural graft to close the opening.
  </p>
  <p className="mt-4">
  When the infection involves the tiny ossicles (hearing bones), we perform **Ossicular Chain Reconstruction (OCR)**. We use microscopic titanium or biocompatible implants to replace damaged bones like the incus or stapes, restoring the physical path of sound into the inner ear.
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+ <ArrowRightCircle className="w-5 h-5 text-emerald-600"/>
  <span><strong>Microscopic Cleansing</strong>: Removal of infected skin (cholesteatoma) that can erode the skull.</span>
  </div>
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-emerald-600" />
+ <ArrowRightCircle className="w-5 h-5 text-emerald-600"/>
  <span><strong>Water-proof Integrity</strong>: Ensuring the middle ear is permanently protected from external water and bacteria.</span>
  </div>
  </div>
  </div>
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
- <Volume2 className="w-16 h-16 text-emerald-500 mb-6" />
- <h4 className="text-xl font-bold mb-2">The "Dry Ear" Lifecycle</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading">
+ <Volume2 className="w-16 h-16 text-emerald-500 mb-6"/>
+ <h4 className="text-xl font-bold mb-2">The "Dry Ear"Lifecycle</h4>
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed mb-6 font-heading">
  Following surgery, we monitor for the **Success Indicators**: a dry middle ear space, a healthy vascularized graft, and a measurable gain in the decibel threshold of hearing.
  </p>
- <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
- <Shield className="w-4 h-4" />
+ <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-sm uppercase tracking-widest">
+ <Shield className="w-4 h-4"/>
  Auditory Pathway Assurance
  </div>
  </div>
@@ -97,18 +97,18 @@ export default function TympanoplastyPage() {
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4">Common Ear Surgery Indications</h3>
- <p className="text-slate-600 dark:text-slate-400">Our ENT Hub is equipped for both pediatric and adult ear microsurgery.</p>
+ <p className="text-slate-600 dark:text-subtle-on-light">Our ENT Hub is equipped for both pediatric and adult ear microsurgery.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
  {[
- { title: "Eardrum Perforation", desc: "A persistent hole in the eardrum usually caused by repeated infections or injury." },
- { title: "Cholesteatoma", desc: "A destructive skin-filled cyst that can erode hearing bones and the skull base." },
- { title: "CSOM Discharge", desc: "Chronic foul-smelling ear discharge that does not respond to medical drops." },
- { title: "Otosclerosis", desc: "Hardening of the hearing bones that requires stapedotomy for sound restoration." }
+ { title: "Eardrum Perforation", desc: "A persistent hole in the eardrum usually caused by repeated infections or injury."},
+ { title: "Cholesteatoma", desc: "A destructive skin-filled cyst that can erode hearing bones and the skull base."},
+ { title: "CSOM Discharge", desc: "Chronic foul-smelling ear discharge that does not respond to medical drops."},
+ { title: "Otosclerosis", desc: "Hardening of the hearing bones that requires stapedotomy for sound restoration."}
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:bg-emerald-50/20 transition-all border-b-4 border-emerald-500">
  <h4 className="font-bold mb-2 text-emerald-600 font-heading tracking-tighter uppercase">{item.title}</h4>
- <p className="text-[10px] text-slate-500 leading-relaxed">{item.desc}</p>
+ <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -116,21 +116,21 @@ export default function TympanoplastyPage() {
 
  {/* Integrated Ear Hub Section */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative">
- <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent shadow-2xl" />
+ <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent shadow-2xl"/>
  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
  <div className="space-y-6">
  <h3 className="font-heading text-3xl font-bold font-heading text-emerald-300">Mastoidectomy: Cleansing the Temporal Bone</h3>
- <p className="text-slate-400 leading-relaxed">
+ <p className="text-subtle-on-light leading-relaxed">
  When infection invades the honeycomb-like mastoid bone behind the ear, a simple tympanoplasty is not enough. We perform **Mastoidectomy** using high-speed micro-drills to clear every cell of infection, preventing serious brain complications.
  </p>
  </div>
  <div className="grid grid-cols-2 gap-4">
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading">Microscope</p>
+ <p className="text-sm text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading">Microscope</p>
  <p className="font-heading text-3xl font-bold text-white">Zeiss</p>
  </div>
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading">Precision</p>
+ <p className="text-sm text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading">Precision</p>
  <p className="font-heading text-3xl font-bold text-white">Sub-mm</p>
  </div>
  </div>
@@ -140,7 +140,7 @@ export default function TympanoplastyPage() {
  {/* Clinical FAQ Hub */}
  <section className="bg-slate-50 dark:bg-slate-900 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
- <Info className="text-emerald-500" />
+ <Info className="text-emerald-500"/>
  Elite Clinical FAQs: Tympanoplasty & Mastoidectomy
  </h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -172,10 +172,10 @@ export default function TympanoplastyPage() {
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group text-left">
  <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
- <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
+ <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0"/>
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>

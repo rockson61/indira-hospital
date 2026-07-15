@@ -52,13 +52,13 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
  <div className="p-8 bg-indigo-50 dark:bg-indigo-900/20 rounded-[2.5rem] border border-indigo-100 dark:border-indigo-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl group-hover:bg-indigo-500/20 transition-all"></div>
- <h4 className="text-2xl font-bold text-indigo-900 dark:text-indigo-200 mb-4 flex items-center gap-2">
+ <h4 className="text-2xl font-bold text-indigo-900 dark:text-subtle-on-dark mb-4 flex items-center gap-2">
  Metabolic Medicine Hub
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- Specialized care for <strong>Diabetology & Lipidology.</strong> We focus on "Metabolic Reversal" through programmed glycemic control, reducing the risk of cardiovascular events and renal damage.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ Specialized care for <strong>Diabetology & Lipidology.</strong> We focus on "Metabolic Reversal"through programmed glycemic control, reducing the risk of cardiovascular events and renal damage.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-indigo-100 dark:border-indigo-700 shadow-sm">HBA1C Monitoring</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-indigo-100 dark:border-indigo-700 shadow-sm">Thyroid Precision</span>
  </div>
@@ -70,8 +70,8 @@ export default function GeneralMedicineDepartmentPage() {
  Rapid triage for acute viral and bacterial infections. Our 24/7 in-house lab ensures zero-delay diagnosis of Dengue, Malaria, and Sepsis.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Sepsis Survival Protocol</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Evidence-Based Antibiotics</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Sepsis Survival Protocol</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Evidence-Based Antibiotics</li>
  </ul>
  </div>
  </div>
@@ -90,10 +90,10 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Chronic Care</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Long-term management of Hypertension, Osteoarthritis, and COPD to prevent hospitalization.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Long-term management of Hypertension, Osteoarthritis, and COPD to prevent hospitalization.</p>
  <ul className="space-y-3 mb-8">
  {["Hypertension Hub", "Lipid Management", "Respiratory Care", "Geriatric Wellness"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -107,10 +107,10 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-indigo-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Diabetology</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Comprehensive Diabetes pathways from diagnosis to complication management (Diabetic Foot/Eye).</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Comprehensive Diabetes pathways from diagnosis to complication management (Diabetic Foot/Eye).</p>
  <ul className="space-y-3 mb-8">
  {["Insulin Regulation", "Foot Care Clinic", "Nutritional Therapy", "CGM Monitoring"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -124,10 +124,10 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Emergency Care</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Managing medical emergencies including acute renal failure, poisoning, and severe infections.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Managing medical emergencies including acute renal failure, poisoning, and severe infections.</p>
  <ul className="space-y-3 mb-8">
  {["ICU Management", "Sepsis Protocols", "Dialysis Support", "Trauma Integration"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-indigo-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -141,23 +141,23 @@ export default function GeneralMedicineDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Diabetes Management ──────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-indigo-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: Beyond the Glucose Spike</h3>
+ <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not- font-heading">Clinical Insight: Beyond the Glucose Spike</h3>
  <p>
- Diabetes management is often oversimplified as "avoiding sugar." In truth, clinical Diabetology is about <strong>Vascular Protection.</strong> Prolonged spikes in blood glucose create "glycosylation" of small blood vessels in the kidneys, heart, and nerves.
+ Diabetes management is often oversimplified as "avoiding sugar."In truth, clinical Diabetology is about <strong>Vascular Protection.</strong> Prolonged spikes in blood glucose create "glycosylation"of small blood vessels in the kidneys, heart, and nerves.
  </p>
  <p className="mt-4">
  At Indira Hospital, our <strong>Diabetes Reversal Orientation</strong> focuses on:
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "HBA1C", v: "3-Month Accuracy" },
- { k: "Lipids", v: "Heart-Safe Target" },
- { k: "Renal", v: "Protein-Track" },
- { k: "Retina", v: "Micro-Vascular" }
+ { k: "HBA1C", v: "3-Month Accuracy"},
+ { k: "Lipids", v: "Heart-Safe Target"},
+ { k: "Renal", v: "Protein-Track"},
+ { k: "Retina", v: "Micro-Vascular"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-indigo-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-indigo-600">
  <p className="text-4xl font-black text-indigo-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -214,7 +214,7 @@ export default function GeneralMedicineDepartmentPage() {
  <span className="text-indigo-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -224,12 +224,12 @@ export default function GeneralMedicineDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Diabetes Management Program", link: "/doctor/near-me/treat/general-medicine" },
- { name: "Executive Health Checkups", link: "/doctor/near-me/treat/general-medicine" },
- { name: "Hypertension Clinic", link: "/doctor/near-me/treat/general-medicine" },
- { name: "Adult Vaccination Hub", link: "/doctor/near-me/treat/general-medicine" },
- { name: "Thyroid & Metabolic Clinic", link: "/doctor/near-me/treat/general-medicine" },
- { name: "Infectious Disease Triage", link: "/doctor/near-me/treat/general-medicine" }
+ { name: "Diabetes Management Program", link: "/doctor/near-me/treat/general-medicine"},
+ { name: "Executive Health Checkups", link: "/doctor/near-me/treat/general-medicine"},
+ { name: "Hypertension Clinic", link: "/doctor/near-me/treat/general-medicine"},
+ { name: "Adult Vaccination Hub", link: "/doctor/near-me/treat/general-medicine"},
+ { name: "Thyroid & Metabolic Clinic", link: "/doctor/near-me/treat/general-medicine"},
+ { name: "Infectious Disease Triage", link: "/doctor/near-me/treat/general-medicine"}
  ]}
  relatedDoctors={medicineDoctors}
  quickFacts={quickFacts}

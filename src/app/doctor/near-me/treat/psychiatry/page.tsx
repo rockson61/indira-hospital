@@ -39,10 +39,10 @@ export default function PsychiatryDepartmentPage() {
  <h4 className="text-2xl font-bold text-blue-900 dark:text-blue-200 mb-4 flex items-center gap-2">
  Clinical Psychiatry
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- "Biology meets Psychology." We specialize in managing complex conditions like Treatment-Resistant Depression, Bipolar Disorder, and Schizophrenia, using targeted medication management and neuro-rehabilitation.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ "Biology meets Psychology."We specialize in managing complex conditions like Treatment-Resistant Depression, Bipolar Disorder, and Schizophrenia, using targeted medication management and neuro-rehabilitation.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 shadow-sm">Bipolar Management</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-blue-100 dark:border-blue-700 shadow-sm">Pharmacotherapy</span>
  </div>
@@ -54,8 +54,8 @@ export default function PsychiatryDepartmentPage() {
  Trusted, confidential paths to recovery. From <strong>Alcohol Withdrawal Management</strong> to <strong>Substance Abuse Counseling</strong>, we focus on long-term sobriety and social reintegration.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Withdrawal Stabilization</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Relapse Prevention</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Withdrawal Stabilization</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Relapse Prevention</li>
  </ul>
  </div>
  </div>
@@ -74,10 +74,10 @@ export default function PsychiatryDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Mood Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Specialized care for Clinical Depression, Panic Disorder, OCD, and Social Anxiety using multi-modal approaches.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Specialized care for Clinical Depression, Panic Disorder, OCD, and Social Anxiety using multi-modal approaches.</p>
  <ul className="space-y-3 mb-8">
  {["Anxiety & Panic Relief", "Major Depressive Hub", "OCD Exposure Therapy", "Phobia Desensitization"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -91,10 +91,10 @@ export default function PsychiatryDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Child Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Managing developmental challenges, ADHD, Autism Spectrum Disorders, and academic performance anxiety.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Managing developmental challenges, ADHD, Autism Spectrum Disorders, and academic performance anxiety.</p>
  <ul className="space-y-3 mb-8">
  {["ADHD Diagnostic Center", "Autism Support Hub", "Academic Stress Relief", "Behavioral Modification"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -108,10 +108,10 @@ export default function PsychiatryDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Wellness Hub</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Holistic counseling for Marriage/Relationship issues, Grief, and Workplace burnout management.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Holistic counseling for Marriage/Relationship issues, Grief, and Workplace burnout management.</p>
  <ul className="space-y-3 mb-8">
  {["Marital & Family Therapy", "Grief Recovery Program", "Burnout Mitigation Hub", "Sleep Hygiene Education"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -125,20 +125,20 @@ export default function PsychiatryDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: Mental Health ───────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-blue-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading text-left">Mental Health First Aid: Breaking the Silence</h3>
+ <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not- font-heading text-left">Mental Health First Aid: Breaking the Silence</h3>
  <p>
- Physical pain has a clear signal; emotional pain often hides behind a smile. Mental health conditions are not "character flaws"—they are manageable clinical events involving neurotransmitter balances and psychological stressors. At Indira Hospital, our <strong>Psychological Shield Program</strong> aims to destigmatize mental wellness and provide actionable "First Aid" tools for individuals and caregivers.
+ Physical pain has a clear signal; emotional pain often hides behind a smile. Mental health conditions are not "character flaws"—they are manageable clinical events involving neurotransmitter balances and psychological stressors. At Indira Hospital, our <strong>Psychological Shield Program</strong> aims to destigmatize mental wellness and provide actionable "First Aid"tools for individuals and caregivers.
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "Listen", v: "Non-Judgmental Ears" },
- { k: "Support", v: "Caregiver Empathy" },
- { k: "Detect", v: "Early Symptom Tracking" },
- { k: "Protect", v: "Safety Net Protocols" }
+ { k: "Listen", v: "Non-Judgmental Ears"},
+ { k: "Support", v: "Caregiver Empathy"},
+ { k: "Detect", v: "Early Symptom Tracking"},
+ { k: "Protect", v: "Safety Net Protocols"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-blue-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-blue-600">
  <p className="text-4xl font-black text-blue-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -187,7 +187,7 @@ export default function PsychiatryDepartmentPage() {
  <span className="text-blue-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -197,12 +197,12 @@ export default function PsychiatryDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Clinical Psychiatry", link: "/doctor/near-me/treat/psychiatry" },
- { name: "CBT/DBT Psychotherapy", link: "/doctor/near-me/treat/psychiatry" },
- { name: "De-addiction Program", link: "/doctor/near-me/treat/psychiatry" },
- { name: "Child & Adolescent Therapy", link: "/doctor/near-me/treat/psychiatry" },
- { name: "Geriatric Mental Health", link: "/doctor/near-me/treat/psychiatry" },
- { name: "Marriage & Family Therapy", link: "/doctor/near-me/treat/psychiatry" }
+ { name: "Clinical Psychiatry", link: "/doctor/near-me/treat/psychiatry"},
+ { name: "CBT/DBT Psychotherapy", link: "/doctor/near-me/treat/psychiatry"},
+ { name: "De-addiction Program", link: "/doctor/near-me/treat/psychiatry"},
+ { name: "Child & Adolescent Therapy", link: "/doctor/near-me/treat/psychiatry"},
+ { name: "Geriatric Mental Health", link: "/doctor/near-me/treat/psychiatry"},
+ { name: "Marriage & Family Therapy", link: "/doctor/near-me/treat/psychiatry"}
  ]}
  technology={[
  {

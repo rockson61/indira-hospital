@@ -71,9 +71,9 @@ export default async function BlogListingPage() {
  className="object-cover"
  />
  ) : (
- <div className="flex items-center justify-center h-full text-slate-400">{BLOG_CONFIGURATION.NO_IMAGE_PLACEHOLDER}</div>
+ <div className="flex items-center justify-center h-full text-subtle-on-light">{BLOG_CONFIGURATION.NO_IMAGE_PLACEHOLDER}</div>
  )}
- <div className="absolute top-4 left-4 bg-white dark:bg-slate-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-800">
+ <div className="absolute top-4 left-4 bg-white dark:bg-slate-900 px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider text-blue-800">
  {post.category || BLOG_CONFIGURATION.DEFAULT_CATEGORY}
  </div>
  </div>
@@ -84,20 +84,20 @@ export default async function BlogListingPage() {
  <p className="text-muted-foreground line-clamp-3 text-sm mb-4">
  {post.excerpt}
  </p>
- <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+ <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-subtle-on-light">
  <div className="flex items-center gap-1">
- <Calendar className="w-3 h-3" />
+ <Calendar className="w-3 h-3"/>
  {format(new Date(post.date_created), "MMM d, yyyy")}
  </div>
  {/* Handle Author object or string */}
  <div className="flex items-center gap-1">
- <User className="w-3 h-3" />
+ <User className="w-3 h-3"/>
  {typeof post.author === 'object' && post.author !== null && 'name' in post.author ? String(post.author.name) : BLOG_CONFIGURATION.DEFAULT_AUTHOR}
  </div>
  </div>
  </CardContent>
  <CardFooter>
- <Button asChild variant="ghost" className="w-full justify-between group">
+ <Button asChild variant="ghost"className="w-full justify-between group">
  <Link href={`/blog/${post.slug}`}>
  {BLOG_CONFIGURATION.READ_ARTICLE_BUTTON}
  <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -113,8 +113,8 @@ export default async function BlogListingPage() {
  </div>
  )}
  </SectionContainer>
- <InternalLinkGrid type="services" title="Expert Surgical Procedures" subtitle="Clinical Services" limit={12} className="bg-slate-50 dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="diagnostics" title="Advanced Diagnostic Tests" subtitle="NABL Accredited" limit={8} className="bg-white dark:bg-slate-950 border-t" />
+ <InternalLinkGrid type="services"title="Expert Surgical Procedures"subtitle="Clinical Services"limit={12} className="bg-slate-50 dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="diagnostics"title="Advanced Diagnostic Tests"subtitle="NABL Accredited"limit={8} className="bg-white dark:bg-slate-950 border-t"/>
  </main>
  )
 }

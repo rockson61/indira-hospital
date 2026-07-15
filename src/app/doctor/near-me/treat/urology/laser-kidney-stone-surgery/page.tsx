@@ -59,7 +59,7 @@ export default function RIRSPage() {
  <article className="space-y-12">
  {/* The Laser Physics Section */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
- <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10"/>
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading">
  The Science of 100W Holmium Laser Lithotripsy
  </h3>
@@ -71,7 +71,7 @@ export default function RIRSPage() {
  <div className="mt-8 space-y-4">
  <div className="flex items-start gap-4">
  <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center shadow-md shrink-0">
- <Zap className="w-5 h-5 text-emerald-500" />
+ <Zap className="w-5 h-5 text-emerald-500"/>
  </div>
  <div>
  <p className="font-bold">Stone 'Dusting' Technology</p>
@@ -80,7 +80,7 @@ export default function RIRSPage() {
  </div>
  <div className="flex items-start gap-4">
  <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center shadow-md shrink-0">
- <Waves className="w-5 h-5 text-emerald-500" />
+ <Waves className="w-5 h-5 text-emerald-500"/>
  </div>
  <div>
  <p className="font-bold">Advanced Irrigation Management</p>
@@ -94,15 +94,15 @@ export default function RIRSPage() {
  <h4 className="text-xl font-bold mb-4 flex items-center gap-2">The RIRS Benefit Matrix</h4>
  <ul className="space-y-4">
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0"/>
  <span className="text-sm"><strong>Zero Cut Suture-less</strong>: No external wounds means zero risk of wound infection.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0"/>
  <span className="text-sm"><strong>Bilateral Clearance</strong>: Simultaneously treat both kidneys in one session.</span>
  </li>
  <li className="flex gap-3">
- <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0"/>
  <span className="text-sm"><strong>Highest Safety</strong>: Ideal for patients on blood thinners or with obesity.</span>
  </li>
  </ul>
@@ -115,7 +115,7 @@ export default function RIRSPage() {
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4">Urinary Stone Modality Comparison</h3>
- <p className="text-slate-600 dark:text-slate-400">Choosing the right path for your specific stone size and location.</p>
+ <p className="text-slate-600 dark:text-subtle-on-light">Choosing the right path for your specific stone size and location.</p>
  </div>
  <div className="overflow-x-auto">
  <table className="w-full text-left border-collapse bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
@@ -129,11 +129,11 @@ export default function RIRSPage() {
  </thead>
  <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-sm">
  {[
- { f: "Incision Size", rirs: "None (Natural)", pcnl: "1cm (Keyhole)", eswl: "None" },
- { f: "Hospital Stay", rirs: "Daycare / 24h", pcnl: "2-3 Days", eswl: "Outpatient" },
- { f: "Clearance Rate", rirs: "98%+ (One session)", pcnl: "99% (Large stones)", eswl: "Variable (60-70%)" },
- { f: "Best For", rirs: "Stones < 2cm", pcnl: "Stones > 2cm / Staghorn", eswl: "Small, Soft Stones" },
- { f: "JJ Stent Need", rirs: "Usually (3-5 days)", pcnl: "Always", eswl: "Rarely" }
+ { f: "Incision Size", rirs: "None (Natural)", pcnl: "1cm (Keyhole)", eswl: "None"},
+ { f: "Hospital Stay", rirs: "Daycare / 24h", pcnl: "2-3 Days", eswl: "Outpatient"},
+ { f: "Clearance Rate", rirs: "98%+ (One session)", pcnl: "99% (Large stones)", eswl: "Variable (60-70%)"},
+ { f: "Best For", rirs: "Stones < 2cm", pcnl: "Stones > 2cm / Staghorn", eswl: "Small, Soft Stones"},
+ { f: "JJ Stent Need", rirs: "Usually (3-5 days)", pcnl: "Always", eswl: "Rarely"}
  ].map((row, i) => (
  <tr key={i}>
  <td className="p-6 font-medium bg-slate-50/30 dark:bg-slate-800/20">{row.f}</td>
@@ -151,49 +151,49 @@ export default function RIRSPage() {
  <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
  <div className="space-y-6">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white">JJ Stent: The Internal Safety Conduit</h3>
- <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+ <p className="text-slate-600 dark:text-subtle-on-light leading-relaxed">
  After a successful laser procedure, we typically place a small, soft tube called a **Double-J (JJ) Stent**. This ensures that the kidney continues to drain perfectly while any residual 'dust' or small fragments pass through the ureter.
  </p>
  <div className="space-y-4">
  <div className="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm flex items-start gap-4">
- <Droplets className="w-6 h-6 text-emerald-500 shrink-0 mt-1" />
+ <Droplets className="w-6 h-6 text-emerald-500 shrink-0 mt-1"/>
  <div>
  <p className="font-bold text-sm">Smooth Drainage</p>
- <p className="text-xs text-slate-500">Prevents post-op 'renal colic' (pain) caused by temporary swelling of the ureter.</p>
+ <p className="text-sm text-slate-500">Prevents post-op 'renal colic' (pain) caused by temporary swelling of the ureter.</p>
  </div>
  </div>
  <div className="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm flex items-start gap-4">
- <Clock className="w-6 h-6 text-emerald-500 shrink-0 mt-1" />
+ <Clock className="w-6 h-6 text-emerald-500 shrink-0 mt-1"/>
  <div>
  <p className="font-bold text-sm">Rapid Stent Removal</p>
- <p className="text-xs text-slate-500">Our stents are typically removed within 7-10 days in a painless 2-minute daycare procedure.</p>
+ <p className="text-sm text-slate-500">Our stents are typically removed within 7-10 days in a painless 2-minute daycare procedure.</p>
  </div>
  </div>
  </div>
  </div>
  <div className="relative group">
- <div className="absolute inset-0 bg-emerald-400/20 rounded-[3rem] blur-3xl transition-all" />
+ <div className="absolute inset-0 bg-emerald-400/20 rounded-[3rem] blur-3xl transition-all"/>
  <div className="relative p-10 bg-slate-900 rounded-[3rem] text-white border border-slate-800 shadow-2xl overflow-hidden">
  <div className="absolute top-0 right-0 p-4 opacity-10">
- <Stethoscope className="w-32 h-32" />
+ <Stethoscope className="w-32 h-32"/>
  </div>
- <h4 className="text-2xl font-bold mb-6">The "Stone-Free" Protocol</h4>
+ <h4 className="text-2xl font-bold mb-6">The "Stone-Free"Protocol</h4>
  <p className="text-emerald-100/70 text-sm mb-8 leading-relaxed">
  At Indira, we don't just 'dust and discharge.' Our Elite Protocol includes:
  </p>
  <ul className="space-y-4 mb-8">
  <li className="flex items-center gap-3 text-sm">
- <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Post-Op Ultrasound Validation
+ <CheckCircle2 className="w-4 h-4 text-emerald-400"/> Post-Op Ultrasound Validation
  </li>
  <li className="flex items-center gap-3 text-sm">
- <CheckCircle2 className="w-4 h-4 text-emerald-400" /> 24h Metabolic Stone Analysis
+ <CheckCircle2 className="w-4 h-4 text-emerald-400"/> 24h Metabolic Stone Analysis
  </li>
  <li className="flex items-center gap-3 text-sm">
- <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Clinical Diet-Scaling for Prevention
+ <CheckCircle2 className="w-4 h-4 text-emerald-400"/> Clinical Diet-Scaling for Prevention
  </li>
  </ul>
  <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center">
- <p className="text-xs font-bold uppercase tracking-widest text-emerald-400">Target Success Rate</p>
+ <p className="text-sm font-bold uppercase tracking-widest text-emerald-400">Target Success Rate</p>
  <p className="font-heading text-3xl font-bold mt-1">99.2%</p>
  </div>
  </div>
@@ -202,9 +202,9 @@ export default function RIRSPage() {
 
  {/* Clinical FAQ Hub */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative">
- <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent"/>
  <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 relative z-10 font-heading">
- <Info className="text-emerald-400" />
+ <Info className="text-emerald-400"/>
  Elite Clinical FAQs: Kidney Stones
  </h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
@@ -236,7 +236,7 @@ export default function RIRSPage() {
  ].map((faq, i) => (
  <div key={i} className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all">
  <h4 className="font-bold text-emerald-400 mb-3 flex items-start gap-2 font-heading tracking-tight">
- <Zap className="w-4 h-4 mt-1 shrink-0" />
+ <Zap className="w-4 h-4 mt-1 shrink-0"/>
  {faq.q}
  </h4>
  <p className="text-slate-300 text-sm leading-relaxed antialiased pl-6">

@@ -57,28 +57,28 @@ export default function ThyroidSurgeryENTPage() {
  {/* Visual Section: Why ENT for Neck Surgery? */}
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
  <div className="p-8 rounded-3xl bg-blue-50 dark:bg-blue-900/50 border border-blue-100 dark:border-blue-800 shadow-lg relative overflow-hidden group">
- <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/20 blur-2xl group-hover:bg-blue-300/30 transition-all opacity-50" />
+ <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/20 blur-2xl group-hover:bg-blue-300/30 transition-all opacity-50"/>
  <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 font-heading text-blue-800 dark:text-blue-300">Nerve-Sparing Precision</h4>
  <ul className="space-y-4">
  {[
- { title: "Intra-operative Nerve Monitoring (IONM)", text: "Real-time electrical mapping to safeguard the recurrent laryngeal nerve and facial nerve." },
- { title: "Harmonic Scalpel Technology", text: "Ultrasonic energy to seal vessels and cut tissue simultaneously, minimizing bleeding and operative time." },
- { title: "Aesthetic Skin-Crease Incisions", text: "Hidden incisions placed in the natural folds of the neck for nearly invisible scarring." }
+ { title: "Intra-operative Nerve Monitoring (IONM)", text: "Real-time electrical mapping to safeguard the recurrent laryngeal nerve and facial nerve."},
+ { title: "Harmonic Scalpel Technology", text: "Ultrasonic energy to seal vessels and cut tissue simultaneously, minimizing bleeding and operative time."},
+ { title: "Aesthetic Skin-Crease Incisions", text: "Hidden incisions placed in the natural folds of the neck for nearly invisible scarring."}
  ].map((item, i) => (
  <li key={i} className="flex gap-3 items-start">
- <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-1" />
+ <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-1"/>
  <div>
  <p className="font-bold text-slate-900 dark:text-white text-sm">{item.title}</p>
- <p className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</p>
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm">{item.text}</p>
  </div>
  </li>
  ))}
  </ul>
  </div>
  <div className="relative group">
- <div className="absolute inset-0 bg-blue-400/20 rounded-[3rem] blur-3xl transition-all duration-700" />
+ <div className="absolute inset-0 bg-blue-400/20 rounded-[3rem] blur-3xl transition-all duration-700"/>
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-2xl">
- <Dna className="w-24 h-24 text-blue-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
+ <Dna className="w-24 h-24 text-blue-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500"/>
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Safe Extraction</p>
  <p className="text-slate-500 text-sm">Precision-guided microscopic ablation to resolve chronic head and neck growths.</p>
  </div>
@@ -103,7 +103,7 @@ export default function ThyroidSurgeryENTPage() {
  "Central & Lateral Neck Dissections (for lymph involvement)"
  ].map((proc, i) => (
  <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
- <CheckCircle2 className="w-5 h-5 text-blue-500" />
+ <CheckCircle2 className="w-5 h-5 text-blue-500"/>
  <span className="text-sm font-medium">{proc}</span>
  </div>
  ))}
@@ -124,10 +124,10 @@ export default function ThyroidSurgeryENTPage() {
 
  {/* FAQ Section */}
  <div className="bg-slate-900 dark:bg-black rounded-[2.5rem] p-10 md:p-16 text-white border border-slate-800 relative shadow-2xl overflow-hidden mt-10">
- <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-transparent shadow-2xl" />
+ <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-transparent shadow-2xl"/>
  
  <h3 className="font-heading text-3xl font-bold mb-12 flex items-center gap-3 font-heading relative z-10">
- <Info className="text-blue-400" />
+ <Info className="text-blue-400"/>
  ENT Head & Neck Clinical FAQs
  </h3>
  
@@ -152,7 +152,7 @@ export default function ThyroidSurgeryENTPage() {
  ].map((faq, idx) => (
  <div key={idx} className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-colors">
  <h4 className="font-bold text-blue-400 mb-4 flex items-start gap-2">
- <Zap className="w-5 h-5 mt-1 shrink-0" />
+ <Zap className="w-5 h-5 mt-1 shrink-0"/>
  {faq.q}
  </h4>
  <p className="text-slate-300 text-sm leading-relaxed antialiased pl-7">

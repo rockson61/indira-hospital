@@ -3,11 +3,11 @@ import ServiceDetailPage, { generateMetadata as parentGenerateMetadata } from '.
 import { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  return parentGenerateMetadata({ params: Promise.resolve({ slug: ['neurology', slug] }) });
+ const { slug } = await params;
+ return parentGenerateMetadata({ params: Promise.resolve({ slug: ['neurology', slug] }) });
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  return <ServiceDetailPage params={Promise.resolve({ slug: ['neurology', slug] })} />;
+ const { slug } = await params;
+ return <ServiceDetailPage params={Promise.resolve({ slug: ['neurology', slug] })} />;
 }

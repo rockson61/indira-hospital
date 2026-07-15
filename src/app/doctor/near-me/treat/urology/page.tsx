@@ -21,7 +21,7 @@ export default function UrologyPillarPage() {
  <div className="space-y-16 text-left">
  {/* Mechanism: The Laser Revolution in Urology */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/50 text-left">
- <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 blur-3xl -z-10" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 blur-3xl -z-10"/>
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-heading uppercase tracking-tighter text-left">
  The Laser Frontier: Precision Excellence in Urology
  </h3>
@@ -31,15 +31,15 @@ export default function UrologyPillarPage() {
  The <strong>Department of Urology</strong> at Indira Super Speciality Hospital is a regional benchmark for the sophisticated management of renal calculi, prostate health, and complex reconstructive urology.
  </p>
  <p className="mt-4 text-lg leading-relaxed">
- Utilizing advanced <strong>100W Holmium & Thulium Lasers</strong> and ultra-thin <strong>Digital Flexible Ureteroscopes</strong>, we reach deep into the human anatomy through natural orifices, providing "dusting" solutions for even the most complex stones with zero blood loss and a 24-hour return to normal life.
+ Utilizing advanced <strong>100W Holmium & Thulium Lasers</strong> and ultra-thin <strong>Digital Flexible Ureteroscopes</strong>, we reach deep into the human anatomy through natural orifices, providing "dusting"solutions for even the most complex stones with zero blood loss and a 24-hour return to normal life.
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-blue-600" />
+ <ArrowRightCircle className="w-5 h-5 text-blue-600"/>
  <span><strong>Stone 'Dusting'</strong>: Turning hard minerals into micron-sized powder for natural passing.</span>
  </div>
  <div className="flex items-center gap-3">
- <ArrowRightCircle className="w-5 h-5 text-blue-600" />
+ <ArrowRightCircle className="w-5 h-5 text-blue-600"/>
  <span><strong>HoLEP Mastery</strong>: The ultimate bloodless cure for large prostates (BPH).</span>
  </div>
  </div>
@@ -48,11 +48,11 @@ export default function UrologyPillarPage() {
  <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
  <h4 className="text-2xl font-bold text-blue-300 mb-4 text-left">Kidney Stone Hub</h4>
  <p className="text-blue-100/60 text-sm leading-relaxed mb-6 font-medium">
- "No Stent, No Pain, No Recurrence." Our <strong>RIRS (Retrograde Intrarenal Surgery)</strong> technique uses a laser fiber as thin as a hair to turn physical stones into microscopic dust.
+ "No Stent, No Pain, No Recurrence."Our <strong>RIRS (Retrograde Intrarenal Surgery)</strong> technique uses a laser fiber as thin as a hair to turn physical stones into microscopic dust.
  </p>
  <ul className="space-y-3">
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> 99% Stone Clearance</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Incision-Less Procedures</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> 99% Stone Clearance</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Incision-Less Procedures</li>
  </ul>
  </div>
  </div>
@@ -62,7 +62,7 @@ export default function UrologyPillarPage() {
  <section className="text-left">
  <div className="mb-12">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter border-b-2 border-blue-100 inline-block text-left">Clinical Specialization Hubs</h3>
- <p className="text-slate-600 dark:text-slate-400 mt-2">From oncological resections to male reconstructive science.</p>
+ <p className="text-slate-600 dark:text-subtle-on-light mt-2">From oncological resections to male reconstructive science.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
  {[
@@ -88,14 +88,14 @@ export default function UrologyPillarPage() {
  <div key={i} className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all overflow-hidden group">
  <div className="p-10 flex-1 flex flex-col justify-between">
  <div>
- <item.icon className="w-12 h-12 text-blue-600 mb-6" />
+ <item.icon className="w-12 h-12 text-blue-600 mb-6"/>
  <h4 className="text-2xl font-bold mb-4 tracking-tight">
  {item.title}
  </h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8">{item.desc}</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-8">{item.desc}</p>
  <ul className="space-y-3 mb-8">
  {item.sub.map(s => (
- <li key={s} className="flex items-center gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+ <li key={s} className="flex items-center gap-2 text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
  <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div> {s}
  </li>
  ))}
@@ -109,23 +109,23 @@ export default function UrologyPillarPage() {
 
  {/* Trust Infrastructure Section */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden text-left">
- <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 to-transparent"/>
  <h3 className="font-heading text-3xl font-bold mb-4 font-heading text-blue-300 text-left">Beyond Surgery: The Stone Prevention Meta-Game</h3>
- <p className="text-slate-400 max-w-2xl text-left mb-12">
+ <p className="text-subtle-on-light max-w-2xl text-left mb-12">
  Treating a stone is a technical event; preventing its recurrence is a lifestyle mission. Recurrence rates can be as high as 50% within 5 years without metabolic management.
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-left relative z-10">
  {[
- { k: "Hydration", v: "2.5L+ Daily Output" },
- { k: "Sodium", v: "Low Salt Audit" },
- { k: "Citrate", v: "Natural Inhibitors" },
- { k: "Potassium", v: "Metabolic Balance" }
+ { k: "Hydration", v: "2.5L+ Daily Output"},
+ { k: "Sodium", v: "Low Salt Audit"},
+ { k: "Citrate", v: "Natural Inhibitors"},
+ { k: "Potassium", v: "Metabolic Balance"}
  ].map((step, i) => (
  <div key={i} className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-lg">
- <p className="text-blue-400 font-bold mb-2 uppercase text-xs tracking-widest">{step.k}</p>
+ <p className="text-blue-400 font-bold mb-2 uppercase text-sm tracking-widest">{step.k}</p>
  <p className="text-xl font-bold text-white mb-2">{step.v}</p>
  <div className="h-1 w-full bg-blue-500/20 rounded-full overflow-hidden">
- <div className="h-full bg-blue-500 w-[70%]" />
+ <div className="h-full bg-blue-500 w-[70%]"/>
  </div>
  </div>
  ))}
@@ -138,7 +138,7 @@ export default function UrologyPillarPage() {
  {/* Clinical FAQ Hub */}
  <section className="bg-slate-50 dark:bg-slate-900 p-8 md:p-16 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 text-left">
  <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3 text-left">
- <Info className="text-blue-500" />
+ <Info className="text-blue-500"/>
  Elite Clinical FAQs: Comprehensive Urology
  </h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -170,10 +170,10 @@ export default function UrologyPillarPage() {
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group text-left">
  <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2 text-left">
- <Zap className="w-4 h-4 mt-1 text-blue-500 shrink-0" />
+ <Zap className="w-4 h-4 mt-1 text-blue-500 shrink-0"/>
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>
@@ -183,12 +183,12 @@ export default function UrologyPillarPage() {
  </div>
  )}
  procedures={[
- { name: "Laser Stone Removal (RIRS)", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
- { name: "Prostate Surgery (HoLEP)", link: "/doctor/near-me/treat/urology/laser-prostate-surgery" },
- { name: "Keyhole Stone Surgery (PCNL)", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
- { name: "Male Fertility Surgery", link: "/doctor/near-me/treat/urology/laser-prostate-surgery" },
- { name: "Bladder Tumor Removal", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery" },
- { name: "Reconstructive Urology", link: "/doctor/near-me/treat/urology/laser-prostate-surgery" }
+ { name: "Laser Stone Removal (RIRS)", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery"},
+ { name: "Prostate Surgery (HoLEP)", link: "/doctor/near-me/treat/urology/laser-prostate-surgery"},
+ { name: "Keyhole Stone Surgery (PCNL)", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery"},
+ { name: "Male Fertility Surgery", link: "/doctor/near-me/treat/urology/laser-prostate-surgery"},
+ { name: "Bladder Tumor Removal", link: "/doctor/near-me/treat/urology/laser-kidney-stone-surgery"},
+ { name: "Reconstructive Urology", link: "/doctor/near-me/treat/urology/laser-prostate-surgery"}
  ]}
  technology={[
  {

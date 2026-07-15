@@ -56,8 +56,8 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
  <section className="bg-fuchsia-900 text-white py-16 md:py-24 relative overflow-hidden">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
  <div className="max-w-3xl">
- <Link href="/technology" className="inline-flex items-center text-fuchsia-200 hover:text-white mb-6 transition-colors text-sm">
- <ArrowLeft className="w-4 h-4 mr-2" /> Back to Technology
+ <Link href="/technology"className="inline-flex items-center text-fuchsia-200 hover:text-white mb-6 transition-colors text-sm">
+ <ArrowLeft className="w-4 h-4 mr-2"/> Back to Technology
  </Link>
  <h1 className="elite-hero-title font-bold mb-4">{tech.title}</h1>
  <p className="text-xl text-fuchsia-100">{tech.shortDescription}</p>
@@ -97,13 +97,13 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
  <div className="lg:col-span-1 space-y-6">
  <div className="bg-gray-50 dark:bg-slate-950 rounded-xl p-6 border border-gray-200 dark:border-slate-700">
  <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
- <CheckCircle2 className="w-5 h-5 text-green-600" />
+ <CheckCircle2 className="w-5 h-5 text-green-600"/>
  Benefits
  </h3>
  <ul className="space-y-3">
  {tech.benefits.map((benefit, idx) => (
  <li key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
- <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+ <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5"/>
  {benefit}
  </li>
  ))}
@@ -117,7 +117,7 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
  href="/contact"
  className="inline-flex items-center justify-center w-full px-4 py-3 bg-white dark:bg-slate-900 text-fuchsia-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
  >
- Contact Us <ChevronRight className="w-4 h-4 ml-1" />
+ Contact Us <ChevronRight className="w-4 h-4 ml-1"/>
  </Link>
  </div>
  </div>
@@ -138,7 +138,7 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-fuchsia-700 transition-colors">
  {t.title}
  </h3>
- <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">{t.shortDescription}</p>
+ <p className="text-sm text-subtle-on-light dark:text-gray-400 mt-2 line-clamp-2">{t.shortDescription}</p>
  </Link>
  ))}
  </div>
@@ -154,15 +154,15 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
  />
 
  {/* ENTITY CARD SECTIONS */}
- <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900" />
- <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-gray-50 dark:bg-slate-950" />
- <EntityCardSection type="locations" title="Hospital Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900" />
+ <EntityCardSection type="services"title="Treatments We Offer"subtitle="Our Services"limit={6} className="bg-white dark:bg-slate-900"/>
+ <EntityCardSection type="doctors"title="Our Expert Doctors"subtitle="Meet Our Specialists"limit={6} className="bg-gray-50 dark:bg-slate-950"/>
+ <EntityCardSection type="locations"title="Hospital Near You"subtitle="Our Locations"limit={6} className="bg-white dark:bg-slate-900"/>
 
  {/* COMPACT SEO LINK STRIPS */}
- <InternalLinkGrid type="diagnostics" title="Related Diagnostics" subtitle="Infrastructure Support" limit={12} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="health-packages" title="Related Wellness" subtitle="Care Packages" limit={8} className="bg-slate-50 dark:bg-slate-950 border-t" />
- <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-white dark:bg-slate-900" />
- <InternalLinkGrid type="doctors" title="All Doctors A-Z" subtitle="Doctors Directory" limit={12} className="bg-white dark:bg-slate-900" />
+ <InternalLinkGrid type="diagnostics"title="Related Diagnostics"subtitle="Infrastructure Support"limit={12} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="health-packages"title="Related Wellness"subtitle="Care Packages"limit={8} className="bg-slate-50 dark:bg-slate-950 border-t"/>
+ <InternalLinkGrid type="services"title="All Treatments A-Z"subtitle="Services Directory"limit={12} className="bg-white dark:bg-slate-900"/>
+ <InternalLinkGrid type="doctors"title="All Doctors A-Z"subtitle="Doctors Directory"limit={12} className="bg-white dark:bg-slate-900"/>
  </main>
  );
 }

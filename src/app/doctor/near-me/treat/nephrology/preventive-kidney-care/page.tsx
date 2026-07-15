@@ -122,14 +122,14 @@ export default function PreventiveKidneyPage() {
  <section>
  <h2 className="font-heading text-3xl font-bold mb-4">India's Premier Center for Early-Stage Kidney Interventions</h2>
  <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
- At Indira Super Speciality Hospital, our <strong>Elite Renal Team</strong> is focused on preservation. We utilize the latest evidence-backed pharmacological interventions and nutritional strategies to ensure that your kidneys continue to function at their peak capacity. Our mission is to transform the management of CKD from "wait-and-watch" to "proactive-and-protect."
+ At Indira Super Speciality Hospital, our <strong>Elite Renal Team</strong> is focused on preservation. We utilize the latest evidence-backed pharmacological interventions and nutritional strategies to ensure that your kidneys continue to function at their peak capacity. Our mission is to transform the management of CKD from "wait-and-watch"to "proactive-and-protect."
  </p>
  </section>
 
  <div className="bg-slate-900 p-8 rounded-[2rem] text-white">
  <h3 className="text-xl font-bold mb-4 text-fuchsia-400">The Power of Early Intervention</h3>
  <p className="text-slate-300 mb-6 font-medium">
- CKD is often a "silent" disease. By the time symptoms appear, significant kidney function may already be lost. Early screening and preventive care are your most powerful defenses.
+ CKD is often a "silent"disease. By the time symptoms appear, significant kidney function may already be lost. Early screening and preventive care are your most powerful defenses.
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
  {[
@@ -140,7 +140,7 @@ export default function PreventiveKidneyPage() {
  ].map((stat, i) => (
  <div key={i} className="text-center">
  <p className="text-2xl font-black text-white">{stat.value}</p>
- <p className="text-[10px] text-fuchsia-200 uppercase tracking-widest">{stat.label}</p>
+ <p className="text-xs text-fuchsia-200 uppercase tracking-widest">{stat.label}</p>
  </div>
  ))}
  </div>

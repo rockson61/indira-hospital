@@ -46,7 +46,7 @@ function getLocation(slug: string) {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
  const { city } = await params;
  const location = getLocation(city);
- if (!location) return { title: "Location Not Found" };
+ if (!location) return { title: "Location Not Found"};
 
  const districtInfo = 'district' in location ? `, ${location.district}` : '';
 
@@ -89,21 +89,21 @@ export default async function LocationDetailPage({ params }: PageProps) {
  <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-20">
  {/* ELITE LOCATION HERO */}
  <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 pt-48 pb-32 lg:pt-60 lg:pb-48 text-white overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"/>
  
  {/* Elite Ambient Glows */}
- <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
- <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+ <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse"/>
+ <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none"/>
 
  <SectionContainer className="relative z-10">
  <div className="max-w-5xl">
  <div className="elite-tag animate-in fade-in slide-in-from-bottom-4 duration-700">
- <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Serving Patients from {location.name}
+ <Sparkles className="w-4 h-4 text-amber-400 animate-pulse"/> Serving Patients from {location.name}
  </div>
  <h1 className="elite-hero-title text-white mb-10 text-left animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
-  Best Hospital <br />
-  <span className="elite-gradient-text text-3xl sm:text-4xl drop-shadow-sm">Near {location.name}.</span>
-  </h1>
+ Best Hospital <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl drop-shadow-sm">Near {location.name}.</span>
+ </h1>
  <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-12 opacity-80">
  Indira Super Speciality Hospital is the preferred healthcare provider for residents of {location.name},
  offering advanced Laparoscopic, Laser, and Cardiac treatments just {location.distance} away.
@@ -112,22 +112,22 @@ export default async function LocationDetailPage({ params }: PageProps) {
  {/* REGIONAL TRUST BADGE */}
  <div className="flex items-center gap-4 mb-12 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 max-w-sm animate-in fade-in zoom-in duration-1000 delay-300">
  <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-400">
- <Shield className="w-6 h-6" />
+ <Shield className="w-6 h-6"/>
  </div>
  <div>
  <div className="text-white font-bold text-sm">#1 Choice for {location.name}</div>
- <div className="text-slate-400 text-xs uppercase tracking-widest font-medium">Outstation Patient Support</div>
+ <div className="text-subtle-on-light text-sm uppercase tracking-widest font-medium">Outstation Patient Support</div>
  </div>
  </div>
 
  <div className="flex flex-col sm:flex-row gap-5">
- <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="elite-button-primary gap-3 hover:scale-[1.02]">
+ <a href={WHATSAPP_URL} target="_blank"rel="noopener noreferrer"className="elite-button-primary gap-3 hover:scale-[1.02]">
  <span className="relative z-10">WhatsApp Appointment</span>
- <MessageCircle className="w-5 h-5 ml-1 relative z-10 group-hover/btn:rotate-12 transition-transform" />
- <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+ <MessageCircle className="w-5 h-5 ml-1 relative z-10 group-hover/btn:rotate-12 transition-transform"/>
+ <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out"/>
  </a>
  <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="elite-button-secondary gap-3">
- <Phone className="w-5 h-5 text-fuchsia-400" />
+ <Phone className="w-5 h-5 text-fuchsia-400"/>
  {siteConfig.contact.phone}
  </a>
  </div>
@@ -140,23 +140,23 @@ export default async function LocationDetailPage({ params }: PageProps) {
  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
  {/* Travel Stats */}
  <div className="lg:col-span-2 bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-200/60 dark:border-slate-800 relative overflow-hidden group">
- <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[80px] will-change-transform transform-gpu -mr-32 -mt-32" />
+ <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[80px] will-change-transform transform-gpu -mr-32 -mt-32"/>
 
  <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
  <div className="flex-1 text-center md:text-left">
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Reaching Us from {location.name}</h2>
  <p 
- className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-8"
+ className="text-slate-500 dark:text-subtle-on-light font-medium leading-relaxed mb-8"
  dangerouslySetInnerHTML={{ __html: injectInternalLinks(location.description || "") }}
  />
  <div className="flex flex-wrap gap-4 justify-center md:justify-start">
  <div className="px-6 py-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
  <div className="text-2xl font-black text-slate-800 dark:text-slate-100">{location.distance}</div>
- <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">To Main Campus</div>
+ <div className="text-sm font-bold text-subtle-on-light uppercase tracking-widest">To Main Campus</div>
  </div>
  <div className="px-6 py-4 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl border border-fuchsia-100">
  <div className="text-2xl font-black text-fuchsia-600">{location.travelTime}</div>
- <div className="text-xs font-bold text-fuchsia-500 uppercase tracking-widest">Travel Time</div>
+ <div className="text-sm font-bold text-fuchsia-500 uppercase tracking-widest">Travel Time</div>
  </div>
  </div>
  </div>
@@ -170,10 +170,10 @@ export default async function LocationDetailPage({ params }: PageProps) {
  ].map((t, idx) => (
  <div key={idx} className={cn(
  "p-6 rounded-2xl text-center border transition-all",
- t.status ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none" : "bg-slate-50 dark:bg-slate-800 text-slate-300 border-slate-200/60 dark:border-slate-800 opacity-50"
+ t.status ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none": "bg-slate-50 dark:bg-slate-800 text-slate-300 border-slate-200/60 dark:border-slate-800 opacity-50"
  )}>
- <t.icon className={cn("w-6 h-6 mx-auto mb-2", t.status ? "text-fuchsia-500" : "text-slate-200")} />
- <div className="text-xs font-bold uppercase tracking-tighter">{t.label}</div>
+ <t.icon className={cn("w-6 h-6 mx-auto mb-2", t.status ? "text-fuchsia-500": "text-slate-200")} />
+ <div className="text-sm font-bold uppercase tracking-tighter">{t.label}</div>
  </div>
  ))}
  </div>
@@ -182,23 +182,23 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
  {/* Quality Assurance */}
  <div className="bg-slate-900 rounded-[2.5rem] p-8 sm:p-10 text-white shadow-2xl relative overflow-hidden flex flex-col justify-center">
- <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/20 rounded-full blur-3xl opacity-50" />
+ <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/20 rounded-full blur-3xl opacity-50"/>
  <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
- <Shield className="w-6 h-6 text-fuchsia-400" /> Clinical Excellence
+ <Shield className="w-6 h-6 text-fuchsia-400"/> Clinical Excellence
  </h3>
  <ul className="space-y-6">
  {[
- { title: "Super Speciality Care", desc: "15+ Advanced Departments" },
- { title: "Same Day Discharge", desc: "For Laser & Laparoscopic Surgeries" },
- { title: "24/7 Patient Support", desc: "Dedicated outstation helpline" },
+ { title: "Super Speciality Care", desc: "15+ Advanced Departments"},
+ { title: "Same Day Discharge", desc: "For Laser & Laparoscopic Surgeries"},
+ { title: "24/7 Patient Support", desc: "Dedicated outstation helpline"},
  ].map((item, i) => (
  <li key={i} className="flex gap-4">
  <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center flex-shrink-0">
- <CheckCircle2 className="w-5 h-5 text-fuchsia-400" />
+ <CheckCircle2 className="w-5 h-5 text-fuchsia-400"/>
  </div>
  <div>
  <div className="font-bold text-sm">{item.title}</div>
- <div className="text-xs text-slate-400">{item.desc}</div>
+ <div className="text-sm text-subtle-on-light">{item.desc}</div>
  </div>
  </li>
  ))}
@@ -211,14 +211,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
  <SectionContainer className="py-24 max-w-7xl mx-auto">
  <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
  <div className="max-w-2xl text-center md:text-left">
- <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-4">
- <Stethoscope className="w-4 h-4" /> Top Specialists
+ <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm font-bold uppercase tracking-widest mb-4">
+ <Stethoscope className="w-4 h-4"/> Top Specialists
  </span>
  <h2 className="elite-section-title text-slate-900 dark:text-white">Experts Serving {location.name}</h2>
- <p className="text-slate-500 dark:text-slate-400 font-medium text-lg mt-4">Consult with Tamil Nadu's leading surgeons and physicians. Advanced care is just a message away.</p>
+ <p className="text-slate-500 dark:text-subtle-on-light font-medium text-lg mt-4">Consult with Tamil Nadu's leading surgeons and physicians. Advanced care is just a message away.</p>
  </div>
- <Link href="/doctor/near-me" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase text-sm tracking-widest hover:text-fuchsia-700 transition-colors">
- View All Doctors <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+ <Link href="/doctor/near-me"className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase text-sm tracking-widest hover:text-fuchsia-700 transition-colors">
+ View All Doctors <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
  </Link>
  </div>
  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -230,15 +230,15 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
  {/* DIRECTIONS MODULE (ELITE) */}
  <section className="py-24 bg-slate-900 relative overflow-hidden">
- <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu pointer-events-none" />
+ <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu pointer-events-none"/>
 
 
  <SectionContainer className="relative z-10 max-w-7xl mx-auto">
  <div className="bg-white dark:bg-slate-900 rounded-[4rem] border border-slate-200 dark:border-slate-800 p-8 lg:p-16">
  <div className="grid lg:grid-cols-2 gap-16 items-center">
  <div>
- <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-xs font-bold uppercase tracking-widest mb-10">
- <Navigation className="w-4 h-4" /> Directions from {location.name}
+ <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-sm font-bold uppercase tracking-widest mb-10">
+ <Navigation className="w-4 h-4"/> Directions from {location.name}
  </div>
  <h2 className="elite-section-title text-white mb-10">
  How to reach <br /> <span className="text-fuchsia-400">Main Campus Vellore</span>
@@ -247,8 +247,8 @@ export default async function LocationDetailPage({ params }: PageProps) {
  <div className="space-y-8">
  {[
  { step: "1", title: "Route Overview", desc: `From ${location.name}, head towards ${location.district} and follow NH-48 / District roads towards Vellore.` },
- { step: "2", title: "Main Landmark", desc: "Our hospital is located near the historic Vellore Fort and Katpadi Railway Station (within 5-7 km radius)." },
- { step: "3", title: "Hospital Address", desc: "71F, Filterbed Road, Vellore, Tamil Nadu - 632001. Look for the Indira Hospital building." },
+ { step: "2", title: "Main Landmark", desc: "Our hospital is located near the historic Vellore Fort and Katpadi Railway Station (within 5-7 km radius)."},
+ { step: "3", title: "Hospital Address", desc: "71F, Filterbed Road, Vellore, Tamil Nadu - 632001. Look for the Indira Hospital building."},
  ].map((s, i) => (
  <div key={i} className="flex gap-6 group">
  <div className="w-12 h-12 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center flex-shrink-0 font-black text-fuchsia-400 border border-slate-200 dark:border-slate-800 group-hover:bg-fuchsia-500 group-hover:text-white transition-all duration-300">
@@ -256,7 +256,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
  </div>
  <div>
  <div className="font-bold text-white text-lg mb-1">{s.title}</div>
- <div className="text-slate-400 font-medium leading-relaxed">{s.desc}</div>
+ <div className="text-subtle-on-light font-medium leading-relaxed">{s.desc}</div>
  </div>
  </div>
  ))}
@@ -269,7 +269,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
  rel="noopener noreferrer"
  className="flex items-center gap-3 px-8 py-4 bg-fuchsia-500 text-white font-black rounded-2xl hover:bg-fuchsia-400 transition-colors shadow-lg shadow-fuchsia-500/20"
  >
- <MapPin className="w-5 h-5" /> Open in Google Maps
+ <MapPin className="w-5 h-5"/> Open in Google Maps
  </a>
  <a
  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Directions Enquiry: I need the best route from ${location.name} to Indira Super Speciality Hospital, Vellore.`)}`}
@@ -277,7 +277,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
  rel="noopener noreferrer"
  className="flex items-center gap-3 px-8 py-4 bg-white dark:bg-slate-900 text-white border border-slate-200 dark:border-slate-800 font-black rounded-2xl hover:bg-white dark:bg-slate-900 transition-colors"
  >
- <MessageCircle className="w-5 h-5 text-fuchsia-400" /> Send Route to Phone
+ <MessageCircle className="w-5 h-5 text-fuchsia-400"/> Send Route to Phone
  </a>
  </div>
  </div>
@@ -291,7 +291,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
  />
  <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none">
  <div className="flex items-center gap-3 text-white font-black tracking-tight drop-shadow-lg">
- <MapPin className="w-6 h-6 text-fuchsia-400" />
+ <MapPin className="w-6 h-6 text-fuchsia-400"/>
  Main Campus (Vellore Main)
  </div>
  </div>
@@ -313,14 +313,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5 hover:-translate-y-2 transition-all duration-500 group">
  <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6">
- <Building className="w-6 h-6 text-blue-500" />
+ <Building className="w-6 h-6 text-blue-500"/>
  </div>
  <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Financial Services</h4>
  <div className="space-y-3">
  {location.amenities.banks.slice(0, 3).map((b, i) => (
- <div key={i} className="text-sm text-slate-500 dark:text-slate-400 flex justify-between group cursor-default">
+ <div key={i} className="text-sm text-slate-500 dark:text-subtle-on-light flex justify-between group cursor-default">
  <span className="font-medium text-slate-700 dark:text-slate-200 group-hover:text-fuchsia-600 transition-colors">{b.name}</span>
- <span className="text-xs opacity-60">{b.distance}</span>
+ <span className="text-sm opacity-60">{b.distance}</span>
  </div>
  ))}
  </div>
@@ -328,14 +328,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-2xl hover:shadow-orange-500/10 dark:hover:shadow-orange-500/5 hover:-translate-y-2 transition-all duration-500 group">
  <div className="w-12 h-12 bg-orange-50 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
- <UtensilsCrossed className="w-6 h-6 text-orange-500" />
+ <UtensilsCrossed className="w-6 h-6 text-orange-500"/>
  </div>
  <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Dining & Food</h4>
  <div className="space-y-3">
  {location.amenities.restaurants.slice(0, 3).map((r, i) => (
- <div key={i} className="text-sm text-slate-500 dark:text-slate-400 flex justify-between group cursor-default">
+ <div key={i} className="text-sm text-slate-500 dark:text-subtle-on-light flex justify-between group cursor-default">
  <span className="font-medium text-slate-700 dark:text-slate-200 group-hover:text-fuchsia-600 transition-colors">{r.name}</span>
- <span className="text-xs opacity-60 font-bold text-fuchsia-500/50">{r.cuisine}</span>
+ <span className="text-sm opacity-60 font-bold text-fuchsia-500/50">{r.cuisine}</span>
  </div>
  ))}
  </div>
@@ -343,13 +343,13 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-pink-200 dark:hover:border-pink-800 hover:shadow-2xl hover:shadow-pink-500/10 dark:hover:shadow-pink-500/5 hover:-translate-y-2 transition-all duration-500 group">
  <div className="w-12 h-12 bg-pink-50 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center mb-6">
- <Landmark className="w-6 h-6 text-pink-500" />
+ <Landmark className="w-6 h-6 text-pink-500"/>
  </div>
  <h4 className="font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Local Landmarks</h4>
  <div className="space-y-3">
  {location.touristPlaces.slice(0, 3).map((p, i) => (
- <div key={i} className="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2 group cursor-default">
- <div className="w-1 h-1 bg-pink-400 rounded-full group-hover:scale-150 transition-transform" />
+ <div key={i} className="text-sm text-slate-500 dark:text-subtle-on-light flex items-center gap-2 group cursor-default">
+ <div className="w-1 h-1 bg-pink-400 rounded-full group-hover:scale-150 transition-transform"/>
  <span className="font-medium text-slate-700 dark:text-slate-200 group-hover:text-pink-600 transition-colors">{p.name}</span>
  </div>
  ))}
@@ -358,15 +358,15 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
  {/* General Info */}
  <div className="bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden group">
- <div className="absolute top-0 right-0 w-24 h-24 bg-fuchsia-500/10 rounded-full blur-2xl group-hover:bg-fuchsia-400/20 transition-all" />
- <h4 className="font-bold text-white mb-6 uppercase text-[10px] tracking-widest opacity-50">Area Overview</h4>
+ <div className="absolute top-0 right-0 w-24 h-24 bg-fuchsia-500/10 rounded-full blur-2xl group-hover:bg-fuchsia-400/20 transition-all"/>
+ <h4 className="font-bold text-white mb-6 uppercase text-xs tracking-widest opacity-50">Area Overview</h4>
  <div className="space-y-6">
  <div>
- <div className="text-[10px] uppercase font-black text-fuchsia-400 tracking-wider">Dist. Pincode</div>
+ <div className="text-xs uppercase font-black text-fuchsia-400 tracking-wider">Dist. Pincode</div>
  <div className="text-xl font-black text-white">{location.pincode}</div>
  </div>
  <div>
- <div className="text-[10px] uppercase font-black text-fuchsia-400 tracking-wider">Locality Type</div>
+ <div className="text-xs uppercase font-black text-fuchsia-400 tracking-wider">Locality Type</div>
  <div className="text-xl font-black text-white capitalize">{location.category.replace('_', ' ')}</div>
  </div>
  </div>
@@ -385,17 +385,17 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
  {/* SPECIALIZED TREATMENTS FOR LOCALITY */}
  <SectionContainer className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden rounded-[4rem] border-y border-slate-100 dark:border-slate-700">
- <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu" />
+ <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 rounded-full hidden md:block blur-[100px] will-change-transform transform-gpu"/>
  <div className="grid md:grid-cols-2 gap-20 items-center">
  <div>
- <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-xs font-bold uppercase tracking-widest mb-10">
- <Star className="w-4 h-4" /> Served Locations Rank #1
+ <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 text-sm font-bold uppercase tracking-widest mb-10">
+ <Star className="w-4 h-4"/> Served Locations Rank #1
  </span>
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-8">
  Advanced Surgery <br />
  <span className="text-fuchsia-600">is Now Local.</span>
  </h2>
- <p className="text-xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-12">
+ <p className="text-xl text-slate-500 dark:text-subtle-on-light font-medium leading-relaxed mb-12">
  Indira Super Speciality Hospital bridged the gap between {location.name} and world-class medical infrastructure.
  Our outstation patient support team ensures a seamless experience for you.
  </p>
@@ -408,14 +408,14 @@ export default async function LocationDetailPage({ params }: PageProps) {
  "24/7 Trauma Care"
  ].map((text, i) => (
  <div key={i} className="flex items-center gap-4 p-5 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition-colors">
- <CheckCircle2 className="w-6 h-6 text-fuchsia-500" />
+ <CheckCircle2 className="w-6 h-6 text-fuchsia-500"/>
  <span className="font-black text-slate-700 dark:text-slate-200 text-sm">{text}</span>
  </div>
  ))}
  </div>
  </div>
  <div className="grid grid-cols-2 gap-6 relative">
- <div className="absolute -inset-4 bg-fuchsia-50/50 blur-[60px] rounded-[5rem] -z-10" />
+ <div className="absolute -inset-4 bg-fuchsia-50/50 blur-[60px] rounded-[5rem] -z-10"/>
  {departments.slice(0, 4).map((dept: any) => (
  <Link
  key={dept.slug}
@@ -423,10 +423,10 @@ export default async function LocationDetailPage({ params }: PageProps) {
  className="p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:border-fuchsia-200 dark:hover:border-fuchsia-800 hover:shadow-2xl hover:shadow-fuchsia-500/10 dark:hover:shadow-fuchsia-500/5 hover:-translate-y-2 transition-all duration-500 group flex flex-col"
  >
  <div className="w-14 h-14 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-fuchsia-500 transition-colors">
- <Heart className="w-7 h-7 text-fuchsia-600 group-hover:text-white" />
+ <Heart className="w-7 h-7 text-fuchsia-600 group-hover:text-white"/>
  </div>
  <div className="font-black text-slate-900 dark:text-white text-lg group-hover:text-fuchsia-600 transition-colors leading-tight">{dept.title}</div>
- <div className="text-[10px] text-slate-400 mt-2 uppercase font-black tracking-widest">Department</div>
+ <div className="text-xs text-subtle-on-light mt-2 uppercase font-black tracking-widest">Department</div>
  </Link>
  ))}
  </div>
@@ -436,9 +436,9 @@ export default async function LocationDetailPage({ params }: PageProps) {
  {/* NEARBY LOCATIONS */}
  <SectionContainer className="py-24 max-w-7xl mx-auto">
  <div className="text-center mb-16">
- <span className="text-fuchsia-600 font-black uppercase text-xs tracking-[0.2em] mb-4 block">Regional Network</span>
+ <span className="text-fuchsia-600 font-black uppercase text-sm tracking-[0.2em] mb-4 block">Regional Network</span>
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Other Areas Near {location.name}</h2>
- <p className="text-slate-500 dark:text-slate-400 font-medium text-lg max-w-2xl mx-auto leading-relaxed">Providing high-end clinical support across the entire {location.district} district and neighboring regions.</p>
+ <p className="text-slate-500 dark:text-subtle-on-light font-medium text-lg max-w-2xl mx-auto leading-relaxed">Providing high-end clinical support across the entire {location.district} district and neighboring regions.</p>
  </div>
  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
  {(('nearbyLocations' in location ? location.nearbyLocations : []) as any[]).slice(0, 4).map((near: any) => (
@@ -449,13 +449,13 @@ export default async function LocationDetailPage({ params }: PageProps) {
  >
  <div>
  <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-fuchsia-50 dark:group-hover:bg-fuchsia-950/40 transition-colors border border-slate-100 dark:border-slate-700">
- <MapPin className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-500" />
+ <MapPin className="w-5 h-5 text-subtle-on-light group-hover:text-fuchsia-500"/>
  </div>
  <div className="font-black text-slate-900 dark:text-white text-xl tracking-tight mb-1">{near.name}</div>
- <div className="text-xs text-slate-500 font-bold uppercase tracking-widest">{near.distance} Distance</div>
+ <div className="text-sm text-slate-500 font-bold uppercase tracking-widest">{near.distance} Distance</div>
  </div>
  <div className="mt-8 flex items-center gap-2 text-fuchsia-600 font-black text-[11px] uppercase tracking-[0.1em] opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
- View Location <ArrowRight className="w-4 h-4" />
+ View Location <ArrowRight className="w-4 h-4"/>
  </div>
  </Link>
  ) as any)}
@@ -513,13 +513,13 @@ export default async function LocationDetailPage({ params }: PageProps) {
  { name: location.name, url: `/doctor/near-me/${city}` },
  ]}
  />
- <UnifiedEntitySection type="services" title="Treatments Available" subtitle="Our Services" featuredLimit={6} linkLimit={12} city={city} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
- <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} city={city} className="bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
+ <UnifiedEntitySection type="services"title="Treatments Available"subtitle="Our Services"featuredLimit={6} linkLimit={12} city={city} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700"/>
+ <UnifiedEntitySection type="doctors"title="Our Expert Doctors"subtitle="Meet Our Specialists"featuredLimit={6} linkLimit={12} city={city} className="bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50"/>
  
- <InternalLinkGrid type="diagnostics" title={`Diagnostics for ${location.name}`} subtitle="Local Lab Services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="health-packages" title={`Checkups for ${location.name}`} subtitle="Regional Wellness" limit={8} className="bg-slate-50 dark:bg-slate-900 border-t" />
+ <InternalLinkGrid type="diagnostics"title={`Diagnostics for ${location.name}`} subtitle="Local Lab Services"limit={12} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="health-packages"title={`Checkups for ${location.name}`} subtitle="Regional Wellness"limit={8} className="bg-slate-50 dark:bg-slate-900 border-t"/>
 
- <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Indira Elite Medical Units" featuredLimit={6} linkLimit={0} city={city} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
+ <UnifiedEntitySection type="departments"title="Our Departments"subtitle="Indira Elite Medical Units"featuredLimit={6} linkLimit={0} city={city} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700"/>
  </main>
  );
 }

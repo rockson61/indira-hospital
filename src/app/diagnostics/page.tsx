@@ -76,7 +76,7 @@ export default async function DiagnosticsPage() {
  <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">
  {config.label}
  </h2>
- <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">{tests.length} Verified Tests Available</p>
+ <p className="text-slate-500 text-sm font-bold uppercase tracking-widest">{tests.length} Verified Tests Available</p>
  </div>
  </div>
 
@@ -93,14 +93,14 @@ export default async function DiagnosticsPage() {
  <SectionContainer className="py-24 border-t border-slate-100 dark:border-slate-800">
  <div className="grid lg:grid-cols-2 gap-16">
  <EntityFAQs 
- entityType="hospital" 
- entityName="Indira Diagnostics" 
- entitySlug="diagnostics" 
+ entityType="hospital"
+ entityName="Indira Diagnostics"
+ entitySlug="diagnostics"
  className="bg-transparent"
  />
  <EntityReviews 
- entityType="hospital" 
- entityName="Indira Diagnostics" 
+ entityType="hospital"
+ entityName="Indira Diagnostics"
  entitySlug="indira-hospital"
  title="Patient Lab Stories"
  description="Verified experiences from our diagnostic center."
@@ -109,9 +109,9 @@ export default async function DiagnosticsPage() {
  </SectionContainer>
 
  {/* RELATED SECTIONS */}
- <EntityCardSection type="doctors" title="Consult the Experts" subtitle="Specialist Panel" limit={6} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="health-packages" title="Comprehensive Wellness" subtitle="Checkup Packages" limit={8} className="bg-slate-50 dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="services" title="A-Z Treatment Directory" subtitle="Clinical Services" limit={12} className="bg-white dark:bg-slate-900 border-t" />
+ <EntityCardSection type="doctors"title="Consult the Experts"subtitle="Specialist Panel"limit={6} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="health-packages"title="Comprehensive Wellness"subtitle="Checkup Packages"limit={8} className="bg-slate-50 dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="services"title="A-Z Treatment Directory"subtitle="Clinical Services"limit={12} className="bg-white dark:bg-slate-900 border-t"/>
  </main>
  )
 }

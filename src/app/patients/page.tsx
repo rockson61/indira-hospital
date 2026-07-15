@@ -38,12 +38,12 @@ export default function PatientsHubPage() {
  </SectionContainer>
 
  {/* ENTITY CARD SECTIONS */}
- <EntityCardSection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" limit={6} className="bg-white dark:bg-slate-900 border-t" />
+ <EntityCardSection type="doctors"title="Our Expert Doctors"subtitle="Meet Our Specialists"limit={6} className="bg-white dark:bg-slate-900 border-t"/>
 
  {/* COMPACT SEO LINK STRIPS */}
- <InternalLinkGrid type="services" title="Treatments & Procedures" subtitle="Clinical Services" limit={12} className="bg-slate-50 dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="diagnostics" title="Diagnostic Tests" subtitle="Lab & Imaging" limit={12} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="health-packages" title="Health Checkups" subtitle="Preventive Care" limit={8} className="bg-slate-50 dark:bg-slate-900 border-y" />
+ <InternalLinkGrid type="services"title="Treatments & Procedures"subtitle="Clinical Services"limit={12} className="bg-slate-50 dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="diagnostics"title="Diagnostic Tests"subtitle="Lab & Imaging"limit={12} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="health-packages"title="Health Checkups"subtitle="Preventive Care"limit={8} className="bg-slate-50 dark:bg-slate-900 border-y"/>
 
  {/* CTA Section */}
  <CTASection />

@@ -32,12 +32,12 @@ export default function InsurancePage() {
  
  {/* Cinematic Hero */}
  <section className="relative pt-48 pb-32 lg:pt-60 lg:pb-56 overflow-hidden bg-slate-900 rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" />
- <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"/>
+ <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu opacity-70 pointer-events-none animate-pulse"/>
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
  <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-emerald-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_30px_-5px_var(--tw-shadow-color)] shadow-emerald-500/30">
- <HeartCardiogram className="w-4 h-4 animate-pulse" /> Cashless Treatment
+ <HeartCardiogram className="w-4 h-4 animate-pulse"/> Cashless Treatment
  </div>
  <h1 className="elite-hero-title text-white mb-6">
  Seamless <br />
@@ -54,13 +54,13 @@ export default function InsurancePage() {
  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 hover:shadow-2xl hover:shadow-emerald-900/5 transition-shadow duration-700 bg-white dark:bg-slate-900 p-2 sm:p-4 rounded-[3rem] border border-white">
  {benefits.map((b) => (
  <div key={b.title} className="group relative bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(16,185,129,0.12)] hover:border-emerald-200 transition-all duration-500 overflow-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+ <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
  <div className="relative z-10">
  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-emerald-500/10">
- <b.icon className="h-8 w-8" />
+ <b.icon className="h-8 w-8"/>
  </div>
  <h3 className="font-bold text-xl mb-3 text-slate-900 dark:text-white">{b.title}</h3>
- <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{b.description}</p>
+ <p className="text-sm text-slate-500 dark:text-subtle-on-light font-medium leading-relaxed">{b.description}</p>
  </div>
  </div>
  ))}
@@ -72,7 +72,7 @@ export default function InsurancePage() {
  <div className="bg-white dark:bg-slate-900 rounded-[3rem] p-8 md:p-12 shadow-sm border border-slate-100 dark:border-slate-800">
  <div className="flex items-center gap-4 mb-8">
  <div className="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center">
- <ShieldCheck className="w-6 h-6 text-emerald-600" />
+ <ShieldCheck className="w-6 h-6 text-emerald-600"/>
  </div>
  <h2 className="elite-section-title text-slate-900 dark:text-white">Government Health Schemes</h2>
  </div>
@@ -86,7 +86,7 @@ export default function InsurancePage() {
  "ESI (Employees' State Insurance)"
  ].map((scheme) => (
  <div key={scheme} className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-700">
- <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-1 flex-shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-1 flex-shrink-0"/>
  <span className="font-bold text-slate-700 dark:text-slate-200">{scheme}</span>
  </div>
  ))}
@@ -98,7 +98,7 @@ export default function InsurancePage() {
  <SectionContainer className="mb-24">
  <div className="mb-10 text-center">
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Our Empanelled Network</h2>
- <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-3xl mx-auto">
+ <p className="text-lg text-slate-600 dark:text-subtle-on-light font-light leading-relaxed max-w-3xl mx-auto">
  We are officially allied with 40+ leading insurance companies and Third-Party Administrators (TPAs) to ensure your care is universally covered.
  </p>
  </div>
@@ -108,7 +108,7 @@ export default function InsurancePage() {
  {insurancePartners.filter(p => !p.includes("Scheme") && !p.includes("TPA") && !p.includes("Assist") && !p.includes("Ayushman") && !p.includes("ESI") && !p.includes("Paramount")).map((partner) => (
  <div key={partner} className="p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/60 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1 transition-all group flex items-center pr-2">
  <span className="w-2 h-2 rounded-full bg-emerald-400 mr-3 shrink-0"></span>
- <p className="font-bold text-slate-700 dark:text-slate-300 text-xs sm:text-sm group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors w-full break-words">{partner}</p>
+ <p className="font-bold text-slate-700 dark:text-slate-300 text-sm sm:text-sm group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors w-full break-words">{partner}</p>
  </div>
  ))}
  </div>
@@ -118,7 +118,7 @@ export default function InsurancePage() {
  {insurancePartners.filter(p => p.includes("TPA") || p.includes("Assist") || p.includes("Paramount")).map((partner) => (
  <div key={partner} className="p-5 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200/60 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all group flex items-center pr-2">
  <span className="w-2 h-2 rounded-full bg-blue-400 mr-3 shrink-0"></span>
- <p className="font-bold text-slate-700 dark:text-slate-300 text-xs sm:text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors w-full break-words">{partner}</p>
+ <p className="font-bold text-slate-700 dark:text-slate-300 text-sm sm:text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors w-full break-words">{partner}</p>
  </div>
  ))}
  </div>
@@ -168,11 +168,11 @@ export default function InsurancePage() {
 
  <SectionContainer className="mb-24">
  <div className="bg-slate-900 text-white rounded-[3rem] p-8 sm:p-12 relative overflow-hidden">
- <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px] will-change-transform transform-gpu" />
+ <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px] will-change-transform transform-gpu"/>
  <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
  <div>
- <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
- <Info className="w-4 h-4 text-emerald-400" /> Essential Guide
+ <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 rounded-full text-sm font-bold uppercase tracking-widest mb-6">
+ <Info className="w-4 h-4 text-emerald-400"/> Essential Guide
  </div>
  <h2 className="elite-section-title mb-6">How to avail Cashless Treatment?</h2>
  <ul className="space-y-4">
@@ -191,23 +191,23 @@ export default function InsurancePage() {
  </div>
  <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 border border-slate-200 dark:border-slate-800">
  <h3 className="text-xl font-bold mb-4">Any queries?</h3>
- <p className="text-slate-400 mb-8 font-medium">Visit our TPA desk located in the main lobby or call our helpdesk for assistance with documents and eligibility.</p>
+ <p className="text-subtle-on-light mb-8 font-medium">Visit our TPA desk located in the main lobby or call our helpdesk for assistance with documents and eligibility.</p>
  <Link
  href="/contact"
  className="inline-flex items-center justify-center w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl transition-all group"
  >
  Contact TPA Desk
- <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+ <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"/>
  </Link>
  </div>
  </div>
  </div>
  </SectionContainer>
 
- <EntityCardSection type="doctors" title="Specialists for Insured Patients" subtitle="Expert Care" limit={6} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="health-packages" title="Wellness & Checkup Packages" subtitle="Preventive Care" limit={8} className="bg-slate-50 dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="diagnostics" title="Diagnostics & Lab Tests" subtitle="NABL Accredited" limit={12} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="services" title="All Treatments A-Z" subtitle="Services Directory" limit={12} className="bg-slate-50 dark:bg-slate-900 border-t" />
+ <EntityCardSection type="doctors"title="Specialists for Insured Patients"subtitle="Expert Care"limit={6} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="health-packages"title="Wellness & Checkup Packages"subtitle="Preventive Care"limit={8} className="bg-slate-50 dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="diagnostics"title="Diagnostics & Lab Tests"subtitle="NABL Accredited"limit={12} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="services"title="All Treatments A-Z"subtitle="Services Directory"limit={12} className="bg-slate-50 dark:bg-slate-900 border-t"/>
  </main>
  );
 }

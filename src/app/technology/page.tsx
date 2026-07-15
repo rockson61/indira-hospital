@@ -23,16 +23,16 @@ export default function TechnologyHubPage() {
  <main className="min-h-screen bg-slate-50 dark:bg-slate-800 dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900 pb-24">
  {/* ELITE TECH HERO */}
  <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 pt-48 pb-40 lg:pt-60 lg:pb-48 text-white overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"/>
  
  {/* Elite Ambient Glows */}
- <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
- <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+ <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse"/>
+ <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none"/>
 
  <SectionContainer className="relative z-10 text-center">
  <div className="max-w-6xl mx-auto">
  <div className="elite-tag mb-10">
- <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Next-Gen Infrastructure
+ <Sparkles className="w-4 h-4 text-amber-400 animate-pulse"/> Next-Gen Infrastructure
  </div>
  <h1 className="elite-hero-title mb-12">
  Technology that<br />
@@ -51,24 +51,24 @@ export default function TechnologyHubPage() {
  <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
  <div className="group">
  <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
- <Shield className="w-7 h-7 text-fuchsia-600" />
+ <Shield className="w-7 h-7 text-fuchsia-600"/>
  </div>
  <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Safety First</h4>
- <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">All equipment undergoes daily calibration and follows international safety protocols.</p>
+ <p className="text-slate-500 dark:text-subtle-on-light font-medium leading-relaxed">All equipment undergoes daily calibration and follows international safety protocols.</p>
  </div>
  <div className="group">
  <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
- <Electricity className="w-7 h-7 text-fuchsia-600" />
+ <Electricity className="w-7 h-7 text-fuchsia-600"/>
  </div>
  <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Zero Waiting</h4>
- <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">In-house blood bank and modular OTs ensure no delay in life-saving procedures.</p>
+ <p className="text-slate-500 dark:text-subtle-on-light font-medium leading-relaxed">In-house blood bank and modular OTs ensure no delay in life-saving procedures.</p>
  </div>
  <div className="group">
  <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-5 mx-auto md:mx-0 group-hover:bg-fuchsia-50 dark:bg-fuchsia-950 group-hover:border-fuchsia-200 group-hover:scale-110 transition-all duration-300">
- <Monitor className="w-7 h-7 text-fuchsia-600" />
+ <Monitor className="w-7 h-7 text-fuchsia-600"/>
  </div>
  <h4 className="font-black text-xl mb-3 text-slate-800 dark:text-slate-100">Expert Hand</h4>
- <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Technicians and surgeons specially trained at world-class OEM facilities.</p>
+ <p className="text-slate-500 dark:text-subtle-on-light font-medium leading-relaxed">Technicians and surgeons specially trained at world-class OEM facilities.</p>
  </div>
  </div>
  </div>
@@ -76,42 +76,42 @@ export default function TechnologyHubPage() {
 
  {/* DARK TECH BENTO GRID */}
  <section className="py-24 relative overflow-hidden bg-slate-900 mt-24 mb-24 skew-y-3">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f1a_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f1a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 -skew-y-3" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f1a_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f1a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 -skew-y-3"/>
 
  <SectionContainer className="relative z-10 -skew-y-3 max-w-7xl mx-auto py-12">
  <div className="text-center max-w-3xl mx-auto mb-16">
  <h2 className="elite-section-title mb-6 text-white">Advanced Medical Systems</h2>
- <p className="text-xl text-slate-400 font-light leading-relaxed">Explore the cutting-edge robotic, imaging, and surgical technology housed within our facility.</p>
+ <p className="text-xl text-subtle-on-light font-light leading-relaxed">Explore the cutting-edge robotic, imaging, and surgical technology housed within our facility.</p>
  </div>
 
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
  {technologies.map((tech) => (
  <Link key={tech.slug} href={`/technology/${tech.slug}`} className="group relative h-full flex flex-col bg-slate-800/50 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 hover:bg-slate-800 hover:border-fuchsia-500/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-all duration-500 overflow-hidden">
  {/* Ambient Hover Glow */}
- <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+ <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
 
  <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700">
- <Sparkles className="w-24 h-24 text-fuchsia-400" />
+ <Sparkles className="w-24 h-24 text-fuchsia-400"/>
  </div>
 
  <div className="relative z-10 flex-grow pr-8">
  <div className="mb-6 flex w-16 h-16 items-center justify-center rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group-hover:bg-fuchsia-500 group-hover:border-fuchsia-400 transition-all duration-500 shadow-lg">
- <Monitor className="w-8 h-8 text-fuchsia-300 group-hover:text-white transition-colors" />
+ <Monitor className="w-8 h-8 text-fuchsia-300 group-hover:text-white transition-colors"/>
  </div>
 
  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-400 group-hover:to-pink-400 transition-colors">
  {tech.title}
  </h3>
 
- <p className="text-slate-400 font-light leading-relaxed mb-8 line-clamp-3 group-hover:text-slate-300 transition-colors">
+ <p className="text-subtle-on-light font-light leading-relaxed mb-8 line-clamp-3 group-hover:text-slate-300 transition-colors">
  {tech.shortDescription}
  </p>
  </div>
 
  <div className="relative z-10 mt-auto flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-800">
- <span className="text-sm font-bold text-slate-500 dark:text-slate-400 group-hover:text-fuchsia-400 uppercase tracking-widest transition-colors">Discover</span>
+ <span className="text-sm font-bold text-slate-500 dark:text-subtle-on-light group-hover:text-fuchsia-400 uppercase tracking-widest transition-colors">Discover</span>
  <span className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center group-hover:bg-fuchsia-500 group-hover:text-white transition-all shadow-md">
- <ArrowRight className="w-5 h-5" />
+ <ArrowRight className="w-5 h-5"/>
  </span>
  </div>
  </Link>
@@ -123,12 +123,12 @@ export default function TechnologyHubPage() {
  {/* CTA BENTO */}
  <SectionContainer className="pb-24 max-w-7xl mx-auto px-4">
  <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-fuchsia-950 rounded-[4rem] border border-slate-200 dark:border-slate-800 overflow-hidden shadow-2xl relative group/cta flex flex-col items-center text-center p-12 sm:p-20">
- <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-fuchsia-500/10 rounded-full blur-[80px] will-change-transform transform-gpu group-hover/cta:bg-fuchsia-500/20 transition-colors duration-700" />
- <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] will-change-transform transform-gpu" />
+ <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-fuchsia-500/10 rounded-full blur-[80px] will-change-transform transform-gpu group-hover/cta:bg-fuchsia-500/20 transition-colors duration-700"/>
+ <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] will-change-transform transform-gpu"/>
 
  <div className="relative z-10 w-full max-w-4xl">
  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 mb-8 shadow-[0_0_30px_rgba(20,184,166,0.2)]">
- <Sparkles className="w-8 h-8 text-fuchsia-300" />
+ <Sparkles className="w-8 h-8 text-fuchsia-300"/>
  </div>
  <h2 className="elite-section-title text-white mb-8">
  Experience Digital <br /> <span className="text-fuchsia-400">Healthcare.</span>
@@ -138,14 +138,14 @@ export default function TechnologyHubPage() {
  </p>
 
  <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl mx-auto">
- <Link href="/contact" className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
+ <Link href="/contact"className="group/btn relative flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-fuchsia-500 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-lg shadow-fuchsia-500/25 overflow-hidden">
  <span className="relative z-10">Contact Facility Manager</span>
- <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
+ <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out"/>
  </Link>
 
- <Link href="/doctors" className="flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-white dark:bg-slate-900 text-white border border-slate-200 dark:border-slate-800 font-bold rounded-2xl hover:bg-white dark:bg-slate-900 transition-colors">
+ <Link href="/doctors"className="flex items-center justify-center w-full sm:w-auto px-10 py-5 bg-white dark:bg-slate-900 text-white border border-slate-200 dark:border-slate-800 font-bold rounded-2xl hover:bg-white dark:bg-slate-900 transition-colors">
  Meet the Specialists
- <ChevronRight className="w-5 h-5 ml-2 text-fuchsia-400" />
+ <ChevronRight className="w-5 h-5 ml-2 text-fuchsia-400"/>
  </Link>
  </div>
  </div>
@@ -172,8 +172,8 @@ export default function TechnologyHubPage() {
  </div>
  </SectionContainer>
 
- <InternalLinkGrid type="diagnostics" title="Advanced Diagnostics" subtitle="Advanced Imaging & Lab" limit={12} className="bg-white dark:bg-slate-900 border-t" />
- <InternalLinkGrid type="health-packages" title="Technology-Driven Checkups" subtitle="Wellness Packages" limit={8} className="bg-slate-50 dark:bg-slate-800" />
+ <InternalLinkGrid type="diagnostics"title="Advanced Diagnostics"subtitle="Advanced Imaging & Lab"limit={12} className="bg-white dark:bg-slate-900 border-t"/>
+ <InternalLinkGrid type="health-packages"title="Technology-Driven Checkups"subtitle="Wellness Packages"limit={8} className="bg-slate-50 dark:bg-slate-800"/>
  </main>
  );
 }

@@ -45,7 +45,7 @@ export default function DermatologyDepartmentPage() {
  Your skin is the narrative of your health. The <strong>Department of Dermatology & Cosmetology</strong> at Indira Super Speciality Hospital is dedicated to the precise diagnosis and treatment of complex skin, hair, and nail disorders. We merge <strong>Evidence-Based Medical Dermatology</strong> with the latest breakthroughs in <strong>Laser Aesthetics.</strong>
  </p>
  <p className="mt-4">
- Our facility is a "Laser Destination," featuring USFDA-approved platforms for permanent hair reduction, pigmentation removal, and fractional skin resurfacing. Whether you are battling chronic <strong>Vitiligo</strong> or seeking "Glass Skin" through precision chemical peels, our clinical pathways are designed for <strong>Visible Results</strong> and <strong>Safety.</strong>
+ Our facility is a "Laser Destination,"featuring USFDA-approved platforms for permanent hair reduction, pigmentation removal, and fractional skin resurfacing. Whether you are battling chronic <strong>Vitiligo</strong> or seeking "Glass Skin"through precision chemical peels, our clinical pathways are designed for <strong>Visible Results</strong> and <strong>Safety.</strong>
  </p>
  </div>
 
@@ -55,10 +55,10 @@ export default function DermatologyDepartmentPage() {
  <h4 className="text-2xl font-bold text-rose-900 dark:text-rose-200 mb-4 flex items-center gap-2 text-left">
  Micro-Laser Resurfacing
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4 text-left">
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4 text-left">
  Regenerate your skin from within. Our <strong>Fractional CO2 Laser</strong> creates microscopic thermal zones, triggering massive collagen production to erase deep acne scars and fine lines.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700">Scar Eraser</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-rose-100 dark:border-rose-700">Texture Refinement</span>
  </div>
@@ -70,8 +70,8 @@ export default function DermatologyDepartmentPage() {
  Stop hair loss at the root. We utilize <strong>Platelet-Rich Plasma (PRP)</strong> and medical-grade mesotherapy to revive dormant follicles and restore hair density.
  </p>
  <ul className="space-y-2 text-left">
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Growth Factor Therapy</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Scalp Bio-Analysis</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Growth Factor Therapy</li>
+ <li className="flex items-center gap-2 text-xs font-black text-rose-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div> Scalp Bio-Analysis</li>
  </ul>
  </div>
  </div>
@@ -90,10 +90,10 @@ export default function DermatologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Medical Care</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Clinical management of chronic conditions including Psoriasis, Vitiligo, Eczema, and complex skin infections.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Clinical management of chronic conditions including Psoriasis, Vitiligo, Eczema, and complex skin infections.</p>
  <ul className="space-y-3 mb-8">
  {["Biologics for Psoriasis", "Vitiligo Grafting", "Acne Intensive Hub", "Fungal Eradication"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -107,10 +107,10 @@ export default function DermatologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-rose-600">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Laser & Aesthetics</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Non-surgical transformations utilizing light energy and advanced chemical formulations for flawed skin.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Non-surgical transformations utilizing light energy and advanced chemical formulations for flawed skin.</p>
  <ul className="space-y-3 mb-8">
  {["Laser Hair Reduction", "Q-Switch for Pigment", "Carbon Hollywood Peel", "Botox & Dermal Fillers"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -124,10 +124,10 @@ export default function DermatologyDepartmentPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Pediatric Skin</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Empathetic care for infants and children with atopic dermatitis, hemangiomas, and birthmarks.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Empathetic care for infants and children with atopic dermatitis, hemangiomas, and birthmarks.</p>
  <ul className="space-y-3 mb-8">
  {["Atopic Eczema Unit", "Neonatal Rash Care", "Wart & Molluscum", "Birthmark Monitoring"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-rose-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
@@ -141,23 +141,23 @@ export default function DermatologyDepartmentPage() {
  {/* ── 3. Educational Deep-Dive: The Laser Journey ─────────────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-rose-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: The Fractional Evolution</h3>
+ <h3 className="text-rose-900 dark:text-rose-400 font-black uppercase text-3xl tracking-tighter not- font-heading">Clinical Insight: The Fractional Evolution</h3>
  <p>
- Historically, "skin resurfacing" involved long recovery times and high risk of pigmentation. Modern <strong>Fractional Laser Technology</strong> has revolutionized this. By treating only a fraction of the skin surface (10-20%) at a time, the surrounding healthy tissue accelerates the healing process of the micro-wounds.
+ Historically, "skin resurfacing"involved long recovery times and high risk of pigmentation. Modern <strong>Fractional Laser Technology</strong> has revolutionized this. By treating only a fraction of the skin surface (10-20%) at a time, the surrounding healthy tissue accelerates the healing process of the micro-wounds.
  </p>
  <p className="mt-4">
  At Indira Hospital, our <strong>Safe-Laser Protocol</strong> ensuring:
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "USFDA", v: "Platform Safety" },
- { k: "COOL", v: "Painless Delivery" },
- { k: "FAST", v: "3-Day Local Healing" },
- { k: "DEEP", v: "Collagen Induction" }
+ { k: "USFDA", v: "Platform Safety"},
+ { k: "COOL", v: "Painless Delivery"},
+ { k: "FAST", v: "3-Day Local Healing"},
+ { k: "DEEP", v: "Collagen Induction"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-rose-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-rose-600">
  <p className="text-4xl font-black text-rose-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -214,7 +214,7 @@ export default function DermatologyDepartmentPage() {
  <span className="text-rose-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>
@@ -224,12 +224,12 @@ export default function DermatologyDepartmentPage() {
  </div>
  )}
  procedures={[
- { name: "Laser Hair Reduction", link: "/doctor/near-me/treat/dermatology" },
- { name: "Acne Scar Revision (CO2)", link: "/doctor/near-me/treat/dermatology" },
- { name: "PRP Hair Restoration", link: "/doctor/near-me/treat/dermatology" },
- { name: "Hollywood Carbon Peel", link: "/doctor/near-me/treat/dermatology" },
- { name: "Psoriasis Biologics Unit", link: "/doctor/near-me/treat/dermatology" },
- { name: "Botox & Dermal Fillers", link: "/doctor/near-me/treat/dermatology" }
+ { name: "Laser Hair Reduction", link: "/doctor/near-me/treat/dermatology"},
+ { name: "Acne Scar Revision (CO2)", link: "/doctor/near-me/treat/dermatology"},
+ { name: "PRP Hair Restoration", link: "/doctor/near-me/treat/dermatology"},
+ { name: "Hollywood Carbon Peel", link: "/doctor/near-me/treat/dermatology"},
+ { name: "Psoriasis Biologics Unit", link: "/doctor/near-me/treat/dermatology"},
+ { name: "Botox & Dermal Fillers", link: "/doctor/near-me/treat/dermatology"}
  ]}
  relatedDoctors={dermDoctors}
  quickFacts={quickFacts}

@@ -61,10 +61,10 @@ export default function OphthalmologyPillarPage() {
  <h4 className="text-2xl font-bold text-teal-900 dark:text-teal-200 mb-4 flex items-center gap-2">
  Micro-Incision Phaco (MICS)
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
- The "Stitchless Revolution." Our MICS technique uses incisions smaller than 2.0 mm, resulting in zero surgically-induced astigmatism and near-instant visual recovery.
+ <p className="text-slate-700 dark:text-subtle-on-light text-sm leading-relaxed mb-4">
+ The "Stitchless Revolution."Our MICS technique uses incisions smaller than 2.0 mm, resulting in zero surgically-induced astigmatism and near-instant visual recovery.
  </p>
- <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
+ <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-tighter">
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-teal-100 dark:border-teal-700">Crystal Clear Vision</span>
  <span className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-teal-100 dark:border-teal-700">20-Min Procedure</span>
  </div>
@@ -76,8 +76,8 @@ export default function OphthalmologyPillarPage() {
  Specialized care for <strong>Diabetic Retinopathy</strong> and Macular Degeneration. We utilize high-dose Anti-VEGF injections to stabilize fluid and prevent irreversible vision loss.
  </p>
  <ul className="space-y-2">
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Precision Retinal Mapping</li>
- <li className="flex items-center gap-2 text-[10px] font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Vision Stabilization Unit</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Precision Retinal Mapping</li>
+ <li className="flex items-center gap-2 text-xs font-black text-blue-300 uppercase tracking-widest leading-none"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Vision Stabilization Unit</li>
  </ul>
  </div>
  </div>
@@ -96,16 +96,16 @@ export default function OphthalmologyPillarPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Cataract & IOL</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Premium cataract restoration using multifocal and toric Intraocular Lenses for freedom from spectacles.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Premium cataract restoration using multifocal and toric Intraocular Lenses for freedom from spectacles.</p>
  <ul className="space-y-3 mb-8">
  {["MICS (Micro-Incision)", "Phacoemulsification", "Multifocal IOLs", "Toric Correction"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-teal-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
  </ul>
  </div>
- <Link href="/doctor/near-me/treat/ophthalmology/advanced-cataract-surgery" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
+ <Link href="/doctor/near-me/treat/ophthalmology/advanced-cataract-surgery"className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-xs font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
  View Cataract Unit
  </Link>
  </div>
@@ -116,16 +116,16 @@ export default function OphthalmologyPillarPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Retinal Health</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Advanced diagnostic and medical management for Diabetic Retinopathy and Hypertensive eye disease.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Advanced diagnostic and medical management for Diabetic Retinopathy and Hypertensive eye disease.</p>
  <ul className="space-y-3 mb-8">
  {["Anti-VEGF Injections", "Green Laser Therapy", "OCT Retinal Mapping", "Fundus Photography"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-teal-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
  </ul>
  </div>
- <Link href="/doctor/near-me/treat/ophthalmology/diabetic-retinopathy-treatment" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
+ <Link href="/doctor/near-me/treat/ophthalmology/diabetic-retinopathy-treatment"className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-xs font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
  View Retina Unit
  </Link>
  </div>
@@ -136,16 +136,16 @@ export default function OphthalmologyPillarPage() {
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Vision Correction</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Comprehensive glaucoma screening and advanced refractive pathways for permanent vision correction.</p>
+ <p className="text-sm text-slate-600 dark:text-subtle-on-light leading-relaxed mb-6 font-medium">Comprehensive glaucoma screening and advanced refractive pathways for permanent vision correction.</p>
  <ul className="space-y-3 mb-8">
  {["Glaucoma Valve Surgery", "LASIK Evaluation", "Automated Perimetry", "Squint Correction"].map(i => (
- <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
+ <li key={i} className="flex items-start gap-2 text-xs font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
  <div className="w-2 h-2 rounded-full bg-teal-500 mt-1 shrink-0"></div> {i}
  </li>
  ))}
  </ul>
  </div>
- <Link href="/doctor/near-me/treat/ophthalmology/lasik-eye-surgery" className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-[10px] font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
+ <Link href="/doctor/near-me/treat/ophthalmology/lasik-eye-surgery"className="p-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white text-center text-xs font-black hover:bg-teal-600 transition-colors uppercase tracking-widest">
  View Vision Unit
  </Link>
  </div>
@@ -156,23 +156,23 @@ export default function OphthalmologyPillarPage() {
  {/* ── 3. Advanced Educational Content: MICS vs Traditional ────────── */}
  <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-teal-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-teal-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-teal-900 dark:text-teal-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: The Micro-Incision Edge</h3>
+ <h3 className="text-teal-900 dark:text-teal-400 font-black uppercase text-3xl tracking-tighter not- font-heading">Clinical Insight: The Micro-Incision Edge</h3>
  <p>
- In standard cataract surgery, an incision of 3.0 mm to 5.0 mm was common, which often required stitches and led to significant "astigmatism" – requiring the patient to wear heavy glasses even after a successful surgery.
+ In standard cataract surgery, an incision of 3.0 mm to 5.0 mm was common, which often required stitches and led to significant "astigmatism"– requiring the patient to wear heavy glasses even after a successful surgery.
  </p>
  <p className="mt-4">
- At Indira Hospital, our <strong>Micro-Incision Cataract Surgery (MICS)</strong> utilizes an incision of less than <strong>1.8 mm to 2.2 mm</strong>. This "Ultra-Small" entry point allows for a "Cold Phaco" technique, which minimizes heat-related damage to the cornea. This results in:
+ At Indira Hospital, our <strong>Micro-Incision Cataract Surgery (MICS)</strong> utilizes an incision of less than <strong>1.8 mm to 2.2 mm</strong>. This "Ultra-Small"entry point allows for a "Cold Phaco"technique, which minimizes heat-related damage to the cornea. This results in:
  </p>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
  {[
- { k: "Healing", v: "Rapid Self-Sealing" },
- { k: "Astigmatism", v: "Neutral Geometry" },
- { k: "Energy", v: "Safe Ultrasound" },
- { k: "Clarity", v: "HD Lens Placement" }
+ { k: "Healing", v: "Rapid Self-Sealing"},
+ { k: "Astigmatism", v: "Neutral Geometry"},
+ { k: "Energy", v: "Safe Ultrasound"},
+ { k: "Clarity", v: "HD Lens Placement"}
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-teal-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-teal-600">
  <p className="text-4xl font-black text-teal-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
+ <p className="text-xs font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
@@ -229,7 +229,7 @@ export default function OphthalmologyPillarPage() {
  <span className="text-teal-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>
- <p className="text-slate-400 text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
+ <p className="text-subtle-on-light text-sm leading-relaxed antialiased pl-8 font-medium font-heading">
  {faq.a}
  </p>
  </div>

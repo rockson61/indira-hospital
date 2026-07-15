@@ -35,18 +35,18 @@ import { LocalSEOFooter } from "@/components/healthcare/LocalSEOFooter";
 
 // Icon map for services
 const iconMap: Record<string, React.ReactNode> = {
- Scalpel: <Stethoscope className="h-8 w-8" />,
- HeartCardiogram: <HeartCardiogram className="h-8 w-8" />,
- Stethoscope: <Stethoscope className="h-8 w-8" />,
- Baby0203m: <Baby0203m className="h-8 w-8" />,
- Orthopaedics: <HeartCardiogram className="h-8 w-8" />,
- Heart: <Heart className="h-8 w-8" />,
- Siren: <Siren className="h-8 w-8" />,
- Happy: <Happy className="h-8 w-8" />,
- Neurology: <Neurology className="h-8 w-8" />,
- Ribbon: <Ribbon className="h-8 w-8" />,
- BloodDrop: <BloodDrop className="h-8 w-8" />,
- Electricity: <Electricity className="h-8 w-8" />,
+ Scalpel: <Stethoscope className="h-8 w-8"/>,
+ HeartCardiogram: <HeartCardiogram className="h-8 w-8"/>,
+ Stethoscope: <Stethoscope className="h-8 w-8"/>,
+ Baby0203m: <Baby0203m className="h-8 w-8"/>,
+ Orthopaedics: <HeartCardiogram className="h-8 w-8"/>,
+ Heart: <Heart className="h-8 w-8"/>,
+ Siren: <Siren className="h-8 w-8"/>,
+ Happy: <Happy className="h-8 w-8"/>,
+ Neurology: <Neurology className="h-8 w-8"/>,
+ Ribbon: <Ribbon className="h-8 w-8"/>,
+ BloodDrop: <BloodDrop className="h-8 w-8"/>,
+ Electricity: <Electricity className="h-8 w-8"/>,
 };
 
 // Key procedures per service/department
@@ -113,7 +113,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
  // Check for Service
  const service = await getServiceBySlug(lastSlug).catch(() => null) as any;
- if (!service) return { title: "Page Not Found" };
+ if (!service) return { title: "Page Not Found"};
 
  const specialistTitle = getSpecialistTitle(service.title);
  const title = service.seo_title || `Best ${specialistTitle} in Vellore | Indira Super Speciality Hospital`;
@@ -225,8 +225,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  // For the current server component, we'll keep the slug-based detection for initial render.
  // If a client component needs this, it would call usePathname itself.
  const isDentalPage = slug.some(s => s.toLowerCase().includes('dental') || s.toLowerCase().includes('dentistry'));
- const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;
- const contactWhatsapp = isDentalPage ? "917010650063" : siteConfig.contact.whatsapp;
+ const contactPhone = isDentalPage ? "+91 7010650063": siteConfig.contact.phone;
+ const contactWhatsapp = isDentalPage ? "917010650063": siteConfig.contact.whatsapp;
 
  const whatsappUrl = isTreatmentPage 
  ? `https://wa.me/${contactWhatsapp}?text=${encodeURIComponent(`Interested in ${service.title} at Indira Hospital. Please share cost estimate and clinical availability.`)}`
@@ -254,12 +254,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  else if (isDentalPage) compType = 'dentistry';
 
  const compSpecs: Record<string, { duration: string; stay: string; recovery: string; anesthesia: string }> = {
-   laser: { duration: '30 - 45 Mins', stay: 'Daycare (6 Hrs)', recovery: '48 - 72 Hours', anesthesia: 'Local/Spinal' },
-   laparoscopy: { duration: '45 - 90 Mins', stay: '1 - 2 Days', recovery: '1 - 2 Weeks', anesthesia: 'General' },
-   orthopedics: { duration: '60 - 120 Mins', stay: '2 - 3 Days', recovery: '3 - 4 Weeks', anesthesia: 'Spinal/Epidural' },
-   dentistry: { duration: '30 - 60 Mins', stay: 'Outpatient (0 Hrs)', recovery: 'Same Day', anesthesia: 'Local / Topical' },
-   ophthalmology: { duration: '15 - 30 Mins', stay: 'Daycare (1 Hr)', recovery: '24 - 48 Hours', anesthesia: 'Aesthetic Drops' },
-   general: { duration: '30 - 60 Mins', stay: 'Daycare (6 Hrs)', recovery: '48 Hours', anesthesia: 'Local/Spinal' }
+ laser: { duration: '30 - 45 Mins', stay: 'Daycare (6 Hrs)', recovery: '48 - 72 Hours', anesthesia: 'Local/Spinal' },
+ laparoscopy: { duration: '45 - 90 Mins', stay: '1 - 2 Days', recovery: '1 - 2 Weeks', anesthesia: 'General' },
+ orthopedics: { duration: '60 - 120 Mins', stay: '2 - 3 Days', recovery: '3 - 4 Weeks', anesthesia: 'Spinal/Epidural' },
+ dentistry: { duration: '30 - 60 Mins', stay: 'Outpatient (0 Hrs)', recovery: 'Same Day', anesthesia: 'Local / Topical' },
+ ophthalmology: { duration: '15 - 30 Mins', stay: 'Daycare (1 Hr)', recovery: '24 - 48 Hours', anesthesia: 'Aesthetic Drops' },
+ general: { duration: '30 - 60 Mins', stay: 'Daycare (6 Hrs)', recovery: '48 Hours', anesthesia: 'Local/Spinal' }
  };
  const specs = compSpecs[compType] || compSpecs.general;
 
@@ -280,77 +280,77 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* ========== HERO ========== */}
  <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
- <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"/>
  
  {/* Elite Ambient Glows */}
- <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
- <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+ <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse"/>
+ <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none"/>
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-32 relative z-10">
- <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap">
- <Link href="/" className="hover:text-white transition-colors">Home</Link>
- <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
- <Link href="/doctor/near-me/treat" className="hover:text-white transition-colors">Treatments</Link>
+ <nav className="flex items-center text-sm breadcrumb-on-dark mb-10 overflow-x-auto whitespace-nowrap">
+ <Link href="/"className="hover:text-white transition-colors">Home</Link>
+ <ChevronRight className="w-4 h-4 mx-2 opacity-40"/>
+ <Link href="/doctor/near-me/treat"className="hover:text-white transition-colors">Treatments</Link>
  {treatment && (
  <>
- <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
+ <ChevronRight className="w-4 h-4 mx-2 opacity-40"/>
  <Link href={`/doctor/near-me/treat/${treatment.parentServiceSlug}`} className="hover:text-white transition-colors capitalize">
  {treatment.parentServiceSlug.replace('-', ' ')}
  </Link>
  </>
  )}
- <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
+ <ChevronRight className="w-4 h-4 mx-2 opacity-40"/>
  <span className="text-white font-black">{service.title}</span>
  </nav>
 
  <div className="flex flex-col lg:flex-row items-start gap-12">
  <div className="flex-1">
  <div className="elite-tag mb-10">
- <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> Advanced Treatment Centre • Vellore
+ <Sparkles className="w-4 h-4 text-amber-400 animate-pulse"/> Advanced Treatment Centre • Vellore
  </div>
-  <h1 className="elite-hero-title text-white mb-10 text-left">
-  Best {service.title} <br />
-  <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, India</span>
-  </h1>
-  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90">
-  {service.short_description}
-  </p>
+ <h1 className="elite-hero-title text-white mb-10 text-left">
+ Best {service.title} <br />
+ <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, India</span>
+ </h1>
+ <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90">
+ {service.short_description}
+ </p>
 
  <div className="flex flex-wrap gap-4 mt-12 mb-12">
  {procedures.length > 0 && (
- <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-3 shadow-2xl text-indigo-200">
- <CheckCircle2 className="w-5 h-5 text-amber-400" />
- <span className="text-xs font-black uppercase tracking-widest">{isTreatmentPage ? 'Key Features' : `${procedures.length}+ Procedures`}</span>
+ <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-3 shadow-2xl text-subtle-on-dark">
+ <CheckCircle2 className="w-5 h-5 text-amber-400"/>
+ <span className="text-sm font-black uppercase tracking-widest">{isTreatmentPage ? 'Key Features' : `${procedures.length}+ Procedures`}</span>
  </div>
  )}
  {relatedDoctors.length > 0 && (
- <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-3 shadow-2xl text-indigo-200">
- <Users className="w-5 h-5 text-amber-400" />
- <span className="text-xs font-black uppercase tracking-widest">{relatedDoctors.length} Specialist{relatedDoctors.length > 1 ? 's' : ''}</span>
+ <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-3 shadow-2xl text-subtle-on-dark">
+ <Users className="w-5 h-5 text-amber-400"/>
+ <span className="text-sm font-black uppercase tracking-widest">{relatedDoctors.length} Specialist{relatedDoctors.length > 1 ? 's' : ''}</span>
  </div>
  )}
  </div>
 
  <div className="flex flex-wrap gap-5">
- <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-  className="elite-button-primary gap-3">
-  <MessageCircle className="w-6 h-6" />
-  Book Consultation
-  </a>
+ <a href={whatsappUrl} target="_blank"rel="noopener noreferrer"
+ className="elite-button-primary gap-3">
+ <MessageCircle className="w-6 h-6"/>
+ Book Consultation
+ </a>
  <a href={`tel:${contactPhone.replace(/\s+/g, '')}`}
  className="elite-button-secondary gap-3">
- <Phone className="w-5 h-5 text-fuchsia-400" />
+ <Phone className="w-5 h-5 text-fuchsia-400"/>
  Talk to Specialist
  </a>
  </div>
  </div>
  
  <div className="hidden lg:flex flex-shrink-0 lg:w-96 h-96 rounded-[3.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center justify-center text-white/20 shadow-2xl group overflow-hidden relative">
- <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+ <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"/>
  <div className="relative z-10 scale-150 group-hover:scale-[1.75] transition-transform duration-[2s]">
- {iconMap[service.icon] || <Stethoscope className="h-24 w-24" />}
+ {iconMap[service.icon] || <Stethoscope className="h-24 w-24"/>}
  </div>
-  <div className="absolute top-0 right-0 p-8 opacity-20 capitalize text-[8px] font-black tracking-[0.5em] [writing-mode:vertical-lr]">Indira Advanced Infrastructure</div>
+ <div className="absolute top-0 right-0 p-8 opacity-20 capitalize text-[8px] font-black tracking-[0.5em] [writing-mode:vertical-lr]">Indira Advanced Infrastructure</div>
  </div>
  </div>
  </div>
@@ -362,26 +362,26 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div className="lg:col-span-2 space-y-8">
  {/* Quick Summary Card */}
  {isTreatmentPage && (
-   <ServiceQuickSummary 
-     duration={specs.duration}
-     hospitalStay={specs.stay}
-     recoveryTime={specs.recovery}
-     anesthesia={specs.anesthesia}
-   />
+ <ServiceQuickSummary 
+ duration={specs.duration}
+ hospitalStay={specs.stay}
+ recoveryTime={specs.recovery}
+ anesthesia={specs.anesthesia}
+ />
  )}
 
  {/* Conversion Grid (Medfin Inspired) */}
  <ConversionGrid whatsappUrl={whatsappUrl} />
 
  {/* About */}
- <Card id="about" className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
+ <Card id="about"className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
  <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
  <span className="bg-fuchsia-100 dark:bg-fuchsia-900/30 p-2 rounded-lg mr-3 text-fuchsia-600 dark:text-fuchsia-400">
- <Stethoscope className="w-5 h-5" />
+ <Stethoscope className="w-5 h-5"/>
  </span>
  Best Hospital for {service.title} in Vellore, Tamil Nadu
  </h2>
- <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4" dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
+ <div className="text-gray-600 dark:text-gray-400 leading-relaxed text-base space-y-4"dangerouslySetInnerHTML={{ __html: injectInternalLinks(service.full_description) }} />
  </Card>
 
  {/* Procedures / Features Grid */}
@@ -389,7 +389,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <Card className="p-6 sm:p-8 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900">
  <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
  <span className="bg-fuchsia-100 dark:bg-fuchsia-900/30 p-2 rounded-lg mr-3 text-fuchsia-600 dark:text-fuchsia-400">
- <CheckCircle2 className="w-5 h-5" />
+ <CheckCircle2 className="w-5 h-5"/>
  </span>
  {isTreatmentPage ? 'Treatment Benefits & Features' : 'Treatments & Procedures'}
  </h2>
@@ -399,9 +399,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  const hasLink = !isTreatmentPage && typeof proc === 'object' && proc.isTreatment;
  const content = (
  <div className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-slate-950 hover:bg-fuchsia-50 dark:bg-fuchsia-950 transition-colors group h-full">
- <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+ <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0"/>
  <span className="text-gray-700 dark:text-gray-300 group-hover:text-fuchsia-700 font-medium text-sm">{title}</span>
- {hasLink && <ChevronRight className="w-4 h-4 ml-auto text-gray-300 group-hover:text-fuchsia-400" />}
+ {hasLink && <ChevronRight className="w-4 h-4 ml-auto text-gray-300 group-hover:text-fuchsia-400"/>}
  </div>
  );
 
@@ -437,48 +437,48 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* PRICING TRANSPARENCY BLOCK */}
  {isHighValueSurgical && (
- <Card id="pricing" className="p-8 border-none shadow-sm rounded-[2rem] bg-slate-900 text-white relative overflow-hidden group">
- <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -mr-32 -mt-32" />
+ <Card id="pricing"className="p-8 border-none shadow-sm rounded-[2rem] bg-slate-900 text-white relative overflow-hidden group">
+ <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] -mr-32 -mt-32"/>
  <div className="relative z-10">
  <div className="flex items-center gap-4 mb-6">
  <div className="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center border border-emerald-500/30">
- <HandCoins className="w-6 h-6 text-emerald-400" />
+ <HandCoins className="w-6 h-6 text-emerald-400"/>
  </div>
  <div>
-  <h3 className="text-xl font-bold">Transparent Pricing</h3>
- <p className="text-emerald-400 text-xs font-black uppercase tracking-widest">Ethical Billing Guarantee</p>
+ <h3 className="text-xl font-bold">Transparent Pricing</h3>
+ <p className="text-emerald-400 text-sm font-black uppercase tracking-widest">Ethical Billing Guarantee</p>
  </div>
  </div>
  
  <div className="grid md:grid-cols-2 gap-8 divide-x divide-white/10">
  <div className="space-y-4">
  <div className="flex items-start gap-3">
- <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0"/>
  <div>
  <p className="font-bold text-sm">All-Inclusive Estimates</p>
- <p className="text-xs text-slate-400 leading-relaxed">No separate charges for nursing, OT consumables, or post-op consultation.</p>
+ <p className="text-sm text-subtle-on-light leading-relaxed">No separate charges for nursing, OT consumables, or post-op consultation.</p>
  </div>
  </div>
  <div className="flex items-start gap-3">
- <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
+ <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0"/>
  <div>
  <p className="font-bold text-sm">Cashless Hospitalization</p>
- <p className="text-xs text-slate-400 leading-relaxed">Direct tie-ups with 50+ IRDAI approved insurance providers for pre-auth.</p>
+ <p className="text-sm text-subtle-on-light leading-relaxed">Direct tie-ups with 50+ IRDAI approved insurance providers for pre-auth.</p>
  </div>
  </div>
  </div>
  <div className="pl-0 md:pl-8 space-y-6">
  <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
- <p className="text-[10px] uppercase font-black text-slate-500 mb-2 tracking-widest text-center">Standard Procedure Window</p>
+ <p className="text-xs uppercase font-black text-slate-500 mb-2 tracking-widest text-center">Standard Procedure Window</p>
  <div className="flex justify-between items-end">
  <div className="text-center flex-1">
  <p className="text-2xl font-black text-white">{pricingRange.min}</p>
  <p className="text-[8px] text-slate-500 uppercase font-bold">Standard</p>
  </div>
- <div className="h-8 w-px bg-white dark:bg-slate-900 mb-1" />
+ <div className="h-8 w-px bg-white dark:bg-slate-900 mb-1"/>
  <div className="text-center flex-1">
  <p className="text-2xl font-black text-fuchsia-400">{pricingRange.max}</p>
-  <p className="text-[8px] text-slate-500 uppercase font-bold">Premium Suite</p>
+ <p className="text-[8px] text-slate-500 uppercase font-bold">Premium Suite</p>
  </div>
  </div>
  </div>
@@ -487,8 +487,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  </div>
 
  <div className="mt-8 flex justify-center">
- <a href={pricingWhatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-black uppercase text-emerald-400 tracking-[0.2em] hover:text-emerald-300 transition-colors">
- Request My Free Estimate <ArrowRight className="w-4 h-4" />
+ <a href={pricingWhatsappUrl} target="_blank"rel="noopener noreferrer"className="inline-flex items-center gap-2 text-sm font-black uppercase text-emerald-400 tracking-[0.2em] hover:text-emerald-300 transition-colors">
+ Request My Free Estimate <ArrowRight className="w-4 h-4"/>
  </a>
  </div>
  </div>
@@ -498,7 +498,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  {/* FAQs Section */}
  <div id="faq">
  <EntityFAQs
- entityType={isTreatmentPage ? "treatment" : "service"}
+ entityType={isTreatmentPage ? "treatment": "service"}
  entityName={service.title}
  entitySlug={lastSlug}
  items={treatment?.faq}
@@ -510,13 +510,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div id="surgeons">
  <h2 className="text-2xl font-black font-heading text-slate-900 dark:text-white mb-6 flex items-center">
  <span className="bg-fuchsia-100 dark:bg-fuchsia-900/30 p-2 rounded-lg mr-3 text-fuchsia-600 dark:text-fuchsia-400">
- <GraduationCap className="w-5 h-5" />
+ <GraduationCap className="w-5 h-5"/>
  </span>
  Best Doctors for {service.title} in Vellore, Tamil Nadu
  </h2>
  <div className="grid sm:grid-cols-2 gap-5">
  {relatedDoctors.map((doc) => (
- <DoctorCard key={doc.slug} doctor={doc} variant="grid" />
+ <DoctorCard key={doc.slug} doctor={doc} variant="grid"/>
  ))}
  </div>
  </div>
@@ -544,19 +544,19 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  {/* Entity Clinic Card */}
  <Card className="p-6 border-none shadow-sm rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
  <h3 className="font-black text-slate-900 dark:text-white mb-4 text-lg border-b border-slate-200 dark:border-slate-700 pb-3 flex items-center gap-2">
- <MapPin className="w-5 h-5 text-fuchsia-600" /> Indira Hospital, Vellore
+ <MapPin className="w-5 h-5 text-fuchsia-600"/> Indira Hospital, Vellore
  </h3>
- <div className="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+ <div className="space-y-4 text-sm text-slate-600 dark:text-subtle-on-light">
  <p className="flex items-start gap-3">
- <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5" />
+ <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5"/>
  <span>Recognized as the <strong>Best Hospital for {service.title}</strong> in North Tamil Nadu.</span>
  </p>
  <p className="flex items-start gap-3">
- <Award className="w-4 h-4 text-amber-500 mt-0.5" />
+ <Award className="w-4 h-4 text-amber-500 mt-0.5"/>
  <span>NABH Accredited & ISO Certified care quality.</span>
  </p>
  <p className="flex items-start gap-3">
- <Users className="w-4 h-4 text-blue-500 mt-0.5" />
+ <Users className="w-4 h-4 text-blue-500 mt-0.5"/>
  <span>Highly experienced <strong>Best Doctors for {service.title}</strong> on staff 24/7.</span>
  </p>
  </div>
@@ -564,14 +564,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* Book Appointment */}
  <Card className="p-8 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-[3rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden group/side">
- <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-[40px] group-hover/side:bg-green-500/20 transition-colors" />
+ <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-[40px] group-hover/side:bg-green-500/20 transition-colors"/>
  <div className="relative text-center">
  <div className="w-20 h-20 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover/side:scale-110 transition-transform">
- <MessageCircle className="w-10 h-10 text-green-400" />
+ <MessageCircle className="w-10 h-10 text-green-400"/>
  </div>
  <h4 className="font-black font-heading text-white text-2xl tracking-tight mb-2 uppercase">Free Cost Estimate</h4>
- <p className="text-slate-400 text-sm mt-1 mb-8">No hidden charges. Get exact pricing, insurance coverage, and schedules in under 2 mins.</p>
- <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+ <p className="text-subtle-on-light text-sm mt-1 mb-8">No hidden charges. Get exact pricing, insurance coverage, and schedules in under 2 mins.</p>
+ <a href={whatsappUrl} target="_blank"rel="noopener noreferrer"
  className="w-full inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-black rounded-2xl transition-all shadow-xl shadow-green-500/20 text-lg uppercase tracking-widest group-hover/side:scale-105">
  WhatsApp Now
  </a>
@@ -584,7 +584,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <h3 className="font-bold font-heading text-slate-900 dark:text-white mb-4">Available Near You</h3>
  <div className="flex flex-col gap-3">
  {(service.available_locations as any[]).map((loc: any) => (
- <LocationCard key={loc.slug} location={loc} variant="compact" />
+ <LocationCard key={loc.slug} location={loc} variant="compact"/>
  ))}
  </div>
  </Card>
@@ -595,7 +595,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <h3 className="font-bold font-heading text-slate-900 dark:text-white mb-4">Other Treatments You May Need</h3>
  <div className="flex flex-wrap gap-2">
  {otherServices.slice(0, 10).map((svc: any) => (
- <ServiceCard key={svc.slug} service={svc} variant="compact" />
+ <ServiceCard key={svc.slug} service={svc} variant="compact"/>
  ))}
  </div>
  </Card>
@@ -609,18 +609,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  {/* ========== SEMANTIC INTERNAL LINKING GRID ========== */}
  <div className="bg-slate-50 dark:bg-slate-900 pt-20 border-t border-slate-100 dark:border-slate-800">
  <InternalLinkGrid 
- type="treatments" 
+ type="treatments"
  parentSlug={treatment?.parentServiceSlug || service.slug}
  excludeSlug={service.slug}
-  title={`Other Advanced ${treatment?.parentServiceSlug ? treatment.parentServiceSlug.replace(/-/g, ' ') : 'Medical'} Procedures`}
+ title={`Other Advanced ${treatment?.parentServiceSlug ? treatment.parentServiceSlug.replace(/-/g, ' ') : 'Medical'} Procedures`}
  subtitle="Related Treatments"
  limit={10}
  />
  
  <InternalLinkGrid 
- type="locations" 
+ type="locations"
  title="Available at These Prime Locations"
-  subtitle="Indira Hospital Network"
+ subtitle="Indira Hospital Network"
  limit={8}
  />
  </div>
@@ -630,19 +630,19 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div className="space-y-10">
  <div>
  <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-3">Comprehensive {service.title} Care in Vellore, Tamil Nadu</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed">
  At Indira Hospital, our multidisciplinary approach to <strong>{service.title}</strong> leverages modern medical protocols, ensuring you receive the highest standard of advanced clinical care locally in Vellore. We merge <strong>advanced technology</strong> with compassionate treatment.
  </p>
  </div>
  <div>
  <h5 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-2">State-of-the-Art Facilities for {service.title}</h5>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed">
  Equipped with ultra-sterile operation theaters and specialized ICUs, our infrastructure is designed to handle both routine and complex <strong>{service.title}</strong> interventions safely. We strictly maintain <strong>NABH accredited</strong> hygiene and safety standards.
  </p>
  </div>
  <div>
  <h6 className="text-[17px] font-semibold text-slate-700 dark:text-slate-300 mb-2">Why Consult Our {service.title} Specialists?</h6>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+ <p className="text-slate-600 dark:text-subtle-on-light text-sm leading-relaxed">
  Our team consists of the <strong>Best doctors</strong> and the <strong>Best surgeons</strong> across Tamil Nadu, offering personalized diagnostics and <strong>institutional value</strong> treatment plans. From initial consultation to <strong>same-day discharge</strong> capabilities, your health is our priority.
  </p>
  </div>
@@ -664,7 +664,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* ========== REVIEWS SECTION ========== */}
  <EntityReviews
- entityType={isTreatmentPage ? "service" : "service"}
+ entityType={isTreatmentPage ? "service": "service"}
  entityName={service.title}
  entitySlug={lastSlug}
  title={`${service.title} — Real Patient Results`}
@@ -672,19 +672,19 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  />
 
  {/* UNIFIED ENTITY QUERIES */}
- <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
- <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Our Medical Specialties" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/50" />
- <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
+ <UnifiedEntitySection type="doctors"title="Our Expert Doctors"subtitle="Meet Our Specialists"featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50"/>
+ <UnifiedEntitySection type="departments"title="Our Departments"subtitle="Our Medical Specialties"featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/50"/>
+ <UnifiedEntitySection type="locations"title="Hospital Near You"subtitle="Our Locations"featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700"/>
 
- <InternalLinkGrid type="diagnostics" title="Diagnostic Support" subtitle="Lab Tests for this Procedure" limit={12} className="bg-slate-50 dark:bg-slate-900 border-b" />
- <InternalLinkGrid type="health-packages" title="Post-Treatment Checkups" subtitle="Wellness Care" limit={8} className="bg-white dark:bg-slate-900 border-b" />
+ <InternalLinkGrid type="diagnostics"title="Diagnostic Support"subtitle="Lab Tests for this Procedure"limit={12} className="bg-slate-50 dark:bg-slate-900 border-b"/>
+ <InternalLinkGrid type="health-packages"title="Post-Treatment Checkups"subtitle="Wellness Care"limit={8} className="bg-white dark:bg-slate-900 border-b"/>
 
  {/* INTERNAL LINKING MESH */}
  <InternalLinkGrid
- type={isTreatmentPage ? "services" : "treatments"}
+ type={isTreatmentPage ? "services": "treatments"}
  parentSlug={isTreatmentPage ? undefined : lastSlug}
- title={isTreatmentPage ? "Explore Other Specialities" : `Specialized Procedures`}
- subtitle={isTreatmentPage ? "Comprehensive Care" : `Under ${service.title}`}
+ title={isTreatmentPage ? "Explore Other Specialities": `Specialized Procedures`}
+ subtitle={isTreatmentPage ? "Comprehensive Care": `Under ${service.title}`}
  limit={24}
  className="bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/50"
  />

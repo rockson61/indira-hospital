@@ -72,7 +72,7 @@ export default function SEOPage() {
  '24/7 Emergency Support'
  ].map((item, i) => (
  <li key={i} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
- <div className="w-6 h-6 rounded-full bg-fuchsia-100 flex items-center justify-center text-fuchsia-600 text-xs font-bold">✓</div>
+ <div className="w-6 h-6 rounded-full bg-fuchsia-100 flex items-center justify-center text-fuchsia-600 text-sm font-bold">✓</div>
  <span className="text-slate-700 font-medium">{item}</span>
  </li>
  ))}
