@@ -20,7 +20,8 @@ directories.forEach(dirName => {
     }
 
     const pageFilePath = path.join(slugDirPath, 'page.tsx');
-    const pageContent = `import ServiceDetailPage, { generateMetadata as parentGenerateMetadata } from '../../[...slug]/page';
+    const pageContent = `export const runtime = 'edge';
+import ServiceDetailPage, { generateMetadata as parentGenerateMetadata } from '../../[...slug]/page';
 import { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import ServiceDetailPage, { generateMetadata as parentGenerateMetadata } from '../../[...slug]/page';
 import { Metadata } from 'next';
 
