@@ -14,6 +14,14 @@ export function middleware(request: NextRequest) {
     return new NextResponse('Forbidden', { status: 403 });
   }
 
+  // Domain Canonicalization: Redirect non-www to www
+  const host = request.headers.get('host') || '';
+  if (host === 'indirasuperspecialityhospital.com') {
+    const url = request.nextUrl.clone();
+    url.host = 'www.indirasuperspecialityhospital.com';
+    return NextResponse.redirect(url, 301);
+  }
+
   return NextResponse.next();
 }
 

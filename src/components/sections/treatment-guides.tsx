@@ -34,10 +34,10 @@ const guidesData = [
  ]
  },
  {
- category: "Children&apos;s Health",
+ category: "Children's Health",
  links: [
  "Blood and Marrow Transplant", "Childhood Leukemia", "Childhood Lymphoma",
- "Children&apos;s Health", "Congenital Heart Disease", "Cystic Fibrosis", "Epilepsy",
+ "Children's Health", "Congenital Heart Disease", "Cystic Fibrosis", "Epilepsy",
  "Fractures", "Headache", "Hypoplastic Left Heart Syndrome (HLHS)",
  "Inflammatory Bowel Disease", "Juvenile Arthritis", "Orthopaedics",
  "Pain/RSD/CRPS", "Pectus Excavatum", "Pediatric Liver Transplant", "Sarcoma",
@@ -104,7 +104,7 @@ const guidesData = [
  links: [
  "Bladder Cancer", "Chronic Kidney Disease", "Genitourinary Reconstruction",
  "Infertility", "Kidney Cancer", "Kidney Stones", "Kidney Transplant Surgery",
- "Male Fertility Preservation Options", "Peyronie&apos;s Disease", "Prolapse and Incontinence",
+ "Male Fertility Preservation Options", "Peyronie's Disease", "Prolapse and Incontinence",
  "Prostate Cancer", "Resistant Hypertension", "Testicular Cancer Treatment",
  "Transitional Urology"
  ]
@@ -116,7 +116,7 @@ const guidesData = [
  ]
  },
  {
- category: "Women&apos;s Health",
+ category: "Women's Health",
  links: [
  "Birth Control Options", "Breast Cancer", "Cervical Cancer", "Chronic Pelvic Pain",
  "Endometriosis", "Fibroids", "Gynecological Cancer", "Hair Loss in Women",

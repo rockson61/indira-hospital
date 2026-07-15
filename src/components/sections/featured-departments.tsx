@@ -19,7 +19,7 @@ export async function FeaturedDepartments() {
  <div className="mx-auto max-w-7xl px-6 lg:px-8">
  <div className="flex justify-between items-end mb-12">
  <SectionHeader
- title="Elite Medical Units"
+ title="Our Medical Specialties"
  subtitle="Our Specialties"
  description="World-class medical care across a wide range of specialties, powered by clinical expertise and advanced technology."
  align="left"

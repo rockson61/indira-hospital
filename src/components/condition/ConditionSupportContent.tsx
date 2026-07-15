@@ -331,7 +331,7 @@ export function ConditionSupportContent({ conditionName, conditionSlug, cityName
 
  <SectionContainer className="py-12 bg-gradient-to-br from-blue-50 via-fuchsia-50/50 to-cyan-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.remedies}>
  <div className="elite-card dark:bg-slate-900 rounded-3xl p-8 border border-fuchsia-200/50 dark:border-fuchsia-600/30 shadow-float">
- <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🌿 Home Remedies &amp; Myths</h2>
+ <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">🌿 Home Remedies & Myths</h2>
  <p className="text-foreground/80 leading-relaxed mb-4">
  <strong>Temporary relief options:</strong> Warm salt-water rinses (1 tsp salt in 250ml water), cold compress (15 minutes on/off), ibuprofen 400mg every 6 hours. <strong>Avoid:</strong> Aspirin on gums (causes burns), undiluted clove oil, hot compresses (increases swelling).
  </p>

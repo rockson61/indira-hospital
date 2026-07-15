@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { Metadata } from "next";
 import { getDirectusClient } from "@/lib/directus";
 import { readItems } from "@directus/sdk";
@@ -104,7 +105,7 @@ export default async function BlogPostPage({
  {formattedTitle}
  </h1>
  
- <p className="text-xl sm:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed italic opacity-80">
+ <p className="text-xl sm:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed opacity-80">
  {post.excerpt}
  </p>
  </div>

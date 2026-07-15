@@ -57,7 +57,7 @@ export default function VoiceSurgeryPage() {
  {/* Mechanism: The Anatomy of Vibration */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-fuchsia-50/50 dark:bg-fuchsia-950/20 border border-fuchsia-100 dark:border-fuchsia-900/50 text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-400/10 blur-3xl -z-10" />
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-heading uppercase tracking-tighter italic">
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-heading uppercase tracking-tighter">
  Mechanism: Micro-Dissection vs Tissue Trauma
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -66,7 +66,7 @@ export default function VoiceSurgeryPage() {
  The vocal folds are composed of multiple delicate layers. The outermost layer—the epithelium—must remain supple to vibrate at high frequencies. Traditional surgery often leaves scars that stiffen these layers, resulting in a permanent breathy or rough voice.
  </p>
  <p className="mt-4">
- **Elite Phonosurgery** at Indira is performed using a "Cold Steel" technique. We avoid lasers that generate heat, which can cause thermal damage to the deep Reinke&apos;s space. By using delicate microscopic shears, we preserve the healthy tissue, ensuring your voice returns with its natural tone and range.
+ **Elite Phonosurgery** at Indira is performed using a "Cold Steel" technique. We avoid lasers that generate heat, which can cause thermal damage to the deep Reinke's space. By using delicate microscopic shears, we preserve the healthy tissue, ensuring your voice returns with its natural tone and range.
  </p>
  <div className="mt-8 space-y-4 text-sm font-medium">
  <div className="flex items-center gap-3">
@@ -82,7 +82,7 @@ export default function VoiceSurgeryPage() {
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-fuchsia-100 dark:border-fuchsia-800 shadow-xl flex flex-col justify-center">
  <Radio className="w-16 h-16 text-fuchsia-500 mb-6" />
  <h4 className="text-xl font-bold mb-2">The Absolute Voice Rest (AVR)</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 italic border-l-2 border-fuchsia-100 pl-4">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 border-l-2 border-fuchsia-100 pl-4">
  Post-surgery, we implement a strict 7-day AVR protocol. This allows the mucosal lining to heal primarily, preventing the formation of granulomas or structural scars.
  </p>
  <div className="inline-flex items-center gap-2 text-fuchsia-600 font-bold text-xs uppercase tracking-widest">
@@ -96,18 +96,18 @@ export default function VoiceSurgeryPage() {
  {/* Specialized Phonosurgery Grid */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-950/30 to-transparent" />
- <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-fuchsia-300 uppercase tracking-widest leading-none">Clinical Voice Care Spectrum</h3>
+ <h3 className="font-heading text-3xl font-bold mb-8 font-heading text-fuchsia-300 uppercase tracking-widest leading-none">Clinical Voice Care Spectrum</h3>
  <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
  {[
  { title: "Vocal Nodules", desc: "Callus-like growths caused by chronic vocal strain or professional speaking.", icon: Mic },
  { title: "Vocal Polyps", desc: "Fluid-filled bumps appearing after severe acute vocal trauma.", icon: Activity },
- { title: "Reinke&apos;s Edema", desc: "Swelling caused by smoking, leading to a permanent low-pitched voice.", icon: Droplets },
+ { title: "Reinke's Edema", desc: "Swelling caused by smoking, leading to a permanent low-pitched voice.", icon: Droplets },
  { title: "Laryngeal Papillomas", desc: "Structural growths that can obstruct breathing if left untreated.", icon: Flame }
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-fuchsia-500/50 transition-all">
  <item.icon className="w-8 h-8 text-fuchsia-400 mb-4" />
  <h4 className="font-bold text-lg mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-400 leading-relaxed italic">{item.desc}</p>
+ <p className="text-[10px] text-slate-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -116,7 +116,7 @@ export default function VoiceSurgeryPage() {
  {/* Integrated Voice Hub Section */}
  <section className="text-left">
  <div className="mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter italic border-b-2 border-fuchsia-100 inline-block">Professional Voice Diagnostics</h3>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter border-b-2 border-fuchsia-100 inline-block">Professional Voice Diagnostics</h3>
  <p className="text-slate-600 dark:text-slate-400 mt-2">Stroboscopy: The diagnostic gold standard for fine-vibration flaws.</p>
  </div>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -126,7 +126,7 @@ export default function VoiceSurgeryPage() {
  </p>
  <div className="p-6 bg-fuchsia-50 dark:bg-fuchsia-950/20 rounded-3xl border border-fuchsia-100 dark:border-fuchsia-900 shadow-sm">
  <h5 className="font-bold mb-2">Integrated Voice Therapy</h5>
- <p className="text-sm text-slate-600 dark:text-slate-400 italic">"Post-op surgery is only half the cure. Our specialized speech pathologists help you retrain your vocal muscles to prevent the return of nodules and polyps."</p>
+ <p className="text-sm text-slate-600 dark:text-slate-400">"Post-op surgery is only half the cure. Our specialized speech pathologists help you retrain your vocal muscles to prevent the return of nodules and polyps."</p>
  </div>
  </div>
  <div className="grid grid-cols-2 gap-4">
@@ -159,12 +159,12 @@ export default function VoiceSurgeryPage() {
  a: "No. Microlaryngeal surgery is performed entirely through the mouth using specialized laryngoscopes. There are no external incisions or visible scars."
  },
  {
- q: "Why can&apos;t I whisper during voice rest?",
+ q: "Why can't I whisper during voice rest?",
  a: "Whispering actually puts *more* strain on the vocal cords than normal talking. It forces the muscles to tighten in an unnatural way, which can disrupt the delicate mucosal healing process."
  },
  {
  q: "Will my voice sound different forever?",
- a: "In most cases where polyps or nodules are removed, the voice returns to its natural, clear state once healing is complete. In fact, many patients report a&apos;clearer' voice than they had for years."
+ a: "In most cases where polyps or nodules are removed, the voice returns to its natural, clear state once healing is complete. In fact, many patients report a'clearer' voice than they had for years."
  },
  {
  q: "How soon can I return to professional singing?",
@@ -172,7 +172,7 @@ export default function VoiceSurgeryPage() {
  },
  {
  q: "What role does Acid Reflux (GERD) play in voice loss?",
- a: "Reflux can cause 'Laryngopharyngeal Reflux' (LPR), where stomach acid burns the vocal cords. We often manage reflux aggressively alongside surgery to ensure growths don&apos;t return."
+ a: "Reflux can cause 'Laryngopharyngeal Reflux' (LPR), where stomach acid burns the vocal cords. We often manage reflux aggressively alongside surgery to ensure growths don't return."
  }
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group">
@@ -180,7 +180,7 @@ export default function VoiceSurgeryPage() {
  <Zap className="w-4 h-4 mt-1 text-fuchsia-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>

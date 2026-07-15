@@ -17,7 +17,7 @@ export default function PCODManagementPage() {
  title="Elite PCOD & PCOS Treatment in Vellore, Tamil Nadu"
  slug="pcod-pcos-treatment-guide"
  parentServiceSlug="obstetrics-gynaecology"
- departmentName="Indira Elite Women&apos;s Care"
+ departmentName="Indira Elite Women's Care"
  description={
  <article>
  <p className="text-lg leading-relaxed">
@@ -80,7 +80,7 @@ export default function PCODManagementPage() {
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-rose-100 dark:border-slate-800 shadow-2xl">
  <Leaf className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Hormonal Balance</p>
- <p className="text-slate-500 text-sm italic pr-4">Restoring your body&apos;s natural cyclical rhythm through evidence-based lifestyle and medical support.</p>
+ <p className="text-slate-500 text-sm pr-4">Restoring your body's natural cyclical rhythm through evidence-based lifestyle and medical support.</p>
  </div>
  </div>
  </div>
@@ -112,12 +112,12 @@ export default function PCODManagementPage() {
  ))}
  </div>
 
- <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">A Personalized Roadmap to Reversal</h3>
+ <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 font-serif">A Personalized Roadmap to Reversal</h3>
  <p>
  The "Indira PCOS Protocol" is built on four pillars: **Metabolic Audit, Clinical Nutrition, Stress Resilience, and Targeted Medical Therapy**. We track your progress through objective data—not just how you feel, but through monthly monitoring of insulin levels, BMI, and hormonal ratios. This scientific approach ensures that we are making real progress toward reversing the condition and preventing its long-term complications.
  </p>
 
- <h4 className="font-heading text-fuchsia-700 dark:text-rose-400 mt-10">What are the Benefits of Women&apos;s Care Surgery?</h4>
+ <h4 className="font-heading text-fuchsia-700 dark:text-rose-400 mt-10">What are the Benefits of Women's Care Surgery?</h4>
  <ul>
  <li>**Advanced Pelvic Ultrasound**: Identifying 'string of pearls' follicles and monitoring endometrial thickness with high clarity.</li>
  <li>**In-house Metabolic Lab**: Rapid testing for oral glucose tolerance and fasting insulin levels.</li>
@@ -146,11 +146,11 @@ export default function PCODManagementPage() {
  },
  {
  q: "Is taking the 'Pill' the only treatment?",
- a: "No. Birth control pills only manage the cycle; they don&apos;t fix the underlying metabolic issue. We use a combination of insulin sensitizers, anti-androgens, and diet therapy for a more comprehensive result."
+ a: "No. Birth control pills only manage the cycle; they don't fix the underlying metabolic issue. We use a combination of insulin sensitizers, anti-androgens, and diet therapy for a more comprehensive result."
  },
  {
  q: "Why am I gaining weight even though I eat little?",
- a: "In PCOS, insulin resistance causes your body to store fat more aggressively. It&apos;s not about 'eating less,' but about eating 'low-insulin-trigger' foods that we will help you identify."
+ a: "In PCOS, insulin resistance causes your body to store fat more aggressively. It's not about 'eating less,' but about eating 'low-insulin-trigger' foods that we will help you identify."
  }
  ].map((faq, idx) => (
  <div key={idx} className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-colors">

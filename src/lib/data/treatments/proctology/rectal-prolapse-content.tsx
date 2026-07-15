@@ -22,7 +22,7 @@ export const RectalProlapseLongForm = () => {
 
  {/* Section 2: What is Rectal Prolapse? Pathophysiology */}
  <section id="what-is-prolapse">
- <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic underline decoration-fuchsia-200">Understanding Rectal Prolapse: Anatomy of the Descent</h2>
+ <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading underline decoration-fuchsia-200">Understanding Rectal Prolapse: Anatomy of the Descent</h2>
  <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
  <p>
  The rectum is normally held in place by strong ligaments and muscles. When these supports weaken due to age, chronic straining, or multiple childbirths, the rectum can slide out of place. Rectal prolapse is categorized into three stages at Indira Hospital:
@@ -30,15 +30,15 @@ export const RectalProlapseLongForm = () => {
  <div className="grid md:grid-cols-3 gap-6 pt-4">
  <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-3">
  <h4 className="font-bold text-slate-900 text-lg">Internal Prolapse</h4>
- <p className="text-sm text-slate-500 italic font-medium">Internal Intussusception: The rectum starts to slide but doesn&apos;t yet protrude through the anus.</p>
+ <p className="text-sm text-slate-500 font-medium">Internal Intussusception: The rectum starts to slide but doesn't yet protrude through the anus.</p>
  </div>
  <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-3">
  <h4 className="font-bold text-slate-900 text-lg">Mucosal Prolapse</h4>
- <p className="text-sm text-slate-500 italic font-medium">Only the lining of the rectum slides out of the anus. Often mistaken for large hemorrhoids.</p>
+ <p className="text-sm text-slate-500 font-medium">Only the lining of the rectum slides out of the anus. Often mistaken for large hemorrhoids.</p>
  </div>
  <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-3">
  <h4 className="font-bold text-slate-900 text-lg">Full-Thickness Prolapse</h4>
- <p className="text-sm text-slate-500 italic font-medium">The entire wall of the rectum protrudes through the anus, often appearing as concentric rings of tissue.</p>
+ <p className="text-sm text-slate-500 font-medium">The entire wall of the rectum protrudes through the anus, often appearing as concentric rings of tissue.</p>
  </div>
  </div>
  </div>
@@ -79,7 +79,7 @@ export const RectalProlapseLongForm = () => {
 
  {/* Section 4: Why Prolapse is Not Piles: The Difference */}
  <section id="prolapse-vs-piles" className="bg-slate-900 rounded-[3rem] p-12 text-white">
- <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Prolapse vs. Hemorrhoids: Don&apos;t Confuse the Two</h2>
+ <h2 className="text-3xl font-bold mb-8 text-center font-heading text-fuchsia-300">Prolapse vs. Hemorrhoids: Don't Confuse the Two</h2>
  <div className="grid md:grid-cols-2 gap-10">
  <div className="space-y-4">
  <h4 className="font-bold text-xl text-red-400">Piles (Hemorrhoids)</h4>
@@ -91,13 +91,13 @@ export const RectalProlapseLongForm = () => {
  </div>
  </div>
  <div className="mt-8 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 text-center">
- <p className="text-sm text-white/50 italic">Misdiagnosis is common. At Indira Hospital, we use Video Defecography to confirm structural prolapse with 100% accuracy.</p>
+ <p className="text-sm text-white/50">Misdiagnosis is common. At Indira Hospital, we use Video Defecography to confirm structural prolapse with 100% accuracy.</p>
  </div>
  </section>
 
  {/* Section 5: Robotic-Assisted & Laparoscopic Rectopexy */}
  <section id="the-fix">
- <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic underline decoration-fuchsia-200">The Modern Solution: Laparoscopic Ventral Mesh Rectopexy</h2>
+ <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading underline decoration-fuchsia-200">The Modern Solution: Laparoscopic Ventral Mesh Rectopexy</h2>
  <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
  <p>
  At our Vellore center, we avoid traditional perineal cuts which have high recurrence rates. Instead, we perform <strong>Laparoscopic Rectopexy</strong>. Through tiny 5-10mm incisions in the abdomen, we use a specialize biological or synthetic mesh to anchor the rectum back to its natural position.
@@ -121,7 +121,7 @@ export const RectalProlapseLongForm = () => {
 
  {/* Section 6: Recovery Path at Indira Hospital */}
  <section id="recovery">
- <h2 className="text-3xl font-bold text-slate-900 mb-6 italic">Post-Operative Recovery and Pelvic Floor Wellness</h2>
+ <h2 className="text-3xl font-bold text-slate-900 mb-6">Post-Operative Recovery and Pelvic Floor Wellness</h2>
  <div className="p-8 bg-fuchsia-50 rounded-[3rem] border border-fuchsia-100 space-y-6">
  <p className="text-lg text-slate-700 leading-relaxed font-medium">
  Repairing the prolapse is only step one. At Indira Super Speciality Hospital, we ensure a comprehensive recovery path:
@@ -129,11 +129,11 @@ export const RectalProlapseLongForm = () => {
  <div className="grid md:grid-cols-2 gap-8">
  <div className="space-y-3">
  <h4 className="font-bold text-slate-900 border-b border-fuchsia-200 pb-2">Hospital Stay</h4>
- <p className="text-sm text-slate-500 italic">Duration: 2-3 Days. You&apos;ll be walking and on a liquid-to-soft diet within 24 hours of laparoscopic surgery.</p>
+ <p className="text-sm text-slate-500">Duration: 2-3 Days. You'll be walking and on a liquid-to-soft diet within 24 hours of laparoscopic surgery.</p>
  </div>
  <div className="space-y-3">
  <h4 className="font-bold text-slate-900 border-b border-fuchsia-200 pb-2">Pelvic Floor Rehab</h4>
- <p className="text-sm text-slate-500 italic">We provide specialized exercises (Kegels) and motility mapping to ensure your bowel movements are regular and strain-free.</p>
+ <p className="text-sm text-slate-500">We provide specialized exercises (Kegels) and motility mapping to ensure your bowel movements are regular and strain-free.</p>
  </div>
  </div>
  </div>
@@ -175,20 +175,20 @@ export const RectalProlapseLongForm = () => {
  <div className="grid md:grid-cols-2 gap-4">
  <div className="p-4 bg-white rounded-2xl shadow-sm border border-fuchsia-200 text-center">
  <span className="text-sm font-bold text-fuchsia-600 block">Cashless Insurance</span>
- <span className="text-xs text-slate-400 font-bold uppercase italic">Full Pre-Auth Support</span>
+ <span className="text-xs text-slate-400 font-bold uppercase">Full Pre-Auth Support</span>
  </div>
  <div className="p-4 bg-white rounded-2xl shadow-sm border border-fuchsia-200 text-center">
  <span className="text-sm font-bold text-fuchsia-600 block">EMI Options</span>
- <span className="text-xs text-slate-400 font-bold uppercase italic">For Non-Insured Cases</span>
+ <span className="text-xs text-slate-400 font-bold uppercase">For Non-Insured Cases</span>
  </div>
  </div>
- <p className="text-sm text-slate-400 italic font-medium">Includes high-grade imported mesh (if applicable), hospital admission, surgical fees, and multi-disciplinary care team assessment.</p>
+ <p className="text-sm text-slate-400 font-medium">Includes high-grade imported mesh (if applicable), hospital admission, surgical fees, and multi-disciplinary care team assessment.</p>
  </div>
  </section>
 
  {/* Section 9: FAQ Section */}
  <section id="faqs" className="pt-12 border-t border-slate-200">
- <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3 italic">
+ <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
  <HelpCircle className="w-10 h-10 text-fuchsia-600" />
  Frequently Asked Questions (Rectal Prolapse)
  </h2>
@@ -199,13 +199,13 @@ export const RectalProlapseLongForm = () => {
  { q: "What is the Tamil name for Rectal Prolapse?", a: "It is often referred to as 'ஆசனவாய் வெளியே தள்ளுதல்' (Aasanavaai veliye thalluthal) in common Tamil parlance." },
  { q: "Is laparoscopic rectopexy better than perineal surgery?", a: "Yes. Laparoscopic surgery has a much lower recurrence rate (under 5%) compared to perineal procedures (which can have up to 20% recurrence)." },
  { q: "How long after surgery can I lift weights?", a: "We recommend avoiding heavy lifting (more than 5kg) for at least 6-8 weeks to allow the mesh and internal sutures to heal correctly." },
- { q: "Will my bowel movements return to normal?", a: "Yes, most patients see a significant improvement in both constipation and incontinence within 3 months of surgery as the rectum&apos;s structural anatomy is restored." }
+ { q: "Will my bowel movements return to normal?", a: "Yes, most patients see a significant improvement in both constipation and incontinence within 3 months of surgery as the rectum's structural anatomy is restored." }
  ].map((faq, index) => (
  <div key={index} className="bg-slate-50 p-6 rounded-2xl space-y-2">
  <h4 className="text-lg font-bold text-slate-900 flex gap-2">
  <span className="text-fuchsia-600">Q.</span> {faq.q}
  </h4>
- <p className="text-slate-600 pl-6 text-sm italic font-medium leading-relaxed">{faq.a}</p>
+ <p className="text-slate-600 pl-6 text-sm font-medium leading-relaxed">{faq.a}</p>
  </div>
  ))}
  </div>
@@ -217,9 +217,9 @@ export const RectalProlapseLongForm = () => {
  <div className="inline-flex p-4 rounded-full bg-white shadow-soft">
  <Target className="w-10 h-10 text-fuchsia-600" />
  </div>
- <h2 className="text-3xl font-bold text-slate-900 italic font-heading">Restore Your Pelvic Foundation</h2>
- <p className="text-lg text-slate-600 leading-relaxed font-medium italic">
- Don&apos;t let prolapse limit your world. Discover the precision of laparoscopic restoration at Vellore&apos;s most advanced proctological center.
+ <h2 className="text-3xl font-bold text-slate-900 font-heading">Restore Your Pelvic Foundation</h2>
+ <p className="text-lg text-slate-600 leading-relaxed font-medium">
+ Don't let prolapse limit your world. Discover the precision of laparoscopic restoration at Vellore's most advanced proctological center.
  </p>
  <div className="flex flex-wrap justify-center gap-6 pt-4">
  <span className="flex items-center gap-2 text-sm text-slate-400 font-bold"><ShieldCheck className="w-4 h-4 text-emerald-500 font-bold" /> NABH Standards</span>

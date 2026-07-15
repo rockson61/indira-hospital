@@ -1,3 +1,4 @@
+import type { ComponentType, SVGProps } from "react";
 import { FileBox, Building, Plane, Globe, Compass, Wallet, Bus, ClipboardList, Shield, Sparkles } from "lucide-react";
 import { Stethoscope, HeartCardiogram } from "healthicons-react/outline";
 
@@ -7,7 +8,7 @@ export interface PatientResource {
  title: string;
  short_description: string;
  full_content: string;
- icon: any; // Lucide icon
+ icon: ComponentType<SVGProps<SVGSVGElement>>;
  category: "Information" | "Travel" | "Billing" | "Concierge";
  customHref?: string;
 }
@@ -429,21 +430,21 @@ For your convenience, Indira Super Speciality Hospital offers a secure online pa
 `
  },
 
- // Elite Concierge & Hospitality Category
+ // Patient Concierge & Hospitality Category
  {
  id: "elite-concierge",
  slug: "elite-concierge",
- title: "Elite Concierge Services",
+ title: "Patient Concierge Services",
  short_description: "Experience premium hospitality with a dedicated healthcare relationship manager.",
  icon: Sparkles,
  category: "Concierge",
  customHref: "/patients/concierge",
  full_content: `
-## Elite Patient Concierge
-At Indira Super Speciality Hospital, we believe that clinical excellence should be matched by world-class hospitality. Our Elite Concierge service ensures that every aspect of your stay is comfortable, dignified, and stress-free.
+## Patient Concierge & Hospitality
+At Indira Super Speciality Hospital, we believe that clinical excellence should be matched by world-class hospitality. Our Patient Concierge service ensures that every aspect of your stay is comfortable, dignified, and stress-free.
 
 ### Personalized Relationship Management
-Upon choosing our Elite care path, you are assigned a dedicated Relationship Manager who will:
+Upon choosing our premium care path, you are assigned a dedicated Relationship Manager who will:
 * Coordinate all appointments and diagnostic schedules.
 * Handle insurance and billing documentation.
 * Arrange for premium room upgrades and specialized dietary requirements.

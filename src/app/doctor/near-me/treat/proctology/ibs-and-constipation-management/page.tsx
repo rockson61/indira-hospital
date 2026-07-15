@@ -63,7 +63,7 @@ export default function IBSConstipationPage() {
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
  <div className="prose prose-slate dark:prose-invert">
  <p className="text-lg leading-relaxed">
- IBS is a functional gastrointestinal disorder. This means that while your gut may look normal during a colonoscopy, it isn&apos;t "functioning" correctly. It&apos;s often caused by communication issues between the brain and the enteric nervous system, leading to abnormal muscle contractions.
+ IBS is a functional gastrointestinal disorder. This means that while your gut may look normal during a colonoscopy, it isn't "functioning" correctly. It's often caused by communication issues between the brain and the enteric nervous system, leading to abnormal muscle contractions.
  </p>
  <p className="mt-4">
  In **Chronic Constipation**, the issue is often structural or behavioral. "Slow Transit" occurs when the colon muscles move too slowly, while "Dyssynergic Defecation" happens when the pelvic floor muscles fail to relax during a bowel movement. Our **Elite Motility Lab** identifies these specific failures to build a targeted recovery plan.
@@ -82,8 +82,8 @@ export default function IBSConstipationPage() {
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
  <Brain className="w-16 h-16 text-emerald-500 mb-6" />
  <h4 className="text-xl font-bold mb-2">The "Indira" Microbiome Audit</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading italic border-l-2 border-emerald-100 pl-4">
- We don&apos;t just prescribe laxatives. We audit your diet, stress levels, and bacterial balance to eliminate SIBO (Small Intestinal Bacterial Overgrowth) and restore your "Gut Rhythms."
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading border-l-2 border-emerald-100 pl-4">
+ We don't just prescribe laxatives. We audit your diet, stress levels, and bacterial balance to eliminate SIBO (Small Intestinal Bacterial Overgrowth) and restore your "Gut Rhythms."
  </p>
  <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
  <Shield className="w-4 h-4" />
@@ -96,17 +96,17 @@ export default function IBSConstipationPage() {
  {/* Regional Factors - Vellore Residents */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
- <h2 className="font-heading text-3xl font-bold mb-8 text-center italic font-heading text-emerald-300">Why Digestive Disorders are Prevalent in Vellore</h2>
+ <h2 className="font-heading text-3xl font-bold mb-8 text-center font-heading text-emerald-300">Why Digestive Disorders are Prevalent in Vellore</h2>
  <div className="grid md:grid-cols-3 gap-10 text-left relative z-10">
  {[
  { title: "South Indian Diet", desc: "Highly refined rice and spicy condiments can irritate the bowel lining, triggering IBS in sensitive individuals.", icon: Utensils },
- { title: "Dehydration (Heat)", desc: "Vellore&apos;s intense heat causes rapid moisture loss, leading to harder stools and chronic constipation.", icon: Droplets },
+ { title: "Dehydration (Heat)", desc: "Vellore's intense heat causes rapid moisture loss, leading to harder stools and chronic constipation.", icon: Droplets },
  { title: "Workplace Stress", desc: "Long sedentary hours and high-pressure roles impact the enteric nervous system, leading to motility failures.", icon: Activity }
  ].map((item, i) => (
  <div key={i} className="p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-emerald-500/50 transition-all">
  <item.icon className="w-10 h-10 text-emerald-400 mb-4" />
  <h4 className="font-bold text-xl mb-2">{item.title}</h4>
- <p className="text-sm text-slate-400 leading-relaxed italic">{item.desc}</p>
+ <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -115,7 +115,7 @@ export default function IBSConstipationPage() {
  {/* Management Roadmap */}
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter italic">Motility Restoration Timeline</h3>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter">Motility Restoration Timeline</h3>
  <p className="text-slate-600 dark:text-slate-400">Reclaiming your digestive health is a structured journey, not a quick fix.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
@@ -128,7 +128,7 @@ export default function IBSConstipationPage() {
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-xl transition-all border-b-4 border-emerald-600">
  <p className="text-emerald-500 font-black mb-2 uppercase tracking-widest text-[10px]">{step.day}</p>
  <h5 className="font-bold text-sm mb-2">{step.title}</h5>
- <p className="text-xs text-slate-400 leading-relaxed font-medium italic">{step.text}</p>
+ <p className="text-xs text-slate-400 leading-relaxed font-medium">{step.text}</p>
  </div>
  ))}
  </div>
@@ -172,7 +172,7 @@ export default function IBSConstipationPage() {
  <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>

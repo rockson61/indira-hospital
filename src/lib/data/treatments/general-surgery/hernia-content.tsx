@@ -26,7 +26,7 @@ export const HerniaLongForm = () => {
  <div className="hernia-longform-content space-y-16 py-8">
  {/* 1. Executive Summary */}
  <section className="executive-summary">
- <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-heading italic underline decoration-indigo-600/20 underline-offset-8">
+ <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8 font-heading underline decoration-indigo-600/20 underline-offset-8">
  Comprehensive Guide to Laparoscopic Hernia Repair in Vellore
  </h2>
  <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -51,7 +51,7 @@ export const HerniaLongForm = () => {
  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
  An abdominal wall hernia occurs when internal organs (most commonly the intestine) or fatty tissue push through a weak spot or opening in the muscle wall. Think of it as a "hole in a tire" where the inner tube bulges out through the outer casing.
  </p>
- <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mt-6 font-heading text-xl uppercase italic">Common Types of Hernia:</h4>
+ <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mt-6 font-heading text-xl uppercase">Common Types of Hernia:</h4>
  <div className="space-y-4">
  {[
  { t: 'Inguinal Hernia', d: 'The most common type, occurring in the groin canal. Predominantly affects men.' },
@@ -63,7 +63,7 @@ export const HerniaLongForm = () => {
  <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 shrink-0" />
  <div>
  <p className="font-bold text-slate-900 m-0 text-sm">{item.t}</p>
- <p className="text-xs text-slate-500 m-0 italic">{item.d}</p>
+ <p className="text-xs text-slate-500 m-0">{item.d}</p>
  </div>
  </div>
  ))}
@@ -74,7 +74,7 @@ export const HerniaLongForm = () => {
  <AlertOctagon className="text-red-600 w-12 h-12 animate-pulse" />
  <h4 className="font-black text-red-900 dark:text-red-400 font-heading uppercase tracking-tighter">Emergency Warning: Strangulation</h4>
  </div>
- <p className="text-sm text-red-800 dark:text-red-300 leading-relaxed italic mb-8 font-medium">
+ <p className="text-sm text-red-800 dark:text-red-300 leading-relaxed mb-8 font-medium">
  If your hernia bulge becomes hard, red, or excruciatingly painful, it may be <strong>strangulated</strong>. This means the blood supply to the intestine is cut off. Seek immediate surgical intervention if you experience:
  </p>
  <ul className="space-y-3">
@@ -91,16 +91,16 @@ export const HerniaLongForm = () => {
  <section className="tech-advantage bg-slate-900 rounded-[4rem] p-16 text-white relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
  <div className="max-w-4xl relative z-10 mx-auto text-center">
- <h2 className="text-4xl font-black mb-10 text-indigo-400 font-heading italic uppercase tracking-tighter shrink-0">Laparoscopic vs. Open Surgery</h2>
+ <h2 className="text-4xl font-black mb-10 text-indigo-400 font-heading uppercase tracking-tighter shrink-0">Laparoscopic vs. Open Surgery</h2>
  <div className="grid md:grid-cols-2 gap-12 text-left">
  <div className="space-y-6">
- <h4 className="text-2xl font-bold font-heading italic text-indigo-100 uppercase italic">Keyhole Precision (TAPP / TEP)</h4>
- <p className="text-slate-400 leading-relaxed italic text-sm">
+ <h4 className="text-2xl font-bold font-heading italic text-indigo-100 uppercase">Keyhole Precision (TAPP / TEP)</h4>
+ <p className="text-slate-400 leading-relaxed text-sm">
  At Indira Hospital, we specialize in the **Transabdominal Preperitoneal (TAPP)** and **Totally Extraperitoneal (TEP)** laparoscopic techniques. Instead of a 4-inch incision, we use three 5mm ports. This allows the surgeon to place the mesh <strong>behind</strong> the defect, using the natural internal pressure of the abdomen to keep the mesh secured.
  </p>
  <div className="p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[3rem] shadow-inner">
  <h5 className="text-indigo-400 font-black text-xs uppercase tracking-[0.2em] mb-4">Clinical Benefits:</h5>
- <ul className="space-y-3 text-xs font-bold italic text-white/70">
+ <ul className="space-y-3 text-xs font-bold text-white/70">
  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Minimal post-operative pain</li>
  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Practically invisible 'keyhole' scars</li>
  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> 24-hour hospital stay (Day Care in some cases)</li>
@@ -111,7 +111,7 @@ export const HerniaLongForm = () => {
  <div className="bg-white dark:bg-slate-900 p-12 rounded-[4rem] border border-slate-200 dark:border-slate-800 flex flex-col justify-center group/card">
  <h3 className="text-fuchsia-400 text-6xl font-black mb-4 font-heading tracking-tighter transition-transform group-hover/card:scale-110">0.5%</h3>
  <p className="text-indigo-200 font-black uppercase tracking-widest text-xs mb-6">Recurrence Rate at Indira</p>
- <p className="text-slate-400 text-xs leading-relaxed italic mb-8 opacity-80">
+ <p className="text-slate-400 text-xs leading-relaxed mb-8 opacity-80">
  Our mastery of 3D-Mesh positioning has reduced the recurrence rate to the lowest in the region. Traditional open surgery often carries a 5-10% recurrence depending on the technique.
  </p>
  <div className="w-full h-1 bg-white dark:bg-slate-900 rounded-full overflow-hidden">
@@ -126,8 +126,8 @@ export const HerniaLongForm = () => {
  <section className="mesh-tech py-12">
  <div className="flex flex-col md:flex-row gap-16 items-center">
  <div className="md:w-1/2 space-y-8">
- <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic m-0 tracking-tighter uppercase italic">The 3D Anatomical Mesh</h2>
- <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic text-lg opacity-80 font-light">
+ <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic m-0 tracking-tighter uppercase">The 3D Anatomical Mesh</h2>
+ <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg opacity-80 font-light">
  Traditional meshes are flat, requiring extensive suturing or stapling to stay in place. We use <strong>anatomically contoured 3D meshes</strong> that match the direct curvature of the abdominal wall.
  </p>
  <div className="grid grid-cols-1 gap-6">
@@ -142,7 +142,7 @@ export const HerniaLongForm = () => {
  </div>
  <div>
  <h4 className="font-bold text-slate-900 dark:text-white text-md m-0">{item.t}</h4>
- <p className="text-xs text-slate-500 m-0 italic font-medium">{item.d}</p>
+ <p className="text-xs text-slate-500 m-0 font-medium">{item.d}</p>
  </div>
  </div>
  ))}
@@ -150,15 +150,15 @@ export const HerniaLongForm = () => {
  </div>
  <div className="md:w-1/2 bg-indigo-50 dark:bg-indigo-950/30 p-12 rounded-[5rem] border border-indigo-100 dark:border-indigo-900/30 shadow-2xl relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-600/5 rounded-full blur-[80px]" />
- <h4 className="text-2xl font-black text-indigo-900 dark:text-indigo-400 mb-6 font-heading italic uppercase italic underline decoration-indigo-600/10 underline-offset-8">Consultations & Diagnosis</h4>
- <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic mb-8">
+ <h4 className="text-2xl font-black text-indigo-900 dark:text-indigo-400 mb-6 font-heading italic uppercase underline decoration-indigo-600/10 underline-offset-8">Consultations & Diagnosis</h4>
+ <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
  A hernia diagnosis starts with a physical exam, but at Indira, we use <strong>Dynamic Ultrasound</strong> (viewing the hernia whilst the patient coughs) to map the exact size of the defect. This ensures we order the perfect mesh size before you even enter the OT.
  </p>
  <div className="flex items-center gap-4 border-t border-indigo-200 dark:border-indigo-900/40 pt-8">
  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-indigo-600 p-0.5 group-hover:scale-110 transition-transform">
  <Image width={48} height={48} src="/images/doctors/dr-shankar.jpg" alt="Dr P Shankar" className="rounded-full grayscale" />
  </div>
- <div className="text-[10px] font-black uppercase text-indigo-900 dark:text-indigo-400 tracking-widest italic leading-tight">Expert Surgical Mapping <br/> <span className="text-slate-400 font-normal">Indira Super Speciality Hospital</span></div>
+ <div className="text-[10px] font-black uppercase text-indigo-900 dark:text-indigo-400 tracking-widest leading-tight">Expert Surgical Mapping <br/> <span className="text-slate-400 font-normal">Indira Super Speciality Hospital</span></div>
  </div>
  </div>
  </div>
@@ -166,7 +166,7 @@ export const HerniaLongForm = () => {
 
  {/* 5. Custom Recovery Path */}
  <section className="bg-slate-50 dark:bg-slate-900 p-10 md:p-16 rounded-[4rem] border border-slate-100 dark:border-slate-800">
- <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-heading italic uppercase tracking-widest text-center">Accelerated Recovery Protocol</h2>
+ <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-heading uppercase tracking-widest text-center">Accelerated Recovery Protocol</h2>
  <div className="grid md:grid-cols-4 gap-6">
  {[
  { day: 'Day 0', title: 'Ambulation', desc: 'You will be encouraged to walk within 4-6 hours of waking from surgery.' },
@@ -175,9 +175,9 @@ export const HerniaLongForm = () => {
  { day: 'Week 3', title: 'Full Power', desc: 'Resumption of gym, sports, and heavy lifting after specialist clearance.' }
  ].map((step, i) => (
  <div key={i} className="p-8 bg-white dark:bg-slate-950 rounded-[3rem] border border-slate-100 dark:border-slate-800 text-center group hover:shadow-2xl transition-all">
- <div className="text-xs font-black text-indigo-600 uppercase tracking-widest mb-4 italic">{step.day}</div>
+ <div className="text-xs font-black text-indigo-600 uppercase tracking-widest mb-4">{step.day}</div>
  <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 font-heading">{step.title}</h4>
- <p className="text-xs text-slate-500 leading-relaxed italic">{step.desc}</p>
+ <p className="text-xs text-slate-500 leading-relaxed">{step.desc}</p>
  </div>
  ))}
  </div>
@@ -189,15 +189,15 @@ export const HerniaLongForm = () => {
  <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
  <div className="grid md:grid-cols-2 gap-16 items-center">
  <div className="space-y-8">
- <h2 className="text-4xl font-black text-indigo-400 font-heading italic uppercase tracking-tighter m-0">Economic Transparency</h2>
- <p className="text-slate-400 leading-relaxed italic">
+ <h2 className="text-4xl font-black text-indigo-400 font-heading uppercase tracking-tighter m-0">Economic Transparency</h2>
+ <p className="text-slate-400 leading-relaxed">
  We believe in <strong>No Hidden Costs</strong>. Our surgical packages in Vellore are comprehensive, covering everything from the 3D-Mesh cost to the anaesthesia and hospital stay.
  </p>
  <div className="p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[3rem]">
  <h4 className="text-fuchsia-400 font-bold mb-4 font-heading text-lg flex items-center gap-3">
  <Shield className="w-5 h-5" /> Insurance Empanelment
  </h4>
- <p className="text-xs text-slate-400 italic mb-4">We are partnered with all leading providers:</p>
+ <p className="text-xs text-slate-400 mb-4">We are partnered with all leading providers:</p>
  <div className="flex flex-wrap gap-2">
  {['Star Health', 'HDFC Ergo', 'Apollo Munich', 'TPA CMCHIS', 'Oriental Ins.'].map((ins, i) => (
  <div key={i} className="px-4 py-1.5 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-800 text-[10px] font-bold text-indigo-100">{ins}</div>
@@ -210,9 +210,9 @@ export const HerniaLongForm = () => {
  <div className="absolute top-0 right-0 p-8 opacity-20">
  <Zap className="w-16 h-16" />
  </div>
- <h4 className="text-2xl font-black mb-2 font-heading italic">Estimated Cost in Vellore:</h4>
- <p className="text-5xl font-black tracking-tighter mb-4 italic">₹45k - ₹85k</p>
- <p className="text-xs font-medium text-white/70 leading-relaxed italic">
+ <h4 className="text-2xl font-black mb-2 font-heading">Estimated Cost in Vellore:</h4>
+ <p className="text-5xl font-black tracking-tighter mb-4">₹45k - ₹85k</p>
+ <p className="text-xs font-medium text-white/70 leading-relaxed">
  *Price varies based on hernia type (Inguinal vs Incisional) and choice of mesh (Flat vs 3D). Contact us for a precise quote.
  </p>
  </div>
@@ -223,7 +223,7 @@ export const HerniaLongForm = () => {
 
  {/* 7. Comprehensive FAQ */}
  <section className="pt-20 border-t border-slate-100 dark:border-slate-800">
- <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-heading italic uppercase tracking-widest text-center underline underline-offset-8 decoration-indigo-600/20">Hernia Care FAQ</h2>
+ <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 font-heading uppercase tracking-widest text-center underline underline-offset-8 decoration-indigo-600/20">Hernia Care FAQ</h2>
  <div className="grid md:grid-cols-2 gap-10">
  {[
  { q: "Can a hernia heal on its own without surgery?", a: "No. A hernia is a structural defect (a hole) in the muscle wall. It will never heal on its own and will typically get larger and more difficult to repair over time." },
@@ -234,11 +234,11 @@ export const HerniaLongForm = () => {
  { q: "Will there be significant scarring from keyhole surgery?", a: "No. We use three incisions of 5mm-10mm. Within 4-6 months, these fade into tiny, practically invisible marks, similar to a small beauty spot." }
  ].map((faq, i) => (
  <div key={i} className="space-y-4 p-8 rounded-[2.5rem] bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
- <h4 className="font-bold text-slate-900 dark:text-white italic text-lg leading-snug flex items-start gap-3">
+ <h4 className="font-bold text-slate-900 dark:text-white text-lg leading-snug flex items-start gap-3">
  <Info className="w-5 h-5 text-indigo-600 mt-1 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-sm text-slate-500 leading-relaxed italic">{faq.a}</p>
+ <p className="text-sm text-slate-500 leading-relaxed">{faq.a}</p>
  </div>
  ))}
  </div>
@@ -247,13 +247,13 @@ export const HerniaLongForm = () => {
  {/* 8. Final Silo Transition CTA */}
  <section className="bg-indigo-950 rounded-[4rem] p-20 text-center text-white relative overflow-hidden group/cta">
  <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse" />
- <h2 className="text-5xl font-black mb-6 font-heading italic uppercase tracking-tighter">Don&apos;t Wait for an Emergency</h2>
- <p className="text-indigo-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light italic">
- Fix the gap permanently with 4K Laparoscopy and 3D-Mesh technology. Consult Vellore&apos;s leading surgical team today.
+ <h2 className="text-5xl font-black mb-6 font-heading uppercase tracking-tighter">Don't Wait for an Emergency</h2>
+ <p className="text-indigo-100/60 mb-12 max-w-2xl mx-auto italic text-xl leading-relaxed font-light">
+ Fix the gap permanently with 4K Laparoscopy and 3D-Mesh technology. Consult Vellore's leading surgical team today.
  </p>
  <div className="flex flex-wrap justify-center gap-8 relative z-10">
- <button className="px-14 py-6 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-indigo-600/30 uppercase tracking-widest italic group-hover/cta:scale-110 active:scale-95">Book Priority Consult</button>
- <button className="px-14 py-6 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-black rounded-3xl transition-all border border-slate-200 dark:border-slate-800 uppercase tracking-widest italic">WhatsApp Diagnostic Team</button>
+ <button className="px-14 py-6 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-3xl transition-all shadow-2xl shadow-indigo-600/30 uppercase tracking-widest group-hover/cta:scale-110 active:scale-95">Book Priority Consult</button>
+ <button className="px-14 py-6 bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 text-white font-black rounded-3xl transition-all border border-slate-200 dark:border-slate-800 uppercase tracking-widest">WhatsApp Diagnostic Team</button>
  </div>
  </section>
  </div>

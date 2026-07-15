@@ -2,9 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     remotePatterns: [
       {
@@ -175,7 +172,7 @@ const nextConfig: NextConfig = {
       'lucide-react',
       'healthicons-react',
       'framer-motion',
-      '@heroui/react'
+      'radix-ui'
     ],
   },
 };

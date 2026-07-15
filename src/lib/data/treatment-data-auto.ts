@@ -5,7 +5,7 @@ export const AUTO_TREATMENTS: TreatmentItem[] = [
  id: "t-auto-dent-1",
  slug: "dentistry",
  parentServiceSlug: "dentistry",
- title: "Elite Dentistry & Oral Surgery in Vellore | Indira Hospital",
+ title: "Top Dentistry & Oral Surgery in Vellore | Indira Hospital",
  shortDescription: "Advanced dental care and oral surgery provided by top specialists in Vellore.",
  fullDescription: "At Indira Super Speciality Hospital, we provide international-standard care for all dental conditions. Our department of Dentistry is led by some of the most experienced specialists in Vellore, Tamil Nadu. We combine state-of-the-art diagnostic protocols with personalized treatment plans to ensure the highest safety and success rates for our patients.",
  features: [

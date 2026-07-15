@@ -45,7 +45,7 @@ export const FloatingWhatsApp = () => {
  <div className="flex items-center gap-2">
  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
  <span className="text-sm font-bold text-slate-800 dark:text-slate-200">
- Indira AI Assistant
+ Indira Care Coordinator
  </span>
  </div>
  <button
@@ -56,7 +56,7 @@ export const FloatingWhatsApp = () => {
  </button>
  </div>
  <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
- Hello! I'm your healthcare assistant. How can I help you book an appointment or find a treatment today?
+ Hello! I'm part of the patient care team. How can I help you book an appointment or find a treatment today?
  </p>
  <a
  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi! I need help with an appointment at Indira Hospital.`}

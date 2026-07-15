@@ -51,7 +51,7 @@ export function SurgicalVideoBank() {
  <PlayCircle className="w-8 h-8 text-fuchsia-600" />
  Clinical Video Bank
  </h2>
- <p className="text-slate-500 font-medium mt-1">Witness Elite surgical precision and patient outcomes.</p>
+ <p className="text-slate-500 font-medium mt-1">Witness top surgical outcomes and patient recovery stories.</p>
  </div>
  <div className="hidden md:flex gap-4">
  <div className="flex items-center gap-2 px-4 py-2 bg-fuchsia-50 dark:bg-fuchsia-950 rounded-full border border-fuchsia-100 dark:border-fuchsia-900">
@@ -102,11 +102,7 @@ export function SurgicalVideoBank() {
  <button 
  key={video.id}
  onClick={() => setSelectedVideo(video)}
- className={`w-full flex gap-4 p-4 rounded-3xl transition-all border text-left ${
- selectedVideo.id === video.id 
- ? "bg-white dark:bg-slate-900 border-fuchsia-500/50 shadow-clay ring-1 ring-fuchsia-500/20" 
- : "bg-transparent border-transparent hover:bg-white dark:bg-slate-900 dark:hover:bg-slate-900 dark:bg-slate-900"
- }`}
+ className={`w-full flex gap-4 p-4 rounded-3xl transition-all border text-left ${ selectedVideo.id === video.id ? "bg-white dark:bg-slate-900 border-fuchsia-500/50 shadow-clay ring-1 ring-fuchsia-500/20" : "bg-transparent border-transparent hover:bg-white dark:bg-slate-900 dark:hover:bg-slate-900 dark:bg-slate-900" }`}
  >
  <div className="relative w-24 h-16 rounded-xl overflow-hidden flex-shrink-0">
  <Image src={video.thumbnail} fill className="object-cover" alt={video.title} />

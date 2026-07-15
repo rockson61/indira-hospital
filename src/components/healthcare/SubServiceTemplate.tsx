@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { ChevronRight, Phone, Calendar, CheckCircle2, MessageCircle, Clock, Star, IndianRupee, Siren, Dna, Wind, Apple, Scale, UserCheck, Ear, Ribbon, Cpu, MapPin, Sparkles, ArrowRight, Shield, Zap, Bed, Target, Globe, AlertCircle, Syringe as SyringeLucide, HandPlatter, Droplets } from "lucide-react"
 import { Stethoscope, Electricity, HeartCardiogram, Microscope, Heart, Baby0203m, Orthopaedics, Eye, Neurology, Syringe, Happy, BloodDrop } from "healthicons-react/outline";
 import { SectionContainer } from '@/components/ui/section-container'
@@ -26,6 +29,8 @@ import type { Doctor } from '@/data/doctors'
 import { JsonLdSchema } from '@/components/seo/JsonLdSchema'
 import { DoctorCard } from "@/components/entities/DoctorCard";
 import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
+import { HeroBackground } from "./common/HeroBackground";
+import { Breadcrumbs } from "./common/Breadcrumbs";
 import { OPD_SCHEDULE, WHY_INDIRA_POINTS } from '@/config/design'
 
 // ─── Icon Map (string keys → components) ───────────────────────────────────
@@ -86,6 +91,29 @@ export interface SubServiceTemplateProps {
 }
 
 // ─── Component ───────────────────────────────────────────────────────────────
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 80,
+      damping: 15
+    }
+  }
+};
+
 export function SubServiceTemplate({
   title,
   eyebrow,
@@ -148,9 +176,10 @@ export function SubServiceTemplate({
   // ── SEO Constants ────────────────────────────────────────────────────────
   const baseUrl = siteConfig.url.endsWith('/') ? siteConfig.url : `${siteConfig.url}/`;
   const procedureUrl = `${baseUrl}doctor/near-me/treat/${departmentSlug}/${slug}`;
+  const isSSR = typeof window === 'undefined';
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-background">
       {/* Treatment Secondary Nav (Sticky) */}
       <TreatmentSecondaryNav treatmentName={title} whatsappUrl={whatsappUrl} />
 
@@ -168,59 +197,53 @@ export function SubServiceTemplate({
           { name: title, url: procedureUrl }
         ]}
         mainEntity={(processedMarketingContent?.faqs || marketingContent?.faq || []).map(f => ({ question: f.question, answer: f.answer }))}
-        steps={timeline?.steps.map(s => ({ name: s.title, description: s.description }))}
+        steps={(timeline?.steps || []).map(s => ({ name: s.title, description: s.description }))}
       />
 
-      {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden rounded-b-[3rem] sm:rounded-b-[5rem]">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-        <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[150px] opacity-70 pointer-events-none animate-pulse" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
-
+      <HeroBackground glowColor="indigo">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-32 relative z-10">
-          {/* Breadcrumb */}
-          <nav aria-label="breadcrumb" className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
-            <Link href="/doctor/near-me/treat" className="hover:text-white transition-colors">Treatments</Link>
-            {departmentName && departmentSlug && (
-              <>
-                <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
-                <Link href={`/doctor/near-me/treat/${departmentSlug}`} className="hover:text-white transition-colors">
-                  {departmentName}
-                </Link>
-              </>
-            )}
-            <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
-            <span className="text-white font-black">{title}</span>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { name: 'Home', url: '/' },
+              { name: 'Treatments', url: '/doctor/near-me/treat' },
+              ...(departmentName && departmentSlug ? [{ name: departmentName, url: `/doctor/near-me/treat/${departmentSlug}` }] : []),
+              { name: title }
+            ]}
+          />
 
-          {eyebrow && (
-            <div className="elite-tag mb-10">
-              <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" /> {eyebrow}
-            </div>
-          )}
-          <h1 className="elite-hero-title text-white mb-10 text-left">
-            {title.split(' in ')[0]}
-            {title.includes(' in ') && (
-              <> <br /><span className="elite-gradient-text text-3xl sm:text-4xl">in {title.split(' in ').slice(1).join(' in ')}</span></>
+          <motion.div
+            variants={containerVariants}
+            initial={isSSR ? "visible" : "hidden"}
+            animate="visible"
+            className="space-y-10"
+          >
+            {eyebrow && (
+              <motion.div variants={itemVariants} className="elite-tag border-slate-200 dark:border-border text-slate-700 dark:text-white bg-slate-100 dark:bg-background">
+                <Sparkles className="w-4 h-4 text-amber-500 animate-pulse" /> {eyebrow}
+              </motion.div>
             )}
-          </h1>
-          <div className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-10 opacity-90">
-            {description}
-          </div>
-          <div className="flex flex-wrap gap-5">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="elite-button-primary gap-3">
-              <MessageCircle className="w-6 h-6" />
-              Elite Consultation
-            </a>
-            <Link href={bookingUrl} className="elite-button-secondary gap-3">
-              <Calendar className="w-5 h-5 text-fuchsia-400" />
-              Book Appointment
-            </Link>
-          </div>
+            <motion.h1 variants={itemVariants} className="elite-hero-title text-slate-900 dark:text-white text-left">
+              {title.split(' in ')[0]}
+              {title.includes(' in ') && (
+                <> <br /><span className="elite-gradient-text text-3xl sm:text-4xl">in {title.split(' in ').slice(1).join(' in ')}</span></>
+              )}
+            </motion.h1>
+            <motion.div variants={itemVariants} className="text-xl sm:text-2xl text-slate-650 dark:text-slate-200 max-w-3xl leading-relaxed font-light opacity-90">
+              {description}
+            </motion.div>
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-5">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="elite-button-primary gap-3">
+                <MessageCircle className="w-6 h-6" />
+                Best Consultation
+              </a>
+              <Link href={bookingUrl} className="elite-button-secondary gap-3 bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-800 dark:text-white hover:bg-slate-50 dark:hover:bg-white/10">
+                <Calendar className="w-5 h-5 text-fuchsia-600 dark:text-fuchsia-400" />
+                Book Appointment
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </HeroBackground>
 
       {/* ── Quick Facts Bar ───────────────────────────────────────────── */}
       {quickFacts.length > 0 && (
@@ -302,13 +325,7 @@ export function SubServiceTemplate({
 
           {/* Children (rich prose content) */}
           {children && (
-            <article id="about" className="prose prose-lg prose-slate max-w-none
-              prose-headings:font-heading prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900 dark:text-white
-              prose-h2:text-3xl prose-h2:border-l-4 prose-h2:border-fuchsia-500 prose-h2:pl-4
-              prose-p:text-slate-600 prose-p:leading-relaxed
-              prose-strong:text-slate-800 dark:text-slate-100
-              prose-a:text-fuchsia-600 prose-a:no-underline hover:prose-a:underline
-              prose-img:rounded-[2rem] prose-img:shadow-float">
+            <article id="about" className="prose prose-lg prose-slate max-w-none prose-headings:font-heading prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900 dark:text-white prose-h2:text-3xl prose-h2:border-l-4 prose-h2:border-fuchsia-500 prose-h2:pl-4 prose-p:text-slate-600 prose-p:leading-relaxed prose-strong:text-slate-800 dark:text-slate-100 prose-a:text-fuchsia-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-[2rem] prose-img:shadow-float">
               {typeof children === 'string' ? (
                 <div dangerouslySetInnerHTML={{ __html: injectInternalLinks(children) }} />
               ) : (
@@ -385,7 +402,7 @@ export function SubServiceTemplate({
                   className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-900 dark:bg-fuchsia-600 hover:bg-fuchsia-600 dark:hover:bg-fuchsia-700 text-white font-bold rounded-full transition-all text-base"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
-                  Elite Consultation
+                  Best Consultation
                 </Link>
                 <a
                   href={whatsappUrl}
@@ -556,30 +573,31 @@ export function SubServiceTemplate({
       )}
 
       {/* ── Final CTA ─────────────────────────────────────────────────── */}
-      <section className="bg-slate-900 dark:bg-slate-900 py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full hidden md:block blur-[120px] will-change-transform transform-gpu" />
         <SectionContainer>
-          <div className="max-w-4xl mx-auto text-center space-y-8 relative">
+          <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
             <h2 className="elite-section-title text-white">
               Get Expert Care for{' '}
               <span className="text-fuchsia-400">{title}</span>
             </h2>
-            <p className="text-xl text-fuchsia-100/70 font-light">
+            <p className="text-xl text-indigo-100/70 font-light">
               Trusted by patients across Vellore and Tamil Nadu for advanced speciality care.
             </p>
             <div className="flex flex-wrap justify-center gap-6 pt-4">
               <Link
                 href={bookingUrl}
-                className="px-10 py-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold rounded-full transition-all shadow-float hover:-translate-y-1 text-lg inline-flex items-center gap-2"
+                className="elite-button-primary gap-3 bg-white text-slate-900 hover:bg-slate-100"
               >
                 <MessageCircle className="w-5 h-5" />
-                Elite Consultation
+                Best Consultation
               </Link>
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-5 bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold rounded-full transition-all hover:-translate-y-1 text-lg inline-flex items-center gap-2"
+                className="elite-button-secondary gap-3 bg-fuchsia-600 hover:bg-fuchsia-700 text-white border-transparent"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Chat
@@ -589,7 +607,7 @@ export function SubServiceTemplate({
         </SectionContainer>
       </section>
       <InternalLinkGrid type="treatments" title="More Heroic Procedures" subtitle="Clinical Excellence" limit={8} className="bg-white dark:bg-slate-950 border-y" />
-      <InternalLinkGrid type="locations" title="Elite Surgical Centers" subtitle="Regional Presence" limit={12} className="bg-slate-50 dark:bg-slate-900 border-b" />
+      <InternalLinkGrid type="locations" title="Top Surgical Centers" subtitle="Regional Presence" limit={12} className="bg-slate-50 dark:bg-slate-900 border-b" />
       <LocalSEOFooter />
     </div>
   )

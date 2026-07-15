@@ -106,7 +106,7 @@ export default function FAQClient() {
  <Search className="w-10 h-10 text-slate-300" />
  </div>
  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">No results found</h3>
- <p className="text-slate-500 dark:text-slate-400">We couldn&apos;t find any questions matching &quot;{searchTerm}&quot;.</p>
+ <p className="text-slate-500 dark:text-slate-400">We couldn't find any questions matching &quot;{searchTerm}&quot;.</p>
  </div>
  )}
 

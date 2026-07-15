@@ -96,7 +96,7 @@ export default function ColonoscopyPage() {
  {/* Screening Timeline */}
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase">Clinical Screening Roadmap</h3>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 font-heading tracking-tighter uppercase">Clinical Screening Roadmap</h3>
  <p className="text-slate-600 dark:text-slate-400">Regular colonoscopy screening can reduce the risk of colon cancer by up to 90%.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -107,8 +107,8 @@ export default function ColonoscopyPage() {
  { title: "Result Audit", desc: "Instant report on findings. Histopathology follow-up for removed polyps." }
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center">
- <h4 className="font-bold mb-2 text-emerald-600 font-heading uppercase tracking-tighter italic">{item.title}</h4>
- <p className="text-xs text-slate-500 font-medium italic">{item.desc}</p>
+ <h4 className="font-bold mb-2 text-emerald-600 font-heading uppercase tracking-tighter">{item.title}</h4>
+ <p className="text-xs text-slate-500 font-medium">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -117,7 +117,7 @@ export default function ColonoscopyPage() {
  {/* Technology Focus Section */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
- <h3 className="font-heading text-3xl font-bold mb-4 font-serif italic">Advanced Endoscopy Platform</h3>
+ <h3 className="font-heading text-3xl font-bold mb-4 font-serif">Advanced Endoscopy Platform</h3>
  <p className="text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
  A colonoscopy is only as good as the technology and the "Withdrawal Time" of the endoscopist. At Indira, we maintain strict performance metrics for every procedure.
  </p>
@@ -146,7 +146,7 @@ export default function ColonoscopyPage() {
  {[
  {
  q: "What is the recommended age to start screening?",
- a: "According to the latest global guidelines, colon cancer screening should start at age 45 for individuals at average risk. If you have a family history, screening should start even earlier (usually 10 years before the family member&apos;s diagnosis)."
+ a: "According to the latest global guidelines, colon cancer screening should start at age 45 for individuals at average risk. If you have a family history, screening should start even earlier (usually 10 years before the family member's diagnosis)."
  },
  {
  q: "Will I be awake during the colonoscopy?",
@@ -174,7 +174,7 @@ export default function ColonoscopyPage() {
  <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>

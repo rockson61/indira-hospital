@@ -41,7 +41,7 @@ const DEFAULTS: Record<string, { title: string; subtitle: string; href: string }
  services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/doctor/near-me/treat" },
  treatments: { title: "Specific Procedures", subtitle: "Available Surgeries", href: "/doctor/near-me/treat" },
  doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
- departments: { title: "Elite Medical Units", subtitle: "Our Departments", href: "/departments" },
+ departments: { title: "Our Medical Departments", subtitle: "Our Departments", href: "/departments" },
  locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
 };
 
@@ -53,7 +53,7 @@ export async function UnifiedEntitySection({
  linkLimit = 16,
  excludeSlug,
  parentSlug,
- className = "",
+ className="",
  city,
 }: UnifiedEntitySectionProps) {
  const defaults = DEFAULTS[type];
@@ -88,7 +88,7 @@ export async function UnifiedEntitySection({
  if (!allItems.length) return null;
 
  // 2. Split Data: Featured Cards vs. Remaining Links
- // Note: 'treatments' type doesn&apos;t have a large UI card variant historically, so we treat it all as links if needed, 
+ // Note: 'treatments' type doesn't have a large UI card variant historically, so we treat it all as links if needed, 
  // or just pass 0 to featuredLimit when calling it.
  const featuredItems = allItems.slice(0, featuredLimit);
  const linkItems = allItems.slice(featuredLimit, featuredLimit + linkLimit).map((item: any) => {

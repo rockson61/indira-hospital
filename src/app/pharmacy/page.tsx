@@ -119,7 +119,7 @@ export default function PharmacyPage() {
  <div className="hidden sm:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-emerald-100 via-emerald-300 to-emerald-100 dark:from-emerald-900 dark:to-emerald-900" />
 
  {[
- { step: "01", title: "Send Prescription", desc: "Snap a photo of your valid doctor&apos;s prescription." },
+ { step: "01", title: "Send Prescription", desc: "Snap a photo of your valid doctor's prescription." },
  { step: "02", title: "WhatsApp Us", desc: "Share it on our dedicated pharmacy WhatsApp number." },
  { step: "03", title: "Fast Delivery", desc: "We confirm the order and dispatch immediately." }
  ].map((step, idx) => (

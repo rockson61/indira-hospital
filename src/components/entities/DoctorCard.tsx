@@ -23,6 +23,23 @@ function getSpecialtySlug(doctor: any): string {
  return rawDept.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
+function getDoctorImageUrl(doctor: any): string {
+  if (!doctor.image) {
+    if (doctor.name?.includes("Praharshitha") || doctor.name?.includes("Gayathri") || doctor.name?.includes("Dhanushmi") || doctor.name?.includes("Soniya")) {
+      return '/images/doctors/dr-praharshitha.png';
+    }
+    return '/images/doctors/dr-shankar.jpg';
+  }
+  const imgUrl = getImageUrl(doctor.image);
+  if (imgUrl === '/images/hospital/Hospital view 2.webp') {
+    if (doctor.name?.includes("Praharshitha") || doctor.name?.includes("Gayathri") || doctor.name?.includes("Dhanushmi") || doctor.name?.includes("Soniya")) {
+      return '/images/doctors/dr-praharshitha.png';
+    }
+    return '/images/doctors/dr-shankar.jpg';
+  }
+  return imgUrl;
+}
+
 export function DoctorCard({ doctor, variant = "grid", showBookButton = true, city }: DoctorCardProps) {
  const doctorUrl = city 
  ? `/doctor/near-me/${city}/${doctor.slug}`
@@ -43,11 +60,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
  >
  <Link href={doctorUrl} className="group flex items-center gap-4 p-4 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-soft hover:border-fuchsia-100 hover:-translate-y-0.5 transition-all">
  <div className="relative w-14 h-14 rounded-full bg-fuchsia-50 dark:bg-fuchsia-950 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm dark:shadow-slate-900/30">
- {doctor.image && getImageUrl(doctor.image) ? (
- <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover" />
- ) : (
- <span className="text-fuchsia-700 font-bold text-sm tracking-widest">{initials}</span>
- )}
+ <Image src={getDoctorImageUrl(doctor)} alt={doctor.name} fill className="object-cover" />
  </div>
  <div className="min-w-0 flex-1">
  <h3 className="font-bold font-heading text-slate-900 dark:text-white text-base truncate group-hover:text-fuchsia-700 transition-colors">{doctor.name}</h3>
@@ -72,13 +85,7 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
  >
  <Card className="flex flex-col sm:flex-row gap-6 p-6 rounded-[2rem] bg-white dark:bg-slate-900 transition-all duration-300 shadow-soft hover:shadow-float border border-slate-100 dark:border-slate-700 overflow-hidden group">
  <div className="relative w-full sm:w-56 h-56 sm:h-auto rounded-[1.5rem] bg-slate-50 dark:bg-slate-800 shrink-0 overflow-hidden shadow-inner">
- {doctor.image && getImageUrl(doctor.image) ? (
- <Image src={getImageUrl(doctor.image)!} alt={doctor.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
- ) : (
- <div className="w-full h-full flex items-center justify-center bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-300">
- <Stethoscope className="w-12 h-12" />
- </div>
- )}
+ <Image src={getDoctorImageUrl(doctor)} alt={doctor.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
  {doctor.experience_years && (
  <div className="absolute top-3 left-3 bg-white dark:bg-slate-900 px-3 py-1.5 rounded-full text-xs font-bold text-slate-900 dark:text-white shadow-sm flex items-center gap-1.5">
  <Award className="w-3.5 h-3.5 text-amber-500" />
@@ -159,18 +166,12 @@ export function DoctorCard({ doctor, variant = "grid", showBookButton = true, ci
  >
  <article className="group relative overflow-hidden rounded-[2rem] border border-slate-200/60 dark:border-slate-700/50 shadow-sm hover:shadow-clay-dark dark:hover:shadow-fuchsia-500/10 hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col bg-white dark:bg-slate-900">
  <div className="relative aspect-[4/3] bg-fuchsia-50 dark:bg-fuchsia-950 overflow-hidden m-2 rounded-[1.5rem] shadow-inner">
- {doctor.image && getImageUrl(doctor.image) ? (
  <Image
- src={getImageUrl(doctor.image)!}
+ src={getDoctorImageUrl(doctor)}
  alt={doctor.name}
  fill
  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
  />
- ) : (
- <div className="w-full h-full flex items-center justify-center text-fuchsia-100">
- <Stethoscope className="w-16 h-16" />
- </div>
- )}
  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
 
  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">

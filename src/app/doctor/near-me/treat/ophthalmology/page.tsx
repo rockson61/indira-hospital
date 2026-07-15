@@ -10,7 +10,7 @@ import { Activity, Apple, ArrowRight, ArrowRightCircle, Award, Baby, Brain, Chec
 
 export const metadata: Metadata = constructMetadata({
  title: "Doctor | Indira Super Speciality Hospital",
- description: "Learn more about doctor at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
+ description: "Learn more about doctor at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
  path: "/doctor/near-me/treat/ophthalmology"
 });
 
@@ -43,7 +43,7 @@ export default function OphthalmologyPillarPage() {
  <div className="ophthalmology-pillar-content space-y-20">
  {/* ── 1. The Vision of Clinical Excellence ─────────────────────── */}
  <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert text-left">
- <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-teal-600 pl-6 mb-8 uppercase tracking-tight">
+ <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading border-l-8 border-teal-600 pl-6 mb-8 uppercase tracking-tight">
  The Visionary Frontier: Advanced Ophthalmology in Vellore
  </h2>
  <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -58,10 +58,10 @@ export default function OphthalmologyPillarPage() {
  <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
  <div className="p-8 bg-teal-50 dark:bg-teal-900/20 rounded-[2.5rem] border border-teal-100 dark:border-teal-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/10 blur-3xl group-hover:bg-teal-500/20 transition-all"></div>
- <h4 className="text-2xl font-bold text-teal-900 dark:text-teal-200 mb-4 flex items-center gap-2 italic">
+ <h4 className="text-2xl font-bold text-teal-900 dark:text-teal-200 mb-4 flex items-center gap-2">
  Micro-Incision Phaco (MICS)
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
+ <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
  The "Stitchless Revolution." Our MICS technique uses incisions smaller than 2.0 mm, resulting in zero surgically-induced astigmatism and near-instant visual recovery.
  </p>
  <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
@@ -71,8 +71,8 @@ export default function OphthalmologyPillarPage() {
  </div>
  <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
  <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
- <h4 className="text-2xl font-bold text-blue-300 mb-4 italic">Medical Retina & Anti-VEGF</h4>
- <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
+ <h4 className="text-2xl font-bold text-blue-300 mb-4">Medical Retina & Anti-VEGF</h4>
+ <p className="text-blue-100/60 text-sm leading-relaxed mb-6 font-medium">
  Specialized care for <strong>Diabetic Retinopathy</strong> and Macular Degeneration. We utilize high-dose Anti-VEGF injections to stabilize fluid and prevent irreversible vision loss.
  </p>
  <ul className="space-y-2">
@@ -86,7 +86,7 @@ export default function OphthalmologyPillarPage() {
  {/* ── 2. Specialized Ophthalmic Verticals ─────────────────── */}
  <section className="ophthal-verticals space-y-16">
  <div className="text-center max-w-3xl mx-auto">
- <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter italic">Clinical Specialization Hubs</h2>
+ <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Clinical Specialization Hubs</h2>
  <div className="h-1 w-24 bg-teal-600 dark:bg-teal-500 mx-auto mt-4 rounded-full"></div>
  </div>
 
@@ -95,8 +95,8 @@ export default function OphthalmologyPillarPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Cataract & IOL</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Premium cataract restoration using multifocal and toric Intraocular Lenses for freedom from spectacles.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Cataract & IOL</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Premium cataract restoration using multifocal and toric Intraocular Lenses for freedom from spectacles.</p>
  <ul className="space-y-3 mb-8">
  {["MICS (Micro-Incision)", "Phacoemulsification", "Multifocal IOLs", "Toric Correction"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
@@ -115,8 +115,8 @@ export default function OphthalmologyPillarPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Retinal Health</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Advanced diagnostic and medical management for Diabetic Retinopathy and Hypertensive eye disease.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Retinal Health</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Advanced diagnostic and medical management for Diabetic Retinopathy and Hypertensive eye disease.</p>
  <ul className="space-y-3 mb-8">
  {["Anti-VEGF Injections", "Green Laser Therapy", "OCT Retinal Mapping", "Fundus Photography"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
@@ -135,8 +135,8 @@ export default function OphthalmologyPillarPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Vision Correction</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Comprehensive glaucoma screening and advanced refractive pathways for permanent vision correction.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Vision Correction</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Comprehensive glaucoma screening and advanced refractive pathways for permanent vision correction.</p>
  <ul className="space-y-3 mb-8">
  {["Glaucoma Valve Surgery", "LASIK Evaluation", "Automated Perimetry", "Squint Correction"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest">
@@ -154,9 +154,9 @@ export default function OphthalmologyPillarPage() {
  </section>
 
  {/* ── 3. Advanced Educational Content: MICS vs Traditional ────────── */}
- <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-teal-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-teal-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
+ <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-teal-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-teal-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-teal-900 dark:text-teal-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: The Micro-Incision Edge</h3>
+ <h3 className="text-teal-900 dark:text-teal-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: The Micro-Incision Edge</h3>
  <p>
  In standard cataract surgery, an incision of 3.0 mm to 5.0 mm was common, which often required stitches and led to significant "astigmatism" – requiring the patient to wear heavy glasses even after a successful surgery.
  </p>
@@ -171,13 +171,13 @@ export default function OphthalmologyPillarPage() {
  { k: "Clarity", v: "HD Lens Placement" }
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-teal-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-teal-600">
- <p className="text-4xl font-black text-teal-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
+ <p className="text-4xl font-black text-teal-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
+ <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
- <p className="font-bold text-slate-900 dark:text-slate-100 italic">
- By utilizing the smallest possible incision, we ensure that the eye&apos;s natural structural integrity is maintained, resulting in faster visual recovery – often within just a few hours after the procedure.
+ <p className="font-bold text-slate-900 dark:text-slate-100">
+ By utilizing the smallest possible incision, we ensure that the eye's natural structural integrity is maintained, resulting in faster visual recovery – often within just a few hours after the procedure.
  </p>
  </section>
 
@@ -185,7 +185,7 @@ export default function OphthalmologyPillarPage() {
  <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
  <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-600/10 blur-[150px] -ml-48 -mb-48"></div>
  
- <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-teal-400 text-left">
+ <h3 className="text-4xl font-black mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-teal-400 text-left">
  Ophthalmology Excellence: Clinical FAQ Hub
  </h3>
  
@@ -225,7 +225,7 @@ export default function OphthalmologyPillarPage() {
  }
  ].map((faq, i) => (
  <div key={i} className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all group">
- <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-teal-400 transition-colors text-lg">
+ <h4 className="font-black text-white mb-6 flex items-start gap-4 group-hover:text-teal-400 transition-colors text-lg">
  <span className="text-teal-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>

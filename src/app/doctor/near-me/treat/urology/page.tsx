@@ -16,13 +16,13 @@ export default function UrologyPillarPage() {
  <DepartmentTemplate
  title="Urology & Laser Stone Center in Vellore, Tamil Nadu"
  slug="urology"
- shortDescription="India&apos;s leading center for 100W Holmium Laser enucleation, retrograde intrarenal surgery (RIRS), and comprehensive male fertility excellence."
+ shortDescription="India's leading center for 100W Holmium Laser enucleation, retrograde intrarenal surgery (RIRS), and comprehensive male fertility excellence."
  fullDescription={(
  <div className="space-y-16 text-left">
  {/* Mechanism: The Laser Revolution in Urology */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/50 text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 blur-3xl -z-10" />
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-heading uppercase tracking-tighter italic text-left">
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-blue-500 pl-4 font-heading uppercase tracking-tighter text-left">
  The Laser Frontier: Precision Excellence in Urology
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
@@ -31,7 +31,7 @@ export default function UrologyPillarPage() {
  The <strong>Department of Urology</strong> at Indira Super Speciality Hospital is a regional benchmark for the sophisticated management of renal calculi, prostate health, and complex reconstructive urology.
  </p>
  <p className="mt-4 text-lg leading-relaxed">
- Utilizing advanced <strong>100W Holmium &amp; Thulium Lasers</strong> and ultra-thin <strong>Digital Flexible Ureteroscopes</strong>, we reach deep into the human anatomy through natural orifices, providing "dusting" solutions for even the most complex stones with zero blood loss and a 24-hour return to normal life.
+ Utilizing advanced <strong>100W Holmium & Thulium Lasers</strong> and ultra-thin <strong>Digital Flexible Ureteroscopes</strong>, we reach deep into the human anatomy through natural orifices, providing "dusting" solutions for even the most complex stones with zero blood loss and a 24-hour return to normal life.
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
@@ -46,8 +46,8 @@ export default function UrologyPillarPage() {
  </div>
  <div className="bg-slate-900 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group border border-slate-800">
  <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
- <h4 className="text-2xl font-bold text-blue-300 mb-4 italic text-left">Kidney Stone Hub</h4>
- <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
+ <h4 className="text-2xl font-bold text-blue-300 mb-4 text-left">Kidney Stone Hub</h4>
+ <p className="text-blue-100/60 text-sm leading-relaxed mb-6 font-medium">
  "No Stent, No Pain, No Recurrence." Our <strong>RIRS (Retrograde Intrarenal Surgery)</strong> technique uses a laser fiber as thin as a hair to turn physical stones into microscopic dust.
  </p>
  <ul className="space-y-3">
@@ -61,7 +61,7 @@ export default function UrologyPillarPage() {
  {/* Specialist Urology Verticals */}
  <section className="text-left">
  <div className="mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter italic border-b-2 border-blue-100 inline-block text-left">Clinical Specialization Hubs</h3>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tighter border-b-2 border-blue-100 inline-block text-left">Clinical Specialization Hubs</h3>
  <p className="text-slate-600 dark:text-slate-400 mt-2">From oncological resections to male reconstructive science.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -89,10 +89,10 @@ export default function UrologyPillarPage() {
  <div className="p-10 flex-1 flex flex-col justify-between">
  <div>
  <item.icon className="w-12 h-12 text-blue-600 mb-6" />
- <h4 className="text-2xl font-bold mb-4 italic tracking-tight">
+ <h4 className="text-2xl font-bold mb-4 tracking-tight">
  {item.title}
  </h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 italic">{item.desc}</p>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8">{item.desc}</p>
  <ul className="space-y-3 mb-8">
  {item.sub.map(s => (
  <li key={s} className="flex items-center gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
@@ -110,7 +110,7 @@ export default function UrologyPillarPage() {
  {/* Trust Infrastructure Section */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden text-left">
  <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 to-transparent" />
- <h3 className="font-heading text-3xl font-bold mb-4 italic font-heading text-blue-300 text-left">Beyond Surgery: The Stone Prevention Meta-Game</h3>
+ <h3 className="font-heading text-3xl font-bold mb-4 font-heading text-blue-300 text-left">Beyond Surgery: The Stone Prevention Meta-Game</h3>
  <p className="text-slate-400 max-w-2xl text-left mb-12">
  Treating a stone is a technical event; preventing its recurrence is a lifestyle mission. Recurrence rates can be as high as 50% within 5 years without metabolic management.
  </p>
@@ -130,8 +130,8 @@ export default function UrologyPillarPage() {
  </div>
  ))}
  </div>
- <div className="mt-12 p-6 rounded-3xl bg-blue-600/10 border border-blue-500/30 text-blue-300 italic text-sm text-left">
- At Indira Hospital, every stone patient receives a <strong>Stone Analysis &amp; Metabolic Workup</strong> to identify their stone&apos;s chemical signature.
+ <div className="mt-12 p-6 rounded-3xl bg-blue-600/10 border border-blue-500/30 text-blue-300 text-sm text-left">
+ At Indira Hospital, every stone patient receives a <strong>Stone Analysis & Metabolic Workup</strong> to identify their stone's chemical signature.
  </div>
  </section>
 
@@ -169,7 +169,7 @@ export default function UrologyPillarPage() {
  }
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group text-left">
- <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2 italic text-left">
+ <h4 className="font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2 text-left">
  <Zap className="w-4 h-4 mt-1 text-blue-500 shrink-0" />
  {faq.q}
  </h4>

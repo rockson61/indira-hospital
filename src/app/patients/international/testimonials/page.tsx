@@ -34,7 +34,7 @@ const TESTIMONIALS = [
  flag: "🇴🇲",
  procedure: "Laparoscopic Hernia Repair",
  rating: 5,
- story: "I had been postponing my hernia surgery for 2 years because of the cost in Oman. A colleague told me about Indira Hospital. From the moment I WhatsApp&apos;d them, everything was arranged — visa letter, airport pickup, even a Halal meal plan. The surgery took 45 minutes. I was back in my hotel the same evening. The total cost including my flight was less than the surgery alone would have cost in Muscat.",
+ story: "I had been postponing my hernia surgery for 2 years because of the cost in Oman. A colleague told me about Indira Hospital. From the moment I WhatsApp'd them, everything was arranged — visa letter, airport pickup, even a Halal meal plan. The surgery took 45 minutes. I was back in my hotel the same evening. The total cost including my flight was less than the surgery alone would have cost in Muscat.",
  outcome: "Discharged same day · Flying home day 4",
  savings: "Saved ~OMR 2,800 vs local hospital",
  },
@@ -44,7 +44,7 @@ const TESTIMONIALS = [
  flag: "🇧🇩",
  procedure: "Cardiac Bypass Surgery (CABG)",
  rating: 5,
- story: "My father was diagnosed with triple-vessel coronary disease in Dhaka. CMC Vellore had a 3-month wait. Indira Hospital was recommended by a relative who had surgery there. Dr. Shankar&apos;s team reviewed his reports the same day and gave us a cost estimate by next morning. We flew in 5 days later. The surgery was done in 6 hours. My father walked on day 3 and we were discharged by day 10.",
+ story: "My father was diagnosed with triple-vessel coronary disease in Dhaka. CMC Vellore had a 3-month wait. Indira Hospital was recommended by a relative who had surgery there. Dr. Shankar's team reviewed his reports the same day and gave us a cost estimate by next morning. We flew in 5 days later. The surgery was done in 6 hours. My father walked on day 3 and we were discharged by day 10.",
  outcome: "Discharged on day 10 · Full recovery",
  savings: "Saved BDT 12+ Lakh vs Dhaka private",
  },
@@ -54,7 +54,7 @@ const TESTIMONIALS = [
  flag: "🇳🇬",
  procedure: "Total Knee Replacement",
  rating: 5,
- story: "For 4 years I couldn&apos;t walk properly due to severe arthritis. I got quotes from hospitals in London — it was over £20,000. India had been recommended to me and I researched many hospitals. I chose Indira because they responded within hours, provided a detailed breakdown, and the coordinator called me personally. The knee replacement was done with US-made Stryker implants.",
+ story: "For 4 years I couldn't walk properly due to severe arthritis. I got quotes from hospitals in London — it was over £20,000. India had been recommended to me and I researched many hospitals. I chose Indira because they responded within hours, provided a detailed breakdown, and the coordinator called me personally. The knee replacement was done with US-made Stryker implants.",
  outcome: "Walking day 1 · Travelling day 10",
  savings: "Saved over £16,000 vs UK quote",
  },
@@ -74,7 +74,7 @@ const TESTIMONIALS = [
  flag: "🇰🇪",
  procedure: "Spinal Disc Surgery (L4-L5)",
  rating: 5,
- story: "As a physician myself, I was cautious about where to have surgery. I evaluated multiple hospitals in India. Indira Hospital gave me direct access to the neurosurgeon to discuss the case before I even booked my flight. The facility is world-class — clean, NABH-certified, advanced imaging. The surgery was a complete success. I&apos;m back to working full-time.",
+ story: "As a physician myself, I was cautious about where to have surgery. I evaluated multiple hospitals in India. Indira Hospital gave me direct access to the neurosurgeon to discuss the case before I even booked my flight. The facility is world-class — clean, NABH-certified, advanced imaging. The surgery was a complete success. I'm back to working full-time.",
  outcome: "Back to full work in 6 weeks",
  savings: "Saved KES 800,000 vs Nairobi private hospital",
  },
@@ -119,7 +119,7 @@ export default function InternationalTestimonialsPage() {
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">Success Stories.</span>
  </h1>
  
- <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10 italic">
+ <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10">
  Over 15,000 global patients have transformed their lives at Indira Hospital. Read their journeys in their own words.
  </p>
 
@@ -183,7 +183,7 @@ export default function InternationalTestimonialsPage() {
 
  <div className="mb-8 relative flex-1">
  <Quote className="w-8 h-8 text-fuchsia-500/10 absolute -top-4 -left-2" />
- <p className="text-slate-600 dark:text-slate-400 font-medium italic leading-relaxed text-sm relative z-10 line-clamp-6">
+ <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed text-sm relative z-10 line-clamp-6">
  {t.story}
  </p>
  </div>
@@ -211,8 +211,8 @@ export default function InternationalTestimonialsPage() {
  
  <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
  <div>
- <h2 className="elite-section-title text-white mb-6 uppercase">Find Your <br /><span className="text-fuchsia-400 italic">Country Hub.</span></h2>
- <p className="text-slate-400 font-medium mb-10 leading-relaxed italic text-lg">Detailed travel guides, visa requirements, and specific success stories tailored for your home nation.</p>
+ <h2 className="elite-section-title text-white mb-6 uppercase">Find Your <br /><span className="text-fuchsia-400">Country Hub.</span></h2>
+ <p className="text-slate-400 font-medium mb-10 leading-relaxed text-lg">Detailed travel guides, visa requirements, and specific success stories tailored for your home nation.</p>
  </div>
 
  <div className="flex flex-wrap gap-3 justify-center lg:justify-end">
@@ -254,8 +254,8 @@ export default function InternationalTestimonialsPage() {
  <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,121,249,0.1),transparent_70%)] pointer-events-none" />
  <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
- <h2 className="elite-section-title text-white mb-10 uppercase">Join Our <br /><span className="text-fuchsia-500 italic">Success Stories.</span></h2>
- <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">Your journey to world-class health begins with a single conversation. Our international desk is ready to assist you.</p>
+ <h2 className="elite-section-title text-white mb-10 uppercase">Join Our <br /><span className="text-fuchsia-500">Success Stories.</span></h2>
+ <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto leading-relaxed">Your journey to world-class health begins with a single conversation. Our international desk is ready to assist you.</p>
  
  <div className="flex flex-wrap justify-center gap-6">
  <a href={WA} target="_blank" rel="noopener noreferrer"

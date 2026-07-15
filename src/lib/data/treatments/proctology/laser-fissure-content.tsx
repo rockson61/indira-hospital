@@ -9,7 +9,7 @@ export const LaserFissureLongForm = () => {
  <h2 className="text-3xl font-bold text-slate-900 mb-6">Laser Fissure Treatment in Vellore: Instant Relief from Sharp Anal Pain</h2>
  <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
  <p>
- Are you experiencing sharp, tearing pain during bowel movements, often compared to "passing glass"? This is the hallmark symptom of an <strong>Anal Fissure</strong> (known as <em>Aasanavaai Vedippu</em> in Tamil). It is essentially a small tear or cut in the lining of the anal canal, often triggered by chronic constipation or the passage of hard stools.
+ Are you experiencing sharp, tearing pain during bowel movements, often compared to "passing glass"? This is the hallmark symptom of an <strong>Anal Fissure</strong> (known as <span>Aasanavaai Vedippu</span> in Tamil). It is essentially a small tear or cut in the lining of the anal canal, often triggered by chronic constipation or the passage of hard stools.
  </p>
  <p>
  At <strong>Indira Super Speciality Hospital, Vellore</strong>, we specialize in <strong>Laser Fissure Treatment</strong>, a transformative procedure that eliminates pain almost instantaneously. Under the surgical leadership of <strong>Dr. Karan Shankar</strong>, we use precise 1470nm laser technology to relax the internal sphincter muscle, allowing the fissure to heal without the trauma of traditional open surgery.
@@ -22,7 +22,7 @@ export const LaserFissureLongForm = () => {
 
  {/* Section 2: What is Anal Fissure? Anatomy of the Tear */}
  <section id="what-are-fissure">
- <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading italic">Anal Fissure (Aasanavaai Vedippu): Why it Hurts So Much</h2>
+ <h2 className="text-3xl font-bold text-slate-900 mb-6 font-heading">Anal Fissure (Aasanavaai Vedippu): Why it Hurts So Much</h2>
  <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
  <p>
  The anal canal is lined with extremely sensitive skin. When a tear occurs, it exposes the underlying internal anal sphincter muscle, which immediately goes into a spasm. This spasm is what causes the intense, prolonged pain after a bowel movement and also prevents blood flow to the area, keeping the fissure from healing naturally.
@@ -80,7 +80,7 @@ export const LaserFissureLongForm = () => {
  {/* Section 4: Laser Sphincterotomy at Indira Hospital */}
  <section id="laser-technique" className="bg-slate-900 rounded-[3rem] p-12 text-white overflow-hidden relative">
  <div className="absolute top-0 left-0 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl -ml-32 -mt-32" />
- <h2 className="text-3xl font-bold mb-8 text-center italic font-heading">The Elite Laser Solution (Laser-LIS)</h2>
+ <h2 className="text-3xl font-bold mb-8 text-center font-heading">The Elite Laser Solution (Laser-LIS)</h2>
  <div className="grid md:grid-cols-2 gap-12 items-center">
  <div className="space-y-6">
  <p className="text-lg text-fuchsia-100 font-medium">
@@ -135,7 +135,7 @@ export const LaserFissureLongForm = () => {
  </li>
  <li className="flex items-start gap-4">
  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-1" />
- <span><strong>Underlying Disease:</strong> Occasional cases may be linked to Crohn&apos;s disease or other inflammatory bowel conditions.</span>
+ <span><strong>Underlying Disease:</strong> Occasional cases may be linked to Crohn's disease or other inflammatory bowel conditions.</span>
  </li>
  </ul>
  </div>
@@ -152,7 +152,7 @@ export const LaserFissureLongForm = () => {
  <p className="text-lg text-slate-700 leading-relaxed font-medium">
  At <strong>Indira Super Speciality Hospital</strong>, we offer premium laser fissure treatment at an affordable price point. For most patients in Vellore, the total procedure cost ranges between <strong>₹35,000 to ₹50,000</strong>.
  </p>
- <p className="text-sm text-slate-500 leading-relaxed italic border-l-4 border-fuchsia-200 pl-4">
+ <p className="text-sm text-slate-500 leading-relaxed border-l-4 border-fuchsia-200 pl-4">
  Includes 1470nm laser fiber technology, specialist consultation with Dr. Karan Shankar, and premium daycare facility access.
  </p>
  </div>
@@ -192,7 +192,7 @@ export const LaserFissureLongForm = () => {
 
  {/* Section 8: Detailed FAQs */}
  <section id="faqs" className="pt-12 border-t border-slate-200">
- <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3 italic">
+ <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
  <HelpCircle className="w-10 h-10 text-fuchsia-600" />
  Frequently Asked Questions (Fissure Specialist Advice)
  </h2>
@@ -209,7 +209,7 @@ export const LaserFissureLongForm = () => {
  <h4 className="text-lg font-bold text-slate-900 flex gap-2">
  <span className="text-fuchsia-600">Q.</span> {faq.q}
  </h4>
- <p className="text-slate-500 pl-6 text-sm italic font-medium leading-relaxed">{faq.a}</p>
+ <p className="text-slate-500 pl-6 text-sm font-medium leading-relaxed">{faq.a}</p>
  </div>
  ))}
  </div>
@@ -223,7 +223,7 @@ export const LaserFissureLongForm = () => {
  </div>
  <h2 className="text-3xl font-bold text-slate-900">Break the Spasm-Pain Cycle Today</h2>
  <p className="text-lg text-slate-600 leading-relaxed font-medium">
- You don&apos;t have to suffer in silence or fear every bowel movement. Our Vellore center offers the precision and care needed to heal your fissure once and for all.
+ You don't have to suffer in silence or fear every bowel movement. Our Vellore center offers the precision and care needed to heal your fissure once and for all.
  </p>
  <div className="flex flex-wrap justify-center gap-6 pt-4">
  <span className="flex items-center gap-2 text-sm text-slate-400"><MapPin className="w-4 h-4" /> Near Katpadi, Vellore</span>

@@ -20,7 +20,7 @@ interface EntityCardSectionProps {
 const DEFAULTS: Record<string, { title: string; subtitle: string; href: string }> = {
  services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/services" },
  doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
- departments: { title: "Elite Medical Units", subtitle: "Elite Medical Units", href: "/departments" },
+ departments: { title: "Our Medical Departments", subtitle: "Our Medical Departments", href: "/departments" },
  locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
 };
 
@@ -30,7 +30,7 @@ export async function EntityCardSection({
  subtitle,
  limit = 6,
  excludeSlug,
- className = "",
+ className="",
 }: EntityCardSectionProps) {
  const defaults = DEFAULTS[type];
  const displayTitle = title || defaults.title;

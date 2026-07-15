@@ -31,8 +31,7 @@ export function SpecialtyNav() {
 
  return (
  <div
- className={`fixed inset-x-0 z-[90] transition-all duration-300 ${scrolled ? "top-[88px]" : "top-[112px]"
- }`}
+ className={`fixed inset-x-0 z-[90] transition-all duration-300 ${scrolled ? "top-[88px]" : "top-[112px]" }`}
  >
  <div className="max-w-7xl mx-auto px-4 sm:px-6">
  <nav className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 dark:border-slate-700/60 rounded-full shadow-clay px-3 py-2 flex items-center overflow-x-auto no-scrollbar gap-2">
@@ -44,10 +43,7 @@ export function SpecialtyNav() {
  <div key={item.title} className="relative group flex-shrink-0">
  <Link
  href={item.href}
- className={`flex items-center gap-1.5 px-5 py-2.5 text-[14px] font-bold rounded-full transition-all whitespace-nowrap ${isActive
- ? "bg-fuchsia-600 text-white shadow-float"
- : "text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30"
- }`}
+ className={`flex items-center gap-1.5 px-5 py-2.5 text-[14px] font-bold rounded-full transition-all whitespace-nowrap ${isActive ? "bg-fuchsia-600 text-white shadow-float" : "text-slate-600 dark:text-slate-300 hover:text-fuchsia-600 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/30" }`}
  >
  {item.title}
  {hasSubServices && <ChevronDown className={`w-4 h-4 opacity-70 transition-transform group-hover:rotate-180 ${isActive ? "text-white" : ""}`} />}
@@ -82,10 +78,7 @@ export function SpecialtyNav() {
  <div className="relative flex-shrink-0" ref={dropdownRef}>
  <button
  onClick={() => setIsHospitalsOpen(!isHospitalsOpen)}
- className={`flex items-center gap-2 px-6 py-2.5 text-[14px] font-black rounded-full transition-all whitespace-nowrap border-2 ${isHospitalsOpen
- ? "bg-slate-900 border-slate-900 text-white dark:bg-fuchsia-600 dark:border-fuchsia-600"
- : "border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-fuchsia-600 hover:text-fuchsia-600"
- }`}
+ className={`flex items-center gap-2 px-6 py-2.5 text-[14px] font-black rounded-full transition-all whitespace-nowrap border-2 ${isHospitalsOpen ? "bg-slate-900 border-slate-900 text-white dark:bg-fuchsia-600 dark:border-fuchsia-600" : "border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-fuchsia-600 hover:text-fuchsia-600" }`}
  >
  <MapPin className="w-4 h-4" />
  Our Hospitals

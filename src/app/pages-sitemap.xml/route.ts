@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { getSitemapData, generateSitemapXml } from '@/lib/sitemap-utils';
 
 export async function GET() {

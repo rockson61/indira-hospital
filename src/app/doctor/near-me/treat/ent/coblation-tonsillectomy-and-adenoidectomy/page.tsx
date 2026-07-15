@@ -57,7 +57,7 @@ export default function TonsillectomyPage() {
  {/* Mechanism: Plasma vs Cautery */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50">
  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 blur-3xl -z-10" />
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading uppercase tracking-tighter italic">
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-emerald-500 pl-4 font-heading uppercase tracking-tighter">
  Mechanism: Plasma-Layer Dissolution
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
@@ -82,7 +82,7 @@ export default function TonsillectomyPage() {
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-emerald-100 dark:border-emerald-800 shadow-xl flex flex-col justify-center">
  <Flame className="w-16 h-16 text-emerald-500 mb-6" />
  <h4 className="text-xl font-bold mb-2">The "Indira" Cold Standard</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading italic border-l-2 border-emerald-100 pl-4">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading border-l-2 border-emerald-100 pl-4">
  By eliminating the 400°C+ heat of traditional cautery, we reduce the secondary inflammatory response. This is why our patients can enjoy cold liquids and soft foods almost immediately after surgery.
  </p>
  <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
@@ -96,7 +96,7 @@ export default function TonsillectomyPage() {
  {/* Pediatric Specialization */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
- <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-emerald-300">Pediatric "Airway First" Strategy</h3>
+ <h3 className="font-heading text-3xl font-bold mb-8 font-heading text-emerald-300">Pediatric "Airway First" Strategy</h3>
  <div className="grid md:grid-cols-3 gap-10 text-left relative z-10">
  {[
  { title: "Sleep Apnea Support", desc: "For children who snore or gasp during sleep, removing enlarged adenoids restores 100% airflow instantly.", icon: Wind },
@@ -106,7 +106,7 @@ export default function TonsillectomyPage() {
  <div key={i} className="p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-emerald-500/50 transition-all">
  <item.icon className="w-10 h-10 text-emerald-400 mb-4" />
  <h4 className="font-bold text-xl mb-2">{item.title}</h4>
- <p className="text-sm text-slate-400 leading-relaxed italic">{item.desc}</p>
+ <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -115,7 +115,7 @@ export default function TonsillectomyPage() {
  {/* Surgical Precision Grid */}
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter italic">Why Indira Hospital for Coblation?</h3>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter">Why Indira Hospital for Coblation?</h3>
  <p className="text-slate-600 dark:text-slate-400">Our ENT surgical suites are optimized for micro-precision outcome tracking.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -127,7 +127,7 @@ export default function TonsillectomyPage() {
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:bg-emerald-50/10 transition-all border-b-4 border-emerald-600">
  <h4 className="font-heading text-[10px] font-black uppercase tracking-widest text-emerald-600 mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-500 font-medium italic">{item.desc}</p>
+ <p className="text-[10px] text-slate-500 font-medium">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -163,7 +163,7 @@ export default function TonsillectomyPage() {
  },
  {
  q: "Why do we remove both tonsils and adenoids?",
- a: "They are part of the same lymphoid ring (Waldeyer&apos;s ring). If both are chronically infected or enlarged, removing both ensures the child&apos;s obstructive sleep apnea and recurrent infections are permanently cured."
+ a: "They are part of the same lymphoid ring (Waldeyer's ring). If both are chronically infected or enlarged, removing both ensures the child's obstructive sleep apnea and recurrent infections are permanently cured."
  }
  ].map((faq, i) => (
  <div key={i} className="pb-6 border-b border-slate-200 dark:border-slate-800 group text-left">
@@ -171,7 +171,7 @@ export default function TonsillectomyPage() {
  <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic text-left">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased text-left">
  {faq.a}
  </p>
  </div>

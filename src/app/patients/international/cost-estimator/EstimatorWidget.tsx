@@ -8,7 +8,7 @@ import { elitePricingBank } from "@/data/pricing-elite";
 const WA_BASE = `https://wa.me/${siteConfig.contact.whatsapp}?text=`;
 
 const WHATS_INCLUDED = [
- "Elite Surgeon&apos;s fee and OT charges",
+ "Elite Surgeon's fee and OT charges",
  "Anaesthesiologist & Care team fee",
  "Elite Institutional Room (Private / Deluxe)",
  "Personalized Nursing Care & Monitoring",
@@ -75,7 +75,7 @@ export function EstimatorWidget() {
 
  <div className="space-y-4">
  <div className="p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
- <p className="text-sm text-slate-300 mb-4">Want a <strong className="text-white">personalised quote</strong> for your specific case? Send us your reports and we&apos;ll reply within 24 hours.</p>
+ <p className="text-sm text-slate-300 mb-4">Want a <strong className="text-white">personalised quote</strong> for your specific case? Send us your reports and we'll reply within 24 hours.</p>
  <a href={waUrl} target="_blank" rel="noopener noreferrer"
  className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-all text-sm">
  <MessageCircle className="w-4 h-4" />

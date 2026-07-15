@@ -167,7 +167,7 @@ export function PayBillClient() {
 
  <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 bg-amber-50 dark:bg-amber-900/10 p-4 rounded-xl">
  <FileText className="w-5 h-5 text-amber-600 dark:text-amber-500 flex-shrink-0" />
- <p>If you don&apos;t know your Patient ID or Invoice Number, please contact our billing department at <span className="font-bold text-slate-700 dark:text-slate-300">080 4716 1616</span>.</p>
+ <p>If you don't know your Patient ID or Invoice Number, please contact our billing department at <span className="font-bold text-slate-700 dark:text-slate-300">080 4716 1616</span>.</p>
  </div>
  </div>
  </section>

@@ -120,7 +120,7 @@ export default function PreventiveKidneyPage() {
  >
  <div className="space-y-8">
  <section>
- <h2 className="font-heading text-3xl font-bold mb-4">India&apos;s Premier Center for Early-Stage Kidney Interventions</h2>
+ <h2 className="font-heading text-3xl font-bold mb-4">India's Premier Center for Early-Stage Kidney Interventions</h2>
  <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
  At Indira Super Speciality Hospital, our <strong>Elite Renal Team</strong> is focused on preservation. We utilize the latest evidence-backed pharmacological interventions and nutritional strategies to ensure that your kidneys continue to function at their peak capacity. Our mission is to transform the management of CKD from "wait-and-watch" to "proactive-and-protect."
  </p>

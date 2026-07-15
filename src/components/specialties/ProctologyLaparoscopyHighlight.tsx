@@ -30,7 +30,7 @@ const PARENT_SLUG = "general-surgery";
 
 const WA_DEFAULT = "https://wa.me/" + siteConfig.contact.whatsapp + "?text=" + encodeURIComponent("Hi, I want to know more about Proctology (Piles/Fistula) or Laparoscopic surgery at Indira Hospital. Please help.");
 
-export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, className = "" }: Props) {
+export function ProctologyLaparoscopyHighlight({ cityName, countryName, waUrl, className="" }: Props) {
  const locationLabel = countryName
  ? `for Patients from ${countryName}`
  : cityName

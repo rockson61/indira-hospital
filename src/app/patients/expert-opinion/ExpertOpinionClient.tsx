@@ -60,7 +60,7 @@ export default function ExpertOpinionClient() {
  <ShieldCheck className="w-4 h-4 mr-2" /> Verified Clinical Opinion
  </Badge>
  
- <h1 className="text-5xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-none italic uppercase">
+ <h1 className="text-5xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-none uppercase">
  Clinical <br />
  <span className="text-blue-600 dark:text-blue-400 font-black">Expert Review.</span>
  </h1>
@@ -95,12 +95,12 @@ export default function ExpertOpinionClient() {
  <SectionContainer className="py-32">
  <div className="flex flex-col lg:flex-row gap-20 items-center">
  <div className="lg:w-1/2 space-y-10">
- <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none italic text-slate-900 dark:text-white uppercase">
+ <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none text-slate-900 dark:text-white uppercase">
  The Multi-Disciplinary <br />
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Board Approach.</span>
  </h2>
  <p className="text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
- Complex medical decisions shouldn&apos;t be made in isolation. Our Expert Opinion portal triggers an MDT review where surgeons, radiologists, and recovery specialists collaborate on your specific case.
+ Complex medical decisions shouldn't be made in isolation. Our Expert Opinion portal triggers an MDT review where surgeons, radiologists, and recovery specialists collaborate on your specific case.
  </p>
  
  <div className="grid sm:grid-cols-2 gap-4">
@@ -125,7 +125,7 @@ export default function ExpertOpinionClient() {
  <div className="w-20 h-20 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-6">
  <UploadCloud className="w-10 h-10 text-blue-400" />
  </div>
- <h3 className="text-2xl font-black text-white italic uppercase tracking-tight">Upload Case Reports</h3>
+ <h3 className="text-2xl font-black text-white uppercase tracking-tight">Upload Case Reports</h3>
  <p className="text-slate-400 font-medium text-sm">Drag and drop MRI, CT scans, or discharge summaries (ZIP/PDF).</p>
  </div>
 

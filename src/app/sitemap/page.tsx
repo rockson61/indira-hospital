@@ -21,7 +21,7 @@ import { constructMetadata } from '@/lib/seo-utils';
 
 export const metadata: Metadata = constructMetadata({
  title: "Sitemap | Indira Super Speciality Hospital",
- description: "Learn more about sitemap at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
+ description: "Learn more about sitemap at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
  path: "/sitemap"
 });
 
@@ -192,7 +192,7 @@ export default function SitemapPage() {
  <Card className="mt-20 p-12 bg-gradient-to-br from-fuchsia-900 to-slate-900 border-none relative overflow-hidden rounded-[3rem]">
  <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
  <div className="text-center md:text-left">
- <h3 className="text-3xl font-black text-white mb-2">Can&apos;t find what you&apos;re looking for?</h3>
+ <h3 className="text-3xl font-black text-white mb-2">Can't find what you're looking for?</h3>
  <p className="text-fuchsia-200/70 text-lg">Our 24/7 helpdesk is available for all medical inquiries.</p>
  </div>
  <div className="flex gap-4">

@@ -80,7 +80,7 @@ export default function ThyroidSurgeryENTPage() {
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-2xl">
  <Dna className="w-24 h-24 text-blue-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Safe Extraction</p>
- <p className="text-slate-500 text-sm italic">Precision-guided microscopic ablation to resolve chronic head and neck growths.</p>
+ <p className="text-slate-500 text-sm">Precision-guided microscopic ablation to resolve chronic head and neck growths.</p>
  </div>
  </div>
  </div>
@@ -109,7 +109,7 @@ export default function ThyroidSurgeryENTPage() {
  ))}
  </div>
 
- <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-blue-500 pl-4 py-2 italic">Safeguarding Functional Outcomes</h3>
+ <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-blue-500 pl-4 py-2">Safeguarding Functional Outcomes</h3>
  <p>
  One of the most concerning risks of thyroid surgery is a potential change in voice due to injury of the **recurrent laryngeal nerve**. In parotid surgery, the primary risk is injury to the **facial nerve**, which could lead to facial paralysis. We use **Intra-operative Nerve Monitoring (IONM)** at Indira Hospital to mitigate these risks. This technology provides the surgeon with real-time electrical feedback, allowing them to identify and protect these microscopic nerves with absolute certainty.
  </p>

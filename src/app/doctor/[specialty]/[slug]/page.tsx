@@ -141,7 +141,7 @@ export default async function DoctorProfileRoute({
 
  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-16 lg:pt-60 lg:pb-32 z-10">
  {/* Breadcrumb */}
- <nav className="flex items-center text-sm text-indigo-300/60 mb-10 italic">
+ <nav className="flex items-center text-sm text-indigo-300/60 mb-10">
  <Link href="/" className="hover:text-white transition-colors">Home</Link>
  <ChevronRight className="w-4 h-4 mx-2 opacity-40" />
  <Link href="/doctor/near-me" className="hover:text-white transition-colors capitalize">Our Specialists</Link>
@@ -268,7 +268,7 @@ export default async function DoctorProfileRoute({
  Elite Consultation
  </Link>
  <a
- href={`https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent(`Hi, I&apos;d like to book an appointment with ${currDoctor.name}.`)}`}
+ href={`https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent(`Hi, I'd like to book an appointment with ${currDoctor.name}.`)}`}
  target="_blank"
  rel="noopener noreferrer"
  className="block w-full text-center px-6 py-3 mt-3 bg-green-500 text-white font-bold rounded-2xl hover:bg-green-600 transition-all shadow-md"

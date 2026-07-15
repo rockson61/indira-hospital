@@ -17,7 +17,7 @@ export default function HighRiskPregnancyPage() {
  title="High-Risk Pregnancy & Maternal-Fetal Hub in Vellore, Tamil Nadu"
  slug="high-risk-pregnancy-care"
  parentServiceSlug="obstetrics-gynaecology"
- departmentName="Indira Elite Women&apos;s Care"
+ departmentName="Indira Elite Women's Care"
  description={
  <article>
  <p className="text-lg leading-relaxed">
@@ -57,7 +57,7 @@ export default function HighRiskPregnancyPage() {
  {/* Mechanism: The High-Risk Security Protocol */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
  <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading uppercase tracking-tighter italic">
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading uppercase tracking-tighter">
  Mechanism: The maternal-fetal security axis
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
@@ -66,7 +66,7 @@ export default function HighRiskPregnancyPage() {
  High-risk pregnancies are medical scenarios that require constant physiological monitoring of two patients simultaneously. Our **Maternal-Fetal Medicine (MFM)** unit operates on a 'Zero-Compromise' framework that integrates real-time clinical vigilance with technological superiority.
  </p>
  <p className="mt-4">
- Whether managing **Preeclampsia** (high blood pressure) or **Preterm Labor**, our protocols focus on 'extending gestation' safely to allow the baby&apos;s lungs and organs to mature. We utilize **Doppler Flow Studies** and **High-Resolution 4D Ultrasonography** to track fetal health in sub-millimeter detail, identifying issues like 'Intrauterine Growth Restriction (IUGR)' before they become critical.
+ Whether managing **Preeclampsia** (high blood pressure) or **Preterm Labor**, our protocols focus on 'extending gestation' safely to allow the baby's lungs and organs to mature. We utilize **Doppler Flow Studies** and **High-Resolution 4D Ultrasonography** to track fetal health in sub-millimeter detail, identifying issues like 'Intrauterine Growth Restriction (IUGR)' before they become critical.
  </p>
  <div className="mt-8 space-y-4">
  <div className="flex items-center gap-3">
@@ -82,7 +82,7 @@ export default function HighRiskPregnancyPage() {
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-rose-100 dark:border-rose-800 shadow-xl flex flex-col justify-center">
  <Baby className="w-16 h-16 text-rose-500 mb-6" />
  <h4 className="text-xl font-bold mb-2">The "Indira" NICU Synergy</h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading italic border-l-2 border-rose-100 pl-4">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-heading border-l-2 border-rose-100 pl-4">
  Our Level II+ Neonatal ICU is located seconds away from the labor suits. For babies born early or those with growth challenges, our senior neonatologists provide immediate 'life-first' interventions starting from the very first breath.
  </p>
  <div className="inline-flex items-center gap-2 text-rose-600 font-bold text-xs uppercase tracking-widest">
@@ -96,7 +96,7 @@ export default function HighRiskPregnancyPage() {
  {/* Conditions Grid */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
- <h3 className="font-heading text-3xl font-bold mb-8 italic font-heading text-rose-300 uppercase tracking-widest leading-none">Maternal-Fetal Clinical Spectrum</h3>
+ <h3 className="font-heading text-3xl font-bold mb-8 font-heading text-rose-300 uppercase tracking-widest leading-none">Maternal-Fetal Clinical Spectrum</h3>
  <div className="grid md:grid-cols-3 gap-10 text-left relative z-10">
  {[
  { title: "Multifetal Gestation", desc: "Specialized monitoring for twins and triplets, focusing on weight discordance and preterm labor prevention.", icon: Users2 },
@@ -106,7 +106,7 @@ export default function HighRiskPregnancyPage() {
  <div key={i} className="p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-rose-500/50 transition-all">
  <item.icon className="w-10 h-10 text-rose-400 mb-4" />
  <h4 className="font-bold text-xl mb-2">{item.title}</h4>
- <p className="text-sm text-slate-400 leading-relaxed italic">{item.desc}</p>
+ <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -115,7 +115,7 @@ export default function HighRiskPregnancyPage() {
  {/* Pre-natal security grid */}
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter italic">Why Indira Hospital for High-Risk Pregnancies?</h3>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter">Why Indira Hospital for High-Risk Pregnancies?</h3>
  <p className="text-slate-600 dark:text-slate-400">Total clinical synergy for the most sensitive journey of your life.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -127,7 +127,7 @@ export default function HighRiskPregnancyPage() {
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:bg-rose-50/10 transition-all border-b-4 border-rose-600">
  <h4 className="font-heading text-[10px] font-black uppercase tracking-widest text-rose-600 mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-500 font-medium italic">{item.desc}</p>
+ <p className="text-[10px] text-slate-500 font-medium">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -143,7 +143,7 @@ export default function HighRiskPregnancyPage() {
  {[
  {
  q: "Does a high-risk pregnancy mean I should have a C-section?",
- a: "Not necessarily. We prioritize Normal Vaginal Birth (VBAC and routine) whenever clinically safe. However, in high-risk cases, we are prepared to perform an emergency C-section within minutes if the baby&apos;s heart tracking shows distress."
+ a: "Not necessarily. We prioritize Normal Vaginal Birth (VBAC and routine) whenever clinically safe. However, in high-risk cases, we are prepared to perform an emergency C-section within minutes if the baby's heart tracking shows distress."
  },
  {
  q: "Why is maternal age over 35 considered 'High-Risk'?",
@@ -155,7 +155,7 @@ export default function HighRiskPregnancyPage() {
  },
  {
  q: "Can I manage Gestational Diabetes with just diet?",
- a: "In many cases, yes. Our clinical nutritionist provides a GDM-specific meal plan. However, if your fasting sugars remain high, we titrate insulin to ensure the baby doesn&apos;t grow too large (macrosomia)."
+ a: "In many cases, yes. Our clinical nutritionist provides a GDM-specific meal plan. However, if your fasting sugars remain high, we titrate insulin to ensure the baby doesn't grow too large (macrosomia)."
  },
  {
  q: "When should I call the emergency line immediately?",
@@ -171,7 +171,7 @@ export default function HighRiskPregnancyPage() {
  <Zap className="w-4 h-4 mt-1 text-rose-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic text-left">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased text-left">
  {faq.a}
  </p>
  </div>

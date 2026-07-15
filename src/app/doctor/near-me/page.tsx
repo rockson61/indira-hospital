@@ -18,7 +18,7 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import EntityFAQs from "@/components/trust/EntityFAQs";
 import EntityReviews from "@/components/trust/EntityReviews";
 
-const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Elite WhatsApp Consultation: I&apos;m looking for the best specialist at Indira Super Speciality Hospital, Vellore.")}`;
+const WHATSAPP_URL = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Elite WhatsApp Consultation: I'm looking for the best specialist at Indira Super Speciality Hospital, Vellore.")}`;
 
 export const metadata: Metadata = {
  title: "Best Hospital in Vellore — Ranked #1 for Specialized Care...",
@@ -137,7 +137,7 @@ export default async function LocationsPage() {
   <span className="elite-gradient-text text-3xl sm:text-4xl">Serving {locations.length}+ Cities.</span>
   </h1>
  <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-10">
- Elite healthcare shouldn&apos;t require a long journey. Indira Super Speciality Hospital brings advanced laparoscopic, laser, and emergency treatments directly to {districtsServed} districts across Tamil Nadu.
+ Elite healthcare shouldn't require a long journey. Indira Super Speciality Hospital brings advanced laparoscopic, laser, and emergency treatments directly to {districtsServed} districts across Tamil Nadu.
  </p>
 
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -266,7 +266,7 @@ export default async function LocationsPage() {
 
  {/* DEPARTMENTS CROSS-LINK (INTERACTIVE PILLS) */}
  <section className="py-24 bg-slate-100 dark:bg-slate-800 relative overflow-hidden -skew-y-3">
- <div className="absolute inset-0 bg-white dark:bg-slate-900 " />
+ <div className="absolute inset-0 bg-white dark:bg-slate-900" />
  <SectionContainer className="relative z-10 max-w-7xl mx-auto skew-y-3">
  <div className="text-center mb-12">
  <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-600 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm dark:shadow-slate-900/30">
@@ -321,7 +321,7 @@ export default async function LocationsPage() {
  <MapPin className="w-8 h-8 text-fuchsia-300" />
  </div>
  <h2 className="elite-section-title text-white mb-8">
- Can&apos;t Find Your <br className="hidden sm:block" /> <span className="text-fuchsia-400">Location?</span>
+ Can't Find Your <br className="hidden sm:block" /> <span className="text-fuchsia-400">Location?</span>
  </h2>
  <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
  We serve patients from across Tamil Nadu and neighboring states. WhatsApp us for instant appointment booking, accurate cost estimates, and VIP transport assistance.

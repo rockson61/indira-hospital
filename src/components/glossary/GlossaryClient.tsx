@@ -192,7 +192,7 @@ export function GlossaryClient() {
  <BookOpen className="w-10 h-10 text-slate-400" />
  </div>
  <h3 className="elite-section-title text-slate-900 dark:text-white mb-4">No precise match</h3>
- <p className="text-slate-500 dark:text-slate-400 font-medium text-lg mb-8 px-8">We couldn&apos;t locate any terminology in our glossary matching your exact query.</p>
+ <p className="text-slate-500 dark:text-slate-400 font-medium text-lg mb-8 px-8">We couldn't locate any terminology in our glossary matching your exact query.</p>
  <button
  onClick={() => { setSearchQuery(""); setSelectedLetter(null); }}
  className="inline-flex items-center px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:scale-105 transition-transform"

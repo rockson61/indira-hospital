@@ -64,10 +64,7 @@ export const AZIndex = () => {
  <button
  key={group.letter}
  onClick={() => setActiveLetter(group.letter)}
- className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl font-bold transition-all ${activeLetter === group.letter
- ? "bg-fuchsia-600 text-white shadow-clay shadow-fuchsia-600/30 scale-110"
- : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:bg-slate-700"
- }`}
+ className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl font-bold transition-all ${activeLetter === group.letter ? "bg-fuchsia-600 text-white shadow-clay shadow-fuchsia-600/30 scale-110" : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:bg-slate-700" }`}
  >
  {group.letter}
  </button>
@@ -88,7 +85,7 @@ export const AZIndex = () => {
  </Link>
  ))}
  {filteredData.length === 0 && (
- <div className="col-span-full text-center py-12 text-slate-400 font-medium italic">
+ <div className="col-span-full text-center py-12 text-slate-400 font-medium">
  No matching treatments or conditions found.
  </div>
  )}

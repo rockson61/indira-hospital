@@ -32,11 +32,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
  <button
  key={cat}
  onClick={() => setFilter(cat)}
- className={`px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 border ${
- filter === cat 
- ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white shadow-2xl shadow-indigo-500/20 scale-105' 
- : 'bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:scale-105'
- }`}
+ className={`px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 border ${ filter === cat ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white shadow-2xl shadow-indigo-500/20 scale-105' : 'bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:scale-105' }`}
  >
  {cat}
  </button>
@@ -58,9 +54,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
  key={photo.src}
  onClick={() => setSelectedImage(photo)}
- className={`group relative overflow-hidden rounded-[3.5rem] cursor-pointer shadow-lg hover:shadow-[0_40px_100px_-20px_rgba(99,102,241,0.2)] transition-all duration-700 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 ${
- index === 0 && filter === "All" ? 'sm:col-span-2 sm:row-span-2' : ''
- }`}
+ className={`group relative overflow-hidden rounded-[3.5rem] cursor-pointer shadow-lg hover:shadow-[0_40px_100px_-20px_rgba(99,102,241,0.2)] transition-all duration-700 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 ${ index === 0 && filter === "All" ? 'sm:col-span-2 sm:row-span-2' : '' }`}
  >
  <EliteImage
  src={photo.src}
@@ -74,7 +68,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
  <span className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.3em] mb-3">
  {photo.category}
  </span>
- <h3 className="text-white font-black text-2xl tracking-tight leading-tight mb-2 uppercase italic">
+ <h3 className="text-white font-black text-2xl tracking-tight leading-tight mb-2 uppercase">
  {photo.alt}
  </h3>
  <div className="h-1.5 w-16 bg-gradient-to-r from-indigo-500 to-fuchsia-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 delay-100 rounded-full" />
@@ -104,7 +98,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
  initial={{ opacity: 0 }}
  animate={{ opacity: 1 }}
  exit={{ opacity: 0 }}
- className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-10 lg:p-20 bg-slate-950/98 "
+ className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-10 lg:p-20 bg-slate-950/98"
  onClick={() => setSelectedImage(null)}
  >
  <motion.button 
@@ -134,7 +128,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
  <span className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.4em] mb-4 block">
  {selectedImage.category}
  </span>
- <h2 className="elite-section-title text-white er mb-6 uppercase italic">
+ <h2 className="elite-section-title text-white er mb-6 uppercase">
  {selectedImage.alt}
  </h2>
  <div className="h-2 w-32 bg-gradient-to-r from-indigo-500 to-fuchsia-500 rounded-full" />

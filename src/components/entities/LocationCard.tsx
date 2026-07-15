@@ -47,6 +47,7 @@ export function LocationCard({ location, className, cardClassName, variant = "ca
  className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity pointer-events-none"
  title={location.name}
  loading="lazy"
+ suppressHydrationWarning={true}
  />
  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex items-end">
  <h3 className="text-white font-heading font-black text-base tracking-tight drop-shadow-clay-sm">{location.name}</h3>

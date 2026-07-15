@@ -6,7 +6,6 @@ import { enhancedVelloreLocations } from '@/lib/data/enhanced-location-data';
 import { navigation } from '@/config/navigation';
 import { ChevronDown, MapPin, Stethoscope, Building2, Sparkles, TrendingUp, Globe, HeartPulse } from 'lucide-react';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function DynamicSEOKeywordBlock() {
  const pathname = usePathname();
@@ -64,16 +63,17 @@ export default function DynamicSEOKeywordBlock() {
  return (
  <section className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800/80 py-12 transition-colors duration-500">
  <div className="container mx-auto px-6 max-w-7xl">
- <motion.button 
+ <button 
+ type="button"
  onClick={() => setIsExpanded(!isExpanded)}
- initial={false}
+ aria-expanded={isExpanded}
  className="flex flex-col md:flex-row items-center justify-between w-full text-left group gap-6"
  >
  <div className="flex-1">
  <div className="flex items-center gap-2 mb-2">
  <div className="px-2 py-0.5 rounded-full bg-fuchsia-100 dark:bg-fuchsia-950/50 border border-fuchsia-200 dark:border-fuchsia-800/50 flex items-center gap-1.5">
  <Sparkles className="w-3 h-3 text-fuchsia-600" />
- <span className="text-[10px] font-black uppercase tracking-widest text-fuchsia-700 dark:text-fuchsia-400">Elite SEO Network</span>
+ <span className="text-[10px] font-black uppercase tracking-widest text-fuchsia-700 dark:text-fuchsia-400">Related Services</span>
  </div>
  </div>
  <h2 className="text-2xl font-black text-slate-800 dark:text-white tracking-tight flex items-center gap-2 group-hover:text-fuchsia-600 transition-colors">
@@ -92,17 +92,10 @@ export default function DynamicSEOKeywordBlock() {
  <ChevronDown className="w-5 h-5 text-slate-400 group-hover:text-fuchsia-600" />
  </div>
  </div>
- </motion.button>
+ </button>
 
- <AnimatePresence>
  {isExpanded && (
- <motion.div 
- initial={{ height: 0, opacity: 0 }}
- animate={{ height: 'auto', opacity: 1 }}
- exit={{ height: 0, opacity: 0 }}
- transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
- className="overflow-hidden"
- >
+ <div className="overflow-hidden animate-in fade-in slide-in-from-top-2 duration-300">
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-12 py-8 border-t border-slate-200 dark:border-slate-800/60">
  
  {/* High Authority Core Links */}
@@ -180,9 +173,8 @@ export default function DynamicSEOKeywordBlock() {
  </div>
 
  </div>
- </motion.div>
+ </div>
  )}
- </AnimatePresence>
  </div>
  </section>
  );

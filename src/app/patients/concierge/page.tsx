@@ -121,7 +121,7 @@ export default function ConciergePage() {
  <div className={`w-16 h-16 rounded-2xl ${feature.bg} flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
  <feature.icon className={`w-8 h-8 ${feature.color}`} />
  </div>
- <h3 className="text-2xl font-black text-white italic tracking-tight">{feature.title}</h3>
+ <h3 className="text-2xl font-black text-white tracking-tight">{feature.title}</h3>
  <p className="text-slate-400 font-medium leading-relaxed">
  {feature.description}
  </p>
@@ -139,7 +139,7 @@ export default function ConciergePage() {
  <div className="inline-flex items-center gap-2 p-2 px-4 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-widest">
  <Hotel className="w-4 h-4" /> Destination Recovery
  </div>
- <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none italic">
+ <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none">
  The Elite <br />
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Recovery Suites.</span>
  </h2>
@@ -169,7 +169,7 @@ export default function ConciergePage() {
  <div className="flex gap-1">
  {[1,2,3,4,5].map(star => <Star key={star} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
  </div>
- <h4 className="text-3xl font-black italic">The Presidential Suite</h4>
+ <h4 className="text-3xl font-black">The Presidential Suite</h4>
  <p className="text-slate-200 font-medium">Redefining clinical comfort for our most discerning patients.</p>
  </div>
  {/* Animated ring */}
@@ -184,9 +184,9 @@ export default function ConciergePage() {
  <div className="flex flex-nowrap gap-20 animate-marquee items-center opacity-30 select-none">
  {[1,2,3,4,5].map(i => (
  <div key={i} className="flex gap-12 items-center shrink-0">
- <span className="text-5xl font-black italic tracking-tighter text-white">ELITE COMFORT</span>
+ <span className="text-5xl font-black tracking-tighter text-white">ELITE COMFORT</span>
  <Sparkles className="w-12 h-12 text-purple-500" />
- <span className="text-5xl font-black italic tracking-tighter text-white">CLINICAL PRECISION</span>
+ <span className="text-5xl font-black tracking-tighter text-white">CLINICAL PRECISION</span>
  <Star className="w-12 h-12 text-purple-500" />
  </div>
  ))}

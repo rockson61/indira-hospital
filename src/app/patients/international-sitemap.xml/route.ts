@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { INTERNATIONAL_COUNTRIES } from "@/lib/data/international-data";
 import { siteConfig } from "@/config/site";
 

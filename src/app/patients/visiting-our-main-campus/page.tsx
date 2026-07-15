@@ -131,7 +131,7 @@ export default function VisitingMainCampusPage() {
  {row.slot2}
  </span>
  </td>
- <td className="py-6 px-8 text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed italic">{row.note}</td>
+ <td className="py-6 px-8 text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed">{row.note}</td>
  </tr>
  ))}
  </tbody>

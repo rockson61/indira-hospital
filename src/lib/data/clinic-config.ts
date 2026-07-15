@@ -103,7 +103,7 @@ export const clinicEquipment = [
  {
  id: 'ct-scan',
  title: '128-Slice CT & Advanced USG',
- description: 'Elite diagnostics featuring 128-slice CT for sub-millimeter precision and high-definition 4D ultrasound mapping.',
+ description: 'Advanced diagnostics featuring 128-slice CT for sub-millimeter precision and high-definition 4D ultrasound mapping.',
  },
  {
  id: 'dialysis',
@@ -117,7 +117,7 @@ export const clinicEquipment = [
  },
  {
  id: 'icu',
- title: 'Elite 24/7 Critical Care',
+ title: 'Advanced 24/7 Critical Care',
  description: 'Level-3 Intensive Care Units with centralized monitoring, advanced mechanical ventilation, and one-to-one nursing.',
  },
 ];

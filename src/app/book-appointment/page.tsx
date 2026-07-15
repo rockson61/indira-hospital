@@ -28,7 +28,7 @@ export default function AppointmentPage() {
  Experience.
  </h1>
 
- <p className="text-xl md:text-2xl text-slate-400 max-w-4xl mx-auto font-light leading-relaxed mb-8 italic">
+ <p className="text-xl md:text-2xl text-slate-400 max-w-4xl mx-auto font-light leading-relaxed mb-8">
  Transparent pricing. Direct specialist mapping. No waitlists. <br className="hidden md:block" />
  Experience the gold standard of surgical coordination.
  </p>
@@ -36,18 +36,18 @@ export default function AppointmentPage() {
  <div className="flex justify-center items-center gap-8 opacity-40 grayscale hover:grayscale-0 transition-all cursor-crosshair">
  <div className="flex items-center gap-2">
  <Clock className="w-5 h-5 text-emerald-400" />
- <span className="text-xs font-black uppercase tracking-widest text-white italic">Same-Week Surgery</span>
+ <span className="text-xs font-black uppercase tracking-widest text-white">Same-Week Surgery</span>
  </div>
  <div className="w-px h-6 bg-white dark:bg-slate-900" />
  <div className="flex items-center gap-2">
  <Sparkles className="w-5 h-5 text-indigo-400" />
- <span className="text-xs font-black uppercase tracking-widest text-white italic">Fixed Cost Estimates</span>
+ <span className="text-xs font-black uppercase tracking-widest text-white">Fixed Cost Estimates</span>
  </div>
  </div>
  </div>
 
  {/* Perspective Backdrop Text */}
- <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-[15rem] font-black text-white/[0.02] tracking-tighter select-none pointer-events-none uppercase italic">
+ <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-[15rem] font-black text-white/[0.02] tracking-tighter select-none pointer-events-none uppercase">
  PRIORITY
  </div>
  </section>
@@ -65,19 +65,19 @@ export default function AppointmentPage() {
  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 hover:opacity-100 transition-opacity duration-1000">
  <div className="flex flex-col items-center gap-3">
  <div className="h-0.5 w-12 bg-white dark:bg-slate-900" />
- <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">USFDA Approved <br /> Technology</span>
+ <span className="text-[9px] font-bold text-white uppercase tracking-widest leading-relaxed text-center">USFDA Approved <br /> Technology</span>
  </div>
  <div className="flex flex-col items-center gap-3">
  <div className="h-0.5 w-12 bg-white dark:bg-slate-900" />
- <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">NABH Safety <br /> Standards</span>
+ <span className="text-[9px] font-bold text-white uppercase tracking-widest leading-relaxed text-center">NABH Safety <br /> Standards</span>
  </div>
  <div className="flex flex-col items-center gap-3">
  <div className="h-0.5 w-12 bg-white dark:bg-slate-900" />
- <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">NABL Certified <br /> Diagnostics</span>
+ <span className="text-[9px] font-bold text-white uppercase tracking-widest leading-relaxed text-center">NABL Certified <br /> Diagnostics</span>
  </div>
  <div className="flex flex-col items-center gap-3">
  <div className="h-0.5 w-12 bg-white dark:bg-slate-900" />
- <span className="text-[9px] font-bold text-white uppercase tracking-widest italic leading-relaxed text-center">World-Class <br /> TPA Support</span>
+ <span className="text-[9px] font-bold text-white uppercase tracking-widest leading-relaxed text-center">World-Class <br /> TPA Support</span>
  </div>
  </div>
  </section>

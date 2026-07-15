@@ -156,7 +156,7 @@ export default function ScansPage() {
  Book Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Scan Today.</span>
  </h2>
  <p className="text-xl sm:text-2xl text-slate-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
- Don&apos;t wait hours for an emergency scan. Schedule your appointment instantly and get your comprehensive digital diagnostic report lightning fast.
+ Don't wait hours for an emergency scan. Schedule your appointment instantly and get your comprehensive digital diagnostic report lightning fast.
  </p>
  <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-3xl mx-auto">
  <a

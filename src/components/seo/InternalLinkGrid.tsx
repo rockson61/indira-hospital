@@ -39,7 +39,7 @@ const DEFAULTS = {
  services: { title: "Explore Our Treatments", subtitle: "Popular Services", href: "/doctor/near-me/treat" },
  treatments: { title: "Specific Procedures", subtitle: "Available Surgeries", href: "/doctor/near-me/treat" },
  doctors: { title: "Meet Our Specialists", subtitle: "Expert Doctors", href: "/doctors" },
- departments: { title: "Elite Medical Units", subtitle: "Departments", href: "/departments" },
+ departments: { title: "Our Medical Departments", subtitle: "Departments", href: "/departments" },
  locations: { title: "We Serve Your Area", subtitle: "Our Locations", href: "/doctor/near-me" },
  diagnostics: { title: "Accurate Lab Tests", subtitle: "Indira Diagnostics", href: "/diagnostics" },
  "health-packages": { title: "Complete Health Screenings", subtitle: "Wellness Packages", href: "/health-packages" },
@@ -52,7 +52,7 @@ export async function InternalLinkGrid({
  limit = 12,
  excludeSlug,
  parentSlug,
- className = "",
+ className="",
 }: InternalLinkGridProps) {
  let items: { name: string; slug: string; url: string }[] = [];
 

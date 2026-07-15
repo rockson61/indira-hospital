@@ -221,7 +221,7 @@ export function ServiceSupportContent({
  </li>
  ))}
  </ul>
- <p className="mt-6 text-foreground/70 dark:text-slate-400 italic">
+ <p className="mt-6 text-foreground/70 dark:text-slate-400">
  <strong>Early treatment saves 30–50% in costs.</strong> Free 15-minute assessment available. Call {siteConfig.contact.phone} or WhatsApp to check if you need {serviceName.toLowerCase()}.
  </p>
  </div>
@@ -257,7 +257,7 @@ export function ServiceSupportContent({
  </SectionContainer>
 
  <SectionContainer className="py-12 bg-gradient-to-br from-cyan-50/50 via-white to-blue-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" id={sectionIds.cost}>
- <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">{serviceName} Cost &amp; Packages</h2>
+ <h2 className="elite-section-title bg-gradient-to-r from-fuchsia-600 to-fuchsia-600 dark:from-fuchsia-400 dark:to-fuchsia-400 bg-clip-text text-transparent mb-4">{serviceName} Cost & Packages</h2>
  <p className="text-foreground/80 dark:text-slate-300 leading-relaxed mb-6">
  <strong>All-inclusive pricing</strong>—no hidden fees. Each package includes: consultation, CBCT scan, procedure, materials, and follow-up visits. <strong>0% EMI available</strong> for eligible treatments. Serving patients from {cityName}, {locationName}, and nearby districts.
  </p>
@@ -267,7 +267,7 @@ export function ServiceSupportContent({
  <tr>
  <th scope="col" className="px-4 py-3 text-left text-sm font-semibold text-fuchsia-800 dark:text-fuchsia-200">Package</th>
  <th scope="col" className="px-4 py-3 text-left text-sm font-semibold text-fuchsia-800 dark:text-fuchsia-200">Starting Cost</th>
- <th scope="col" className="px-4 py-3 text-left text-sm font-semibold text-fuchsia-800 dark:text-fuchsia-200">What&apos;s Included</th>
+ <th scope="col" className="px-4 py-3 text-left text-sm font-semibold text-fuchsia-800 dark:text-fuchsia-200">What's Included</th>
  </tr>
  </thead>
  <tbody className="divide-y divide-fuchsia-100/50 dark:divide-fuchsia-800/40 bg-white dark:bg-slate-900">

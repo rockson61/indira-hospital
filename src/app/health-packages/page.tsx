@@ -90,7 +90,7 @@ export default async function HealthPackagesPage() {
  <ArrowRight className="w-5 h-5 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover/btn:translate-x-[150%] transition-transform duration-700 ease-out" />
  </Link>
- <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;m interested in booking the ${pkg.title} package.`)}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-6 py-4 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 font-bold rounded-2xl hover:bg-fuchsia-600 hover:text-white transition-all duration-300">
+ <a href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in booking the ${pkg.title} package.`)}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-6 py-4 bg-fuchsia-50 dark:bg-fuchsia-950 text-fuchsia-700 font-bold rounded-2xl hover:bg-fuchsia-600 hover:text-white transition-all duration-300">
  <MessageCircle className="w-4 h-4 mr-2" />
  Book via WhatsApp
  </a>
@@ -166,7 +166,7 @@ export default async function HealthPackagesPage() {
  </div>
  <div>
  <h4 className="text-xl font-bold text-white mb-2">Patient Caring</h4>
- <p className="text-slate-400 leading-relaxed font-light">We don&apos;t merely provide reports; our clinical team provides a structured path to ongoing wellness and recovery.</p>
+ <p className="text-slate-400 leading-relaxed font-light">We don't merely provide reports; our clinical team provides a structured path to ongoing wellness and recovery.</p>
  </div>
  </div>
  </div>

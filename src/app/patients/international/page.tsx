@@ -231,7 +231,7 @@ export default function InternationalPatientsPage() {
  ))}
  </div>
  <div className="mt-12 p-6 bg-fuchsia-600 rounded-2xl text-center">
- <div className="text-white font-black text-lg mb-1 italic">Save up to 70%</div>
+ <div className="text-white font-black text-lg mb-1">Save up to 70%</div>
  <div className="text-white/70 text-xs font-bold uppercase tracking-widest">Global Medical Standards</div>
  </div>
  </div>

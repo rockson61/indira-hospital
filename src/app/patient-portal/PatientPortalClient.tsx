@@ -165,7 +165,7 @@ export default function PatientPortalClient() {
  >
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 rounded-full blur-3xl" />
  <div className="flex items-center gap-6 relative z-10 text-white">
- <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl ">
+ <div className="p-4 bg-white dark:bg-slate-900 rounded-2xl">
  <Sparkles className="w-8 h-8 text-fuchsia-400" />
  </div>
  <div>

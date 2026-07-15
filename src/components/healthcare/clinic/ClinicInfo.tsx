@@ -13,7 +13,7 @@ interface ClinicInfoProps {
 
 
 
-export function ClinicInfo({ variant = "full", showHours = true, showEmail = true, className = "" }: ClinicInfoProps) {
+export function ClinicInfo({ variant = "full", showHours = true, showEmail = true, className="" }: ClinicInfoProps) {
  const hours = clinicTimings;
 
  return (
@@ -22,7 +22,7 @@ export function ClinicInfo({ variant = "full", showHours = true, showEmail = tru
 
  <div className="flex items-start gap-2 mb-2">
  <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-fuchsia-600" />
- <address className="not-italic">
+ <address className="not-">
  Vellore, Tamil Nadu
  </address>
  </div>

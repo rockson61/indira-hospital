@@ -48,7 +48,7 @@ export function MRIScanClient() {
  <p>
  Magnetic Resonance Imaging (MRI) is the gold standard for visualizing soft tissues, the brain, and complex joint structures. At Indira Super Speciality Hospital, we provide **Elite 3T MRI Diagnostics**. Using our **Wide-Bore, Silent 3.0 Tesla Magnet**, we deliver double the signal strength of standard 1.5T machines, allowing for ultra-fine slice thickness, reduced scan times, and unparalleled diagnostic clarity.
  </p>
- <p className="mt-4 text-fuchsia-600 dark:text-fuchsia-400 font-semibold italic border-l-4 border-fuchsia-500 pl-4 uppercase tracking-tighter">
+ <p className="mt-4 text-fuchsia-600 dark:text-fuchsia-400 font-semibold border-l-4 border-fuchsia-500 pl-4 uppercase tracking-tighter">
  "3.0 Tesla Precision: Visualizing the invisible with silent comfort."
  </p>
  </>
@@ -68,7 +68,7 @@ export function MRIScanClient() {
  {/* Mechanism: 3T vs 1.5T */}
  <section className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-fuchsia-50/50 dark:bg-fuchsia-950/20 border border-fuchsia-100 dark:border-fuchsia-900/50 text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-fuchsia-400/10 blur-3xl -z-10" />
- <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-heading uppercase tracking-tighter italic">
+ <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-fuchsia-500 pl-4 font-heading uppercase tracking-tighter">
  Mechanism: The 3.0 Tesla Signal Advantage
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -86,7 +86,7 @@ export function MRIScanClient() {
  </div>
  <div className="flex items-center gap-3">
  <ArrowRightCircle className="w-5 h-5 text-fuchsia-600" />
- <span><strong>Diffusion Tensor Imaging (DTI)</strong>: Mapping the brain&apos;s white matter pathways for advanced neuro-diagnostics.</span>
+ <span><strong>Diffusion Tensor Imaging (DTI)</strong>: Mapping the brain's white matter pathways for advanced neuro-diagnostics.</span>
  </div>
  </div>
  </div>
@@ -114,7 +114,7 @@ export function MRIScanClient() {
  {/* Diagnostic Spectrum Grid */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-950/30 to-transparent" />
- <h3 className="text-3xl font-bold mb-8 italic font-heading text-fuchsia-300 uppercase tracking-widest leading-none">Specialized MRI Modalities</h3>
+ <h3 className="text-3xl font-bold mb-8 font-heading text-fuchsia-300 uppercase tracking-widest leading-none">Specialized MRI Modalities</h3>
  <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
  {[
  { title: "Neuro Excellence", desc: "Expert imaging for Brain Tumors, Multiple Sclerosis, and Epilepsy mapping.", icon: Eye },
@@ -125,7 +125,7 @@ export function MRIScanClient() {
  <div key={i} className="p-6 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-fuchsia-500/50 transition-all">
  <item.icon className="w-8 h-8 text-fuchsia-400 mb-4" />
  <h4 className="font-bold text-lg mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-400 leading-relaxed italic">{item.desc}</p>
+ <p className="text-[10px] text-slate-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -134,7 +134,7 @@ export function MRIScanClient() {
  {/* Preparing for Your MRI Section */}
  <section className="text-left">
  <div className="mb-12">
- <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter uppercase uppercase">Preparing for Your 3T MRI</h3>
+ <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 font-heading tracking-tighter uppercase uppercase">Preparing for Your 3T MRI</h3>
  <p className="text-slate-600 dark:text-slate-400">Essential benchmarks for a safe and accurate scan.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -145,7 +145,7 @@ export function MRIScanClient() {
  ].map((item: any, i: number) => (
  <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-2xl transition-all border-b-4 border-fuchsia-500">
  <h4 className="font-heading text-xl font-bold mb-3">{item.title}</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic">{item.desc}</p>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -189,7 +189,7 @@ export function MRIScanClient() {
  <Zap className="w-4 h-4 mt-1 text-fuchsia-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>

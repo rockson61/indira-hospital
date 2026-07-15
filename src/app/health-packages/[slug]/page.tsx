@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { notFound } from "next/navigation"
 import { getHealthPackageBySlug } from "@/lib/api"
 import { HealthPackage } from "@/lib/schema"
@@ -67,7 +68,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
  {pkg.title} <br />
  <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, India</span>
  </h1>
- <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8 italic">
+ <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8">
  {pkg.short_description || `Our ${pkg.title} is designed to provide a thorough evaluation of your health status, helping you detect potential issues early.`}
  </p>
 
@@ -113,7 +114,7 @@ export default async function HealthPackageDetailPage({ params }: { params: Prom
 
  <div className="space-y-3">
  <a
- href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;d like to book the ${pkg.title} health package.`)}`}
+ href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'd like to book the ${pkg.title} health package.`)}`}
  target="_blank"
  rel="noopener noreferrer"
  className="elite-button-primary w-full text-base"

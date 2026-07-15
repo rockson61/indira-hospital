@@ -17,7 +17,7 @@ export default function HysteroscopyPage() {
  title="Elite Hysteroscopy & Uterine Care"
  slug="hysteroscopy"
  parentServiceSlug="obstetrics-gynaecology"
- departmentName="Indira Elite Women&apos;s Care"
+ departmentName="Indira Elite Women's Care"
  description={
  <article>
  <p className="text-lg leading-relaxed">
@@ -80,7 +80,7 @@ export default function HysteroscopyPage() {
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-rose-100 dark:border-slate-800 shadow-2xl">
  <Microscope className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Internal Clarity</p>
- <p className="text-slate-500 text-sm italic pr-4">Identifying and correcting uterine factors with surgical precision and zero external incisions.</p>
+ <p className="text-slate-500 text-sm pr-4">Identifying and correcting uterine factors with surgical precision and zero external incisions.</p>
  </div>
  </div>
  </div>
@@ -112,7 +112,7 @@ export default function HysteroscopyPage() {
  ))}
  </div>
 
- <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Painless Procedure & Rapid Recovery</h3>
+ <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 font-serif">Painless Procedure & Rapid Recovery</h3>
  <p>
  At Indira Hospital, we prioritize **"Pain-Free Daycare"**. Most operative hysteroscopies are performed under light intravenous sedation, ensuring you are in a comfortable 'dream-state' during the 15-30 minute procedure. Because there are no external incisions, recovery is nearly immediate. Most patients relax in our daycare suite for a few hours and are back home for dinner, resuming light activities by the next morning.
  </p>

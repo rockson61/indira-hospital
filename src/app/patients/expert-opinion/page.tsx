@@ -4,7 +4,7 @@ import ExpertOpinionClient from './ExpertOpinionClient';
 
 export const metadata: Metadata = constructMetadata({
  title: "Patients | Indira Super Speciality Hospital",
- description: "Learn more about patients at Indira Hospital, Vellore&apos;s leading super-speciality center for advanced clinical care.",
+ description: "Learn more about patients at Indira Hospital, Vellore's leading super-speciality center for advanced clinical care.",
  path: "/patients/expert-opinion"
 });
 

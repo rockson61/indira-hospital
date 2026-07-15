@@ -25,7 +25,7 @@ interface MedicineSectionProps {
 export function MedicineSection({ 
  conditionName, 
  medicines,
- className = "" 
+ className="" 
 }: MedicineSectionProps) {
  const typeColors = {
  'Antibiotic': 'bg-red-100 text-red-700 border-red-300',

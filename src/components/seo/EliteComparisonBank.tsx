@@ -12,7 +12,7 @@ interface ComparisonRowProps {
 const ComparisonRow = ({ feature, traditional, elite, isPositive = true }: ComparisonRowProps) => (
  <div className="grid grid-cols-1 md:grid-cols-3 border-b border-slate-100 dark:border-slate-800/50 py-4 items-center gap-4">
  <div className="font-bold text-slate-900 dark:text-slate-100 text-sm uppercase tracking-wider">{feature}</div>
- <div className="flex items-center gap-2 text-slate-500 dark:text-slate-500 text-sm italic">
+ <div className="flex items-center gap-2 text-slate-500 dark:text-slate-500 text-sm">
  <X className="w-4 h-4 text-slate-400 shrink-0" />
  {traditional}
  </div>
@@ -36,7 +36,7 @@ export const EliteComparisonBank = ({ type = 'laser' }: { type?: 'laser' | 'lapa
  <Zap className="w-6 h-6" />
  </div>
  <div>
- <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">The Indira Elite Comparison</h3>
+ <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">The Indira Advantage</h3>
  <p className="text-slate-500 text-sm font-medium uppercase tracking-widest mt-1">Surgical Technology Standards</p>
  </div>
  </div>
@@ -46,7 +46,7 @@ export const EliteComparisonBank = ({ type = 'laser' }: { type?: 'laser' | 'lapa
  <div className="grid grid-cols-1 md:grid-cols-3 bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 mb-6">
  <div className="text-xs font-black text-slate-400 uppercase tracking-widest">Clinical Metric</div>
  <div className="text-xs font-black text-slate-400 uppercase tracking-widest hidden md:block">Traditional Surgery</div>
- <div className="text-xs font-black text-fuchsia-600 uppercase tracking-widest hidden md:block italic underline decoration-2 underline-offset-4">Indira Elite Standards</div>
+ <div className="text-xs font-black text-fuchsia-600 uppercase tracking-widest hidden md:block underline decoration-2 underline-offset-4">Indira Standards</div>
  </div>
 
  {type === 'laser' && (
@@ -111,7 +111,7 @@ export const EliteComparisonBank = ({ type = 'laser' }: { type?: 'laser' | 'lapa
  </div>
  
  {/* SEO Trust Signal Text */}
- <p className="text-[10px] text-slate-400 dark:text-slate-600 mt-6 text-center italic uppercase tracking-widest font-bold">
+ <p className="text-[10px] text-slate-400 dark:text-slate-600 mt-6 text-center uppercase tracking-widest font-bold">
  * Comparison based on clinical internal audits (2025-26) at Indira Super Speciality Hospital. Results may vary based on individual medical history.
  </p>
  </div>

@@ -47,7 +47,7 @@ export default function QualityPage() {
  </h1>
  <p 
  className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed"
- dangerouslySetInnerHTML={{ __html: injectInternalLinks("At Indira Hospital, quality is not just a certification—it&apos;s a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.") }}
+ dangerouslySetInnerHTML={{ __html: injectInternalLinks("At Indira Hospital, quality is not just a certification—it's a culture. We continuously monitor and improve our processes to ensure absolute patient safety and clinical success.") }}
  />
  </div>
  </section>

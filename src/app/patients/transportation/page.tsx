@@ -202,7 +202,7 @@ export default function TransportationPage() {
 
  <div className="mt-auto flex items-start gap-3 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-700">
  <AlertCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
- <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed italic">{mode.tip}</p>
+ <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{mode.tip}</p>
  </div>
  </div>
  </div>

@@ -116,7 +116,7 @@ export default function RectalProlapsePage() {
  <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm text-center group hover:bg-emerald-50/20 transition-all">
  <item.icon className="w-10 h-10 text-emerald-600 mx-auto mb-4" />
  <h4 className="font-bold mb-2 text-sm">{item.title}</h4>
- <p className="text-[10px] text-slate-500 leading-relaxed italic">{item.desc}</p>
+ <p className="text-[10px] text-slate-500 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -125,7 +125,7 @@ export default function RectalProlapsePage() {
  {/* Recovery Timeline */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
- <h3 className="font-heading text-3xl font-bold mb-4 font-heading italic">The Pelvic Restoration Roadmap</h3>
+ <h3 className="font-heading text-3xl font-bold mb-4 font-heading">The Pelvic Restoration Roadmap</h3>
  <p className="text-slate-400 max-w-2xl mx-auto mb-12">
  Our recovery path focuses on restoring both the structural anatomy and the physiological function of the bowel.
  </p>
@@ -139,7 +139,7 @@ export default function RectalProlapsePage() {
  <div key={i} className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
  <p className="text-emerald-400 font-bold mb-2 uppercase tracking-widest text-[10px]">{step.day}</p>
  <h5 className="font-bold text-sm mb-2">{step.title}</h5>
- <p className="text-xs text-slate-400 leading-relaxed font-medium italic">{step.text}</p>
+ <p className="text-xs text-slate-400 leading-relaxed font-medium">{step.text}</p>
  </div>
  ))}
  </div>
@@ -152,7 +152,7 @@ export default function RectalProlapsePage() {
  </div>
  <div className="space-y-4">
  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Expert Colorectal Care: Dr. Karan Shankar</h3>
- <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-medium italic">
+ <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
  Rectal Prolapse surgery requires an intimate understanding of the pelvic spaces. <strong>Dr. Karan Shankar</strong> specialized in nerve-sparing laparoscopic rectopexy, ensuring that the rectum is anchored with precision while preserving all functional nerves for bowel and sexual health.
  </p>
  <div className="flex flex-wrap gap-4 pt-2">
@@ -204,7 +204,7 @@ export default function RectalProlapsePage() {
  <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 italic">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6">
  {faq.a}
  </p>
  </div>

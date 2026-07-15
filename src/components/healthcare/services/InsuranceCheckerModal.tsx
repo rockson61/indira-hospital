@@ -33,7 +33,7 @@ export function InsuranceCheckerModal({
  animate={{ opacity: 1 }}
  exit={{ opacity: 0 }}
  onClick={onClose}
- className="fixed inset-0 z-[100] bg-slate-950/60 "
+ className="fixed inset-0 z-[100] bg-slate-950/60"
  />
 
  {/* Modal */}
@@ -58,7 +58,7 @@ export function InsuranceCheckerModal({
  <ShieldCheck className="w-8 h-8" />
  </div>
 
- <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight mb-2 uppercase italic leading-none">
+ <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight mb-2 uppercase leading-none">
  Check Insurance Coverage
  </h2>
  <p className="text-slate-500 dark:text-slate-400 mb-8 font-medium">Verify your surgical benefits instantly via WhatsApp with our specialized counselors.</p>
@@ -74,7 +74,7 @@ export function InsuranceCheckerModal({
  <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-white">
  <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={3} />
  </div>
- <span className="text-sm font-bold text-slate-700 dark:text-slate-300 italic tracking-tight">{item}</span>
+ <span className="text-sm font-bold text-slate-700 dark:text-slate-300 tracking-tight">{item}</span>
  </div>
  ))}
  </div>
@@ -82,7 +82,7 @@ export function InsuranceCheckerModal({
  <div className="grid grid-cols-1 gap-4">
  <Button 
  asChild
- className="h-16 rounded-[2rem] bg-slate-900 dark:bg-white text-white dark:text-slate-900 transition-colors font-black text-lg uppercase tracking-widest italic group overflow-hidden relative shadow-float shadow-black/10 hover:shadow-black/20 transition-all hover:scale-[1.02]"
+ className="h-16 rounded-[2rem] bg-slate-900 dark:bg-white text-white dark:text-slate-900 transition-colors font-black text-lg uppercase tracking-widest group overflow-hidden relative shadow-float shadow-black/10 hover:shadow-black/20 transition-all hover:scale-[1.02]"
  >
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
  <MessageCircle className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />

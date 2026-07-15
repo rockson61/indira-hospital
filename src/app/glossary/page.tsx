@@ -21,7 +21,7 @@ export default function GlossaryPage() {
  Medical Lexicon & Clinical Definitions
  </div>
  
- <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-none italic text-slate-900 dark:text-white">
+ <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-none text-slate-900 dark:text-white">
  Medical <br />
  <span className="text-fuchsia-600 dark:text-fuchsia-400">Glossary Hub.</span>
  </h1>

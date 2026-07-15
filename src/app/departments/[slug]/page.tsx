@@ -133,7 +133,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-24 relative z-10">
- <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap italic">
+ <nav className="flex items-center text-sm text-indigo-300/60 mb-10 overflow-x-auto whitespace-nowrap">
  <Link href="/" className="hover:text-white transition-colors">Home</Link>
  <ChevronRight className="w-4 h-4 mx-2" />
  <Link href="/departments" className="hover:text-white transition-colors">Departments</Link>
@@ -153,7 +153,7 @@ export default async function DepartmentDetailPage({ params }: { params: Promise
  {department.title} <br />
  <span className="elite-gradient-text text-3xl sm:text-4xl">Precision Specialists in Vellore.</span>
  </h1>
-  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90 italic">
+  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90">
   {department.short_description}
   </p>
 

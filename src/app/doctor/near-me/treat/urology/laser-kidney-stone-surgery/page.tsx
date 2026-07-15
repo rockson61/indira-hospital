@@ -179,7 +179,7 @@ export default function RIRSPage() {
  </div>
  <h4 className="text-2xl font-bold mb-6">The "Stone-Free" Protocol</h4>
  <p className="text-emerald-100/70 text-sm mb-8 leading-relaxed">
- At Indira, we don&apos;t just 'dust and discharge.' Our Elite Protocol includes:
+ At Indira, we don't just 'dust and discharge.' Our Elite Protocol includes:
  </p>
  <ul className="space-y-4 mb-8">
  <li className="flex items-center gap-3 text-sm">
@@ -218,7 +218,7 @@ export default function RIRSPage() {
  a: "No. The Holmium laser has a very specific penetration depth (less than 0.5mm) in water. It vaporizes the stone but is safely absorbed by the irrigation fluid before it can reach tissue, provided the surgeon remains focused on the stone."
  },
  {
- q: "How do I know if I&apos;m 'Stone-Free'?",
+ q: "How do I know if I'm 'Stone-Free'?",
  a: "We confirm stone clearance using high-resolution Ultrasound or X-ray KUB during follow-up. For very complex cases, a low-dose CT scan may be used to verify 100% clearance."
  },
  {
@@ -235,7 +235,7 @@ export default function RIRSPage() {
  }
  ].map((faq, i) => (
  <div key={i} className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all">
- <h4 className="font-bold text-emerald-400 mb-3 flex items-start gap-2 italic font-heading tracking-tight">
+ <h4 className="font-bold text-emerald-400 mb-3 flex items-start gap-2 font-heading tracking-tight">
  <Zap className="w-4 h-4 mt-1 shrink-0" />
  {faq.q}
  </h4>

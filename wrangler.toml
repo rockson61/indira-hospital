@@ -1,0 +1,8 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "indirahos"
+compatibility_date = "2024-05-02"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Add any runtime environment variables here if needed
+NEXT_PUBLIC_SITE_URL = "https://www.indirasuperspecialityhospital.com"

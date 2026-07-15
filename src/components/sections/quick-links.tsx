@@ -21,7 +21,7 @@ const links = [
  hover: "hover:border-fuchsia-200"
  },
  {
- title: "Don&apos;t Google Your Symptoms",
+ title: "Don't Google Your Symptoms",
  description: "Read expert-written guides by our surgeons instead.",
  icon: FileText,
  href: "/blog",

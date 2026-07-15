@@ -37,7 +37,7 @@ export function ServicesSection() {
  </motion.div>
  <h2 className="elite-section-title text-white mb-6">
  Advanced Clinical <br />
- <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Elite Medical Units</span>
+ <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Medical Specialties</span>
  </h2>
  <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
  Indira Hospital brings world-class medical expertise and state-of-the-art technology under one roof, providing comprehensive healing for every member of your family.
@@ -56,11 +56,7 @@ export function ServicesSection() {
  <button
  key={index}
  onClick={() => setActiveService(index)}
- className={`w-full flex items-center gap-4 p-5 rounded-2xl transition-all duration-500 group relative overflow-hidden ${
- isActive 
- ? "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-clay-dark" 
- : "bg-transparent border-transparent hover:bg-white dark:bg-slate-900"
- } border`}
+ className={`w-full flex items-center gap-4 p-5 rounded-2xl transition-all duration-500 group relative overflow-hidden ${ isActive ? "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-clay-dark" : "bg-transparent border-transparent hover:bg-white dark:bg-slate-900" } border`}
  >
  {isActive && (
  <motion.div 
@@ -68,9 +64,7 @@ export function ServicesSection() {
  className="absolute inset-0 bg-gradient-to-r from-fuchsia-600/10 to-transparent"
  />
  )}
- <div className={`p-3 rounded-xl transition-colors shrink-0 relative z-10 ${
- isActive ? "elite-button-primary" : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:text-white"
- }`}>
+ <div className={`p-3 rounded-xl transition-colors shrink-0 relative z-10 ${ isActive ? "elite-button-primary" : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:text-white" }`}>
  <IconComponent className="w-6 h-6" />
  </div>
  <div className="text-left relative z-10">
@@ -78,9 +72,7 @@ export function ServicesSection() {
  {service.title}
  </h3>
  </div>
- <ArrowRight className={`ml-auto w-4 h-4 transition-all duration-500 ${
- isActive ? "text-fuchsia-400 opacity-100 translate-x-0" : "opacity-0 -translate-x-2"
- }`} />
+ <ArrowRight className={`ml-auto w-4 h-4 transition-all duration-500 ${ isActive ? "text-fuchsia-400 opacity-100 translate-x-0" : "opacity-0 -translate-x-2" }`} />
  </button>
  )
  })}
@@ -169,7 +161,7 @@ export function ServicesSection() {
  
  <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
  <div>
- <h4 className="text-3xl md:text-4xl font-black text-white mb-2">Can&apos;t find what you&apos;re looking for?</h4>
+ <h4 className="text-3xl md:text-4xl font-black text-white mb-2">Can't find what you're looking for?</h4>
  <p className="text-white/80 font-medium text-lg">Browse our full clinical directory of over 200+ specialized treatments.</p>
  </div>
  <Link

@@ -39,7 +39,7 @@ export function PatientsHubClient() {
  const categories = [
  { 
  id: "Concierge", 
- title: "Elite Concierge", 
+ title: "Top Concierge", 
  icon: Sparkles, 
  gradient: "from-purple-600 to-pink-600",
  description: "Premium hospital hospitality and personalized relationship management."
@@ -56,7 +56,7 @@ export function PatientsHubClient() {
  title: "Travel & Logistics", 
  icon: Plane, 
  gradient: "from-blue-500 to-cyan-500",
- description: "No matter where you&apos;re coming from, we help you get here safely."
+ description: "No matter where you're coming from, we help you get here safely."
  },
  { 
  id: "Billing", 
@@ -84,7 +84,7 @@ export function PatientsHubClient() {
  transition={{ duration: 0.8, ease: "easeOut" }}
  >
  <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-300 text-sm font-bold tracking-[0.2em] uppercase mb-10 shadow-[0_0_40px_-5px_rgba(232,121,249,0.3)]">
- <Sparkles className="w-4 h-4" /> Patient Experience Hub
+ <Sparkles className="w-4 h-4" /> Patient Experience Center
  </span>
  
  <h1 className="elite-hero-title text-white mb-8">
@@ -101,7 +101,7 @@ export function PatientsHubClient() {
  href="/book-appointment" 
  className="group flex items-center justify-center px-10 py-5 bg-fuchsia-600 text-white font-black rounded-2xl hover:bg-fuchsia-500 transition-all shadow-xl shadow-fuchsia-500/20 text-lg"
  >
- Elite Consultation
+ Best Consultation
  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
  </Link>
  <a 

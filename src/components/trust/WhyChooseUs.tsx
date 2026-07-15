@@ -55,7 +55,7 @@ const FEATURES = [
 
 const GUARANTEES = [
  "NABH Standards of Patient Safety",
- "Transperant Pricing & Billing",
+ "Transparent Pricing & Billing",
  "24/7 Advanced ICU & Life Support",
  "Cashless Treatment with 50+ TPAs",
  "Precision Diagnostics & Pharmacy",
@@ -101,10 +101,10 @@ export function WhyChooseUs() {
  >
  <IconComponent className={`h-8 w-8 ${feature.color}`} />
  </div>
- <h3 className="text-xl font-bold text-white group-hover:text-[#54CAD3] transition-colors">
+ <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-[#54CAD3] transition-colors">
  {feature.title}
  </h3>
- <p className="text-fuchsia-100/80 leading-relaxed">{feature.description}</p>
+ <p className="text-slate-600 dark:text-fuchsia-100/80 leading-relaxed">{feature.description}</p>
  </div>
  </GlassCard>
  </motion.div>
@@ -155,7 +155,7 @@ export function WhyChooseUs() {
  {GUARANTEES.map((guarantee, index) => (
  <div key={index} className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
  <CheckCircle className="h-6 w-6 text-[#54CAD3] flex-shrink-0" />
- <span className="font-medium text-white/90">{guarantee}</span>
+ <span className="font-medium text-slate-800 dark:text-white/90">{guarantee}</span>
  </div>
  ))}
  </div>
@@ -177,7 +177,7 @@ export function WhyChooseUs() {
  <Star key={star} className="h-8 w-8 text-yellow-400 fill-current" />
  ))}
  </div>
- <blockquote className="text-2xl font-medium text-white/90 italic">
+ <blockquote className="text-2xl font-medium text-slate-700 dark:text-white/90">
  &quot;The team at Indira Super Speciality Hospital provided exceptional care. The facility is modern,
  clean, and the staff is incredibly professional. I highly recommend them for any medical needs.&quot;
  </blockquote>

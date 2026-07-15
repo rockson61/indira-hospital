@@ -124,7 +124,7 @@ export default function ProfessionalsHub() {
  <Button 
  variant="link" 
  className="p-0 text-blue-400 hover:text-blue-300 font-black uppercase text-xs tracking-widest group-hover:translate-x-1 transition-transform"
- onClick={() => window.open(`https://wa.me/919942436814?text=${encodeURIComponent(`Elite Professional Enquiry: I&apos;m interested in the ${portal.title} at Indira Super Speciality Hospital.`)}`, '_blank')}
+ onClick={() => window.open(`https://wa.me/919942436814?text=${encodeURIComponent(`Elite Professional Enquiry: I'm interested in the ${portal.title} at Indira Super Speciality Hospital.`)}`, '_blank')}
  >
  {portal.cta} <ArrowRight className="ml-1 w-3.5 h-3.5" />
  </Button>
@@ -141,7 +141,7 @@ export default function ProfessionalsHub() {
  <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest rounded-lg">
  <Activity className="w-4 h-4" /> Real-time Clinical Benchmarks
  </div>
- <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none italic">
+ <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none">
  Evidence-Based <br />
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Outcomes.</span>
  </h2>
@@ -170,7 +170,7 @@ export default function ProfessionalsHub() {
  <div className="z-10 text-center space-y-4">
  <Award className="w-24 h-24 text-blue-400 mx-auto" />
  <h4 className="text-2xl font-black text-white">Clinical Center of Excellence</h4>
- <p className="text-slate-400 text-sm italic">Ranked #1 for Laparoscopic Innovation in the Region.</p>
+ <p className="text-slate-400 text-sm">Ranked #1 for Laparoscopic Innovation in the Region.</p>
  </div>
  {/* Decorative radar */}
  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] border-[20px] border-blue-500/5 rounded-full animate-ping" />
@@ -182,14 +182,14 @@ export default function ProfessionalsHub() {
  {/* ACADEMICS & RESEARCH STRIP */}
  <SectionContainer className="py-32">
  <div className="flex flex-col items-center text-center space-y-6 mb-16">
- <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight italic">Academic Leadership & Research</h2>
+ <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">Academic Leadership & Research</h2>
  <p className="text-slate-400 max-w-2xl font-medium">Empowering the next generation of surgeons through accredited residency programs and continuous medical education.</p>
  </div>
  
  <div className="grid md:grid-cols-2 gap-8">
  <Card className="bg-slate-900 border-slate-200 dark:border-slate-800 overflow-hidden">
  <CardHeader className="p-8 border-b border-slate-200 dark:border-slate-800">
- <CardTitle className="text-2xl font-black text-white flex items-center gap-3 italic">
+ <CardTitle className="text-2xl font-black text-white flex items-center gap-3">
  <Users className="w-6 h-6 text-indigo-400" /> DNB Residency Programs
  </CardTitle>
  </CardHeader>
@@ -207,7 +207,7 @@ export default function ProfessionalsHub() {
  
  <Card className="bg-slate-900 border-slate-200 dark:border-slate-800 overflow-hidden">
  <CardHeader className="p-8 border-b border-slate-200 dark:border-slate-800">
- <CardTitle className="text-2xl font-black text-white flex items-center gap-3 italic">
+ <CardTitle className="text-2xl font-black text-white flex items-center gap-3">
  <Globe className="w-6 h-6 text-emerald-400" /> Global Research Trials
  </CardTitle>
  </CardHeader>

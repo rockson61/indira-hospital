@@ -28,7 +28,7 @@ export async function SignatureTreatments() {
  <div className="flex justify-between items-end mb-12">
  <SectionHeader
  title="Advanced Minimally Invasive & Day-Care Surgeries"
- subtitle="Precision Meets Rapid Recovery"
+ subtitle="Advanced Care. Rapid Recovery."
  description="Experience the benefits of world-class laparoscopic and laser treatments. By utilizing keyhole techniques, we minimize scarring, significantly reduce pain, and ensure you return to the life you love—often on the exact same day."
  className="mb-0 text-left items-start"
  align="left"

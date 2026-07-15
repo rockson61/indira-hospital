@@ -90,7 +90,7 @@ export default function SEOPage() {
  { title: 'Modular OTs', desc: 'Infection-free surgical environments for safety.' },
  { title: 'Expert Team', desc: 'Multidisciplinary approach to complex cases.' }
  ].map((box, i) => (
- <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl ">
+ <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl">
  <h3 className="font-bold text-xl mb-2">{box.title}</h3>
  <p className="text-sm text-fuchsia-100/60">{box.desc}</p>
  </div>

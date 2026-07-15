@@ -67,7 +67,7 @@ export default function DialysisPage() {
  faqs: [
  {
  question: "How long does a standard dialysis session take?",
- answer: "A typical hemodialysis session takes approximately 4 hours, depending on the patient&apos;s medical requirements and toxin clearance needs."
+ answer: "A typical hemodialysis session takes approximately 4 hours, depending on the patient's medical requirements and toxin clearance needs."
  },
  {
  question: "What is High-Flux Dialysis?",
@@ -81,7 +81,7 @@ export default function DialysisPage() {
  }}
  timeline={{
  title: "Your Dialysis Care Path",
- description: "Seamless and safe blood purification at Indira&apos;s Renal Center.",
+ description: "Seamless and safe blood purification at Indira's Renal Center.",
  steps: [
  {
  title: 'Pre-Dialysis Vitals',
@@ -120,7 +120,7 @@ export default function DialysisPage() {
  >
  <div className="space-y-8">
  <section>
- <h2 className="font-heading text-3xl font-bold mb-4">India&apos;s Elite Destination for Comprehensive Renal Health</h2>
+ <h2 className="font-heading text-3xl font-bold mb-4">India's Elite Destination for Comprehensive Renal Health</h2>
  <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
  At the <strong>Indira Renal Center</strong>, we believe that dialysis should not just sustain life, but enhance its quality. By combining world-class Fresenius technology with a compassionate, patient-first approach, we ensure that our patients lead active, fulfilling lives despite their renal challenges.
  </p>

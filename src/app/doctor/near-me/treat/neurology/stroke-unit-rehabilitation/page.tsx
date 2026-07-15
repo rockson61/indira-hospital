@@ -81,7 +81,7 @@ export default function StrokeUnitPage() {
  }}
  timeline={{
  title: "Rapid Stroke Recovery Roadmap",
- description: "Every minute counts. Our coordinated response at Indira&apos;s Neurology Center.",
+ description: "Every minute counts. Our coordinated response at Indira's Neurology Center.",
  steps: [
  {
  title: 'Minute 0-15: ER Triage',
@@ -90,7 +90,7 @@ export default function StrokeUnitPage() {
  },
  {
  title: 'Minute 15-30: Brain Mapping',
- description: "Priority CT Brain scan to confirm the stroke&apos;s location and type (Ischemic vs Hemorrhagic).",
+ description: "Priority CT Brain scan to confirm the stroke's location and type (Ischemic vs Hemorrhagic).",
  duration: 'Stat!'
  },
  {
@@ -120,14 +120,14 @@ export default function StrokeUnitPage() {
  >
  <div className="space-y-8">
  <section>
- <h2 className="font-heading text-3xl font-bold mb-4">India&apos;s Premier Rapid-Response Center for Brain Attacks</h2>
+ <h2 className="font-heading text-3xl font-bold mb-4">India's Premier Rapid-Response Center for Brain Attacks</h2>
  <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
  At the <strong>Indira Stroke Unit</strong>, we understand that time is brain. Our precision-guided protocols are designed for speed and reliability, ensuring that every patient receives the best possible chance of a full recovery. Backed by an advanced 24/7 Imaging Center and ICU, we are the regional leader in managing complex neurological emergencies.
  </p>
  </section>
 
  <div className="border-l-4 border-red-500 pl-6 my-10 py-2 bg-red-50 dark:bg-red-950/20">
- <p className="text-2xl font-heading font-black italic text-red-900 dark:text-red-100">
+ <p className="text-2xl font-heading font-black text-red-900 dark:text-red-100">
  Over 1000+ Brain Strikes managed with high-success thrombolysis rates.
  </p>
  <p className="text-red-600 font-bold mt-2">— Indira Neurology Department Statistics</p>

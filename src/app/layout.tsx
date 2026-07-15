@@ -1,26 +1,18 @@
 import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/config/site";
-import { Inter, Outfit } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { defaultSeo } from "@/config/seo";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
 
 const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
 const StickyCTA = dynamic(() => import("@/components/layout/StickyCTA").then(mod => mod.StickyCTA));
 const FloatingWhatsApp = dynamic(() => import("@/components/layout/FloatingWhatsApp").then(mod => mod.FloatingWhatsApp));
 const DynamicSEOKeywordBlock = dynamic(() => import("@/components/DynamicSEOKeywordBlock"));
 import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
-import { SeorceScriptRouteHandler } from "@/components/SeorceScriptRouteHandler";
 
-
-const inter = Inter({
- variable: "--font-inter",
- subsets: ["latin"],
- display: "swap",
-});
 
 const outfit = Outfit({
  variable: "--font-outfit",
@@ -61,7 +53,7 @@ export default function RootLayout({
  children: React.ReactNode;
 }>) {
  return (
- <html lang="en" suppressHydrationWarning>
+ <html lang="en" className="bg-background" suppressHydrationWarning>
  <body
  className={`${outfit.variable} antialiased min-h-screen flex flex-col font-sans relative`}
  >
@@ -82,18 +74,21 @@ export default function RootLayout({
  strategy="afterInteractive"
  />
  <JsonLdSchema auto />
- <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+ <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
  <Header />
- <main className="flex-1">
+ <main className="flex-1 overflow-x-hidden w-full">
  {children}
  </main>
  <Footer />
  <StickyCTA />
  <FloatingWhatsApp />
  <DynamicSEOKeywordBlock />
- <Suspense fallback={null}>
- <SeorceScriptRouteHandler />
- </Suspense>
+ <Script
+ id="seorce-analytics"
+ src="https://scripts.seorce.com/api?projectId=6a2e65413f9dac8c30e24143"
+ strategy="lazyOnload"
+ data-uuid="6a2e65413f9dac8c30e24143"
+ />
  </ThemeProvider>
  </body>
  </html>

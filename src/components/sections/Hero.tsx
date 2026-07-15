@@ -55,7 +55,7 @@ export function Hero() {
  Advanced Laparoscopic & Multispeciality Treatments.
  </h2>
  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl font-light">
- Top-tier surgical expertise at half the metro cost. Walk in with pain. Walk out the same day. That&apos;s the <span className="text-primary font-bold">Indira promise.</span>
+ Top-tier surgical expertise at half the metro cost. Walk in with pain. Walk out the same day. That's the <span className="text-primary font-bold">Indira promise.</span>
  </p>
  </div>
 

@@ -11,8 +11,8 @@ export function CTASection() {
  <div className="bg-red-600 py-3">
  <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-center gap-3 text-white text-sm font-semibold">
  <span className="relative flex h-2 w-2">
- <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white dark:bg-slate-900 opacity-75"></span>
- <span className="relative inline-flex rounded-full h-2 w-2 bg-white dark:bg-slate-900"></span>
+ <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+ <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
  </span>
  24/7 Emergency Available — Call{" "}
  <a href={`tel:${siteConfig.contact.emergencyPhone.replace(/\s+/g, '')}`} className="underline underline-offset-2 hover:no-underline">{siteConfig.contact.emergencyPhone}</a>{" "}
@@ -32,7 +32,7 @@ export function CTASection() {
  Ready to Prioritize Your Health?
  </h2>
  <p className="text-lg text-white/70 max-w-2xl mx-auto">
- Book an appointment with our specialists today. Choose the method that&apos;s most convenient for you.
+ Book an appointment with our specialists today. Choose the method that's most convenient for you.
  </p>
  </div>
 
@@ -40,13 +40,13 @@ export function CTASection() {
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
  {/* WhatsApp card */}
  <a
- href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hello Indira Elite Concierge, I would like to book a clinical consultation at the Super Speciality Hospital.")}`}
+ href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hello Indira Hospital, I would like to book a clinical consultation at the Super Speciality Hospital.")}`}
  target="_blank"
  rel="noopener noreferrer"
  className="group rounded-2xl bg-green-500 hover:bg-green-600 p-8 text-center transition-all duration-300 hover:shadow-clay-dark hover:shadow-green-500/30 hover:-translate-y-1"
  >
  <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
- <MessageCircle className="w-8 h-8 text-white" />
+ <MessageCircle className="w-8 h-8 text-green-600" />
  </div>
  <h3 className="text-xl font-bold text-white mb-2">WhatsApp Booking</h3>
  <p className="text-green-100 text-sm mb-4">Fastest way to book. Get instant confirmation and cost estimates.</p>
@@ -58,9 +58,9 @@ export function CTASection() {
  {/* Phone card */}
  <a
  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
- className="group rounded-2xl bg-white dark:bg-slate-900 hover:bg-white dark:bg-slate-900 ring-1 ring-white/20 p-8 text-center transition-all duration-300 hover:shadow-clay-dark hover:-translate-y-1"
+ className="group rounded-2xl bg-white/10 hover:bg-white/20 ring-1 ring-white/20 p-8 text-center transition-all duration-300 hover:shadow-clay-dark hover:-translate-y-1"
  >
- <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+ <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
  <Phone className="w-8 h-8 text-white" />
  </div>
  <h3 className="text-xl font-bold text-white mb-2">Call to Book</h3>
@@ -77,12 +77,12 @@ export function CTASection() {
  <MapPin className="w-4 h-4" />
  Katpadi Road, Vellore, Tamil Nadu 632004
  </div>
- <div className="hidden sm:block w-1 h-1 rounded-full bg-white dark:bg-slate-900" />
- <Link href="/departments" className="text-primary-300 hover:text-primary-200 font-medium transition-colors">
+ <div className="hidden sm:block w-1 h-1 rounded-full bg-white/40" />
+ <Link href="/departments" className="text-white/80 hover:text-white font-medium transition-colors">
  View Departments
  </Link>
- <div className="hidden sm:block w-1 h-1 rounded-full bg-white dark:bg-slate-900" />
- <Link href="/doctors" className="text-primary-300 hover:text-primary-200 font-medium transition-colors">
+ <div className="hidden sm:block w-1 h-1 rounded-full bg-white/40" />
+ <Link href="/doctors" className="text-white/80 hover:text-white font-medium transition-colors">
  Find a Doctor
  </Link>
  </div>

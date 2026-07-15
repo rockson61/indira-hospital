@@ -54,7 +54,6 @@ export default async function TechnologyDetailPage({ params }: PageProps) {
  <main className="min-h-screen bg-gray-50 dark:bg-slate-950 pb-12">
  {/* Hero Section */}
  <section className="bg-fuchsia-900 text-white py-16 md:py-24 relative overflow-hidden">
- <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
  <div className="max-w-3xl">
  <Link href="/technology" className="inline-flex items-center text-fuchsia-200 hover:text-white mb-6 transition-colors text-sm">

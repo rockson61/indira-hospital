@@ -45,7 +45,7 @@ const PROCEDURE_TABLE = [
 
 const WHY_AFFORDABLE = [
  { t: "Lower operational costs", d: "Real estate, labour, and admin costs in India are a fraction of Western countries — not a reflection of lower quality." },
- { t: "No insurance overhead", d: "India&apos;s healthcare system doesn&apos;t carry the massive insurance administration overhead that inflates US hospital bills." },
+ { t: "No insurance overhead", d: "India's healthcare system doesn't carry the massive insurance administration overhead that inflates US hospital bills." },
  { t: "Government subsidies", d: "Government policies actively promote medical tourism — keeping taxes and import duties on medical equipment lower." },
  { t: "Same international equipment", d: "We use Siemens, GE, Stryker, J&J implants and instruments — identical to what US and UK hospitals use." },
 ];
@@ -81,7 +81,7 @@ export default function CostEstimatorPage() {
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">vs USA, UK & UAE</span>
  </h1>
  
- <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10 italic">
+ <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10">
  NABH-accredited quaternary care with 80–95% institutional cost savings vs the West. Get your personalised estimate today.
  </p>
 
@@ -129,7 +129,7 @@ export default function CostEstimatorPage() {
  <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
  <div className="max-w-2xl">
  <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">Procedure <br /><span className="text-emerald-600">Cost Comparison</span></h2>
- <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium italic">Indicative ranges showing how much you can save without compromising on clinical quality.</p>
+ <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium">Indicative ranges showing how much you can save without compromising on clinical quality.</p>
  </div>
  <div className="flex gap-2">
  <span className="w-3 h-3 rounded-full bg-emerald-500" />
@@ -177,7 +177,7 @@ export default function CostEstimatorPage() {
  <div className="grid lg:grid-cols-2 gap-12 items-center">
  <div>
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-8 uppercase">The Physics <br /><span className="text-emerald-600">of Value</span></h2>
- <p className="text-slate-500 dark:text-slate-400 font-medium italic text-lg leading-relaxed mb-10">Optimized pricing in India is driven by operational efficiency and high patient volumes, ensuring elite clinical outcomes without the Western administrative overhead.</p>
+ <p className="text-slate-500 dark:text-slate-400 font-medium text-lg leading-relaxed mb-10">Optimized pricing in India is driven by operational efficiency and high patient volumes, ensuring elite clinical outcomes without the Western administrative overhead.</p>
  
  <div className="grid sm:grid-cols-2 gap-6">
  {WHY_AFFORDABLE.map((item, i) => (
@@ -186,7 +186,7 @@ export default function CostEstimatorPage() {
  <CheckCircle2 className="w-5 h-5" />
  </div>
  <h3 className="font-black text-slate-900 dark:text-white text-sm uppercase tracking-tight mb-2">{item.t}</h3>
- <p className="text-slate-500 dark:text-slate-400 text-xs font-medium leading-relaxed italic">{item.d}</p>
+ <p className="text-slate-500 dark:text-slate-400 text-xs font-medium leading-relaxed">{item.d}</p>
  </div>
  ))}
  </div>
@@ -198,7 +198,7 @@ export default function CostEstimatorPage() {
  <Shield className="w-10 h-10" />
  </div>
  <h3 className="elite-section-title mb-6 uppercase">NABH Quality Standards</h3>
- <p className="text-slate-400 font-medium mb-10 italic">Indira Hospital is NABH-accredited, ensuring the same surgical safety protocols and technology standards as elite hospitals in the US and Europe.</p>
+ <p className="text-slate-400 font-medium mb-10">Indira Hospital is NABH-accredited, ensuring the same surgical safety protocols and technology standards as elite hospitals in the US and Europe.</p>
  
  <div className="space-y-4 mb-10 text-left max-w-xs mx-auto">
  <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-emerald-400">
@@ -244,8 +244,8 @@ export default function CostEstimatorPage() {
  <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden">
  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none" />
  <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
- <h2 className="elite-section-title text-white mb-10 uppercase">Your Health <br /><span className="text-emerald-500 italic">Institutional Excellence.</span></h2>
- <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">Achieve up to 90% cost savings on world-class quaternary care. Get your free personalized cost estimate within 24 hours.</p>
+ <h2 className="elite-section-title text-white mb-10 uppercase">Your Health <br /><span className="text-emerald-500">Institutional Excellence.</span></h2>
+ <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto leading-relaxed">Achieve up to 90% cost savings on world-class quaternary care. Get your free personalized cost estimate within 24 hours.</p>
  
  <div className="flex flex-wrap justify-center gap-6">
  <a href={waUrl} target="_blank" rel="noopener noreferrer"

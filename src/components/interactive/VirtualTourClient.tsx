@@ -99,13 +99,13 @@ export default function VirtualTourClient() {
  <header className="p-8 flex items-center justify-between">
  <Link href="/gallery" className="group flex items-center gap-3 px-6 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all shadow-clay-dark">
  <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
- <span className="text-[10px] font-black uppercase tracking-[0.3em] italic">Gallery</span>
+ <span className="text-[10px] font-black uppercase tracking-[0.3em]">Gallery</span>
  </Link>
  
  <div className="flex items-center gap-4">
  <div className="hidden md:flex flex-col items-end">
  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-400">Atmosphere</span>
- <span className="text-xs text-white/60 font-medium italic">High Definition Elite Tour</span>
+ <span className="text-xs text-white/60 font-medium">High Definition Elite Tour</span>
  </div>
  <div className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center bg-white dark:bg-slate-900">
  <Camera className="w-5 h-5 text-fuchsia-400 animate-pulse" />
@@ -128,7 +128,7 @@ export default function VirtualTourClient() {
  ))}
  </h2>
 
- <p className="text-xl text-slate-300 font-light italic leading-relaxed max-w-2xl mb-12">
+ <p className="text-xl text-slate-300 font-light leading-relaxed max-w-2xl mb-12">
  {activeScene.description}
  </p>
 
@@ -138,7 +138,7 @@ export default function VirtualTourClient() {
  <div className="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
  <fact.icon className="w-5 h-5" />
  </div>
- <span className="text-xs font-bold text-white uppercase tracking-widest italic">{fact.text}</span>
+ <span className="text-xs font-bold text-white uppercase tracking-widest">{fact.text}</span>
  </div>
  ))}
  </div>
@@ -146,7 +146,7 @@ export default function VirtualTourClient() {
  <div className="flex flex-col sm:flex-row gap-6">
  <a href={waUrl} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-4 px-10 py-6 bg-green-600 text-white font-black rounded-3xl hover:bg-green-500 shadow-clay-dark transition-all">
  <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
- <span className="text-sm uppercase tracking-widest italic">Enquire via WhatsApp</span>
+ <span className="text-sm uppercase tracking-widest">Enquire via WhatsApp</span>
  </a>
  <Link href="/contact" className="flex items-center justify-center gap-4 px-10 py-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold rounded-3xl hover:bg-white dark:bg-slate-900 transition-colors uppercase tracking-widest text-[11px]">
  Arrange Site Visit
@@ -162,9 +162,7 @@ export default function VirtualTourClient() {
  <button
  key={scene.id}
  onClick={() => setActiveScene(scene)}
- className={`group relative w-24 md:w-48 aspect-video rounded-2xl overflow-hidden border-2 transition-all duration-500 focus:outline-none ${
- activeScene.id === scene.id ? "border-indigo-500 scale-105 shadow-[0_0_30px_rgba(99,102,241,0.3)]" : "border-transparent opacity-40 hover:opacity-100"
- }`}
+ className={`group relative w-24 md:w-48 aspect-video rounded-2xl overflow-hidden border-2 transition-all duration-500 focus:outline-none ${ activeScene.id === scene.id ? "border-indigo-500 scale-105 shadow-[0_0_30px_rgba(99,102,241,0.3)]" : "border-transparent opacity-40 hover:opacity-100" }`}
  >
  <Image src={scene.image} alt={scene.title} fill className="object-cover" />
  <div className="absolute inset-0 bg-slate-900 dark:bg-slate-900 group-hover:bg-transparent transition-colors" />

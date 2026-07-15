@@ -25,9 +25,9 @@ export const LaserFistulaLongForm = () => {
  <h2 className="text-3xl font-bold text-slate-900 mb-6">Understanding Anal Fistula: More Than Just a Tunnel</h2>
  <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
  <p>
- An anal fistula is almost always the result of a previous anal abscess. When the abscess (a collection of pus) drains but the path it took from the anal gland to the skin doesn&apos;t close, a fistula tract forms.
+ An anal fistula is almost always the result of a previous anal abscess. When the abscess (a collection of pus) drains but the path it took from the anal gland to the skin doesn't close, a fistula tract forms.
  </p>
- <h3 className="text-xl font-bold text-slate-800 mt-6 italic underline decoration-fuchsia-200">Types of Anal Fistula</h3>
+ <h3 className="text-xl font-bold text-slate-800 mt-6 underline decoration-fuchsia-200">Types of Anal Fistula</h3>
  <p>
  The complexity of a fistula depends on its path through the anal sphincter muscles. At Indira Hospital, we use advanced 128-Slice CT imaging or MRI Fistulograms to categorize your condition:
  </p>
@@ -56,7 +56,7 @@ export const LaserFistulaLongForm = () => {
  </div>
  <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm space-y-3">
  <AlertCircle className="w-8 h-8 text-fuchsia-600" />
- <h4 className="font-bold text-slate-900 text-xl underline decoration-fuchsia-100">When it&apos;s Urgent</h4>
+ <h4 className="font-bold text-slate-900 text-xl underline decoration-fuchsia-100">When it's Urgent</h4>
  <ul className="text-slate-600 space-y-2">
  <li>• High fever with chills</li>
  <li>• Severe, throbbing pain</li>
@@ -71,7 +71,7 @@ export const LaserFistulaLongForm = () => {
  <section id="filac-technique" className="bg-slate-900 rounded-[3rem] p-12 text-white">
  <div className="max-w-4xl mx-auto space-y-8">
  <div className="text-center">
- <h2 className="text-3xl font-bold mb-4 italic font-heading text-fuchsia-300">FiLaC: The Sphincter-Preserving Laser Protocol</h2>
+ <h2 className="text-3xl font-bold mb-4 font-heading text-fuchsia-300">FiLaC: The Sphincter-Preserving Laser Protocol</h2>
  <p className="text-lg text-white/70">Fistula-tract Laser Closure is the future of proctology.</p>
  </div>
  <div className="grid md:grid-cols-2 gap-10">
@@ -192,7 +192,7 @@ export const LaserFistulaLongForm = () => {
  { q: "Can I return to work the next day?", a: "Most patients return to desk work within 48-72 hours. We recommend avoiding heavy lifting or cycling for about 10-14 days." }
  ].map((faq, index) => (
  <div key={index} className="bg-slate-50 p-6 rounded-2xl space-y-2">
- <h4 className="text-lg font-bold text-slate-900 flex gap-2 italic">
+ <h4 className="text-lg font-bold text-slate-900 flex gap-2">
  <span className="text-fuchsia-600">Q.</span> {faq.q}
  </h4>
  <p className="text-slate-600 pl-6 font-medium">{faq.a}</p>
@@ -206,7 +206,7 @@ export const LaserFistulaLongForm = () => {
  <div className="absolute top-0 right-0 w-64 h-64 bg-white dark:bg-slate-900 rounded-full blur-3xl -mr-32 -mt-32" />
  <h2 className="text-3xl font-bold">Heal Your Fistula Once and For All</h2>
  <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
- Don&apos;t let a recurrent fistula dictate your life. At Indira Hospital, Vellore, we offer the precision, technology, and care needed to close the tract permanently. 
+ Don't let a recurrent fistula dictate your life. At Indira Hospital, Vellore, we offer the precision, technology, and care needed to close the tract permanently. 
  </p>
  <div className="flex flex-wrap gap-4">
  <div className="flex items-center gap-3 px-6 py-4 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-800">

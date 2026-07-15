@@ -317,7 +317,7 @@ export function ClinicInfoCard({ showDirections = true, showMap = true, classNam
  <li>Look for the Shell Petrol Pump on Katpadi Main Road</li>
  <li>The clinic building is right next to the petrol pump</li>
  <li>Take the elevator or stairs to the 3rd floor</li>
- <li>You&apos;ll see our signboard at the entrance</li>
+ <li>You'll see our signboard at the entrance</li>
  </ul>
  </div>
  </div>

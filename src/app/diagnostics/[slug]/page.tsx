@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import React from "react"
 import { notFound } from "next/navigation"
 import { getDiagnosticBySlug } from "@/lib/api"
@@ -66,7 +67,7 @@ export default async function DiagnosticTestPage({ params }: { params: Promise<{
   {test.name} <br />
   <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, Tamil Nadu</span>
   </h1>
-  <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8 italic">
+  <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-light mb-8">
   {test.short_description || test.description?.replace(/<[^>]+>/g, '').slice(0, 150) || `Comprehensive ${test.name} with accurate reporting and quick turnaround time.`}
   </p>
  </div>

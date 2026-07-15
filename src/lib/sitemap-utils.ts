@@ -240,7 +240,11 @@ export async function getSitemapData(id: string): Promise<MetadataRoute.Sitemap>
  '/patients/insurance', 
  '/technology',
  '/diagnostics',
- '/professionals'
+ '/professionals',
+ '/facilities',
+ '/why-choose-indira',
+ '/quality-accreditations',
+ '/health-library'
  ].filter(route => !['/admin', '/private'].some(dis => route.startsWith(dis)))
  .map((route) => ({
  url: `${baseUrl}${route}`,

@@ -147,7 +147,7 @@ export default function LodgingPage() {
  </div>
  </section>
 
- {/* What&apos;s included BENTO */}
+ {/* What's included BENTO */}
  <section className="bg-slate-50 dark:bg-slate-900 rounded-[3.5rem] p-10 md:p-16 border border-slate-100 dark:border-slate-800">
  <div className="text-center max-w-3xl mx-auto mb-16">
  <h2 className="elite-section-title text-slate-900 dark:text-white">What Indira Hospital <br /><span className="text-fuchsia-600">Arranges for You</span></h2>

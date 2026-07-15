@@ -16,7 +16,7 @@ const bodySystems = [
  { name: "Bones & Joints", icon: Orthopaedics, link: "/doctor/near-me/treat/orthopaedics" },
  { name: "Neurology & Nerves", icon: Neurology, link: "/doctor/near-me/treat/neurology" },
  { name: "Digestive System", icon: HeartCardiogram, link: "/doctor/near-me/treat/gastroenterology" },
- { name: "Women&apos;s Health", icon: Baby0203m, link: "/doctor/near-me/treat/obstetrics-gynaecology" },
+ { name: "Women's Health", icon: Baby0203m, link: "/doctor/near-me/treat/obstetrics-gynaecology" },
  { name: "Eyes & Vision", icon: Eye, link: "/doctor/near-me/treat/ophthalmology" },
  { name: "Kidneys & Urinary Tract", icon: Shield, link: "/doctor/near-me/treat/urology" },
  { name: "Lungs & Breathing", icon: LayoutGrid, link: "/doctor/near-me/treat/general-medicine" },
@@ -185,7 +185,7 @@ export default function HealthLibraryClient() {
  {signatureTreatments.map((treatment) => (
  <div key={treatment.slug} className="bg-white dark:bg-slate-900 rounded-[3rem] p-10 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col h-full group transition-all hover:shadow-xl hover:border-fuchsia-200">
  <div className="mb-8">{treatment.icon}</div>
- <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic tracking-tighter">{treatment.title}</h2>
+ <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tighter">{treatment.title}</h2>
  <p className="text-slate-500 dark:text-slate-400 font-medium mb-8 flex-grow leading-relaxed">{treatment.description}</p>
 
  <div className="space-y-4 mb-10">
@@ -297,10 +297,10 @@ export default function HealthLibraryClient() {
  <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-fuchsia-400 text-[10px] font-black uppercase tracking-widest mb-8">
  <Shield className="w-3 h-3" /> Precision Core Technology
  </span>
- <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter mb-10 leading-tight">
+ <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-10 leading-tight">
  Why choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-indigo-400">Laser & Keyhole Excellence?</span>
  </h2>
- <p className="text-slate-300 text-lg md:text-xl font-light mb-12 leading-relaxed opacity-90 italic">
+ <p className="text-slate-300 text-lg md:text-xl font-light mb-12 leading-relaxed opacity-90">
  &ldquo;Modern surgery represents the pinnacle of patient safety. By using concentrated energy and microscopic access, we achieve surgical precision unreachable by traditional scalpels&mdash;leading to less pain, zero scarring, and same-day recovery.&rdquo;
  </p>
  <div className="flex flex-wrap justify-center gap-6">
@@ -360,10 +360,10 @@ export default function HealthLibraryClient() {
  
  <div className="mt-20 p-12 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[3rem] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
  <div className="text-left">
- <h4 className="text-2xl font-black text-slate-900 dark:text-white uppercase italic tracking-tighter">Need a Generic Appointment?</h4>
- <p className="text-slate-500 dark:text-slate-400 mt-2 font-medium italic">Our general medicine department is available 24/7 for walk-ins and emergency consults.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Need a Generic Appointment?</h4>
+ <p className="text-slate-500 dark:text-slate-400 mt-2 font-medium">Our general medicine department is available 24/7 for walk-ins and emergency consults.</p>
  </div>
- <Link href="/contact" className="px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-[#0086d6] dark:hover:bg-[#0086d6] hover:text-white transition-all uppercase tracking-widest text-sm italic">
+ <Link href="/contact" className="px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-2xl hover:bg-[#0086d6] dark:hover:bg-[#0086d6] hover:text-white transition-all uppercase tracking-widest text-sm">
  Book Now
  </Link>
  </div>

@@ -37,8 +37,8 @@ export default function ENTDepartmentPage() {
  <div className="space-y-20 text-left">
  {/* ── 1. The Auditory & Respiratory Vision ────────────────── */}
  <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
- <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-emerald-600 pl-6 mb-8 uppercase tracking-tight text-left">
- The Ear, Nose &amp; Throat Authority: Precision Micro-Surgery
+ <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading border-l-8 border-emerald-600 pl-6 mb-8 uppercase tracking-tight text-left">
+ The Ear, Nose & Throat Authority: Precision Micro-Surgery
  </h2>
  <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
  <p>
@@ -52,11 +52,11 @@ export default function ENTDepartmentPage() {
  <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
  <div className="p-8 bg-emerald-50 dark:bg-emerald-900/20 rounded-[2.5rem] border border-emerald-100 dark:border-emerald-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-3xl group-hover:bg-emerald-500/20 transition-all"></div>
- <h4 className="text-2xl font-bold text-emerald-900 dark:text-emerald-200 mb-4 flex items-center gap-2 italic uppercase tracking-tighter">
+ <h4 className="text-2xl font-bold text-emerald-900 dark:text-emerald-200 mb-4 flex items-center gap-2 uppercase tracking-tighter">
  <Target className="w-6 h-6" />
  Advanced FESS Sinus Surgery
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
+ <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
  Breathe clearly again. Our <strong>4K FESS</strong> protocols allow for the clearing of chronic sinus blockages with extreme precision, avoiding external cuts and ensuring rapid nasal restoration.
  </p>
  <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
@@ -66,11 +66,11 @@ export default function ENTDepartmentPage() {
  </div>
  <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
  <div className="absolute inset-0 bg-emerald-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
- <h4 className="text-2xl font-bold text-emerald-300 mb-4 italic uppercase tracking-tighter flex items-center gap-2">
+ <h4 className="text-2xl font-bold text-emerald-300 mb-4 uppercase tracking-tighter flex items-center gap-2">
  <Zap className="w-6 h-6" />
  Coblation-Assisted Surgery
  </h4>
- <p className="text-emerald-100/60 text-sm leading-relaxed mb-6 italic font-medium">
+ <p className="text-emerald-100/60 text-sm leading-relaxed mb-6 font-medium">
  The "Bloodless" Evolution. We utilize cold-plasma Coblation to remove tonsils and adenoids, resulting in 70% less post-operative pain and significantly faster return to normal diet.
  </p>
  <ul className="space-y-2">
@@ -85,9 +85,9 @@ export default function ENTDepartmentPage() {
  <section className="ent-specialization bg-emerald-600 text-white p-12 md:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center gap-10">
  <div className="absolute top-0 right-0 w-96 h-96 bg-white dark:bg-slate-900 blur-[150px] -mr-48 -mt-48"></div>
  <div className="relative z-10 max-w-4xl space-y-8 text-left">
- <span className="inline-block px-6 py-2 bg-white text-emerald-600 text-xs font-black rounded-full uppercase tracking-widest italic shadow-lg">Micro-Ear Surgery Hub</span>
- <h2 className="text-5xl font-black leading-tight italic tracking-tighter">Microscopic Hearing Restoration led by <span className="text-emerald-100">Dr. Gayathri</span></h2>
- <div className="text-emerald-50 text-2xl leading-relaxed italic font-medium">
+ <span className="inline-block px-6 py-2 bg-white text-emerald-600 text-xs font-black rounded-full uppercase tracking-widest shadow-lg">Micro-Ear Surgery Hub</span>
+ <h2 className="text-5xl font-black leading-tight tracking-tighter">Microscopic Hearing Restoration led by <span className="text-emerald-100">Dr. Gayathri</span></h2>
+ <div className="text-emerald-50 text-2xl leading-relaxed font-medium">
  <p>We specialize in sub-millimeter precision for eardrum repairs (Tympanoplasty) and Ossicular Chain Reconstruction (OCR).</p>
  </div>
  <p className="text-emerald-100/80 text-lg leading-relaxed">
@@ -97,9 +97,9 @@ export default function ENTDepartmentPage() {
  </section>
 
  {/* ── 3. Educational Deep-Dive: Sinusitis ────────────────── */}
- <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-emerald-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
+ <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-emerald-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-emerald-900 dark:text-emerald-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic text-left">Clinical Insight: The Endoscopic Sinus Revolution</h3>
+ <h3 className="text-emerald-900 dark:text-emerald-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading text-left">Clinical Insight: The Endoscopic Sinus Revolution</h3>
  <p>
  Chronic Sinusitis is more than just a "bad cold." It involves the persistent inflammation of the sinus linings, blocking the natural drainage pathways (ostia). Traditional surgery was invasive, but <strong>FESS</strong> changed the paradigm by allowing surgeons to visualize and clear blockages using 4K cameras inside the nose.
  </p>
@@ -114,12 +114,12 @@ export default function ENTDepartmentPage() {
  { k: "Precision", v: "Nerve-Safe Paths" }
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-emerald-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-emerald-600">
- <p className="text-4xl font-black text-emerald-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
+ <p className="text-4xl font-black text-emerald-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
+ <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
- <p className="font-bold text-slate-900 dark:text-slate-100 italic border-l-4 border-emerald-500 pl-6">
+ <p className="font-bold text-slate-900 dark:text-slate-100 border-l-4 border-emerald-500 pl-6">
  By restoring the "Function" of the sinuses rather than just removing tissue, we ensure that your natural immune defense of the airways is preserved.
  </p>
  </section>
@@ -128,7 +128,7 @@ export default function ENTDepartmentPage() {
  <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
  <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-600/10 blur-[150px] -ml-48 -mb-48"></div>
  
- <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-emerald-400 text-left">
+ <h3 className="text-4xl font-black mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-emerald-400 text-left">
  ENT Specialist: Clinical Hub FAQs
  </h3>
  
@@ -144,10 +144,10 @@ export default function ENTDepartmentPage() {
  },
  {
  q: "Is Tinnitus (ringing in the ears) curable?",
- a: "While Tinnitus doesn&apos;t always have a single 'cure,' it is often a symptom of underlying hearing loss or wax. We use high-resolution audiometry to find the cause and offer masking therapies to reclaim your peace of mind."
+ a: "While Tinnitus doesn't always have a single 'cure,' it is often a symptom of underlying hearing loss or wax. We use high-resolution audiometry to find the cause and offer masking therapies to reclaim your peace of mind."
  },
  {
- q: "How safe are grommet tubes for a child&apos;s ear?",
+ q: "How safe are grommet tubes for a child's ear?",
  a: "Extremely safe. For children with persistent 'Glue Ear' (fluid buildup), grommets are a 15-minute daycare procedure that prevents recurrent infections and ensures hearing development stays on track."
  },
  {
@@ -160,7 +160,7 @@ export default function ENTDepartmentPage() {
  }
  ].map((faq, i) => (
  <div key={i} className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all group">
- <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-emerald-400 transition-colors text-lg text-left">
+ <h4 className="font-black text-white mb-6 flex items-start gap-4 group-hover:text-emerald-400 transition-colors text-lg text-left">
  <span className="text-emerald-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>

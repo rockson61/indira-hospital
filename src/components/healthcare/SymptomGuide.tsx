@@ -19,7 +19,7 @@ interface Symptom {
 }
 
 const SYMPTOMS: Symptom[] = [
- { name: "Allergic reaction where it&apos;s hard to breathe", category: "Respiratory & ENT", recommended: ['emergency'] },
+ { name: "Allergic reaction where it's hard to breathe", category: "Respiratory & ENT", recommended: ['emergency'] },
  { name: "Allergies", category: "Respiratory & ENT", recommended: ['teleconsult', 'opd', 'daycare'], departmentLink: "/book-appointment", departmentName: "General Physician" },
  { name: "Asthma attack - inhalers are not helping and difficulty breathing", category: "Respiratory & ENT", recommended: ['emergency'] },
  { name: "Asthma attack - inhalers are working some", category: "Respiratory & ENT", recommended: ['opd', 'daycare'] },
@@ -32,7 +32,7 @@ const SYMPTOMS: Symptom[] = [
  { name: "Burns - minor", category: "Trauma & Injuries", recommended: ['opd', 'daycare'] },
  { name: "Orthopaedics breaks (large bones or serious breaks)", category: "Trauma & Injuries", recommended: ['emergency'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
  { name: "Orthopaedics breaks (minor)", category: "Trauma & Injuries", recommended: ['daycare'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
- { name: "Cuts that are deep or bleeding that won&apos;t stop", category: "Trauma & Injuries", recommended: ['emergency'], departmentLink: "/departments/general-surgery", departmentName: "General Surgery" },
+ { name: "Cuts that are deep or bleeding that won't stop", category: "Trauma & Injuries", recommended: ['emergency'], departmentLink: "/departments/general-surgery", departmentName: "General Surgery" },
  { name: "Cuts - minor", category: "Trauma & Injuries", recommended: ['opd', 'daycare'] },
  { name: "Sprains", category: "Trauma & Injuries", recommended: ['opd', 'daycare'], departmentLink: "/departments/orthopaedics", departmentName: "Orthopaedics" },
  { name: "Trauma or very bad injury", category: "Trauma & Injuries", recommended: ['emergency'] },
@@ -93,8 +93,8 @@ export function SymptomGuide() {
  answer: `For ${s.name}, we recommend: ${s.recommended.join(', ').toUpperCase()}. ${s.departmentName ? `Please consult our ${s.departmentName} department.` : ''}`
  }))}
  steps={[
- { name: "Observe Symptoms", description: "Monitor severity and check if it&apos;s life-threatening (Snake bite, breathing difficulty)." },
- { name: "Categorize Care", description: "Determine if it&apos;s an Emergency, OPD, or Teleconsultation case." },
+ { name: "Observe Symptoms", description: "Monitor severity and check if it's life-threatening (Snake bite, breathing difficulty)." },
+ { name: "Categorize Care", description: "Determine if it's an Emergency, OPD, or Teleconsultation case." },
  { name: "Consult Specialist", description: "Book an appointment with the recommended department at Indira Hospital." }
  ]}
  />
@@ -195,7 +195,7 @@ export function SymptomGuide() {
  {filteredSymptoms.length === 0 && (
  <tr>
  <td colSpan={5} className="p-12 text-center text-slate-500 dark:text-slate-400">
- No symptoms found matching your search. If it&apos;s an emergency, please visit our ER immediately.
+ No symptoms found matching your search. If it's an emergency, please visit our ER immediately.
  </td>
  </tr>
  )}

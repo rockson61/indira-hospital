@@ -83,7 +83,7 @@ export default function SurgicalGastroPage() {
  <Scale className="w-16 h-16 text-emerald-500 mb-6" />
  <h4 className="text-xl font-bold mb-2">Nutritional Hub Integration</h4>
  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 font-medium">
- Following major GI resection, the body&apos;s absorption mechanics change. We provide a **30-Day Post-Op Nutrition Blueprint** tailored to your new digestive anatomy.
+ Following major GI resection, the body's absorption mechanics change. We provide a **30-Day Post-Op Nutrition Blueprint** tailored to your new digestive anatomy.
  </p>
  <div className="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-widest">
  <Shield className="w-4 h-4" />
@@ -96,7 +96,7 @@ export default function SurgicalGastroPage() {
  {/* Specialized GI Verticals */}
  <section>
  <div className="text-center max-w-3xl mx-auto mb-12">
- <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 italic font-heading tracking-tighter">Advanced Surgical GI Domains</h3>
+ <h3 className="font-heading text-3xl font-bold text-slate-900 dark:text-white mb-4 font-heading tracking-tighter">Advanced Surgical GI Domains</h3>
  <p className="text-slate-600 dark:text-slate-400">From oncology to complex hernias, we manage the most challenging abdominal pathology.</p>
  </div>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -120,7 +120,7 @@ export default function SurgicalGastroPage() {
  <div key={i} className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all border-b-4 border-emerald-500">
  <item.icon className="w-12 h-12 text-emerald-600 mb-6" />
  <h4 className="text-xl font-bold mb-3">{item.title}</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-heading italic">{item.desc}</p>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-heading">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -129,7 +129,7 @@ export default function SurgicalGastroPage() {
  {/* Trust Infrastructure Section */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent" />
- <h3 className="font-heading text-3xl font-bold mb-4 font-serif italic">Why Indira for Surgical GI?</h3>
+ <h3 className="font-heading text-3xl font-bold mb-4 font-serif">Why Indira for Surgical GI?</h3>
  <p className="text-slate-400 max-w-2xl mx-auto mb-12">
  GI surgery is about more than just "removing a mass"—it is about ensuring the long-term metabolic health of the patient.
  </p>
@@ -143,7 +143,7 @@ export default function SurgicalGastroPage() {
  <div key={i} className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
  <p className="text-emerald-400 font-bold mb-2">{step.day}</p>
  <h5 className="font-bold text-sm mb-2">{step.title}</h5>
- <p className="text-xs text-slate-400 leading-relaxed antialiased italic">{step.text}</p>
+ <p className="text-xs text-slate-400 leading-relaxed antialiased">{step.text}</p>
  </div>
  ))}
  </div>
@@ -162,7 +162,7 @@ export default function SurgicalGastroPage() {
  a: "Yes. For many GI cancers, like Colon and Esophageal cancer, laparoscopic (keyhole) surgery is now the gold standard. It provides similar oncological outcomes with much faster recovery."
  },
  {
- q: "What is a Whipple&apos;s Procedure?",
+ q: "What is a Whipple's Procedure?",
  a: "It is one of the most complex GI surgeries, involving removal of the pancreas head and parts of the small intestine. This is performed by our senior HPB specialists for pancreatic cancers."
  },
  {
@@ -175,7 +175,7 @@ export default function SurgicalGastroPage() {
  },
  {
  q: "How long after GI surgery can I eat normally?",
- a: "Under our ERAS protocol, you&apos;ll start sips of liquids within 24 hours. A return to a fully solid diet usually happens over 10-14 days as the bowel recovers."
+ a: "Under our ERAS protocol, you'll start sips of liquids within 24 hours. A return to a fully solid diet usually happens over 10-14 days as the bowel recovers."
  },
  {
  q: "Is Surgical GI different from Medical Gastroenterology?",
@@ -187,7 +187,7 @@ export default function SurgicalGastroPage() {
  <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>

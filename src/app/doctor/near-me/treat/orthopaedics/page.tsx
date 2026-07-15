@@ -33,7 +33,7 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="orthopaedics-pillar-content space-y-20 text-left">
  {/* ── 1. The Mobility Revolution ───────────────────────────── */}
  <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
- <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight">
+ <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading border-l-8 border-blue-600 pl-6 mb-8 uppercase tracking-tight">
  Regain Your Reach: The Golden Standard in Orthopaedic Surgery
  </h2>
  <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -48,10 +48,10 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose">
  <div className="p-8 bg-blue-50 dark:bg-blue-900/20 rounded-[2.5rem] border border-blue-100 dark:border-blue-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl group-hover:bg-blue-500/20 transition-all"></div>
- <h4 className="text-2xl font-bold text-blue-900 dark:text-blue-200 mb-4 flex items-center gap-2 italic">
+ <h4 className="text-2xl font-bold text-blue-900 dark:text-blue-200 mb-4 flex items-center gap-2">
  Robotic Joint Replacement
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
+ <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
  Precision is measured in microns. Our robotic systems ensure perfect implant alignment, virtually eliminating the risk of dislocation and ensuring a "Natural Feel" post-surgery.
  </p>
  <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
@@ -61,8 +61,8 @@ export default function OrthopaedicsDepartmentPage() {
  </div>
  <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
  <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
- <h4 className="text-2xl font-bold text-blue-300 mb-4 italic uppercase tracking-tighter">Sports Arthroscopy Unit</h4>
- <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
+ <h4 className="text-2xl font-bold text-blue-300 mb-4 uppercase tracking-tighter">Sports Arthroscopy Unit</h4>
+ <p className="text-blue-100/60 text-sm leading-relaxed mb-6 font-medium">
  Reclaiming the field. We perform <strong>HD Arthroscopic (Keyhole)</strong> ligament repairs (ACL/PCL/Meniscus) that minimize scarring and accelerate your return to high-performance sports.
  </p>
  <ul className="space-y-2">
@@ -76,7 +76,7 @@ export default function OrthopaedicsDepartmentPage() {
  {/* ── 2. Specialized Orthopaedic Verticals ────────────────── */}
  <section className="ortho-verticals space-y-16">
  <div className="text-center max-w-3xl mx-auto">
- <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter italic">Orthopaedic Excellence Domains</h2>
+ <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Orthopaedic Excellence Domains</h2>
  <div className="h-1 w-24 bg-blue-600 dark:bg-blue-500 mx-auto mt-4 rounded-full"></div>
  </div>
 
@@ -85,8 +85,8 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Arthroplasty</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Advanced joint replacement for hips, knees, and shoulders using muscle-sparing approaches and gold-standard implants.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Arthroplasty</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Advanced joint replacement for hips, knees, and shoulders using muscle-sparing approaches and gold-standard implants.</p>
  <ul className="space-y-3 mb-8">
  {["Total Knee (TKR)", "Total Hip (THR)", "Shoulder Replacement", "Revision Arthroplasty"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
@@ -102,8 +102,8 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-blue-600">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Spine & Trauma</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">High-precision management of spinal fractures, slip discs, and multi-fracture trauma emergencies.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Spine & Trauma</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">High-precision management of spinal fractures, slip discs, and multi-fracture trauma emergencies.</p>
  <ul className="space-y-3 mb-8">
  {["Microdiscectomy", "Spinal Fusion", "Scoliotic Repair", "Pelvic Acetabular Trauma"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
@@ -119,8 +119,8 @@ export default function OrthopaedicsDepartmentPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Hand & Foot</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Micro-surgical restoration of hand tendons, peripheral nerves, and complex diabetic foot reconstructions.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Hand & Foot</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Micro-surgical restoration of hand tendons, peripheral nerves, and complex diabetic foot reconstructions.</p>
  <ul className="space-y-3 mb-8">
  {["Tendon Repair", "Nerve Grafting", "Diabetic Offloading", "Flat-Foot Correction"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
@@ -135,9 +135,9 @@ export default function OrthopaedicsDepartmentPage() {
  </section>
 
  {/* ── 3. Educational Deep-Dive: Robotic vs. Manual ─────────────────── */}
- <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden">
+ <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-blue-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden">
  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: The Robotic Advantage</h3>
+ <h3 className="text-blue-900 dark:text-blue-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: The Robotic Advantage</h3>
  <p>
  Orthopaedic surgery is transitioning from "subjective art" to "objective science." In manual knee replacement, the surgeon rely on visual cues and traditional mechanical jigs. In <strong>Robotic-Assisted Surgery</strong>, a 3D digital map of your unique knee is created before the first cut.
  </p>
@@ -152,12 +152,12 @@ export default function OrthopaedicsDepartmentPage() {
  { k: "FAST", v: "Walk in 24 Hours" }
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-blue-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-blue-600">
- <p className="text-4xl font-black text-blue-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
+ <p className="text-4xl font-black text-blue-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
+ <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
- <p className="font-bold text-slate-900 dark:text-slate-100 italic">
+ <p className="font-bold text-slate-900 dark:text-slate-100">
  By utilizing high-precision computer navigation, we ensure that your implant is perfectly balanced, reducing the risk of premature wear and ensuring you walk with a completely natural gait.
  </p>
  </section>
@@ -166,7 +166,7 @@ export default function OrthopaedicsDepartmentPage() {
  <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl">
  <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 blur-[150px] -ml-48 -mb-48"></div>
  
- <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-blue-400 text-left">
+ <h3 className="text-4xl font-black mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-blue-400 text-left">
  Orthopaedics: Specialist Clinical FAQs
  </h3>
  
@@ -174,7 +174,7 @@ export default function OrthopaedicsDepartmentPage() {
  {[
  {
  q: "What is robotic-assisted knee replacement vs. manual?",
- a: "Manual surgery uses standard tools and visual alignment. Robotic surgery uses a 3D digital model of your knee to guide the surgeon&apos;s hands, ensuring the bone cuts are accurate to within 0.5mm. This results in better balance, less pain, and a more natural feel to the new joint."
+ a: "Manual surgery uses standard tools and visual alignment. Robotic surgery uses a 3D digital model of your knee to guide the surgeon's hands, ensuring the bone cuts are accurate to within 0.5mm. This results in better balance, less pain, and a more natural feel to the new joint."
  },
  {
  q: "How soon can I walk after a Total Knee Replacement (TKR)?",
@@ -206,7 +206,7 @@ export default function OrthopaedicsDepartmentPage() {
  }
  ].map((faq, i) => (
  <div key={i} className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all group">
- <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-blue-400 transition-colors text-lg">
+ <h4 className="font-black text-white mb-6 flex items-start gap-4 group-hover:text-blue-400 transition-colors text-lg">
  <span className="text-blue-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>

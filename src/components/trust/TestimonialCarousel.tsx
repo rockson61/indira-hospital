@@ -50,15 +50,13 @@ export function TestimonialCarousel({ testimonials = [], autoPlay = true, interv
  </div>
 
  <div className="text-center mb-6">
- <p className="text-lg text-foreground italic mb-6">&quot;{testimonials[currentIndex].text}&quot;</p>
+ <p className="text-lg text-foreground mb-6">&quot;{testimonials[currentIndex].text}&quot;</p>
 
  <div className="flex justify-center mb-2">
  {[...Array(5)].map((_, i) => (
  <Star
  key={i}
- className={`h-5 w-5 ${
- i < testimonials[currentIndex].rating ? "text-accent fill-current" : "text-muted"
- }`}
+ className={`h-5 w-5 ${ i < testimonials[currentIndex].rating ? "text-accent fill-current" : "text-muted" }`}
  />
  ))}
  </div>

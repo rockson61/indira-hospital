@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { GLOSSARY_DATA } from "@/lib/data/glossary-data";
 import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 import { notFound } from "next/navigation";
@@ -86,10 +87,10 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
  <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 dark:bg-fuchsia-950/30 flex items-center justify-center text-fuchsia-600 border border-fuchsia-100 dark:border-fuchsia-900/50">
  <Shield className="w-6 h-6" />
  </div>
- <h2 className="elite-section-title text-slate-900 dark:text-white uppercase italic">Clinical Definition</h2>
+ <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">Clinical Definition</h2>
  </div>
 
- <p className="text-slate-600 dark:text-slate-300 text-2xl md:text-3xl leading-relaxed font-light mb-16 italic first-letter:text-6xl first-letter:font-black first-letter:text-fuchsia-600 first-letter:mr-4 first-letter:float-left first-letter:mt-2">
+ <p className="text-slate-600 dark:text-slate-300 text-2xl md:text-3xl leading-relaxed font-light mb-16 first-letter:text-6xl first-letter:font-black first-letter:text-fuchsia-600 first-letter:mr-4 first-letter:float-left first-letter:mt-2">
  {glossaryItem.definition.includes("Find expert knowledge and treatments")
  ? `${glossaryItem.term} is a critical medical concept within the field of ${glossaryItem.category}. At Indira Super Speciality Hospital, our specialists utilize advanced diagnostics and evidence-based protocols to manage conditions and procedures related to ${glossaryItem.term.toLowerCase()} for patients in Vellore and across Tamil Nadu.`
  : glossaryItem.definition}
@@ -175,7 +176,7 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
  <h4 className="text-2xl font-black mb-2 tracking-tight">Still have questions?</h4>
  <p className="text-slate-400 font-medium">Connect with our clinical coordinators for precise guidance.</p>
  </div>
- <Link href="/contact" className="relative z-10 px-10 py-5 bg-white text-slate-900 font-black rounded-2xl hover:bg-slate-100 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-white/5 uppercase tracking-widest text-sm italic">
+ <Link href="/contact" className="relative z-10 px-10 py-5 bg-white text-slate-900 font-black rounded-2xl hover:bg-slate-100 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-white/5 uppercase tracking-widest text-sm">
  Consult Expert
  </Link>
  </div>

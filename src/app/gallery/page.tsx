@@ -62,7 +62,7 @@ export default function GalleryPage() {
  href="/virtual-tour"
  className="group/btn inline-flex items-center gap-4 px-12 py-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black rounded-[2.5rem] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.1)] text-xl overflow-hidden relative"
  >
- <span className="relative z-10 uppercase tracking-widest italic">Enter 360° Virtual Tour</span>
+ <span className="relative z-10 uppercase tracking-widest">Enter 360° Virtual Tour</span>
  <ArrowRight className="w-6 h-6 relative z-10 group-hover/btn:translate-x-2 transition-transform" />
  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-indigo-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500" />
  </Link>

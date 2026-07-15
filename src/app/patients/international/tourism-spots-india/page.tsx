@@ -27,7 +27,7 @@ const TOURISM_STATES = [
  },
  {
  name: "Kerala",
- description: "God&apos;s Own Country, globally acclaimed for its backwaters and serenity.",
+ description: "God's Own Country, globally acclaimed for its backwaters and serenity.",
  spots: [
  { name: "Munnar", desc: "Endless rolling tea gardens and fresh mountain air." },
  { name: "Alleppey Backwaters", desc: "Relaxing houseboat cruises on tranquil, palm-fringed canals." },
@@ -46,7 +46,7 @@ const TOURISM_STATES = [
  },
  {
  name: "Delhi & Agra",
- description: "The Golden Triangle route showcasing India&apos;s spectacular history.",
+ description: "The Golden Triangle route showcasing India's spectacular history.",
  spots: [
  { name: "Taj Mahal, Agra", desc: "The iconic ivory-white marble mausoleum, a Wonder of the World." },
  { name: "Red Fort, Delhi", desc: "A massive historic fort representing the pinnacle of Mughal creativity." }
@@ -86,7 +86,7 @@ export default function TourismSpotsPage() {
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Recovery Spots.</span>
  </h1>
  
- <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10 italic">
+ <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10">
  Combine world-class medical care with a serene vacation. India offers breathtaking landscapes perfect for your post-treatment peace.
  </p>
 
@@ -136,7 +136,7 @@ export default function TourismSpotsPage() {
  <feature.icon className="w-7 h-7" />
  </div>
  <h3 className="text-xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">{feature.title}</h3>
- <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed italic text-sm">{feature.desc}</p>
+ <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed text-sm">{feature.desc}</p>
  </div>
  ))}
  </div>
@@ -147,7 +147,7 @@ export default function TourismSpotsPage() {
  <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6 text-center lg:text-left mx-auto max-w-4xl lg:mx-0 lg:max-w-full">
  <div className="max-w-2xl">
  <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">Curated <br /><span className="text-amber-600">Destinations</span></h2>
- <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium italic">Explore the best recovery spots handpicked for our international guests.</p>
+ <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg font-medium">Explore the best recovery spots handpicked for our international guests.</p>
  </div>
  <div className="w-16 h-16 rounded-full bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 border border-amber-100 dark:border-amber-800">
  <MapPin className="w-8 h-8" />
@@ -164,7 +164,7 @@ export default function TourismSpotsPage() {
  {state.type}
  </span>
  </div>
- <p className="text-slate-500 dark:text-slate-400 mb-10 font-medium italic leading-relaxed">{state.description}</p>
+ <p className="text-slate-500 dark:text-slate-400 mb-10 font-medium leading-relaxed">{state.description}</p>
  </div>
 
  <div className="px-10 pb-10 space-y-4">
@@ -175,7 +175,7 @@ export default function TourismSpotsPage() {
  </div>
  <div>
  <h4 className="font-black text-slate-900 dark:text-white mb-1 uppercase tracking-tight text-sm">{spot.name}</h4>
- <p className="text-xs text-slate-500 dark:text-slate-400 font-medium italic">{spot.desc}</p>
+ <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{spot.desc}</p>
  </div>
  </div>
  ))}
@@ -196,9 +196,9 @@ export default function TourismSpotsPage() {
  </span>
  <h2 className="elite-section-title mb-8 uppercase er">
  You Focus on Healing. <br/>
- <span className="text-amber-500 italic">We Handle the Rest.</span>
+ <span className="text-amber-500">We Handle the Rest.</span>
  </h2>
- <p className="text-lg text-slate-400 mb-10 leading-relaxed italic font-light">
+ <p className="text-lg text-slate-400 mb-10 leading-relaxed font-light">
  Our dedicated International Patient Desk assists you with visa documentation, airport logistics, and entire recovery itineraries.
  </p>
  

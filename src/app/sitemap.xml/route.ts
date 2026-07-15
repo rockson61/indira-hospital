@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { siteConfig } from '@/config/site';
 import { generateSitemapIndexXml } from '@/lib/sitemap-utils';
 

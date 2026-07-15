@@ -1,8 +1,0 @@
-.agent
-.gemini
-scripts
-node_modules
-.next
-dist
-build
-public

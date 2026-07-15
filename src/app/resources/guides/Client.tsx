@@ -62,7 +62,7 @@ export function GuidesClient() {
  <BookOpen className="w-4 h-4" /> Elite Resource Library
  </div>
  
- <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-none italic text-slate-900 dark:text-white">
+ <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-none text-slate-900 dark:text-white">
  Clinical <br />
  <span className="text-purple-600 dark:text-purple-400">Journey Maps.</span>
  </h1>
@@ -100,7 +100,7 @@ export function GuidesClient() {
  <div className={`w-16 h-16 rounded-[2rem] ${guide.bg} flex items-center justify-center shadow-sm`}>
  <guide.icon className={`w-8 h-8 ${guide.color}`} />
  </div>
- <h3 className="text-2xl font-black text-slate-900 dark:text-white leading-tight italic tracking-tight uppercase">
+ <h3 className="text-2xl font-black text-slate-900 dark:text-white leading-tight tracking-tight uppercase">
  {guide.title}
  </h3>
  <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
@@ -161,7 +161,7 @@ export function GuidesClient() {
  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] will-change-transform transform-gpu" />
  <div className="relative z-10 flex flex-col md:flex-row gap-16 items-center">
  <div className="md:w-2/3 space-y-6 text-center md:text-left">
- <h2 className="text-3xl md:text-5xl font-black tracking-tight italic">Are you a Medical Professional?</h2>
+ <h2 className="text-3xl md:text-5xl font-black tracking-tight">Are you a Medical Professional?</h2>
  <p className="text-slate-300 text-lg font-light leading-relaxed">
  Access technical data sheets, clinical results, and our streamlined referral portal designed for seamless patient transitions.
  </p>
@@ -182,10 +182,10 @@ export function GuidesClient() {
  </div>
  </div>
  <div className="md:w-1/3">
- <div className="p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2.5rem] ">
+ <div className="p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2.5rem]">
  <CheckCircle2 className="w-12 h-12 text-purple-400 mb-6" />
  <h4 className="text-xl font-black mb-2">Verified Accuracy</h4>
- <p className="text-sm text-slate-400 font-medium italic">Every guide is reviewed annually by our clinical chiefs.</p>
+ <p className="text-sm text-slate-400 font-medium">Every guide is reviewed annually by our clinical chiefs.</p>
  </div>
  </div>
  </div>

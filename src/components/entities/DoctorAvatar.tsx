@@ -11,7 +11,7 @@ interface DoctorAvatarProps {
  className?: string;
 }
 
-export function DoctorAvatar({ src, name, initials, className = "" }: DoctorAvatarProps) {
+export function DoctorAvatar({ src, name, initials, className="" }: DoctorAvatarProps) {
  const [error, setError] = React.useState(false);
  const finalSrc = src ? getImageUrl(src) : null;
 

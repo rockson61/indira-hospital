@@ -64,7 +64,7 @@ export function HomeLatestNews() {
  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
  />
  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
- <span className="bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 ">
+ <span className="bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
  Read Article <ArrowUpRight className="w-3 h-3" />
  </span>
  </div>

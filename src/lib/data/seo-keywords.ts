@@ -269,6 +269,6 @@ export const SEO_KEYWORDS: SEOKeyword[] = [
  { slug: "paediatrics", title: "Best Paediatric Care in Vellore", department: "Paediatrics", category: "Specialist" },
  { slug: "physiotherapy", title: "Advanced Physiotherapy in Vellore", department: "Orthopaedics", category: "Treatment" },
  { slug: "psychiatry", title: "Expert Psychiatry & Mental Health in Vellore", department: "General Medicine", category: "Specialist" },
- { slug: "dentistry", title: "Elite Dental Care & Oral Surgery in Vellore", department: "Dentistry", category: "Specialist" },
+ { slug: "dentistry", title: "Top Dental Care & Oral Surgery in Vellore", department: "Dentistry", category: "Specialist" },
  { slug: "gum-treatment", title: "Advanced Gum Treatment & Periodontics", department: "Dentistry", category: "Treatment" },
 ];

@@ -59,7 +59,7 @@ const serviceProcedures: Record<string, string[]> = {
  cardiology: ["Angiography", "Angioplasty & Stenting", "Pacemaker Implantation", "Echocardiography", "TMT / Stress Test", "Heart Failure Management", "Cardiac Rehabilitation", "Holter Monitoring"],
  "icu-emergency": ["24/7 Emergency Care", "Ventilator Support", "Trauma Management", "Post-Surgical ICU Care", "Cardiac Monitoring", "Sepsis Management", "Stroke Care", "Poison Management"],
  dentistry: ["Maxillofacial Surgery", "Orthognathic Procedures", "Dental Implants", "Orthodontics", "Root Canal Treatment", "Happy Makeover", "Full Mouth Rehabilitation", "Pediatric Dentistry"],
- neurology: ["Stroke Management", "Epilepsy Treatment", "Migraine & Headache Clinic", "Parkinson&apos;s Disease Care", "EEG & EMG Studies", "Peripheral Neuropathy", "Multiple Sclerosis Treatment", "Nerve Conduction Studies"],
+ neurology: ["Stroke Management", "Epilepsy Treatment", "Migraine & Headache Clinic", "Parkinson's Disease Care", "EEG & EMG Studies", "Peripheral Neuropathy", "Multiple Sclerosis Treatment", "Nerve Conduction Studies"],
  oncology: ["Cancer Screening", "Chemotherapy", "Targeted Therapy", "Immunotherapy", "Surgical Oncology", "Palliative Care", "Biopsy & Diagnosis", "Cancer Rehabilitation"],
  nephrology: ["Dialysis Services", "Chronic Kidney Disease", "Kidney Stone Management", "Hypertension Treatment", "Electrolyte Disorders", "Pre-Transplant Evaluation", "Glomerulonephritis Care", "Diabetic Nephropathy"],
 };
@@ -147,7 +147,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  const { slug } = await params;
  const lastSlug = slug[slug.length - 1];
 
- // --- 1. Check if it&apos;s a SITE-SPECIFIC TREATMENT (Hierarchy) ---
+ // --- 1. Check if it's a SITE-SPECIFIC TREATMENT (Hierarchy) ---
  const treatment = getTreatmentBySlug(lastSlug);
  let service: any | null = null;
  let procedures: any[] = [];
@@ -189,7 +189,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  }
 
  } else {
- // --- 2. Check if it&apos;s a STANDARD SERVICE ---
+ // --- 2. Check if it's a STANDARD SERVICE ---
  // Use API with fallback
  service = await getServiceBySlug(lastSlug).catch(() => null);
 
@@ -236,7 +236,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  // Use usePathname for client-side context detection
  // This component is a Server Component, so usePathname cannot be called directly here.
  // The instruction implies this logic is for a client-side component like FloatingActionBar.
- // For the current server component, we&apos;ll keep the slug-based detection for initial render.
+ // For the current server component, we'll keep the slug-based detection for initial render.
  // If a client component needs this, it would call usePathname itself.
  const isDentalPage = slug.some(s => s.toLowerCase().includes('dental') || s.toLowerCase().includes('dentistry'));
  const contactPhone = isDentalPage ? "+91 7010650063" : siteConfig.contact.phone;
@@ -259,6 +259,23 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  else if (isLapSpecialty) comparisonType = 'laparoscopy';
  else if (isOrthoSpecialty) comparisonType = 'orthopedics';
  else if (isEyeSpecialty) comparisonType = 'ophthalmology';
+
+ let compType: 'laser' | 'laparoscopy' | 'orthopedics' | 'ophthalmology' | 'dentistry' | 'general' = 'general';
+ if (isLaserSpecialty) compType = 'laser';
+ else if (isLapSpecialty) compType = 'laparoscopy';
+ else if (isOrthoSpecialty) compType = 'orthopedics';
+ else if (isEyeSpecialty) compType = 'ophthalmology';
+ else if (isDentalPage) compType = 'dentistry';
+
+ const compSpecs: Record<string, { duration: string; stay: string; recovery: string; anesthesia: string }> = {
+   laser: { duration: '30 - 45 Mins', stay: 'Daycare (6 Hrs)', recovery: '48 - 72 Hours', anesthesia: 'Local/Spinal' },
+   laparoscopy: { duration: '45 - 90 Mins', stay: '1 - 2 Days', recovery: '1 - 2 Weeks', anesthesia: 'General' },
+   orthopedics: { duration: '60 - 120 Mins', stay: '2 - 3 Days', recovery: '3 - 4 Weeks', anesthesia: 'Spinal/Epidural' },
+   dentistry: { duration: '30 - 60 Mins', stay: 'Outpatient (0 Hrs)', recovery: 'Same Day', anesthesia: 'Local / Topical' },
+   ophthalmology: { duration: '15 - 30 Mins', stay: 'Daycare (1 Hr)', recovery: '24 - 48 Hours', anesthesia: 'Aesthetic Drops' },
+   general: { duration: '30 - 60 Mins', stay: 'Daycare (6 Hrs)', recovery: '48 Hours', anesthesia: 'Local/Spinal' }
+ };
+ const specs = compSpecs[compType] || compSpecs.general;
 
  const isHighValueSurgical = isLaserSpecialty || isLapSpecialty || isOrthoSpecialty || isEyeSpecialty || slug.some(s => ['surgery', 'urology', 'cardiology'].some(k => s.toLowerCase().includes(k)));
 
@@ -309,7 +326,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   Best {service.title} <br />
   <span className="elite-gradient-text text-3xl sm:text-4xl">in Vellore, India</span>
   </h1>
-  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90 italic">
+  <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl leading-relaxed font-light mb-8 opacity-90">
   {service.short_description}
   </p>
 
@@ -330,10 +347,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  <div className="flex flex-wrap gap-5">
  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
- className="elite-button-primary gap-3">
- <MessageCircle className="w-6 h-6" />
- Elite Consultation
- </a>
+  className="elite-button-primary gap-3">
+  <MessageCircle className="w-6 h-6" />
+  Book Consultation
+  </a>
  <a href={`tel:${contactPhone.replace(/\s+/g, '')}`}
  className="elite-button-secondary gap-3">
  <Phone className="w-5 h-5 text-fuchsia-400" />
@@ -347,7 +364,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div className="relative z-10 scale-150 group-hover:scale-[1.75] transition-transform duration-[2s]">
  {iconMap[service.icon] || <Stethoscope className="h-24 w-24" />}
  </div>
- <div className="absolute top-0 right-0 p-8 opacity-20 capitalize text-[8px] font-black tracking-[0.5em] [writing-mode:vertical-lr]">Indira Elite Infrastructure</div>
+  <div className="absolute top-0 right-0 p-8 opacity-20 capitalize text-[8px] font-black tracking-[0.5em] [writing-mode:vertical-lr]">Indira Advanced Infrastructure</div>
  </div>
  </div>
  </div>
@@ -359,9 +376,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <div className="lg:col-span-2 space-y-8">
  {/* Quick Summary Card */}
  {isTreatmentPage && (
- <ServiceQuickSummary 
- duration={treatment?.faq?.[0]?.question?.toLowerCase()?.includes('time') ? treatment.faq[0].answer : undefined}
- />
+   <ServiceQuickSummary 
+     duration={specs.duration}
+     hospitalStay={specs.stay}
+     recoveryTime={specs.recovery}
+     anesthesia={specs.anesthesia}
+   />
  )}
 
  {/* Conversion Grid (Medfin Inspired) */}
@@ -426,7 +446,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* Procedure Comparison Table */}
  {isTreatmentPage && (
- <ProcedureComparison />
+ <ProcedureComparison type={compType} />
  )}
 
  {/* PRICING TRANSPARENCY BLOCK */}
@@ -439,7 +459,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <HandCoins className="w-6 h-6 text-emerald-400" />
  </div>
  <div>
- <h3 className="text-xl font-bold">Elite Pricing Transparency</h3>
+  <h3 className="text-xl font-bold">Transparent Pricing</h3>
  <p className="text-emerald-400 text-xs font-black uppercase tracking-widest">Ethical Billing Guarantee</p>
  </div>
  </div>
@@ -466,13 +486,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <p className="text-[10px] uppercase font-black text-slate-500 mb-2 tracking-widest text-center">Standard Procedure Window</p>
  <div className="flex justify-between items-end">
  <div className="text-center flex-1">
- <p className="text-2xl font-black text-white italic">{pricingRange.min}</p>
+ <p className="text-2xl font-black text-white">{pricingRange.min}</p>
  <p className="text-[8px] text-slate-500 uppercase font-bold">Standard</p>
  </div>
  <div className="h-8 w-px bg-white dark:bg-slate-900 mb-1" />
  <div className="text-center flex-1">
- <p className="text-2xl font-black text-fuchsia-400 italic">{pricingRange.max}</p>
- <p className="text-[8px] text-slate-500 uppercase font-bold">Elite Suite</p>
+ <p className="text-2xl font-black text-fuchsia-400">{pricingRange.max}</p>
+  <p className="text-[8px] text-slate-500 uppercase font-bold">Premium Suite</p>
  </div>
  </div>
  </div>
@@ -606,7 +626,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  type="treatments" 
  parentSlug={treatment?.parentServiceSlug || service.slug}
  excludeSlug={service.slug}
- title={`Other Elite ${treatment?.parentServiceSlug ? treatment.parentServiceSlug.replace(/-/g, ' ') : 'Medical'} Procedures`}
+  title={`Other Advanced ${treatment?.parentServiceSlug ? treatment.parentServiceSlug.replace(/-/g, ' ') : 'Medical'} Procedures`}
  subtitle="Related Treatments"
  limit={10}
  />
@@ -614,7 +634,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  <InternalLinkGrid 
  type="locations" 
  title="Available at These Prime Locations"
- subtitle="Indira Hospital Elite Network"
+  subtitle="Indira Hospital Network"
  limit={8}
  />
  </div>
@@ -667,7 +687,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
  {/* UNIFIED ENTITY QUERIES */}
  <UnifiedEntitySection type="doctors" title="Our Expert Doctors" subtitle="Meet Our Specialists" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
- <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Elite Medical Units" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/50" />
+ <UnifiedEntitySection type="departments" title="Our Departments" subtitle="Our Medical Specialties" featuredLimit={6} linkLimit={12} className="bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/50" />
  <UnifiedEntitySection type="locations" title="Hospital Near You" subtitle="Our Locations" featuredLimit={6} linkLimit={12} className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700" />
 
  <InternalLinkGrid type="diagnostics" title="Diagnostic Support" subtitle="Lab Tests for this Procedure" limit={12} className="bg-slate-50 dark:bg-slate-900 border-b" />

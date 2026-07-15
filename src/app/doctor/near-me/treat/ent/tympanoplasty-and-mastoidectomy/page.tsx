@@ -107,8 +107,8 @@ export default function TympanoplastyPage() {
  { title: "Otosclerosis", desc: "Hardening of the hearing bones that requires stapedotomy for sound restoration." }
  ].map((item, i) => (
  <div key={i} className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:bg-emerald-50/20 transition-all border-b-4 border-emerald-500">
- <h4 className="font-bold mb-2 text-emerald-600 font-heading italic tracking-tighter uppercase">{item.title}</h4>
- <p className="text-[10px] text-slate-500 leading-relaxed italic">{item.desc}</p>
+ <h4 className="font-bold mb-2 text-emerald-600 font-heading tracking-tighter uppercase">{item.title}</h4>
+ <p className="text-[10px] text-slate-500 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -119,18 +119,18 @@ export default function TympanoplastyPage() {
  <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/30 to-transparent shadow-2xl" />
  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
  <div className="space-y-6">
- <h3 className="font-heading text-3xl font-bold italic font-heading text-emerald-300">Mastoidectomy: Cleansing the Temporal Bone</h3>
- <p className="text-slate-400 leading-relaxed italic">
+ <h3 className="font-heading text-3xl font-bold font-heading text-emerald-300">Mastoidectomy: Cleansing the Temporal Bone</h3>
+ <p className="text-slate-400 leading-relaxed">
  When infection invades the honeycomb-like mastoid bone behind the ear, a simple tympanoplasty is not enough. We perform **Mastoidectomy** using high-speed micro-drills to clear every cell of infection, preventing serious brain complications.
  </p>
  </div>
  <div className="grid grid-cols-2 gap-4">
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading italic">Microscope</p>
+ <p className="text-xs text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading">Microscope</p>
  <p className="font-heading text-3xl font-bold text-white">Zeiss</p>
  </div>
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading italic">Precision</p>
+ <p className="text-xs text-emerald-300 font-bold uppercase tracking-widest mb-1 font-heading">Precision</p>
  <p className="font-heading text-3xl font-bold text-white">Sub-mm</p>
  </div>
  </div>
@@ -175,7 +175,7 @@ export default function TympanoplastyPage() {
  <Zap className="w-4 h-4 mt-1 text-emerald-500 shrink-0" />
  {faq.q}
  </h4>
- <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased italic">
+ <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed pl-6 antialiased">
  {faq.a}
  </p>
  </div>

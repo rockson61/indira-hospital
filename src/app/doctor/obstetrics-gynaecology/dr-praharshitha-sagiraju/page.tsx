@@ -57,7 +57,7 @@ export default function DrPraharshithaProfile() {
 
  const faqItems = [
  {
- question: "What is Dr. Praharshitha&apos;s approach to high-risk pregnancy?",
+ question: "What is Dr. Praharshitha's approach to high-risk pregnancy?",
  answer: "Dr. Praharshitha utilizes her AIIMS-standard training to provide advanced fetal monitoring and evidence-based clinical protocols for complex pregnancies, ensuring the highest safety standards for both mother and child."
  },
  {
@@ -98,16 +98,16 @@ export default function DrPraharshithaProfile() {
  {/* Section: Academic Excellence from AIIMS */}
  <section id="philosophy" className="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50 text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-rose-400/10 blur-3xl -z-10" />
- <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading uppercase tracking-tighter italic">
+ <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-rose-500 pl-4 font-heading uppercase tracking-tighter">
  Women’s Health: AIIMS-Standard Fetal Medicine
  </h3>
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
  <div className="prose prose-slate dark:prose-invert">
- <p className="text-lg leading-relaxed antialiased font-medium uppercase italic text-slate-700 dark:text-slate-200 tracking-tight">
+ <p className="text-lg leading-relaxed antialiased font-medium uppercase text-slate-700 dark:text-slate-200 tracking-tight">
  "Excellence in maternity care today is about combining clinical intuition with advanced fetal diagnostics and minimally invasive gynae-solutions."
  </p>
  <p className="mt-4">
- With a residency from **AIIMS, New Delhi**, India&apos;s premier medical institution, Dr. Praharshitha Sagiraju brings a level of academic rigour and clinical excellence to Indira Hospital that is unmatched in the region. She specializes in **High-Risk Obstetrics** and **Advanced Fetal Monitoring**, ensuring both mother and baby receive tertiary-level care. 
+ With a residency from **AIIMS, New Delhi**, India's premier medical institution, Dr. Praharshitha Sagiraju brings a level of academic rigour and clinical excellence to Indira Hospital that is unmatched in the region. She specializes in **High-Risk Obstetrics** and **Advanced Fetal Monitoring**, ensuring both mother and baby receive tertiary-level care. 
  </p>
  <p className="mt-4">
  Beyond maternity, she is a master of **Gynae-Endoscopy (Laparoscopy & Hysteroscopy)**. Her surgical philosophy focuses on preserving fertility and minimizing recovery times for procedures like ovarian cystectomies and fibroid removals through precise keyhole techniques.
@@ -124,12 +124,12 @@ export default function DrPraharshithaProfile() {
  </div>
  </div>
  <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-rose-100 dark:border-rose-800 shadow-xl flex flex-col justify-center">
- <Activity className="w-16 h-16 text-rose-500 mb-6 font-heading uppercase tracking-widest italic" />
+ <Activity className="w-16 h-16 text-rose-500 mb-6 font-heading uppercase tracking-widest" />
  <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">OBGY Clinical Benchmarks</h4>
  <ul className="space-y-4 mb-6">
  <li className="flex gap-3">
  <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
- <span className="text-sm"><strong>AIIMS Academic Lineage</strong>: Adhering to the world&apos;s most rigorous medical protocols.</span>
+ <span className="text-sm"><strong>AIIMS Academic Lineage</strong>: Adhering to the world's most rigorous medical protocols.</span>
  </li>
  <li className="flex gap-3">
  <CheckCircle2 className="w-5 h-5 text-rose-500 shrink-0" />
@@ -140,7 +140,7 @@ export default function DrPraharshithaProfile() {
  <span className="text-sm"><strong>Painless Labour</strong>: Expertise in safe epidural-supported delivery management.</span>
  </li>
  </ul>
- <div className="inline-flex items-center gap-2 text-rose-600 font-bold text-xs uppercase tracking-widest italic">
+ <div className="inline-flex items-center gap-2 text-rose-600 font-bold text-xs uppercase tracking-widest">
  <Award className="w-4 h-4" />
  Tertiary OBGY Standard Verified
  </div>
@@ -151,7 +151,7 @@ export default function DrPraharshithaProfile() {
  {/* OBGY Technology row */}
  <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
- <h3 className="text-3xl font-bold mb-8 italic font-heading text-rose-300 uppercase tracking-widest leading-none">Diagnostic & Surgical modality Spectrum</h3>
+ <h3 className="text-3xl font-bold mb-8 font-heading text-rose-300 uppercase tracking-widest leading-none">Diagnostic & Surgical modality Spectrum</h3>
  <div className="grid md:grid-cols-4 gap-6 text-left relative z-10">
  {[
  { title: "HD Hysteroscopy", desc: "Digital visualization of the uterine cavity for diagnosis and therapy.", icon: Monitor },
@@ -162,7 +162,7 @@ export default function DrPraharshithaProfile() {
  <div key={i} className="p-6 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-rose-500/50 transition-all">
  <item.icon className="w-8 h-8 text-rose-400 mb-4" />
  <h4 className="font-bold text-lg mb-2">{item.title}</h4>
- <p className="text-[10px] text-slate-400 leading-relaxed italic antialiased">{item.desc}</p>
+ <p className="text-[10px] text-slate-400 leading-relaxed antialiased">{item.desc}</p>
  </div>
  ))}
  </div>

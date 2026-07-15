@@ -49,7 +49,7 @@ const WHY_POINTS = [
  { icon: Users, title: "Dedicated International Desk", desc: "24/7 coordinator for visa letters, airport pickup, accommodation, and translation.", color: "blue" },
  { icon: TrendingDown, title: "Lower Costs", desc: "NABH-accredited care at 10–30% lower cost than CMC Vellore for most procedures.", color: "amber" },
  { icon: Shield, title: "Private Rooms Available", desc: "No scrambling for accommodation. International suites and attendant facilities always available.", color: "indigo" },
- { icon: MapPin, title: "Same City — Near CMC", desc: "Located in Vellore, the same medical hub. You don&apos;t need to travel to another city.", color: "red" },
+ { icon: MapPin, title: "Same City — Near CMC", desc: "Located in Vellore, the same medical hub. You don't need to travel to another city.", color: "red" },
 ];
 
 const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Skip the CMC Queue: I saw the long waiting list and would like to book a same-week appointment at Indira Super Speciality Hospital, Vellore.")}`;
@@ -127,7 +127,7 @@ export default function CMCVelloreAlternativePage() {
  <div className="flex items-center justify-between mb-12 flex-wrap gap-4">
  <div>
  <h2 className="elite-section-title text-slate-900 dark:text-white uppercase">Wait Time <br /><span className="text-fuchsia-600">Comparison</span></h2>
- <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg font-medium italic">Why wait months when you can be treated this week?</p>
+ <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg font-medium">Why wait months when you can be treated this week?</p>
  </div>
  <div className="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 border border-slate-200 dark:border-slate-700">
  <Clock className="w-8 h-8" />
@@ -165,7 +165,7 @@ export default function CMCVelloreAlternativePage() {
  <div className="bg-slate-900 rounded-[3rem] p-10 text-white border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden flex flex-col justify-center">
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/20 rounded-full blur-[40px] pointer-events-none" />
  <div className="relative z-10">
- <h3 className="elite-section-title mb-6 uppercase">Same City. <br /><span className="text-fuchsia-400 italic">No Waiting.</span></h3>
+ <h3 className="elite-section-title mb-6 uppercase">Same City. <br /><span className="text-fuchsia-400">No Waiting.</span></h3>
  <p className="text-slate-400 font-medium mb-8 leading-relaxed">Indira Hospital is located in Gandhi Nagar, Vellore — just minutes away from CMC. You get the same medical hub benefits without the long queues.</p>
  
  <div className="space-y-4 mb-10">
@@ -192,7 +192,7 @@ export default function CMCVelloreAlternativePage() {
  <section>
  <div className="text-center max-w-3xl mx-auto mb-16">
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-6 uppercase">Why Choose Indira <br /><span className="text-fuchsia-600">Over a 3-Month Wait?</span></h2>
- <p className="text-lg text-slate-500 dark:text-slate-400 font-medium italic">NABH-accredited care doesn&apos;t have to be a queue.</p>
+ <p className="text-lg text-slate-500 dark:text-slate-400 font-medium">NABH-accredited care doesn't have to be a queue.</p>
  </div>
 
  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -202,7 +202,7 @@ export default function CMCVelloreAlternativePage() {
  <Icon className="w-8 h-8" />
  </div>
  <h3 className="text-xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight group-hover:text-fuchsia-600 transition-colors">{title}</h3>
- <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed italic text-sm">{desc}</p>
+ <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed text-sm">{desc}</p>
  </div>
  ))}
  </div>
@@ -213,7 +213,7 @@ export default function CMCVelloreAlternativePage() {
  <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.1),transparent_50%)] pointer-events-none" />
  
  <div className="relative z-10">
- <h2 className="elite-section-title text-white mb-12 uppercase text-center lg:text-left">Full Comparison: <br /><small className="text-fuchsia-400 opacity-80 text-2xl lowercase italic">no compromises, just faster care.</small></h2>
+ <h2 className="elite-section-title text-white mb-12 uppercase text-center lg:text-left">Full Comparison: <br /><small className="text-fuchsia-400 opacity-80 text-2xl lowercase">no compromises, just faster care.</small></h2>
  
  <div className="overflow-x-auto">
  <table className="w-full text-left">
@@ -255,7 +255,7 @@ export default function CMCVelloreAlternativePage() {
  </div>
  <div>
  <h3 className="font-black text-slate-900 dark:text-white uppercase tracking-tight text-sm mb-1">{step.title}</h3>
- <p className="text-slate-500 dark:text-slate-400 font-medium italic text-xs leading-relaxed">{step.desc}</p>
+ <p className="text-slate-500 dark:text-slate-400 font-medium text-xs leading-relaxed">{step.desc}</p>
  </div>
  </div>
  ))}
@@ -266,8 +266,8 @@ export default function CMCVelloreAlternativePage() {
  <div className="w-20 h-20 rounded-[2rem] bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 mb-10 mx-auto shadow-inner border border-indigo-100 dark:border-indigo-800 animate-bounce">
  <Sparkles className="w-10 h-10" />
  </div>
- <h3 className="elite-section-title text-slate-900 dark:text-white mb-6 uppercase">Get a Second Opinion <br /><span className="text-indigo-600 italic">Free of Cost.</span></h3>
- <p className="text-slate-500 dark:text-slate-400 font-medium italic mb-10 px-4 leading-relaxed">Send your existing reports and CMC diagnosis. Our senior specialists will review them and provide a complete treatment plan within 24 hours.</p>
+ <h3 className="elite-section-title text-slate-900 dark:text-white mb-6 uppercase">Get a Second Opinion <br /><span className="text-indigo-600">Free of Cost.</span></h3>
+ <p className="text-slate-500 dark:text-slate-400 font-medium mb-10 px-4 leading-relaxed">Send your existing reports and CMC diagnosis. Our senior specialists will review them and provide a complete treatment plan within 24 hours.</p>
  
  <a href={reportsWaUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm shadow-2xl">
  <MessageCircle className="w-6 h-6 text-emerald-400" /> WhatsApp My Reports
@@ -301,8 +301,8 @@ export default function CMCVelloreAlternativePage() {
  <section className="bg-slate-900 rounded-t-[5rem] py-24 sm:py-32 relative overflow-hidden group">
  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.1),transparent_70%)] pointer-events-none" />
  <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
- <h2 className="elite-section-title text-white mb-10 uppercase">Your Health <br /><span className="text-fuchsia-500 italic">Can&apos;t Wait Months.</span></h2>
- <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto italic leading-relaxed">NABH Quality care at Indira Hospital starts this week. Join 50,000+ satisfied patients today.</p>
+ <h2 className="elite-section-title text-white mb-10 uppercase">Your Health <br /><span className="text-fuchsia-500">Can't Wait Months.</span></h2>
+ <p className="text-xl text-slate-400 font-light mb-16 max-w-2xl mx-auto leading-relaxed">NABH Quality care at Indira Hospital starts this week. Join 50,000+ satisfied patients today.</p>
  
  <div className="flex flex-wrap justify-center gap-6">
  <a href={waUrl} target="_blank" rel="noopener noreferrer"

@@ -11,7 +11,7 @@ import { InternalLinkGrid } from "@/components/seo/InternalLinkGrid";
 
 export const metadata: Metadata = constructMetadata({
  title: "Advanced Medical Technology & Infrastructure | Indira Hospital",
- description: "Discover the cutting-edge medical infrastructure at Indira Hospital. From Robotic Surgery to 3T MRI, we use the world&apos;s best technology for your care.",
+ description: "Discover the cutting-edge medical infrastructure at Indira Hospital. From Robotic Surgery to 3T MRI, we use the world's best technology for your care.",
  path: "/technology"
 });
 
@@ -38,8 +38,8 @@ export default function TechnologyHubPage() {
  Technology that<br />
  <span className="elite-gradient-text">Saves Lives.</span>
  </h1>
- <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-12 opacity-80 italic">
- At Indira Hospital, we invest in the world&apos;s most advanced diagnostic and surgical systems to provide our patients with safer, faster, and more precise treatments.
+ <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light mb-12 opacity-80">
+ At Indira Hospital, we invest in the world's most advanced diagnostic and surgical systems to provide our patients with safer, faster, and more precise treatments.
  </p>
  </div>
  </SectionContainer>

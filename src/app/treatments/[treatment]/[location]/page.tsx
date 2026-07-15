@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -24,23 +25,22 @@ const GEO_LOCATIONS = [
 
 export const dynamicParams = true;
 
-// Pre-build standard combinations for top treatments + locations
-export async function generateStaticParams() {
- if (process.env.VERCEL) {
- return []; // Vercel build bypass
- }
- 
- // Top treatments to statically pre-build for all locations
- const topTreatments = ["laser-piles-treatment", "laparoscopic-hernia-repair", "total-knee-replacement"];
- const params: { treatment: string; location: string }[] = [];
- 
- for (const treatment of topTreatments) {
- for (const loc of GEO_LOCATIONS) {
- params.push({ treatment, location: loc.slug });
- }
- }
- return params;
-}
+// export async function generateStaticParams() {
+//  if (process.env.VERCEL) {
+//  return []; // Vercel build bypass
+//  }
+//  
+//  // Top treatments to statically pre-build for all locations
+//  const topTreatments = ["laser-piles-treatment", "laparoscopic-hernia-repair", "total-knee-replacement"];
+//  const params: { treatment: string; location: string }[] = [];
+//  
+//  for (const treatment of topTreatments) {
+//  for (const loc of GEO_LOCATIONS) {
+//  params.push({ treatment, location: loc.slug });
+//  }
+//  }
+//  return params;
+// }
 
 export async function generateMetadata({ params }: { params: Promise<{ treatment: string; location: string }> }): Promise<Metadata> {
  const { treatment: treatmentSlug, location: locationSlug } = await params;

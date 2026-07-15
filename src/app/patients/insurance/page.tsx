@@ -130,7 +130,7 @@ export default function InsurancePage() {
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-6">Cashless Hospitalization in Vellore</h2>
  <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
  <p>
- Medical emergencies and planned surgeries shouldn&apos;t be a financial burden. At <strong>Indira Super Speciality Hospital, Vellore</strong>, we bridge the gap between world-class healthcare and financial peace of mind through our extensive network of cashless insurance tie-ups.
+ Medical emergencies and planned surgeries shouldn't be a financial burden. At <strong>Indira Super Speciality Hospital, Vellore</strong>, we bridge the gap between world-class healthcare and financial peace of mind through our extensive network of cashless insurance tie-ups.
  </p>
  <p>
  We understand that navigating health insurance (Mediclaim) can be complex. That is why our dedicated TPA (Third Party Administrator) desk assists you comprehensively—from initial pre-authorization during admission to ultimate claim settlement at discharge.

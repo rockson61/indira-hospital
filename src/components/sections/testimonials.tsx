@@ -41,15 +41,14 @@ export async function Testimonials() {
  {testimonials.map((testimonial: any, i: number) => (
  <div
  key={testimonial.id}
- className="group relative bg-slate-50 dark:bg-slate-800/40 -none dark: rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-200 dark:border-slate-800 hover:border-fuchsia-200 dark:hover:border-fuchsia-500/30 transition-all duration-700 hover:-translate-y-3 shadow-clay dark:shadow-clay-dark overflow-hidden"
+ className="group relative bg-slate-50 dark:bg-slate-800/40 rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-700 hover:border-fuchsia-200 dark:hover:border-fuchsia-500/30 transition-all duration-700 hover:-translate-y-3 shadow-clay dark:shadow-clay-dark overflow-hidden"
  >
  {/* Decorative Background Pattern */}
  <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/5 dark:bg-fuchsia-500/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-fuchsia-500/10 transition-colors" />
 
- {/* VIDEO PLAY OVERLAY (Premium) */}
- <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-fuchsia-600 to-fuchsia-600 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-float shadow-fuchsia-900/20 dark:shadow-fuchsia-900/40 border border-fuchsia-500/30 dark:border-slate-200 dark:border-slate-800 cursor-pointer overflow-hidden">
- <span className="absolute inset-0 bg-white dark:bg-slate-900 animate-pulse group-hover:hidden" />
- <Play className="w-5 h-5 fill-current relative z-10" />
+ {/* VIDEO PLAY OVERLAY */}
+ <div className="absolute top-8 right-8 w-14 h-14 rounded-full bg-gradient-to-tr from-fuchsia-600 to-fuchsia-500 flex items-center justify-center text-white scale-90 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-500 shadow-float shadow-fuchsia-900/20 dark:shadow-fuchsia-900/40 border border-fuchsia-400/30 cursor-pointer">
+ <Play className="w-5 h-5 fill-current" />
  </div>
 
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-50 dark:bg-fuchsia-500/10 border border-fuchsia-200 dark:border-fuchsia-500/20 text-fuchsia-700 dark:text-fuchsia-400 text-[10px] font-black uppercase tracking-tighter mb-6 group-hover:bg-fuchsia-100 dark:group-hover:bg-fuchsia-500/20 transition-colors">
@@ -61,7 +60,7 @@ export async function Testimonials() {
  &ldquo;{testimonial.content}&rdquo;
  </blockquote>
 
- <div className="flex items-center gap-x-4 border-t border-slate-200 dark:border-slate-200 dark:border-slate-800 pt-8">
+ <div className="flex items-center gap-x-4 border-t border-slate-200 dark:border-slate-700 pt-8">
  {testimonial.image ? (
  <Image
  src={getImageUrl(testimonial.image)!}
@@ -99,7 +98,7 @@ export async function Testimonials() {
  Our experts are ready to provide you with the same world-class care these patients received. Chat with us now for a free consultation estimate.
  </p>
  <a
- href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was inspired by the testimonials. I&apos;d like to book a consultation.")}`}
+ href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I was inspired by the testimonials. I'd like to book a consultation.")}`}
  target="_blank"
  rel="noopener noreferrer"
  className="elite-button-primary text-base mt-2"

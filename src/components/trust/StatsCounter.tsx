@@ -45,18 +45,18 @@ function Counter({ value, suffix = "" }: CounterProps) {
 }
 
 const statsCardVariants = cva(
- "h-full transition-all duration-300 hover:shadow-clay border-slate-100 dark:border-slate-700 dark:border-slate-800",
- {
- variants: {
- variant: {
- default: "bg-card",
- highlight: "bg-fuchsia-50 dark:bg-fuchsia-950 dark:bg-fuchsia-900/20 border-fuchsia-100 dark:border-fuchsia-800",
- },
- },
- defaultVariants: {
- variant: "default",
- },
- }
+  "h-full transition-all duration-300 hover:shadow-clay border-slate-100 dark:border-slate-800",
+  {
+  variants: {
+  variant: {
+  default: "bg-card",
+  highlight: "bg-fuchsia-50 dark:bg-fuchsia-900/20 border-fuchsia-100 dark:border-fuchsia-800",
+  },
+  },
+  defaultVariants: {
+  variant: "default",
+  },
+  }
 )
 
 interface StatItem {
@@ -151,7 +151,7 @@ export function StatsSection() {
  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 mb-2">
  <Counter value={stat.value} suffix={stat.suffix} />
  </div>
- <div className="font-semibold text-slate-800 dark:text-slate-100 dark:text-slate-200 mb-1">{stat.label}</div>
+ <div className="font-semibold text-slate-800 dark:text-slate-200 mb-1">{stat.label}</div>
  <div className="text-sm text-slate-500 dark:text-slate-400 hidden md:block">{stat.description}</div>
  </div>
  </Card>

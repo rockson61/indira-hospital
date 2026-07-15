@@ -34,7 +34,7 @@ export function CostCalculator() {
  };
 
  const estimatedCost = calculateCost();
- const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I&apos;m interested in an Elite Consultation for ${procedure.procedure}. My estimated value range is around ₹${estimatedCost.toLocaleString()}.`)}`;
+ const waUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in an Elite Consultation for ${procedure.procedure}. My estimated value range is around ₹${estimatedCost.toLocaleString()}.`)}`;
 
  return (
  <Card className="p-8 bg-slate-950/40 border border-slate-200 dark:border-slate-800 shadow-clay-dark rounded-[2.5rem] relative overflow-hidden">
@@ -90,14 +90,14 @@ export function CostCalculator() {
  <div className="text-center animate-in fade-in zoom-in duration-500 py-4">
  <p className="text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Transparent Value Quote</p>
  <div className="text-5xl font-black text-white mb-4 tracking-tighter">
- ₹{(estimatedCost/1000).toLocaleString()}K<span className="text-lg text-slate-500 ml-1 font-medium italic">Estimated</span>
+ ₹{(estimatedCost/1000).toLocaleString()}K<span className="text-lg text-slate-500 ml-1 font-medium">Estimated</span>
  </div>
 
  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[10px] font-black uppercase tracking-widest mb-8">
  {insurance ? '✅ Cashless Ready' : '✨ Institutional Value Pricing'}
  </div>
 
- <p className="text-xs text-slate-500 mb-10 max-w-[280px] mx-auto font-medium italic leading-relaxed">
+ <p className="text-xs text-slate-500 mb-10 max-w-[280px] mx-auto font-medium leading-relaxed">
  This range reflects Elite care standards. Get an all-inclusive surgical quote via our WhatsApp desk.
  </p>
 

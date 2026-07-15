@@ -45,7 +45,7 @@ const trustFactors = [
  {
  category: "Patient Experience",
  points: [
- "There&apos;s no waiting time for patients",
+ "There's no waiting time for patients",
  "Educate patients during the treatment",
  "Ensure regular follow-ups with Patients",
  "Treat patients from around the globe",
@@ -64,7 +64,7 @@ export function ClinicUSP() {
  <h3 className="text-2xl font-bold text-center mb-8 text-foreground">Successful Dental Treatments</h3>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
  {achievements.map((achievement, index) => (
- <ModernCard key={index} className="group border-none shadow-clay bg-background/50 dark:bg-default-50/5 ">
+ <ModernCard key={index} className="group border-none shadow-clay bg-background/50 dark:bg-default-50/5">
  <ModernCardContent className="p-8 text-center">
  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
  <achievement.icon className="w-10 h-10" />

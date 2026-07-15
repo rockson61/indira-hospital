@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -27,40 +28,40 @@ import AioKnowledgeBlock from "@/components/seo/AioKnowledgeBlock";
 
 export const dynamicParams = true;
 
-export async function generateStaticParams() {
- if (process.env.VERCEL) return [];
-
- const [allDoctors, services, seoKeywords, locations] = await Promise.all([
- getDoctors().catch(() => []),
- getServices().catch(() => []),
- getSEOKeywords().catch(() => []),
- Promise.resolve(tamilNaduLocations),
- ]);
- 
- const params: { city: string; slug: string }[] = [];
- 
- // 1. Regular Doctors & Services for ALL locations
- for (const loc of locations) {
- for (const doc of allDoctors as any[]) {
- if (doc.slug) params.push({ city: loc.slug, slug: doc.slug });
- }
- for (const svc of services as any[]) {
- if (svc.slug) params.push({ city: loc.slug, slug: svc.slug });
- }
- }
-
- // Vellore, Katpadi, Ranipet, Gudiyatham, Ambur, Arcot, Walajapet, Tamil Nadu, etc.
- const hubSlugs = ['vellore', 'katpadi', 'ranipet', 'gudiyatham', 'ambur', 'vaniyambadi', 'kanchipuram', 'tiruvannamalai', 'arcot', 'walajapet', 'chennai', 'hosur', 'tamil-nadu'];
- const hubLocations = locations.filter(l => hubSlugs.includes(l.slug));
-
- for (const loc of hubLocations) {
- for (const keyword of seoKeywords) {
- params.push({ city: loc.slug, slug: keyword.slug });
- }
- }
-
- return params;
-}
+// export async function generateStaticParams() {
+//  if (process.env.VERCEL || !process.env.FULL_BUILD) return [];
+//
+//  const [allDoctors, services, seoKeywords, locations] = await Promise.all([
+//  getDoctors().catch(() => []),
+//  getServices().catch(() => []),
+//  getSEOKeywords().catch(() => []),
+//  Promise.resolve(tamilNaduLocations),
+//  ]);
+//  
+//  const params: { city: string; slug: string }[] = [];
+//  
+//  // 1. Regular Doctors & Services for ALL locations
+//  for (const loc of locations) {
+//  for (const doc of allDoctors as any[]) {
+//  if (doc.slug) params.push({ city: loc.slug, slug: doc.slug });
+//  }
+//  for (const svc of services as any[]) {
+//  if (svc.slug) params.push({ city: loc.slug, slug: svc.slug });
+//  }
+//  }
+//
+//  // Vellore, Katpadi, Ranipet, Gudiyatham, Ambur, Arcot, Walajapet, Tamil Nadu, etc.
+//  const hubSlugs = ['vellore', 'katpadi', 'ranipet', 'gudiyatham', 'ambur', 'vaniyambadi', 'kanchipuram', 'tiruvannamalai', 'arcot', 'walajapet', 'chennai', 'hosur', 'tamil-nadu'];
+//  const hubLocations = locations.filter(l => hubSlugs.includes(l.slug));
+//
+//  for (const loc of hubLocations) {
+//  for (const keyword of seoKeywords) {
+//  params.push({ city: loc.slug, slug: keyword.slug });
+//  }
+//  }
+//
+//  return params;
+// }
 
 import { constructMetadata } from "@/lib/seo-utils";
 
@@ -243,7 +244,7 @@ async function DoctorView({ doctor, location, city, slug }: any) {
  <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-24 relative z-10">
- <nav className="flex flex-wrap items-center text-sm text-indigo-300/60 mb-10 gap-1 italic">
+ <nav className="flex flex-wrap items-center text-sm text-indigo-300/60 mb-10 gap-1">
  <Link href="/" className="hover:text-white transition-colors">Home</Link>
  <ChevronRight className="w-4 h-4" />
  <Link href="/doctor/near-me" className="hover:text-white transition-colors">Near Me</Link>
@@ -416,7 +417,7 @@ async function ServiceView({ service, location, city, slug }: any) {
  <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none" />
 
  <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-48 pb-16 lg:pt-56 lg:pb-24 relative z-10">
- <nav className="flex flex-wrap items-center text-sm text-indigo-300/60 mb-10 gap-1 italic">
+ <nav className="flex flex-wrap items-center text-sm text-indigo-300/60 mb-10 gap-1">
  <Link href="/" className="hover:text-white transition-colors">Home</Link>
  <ChevronRight className="w-4 h-4" />
  <Link href="/doctor/near-me" className="hover:text-white transition-colors">Near Me</Link>
@@ -474,7 +475,7 @@ async function ServiceView({ service, location, city, slug }: any) {
  <CheckCircle2 className="w-5 h-5 text-indigo-500 mt-0.5" />
  <div>
  <h4 className="font-bold text-gray-900 dark:text-white mb-1">{item.title}</h4>
- {item.description && <p className="text-xs text-gray-500 italic">{item.description}</p>}
+ {item.description && <p className="text-xs text-gray-500">{item.description}</p>}
  </div>
  </div>
  );
@@ -559,10 +560,10 @@ async function ServiceView({ service, location, city, slug }: any) {
  {/* CMS / Cashless Assistance */}
  <div className="bg-fuchsia-50 dark:bg-fuchsia-950/30 rounded-2xl p-6 border border-fuchsia-100 dark:border-fuchsia-900/50">
  <h3 className="font-bold text-fuchsia-900 dark:text-fuchsia-300 mb-3 flex items-center gap-2">
- <Shield className="w-4 h-4" /> Chief Minister&apos;s Scheme
+ <Shield className="w-4 h-4" /> Chief Minister's Scheme
  </h3>
  <p className="text-sm text-fuchsia-800 dark:text-fuchsia-400 leading-relaxed mb-4">
- Our center in Vellore is fully empanelled with the <strong>Chief Minister&apos;s Comprehensive Health Insurance Scheme (CMCHIS)</strong> supporting patients across {location.category === 'district_hq' ? location.name : location.district + ' district'} and all of Tamil Nadu.
+ Our center in Vellore is fully empanelled with the <strong>Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS)</strong> supporting patients across {location.category === 'district_hq' ? location.name : location.district + ' district'} and all of Tamil Nadu.
  </p>
  </div>
  </div>

@@ -15,19 +15,19 @@ export const LaserPilonidalSinusLongForm = () => {
  Under the surgical expertise of <strong>Dr. Karan Shankar</strong>, a leading proctologist in Vellore, we use specialized laser fibers to destroy infected sinus tracts from within. This allows for a daycare procedure that involves minimal pain, no major incisions, and a significantly faster healing time compared to traditional methods.
  </p>
  <p>
- In this comprehensive guide, we&apos;ll dive deep into the pathophysiology of pilonidal sinus, the limitations of traditional surgery, and why laser-based intervention is the definitive choice for long-term health and minimal recurrence.
+ In this comprehensive guide, we'll dive deep into the pathophysiology of pilonidal sinus, the limitations of traditional surgery, and why laser-based intervention is the definitive choice for long-term health and minimal recurrence.
  </p>
  </div>
  </section>
 
  {/* Section 2: What is Pilonidal Sinus? Anatomy of a "Nest of Hair" */}
  <section id="what-is-pilonidal">
- <h2 className="text-3xl font-bold text-slate-900 mb-6 italic underline decoration-fuchsia-200">What exactly is a Pilonidal Sinus?</h2>
+ <h2 className="text-3xl font-bold text-slate-900 mb-6 underline decoration-fuchsia-200">What exactly is a Pilonidal Sinus?</h2>
  <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
  <p>
  The term "Pilonidal" literally means "nest of hair" (Pilus = hair, Nidus = nest). It is essentially a chronic skin infection in the crease between the buttocks. Often, these sinuses contain hair, skin debris, and bacteria, which lead to recurring abscesses and drainage.
  </p>
- <h3 className="text-xl font-bold text-slate-800 mt-6 underline decoration-fuchsia-100 italic">How the Sinus Forms</h3>
+ <h3 className="text-xl font-bold text-slate-800 mt-6 underline decoration-fuchsia-100">How the Sinus Forms</h3>
  <p>
  It typically occurs when hair is forced into the skin by friction or pressure. The body treats this embedded hair as a foreign object, creating an inflammatory response that leads to a sinus tract or "pit."
  </p>
@@ -35,12 +35,12 @@ export const LaserPilonidalSinusLongForm = () => {
  <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-3">
  <Target className="w-8 h-8 text-fuchsia-600" />
  <h4 className="font-bold text-slate-900 text-lg">Primary Pit</h4>
- <p className="text-sm text-slate-500 italic">The initial opening where the hair enters the skin. This can often be seen as a tiny hole near the tailbone.</p>
+ <p className="text-sm text-slate-500">The initial opening where the hair enters the skin. This can often be seen as a tiny hole near the tailbone.</p>
  </div>
  <div className="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm space-y-3">
  <Target className="w-8 h-8 text-fuchsia-600" />
  <h4 className="font-bold text-slate-900 text-lg">Abscess Formation</h4>
- <p className="text-sm text-slate-500 italic">If the sinus gets infected, it forms a painful pile of pus, often requiring emergency drainage.</p>
+ <p className="text-sm text-slate-500">If the sinus gets infected, it forms a painful pile of pus, often requiring emergency drainage.</p>
  </div>
  </div>
  </div>
@@ -81,7 +81,7 @@ export const LaserPilonidalSinusLongForm = () => {
 
  {/* Section 4: Traditional Open Surgery vs. Laser SiLaC */}
  <section id="comparison" className="bg-slate-900 rounded-[3rem] p-12 text-white">
- <h2 className="text-3xl font-bold mb-8 text-center italic font-heading text-fuchsia-300">Why Laser is the Definitive Choice in Vellore</h2>
+ <h2 className="text-3xl font-bold mb-8 text-center font-heading text-fuchsia-300">Why Laser is the Definitive Choice in Vellore</h2>
  <div className="grid md:grid-cols-2 gap-10">
  <div className="space-y-6">
  <h3 className="text-xl font-bold border-b border-slate-200 dark:border-slate-800 pb-4 text-red-400">Traditional Wide Excision</h3>
@@ -106,7 +106,7 @@ export const LaserPilonidalSinusLongForm = () => {
 
  {/* Section 5: The SiLaC Technique Experience at Indira Hospital */}
  <section id="the-procedure">
- <h2 className="text-3xl font-bold text-slate-900 mb-6">The Laser Procedure: A Patient&apos;s Journey</h2>
+ <h2 className="text-3xl font-bold text-slate-900 mb-6">The Laser Procedure: A Patient's Journey</h2>
  <div className="space-y-8">
  <div className="flex gap-6 items-start">
  <div className="w-12 h-12 bg-fuchsia-600 rounded-full flex items-center justify-center shrink-0 text-white font-black">1</div>
@@ -195,7 +195,7 @@ export const LaserPilonidalSinusLongForm = () => {
  <h4 className="text-lg font-bold text-slate-900 flex gap-2">
  <span className="text-fuchsia-600 font-black">Q.</span> {faq.q}
  </h4>
- <p className="text-slate-600 pl-6 font-medium leading-relaxed italic">{faq.a}</p>
+ <p className="text-slate-600 pl-6 font-medium leading-relaxed">{faq.a}</p>
  </div>
  ))}
  </div>
@@ -208,8 +208,8 @@ export const LaserPilonidalSinusLongForm = () => {
  <Scissors className="w-10 h-10 text-fuchsia-600" />
  </div>
  <h2 className="text-3xl font-bold text-slate-900">End the Loop of Sinus Recurrence</h2>
- <p className="text-lg text-slate-600 leading-relaxed font-medium italic">
- The "cut it out and wait months" approach is outdated. Discover the precision of specialist laser intervention at Vellore&apos;s most advanced proctology center.
+ <p className="text-lg text-slate-600 leading-relaxed font-medium">
+ The "cut it out and wait months" approach is outdated. Discover the precision of specialist laser intervention at Vellore's most advanced proctology center.
  </p>
  <div className="flex flex-wrap justify-center gap-6 pt-4">
  <span className="flex items-center gap-2 text-sm text-slate-400 font-bold"><Shield className="w-4 h-4 text-emerald-500" /> Top-Tier Laser Protocol</span>

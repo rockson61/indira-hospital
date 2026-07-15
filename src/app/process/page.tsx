@@ -72,7 +72,7 @@ export default function ProcessPage() {
  </div>
  <div className="md:w-2/3 p-8 lg:p-12 bg-slate-50 dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 group-hover:border-fuchsia-200 dark:group-hover:border-fuchsia-900 transition-all">
  <p className="text-xl text-slate-700 dark:text-slate-300 font-bold mb-4 leading-relaxed">{step.description}</p>
- <p className="text-slate-500 font-medium italic">{step.details}</p>
+ <p className="text-slate-500 font-medium">{step.details}</p>
  </div>
  </div>
  ))}

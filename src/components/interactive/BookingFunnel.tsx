@@ -13,19 +13,27 @@ import { TREATMENT_DATA } from "@/lib/data/treatment-data";
 import { siteConfig } from "@/config/site";
 
 type Step = "selection" | "valuation" | "handoff";
+type BookingOption = {
+ id: string;
+ title: string;
+ type: "treatment" | "service";
+ slug: string;
+ category: string;
+};
+type PricingItem = (typeof PRICING_DATA)[number];
 
 export default function BookingFunnel() {
  const [step, setStep] = useState<Step>("selection");
  const [search, setSearch] = useState("");
- const [selectedTreatment, setSelectedTreatment] = useState<any>(null);
- const [selectedPricing, setSelectedPricing] = useState<any>(null);
+ const [selectedTreatment, setSelectedTreatment] = useState<BookingOption | null>(null);
+ const [selectedPricing, setSelectedPricing] = useState<PricingItem | null>(null);
 
  // Combine services and treatments for selection
- const options = useMemo(() => {
+ const options = useMemo<BookingOption[]>(() => {
  const treatments = TREATMENT_DATA.map(t => ({
  id: t.id,
  title: t.title,
- type: "treatment",
+ type: "treatment" as const,
  slug: t.slug,
  category: t.parentServiceSlug
  }));
@@ -33,7 +41,7 @@ export default function BookingFunnel() {
  const services = servicesData.map(s => ({
  id: s.id,
  title: s.title,
- type: "service",
+ type: "service" as const,
  slug: s.id,
  category: s.id
  }));
@@ -43,7 +51,7 @@ export default function BookingFunnel() {
  );
  }, [search]);
 
- const handleSelection = (option: any) => {
+ const handleSelection = (option: BookingOption) => {
  setSelectedTreatment(option);
  const pricing = PRICING_DATA.find(p => 
  p.id === option.id || 
@@ -54,7 +62,8 @@ export default function BookingFunnel() {
  };
 
  const generateWhatsAppLink = () => {
- const baseMessage = `Hi Indira Elite Desk, I&apos;m interested in an Elite consultation for ${selectedTreatment.title}.`;
+ if (!selectedTreatment) return "#";
+ const baseMessage = `Hi Indira Hospital, I'm interested in a consultation for ${selectedTreatment.title}.`;
  const pricingContext = selectedPricing ? ` I saw the estimate starting from ${selectedPricing.startingPrice}.` : "";
  return `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(baseMessage + pricingContext)}`;
  };
@@ -71,14 +80,12 @@ export default function BookingFunnel() {
  {["selection", "valuation", "handoff"].map((s, i) => (
  <div 
  key={s} 
- className={`h-1 rounded-full transition-all duration-500 ${
- step === s ? "w-8 bg-emerald-400" : i < ["selection", "valuation", "handoff"].indexOf(step) ? "w-4 bg-emerald-400/40" : "w-4 bg-white dark:bg-slate-900"
- }`} 
+ className={`h-1 rounded-full transition-all duration-500 ${ step === s ? "w-8 bg-emerald-400" : i < ["selection", "valuation", "handoff"].indexOf(step) ? "w-4 bg-emerald-400/40" : "w-4 bg-white dark:bg-slate-900" }`} 
  />
  ))}
  </div>
- <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 italic">
- Elite Conversion Tunnel
+ <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+ Booking Assistant
  </span>
  </div>
 
@@ -93,7 +100,7 @@ export default function BookingFunnel() {
  className="space-y-8"
  >
  <div className="space-y-2">
- <h3 className="text-3xl font-black text-white tracking-widest uppercase italic">Select Excellence.</h3>
+ <h3 className="text-3xl font-black text-white tracking-widest uppercase">Select Excellence.</h3>
  <p className="text-slate-400 text-sm font-medium">Search for a specialized department or surgical procedure.</p>
  </div>
 
@@ -104,7 +111,7 @@ export default function BookingFunnel() {
  value={search}
  onChange={(e) => setSearch(e.target.value)}
  placeholder="e.g. Knee Replacement, Cardiology, Laser Piles..."
- className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 pl-16 pr-6 text-slate-900 dark:text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:bg-white dark:bg-slate-900 transition-all font-medium italic"
+ className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 pl-16 pr-6 text-slate-900 dark:text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:bg-white dark:bg-slate-900 transition-all font-medium"
  />
  </div>
 
@@ -117,20 +124,20 @@ export default function BookingFunnel() {
  className="flex items-center justify-between p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/30 hover:bg-white dark:bg-slate-900 transition-all group group-hover:shadow-[0_0_20px_rgba(16,185,129,0.1)]"
  >
  <div className="flex flex-col items-start">
- <span className="text-xs font-black text-white uppercase tracking-widest">{opt.title}</span>
+ <span className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-widest">{opt.title}</span>
  <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold mt-1">{opt.type}</span>
  </div>
  <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all" />
  </button>
  ))
  ) : (
- <div className="col-span-2 py-10 text-center text-slate-600 italic text-sm">No matching specialties found. Try searching for 'Surgery'.</div>
+ <div className="col-span-2 py-10 text-center text-slate-600 text-sm">No matching specialties found. Try searching for 'Surgery'.</div>
  )}
  </div>
  </motion.div>
  )}
 
- {step === "valuation" && (
+ {step === "valuation" && selectedTreatment && (
  <motion.div
  key="valuation"
  initial={{ opacity: 0, scale: 0.95 }}
@@ -148,23 +155,23 @@ export default function BookingFunnel() {
  <div className="flex flex-col md:flex-row gap-10 items-start">
  <div className="flex-1 space-y-6">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] font-black tracking-widest uppercase">
- <Sparkles className="w-3.5 h-3.5" /> Elite Value Insights
+ <Sparkles className="w-3.5 h-3.5" /> Treatment Insights
  </div>
- <h3 className="text-4xl font-black text-white uppercase tracking-tighter leading-tight italic">
+ <h3 className="text-4xl font-black text-white uppercase tracking-tighter leading-tight">
  {selectedTreatment.title}
  </h3>
  <div className="space-y-4">
  <div className="flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
  <Shield className="w-5 h-5 text-indigo-400 shrink-0 mt-1" />
  <div>
- <p className="text-xs font-black text-white uppercase tracking-wider mb-1">NABH Accredited Safety</p>
+ <p className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider mb-1">NABH Accredited Safety</p>
  <p className="text-[11px] text-slate-400 leading-relaxed font-medium">World-class protocols ensuring zero-error clinical precision for your recovery.</p>
  </div>
  </div>
  <div className="flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
  <Zap className="w-5 h-5 text-fuchsia-400 shrink-0 mt-1" />
  <div>
- <p className="text-xs font-black text-white uppercase tracking-wider mb-1">Direct Surgical Path</p>
+ <p className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider mb-1">Direct Surgical Path</p>
  <p className="text-[11px] text-slate-400 leading-relaxed font-medium">Skip the waitlists with direct priority access to our Chief Specialists.</p>
  </div>
  </div>
@@ -175,9 +182,9 @@ export default function BookingFunnel() {
  {selectedPricing ? (
  <div className="p-8 rounded-[2rem] bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10 border border-slate-200 dark:border-slate-800 shadow-clay-dark relative group overflow-hidden">
  <div className="absolute inset-0 bg-white dark:bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity" />
- <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-6">Elite Cost Estimation</p>
+ <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-6">Cost Estimation</p>
  <div className="space-y-1 mb-8">
- <p className="text-sm font-bold text-slate-400 line-through decoration-slate-600 italic">Common Price: {selectedPricing.metroPrice}</p>
+ <p className="text-sm font-bold text-slate-400 line-through decoration-slate-600">Common Price: {selectedPricing.metroPrice}</p>
  <p className="text-5xl font-black text-white tracking-tighter">{selectedPricing.startingPrice}</p>
  <p className="text-[10px] font-black text-emerald-400 uppercase tracking-widest flex items-center gap-1.5 mt-2">
  <TrendingUp className="w-3.5 h-3.5" /> {selectedPricing.valueProp}
@@ -185,7 +192,7 @@ export default function BookingFunnel() {
  </div>
  <div className="space-y-3">
  {selectedPricing.includes.map((inc: string, i: number) => (
- <div key={i} className="flex items-center gap-2 text-[10px] font-bold text-slate-300 uppercase tracking-widest">
+ <div key={i} className="flex items-center gap-2 text-[10px] font-bold text-slate-900 dark:text-slate-300 uppercase tracking-widest">
  <CheckCircle2 className="w-3 h-3 text-emerald-500" /> {inc}
  </div>
  ))}
@@ -210,7 +217,7 @@ export default function BookingFunnel() {
  </motion.div>
  )}
 
- {step === "handoff" && (
+ {step === "handoff" && selectedTreatment && (
  <motion.div
  key="handoff"
  initial={{ opacity: 0, x: 20 }}
@@ -223,11 +230,11 @@ export default function BookingFunnel() {
  </div>
  
  <div className="space-y-4 max-w-lg">
- <h3 className="text-4xl font-black text-white uppercase tracking-tighter italic leading-none">
+ <h3 className="text-4xl font-black text-white uppercase tracking-tighter leading-none">
  Consultation <br /> Ready.
  </h3>
  <p className="text-slate-400 text-sm font-medium leading-relaxed">
- Our Senior Surgical Coordinator is notified. Connect via WhatsApp to share details and confirm your <span className="text-white">Elite Clinical Priority</span> status.
+ Our Senior Surgical Coordinator is notified. Connect via WhatsApp to share details and confirm your <span className="text-white">clinical appointment</span>.
  </p>
  </div>
 
@@ -237,14 +244,14 @@ export default function BookingFunnel() {
  <span className="text-[9px] font-black text-indigo-400 uppercase tracking-widest">Encrypted Transmit</span>
  </div>
  <div className="space-y-2">
- <div className="flex justify-between items-center text-[10px] font-bold text-white uppercase tracking-widest">
+ <div className="flex justify-between items-center text-[10px] font-bold text-slate-900 dark:text-white uppercase tracking-widest">
  <span>Selection:</span>
  <span>{selectedTreatment.title}</span>
  </div>
  {selectedPricing && (
  <div className="flex justify-between items-center text-[10px] font-bold text-emerald-400 uppercase tracking-widest">
  <span>Value Prop:</span>
- <span>Institutional Excellence</span>
+ <span>Transparent Pricing</span>
  </div>
  )}
  </div>

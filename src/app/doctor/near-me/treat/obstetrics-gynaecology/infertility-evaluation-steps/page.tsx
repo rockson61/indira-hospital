@@ -17,7 +17,7 @@ export default function InfertilityManagementPage() {
  title="Elite Infertility Evaluation & Path to Parenthood"
  slug="infertility-evaluation-steps"
  parentServiceSlug="obstetrics-gynaecology"
- departmentName="Indira Elite Women&apos;s Care"
+ departmentName="Indira Elite Women's Care"
  description={
  <article>
  <p className="text-lg leading-relaxed">
@@ -80,7 +80,7 @@ export default function InfertilityManagementPage() {
  <div className="relative p-10 text-center bg-white dark:bg-slate-900 rounded-[3rem] border border-rose-100 dark:border-slate-800 shadow-2xl">
  <Baby className="w-24 h-24 text-rose-500 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" />
  <p className="text-2xl font-bold text-slate-900 dark:text-white mb-2">New Beginnings</p>
- <p className="text-slate-500 text-sm italic pr-4">Science-backed protocols to maximize your natural conception potential safely and ethically.</p>
+ <p className="text-slate-500 text-sm pr-4">Science-backed protocols to maximize your natural conception potential safely and ethically.</p>
  </div>
  </div>
  </div>
@@ -112,9 +112,9 @@ export default function InfertilityManagementPage() {
  ))}
  </div>
 
- <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 italic font-serif">Personalized Care, Not One-Size-Fits-All</h3>
+ <h3 className="text-slate-900 dark:text-white font-heading font-bold text-2xl mt-12 mb-6 border-l-4 border-rose-500 pl-4 py-2 font-serif">Personalized Care, Not One-Size-Fits-All</h3>
  <p>
- Every couple&apos;s journey is unique. Some may simply need 'Timed Intercourse' with minor ovulation support, while others may require specialized hysteroscopic procedures to correct uterine factors. Our **Fertility Wellness Team** includes dietitians and counselors who provide the nutritional and psychological support needed during this emotionally demanding phase.
+ Every couple's journey is unique. Some may simply need 'Timed Intercourse' with minor ovulation support, while others may require specialized hysteroscopic procedures to correct uterine factors. Our **Fertility Wellness Team** includes dietitians and counselors who provide the nutritional and psychological support needed during this emotionally demanding phase.
  </p>
 
  <h4 className="font-heading text-fuchsia-700 dark:text-rose-400 mt-10">What are the Benefits of Fertility Surgery?</h4>
@@ -150,7 +150,7 @@ export default function InfertilityManagementPage() {
  },
  {
  q: "What are the first steps in treatment?",
- a: "Often, the first step is 'Ovulation Induction'—oral medications to ensure healthy egg release—paired with timed intercourse. We only move to more complex treatments if these simpler foundations don&apos;t result in success."
+ a: "Often, the first step is 'Ovulation Induction'—oral medications to ensure healthy egg release—paired with timed intercourse. We only move to more complex treatments if these simpler foundations don't result in success."
  }
  ].map((faq, idx) => (
  <div key={idx} className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-colors">

@@ -103,8 +103,8 @@ export default async function InternationalCountryPage({ params }: { params: Pro
  <span className="elite-gradient-text text-3xl sm:text-4xl">for {country.name}.</span>
  </h1>
  
- <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10 italic">
- Indira Super Speciality Hospital, Vellore — India&apos;s leading quaternary care choice for patients from {country.name}. {country.cost_savings || "Save 60–80%"} compared to home country costs.
+ <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light mb-10">
+ Indira Super Speciality Hospital, Vellore — India's leading quaternary care choice for patients from {country.name}. {country.cost_savings || "Save 60–80%"} compared to home country costs.
  </p>
 
  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -158,7 +158,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
  <item.icon className="w-6 h-6" />
  </div>
  <h3 className="font-black text-slate-900 dark:text-white text-sm uppercase tracking-tight mb-2">{item.title}</h3>
- <p className="text-slate-500 dark:text-slate-400 text-xs font-medium italic leading-relaxed">{item.value}</p>
+ <p className="text-slate-500 dark:text-slate-400 text-xs font-medium leading-relaxed">{item.value}</p>
  </div>
  ))}
  </div>
@@ -192,7 +192,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
  🔥 Same-Week Appointments
  </span>
  <h2 className="elite-section-title mb-4 uppercase er">Why {country.name} Chooses <br /><span className="text-fuchsia-400">Indira Over CMC Vellore</span></h2>
- <p className="text-slate-400 text-sm mb-10 italic font-light leading-relaxed max-w-xl">
+ <p className="text-slate-400 text-sm mb-10 font-light leading-relaxed max-w-xl">
  Avoid the 3–6 month waitlists. Indira Hospital offers equivalent quaternary care with immediate access and dedicated international coordination.
  </p>
  
@@ -215,7 +215,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
  {/* COST TABLE */}
  <section>
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-4 uppercase text-center lg:text-left">Transparent <span className="text-fuchsia-600">Pricing</span></h2>
- <p className="text-slate-500 dark:text-slate-400 text-sm mb-10 italic font-medium text-center lg:text-left">Save up to 85% compared to home country costs.</p>
+ <p className="text-slate-500 dark:text-slate-400 text-sm mb-10 font-medium text-center lg:text-left">Save up to 85% compared to home country costs.</p>
  
  <div className="overflow-x-auto rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm">
  <table className="w-full text-xs text-left">
@@ -267,7 +267,7 @@ export default async function InternationalCountryPage({ params }: { params: Pro
  <div className="bg-slate-900 rounded-[3rem] p-10 text-white shadow-2xl border border-slate-200 dark:border-slate-800 relative overflow-hidden">
  <div className="absolute top-0 right-0 w-24 h-24 bg-fuchsia-500/10 rounded-full blur-[40px] pointer-events-none" />
  <h3 className="font-black text-2xl uppercase tracking-tighter mb-2">Free <br /><span className="text-fuchsia-400">Consultation</span></h3>
- <p className="text-slate-400 text-xs mb-8 italic font-medium leading-relaxed">
+ <p className="text-slate-400 text-xs mb-8 font-medium leading-relaxed">
  Receive a detailed treatment plan and cost estimate within hours. No commitment.
  </p>
  <a href={waUrl} target="_blank" rel="noopener noreferrer"
@@ -329,8 +329,8 @@ export default async function InternationalCountryPage({ params }: { params: Pro
  <section className="bg-slate-900 py-32 relative overflow-hidden text-center rounded-t-[5rem]">
  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,121,249,0.1),transparent_70%)] pointer-events-none" />
  <div className="max-w-4xl mx-auto px-6 relative z-10">
- <h2 className="elite-section-title text-white mb-10 uppercase">Indira <br /><span className="text-fuchsia-500 italic">Global Care.</span></h2>
- <p className="text-xl text-slate-400 font-light mb-16 italic leading-relaxed">Join 15,000+ international patients who transformed their lives at Indira Hospital.</p>
+ <h2 className="elite-section-title text-white mb-10 uppercase">Indira <br /><span className="text-fuchsia-500">Global Care.</span></h2>
+ <p className="text-xl text-slate-400 font-light mb-16 leading-relaxed">Join 15,000+ international patients who transformed their lives at Indira Hospital.</p>
  <a href={waUrl} target="_blank" rel="noopener noreferrer"
  className="inline-flex items-center gap-4 px-12 py-6 bg-green-600 hover:bg-green-500 text-white font-black rounded-[2.5rem] shadow-2xl shadow-green-900/40 text-xl transition-all hover:scale-105">
  <MessageCircle className="w-6 h-6" /> WhatsApp Enquire

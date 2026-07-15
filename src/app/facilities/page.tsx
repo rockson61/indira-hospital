@@ -108,7 +108,7 @@ export default function FacilitiesPage() {
  { label: "Successful Surgeries", value: "15k+" }
  ].map((stat, i) => (
  <div key={i} className="text-center">
- <div className="text-4xl font-black text-slate-900 dark:text-white mb-2 uppercase italic">{stat.value}</div>
+ <div className="text-4xl font-black text-slate-900 dark:text-white mb-2 uppercase">{stat.value}</div>
  <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">{stat.label}</div>
  </div>
  ))}

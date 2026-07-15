@@ -41,7 +41,7 @@ export function HealthCalculators() {
  <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tighter">
  Elite <span className="text-fuchsia-600">Health Intelligence</span>
  </h2>
- <p className="text-slate-500 font-medium mt-1">Clinical assessments powered by Indira&apos;s medical mastery.</p>
+ <p className="text-slate-500 font-medium mt-1">Clinical assessments powered by Indira's medical mastery.</p>
  </div>
  <div className="flex bg-slate-100 dark:bg-slate-900 p-1 rounded-2xl border border-slate-200 dark:border-slate-800">
  <button 

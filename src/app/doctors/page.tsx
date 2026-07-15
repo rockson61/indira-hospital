@@ -14,7 +14,7 @@ import { HealthLibraryCard } from "@/components/sections/HealthLibraryCard";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Best Doctors in Vellore — Elite Specialist Surgeons",
+  title: "Best Doctors in Vellore — Specialist Surgeons & Consultants",
   description: "Consult with 25+ board-certified surgeons and specialists at Indira Hospital, Vellore. Leading experts in laser & laparoscopic surgery in Tamil Nadu.",
   path: "/doctors"
 });
@@ -23,11 +23,11 @@ export default async function DoctorsDirectoryPage() {
  const doctors = await getDoctors().catch(() => []);
 
  return (
- <main className="min-h-screen bg-slate-50 dark:bg-slate-800">
+ <main className="min-h-screen bg-slate-50 dark:bg-slate-900">
  <PageHero
  title="Best Doctors & Specialist Surgeons in Vellore"
  subtitle="Expert Care You Can Trust"
- description="Don&apos;t leave your health to chance. Our elite team of board-certified specialists and surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
+ description="Don't leave your health to chance. Our specialist team of board-certified surgeons at Indira Hospital have successfully performed thousands of advanced procedures. Experience precise, ethical, and world-class healthcare."
  descriptionClassName="clinical-insight direct-answer"
  backgroundImage="/images/hospital/Consultation.webp"
  />
@@ -79,7 +79,7 @@ export default async function DoctorsDirectoryPage() {
  entityType="hospital"
  entityName="Indira Hospital"
  entitySlug="indira-hospital"
- className="bg-white dark:bg-slate-900 py-24 border-t border-slate-100 dark:border-slate-700"
+ className="bg-slate-50 dark:bg-slate-900 py-24 border-t border-slate-100 dark:border-slate-700"
  />
 
  <EntityReviews
@@ -93,7 +93,7 @@ export default async function DoctorsDirectoryPage() {
 
  {/* ENTITY CARD SECTIONS */}
  <EntityCardSection type="services" title="Treatments We Offer" subtitle="Our Services" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
- <EntityCardSection type="departments" title="Browse by Department" subtitle="Elite Medical Units" limit={6} className="bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
+ <EntityCardSection type="departments" title="Browse by Department" subtitle="Our Departments" limit={6} className="bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800/50" />
  <EntityCardSection type="locations" title="Find Us Near You" subtitle="Our Locations" limit={6} className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-700" />
 
  {/* COMPACT SEO LINK STRIPS */}

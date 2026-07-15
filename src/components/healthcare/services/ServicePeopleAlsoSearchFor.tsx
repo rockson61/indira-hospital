@@ -67,7 +67,7 @@ const DEFAULT_QUERIES: SearchQuery[] = [
 export function ServicePeopleAlsoSearchFor({
  serviceName,
  category,
- className = ""
+ className=""
 }: ServicePeopleAlsoSearchForProps) {
  const [showMore, setShowMore] = useState(false)
 

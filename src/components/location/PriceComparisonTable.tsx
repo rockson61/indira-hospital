@@ -8,7 +8,7 @@ interface PriceComparisonTableProps {
  className?: string
 }
 
-export function PriceComparisonTable({ locationName, className = "" }: PriceComparisonTableProps) {
+export function PriceComparisonTable({ locationName, className="" }: PriceComparisonTableProps) {
  const services = [
  {
  name: 'Root Canal Treatment',
@@ -60,7 +60,7 @@ export function PriceComparisonTable({ locationName, className = "" }: PriceComp
  <strong>Significantly lower than metro city prices.</strong> Compare Indira Dental Clinic, Vellore with Chennai and Bangalore rates. All services include consultation, procedure, and follow-up visits.
  </p>
 
- <div className="overflow-x-auto rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-sm bg-white dark:bg-slate-900 ">
+ <div className="overflow-x-auto rounded-2xl border border-slate-200/60 dark:border-slate-700/50 shadow-sm bg-white dark:bg-slate-900">
  <table className="w-full text-left border-collapse">
  <thead>
  <tr className="bg-slate-50/80 dark:bg-slate-800/80 border-b border-slate-200/60 dark:border-slate-700/50">

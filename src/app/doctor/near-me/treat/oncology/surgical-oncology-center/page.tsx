@@ -81,7 +81,7 @@ export default function SurgicalOncologyPage() {
  }}
  timeline={{
  title: "Your Path to Remission",
- description: "A meticulously coordinated surgical journey at Indira&apos;s Oncology Center.",
+ description: "A meticulously coordinated surgical journey at Indira's Oncology Center.",
  steps: [
  {
  title: 'Phase I: Staging & Mapping',
@@ -120,7 +120,7 @@ export default function SurgicalOncologyPage() {
  >
  <div className="space-y-8">
  <section>
- <h2 className="font-heading text-3xl font-bold mb-4">India&apos;s Leading Hub for Curative Cancer Surgery</h2>
+ <h2 className="font-heading text-3xl font-bold mb-4">India's Leading Hub for Curative Cancer Surgery</h2>
  <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
  At the <strong>Indira Surgical Oncology Center</strong>, we fight cancer with precision. Under the leadership of <strong>Dr. Karan Shankar</strong> and an elite multidisciplinary team, we execute the most complex resections with a singular focus: achieve complete tumor clearance while maximizing life quality.
  </p>

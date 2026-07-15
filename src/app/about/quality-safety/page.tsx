@@ -55,7 +55,7 @@ export default function QualitySafetyPage() {
  <span className="text-blue-400">Patient Safety in Vellore.</span>
  </h1>
  <p className="text-xl text-slate-300 leading-relaxed">
- At Indira Hospital, quality is not just a checkbox; it&apos;s our clinical
+ At Indira Hospital, quality is not just a checkbox; it's our clinical
  foundation. We follow global benchmarks to ensure every patient
  receives safe, error-free medical care.
  </p>
@@ -113,7 +113,7 @@ export default function QualitySafetyPage() {
  <div className="absolute -bottom-8 -right-8 bg-fuchsia-600 text-white p-10 rounded-3xl shadow-2xl max-w-xs">
  <Award className="w-12 h-12 mb-4" />
  <h4 className="text-xl font-bold mb-2">NABH Standard</h4>
- <p className="text-blue-100 text-sm italic">Committed to maintaining the highest benchmarks in Indian healthcare administration.</p>
+ <p className="text-blue-100 text-sm">Committed to maintaining the highest benchmarks in Indian healthcare administration.</p>
  </div>
  </div>
  </div>

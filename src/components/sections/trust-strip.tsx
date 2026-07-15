@@ -39,7 +39,7 @@ export function TrustStrip() {
  <item.icon className={`w-7 h-7 ${item.color}`} />
  </div>
  <div>
- <p className="text-3xl font-black text-slate-900 dark:text-white leading-none uppercase italic tracking-tighter mb-1">{item.label}</p>
+ <p className="text-3xl font-black text-slate-900 dark:text-white leading-none uppercase tracking-tighter mb-1">{item.label}</p>
  <p className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em]">{item.sublabel}</p>
  </div>
  </motion.div>

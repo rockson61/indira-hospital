@@ -50,14 +50,14 @@ export default function AioKnowledgeBlock({
  ))}
  </div>
 
- <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-6 items-center italic text-xs text-slate-400">
+ <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-6 items-center text-xs text-slate-400">
  <div className="flex items-center gap-2">
  <ShieldCheck className="w-4 h-4 text-emerald-500" /> Authorized Clinical Content
  </div>
  <div className="flex items-center gap-2">
  <Clock className="w-4 h-4 text-amber-500" /> Updated: {new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })}
  </div>
- <div className="flex items-center gap-2 ml-auto not-italic font-bold text-fuchsia-600">
+ <div className="flex items-center gap-2 ml-auto not-font-bold text-fuchsia-600">
  {siteConfig.name}
  </div>
  </div>

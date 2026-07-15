@@ -37,7 +37,7 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="medicine-pillar-content space-y-20 text-left">
  {/* ── 1. The Clinical Heart of the Hospital ───────────────────── */}
  <section className="intro prose prose-lg max-w-none prose-slate dark:prose-invert">
- <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading italic border-l-8 border-indigo-600 pl-6 mb-8 uppercase tracking-tight text-left">
+ <h2 className="text-4xl font-black text-slate-900 dark:text-white font-heading border-l-8 border-indigo-600 pl-6 mb-8 uppercase tracking-tight text-left">
  The Diagnostic Powerhouse: Master Internal Medicine
  </h2>
  <div className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
@@ -52,10 +52,10 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="grid md:grid-cols-2 gap-8 mt-12 not-prose text-left">
  <div className="p-8 bg-indigo-50 dark:bg-indigo-900/20 rounded-[2.5rem] border border-indigo-100 dark:border-indigo-800 shadow-sm relative overflow-hidden group">
  <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl group-hover:bg-indigo-500/20 transition-all"></div>
- <h4 className="text-2xl font-bold text-indigo-900 dark:text-indigo-200 mb-4 flex items-center gap-2 italic">
+ <h4 className="text-2xl font-bold text-indigo-900 dark:text-indigo-200 mb-4 flex items-center gap-2">
  Metabolic Medicine Hub
  </h4>
- <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed italic mb-4">
+ <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed mb-4">
  Specialized care for <strong>Diabetology & Lipidology.</strong> We focus on "Metabolic Reversal" through programmed glycemic control, reducing the risk of cardiovascular events and renal damage.
  </p>
  <div className="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-tighter">
@@ -65,8 +65,8 @@ export default function GeneralMedicineDepartmentPage() {
  </div>
  <div className="p-8 bg-slate-900 text-white rounded-[2.5rem] border border-slate-800 shadow-xl relative overflow-hidden group">
  <div className="absolute inset-0 bg-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform"></div>
- <h4 className="text-2xl font-bold text-blue-300 mb-4 italic uppercase tracking-tighter text-left">Fever & Infectious Disease Unit</h4>
- <p className="text-blue-100/60 text-sm leading-relaxed mb-6 italic font-medium">
+ <h4 className="text-2xl font-bold text-blue-300 mb-4 uppercase tracking-tighter text-left">Fever & Infectious Disease Unit</h4>
+ <p className="text-blue-100/60 text-sm leading-relaxed mb-6 font-medium">
  Rapid triage for acute viral and bacterial infections. Our 24/7 in-house lab ensures zero-delay diagnosis of Dengue, Malaria, and Sepsis.
  </p>
  <ul className="space-y-2">
@@ -80,7 +80,7 @@ export default function GeneralMedicineDepartmentPage() {
  {/* ── 2. Specialized Clinical Verticals ───────────────────── */}
  <section className="medicine-verticals space-y-16">
  <div className="text-center max-w-3xl mx-auto">
- <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter italic">Internal Medicine Specializations</h2>
+ <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Internal Medicine Specializations</h2>
  <div className="h-1 w-24 bg-indigo-600 dark:indigo-500 mx-auto mt-4 rounded-full"></div>
  </div>
 
@@ -89,8 +89,8 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Chronic Care</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Long-term management of Hypertension, Osteoarthritis, and COPD to prevent hospitalization.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Chronic Care</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Long-term management of Hypertension, Osteoarthritis, and COPD to prevent hospitalization.</p>
  <ul className="space-y-3 mb-8">
  {["Hypertension Hub", "Lipid Management", "Respiratory Care", "Geriatric Wellness"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
@@ -106,8 +106,8 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between border-b-4 border-indigo-600">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Diabetology</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Comprehensive Diabetes pathways from diagnosis to complication management (Diabetic Foot/Eye).</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Diabetology</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Comprehensive Diabetes pathways from diagnosis to complication management (Diabetic Foot/Eye).</p>
  <ul className="space-y-3 mb-8">
  {["Insulin Regulation", "Foot Care Clinic", "Nutritional Therapy", "CGM Monitoring"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
@@ -123,8 +123,8 @@ export default function GeneralMedicineDepartmentPage() {
  <div className="flex flex-col bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform">
  <div className="p-8 flex-1 flex flex-col justify-between">
  <div>
- <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 italic uppercase tracking-tighter">Emergency Care</h4>
- <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium italic">Managing medical emergencies including acute renal failure, poisoning, and severe infections.</p>
+ <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Emergency Care</h4>
+ <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-medium">Managing medical emergencies including acute renal failure, poisoning, and severe infections.</p>
  <ul className="space-y-3 mb-8">
  {["ICU Management", "Sepsis Protocols", "Dialysis Support", "Trauma Integration"].map(i => (
  <li key={i} className="flex items-start gap-2 text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
@@ -139,9 +139,9 @@ export default function GeneralMedicineDepartmentPage() {
  </section>
 
  {/* ── 3. Educational Deep-Dive: Diabetes Management ──────────────── */}
- <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-indigo-100 dark:border-slate-800 font-serif italic shadow-inner relative overflow-hidden text-left">
+ <section className="prose prose-lg max-w-none prose-slate dark:prose-invert bg-slate-50 dark:bg-slate-950 p-12 md:p-20 rounded-[4rem] border border-indigo-100 dark:border-slate-800 font-serif shadow-inner relative overflow-hidden text-left">
  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 blur-[100px] -mr-32 -mt-32"></div>
- <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading italic">Clinical Insight: Beyond the Glucose Spike</h3>
+ <h3 className="text-indigo-900 dark:text-indigo-400 font-black uppercase text-3xl tracking-tighter not-italic font-heading">Clinical Insight: Beyond the Glucose Spike</h3>
  <p>
  Diabetes management is often oversimplified as "avoiding sugar." In truth, clinical Diabetology is about <strong>Vascular Protection.</strong> Prolonged spikes in blood glucose create "glycosylation" of small blood vessels in the kidneys, heart, and nerves.
  </p>
@@ -156,13 +156,13 @@ export default function GeneralMedicineDepartmentPage() {
  { k: "Retina", v: "Micro-Vascular" }
  ].map(item => (
  <div key={item.k} className="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-indigo-100 dark:border-slate-800 text-center shadow-md group border-b-4 border-b-indigo-600">
- <p className="text-4xl font-black text-indigo-600 mb-2 font-heading italic uppercase tracking-tighter">{item.k}</p>
- <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest italic">{item.v}</p>
+ <p className="text-4xl font-black text-indigo-600 mb-2 font-heading uppercase tracking-tighter">{item.k}</p>
+ <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{item.v}</p>
  </div>
  ))}
  </div>
- <p className="font-bold text-slate-900 dark:text-slate-100 italic">
- By monitoring these four pillars, we ensure that being a diabetic doesn&apos;t lead to long-term health complications. We empower you to live a life with <strong>Zero Clinical Limitations.</strong>
+ <p className="font-bold text-slate-900 dark:text-slate-100">
+ By monitoring these four pillars, we ensure that being a diabetic doesn't lead to long-term health complications. We empower you to live a life with <strong>Zero Clinical Limitations.</strong>
  </p>
  </section>
 
@@ -170,7 +170,7 @@ export default function GeneralMedicineDepartmentPage() {
  <section className="bg-slate-900 dark:bg-black rounded-[4rem] p-12 md:p-24 border border-slate-800 text-white relative overflow-hidden shadow-2xl text-left">
  <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/10 blur-[150px] -ml-48 -mb-48"></div>
  
- <h3 className="text-4xl font-black italic mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-indigo-400 text-left">
+ <h3 className="text-4xl font-black mb-16 flex items-center gap-3 font-heading uppercase tracking-tighter text-indigo-400 text-left">
  General Medicine: Specialist Clinical FAQs
  </h3>
  
@@ -210,7 +210,7 @@ export default function GeneralMedicineDepartmentPage() {
  }
  ].map((faq, i) => (
  <div key={i} className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-white dark:bg-slate-900 transition-all group">
- <h4 className="font-black text-white mb-6 flex items-start gap-4 italic group-hover:text-indigo-400 transition-colors text-lg">
+ <h4 className="font-black text-white mb-6 flex items-start gap-4 group-hover:text-indigo-400 transition-colors text-lg">
  <span className="text-indigo-500 text-2xl font-serif">Q.</span>
  <span>{faq.q}</span>
  </h4>

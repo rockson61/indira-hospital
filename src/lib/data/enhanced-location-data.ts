@@ -383,7 +383,7 @@ export const enhancedVelloreLocations: EnhancedLocationData[] = [
  longitude: 80.2707,
  distance: '140 km',
  travelTime: '2.5 hours',
- description: 'State capital and India\'s fourth largest city. Patients from Chennai trust Indira Hospital for specialised surgical procedures with elite institutional value.',
+ description: 'State capital and India\'s fourth largest city. Patients from Chennai trust Indira Hospital for specialised surgical procedures with best-in-class surgical standards.',
  population: '1,10,00,000+',
  category: 'city',
  amenities: { banks: [], atms: [], postOffices: [], hospitals: [], shopping: [], restaurants: [], hotels: [] },

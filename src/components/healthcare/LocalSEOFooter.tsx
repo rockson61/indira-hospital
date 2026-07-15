@@ -11,11 +11,11 @@ export function LocalSEOFooter() {
  <div className="max-w-7xl mx-auto">
  {/* Header: Semantic H2 for Local SEO */}
  <div className="mb-16">
- <h2 className="text-3xl font-black text-slate-900 dark:text-white font-heading italic border-l-4 border-fuchsia-600 pl-6 mb-6">
+ <h2 className="text-3xl font-black text-slate-900 dark:text-white font-heading border-l-4 border-fuchsia-600 pl-6 mb-6">
  List of Top Doctors in Vellore
  </h2>
  <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">
- Looking for trusted healthcare professionals in Vellore? <strong>Indira Super Speciality Hospital</strong> brings you a verified list of doctors in Vellore from various specialties to help you find the best care possible. Whether you&apos;re searching for General Physician Doctors in Vellore or Specialist Surgeons in Vellore, we’ve got you covered.
+ Looking for trusted healthcare professionals in Vellore? <strong>Indira Super Speciality Hospital</strong> brings you a verified list of doctors in Vellore from various specialties to help you find the best care possible. Whether you're searching for General Physician Doctors in Vellore or Specialist Surgeons in Vellore, we’ve got you covered.
  </p>
  </div>
 
@@ -163,7 +163,7 @@ export function LocalSEOFooter() {
  </ul>
  </div>
  <div className="flex-shrink-0">
- <div className="text-4xl font-black italic opacity-20 select-none">TRUSTED CARE</div>
+ <div className="text-4xl font-black opacity-20 select-none">TRUSTED CARE</div>
  </div>
  </div>
  </div>

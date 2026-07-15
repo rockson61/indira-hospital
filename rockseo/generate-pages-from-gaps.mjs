@@ -68,12 +68,31 @@ const SURGICAL_SILOS = [
 ];
 
 function generatePageTemplate(treatment, silo) {
-    const eyebrow = `Elite ${silo.category} Solutions`;
+    const eyebrow = `Top ${silo.category} Solutions`;
     
+    const pagePath = `/doctor/near-me/treat/${silo.slug}/${treatment.slug}`;
+    const metaTitle = `${treatment.name} in Vellore | Indira Super Speciality Hospital`;
+    const metaDescription = `${treatment.name} at Indira Super Speciality Hospital, Vellore. NABH-accredited ${silo.category.toLowerCase()} care with advanced technology, experienced specialists, and fast recovery. Book a consultation today.`;
+
     return `import React from 'react'
+import type { Metadata } from 'next'
 import { SubServiceTemplate } from '@/components/healthcare/SubServiceTemplate'
 import AioKnowledgeBlock from '@/components/seo/AioKnowledgeBlock'
 import { Zap, Shield, Clock, UserCheck, CheckCircle2, Info, Star, MapPin } from 'lucide-react'
+
+export const metadata: Metadata = {
+    title: ${JSON.stringify(metaTitle)},
+    description: ${JSON.stringify(metaDescription)},
+    alternates: {
+        canonical: ${JSON.stringify(pagePath)},
+    },
+    openGraph: {
+        title: ${JSON.stringify(metaTitle)},
+        description: ${JSON.stringify(metaDescription)},
+        url: ${JSON.stringify(pagePath)},
+        type: 'website',
+    },
+}
 
 export default function SEOPage() {
     return (
@@ -85,15 +104,15 @@ export default function SEOPage() {
             description={
                 <article>
                     <p className="text-lg leading-relaxed">
-                        <strong>${treatment.name}</strong> at Indira Super Speciality Hospital, Vellore, is a precision-driven clinical procedure. Our surgical experts utilize advanced medical protocols to ensure <strong>painless outcomes</strong> and <strong>accelerated patient recovery</strong> for all procedures.
+                        <strong>${treatment.name}</strong> at Indira Super Speciality Hospital, Vellore, is a top-rated clinical procedure. Our surgical experts utilize advanced medical protocols to ensure <strong>painless outcomes</strong> and <strong>accelerated patient recovery</strong> for all procedures.
                     </p>
                 </article>
             }
             quickFacts={[
-                { label: 'Consultation', value: 'Elite', icon: 'UserCheck' },
+                { label: 'Consultation', value: 'Best', icon: 'UserCheck' },
                 { label: 'Care Model', value: 'NABH Accredited', icon: 'Shield' },
                 { label: 'Tech Level', value: 'Advanced', icon: 'Zap' },
-                { label: 'Vellore Hub', value: 'Indira', icon: 'MapPin' }
+                { label: 'Vellore Location', value: 'Indira', icon: 'MapPin' }
             ]}
             reviews={{
                 entityType: 'service',
@@ -114,9 +133,9 @@ export default function SEOPage() {
                     title="Quick Facts: ${treatment.name} in Vellore"
                     items={[
                         { label: 'Expert Specialist', value: 'Senior Clinical Team', icon: UserCheck },
-                        { label: 'Tech Standard', value: 'Advanced Precision Tech', icon: Zap },
+                        { label: 'Tech Standard', value: 'Advanced Treatment Tech', icon: Zap },
                         { label: 'Facility Grade', value: 'NABH Super Speciality', icon: Shield },
-                        { label: 'Region Focus', value: 'Vellore Hub', icon: MapPin }
+                        { label: 'Region Focus', value: 'Vellore Location', icon: MapPin }
                     ]}
                 />
 
@@ -146,11 +165,11 @@ export default function SEOPage() {
                     <section className="bg-slate-900 rounded-[3rem] p-12 text-white">
                         <h2 className="text-3xl font-black text-white mb-6">How Does ${silo.category} Treatment Work?</h2>
                         <p className="text-fuchsia-200/80 text-lg mb-8">
-                            Our hospital is equipped with high-end medical technology to support complex ${silo.category.toLowerCase()} procedures, reducing surgical time and enhancing precision.
+                            Our hospital is equipped with high-end medical technology to support complex ${silo.category.toLowerCase()} procedures, reducing surgical time and enhancing safety.
                         </p>
                         <div className="grid md:grid-cols-3 gap-6">
                             {[
-                                { title: 'High-Def Imaging', desc: 'Precision diagnosis with 128-Slice CT & 3T MRI.' },
+                                { title: 'High-Def Imaging', desc: 'Accurate diagnosis with 128-Slice CT & 3T MRI.' },
                                 { title: 'Modular OTs', desc: 'Infection-free surgical environments for safety.' },
                                 { title: 'Expert Team', desc: 'Multidisciplinary approach to complex cases.' }
                             ].map((box, i) => (

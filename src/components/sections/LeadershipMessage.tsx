@@ -88,7 +88,7 @@ export function LeadershipMessage() {
  <Quote className="absolute -top-12 -left-8 w-24 h-24 text-slate-100 dark:text-slate-800/50 -rotate-12" />
  
  <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm mb-8 relative z-10">
- Chairman&apos;s Message
+ Chairman's Message
  </div>
 
  <h2 className="elite-section-title text-slate-900 dark:text-white mb-8 relative z-10">
@@ -98,7 +98,7 @@ export function LeadershipMessage() {
  
  <div className="space-y-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed relative z-10">
  <p>
- &quot;At Indira Super Speciality Hospital, our primary mission has always been to bring world-class, advanced surgical care to the heart of Vellore. We firmly believe that elite-tier medical interventions should not be restricted to metropolitan cities.&quot;
+ &quot;At Indira Super Speciality Hospital (formerly known as Indira Nursing Home or Indira Hospital Katpadi), our primary mission has always been to bring world-class, advanced surgical care to the heart of Vellore. We firmly believe that best-in-class medical interventions should not be restricted to metropolitan cities.&quot;
  </p>
  <p>
  &quot;Through our dedicated focus on <strong className="font-bold text-slate-900 dark:text-white">Advanced Laser Proctology and Laparoscopy</strong>, we have introduced painless, minimally invasive techniques that ensure rapid recovery and definitive cures. Our promise is simple: unwavering clinical excellence delivered with deep-rooted compassion.&quot;

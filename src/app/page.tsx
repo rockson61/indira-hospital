@@ -85,7 +85,7 @@ const SemanticLinkBlock = () => (
  </ul>
  </div>
  <div>
- <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Patient Hubs</h3>
+ <h3 className="font-semibold text-slate-900 dark:text-white mb-3">Patient Care</h3>
  <ul className="space-y-2">
  <li><Link href="/doctor/near-me" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">Find Doctors Near You</Link></li>
  <li><Link href="/patients/international" prefetch={false} className="text-slate-600 dark:text-slate-400 hover:text-fuchsia-600">International Patients</Link></li>
@@ -112,6 +112,7 @@ export default function Home() {
  return (
  <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-fuchsia-200 selection:text-fuchsia-900">
  <Hero />
+ <React.Suspense fallback={<div className="min-h-64 bg-background" aria-hidden="true" />}>
  <LeadershipMessage />
  <StatsBanner />
 
@@ -298,6 +299,7 @@ export default function Home() {
  </SectionContainer>
 
  <HospitalSEOBlock />
+ </React.Suspense>
  </main>
  );
 }

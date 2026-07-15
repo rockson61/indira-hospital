@@ -88,7 +88,7 @@ export default function CareersPage() {
  <div className="max-w-2xl">
  <h2 className="elite-section-title mb-6 text-slate-900 dark:text-white">Active <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">Opportunities</span></h2>
  <p className="text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">
- We are actively hiring for the following departments. Even if you don&apos;t see your
+ We are actively hiring for the following departments. Even if you don't see your
  exact role listed, we would love to hear from talented professionals.
  </p>
  </div>

@@ -17,7 +17,7 @@ export default function LaparoscopicHysterectomyPage() {
  title="Elite Laparoscopic Hysterectomy (TLH)"
  slug="laparoscopic-hysterectomy-guide"
  parentServiceSlug="obstetrics-gynaecology"
- departmentName="Indira Elite Women&apos;s Care"
+ departmentName="Indira Elite Women's Care"
  description={
  <article>
  <p className="text-lg leading-relaxed">
@@ -101,7 +101,7 @@ export default function LaparoscopicHysterectomyPage() {
  <span className="text-sm font-medium">Full Recovery</span>
  <span className="text-sm font-bold text-rose-500">10-14 Days</span>
  </div>
- <div className="flex justify-between items-center italic text-[10px] text-slate-400">
+ <div className="flex justify-between items-center text-[10px] text-slate-400">
  *Data based on clinical protocols at our Vellore center.
  </div>
  </div>
@@ -135,7 +135,7 @@ export default function LaparoscopicHysterectomyPage() {
  <div className="absolute inset-0 bg-gradient-to-br from-rose-950/30 to-transparent" />
  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
  <div className="space-y-6">
- <h3 className="font-heading text-3xl font-bold italic font-heading">The "Home-in-24h" Recovery Framework</h3>
+ <h3 className="font-heading text-3xl font-bold font-heading">The "Home-in-24h" Recovery Framework</h3>
  <p className="text-slate-400 leading-relaxed">
  Our recovery protocol is built around **Early Mobilization**. Because we avoid large abdominal cuts, our patients experience significantly less pain and are often walking within hours of surgery.
  </p>
@@ -152,11 +152,11 @@ export default function LaparoscopicHysterectomyPage() {
  </div>
  <div className="grid grid-cols-2 gap-4">
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading italic">Pain Level</p>
+ <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading">Pain Level</p>
  <p className="font-heading text-3xl font-bold text-white">LOW</p>
  </div>
  <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center">
- <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading italic">Incision Size</p>
+ <p className="text-xs text-rose-300 font-bold uppercase tracking-widest mb-1 font-heading">Incision Size</p>
  <p className="font-heading text-3xl font-bold text-white">5MM</p>
  </div>
  </div>

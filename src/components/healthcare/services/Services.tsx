@@ -140,7 +140,7 @@ const servicesData = {
  treatments: [
  "Oral Hygiene & Maintenance (For Elderly with No Teeth, With Braces, Severe Plaque on Teeth)",
  "Teaching Dental Hygiene to Preschoolers",
- "Fluoride Treatments for Children&apos;s Teeth",
+ "Fluoride Treatments for Children's Teeth",
  "Baby0203m Bottle Tooth Decay",
  "Composite Bonding for Missing Tooth",
  "Silver Fillings vs. White Fillings",

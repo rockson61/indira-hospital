@@ -113,7 +113,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
   Best Hospital <br />
   <span className="elite-gradient-text text-3xl sm:text-4xl drop-shadow-sm">Near {location.name}.</span>
   </h1>
- <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-12 opacity-80 italic">
+ <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl font-light mb-12 opacity-80">
  Indira Super Speciality Hospital is the preferred healthcare provider for residents of {location.name},
  offering advanced Laparoscopic, Laser, and Cardiac treatments just {location.distance} away.
  </p>
@@ -224,7 +224,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
  <Stethoscope className="w-4 h-4" /> Top Specialists
  </span>
  <h2 className="elite-section-title text-slate-900 dark:text-white">Experts Serving {location.name}</h2>
- <p className="text-slate-500 dark:text-slate-400 font-medium text-lg mt-4">Consult with Tamil Nadu&apos;s leading surgeons and physicians. Advanced care is just a message away.</p>
+ <p className="text-slate-500 dark:text-slate-400 font-medium text-lg mt-4">Consult with Tamil Nadu's leading surgeons and physicians. Advanced care is just a message away.</p>
  </div>
  <Link href="/doctor/near-me" className="group flex items-center gap-2 text-fuchsia-600 font-black uppercase text-sm tracking-widest hover:text-fuchsia-700 transition-colors">
  View All Doctors <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

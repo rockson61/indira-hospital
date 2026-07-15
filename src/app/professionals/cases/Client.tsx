@@ -67,7 +67,7 @@ export function CasesClient() {
  <Database className="w-4 h-4 mr-2" /> Elite Surgical Repository
  </Badge>
  
- <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none italic uppercase">
+ <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none uppercase">
  Clinical <br />
  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400">Archives.</span>
  </h1>
@@ -110,7 +110,7 @@ export function CasesClient() {
  <Badge className="bg-blue-600 hover:bg-blue-500 text-white font-black uppercase tracking-widest text-[10px] rounded-lg">
  {caseStudy.specialty}
  </Badge>
- <h3 className="text-2xl font-black text-white leading-tight italic tracking-tight uppercase">
+ <h3 className="text-2xl font-black text-white leading-tight tracking-tight uppercase">
  {caseStudy.title}
  </h3>
  </div>
@@ -119,14 +119,14 @@ export function CasesClient() {
  <Activity className="w-4 h-4" />
  <span className="text-xs font-black uppercase tracking-widest">Outcome Metric</span>
  </div>
- <p className="text-2xl font-black text-white italic">{caseStudy.metric}</p>
+ <p className="text-2xl font-black text-white">{caseStudy.metric}</p>
  </div>
  </div>
 
  <div className="lg:w-3/4 p-12 space-y-10">
  <div className="grid md:grid-cols-2 gap-12">
  <div className="space-y-4">
- <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest italic">Clinical Overview</p>
+ <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Clinical Overview</p>
  <p className="text-slate-300 font-medium leading-relaxed">
  {caseStudy.summary}
  </p>
@@ -137,14 +137,14 @@ export function CasesClient() {
  <Microscope className="w-4 h-4" />
  <span className="text-[10px] font-black uppercase tracking-widest">Surgical Technique</span>
  </div>
- <p className="text-sm font-black text-white italic uppercase tracking-tighter">{caseStudy.technique}</p>
+ <p className="text-sm font-black text-white uppercase tracking-tighter">{caseStudy.technique}</p>
  </div>
  <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
  <div className="flex items-center gap-2 text-indigo-400">
  <Search className="w-4 h-4" />
  <span className="text-[10px] font-black uppercase tracking-widest">Available Imaging</span>
  </div>
- <p className="text-sm font-black text-white italic uppercase tracking-tighter">{caseStudy.imaging}</p>
+ <p className="text-sm font-black text-white uppercase tracking-tighter">{caseStudy.imaging}</p>
  </div>
  </div>
  </div>
@@ -178,12 +178,12 @@ export function CasesClient() {
  <div key={i} className="flex gap-16 items-center shrink-0">
  <div className="flex items-center gap-4">
  <Award className="w-10 h-10" />
- <span className="text-3xl font-black italic tracking-tighter uppercase whitespace-nowrap text-white">Clinical Benchmarked</span>
+ <span className="text-3xl font-black tracking-tighter uppercase whitespace-nowrap text-white">Clinical Benchmarked</span>
  </div>
  <Activity className="w-10 h-10" />
  <div className="flex items-center gap-4">
  <ShieldCheck className="w-10 h-10" />
- <span className="text-3xl font-black italic tracking-tighter uppercase whitespace-nowrap text-white">Peer-Reviewed Excellence</span>
+ <span className="text-3xl font-black tracking-tighter uppercase whitespace-nowrap text-white">Peer-Reviewed Excellence</span>
  </div>
  </div>
  ))}

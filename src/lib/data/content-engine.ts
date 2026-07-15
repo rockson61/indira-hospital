@@ -180,7 +180,7 @@ export function generateUniqueContent(topic: string, cluster: string, lang: "en"
  const keywords = [
  'Indira Hospital', 'Vellore', 'Senior Specialist', 'Clinical Mastery',
  'Robotic-Assisted', 'Laser Precision', 'Minimally Invasive', 'NABH Accredited',
- 'Surgical Excellence', 'Elite', 'Vellore Hospital', 'இந்திரா மருத்துவமனை', 'مستشفى إنديرا', 'فيلور'
+ 'Surgical Excellence', 'Top', 'Vellore Hospital', 'இந்திரா மருத்துவமனை', 'مستشفى إنديرا', 'فيلور'
  ];
  let processed = text;
  keywords.forEach(kw => {

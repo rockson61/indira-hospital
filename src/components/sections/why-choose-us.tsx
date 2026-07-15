@@ -8,13 +8,13 @@ import { HeartCardiogram, Microscope } from "healthicons-react/outline";
 const features = [
  {
  name: "24/7 Trauma & Emergency Response",
- description: "Medical emergencies don&apos;t wait. Our cardiac and trauma teams operate 24/7 with a door-to-doctor time of under 8 minutes.",
+ description: "Medical emergencies don't wait. Our cardiac and trauma teams operate 24/7 with a door-to-doctor time of under 8 minutes.",
  icon: Ambulance,
  color: "from-red-500 to-rose-600",
  stat: "24/7",
  },
  {
- name: "Elite Specialists & Surgeons",
+ name: "Top Specialists & Surgeons",
  description: "Your health is in the hands of renowned experts. Every surgeon possesses over a decade of specialized experience in advanced procedures.",
  icon: Users,
  color: "from-fuchsia-500 to-fuchsia-600",
@@ -71,7 +71,7 @@ export function WhyChooseUs() {
  <h3 className="text-xl font-bold leading-7 text-gray-900 dark:text-white">
  {feature.name}
  </h3>
- <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600 dark:text-slate-400 dark:text-gray-400">
+ <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600 dark:text-slate-400">
  <p className="flex-auto">{feature.description}</p>
  </dd>
  </div>
@@ -81,7 +81,7 @@ export function WhyChooseUs() {
 
  <div className="mt-20 flex flex-col items-center">
  <a
- href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I&apos;m clinical inquiry. I want to book an appointment.")}`}
+ href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi, I'm clinical inquiry. I want to book an appointment.")}`}
  target="_blank"
  rel="noopener noreferrer"
  className="elite-button-primary text-base"

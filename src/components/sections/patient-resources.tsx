@@ -14,7 +14,7 @@ const resourceGroups = [
  {
  title: "Parking, Lodging & Travel",
  icon: Globe,
- description: "No matter where you&apos;re coming from, traveling for medical care can be overwhelming. Let us help get you started.",
+ description: "No matter where you're coming from, traveling for medical care can be overwhelming. Let us help get you started.",
  category: "Travel",
  },
  {
