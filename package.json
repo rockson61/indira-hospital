@@ -6,7 +6,7 @@
     "dev": "next dev -p 3001",
     "prebuild": "node rockseo/generate-pages-from-gaps.mjs",
     "build": "next build",
-    "pages:build": "next-on-pages",
+    "pages:build": "next-on-pages && touch .vercel/output/static/.assetsignore",
     "start": "next start",
     "lint": "eslint"
   },
