@@ -3213,9 +3213,17 @@ export const TREATMENT_DATA: TreatmentItem[] = [
 ];
 
 export const getTreatmentBySlug = (slug: string) => {
- return TREATMENT_DATA.find(t => t.slug === slug);
+  const lowerSlug = slug.toLowerCase();
+  const treatment = TREATMENT_DATA.find(t => 
+    t.slug.toLowerCase() === lowerSlug || (t.aliases && t.aliases.some(a => a.toLowerCase() === lowerSlug))
+  );
+  if (treatment) return treatment;
+  
+  return AUTO_TREATMENTS.find(t => 
+    t.slug.toLowerCase() === lowerSlug || (t.aliases && t.aliases.some(a => a.toLowerCase() === lowerSlug))
+  );
 };
 
 export const getAllTreatments = () => {
- return TREATMENT_DATA;
+  return [...TREATMENT_DATA, ...AUTO_TREATMENTS];
 };

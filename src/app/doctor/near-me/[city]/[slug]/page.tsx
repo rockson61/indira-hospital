@@ -8,6 +8,7 @@ import {
  getSEOKeywords, getSEOKeywordBySlug, getTreatmentBySlug, getRichSEOContent 
 } from "@/lib/api";
 import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
+import { enhancedVelloreLocations } from "@/lib/data/enhanced-location-data";
 import {
  ChevronRight, MapPin, Phone, MessageCircle, Star, Award,
  Clock, Shield, GraduationCap, CheckCircle2, ArrowRight, Users, Calendar, Tag, Sparkles
@@ -63,6 +64,16 @@ export const dynamicParams = true;
 //  return params;
 // }
 
+function getLocation(slug: string) {
+ const enhanced = enhancedVelloreLocations.find(l => l.slug === slug);
+ if (enhanced) return enhanced;
+
+ const tn = tamilNaduLocations.find(l => l.slug === slug);
+ if (tn) return tn;
+
+ return null;
+}
+
 import { constructMetadata } from "@/lib/seo-utils";
 
 export async function generateMetadata({
@@ -71,7 +82,7 @@ export async function generateMetadata({
  params: Promise<{ city: string; slug: string }>;
 }): Promise<Metadata> {
  const { city, slug } = await params;
- const location = tamilNaduLocations.find((l) => l.slug === city);
+ const location = getLocation(city);
  if (!location) {
  return constructMetadata({
  title: "Location Not Found",
@@ -152,9 +163,11 @@ export async function generateMetadata({
  });
  }
 
+ // Dynamic Fallback Metadata
+ const formattedTitle = slug.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
  return constructMetadata({
- title: "Not Found",
- description: "The requested medical page could not be found.",
+ title: `Best ${formattedTitle} in ${location.name} | Indira Super Speciality Hospital`,
+ description: `Looking for top-rated ${formattedTitle.toLowerCase()} in ${location.name}? Indira Super Speciality Hospital offers advanced diagnostic services and surgical care. NABH accredited hospital.`,
  path: `/doctor/near-me/${city}/${slug}`
  });
 }
@@ -166,7 +179,7 @@ export default async function UnifiedLocationSlugPage({
  params: Promise<{ city: string; slug: string }>;
 }) {
  const { city, slug } = await params;
- const location = tamilNaduLocations.find((l) => l.slug === city);
+ const location = getLocation(city);
  if (!location) notFound();
 
  const doctor = await getDoctorBySlug(slug).catch(() => null) as any;
@@ -209,7 +222,17 @@ export default async function UnifiedLocationSlugPage({
  return <ServiceView service={mappedService} location={location} city={city} slug={slug} isSEOKeyword={true} />;
  }
 
- notFound();
+ // Graceful Fallback rendering
+ const formattedTitle = slug.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+ const richDescription = `Looking for ${formattedTitle} near you? Indira Super Speciality Hospital is the premier destination for patients from ${location.name} seeking advanced healthcare and surgical solutions. We offer NABH-accredited treatment options, world-class diagnostics, and highly experienced specialists.`;
+
+ const fallbackService = {
+ title: formattedTitle,
+ slug: slug,
+ department: "General Medicine",
+ full_description: richDescription,
+ };
+ return <ServiceView service={fallbackService} location={location} city={city} slug={slug} isSEOKeyword={true} />;
 }
 
 async function DoctorView({ doctor, location, city, slug }: any) {

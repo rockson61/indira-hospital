@@ -135,6 +135,7 @@ export const getServiceBySlug = unstable_cache(
 );
 
 import { TREATMENT_DATA } from './data/treatment-data';
+import { AUTO_TREATMENTS } from './data/treatment-data-auto';
 
 export const getTreatmentBySlug = unstable_cache(
  async (slug: string) => {
@@ -144,6 +145,12 @@ export const getTreatmentBySlug = unstable_cache(
  t.slug.toLowerCase() === lowerSlug || (t.aliases && t.aliases.some(a => a.toLowerCase() === lowerSlug))
  );
  if (treatment) return treatment;
+
+ // Check AUTO_TREATMENTS
+ const autoTreatment = AUTO_TREATMENTS.find(t =>
+ t.slug.toLowerCase() === lowerSlug || (t.aliases && t.aliases.some(a => a.toLowerCase() === lowerSlug))
+ );
+ if (autoTreatment) return autoTreatment;
 
  return null;
  },

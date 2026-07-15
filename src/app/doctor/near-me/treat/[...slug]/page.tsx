@@ -67,6 +67,7 @@ const serviceProcedures: Record<string, string[]> = {
 
 
 export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 import { constructMetadata } from "@/lib/seo-utils";
 

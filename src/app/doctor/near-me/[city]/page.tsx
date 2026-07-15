@@ -27,6 +27,7 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { PeopleAlsoSearchCard } from "@/components/seo/PeopleAlsoSearchCard";
 
 export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 interface PageProps {
  params: Promise<{ city: string }>;

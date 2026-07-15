@@ -8,19 +8,18 @@ import { JsonLdSchema } from "@/components/seo/JsonLdSchema";
 import { ChevronRight, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { UnifiedEntitySection } from "@/components/seo/UnifiedEntitySection";
+import { tamilNaduLocations } from "@/lib/data/tamilnadu-locations";
+import { enhancedVelloreLocations } from "@/lib/data/enhanced-location-data";
 
-// List of supported GEO targets for Indira Hospital
-const GEO_LOCATIONS = [
- { slug: "vellore", name: "Vellore" },
- { slug: "katpadi", name: "Katpadi" },
- { slug: "ranipet", name: "Ranipet" },
- { slug: "arcot", name: "Arcot" },
- { slug: "gudiyatham", name: "Gudiyatham" },
- { slug: "tirupattur", name: "Tirupattur" },
- { slug: "ambur", name: "Ambur" },
- { slug: "chennai", name: "Chennai" },
+const EXTRA_LOCATIONS = [
  { slug: "bangalore", name: "Bangalore" },
- { slug: "chittoor", name: "Chittoor" } // Andhra border region
+ { slug: "chittoor", name: "Chittoor" }
+];
+
+const GEO_LOCATIONS = [
+ ...enhancedVelloreLocations.map(l => ({ slug: l.slug, name: l.name })),
+ ...tamilNaduLocations.map(l => ({ slug: l.slug, name: l.name })),
+ ...EXTRA_LOCATIONS
 ];
 
 export const dynamicParams = true;
