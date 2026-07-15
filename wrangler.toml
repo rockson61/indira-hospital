@@ -3,6 +3,11 @@ name = "indira-hospital"
 compatibility_date = "2024-05-02"
 compatibility_flags = ["nodejs_compat"]
 
+main = ".vercel/output/static/_worker.js/index.js"
+
+[assets]
+directory = ".vercel/output/static"
+
 [vars]
 # Add any runtime environment variables here if needed
 NEXT_PUBLIC_SITE_URL = "https://www.indirasuperspecialityhospital.com"
