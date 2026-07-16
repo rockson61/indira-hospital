@@ -1,4 +1,6 @@
-export const runtime = 'edge';
+export const dynamic = "force-dynamic";
+
+
 import ServiceDetailPage, { generateMetadata as parentGenerateMetadata } from '../../[...slug]/page';
 import { Metadata } from 'next';
 
